@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import Text from '../../Atoms/Text/Text';
+
 const Container = styled.section`
     height: 500px;
     position: relative;
@@ -19,9 +21,6 @@ const Image = styled.img.attrs(() => ({
 `;
 
 const Title = styled.h1`
-    font-size: 64px;
-    line-height: 72px;
-    color: ${props => props.theme.color('white')};
     position: absolute;
     margin: 0 auto;
     top: 50%;
@@ -39,7 +38,11 @@ const HeroBanner = ({url, title, background}) => {
     return (
         <Container background={background}>
             <Image src={url} />
-            <Title>{title}</Title>
+            <Title>
+                <Text size="xxl" color="white">
+                    {title}
+                </Text>
+            </Title>
         </Container>
     );
 };
