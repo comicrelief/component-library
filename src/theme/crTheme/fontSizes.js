@@ -1,6 +1,3 @@
-// @flow
-import { css } from 'styled-components';
-
 const fontSizes = {
   "xxs": '0.69375rem',
   "xs": '0.83125rem',

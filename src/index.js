@@ -1,6 +1,7 @@
 /* Theme */
 
-export { theme } from './theme/theme';
+export { theme as crTheme } from './theme/crTheme/theme';
+export { theme as srTheme } from './theme/srTheme/theme';
 export { ThemeProvider } from './theme/ThemeProvider';
 
 /* Molecules */
