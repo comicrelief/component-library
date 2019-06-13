@@ -6,6 +6,9 @@ import Text from '../../Atoms/Text/Text';
 
 const Container = styled.section`
     height: 500px;
+    h1 {
+        
+    }
     position: relative;
     background: ${props => props.background ? props.background : "transparent"};
     color: ${props => props.theme.color('red')};

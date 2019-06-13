@@ -18,10 +18,6 @@
 Sport Relief
 
 ```js
-const { ThemeProvider } = require('../../../index');
-const { srTheme } = require('../../../index');
-
-<ThemeProvider theme={srTheme}>
   <div>
     <Text tag="h3" size="s">
       Heading 3
@@ -36,5 +32,4 @@ const { srTheme } = require('../../../index');
       My paragraph small and yellow
     </Text>
   </div>
-</ThemeProvider>
 ```
