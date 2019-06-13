@@ -1,16 +1,40 @@
 ## Comic Relief React Componet Library
 
-build with Styled Componenents and Styleguidist
+React components to be shared cross Comic Relief applications
 
-### How to use components
+### Use
 
 CR-CL has a dependency of Styled-components.
 
 #### Install the package
-`yarn add @comicrelief/component-library`
+```
+$ yarn add @comicrelief/component-library
+```
 
 #### Wrap your app with the ThemeProvider and crTheme
-`import { ThemeProvider, theme as crTheme } from '@comic-relief/component-library';`
+```
+import { ThemeProvider, theme as crTheme } from '@comic-relief/component-library';
+```
 
 #### Import components
-`import { HeroBanner } from '@comic-relief/component-library';`
+```
+import { HeroBanner } from '@comic-relief/component-library';
+```
+
+### Develop
+
+To install CR-CL locally run
+
+```
+$ yarn install
+```
+
+To start
+```
+$ yarn styleguide
+```
+
+To publish
+```
+$ yarn publish:npm
+```
