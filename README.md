@@ -38,7 +38,7 @@ To test
 ```
 $ yarn test
 ```
-_Test will run throug all jest test and watch for any changes on snapshots._
+_Test will run through all jest tests and watch for any changes on snapshots._
 
 To publish
 ```
