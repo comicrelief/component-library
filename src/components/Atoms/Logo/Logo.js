@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 import image from './assets/logo.svg';
 
-const Image = styled.img.attrs(() => ({
-	alt: '',
-}))`
+const Image = styled.img`
 	object-fit: cover;
 	width: auto;
 	display: block;
@@ -23,7 +21,6 @@ const LogoWrapper = styled.div.attrs(() => ({
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	background-size: 100%;
 	@media (min-width: 740px) {
 		width: 60px;
 		height: 60px;
