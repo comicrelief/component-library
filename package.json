@@ -41,6 +41,12 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": { 
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js", 
+      "\\.(css|less)$": "<rootDir>/assetTransformer.js" 
+    } 
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "enzyme": "^3.10.0",
