@@ -34,10 +34,16 @@ const ImageWrapper = styled.div`
 	height: auto;
 	@media (min-width: 769px) {
 		display: flex;
-		flex-direction: ${props => (props.col ? 'column' : 'row')};
+		flex-direction: ${props => (props.direction === 'column' ? 'column' : 'row')};
 		flex-basis: 50%;
 		flex-grow: 1;
 	}
+`;
+
+const BlockImg = styled.div`
+	display: block;
+	position: relative;
+	width: 100%;
 `;
 
 /**
@@ -54,16 +60,16 @@ const CopyWrapper = styled.div`
 	flex-direction: column;
 `;
 
-const FullheightDoubleImageSingleCopy = ({ align, background, title, url }) => {
+const FullheightDoubleImageSingleCopy = ({ align, background, direction, title, url }) => {
 	return (
 		<FullHeightWrapper align={align}>
-			<ImageWrapper col>
-				<div>
+			<ImageWrapper direction={direction}>
+				<BlockImg>
 					<Image src={url} />
-				</div>
-				<div>
+				</BlockImg>
+				<BlockImg>
 					<Image src={url} />
-				</div>
+				</BlockImg>
 			</ImageWrapper>
 			<CopyWrapper background={background}>
 				<Text size="xxl" color="blue" tag="p">
@@ -83,7 +89,9 @@ FullheightDoubleImageSingleCopy.propTypes = {
 	/** Background Color */
   background: PropTypes.string,
   /** Align image */
-  align: PropTypes.string
+	align: PropTypes.string,
+	/** Direction images */
+	direction: PropTypes.string
 };
 
 export default FullheightDoubleImageSingleCopy;

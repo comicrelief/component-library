@@ -4,5 +4,6 @@
     title="Change Please"
     background="red"
     align="right"
+    direction="column"
 />
 ```
