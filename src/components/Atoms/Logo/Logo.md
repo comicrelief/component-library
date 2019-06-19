@@ -1,9 +1,8 @@
-# CR Logo Example
+# Logo Example
 
 ``` js
 <Logo
-  position={false}
-  url="laa"
+  rotate={false}
   alt="CR18 logo"
 />
 ```

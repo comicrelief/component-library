@@ -14,10 +14,12 @@ const Image = styled.img.attrs(() => ({
 `;
 
 /**
- * Link 
+ * Logo wrapper
  */
 
-const Link = styled.a`
+const LogoWrapper = styled.div.attrs(() => ({
+	role: 'Logo'
+	}))`
 	display: inline-block;
 	width: 50px;
 	height: 50px;
@@ -29,21 +31,17 @@ const Link = styled.a`
 	}
 `;
 
-const Logo = ({ rotate, url, alt }) => {
+const Logo = ({ rotate, alt }) => {
 	return (
-		<Link rotate={rotate} href={url} >
+		<LogoWrapper rotate={rotate} >
 			<Image src={image} alt={alt} />
-		</Link>
+		</LogoWrapper>
 	);
 };
 
 Logo.propTypes = {
 	/** Rotate logo */
 	rotate: PropTypes.bool,
-	/** Rotate logo */
-	url: PropTypes.string,
-	/** Logo info */
-	alt: PropTypes.string,
 };
 
 export default Logo;
