@@ -12,7 +12,7 @@ const Container = styled.section`
     color: white;
     padding: 60px 0;
     background: ${p => p.background ? p.background : "transparent"};
-    @media (min-width: 700px) {
+    @media ${p => p.theme.breakpoint("small")} {
         flex-direction: row;
     }
 `;
@@ -24,7 +24,7 @@ const Info = styled.div`
     width: 100%;
     margin-bottom: 40px;
     flex-direction: column;
-    @media (min-width: 700px) {
+    @media ${p => p.theme.breakpoint("small")} {
         width: calc(100%/3);
     }
 `;
