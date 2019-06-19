@@ -13,7 +13,7 @@ $ yarn add @comicrelief/component-library
 
 #### Wrap your app with the ThemeProvider and crTheme
 ```
-import { ThemeProvider, theme as crTheme } from '@comic-relief/component-library';
+import { ThemeProvider, crTheme } from '@comic-relief/component-library';
 ```
 
 #### Import components
@@ -33,6 +33,12 @@ To start
 ```
 $ yarn styleguide
 ```
+
+To test
+```
+$ yarn test
+```
+_Test will run throug all jest test and watch for any changes on snapshots._
 
 To publish
 ```
