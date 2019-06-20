@@ -1,5 +1,15 @@
 {
   "name": "component-library",
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js"
+    }
+  },
   "version": "0.1.0",
   "private": false,
   "license": "(ISC OR GPL-3.0)",
@@ -40,12 +50,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "jest": {
-    "moduleNameMapper": { 
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js", 
-      "\\.(css|less)$": "<rootDir>/assetTransformer.js" 
-    }
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
