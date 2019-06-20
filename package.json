@@ -30,6 +30,17 @@
     "react-styleguidist": "^9.1.5",
     "styled-components": "^4.3.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "scripts": {
     "test": "yarn run jest --watch",
     "styleguide": "styleguidist server",
@@ -55,8 +66,10 @@
     "@babel/cli": "^7.4.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "husky": "^2.4.1",
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
+    "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6"
   }

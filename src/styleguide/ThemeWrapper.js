@@ -4,10 +4,6 @@ import { crTheme } from '../index';
 
 export default class ThemeWrapper extends Component {
   render() {
-    return (
-      <ThemeProvider theme={crTheme}>
-        {this.props.children}
-      </ThemeProvider>
-    )
+    return <ThemeProvider theme={crTheme}>{this.props.children}</ThemeProvider>;
   }
 }

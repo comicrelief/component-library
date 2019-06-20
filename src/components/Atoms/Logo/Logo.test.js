@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import { renderWithTheme } from "../../../hoc/shallowWithTheme";
-import Logo from "./Logo";
+import React from 'react';
+import 'jest-styled-components';
+import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import Logo from './Logo';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(<Logo rotate={true} alt="CR18 Logo" />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
