@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 const StyleGuideRenderer = ({
   title,
   version,
@@ -12,9 +12,7 @@ const StyleGuideRenderer = ({
     <main className="wrapper">
       <div className="content">
         {components}
-        <footer className="footer">
-          Copyright @ Comic Relief 2019
-        </footer>
+        <footer className="footer">Copyright @ Comic Relief 2019</footer>
       </div>
       {hasSidebar && <div className="sidebar">{toc}</div>}
     </main>

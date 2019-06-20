@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
  * Text component
  */
 export const BaseText = styled.span`
-  color: ${({ color, theme }) =>
-    color ? theme.color(color) : 'inherit'};
+  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
 `;
 
