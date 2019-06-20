@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import { renderWithTheme } from "../../../hoc/shallowWithTheme";
-import Text from "./Text";
+import React from 'react';
+import 'jest-styled-components';
+import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import Text from './Text';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <Text tag="p" size="xl" color="yellow">
       My paragraph small and yellow

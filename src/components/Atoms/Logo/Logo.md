@@ -1,8 +1,5 @@
 # Logo Example
 
-``` js
-<Logo
-  rotate={false}
-  alt="CR18 logo"
-/>
+```js
+<Logo rotate={false} alt="CR18 logo" />
 ```
