@@ -1,24 +1,25 @@
 {
   "name": "component-library",
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js"
+    }
+  },
   "version": "0.1.0",
   "private": false,
   "license": "(ISC OR GPL-3.0)",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "babel": {
-    "plugins": [
-      ["babel-plugin-styled-components"]
-    ],
-    "presets": [
-      "@babel/react"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -30,10 +31,10 @@
     "styled-components": "^4.3.1"
   },
   "scripts": {
-    "eject": "react-scripts eject",
+    "test": "yarn run jest --watch",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "publish:npm": "export NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src --out-dir dist --copy-files"
+    "publish:npm": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +53,11 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "styled-components.macro": "^1.0.0"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+    "jest-styled-components": "^6.3.3",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6"
   }
 }
