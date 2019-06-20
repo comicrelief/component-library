@@ -3,9 +3,9 @@ const fontSizes = {
   "xs": '0.83125rem',
   "s": '1rem',
   "m": '1.2rem',
-  "l": '1.44rem',
-  "xl": '1.725rem',
-  "xxl": '2.075rem',
+  "l": '1.625rem',
+  "xl": '2.625rem',
+  "xxl": '4rem',
 };
 
 export const fontSize = size => {

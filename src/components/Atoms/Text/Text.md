@@ -1,12 +1,12 @@
 ```js
 <div>
-  <Text tag="h3" size="s">
+  <Text tag="h3" size="l">
     Heading 3
   </Text>
   <Text tag="p" colour="black">
     My paragraph
   </Text>
-  <Text tag="h3" size="m">
+  <Text tag="h3" size="xxl">
     Heading 3 size 3
   </Text>
   <Text tag="p" size="xl" color="red">
@@ -19,7 +19,7 @@ Sport Relief
 
 ```js
   <div>
-    <Text tag="h3" size="s">
+    <Text tag="h3" size="l">
       Heading 3
     </Text>
     <Text tag="p" colour="black">
