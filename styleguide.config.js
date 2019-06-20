@@ -20,9 +20,6 @@ module.exports = {
         link: 'white',
         linkHover: 'grey'
       },
-      fontFamily: {
-        base: '"Montserrat", Helvetica, Arial, sans-serif'
-      },
       fontSize: {
         base: 15,
         text: 16,

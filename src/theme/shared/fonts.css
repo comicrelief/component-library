@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800');
+
+h1, h2, h3, h4, h5 { 
+    text-transform: uppercase;
+    font-family: "Anton", Impact, sans-serif;
+}
+  
+p, span {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+  
+p:last-child {
+    margin: 0;
+}
