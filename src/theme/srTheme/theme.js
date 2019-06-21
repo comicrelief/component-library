@@ -4,6 +4,6 @@ import { breakpoint } from '../shared/breakpoint';
 
 export const theme = {
   color,
-  fontSize
-  //   font,
+  fontSize,
+  breakpoint
 };
