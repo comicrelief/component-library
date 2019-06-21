@@ -1,12 +1,14 @@
-# Input Field
+# TextField
 
 ```js
-<Input
+<TextField
   name="Fullname"
   placeholder="Placeholder"
   type="text"
   disabled={false}
+  error={true}
   color="black"
-  error={false}
+  helperText="Helper text"
+  label="Label"
 />
 ```
