@@ -5,8 +5,10 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 
 const StyledInput = styled.input`
-  background-color: white;
-  outline: none;
+  background-color: ${({ bgColor, theme }) =>
+    bgColor ? theme.color(bgColor) : theme.color('white')};
+  color: ${({ color, theme }) =>
+    color ? theme.color(color) : theme.color('white')};
   width: 100%;
   font-size: ${({ theme }) => theme.fontSize('m')};
   display: block;
@@ -42,7 +44,9 @@ Input.propTypes = {
   type: PropTypes.string,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
-  color: PropTypes.string
+  /** Colour  */
+  color: PropTypes.string,
+  bgColor: PropTypes.string
 };
 
 export default Input;

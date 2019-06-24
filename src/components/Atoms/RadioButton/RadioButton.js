@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 
 const StyledInput = styled.input`
-  background-color: white;
-  outline: none;
+  background-color: ${({ color, theme }) =>
+    color ? theme.color(color) : theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('sm')};
   display: block;
   box-sizing: border-box;

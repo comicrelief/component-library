@@ -7,5 +7,6 @@
   type="text"
   color="black"
   label="Label"
+  bgColor=""
 />
 ```
