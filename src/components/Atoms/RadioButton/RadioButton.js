@@ -19,20 +19,10 @@ const Label = styled.label`
 
 const RadioButton = ({ props, label, value, changed, ...rest }) => {
   return (
-    <>
-      <Label>
-        <StyledInput type="radio" {...rest} value={value} />
-        <Text weight="bold">{label}</Text>
-      </Label>
-      <Label>
-        <StyledInput type="radio" {...rest} value={value} />
-        <Text weight="bold">Female</Text>
-      </Label>
-      <Label>
-        <StyledInput type="radio" {...rest} value={value} />
-        <Text weight="bold">Other</Text>
-      </Label>
-    </>
+    <Label>
+      <StyledInput type="radio" {...rest} value={value} />
+      <Text weight="bold">{label}</Text>
+    </Label>
   );
 };
 
