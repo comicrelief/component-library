@@ -15,7 +15,7 @@ const Image = styled.img`
 
 const Picture = ({ images, alt, theme }) => {
   const { breakpoint } = theme;
-  console.log(theme);
+
   return (
     <picture>
       <source media={`${breakpoint('large')}`} srcSet={images.large} />
@@ -27,7 +27,7 @@ const Picture = ({ images, alt, theme }) => {
 };
 
 Picture.propTypes = {
-  images: PropTypes.array,
+  images: PropTypes.object,
   alt: PropTypes.string
 };
 
