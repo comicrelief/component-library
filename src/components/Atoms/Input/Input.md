@@ -2,7 +2,7 @@
 
 ```js
 <Input
-  name="Fullname"
+  name="fullname"
   placeholder="Placeholder"
   type="text"
   color="black"
