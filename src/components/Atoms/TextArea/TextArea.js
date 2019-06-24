@@ -23,11 +23,11 @@ const Label = styled.label`
   display: block;
   margin-bottom: 8px;
 `;
-const TextArea = ({ label, value, changed, color, ...rest }) => {
+const TextArea = ({ label, value, color, ...rest }) => {
   return (
     <Label>
       <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} value={value} color={color} onChange={changed} />
+      <StyledInput {...rest} value={value} color={color} />
     </Label>
   );
 };
