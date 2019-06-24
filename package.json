@@ -45,6 +45,7 @@
     "test": "yarn run jest --watch",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
+    "postinstall": "yarn run publish:npm",
     "publish:npm": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
   },
   "eslintConfig": {
