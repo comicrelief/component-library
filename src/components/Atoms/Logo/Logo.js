@@ -30,7 +30,7 @@ const LogoWrapper = styled.div.attrs(() => ({
 
 const Logo = ({ rotate, alt }) => {
   return (
-    <LogoWrapper rotate={rotate}>
+    <LogoWrapper rotate={rotate ? 1 : 0}>
       <Image src={image} alt={alt} />
     </LogoWrapper>
   );
