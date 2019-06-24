@@ -24,13 +24,19 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-const Select = ({ label, options }) => {
+const Select = ({ description, label, options, ...rest }) => {
   return (
     <Label>
       <Text weight="bold">{label}</Text>
       <StyledInput>
+        <option disabled>{description}</option>
         {options.map(option => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            {...rest}
+            selected={option.selected}
+          >
             {option.displayValue}
           </option>
         ))}
