@@ -9,6 +9,8 @@ module.exports = {
     Wrapper: path.join(__dirname, 'src/styleguide/ThemeWrapper')
   },
   ignore: [
+    '**/assets/**',
+    '**/data/**',
     '**/__tests__/**',
     '**/*.test.{js,jsx,ts,tsx}',
     '**/*.spec.{js,jsx,ts,tsx}',
