@@ -8,11 +8,17 @@ const IMAGE_FALLBACK =
 
 const Image = styled.img`
   display: block;
-  width: 100%;
-  height: auto;
+  width: ${props => (props.width ? props.width : '100%')};
+  height: ${props => (props.height ? props.height : 'auto')};
+  object-fit: ${props =>
+    (props.objectFit === 'none' && 'none') ||
+    (props.objectFit === 'cover' && 'cover') ||
+    (props.objectFit === 'contain' && 'contain')};
 `;
 
-const Picture = ({ images, alt, theme }) => {
+/** Responsive Picture */
+
+const Picture = ({ images, alt, theme, width, height, objectFit }) => {
   const { breakpoint } = theme;
 
   return (
@@ -20,14 +26,35 @@ const Picture = ({ images, alt, theme }) => {
       <source media={`${breakpoint('large')}`} srcSet={images.large} />
       <source media={`${breakpoint('medium')}`} srcSet={images.medium} />
       <source srcSet={images.small} />
-      <Image src={IMAGE_FALLBACK} alt={alt} />
+      <Image
+        src={IMAGE_FALLBACK}
+        alt={alt}
+        height={height}
+        width={width}
+        objectFit={objectFit}
+      />
     </picture>
   );
 };
 
 Picture.propTypes = {
   images: PropTypes.object,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  objectFit: PropTypes.oneOf([
+    'none',
+    'cover',
+    'contain',
+    'fill',
+    'scale-down'
+  ]),
+  width: PropTypes.string,
+  height: PropTypes.string
+};
+
+Picture.defaultProps = {
+  objectFit: 'none',
+  width: '100%',
+  height: 'auto'
 };
 
 export default withTheme(Picture);
