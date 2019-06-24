@@ -10,5 +10,25 @@ it('renders correctly', () => {
     </Link>
   ).toJSON();
 
-  expect(tree).toMatchInlineSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+    .c0 {
+      display: block;
+      padding: 16px 30px;
+      text-align: center;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: point;
+      background-color: #fbef51;
+    }
+
+    <a
+      className="c0"
+      color="yellow"
+      target="_self"
+    >
+      My paragraph small and yellow
+    </a>
+  `);
 });

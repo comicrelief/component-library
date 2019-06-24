@@ -7,10 +7,9 @@ const IMAGE_FALLBACK =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Image = styled.img`
-  width: 100%;
   display: block;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
 `;
 
 const Picture = ({ images, alt, theme }) => {

@@ -1,6 +1,6 @@
 Picture
 
 ```js
-const images = require('./data/images').default;
-<Picture alt="test Image" images={testImages} />;
+const images = require('./data/pictures').default;
+<Picture alt="test Image" images={images} />;
 ```

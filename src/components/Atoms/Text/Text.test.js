@@ -13,7 +13,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       color: #fbef51;
-      font-size: 2.625rem;
+      font-size: 1.725rem;
     }
 
     <p
