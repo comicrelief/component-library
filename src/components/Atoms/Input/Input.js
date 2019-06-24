@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Text from '../Text/Text';
 
-const StyledInput = styled.textarea`
+const StyledInput = styled.input`
   background-color: white;
   outline: none;
   width: 100%;
@@ -15,7 +15,8 @@ const StyledInput = styled.textarea`
   padding: 6px 10px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${({ color, theme }) => theme.color(color)};
+  border-color: ${({ color, theme, error }) =>
+    color && !error ? theme.color(color) : 'red'};
   margin: 0;
 `;
 
@@ -23,21 +24,25 @@ const Label = styled.label`
   display: block;
   margin-bottom: 8px;
 `;
-const TextArea = ({ label, value, changed, color, ...rest }) => {
+
+const Input = ({ props, label, type, value, changed, ...rest }) => {
   return (
     <Label>
       <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} value={value} color={color} onChange={changed} />
+      <StyledInput type={type} {...rest} value={value} />
     </Label>
   );
 };
 
-TextArea.propTypes = {
+Input.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
+  /** text, email, number */
+  type: PropTypes.string,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
   color: PropTypes.string
 };
 
-export default TextArea;
+export default Input;

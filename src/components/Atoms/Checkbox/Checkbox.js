@@ -4,40 +4,35 @@ import styled from 'styled-components';
 
 import Text from '../Text/Text';
 
-const StyledInput = styled.textarea`
+const StyledInput = styled.input`
   background-color: white;
   outline: none;
-  width: 100%;
-  font-size: ${({ theme }) => theme.fontSize('m')};
+  font-size: ${({ theme }) => theme.fontSize('sm')};
   display: block;
-  width: 100%;
   box-sizing: border-box;
-  padding: 6px 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: ${({ color, theme }) => theme.color(color)};
-  margin: 0;
 `;
 
 const Label = styled.label`
-  display: block;
+  display: flex;
   margin-bottom: 8px;
 `;
-const TextArea = ({ label, value, changed, color, ...rest }) => {
+
+const Checkbox = ({ props, label, value, changed, ...rest }) => {
   return (
     <Label>
+      <StyledInput type="checkbox" {...rest} value={value} />
       <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} value={value} color={color} onChange={changed} />
     </Label>
   );
 };
 
-TextArea.propTypes = {
+Checkbox.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
   color: PropTypes.string
 };
 
-export default TextArea;
+export default Checkbox;

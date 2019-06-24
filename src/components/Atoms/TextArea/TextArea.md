@@ -2,9 +2,11 @@
 
 ```js
 <TextArea
-  name="Fullname"
+  name="fullname"
   placeholder="Placeholder"
   label="Label"
-  helperText="Helper text"
+  color="black"
+  rows="5"
+  cols="5"
 />
 ```

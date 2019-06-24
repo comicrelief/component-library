@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Text from '../Text/Text';
 
-const StyledInput = styled.textarea`
+const StyledInput = styled.select`
   background-color: white;
   outline: none;
   width: 100%;
@@ -23,21 +23,31 @@ const Label = styled.label`
   display: block;
   margin-bottom: 8px;
 `;
-const TextArea = ({ label, value, changed, color, ...rest }) => {
+
+const Select = ({ label, options }) => {
   return (
     <Label>
       <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} value={value} color={color} onChange={changed} />
+      <StyledInput>
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.displayValue}
+          </option>
+        ))}
+      </StyledInput>
     </Label>
   );
 };
 
-TextArea.propTypes = {
+Select.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
+  /** options */
+  options: PropTypes.array,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
   color: PropTypes.string
 };
 
-export default TextArea;
+export default Select;
