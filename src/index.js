@@ -9,6 +9,7 @@ export { ThemeProvider } from './theme/ThemeProvider';
 export { default as Text } from './components/Atoms/Text/Text';
 export { default as Logo } from './components/Atoms/Logo/Logo';
 export { default as Picture } from './components/Atoms/Picture/Picture';
+export { default as Link } from './components/Atoms/Link/Link';
 
 /* Molecules */
 
