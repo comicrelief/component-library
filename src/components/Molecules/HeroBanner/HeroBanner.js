@@ -10,11 +10,6 @@ const Container = styled.section`
   background: ${props => (props.background ? props.background : 'transparent')};
   color: ${props => props.theme.color('red')};
   height: 500px;
-  h1 {
-  }
-  position: relative;
-  background: ${props => (props.background ? props.background : 'transparent')};
-  color: ${props => props.theme.color('red')};
 `;
 
 const Image = styled.img.attrs(() => ({

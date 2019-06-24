@@ -21,7 +21,7 @@ Text.defaultProps = {
   tag: 'span',
   weight: 'normal',
   uppercase: false,
-  size: 's0'
+  size: 's'
 };
 
 Text.propTypes = {
