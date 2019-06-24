@@ -17,7 +17,7 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-const Checkbox = ({ props, label, value, changed, ...rest }) => {
+const Checkbox = ({ props, label, value, ...rest }) => {
   return (
     <Label>
       <StyledInput type="checkbox" {...rest} value={value} />
