@@ -17,6 +17,7 @@ it('renders correctly', () => {
       backgroundColor="purple"
       imageSet={data.pictures}
       imageAltText=""
+      copyFirst={false}
     />
   ).toJSON();
 
@@ -69,6 +70,9 @@ it('renders correctly', () => {
 
     .c2 {
       padding: 20px;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
     }
 
     @media (min-width:740px) {
