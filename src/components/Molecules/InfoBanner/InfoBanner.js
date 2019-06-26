@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Moment from 'react-moment';
 import CurrencyFormat from 'react-currency-format';
+import PropTypes from 'prop-types';
 
 const Container = styled.section`
   display: flex;
@@ -92,6 +93,16 @@ const InfoBanner = ({
       </Info>
     </Container>
   );
+};
+
+InfoBanner.propTypes = {
+  title: PropTypes.string.isRequired,
+  background: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired
 };
 
 export default InfoBanner;

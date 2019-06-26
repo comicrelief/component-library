@@ -3,12 +3,16 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
+    "react/jsx-filename-extension": "off",
     "quotes": [
       2,
       "single",
       {
-        "avoidEscape": true,
-      },
-    ],
+        "avoidEscape": true
+      }
+    ]
   },
+  "env": {
+    "jest": true
+  }
 }

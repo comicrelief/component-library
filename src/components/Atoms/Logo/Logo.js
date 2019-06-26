@@ -38,7 +38,14 @@ const Logo = ({ rotate, alt }) => {
 
 Logo.propTypes = {
   /** Rotate logo */
-  rotate: PropTypes.bool
+  rotate: PropTypes.bool,
+  /** Alternative text */
+  alt: PropTypes.string
+};
+
+Logo.defaultProps = {
+  rotate: false,
+  alt: ''
 };
 
 export default Logo;

@@ -4,7 +4,7 @@ const sizes = {
   large: 1440
 };
 
-export const breakpoint = size => {
+export default size => {
   if (size) {
     return `(min-width: ${sizes[size]}px)`;
   }

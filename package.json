@@ -28,6 +28,7 @@
     "react-moment": "^0.9.2",
     "react-scripts": "3.0.1",
     "react-styleguidist": "^9.1.5",
+    "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.1"
   },
   "husky": {
@@ -70,7 +71,7 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
@@ -80,7 +81,6 @@
     "jest-styled-components": "^6.3.3",
     "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
-    "react-test-renderer": "^16.8.6",
     "semantic-release": "^15.13.17"
   }
 }

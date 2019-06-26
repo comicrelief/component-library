@@ -11,7 +11,7 @@ const colors = {
   red: '#E52630'
 };
 
-export const color = colorName => {
+export default colorName => {
   if (colorName) {
     return colors[colorName];
   }

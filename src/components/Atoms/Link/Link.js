@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledLink } from './Link.style.js';
+import StyledLink from './Link.style';
 
-const Link = ({ children, color, link, target, inline, ...rest }) => {
+const Link = ({ children, color, href, target, inline, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
 
   return (
     <StyledLink
       {...rest}
       color={color}
-      href={link}
+      href={href}
       target={window}
       inline={inline}
     >
@@ -27,7 +27,8 @@ Link.propTypes = {
   /** link target */
   target: PropTypes.string,
   /** link url */
-  link: PropTypes.string
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 Link.defaultProps = {

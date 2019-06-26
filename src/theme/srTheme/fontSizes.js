@@ -8,7 +8,7 @@ const fontSizes = {
   xxl: '2.075rem'
 };
 
-export const fontSize = size => {
+export default size => {
   if (size) {
     return fontSizes[size];
   }
