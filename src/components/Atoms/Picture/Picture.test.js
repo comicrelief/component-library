@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Picture from './Picture';
 import images from './data/pictures';
 

@@ -1,8 +1,8 @@
-import { color } from './colors';
-import { fontSize } from './fontSizes';
-import { breakpoint } from '../shared/breakpoint';
+import color from './colors';
+import fontSize from './fontSizes';
+import breakpoint from '../shared/breakpoint';
 
-export const theme = {
+export default {
   color,
   fontSize,
   breakpoint

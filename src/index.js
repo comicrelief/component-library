@@ -1,8 +1,8 @@
 /* Theme */
 
-export { theme as crTheme } from './theme/crTheme/theme';
-export { theme as srTheme } from './theme/srTheme/theme';
-export { ThemeProvider } from './theme/ThemeProvider';
+export { default as crTheme } from './theme/crTheme/theme';
+export { default as srTheme } from './theme/srTheme/theme';
+export { default as ThemeProvider } from './theme/ThemeProvider';
 
 /* Atoms */
 
