@@ -73,9 +73,9 @@ const InfoBanner = ({
         <Desc>
           <CurrencyFormat
             value={amount}
-            displayType={'text'}
-            thousandSeparator={true}
-            prefix={'£'}
+            displayType="text"
+            thousandSeparator
+            prefix="£"
             renderText={value => value}
           />
         </Desc>

@@ -1,12 +1,12 @@
 const sizes = {
-    small: 740,
-    medium: 1024,
-    large: 1440
-}
+  small: 740,
+  medium: 1024,
+  large: 1440
+};
 
 export const breakpoint = size => {
-    if (size) {
-        return `(min-width: ${sizes[size]}px)`;
-    }
-    return 'inherit';
+  if (size) {
+    return `(min-width: ${sizes[size]}px)`;
+  }
+  return 'inherit';
 };
