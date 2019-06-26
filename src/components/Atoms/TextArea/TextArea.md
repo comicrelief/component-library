@@ -1,12 +1,25 @@
 # TextArea Field
 
 ```js
+<h4>Long copy/Message field</h4>
 <TextArea
-  name="fullname"
-  placeholder="Placeholder"
+  name="description"
+  placeholder="This is text area"
   label="Label"
-  color="black"
   rows="5"
   cols="5"
+  errorMsg=""
+  id="Please leave your comment here"
+/>
+
+<h4>Long copy/Message field</h4>
+<TextArea
+  name="description"
+  placeholder="This is text area"
+  label="Label"
+  rows="5"
+  cols="5"
+  errorMsg="This is a error message"
+  id="Please leave your comment here"
 />
 ```

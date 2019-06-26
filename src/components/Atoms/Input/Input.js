@@ -52,7 +52,6 @@ const Label = styled.label.attrs(({ id }) => ({
 }))`
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
 `;
 
 /**
@@ -73,9 +72,10 @@ const ErrorText = styled(Text)`
     height: 19px;
     display: inline-block;
     vertical-align: top;
-    color: #ea0043;
+    color: ${({ theme }) => theme.color('red')};
   }
 `;
+
 const Input = ({ errorMsg, id, label, type, value, changed, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0 ? true : false;
   return (
