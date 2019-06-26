@@ -9,17 +9,20 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex-direction: row;
+    flex-direction: ${({ copyFirst }) =>
+      copyFirst === true ? 'row-reverse' : 'row'};
   }
 `;
 
 const Copy = styled.div`
   padding: 20px;
+  flex: 0 0 50%;
 `;
 
 const SingleMessage = ({
   title,
   text,
+  copyFirst,
   textColor,
   ctaText,
   ctaLink,
@@ -30,7 +33,7 @@ const SingleMessage = ({
   imageAltText
 }) => {
   return (
-    <Container backgroundColor={backgroundColor}>
+    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
       <Picture
         alt={imageAltText ? imageAltText : null}
         images={imageSet}

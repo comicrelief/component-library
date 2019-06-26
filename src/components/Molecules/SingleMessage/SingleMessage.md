@@ -14,5 +14,6 @@ const data = require('./data/data').default;
   backgroundColor="purple"
   imageSet={data.pictures}
   imageAltText=""
+  copyFirst={false}
 />;
 ```
