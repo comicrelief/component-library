@@ -6,12 +6,13 @@ import TextArea from './TextArea';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <TextArea
-      name="fullname"
-      placeholder="Placeholder"
+      name="description"
+      placeholder="This is text area"
       label="Label"
-      color="black"
       rows="5"
       cols="5"
+      errorMsg=""
+      id="Please leave your comment here"
     />
   ).toJSON();
 
@@ -22,27 +23,55 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      background-color: white;
-      outline: none;
-      width: 100%;
-      font-size: 1.2rem;
-      display: block;
-      width: 100%;
       box-sizing: border-box;
-      padding: 6px 10px;
-      border-width: 1px;
-      border-style: solid;
+      width: 100%;
+      margin: 10px 0;
+      min-height: 65px;
+      padding: 12px 50px 14px 10px;
+      font-size: 1.2rem;
+      background-color: #FFFFFF;
+      border: 1px solid;
       border-color: #030e1a;
-      margin: 0;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: #030e1a;
+    }
+
+    .c2:focus {
+      border: 1px solid #666;
+    }
+
+    .c2:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    .c2:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    .c2:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    .c2:focus:-ms-input-placeholder {
+      color: transparent;
     }
 
     .c0 {
-      display: block;
-      margin-bottom: 8px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     <label
       className="c0"
+      htmlFor="undefined"
     >
       <span
         className="c1"
@@ -51,11 +80,11 @@ it('renders correctly', () => {
         Label
       </span>
       <textarea
+        aria-describedby="Please leave your comment here"
         className="c2"
-        color="black"
         cols="5"
-        name="fullname"
-        placeholder="Placeholder"
+        name="description"
+        placeholder="This is text area"
         rows="5"
       />
     </label>
