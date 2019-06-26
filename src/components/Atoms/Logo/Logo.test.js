@@ -33,7 +33,7 @@ it('renders correctly', () => {
     <div
       className="c0"
       role="Logo"
-      rotate={true}
+      rotate={1}
     >
       <img
         alt="CR18 Logo"

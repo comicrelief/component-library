@@ -19,8 +19,7 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      background-color: white;
-      outline: none;
+      background-color: #FFFFFF;
       display: block;
       box-sizing: border-box;
     }
@@ -55,8 +54,7 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      background-color: white;
-      outline: none;
+      background-color: #FFFFFF;
       display: block;
       box-sizing: border-box;
     }

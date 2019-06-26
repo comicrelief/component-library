@@ -27,8 +27,7 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      background-color: white;
-      outline: none;
+      background-color: #FFFFFF;
       width: 100%;
       font-size: 1.2rem;
       display: block;
