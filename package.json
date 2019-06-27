@@ -44,7 +44,7 @@
     ]
   },
   "scripts": {
-    "test": "yarn run jest --watch",
+    "test": "yarn run jest",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
