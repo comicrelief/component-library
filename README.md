@@ -1,4 +1,4 @@
-Comic Relief React Componet Library 
+Comic Relief React Component Library 
 --------------
 
 [![CircleCI](https://circleci.com/gh/comicrelief/component-library.svg?style=svg)](https://circleci.com/gh/comicrelief/component-library)
