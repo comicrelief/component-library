@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
@@ -35,7 +36,7 @@ const SingleMessage = ({
   return (
     <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
       <Picture
-        alt={imageAltText ? imageAltText : null}
+        alt={imageAltText}
         images={imageSet}
         objectFit="cover"
         width="100%"
@@ -51,13 +52,40 @@ const SingleMessage = ({
           </Text>
         ) : null}
         {ctaLink ? (
-          <Link color={ctaColor} link={ctaLink} target={ctaTarget}>
+          <Link color={ctaColor} href={ctaLink} target={ctaTarget}>
             {ctaText}
           </Link>
         ) : null}
       </Copy>
     </Container>
   );
+};
+
+SingleMessage.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  copyFirst: PropTypes.string,
+  textColor: PropTypes.string,
+  ctaText: PropTypes.string,
+  ctaLink: PropTypes.string,
+  ctaColor: PropTypes.string,
+  ctaTarget: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  imageSet: PropTypes.string,
+  imageAltText: PropTypes.string
+};
+
+SingleMessage.defaultProps = {
+  text: null,
+  copyFirst: false,
+  textColor: 'inherit',
+  ctaText: null,
+  ctaLink: null,
+  ctaColor: null,
+  ctaTarget: null,
+  backgroundColor: 'white',
+  imageSet: null,
+  imageAltText: ''
 };
 
 export default SingleMessage;
