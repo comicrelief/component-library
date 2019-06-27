@@ -24,6 +24,23 @@ const Image = styled.img`
 const Picture = ({ images, alt, theme, width, height, objectFit }) => {
   const { breakpoint } = theme;
 
+  const isSingle = typeof images === 'object';
+
+  if (!isSingle) {
+    return (
+      <picture>
+        <source srcSet={images} />
+        <Image
+          src={IMAGE_FALLBACK}
+          alt={alt}
+          height="400px"
+          width={width}
+          objectFit={objectFit}
+        />
+      </picture>
+    );
+  }
+
   return (
     <picture>
       <source media={`${breakpoint('large')}`} srcSet={images.large} />
