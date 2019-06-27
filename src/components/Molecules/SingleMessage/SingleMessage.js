@@ -64,14 +64,15 @@ const SingleMessage = ({
 SingleMessage.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
-  copyFirst: PropTypes.string,
+  copyFirst: PropTypes.bool,
   textColor: PropTypes.string,
   ctaText: PropTypes.string,
   ctaLink: PropTypes.string,
   ctaColor: PropTypes.string,
   ctaTarget: PropTypes.string,
   backgroundColor: PropTypes.string,
-  imageSet: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  imageSet: PropTypes.object,
   imageAltText: PropTypes.string
 };
 

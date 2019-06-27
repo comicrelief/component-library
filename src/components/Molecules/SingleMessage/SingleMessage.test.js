@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
 import SingleMessage from './SingleMessage';
 import data from './data/data';
 
@@ -40,7 +40,7 @@ it('renders correctly', () => {
     }
 
     .c5 {
-      display: block;
+      display: inline-block;
       padding: 16px 30px;
       text-align: center;
       -webkit-text-decoration: none;
@@ -99,7 +99,7 @@ it('renders correctly', () => {
           srcSet="src/components/Atoms/Picture/assets/picture-1.jpg"
         />
         <img
-          alt={null}
+          alt=""
           className="c1"
           height="100%"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
