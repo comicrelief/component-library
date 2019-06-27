@@ -65,7 +65,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      margin-bottom: 8px;
     }
 
     @media (min-width:740px) {
@@ -76,7 +75,6 @@ it('renders correctly', () => {
 
     <label
       className="c0"
-      htmlFor="undefined"
     >
       <span
         className="c1"

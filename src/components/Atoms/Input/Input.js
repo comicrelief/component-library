@@ -79,7 +79,7 @@ const ErrorText = styled(Text)`
 const Input = ({ errorMsg, id, label, type, value, changed, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0 ? true : false;
   return (
-    <Label>
+    <Label htmlFor={id}>
       <Text weight="bold">{label}</Text>
       <StyledInput
         type={type}

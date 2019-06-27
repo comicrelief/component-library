@@ -4,24 +4,76 @@ import styled from 'styled-components';
 
 import Text from '../Text/Text';
 
+/**
+ * Input radio component
+ */
 const StyledInput = styled.input`
   background-color: ${({ color, theme }) =>
     color ? theme.color(color) : theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('sm')};
-  display: block;
-  box-sizing: border-box;
+  z-index: 1;
+  top: 0;
+  margin: 5px 10px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  + span {
+    left: 2px;
+    border-radius: 30px;
+    background-clip: padding-box;
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid ${({ theme }) => theme.color('grey')};
+  }
+  :checked + span {
+    background-color: ${({ theme }) => theme.color('purple')};
+    border: 1px solid ${({ theme }) => theme.color('purple')};
+    :before {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      right: 0;
+      background-color: ${({ theme }) => theme.color('white')};
+      border-radius: 30px;
+      width: 12px;
+      height: 12px;
+      z-index: 1;
+      margin: 0 auto;
+      opacity: 1;
+    }
+  }
 `;
 
-const Label = styled.label`
+/**
+ * Label component
+ */
+const Label = styled.label.attrs(({ label }) => ({
+  htmlFor: `${label}`
+}))`
   display: flex;
-  margin-bottom: 8px;
+  align-items: center;
+  position: relative;
 `;
 
-const RadioButton = ({ props, label, value, changed, ...rest }) => {
+const RadioButton = ({ label, name, changed, value, ...rest }) => {
   return (
-    <Label>
-      <StyledInput type="radio" {...rest} value={value} />
-      <Text weight="bold">{label}</Text>
+    <Label htmlFor={label}>
+      <StyledInput
+        type="radio"
+        {...rest}
+        name={name}
+        value={value}
+        id={value}
+      />
+      <Text></Text>
+      <Text weight="bold" for={label}>
+        {label}
+      </Text>
     </Label>
   );
 };
