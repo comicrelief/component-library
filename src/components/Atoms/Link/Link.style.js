@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyle = () => css`
-  display: block;
+  display: inline-block;
   padding: 16px 30px;
   text-align: center;
   text-decoration: none;
