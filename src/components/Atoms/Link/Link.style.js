@@ -37,7 +37,7 @@ const buttonStyle = () => css`
       `)};
 `;
 
-export const StyledLink = styled.a`
+const StyledLink = styled.a`
   ${props =>
     props.inline
       ? css`
@@ -50,3 +50,5 @@ export const StyledLink = styled.a`
         `
       : buttonStyle}
 `;
+
+export default StyledLink;

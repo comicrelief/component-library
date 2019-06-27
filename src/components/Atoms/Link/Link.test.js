@@ -1,11 +1,11 @@
 import React from 'react';
 import 'jest-styled-components';
-import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Link from './Link';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <Link button color="yellow">
+    <Link href="/test" button color="yellow">
       My paragraph small and yellow
     </Link>
   ).toJSON();
@@ -26,6 +26,7 @@ it('renders correctly', () => {
     <a
       className="c0"
       color="yellow"
+      href="/test"
       target="_self"
     >
       My paragraph small and yellow

@@ -51,11 +51,11 @@ const HeroBanner = ({ url, title, background }) => {
 
 HeroBanner.propTypes = {
   /** Image url */
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
   /** Header Title */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   /** Background Color */
-  background: PropTypes.string
+  background: PropTypes.string.isRequired
 };
 
 export default HeroBanner;

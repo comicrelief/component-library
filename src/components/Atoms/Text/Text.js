@@ -34,7 +34,12 @@ Text.propTypes = {
   /** Tag type */
   tag: PropTypes.string,
   /** Sizes */
-  size: PropTypes.string
+  size: PropTypes.string,
+  children: PropTypes.string.isRequired
+};
+
+Text.defaultProps = {
+  color: 'inherit'
 };
 
 export default Text;
