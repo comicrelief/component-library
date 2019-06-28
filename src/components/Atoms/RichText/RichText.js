@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import DOMPurify from 'dompurify';
 
-export const RichTextInner = styled.div`
+export const Inner = styled.div`
   text-align: ${props => props.align};
 `;
 
@@ -12,7 +12,7 @@ const RichText = ({ align, markup, ...rest }) => {
   const sanitisedMarkup = DOMPurify.sanitize(markup);
 
   return (
-    <RichTextInner
+    <Inner
       align={align}
       dangerouslySetInnerHTML={{ __html: sanitisedMarkup }}
       {...rest}
@@ -21,7 +21,7 @@ const RichText = ({ align, markup, ...rest }) => {
 };
 
 RichText.propTypes = {
-  align: PropTypes.string,
+  align: PropTypes.oneOf(['left', 'center', 'right']),
   markup: PropTypes.string
 };
 
