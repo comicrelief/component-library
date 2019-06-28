@@ -12,7 +12,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      display: block;
+      display: inline-block;
       padding: 16px 30px;
       text-align: center;
       -webkit-text-decoration: none;

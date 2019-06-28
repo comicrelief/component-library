@@ -19,3 +19,6 @@ export {
 export {
   default as InfoBanner
 } from './components/Molecules/InfoBanner/InfoBanner';
+export {
+  default as SingleMessage
+} from './components/Molecules/SingleMessage/SingleMessage';
