@@ -10,6 +10,7 @@ export { default as Text } from './components/Atoms/Text/Text';
 export { default as Logo } from './components/Atoms/Logo/Logo';
 export { default as Picture } from './components/Atoms/Picture/Picture';
 export { default as Link } from './components/Atoms/Link/Link';
+export { default as RichText } from './components/Atoms/RichText/RichText';
 
 /* Molecules */
 
