@@ -2,7 +2,7 @@
   "name": "@comicrelief/component-library",
   "version": "0.0.0-see.readme.for.semantic.release.process",
   "main": "dist/index.js",
-  "license": "(ISC OR GPL-3.0)",
+  "license": "ISC",
   "jest": {
     "verbose": true,
     "testPathIgnorePatterns": [
