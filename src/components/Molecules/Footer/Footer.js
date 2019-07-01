@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-// import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import data from './data/data';
 
 export const Inner = styled.footer`
   background-color: black;
@@ -13,45 +11,39 @@ export const Inner = styled.footer`
   }
 `;
 
-const Footer = ({ markup, ...rest }) => {
-  const thisData = markup.data;
-
+const Footer = ({ items, ...rest }) => {
   return (
-    <Inner markup {...rest}>
-      <footer role="navigation">
-        <ul className="parent-menu">
-          {thisData.menuGroup.map(thisGroup => (
-            <li key={thisGroup.id}>
-              <Link className="parent-item" href={thisGroup.url} inline>
-                {thisGroup.title}
-              </Link>
-              {thisGroup.links ? (
-                <ul>
-                  {thisGroup.links.map(childLink => (
-                    <li>
-                      <Link href={childLink.url} inline>
-                        {childLink.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))}
-        </ul>
-      </footer>
+    <Inner items {...rest}>
+      <ul className="parent-menu">
+        {items.menuGroup.map(thisGroup => (
+          <li key={thisGroup.url}>
+            <Link className="parent-item" href={thisGroup.url} inline>
+              {thisGroup.title}
+            </Link>
+            {thisGroup.links ? (
+              <ul>
+                {thisGroup.links.map(childLink => (
+                  <li key={childLink.url}>
+                    <Link href={childLink.url} inline>
+                      {childLink.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        ))}
+      </ul>
     </Inner>
   );
 };
 
 Footer.propTypes = {
-  markup: PropTypes.objectOf(PropTypes.shape)
+  items: PropTypes.objectOf(PropTypes.shape)
 };
 
 Footer.defaultProps = {
-  markup: {
-    data
-  }
+  items: {}
 };
 
 export default Footer;

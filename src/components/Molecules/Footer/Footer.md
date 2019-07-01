@@ -1,3 +1,5 @@
 ```js
-<Footer></Footer>
+import data from './data/data';
+
+<Footer items={data} />;
 ```
