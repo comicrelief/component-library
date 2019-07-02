@@ -1,5 +1,8 @@
 {
-  "name": "component-library",
+  "name": "@comicrelief/component-library",
+  "version": "0.0.0-see.readme.for.semantic.release.process",
+  "main": "dist/index.js",
+  "license": "ISC",
   "jest": {
     "verbose": true,
     "testPathIgnorePatterns": [
@@ -10,16 +13,14 @@
       "\\.(css|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js"
     }
   },
-  "version": "0.1.0",
-  "private": false,
-  "license": "(ISC OR GPL-3.0)",
-  "main": "dist/index.js",
   "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
+    "dompurify": "^1.0.11",
+    "@babel/cli": "^7.4.4",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -65,7 +66,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
     "babel-eslint": "^10.0.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",

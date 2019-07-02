@@ -17,3 +17,10 @@ const images = require('./data/pictures').default;
   height="200px"
 />;
 ```
+
+Single image
+
+```js
+const images = require('./data/pictures').default;
+<Picture alt="test Image" images={images.small} />;
+```

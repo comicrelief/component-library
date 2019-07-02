@@ -59,7 +59,7 @@ const Label = styled.label.attrs(({ id }) => ({
  */
 const ErrorText = styled(Text)`
   color: red;
-  font-weight: ${({ weight }) => (weight ? weight : 'inherit')};
+  font-weight: ${({ weight }) => weight};
   :before {
     position: relative;
     content: '';
@@ -76,8 +76,8 @@ const ErrorText = styled(Text)`
   }
 `;
 
-const Input = ({ errorMsg, id, label, type, value, changed, ...rest }) => {
-  const error = errorMsg && errorMsg.length > 0 ? true : false;
+const Input = ({ errorMsg, id, label, type, value, ...rest }) => {
+  const error = errorMsg && errorMsg.length > 0;
   return (
     <Label htmlFor={id}>
       <Text weight="bold">{label}</Text>
@@ -88,22 +88,20 @@ const Input = ({ errorMsg, id, label, type, value, changed, ...rest }) => {
         error={error ? 1 : 0}
         aria-describedby={id}
       />
-      {error && <ErrorText size="sm"> {errorMsg} </ErrorText>}
+      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
   );
 };
 
 Input.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  errorMsg: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
-  type: PropTypes.string,
-  onChange: PropTypes.func,
-  disabled: PropTypes.bool,
-  /** Colour  */
-  color: PropTypes.string,
-  bgColor: PropTypes.string
+  type: PropTypes.string.isRequired
 };
 
 export default Input;

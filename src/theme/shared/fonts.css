@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800');
 
+/** move to a reset file */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -10,7 +20,6 @@ h5 {
 }
 
 p,
-span,
 a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;

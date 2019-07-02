@@ -15,6 +15,7 @@ export { default as Checkbox } from './components/Atoms/Checkbox/Checkbox';
 export { default as Input } from './components/Atoms/Input/Input';
 export { default as Select } from './components/Atoms/SelectField/SelectField';
 export { default as TextArea } from './components/Atoms/TextArea/TextArea';
+export { default as RichText } from './components/Atoms/RichText/RichText';
 
 /* Molecules */
 
@@ -24,3 +25,6 @@ export {
 export {
   default as InfoBanner
 } from './components/Molecules/InfoBanner/InfoBanner';
+export {
+  default as SingleMessage
+} from './components/Molecules/SingleMessage/SingleMessage';
