@@ -65,6 +65,10 @@ module.exports = {
       content: './docs/installation.md'
     },
     {
+      name: 'Utils',
+      content: './docs/utils.md'
+    },
+    {
       name: 'Atoms',
       components: 'src/components/Atoms/**/*.js',
       sectionDepth: 2
