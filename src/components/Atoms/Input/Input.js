@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Text from '../Text/Text';
 import alertIcon from './assets/error-alert-icon.png';
+import hideVisually from '../../../theme/shared/hideVisually';
 
 /**
  * Input component
@@ -52,6 +53,9 @@ const Label = styled.label.attrs(({ id }) => ({
 }))`
   display: flex;
   flex-direction: column;
+  span {
+    visibility: ${({ showLabel }) => showLabel === 'no' && hideVisually};
+  }
 `;
 
 /**
@@ -76,10 +80,10 @@ const ErrorText = styled(Text)`
   }
 `;
 
-const Input = ({ errorMsg, id, label, type, ...rest }) => {
+const Input = ({ errorMsg, id, label, showLabel, type, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
-    <Label htmlFor={id}>
+    <Label htmlFor={id} showLabel={showLabel}>
       <Text weight="bold">{label}</Text>
       <StyledInput
         type={type}
@@ -97,6 +101,7 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   errorMsg: PropTypes.string.isRequired,
+  showLabel: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
   type: PropTypes.string.isRequired
