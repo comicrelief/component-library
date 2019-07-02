@@ -76,7 +76,7 @@ const ErrorText = styled(Text)`
   }
 `;
 
-const Input = ({ errorMsg, id, label, type, value, ...rest }) => {
+const Input = ({ errorMsg, id, label, type, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
     <Label htmlFor={id}>
@@ -84,7 +84,6 @@ const Input = ({ errorMsg, id, label, type, value, ...rest }) => {
       <StyledInput
         type={type}
         {...rest}
-        value={value}
         error={error ? 1 : 0}
         aria-describedby={id}
       />
@@ -96,7 +95,6 @@ const Input = ({ errorMsg, id, label, type, value, ...rest }) => {
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   errorMsg: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,

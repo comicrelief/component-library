@@ -1,26 +1,22 @@
 import React from 'react';
 import 'jest-styled-components';
-import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Input from './Input';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <Input
       name="fullname"
-      placeholder="Placeholder"
+      placeholder="This is the hint text"
       type="text"
-      color="black"
       label="Label"
+      errorMsg=""
+      id="Acessibility info go here"
     />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      color: inherit;
-      font-size: 1rem;
-    }
-
-    .c2 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -37,23 +33,23 @@ it('renders correctly', () => {
       color: #030e1a;
     }
 
-    .c2:focus {
+    .c1:focus {
       border: 1px solid #666;
     }
 
-    .c2:focus::-webkit-input-placeholder {
+    .c1:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c2:focus:-moz-placeholder {
+    .c1:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c2:focus::-moz-placeholder {
+    .c1:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c2:focus:-ms-input-placeholder {
+    .c1:focus:-ms-input-placeholder {
       color: transparent;
     }
 
@@ -68,27 +64,29 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c2 {
+      .c1 {
         max-width: 290px;
       }
     }
 
     <label
       className="c0"
+      htmlFor="Acessibility info go here"
     >
       <span
-        className="c1"
-        size="s"
+        className=""
+        color="inherit"
       >
         Label
       </span>
       <input
-        className="c2"
-        color="black"
+        aria-describedby="Acessibility info go here"
+        className="c1"
         name="fullname"
-        placeholder="Placeholder"
+        placeholder="This is the hint text"
         type="text"
       />
+      
     </label>
   `);
 });

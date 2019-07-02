@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import { renderWithTheme } from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
 import RadioButton from './RadioButton';
 
 it('renders correctly', () => {
@@ -13,12 +13,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c2 {
-      color: inherit;
-      font-size: 1rem;
-    }
-
-    .c1 {
+      .c1 {
       background-color: #FFFFFF;
       z-index: 1;
       top: 0;
@@ -84,24 +79,16 @@ it('renders correctly', () => {
           type="radio"
           value="male"
         />
+        <span />
         <span
-          className="c2"
-          size="s"
-        />
-        <span
-          className="c2"
+          className=""
+          color="inherit"
           for="Male"
-          size="s"
         >
           Male
         </span>
       </label>,
-      .c2 {
-      color: inherit;
-      font-size: 1rem;
-    }
-
-    .c1 {
+      .c1 {
       background-color: #FFFFFF;
       z-index: 1;
       top: 0;
@@ -167,14 +154,11 @@ it('renders correctly', () => {
           type="radio"
           value="female"
         />
+        <span />
         <span
-          className="c2"
-          size="s"
-        />
-        <span
-          className="c2"
+          className=""
+          color="inherit"
           for="Female"
-          size="s"
         >
           Female
         </span>

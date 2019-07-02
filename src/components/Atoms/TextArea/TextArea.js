@@ -13,10 +13,11 @@ const StyledInput = styled.textarea`
   width: 100%;
   margin: 10px 0;
   min-height: 65px;
-  padding: 12px 50px 14px 10px;
+  padding: 6px 12px;
   font-size: ${({ theme }) => theme.fontSize('m')};
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid;
+  border-radius: 0;
   border-color: ${({ theme, error }) =>
     !error ? theme.color('black') : theme.color('red')};
   box-shadow: none;
@@ -28,16 +29,37 @@ const StyledInput = styled.textarea`
   }
   :focus::-webkit-input-placeholder {
     color: transparent;
+    color: $color;
+    font-size: $font-size;
+    opacity: 1;
+    overflow: visible;
   }
   :focus:-moz-placeholder {
     color: transparent;
+    color: $color;
+    font-size: $font-size;
+    opacity: 1;
+    overflow: visible;
   } /* FF 4-18 */
   :focus::-moz-placeholder {
     color: transparent;
+    color: $color;
+    font-size: $font-size;
+    opacity: 1;
+    overflow: visible;
   } /* FF 19+ */
   :focus:-ms-input-placeholder {
     color: transparent;
+    color: $color;
+    font-size: $font-size;
+    opacity: 1;
+    overflow: visible;
   } /* IE 10+ */
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    max-width: 100%;
+    height: 96px;
+  }
 `;
 
 /**
@@ -55,7 +77,7 @@ const Label = styled.label.attrs(({ id }) => ({
  */
 const ErrorText = styled(Text)`
   color: red;
-  font-weight: ${({ weight }) => (weight ? weight : 'inherit')};
+  font-weight: ${({ weight }) => weight};
   :before {
     position: relative;
     content: '';
@@ -72,29 +94,23 @@ const ErrorText = styled(Text)`
   }
 `;
 
-const TextArea = ({ id, label, value, errorMsg, ...rest }) => {
-  const error = errorMsg && errorMsg.length > 0 ? true : false;
+const TextArea = ({ id, label, errorMsg, ...rest }) => {
+  const error = errorMsg && errorMsg.length > 0;
   return (
     <Label>
       <Text weight="bold">{label}</Text>
-      <StyledInput
-        {...rest}
-        value={value}
-        error={error ? 1 : 0}
-        aria-describedby={id}
-      />
-      {error && <ErrorText size="sm"> {errorMsg} </ErrorText>}
+      <StyledInput {...rest} error={error ? 1 : 0} aria-describedby={id} />
+      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
   );
 };
 
 TextArea.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  color: PropTypes.string,
-  id: PropTypes.string
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  errorMsg: PropTypes.string.isRequired
 };
 
 export default TextArea;

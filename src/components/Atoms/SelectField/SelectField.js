@@ -92,8 +92,6 @@ const Select = ({ errorMsg, description, label, options, ...rest }) => {
 };
 
 Select.propTypes = {
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   errorMsg: PropTypes.string.isRequired,
   /** options */

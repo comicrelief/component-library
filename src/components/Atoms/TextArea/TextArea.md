@@ -19,7 +19,7 @@
   label="Label"
   rows="5"
   cols="5"
-  errorMsg="This is a error message"
+  errorMsg="This is an error message"
   id="Please leave your comment here"
 />
 ```

@@ -60,7 +60,7 @@ const Label = styled.label.attrs(({ label }) => ({
   position: relative;
 `;
 
-const RadioButton = ({ label, name, changed, value, ...rest }) => {
+const RadioButton = ({ label, name, value, ...rest }) => {
   return (
     <Label htmlFor={label}>
       <StyledInput
@@ -70,7 +70,7 @@ const RadioButton = ({ label, name, changed, value, ...rest }) => {
         value={value}
         id={value}
       />
-      <Text></Text>
+      <span />
       <Text weight="bold" for={label}>
         {label}
       </Text>
@@ -79,12 +79,9 @@ const RadioButton = ({ label, name, changed, value, ...rest }) => {
 };
 
 RadioButton.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  disabled: PropTypes.bool,
-  color: PropTypes.string
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired
 };
 
 export default RadioButton;
