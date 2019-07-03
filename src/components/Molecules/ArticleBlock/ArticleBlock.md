@@ -10,5 +10,6 @@ const images = require('../../Atoms/Picture/data/pictures').default;
   uppercase={true}
   weight="bold"
   copy="News article"
+  objectFit="cover"
 />;
 ```

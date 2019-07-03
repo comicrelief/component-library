@@ -9,24 +9,44 @@ import StyledLink from '../../Atoms/Link/Link.style';
 const ArticleTeaser = styled.article`
   width: 100%;
   height: 100%;
-  display: inline-block;
+  display: flex;
   background-color: #fff;
 `;
 
 const Link = styled(StyledLink)`
-  display: inline-block;
+  display: flex;
   height: 100%;
   border: 0;
+  flex-direction: column;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    flex-direction: row;
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    flex-direction: column;
+  }
 `;
 
-const ImageWrapper = styled(Picture)`
+const ImageWrapper = styled.div`
   height: 100%;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 45%;
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
+  }
 `;
 
 const CopyWrapper = styled.div`
   padding: 40px;
   h3 {
     margin: 0;
+  }
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 55%;
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -39,13 +59,16 @@ const ArticleBlock = ({
   alt,
   uppercase,
   weight,
-  copy
+  copy,
+  objectFit
 }) => {
   const window = target === 'blank' ? '_blank' : '_self';
   return (
     <ArticleTeaser>
       <Link href={href} target={window} inline={inline}>
-        <ImageWrapper images={images} alt={alt} />
+        <ImageWrapper>
+          <Picture images={images} alt={alt} objectFit={objectFit} />
+        </ImageWrapper>
         <CopyWrapper>
           <Text uppercase={uppercase} size="xxs" weight={weight}>
             {date}
@@ -68,6 +91,7 @@ ArticleBlock.propTypes = {
   target: PropTypes.string,
   date: PropTypes.string,
   weight: PropTypes.string,
+  objectFit: PropTypes.string,
   copy: PropTypes.string.isRequired,
   /** link url */
   href: PropTypes.string.isRequired
@@ -80,7 +104,8 @@ ArticleBlock.defaultProps = {
   alt: '',
   date: 'Date goes here',
   uppercase: false,
-  weight: 'normal'
+  weight: 'normal',
+  objectFit: 'none'
 };
 
 export default ArticleBlock;
