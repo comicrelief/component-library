@@ -41,7 +41,7 @@ it('renders correctly', () => {
       padding: 12px 50px 8px 10px;
       height: 50px;
       font-weight: 300;
-      background: transparent url() calc(100% - 20px) 18px/20px 20px no-repeat;
+      background: transparent url(mock.asset) calc(100% - 20px) 18px/20px 20px no-repeat;
       cursor: pointer;
       margin-bottom: 0;
       cursor: pointer;

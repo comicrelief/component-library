@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import { dropDownIcon } from './assets/drop-down-dark-purple.svg';
-import { alertIcon } from './assets/error-alert-icon.png';
+import dropDownIcon from './assets/drop-down-dark-purple.svg';
+import alertIcon from './assets/error-alert-icon.png';
 
 const StyledInput = styled.select`
   background-color: ${({ color, theme }) =>

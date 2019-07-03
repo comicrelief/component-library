@@ -38,11 +38,7 @@ it('renders correctly', () => {
       <img
         alt="CR18 Logo"
         className="c1"
-        src={
-          Object {
-            "process": [Function],
-          }
-        }
+        src="mock.asset"
       />
     </div>
   `);

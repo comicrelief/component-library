@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import { checkBoxIcon } from './assets/checkbox-white-tick.png';
+import checkBoxIcon from './assets/checkbox-white-tick.png';
 
 const StyledInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize('sm')};
