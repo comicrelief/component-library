@@ -9,7 +9,7 @@
     label="Label"
     errorMsg=""
     id="Acessibility info go here"
-    showLabel="no"
+    showLabel={true}
   />
 
   <h4>Input with error message</h4>
@@ -20,7 +20,7 @@
     label="Label"
     errorMsg="This is an error message"
     id="Acessibility info go here"
-    showLabel="yes"
+    showLabel={false}
   />
 
   <h4>Simple input (optional)</h4>
@@ -31,6 +31,6 @@
     label="Label"
     errorMsg=""
     id="Acessibility info go here"
-    showLabel="no"
+    showLabel={true}
   />
 ```

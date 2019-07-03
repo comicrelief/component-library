@@ -53,9 +53,6 @@ const Label = styled.label.attrs(({ id }) => ({
 }))`
   display: flex;
   flex-direction: column;
-  span {
-    visibility: ${({ showLabel }) => showLabel === 'no' && hideVisually};
-  }
 `;
 
 /**
@@ -80,11 +77,19 @@ const ErrorText = styled(Text)`
   }
 `;
 
+/**
+ * Label text component
+ */
+const TextLabel = styled(Text)`
+  visibility: ${({ showLabel }) => !showLabel && hideVisually};
+`;
 const Input = ({ errorMsg, id, label, showLabel, type, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
-    <Label htmlFor={id} showLabel={showLabel}>
-      <Text weight="bold">{label}</Text>
+    <Label htmlFor={id}>
+      <TextLabel showLabel={showLabel} weight="bold">
+        {label}
+      </TextLabel>
       <StyledInput
         type={type}
         {...rest}
@@ -101,10 +106,14 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   errorMsg: PropTypes.string.isRequired,
-  showLabel: PropTypes.string.isRequired,
+  showLabel: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
   type: PropTypes.string.isRequired
+};
+
+Input.defaultProps = {
+  showLabel: true
 };
 
 export default Input;
