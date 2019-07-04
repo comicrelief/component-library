@@ -23,6 +23,11 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c2 {
       background-color: #FFFFFF;
       width: 100%;
       font-size: 1.2rem;
@@ -52,7 +57,7 @@ it('renders correctly', () => {
       border-radius: 0;
     }
 
-    .c1:focus {
+    .c2:focus {
       border: 1px solid #666;
     }
 
@@ -62,7 +67,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c1 {
+      .c2 {
         max-width: 290px;
       }
     }
@@ -71,13 +76,13 @@ it('renders correctly', () => {
       className="c0"
     >
       <span
-        className=""
+        className="c1"
         color="inherit"
       >
         Label
       </span>
       <select
-        className="c1"
+        className="c2"
       >
         <option
           disabled={true}

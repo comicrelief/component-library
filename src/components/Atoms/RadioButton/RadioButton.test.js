@@ -13,7 +13,12 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c1 {
+      .c2 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c1 {
       background-color: #FFFFFF;
       z-index: 1;
       top: 0;
@@ -81,14 +86,19 @@ it('renders correctly', () => {
         />
         <span />
         <span
-          className=""
+          className="c2"
           color="inherit"
           for="Male"
         >
           Male
         </span>
       </label>,
-      .c1 {
+      .c2 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c1 {
       background-color: #FFFFFF;
       z-index: 1;
       top: 0;
@@ -156,7 +166,7 @@ it('renders correctly', () => {
         />
         <span />
         <span
-          className=""
+          className="c2"
           color="inherit"
           for="Female"
         >

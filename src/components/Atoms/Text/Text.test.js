@@ -14,6 +14,7 @@ it('renders correctly', () => {
     .c0 {
       color: #fbef51;
       font-size: 1.725rem;
+      text-transform: inherit;
     }
 
     <p

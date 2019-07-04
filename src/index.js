@@ -29,3 +29,6 @@ export {
 export {
   default as SingleMessage
 } from './components/Molecules/SingleMessage/SingleMessage';
+export {
+  default as ArticleBlock
+} from './components/Molecules/ArticleTeaser/ArticleTeaser';
