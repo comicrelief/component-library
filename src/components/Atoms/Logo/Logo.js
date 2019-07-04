@@ -28,24 +28,21 @@ const LogoWrapper = styled.div.attrs(() => ({
   }
 `;
 
-const Logo = ({ rotate, alt }) => {
+const Logo = ({ rotate }) => {
   return (
     <LogoWrapper rotate={rotate ? 1 : 0}>
-      <Image src={image} alt={alt} />
+      <Image src={image} alt="Comic Relief logo" />
     </LogoWrapper>
   );
 };
 
 Logo.propTypes = {
   /** Rotate logo */
-  rotate: PropTypes.bool,
-  /** Alternative text */
-  alt: PropTypes.string
+  rotate: PropTypes.bool
 };
 
 Logo.defaultProps = {
-  rotate: false,
-  alt: ''
+  rotate: false
 };
 
 export default Logo;
