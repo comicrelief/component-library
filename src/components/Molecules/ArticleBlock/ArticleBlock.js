@@ -73,7 +73,9 @@ const ArticleBlock = ({
           <Text uppercase={uppercase} size="xxs" weight={weight}>
             {date}
           </Text>
-          <Text tag="h3">{copy}</Text>
+          <Text size="xl" tag="h3">
+            {copy}
+          </Text>
         </CopyWrapper>
       </Link>
     </ArticleTeaser>
