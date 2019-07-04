@@ -25,11 +25,13 @@ it('renders correctly', () => {
     .c3 {
       color: #FFFFFF;
       font-size: 2.075rem;
+      text-transform: inherit;
     }
 
     .c4 {
       color: #FFFFFF;
       font-size: 1.2rem;
+      text-transform: inherit;
     }
 
     .c1 {

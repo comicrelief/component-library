@@ -6,7 +6,10 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import StyledLink from '../../Atoms/Link/Link.style';
 
-const ArticleTeaser = styled.article`
+/**
+ * Article tag wrapper
+ */
+const Wrapper = styled.article`
   width: 100%;
   height: 100%;
   display: flex;
@@ -50,64 +53,38 @@ const CopyWrapper = styled.div`
   }
 `;
 
-const ArticleBlock = ({
-  date,
-  href,
-  inline,
-  images,
-  target,
-  alt,
-  uppercase,
-  weight,
-  copy,
-  objectFit
-}) => {
-  const window = target === 'blank' ? '_blank' : '_self';
+/**
+ * Article teaser component
+ */
+const ArticleTeaser = ({ date, href, images, alt, title, objectFit }) => {
   return (
-    <ArticleTeaser>
-      <Link href={href} target={window} inline={inline}>
+    <Wrapper>
+      <Link href={href} inline>
         <ImageWrapper>
           <Picture images={images} alt={alt} objectFit={objectFit} />
         </ImageWrapper>
         <CopyWrapper>
-          <Text uppercase={uppercase} size="xxs" weight={weight}>
+          <Text size="xxs" weight="bold" uppercase>
             {date}
           </Text>
-          <Text size="xl" tag="h3">
-            {copy}
+          <Text size="xl" tag="h3" uppercase>
+            {title}
           </Text>
         </CopyWrapper>
       </Link>
-    </ArticleTeaser>
+    </Wrapper>
   );
 };
 
-ArticleBlock.propTypes = {
+ArticleTeaser.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   images: PropTypes.object.isRequired,
-  alt: PropTypes.string,
-  /** Inline is link style */
-  inline: PropTypes.bool,
-  uppercase: PropTypes.bool,
-  /** link target */
-  target: PropTypes.string,
-  date: PropTypes.string,
-  weight: PropTypes.string,
-  objectFit: PropTypes.string,
-  copy: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  objectFit: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   /** link url */
   href: PropTypes.string.isRequired
-  // children: PropTypes.node.isRequired
 };
 
-ArticleBlock.defaultProps = {
-  target: 'self',
-  inline: true,
-  alt: '',
-  date: 'Date goes here',
-  uppercase: false,
-  weight: 'normal',
-  objectFit: 'none'
-};
-
-export default ArticleBlock;
+export default ArticleTeaser;

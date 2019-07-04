@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
-  text-transform: ${({ uppercase }) => uppercase && 'uppercase'};
+  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   font-weight: ${({ weight }) => weight};
 `;
 

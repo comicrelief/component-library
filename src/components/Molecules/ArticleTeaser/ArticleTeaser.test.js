@@ -1,20 +1,18 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleBlock from './ArticleBlock';
+import ArticleTeaser from './ArticleTeaser';
 import images from '../../Atoms/Picture/data/pictures';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <ArticleBlock
+    <ArticleTeaser
       href="/test"
-      target="blank"
       images={images}
-      date=" 2 July 2019"
-      uppercase
-      weight="bold"
-      copy="News article"
+      date=" 01 July 2019"
+      title="News article"
       objectFit="cover"
+      alt="Image's description"
     />
   ).toJSON();
 
@@ -27,6 +25,7 @@ it('renders correctly', () => {
 
     .c6 {
       font-size: 1.725rem;
+      text-transform: uppercase;
     }
 
     .c3 {
@@ -124,7 +123,6 @@ it('renders correctly', () => {
       <a
         className="c1"
         href="/test"
-        target="_blank"
       >
         <div
           className="c2"
@@ -142,7 +140,7 @@ it('renders correctly', () => {
               srcSet="src/components/Atoms/Picture/assets/picture-1.jpg"
             />
             <img
-              alt=""
+              alt="Image's description"
               className="c3"
               height="auto"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -158,7 +156,7 @@ it('renders correctly', () => {
             color="inherit"
             size="xxs"
           >
-             2 July 2019
+             01 July 2019
           </span>
           <h3
             className="c6"

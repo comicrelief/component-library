@@ -26,4 +26,4 @@ export {
 } from './components/Molecules/SingleMessage/SingleMessage';
 export {
   default as ArticleBlock
-} from './components/Molecules/ArticleBlock/ArticleBlock';
+} from './components/Molecules/ArticleTeaser/ArticleTeaser';

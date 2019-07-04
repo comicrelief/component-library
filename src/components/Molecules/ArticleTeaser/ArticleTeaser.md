@@ -1,15 +1,13 @@
-# Article Block
+# Article teaser
 
 ```js
 const images = require('../../Atoms/Picture/data/pictures').default;
-<ArticleBlock
+<ArticleTeaser
   href="/test"
-  target="blank"
   images={images}
-  date=" 2 July 2019"
-  uppercase={true}
-  weight="bold"
-  copy="News article"
+  date=" 01 July 2019"
+  title="News article"
   objectFit="cover"
+  alt="Image's description"
 />;
 ```
