@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Logo from './Logo';
 
 it('renders correctly', () => {
-  const tree = renderWithTheme(<Logo rotate alt="CR18 Logo" />).toJSON();
+  const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
@@ -36,7 +36,7 @@ it('renders correctly', () => {
       rotate={1}
     >
       <img
-        alt="CR18 Logo"
+        alt="Comic Relief logo"
         className="c1"
         src="mock.asset"
       />
