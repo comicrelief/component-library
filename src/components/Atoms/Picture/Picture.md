@@ -1,17 +1,19 @@
 Picture
 
 ```js
-const images = require('./data/pictures').default;
-<Picture alt="test Image" images={images} />;
+const data = require('../../../styleguide/data/data').default;
+
+<Picture alt="test Image" images={data.pictures} />;
 ```
 
 Custom value.
 
 ```js
-const images = require('./data/pictures').default;
+const data = require('../../../styleguide/data/data').default;
+
 <Picture
   alt="test Image"
-  images={images}
+  images={data.pictures}
   objectFit="cover"
   width="300px"
   height="200px"
@@ -21,6 +23,6 @@ const images = require('./data/pictures').default;
 Single image
 
 ```js
-const images = require('./data/pictures').default;
-<Picture alt="test Image" images={images.small} />;
+const data = require('../../../styleguide/data/data').default;
+<Picture alt="test Image" images={data.pictures.small} />;
 ```

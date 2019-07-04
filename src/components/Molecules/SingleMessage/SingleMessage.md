@@ -1,7 +1,7 @@
 Single Message
 
 ```js
-const data = require('./data/data').default;
+const data = require('../../../styleguide/data/data').default;
 
 <SingleMessage
   title={data.title}
