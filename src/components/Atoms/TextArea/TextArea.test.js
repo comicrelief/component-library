@@ -18,6 +18,11 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c2 {
       box-sizing: border-box;
       width: 100%;
       margin: 10px 0;
@@ -35,11 +40,11 @@ it('renders correctly', () => {
       color: #030e1a;
     }
 
-    .c1:focus {
+    .c2:focus {
       border: 1px solid #666;
     }
 
-    .c1:focus::-webkit-input-placeholder {
+    .c2:focus::-webkit-input-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -47,7 +52,7 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c1:focus:-moz-placeholder {
+    .c2:focus:-moz-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -55,7 +60,7 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c1:focus::-moz-placeholder {
+    .c2:focus::-moz-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -63,7 +68,7 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c1:focus:-ms-input-placeholder {
+    .c2:focus:-ms-input-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -82,7 +87,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c1 {
+      .c2 {
         max-width: 100%;
         height: 96px;
       }
@@ -93,14 +98,14 @@ it('renders correctly', () => {
       htmlFor="undefined"
     >
       <span
-        className=""
+        className="c1"
         color="inherit"
       >
         Label
       </span>
       <textarea
         aria-describedby="Please leave your comment here"
-        className="c1"
+        className="c2"
         cols="5"
         name="description"
         placeholder="This is text area"

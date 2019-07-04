@@ -56,12 +56,12 @@ const CopyWrapper = styled.div`
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({ date, href, images, alt, title, objectFit }) => {
+const ArticleTeaser = ({ date, href, images, alt, title }) => {
   return (
     <Wrapper>
       <Link href={href} inline>
         <ImageWrapper>
-          <Picture images={images} alt={alt} objectFit={objectFit} />
+          <Picture images={images} alt={alt} objectFit="cover" />
         </ImageWrapper>
         <CopyWrapper>
           <Text size="xxs" weight="bold" uppercase>
@@ -81,7 +81,6 @@ ArticleTeaser.propTypes = {
   images: PropTypes.object.isRequired,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  objectFit: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   /** link url */
   href: PropTypes.string.isRequired

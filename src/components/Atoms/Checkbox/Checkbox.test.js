@@ -13,7 +13,12 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c1 {
+      .c2 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c1 {
       display: block;
       box-sizing: border-box;
       opacity: 0;
@@ -73,13 +78,18 @@ it('renders correctly', () => {
         />
         <span />
         <span
-          className=""
+          className="c2"
           color="inherit"
         >
           Tenis
         </span>
       </label>,
-      .c1 {
+      .c2 {
+      text-transform: inherit;
+      font-weight: bold;
+    }
+
+    .c1 {
       display: block;
       box-sizing: border-box;
       opacity: 0;
@@ -139,7 +149,7 @@ it('renders correctly', () => {
         />
         <span />
         <span
-          className=""
+          className="c2"
           color="inherit"
         >
           Handball

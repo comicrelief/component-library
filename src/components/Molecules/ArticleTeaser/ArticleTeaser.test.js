@@ -2,16 +2,15 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
-import images from '../../Atoms/Picture/data/pictures';
+import images from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
-      images={images}
+      images={images.pictures}
       date=" 01 July 2019"
       title="News article"
-      objectFit="cover"
       alt="Image's description"
     />
   ).toJSON();
@@ -130,14 +129,14 @@ it('renders correctly', () => {
           <picture>
             <source
               media="(min-width: 1440px)"
-              srcSet="src/components/Atoms/Picture/assets/picture-3.jpg"
+              srcSet="picture-3.jpg"
             />
             <source
               media="(min-width: 1024px)"
-              srcSet="src/components/Atoms/Picture/assets/picture-2.jpg"
+              srcSet="picture-2.jpg"
             />
             <source
-              srcSet="src/components/Atoms/Picture/assets/picture-1.jpg"
+              srcSet="picture-1.jpg"
             />
             <img
               alt="Image's description"
