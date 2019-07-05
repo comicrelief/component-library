@@ -1,5 +1,6 @@
 # Header
 
 ```js
-<Header />
+import data from './data/data';
+<Header items={data} color="green" />;
 ```
