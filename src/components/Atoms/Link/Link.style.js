@@ -34,6 +34,14 @@ const buttonStyle = () => css`
         :hover {
           background: ${theme.color('teal')};
         }
+      `) ||
+    (color === 'green' &&
+      css`
+        background: ${theme.color('green')};
+        color: ${theme.color('black')};
+        :hover {
+          background: ${theme.color('green_light')};
+        }
       `)};
 `;
 
