@@ -21,10 +21,10 @@ const LogoWrapper = styled.div.attrs(() => ({
   display: inline-block;
   width: 50px;
   height: 50px;
+  transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   @media (min-width: 740px) {
     width: 60px;
     height: 60px;
-    transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   }
 `;
 
