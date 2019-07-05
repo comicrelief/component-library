@@ -18,15 +18,15 @@ it('renders correctly', () => {
       display: inline-block;
       width: 50px;
       height: 50px;
+      -webkit-transform: rotate(-14deg);
+      -ms-transform: rotate(-14deg);
+      transform: rotate(-14deg);
     }
 
     @media (min-width:740px) {
       .c0 {
         width: 60px;
         height: 60px;
-        -webkit-transform: rotate(-14deg);
-        -ms-transform: rotate(-14deg);
-        transform: rotate(-14deg);
       }
     }
 
