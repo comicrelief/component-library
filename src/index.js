@@ -3,7 +3,10 @@
 export { default as crTheme } from './theme/crTheme/theme';
 export { default as srTheme } from './theme/srTheme/theme';
 export { default as ThemeProvider } from './theme/ThemeProvider';
+
+/* Utils */
 export { default as hideVisually } from './theme/shared/hideVisually';
+export { default as zIndex } from './theme/shared/zIndex';
 
 /* Atoms */
 
