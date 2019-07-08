@@ -1,7 +1,6 @@
 import { range } from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import LinkList from './LinkList';
 
 // Determines the size of the widget (the number of pages displayed - that the user can directly click on)
 function calculateSize(padding, maxPages) {
@@ -40,18 +39,6 @@ function getPages(currentPage, maxPages, padding) {
 }
 
 class Pagination extends Component {
-  getItem(modifier, label, ariaLabel, value) {
-    const { nbPages, totalPages } = this.props;
-    return {
-      key: `${modifier}.${value}`,
-      modifier,
-      disabled: value < 1 || value >= Math.min(totalPages, nbPages),
-      label,
-      value,
-      ariaLabel
-    };
-  }
-
   render() {
     const {
       PageComponent,
@@ -69,61 +56,75 @@ class Pagination extends Component {
       className,
       ...otherProps
     } = this.props;
-
+    const getItem = (modifier, label, ariaLabel, value, disabled) => {
+      return {
+        key: `${modifier}.${value}`,
+        modifier,
+        disabled,
+        label,
+        value,
+        ariaLabel
+      };
+    };
     const maxPages = Math.min(nbPages, totalPages);
     const lastPage = maxPages;
 
     let items = [];
     if (showFirst) {
-      items.push({
-        key: 'first',
-        modifier: 'item--firstPage',
-        disabled: currentRefinement === 1,
-        label: 'firstLabel',
-        value: 1,
-        ariaLabel: 'firstAriaLabel'
-      });
+      items.push(
+        getItem(
+          'item--firstPage',
+          'firstLabel',
+          'firstAriaLabel',
+          1,
+          currentRefinement === 1
+        )
+      );
     }
     if (showPrevious) {
-      items.push({
-        key: 'previous',
-        modifier: 'item--previousPage',
-        disabled: currentRefinement === 1,
-        label: 'previousLabel',
-        value: currentRefinement - 1,
-        ariaLabel: 'previousAriaLabel'
-      });
+      items.push(
+        getItem(
+          'item--previousPage',
+          'previousLabel',
+          'previousAriaLabel',
+          currentRefinement - 1,
+          currentRefinement === 1
+        )
+      );
     }
 
     items = items.concat(
-      getPages(currentRefinement, maxPages, padding).map(value => ({
-        key: value,
-        modifier: 'item--page',
-        label: ('page', value),
-        value,
-        selected: value === currentRefinement,
-        ariaLabel: ('ariaPage', value)
-      }))
+      getPages(currentRefinement, maxPages, padding).map(value =>
+        getItem(
+          'item--page',
+          `page${value}`,
+          `ariaPage${value}`,
+          value,
+          currentRefinement === value
+        )
+      )
     );
     if (showNext) {
-      items.push({
-        key: 'next',
-        modifier: 'item--nextPage',
-        disabled: currentRefinement === lastPage || lastPage <= 1,
-        label: 'nextLabel',
-        value: currentRefinement + 1,
-        ariaLabel: 'nextAriaLabel'
-      });
+      items.push(
+        getItem(
+          'item--nextPage',
+          'nextLabel',
+          'nextAriaLabel',
+          currentRefinement + 1,
+          currentRefinement === lastPage || lastPage <= 1
+        )
+      );
     }
     if (showLast) {
-      items.push({
-        key: 'last',
-        modifier: 'item--lastPage',
-        disabled: currentRefinement === lastPage || lastPage <= 1,
-        label: 'lastLabel',
-        value: lastPage,
-        ariaLabel: 'lastAriaLabel'
-      });
+      items.push(
+        getItem(
+          'item--lastPage',
+          'lastLabel',
+          'lastAriaLabel',
+          lastPage,
+          currentRefinement === lastPage || lastPage <= 1
+        )
+      );
     }
 
     return (
