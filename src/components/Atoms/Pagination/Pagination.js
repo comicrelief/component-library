@@ -54,7 +54,7 @@ class Pagination extends Component {
       createURL,
       canRefine,
       className,
-      ...otherProps
+      onSelect
     } = this.props;
     const getItem = (modifier, label, ariaLabel, value, disabled) => {
       return {
@@ -132,14 +132,14 @@ class Pagination extends Component {
         <ul className="list">
           {items.map(item => (
             <li
-              key={has(item, 'key') ? item.key : item.value}
+              key={'key' in item ? item.key : item.value}
               className={`item ${
                 item.selected && !item.disabled ? 'item--selected' : ''
               } ${item.disabled ? 'item--disabled' : ''} ${item.modifier}`}
             >
               {item.disabled ? (
                 <span className="link">
-                  {has(item, 'label') ? item.label : item.value}
+                  {'label' in item ? item.label : item.value}
                 </span>
               ) : (
                 <PageComponent
@@ -148,7 +148,7 @@ class Pagination extends Component {
                   href={createURL(item.value)}
                   onClick={() => onSelect(item.value)}
                 >
-                  {has(item, 'label') ? item.label : item.value}
+                  {'label' in item ? item.label : item.value}
                 </PageComponent>
               )}
             </li>
@@ -167,6 +167,7 @@ Pagination.propTypes = {
   canRefine: PropTypes.bool.isRequired,
 
   PageComponent: PropTypes.func,
+  onSelect: PropTypes.func.isRequired,
 
   showFirst: PropTypes.bool,
   showPrevious: PropTypes.bool,
