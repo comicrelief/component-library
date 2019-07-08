@@ -58,7 +58,7 @@ const Picture = ({ images, alt, theme, width, height, objectFit }) => {
 };
 
 Picture.propTypes = {
-  images: PropTypes.object.isRequired,
+  images: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   alt: PropTypes.string,
   objectFit: PropTypes.oneOf([
     'none',

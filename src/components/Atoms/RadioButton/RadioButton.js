@@ -62,7 +62,7 @@ const Label = styled.label.attrs(({ label }) => ({
 
 const RadioButton = ({ label, name, value, ...rest }) => {
   return (
-    <Label htmlFor={label}>
+    <Label htmlFor={label.toLowerCase()}>
       <StyledInput
         type="radio"
         {...rest}
@@ -71,9 +71,7 @@ const RadioButton = ({ label, name, value, ...rest }) => {
         id={value}
       />
       <span />
-      <Text weight="bold" for={label}>
-        {label}
-      </Text>
+      <Text weight="bold">{label}</Text>
     </Label>
   );
 };
