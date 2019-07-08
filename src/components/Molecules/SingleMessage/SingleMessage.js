@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
-import Text from '../../Atoms/Text/Text';
-import Link from '../../Atoms/Link/Link';
 
 const Container = styled.div`
   display: flex;
@@ -21,17 +19,11 @@ const Copy = styled.div`
 `;
 
 const SingleMessage = ({
-  title,
-  text,
-  copyFirst,
-  textColor,
-  ctaText,
-  ctaLink,
-  ctaColor,
-  ctaTarget,
   backgroundColor,
+  copyFirst,
   imageSet,
-  imageAltText
+  imageAltText,
+  children
 }) => {
   return (
     <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
@@ -42,49 +34,23 @@ const SingleMessage = ({
         width="100%"
         height="100%"
       />
-      <Copy>
-        <Text tag="h2" size="xxl" color={textColor}>
-          {title}
-        </Text>
-        {text ? (
-          <Text tag="p" size="m" color={textColor}>
-            {text}
-          </Text>
-        ) : null}
-        {ctaLink ? (
-          <Link color={ctaColor} href={ctaLink} target={ctaTarget}>
-            {ctaText}
-          </Link>
-        ) : null}
-      </Copy>
+      <Copy>{children}</Copy>
     </Container>
   );
 };
 
 SingleMessage.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  copyFirst: PropTypes.bool,
-  textColor: PropTypes.string,
-  ctaText: PropTypes.string,
-  ctaLink: PropTypes.string,
-  ctaColor: PropTypes.string,
-  ctaTarget: PropTypes.string,
   backgroundColor: PropTypes.string,
+  copyFirst: PropTypes.bool,
   // eslint-disable-next-line react/forbid-prop-types
   imageSet: PropTypes.object,
-  imageAltText: PropTypes.string
+  imageAltText: PropTypes.string,
+  children: PropTypes.node.isRequired
 };
 
 SingleMessage.defaultProps = {
-  text: null,
-  copyFirst: false,
-  textColor: 'inherit',
-  ctaText: null,
-  ctaLink: null,
-  ctaColor: null,
-  ctaTarget: null,
   backgroundColor: 'white',
+  copyFirst: false,
   imageSet: null,
   imageAltText: ''
 };

@@ -3,22 +3,27 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import SingleMessage from './SingleMessage';
 import data from '../../../styleguide/data/data';
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
-      title={data.title}
-      text={data.text}
-      textColor="white"
-      ctaText={data.ctaText}
-      ctaLink="/"
-      ctaColor="red"
-      ctaTarget="self"
       backgroundColor="purple"
       imageSet={data.pictures}
       imageAltText=""
       copyFirst={false}
-    />
+    >
+      <Text tag="h1" color="white" size="xxl">
+        title
+      </Text>
+      <Text tag="p" color="white">
+        description
+      </Text>
+      <Link href="/" color="white">
+        CTA
+      </Link>
+    </SingleMessage>
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -30,7 +35,6 @@ it('renders correctly', () => {
 
     .c4 {
       color: #FFFFFF;
-      font-size: 1.2rem;
       text-transform: inherit;
     }
 
@@ -50,13 +54,7 @@ it('renders correctly', () => {
       font-weight: 700;
       border-radius: 30px;
       cursor: point;
-      background-color: #f04257;
-      background: #f04257;
-      color: #FFFFFF;
-    }
-
-    .c5:hover {
-      background: #00beca;
+      background-color: #FFFFFF;
     }
 
     .c0 {
@@ -111,27 +109,26 @@ it('renders correctly', () => {
       <div
         className="c2"
       >
-        <h2
+        <h1
           className="c3"
           color="white"
           size="xxl"
         >
-          What your money does
-        </h2>
+          title
+        </h1>
         <p
           className="c4"
           color="white"
-          size="m"
         >
-          When you donate to Comic Relief or Sport Relief, you’re supporting vulnerable people and communities in the UK and internationally.
+          description
         </p>
         <a
           className="c5"
-          color="red"
+          color="white"
           href="/"
           target="_self"
         >
-          Find out how
+          CTA
         </a>
       </div>
     </div>
