@@ -1,6 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable react/prop-types */
-/* fix theme, breakpoint and object types */
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -58,7 +55,10 @@ const Picture = ({ images, alt, theme, width, height, objectFit }) => {
 };
 
 Picture.propTypes = {
-  images: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  images: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ picture: PropTypes.string })
+  ]).isRequired,
   alt: PropTypes.string,
   objectFit: PropTypes.oneOf([
     'none',
@@ -68,7 +68,10 @@ Picture.propTypes = {
     'scale-down'
   ]),
   width: PropTypes.string,
-  height: PropTypes.string
+  height: PropTypes.string,
+  theme: PropTypes.shape({
+    breakpoint: PropTypes.func
+  }).isRequired
 };
 
 Picture.defaultProps = {
