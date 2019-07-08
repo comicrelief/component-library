@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-// import Text from '../../Atoms/Text/Text';
+import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
 import Link from '../../Atoms/Link/Link';
 
@@ -73,8 +73,10 @@ const NavMenu = styled.ul`
   height: auto;
   max-height: none;
   text-align: left;
+  height: 75px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
+    height: 90px;
   }
   @media ${({ theme }) => theme.breakpoint('large')} {
     display: flex;
@@ -87,8 +89,29 @@ const NavMenu = styled.ul`
  * Menu list item
  */
 const NavItem = styled.li`
+  position: relative;
   padding: 30px 0px;
   margin: 0 8px;
+  a {
+    padding: 7px 5px;
+    height: auto;
+  }
+  :hover {
+    background-color: transparent;
+    span {
+      border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+      padding-bottom: 2px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: ${({ theme }) => theme.color('white')};
+        border: 0;
+      }
+    }
+  }
 `;
 
 /**
@@ -97,17 +120,64 @@ const NavItem = styled.li`
 const SubNavMenu = styled.ul`
   display: none;
   list-style: none outside;
-  top: 90px;
-  text-align: left;
-  flex-direction: column;
+  top: 93px;
+  left: 0;
+  background-color: ${({ theme }) => theme.color('deep_violet')};
+  position: absolute;
+  left: 0;
+  padding: 0;
+  width: 250px;
+  height: auto;
+  transition-property: max-height;
+  transition-duration: 850ms;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
 `;
 
 /**
  * Sub Menu list item
  */
 const SubNavItem = styled.li`
-  padding: 30px 0px;
-  margin: 0 8px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  :first-child {
+    a {
+      padding: 26px 21px;
+      height: auto;
+      position: relative;
+      ::before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 34px;
+        width: 10px;
+        height: 10px;
+        border: 11px solid transparent;
+        border-bottom-color: #2c0230;
+        top: -22px;
+      }
+      ::after {
+        width: 14px;
+        border-bottom: 2px solid #fff;
+        left: 12px;
+        top: auto;
+        bottom: 10px;
+        position: absolute;
+        margin: 0 10px;
+        content: '';
+      }
+    }
+  }
+  a {
+    padding: 14px 21px;
+  }
+  :hover {
+    background-color: #3e1c43;
+    span {
+      border-bottom: 0;
+      padding-bottom: 2px;
+    }
+  }
 `;
 /**
  * Meta icons
@@ -140,13 +210,18 @@ const Header = ({ items, color, ...rest }) => {
             {items.menuGroup.map(group => (
               <NavItem key={group.id}>
                 <NavLink href={group.url} inline>
-                  {group.title}
+                  <Text>{group.title}</Text>
                 </NavLink>
                 <SubNavMenu>
+                  <SubNavItem>
+                    <NavLink href={group.url} inline>
+                      <Text>{group.title}</Text>
+                    </NavLink>
+                  </SubNavItem>
                   {group.links.map(child => (
-                    <SubNavItem key={child.class}>
+                    <SubNavItem key={child.url}>
                       <NavLink href={child.url} inline>
-                        {child.title}
+                        <Text>{child.title}</Text>
                       </NavLink>
                     </SubNavItem>
                   ))}

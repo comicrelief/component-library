@@ -56,13 +56,13 @@ export default {
           class: 'someClass'
         },
         {
-          title: 'Child Item Title 3-3',
-          url: '/child-item-3-3',
+          title: 'Child Item Title 3-7',
+          url: '/child-item-8-332',
           class: 'someClass'
         },
         {
-          title: 'Child Item Title 3-3',
-          url: '/child-item-3-3',
+          title: 'Child Item Title 3-9',
+          url: '/child-item-9-3',
           class: 'someClass'
         }
       ]
@@ -90,7 +90,7 @@ export default {
       ]
     },
     {
-      id: 'Parent Item Title 3',
+      id: 'Parent Item Title 5',
       title: 'Parent Item Title 3',
       url: '/parent3',
       links: [
@@ -100,12 +100,12 @@ export default {
           class: 'someClass'
         },
         {
-          title: 'Child Item Title 3-3',
-          url: '/child-item-3-3',
+          title: 'Child Item Title 3-300',
+          url: '/child-item-90-3',
           class: 'someClass'
         },
         {
-          title: 'Child Item Title 3-3',
+          title: 'Child Item Title 3-34',
           url: '/child-item-3-3',
           class: 'someClass'
         }
