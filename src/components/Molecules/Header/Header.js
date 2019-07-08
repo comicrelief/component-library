@@ -153,16 +153,16 @@ const SubNavItem = styled.li`
         width: 10px;
         height: 10px;
         border: 11px solid transparent;
-        border-bottom-color: #2c0230;
+        border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
         top: -22px;
       }
       ::after {
+        position: absolute;
         width: 14px;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid ${({ theme }) => theme.color('white')};
         left: 12px;
         top: auto;
         bottom: 10px;
-        position: absolute;
         margin: 0 10px;
         content: '';
       }
@@ -172,7 +172,7 @@ const SubNavItem = styled.li`
     padding: 14px 21px;
   }
   :hover {
-    background-color: #3e1c43;
+    background-color: ${({ theme }) => theme.color('violet_light')};
     span {
       border-bottom: 0;
       padding-bottom: 2px;

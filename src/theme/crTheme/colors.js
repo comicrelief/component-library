@@ -15,7 +15,8 @@ const colors = {
   grey_medium: '#c7c7c7',
   grey: '#666',
   purple: '#7d2ca9',
-  deep_violet: '#2C0230'
+  deep_violet: '#2C0230',
+  violet_light: '#3e1c43'
 };
 
 export default colorName => {
