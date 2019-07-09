@@ -4,6 +4,9 @@ import PaginationList from './Components/PaginationList';
 import PaginationItem from './Components/PaginationItem';
 import { getPages } from './Utils/PaginationCalculator';
 
+/**
+ * Customizable Pagination component
+ */
 const Pagination = ({
   PageComponent,
   totalPages,
@@ -107,26 +110,47 @@ const Pagination = ({
   );
 };
 Pagination.propTypes = {
-  totalPages: PropTypes.number.isRequired, // total pages
+  /** Total number of pages */
+  totalPages: PropTypes.number.isRequired,
+  /** Current select page */
   currentPage: PropTypes.number.isRequired,
+  /** Create each page url, page number is available as an argument */
   createURL: PropTypes.func.isRequired,
+  /** Select a page, event and page number are provided as arguments respectively */
   onSelect: PropTypes.func.isRequired,
+  /** Component to use to render each page */
   PageComponent: PropTypes.func,
+  /** Show first page link */
   showFirst: PropTypes.bool,
+  /** Show previous page link */
   showPrevious: PropTypes.bool,
+  /** Show next page link */
   showNext: PropTypes.bool,
+  /** Show last page link */
   showLast: PropTypes.bool,
-  maxPages: PropTypes.number, // allowed max number of pages
+  /** Max allowed number of pages */
+  maxPages: PropTypes.number,
+  /** Main pagination container class */
   className: PropTypes.string,
+  /** Previous page label */
   previousLabel: PropTypes.string,
+  /** Next page label */
   nextLabel: PropTypes.string,
+  /** First page label */
   firstLabel: PropTypes.string,
+  /** Last page label */
   lastLabel: PropTypes.string,
+  /** Generate page label, page number is available as an argument */
   getPageLabel: PropTypes.func,
+  /** Previous page aria label */
   previousAriaLabel: PropTypes.string,
+  /** Next page aria label */
   nextAriaLabel: PropTypes.string,
+  /** First page aria label */
   firstAriaLabel: PropTypes.string,
+  /** Last page aria label */
   lastAriaLabel: PropTypes.string,
+  /** Generate page aria label, page number is available as an argument */
   getPageAriaLabel: PropTypes.func
 };
 

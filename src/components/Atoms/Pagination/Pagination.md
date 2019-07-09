@@ -2,7 +2,7 @@
 
 Minimalist.
 
-````js
+```js
 <Pagination
   maxPages={5}
   totalPages={5}
@@ -16,7 +16,8 @@ Minimalist.
   showPrevious={false}
   showNext={false}
   showLast={false}
-/>;```
+/>
+```
 
 Full size.
 
@@ -34,8 +35,8 @@ Full size.
   showPrevious={true}
   showNext={true}
   showLast={true}
-/>;
-````
+/>
+```
 
 Custom labels.
 
