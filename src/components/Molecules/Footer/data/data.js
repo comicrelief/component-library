@@ -4,7 +4,6 @@ export default {
     {
       id: 'Parent Item Title 1',
       title: 'Parent Item Title 1',
-      url: '/parent1',
       links: [
         {
           title: 'Child Item Title 1-1',
@@ -26,7 +25,6 @@ export default {
     {
       id: 'Parent Item Title 2',
       title: 'Parent Item Title 2',
-      url: '/parent2',
       links: [
         {
           title: 'Child Item Title 2-1',
@@ -41,6 +39,17 @@ export default {
         {
           title: 'Child Item Title 2-3',
           url: '/child-item-2-3',
+          class: 'someClass'
+        }
+      ]
+    },
+    {
+      id: 'Parent Item Title 3 no children',
+      title: 'Parent Item Title 3 no children',
+      links: [
+        {
+          title: 'Child Item Title 3-1',
+          url: '/child-item-3-1',
           class: 'someClass'
         }
       ]

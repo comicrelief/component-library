@@ -14,24 +14,38 @@ export const Inner = styled.footer`
 const Footer = ({ items, ...rest }) => {
   return (
     <Inner items {...rest}>
+      {/* Nav menu */}
       <ul className="parent-menu">
+        {/* Each menugroup */}
         {items.menuGroup.map(thisGroup => (
-          <li key={thisGroup.url}>
-            <Link className="parent-item" href={thisGroup.url} inline>
-              {thisGroup.title}
-            </Link>
+          <div key={thisGroup.id}>
+            {/* If it contains links */}
             {thisGroup.links ? (
-              <ul>
-                {thisGroup.links.map(childLink => (
-                  <li key={childLink.url}>
-                    <Link href={childLink.url} inline>
-                      {childLink.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <li key={thisGroup.id}>
+                <Link
+                  className="parent-item"
+                  href={
+                    thisGroup.links.length > 1
+                      ? '#fakeButton'
+                      : thisGroup.links[0].url
+                  }
+                  inline
+                >
+                  {thisGroup.title}
+                </Link>
+
+                <ul>
+                  {thisGroup.links.map(childLink => (
+                    <li key={childLink.url}>
+                      <Link href={childLink.url} inline>
+                        {childLink.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             ) : null}
-          </li>
+          </div>
         ))}
       </ul>
     </Inner>
