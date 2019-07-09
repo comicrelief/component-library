@@ -13,6 +13,8 @@ export const calculateDisplayedPages = (totalPages, maxPages) => {
 
 /**
  * Determines the number of displayed pages to the left
+ * By using half total pages unless current page is inside that half
+ * Then pages to the left would be current page after subtracting one from it
  * @param  {Integer} currentPage
  * @param  {Integer} totalPages
  * @return {Integer}
@@ -28,6 +30,7 @@ export const calculatePagesToTheLeft = (currentPage, totalPages) => {
 
 /**
  * Determines the number of displayed pages to the right
+ * By subtracting pages to the left and the current page itself from displayed pages total
  * @param  {Integer} currentPage
  * @param  {Integer} totalPages
  * @param  {Integer} displayedPages
@@ -38,7 +41,7 @@ export const calculatePagesToTheRight = (
   totalPages,
   displayedPages
 ) => {
-  return displayedPages - calculatePagesToTheLeft(currentPage, totalPages);
+  return displayedPages - calculatePagesToTheLeft(currentPage, totalPages) - 1;
 };
 
 /**

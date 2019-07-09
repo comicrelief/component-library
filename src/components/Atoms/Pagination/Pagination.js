@@ -80,7 +80,7 @@ const Pagination = ({
         nextLabel,
         nextAriaLabel,
         currentPage + 1,
-        currentPage === maxPages || maxPages <= 1
+        currentPage === maxPages || maxPages === 1
       )
     );
   }
@@ -90,8 +90,8 @@ const Pagination = ({
         'item--lastPage',
         lastLabel,
         lastAriaLabel,
-        maxPages,
-        currentPage === maxPages || maxPages <= 1
+        totalPages,
+        currentPage === maxPages || maxPages === 1
       )
     );
   }
@@ -147,6 +147,6 @@ Pagination.defaultProps = {
   nextAriaLabel: 'Next page',
   firstAriaLabel: 'First page',
   lastAriaLabel: 'Last page',
-  getPageAriaLabel: currentPage => `Page ${currentPage.toString()}`
+  getPageAriaLabel: currentPage => `Page ${currentPage}`
 };
 export default Pagination;
