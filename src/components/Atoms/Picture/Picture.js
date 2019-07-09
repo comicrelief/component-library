@@ -38,7 +38,7 @@ const Picture = ({ images, image, alt, width, height, objectFit }) => {
       height={height}
       width={width}
       objectFit={objectFit}
-      src="image3.jpg"
+      src={image}
       srcSet={IMAGE_FALLBACK}
       data-srcset={images}
       data-sizes="auto"
