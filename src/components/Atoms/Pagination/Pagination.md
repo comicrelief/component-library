@@ -8,7 +8,10 @@ Minimalist.
   totalPages={5}
   currentPage={2}
   createURL={value => `example.com/page/${value}`}
-  onSelect={value => console.log(value)}
+  onSelect={(event, value) => {
+    event.preventDefault();
+    console.log(value);
+  }}
   showFirst={false}
   showPrevious={false}
   showNext={false}
@@ -23,7 +26,10 @@ Full size.
   totalPages={5}
   currentPage={2}
   createURL={value => `example.com/page/${value}`}
-  onSelect={value => console.log(value)}
+  onSelect={(event, value) => {
+    event.preventDefault();
+    console.log(value);
+  }}
   showFirst={true}
   showPrevious={true}
   showNext={true}
@@ -39,7 +45,10 @@ Custom labels.
   totalPages={5}
   currentPage={2}
   createURL={value => `example.com/page/${value}`}
-  onSelect={value => console.log(value)}
+  onSelect={(event, value) => {
+    event.preventDefault();
+    console.log(value);
+  }}
   showFirst={true}
   showPrevious={true}
   showNext={true}

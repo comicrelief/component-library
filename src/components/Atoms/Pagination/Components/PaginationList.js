@@ -37,7 +37,7 @@ const PaginationList = ({
                   className={`link ${selected ? 'link--selected' : ''}`}
                   aria-label={ariaLabel}
                   href={createURL(value)}
-                  onClick={() => onSelect(value)}
+                  onClick={event => onSelect(event, value)}
                 >
                   {label}
                 </PageComponent>
