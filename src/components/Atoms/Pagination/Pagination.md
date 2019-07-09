@@ -1,25 +1,53 @@
-# TextArea Field
+# Pagination
+
+Minimalist.
+
+````js
+<Pagination
+  maxPages={5}
+  totalPages={5}
+  currentPage={2}
+  createURL={value => `example.com/page/${value}`}
+  onSelect={value => console.log(value)}
+  showFirst={false}
+  showPrevious={false}
+  showNext={false}
+  showLast={false}
+/>;```
+
+Full size.
 
 ```js
-<h4>Long copy/Message field</h4>
-<TextArea
-  name="description"
-  placeholder="This is text area"
-  label="Label"
-  rows="5"
-  cols="5"
-  errorMsg=""
-  id="Please leave your comment here"
-/>
+<Pagination
+  maxPages={5}
+  totalPages={5}
+  currentPage={2}
+  createURL={value => `example.com/page/${value}`}
+  onSelect={value => console.log(value)}
+  showFirst={true}
+  showPrevious={true}
+  showNext={true}
+  showLast={true}
+/>;
+````
 
-<h4>Long copy/Message field</h4>
-<TextArea
-  name="description"
-  placeholder="This is text area"
-  label="Label"
-  rows="5"
-  cols="5"
-  errorMsg="This is an error message"
-  id="Please leave your comment here"
+Custom labels.
+
+```js
+<Pagination
+  maxPages={5}
+  totalPages={5}
+  currentPage={2}
+  createURL={value => `example.com/page/${value}`}
+  onSelect={value => console.log(value)}
+  showFirst={true}
+  showPrevious={true}
+  showNext={true}
+  showLast={true}
+  previousLabel="Previous"
+  nextLabel="Next"
+  firstLabel="First"
+  lastLabel="Last"
+  getPageLabel={value => `Page ${value}`}
 />
 ```
