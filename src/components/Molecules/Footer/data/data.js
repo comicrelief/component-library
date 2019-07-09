@@ -44,8 +44,8 @@ export default {
       ]
     },
     {
-      id: 'Parent Item Title 3 no children',
-      title: 'Parent Item Title 3 no children',
+      id: 'Parent Item Title 3, 1 child',
+      title: 'Parent Item Title 3, 1 child',
       links: [
         {
           title: 'Child Item Title 3-1',

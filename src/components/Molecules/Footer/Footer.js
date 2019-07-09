@@ -24,6 +24,9 @@ const Footer = ({ items, ...rest }) => {
               <li key={thisGroup.id}>
                 <Link
                   className="parent-item"
+                  onClick={
+                    thisGroup.links.length > 1 ? e => e.preventDefault() : null
+                  }
                   href={
                     thisGroup.links.length > 1
                       ? '#fakeButton'
