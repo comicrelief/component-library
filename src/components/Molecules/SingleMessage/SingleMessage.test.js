@@ -125,7 +125,6 @@ it('renders correctly', () => {
     //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,
     //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
-          src="image3.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
@@ -171,76 +170,76 @@ it('renders Single Message with no Image correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-        .c2 {
-          color: #FFFFFF;
-          text-transform: inherit;
-        }
+            .c2 {
+              color: #FFFFFF;
+              text-transform: inherit;
+            }
 
-        .c0 {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          position: relative;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          background: #7d2ca9;
-        }
+            .c0 {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              position: relative;
+              -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              background: #7d2ca9;
+            }
 
-        .c1 {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-flex: 0;
-          -webkit-flex-grow: 0;
-          -ms-flex-positive: 0;
-          flex-grow: 0;
-          -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-          flex-shrink: 0;
-          -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-          padding: 20px;
-          -webkit-flex: 0 0 60%;
-          -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-          margin: auto;
-          padding: 100px 20px;
-        }
+            .c1 {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-flex: 0;
+              -webkit-flex-grow: 0;
+              -ms-flex-positive: 0;
+              flex-grow: 0;
+              -webkit-flex-shrink: 0;
+              -ms-flex-negative: 0;
+              flex-shrink: 0;
+              -webkit-flex-basis: 50%;
+              -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+              padding: 20px;
+              -webkit-flex: 0 0 60%;
+              -ms-flex: 0 0 60%;
+              flex: 0 0 60%;
+              margin: auto;
+              padding: 100px 20px;
+            }
 
-        @media (min-width:740px) {
-          .c0 {
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-          }
-        }
+            @media (min-width:740px) {
+              .c0 {
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+              }
+            }
 
-        <div
-          className="c0"
-        >
-          <div
-            className="c1"
-          >
-            <p
-              className="c2"
-              color="white"
+            <div
+              className="c0"
             >
-              description
-            </p>
-          </div>
-        </div>
-    `);
+              <div
+                className="c1"
+              >
+                <p
+                  className="c2"
+                  color="white"
+                >
+                  description
+                </p>
+              </div>
+            </div>
+      `);
 });
 
 it('renders fullWidth Single Message correctly', () => {
@@ -253,74 +252,74 @@ it('renders fullWidth Single Message correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-        .c2 {
-          color: #FFFFFF;
-          text-transform: inherit;
-        }
+            .c2 {
+              color: #FFFFFF;
+              text-transform: inherit;
+            }
 
-        .c0 {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          position: relative;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          background: #7d2ca9;
-        }
+            .c0 {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              position: relative;
+              -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              background: #7d2ca9;
+            }
 
-        .c1 {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-flex: 0;
-          -webkit-flex-grow: 0;
-          -ms-flex-positive: 0;
-          flex-grow: 0;
-          -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-          flex-shrink: 0;
-          -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-          padding: 20px;
-          -webkit-flex: 0 0 60%;
-          -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-          margin: auto;
-          padding: 100px 20px;
-        }
+            .c1 {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-flex: 0;
+              -webkit-flex-grow: 0;
+              -ms-flex-positive: 0;
+              flex-grow: 0;
+              -webkit-flex-shrink: 0;
+              -ms-flex-negative: 0;
+              flex-shrink: 0;
+              -webkit-flex-basis: 50%;
+              -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+              padding: 20px;
+              -webkit-flex: 0 0 60%;
+              -ms-flex: 0 0 60%;
+              flex: 0 0 60%;
+              margin: auto;
+              padding: 100px 20px;
+            }
 
-        @media (min-width:740px) {
-          .c0 {
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-          }
-        }
+            @media (min-width:740px) {
+              .c0 {
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+              }
+            }
 
-        <div
-          className="c0"
-        >
-          <div
-            className="c1"
-          >
-            <p
-              className="c2"
-              color="white"
+            <div
+              className="c0"
             >
-              description
-            </p>
-          </div>
-        </div>
-    `);
+              <div
+                className="c1"
+              >
+                <p
+                  className="c2"
+                  color="white"
+                >
+                  description
+                </p>
+              </div>
+            </div>
+      `);
 });

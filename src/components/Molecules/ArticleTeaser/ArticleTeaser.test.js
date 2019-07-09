@@ -138,7 +138,6 @@ it('renders correctly', () => {
               }
             }
             height="auto"
-            src="image3.jpg"
             srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             width="100%"
           />
