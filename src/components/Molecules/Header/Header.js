@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/no-array-index-key */
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
@@ -16,7 +17,8 @@ import {
   MetaIcons
 } from './Header.style';
 
-const Header = ({ navItems, color, children, ...rest }) => {
+const Header = ({ navItems, metaIcons, ...rest }) => {
+  const { menuGroup } = navItems;
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
@@ -25,7 +27,7 @@ const Header = ({ navItems, color, children, ...rest }) => {
         </Brand>
         <Nav>
           <NavMenu>
-            {navItems.menuGroup.map(group => (
+            {menuGroup.map(group => (
               <NavItem key={group.id}>
                 <NavLink href={group.url} inline>
                   <Text>{group.title}</Text>
@@ -48,7 +50,11 @@ const Header = ({ navItems, color, children, ...rest }) => {
             ))}
           </NavMenu>
         </Nav>
-        <MetaIcons>{children}</MetaIcons>
+        <MetaIcons>
+          {metaIcons.map((metaIcon, i) => (
+            <Fragment key={i}>{metaIcon}</Fragment>
+          ))}
+        </MetaIcons>
       </InnerWrapper>
     </HeaderWrapper>
   );
@@ -56,8 +62,7 @@ const Header = ({ navItems, color, children, ...rest }) => {
 
 Header.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  color: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  metaIcons: PropTypes.node.isRequired
 };
 
 Header.defaultProps = {

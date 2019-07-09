@@ -121,7 +121,7 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('deep_violet')};
   position: absolute;
   left: 0;
-  padding: 0;
+  padding: 0 0 20px;
   width: 250px;
   height: auto;
   transition-property: max-height;
