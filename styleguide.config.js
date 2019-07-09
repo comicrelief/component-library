@@ -5,6 +5,7 @@ module.exports = {
     const name = path.basename(componentPath, '.js');
     return `import { ${name} } from '@comic-relief/component-library';`;
   },
+  assetsDir: 'src/styleguide/assets/',
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/ThemeWrapper')
   },
@@ -45,8 +46,7 @@ module.exports = {
     Logo: {
       // We're changing the LogoRenderer component
       logo: {
-        backgroundImage:
-          "url('https://pattern-lab.services.comicrelief.com/kss-assets/pattern_logo.png')",
+        backgroundImage: "url('/pattern_logo.png')",
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
         height: '50px',
@@ -63,6 +63,10 @@ module.exports = {
     {
       name: 'Installation',
       content: './docs/installation.md'
+    },
+    {
+      name: 'Utils',
+      content: './docs/utils.md'
     },
     {
       name: 'Atoms',

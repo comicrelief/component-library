@@ -8,11 +8,13 @@ import PropTypes from 'prop-types';
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
+  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
+  font-weight: ${({ weight }) => weight};
 `;
 
 /** Text renders different elements based on the `tag` prop */
-const Text = ({ tag, children, ...rest }) => (
-  <BaseText {...rest} as={tag}>
+const Text = ({ tag, children, weight, ...rest }) => (
+  <BaseText {...rest} as={tag} weight={weight}>
     {children}
   </BaseText>
 );

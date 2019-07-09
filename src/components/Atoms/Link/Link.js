@@ -7,15 +7,17 @@ const Link = ({ children, color, href, target, inline, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
 
   return (
-    <StyledLink
-      {...rest}
-      color={color}
-      href={href}
-      target={window}
-      inline={inline}
-    >
-      {children}
-    </StyledLink>
+    <span>
+      <StyledLink
+        {...rest}
+        color={color}
+        href={href}
+        target={window}
+        inline={inline}
+      >
+        {children}
+      </StyledLink>
+    </span>
   );
 };
 
