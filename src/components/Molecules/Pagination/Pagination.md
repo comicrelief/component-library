@@ -25,7 +25,7 @@ Full size.
 <Pagination
   maxPages={5}
   totalPages={5}
-  currentPage={2}
+  currentPage={1}
   createURL={value => `example.com/page/${value}`}
   onSelect={(event, value) => {
     event.preventDefault();

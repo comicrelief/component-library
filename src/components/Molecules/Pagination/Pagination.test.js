@@ -75,6 +75,24 @@ it('renders correctly in full size with max pages less than total pages', () => 
   expect(tree).toMatchSnapshot();
 });
 
+it('renders correctly in full size with first page selected', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={5}
+      currentPage={1}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
 it('renders correctly with custom labels', () => {
   const tree = renderWithTheme(
     <Pagination

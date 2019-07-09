@@ -9,10 +9,11 @@ const PaginationList = ({
   className,
   pageComponentProps
 }) => {
-  const getPageClassNames = (selected, disabled, pageClassName) => {
-    const selectedPageClassName = selected && !disabled ? 'item--selected' : '';
-    const disabledPageClassName = disabled ? 'item--disabled' : '';
-    return `item ${selectedPageClassName} ${disabledPageClassName} ${pageClassName}`;
+  const getPageClassNames = (prefix, selected, disabled, pageClassName) => {
+    const selectedPageClassName =
+      selected && !disabled ? `${prefix}--selected` : '';
+    const disabledPageClassName = disabled ? `${prefix}--disabled` : '';
+    return `${prefix} ${selectedPageClassName} ${disabledPageClassName} ${pageClassName}`;
   };
   return (
     <div className={className}>
@@ -29,21 +30,27 @@ const PaginationList = ({
           }) => (
             <li
               key={key}
-              className={getPageClassNames(selected, disabled, pageClassName)}
-            >
-              {disabled ? (
-                <span className="link">{label}</span>
-              ) : (
-                <PageComponent
-                  className={`link ${selected ? 'link--selected' : ''}`}
-                  aria-label={ariaLabel}
-                  href={createURL(value)}
-                  onClick={event => onSelect(event, value)}
-                  {...pageComponentProps}
-                >
-                  {label}
-                </PageComponent>
+              className={getPageClassNames(
+                'item',
+                selected,
+                disabled,
+                pageClassName
               )}
+            >
+              <PageComponent
+                className={getPageClassNames('link', selected, disabled, '')}
+                aria-label={ariaLabel}
+                href={createURL(value)}
+                onClick={event => {
+                  if (selected || disabled) {
+                    return event.preventDefault();
+                  }
+                  return onSelect(event, value);
+                }}
+                {...pageComponentProps}
+              >
+                {label}
+              </PageComponent>
             </li>
           )
         )}
@@ -66,7 +73,7 @@ PaginationList.propTypes = {
   ).isRequired,
   onSelect: PropTypes.func.isRequired,
   createURL: PropTypes.func.isRequired,
-  PageComponent: PropTypes.func.isRequired,
+  PageComponent: PropTypes.elementType.isRequired,
   pageComponentProps: PropTypes.objectOf(
     PropTypes.oneOfType([
       PropTypes.bool,

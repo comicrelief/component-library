@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PaginationList from './Components/PaginationList';
-import PaginationItem from './Components/PaginationItem';
+import StyledPaginationList from './Components/PaginationList.style';
+import StyledPaginationItem from './Components/PaginationItem.style';
 import { getPages } from './Utils/PaginationCalculator';
 
 /**
@@ -73,7 +73,7 @@ const Pagination = ({
         getPageLabel(value),
         getPageAriaLabel(value),
         value,
-        currentPage === value
+        false
       )
     )
   );
@@ -101,7 +101,7 @@ const Pagination = ({
   }
 
   return (
-    <PaginationList
+    <StyledPaginationList
       className={className}
       pages={items}
       PageComponent={PageComponent}
@@ -121,7 +121,7 @@ Pagination.propTypes = {
   /** Select a page, event and page number are provided as arguments respectively */
   onSelect: PropTypes.func.isRequired,
   /** Component to use to render each page */
-  PageComponent: PropTypes.func,
+  PageComponent: PropTypes.elementType,
   /** Props for component used to render each page */
   pageComponentProps: PropTypes.objectOf(
     PropTypes.oneOfType([
@@ -166,8 +166,8 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  PageComponent: PaginationItem,
-  pageComponentProps: { color: 'red', inline: false },
+  PageComponent: StyledPaginationItem,
+  pageComponentProps: { color: 'red', inline: true },
   showFirst: true,
   showPrevious: true,
   showNext: true,
