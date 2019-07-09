@@ -12,9 +12,6 @@ export { default as zIndex } from './theme/shared/zIndex';
 
 export { default as Text } from './components/Atoms/Text/Text';
 export { default as Logo } from './components/Atoms/Logo/Logo';
-export {
-  default as Pagination
-} from './components/Atoms/Pagination/Pagination';
 export { default as Picture } from './components/Atoms/Picture/Picture';
 export { default as Link } from './components/Atoms/Link/Link';
 export { default as Radio } from './components/Atoms/RadioButton/RadioButton';
@@ -38,3 +35,6 @@ export {
 export {
   default as ArticleBlock
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
+export {
+  default as Pagination
+} from './components/Molecules/Pagination/Pagination';

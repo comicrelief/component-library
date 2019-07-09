@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from '../../../Atoms/Link/Link';
 
 const PaginationItem = ({ children, ...restProps }) => (
-  <a {...restProps}>{children}</a>
+  <Link target="self" {...restProps}>
+    {children}
+  </Link>
 );
 
 PaginationItem.propTypes = {

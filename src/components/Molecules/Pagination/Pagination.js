@@ -28,7 +28,8 @@ const Pagination = ({
   getPageAriaLabel,
   onSelect,
   createURL,
-  className
+  className,
+  pageComponentProps
 }) => {
   const getItem = (pageClassName, label, ariaLabel, value, disabled) => {
     return {
@@ -104,6 +105,7 @@ const Pagination = ({
       className={className}
       pages={items}
       PageComponent={PageComponent}
+      pageComponentProps={pageComponentProps}
       createURL={createURL}
       onSelect={onSelect}
     />
@@ -120,6 +122,15 @@ Pagination.propTypes = {
   onSelect: PropTypes.func.isRequired,
   /** Component to use to render each page */
   PageComponent: PropTypes.func,
+  /** Props for component used to render each page */
+  pageComponentProps: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.func
+    ])
+  ),
   /** Show first page link */
   showFirst: PropTypes.bool,
   /** Show previous page link */
@@ -156,6 +167,7 @@ Pagination.propTypes = {
 
 Pagination.defaultProps = {
   PageComponent: PaginationItem,
+  pageComponentProps: { color: 'red', inline: false },
   showFirst: true,
   showPrevious: true,
   showNext: true,

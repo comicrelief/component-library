@@ -6,7 +6,8 @@ const PaginationList = ({
   pages,
   createURL,
   onSelect,
-  className
+  className,
+  pageComponentProps
 }) => {
   const getPageClassNames = (selected, disabled, pageClassName) => {
     const selectedPageClassName = selected && !disabled ? 'item--selected' : '';
@@ -38,6 +39,7 @@ const PaginationList = ({
                   aria-label={ariaLabel}
                   href={createURL(value)}
                   onClick={event => onSelect(event, value)}
+                  {...pageComponentProps}
                 >
                   {label}
                 </PageComponent>
@@ -65,6 +67,14 @@ PaginationList.propTypes = {
   onSelect: PropTypes.func.isRequired,
   createURL: PropTypes.func.isRequired,
   PageComponent: PropTypes.func.isRequired,
+  pageComponentProps: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.func
+    ])
+  ).isRequired,
   className: PropTypes.string.isRequired
 };
 
