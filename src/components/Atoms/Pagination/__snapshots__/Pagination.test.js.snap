@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in full size with max pages equal to total pages 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="list"
+  >
+    <li
+      className="item   item--firstPage"
+    >
+      <a
+        aria-label="First page"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        «
+      </a>
+    </li>
+    <li
+      className="item   item--previousPage"
+    >
+      <a
+        aria-label="Previous page"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        ‹
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 1"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 2"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li
+      className="item  item--disabled item--page"
+    >
+      <span
+        className="link"
+      >
+        3
+      </span>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 4"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        4
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 5"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="item   item--nextPage"
+    >
+      <a
+        aria-label="Next page"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        ›
+      </a>
+    </li>
+    <li
+      className="item   item--lastPage"
+    >
+      <a
+        aria-label="Last page"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        »
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly in full size with max pages less than total pages 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="list"
+  >
+    <li
+      className="item   item--firstPage"
+    >
+      <a
+        aria-label="First page"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        «
+      </a>
+    </li>
+    <li
+      className="item   item--previousPage"
+    >
+      <a
+        aria-label="Previous page"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        ‹
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 1"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="item  item--disabled item--page"
+    >
+      <span
+        className="link"
+      >
+        2
+      </span>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 3"
+        className="link "
+        href="example.com/page/3"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 4"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        4
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 5"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 6"
+        className="link "
+        href="example.com/page/6"
+        onClick={[Function]}
+      >
+        6
+      </a>
+    </li>
+    <li
+      className="item   item--nextPage"
+    >
+      <a
+        aria-label="Next page"
+        className="link "
+        href="example.com/page/3"
+        onClick={[Function]}
+      >
+        ›
+      </a>
+    </li>
+    <li
+      className="item   item--lastPage"
+    >
+      <a
+        aria-label="Last page"
+        className="link "
+        href="example.com/page/10"
+        onClick={[Function]}
+      >
+        »
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly in full size with max pages more than total pages 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="list"
+  >
+    <li
+      className="item   item--firstPage"
+    >
+      <a
+        aria-label="First page"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        «
+      </a>
+    </li>
+    <li
+      className="item   item--previousPage"
+    >
+      <a
+        aria-label="Previous page"
+        className="link "
+        href="example.com/page/3"
+        onClick={[Function]}
+      >
+        ‹
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 1"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 2"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 3"
+        className="link "
+        href="example.com/page/3"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+    <li
+      className="item  item--disabled item--page"
+    >
+      <span
+        className="link"
+      >
+        4
+      </span>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 5"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 6"
+        className="link "
+        href="example.com/page/6"
+        onClick={[Function]}
+      >
+        6
+      </a>
+    </li>
+    <li
+      className="item   item--nextPage"
+    >
+      <a
+        aria-label="Next page"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        ›
+      </a>
+    </li>
+    <li
+      className="item   item--lastPage"
+    >
+      <a
+        aria-label="Last page"
+        className="link "
+        href="example.com/page/6"
+        onClick={[Function]}
+      >
+        »
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly in minimalist form 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="list"
+  >
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 1"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 2"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li
+      className="item  item--disabled item--page"
+    >
+      <span
+        className="link"
+      >
+        3
+      </span>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 4"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        4
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 5"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly with custom labels 1`] = `
+<div
+  className=""
+>
+  <ul
+    className="list"
+  >
+    <li
+      className="item   item--firstPage"
+    >
+      <a
+        aria-label="First page"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        First
+      </a>
+    </li>
+    <li
+      className="item   item--previousPage"
+    >
+      <a
+        aria-label="Previous page"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        Previous
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 1"
+        className="link "
+        href="example.com/page/1"
+        onClick={[Function]}
+      >
+        Page 1
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 2"
+        className="link "
+        href="example.com/page/2"
+        onClick={[Function]}
+      >
+        Page 2
+      </a>
+    </li>
+    <li
+      className="item  item--disabled item--page"
+    >
+      <span
+        className="link"
+      >
+        Page 3
+      </span>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 4"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        Page 4
+      </a>
+    </li>
+    <li
+      className="item   item--page"
+    >
+      <a
+        aria-label="Page 5"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        Page 5
+      </a>
+    </li>
+    <li
+      className="item   item--nextPage"
+    >
+      <a
+        aria-label="Next page"
+        className="link "
+        href="example.com/page/4"
+        onClick={[Function]}
+      >
+        Next
+      </a>
+    </li>
+    <li
+      className="item   item--lastPage"
+    >
+      <a
+        aria-label="Last page"
+        className="link "
+        href="example.com/page/5"
+        onClick={[Function]}
+      >
+        Last
+      </a>
+    </li>
+  </ul>
+</div>
+`;
