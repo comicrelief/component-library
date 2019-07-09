@@ -37,6 +37,11 @@ exports[`renders correctly in full size with first page selected 1`] = `
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -59,7 +64,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="First page"
-        className="link  link--disabled  c1 c2"
+        className="link  link--disabled link--firstPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -73,7 +78,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Previous page"
-        className="link  link--disabled  c1 c2"
+        className="link  link--disabled link--previousPage c1 c2"
         color="red"
         href="example.com/page/0"
         onClick={[Function]}
@@ -87,7 +92,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Page 1"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -101,7 +106,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Page 2"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -115,7 +120,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Page 3"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -129,7 +134,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Page 4"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -143,7 +148,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -157,7 +162,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Next page"
-        className="link    c1 c2"
+        className="link   link--nextPage c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -171,7 +176,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     >
       <a
         aria-label="Last page"
-        className="link    c1 c2"
+        className="link   link--lastPage c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -221,6 +226,11 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -243,7 +253,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="First page"
-        className="link    c1 c2"
+        className="link   link--firstPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -257,7 +267,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Previous page"
-        className="link    c1 c2"
+        className="link   link--previousPage c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -271,7 +281,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Page 1"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -285,7 +295,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Page 2"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -299,7 +309,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Page 3"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -313,7 +323,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Page 4"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -327,7 +337,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -341,7 +351,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Next page"
-        className="link    c1 c2"
+        className="link   link--nextPage c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -355,7 +365,7 @@ exports[`renders correctly in full size with max pages equal to total pages 1`] 
     >
       <a
         aria-label="Last page"
-        className="link    c1 c2"
+        className="link   link--lastPage c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -405,6 +415,11 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -427,7 +442,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="First page"
-        className="link    c1 c2"
+        className="link   link--firstPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -441,7 +456,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Previous page"
-        className="link    c1 c2"
+        className="link   link--previousPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -455,7 +470,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 1"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -469,7 +484,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 2"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -483,7 +498,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 3"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -497,7 +512,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 4"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -511,7 +526,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -525,7 +540,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Page 6"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/6"
         onClick={[Function]}
@@ -535,11 +550,25 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
       </a>
     </li>
     <li
+      className="item  item--disabled item--morePage"
+    >
+      <a
+        aria-label="More pages"
+        className="link  link--disabled link--morePage c1 c2"
+        color="red"
+        href="example.com/page/0"
+        onClick={[Function]}
+        target="_self"
+      >
+        ...
+      </a>
+    </li>
+    <li
       className="item   item--nextPage"
     >
       <a
         aria-label="Next page"
-        className="link    c1 c2"
+        className="link   link--nextPage c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -553,7 +582,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     >
       <a
         aria-label="Last page"
-        className="link    c1 c2"
+        className="link   link--lastPage c1 c2"
         color="red"
         href="example.com/page/10"
         onClick={[Function]}
@@ -603,6 +632,11 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -625,7 +659,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="First page"
-        className="link    c1 c2"
+        className="link   link--firstPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -639,7 +673,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Previous page"
-        className="link    c1 c2"
+        className="link   link--previousPage c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -653,7 +687,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 1"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -667,7 +701,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 2"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -681,7 +715,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 3"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -695,7 +729,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 4"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -709,7 +743,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -723,7 +757,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Page 6"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/6"
         onClick={[Function]}
@@ -737,7 +771,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Next page"
-        className="link    c1 c2"
+        className="link   link--nextPage c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -751,7 +785,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     >
       <a
         aria-label="Last page"
-        className="link    c1 c2"
+        className="link   link--lastPage c1 c2"
         color="red"
         href="example.com/page/6"
         onClick={[Function]}
@@ -801,6 +835,11 @@ exports[`renders correctly in minimalist form 1`] = `
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -823,7 +862,7 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <a
         aria-label="Page 1"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -837,7 +876,7 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <a
         aria-label="Page 2"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -851,7 +890,7 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <a
         aria-label="Page 3"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -865,7 +904,7 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <a
         aria-label="Page 4"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -879,7 +918,7 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -929,6 +968,11 @@ exports[`renders correctly with custom labels 1`] = `
   color: #FFFFFF;
 }
 
+.c1.link--morePage {
+  background: #FFFFFF;
+  color: #030e1a;
+}
+
 .c1.link--selected {
   cursor: default;
   background-color: #f04257;
@@ -951,7 +995,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="First page"
-        className="link    c1 c2"
+        className="link   link--firstPage c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -965,7 +1009,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Previous page"
-        className="link    c1 c2"
+        className="link   link--previousPage c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -979,7 +1023,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Page 1"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/1"
         onClick={[Function]}
@@ -993,7 +1037,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Page 2"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/2"
         onClick={[Function]}
@@ -1007,7 +1051,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Page 3"
-        className="link link--selected   c1 c2"
+        className="link link--selected  link--page c1 c2"
         color="red"
         href="example.com/page/3"
         onClick={[Function]}
@@ -1021,7 +1065,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Page 4"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -1035,7 +1079,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Page 5"
-        className="link    c1 c2"
+        className="link   link--page c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}
@@ -1049,7 +1093,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Next page"
-        className="link    c1 c2"
+        className="link   link--nextPage c1 c2"
         color="red"
         href="example.com/page/4"
         onClick={[Function]}
@@ -1063,7 +1107,7 @@ exports[`renders correctly with custom labels 1`] = `
     >
       <a
         aria-label="Last page"
-        className="link    c1 c2"
+        className="link   link--lastPage c1 c2"
         color="red"
         href="example.com/page/5"
         onClick={[Function]}

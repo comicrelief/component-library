@@ -18,6 +18,9 @@ const Pagination = ({
   showPrevious,
   previousLabel,
   previousAriaLabel,
+  showMore,
+  moreLabel,
+  moreAriaLabel,
   showNext,
   nextLabel,
   nextAriaLabel,
@@ -45,19 +48,13 @@ const Pagination = ({
   let items = [];
   if (showFirst) {
     items.push(
-      getItem(
-        'item--firstPage',
-        firstLabel,
-        firstAriaLabel,
-        1,
-        currentPage === 1
-      )
+      getItem('firstPage', firstLabel, firstAriaLabel, 1, currentPage === 1)
     );
   }
   if (showPrevious) {
     items.push(
       getItem(
-        'item--previousPage',
+        'previousPage',
         previousLabel,
         previousAriaLabel,
         currentPage - 1,
@@ -66,10 +63,14 @@ const Pagination = ({
     );
   }
 
+  const pages = getPages(currentPage, maxPages, totalPages);
+  if (showMore && pages[0] > 1) {
+    items.push(getItem('morePage', moreLabel, moreAriaLabel, 0, true));
+  }
   items = items.concat(
-    getPages(currentPage, maxPages, totalPages).map(value =>
+    pages.map(value =>
       getItem(
-        'item--page',
+        'page',
         getPageLabel(value),
         getPageAriaLabel(value),
         value,
@@ -77,10 +78,13 @@ const Pagination = ({
       )
     )
   );
+  if (showMore && pages[pages.length - 1] < totalPages) {
+    items.push(getItem('morePage', moreLabel, moreAriaLabel, 0, true));
+  }
   if (showNext) {
     items.push(
       getItem(
-        'item--nextPage',
+        'nextPage',
         nextLabel,
         nextAriaLabel,
         currentPage + 1,
@@ -91,7 +95,7 @@ const Pagination = ({
   if (showLast) {
     items.push(
       getItem(
-        'item--lastPage',
+        'lastPage',
         lastLabel,
         lastAriaLabel,
         totalPages,
@@ -139,6 +143,8 @@ Pagination.propTypes = {
   showNext: PropTypes.bool,
   /** Show last page link */
   showLast: PropTypes.bool,
+  /** Show that there are more pages */
+  showMore: PropTypes.bool,
   /** Max allowed number of pages */
   maxPages: PropTypes.number,
   /** Main pagination container class */
@@ -151,6 +157,8 @@ Pagination.propTypes = {
   firstLabel: PropTypes.string,
   /** Last page label */
   lastLabel: PropTypes.string,
+  /** More pages -other than displayed ones- label */
+  moreLabel: PropTypes.string,
   /** Generate page label, page number is available as an argument */
   getPageLabel: PropTypes.func,
   /** Previous page aria label */
@@ -161,6 +169,8 @@ Pagination.propTypes = {
   firstAriaLabel: PropTypes.string,
   /** Last page aria label */
   lastAriaLabel: PropTypes.string,
+  /** More pages -other than displayed ones- aria label */
+  moreAriaLabel: PropTypes.string,
   /** Generate page aria label, page number is available as an argument */
   getPageAriaLabel: PropTypes.func
 };
@@ -172,17 +182,20 @@ Pagination.defaultProps = {
   showPrevious: true,
   showNext: true,
   showLast: true,
+  showMore: true,
   maxPages: 5,
   className: '',
   previousLabel: '‹',
   nextLabel: '›',
   firstLabel: '«',
   lastLabel: '»',
+  moreLabel: '...',
   getPageLabel: currentPage => currentPage.toString(),
   previousAriaLabel: 'Previous page',
   nextAriaLabel: 'Next page',
   firstAriaLabel: 'First page',
   lastAriaLabel: 'Last page',
+  moreAriaLabel: 'More pages',
   getPageAriaLabel: currentPage => `Page ${currentPage}`
 };
 export default Pagination;

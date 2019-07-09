@@ -15,6 +15,10 @@ const StyledPaginationItem = styled(PaginationItem)`
     background: ${({ theme }) => theme.color('grey')};
     color: ${({ theme }) => theme.color('white')};
   }
+  &.link--morePage {
+    background: ${({ theme }) => theme.color('white')};
+    color: ${({ theme }) => theme.color('black')};
+  }
   &.link--selected {
     cursor: default;
     background-color: ${({ color, theme }) =>

@@ -24,7 +24,7 @@ Full size.
 ```js
 <Pagination
   maxPages={5}
-  totalPages={5}
+  totalPages={10}
   currentPage={1}
   createURL={value => `example.com/page/${value}`}
   onSelect={(event, value) => {
@@ -35,6 +35,7 @@ Full size.
   showPrevious={true}
   showNext={true}
   showLast={true}
+  showMore={true}
 />
 ```
 
@@ -43,8 +44,8 @@ Custom labels.
 ```js
 <Pagination
   maxPages={5}
-  totalPages={5}
-  currentPage={2}
+  totalPages={20}
+  currentPage={10}
   createURL={value => `example.com/page/${value}`}
   onSelect={(event, value) => {
     event.preventDefault();
@@ -54,10 +55,12 @@ Custom labels.
   showPrevious={true}
   showNext={true}
   showLast={true}
+  showMore={true}
   previousLabel="Previous"
   nextLabel="Next"
   firstLabel="First"
   lastLabel="Last"
+  moreLabel="More"
   getPageLabel={value => `Page ${value}`}
 />
 ```

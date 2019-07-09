@@ -13,7 +13,7 @@ const PaginationList = ({
     const selectedPageClassName =
       selected && !disabled ? `${prefix}--selected` : '';
     const disabledPageClassName = disabled ? `${prefix}--disabled` : '';
-    return `${prefix} ${selectedPageClassName} ${disabledPageClassName} ${pageClassName}`;
+    return `${prefix} ${selectedPageClassName} ${disabledPageClassName} ${prefix}--${pageClassName}`;
   };
   return (
     <div className={className}>
@@ -38,7 +38,12 @@ const PaginationList = ({
               )}
             >
               <PageComponent
-                className={getPageClassNames('link', selected, disabled, '')}
+                className={getPageClassNames(
+                  'link',
+                  selected,
+                  disabled,
+                  pageClassName
+                )}
                 aria-label={ariaLabel}
                 href={createURL(value)}
                 onClick={event => {
