@@ -8,7 +8,7 @@ const PaginationList = ({
   onSelect,
   className
 }) => {
-  const getPageClassNames = ({ selected, disabled, pageClassName }) => {
+  const getPageClassNames = (selected, disabled, pageClassName) => {
     const selectedPageClassName = selected && !disabled ? 'item--selected' : '';
     const disabledPageClassName = disabled ? 'item--disabled' : '';
     return `item ${selectedPageClassName} ${disabledPageClassName} ${pageClassName}`;
@@ -57,8 +57,8 @@ PaginationList.propTypes = {
       pageClassName: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       ariaLabel: PropTypes.string.isRequired,
-      selected: PropTypes.boolean.isRequired,
-      disabled: PropTypes.boolean.isRequired,
+      selected: PropTypes.bool.isRequired,
+      disabled: PropTypes.bool.isRequired,
       value: PropTypes.number.isRequired
     })
   ).isRequired,
