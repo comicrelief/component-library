@@ -15,8 +15,13 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
   padding: 20px;
-  flex: 0 0 50%;
   ${props =>
     props.fullImage &&
     css`
