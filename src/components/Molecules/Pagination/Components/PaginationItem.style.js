@@ -3,43 +3,24 @@ import PaginationItem from './PaginationItem';
 
 const StyledPaginationItem = styled(PaginationItem)`
   &.link {
-    padding: 6px 13px 6px 13px;
+    padding: 9px 14px 9px 14px;
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
     border-bottom: 0px;
     font-weight: 700;
   }
-  &.link--disabled {
-    cursor: default;
-    background: ${({ theme }) => theme.color('grey')};
-    color: ${({ theme }) => theme.color('white')};
-  }
+  &.link--disabled,
   &.link--morePagesBefore,
   &.link--morePagesAfter {
+    cursor: default;
     background: ${({ theme }) => theme.color('white')};
-    color: ${({ theme }) => theme.color('black')};
+    color: ${({ theme }) => theme.color('grey_medium')};
   }
   &.link--selected {
     cursor: default;
-    background-color: ${({ color, theme }) =>
-      color ? theme.color(color) : theme.color('red')};
-    ${({ color, theme }) =>
-      (color === 'red' &&
-        `
-          background: ${theme.color('red')};
-          color: ${theme.color('white')};
-        `) ||
-      (color === 'black' &&
-        `
-          background: ${theme.color('black')};
-          color: ${theme.color('white')};
-        `) ||
-      (color === 'grey' &&
-        `
-          background: ${theme.color('grey')};
-          color: ${theme.color('white')};
-        `)};
+    background: ${({ color, theme }) => theme.color(color)};
+    color: ${({ theme }) => theme.color('white')};
   }
 `;
 
