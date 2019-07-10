@@ -15,7 +15,8 @@ const StyledPaginationItem = styled(PaginationItem)`
     background: ${({ theme }) => theme.color('grey')};
     color: ${({ theme }) => theme.color('white')};
   }
-  &.link--morePage {
+  &.link--morePagesBefore,
+  &.link--morePagesAfter {
     background: ${({ theme }) => theme.color('white')};
     color: ${({ theme }) => theme.color('black')};
   }
@@ -28,25 +29,16 @@ const StyledPaginationItem = styled(PaginationItem)`
         `
           background: ${theme.color('red')};
           color: ${theme.color('white')};
-          :hover {
-            background: ${theme.color('teal')};
-          }
         `) ||
       (color === 'black' &&
         `
           background: ${theme.color('black')};
           color: ${theme.color('white')};
-          :hover {
-            background: ${theme.color('teal')};
-          }
         `) ||
       (color === 'grey' &&
         `
           background: ${theme.color('grey')};
           color: ${theme.color('white')};
-          :hover {
-            background: ${theme.color('teal')};
-          }
         `)};
   }
 `;

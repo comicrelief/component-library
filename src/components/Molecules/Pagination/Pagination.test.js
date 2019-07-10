@@ -15,6 +15,7 @@ it('renders correctly in minimalist form', () => {
       showPrevious={false}
       showNext={false}
       showLast={false}
+      showMore={false}
     />
   ).toJSON();
 
@@ -33,6 +34,7 @@ it('renders correctly in full size with max pages equal to total pages', () => {
       showPrevious
       showNext
       showLast
+      showMore
     />
   ).toJSON();
 
@@ -51,6 +53,7 @@ it('renders correctly in full size with max pages more than total pages', () => 
       showPrevious
       showNext
       showLast
+      showMore
     />
   ).toJSON();
 
@@ -69,6 +72,26 @@ it('renders correctly in full size with max pages less than total pages', () => 
       showPrevious
       showNext
       showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly in full size with max pages less than current page', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={20}
+      currentPage={10}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
     />
   ).toJSON();
 
@@ -87,6 +110,7 @@ it('renders correctly in full size with first page selected', () => {
       showPrevious
       showNext
       showLast
+      showMore
     />
   ).toJSON();
 
@@ -105,10 +129,12 @@ it('renders correctly with custom labels', () => {
       showPrevious
       showNext
       showLast
+      showMore
       previousLabel="Previous"
       nextLabel="Next"
       firstLabel="First"
       lastLabel="Last"
+      moreLabel="More"
       getPageLabel={value => `Page ${value}`}
     />
   ).toJSON();

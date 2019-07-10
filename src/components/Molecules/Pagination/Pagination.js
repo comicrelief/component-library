@@ -65,7 +65,7 @@ const Pagination = ({
 
   const pages = getPages(currentPage, maxPages, totalPages);
   if (showMore && pages[0] > 1) {
-    items.push(getItem('morePage', moreLabel, moreAriaLabel, 0, true));
+    items.push(getItem('morePagesBefore', moreLabel, moreAriaLabel, 0, true));
   }
   items = items.concat(
     pages.map(value =>
@@ -79,7 +79,7 @@ const Pagination = ({
     )
   );
   if (showMore && pages[pages.length - 1] < totalPages) {
-    items.push(getItem('morePage', moreLabel, moreAriaLabel, 0, true));
+    items.push(getItem('morePagesAfter', moreLabel, moreAriaLabel, 0, true));
   }
   if (showNext) {
     items.push(
