@@ -1,10 +1,16 @@
-# Comic Relief
+### Comic Relief with default style
 
 ```js
 <SocialMedia campaign="comicrelief" />
 ```
 
-# Sport Relief
+### Red Nose Day with semi-custom style
+
+```js
+<SocialMedia campaign="rednoseday" backgroundColor="black" />
+```
+
+### Sport Relief with full custom style
 
 ```js
 <SocialMedia
@@ -15,10 +21,4 @@
   backgroundColorOnHover="red"
   className="social-media"
 />
-```
-
-# Red Nose Day
-
-```js
-<SocialMedia campaign="rednoseday" backgroundColor="black" />
 ```
