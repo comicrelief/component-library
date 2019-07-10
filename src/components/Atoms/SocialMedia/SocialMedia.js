@@ -1,38 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import getLinks from './Utils/SocialMediaLinks';
 import icons from './Utils/SocialMediaIcons';
-import StyledSocialIcon from './Components/SocialIcon.style';
+import StyledSocialIcons from './Components/SocialIcons.style';
 
+/** Social media icons with customizable style linked to campaign social media accounts */
 const SocialMedia = ({ className, campaign, ...restProps }) => {
   const links = getLinks(campaign);
   return (
-    <ul className={`icons ${className}`}>
-      {Object.keys(icons).map(brand => (
-        <li key={brand}>
-          <StyledSocialIcon
-            icon={icons[brand]}
-            href={links[brand]}
-            {...restProps}
-          />
-        </li>
-      ))}
-    </ul>
+    <StyledSocialIcons
+      className={className}
+      icons={icons}
+      links={links}
+      {...restProps}
+    />
   );
 };
 
 SocialMedia.propTypes = {
-  className: PropTypes.string.isRequired,
+  /** Campaign, used to get social media accounts' links */
   campaign: PropTypes.string.isRequired,
+  /** Main social media container class */
+  className: PropTypes.string,
+  /** Social media brand color */
   color: PropTypes.string,
+  /** Social media brand color on hover */
   colorOnHover: PropTypes.string,
+  /** Social media brand circular background color */
   backgroundColor: PropTypes.string,
+  /** Social media brand circular background color on hover */
   backgroundColorOnHover: PropTypes.string,
+  /** Social media account link target */
   target: PropTypes.string
 };
 
 SocialMedia.defaultProps = {
+  className: '',
   color: 'white',
   colorOnHover: 'white',
   backgroundColor: 'red',
@@ -40,14 +43,4 @@ SocialMedia.defaultProps = {
   target: 'blank'
 };
 
-const StyledSocialMedia = styled(SocialMedia)`
-  &.icons {
-    display: inline-block;
-    list-style-type: none;
-  }
-  li {
-    float: left;
-    padding: 10px;
-  }
-`;
-export default StyledSocialMedia;
+export default SocialMedia;

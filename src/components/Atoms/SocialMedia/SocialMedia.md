@@ -13,6 +13,7 @@
   backgroundColor="teal"
   colorOnHover="yellow"
   backgroundColorOnHover="red"
+  className="social-media"
 />
 ```
 
