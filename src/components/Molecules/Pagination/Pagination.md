@@ -1,6 +1,4 @@
-# Pagination
-
-## Minimalist
+### Minimalist
 
 ```js
 <Pagination
@@ -35,7 +33,7 @@
 />
 ```
 
-## Full size
+### Full size
 
 ```js
 <Pagination
@@ -106,7 +104,7 @@
 />
 ```
 
-## Custom labels
+### Custom labels
 
 ```js
 <Pagination
