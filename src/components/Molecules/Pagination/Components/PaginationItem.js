@@ -10,7 +10,7 @@ const PaginationItem = ({ children, color, ...restProps }) => (
 
 PaginationItem.propTypes = {
   children: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired // color is required as it is used in styling in `StyledPaginationItem`
 };
 
 export default PaginationItem;
