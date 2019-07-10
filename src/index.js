@@ -21,8 +21,8 @@ export { default as Select } from './components/Atoms/SelectField/SelectField';
 export { default as TextArea } from './components/Atoms/TextArea/TextArea';
 export { default as RichText } from './components/Atoms/RichText/RichText';
 export {
-  default as SocialIcons
-} from './components/Atoms/SocialIcons/SocialIcons';
+  default as SocialMedia
+} from './components/Atoms/SocialMedia/SocialMedia';
 
 /* Molecules */
 
