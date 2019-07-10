@@ -22,7 +22,7 @@ it('renders correctly in minimalist form', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly in full size with max pages equal to total pages', () => {
+it('renders correctly in minimalist form with non-default color', () => {
   const tree = renderWithTheme(
     <Pagination
       maxPages={5}
@@ -30,11 +30,12 @@ it('renders correctly in full size with max pages equal to total pages', () => {
       currentPage={3}
       createURL={value => `example.com/page/${value}`}
       onSelect={value => value}
-      showFirst
-      showPrevious
-      showNext
-      showLast
-      showMore
+      showFirst={false}
+      showPrevious={false}
+      showNext={false}
+      showLast={false}
+      showMore={false}
+      pageComponentProps={{ color: 'blue' }}
     />
   ).toJSON();
 
@@ -84,7 +85,7 @@ it('renders correctly in full size with max pages less than current page', () =>
     <Pagination
       maxPages={5}
       totalPages={20}
-      currentPage={10}
+      currentPage={19}
       createURL={value => `example.com/page/${value}`}
       onSelect={value => value}
       showFirst
@@ -104,6 +105,82 @@ it('renders correctly in full size with first page selected', () => {
       maxPages={5}
       totalPages={5}
       currentPage={1}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly in full size with last page selected', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={5}
+      currentPage={5}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly in full size with more on left', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={6}
+      currentPage={4}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly in full size with more on right', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={6}
+      currentPage={3}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly in full size with more on both sides', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={7}
+      currentPage={4}
       createURL={value => `example.com/page/${value}`}
       onSelect={value => value}
       showFirst
