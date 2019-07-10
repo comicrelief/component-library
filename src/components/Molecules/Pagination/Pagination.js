@@ -88,7 +88,7 @@ const Pagination = ({
         nextLabel,
         nextAriaLabel,
         currentPage + 1,
-        currentPage === maxPages || maxPages === 1
+        currentPage === totalPages || totalPages === 1
       )
     );
   }
@@ -99,7 +99,7 @@ const Pagination = ({
         lastLabel,
         lastAriaLabel,
         totalPages,
-        currentPage === maxPages || maxPages === 1
+        currentPage === totalPages || totalPages === 1
       )
     );
   }
@@ -177,7 +177,7 @@ Pagination.propTypes = {
 
 Pagination.defaultProps = {
   PageComponent: StyledPaginationItem,
-  pageComponentProps: { color: 'red', inline: true },
+  pageComponentProps: { color: 'red' },
   showFirst: true,
   showPrevious: true,
   showNext: true,
