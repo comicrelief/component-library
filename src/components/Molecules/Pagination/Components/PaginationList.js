@@ -7,7 +7,8 @@ const PaginationList = ({
   createURL,
   onSelect,
   className,
-  pageComponentProps
+  pageComponentProps,
+  target
 }) => {
   const getPageClassNames = (prefix, selected, disabled, pageClassName) => {
     const selectedPageClassName =
@@ -52,6 +53,7 @@ const PaginationList = ({
                   }
                   return onSelect(event, value);
                 }}
+                target={target}
                 {...pageComponentProps}
               >
                 {label}
@@ -87,7 +89,8 @@ PaginationList.propTypes = {
       PropTypes.func
     ])
   ).isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired
 };
 
 export default PaginationList;

@@ -4,9 +4,7 @@ import StyledPaginationList from './Components/PaginationList.style';
 import StyledPaginationItem from './Components/PaginationItem.style';
 import { getPages } from './Utils/PaginationCalculator';
 
-/**
- * Customizable Pagination component
- */
+/** Customizable Pagination component */
 const Pagination = ({
   PageComponent,
   totalPages,
@@ -32,6 +30,7 @@ const Pagination = ({
   onSelect,
   createURL,
   className,
+  target,
   pageComponentProps
 }) => {
   const getItem = (pageClassName, label, ariaLabel, value, disabled) => {
@@ -112,6 +111,7 @@ const Pagination = ({
       pageComponentProps={pageComponentProps}
       createURL={createURL}
       onSelect={onSelect}
+      target={target}
     />
   );
 };
@@ -178,7 +178,9 @@ Pagination.propTypes = {
   /** More pages -other than displayed ones- aria label */
   moreAriaLabel: PropTypes.string,
   /** Generate page aria label, page number is available as an argument */
-  getPageAriaLabel: PropTypes.func
+  getPageAriaLabel: PropTypes.func,
+  /** Page link target */
+  target: PropTypes.string
 };
 
 Pagination.defaultProps = {
@@ -202,6 +204,7 @@ Pagination.defaultProps = {
   firstAriaLabel: 'First page',
   lastAriaLabel: 'Last page',
   moreAriaLabel: 'More pages',
-  getPageAriaLabel: currentPage => `Page ${currentPage}`
+  getPageAriaLabel: currentPage => `Page ${currentPage}`,
+  target: 'self'
 };
 export default Pagination;
