@@ -17,14 +17,26 @@ export const calculateDisplayedPages = (maxPages, totalPages) => {
  * Then pages to the left would be current page after subtracting one from it
  * @param  {Integer} currentPage
  * @param  {Integer} displayedPages
+ * @param  {Integer} totalPages
  * @return {Integer}
  */
-export const calculatePagesToTheLeft = (currentPage, displayedPages) => {
+export const calculatePagesToTheLeft = (
+  currentPage,
+  displayedPages,
+  totalPages
+) => {
   const oneSidePages = Math.floor(displayedPages / 2);
+  // if current page is closer to the start
+  // pages to the left will be current page minus one -for the current page item itself-
   if (currentPage <= oneSidePages) {
     return currentPage - 1;
   }
-
+  // if current page is closer to the end
+  // pages to the left will be displayed pages
+  // minus pages on the right side minus one -for the current page item itself-
+  if (totalPages - currentPage <= oneSidePages) {
+    return displayedPages - (totalPages - currentPage) - 1;
+  }
   return oneSidePages;
 };
 
@@ -33,11 +45,18 @@ export const calculatePagesToTheLeft = (currentPage, displayedPages) => {
  * By subtracting pages to the left and the current page itself from displayed pages total
  * @param  {Integer} currentPage
  * @param  {Integer} displayedPages
+ * @param  {Integer} totalPages
  * @return {Integer}
  */
-export const calculatePagesToTheRight = (currentPage, displayedPages) => {
+export const calculatePagesToTheRight = (
+  currentPage,
+  displayedPages,
+  totalPages
+) => {
   return (
-    displayedPages - calculatePagesToTheLeft(currentPage, displayedPages) - 1
+    displayedPages -
+    calculatePagesToTheLeft(currentPage, displayedPages, totalPages) -
+    1
   );
 };
 
@@ -55,8 +74,16 @@ export const getPages = (currentPage, maxPages, totalPages) => {
     return range(1, totalPages + 1);
   }
 
-  const pagesToTheLeft = calculatePagesToTheLeft(currentPage, displayedPages);
-  const pagesToTheRight = calculatePagesToTheRight(currentPage, displayedPages);
+  const pagesToTheLeft = calculatePagesToTheLeft(
+    currentPage,
+    displayedPages,
+    totalPages
+  );
+  const pagesToTheRight = calculatePagesToTheRight(
+    currentPage,
+    displayedPages,
+    totalPages
+  );
 
   const first = currentPage - pagesToTheLeft;
   const last = currentPage + pagesToTheRight;
