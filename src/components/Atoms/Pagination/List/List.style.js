@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import PaginationList from './PaginationList';
+import List from './List';
 
-const StyledPaginationList = styled(PaginationList)`
+const StyledList = styled(List)`
   ul {
     display: inline-block;
     list-style-type: none;
@@ -11,4 +11,4 @@ const StyledPaginationList = styled(PaginationList)`
     padding: 10px;
   }
 `;
-export default StyledPaginationList;
+export default StyledList;

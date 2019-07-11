@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledPaginationList from './Components/PaginationList.style';
-import PaginationItem from './Components/PaginationItem';
+import List from './List/List.style';
+import Item from './Item/Item';
 import { getPages } from './Utils/PaginationCalculator';
 
 /** Customizable Pagination component */
@@ -104,7 +104,7 @@ const Pagination = ({
   }
 
   return (
-    <StyledPaginationList
+    <List
       className={className}
       pages={items}
       PageComponent={PageComponent}
@@ -200,7 +200,7 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  PageComponent: PaginationItem,
+  PageComponent: Item,
   pageComponentProps: {},
   showFirst: true,
   showPrevious: true,

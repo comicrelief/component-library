@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PaginationList = ({
+const List = ({
   PageComponent,
   pages,
   createURL,
@@ -38,7 +38,7 @@ const PaginationList = ({
   );
 };
 
-PaginationList.propTypes = {
+List.propTypes = {
   pages: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
@@ -63,4 +63,4 @@ PaginationList.propTypes = {
   className: PropTypes.string.isRequired
 };
 
-export default PaginationList;
+export default List;

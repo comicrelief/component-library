@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const StyledPaginationItem = styled.a`
+const StyledItem = styled.a`
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -33,19 +33,12 @@ const StyledPaginationItem = styled.a`
     selectedColor,
     disabledColor
   }) => {
-    console.log(disabled, selected);
     let processedColor = color;
     if (disabled) {
       processedColor = disabledColor;
     } else if (selected) {
       processedColor = selectedColor;
     }
-    console.log(
-      disabledColor,
-      selectedColor,
-      processedColor,
-      theme.color(processedColor)
-    );
     return theme.color(processedColor);
   }};
   ${({ theme, selected, disabled, backgroundColorOnHover, colorOnHover }) => {
@@ -61,4 +54,4 @@ const StyledPaginationItem = styled.a`
   }};
 `;
 
-export default StyledPaginationItem;
+export default StyledItem;
