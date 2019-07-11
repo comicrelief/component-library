@@ -2,6 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { crTheme } from '../index';
 
+import 'lazysizes';
+
 import '../theme/shared/fonts.css';
 
 // eslint-disable-next-line react/prop-types

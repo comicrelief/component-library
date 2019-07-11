@@ -23,13 +23,15 @@ it('renders correctly', () => {
       background-color: #fbef51;
     }
 
-    <a
-      className="c0"
-      color="yellow"
-      href="/test"
-      target="_self"
-    >
-      My paragraph small and yellow
-    </a>
+    <span>
+      <a
+        className="c0"
+        color="yellow"
+        href="/test"
+        target="_self"
+      >
+        My paragraph small and yellow
+      </a>
+    </span>
   `);
 });
