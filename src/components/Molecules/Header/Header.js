@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
-import { BurgerIcon, BurgerMenu } from './BurgerMenu.style';
 import {
+  BurgerMenu,
   Brand,
   HeaderWrapper,
   InnerWrapper,
@@ -18,10 +18,6 @@ import {
 } from './Header.style';
 
 const Header = ({ navItems, metaIcons, ...rest }) => {
-  const [toggleState, setToggleState] = useState(false);
-  function toggle() {
-    setToggleState(!toggleState);
-  }
   const { menuGroup } = navItems;
   return (
     <HeaderWrapper navItems {...rest}>
@@ -31,22 +27,7 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
         </Brand>
         <Nav aria-labelledby="block-comicrelief-main-menu-menu">
           <Text tag="h2">Main navigation</Text>
-          <BurgerMenu>
-            <NavLink
-              href="#"
-              role="button"
-              aria-expanded={toggleState}
-              aria-haspopup="true"
-              aria-label="Open and close Navigation Menu, 24 items listed"
-              inline
-              onClick={toggle}
-            >
-              <BurgerIcon>
-                <Text>Open and close nav menu</Text>
-              </BurgerIcon>
-              <span />
-            </NavLink>
-          </BurgerMenu>
+          <BurgerMenu />
           <NavMenu>
             {menuGroup.map(group => (
               <NavItem key={group.id}>
