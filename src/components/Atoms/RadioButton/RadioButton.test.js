@@ -75,7 +75,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="Male"
+        htmlFor="male"
       >
         <input
           className="c1"
@@ -88,7 +88,6 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          for="Male"
         >
           Male
         </span>
@@ -155,7 +154,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="Female"
+        htmlFor="female"
       >
         <input
           className="c1"
@@ -168,7 +167,6 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          for="Female"
         >
           Female
         </span>
