@@ -1,62 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Text from '../../Atoms/Text/Text';
+// import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
-import {
-  BurgerMenu,
-  Brand,
-  HeaderWrapper,
-  InnerWrapper,
-  NavLink,
-  Nav,
-  NavMenu,
-  NavItem,
-  SubNavMenu,
-  SubNavItem,
-  MetaIcons
-} from './Header.style';
+import MainMenu from './Nav/Nav';
+
+import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Header.style';
 
 const Header = ({ navItems, metaIcons, ...rest }) => {
-  const { menuGroup } = navItems;
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
         <Brand href="/" inline>
           <Logo rotate />
         </Brand>
-        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
-          <Text tag="h2">Main navigation</Text>
-          <BurgerMenu />
-          <NavMenu>
-            {menuGroup.map(group => (
-              <NavItem key={group.id}>
-                <NavLink
-                  href={group.url}
-                  inline
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-                <SubNavMenu>
-                  <SubNavItem>
-                    <NavLink href={group.url} inline>
-                      <Text>{group.title}</Text>
-                    </NavLink>
-                  </SubNavItem>
-                  {group.links.map(child => (
-                    <SubNavItem key={child.url}>
-                      <NavLink href={child.url} inline>
-                        <Text>{child.title}</Text>
-                      </NavLink>
-                    </SubNavItem>
-                  ))}
-                </SubNavMenu>
-              </NavItem>
-            ))}
-          </NavMenu>
-        </Nav>
+        <MainMenu navItems={navItems} />
         <MetaIcons>{metaIcons}</MetaIcons>
       </InnerWrapper>
     </HeaderWrapper>
