@@ -10,7 +10,7 @@
 <SocialIcons campaign="rednoseday" />
 ```
 
-### Sport Relief with self links
+### Sport Relief with self target
 
 ```js
 <SocialIcons campaign="sportrelief" target="self" />
