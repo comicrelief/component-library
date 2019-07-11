@@ -33,7 +33,7 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
           <Text tag="h2">Main navigation</Text>
           <BurgerMenu>
             <NavLink
-              href="#!/Header/1"
+              href="#"
               role="button"
               aria-expanded={toggleState}
               aria-haspopup="true"
