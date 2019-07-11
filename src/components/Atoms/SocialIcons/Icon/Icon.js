@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import StyledIcon from './Icon.style';
+import styled from 'styled-components';
 
-const Icon = ({ href, target, icon, ...restProps }) => (
-  <StyledIcon href={href} target={target} {...restProps}>
-    <FontAwesomeIcon icon={icon} size="2x" fixedWidth />
-  </StyledIcon>
+const StyledLink = styled.a`
+  text-decoration: none;
+  cursor: point;
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
+`;
+
+const Icon = ({ href, target, icon, brand, ...restProps }) => (
+  <StyledLink href={href} target={`_${target}`} {...restProps}>
+    <StyledImage src={icon} alt={brand} />
+  </StyledLink>
 );
 
 Icon.propTypes = {
+  brand: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired, // used for styling in `StyledSocialIcon`
-  colorOnHover: PropTypes.string.isRequired, // used for styling in `StyledSocialIcon`
-  backgroundColor: PropTypes.string.isRequired, // used for styling in `StyledSocialIcon`
-  backgroundColorOnHover: PropTypes.string.isRequired, // used for styling in `StyledSocialIcon`
-  // eslint-disable-next-line react/forbid-prop-types
-  icon: PropTypes.object.isRequired // not interested in knowing how a third party object is constructed
+  icon: PropTypes.string.isRequired
 };
 
 export default Icon;

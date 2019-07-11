@@ -1,13 +1,11 @@
-import {
-  faFacebookF,
-  faTwitter,
-  faYoutube,
-  faInstagram
-} from '@fortawesome/free-brands-svg-icons';
+import facebook from '../assets/facebook.svg';
+import twitter from '../assets/twitter.svg';
+import youtube from '../assets/youtube.svg';
+import instagram from '../assets/instagram.svg';
 
 export default {
-  facebook: faFacebookF,
-  twitter: faTwitter,
-  youtube: faYoutube,
-  instagram: faInstagram
+  facebook,
+  twitter,
+  youtube,
+  instagram
 };

@@ -11,6 +11,7 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
+  width: 80px;
   padding: 10px;
 `;
 
@@ -21,7 +22,12 @@ const SocialIcons = ({ campaign, ...restProps }) => {
     <StyledList>
       {Object.keys(icons).map(brand => (
         <StyledItem key={brand}>
-          <Icon icon={icons[brand]} href={links[brand]} {...restProps} />
+          <Icon
+            icon={icons[brand]}
+            href={links[brand]}
+            brand={brand}
+            {...restProps}
+          />
         </StyledItem>
       ))}
     </StyledList>
@@ -31,23 +37,11 @@ const SocialIcons = ({ campaign, ...restProps }) => {
 SocialIcons.propTypes = {
   /** Campaign, used to get social media accounts' links */
   campaign: PropTypes.string.isRequired,
-  /** Social media brand color */
-  color: PropTypes.string,
-  /** Social media brand color on hover */
-  colorOnHover: PropTypes.string,
-  /** Social media brand circular background color */
-  backgroundColor: PropTypes.string,
-  /** Social media brand circular background color on hover */
-  backgroundColorOnHover: PropTypes.string,
   /** Social media account link target */
   target: PropTypes.string
 };
 
 SocialIcons.defaultProps = {
-  color: 'white',
-  colorOnHover: 'white',
-  backgroundColor: 'red',
-  backgroundColorOnHover: 'teal',
   target: 'blank'
 };
 

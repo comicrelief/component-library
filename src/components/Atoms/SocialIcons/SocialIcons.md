@@ -1,23 +1,17 @@
-### Comic Relief with default style
+### Comic Relief
 
 ```js
 <SocialIcons campaign="comicrelief" />
 ```
 
-### Red Nose Day with semi-custom style
+### Red Nose Day
 
 ```js
-<SocialIcons campaign="rednoseday" backgroundColor="black" />
+<SocialIcons campaign="rednoseday" />
 ```
 
-### Sport Relief with full custom style
+### Sport Relief with self links
 
 ```js
-<SocialIcons
-  campaign="sportrelief"
-  color="black"
-  backgroundColor="teal"
-  colorOnHover="yellow"
-  backgroundColorOnHover="red"
-/>
+<SocialIcons campaign="sportrelief" target="self" />
 ```
