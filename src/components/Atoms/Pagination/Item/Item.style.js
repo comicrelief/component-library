@@ -5,7 +5,6 @@ const StyledItem = styled.a`
   border-radius: 30px;
   text-align: center;
   text-decoration: none;
-  border-bottom: 0px;
   font-weight: 700;
   cursor: ${({ selected, disabled }) =>
     selected || disabled ? 'default' : 'pointer'};

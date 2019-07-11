@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import List from './List/List.style';
+import List from './List/List';
 import Item from './Item/Item';
 import { getPages } from './Utils/PaginationCalculator';
 

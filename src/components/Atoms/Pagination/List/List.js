@@ -1,40 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+`;
+
+const StyledItem = styled.li`
+  padding: 10px;
+`;
 
 const List = ({
   PageComponent,
   pages,
   createURL,
   onSelect,
-  className,
   pageComponentProps,
   ...restProps
 }) => {
   return (
-    <div className={className}>
-      <ul>
-        {pages.map(({ selected, disabled, label, ariaLabel, value }) => (
-          <li key={`${ariaLabel} ${value}`}>
-            <PageComponent
-              selected={selected}
-              disabled={disabled}
-              aria-label={ariaLabel}
-              href={selected || disabled ? null : createURL(value)}
-              onClick={event => {
-                if (selected || disabled) {
-                  return event.preventDefault();
-                }
-                return onSelect(event, value);
-              }}
-              {...restProps}
-              {...pageComponentProps}
-            >
-              {label}
-            </PageComponent>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <StyledList>
+      {pages.map(({ selected, disabled, label, ariaLabel, value }) => (
+        <StyledItem key={`${ariaLabel} ${value}`}>
+          <PageComponent
+            selected={selected}
+            disabled={disabled}
+            aria-label={ariaLabel}
+            href={selected || disabled ? null : createURL(value)}
+            onClick={event => {
+              if (selected || disabled) {
+                return event.preventDefault();
+              }
+              return onSelect(event, value);
+            }}
+            {...restProps}
+            {...pageComponentProps}
+          >
+            {label}
+          </PageComponent>
+        </StyledItem>
+      ))}
+    </StyledList>
   );
 };
 
@@ -58,8 +66,7 @@ List.propTypes = {
       PropTypes.number,
       PropTypes.func
     ])
-  ).isRequired,
-  className: PropTypes.string.isRequired
+  ).isRequired
 };
 
 export default List;
