@@ -5,13 +5,12 @@ import hideVisually from '../../../theme/shared/hideVisually';
  * Burger menu
  */
 const BurgerMenu = styled.div`
-  height: 75px;
   position: relative;
   a {
     width: 40px;
     display: block;
     position: relative;
-    height: 76px;
+    height: 55px;
     margin: 0;
     padding: 0 20px;
     cursor: pointer;
@@ -25,14 +24,13 @@ const BurgerMenu = styled.div`
   }
   span {
     position: absolute;
-    top: 32px;
+    top: 0px;
     right: 15px;
     display: block;
     height: 3px;
     background-color: #666;
     width: 25px;
     background-color: ${({ theme }) => theme.color('deep_violet')};
-    top: 35px;
     right: 5px;
     ::before,
     ::after {

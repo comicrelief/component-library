@@ -27,6 +27,21 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
         </Brand>
         <Nav aria-labelledby="block-comicrelief-main-menu-menu">
           <Text tag="h2">Main navigation</Text>
+          <BurgerMenu>
+            <NavLink
+              href="#"
+              role="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Open and close Navigation Menu, 24 items listed"
+              inline
+            >
+              <BurgerIcon>
+                <Text>Open and close nav menu</Text>
+              </BurgerIcon>
+              <span />
+            </NavLink>
+          </BurgerMenu>
           <NavMenu>
             {menuGroup.map(group => (
               <NavItem key={group.id}>
@@ -57,14 +72,6 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
           </NavMenu>
         </Nav>
         <MetaIcons>{metaIcons}</MetaIcons>
-        <BurgerMenu>
-          <NavLink href="#" role="button" inline>
-            <BurgerIcon>
-              <Text>Open and close nav menu</Text>
-            </BurgerIcon>
-            <span />
-          </NavLink>
-        </BurgerMenu>
       </InnerWrapper>
     </HeaderWrapper>
   );

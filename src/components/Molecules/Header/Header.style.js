@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Link from '../../Atoms/Link/Link';
+import hideVisually from '../../../theme/shared/hideVisually';
 
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'Banner'
@@ -57,7 +58,7 @@ const NavLink = styled(Link)`
 const Nav = styled.nav`
   display: block;
   > h2 {
-    visibility: hidden;
+    visibility: ${hideVisually};
   }
 `;
 
