@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
@@ -18,6 +18,10 @@ import {
 } from './Header.style';
 
 const Header = ({ navItems, metaIcons, ...rest }) => {
+  const [toggleState, setToggleState] = useState(false);
+  function toggle() {
+    setToggleState(!toggleState);
+  }
   const { menuGroup } = navItems;
   return (
     <HeaderWrapper navItems {...rest}>
@@ -29,12 +33,13 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
           <Text tag="h2">Main navigation</Text>
           <BurgerMenu>
             <NavLink
-              href="#"
+              href="#!/Header/1"
               role="button"
-              aria-expanded="false"
+              aria-expanded={toggleState}
               aria-haspopup="true"
               aria-label="Open and close Navigation Menu, 24 items listed"
               inline
+              onClick={toggle}
             >
               <BurgerIcon>
                 <Text>Open and close nav menu</Text>
