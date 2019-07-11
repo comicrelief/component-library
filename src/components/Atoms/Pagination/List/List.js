@@ -14,7 +14,7 @@ const List = ({
     <div className={className}>
       <ul>
         {pages.map(({ selected, disabled, label, ariaLabel, value }) => (
-          <li key={value}>
+          <li key={`${ariaLabel} ${value}`}>
             <PageComponent
               selected={selected}
               disabled={disabled}
@@ -41,7 +41,6 @@ const List = ({
 List.propTypes = {
   pages: PropTypes.arrayOf(
     PropTypes.shape({
-      key: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       ariaLabel: PropTypes.string.isRequired,
       selected: PropTypes.bool.isRequired,

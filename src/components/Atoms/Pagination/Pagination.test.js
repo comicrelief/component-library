@@ -35,7 +35,7 @@ it('renders correctly in minimalist form with non-default color', () => {
       showNext={false}
       showLast={false}
       showMore={false}
-      pageComponentProps={{ color: 'blue' }}
+      selectedBackgroundColor="blue"
     />
   ).toJSON();
 
@@ -188,6 +188,33 @@ it('renders correctly in full size with more on both sides', () => {
       showNext
       showLast
       showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with custom style', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={10}
+      currentPage={5}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+      color="red"
+      backgroundColor="yellow"
+      selectedColor="yellow"
+      selectedBackgroundColor="teal"
+      disabledColor="white"
+      disabledBackgroundColor="grey_light"
+      colorOnHover="yellow"
+      backgroundColorOnHover="teal"
     />
   ).toJSON();
 

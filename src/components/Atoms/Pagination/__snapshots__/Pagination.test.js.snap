@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly in full size with first page selected 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -21,7 +11,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c3 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -29,150 +19,168 @@ exports[`renders correctly in full size with first page selected 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c3:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c1 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item  item--disabled item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link  link--disabled link--firstPage c1 c2"
-        color="red"
-        href="example.com/page/1"
+        className="c1"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item  item--disabled item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link  link--disabled link--previousPage c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c1"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/1"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c3"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -182,16 +190,6 @@ exports[`renders correctly in full size with first page selected 1`] = `
 `;
 
 exports[`renders correctly in full size with last page selected 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -202,7 +200,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -210,150 +208,168 @@ exports[`renders correctly in full size with last page selected 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/5"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item  item--disabled item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link  link--disabled link--nextPage c1 c2"
-        color="red"
-        href="example.com/page/6"
+        className="c3"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item  item--disabled item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link  link--disabled link--lastPage c1 c2"
-        color="red"
-        href="example.com/page/5"
+        className="c3"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         »
       </a>
@@ -363,16 +379,6 @@ exports[`renders correctly in full size with last page selected 1`] = `
 `;
 
 exports[`renders correctly in full size with max pages less than current page 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -383,7 +389,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -391,164 +397,182 @@ exports[`renders correctly in full size with max pages less than current page 1`
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/18"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesBefore"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesBefore c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c2"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 16"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/16"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         16
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 17"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/17"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         17
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 18"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/18"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         18
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 19"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/19"
+        className="c3"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         19
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 20"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/20"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         20
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/20"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/20"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -558,16 +582,6 @@ exports[`renders correctly in full size with max pages less than current page 1`
 `;
 
 exports[`renders correctly in full size with max pages less than total pages 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -578,7 +592,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -586,178 +600,196 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/2"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 6"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         6
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesAfter"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesAfter c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c3"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/10"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -767,16 +799,6 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
 `;
 
 exports[`renders correctly in full size with max pages more than total pages 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -787,7 +809,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -795,17 +817,24 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
@@ -814,145 +843,143 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/4"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 6"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         6
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -962,16 +989,6 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
 `;
 
 exports[`renders correctly in full size with more on both sides 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -982,7 +999,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -990,178 +1007,196 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesBefore"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesBefore c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c2"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/4"
+        className="c3"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 6"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         6
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesAfter"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesAfter c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c2"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/7"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -1171,16 +1206,6 @@ exports[`renders correctly in full size with more on both sides 1`] = `
 `;
 
 exports[`renders correctly in full size with more on left 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -1191,7 +1216,7 @@ exports[`renders correctly in full size with more on left 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -1199,164 +1224,182 @@ exports[`renders correctly in full size with more on left 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesBefore"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesBefore c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c2"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/3"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/4"
+        className="c3"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 6"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         6
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -1366,16 +1409,6 @@ exports[`renders correctly in full size with more on left 1`] = `
 `;
 
 exports[`renders correctly in full size with more on right 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -1386,7 +1419,7 @@ exports[`renders correctly in full size with more on right 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -1394,164 +1427,182 @@ exports[`renders correctly in full size with more on right 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
 }
 
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #c7c7c7;
+}
+
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         «
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ‹
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/3"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
     </li>
-    <li
-      className="item  item--disabled item--morePagesAfter"
-    >
+    <li>
       <a
         aria-label="More pages"
-        className="link  link--disabled link--morePagesAfter c1 c2"
-        color="red"
-        href="example.com/page/0"
+        className="c3"
+        color="black"
+        disabled={true}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ...
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         ›
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/6"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         »
       </a>
@@ -1561,16 +1612,6 @@ exports[`renders correctly in full size with more on right 1`] = `
 `;
 
 exports[`renders correctly in minimalist form 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -1581,7 +1622,7 @@ exports[`renders correctly in minimalist form 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -1589,17 +1630,24 @@ exports[`renders correctly in minimalist form 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
@@ -1608,75 +1656,73 @@ exports[`renders correctly in minimalist form 1`] = `
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--page"
-    >
+  <ul>
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/3"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
@@ -1686,16 +1732,6 @@ exports[`renders correctly in minimalist form 1`] = `
 `;
 
 exports[`renders correctly in minimalist form with non-default color 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -1706,7 +1742,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -1714,17 +1750,24 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #22d2dc;
   color: #FFFFFF;
@@ -1733,75 +1776,73 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--page"
-    >
+  <ul>
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         2
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/3"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         5
       </a>
@@ -1811,16 +1852,6 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
 `;
 
 exports[`renders correctly with custom labels 1`] = `
-.c2 {
-  color: #000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 2px 1px;
-  border-bottom: 2px solid;
-  border-bottom-color: #000;
-}
-
 .c0 ul {
   display: inline-block;
   list-style-type: none;
@@ -1831,7 +1862,7 @@ exports[`renders correctly with custom labels 1`] = `
   padding: 10px;
 }
 
-.c1.link {
+.c1 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
@@ -1839,17 +1870,24 @@ exports[`renders correctly with custom labels 1`] = `
   text-decoration: none;
   border-bottom: 0px;
   font-weight: 700;
-}
-
-.c1.link--disabled,
-.c1.link--morePagesBefore,
-.c1.link--morePagesAfter {
-  cursor: default;
+  cursor: pointer;
   background: #FFFFFF;
-  color: #c7c7c7;
+  color: #030e1a;
 }
 
-.c1.link--selected {
+.c1:hover {
+  background: #00beca;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
   cursor: default;
   background: #f04257;
   color: #FFFFFF;
@@ -1858,133 +1896,348 @@ exports[`renders correctly with custom labels 1`] = `
 <div
   className="c0"
 >
-  <ul
-    className="list"
-  >
-    <li
-      className="item   item--firstPage"
-    >
+  <ul>
+    <li>
       <a
         aria-label="First page"
-        className="link   link--firstPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         First
       </a>
     </li>
-    <li
-      className="item   item--previousPage"
-    >
+    <li>
       <a
         aria-label="Previous page"
-        className="link   link--previousPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Previous
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 1"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/1"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Page 1
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 2"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/2"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Page 2
       </a>
     </li>
-    <li
-      className="item item--selected  item--page"
-    >
+    <li>
       <a
         aria-label="Page 3"
-        className="link link--selected  link--page c1 c2"
-        color="red"
-        href="example.com/page/3"
+        className="c2"
+        color="black"
+        disabled={false}
+        href={null}
         onClick={[Function]}
-        target="_self"
+        selected={true}
+        target="self"
       >
         Page 3
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 4"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Page 4
       </a>
     </li>
-    <li
-      className="item   item--page"
-    >
+    <li>
       <a
         aria-label="Page 5"
-        className="link   link--page c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Page 5
       </a>
     </li>
-    <li
-      className="item   item--nextPage"
-    >
+    <li>
       <a
         aria-label="Next page"
-        className="link   link--nextPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/4"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Next
       </a>
     </li>
-    <li
-      className="item   item--lastPage"
-    >
+    <li>
       <a
         aria-label="Last page"
-        className="link   link--lastPage c1 c2"
-        color="red"
+        className="c1"
+        color="black"
+        disabled={false}
         href="example.com/page/5"
         onClick={[Function]}
-        target="_self"
+        selected={false}
+        target="self"
       >
         Last
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly with custom style 1`] = `
+.c0 ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.c0 li {
+  float: left;
+  padding: 10px;
+}
+
+.c1 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fbef51;
+  color: #f04257;
+}
+
+.c1:hover {
+  background: #00beca;
+  color: #fbef51;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #e6e3dc;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0px;
+  font-weight: 700;
+  cursor: default;
+  background: #00beca;
+  color: #fbef51;
+}
+
+<div
+  className="c0"
+>
+  <ul>
+    <li>
+      <a
+        aria-label="First page"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/1"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        «
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Previous page"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/4"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        ‹
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="More pages"
+        className="c2"
+        color="red"
+        disabled={true}
+        href={null}
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        ...
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 3"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/3"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        3
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 4"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/4"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        4
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 5"
+        className="c3"
+        color="red"
+        disabled={false}
+        href={null}
+        onClick={[Function]}
+        selected={true}
+        target="self"
+      >
+        5
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 6"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/6"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        6
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 7"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/7"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        7
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="More pages"
+        className="c2"
+        color="red"
+        disabled={true}
+        href={null}
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        ...
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Next page"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/6"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        ›
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Last page"
+        className="c1"
+        color="red"
+        disabled={false}
+        href="example.com/page/10"
+        onClick={[Function]}
+        selected={false}
+        target="self"
+      >
+        »
       </a>
     </li>
   </ul>
