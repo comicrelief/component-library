@@ -33,10 +33,8 @@ const Pagination = ({
   pageComponentProps,
   ...restProps
 }) => {
-  const getItem = (pageClassName, label, ariaLabel, value, disabled) => {
+  const getItem = (label, ariaLabel, value, disabled) => {
     return {
-      key: `${pageClassName}.${value}`,
-      pageClassName,
       disabled,
       selected: currentPage === value,
       label,
@@ -46,14 +44,11 @@ const Pagination = ({
   };
   let items = [];
   if (showFirst) {
-    items.push(
-      getItem('firstPage', firstLabel, firstAriaLabel, 1, currentPage === 1)
-    );
+    items.push(getItem(firstLabel, firstAriaLabel, 1, currentPage === 1));
   }
   if (showPrevious) {
     items.push(
       getItem(
-        'previousPage',
         previousLabel,
         previousAriaLabel,
         currentPage - 1,
@@ -64,26 +59,19 @@ const Pagination = ({
 
   const pages = getPages(currentPage, maxPages, totalPages);
   if (showMore && pages[0] > 1) {
-    items.push(getItem('morePagesBefore', moreLabel, moreAriaLabel, 0, true));
+    items.push(getItem(moreLabel, moreAriaLabel, -1, true));
   }
   items = items.concat(
     pages.map(value =>
-      getItem(
-        'page',
-        getPageLabel(value),
-        getPageAriaLabel(value),
-        value,
-        false
-      )
+      getItem(getPageLabel(value), getPageAriaLabel(value), value, false)
     )
   );
   if (showMore && pages[pages.length - 1] < totalPages) {
-    items.push(getItem('morePagesAfter', moreLabel, moreAriaLabel, 0, true));
+    items.push(getItem(moreLabel, moreAriaLabel, -2, true));
   }
   if (showNext) {
     items.push(
       getItem(
-        'nextPage',
         nextLabel,
         nextAriaLabel,
         currentPage + 1,
@@ -94,7 +82,6 @@ const Pagination = ({
   if (showLast) {
     items.push(
       getItem(
-        'lastPage',
         lastLabel,
         lastAriaLabel,
         totalPages,

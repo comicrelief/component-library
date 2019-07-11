@@ -13,13 +13,13 @@ const List = ({
   return (
     <div className={className}>
       <ul>
-        {pages.map(({ key, selected, disabled, label, ariaLabel, value }) => (
-          <li key={key}>
+        {pages.map(({ selected, disabled, label, ariaLabel, value }) => (
+          <li key={value}>
             <PageComponent
               selected={selected}
               disabled={disabled}
               aria-label={ariaLabel}
-              href={createURL(value)}
+              href={selected || disabled ? null : createURL(value)}
               onClick={event => {
                 if (selected || disabled) {
                   return event.preventDefault();
