@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StyledPaginationList from './Components/PaginationList.style';
-import StyledPaginationItem from './Components/PaginationItem.style';
+import PaginationItem from './Components/PaginationItem';
 import { getPages } from './Utils/PaginationCalculator';
 
 /** Customizable Pagination component */
@@ -30,8 +30,8 @@ const Pagination = ({
   onSelect,
   createURL,
   className,
-  target,
-  pageComponentProps
+  pageComponentProps,
+  ...restProps
 }) => {
   const getItem = (pageClassName, label, ariaLabel, value, disabled) => {
     return {
@@ -111,7 +111,7 @@ const Pagination = ({
       pageComponentProps={pageComponentProps}
       createURL={createURL}
       onSelect={onSelect}
-      target={target}
+      {...restProps}
     />
   );
 };
@@ -180,12 +180,28 @@ Pagination.propTypes = {
   /** Generate page aria label, page number is available as an argument */
   getPageAriaLabel: PropTypes.func,
   /** Page link target */
-  target: PropTypes.string
+  target: PropTypes.string,
+  /** Page link default color */
+  color: PropTypes.string,
+  /** Page link default background color */
+  backgroundColor: PropTypes.string,
+  /** Page link color when selected */
+  selectedColor: PropTypes.string,
+  /** Page link background color when selected */
+  selectedBackgroundColor: PropTypes.string,
+  /** Page link color when disabled */
+  disabledColor: PropTypes.string,
+  /** Page link background color when disabled */
+  disabledBackgroundColor: PropTypes.string,
+  /** Page link color on hover */
+  colorOnHover: PropTypes.string,
+  /** Page link background color on hover */
+  backgroundColorOnHover: PropTypes.string
 };
 
 Pagination.defaultProps = {
-  PageComponent: StyledPaginationItem,
-  pageComponentProps: { color: 'red' },
+  PageComponent: PaginationItem,
+  pageComponentProps: {},
   showFirst: true,
   showPrevious: true,
   showNext: true,
@@ -205,6 +221,14 @@ Pagination.defaultProps = {
   lastAriaLabel: 'Last page',
   moreAriaLabel: 'More pages',
   getPageAriaLabel: currentPage => `Page ${currentPage}`,
-  target: 'self'
+  target: 'self',
+  color: 'black',
+  backgroundColor: 'white',
+  selectedColor: 'white',
+  selectedBackgroundColor: 'red',
+  disabledColor: 'grey_medium',
+  disabledBackgroundColor: 'white',
+  colorOnHover: 'white',
+  backgroundColorOnHover: 'teal'
 };
 export default Pagination;

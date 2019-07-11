@@ -29,7 +29,7 @@
   showPrevious={false}
   showNext={false}
   showLast={false}
-  pageComponentProps={{color: 'black'}}
+  selectedBackgroundColor="black"
 />
 ```
 
@@ -66,7 +66,7 @@
   showNext={true}
   showLast={true}
   showMore={true}
-  pageComponentProps={{color: 'purple'}}
+  selectedBackgroundColor="purple"
 />
 
 <Pagination
@@ -83,7 +83,7 @@
   showNext={true}
   showLast={true}
   showMore={true}
-  pageComponentProps={{color: 'blue'}}
+  selectedBackgroundColor="blue"
 />
 
 <Pagination
@@ -100,7 +100,35 @@
   showNext={true}
   showLast={true}
   showMore={true}
-  pageComponentProps={{color: 'green'}}
+  selectedBackgroundColor="green"
+/>
+```
+
+### Custom style
+
+```js
+<Pagination
+  maxPages={5}
+  totalPages={10}
+  currentPage={5}
+  createURL={value => `example.com/page/${value}`}
+  onSelect={(event, value) => {
+    event.preventDefault();
+    console.log(value);
+  }}
+  showFirst={true}
+  showPrevious={true}
+  showNext={true}
+  showLast={true}
+  showMore={true}
+  color="red"
+  backgroundColor="yellow"
+  selectedColor="yellow"
+  selectedBackgroundColor="teal"
+  disabledColor="white"
+  disabledBackgroundColor="grey_light"
+  colorOnHover="yellow"
+  backgroundColorOnHover="teal"
 />
 ```
 
