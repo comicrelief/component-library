@@ -56,6 +56,9 @@ const NavLink = styled(Link)`
  */
 const Nav = styled.nav`
   display: block;
+  > h2 {
+    visibility: hidden;
+  }
 `;
 
 /**
@@ -183,8 +186,9 @@ const MetaIcons = styled.div`
   float: left;
   position: relative;
   display: flex;
-  left: 10px;
-
+  a {
+    margin-left: ${({ theme }) => theme.fontSize('xxs')};
+  }
   @media ${({ theme }) => theme.breakpoint('small')} {
     z-index: 100;
   }

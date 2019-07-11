@@ -1,9 +1,9 @@
-/* eslint-disable react/no-array-index-key */
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
+import { BurgerIcon, BurgerMenu } from './BurgerMenu.style';
 import {
   Brand,
   HeaderWrapper,
@@ -25,11 +25,17 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
         <Brand href="/" inline>
           <Logo rotate />
         </Brand>
-        <Nav>
+        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
+          <Text tag="h2">Main navigation</Text>
           <NavMenu>
             {menuGroup.map(group => (
               <NavItem key={group.id}>
-                <NavLink href={group.url} inline>
+                <NavLink
+                  href={group.url}
+                  inline
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
                   <Text>{group.title}</Text>
                 </NavLink>
                 <SubNavMenu>
@@ -50,11 +56,15 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
             ))}
           </NavMenu>
         </Nav>
-        <MetaIcons>
-          {metaIcons.map((metaIcon, i) => (
-            <Fragment key={i}>{metaIcon}</Fragment>
-          ))}
-        </MetaIcons>
+        <MetaIcons>{metaIcons}</MetaIcons>
+        <BurgerMenu>
+          <NavLink href="#" role="button" inline>
+            <BurgerIcon>
+              <Text>Open and close nav menu</Text>
+            </BurgerIcon>
+            <span />
+          </NavLink>
+        </BurgerMenu>
       </InnerWrapper>
     </HeaderWrapper>
   );
