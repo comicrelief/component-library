@@ -7,7 +7,7 @@ import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.pictures}
+  imageSet={data.images}
   imageAltText=""
   copyFirst={false}
 >
@@ -32,7 +32,7 @@ import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.pictures}
+  imageSet={data.images}
   imageAltText=""
   copyFirst={false}
   fullImage={true}
