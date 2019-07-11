@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with Comic Relief links and default style 1`] = `
-.c1.icon {
+.c2 {
   display: inline-block;
   padding: 14px 11px;
   text-align: center;
@@ -14,27 +14,32 @@ exports[`renders correctly with Comic Relief links and default style 1`] = `
   color: #FFFFFF;
 }
 
-.c1.icon:hover {
+.c2:hover {
   background: #00beca;
   color: #FFFFFF;
 }
 
-.c0.icons {
-  display: inline-block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   list-style-type: none;
 }
 
-.c0 li {
-  float: left;
+.c1 {
   padding: 10px;
 }
 
 <ul
-  className="icons c0"
+  className="c0"
 >
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.facebook.com/comicrelief"
       target="blank"
     >
@@ -57,9 +62,12 @@ exports[`renders correctly with Comic Relief links and default style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://twitter.com/comicrelief"
       target="blank"
     >
@@ -82,9 +90,12 @@ exports[`renders correctly with Comic Relief links and default style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       target="blank"
     >
@@ -107,9 +118,12 @@ exports[`renders correctly with Comic Relief links and default style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.instagram.com/comicrelief"
       target="blank"
     >
@@ -136,7 +150,7 @@ exports[`renders correctly with Comic Relief links and default style 1`] = `
 `;
 
 exports[`renders correctly with Red Nose Day links and partly custom style 1`] = `
-.c1.icon {
+.c2 {
   display: inline-block;
   padding: 14px 11px;
   text-align: center;
@@ -149,27 +163,32 @@ exports[`renders correctly with Red Nose Day links and partly custom style 1`] =
   color: #FFFFFF;
 }
 
-.c1.icon:hover {
+.c2:hover {
   background: #00beca;
   color: #FFFFFF;
 }
 
-.c0.icons {
-  display: inline-block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   list-style-type: none;
 }
 
-.c0 li {
-  float: left;
+.c1 {
   padding: 10px;
 }
 
 <ul
-  className="icons c0"
+  className="c0"
 >
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.facebook.com/officialrednoseday"
       target="blank"
     >
@@ -192,9 +211,12 @@ exports[`renders correctly with Red Nose Day links and partly custom style 1`] =
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://twitter.com/rednoseday"
       target="blank"
     >
@@ -217,9 +239,12 @@ exports[`renders correctly with Red Nose Day links and partly custom style 1`] =
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       target="blank"
     >
@@ -242,9 +267,12 @@ exports[`renders correctly with Red Nose Day links and partly custom style 1`] =
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="white"
       href="https://www.instagram.com/rednoseday"
       target="blank"
     >
@@ -271,7 +299,7 @@ exports[`renders correctly with Red Nose Day links and partly custom style 1`] =
 `;
 
 exports[`renders correctly with Sport Relief links and full custom style 1`] = `
-.c1.icon {
+.c2 {
   display: inline-block;
   padding: 14px 11px;
   text-align: center;
@@ -284,27 +312,32 @@ exports[`renders correctly with Sport Relief links and full custom style 1`] = `
   color: #030e1a;
 }
 
-.c1.icon:hover {
+.c2:hover {
   background: #f04257;
   color: #fbef51;
 }
 
-.c0.icons {
-  display: inline-block;
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   list-style-type: none;
 }
 
-.c0 li {
-  float: left;
+.c1 {
   padding: 10px;
 }
 
 <ul
-  className="icons c0"
+  className="c0"
 >
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="black"
       href="https://www.facebook.com/sportrelief"
       target="blank"
     >
@@ -327,9 +360,12 @@ exports[`renders correctly with Sport Relief links and full custom style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="black"
       href="https://twitter.com/sportrelief"
       target="blank"
     >
@@ -352,9 +388,12 @@ exports[`renders correctly with Sport Relief links and full custom style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="black"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       target="blank"
     >
@@ -377,9 +416,12 @@ exports[`renders correctly with Sport Relief links and full custom style 1`] = `
       </svg>
     </a>
   </li>
-  <li>
+  <li
+    className="c1"
+  >
     <a
-      className="icon c1"
+      className="c2"
+      color="black"
       href="https://www.instagram.com/sportrelief"
       target="blank"
     >

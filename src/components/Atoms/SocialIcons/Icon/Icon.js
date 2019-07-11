@@ -1,25 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import StyledIcon from './Icon.style';
 
-const SocialIcons = ({
-  className,
-  href,
-  target,
-  icon,
-  color,
-  colorOnHover,
-  backgroundColor,
-  backgroundColorOnHover,
-  ...restProps
-}) => (
-  <a className={`icon ${className}`} href={href} target={target} {...restProps}>
+const Icon = ({ href, target, icon, ...restProps }) => (
+  <StyledIcon href={href} target={target} {...restProps}>
     <FontAwesomeIcon icon={icon} size="2x" fixedWidth />
-  </a>
+  </StyledIcon>
 );
 
-SocialIcons.propTypes = {
-  className: PropTypes.string.isRequired,
+Icon.propTypes = {
   href: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired, // used for styling in `StyledSocialIcon`
@@ -30,4 +20,4 @@ SocialIcons.propTypes = {
   icon: PropTypes.object.isRequired // not interested in knowing how a third party object is constructed
 };
 
-export default SocialIcons;
+export default Icon;

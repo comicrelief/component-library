@@ -1,27 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getLinks from './Utils/SocialMediaLinks';
-import icons from './Utils/SocialMediaIcons';
-import StyledSocialIcons from './Components/SocialIcons.style';
+import styled from 'styled-components';
+import getLinks from './Utils/Links';
+import icons from './Utils/Icons';
+import Icon from './Icon/Icon';
+
+const StyledList = styled.ul`
+  display: flex;
+  list-style-type: none;
+`;
+
+const StyledItem = styled.li`
+  padding: 10px;
+`;
 
 /** Social media icons with customizable style linked to campaign social media accounts */
-const SocialMedia = ({ className, campaign, ...restProps }) => {
+const SocialIcons = ({ campaign, ...restProps }) => {
   const links = getLinks(campaign);
   return (
-    <StyledSocialIcons
-      className={className}
-      icons={icons}
-      links={links}
-      {...restProps}
-    />
+    <StyledList>
+      {Object.keys(icons).map(brand => (
+        <StyledItem key={brand}>
+          <Icon icon={icons[brand]} href={links[brand]} {...restProps} />
+        </StyledItem>
+      ))}
+    </StyledList>
   );
 };
 
-SocialMedia.propTypes = {
+SocialIcons.propTypes = {
   /** Campaign, used to get social media accounts' links */
   campaign: PropTypes.string.isRequired,
-  /** Main social media container class */
-  className: PropTypes.string,
   /** Social media brand color */
   color: PropTypes.string,
   /** Social media brand color on hover */
@@ -34,8 +43,7 @@ SocialMedia.propTypes = {
   target: PropTypes.string
 };
 
-SocialMedia.defaultProps = {
-  className: '',
+SocialIcons.defaultProps = {
   color: 'white',
   colorOnHover: 'white',
   backgroundColor: 'red',
@@ -43,4 +51,4 @@ SocialMedia.defaultProps = {
   target: 'blank'
 };
 
-export default SocialMedia;
+export default SocialIcons;
