@@ -36,8 +36,7 @@ const Label = styled.h3`
 `;
 
 const Desc = styled.p`
-  font-size: 27px;
-  font-weight: bold;
+  font-size: 14px;
 `;
 
 /**
