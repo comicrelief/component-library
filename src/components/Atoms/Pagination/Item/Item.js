@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledItem from './Item.style';
 
-const Item = ({ children, ...restProps }) => (
-  <StyledItem {...restProps}>{children}</StyledItem>
+const Item = ({ children, target, ...restProps }) => (
+  <StyledItem target={`_${target}`} {...restProps}>
+    {children}
+  </StyledItem>
 );
 
 Item.propTypes = {
   children: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired, // required for styling in `StyledItem`
   backgroundColor: PropTypes.string.isRequired, // required for styling in `StyledItem`
   selectedColor: PropTypes.string.isRequired, // required for styling in `StyledItem`
