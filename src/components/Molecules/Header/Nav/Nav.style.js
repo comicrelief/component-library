@@ -11,11 +11,11 @@ const NavLink = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  width: 25px;
+  position: relative;
+  width: 40px;
   height: auto;
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: auto;
-    position: relative;
   }
   > h2 {
     visibility: ${hideVisually};

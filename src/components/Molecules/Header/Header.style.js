@@ -31,7 +31,6 @@ const InnerWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('large')} {
     justify-content: space-around;
-    padding: 0;
   }
 `;
 
@@ -51,7 +50,7 @@ const Brand = styled(Link).attrs(() => ({
  */
 const MetaIcons = styled.div`
   position: absolute;
-  right: 70px;
+  right: 65px;
   a {
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }

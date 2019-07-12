@@ -2,7 +2,10 @@ import styled, { css } from 'styled-components';
 
 const buttonStyle = () => css`
   display: inline-block;
-  padding: 16px 30px;
+  padding: 11px 17px;
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    padding: 16px 30px;
+  }
   text-align: center;
   text-decoration: none;
   font-weight: 700;
