@@ -61,6 +61,7 @@ const SingleMessage = ({
   backgroundColor,
   copyFirst,
   imageSet,
+  image,
   imageAltText,
   children,
   fullImage
@@ -69,11 +70,12 @@ const SingleMessage = ({
 
   return (
     <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
-      {imageSet ? (
+      {imageSet && image ? (
         <Image>
           <Picture
             alt={imageAltText}
             images={imageSet}
+            image={image}
             objectFit="cover"
             width="100%"
             height="100%"
@@ -91,8 +93,8 @@ SingleMessage.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
   fullImage: PropTypes.bool,
-  // eslint-disable-next-line react/forbid-prop-types
-  imageSet: PropTypes.object,
+  imageSet: PropTypes.string,
+  image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node.isRequired
 };
@@ -102,6 +104,7 @@ SingleMessage.defaultProps = {
   copyFirst: false,
   fullImage: false,
   imageSet: null,
+  image: null,
   imageAltText: ''
 };
 

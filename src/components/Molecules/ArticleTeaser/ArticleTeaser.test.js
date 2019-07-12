@@ -2,13 +2,14 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
-import images from '../../../styleguide/data/data';
+import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
-      images={images.pictures}
+      images={data.images}
+      image={data.image}
       date=" 01 July 2019"
       title="News article"
       alt="Image's description"
@@ -130,14 +131,13 @@ it('renders correctly', () => {
             alt="Image's description"
             className="lazyload c3"
             data-sizes="auto"
-            data-srcset={
-              Object {
-                "large": "picture-3.jpg",
-                "medium": "picture-2.jpg",
-                "small": "picture-1.jpg",
-              }
-            }
+            data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
             height="auto"
+            src="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w"
             srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             width="100%"
           />
