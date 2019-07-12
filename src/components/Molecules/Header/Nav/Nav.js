@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
+import BurgerMenu from '../Burger/BurgerMenu';
 
 import {
   NavLink,
@@ -17,6 +18,7 @@ const MainMenu = ({ navItems }) => {
   return (
     <Nav aria-labelledby="block-comicrelief-main-menu-menu">
       <Text tag="h2">Main navigation</Text>
+      <BurgerMenu />
       <NavMenu>
         {menuGroup.map(group => (
           <NavItem key={group.id}>

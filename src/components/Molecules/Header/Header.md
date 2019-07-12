@@ -11,6 +11,9 @@ import Link from '../../Atoms/Link/Link';
       <Link color="green" href="/donation">
         Donate
       </Link>
+      <Link color="green" href="/donation">
+        Donate
+      </Link>
     </>
   }
 />;

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
-import MainMenu from './Nav/Nav';
+import MainNav from './Nav/Nav';
 
 import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Header.style';
 
@@ -14,8 +13,8 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
         <Brand href="/" inline>
           <Logo rotate />
         </Brand>
-        <MainMenu navItems={navItems} />
         <MetaIcons>{metaIcons}</MetaIcons>
+        <MainNav navItems={navItems} />
       </InnerWrapper>
     </HeaderWrapper>
   );
