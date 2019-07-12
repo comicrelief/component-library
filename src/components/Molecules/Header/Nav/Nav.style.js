@@ -14,6 +14,7 @@ const Nav = styled.nav`
   width: 25px;
   height: auto;
   @media ${({ theme }) => theme.breakpoint('large')} {
+    width: auto;
     position: relative;
   }
   > h2 {

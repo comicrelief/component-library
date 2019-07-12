@@ -31,6 +31,7 @@ const InnerWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('large')} {
     justify-content: space-around;
+    padding: 0;
   }
 `;
 
@@ -56,6 +57,7 @@ const MetaIcons = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
+    position: relative;
     display: flex;
     background-color: ${({ theme }) => theme.color('white')};
     margin-right: 0px;

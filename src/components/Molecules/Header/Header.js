@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MediaQuery from 'react-responsive';
 
 import Logo from '../../Atoms/Logo/Logo';
 import MainNav from './Nav/Nav';
-
+import { sizes } from '../../../theme/shared/breakpoint';
 import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Header.style';
 
 const Header = ({ navItems, metaIcons, ...rest }) => {
@@ -13,8 +14,15 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
         <Brand href="/" inline>
           <Logo rotate />
         </Brand>
-        <MetaIcons>{metaIcons}</MetaIcons>
-        <MainNav navItems={navItems} />
+        <MediaQuery maxDeviceWidth={sizes.large}>
+          <MetaIcons>{metaIcons}</MetaIcons>
+          <MainNav navItems={navItems} />
+        </MediaQuery>
+
+        <MediaQuery minDeviceWidth={sizes.large}>
+          <MainNav navItems={navItems} />
+          <MetaIcons>{metaIcons}</MetaIcons>
+        </MediaQuery>
       </InnerWrapper>
     </HeaderWrapper>
   );
