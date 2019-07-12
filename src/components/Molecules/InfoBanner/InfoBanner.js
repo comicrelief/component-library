@@ -25,6 +25,7 @@ const Info = styled.div`
   width: 100%;
   margin-bottom: 40px;
   flex-direction: column;
+  padding: 0 20px;
   @media (min-width: 700px) {
     width: calc(100% / 3);
   }
