@@ -7,18 +7,18 @@ import Link from '../../../Atoms/Link/Link';
  * Burger menu
  */
 const BurgerMenu = styled(Link)`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   text-indent: -9999px;
   border: none;
   background-color: transparent;
-  padding: 0;
+  padding: 2px 5px;
   span:nth-child(2) {
     width: 100%;
     height: 100%;
     position: relative;
-    top: 0px;
+    top: 50%;
     display: block;
     height: 3px;
     background-color: ${({ theme }) => theme.color('deep_violet')};

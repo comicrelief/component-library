@@ -13,7 +13,7 @@ const NavLink = styled(Link)`
 const Nav = styled.nav`
   position: relative;
   width: 40px;
-  height: auto;
+  height: 100%;
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: auto;
   }

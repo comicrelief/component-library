@@ -11,7 +11,7 @@ const BurgerMenu = () => {
   }
   return (
     <Wrapper
-      href="#"
+      href=""
       role="button"
       aria-expanded={toggleState}
       aria-haspopup="true"
