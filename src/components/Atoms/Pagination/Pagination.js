@@ -29,7 +29,6 @@ const Pagination = ({
   getPageAriaLabel,
   onSelect,
   createURL,
-  className,
   pageComponentProps,
   ...restProps
 }) => {
@@ -92,7 +91,6 @@ const Pagination = ({
 
   return (
     <List
-      className={className}
       pages={items}
       PageComponent={PageComponent}
       pageComponentProps={pageComponentProps}
@@ -140,8 +138,6 @@ Pagination.propTypes = {
   showMore: PropTypes.bool,
   /** Max allowed number of pages */
   maxPages: PropTypes.number,
-  /** Main pagination container class */
-  className: PropTypes.string,
   /** Previous page label */
   previousLabel: PropTypes.string,
   /** Next page label */
@@ -195,7 +191,6 @@ Pagination.defaultProps = {
   showLast: true,
   showMore: true,
   maxPages: 5,
-  className: '',
   previousLabel: '‹',
   nextLabel: '›',
   firstLabel: '«',
