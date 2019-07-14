@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="social_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 108 108" style="enable-background:new 0 0 108 108;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#E52630;}
-	.st1{fill:#FFFFFF;}
-</style>
-<g id="facebook">
-	<circle class="st0" cx="54" cy="54" r="54"/>
-	<path class="st1" d="M68.91,54.16H59.2c0,15.52,0,34.63,0,34.63H44.81c0,0,0-18.92,0-34.63h-6.84V41.93h6.84v-7.92
-		c0-5.67,2.69-14.53,14.52-14.53l10.66,0.04V31.4c0,0-6.48,0-7.74,0c-1.26,0-3.05,0.63-3.05,3.33v7.19h10.97L68.91,54.16z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108"><circle cx="54" cy="54" r="54" fill="#e52630"/><path d="M68.91 54.16H59.2v34.63H44.81V54.16h-6.84V41.93h6.84v-7.92c0-5.67 2.69-14.53 14.52-14.53l10.66.04V31.4h-7.74c-1.26 0-3.05.63-3.05 3.33v7.19h10.97l-1.26 12.24z" fill="#fff"/></svg>
