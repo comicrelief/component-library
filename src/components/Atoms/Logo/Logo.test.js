@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Logo from './Logo';
 
 it('renders correctly', () => {
-  const tree = renderWithTheme(<Logo rotate alt="CR18 Logo" />).toJSON();
+  const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
@@ -18,15 +18,15 @@ it('renders correctly', () => {
       display: inline-block;
       width: 50px;
       height: 50px;
+      -webkit-transform: rotate(-14deg);
+      -ms-transform: rotate(-14deg);
+      transform: rotate(-14deg);
     }
 
     @media (min-width:740px) {
       .c0 {
         width: 60px;
         height: 60px;
-        -webkit-transform: rotate(-14deg);
-        -ms-transform: rotate(-14deg);
-        transform: rotate(-14deg);
       }
     }
 
@@ -36,7 +36,7 @@ it('renders correctly', () => {
       rotate={1}
     >
       <img
-        alt="CR18 Logo"
+        alt="Comic Relief logo"
         className="c1"
         src="mock.asset"
       />

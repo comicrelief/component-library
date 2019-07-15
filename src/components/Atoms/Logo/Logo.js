@@ -21,31 +21,28 @@ const LogoWrapper = styled.div.attrs(() => ({
   display: inline-block;
   width: 50px;
   height: 50px;
+  transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   @media (min-width: 740px) {
     width: 60px;
     height: 60px;
-    transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   }
 `;
 
-const Logo = ({ rotate, alt }) => {
+const Logo = ({ rotate }) => {
   return (
     <LogoWrapper rotate={rotate ? 1 : 0}>
-      <Image src={image} alt={alt} />
+      <Image src={image} alt="Comic Relief logo" />
     </LogoWrapper>
   );
 };
 
 Logo.propTypes = {
   /** Rotate logo */
-  rotate: PropTypes.bool,
-  /** Alternative text */
-  alt: PropTypes.string
+  rotate: PropTypes.bool
 };
 
 Logo.defaultProps = {
-  rotate: false,
-  alt: ''
+  rotate: false
 };
 
 export default Logo;

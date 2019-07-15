@@ -13,7 +13,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       display: inline-block;
-      padding: 16px 30px;
+      padding: 11px 17px;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -21,6 +21,12 @@ it('renders correctly', () => {
       border-radius: 30px;
       cursor: point;
       background-color: #fbef51;
+    }
+
+    @media (min-width:1440px) {
+      .c0 {
+        padding: 16px 30px;
+      }
     }
 
     <span>
