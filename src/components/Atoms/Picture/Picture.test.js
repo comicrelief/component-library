@@ -2,11 +2,11 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Picture from './Picture';
-import images from '../../../styleguide/data/data';
+import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <Picture images={images} alt="Test images" />
+    <Picture images={data.images} image={data.image} alt="Test images" />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -17,29 +17,28 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
-    <picture>
-      <source
-        media="(min-width: 1440px)"
-      />
-      <source
-        media="(min-width: 1024px)"
-      />
-      <source />
-      <img
-        alt="Test images"
-        className="c0"
-        height="auto"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="100%"
-      />
-    </picture>
+    <img
+      alt="Test images"
+      className="lazyload c0"
+      data-sizes="auto"
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="auto"
+      src="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w"
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
   `);
 });
 
 it('renders correctly with custom props', () => {
   const tree = renderWithTheme(
     <Picture
-      images={images}
+      images={data.images}
+      image={data.image}
       objectFit="cover"
       width="200px"
       height="100px"
@@ -55,21 +54,19 @@ it('renders correctly with custom props', () => {
       object-fit: cover;
     }
 
-    <picture>
-      <source
-        media="(min-width: 1440px)"
-      />
-      <source
-        media="(min-width: 1024px)"
-      />
-      <source />
-      <img
-        alt="Test images"
-        className="c0"
-        height="100px"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="200px"
-      />
-    </picture>
+    <img
+      alt="Test images"
+      className="lazyload c0"
+      data-sizes="auto"
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100px"
+      src="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w"
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="200px"
+    />
   `);
 });

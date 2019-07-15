@@ -25,7 +25,3 @@ a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
-
-p:last-child {
-  margin: 0;
-}

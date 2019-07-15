@@ -18,47 +18,38 @@ const Image = styled.img`
 
 /** Responsive Picture */
 
-const Picture = ({ images, alt, theme, width, height, objectFit }) => {
-  const { breakpoint } = theme;
-
-  const isSingle = typeof images === 'object';
-
-  if (!isSingle) {
+const Picture = ({ images, image, alt, width, height, objectFit }) => {
+  if (!images) {
     return (
-      <picture>
-        <source srcSet={images} />
-        <Image
-          src={IMAGE_FALLBACK}
-          alt={alt}
-          height="400px"
-          width={width}
-          objectFit={objectFit}
-        />
-      </picture>
-    );
-  }
-
-  return (
-    <picture>
-      <source media={`${breakpoint('large')}`} srcSet={images.large} />
-      <source media={`${breakpoint('medium')}`} srcSet={images.medium} />
-      <source srcSet={images.small} />
       <Image
-        src={IMAGE_FALLBACK}
         alt={alt}
         height={height}
         width={width}
         objectFit={objectFit}
+        data-src={image}
+        className="lazyload"
       />
-    </picture>
+    );
+  }
+
+  return (
+    <Image
+      alt={alt}
+      height={height}
+      width={width}
+      objectFit={objectFit}
+      src={image}
+      srcSet={IMAGE_FALLBACK}
+      data-srcset={images}
+      data-sizes="auto"
+      className="lazyload"
+    />
   );
 };
 
 Picture.propTypes = {
-  images: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape({ picture: PropTypes.string })
-  ]).isRequired,
+  images: PropTypes.string,
+  image: PropTypes.string.isRequired,
   alt: PropTypes.string,
   objectFit: PropTypes.oneOf([
     'none',
@@ -68,13 +59,11 @@ Picture.propTypes = {
     'scale-down'
   ]),
   width: PropTypes.string,
-  height: PropTypes.string,
-  theme: PropTypes.shape({
-    breakpoint: PropTypes.func
-  }).isRequired
+  height: PropTypes.string
 };
 
 Picture.defaultProps = {
+  images: null,
   objectFit: 'none',
   width: '100%',
   height: 'auto',
