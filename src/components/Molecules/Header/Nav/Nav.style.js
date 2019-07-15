@@ -113,7 +113,7 @@ const SubNavMenu = styled.ul`
   justify-content: center;
   align-items: center;
   max-height: 400px;
-  background-color: ${({ theme }) => theme.color('violet_light')};
+  background-color: ${({ theme }) => theme.color('deep_violet')};
   @media ${({ theme }) => theme.breakpoint('medium')} {
     top: 93px;
     position: absolute;
