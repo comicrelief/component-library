@@ -18,9 +18,14 @@ import {
 const MainMenu = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   function toggle() {
     setIsExpandable(!isExpandable);
+  }
+
+  function openSubMenu() {
+    setIsSubMenuOpen(!isSubMenuOpen);
   }
   return (
     <>
@@ -31,18 +36,17 @@ const MainMenu = ({ navItems }) => {
         <Text tag="h2">Main navigation</Text>
         <NavMenu>
           {menuGroup.map(group => (
-            <NavItem key={group.id}>
+            <NavItem key={group.id} aria-expanded="false" onClick={openSubMenu}>
               <NavLink
                 href={group.url}
                 inline
                 aria-expanded="false"
                 aria-haspopup="true"
                 disabled
-                isExpandable={isExpandable}
               >
                 <Text>{group.title}</Text>
               </NavLink>
-              <SubNavMenu>
+              <SubNavMenu isSubMenuOpen={isSubMenuOpen} aria-expanded="false">
                 <SubNavItem>
                   <NavLink aria-expanded="true" href={group.url} inline>
                     <Text>{group.title}</Text>

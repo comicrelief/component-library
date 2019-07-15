@@ -57,7 +57,7 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   ul {
-    display: none;
+    margin: 0;
     span {
       border: 0;
     }
@@ -100,11 +100,14 @@ const NavItem = styled.li`
  * Sub Navigation Menu
  */
 const SubNavMenu = styled.ul`
+  &[aria-expanded=${({ isSubMenuOpen }) => isSubMenuOpen}] {
+    background-color: red;
+  }
+  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
   left: 0;
-  display: flex;
   top: 0;
   flex-direction: column;
   justify-content: center;
@@ -112,7 +115,6 @@ const SubNavMenu = styled.ul`
   max-height: 400px;
   background-color: ${({ theme }) => theme.color('violet_light')};
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    display: none;
     top: 93px;
     position: absolute;
     padding: 0 0 20px;
