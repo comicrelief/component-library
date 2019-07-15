@@ -1,19 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { BurgerIcon, BurgerMenu as Wrapper } from './BurgerMenu.style';
 import Text from '../../../Atoms/Text/Text';
 
-const BurgerMenu = () => {
-  const [toggleState, setToggleState] = useState(false);
-  function toggle() {
-    setToggleState(!toggleState);
-  }
+const BurgerMenu = ({ toggle }) => {
   return (
     <Wrapper
-      href=""
+      href="#!/Header/1"
       role="button"
-      aria-expanded={toggleState}
       aria-haspopup="true"
       aria-label="Open and close Navigation Menu, 24 items listed"
       inline
@@ -25,6 +21,10 @@ const BurgerMenu = () => {
       <span />
     </Wrapper>
   );
+};
+
+BurgerMenu.propTypes = {
+  toggle: PropTypes.func.isRequired
 };
 
 export default BurgerMenu;

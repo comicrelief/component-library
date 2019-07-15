@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 
@@ -17,73 +17,51 @@ import {
 
 const MainMenu = ({ navItems }) => {
   const { menuGroup } = navItems;
+  const [isExpandable, setIsExpandable] = useState(false);
+
+  function toggle() {
+    setIsExpandable(!isExpandable);
+  }
   return (
     <>
-      <MediaQuery minDeviceWidth={sizes.large}>
-        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
-          <Text tag="h2">Main navigation</Text>
-          <NavMenu>
-            {menuGroup.map(group => (
-              <NavItem key={group.id}>
-                <NavLink
-                  href={group.url}
-                  inline
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-                <SubNavMenu>
-                  <SubNavItem>
-                    <NavLink href={group.url} inline>
-                      <Text>{group.title}</Text>
+      <Nav
+        aria-labelledby="block-comicrelief-main-menu-menu"
+        isExpandable={isExpandable}
+      >
+        <Text tag="h2">Main navigation</Text>
+        <NavMenu>
+          {menuGroup.map(group => (
+            <NavItem key={group.id}>
+              <NavLink
+                href={group.url}
+                inline
+                aria-expanded="false"
+                aria-haspopup="true"
+                disabled
+                isExpandable={isExpandable}
+              >
+                <Text>{group.title}</Text>
+              </NavLink>
+              <SubNavMenu>
+                <SubNavItem>
+                  <NavLink aria-expanded="true" href={group.url} inline>
+                    <Text>{group.title}</Text>
+                  </NavLink>
+                </SubNavItem>
+                {group.links.map(child => (
+                  <SubNavItem key={child.url}>
+                    <NavLink href={child.url} inline>
+                      <Text>{child.title}</Text>
                     </NavLink>
                   </SubNavItem>
-                  {group.links.map(child => (
-                    <SubNavItem key={child.url}>
-                      <NavLink href={child.url} inline>
-                        <Text>{child.title}</Text>
-                      </NavLink>
-                    </SubNavItem>
-                  ))}
-                </SubNavMenu>
-              </NavItem>
-            ))}
-          </NavMenu>
-        </Nav>
-      </MediaQuery>
-      <MediaQuery maxDeviceWidth={sizes.large}>
-        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
-          <NavMenu>
-            {menuGroup.map(group => (
-              <NavItem key={group.id}>
-                <NavLink
-                  href={group.url}
-                  inline
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-                <SubNavMenu>
-                  <SubNavItem>
-                    <NavLink href={group.url} inline>
-                      <Text>{group.title}</Text>
-                    </NavLink>
-                  </SubNavItem>
-                  {group.links.map(child => (
-                    <SubNavItem key={child.url}>
-                      <NavLink href={child.url} inline>
-                        <Text>{child.title}</Text>
-                      </NavLink>
-                    </SubNavItem>
-                  ))}
-                </SubNavMenu>
-              </NavItem>
-            ))}
-          </NavMenu>
-        </Nav>
-        <BurgerMenu />
+                ))}
+              </SubNavMenu>
+            </NavItem>
+          ))}
+        </NavMenu>
+      </Nav>
+      <MediaQuery maxWidth={sizes.medium}>
+        <BurgerMenu toggle={toggle}>Open</BurgerMenu>
       </MediaQuery>
     </>
   );

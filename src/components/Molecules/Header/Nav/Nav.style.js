@@ -7,16 +7,24 @@ const NavLink = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
+  width: 100%;
+  color: ${({ theme }) => theme.color('deep_violet')};
 `;
 
 /**
  * Navigation menu
  */
 const Nav = styled.nav`
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    width: auto;
-    top: 0;
+  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
+    top: 0;
+    display: block;
+    width: auto;
   }
   > h2 {
     visibility: ${hideVisually};
@@ -30,20 +38,12 @@ const NavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('grey_extra_light')};
   list-style: none outside;
   padding: 0;
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  overflow: hidden;
-  right: 0;
   margin: 0;
-  height: auto;
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
-    top: 0;
     display: flex;
     align-items: center;
     background-color: ${({ theme }) => theme.color('white')};
-    overflow: inherit;
   }
 `;
 
@@ -53,11 +53,24 @@ const NavMenu = styled.ul`
 const NavItem = styled.li`
   position: relative;
   padding: 0;
-  ul span {
-    color: ${({ theme }) => theme.color('white')};
-    border: 0;
+  :hover {
+    background-color: ${({ theme }) => theme.color('teal_light')};
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  ul {
+    display: none;
+    span {
+      border: 0;
+    }
+  }
+  &[aria-expanded='true'] {
+    ul {
+      display: block;
+      span {
+        color: ${({ theme }) => theme.color('white')};
+      }
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 30px 0px;
     margin: 0 8px;
     a {
@@ -98,7 +111,7 @@ const SubNavMenu = styled.ul`
   align-items: center;
   max-height: 400px;
   background-color: ${({ theme }) => theme.color('violet_light')};
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     display: none;
     top: 93px;
     position: absolute;
@@ -135,8 +148,11 @@ const SubNavItem = styled.li`
       }
     }
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     :first-child {
+      :hover {
+        background-color: ${({ theme }) => theme.color('violet_light')};
+      }
       a {
         ::before {
           display: block;

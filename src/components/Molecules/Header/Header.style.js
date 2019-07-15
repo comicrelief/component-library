@@ -27,15 +27,15 @@ const InnerWrapper = styled.div`
   cursor: pointer;
 
   /* Burger menu on small and medium device  */
-  span:nth-child(4) {
+  span:nth-child(3) {
     left: 2px;
     position: relative;
     height: 100%;
+    cursor: pointer;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-around;
   }
 `;
 
@@ -60,7 +60,7 @@ const MetaIcons = styled.div`
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;
     background-color: ${({ theme }) => theme.color('white')};
