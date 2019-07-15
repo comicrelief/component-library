@@ -5,17 +5,18 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 
 const NavLink = styled(Link)`
   border: 0;
+  padding: 17px 20px;
+  height: 46px;
 `;
 
 /**
  * Navigation menu
  */
 const Nav = styled.nav`
-  position: relative;
-  width: 40px;
-  height: 100%;
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: auto;
+    top: 0;
+    position: relative;
   }
   > h2 {
     visibility: ${hideVisually};
@@ -26,22 +27,23 @@ const Nav = styled.nav`
  * Navigation Menu
  */
 const NavMenu = styled.ul`
-  position: relative;
-  display: none;
+  background-color: ${({ theme }) => theme.color('grey_extra_light')};
   list-style: none outside;
-  width: auto;
+  padding: 0;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  overflow: hidden;
+  right: 0;
+  margin: 0;
   height: auto;
-  max-height: none;
-  text-align: left;
-  height: 75px;
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 90px;
-  }
   @media ${({ theme }) => theme.breakpoint('large')} {
+    position: relative;
+    top: 0;
     display: flex;
     align-items: center;
     background-color: ${({ theme }) => theme.color('white')};
+    overflow: inherit;
   }
 `;
 
@@ -50,25 +52,32 @@ const NavMenu = styled.ul`
  */
 const NavItem = styled.li`
   position: relative;
-  padding: 30px 0px;
-  margin: 0 8px;
-  a {
-    padding: 7px 5px;
-    height: auto;
+  padding: 0;
+  ul span {
+    color: ${({ theme }) => theme.color('white')};
+    border: 0;
   }
-  :hover {
-    background-color: transparent;
-    span {
-      border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-      padding-bottom: 2px;
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    padding: 30px 0px;
+    margin: 0 8px;
+    a {
+      padding: 7px 5px;
+      height: auto;
     }
-
-    ul {
-      display: flex;
-      flex-direction: column;
+    :hover {
+      background-color: transparent;
       span {
-        color: ${({ theme }) => theme.color('white')};
-        border: 0;
+        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+        padding-bottom: 2px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        span {
+          color: ${({ theme }) => theme.color('white')};
+          border: 0;
+        }
       }
     }
   }
@@ -78,19 +87,28 @@ const NavItem = styled.li`
  * Sub Navigation Menu
  */
 const SubNavMenu = styled.ul`
-  display: none;
+  padding: 0;
+  position: relative;
   list-style: none outside;
-  top: 93px;
   left: 0;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
-  position: absolute;
-  left: 0;
-  padding: 0 0 20px;
-  width: 250px;
-  height: auto;
-  transition-property: max-height;
-  transition-duration: 850ms;
-  transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+  background-color: ${({ theme }) => theme.color('violet_light')};
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    display: none;
+    top: 93px;
+    position: absolute;
+    padding: 0 0 20px;
+    width: 250px;
+    height: auto;
+    transition-property: max-height;
+    transition-duration: 850ms;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+  }
 `;
 
 /**
@@ -105,17 +123,6 @@ const SubNavItem = styled.li`
       padding: 26px 21px;
       height: auto;
       position: relative;
-      ::before {
-        display: block;
-        position: absolute;
-        content: '';
-        left: 34px;
-        width: 10px;
-        height: 10px;
-        border: 11px solid transparent;
-        border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
-        top: -22px;
-      }
       ::after {
         position: absolute;
         width: 14px;
@@ -125,6 +132,23 @@ const SubNavItem = styled.li`
         bottom: 10px;
         margin: 0 10px;
         content: '';
+      }
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    :first-child {
+      a {
+        ::before {
+          display: block;
+          position: absolute;
+          content: '';
+          left: 34px;
+          width: 10px;
+          height: 10px;
+          border: 11px solid transparent;
+          border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
+          top: -22px;
+        }
       }
     }
   }

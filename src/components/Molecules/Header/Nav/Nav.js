@@ -18,42 +18,74 @@ import {
 const MainMenu = ({ navItems }) => {
   const { menuGroup } = navItems;
   return (
-    <Nav aria-labelledby="block-comicrelief-main-menu-menu">
-      <Text tag="h2">Main navigation</Text>
+    <>
       <MediaQuery minDeviceWidth={sizes.large}>
-        <NavMenu>
-          {menuGroup.map(group => (
-            <NavItem key={group.id}>
-              <NavLink
-                href={group.url}
-                inline
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <Text>{group.title}</Text>
-              </NavLink>
-              <SubNavMenu>
-                <SubNavItem>
-                  <NavLink href={group.url} inline>
-                    <Text>{group.title}</Text>
-                  </NavLink>
-                </SubNavItem>
-                {group.links.map(child => (
-                  <SubNavItem key={child.url}>
-                    <NavLink href={child.url} inline>
-                      <Text>{child.title}</Text>
+        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
+          <Text tag="h2">Main navigation</Text>
+          <NavMenu>
+            {menuGroup.map(group => (
+              <NavItem key={group.id}>
+                <NavLink
+                  href={group.url}
+                  inline
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <Text>{group.title}</Text>
+                </NavLink>
+                <SubNavMenu>
+                  <SubNavItem>
+                    <NavLink href={group.url} inline>
+                      <Text>{group.title}</Text>
                     </NavLink>
                   </SubNavItem>
-                ))}
-              </SubNavMenu>
-            </NavItem>
-          ))}
-        </NavMenu>
+                  {group.links.map(child => (
+                    <SubNavItem key={child.url}>
+                      <NavLink href={child.url} inline>
+                        <Text>{child.title}</Text>
+                      </NavLink>
+                    </SubNavItem>
+                  ))}
+                </SubNavMenu>
+              </NavItem>
+            ))}
+          </NavMenu>
+        </Nav>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={sizes.large}>
+        <Nav aria-labelledby="block-comicrelief-main-menu-menu">
+          <NavMenu>
+            {menuGroup.map(group => (
+              <NavItem key={group.id}>
+                <NavLink
+                  href={group.url}
+                  inline
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <Text>{group.title}</Text>
+                </NavLink>
+                <SubNavMenu>
+                  <SubNavItem>
+                    <NavLink href={group.url} inline>
+                      <Text>{group.title}</Text>
+                    </NavLink>
+                  </SubNavItem>
+                  {group.links.map(child => (
+                    <SubNavItem key={child.url}>
+                      <NavLink href={child.url} inline>
+                        <Text>{child.title}</Text>
+                      </NavLink>
+                    </SubNavItem>
+                  ))}
+                </SubNavMenu>
+              </NavItem>
+            ))}
+          </NavMenu>
+        </Nav>
         <BurgerMenu />
       </MediaQuery>
-    </Nav>
+    </>
   );
 };
 

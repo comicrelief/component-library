@@ -24,12 +24,17 @@ const InnerWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   padding: 0 15px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   cursor: pointer;
 
+  /* Burger menu on small and medium device  */
+  span:nth-child(4) {
+    left: 2px;
+    position: relative;
+    height: 100%;
+  }
   @media ${({ theme }) => theme.breakpoint('large')} {
+    margin-left: auto;
+    margin-right: auto;
     justify-content: space-around;
   }
 `;
@@ -50,7 +55,7 @@ const Brand = styled(Link).attrs(() => ({
  */
 const MetaIcons = styled.div`
   position: absolute;
-  right: 65px;
+  right: 60px;
   a {
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }

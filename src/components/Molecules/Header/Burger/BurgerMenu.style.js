@@ -8,15 +8,16 @@ import Link from '../../../Atoms/Link/Link';
  */
 const BurgerMenu = styled(Link)`
   position: relative;
-  width: 100%;
+  width: 45px;
   height: 100%;
   text-indent: -9999px;
   border: none;
   background-color: transparent;
   padding: 2px 5px;
   span:nth-child(2) {
-    width: 100%;
+    width: 25px;
     height: 100%;
+    margin: 0 auto;
     position: relative;
     top: 50%;
     display: block;
