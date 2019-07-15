@@ -21,6 +21,7 @@
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "lazysizes": "^5.1.0",
+    "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -50,9 +51,6 @@
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

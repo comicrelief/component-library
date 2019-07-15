@@ -20,6 +20,12 @@ export { default as Input } from './components/Atoms/Input/Input';
 export { default as Select } from './components/Atoms/SelectField/SelectField';
 export { default as TextArea } from './components/Atoms/TextArea/TextArea';
 export { default as RichText } from './components/Atoms/RichText/RichText';
+export {
+  default as Pagination
+} from './components/Atoms/Pagination/Pagination';
+export {
+  default as SocialIcons
+} from './components/Atoms/SocialIcons/SocialIcons';
 
 /* Molecules */
 

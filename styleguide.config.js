@@ -9,6 +9,7 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/ThemeWrapper')
   },
+  skipComponentsWithoutExample: true,
   ignore: [
     '**/assets/**',
     '**/data/**',

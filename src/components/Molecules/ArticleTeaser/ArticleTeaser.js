@@ -56,12 +56,12 @@ const CopyWrapper = styled.div`
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({ date, href, images, alt, title }) => {
+const ArticleTeaser = ({ date, href, images, alt, title, image }) => {
   return (
     <Wrapper>
       <Link href={href} inline>
         <ImageWrapper>
-          <Picture images={images} alt={alt} objectFit="cover" />
+          <Picture images={images} image={image} alt={alt} objectFit="cover" />
         </ImageWrapper>
         <CopyWrapper>
           <Text size="xxs" weight="bold" uppercase>
@@ -77,8 +77,8 @@ const ArticleTeaser = ({ date, href, images, alt, title }) => {
 };
 
 ArticleTeaser.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  images: PropTypes.object.isRequired,
+  images: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

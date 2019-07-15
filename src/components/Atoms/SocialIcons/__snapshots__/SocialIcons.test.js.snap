@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with Comic Relief links 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: point;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.c1 {
+  width: 80px;
+  padding: 10px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.facebook.com/comicrelief"
+      target="_blank"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://twitter.com/comicrelief"
+      target="_blank"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      target="_blank"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.instagram.com/comicrelief"
+      target="_blank"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with Red Nose Day links and self target 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: point;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.c1 {
+  width: 80px;
+  padding: 10px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.facebook.com/rednoseday"
+      target="_self"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://twitter.com/rednoseday"
+      target="_self"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      target="_self"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.instagram.com/rednoseday"
+      target="_self"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with Sport Relief links 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: point;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.c1 {
+  width: 80px;
+  padding: 10px;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.facebook.com/sportrelief"
+      target="_blank"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://twitter.com/sportrelief"
+      target="_blank"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      target="_blank"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.instagram.com/sportrelief"
+      target="_blank"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+    </a>
+  </li>
+</ul>
+`;
