@@ -44,6 +44,28 @@ export default {
           class: 'someClass'
         }
       ]
+    },
+    {
+      id: 'Parent Ityyem Title 1',
+      title: 'Parent Item Title 1',
+      url: '/parent1',
+      links: [
+        {
+          title: 'Child Item Title 1-1',
+          url: '/child-item-1-1',
+          class: 'someClass'
+        },
+        {
+          title: 'Child Item Title 1-2',
+          url: '/child-item-1-2',
+          class: 'someClass'
+        },
+        {
+          title: 'Child Item Title 1-3',
+          url: '/child-item-1-3',
+          class: 'someClass'
+        }
+      ]
     }
   ]
 };

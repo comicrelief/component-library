@@ -57,7 +57,7 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   ul {
-    /* background-color: red; */
+    /* Display submenu items when parent(ul) item (li) is clicked */
     display: ${({ isSubMenuOpen, target }) =>
       isSubMenuOpen[target] ? 'block' : 'none'};
   }
@@ -68,6 +68,12 @@ const NavItem = styled.li`
     a {
       padding: 7px 5px;
       height: auto;
+    }
+
+    /* Hide submenu and display it only on item (li) is hovered */
+    ul {
+      display: ${({ isSubMenuOpen, target }) =>
+        isSubMenuOpen[target] ? 'none' : 'none'};
     }
     :hover {
       background-color: transparent;
@@ -161,6 +167,7 @@ const SubNavItem = styled.li`
   }
   a {
     padding: 14px 21px;
+    color: ${({ theme }) => theme.color('white')};
   }
   :hover {
     background-color: ${({ theme }) => theme.color('violet_light')};
