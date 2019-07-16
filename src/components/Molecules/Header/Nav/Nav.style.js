@@ -57,19 +57,11 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   ul {
-    margin: 0;
-    span {
-      border: 0;
-    }
+    /* background-color: red; */
+    display: ${({ isSubMenuOpen, target }) =>
+      isSubMenuOpen[target] ? 'block' : 'none'};
   }
-  &[aria-expanded='true'] {
-    ul {
-      display: block;
-      span {
-        color: ${({ theme }) => theme.color('white')};
-      }
-    }
-  }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 30px 0px;
     margin: 0 8px;
@@ -100,10 +92,7 @@ const NavItem = styled.li`
  * Sub Navigation Menu
  */
 const SubNavMenu = styled.ul`
-  &[aria-expanded=${({ isSubMenuOpen }) => isSubMenuOpen}] {
-    background-color: red;
-  }
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
+  display: none;
   padding: 0;
   position: relative;
   list-style: none outside;

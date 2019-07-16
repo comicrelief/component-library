@@ -18,15 +18,16 @@ import {
 const MainMenu = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  function toggle() {
+  const toggleBurgerMenu = () => {
     setIsExpandable(!isExpandable);
-  }
+  };
 
-  function openSubMenu() {
-    setIsSubMenuOpen(!isSubMenuOpen);
-  }
+  const toggleSubMenu = item => event => {
+    event.preventDefault();
+    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+  };
   return (
     <>
       <Nav
@@ -34,20 +35,31 @@ const MainMenu = ({ navItems }) => {
         isExpandable={isExpandable}
       >
         <Text tag="h2">Main navigation</Text>
+
+        {/* First level of the navigation (ul tag): Parent */}
         <NavMenu>
-          {menuGroup.map(group => (
-            <NavItem key={group.id} aria-expanded="false" onClick={openSubMenu}>
+          {menuGroup.map((group, index) => (
+            <NavItem
+              key={group.id}
+              aria-expanded="false"
+              isSubMenuOpen={isSubMenuOpen}
+              target={group.id}
+              index={index}
+            >
               <NavLink
                 href={group.url}
                 inline
                 aria-expanded="false"
                 aria-haspopup="true"
-                disabled
+                onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
-              <SubNavMenu isSubMenuOpen={isSubMenuOpen} aria-expanded="false">
+
+              {/* Second level of the navigation (ul tag): Child(ren) */}
+              <SubNavMenu aria-expanded="false">
                 <SubNavItem>
+                  {/* This is the previous li item from the parent */}
                   <NavLink aria-expanded="true" href={group.url} inline>
                     <Text>{group.title}</Text>
                   </NavLink>
@@ -65,7 +77,7 @@ const MainMenu = ({ navItems }) => {
         </NavMenu>
       </Nav>
       <MediaQuery maxWidth={sizes.medium}>
-        <BurgerMenu toggle={toggle}>Open</BurgerMenu>
+        <BurgerMenu toggle={toggleBurgerMenu}>Open</BurgerMenu>
       </MediaQuery>
     </>
   );
