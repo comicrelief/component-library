@@ -37,7 +37,7 @@ const buttonStyle = () => css`
       `)};
 `;
 
-const StyledLink = styled.a`
+export const StyledLink = styled.a`
   ${props =>
     props.inline
       ? css`
@@ -51,4 +51,18 @@ const StyledLink = styled.a`
       : buttonStyle}
 `;
 
-export default StyledLink;
+export const WrapperLink = styled.span`
+  a {
+    ${props =>
+      props.inline
+        ? css`
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 2px 1px;
+            border-bottom: 2px solid;
+            border-bottom-color: #000;
+          `
+        : buttonStyle}
+  }
+`;
