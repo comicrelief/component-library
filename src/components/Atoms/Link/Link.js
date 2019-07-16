@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import StyledLink from './Link.style';
+import { StyledLink, WrapperLink } from './Link.style';
 
-const Link = ({ children, color, href, target, inline, ...rest }) => {
+const Link = ({ children, color, href, target, inline, wrapper, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
 
-  return (
+  return wrapper ? (
+    <span>
+      <WrapperLink {...rest} color={color} inline={inline}>
+        {children}
+      </WrapperLink>
+    </span>
+  ) : (
     <span>
       <StyledLink
         {...rest}
@@ -14,6 +20,7 @@ const Link = ({ children, color, href, target, inline, ...rest }) => {
         href={href}
         target={window}
         inline={inline}
+        as="a"
       >
         {children}
       </StyledLink>
@@ -24,6 +31,7 @@ const Link = ({ children, color, href, target, inline, ...rest }) => {
 Link.propTypes = {
   /** Inline is link style */
   inline: PropTypes.bool,
+  wrapper: PropTypes.bool,
   /** Button color style */
   color: PropTypes.string,
   /** link target */
@@ -36,7 +44,8 @@ Link.propTypes = {
 Link.defaultProps = {
   color: 'red',
   target: 'self',
-  inline: false
+  inline: false,
+  wrapper: false
 };
 
 export default Link;

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
-import StyledLink from '../../Atoms/Link/Link.style';
 
 /**
  * Article tag wrapper
@@ -16,11 +15,13 @@ const Wrapper = styled.article`
   background-color: #fff;
 `;
 
-const Link = styled(StyledLink)`
+const Link = styled.a`
   display: flex;
   height: 100%;
   border: 0;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
