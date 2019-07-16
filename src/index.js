@@ -41,3 +41,4 @@ export {
 export {
   default as ArticleBlock
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
+export { default as Card } from './components/Molecules/Card/Card';

@@ -7,25 +7,37 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+`;
+
+const Image = styled.div`
+  height: 50%;
 `;
 
 const Copy = styled.div`
   padding: 20px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Card = ({ backgroundColor, image, images, imageAltText, children }) => {
   return (
     <Container backgroundColor={backgroundColor}>
       {image ? (
-        <Picture
-          alt={imageAltText}
-          image={image}
-          images={images}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-        />
+        <Image>
+          <Picture
+            alt={imageAltText}
+            image={image}
+            images={images}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+          />
+        </Image>
       ) : null}
       <Copy>{children}</Copy>
     </Container>
