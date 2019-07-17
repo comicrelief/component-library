@@ -20,6 +20,13 @@ const Nav = styled.nav`
   position: absolute;
   top: 80px;
   left: 0;
+
+  @media (min-width: ${({ sizes }) => sizes.small}px) {
+    width: 50%;
+    right: 0;
+    left: inherit;
+  }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     top: 0;
@@ -48,7 +55,7 @@ const NavMenu = styled.ul`
 `;
 
 /**
- * Menu list item
+ * Menu list items
  */
 const NavItem = styled.li`
   position: relative;
@@ -58,8 +65,7 @@ const NavItem = styled.li`
   }
   ul {
     /* Display submenu items when parent(ul) item (li) is clicked */
-    display: ${({ isSubMenuOpen, target }) =>
-      isSubMenuOpen[target] ? 'block' : 'none'};
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
@@ -70,7 +76,7 @@ const NavItem = styled.li`
       height: auto;
     }
 
-    /* Hide submenu and display it only on item (li) is hovered */
+    /* Hide submenu items and display them only when item (li) is hovered */
     ul {
       display: ${({ isSubMenuOpen, target }) =>
         isSubMenuOpen[target] ? 'none' : 'none'};
@@ -109,6 +115,7 @@ const SubNavMenu = styled.ul`
   align-items: center;
   max-height: 400px;
   background-color: ${({ theme }) => theme.color('deep_violet')};
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     top: 93px;
     position: absolute;
@@ -122,7 +129,7 @@ const SubNavMenu = styled.ul`
 `;
 
 /**
- * Sub Menu list item
+ * Sub Menu list items
  */
 const SubNavItem = styled.li`
   padding: 0;

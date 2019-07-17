@@ -15,7 +15,7 @@ import {
   SubNavItem
 } from './Nav.style';
 
-const MainMenu = ({ navItems }) => {
+const MainNav = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -33,6 +33,7 @@ const MainMenu = ({ navItems }) => {
       <Nav
         aria-labelledby="block-comicrelief-main-menu-menu"
         isExpandable={isExpandable}
+        sizes={sizes}
       >
         <Text tag="h2">Main navigation</Text>
 
@@ -41,15 +42,13 @@ const MainMenu = ({ navItems }) => {
           {menuGroup.map((group, index) => (
             <NavItem
               key={group.id}
-              aria-expanded="false"
-              isSubMenuOpen={isSubMenuOpen}
-              target={group.id}
               index={index}
+              isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
               <NavLink
-                href={group.url}
+                href="google.com"
                 inline
-                aria-expanded="false"
+                aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
                 onClick={toggleSubMenu(group.id)}
               >
@@ -57,7 +56,7 @@ const MainMenu = ({ navItems }) => {
               </NavLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
-              <SubNavMenu aria-expanded="false">
+              <SubNavMenu>
                 <SubNavItem>
                   {/* This is the previous li item from the parent */}
                   <NavLink aria-expanded="true" href={group.url} inline>
@@ -83,12 +82,12 @@ const MainMenu = ({ navItems }) => {
   );
 };
 
-MainMenu.propTypes = {
+MainNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape)
 };
 
-MainMenu.defaultProps = {
+MainNav.defaultProps = {
   navItems: {}
 };
 
-export default MainMenu;
+export default MainNav;
