@@ -71,7 +71,7 @@ it('renders correctly', () => {
       cursor: pointer;
     }
 
-    .c1 span:nth-child(3) {
+    .c1 > span:nth-of-type(2) {
       left: 2px;
       position: relative;
       height: 100%;
