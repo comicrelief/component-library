@@ -46,13 +46,6 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      color: #000;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -62,6 +55,9 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
     }
 
     .c2 {
