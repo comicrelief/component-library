@@ -60,7 +60,7 @@ const MainNav = ({ navItems }) => {
               <SubNavMenu>
                 <SubNavItem>
                   {/* This is the previous li item from the parent */}
-                  <NavLink aria-expanded="true" href={group.url} inline>
+                  <NavLink href={group.url} inline>
                     <Text>{group.title}</Text>
                   </NavLink>
                 </SubNavItem>

@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Link from '../../../Atoms/Link/Link';
+import Text from '../../../Atoms/Text/Text';
 
 /**
  * Burger hidden text
  */
-const BurgerHiddenText = styled.div`
-  span {
-    visibility: ${hideVisually};
-  }
+const BurgerHiddenText = styled(Text)`
+  ${hideVisually};
 `;
 
 /**
@@ -42,24 +41,24 @@ const BurgerWrapper = styled(Link)`
   background-color: transparent;
   padding: 2px 5px;
   ${BurgerBar} {
-    :nth-of-type(1) {
+    :nth-of-type(2) {
       transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};
       top: 40%;
       top: ${({ isExpandable }) => isExpandable && '50%'};
       width: ${({ isExpandable }) => isExpandable && '0'};
       left: ${({ isExpandable }) => isExpandable && '600%'};
     }
-    :nth-of-type(2),
-    :nth-of-type(3) {
+    :nth-of-type(3),
+    :nth-of-type(4) {
       top: 50%;
     }
-    :nth-of-type(2) {
+    :nth-of-type(3) {
       transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};
     }
-    :nth-of-type(3) {
+    :nth-of-type(4) {
       transform: ${({ isExpandable }) => isExpandable && 'rotate(-45deg)'};
     }
-    :nth-of-type(4) {
+    :nth-of-type(5) {
       top: 60%;
       top: ${({ isExpandable }) => isExpandable && '40%'};
       width: ${({ isExpandable }) => isExpandable && '0'};

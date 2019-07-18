@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { BurgerBar, BurgerHiddenText, BurgerWrapper } from './BurgerMenu.style';
-import Text from '../../../Atoms/Text/Text';
 
 const BurgerMenu = ({ toggle, isExpandable }) => {
   return (
@@ -16,9 +15,7 @@ const BurgerMenu = ({ toggle, isExpandable }) => {
       onClick={toggle}
       isExpandable={isExpandable}
     >
-      <BurgerHiddenText>
-        <Text>Open and close nav menu</Text>
-      </BurgerHiddenText>
+      <BurgerHiddenText>Open and close nav menu</BurgerHiddenText>
       <BurgerBar />
       <BurgerBar />
       <BurgerBar />
