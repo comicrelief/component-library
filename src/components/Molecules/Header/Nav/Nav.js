@@ -46,7 +46,7 @@ const MainNav = ({ navItems }) => {
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
               <NavLink
-                href="google.com"
+                href={group.url}
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
@@ -59,7 +59,7 @@ const MainNav = ({ navItems }) => {
               <SubNavMenu>
                 <SubNavItem>
                   {/* This is the previous li item from the parent */}
-                  <NavLink aria-expanded="true" href={group.url} inline>
+                  <NavLink href={group.url} inline>
                     <Text>{group.title}</Text>
                   </NavLink>
                 </SubNavItem>
