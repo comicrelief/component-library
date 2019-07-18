@@ -20,6 +20,13 @@ const Nav = styled.nav`
   position: absolute;
   top: 80px;
   left: 0;
+
+  @media (min-width: ${({ sizes }) => sizes.small}px) {
+    width: 50%;
+    right: 0;
+    left: inherit;
+  }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     top: 0;
@@ -48,7 +55,7 @@ const NavMenu = styled.ul`
 `;
 
 /**
- * Menu list item
+ * Menu list items
  */
 const NavItem = styled.li`
   position: relative;
@@ -57,25 +64,22 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   ul {
-    margin: 0;
-    span {
-      border: 0;
-    }
+    /* Display submenu items when parent(ul) item (li) is clicked */
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
   }
-  &[aria-expanded='true'] {
-    ul {
-      display: block;
-      span {
-        color: ${({ theme }) => theme.color('white')};
-      }
-    }
-  }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 30px 0px;
     margin: 0 8px;
     a {
       padding: 7px 5px;
       height: auto;
+    }
+
+    /* Hide submenu items and display them only when item (li) is hovered */
+    ul {
+      display: ${({ isSubMenuOpen, target }) =>
+        isSubMenuOpen[target] ? 'none' : 'none'};
     }
     :hover {
       background-color: transparent;
@@ -100,10 +104,7 @@ const NavItem = styled.li`
  * Sub Navigation Menu
  */
 const SubNavMenu = styled.ul`
-  &[aria-expanded=${({ isSubMenuOpen }) => isSubMenuOpen}] {
-    background-color: red;
-  }
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
+  display: none;
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -113,7 +114,8 @@ const SubNavMenu = styled.ul`
   justify-content: center;
   align-items: center;
   max-height: 400px;
-  background-color: ${({ theme }) => theme.color('violet_light')};
+  background-color: ${({ theme }) => theme.color('deep_violet')};
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     top: 93px;
     position: absolute;
@@ -127,7 +129,7 @@ const SubNavMenu = styled.ul`
 `;
 
 /**
- * Sub Menu list item
+ * Sub Menu list items
  */
 const SubNavItem = styled.li`
   padding: 0;
@@ -172,6 +174,7 @@ const SubNavItem = styled.li`
   }
   a {
     padding: 14px 21px;
+    color: ${({ theme }) => theme.color('white')};
   }
   :hover {
     background-color: ${({ theme }) => theme.color('violet_light')};

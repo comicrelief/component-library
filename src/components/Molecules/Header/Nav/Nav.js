@@ -15,40 +15,51 @@ import {
   SubNavItem
 } from './Nav.style';
 
-const MainMenu = ({ navItems }) => {
+const MainNav = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  function toggle() {
+  const toggleBurgerMenu = () => {
     setIsExpandable(!isExpandable);
-  }
+  };
 
-  function openSubMenu() {
-    setIsSubMenuOpen(!isSubMenuOpen);
-  }
+  const toggleSubMenu = item => event => {
+    event.preventDefault();
+    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+  };
   return (
     <>
       <Nav
         aria-labelledby="block-comicrelief-main-menu-menu"
         isExpandable={isExpandable}
+        sizes={sizes}
       >
         <Text tag="h2">Main navigation</Text>
+
+        {/* First level of the navigation (ul tag): Parent */}
         <NavMenu>
-          {menuGroup.map(group => (
-            <NavItem key={group.id} aria-expanded="false" onClick={openSubMenu}>
+          {menuGroup.map((group, index) => (
+            <NavItem
+              key={group.id}
+              index={index}
+              isSubMenuOpen={!!isSubMenuOpen[group.id]}
+            >
               <NavLink
                 href={group.url}
                 inline
-                aria-expanded="false"
+                aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
-                disabled
+                onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
-              <SubNavMenu isSubMenuOpen={isSubMenuOpen} aria-expanded="false">
+
+              {/* Second level of the navigation (ul tag): Child(ren) */}
+              <SubNavMenu>
                 <SubNavItem>
-                  <NavLink aria-expanded="true" href={group.url} inline>
+                  {/* This is the previous li item from the parent */}
+                  <NavLink href={group.url} inline>
                     <Text>{group.title}</Text>
                   </NavLink>
                 </SubNavItem>
@@ -65,18 +76,18 @@ const MainMenu = ({ navItems }) => {
         </NavMenu>
       </Nav>
       <MediaQuery maxWidth={sizes.medium}>
-        <BurgerMenu toggle={toggle}>Open</BurgerMenu>
+        <BurgerMenu toggle={toggleBurgerMenu}>Open</BurgerMenu>
       </MediaQuery>
     </>
   );
 };
 
-MainMenu.propTypes = {
+MainNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape)
 };
 
-MainMenu.defaultProps = {
+MainNav.defaultProps = {
   navItems: {}
 };
 
-export default MainMenu;
+export default MainNav;

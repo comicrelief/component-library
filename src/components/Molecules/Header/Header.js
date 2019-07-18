@@ -15,8 +15,8 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
           <Logo rotate />
         </Brand>
         <MediaQuery maxDeviceWidth={sizes.large}>
-          <MetaIcons>{metaIcons}</MetaIcons>
           <MainNav navItems={navItems} />
+          <MetaIcons>{metaIcons}</MetaIcons>
         </MediaQuery>
 
         <MediaQuery minDeviceWidth={sizes.large}>
