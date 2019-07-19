@@ -57,7 +57,7 @@ const MainNav = ({ navItems }) => {
               </NavLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
-              {group.links && (
+              {group.links && group.links.length > 0 && (
                 <SubNavMenu>
                   <SubNavItem>
                     {/* This is the previous li item from the parent */}
