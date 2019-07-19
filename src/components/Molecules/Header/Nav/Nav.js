@@ -47,7 +47,7 @@ const MainNav = ({ navItems }) => {
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
               <NavLink
-                href={group.id}
+                href={group.url}
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
