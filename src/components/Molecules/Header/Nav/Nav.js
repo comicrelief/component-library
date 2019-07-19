@@ -57,21 +57,23 @@ const MainNav = ({ navItems }) => {
               </NavLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
-              <SubNavMenu>
-                <SubNavItem>
-                  {/* This is the previous li item from the parent */}
-                  <NavLink href={group.url} inline>
-                    <Text>{group.title}</Text>
-                  </NavLink>
-                </SubNavItem>
-                {group.links.map(child => (
-                  <SubNavItem key={child.url}>
-                    <NavLink href={child.url} inline>
-                      <Text>{child.title}</Text>
+              {group.links && (
+                <SubNavMenu>
+                  <SubNavItem>
+                    {/* This is the previous li item from the parent */}
+                    <NavLink href={group.url} inline>
+                      <Text>{group.title}</Text>
                     </NavLink>
                   </SubNavItem>
-                ))}
-              </SubNavMenu>
+                  {group.links.map(child => (
+                    <SubNavItem key={child.url}>
+                      <NavLink href={child.url} inline>
+                        <Text>{child.title}</Text>
+                      </NavLink>
+                    </SubNavItem>
+                  ))}
+                </SubNavMenu>
+              )}
             </NavItem>
           ))}
         </NavMenu>
