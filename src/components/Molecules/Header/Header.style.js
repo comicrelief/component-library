@@ -27,12 +27,13 @@ const InnerWrapper = styled.div`
   cursor: pointer;
 
   /* Burger menu on small and medium device  */
-  span:nth-child(3) {
+  > span:nth-of-type(2) {
     left: 2px;
     position: relative;
     height: 100%;
     cursor: pointer;
   }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin-left: auto;
     margin-right: auto;
@@ -65,6 +66,7 @@ const MetaIcons = styled.div`
     display: flex;
     background-color: ${({ theme }) => theme.color('white')};
     margin-right: 0px;
+    right: 0px;
   }
 `;
 

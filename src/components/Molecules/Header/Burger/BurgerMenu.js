@@ -2,29 +2,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { BurgerIcon, BurgerMenu as Wrapper } from './BurgerMenu.style';
-import Text from '../../../Atoms/Text/Text';
+import { BurgerBar, BurgerHiddenText, BurgerWrapper } from './BurgerMenu.style';
 
-const BurgerMenu = ({ toggle }) => {
+const BurgerMenu = ({ toggle, isExpandable }) => {
   return (
-    <Wrapper
-      href="#!/Header/1"
+    <BurgerWrapper
+      href="#"
       role="button"
       aria-haspopup="true"
-      aria-label="Open and close Navigation Menu, 24 items listed"
+      aria-label="Open and close Navigation Menu"
       inline
       onClick={toggle}
+      isExpandable={isExpandable}
     >
-      <BurgerIcon>
-        <Text>Open and close nav menu</Text>
-      </BurgerIcon>
-      <span />
-    </Wrapper>
+      <BurgerHiddenText>Open and close nav menu</BurgerHiddenText>
+      <BurgerBar />
+      <BurgerBar />
+      <BurgerBar />
+      <BurgerBar />
+    </BurgerWrapper>
   );
 };
 
 BurgerMenu.propTypes = {
-  toggle: PropTypes.func.isRequired
+  toggle: PropTypes.func.isRequired,
+  isExpandable: PropTypes.bool.isRequired
 };
 
 export default BurgerMenu;

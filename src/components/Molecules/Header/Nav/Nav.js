@@ -20,7 +20,8 @@ const MainNav = ({ navItems }) => {
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  const toggleBurgerMenu = () => {
+  const toggleBurgerMenu = event => {
+    event.preventDefault();
     setIsExpandable(!isExpandable);
   };
 
@@ -76,7 +77,9 @@ const MainNav = ({ navItems }) => {
         </NavMenu>
       </Nav>
       <MediaQuery maxWidth={sizes.medium}>
-        <BurgerMenu toggle={toggleBurgerMenu}>Open</BurgerMenu>
+        <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
+          Open
+        </BurgerMenu>
       </MediaQuery>
     </>
   );
