@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import zIndex from '../../../../theme/shared/zIndex';
 
 const NavLink = styled(Link)`
   border: 0;
@@ -83,6 +84,7 @@ const NavItem = styled.li`
     }
     :hover {
       background-color: transparent;
+      ${zIndex('high')};
       span {
         border-bottom: 2px solid ${({ theme }) => theme.color('black')};
         padding-bottom: 2px;
@@ -117,7 +119,7 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('deep_violet')};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    top: 93px;
+    top: 90px;
     position: absolute;
     padding: 0 0 20px;
     width: 250px;
