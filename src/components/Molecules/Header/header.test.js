@@ -50,7 +50,7 @@ it('renders correctly', () => {
       border-bottom-color: #000;
     }
 
-    .c14 {
+    .c18 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -64,8 +64,66 @@ it('renders correctly', () => {
       color: #030e1a;
     }
 
-    .c14:hover {
+    .c18:hover {
       background: #62EF74;
+    }
+
+    .c14 {
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    .c16 {
+      background-color: #2C0230;
+      width: 25px;
+      margin: 0 auto;
+      position: absolute;
+      display: block;
+      height: 3px;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+
+    .c13 {
+      top: 0;
+      position: relative;
+      width: 45px;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      height: 100%;
+      text-indent: -9999px;
+      border: none;
+      background-color: transparent;
+      padding: 2px 5px;
+    }
+
+    .c13 .c15:nth-of-type(2) {
+      top: 40%;
+    }
+
+    .c13 .c15:nth-of-type(3),
+    .c13 .c15:nth-of-type(4) {
+      top: 50%;
+    }
+
+    .c13 .c15:nth-of-type(5) {
+      top: 60%;
     }
 
     .c10 {
@@ -215,12 +273,12 @@ it('renders correctly', () => {
       border: 0;
     }
 
-    .c13 {
+    .c17 {
       position: absolute;
       right: 60px;
     }
 
-    .c13 a {
+    .c17 a {
       margin-left: 0.69375rem;
     }
 
@@ -232,8 +290,14 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1440px) {
-      .c14 {
+      .c18 {
         padding: 16px 30px;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c13 {
+        display: none;
       }
     }
 
@@ -357,7 +421,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c13 {
+      .c17 {
         position: relative;
         display: -webkit-box;
         display: -webkit-flex;
@@ -427,7 +491,7 @@ it('renders correctly', () => {
                   aria-haspopup="true"
                   className="c10 c3"
                   color="red"
-                  href="/parent1"
+                  href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                   onClick={[Function]}
                   target="_self"
                 >
@@ -435,7 +499,7 @@ it('renders correctly', () => {
                     className="c7"
                     color="inherit"
                   >
-                    Parent Item Title 1
+                    Fundraising
                   </span>
                 </a>
               </span>
@@ -449,14 +513,14 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/parent1"
+                      href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Parent Item Title 1
+                        Fundraising
                       </span>
                     </a>
                   </span>
@@ -468,14 +532,14 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/child-item-1-1"
+                      href="https://www.comicrelief.com/rednoseday"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Child Item Title 1-1
+                        Red Nose Day
                       </span>
                     </a>
                   </span>
@@ -487,14 +551,14 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/child-item-1-2"
+                      href="https://www.comicrelief.com/join"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Child Item Title 1-2
+                        Regular donations
                       </span>
                     </a>
                   </span>
@@ -506,14 +570,52 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/child-item-1-3"
+                      href="https://www.comicrelief.com/squads"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Child Item Title 1-3
+                        Squads
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        The Noseys
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Free downloads
                       </span>
                     </a>
                   </span>
@@ -529,7 +631,7 @@ it('renders correctly', () => {
                   aria-haspopup="true"
                   className="c10 c3"
                   color="red"
-                  href="/parent2"
+                  href="https://www.comicrelief.com/what-your-money-does"
                   onClick={[Function]}
                   target="_self"
                 >
@@ -537,7 +639,7 @@ it('renders correctly', () => {
                     className="c7"
                     color="inherit"
                   >
-                    Parent Item Title 2
+                    What your money does
                   </span>
                 </a>
               </span>
@@ -551,14 +653,14 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/parent2"
+                      href="https://www.comicrelief.com/what-your-money-does"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Parent Item Title 2
+                        What your money does
                       </span>
                     </a>
                   </span>
@@ -570,52 +672,14 @@ it('renders correctly', () => {
                     <a
                       className="c10 c3"
                       color="red"
-                      href="/child-item-2-1"
+                      href="https://www.comicrelief.com/What-we-do/our-legacy"
                       target="_self"
                     >
                       <span
                         className="c7"
                         color="inherit"
                       >
-                        Child Item Title 2-1
-                      </span>
-                    </a>
-                  </span>
-                </li>
-                <li
-                  className="c12"
-                >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="/child-item-2-2"
-                      target="_self"
-                    >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Child Item Title 2-2
-                      </span>
-                    </a>
-                  </span>
-                </li>
-                <li
-                  className="c12"
-                >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="/child-item-2-3"
-                      target="_self"
-                    >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Child Item Title 2-3
+                        What your money does
                       </span>
                     </a>
                   </span>
@@ -631,7 +695,7 @@ it('renders correctly', () => {
                   aria-haspopup="true"
                   className="c10 c3"
                   color="red"
-                  href="/parent1"
+                  href="https://www.comicrelief.com/rednoseday/schools"
                   onClick={[Function]}
                   target="_self"
                 >
@@ -639,19 +703,352 @@ it('renders correctly', () => {
                     className="c7"
                     color="inherit"
                   >
-                    Parent Item Title 1
+                    Schools & youth
+                  </span>
+                </a>
+              </span>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/schools"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Schools & youth
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Primary schools
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Secondary schools
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/schools/nurseries"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Nurseries
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/youth"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Youth groups
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Free downloads
+                      </span>
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li
+              className="c9"
+            >
+              <span>
+                <a
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  className="c10 c3"
+                  color="red"
+                  href="https://www.comicrelief.com/funding"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <span
+                    className="c7"
+                    color="inherit"
+                  >
+                    Funding
+                  </span>
+                </a>
+              </span>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Funding
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding/funding-opportunities"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Funding opportunities
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding/funding-strategy"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Our strategy
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding/eligibility-criteria"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Eligibility
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding/applying-for-funding"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Applying for funding
+                      </span>
+                    </a>
+                  </span>
+                </li>
+                <li
+                  className="c12"
+                >
+                  <span>
+                    <a
+                      className="c10 c3"
+                      color="red"
+                      href="https://www.comicrelief.com/funding/managing-your-funding"
+                      target="_self"
+                    >
+                      <span
+                        className="c7"
+                        color="inherit"
+                      >
+                        Managing your funding
+                      </span>
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li
+              className="c9"
+            >
+              <span>
+                <a
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  className="c10 c3"
+                  color="red"
+                  href="https://www.comicrelief.com/fundraising/pay-in-your-money"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <span
+                    className="c7"
+                    color="inherit"
+                  >
+                    Pay in your fundraising money
+                  </span>
+                </a>
+              </span>
+            </li>
+            <li
+              className="c9"
+            >
+              <span>
+                <a
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  className="c10 c3"
+                  color="red"
+                  href="https://www.comicrelief.com/donate"
+                  onClick={[Function]}
+                  target="_self"
+                >
+                  <span
+                    className="c7"
+                    color="inherit"
+                  >
+                    Donate
                   </span>
                 </a>
               </span>
             </li>
           </ul>
         </nav>
+        <span>
+          <a
+            aria-haspopup="true"
+            aria-label="Open and close Navigation Menu"
+            className="c13 c3"
+            color="red"
+            href="#"
+            onClick={[Function]}
+            role="button"
+            target="_self"
+          >
+            <span
+              className="c14 c7"
+              color="inherit"
+            >
+              Open and close nav menu
+            </span>
+            <span
+              className="c15 c16"
+            />
+            <span
+              className="c15 c16"
+            />
+            <span
+              className="c15 c16"
+            />
+            <span
+              className="c15 c16"
+            />
+          </a>
+        </span>
         <div
-          className="c13"
+          className="c17"
         >
           <span>
             <a
-              className="c14"
+              className="c18"
               color="green"
               href="/donation"
               target="_self"
