@@ -65,6 +65,10 @@ const BurgerWrapper = styled(Link)`
       left: ${({ isExpandable }) => isExpandable && '600%'};
     }
   }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    display: none;
+  }
 `;
 
 export { BurgerHiddenText, BurgerWrapper, BurgerBar };
