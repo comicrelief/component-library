@@ -59,7 +59,7 @@ const BurgerWrapper = styled(Link)`
       transform: ${({ isExpandable }) => isExpandable && 'rotate(-45deg)'};
     }
     :nth-of-type(5) {
-      top: 60%;
+      top: 61%;
       top: ${({ isExpandable }) => isExpandable && '40%'};
       width: ${({ isExpandable }) => isExpandable && '0'};
       left: ${({ isExpandable }) => isExpandable && '600%'};

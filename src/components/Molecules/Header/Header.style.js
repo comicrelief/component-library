@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     height: 90px;
   }
   @media ${({ theme }) => theme.breakpoint('large')} {

@@ -61,6 +61,7 @@ const NavMenu = styled.ul`
 const NavItem = styled.li`
   position: relative;
   padding: 0;
+  font-size: ${({ theme }) => theme.fontSize('xs')};
   :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
@@ -71,7 +72,7 @@ const NavItem = styled.li`
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 30px 0px;
-    margin: 0 8px;
+    margin: 0 4px;
     a {
       padding: 7px 5px;
       height: auto;

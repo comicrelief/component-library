@@ -261,6 +261,10 @@ it('renders correctly', () => {
       cursor: pointer;
     }
 
+    .c1 > span:nth-of-type(1) {
+      z-index: 3;
+    }
+
     .c1 > span:nth-of-type(2) {
       left: 2px;
       position: relative;
@@ -350,6 +354,7 @@ it('renders correctly', () => {
 
       .c9:hover {
         background-color: transparent;
+        z-index: 3;
       }
 
       .c9:hover span {
@@ -375,7 +380,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c11 {
-        top: 93px;
+        top: 90px;
         position: absolute;
         padding: 0 0 20px;
         width: 250px;
