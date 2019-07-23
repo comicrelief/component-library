@@ -33,6 +33,7 @@ const Nav = styled.nav`
     top: 0;
     display: block;
     width: auto;
+    height: 100%;
   }
   > h2 {
     visibility: ${hideVisually};
@@ -50,7 +51,9 @@ const NavMenu = styled.ul`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
     background-color: ${({ theme }) => theme.color('white')};
   }
 `;
@@ -60,8 +63,7 @@ const NavMenu = styled.ul`
  */
 const NavItem = styled.li`
   position: relative;
-  padding: 0;
-  font-size: ${({ theme }) => theme.fontSize('xs')};
+  font-weight: 700;
   :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
@@ -71,8 +73,9 @@ const NavItem = styled.li`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 30px 0px;
     margin: 0 4px;
+    padding: 30px 0;
+
     a {
       padding: 7px 5px;
       height: auto;
