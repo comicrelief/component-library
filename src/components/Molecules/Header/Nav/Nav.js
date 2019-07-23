@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import MediaQuery from 'react-responsive';
 
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
@@ -78,11 +77,9 @@ const MainNav = ({ navItems }) => {
           ))}
         </NavMenu>
       </Nav>
-      <MediaQuery maxWidth={sizes.medium}>
-        <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
-          Open
-        </BurgerMenu>
-      </MediaQuery>
+      <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
+        Open
+      </BurgerMenu>
     </>
   );
 };

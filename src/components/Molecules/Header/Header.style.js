@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 import Link from '../../Atoms/Link/Link';
+import zIndex from '../../../theme/shared/zIndex';
 
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'Banner'
@@ -11,7 +12,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     height: 90px;
   }
   @media ${({ theme }) => theme.breakpoint('large')} {
@@ -25,6 +26,10 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 15px;
   cursor: pointer;
+  /* Add z-index to logo  */
+  > span:nth-of-type(1) {
+    ${zIndex('high')};
+  }
 
   /* Burger menu on small and medium device  */
   > span:nth-of-type(2) {
