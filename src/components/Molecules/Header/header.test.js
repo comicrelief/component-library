@@ -979,50 +979,6 @@ it('renders correctly', () => {
                 </li>
               </ul>
             </li>
-            <li
-              className="c9"
-            >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/fundraising/pay-in-your-money"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    Pay in your fundraising money
-                  </span>
-                </a>
-              </span>
-            </li>
-            <li
-              className="c9"
-            >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/donate"
-                  onClick={[Function]}
-                  target="_self"
-                >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    Donate
-                  </span>
-                </a>
-              </span>
-            </li>
           </ul>
         </nav>
         <span>
