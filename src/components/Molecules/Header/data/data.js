@@ -110,18 +110,6 @@ export default {
           class: null
         }
       ]
-    },
-    {
-      id: '8bbb2c50-2d81-5c30-aad6-2f30e120ef75',
-      title: 'Pay in your fundraising money',
-      url: 'https://www.comicrelief.com/fundraising/pay-in-your-money',
-      class: null
-    },
-    {
-      id: '1707a076-7c8f-55b9-b1a3-49b1d5d7a81b',
-      title: 'Donate',
-      url: 'https://www.comicrelief.com/donate',
-      class: ['btn', 'btn--green', 'donate']
     }
   ]
 };
