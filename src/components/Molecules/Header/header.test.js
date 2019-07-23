@@ -123,7 +123,7 @@ it('renders correctly', () => {
     }
 
     .c13 .c15:nth-of-type(5) {
-      top: 60%;
+      top: 61%;
     }
 
     .c10 {
@@ -166,7 +166,7 @@ it('renders correctly', () => {
 
     .c9 {
       position: relative;
-      padding: 0;
+      font-weight: 700;
     }
 
     .c9:hover {
@@ -319,6 +319,7 @@ it('renders correctly', () => {
         top: 0;
         display: block;
         width: auto;
+        height: 100%;
       }
     }
 
@@ -329,18 +330,25 @@ it('renders correctly', () => {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-align-items: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: space-around;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: space-around;
+        justify-content: space-around;
         background-color: #FFFFFF;
       }
     }
 
     @media (min-width:1024px) {
       .c9 {
-        padding: 30px 0px;
-        margin: 0 8px;
+        margin: 0 4px;
+        padding: 30px 0;
       }
 
       .c9 a {
@@ -412,7 +420,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1024px) {
       .c0 {
         height: 90px;
       }
