@@ -11,3 +11,12 @@ _Z Index_
 
 how to use in your styled component
 `export const Component = styled.span'${zIndex('high')};';`
+
+_Spacing_
+
+`import { none, xsm, sm, md, l, xl, xxl, xxxl } from '@comicrelief/component-library';`
+
+how to use in your styled component 
+`export const Component = styled.span'`
+ `padding: ${md} ${l};'`
+
