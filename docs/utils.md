@@ -14,9 +14,24 @@ how to use in your styled component
 
 _Spacing_
 
-`import { none, xsm, sm, md, l, xl, xxl, xxxl } from '@comicrelief/component-library';`
+`import { spacing } from '@comicrelief/component-library';`
 
-how to use in your styled component 
+Default spacing scale
+
+One spacing unit is equal to 0.25rem, which translates to 4px by default in common browsers.
+
+| Name        | Size        |
+| :---        |    :----:   |
+| none        | 0           |
+| xsm         | 0.25rem     |
+| sm          | 0.25rem     |
+| md          | 1rem        |
+| l           | 2rem        |
+| xl          | 4rem        |
+| xxl         | 8rem        |
+| xxxl        | 16rem       |
+
+how to use in your styled component
+
 `export const Component = styled.span'`
- `padding: ${md} ${l};'`
-
+ `padding: ${spacing('md)'} ${spacing('l)'};';`
