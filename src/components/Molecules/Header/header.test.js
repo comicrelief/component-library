@@ -259,6 +259,7 @@ it('renders correctly', () => {
       height: 100%;
       padding: 0 15px;
       cursor: pointer;
+      max-width: 1440px;
     }
 
     .c1 > span:nth-of-type(1) {
@@ -422,7 +423,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c0 {
-        height: 90px;
+        height: auto;
       }
     }
 
