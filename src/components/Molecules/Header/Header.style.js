@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   height: 75px;
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    height: 90px;
+    height: auto;
   }
   @media ${({ theme }) => theme.breakpoint('large')} {
   }
@@ -26,6 +26,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 15px;
   cursor: pointer;
+  max-width: 1440px;
   /* Add z-index to logo  */
   > span:nth-of-type(1) {
     ${zIndex('high')};
