@@ -24,6 +24,9 @@ const MainNav = ({ navItems }) => {
     setIsExpandable(!isExpandable);
   };
 
+  // Detect windown screen size
+  const width = window.innerWidth;
+
   const toggleSubMenu = item => event => {
     event.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
@@ -50,7 +53,7 @@ const MainNav = ({ navItems }) => {
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
-                onClick={toggleSubMenu(group.id)}
+                onClick={width < sizes.medium && toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
               </NavLink>

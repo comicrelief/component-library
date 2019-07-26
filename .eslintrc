@@ -14,5 +14,8 @@
   },
   "env": {
     "jest": true
+  },
+  "globals": {
+    "window": true
   }
 }
