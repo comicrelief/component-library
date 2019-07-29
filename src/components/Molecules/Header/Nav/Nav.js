@@ -18,6 +18,7 @@ const MainNav = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+  const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
@@ -28,9 +29,18 @@ const MainNav = ({ navItems }) => {
   const width = window.innerWidth;
 
   const toggleSubMenu = item => event => {
-    event.preventDefault();
-    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+    if (width < sizes.medium) {
+      event.preventDefault();
+      setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+    }
   };
+
+  const keyPressed = item => e => {
+    if (e.target.querySelector('span').innerText === item) {
+      setIsKeyPressed({ [item]: !isKeyPressed[item] });
+    }
+  };
+
   return (
     <>
       <Nav
@@ -53,14 +63,18 @@ const MainNav = ({ navItems }) => {
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
-                onClick={width < sizes.medium && toggleSubMenu(group.id)}
+                onClick={toggleSubMenu(group.id)}
+                onKeyUp={keyPressed(group.title)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
               {group.links && group.links.length > 0 && (
-                <SubNavMenu>
+                <SubNavMenu
+                  isKeyPressed={!!isKeyPressed[group.title]}
+                  isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                >
                   <SubNavItem>
                     {/* This is the previous li item from the parent */}
                     <NavLink href={group.url} inline>

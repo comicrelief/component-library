@@ -36,7 +36,7 @@ const Nav = styled.nav`
     height: 100%;
   }
   > h2 {
-    visibility: ${hideVisually};
+    ${hideVisually};
   }
 `;
 
@@ -67,11 +67,6 @@ const NavItem = styled.li`
   :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
-  ul {
-    /* Display submenu items when parent(ul) item (li) is clicked */
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
-  }
-
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 4px;
     padding: 30px 0;
@@ -79,12 +74,6 @@ const NavItem = styled.li`
     a {
       padding: 7px 5px;
       height: auto;
-    }
-
-    /* Hide submenu items and display them only when item (li) is hovered */
-    ul {
-      display: ${({ isSubMenuOpen, target }) =>
-        isSubMenuOpen[target] ? 'none' : 'none'};
     }
     :hover {
       background-color: transparent;
@@ -110,7 +99,7 @@ const NavItem = styled.li`
  * Sub Navigation Menu
  */
 const SubNavMenu = styled.ul`
-  display: none;
+  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -123,6 +112,7 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('deep_violet')};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
+    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 90px;
     position: absolute;
     padding: 0 0 20px;
