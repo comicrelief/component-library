@@ -54,8 +54,14 @@ const Copy = styled.div`
         `}
 `;
 
+const Media = styled.div`
+  height: 100%;
+`;
+
 const Image = styled.div`
   width: 100%;
+  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : null)};
+  ${({ vhFull }) => (vhFull ? 'height: 100vh;' : null)};
 `;
 
 /** Single Message is our main component usually to build landing pages */
@@ -65,12 +71,16 @@ const SingleMessage = ({
   copyFirst,
   imageSet,
   image,
+  imageSet2,
+  image2,
   imageAltText,
+  imageAltText2,
   children,
   fullImage,
   vhFull
 }) => {
   const hasImage = imageSet || false;
+  const doubleImage = (imageSet || image) && (imageSet2 || image2);
 
   return (
     <Container
@@ -78,17 +88,35 @@ const SingleMessage = ({
       copyFirst={copyFirst}
       vhFull={vhFull}
     >
-      {imageSet && image ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            images={imageSet}
-            image={image}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-        </Image>
+      {imageSet || imageSet2 ? (
+        <>
+          <Media>
+            {imageSet || image ? (
+              <Image doubleImage={doubleImage} vhFull={vhFull}>
+                <Picture
+                  alt={imageAltText}
+                  images={imageSet}
+                  image={image}
+                  objectFit="cover"
+                  width="100%"
+                  height="100%"
+                />
+              </Image>
+            ) : null}
+            {imageSet2 || image2 ? (
+              <Image doubleImage={doubleImage} vhFull={vhFull}>
+                <Picture
+                  alt={imageAltText2}
+                  images={imageSet2}
+                  image={image2}
+                  objectFit="cover"
+                  width="100%"
+                  height="100%"
+                />
+              </Image>
+            ) : null}
+          </Media>
+        </>
       ) : null}
       <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
         {children}
@@ -105,7 +133,10 @@ SingleMessage.propTypes = {
   fullImage: PropTypes.bool,
   imageSet: PropTypes.string,
   image: PropTypes.string,
+  imageSet2: PropTypes.string,
+  image2: PropTypes.string,
   imageAltText: PropTypes.string,
+  imageAltText2: PropTypes.string,
   children: PropTypes.node.isRequired,
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool
@@ -117,7 +148,10 @@ SingleMessage.defaultProps = {
   fullImage: false,
   imageSet: null,
   image: null,
+  imageSet2: null,
+  image2: null,
   imageAltText: '',
+  imageAltText2: '',
   vhFull: false
 };
 

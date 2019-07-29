@@ -83,3 +83,25 @@ const data = require('../../../styleguide/data/data').default;
   </Text>
 </SingleMessage>;
 ```
+
+Single Message double image
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="yellow"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  imageSet2={data.images}
+  image2={data.image}
+  imageAltText2=""
+>
+  <Text tag="p" color="black" size="xxl">
+    “The creativity that goes into helping people have a better life is
+    extraordinary.”
+  </Text>
+</SingleMessage>;
+```
