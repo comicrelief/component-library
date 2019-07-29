@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
   }
@@ -53,34 +54,69 @@ const Copy = styled.div`
         `}
 `;
 
+const Media = styled.div`
+  height: 100%;
+`;
+
 const Image = styled.div`
   width: 100%;
+  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : null)};
+  ${({ vhFull }) => (vhFull ? 'height: 100vh;' : null)};
 `;
+
+/** Single Message is our main component usually to build landing pages */
 
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
   imageSet,
   image,
+  imageSet2,
+  image2,
   imageAltText,
+  imageAltText2,
   children,
-  fullImage
+  fullImage,
+  vhFull
 }) => {
   const hasImage = imageSet || false;
+  const doubleImage = (imageSet || image) && (imageSet2 || image2);
 
   return (
-    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
-      {imageSet && image ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            images={imageSet}
-            image={image}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-        </Image>
+    <Container
+      backgroundColor={backgroundColor}
+      copyFirst={copyFirst}
+      vhFull={vhFull}
+    >
+      {imageSet || imageSet2 ? (
+        <>
+          <Media>
+            {imageSet || image ? (
+              <Image doubleImage={doubleImage} vhFull={vhFull}>
+                <Picture
+                  alt={imageAltText}
+                  images={imageSet}
+                  image={image}
+                  objectFit="cover"
+                  width="100%"
+                  height="100%"
+                />
+              </Image>
+            ) : null}
+            {imageSet2 || image2 ? (
+              <Image doubleImage={doubleImage} vhFull={vhFull}>
+                <Picture
+                  alt={imageAltText2}
+                  images={imageSet2}
+                  image={image2}
+                  objectFit="cover"
+                  width="100%"
+                  height="100%"
+                />
+              </Image>
+            ) : null}
+          </Media>
+        </>
       ) : null}
       <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
         {children}
@@ -91,12 +127,19 @@ const SingleMessage = ({
 
 SingleMessage.propTypes = {
   backgroundColor: PropTypes.string,
+  /** Copy will come on the left and Image on the right */
   copyFirst: PropTypes.bool,
+  /** Image will be 100% wide and copy over the image (left, right or centre) */
   fullImage: PropTypes.bool,
   imageSet: PropTypes.string,
   image: PropTypes.string,
+  imageSet2: PropTypes.string,
+  image2: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node.isRequired
+  imageAltText2: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  /** Image will be the height of the viewport */
+  vhFull: PropTypes.bool
 };
 
 SingleMessage.defaultProps = {
@@ -105,7 +148,11 @@ SingleMessage.defaultProps = {
   fullImage: false,
   imageSet: null,
   image: null,
-  imageAltText: ''
+  imageSet2: null,
+  image2: null,
+  imageAltText: '',
+  imageAltText2: '',
+  vhFull: false
 };
 
 export default SingleMessage;
