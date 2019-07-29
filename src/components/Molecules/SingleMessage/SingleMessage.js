@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
   }
@@ -57,6 +58,8 @@ const Image = styled.div`
   width: 100%;
 `;
 
+/** Single Message is our main component usually to build landing pages */
+
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
@@ -64,12 +67,17 @@ const SingleMessage = ({
   image,
   imageAltText,
   children,
-  fullImage
+  fullImage,
+  vhFull
 }) => {
   const hasImage = imageSet || false;
 
   return (
-    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
+    <Container
+      backgroundColor={backgroundColor}
+      copyFirst={copyFirst}
+      vhFull={vhFull}
+    >
       {imageSet && image ? (
         <Image>
           <Picture
@@ -91,12 +99,16 @@ const SingleMessage = ({
 
 SingleMessage.propTypes = {
   backgroundColor: PropTypes.string,
+  /** Copy will come on the left and Image on the right */
   copyFirst: PropTypes.bool,
+  /** Image will be 100% wide and copy over the image (left, right or centre) */
   fullImage: PropTypes.bool,
   imageSet: PropTypes.string,
   image: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  /** Image will be the height of the viewport */
+  vhFull: PropTypes.bool
 };
 
 SingleMessage.defaultProps = {
@@ -105,7 +117,8 @@ SingleMessage.defaultProps = {
   fullImage: false,
   imageSet: null,
   image: null,
-  imageAltText: ''
+  imageAltText: '',
+  vhFull: false
 };
 
 export default SingleMessage;
