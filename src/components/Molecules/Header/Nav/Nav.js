@@ -6,12 +6,14 @@ import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
 
 import {
-  NavLink,
   Nav,
   NavMenu,
   NavItem,
+  NavItemLink,
   SubNavMenu,
-  SubNavItem
+  SubNavItem,
+  SubNavItemLink,
+  SubNavItemLinkUnderline
 } from './Nav.style';
 
 const MainNav = ({ navItems }) => {
@@ -58,7 +60,7 @@ const MainNav = ({ navItems }) => {
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
-              <NavLink
+              <NavItemLink
                 href={group.url}
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
@@ -67,7 +69,7 @@ const MainNav = ({ navItems }) => {
                 onKeyUp={keyPressed(group.title)}
               >
                 <Text>{group.title}</Text>
-              </NavLink>
+              </NavItemLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
               {group.links && group.links.length > 0 && (
@@ -79,15 +81,19 @@ const MainNav = ({ navItems }) => {
                 >
                   <SubNavItem role="none">
                     {/* This is the previous li item from the parent */}
-                    <NavLink href={group.url} inline role="menuitem">
+                    <SubNavItemLinkUnderline
+                      href={group.url}
+                      inline
+                      role="menuitem"
+                    >
                       <Text>{group.title}</Text>
-                    </NavLink>
+                    </SubNavItemLinkUnderline>
                   </SubNavItem>
                   {group.links.map(child => (
                     <SubNavItem key={child.url}>
-                      <NavLink href={child.url} inline>
+                      <SubNavItemLink href={child.url} inline>
                         <Text>{child.title}</Text>
-                      </NavLink>
+                      </SubNavItemLink>
                     </SubNavItem>
                   ))}
                 </SubNavMenu>

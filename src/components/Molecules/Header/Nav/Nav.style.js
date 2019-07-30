@@ -11,14 +11,14 @@ const NavLink = styled(Link)`
   height: 46px;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 7px 5px;
-    height: auto;
-    :focus + ul {
-      display: flex;
-    }
+  :focus {
+    display: inline-block;
   }
 `;
+
+/**
+ *          Menu second level
+ */
 
 /**
  * Navigation menu
@@ -47,6 +47,82 @@ const Nav = styled.nav`
     ${hideVisually};
   }
 `;
+
+/**
+ * Sub Navigation Menu
+ */
+const SubNavMenu = styled.ul`
+  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+  background-color: ${({ theme }) => theme.color('deep_violet')};
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
+    top: 90px;
+    position: absolute;
+    padding: 0 0 20px;
+    width: 250px;
+    height: auto;
+    transition-property: max-height;
+    transition-duration: 850ms;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+  }
+`;
+
+/**
+ * Sub Menu list items
+ */
+const SubNavItem = styled.li`
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  :hover {
+    background-color: ${({ theme }) => theme.color('violet_light')};
+    span {
+      border-bottom: 0;
+      padding-bottom: 2px;
+    }
+  }
+`;
+
+/**
+ * Sub menu item link
+ */
+const SubNavItemLink = styled(NavLink)`
+  padding: 14px 21px;
+  color: ${({ theme }) => theme.color('white')};
+  height: auto;
+  position: relative;
+`;
+
+/**
+ * Sub menu item link underline
+ */
+const SubNavItemLinkUnderline = styled(SubNavItemLink)`
+  padding: 26px 21px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
+    left: 12px;
+    top: auto;
+    bottom: 10px;
+    margin: 0 10px;
+  }
+`;
+
+/**
+ *          Menu first level
+ */
 
 /**
  * Navigation Menu
@@ -82,11 +158,8 @@ const NavItem = styled.li`
     :hover {
       background-color: transparent;
       ${zIndex('high')};
-      span {
-        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-        padding-bottom: 2px;
-      }
-      ul {
+
+      ${SubNavMenu} {
         display: flex;
         flex-direction: column;
       }
@@ -95,88 +168,32 @@ const NavItem = styled.li`
 `;
 
 /**
- * Sub Navigation Menu
+ * Menu item link
  */
-const SubNavMenu = styled.ul`
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
-  padding: 0;
-  position: relative;
-  list-style: none outside;
-  left: 0;
-  top: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: 400px;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
-
+const NavItemLink = styled(NavLink)`
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    top: 90px;
-    position: absolute;
-    padding: 0 0 20px;
-    width: 250px;
+    padding: 7px 5px;
     height: auto;
-    transition-property: max-height;
-    transition-duration: 850ms;
-    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
-  }
-`;
-
-/**
- * Sub Menu list items
- */
-const SubNavItem = styled.li`
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  :first-child {
-    a {
-      padding: 26px 21px;
-      height: auto;
-      position: relative;
-      ::after {
-        position: absolute;
-        width: 14px;
-        border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-        left: 12px;
-        top: auto;
-        bottom: 10px;
-        margin: 0 10px;
-        content: '';
+    :hover {
+      span {
+        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+        padding-bottom: 2px;
       }
     }
-  }
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    :first-child {
-      :hover {
-        background-color: ${({ theme }) => theme.color('violet_light')};
-      }
-      a {
-        ::before {
-          display: block;
-          position: absolute;
-          content: '';
-          left: 34px;
-          width: 10px;
-          height: 10px;
-          border: 11px solid transparent;
-          border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
-          top: -22px;
-        }
-      }
-    }
-  }
-  a {
-    padding: 14px 21px;
-    color: ${({ theme }) => theme.color('white')};
-  }
-  :hover {
-    background-color: ${({ theme }) => theme.color('violet_light')};
-    span {
-      border-bottom: 0;
-      padding-bottom: 2px;
+    :focus + ${SubNavMenu} {
+      display: flex;
     }
   }
 `;
 
-export { NavLink, Nav, NavMenu, NavItem, SubNavMenu, SubNavItem };
+export {
+  NavLink,
+  Nav,
+  NavMenu,
+  NavItem,
+  NavItemLink,
+  SubNavMenu,
+  SubNavItem,
+  SubNavItemLink,
+  SubNavItemLinkUnderline
+};
