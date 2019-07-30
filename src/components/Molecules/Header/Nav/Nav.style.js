@@ -11,9 +11,6 @@ const NavLink = styled(Link)`
   height: 46px;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
-  :focus {
-    display: inline-block;
-  }
 `;
 
 /**
@@ -118,6 +115,19 @@ const SubNavItemLinkUnderline = styled(SubNavItemLink)`
     bottom: 10px;
     margin: 0 10px;
   }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    ::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 34px;
+      width: 10px;
+      height: 10px;
+      border: 11px solid transparent;
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
+      top: -22px;
+    }
+  }
 `;
 
 /**
@@ -143,6 +153,19 @@ const NavMenu = styled.ul`
 `;
 
 /**
+ * Menu item link
+ */
+const NavItemLink = styled(NavLink)`
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 7px 5px;
+    height: auto;
+    :focus + ${SubNavMenu} {
+      display: flex;
+    }
+  }
+`;
+
+/**
  * Menu list items
  */
 const NavItem = styled.li`
@@ -155,33 +178,25 @@ const NavItem = styled.li`
     margin: 0 4px;
     padding: 30px 0;
 
+    :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+    }
+
     :hover {
       background-color: transparent;
       ${zIndex('high')};
-
+      ${NavItemLink} {
+        span {
+          border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+          padding-bottom: 2px;
+        }
+      }
       ${SubNavMenu} {
         display: flex;
         flex-direction: column;
       }
-    }
-  }
-`;
-
-/**
- * Menu item link
- */
-const NavItemLink = styled(NavLink)`
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 7px 5px;
-    height: auto;
-    :hover {
-      span {
-        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-        padding-bottom: 2px;
-      }
-    }
-    :focus + ${SubNavMenu} {
-      display: flex;
     }
   }
 `;

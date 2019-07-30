@@ -67,6 +67,7 @@ const MainNav = ({ navItems }) => {
                 aria-haspopup="true"
                 onClick={toggleSubMenu(group.id)}
                 onKeyUp={keyPressed(group.title)}
+                isKeyPressed={!!isKeyPressed[group.title]}
               >
                 <Text>{group.title}</Text>
               </NavItemLink>

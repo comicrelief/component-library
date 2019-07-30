@@ -50,7 +50,7 @@ it('renders correctly', () => {
       border-bottom-color: #000;
     }
 
-    .c21 {
+    .c22 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -64,11 +64,11 @@ it('renders correctly', () => {
       color: #030e1a;
     }
 
-    .c21:hover {
+    .c22:hover {
       background: #62EF74;
     }
 
-    .c17 {
+    .c18 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -83,7 +83,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c19 {
+    .c20 {
       background-color: #2C0230;
       width: 25px;
       margin: 0 auto;
@@ -97,7 +97,7 @@ it('renders correctly', () => {
       transition: 0.25s ease-in-out;
     }
 
-    .c16 {
+    .c17 {
       top: 0;
       position: relative;
       width: 45px;
@@ -113,16 +113,16 @@ it('renders correctly', () => {
       padding: 2px 5px;
     }
 
-    .c16 .c18:nth-of-type(2) {
+    .c17 .c19:nth-of-type(2) {
       top: 40%;
     }
 
-    .c16 .c18:nth-of-type(3),
-    .c16 .c18:nth-of-type(4) {
+    .c17 .c19:nth-of-type(3),
+    .c17 .c19:nth-of-type(4) {
       top: 50%;
     }
 
-    .c16 .c18:nth-of-type(5) {
+    .c17 .c19:nth-of-type(5) {
       top: 61%;
     }
 
@@ -149,7 +149,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c12 {
+    .c13 {
       display: none;
       padding: 0;
       position: relative;
@@ -171,19 +171,31 @@ it('renders correctly', () => {
       background-color: #2C0230;
     }
 
-    .c13 {
+    .c14 {
       padding: 0;
       height: 100%;
       width: 100%;
     }
 
-    .c13:hover {
+    .c14:hover {
       background-color: #3e1c43;
     }
 
-    .c13:hover span {
+    .c14:hover span {
       border-bottom: 0;
       padding-bottom: 2px;
+    }
+
+    .c16 {
+      border: 0;
+      padding: 17px 20px;
+      height: 46px;
+      width: 100%;
+      color: #2C0230;
+      padding: 14px 21px;
+      color: #FFFFFF;
+      height: auto;
+      position: relative;
     }
 
     .c15 {
@@ -196,30 +208,10 @@ it('renders correctly', () => {
       color: #FFFFFF;
       height: auto;
       position: relative;
-    }
-
-    .c15:focus {
-      display: inline-block;
-    }
-
-    .c14 {
-      border: 0;
-      padding: 17px 20px;
-      height: 46px;
-      width: 100%;
-      color: #2C0230;
-      padding: 14px 21px;
-      color: #FFFFFF;
-      height: auto;
-      position: relative;
       padding: 26px 21px;
     }
 
-    .c14:focus {
-      display: inline-block;
-    }
-
-    .c14::after {
+    .c15::after {
       content: '';
       position: absolute;
       width: 14px;
@@ -237,16 +229,7 @@ it('renders correctly', () => {
       margin: 0;
     }
 
-    .c9 {
-      position: relative;
-      font-weight: 700;
-    }
-
-    .c9:hover {
-      background-color: #86E4E9;
-    }
-
-    .c10 {
+    .c11 {
       border: 0;
       padding: 17px 20px;
       height: 46px;
@@ -254,8 +237,13 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c10:focus {
-      display: inline-block;
+    .c9 {
+      position: relative;
+      font-weight: 700;
+    }
+
+    .c9:hover {
+      background-color: #86E4E9;
     }
 
     .c0 {
@@ -300,12 +288,12 @@ it('renders correctly', () => {
       border: 0;
     }
 
-    .c20 {
+    .c21 {
       position: absolute;
       right: 60px;
     }
 
-    .c20 a {
+    .c21 a {
       margin-left: 0.69375rem;
     }
 
@@ -317,13 +305,13 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1440px) {
-      .c21 {
+      .c22 {
         padding: 16px 30px;
       }
     }
 
     @media (min-width:1024px) {
-      .c16 {
+      .c17 {
         display: none;
       }
     }
@@ -347,7 +335,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c12 {
+      .c13 {
         display: none;
         top: 90px;
         position: absolute;
@@ -360,6 +348,20 @@ it('renders correctly', () => {
         transition-duration: 850ms;
         -webkit-transition-timing-function: cubic-bezier(0.2,1,0.5,1);
         transition-timing-function: cubic-bezier(0.2,1,0.5,1);
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c15::before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 34px;
+        width: 10px;
+        height: 10px;
+        border: 11px solid transparent;
+        border-bottom-color: #2C0230;
+        top: -22px;
       }
     }
 
@@ -386,9 +388,33 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
+      .c11 {
+        padding: 7px 5px;
+        height: auto;
+      }
+
+      .c11:focus + .c12 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+
+    @media (min-width:1024px) {
       .c9 {
         margin: 0 4px;
         padding: 30px 0;
+      }
+
+      .c9:hover > .c12,
+      .c9:focus-within > .c12 {
+        visibility: visible;
+        opacity: 1;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
       }
 
       .c9:hover {
@@ -396,7 +422,12 @@ it('renders correctly', () => {
         z-index: 3;
       }
 
-      .c9:hover .c11 {
+      .c9:hover .c10 span {
+        border-bottom: 2px solid #030e1a;
+        padding-bottom: 2px;
+      }
+
+      .c9:hover .c12 {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -404,25 +435,6 @@ it('renders correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c10 {
-        padding: 7px 5px;
-        height: auto;
-      }
-
-      .c10:hover span {
-        border-bottom: 2px solid #030e1a;
-        padding-bottom: 2px;
-      }
-
-      .c10:focus + .c11 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
       }
     }
 
@@ -440,7 +452,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c20 {
+      .c21 {
         position: relative;
         display: -webkit-box;
         display: -webkit-flex;
@@ -500,7 +512,7 @@ it('renders correctly', () => {
               <a
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="c10 c3"
+                className="c10 c11 c3"
                 color="red"
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                 onClick={[Function]}
@@ -516,15 +528,15 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Fundraising"
-                className="c11 c12"
+                className="c12 c13"
                 role="menu"
               >
                 <li
-                  className="c13"
+                  className="c14"
                   role="none"
                 >
                   <a
-                    className="c14 c3"
+                    className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                     role="menuitem"
@@ -539,10 +551,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday"
                     target="_self"
@@ -556,10 +568,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/join"
                     target="_self"
@@ -573,10 +585,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/squads"
                     target="_self"
@@ -590,10 +602,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
                     target="_self"
@@ -607,10 +619,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
                     target="_self"
@@ -632,7 +644,7 @@ it('renders correctly', () => {
               <a
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="c10 c3"
+                className="c10 c11 c3"
                 color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
                 onClick={[Function]}
@@ -648,15 +660,15 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="What your money does"
-                className="c11 c12"
+                className="c12 c13"
                 role="menu"
               >
                 <li
-                  className="c13"
+                  className="c14"
                   role="none"
                 >
                   <a
-                    className="c14 c3"
+                    className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/what-your-money-does"
                     role="menuitem"
@@ -671,10 +683,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/What-we-do/our-legacy"
                     target="_self"
@@ -696,7 +708,7 @@ it('renders correctly', () => {
               <a
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="c10 c3"
+                className="c10 c11 c3"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onClick={[Function]}
@@ -712,15 +724,15 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Schools & youth"
-                className="c11 c12"
+                className="c12 c13"
                 role="menu"
               >
                 <li
-                  className="c13"
+                  className="c14"
                   role="none"
                 >
                   <a
-                    className="c14 c3"
+                    className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools"
                     role="menuitem"
@@ -735,10 +747,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
                     target="_self"
@@ -752,10 +764,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
                     target="_self"
@@ -769,10 +781,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/nurseries"
                     target="_self"
@@ -786,10 +798,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/youth"
                     target="_self"
@@ -803,10 +815,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
                     target="_self"
@@ -828,7 +840,7 @@ it('renders correctly', () => {
               <a
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="c10 c3"
+                className="c10 c11 c3"
                 color="red"
                 href="https://www.comicrelief.com/funding"
                 onClick={[Function]}
@@ -844,15 +856,15 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Funding"
-                className="c11 c12"
+                className="c12 c13"
                 role="menu"
               >
                 <li
-                  className="c13"
+                  className="c14"
                   role="none"
                 >
                   <a
-                    className="c14 c3"
+                    className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding"
                     role="menuitem"
@@ -867,10 +879,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/funding-opportunities"
                     target="_self"
@@ -884,10 +896,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/funding-strategy"
                     target="_self"
@@ -901,10 +913,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/eligibility-criteria"
                     target="_self"
@@ -918,10 +930,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/applying-for-funding"
                     target="_self"
@@ -935,10 +947,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c15 c3"
+                    className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/managing-your-funding"
                     target="_self"
@@ -958,7 +970,7 @@ it('renders correctly', () => {
         <a
           aria-haspopup="true"
           aria-label="Open and close Navigation Menu"
-          className="c16 c3"
+          className="c17 c3"
           color="red"
           href="#"
           onClick={[Function]}
@@ -966,29 +978,29 @@ it('renders correctly', () => {
           target="_self"
         >
           <span
-            className="c17 c7"
+            className="c18 c7"
             color="inherit"
           >
             Open and close nav menu
           </span>
           <span
-            className="c18 c19"
+            className="c19 c20"
           />
           <span
-            className="c18 c19"
+            className="c19 c20"
           />
           <span
-            className="c18 c19"
+            className="c19 c20"
           />
           <span
-            className="c18 c19"
+            className="c19 c20"
           />
         </a>
         <div
-          className="c20"
+          className="c21"
         >
           <a
-            className="c21"
+            className="c22"
             color="green"
             href="/donation"
             target="_self"
