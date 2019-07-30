@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
+import { sizes } from '../../../../theme/shared/breakpoint';
 
 const NavLink = styled(Link)`
   border: 0;
@@ -10,6 +11,13 @@ const NavLink = styled(Link)`
   height: 46px;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 7px 5px;
+    height: auto;
+    :focus + ul {
+      display: flex;
+    }
+  }
 `;
 
 /**
@@ -22,7 +30,7 @@ const Nav = styled.nav`
   top: 80px;
   left: 0;
 
-  @media (min-width: ${({ sizes }) => sizes.small}px) {
+  @media (min-width: ${sizes.small}px) {
     width: 50%;
     right: 0;
     left: inherit;
@@ -71,10 +79,6 @@ const NavItem = styled.li`
     margin: 0 4px;
     padding: 30px 0;
 
-    a {
-      padding: 7px 5px;
-      height: auto;
-    }
     :hover {
       background-color: transparent;
       ${zIndex('high')};
@@ -82,14 +86,9 @@ const NavItem = styled.li`
         border-bottom: 2px solid ${({ theme }) => theme.color('black')};
         padding-bottom: 2px;
       }
-
       ul {
         display: flex;
         flex-direction: column;
-        span {
-          color: ${({ theme }) => theme.color('white')};
-          border: 0;
-        }
       }
     }
   }
@@ -112,7 +111,6 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('deep_violet')};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 90px;
     position: absolute;
     padding: 0 0 20px;

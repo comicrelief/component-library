@@ -44,16 +44,16 @@ const MainNav = ({ navItems }) => {
   return (
     <>
       <Nav
-        aria-labelledby="block-comicrelief-main-menu-menu"
+        aria-label="block-comicrelief-main-menu-menu"
         isExpandable={isExpandable}
-        sizes={sizes}
       >
         <Text tag="h2">Main navigation</Text>
 
         {/* First level of the navigation (ul tag): Parent */}
-        <NavMenu>
+        <NavMenu role="menubar">
           {menuGroup.map((group, index) => (
             <NavItem
+              role="none"
               key={group.id}
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
@@ -72,12 +72,14 @@ const MainNav = ({ navItems }) => {
               {/* Second level of the navigation (ul tag): Child(ren) */}
               {group.links && group.links.length > 0 && (
                 <SubNavMenu
-                  isKeyPressed={!!isKeyPressed[group.title]}
+                  role="menu"
+                  aria-label={group.title}
+                  // isKeyPressed={!!isKeyPressed[group.title]}
                   isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 >
-                  <SubNavItem>
+                  <SubNavItem role="none">
                     {/* This is the previous li item from the parent */}
-                    <NavLink href={group.url} inline>
+                    <NavLink href={group.url} inline role="menuitem">
                       <Text>{group.title}</Text>
                     </NavLink>
                   </SubNavItem>
