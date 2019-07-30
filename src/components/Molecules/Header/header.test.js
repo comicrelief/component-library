@@ -143,7 +143,7 @@ it('renders correctly', () => {
     }
 
     .c6 > h2 {
-      visibility: border:0;
+      border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
       -webkit-clip-path: inset(50%);
@@ -171,10 +171,6 @@ it('renders correctly', () => {
 
     .c9:hover {
       background-color: #86E4E9;
-    }
-
-    .c9 ul {
-      display: none;
     }
 
     .c11 {
@@ -306,6 +302,20 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c10 {
+        padding: 7px 5px;
+        height: auto;
+      }
+
+      .c10:focus + ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+
     @media (min-width:740px) {
       .c6 {
         width: 50%;
@@ -352,15 +362,6 @@ it('renders correctly', () => {
         padding: 30px 0;
       }
 
-      .c9 a {
-        padding: 7px 5px;
-        height: auto;
-      }
-
-      .c9 ul {
-        display: none;
-      }
-
       .c9:hover {
         background-color: transparent;
         z-index: 3;
@@ -379,11 +380,6 @@ it('renders correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-      }
-
-      .c9:hover ul span {
-        color: #FFFFFF;
-        border: 0;
       }
     }
 
@@ -454,38 +450,29 @@ it('renders correctly', () => {
       <div
         className="c1"
       >
-        <span>
-          <a
-            className="c2 c3"
-            color="red"
-            href="/"
-            rel="home"
-            target="_self"
-            title="Home"
+        <a
+          className="c2 c3"
+          color="red"
+          href="/"
+          rel="home"
+          target="_self"
+          title="Home"
+        >
+          <div
+            className="c4"
+            role="Logo"
+            rotate={1}
           >
-            <div
-              className="c4"
-              role="Logo"
-              rotate={1}
-            >
-              <img
-                alt="Comic Relief logo"
-                className="c5"
-                src="mock.asset"
-              />
-            </div>
-          </a>
-        </span>
+            <img
+              alt="Comic Relief logo"
+              className="c5"
+              src="mock.asset"
+            />
+          </div>
+        </a>
         <nav
-          aria-labelledby="block-comicrelief-main-menu-menu"
+          aria-label="block-comicrelief-main-menu-menu"
           className="c6"
-          sizes={
-            Object {
-              "large": 1440,
-              "medium": 1024,
-              "small": 740,
-            }
-          }
         >
           <h2
             className="c7"
@@ -495,537 +482,510 @@ it('renders correctly', () => {
           </h2>
           <ul
             className="c8"
+            role="menubar"
           >
             <li
               className="c9"
+              role="none"
             >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/fundraising/pay-in-your-money"
-                  onClick={[Function]}
-                  target="_self"
+              <a
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="c10 c3"
+                color="red"
+                href="https://www.comicrelief.com/fundraising/pay-in-your-money"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
                 >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    Fundraising
-                  </span>
-                </a>
-              </span>
+                  Fundraising
+                </span>
+              </a>
               <ul
+                aria-label="Fundraising"
                 className="c11"
+                role="menu"
               >
                 <li
                   className="c12"
+                  role="none"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/fundraising/pay-in-your-money"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/fundraising/pay-in-your-money"
+                    role="menuitem"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Fundraising
-                      </span>
-                    </a>
-                  </span>
+                      Fundraising
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Red Nose Day
-                      </span>
-                    </a>
-                  </span>
+                      Red Nose Day
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/join"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/join"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Regular donations
-                      </span>
-                    </a>
-                  </span>
+                      Regular donations
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/squads"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/squads"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Squads
-                      </span>
-                    </a>
-                  </span>
+                      Squads
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        The Noseys
-                      </span>
-                    </a>
-                  </span>
+                      The Noseys
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Free downloads
-                      </span>
-                    </a>
-                  </span>
+                      Free downloads
+                    </span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li
               className="c9"
+              role="none"
             >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/what-your-money-does"
-                  onClick={[Function]}
-                  target="_self"
+              <a
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="c10 c3"
+                color="red"
+                href="https://www.comicrelief.com/what-your-money-does"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
                 >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    What your money does
-                  </span>
-                </a>
-              </span>
+                  What your money does
+                </span>
+              </a>
               <ul
+                aria-label="What your money does"
                 className="c11"
+                role="menu"
               >
                 <li
                   className="c12"
+                  role="none"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/what-your-money-does"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/what-your-money-does"
+                    role="menuitem"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        What your money does
-                      </span>
-                    </a>
-                  </span>
+                      What your money does
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/What-we-do/our-legacy"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/What-we-do/our-legacy"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        What your money does
-                      </span>
-                    </a>
-                  </span>
+                      What your money does
+                    </span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li
               className="c9"
+              role="none"
             >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/rednoseday/schools"
-                  onClick={[Function]}
-                  target="_self"
+              <a
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="c10 c3"
+                color="red"
+                href="https://www.comicrelief.com/rednoseday/schools"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
                 >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    Schools & youth
-                  </span>
-                </a>
-              </span>
+                  Schools & youth
+                </span>
+              </a>
               <ul
+                aria-label="Schools & youth"
                 className="c11"
+                role="menu"
               >
                 <li
                   className="c12"
+                  role="none"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/schools"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/schools"
+                    role="menuitem"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Schools & youth
-                      </span>
-                    </a>
-                  </span>
+                      Schools & youth
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Primary schools
-                      </span>
-                    </a>
-                  </span>
+                      Primary schools
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Secondary schools
-                      </span>
-                    </a>
-                  </span>
+                      Secondary schools
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/schools/nurseries"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/schools/nurseries"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Nurseries
-                      </span>
-                    </a>
-                  </span>
+                      Nurseries
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/youth"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/youth"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Youth groups
-                      </span>
-                    </a>
-                  </span>
+                      Youth groups
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Free downloads
-                      </span>
-                    </a>
-                  </span>
+                      Free downloads
+                    </span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li
               className="c9"
+              role="none"
             >
-              <span>
-                <a
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="c10 c3"
-                  color="red"
-                  href="https://www.comicrelief.com/funding"
-                  onClick={[Function]}
-                  target="_self"
+              <a
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="c10 c3"
+                color="red"
+                href="https://www.comicrelief.com/funding"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
                 >
-                  <span
-                    className="c7"
-                    color="inherit"
-                  >
-                    Funding
-                  </span>
-                </a>
-              </span>
+                  Funding
+                </span>
+              </a>
               <ul
+                aria-label="Funding"
                 className="c11"
+                role="menu"
               >
                 <li
                   className="c12"
+                  role="none"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding"
+                    role="menuitem"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Funding
-                      </span>
-                    </a>
-                  </span>
+                      Funding
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding/funding-opportunities"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding/funding-opportunities"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Funding opportunities
-                      </span>
-                    </a>
-                  </span>
+                      Funding opportunities
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding/funding-strategy"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding/funding-strategy"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Our strategy
-                      </span>
-                    </a>
-                  </span>
+                      Our strategy
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding/eligibility-criteria"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding/eligibility-criteria"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Eligibility
-                      </span>
-                    </a>
-                  </span>
+                      Eligibility
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding/applying-for-funding"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding/applying-for-funding"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Applying for funding
-                      </span>
-                    </a>
-                  </span>
+                      Applying for funding
+                    </span>
+                  </a>
                 </li>
                 <li
                   className="c12"
                 >
-                  <span>
-                    <a
-                      className="c10 c3"
-                      color="red"
-                      href="https://www.comicrelief.com/funding/managing-your-funding"
-                      target="_self"
+                  <a
+                    className="c10 c3"
+                    color="red"
+                    href="https://www.comicrelief.com/funding/managing-your-funding"
+                    target="_self"
+                  >
+                    <span
+                      className="c7"
+                      color="inherit"
                     >
-                      <span
-                        className="c7"
-                        color="inherit"
-                      >
-                        Managing your funding
-                      </span>
-                    </a>
-                  </span>
+                      Managing your funding
+                    </span>
+                  </a>
                 </li>
               </ul>
             </li>
           </ul>
         </nav>
-        <span>
-          <a
-            aria-haspopup="true"
-            aria-label="Open and close Navigation Menu"
-            className="c13 c3"
-            color="red"
-            href="#"
-            onClick={[Function]}
-            role="button"
-            target="_self"
+        <a
+          aria-haspopup="true"
+          aria-label="Open and close Navigation Menu"
+          className="c13 c3"
+          color="red"
+          href="#"
+          onClick={[Function]}
+          role="button"
+          target="_self"
+        >
+          <span
+            className="c14 c7"
+            color="inherit"
           >
-            <span
-              className="c14 c7"
-              color="inherit"
-            >
-              Open and close nav menu
-            </span>
-            <span
-              className="c15 c16"
-            />
-            <span
-              className="c15 c16"
-            />
-            <span
-              className="c15 c16"
-            />
-            <span
-              className="c15 c16"
-            />
-          </a>
-        </span>
+            Open and close nav menu
+          </span>
+          <span
+            className="c15 c16"
+          />
+          <span
+            className="c15 c16"
+          />
+          <span
+            className="c15 c16"
+          />
+          <span
+            className="c15 c16"
+          />
+        </a>
         <div
           className="c17"
         >
-          <span>
-            <a
-              className="c18"
-              color="green"
-              href="/donation"
-              target="_self"
-            >
-              Donate
-            </a>
-          </span>
+          <a
+            className="c18"
+            color="green"
+            href="/donation"
+            target="_self"
+          >
+            Donate
+          </a>
         </div>
       </div>
     </header>
