@@ -2,7 +2,7 @@
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
-      color="white"
+      color="black"
       href="#anchor"
       target="self"
       inline={false}
@@ -12,12 +12,27 @@
     </Link>
   </div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="white" href="/test" target="self">
+    <Link color="red" href="/test" target="self">
       Link as button
     </Link>
   </div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="white" href="/test" target="blank">
+    <Link color="grey" href="/test" target="blank">
+      Link as button
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link color="yellow" href="/test" target="blank">
+      Link as button
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link color="yellow_light" href="/test" target="blank">
+      Link as button
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link color="yellow_dark" href="/test" target="blank">
       Link as button
     </Link>
   </div>

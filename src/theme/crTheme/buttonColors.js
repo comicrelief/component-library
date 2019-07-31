@@ -5,7 +5,7 @@ const buttonColors = {
   black: {
     background: color('black'),
     color: color('white'),
-    hoverBackground: color('white'),
+    hoverBackground: color('grey'),
     hoverColor: color('black')
   },
   blue: {

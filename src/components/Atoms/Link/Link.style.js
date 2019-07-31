@@ -12,7 +12,7 @@ const buttonStyle = () => css`
   border-radius: 30px;
   cursor: pointer;
   ${({ color, theme }) =>
-    color ? theme.buttonColors(color) : theme.buttonColors('white')};
+    color ? theme.buttonColors(color) : theme.buttonColors('red')};
 `;
 
 export const StyledLink = styled.a`
