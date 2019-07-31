@@ -42,7 +42,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-  color: 'red',
+  color: 'white',
   target: 'self',
   inline: false,
   wrapper: false

@@ -10,42 +10,9 @@ const buttonStyle = () => css`
   text-decoration: none;
   font-weight: 700;
   border-radius: 30px;
-  cursor: point;
-  background-color: ${({ color, theme }) =>
-    color ? theme.color(color) : theme.color('red')};
+  cursor: pointer;
   ${({ color, theme }) =>
-    (color === 'red' &&
-      css`
-        background: ${theme.color('red')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'black' &&
-      css`
-        background: ${theme.color('black')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'grey' &&
-      css`
-        background: ${theme.color('grey')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'green' &&
-      css`
-        background: ${theme.color('green')};
-        color: ${theme.color('black')};
-        :hover {
-          background: ${theme.color('green_light')};
-        }
-      `)};
+    color ? theme.buttonColors(color) : theme.buttonColors('white')};
 `;
 
 export const StyledLink = styled.a`
