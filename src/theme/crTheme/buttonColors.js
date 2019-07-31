@@ -2,40 +2,10 @@ import { css } from 'styled-components';
 import color from './colors';
 
 const buttonColors = {
-  white: {
-    background: color('white'),
-    color: color('black'),
-    hoverBackground: color('black'),
-    hoverColor: color('white')
-  },
   black: {
     background: color('black'),
     color: color('white'),
     hoverBackground: color('white'),
-    hoverColor: color('black')
-  },
-  red: {
-    background: color('red'),
-    color: color('white'),
-    hoverBackground: color('coral_light'),
-    hoverColor: color('black')
-  },
-  grey: {
-    background: color('grey'),
-    color: color('black'),
-    hoverBackground: color('grey_light'),
-    hoverColor: color('black')
-  },
-  yellow: {
-    background: color('yellow'),
-    color: color('black'),
-    hoverBackground: color('yellow_light'),
-    hoverColor: color('black')
-  },
-  green: {
-    background: color('green'),
-    color: color('black'),
-    hoverBackground: color('green_light'),
     hoverColor: color('black')
   },
   blue: {
@@ -44,22 +14,177 @@ const buttonColors = {
     hoverBackground: color('blue_light'),
     hoverColor: color('black')
   },
+  blue_dark: {
+    background: color('blue_dark'),
+    color: color('white'),
+    hoverBackground: color('blue'),
+    hoverColor: color('black')
+  },
+  blue_light: {
+    background: color('blue_light'),
+    color: color('black'),
+    hoverBackground: color('blue_dark'),
+    hoverColor: color('white')
+  },
+  coral: {
+    background: color('coral'),
+    color: color('black'),
+    hoverBackground: color('coral_light'),
+    hoverColor: color('black')
+  },
+  coral_dark: {
+    background: color('coral_dark'),
+    color: color('white'),
+    hoverBackground: color('coral'),
+    hoverColor: color('black')
+  },
+  coral_light: {
+    background: color('coral_light'),
+    color: color('black'),
+    hoverBackground: color('coral_dark'),
+    hoverColor: color('white')
+  },
+  green: {
+    background: color('green'),
+    color: color('black'),
+    hoverBackground: color('green_light'),
+    hoverColor: color('black')
+  },
+  green_dark: {
+    background: color('green_dark'),
+    color: color('white'),
+    hoverBackground: color('green'),
+    hoverColor: color('black')
+  },
+  green_light: {
+    background: color('green_light'),
+    color: color('black'),
+    hoverBackground: color('green_dark'),
+    hoverColor: color('white')
+  },
+  grey: {
+    background: color('grey'),
+    color: color('black'),
+    hoverBackground: color('grey_light'),
+    hoverColor: color('black')
+  },
+  grey_dark: {
+    background: color('grey_dark'),
+    color: color('white'),
+    hoverBackground: color('grey'),
+    hoverColor: color('black')
+  },
+  grey_light: {
+    background: color('grey_light'),
+    color: color('black'),
+    hoverBackground: color('grey_dark'),
+    hoverColor: color('white')
+  },
+  magenta: {
+    background: color('magenta'),
+    color: color('black'),
+    hoverBackground: color('magenta_light'),
+    hoverColor: color('black')
+  },
+  magenta_dark: {
+    background: color('magenta_dark'),
+    color: color('white'),
+    hoverBackground: color('magenta'),
+    hoverColor: color('black')
+  },
+  magenta_light: {
+    background: color('magenta_light'),
+    color: color('black'),
+    hoverBackground: color('magenta_dark'),
+    hoverColor: color('white')
+  },
   orange: {
     background: color('orange'),
     color: color('black'),
     hoverBackground: color('orange_light'),
     hoverColor: color('black')
   },
-  orange: {
+  orange_dark: {
+    background: color('orange_dark'),
+    color: color('white'),
+    hoverBackground: color('orange'),
+    hoverColor: color('black')
+  },
+  orange_light: {
+    background: color('orange_light'),
+    color: color('black'),
+    hoverBackground: color('orange_dark'),
+    hoverColor: color('white')
+  },
+  purple: {
+    background: color('purple'),
+    color: color('black'),
+    hoverBackground: color('purple_light'),
+    hoverColor: color('black')
+  },
+  purple_dark: {
+    background: color('purple_dark'),
+    color: color('white'),
+    hoverBackground: color('purple'),
+    hoverColor: color('black')
+  },
+  purple_light: {
+    background: color('purple_light'),
+    color: color('black'),
+    hoverBackground: color('purple_dark'),
+    hoverColor: color('white')
+  },
+  red: {
+    background: color('red'),
+    color: color('white'),
+    hoverBackground: color('coral_light'),
+    hoverColor: color('black')
+  },
+  teal: {
     background: color('teal'),
     color: color('black'),
     hoverBackground: color('teal_light'),
     hoverColor: color('black')
+  },
+  teal_dark: {
+    background: color('teal_dark'),
+    color: color('white'),
+    hoverBackground: color('teal'),
+    hoverColor: color('black')
+  },
+  teal_light: {
+    background: color('teal_light'),
+    color: color('black'),
+    hoverBackground: color('teal_dark'),
+    hoverColor: color('white')
+  },
+  white: {
+    background: color('white'),
+    color: color('black'),
+    hoverBackground: color('black'),
+    hoverColor: color('white')
+  },
+  yellow: {
+    background: color('yellow'),
+    color: color('black'),
+    hoverBackground: color('yellow_light'),
+    hoverColor: color('black')
+  },
+  yellow_dark: {
+    background: color('yellow_dark'),
+    color: color('white'),
+    hoverBackground: color('yellow'),
+    hoverColor: color('black')
+  },
+  yellow_light: {
+    background: color('yellow_light'),
+    color: color('black'),
+    hoverBackground: color('yellow_dark'),
+    hoverColor: color('white')
   }
 };
 
 export default colorName => {
-  console.log('colorName', colorName);
   let style = 'inherit';
   if (colorName) {
     style = css`
