@@ -8,7 +8,7 @@ import Link from '../../Atoms/Link/Link';
   navItems={data}
   metaIcons={
     <>
-      <Link color="green" href="/donation">
+      <Link color="white" href="/donation">
         Donate
       </Link>
     </>
