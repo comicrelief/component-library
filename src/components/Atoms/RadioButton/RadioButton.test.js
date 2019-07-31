@@ -42,8 +42,8 @@ it('renders correctly', () => {
     }
 
     .c1:checked + span {
-      background-color: #7d2ca9;
-      border: 1px solid #7d2ca9;
+      background-color: #C180F9;
+      border: 1px solid #C180F9;
     }
 
     .c1:checked + span:before {
@@ -121,8 +121,8 @@ it('renders correctly', () => {
     }
 
     .c1:checked + span {
-      background-color: #7d2ca9;
-      border: 1px solid #7d2ca9;
+      background-color: #C180F9;
+      border: 1px solid #C180F9;
     }
 
     .c1:checked + span:before {

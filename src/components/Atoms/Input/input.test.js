@@ -30,12 +30,12 @@ it('renders correctly', () => {
       font-size: 1.2rem;
       background-color: #FFFFFF;
       border: 1px solid;
-      border-color: #030e1a;
+      border-color: #2C0230;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      color: #030e1a;
+      color: #2C0230;
     }
 
     .c2:focus {

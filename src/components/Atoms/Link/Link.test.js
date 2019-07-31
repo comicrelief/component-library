@@ -19,8 +19,14 @@ it('renders correctly', () => {
       text-decoration: none;
       font-weight: 700;
       border-radius: 30px;
-      cursor: point;
-      background-color: #fbef51;
+      cursor: pointer;
+      background-color: #FFE400;
+      color: #2C0230;
+    }
+    
+    .c0:hover {
+      background-color: #FEFD5A;
+      color: #2C0230;
     }
 
     @media (min-width:1440px) {

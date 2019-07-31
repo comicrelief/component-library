@@ -161,7 +161,7 @@ const SubNavItem = styled.li`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     :first-child {
       :hover {
-        background-color: ${({ theme }) => theme.color('violet_light')};
+        background-color: ${({ theme }) => theme.color('deep_violet_light')};
       }
       a {
         ::before {
@@ -183,7 +183,7 @@ const SubNavItem = styled.li`
     color: ${({ theme }) => theme.color('white')};
   }
   :hover {
-    background-color: ${({ theme }) => theme.color('violet_light')};
+    background-color: ${({ theme }) => theme.color('deep_violet_light')};
     span {
       border-bottom: 0;
       padding-bottom: 2px;

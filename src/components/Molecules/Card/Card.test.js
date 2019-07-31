@@ -34,7 +34,7 @@ it('renders correctly', () => {
       -ms-flex-pack: end;
       justify-content: flex-end;
       height: 100%;
-      background: #fbef51;
+      background: #FFE400;
     }
 
     .c1 {

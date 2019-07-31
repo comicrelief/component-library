@@ -37,7 +37,7 @@ it('renders correctly', () => {
       padding: 6px 10px;
       border-width: 1px;
       border-style: solid;
-      border-color: #030e1a;
+      border-color: #2C0230;
       margin: 0;
       position: relative;
       -moz-appearance: none;

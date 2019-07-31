@@ -36,7 +36,7 @@ const StyledInput = styled.select`
   box-shadow: border-box;
   border-radius: 0;
   :focus {
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
 
   @media ${({ theme }) => theme.breakpoint('small')} {

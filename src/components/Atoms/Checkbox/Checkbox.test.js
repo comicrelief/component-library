@@ -41,7 +41,7 @@ it('renders correctly', () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #7d2ca9;
+      background-color: #C180F9;
       background-size: contain;
     }
 
@@ -112,7 +112,7 @@ it('renders correctly', () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #7d2ca9;
+      background-color: #C180F9;
       background-size: contain;
     }
 
