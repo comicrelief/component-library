@@ -479,8 +479,8 @@ it('renders correctly', () => {
           title="Home"
         >
           <div
+            aria-label="logo"
             className="c4"
-            role="logo"
             rotate={1}
           >
             <img

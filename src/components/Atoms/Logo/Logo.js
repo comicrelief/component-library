@@ -16,7 +16,7 @@ const Image = styled.img`
  */
 
 const LogoWrapper = styled.div.attrs(() => ({
-  role: 'logo'
+  'aria-label': 'logo'
 }))`
   display: inline-block;
   width: 50px;

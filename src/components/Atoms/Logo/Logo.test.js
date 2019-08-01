@@ -31,8 +31,8 @@ it('renders correctly', () => {
     }
 
     <div
+      aria-label="logo"
       className="c0"
-      role="logo"
       rotate={1}
     >
       <img
