@@ -485,19 +485,21 @@ it('renders correctly', () => {
           >
             <img
               alt="Comic Relief logo"
+              aria-label="logo"
               className="c5"
               src="mock.asset"
             />
           </div>
         </a>
         <nav
-          aria-label="block-comicrelief-main-menu-menu"
+          aria-labelledby="comicrelief main-menu-menu"
           className="c6"
           role="navigation"
         >
           <h2
             className="c7"
             color="inherit"
+            id="comicrelief main-menu-menu"
           >
             Main navigation
           </h2>

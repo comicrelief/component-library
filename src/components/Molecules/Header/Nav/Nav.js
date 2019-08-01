@@ -62,11 +62,13 @@ const MainNav = ({ navItems }) => {
   return (
     <>
       <Nav
-        aria-label="block-comicrelief-main-menu-menu"
+        aria-labelledby="main menu"
         isExpandable={isExpandable}
         role="navigation"
       >
-        <Text tag="h2">Main navigation</Text>
+        <Text id="main menu" tag="h2">
+          Main navigation
+        </Text>
 
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">

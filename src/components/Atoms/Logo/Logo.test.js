@@ -37,6 +37,7 @@ it('renders correctly', () => {
     >
       <img
         alt="Comic Relief logo"
+        aria-label="logo"
         className="c1"
         src="mock.asset"
       />
