@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -9,11 +9,11 @@ import {
   Nav,
   NavMenu,
   NavItem,
-  NavItemLink,
+  NavLink,
   SubNavMenu,
   SubNavItem,
-  SubNavItemLink,
-  SubNavItemLinkUnderline
+  SubNavLink,
+  SubNavLinkUnderline
 } from './Nav.style';
 
 const MainNav = ({ navItems }) => {
@@ -37,17 +37,33 @@ const MainNav = ({ navItems }) => {
     }
   };
 
-  const keyPressed = item => e => {
-    if (e.target.querySelector('span').innerText === item) {
-      setIsKeyPressed({ [item]: !isKeyPressed[item] });
-    }
+  // Handle tab key on menu nav
+  const keyPressed = item => () => {
+    window.onkeyup = e => {
+      if (
+        e.target.querySelector('span') &&
+        e.target.querySelector('span').innerText === item
+      ) {
+        setIsKeyPressed({ [item]: !isKeyPressed[item] });
+      } else if (!e.target.querySelector('span')) {
+        setIsKeyPressed({});
+      }
+    };
   };
+
+  useEffect(() => {
+    window.addEventListener('onkeyup', setIsKeyPressed);
+    return () => {
+      window.removeEventListener('onkeyup', setIsKeyPressed);
+    };
+  }, []);
 
   return (
     <>
       <Nav
         aria-label="block-comicrelief-main-menu-menu"
         isExpandable={isExpandable}
+        role="navigation"
       >
         <Text tag="h2">Main navigation</Text>
 
@@ -60,41 +76,40 @@ const MainNav = ({ navItems }) => {
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
-              <NavItemLink
+              <NavLink
                 href={group.url}
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
                 onClick={toggleSubMenu(group.id)}
                 onKeyUp={keyPressed(group.title)}
-                isKeyPressed={!!isKeyPressed[group.title]}
               >
                 <Text>{group.title}</Text>
-              </NavItemLink>
+              </NavLink>
 
               {/* Second level of the navigation (ul tag): Child(ren) */}
               {group.links && group.links.length > 0 && (
                 <SubNavMenu
                   role="menu"
                   aria-label={group.title}
-                  // isKeyPressed={!!isKeyPressed[group.title]}
+                  isKeyPressed={!!isKeyPressed[group.title]}
                   isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 >
                   <SubNavItem role="none">
                     {/* This is the previous li item from the parent */}
-                    <SubNavItemLinkUnderline
+                    <SubNavLinkUnderline
                       href={group.url}
                       inline
                       role="menuitem"
                     >
                       <Text>{group.title}</Text>
-                    </SubNavItemLinkUnderline>
+                    </SubNavLinkUnderline>
                   </SubNavItem>
                   {group.links.map(child => (
                     <SubNavItem key={child.url}>
-                      <SubNavItemLink href={child.url} inline>
+                      <SubNavLink href={child.url} inline role="menuitem">
                         <Text>{child.title}</Text>
-                      </SubNavItemLink>
+                      </SubNavLink>
                     </SubNavItem>
                   ))}
                 </SubNavMenu>

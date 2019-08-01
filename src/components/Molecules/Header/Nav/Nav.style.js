@@ -5,17 +5,13 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 import { sizes } from '../../../../theme/shared/breakpoint';
 
-const NavLink = styled(Link)`
+const NavLinkClass = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
 `;
-
-/**
- *          Menu second level
- */
 
 /**
  * Navigation menu
@@ -46,7 +42,7 @@ const Nav = styled.nav`
 `;
 
 /**
- * Sub Navigation Menu
+ * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
   display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
@@ -63,14 +59,12 @@ const SubNavMenu = styled.ul`
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
+    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 90px;
     position: absolute;
     padding: 0 0 20px;
     width: 250px;
     height: auto;
-    transition-property: max-height;
-    transition-duration: 850ms;
-    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
   }
 `;
 
@@ -91,9 +85,9 @@ const SubNavItem = styled.li`
 `;
 
 /**
- * Sub menu item link
+ * Sub menu link item
  */
-const SubNavItemLink = styled(NavLink)`
+const SubNavLink = styled(NavLinkClass)`
   padding: 14px 21px;
   color: ${({ theme }) => theme.color('white')};
   height: auto;
@@ -101,9 +95,9 @@ const SubNavItemLink = styled(NavLink)`
 `;
 
 /**
- * Sub menu item link underline
+ * Sub menu link item underline
  */
-const SubNavItemLinkUnderline = styled(SubNavItemLink)`
+const SubNavLinkUnderline = styled(SubNavLink)`
   padding: 26px 21px;
   ::after {
     content: '';
@@ -127,15 +121,14 @@ const SubNavItemLinkUnderline = styled(SubNavItemLink)`
       border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
       top: -22px;
     }
+    :hover::before {
+      border-bottom-color: ${({ theme }) => theme.color('violet_light')};
+    }
   }
 `;
 
 /**
- *          Menu first level
- */
-
-/**
- * Navigation Menu
+ * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('grey_extra_light')};
@@ -155,7 +148,7 @@ const NavMenu = styled.ul`
 /**
  * Menu item link
  */
-const NavItemLink = styled(NavLink)`
+const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 7px 5px;
     height: auto;
@@ -187,7 +180,7 @@ const NavItem = styled.li`
     :hover {
       background-color: transparent;
       ${zIndex('high')};
-      ${NavItemLink} {
+      ${NavLink} {
         span {
           border-bottom: 2px solid ${({ theme }) => theme.color('black')};
           padding-bottom: 2px;
@@ -202,13 +195,12 @@ const NavItem = styled.li`
 `;
 
 export {
-  NavLink,
   Nav,
   NavMenu,
   NavItem,
-  NavItemLink,
+  NavLink,
   SubNavMenu,
   SubNavItem,
-  SubNavItemLink,
-  SubNavItemLinkUnderline
+  SubNavLink,
+  SubNavLinkUnderline
 };
