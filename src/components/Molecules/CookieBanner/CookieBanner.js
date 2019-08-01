@@ -13,10 +13,16 @@ const CookieWrapper = styled.div`
   flex-direction: column;
 `;
 
-const CookieLink = styled(Link)`
-  text-decoration: underline;
-  color: white;
+const AcceptBtn = styled(Link)`
+  color: ${({ theme }) => theme.color('black')};
   padding: 8px 20px;
+  margin-right: 8px;
+`;
+
+const CookieLink = styled(Link)`
+  color: ${({ theme }) => theme.color('white')};
+  padding: 0 6px 1px;
+  text-decoration: underline;
 `;
 
 const CookieBanner = () => {
@@ -31,9 +37,9 @@ const CookieBanner = () => {
         . We also use optional cookies for marketing purposes:
       </Text>
       <Text tag="p" color="white">
-        <Link href="/comic" color="white">
+        <AcceptBtn href="/comic" color="white">
           Accept
-        </Link>
+        </AcceptBtn>
         Or click
         <CookieLink href="" inline>
           here
