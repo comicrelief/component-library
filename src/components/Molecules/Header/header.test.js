@@ -510,7 +510,6 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-expanded={false}
                 aria-haspopup="true"
                 className="c10 c11 c3"
                 color="red"
@@ -647,7 +646,6 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-expanded={false}
                 aria-haspopup="true"
                 className="c10 c11 c3"
                 color="red"
@@ -712,7 +710,6 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-expanded={false}
                 aria-haspopup="true"
                 className="c10 c11 c3"
                 color="red"
@@ -849,7 +846,6 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-expanded={false}
                 aria-haspopup="true"
                 className="c10 c11 c3"
                 color="red"

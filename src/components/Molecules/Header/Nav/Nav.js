@@ -29,9 +29,10 @@ const MainNav = ({ navItems }) => {
 
   // Detect windown screen size
   const width = window.innerWidth;
+  const mobile = width < sizes.medium;
 
   const toggleSubMenu = item => event => {
-    if (width < sizes.medium) {
+    if (mobile) {
       event.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
@@ -76,17 +77,28 @@ const MainNav = ({ navItems }) => {
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
-              <NavLink
-                href={group.url}
-                inline
-                aria-expanded={!!isSubMenuOpen[group.id]}
-                aria-haspopup="true"
-                onClick={toggleSubMenu(group.id)}
-                onKeyUp={keyPressed(group.title)}
-              >
-                <Text>{group.title}</Text>
-              </NavLink>
-
+              {!mobile ? (
+                <NavLink
+                  href={group.url}
+                  inline
+                  aria-haspopup="true"
+                  onClick={toggleSubMenu(group.id)}
+                  onKeyUp={keyPressed(group.title)}
+                >
+                  <Text>{group.title}</Text>
+                </NavLink>
+              ) : (
+                <NavLink
+                  href={group.url}
+                  inline
+                  aria-expanded={!!isSubMenuOpen[group.id]}
+                  aria-haspopup="true"
+                  onClick={toggleSubMenu(group.id)}
+                  onKeyUp={keyPressed(group.title)}
+                >
+                  <Text>{group.title}</Text>
+                </NavLink>
+              )}
               {/* Second level of the navigation (ul tag): Child(ren) */}
               {group.links && group.links.length > 0 && (
                 <SubNavMenu
