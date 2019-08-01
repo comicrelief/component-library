@@ -5,7 +5,7 @@ import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
 
 const HeaderWrapper = styled.header.attrs(() => ({
-  role: 'Banner'
+  role: 'banner'
 }))`
   position: relative;
   background-color: ${({ theme }) => theme.color('white')};

@@ -7,24 +7,20 @@ const Link = ({ children, color, href, target, inline, wrapper, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
 
   return wrapper ? (
-    <span>
-      <WrapperLink {...rest} color={color} inline={inline}>
-        {children}
-      </WrapperLink>
-    </span>
+    <WrapperLink {...rest} color={color} inline={inline}>
+      {children}
+    </WrapperLink>
   ) : (
-    <span>
-      <StyledLink
-        {...rest}
-        color={color}
-        href={href}
-        target={window}
-        inline={inline}
-        as="a"
-      >
-        {children}
-      </StyledLink>
-    </span>
+    <StyledLink
+      {...rest}
+      color={color}
+      href={href}
+      target={window}
+      inline={inline}
+      as="a"
+    >
+      {children}
+    </StyledLink>
   );
 };
 
