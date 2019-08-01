@@ -492,14 +492,14 @@ it('renders correctly', () => {
           </div>
         </a>
         <nav
-          aria-labelledby="main menu"
+          aria-labelledby="main-menu"
           className="c6"
           role="navigation"
         >
           <h2
             className="c7"
             color="inherit"
-            id="main menu"
+            id="main-menu"
           >
             Main navigation
           </h2>
