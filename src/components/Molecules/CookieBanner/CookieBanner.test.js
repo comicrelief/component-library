@@ -53,7 +53,7 @@ it('renders correctly', () => {
       display: flex;
       position: relative;
       padding: 20px;
-      background: #030e1a;
+      background: #2C0230;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;

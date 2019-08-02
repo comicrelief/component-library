@@ -8,7 +8,7 @@ const CookieWrapper = styled.div`
   display: flex;
   position: relative;
   padding: 20px;
-  background: ${({ theme }) => theme.color('black')};
+  background: ${({ theme }) => theme.color('deep_violet')};
   flex-direction: column;
   ${zIndex('high')};
 `;
