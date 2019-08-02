@@ -34,6 +34,10 @@ it('renders correctly', () => {
       border-bottom-color: #000;
     }
 
+    .c4:hover {
+      font-weight: 700;
+    }
+
     .c6 {
       display: inline-block;
       padding: 11px 17px;
@@ -43,7 +47,13 @@ it('renders correctly', () => {
       font-weight: 700;
       border-radius: 30px;
       cursor: point;
-      background-color: #FFFFFF;
+      background-color: #2C0230;
+      background: #FFFFFF;
+      color: #2C0230;
+    }
+
+    .c6:hover {
+      background: #918791;
     }
 
     .c0 {
@@ -52,7 +62,7 @@ it('renders correctly', () => {
       display: -ms-flexbox;
       display: flex;
       position: relative;
-      padding: 20px;
+      padding: 1rem;
       background: #2C0230;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
@@ -61,23 +71,23 @@ it('renders correctly', () => {
     }
 
     .c1 {
+      line-height: 1.5;
       margin: 0;
     }
 
     .c1:first-of-type {
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
     }
 
     .c5 {
-      color: #030e1a;
-      padding: 8px 20px;
+      padding: 0.5rem 1rem;
       display: block;
       margin-bottom: 10px;
     }
 
     .c3 {
       color: #FFFFFF;
-      padding: 0 3px 1px;
+      padding: 0 0.25rem 1px;
       border-bottom: 2px solid;
     }
 
@@ -94,13 +104,13 @@ it('renders correctly', () => {
       }
 
       .c1:first-of-type {
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
       }
     }
 
     @media (min-width:740px) {
       .c5 {
-        margin: 0 6px 0 0;
+        margin: 0 0.25rem 0 0;
         display: inline-block;
       }
     }
@@ -129,7 +139,7 @@ it('renders correctly', () => {
       >
         <a
           className="c5 c6"
-          color="white"
+          color="deep_violet"
           href="/comic"
           onClick={[Function]}
           target="_self"
