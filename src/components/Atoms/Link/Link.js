@@ -5,6 +5,7 @@ import { StyledLink, WrapperLink } from './Link.style';
 
 const Link = ({ children, color, href, target, inline, wrapper, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
+  const relationship = target === 'blank' ? 'noopener noreferrer' : false;
 
   return wrapper ? (
     <span>
@@ -19,6 +20,7 @@ const Link = ({ children, color, href, target, inline, wrapper, ...rest }) => {
         color={color}
         href={href}
         target={window}
+        rel={relationship}
         inline={inline}
         as="a"
       >
@@ -42,7 +44,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-  color: 'white',
+  color: 'red',
   target: 'self',
   inline: false,
   wrapper: false
