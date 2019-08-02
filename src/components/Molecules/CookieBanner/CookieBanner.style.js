@@ -3,43 +3,45 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
+import spacing from '../../../theme/shared/spacings';
 
 const CookieWrapper = styled.div`
   display: flex;
   position: relative;
-  padding: 20px;
+  padding: ${spacing('md')};
   background: ${({ theme }) => theme.color('deep_violet')};
   flex-direction: column;
   ${zIndex('high')};
 `;
 
 const CookieText = styled(Text)`
+  line-height: 1.5;
   margin: 0;
   &:first-of-type {
-    margin-bottom: 10px;
+    margin-bottom: ${spacing('sm')};
   }
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 75%;
-    margin: 0 auto;
+    margin: ${spacing('none')} auto;
     &:first-of-type {
-      margin-bottom: 15px;
+      margin-bottom: ${spacing('md')};
     }
   }
 `;
 
 const AcceptCookieBtn = styled(Link)`
-  padding: 8px 20px;
+  padding: ${spacing('sm')} ${spacing('md')};
   display: block;
   margin-bottom: 10px;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    margin: 0 6px 0 0;
+    margin: 0 ${spacing('xsm')} 0 0;
     display: inline-block;
   }
 `;
 
 const LinkStyle = styled(Link)`
   color: ${({ theme }) => theme.color('white')};
-  padding: 0 3px 1px;
+  padding: 0 ${spacing('xsm')} 1px;
   border-bottom: 2px solid;
 `;
 
