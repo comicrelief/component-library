@@ -20,7 +20,11 @@ const CookieBanner = ({ acceptCookie, denyCookie, cookiePolicyUrl }) => {
         . We also use optional cookies for marketing purposes:
       </CookieText>
       <CookieText tag="p" color="white">
-        <AcceptCookieBtn href="/comic" color="white" onClick={acceptCookie}>
+        <AcceptCookieBtn
+          href="/comic"
+          color="deep_violet"
+          onClick={acceptCookie}
+        >
           Accept
         </AcceptCookieBtn>
         Or click

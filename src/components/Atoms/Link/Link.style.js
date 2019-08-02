@@ -45,6 +45,14 @@ const buttonStyle = () => css`
         :hover {
           background: ${theme.color('green_light')};
         }
+      `) ||
+    (color === 'deep_violet' &&
+      css`
+        background: ${theme.color('white')};
+        color: ${theme.color('deep_violet')};
+        :hover {
+          background: ${theme.color('grey')};
+        }
       `)};
 `;
 
@@ -58,6 +66,9 @@ export const StyledLink = styled.a`
           padding: 0 2px 1px;
           border-bottom: 2px solid;
           border-bottom-color: #000;
+          :hover {
+            font-weight: 700;
+          }
         `
       : buttonStyle}
 `;

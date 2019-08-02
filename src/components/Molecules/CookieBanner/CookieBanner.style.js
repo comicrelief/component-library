@@ -28,7 +28,6 @@ const CookieText = styled(Text)`
 `;
 
 const AcceptCookieBtn = styled(Link)`
-  color: ${({ theme }) => theme.color('black')};
   padding: 8px 20px;
   display: block;
   margin-bottom: 10px;
