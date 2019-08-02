@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import RichText from '../../Atoms/RichText/RichText';
@@ -15,36 +15,30 @@ const CopyWrapper = styled.div`
   padding: ${spacing('xl')};
 `;
 
-const DoubleCopy = () => {
+const DoubleCopy = ({ leftCopy, rightCopy, leftCopyAlign, rightCopyAlign }) => {
   return (
     <Section>
       <CopyWrapper>
-        <RichText
-          align="center"
-          markup={
-            ' <h1 class="text--title">Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p>'
-          }
-        />
+        <RichText align={leftCopyAlign} markup={leftCopy} />
       </CopyWrapper>
       <CopyWrapper>
-        <RichText
-          align="center"
-          markup={
-            ' <h1 class="text--title">Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p>'
-          }
-        />
+        <RichText align={rightCopyAlign} markup={rightCopy} />
       </CopyWrapper>
     </Section>
   );
 };
 
-DoubleCopy.propTypes = {};
+DoubleCopy.propTypes = {
+  leftCopy: PropTypes.string,
+  rightCopy: PropTypes.string,
+  leftCopyAlign: PropTypes.string,
+  rightCopyAlign: PropTypes.string
+};
 
+DoubleCopy.defaultProps = {
+  leftCopyAlign: 'left',
+  rightCopyAlign: 'right',
+  leftCopy: '',
+  rightCopy: ''
+};
 export default DoubleCopy;
-
-// align=
-// {'center'}
-// markup=
-// {
-//   ' <div> <h1 class="text--title">Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> </div>'
-// }
