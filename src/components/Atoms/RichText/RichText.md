@@ -1,3 +1,5 @@
+# RichText
+
 ```js
 <RichText
   align={'center'}
