@@ -1,55 +1,42 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import Text from '../../Atoms/Text/Text';
-import Link from '../../Atoms/Link/Link';
+import {
+  CookieWrapper,
+  CookieText,
+  AcceptCookieBtn,
+  LinkStyle
+} from './CookieBanner.style';
 
-const CookieWrapper = styled.div`
-  display: flex;
-  position: relative;
-  padding: 10px;
-  background: ${({ theme }) => theme.color('black')};
-  flex-direction: column;
-`;
-
-const AcceptBtn = styled(Link)`
-  color: ${({ theme }) => theme.color('black')};
-  padding: 8px 20px;
-  margin-right: 8px;
-`;
-
-const CookieLink = styled(Link)`
-  color: ${({ theme }) => theme.color('white')};
-  padding: 0 6px 1px;
-  text-decoration: underline;
-`;
-
-const CookieBanner = () => {
+const CookieBanner = ({ acceptCookie, denyCookie, cookiePolicyUrl }) => {
   return (
     <CookieWrapper>
-      <Text tag="p" color="white">
+      <CookieText tag="p" color="white">
         Hello! Comic Relief uses cookies to help make this website better and
         improve our services. You can learn more about our use of cookies
-        <CookieLink target="_blank" href="/cookies-policy" inline>
+        <LinkStyle href={cookiePolicyUrl} inline>
           here
-        </CookieLink>
+        </LinkStyle>
         . We also use optional cookies for marketing purposes:
-      </Text>
-      <Text tag="p" color="white">
-        <AcceptBtn href="/comic" color="white">
+      </CookieText>
+      <CookieText tag="p" color="white">
+        <AcceptCookieBtn href="/comic" color="white" onClick={acceptCookie}>
           Accept
-        </AcceptBtn>
+        </AcceptCookieBtn>
         Or click
-        <CookieLink href="" inline>
+        <LinkStyle href="" inline onClick={denyCookie}>
           here
-        </CookieLink>
+        </LinkStyle>
         to deny these.
-      </Text>
+      </CookieText>
     </CookieWrapper>
   );
 };
 
-CookieBanner.propTypes = {};
+CookieBanner.propTypes = {
+  acceptCookie: PropTypes.func.isRequired,
+  denyCookie: PropTypes.func.isRequired,
+  cookiePolicyUrl: PropTypes.string.isRequired
+};
 
 export default CookieBanner;
