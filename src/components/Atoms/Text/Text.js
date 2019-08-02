@@ -37,7 +37,11 @@ Text.propTypes = {
   tag: PropTypes.string,
   /** Sizes */
   size: PropTypes.string,
-  children: PropTypes.string.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string
+  ]).isRequired
 };
 
 Text.defaultProps = {

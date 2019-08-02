@@ -50,6 +50,10 @@ it('renders correctly', () => {
       border-bottom-color: #000;
     }
 
+    .c3:hover {
+      font-weight: 700;
+    }
+
     .c22 {
       display: inline-block;
       padding: 11px 17px;
