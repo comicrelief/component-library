@@ -21,17 +21,13 @@ const MainNav = ({ navItems }) => {
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
-  let [width, setWindow] = useState(null);
-  let [mobile, setMobile] = useState(null);
+  let [width] = useState(null);
+  let [mobile] = useState(null);
 
   useEffect(() => {
     // Detect window screen size
     width = window.innerWidth;
     mobile = width < sizes.medium;
-    return () => {
-      setWindow(null);
-      setMobile(null);
-    };
   }, []);
 
   const toggleBurgerMenu = event => {
