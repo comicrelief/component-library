@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 import image1 from './assets/image1.svg';
 import image2 from './assets/image2.svg';
 import image3 from './assets/image3.svg';
 import image4 from './assets/image4.svg';
-import image5 from './assets/image5.svg';
 
 const SocialIconList = styled.ul`
   width: 100%;
@@ -22,43 +20,56 @@ const SocialIconItem = styled.li`
 `;
 
 const SocialIcon = styled.img`
-  object-fit: cover;
   width: 50px;
   height: auto;
 `;
 
-const FooterSocialLinks = ({ prop1 }) => {
+const FooterSocialLinks = () => {
   return (
     <div>
-      {prop1}
-      footer social linkssss
       <SocialIconList>
         <SocialIconItem>
-          <SocialIcon src={image1} alt="Comic Relief logo" aria-label="logo" />
+          <a
+            href="https://www.facebook.com/comicrelief"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={image1} title="Facebook" />
+          </a>
         </SocialIconItem>
+
         <SocialIconItem>
-          <SocialIcon src={image2} alt="Comic Relief logo" aria-label="logo" />
+          <a
+            href="https://twitter.com/comicrelief"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={image2} title="Twitter" />
+          </a>
         </SocialIconItem>
+
         <SocialIconItem>
-          <SocialIcon src={image3} alt="Comic Relief logo" aria-label="logo" />
+          <a
+            href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={image3} title="Youtube" />
+          </a>
         </SocialIconItem>
+
         <SocialIconItem>
-          <SocialIcon src={image4} alt="Comic Relief logo" aria-label="logo" />
-        </SocialIconItem>
-        <SocialIconItem>
-          <SocialIcon src={image5} alt="Comic Relief logo" aria-label="logo" />
+          <a
+            href="https://www.instagram.com/comicrelief/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={image4} title="Instagram" />
+          </a>
         </SocialIconItem>
       </SocialIconList>
     </div>
   );
-};
-
-FooterSocialLinks.propTypes = {
-  prop1: PropTypes.string
-};
-
-FooterSocialLinks.defaultProps = {
-  prop1: 'def prop1'
 };
 
 export default FooterSocialLinks;

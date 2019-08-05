@@ -17,11 +17,14 @@ const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <FooterSocialLinks prop1="hello" />
+        <FooterSocialLinks />
+
         <FooterNav navItems={navItems} />
+
         <FooterBranding>
-          <Logo rotate />
+          <Logo sizeSm="70px" sizeMd="70px" rotate />
         </FooterBranding>
+
         <FooterCopyright>
           <Text tag="p" color="white">
             {footerCopy}
