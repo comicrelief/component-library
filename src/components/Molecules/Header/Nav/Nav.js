@@ -29,7 +29,7 @@ const MainNav = ({ navItems }) => {
   useEffect(() => {
     // Detect window screen size
     setIsMobile(width < sizes.medium);
-  }, []);
+  });
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
