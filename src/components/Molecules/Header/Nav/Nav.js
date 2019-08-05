@@ -84,7 +84,7 @@ const MainNav = ({ navItems }) => {
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
-              {!mobile ? (
+              {!isMobile ? (
                 <NavLink
                   href={group.url}
                   inline
