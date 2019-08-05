@@ -4,15 +4,13 @@ import styled from 'styled-components';
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
 }))`
-  position: relative;
-  background-color: ${({ theme }) => theme.color('white')};
-  padding: 0;
-  height: 75px;
+  text-align: center;
+  line-height: initial;
+  background: #000;
+  padding: 65px 10px 40px;
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    height: auto;
-  }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+    padding: 79px 35px 60px;
   }
 `;
 
@@ -32,12 +30,14 @@ const FooterBranding = styled.div`
   display: block;
   width: 100%;
   height: 100%;
+  margin: 0 0 25px;
 `;
 
 const FooterCopyright = styled.div`
   display: block;
   width: 100%;
   height: 100%;
+  text-align: left;
 `;
 
 /* const InnerWrapper = styled.div`

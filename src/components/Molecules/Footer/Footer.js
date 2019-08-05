@@ -1,34 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FooterSocialLinks from './FooterSocialLinks/FooterSocialLinks';
+import Text from '../../Atoms/Text/Text';
 
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
+
 import {
   FooterWrapper,
   InnerWrapper,
-  SocialLinks,
   FooterBranding,
   FooterCopyright
 } from './Footer.style';
-import Text from '../../Atoms/Text/Text';
 
 const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <SocialLinks>
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-        </SocialLinks>
+        <FooterSocialLinks prop1="hello" />
         <FooterNav navItems={navItems} />
         <FooterBranding>
-          <Logo />
+          <Logo rotate />
         </FooterBranding>
         <FooterCopyright>
-          <Text tag="p">{footerCopy}</Text>
+          <Text tag="p" color="white">
+            {footerCopy}
+          </Text>
         </FooterCopyright>
       </InnerWrapper>
     </FooterWrapper>
