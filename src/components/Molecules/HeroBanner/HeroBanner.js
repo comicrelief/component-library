@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 
 const Container = styled.section`
-  height: 500px;
+  min-height: 200px;
   position: relative;
   background: ${props => (props.background ? props.background : 'transparent')};
   color: ${props => props.theme.color('red')};
-  height: 500px;
 `;
 
 const Image = styled.img.attrs(() => ({

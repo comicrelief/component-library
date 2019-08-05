@@ -2,13 +2,14 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
-import images from '../../../styleguide/data/data';
+import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
-      images={images.pictures}
+      images={data.images}
+      image={data.image}
       date=" 01 July 2019"
       title="News article"
       alt="Image's description"
@@ -45,13 +46,6 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      color: #000;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -61,6 +55,9 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
     }
 
     .c2 {
@@ -126,26 +123,20 @@ it('renders correctly', () => {
         <div
           className="c2"
         >
-          <picture>
-            <source
-              media="(min-width: 1440px)"
-              srcSet="picture-3.jpg"
-            />
-            <source
-              media="(min-width: 1024px)"
-              srcSet="picture-2.jpg"
-            />
-            <source
-              srcSet="picture-1.jpg"
-            />
-            <img
-              alt="Image's description"
-              className="c3"
-              height="auto"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              width="100%"
-            />
-          </picture>
+          <img
+            alt="Image's description"
+            className="lazyload c3"
+            data-sizes="auto"
+            data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,
+    //images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+            height="auto"
+            src="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
         </div>
         <div
           className="c4"

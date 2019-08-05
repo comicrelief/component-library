@@ -1,8 +1,14 @@
 ```js
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="black" href="#anchor" target="self" inline={false}>
-      Link as button
+    <Link
+      color="black"
+      href="#anchor"
+      target="self"
+      inline={false}
+      wrapper={true}
+    >
+      <a href="#">Link as button</a>
     </Link>
   </div>
   <div style={{ display: 'block', marginBottom: '10px' }}>

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
-import StyledLink from '../../Atoms/Link/Link.style';
 
 /**
  * Article tag wrapper
@@ -16,11 +15,13 @@ const Wrapper = styled.article`
   background-color: #fff;
 `;
 
-const Link = styled(StyledLink)`
+const Link = styled.a`
   display: flex;
   height: 100%;
   border: 0;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
@@ -56,12 +57,12 @@ const CopyWrapper = styled.div`
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({ date, href, images, alt, title }) => {
+const ArticleTeaser = ({ date, href, images, alt, title, image }) => {
   return (
     <Wrapper>
       <Link href={href} inline>
         <ImageWrapper>
-          <Picture images={images} alt={alt} objectFit="cover" />
+          <Picture images={images} image={image} alt={alt} objectFit="cover" />
         </ImageWrapper>
         <CopyWrapper>
           <Text size="xxs" weight="bold" uppercase>
@@ -77,8 +78,8 @@ const ArticleTeaser = ({ date, href, images, alt, title }) => {
 };
 
 ArticleTeaser.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  images: PropTypes.object.isRequired,
+  images: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

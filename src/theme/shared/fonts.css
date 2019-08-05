@@ -10,6 +10,11 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 h1,
 h2,
 h3,
@@ -24,8 +29,4 @@ p,
 a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-}
-
-p:last-child {
-  margin: 0;
 }

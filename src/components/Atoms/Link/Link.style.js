@@ -2,7 +2,10 @@ import styled, { css } from 'styled-components';
 
 const buttonStyle = () => css`
   display: inline-block;
-  padding: 16px 30px;
+  padding: 11px 17px;
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    padding: 16px 30px;
+  }
   text-align: center;
   text-decoration: none;
   font-weight: 700;
@@ -34,10 +37,26 @@ const buttonStyle = () => css`
         :hover {
           background: ${theme.color('teal')};
         }
+      `) ||
+    (color === 'green' &&
+      css`
+        background: ${theme.color('green')};
+        color: ${theme.color('black')};
+        :hover {
+          background: ${theme.color('green_light')};
+        }
+      `) ||
+    (color === 'deep_violet' &&
+      css`
+        background: ${theme.color('white')};
+        color: ${theme.color('deep_violet')};
+        :hover {
+          background: ${theme.color('grey')};
+        }
       `)};
 `;
 
-const StyledLink = styled.a`
+export const StyledLink = styled.a`
   ${props =>
     props.inline
       ? css`
@@ -47,8 +66,25 @@ const StyledLink = styled.a`
           padding: 0 2px 1px;
           border-bottom: 2px solid;
           border-bottom-color: #000;
+          :hover {
+            font-weight: 700;
+          }
         `
       : buttonStyle}
 `;
 
-export default StyledLink;
+export const WrapperLink = styled.span`
+  a {
+    ${props =>
+      props.inline
+        ? css`
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 2px 1px;
+            border-bottom: 2px solid;
+            border-bottom-color: #000;
+          `
+        : buttonStyle}
+  }
+`;

@@ -13,7 +13,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       display: inline-block;
-      padding: 16px 30px;
+      padding: 11px 17px;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -23,15 +23,19 @@ it('renders correctly', () => {
       background-color: #fbef51;
     }
 
-    <span>
-      <a
-        className="c0"
-        color="yellow"
-        href="/test"
-        target="_self"
-      >
-        My paragraph small and yellow
-      </a>
-    </span>
+    @media (min-width:1440px) {
+      .c0 {
+        padding: 16px 30px;
+      }
+    }
+
+    <a
+      className="c0"
+      color="yellow"
+      href="/test"
+      target="_self"
+    >
+      My paragraph small and yellow
+    </a>
   `);
 });
