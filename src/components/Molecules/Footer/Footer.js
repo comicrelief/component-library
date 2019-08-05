@@ -3,27 +3,33 @@ import PropTypes from 'prop-types';
 
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
-import { FooterWrapper, InnerWrapper } from './Footer.style';
+import {
+  FooterWrapper,
+  InnerWrapper,
+  SocialLinks,
+  FooterBranding,
+  FooterCopyright
+} from './Footer.style';
 import Text from '../../Atoms/Text/Text';
 
 const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <div className="social-links">
+        <SocialLinks>
           <Logo />
           <Logo />
           <Logo />
           <Logo />
           <Logo />
-        </div>
+        </SocialLinks>
         <FooterNav navItems={navItems} />
-        <div className="footer__branding">
+        <FooterBranding>
           <Logo />
-        </div>
-        <div className="footer__copyright">
+        </FooterBranding>
+        <FooterCopyright>
           <Text tag="p">{footerCopy}</Text>
-        </div>
+        </FooterCopyright>
       </InnerWrapper>
     </FooterWrapper>
   );
