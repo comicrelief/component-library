@@ -5,19 +5,9 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Footer from './Footer';
 
 import data from './data/data';
-import Link from '../../Atoms/Link/Link';
 
 it('renders correctly', () => {
-  const tree = renderWithTheme(
-    <Footer
-      navItems={data}
-      metaIcons={
-        <Link color="green" href="/donation">
-          Donate
-        </Link>
-      }
-    />
-  ).toJSON();
+  const tree = renderWithTheme(<Footer navItems={data} />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {

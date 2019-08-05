@@ -2,30 +2,41 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Logo from '../../Atoms/Logo/Logo';
-import MainNav from './Nav/Nav';
-import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Footer.style';
+import FooterNav from './Nav/Nav';
+import { FooterWrapper, InnerWrapper } from './Footer.style';
+import Text from '../../Atoms/Text/Text';
 
-const Footer = ({ navItems, metaIcons, ...rest }) => {
+const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
-    <HeaderWrapper navItems {...rest}>
+    <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <Brand href="/" inline>
-          <Logo rotate />
-        </Brand>
-        <MainNav navItems={navItems} />
-        <MetaIcons>{metaIcons}</MetaIcons>
+        <div className="social-links">
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+        </div>
+        <FooterNav navItems={navItems} />
+        <div className="footer__branding">
+          <Logo />
+        </div>
+        <div className="footer__copyright">
+          <Text tag="p">{footerCopy}</Text>
+        </div>
       </InnerWrapper>
-    </HeaderWrapper>
+    </FooterWrapper>
   );
 };
 
 Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  metaIcons: PropTypes.node.isRequired
+  footerCopy: PropTypes.string
 };
 
 Footer.defaultProps = {
-  navItems: {}
+  navItems: {},
+  footerCopy: ''
 };
 
 export default Footer;

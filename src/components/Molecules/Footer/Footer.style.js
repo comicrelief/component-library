@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
 
-const HeaderWrapper = styled.header.attrs(() => ({
+const FooterWrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`
   position: relative;
@@ -76,4 +76,4 @@ const MetaIcons = styled.div`
   }
 `;
 
-export { Brand, HeaderWrapper, InnerWrapper, MetaIcons };
+export { Brand, FooterWrapper, InnerWrapper, MetaIcons };

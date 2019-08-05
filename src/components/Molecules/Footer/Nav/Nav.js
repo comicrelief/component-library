@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
-import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
 
 import {
@@ -16,16 +15,11 @@ import {
   SubNavLinkUnderline
 } from './Nav.style';
 
-const MainNav = ({ navItems }) => {
+const FooterNav = ({ navItems }) => {
   const { menuGroup } = navItems;
-  const [isExpandable, setIsExpandable] = useState(false);
+  const [isExpandable] = useState(true);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
-
-  const toggleBurgerMenu = event => {
-    event.preventDefault();
-    setIsExpandable(!isExpandable);
-  };
 
   // Detect windown screen size
   const width = window.innerWidth;
@@ -132,19 +126,16 @@ const MainNav = ({ navItems }) => {
           ))}
         </NavMenu>
       </Nav>
-      <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
-        Open
-      </BurgerMenu>
     </>
   );
 };
 
-MainNav.propTypes = {
+FooterNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape)
 };
 
-MainNav.defaultProps = {
+FooterNav.defaultProps = {
   navItems: {}
 };
 
-export default MainNav;
+export default FooterNav;
