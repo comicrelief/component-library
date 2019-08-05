@@ -20,7 +20,7 @@ it('renders correctly', () => {
       <Text tag="p" color="white">
         description
       </Text>
-      <Link href="/" color="white">
+      <Link href="/" color="white" linktype="button">
         CTA
       </Link>
     </SingleMessage>
@@ -134,6 +134,7 @@ it('renders correctly', () => {
             className="c4"
             color="white"
             href="/"
+            rel={false}
             target="_self"
           >
             CTA

@@ -12,7 +12,7 @@ it('renders correctly', () => {
     <Header
       navItems={data}
       metaIcons={
-        <Link color="green" href="/donation">
+        <Link color="green" linktype="button" href="/donation">
           Donate
         </Link>
       }
@@ -41,13 +41,19 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      color: #000;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
       padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: normal;
+    }
+    
+    .c3:hover {
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: 700;
     }
 
     .c18 {
@@ -457,7 +463,7 @@ it('renders correctly', () => {
         <span>
           <a
             className="c2 c3"
-            color="white"
+            color="red"
             href="/"
             rel="home"
             target="_self"
@@ -504,9 +510,10 @@ it('renders correctly', () => {
                   aria-expanded={false}
                   aria-haspopup="true"
                   className="c10 c3"
-                  color="white"
+                  color="red"
                   href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                   onClick={[Function]}
+                  rel={false}
                   target="_self"
                 >
                   <span
@@ -526,8 +533,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/fundraising/pay-in-your-money"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -545,8 +553,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -564,8 +573,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/join"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -583,8 +593,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/squads"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -602,8 +613,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -621,8 +633,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -644,9 +657,10 @@ it('renders correctly', () => {
                   aria-expanded={false}
                   aria-haspopup="true"
                   className="c10 c3"
-                  color="white"
+                  color="red"
                   href="https://www.comicrelief.com/what-your-money-does"
                   onClick={[Function]}
+                  rel={false}
                   target="_self"
                 >
                   <span
@@ -666,8 +680,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/what-your-money-does"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -685,8 +700,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/What-we-do/our-legacy"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -708,9 +724,10 @@ it('renders correctly', () => {
                   aria-expanded={false}
                   aria-haspopup="true"
                   className="c10 c3"
-                  color="white"
+                  color="red"
                   href="https://www.comicrelief.com/rednoseday/schools"
                   onClick={[Function]}
+                  rel={false}
                   target="_self"
                 >
                   <span
@@ -730,8 +747,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/schools"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -749,8 +767,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -768,8 +787,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -787,8 +807,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/schools/nurseries"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -806,8 +827,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/youth"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -825,8 +847,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -848,9 +871,10 @@ it('renders correctly', () => {
                   aria-expanded={false}
                   aria-haspopup="true"
                   className="c10 c3"
-                  color="white"
+                  color="red"
                   href="https://www.comicrelief.com/funding"
                   onClick={[Function]}
+                  rel={false}
                   target="_self"
                 >
                   <span
@@ -870,8 +894,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -889,8 +914,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding/funding-opportunities"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -908,8 +934,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding/funding-strategy"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -927,8 +954,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding/eligibility-criteria"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -946,8 +974,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding/applying-for-funding"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -965,8 +994,9 @@ it('renders correctly', () => {
                   <span>
                     <a
                       className="c10 c3"
-                      color="white"
+                      color="red"
                       href="https://www.comicrelief.com/funding/managing-your-funding"
+                      rel={false}
                       target="_self"
                     >
                       <span
@@ -987,9 +1017,10 @@ it('renders correctly', () => {
             aria-haspopup="true"
             aria-label="Open and close Navigation Menu"
             className="c13 c3"
-            color="white"
+            color="red"
             href="#"
             onClick={[Function]}
+            rel={false}
             role="button"
             target="_self"
           >
@@ -1021,6 +1052,7 @@ it('renders correctly', () => {
               className="c18"
               color="green"
               href="/donation"
+              rel={false}
               target="_self"
             >
               Donate

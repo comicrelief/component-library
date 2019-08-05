@@ -50,8 +50,7 @@ const InnerWrapper = styled.div`
  * Brand wrapper
  */
 const Brand = styled(Link).attrs(() => ({
-  title: 'Home',
-  rel: 'home'
+  title: 'Home'
 }))`
   color: transparent;
   border: 0;

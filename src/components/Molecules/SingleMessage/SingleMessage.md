@@ -18,7 +18,7 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="p" color="white">
     description
   </Text>
-  <Link href="/" color="white">
+  <Link href="/" linktype="button" color="white">
     CTA
   </Link>
 </SingleMessage>;
@@ -45,7 +45,7 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="p" color="white">
     description
   </Text>
-  <Link href="/" color="white">
+  <Link href="/" linktype="button" color="white">
     CTA
   </Link>
 </SingleMessage>;

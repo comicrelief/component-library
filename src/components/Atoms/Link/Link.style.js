@@ -15,32 +15,13 @@ const buttonStyle = () => css`
     color ? theme.buttonColors(color) : theme.buttonColors('red')};
 `;
 
-export const StyledLink = styled.a`
-  ${props =>
-    props.inline
-      ? css`
-          color: #000;
-          text-decoration: none;
-          display: inline-block;
-          padding: 0 2px 1px;
-          border-bottom: 2px solid;
-          border-bottom-color: #000;
-        `
-      : buttonStyle}
+const linkStyle = () => css`
+  text-decoration: none;
+  display: inline-block;
+  ${({ linktype, theme }) =>
+    linktype ? theme.linkStyles(linktype) : theme.linkStyles('standard')};
 `;
 
-export const WrapperLink = styled.span`
-  a {
-    ${props =>
-      props.inline
-        ? css`
-            color: #000;
-            text-decoration: none;
-            display: inline-block;
-            padding: 0 2px 1px;
-            border-bottom: 2px solid;
-            border-bottom-color: #000;
-          `
-        : buttonStyle}
-  }
+export const StyledLink = styled.a`
+  ${props => (props.linktype === 'button' ? buttonStyle : linkStyle)}
 `;

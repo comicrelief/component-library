@@ -5,7 +5,7 @@ import Link from './Link';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <Link href="/test" button color="yellow">
+    <Link href="/test" linktype="button" color="yellow">
       My paragraph small and yellow
     </Link>
   ).toJSON();
@@ -40,6 +40,7 @@ it('renders correctly', () => {
         className="c0"
         color="yellow"
         href="/test"
+        rel={false}
         target="_self"
       >
         My paragraph small and yellow
