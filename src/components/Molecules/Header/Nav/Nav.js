@@ -22,7 +22,7 @@ const MainNav = ({ navItems }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
   let [width] = useState(null);
-  let [mobile] = useState(null);
+  let mobile;
 
   useEffect(() => {
     // Detect window screen size
