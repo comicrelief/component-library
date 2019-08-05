@@ -1,66 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Link from '../../Atoms/Link/Link';
 
-export const Inner = styled.footer`
-  background-color: black;
+import Logo from '../../Atoms/Logo/Logo';
+import MainNav from './Nav/Nav';
+import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Footer.style';
 
-  ul li a {
-    color: white;
-  }
-`;
-
-const Footer = ({ items, ...rest }) => {
+const Footer = ({ navItems, metaIcons, ...rest }) => {
   return (
-    <Inner items {...rest}>
-      {/* Nav menu */}
-      <ul className="parent-menu">
-        {/* Each menugroup */}
-        {items.menuGroup.map(thisGroup => (
-          <div key={thisGroup.id}>
-            {/* If it contains links */}
-            {thisGroup.links ? (
-              <li key={thisGroup.id}>
-                <Link
-                  className="parent-item"
-                  onClick={
-                    thisGroup.links.length > 1 ? e => e.preventDefault() : null
-                  }
-                  href={
-                    thisGroup.links.length > 1
-                      ? '#fakeButton'
-                      : thisGroup.links[0].url
-                  }
-                  inline
-                >
-                  {thisGroup.title}
-                </Link>
-
-                <ul>
-                  {thisGroup.links.map(childLink => (
-                    <li key={childLink.url}>
-                      <Link href={childLink.url} inline>
-                        {childLink.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ) : null}
-          </div>
-        ))}
-      </ul>
-    </Inner>
+    <HeaderWrapper navItems {...rest}>
+      <InnerWrapper>
+        <Brand href="/" inline>
+          <Logo rotate />
+        </Brand>
+        <MainNav navItems={navItems} />
+        <MetaIcons>{metaIcons}</MetaIcons>
+      </InnerWrapper>
+    </HeaderWrapper>
   );
 };
 
 Footer.propTypes = {
-  items: PropTypes.objectOf(PropTypes.shape)
+  navItems: PropTypes.objectOf(PropTypes.shape),
+  metaIcons: PropTypes.node.isRequired
 };
 
 Footer.defaultProps = {
-  items: {}
+  navItems: {}
 };
 
 export default Footer;
