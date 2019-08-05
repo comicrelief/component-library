@@ -11,67 +11,84 @@ const Section = styled.section`
     display: flex;
   }
 `;
+
 const CopyWrapper = styled.div`
   display: flex;
-  /* ${leftCopyPosition => css`
-    align-items: ${leftCopyPosition};
-  `}
-  ${rightCopyPosition => css`
-    align-items: ${rightCopyPosition};
-  `} */
   padding: ${spacing('xl')};
-  background: ${({ theme, leftBgColor, rightBgColor }) =>
-    leftBgColor ? theme.color(leftBgColor) : theme.color(rightBgColor)};
+  background: ${({ theme, bgColor }) => theme.color(bgColor)};
+  color: ${({ theme }) => theme.color('deep_violet')};
+
+  ${({ position }) =>
+    (position === 'top' &&
+      css`
+        align-items: flex-start;
+      `) ||
+    (position === 'center' &&
+      css`
+        align-items: center;
+      `) ||
+    (position === 'bottom' &&
+      css`
+        align-items: flex-end;
+      `)}
+  p {
+    font-size: ${({ theme }) => theme.fontSize('m')};
+  }
+  h1 {
+    font-size: ${({ theme }) => theme.fontSize('xxl')};
+  }
 `;
 
 const DoubleCopy = ({
+  /** Copy block */
   leftCopy,
   rightCopy,
-  leftTextAlign,
-  rightTextAlign,
-  leftCopyPosition,
-  rightCopyPosition,
+  /** Text align */
+  leftCopyAlign,
+  rightCopyAlign,
+  /** Position on the Y axis */
+  leftCopyAlignItem,
+  rightCopyAlignItem,
+  /** Background color */
   leftBgColor,
   rightBgColor
 }) => {
   return (
     <Section>
-      <CopyWrapper
-        leftBgColor={leftBgColor}
-        leftCopyPosition={leftCopyPosition}
-      >
-        <RichText align={leftTextAlign} markup={leftCopy} />
+      <CopyWrapper bgColor={leftBgColor} position={leftCopyAlignItem}>
+        <RichText align={leftCopyAlign} markup={leftCopy} />
       </CopyWrapper>
-      <CopyWrapper
-        rightBgColor={rightBgColor}
-        rightCopyPosition={rightCopyPosition}
-      >
-        <RichText align={rightTextAlign} markup={rightCopy} />
+      <CopyWrapper bgColor={rightBgColor} position={rightCopyAlignItem}>
+        <RichText align={rightCopyAlign} markup={rightCopy} />
       </CopyWrapper>
     </Section>
   );
 };
 
 DoubleCopy.propTypes = {
+  /** Copy box */
   leftCopy: PropTypes.string,
   rightCopy: PropTypes.string,
-  leftTextAlign: PropTypes.string,
-  rightTextAlign: PropTypes.string,
-  leftCopyPosition: PropTypes.string,
-  rightCopyPosition: PropTypes.string,
+  /** Copy text align */
+  leftCopyAlign: PropTypes.oneOf(['left', 'center', 'right']),
+  rightCopyAlign: PropTypes.oneOf(['left', 'center', 'right']),
+  /** Copy align item   */
+  leftCopyAlignItem: PropTypes.oneOf(['top', 'center', 'bottom']),
+  rightCopyAlignItem: PropTypes.oneOf(['top', 'center', 'bottom']),
+  /** Copy background color */
   leftBgColor: PropTypes.string,
   rightBgColor: PropTypes.string
 };
 
 DoubleCopy.defaultProps = {
-  leftTextAlign: 'left',
-  rightTextAlign: 'right',
+  leftCopyAlign: 'left',
+  rightCopyAlign: 'right',
   leftCopy: '',
   rightCopy: '',
-  leftBgColor: '',
+  leftBgColor: 'purple',
   rightBgColor: 'yellow',
-  leftCopyPosition: '',
-  rightCopyPosition: 'center'
+  leftCopyAlignItem: 'center',
+  rightCopyAlignItem: 'bottom'
 };
 
 export default DoubleCopy;
