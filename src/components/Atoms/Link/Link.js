@@ -30,16 +30,18 @@ Link.propTypes = {
   color: PropTypes.string,
   /** link target */
   target: PropTypes.string,
+  /** link rel attribute should be home */
+  home: PropTypes.bool,
   /** link url */
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };
 
 Link.defaultProps = {
+  linktype: 'standard',
   color: 'red',
   target: 'self',
-  inline: false,
-  linktype: 'standard'
+  home: false
 };
 
 export default Link;
