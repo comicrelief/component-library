@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import RichText from '../../Atoms/RichText/RichText';
 import spacing from '../../../theme/shared/spacings';
@@ -12,17 +12,41 @@ const Section = styled.section`
   }
 `;
 const CopyWrapper = styled.div`
+  display: flex;
+  /* ${leftCopyPosition => css`
+    align-items: ${leftCopyPosition};
+  `}
+  ${rightCopyPosition => css`
+    align-items: ${rightCopyPosition};
+  `} */
   padding: ${spacing('xl')};
+  background: ${({ theme, leftBgColor, rightBgColor }) =>
+    leftBgColor ? theme.color(leftBgColor) : theme.color(rightBgColor)};
 `;
 
-const DoubleCopy = ({ leftCopy, rightCopy, leftCopyAlign, rightCopyAlign }) => {
+const DoubleCopy = ({
+  leftCopy,
+  rightCopy,
+  leftTextAlign,
+  rightTextAlign,
+  leftCopyPosition,
+  rightCopyPosition,
+  leftBgColor,
+  rightBgColor
+}) => {
   return (
     <Section>
-      <CopyWrapper>
-        <RichText align={leftCopyAlign} markup={leftCopy} />
+      <CopyWrapper
+        leftBgColor={leftBgColor}
+        leftCopyPosition={leftCopyPosition}
+      >
+        <RichText align={leftTextAlign} markup={leftCopy} />
       </CopyWrapper>
-      <CopyWrapper>
-        <RichText align={rightCopyAlign} markup={rightCopy} />
+      <CopyWrapper
+        rightBgColor={rightBgColor}
+        rightCopyPosition={rightCopyPosition}
+      >
+        <RichText align={rightTextAlign} markup={rightCopy} />
       </CopyWrapper>
     </Section>
   );
@@ -31,14 +55,23 @@ const DoubleCopy = ({ leftCopy, rightCopy, leftCopyAlign, rightCopyAlign }) => {
 DoubleCopy.propTypes = {
   leftCopy: PropTypes.string,
   rightCopy: PropTypes.string,
-  leftCopyAlign: PropTypes.string,
-  rightCopyAlign: PropTypes.string
+  leftTextAlign: PropTypes.string,
+  rightTextAlign: PropTypes.string,
+  leftCopyPosition: PropTypes.string,
+  rightCopyPosition: PropTypes.string,
+  leftBgColor: PropTypes.string,
+  rightBgColor: PropTypes.string
 };
 
 DoubleCopy.defaultProps = {
-  leftCopyAlign: 'left',
-  rightCopyAlign: 'right',
+  leftTextAlign: 'left',
+  rightTextAlign: 'right',
   leftCopy: '',
-  rightCopy: ''
+  rightCopy: '',
+  leftBgColor: '',
+  rightBgColor: 'yellow',
+  leftCopyPosition: '',
+  rightCopyPosition: 'center'
 };
+
 export default DoubleCopy;
