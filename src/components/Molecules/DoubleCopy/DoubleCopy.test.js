@@ -1,17 +1,17 @@
 import React from 'react';
 import 'jest-styled-components';
+
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import DoubleCopy from './DoubleCopy';
+import RichText from '../../Atoms/RichText/RichText';
 
 it('renders correctly', () => {
+  const content =
+    '<h1> Left Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
   const tree = renderWithTheme(
     <DoubleCopy
-      leftCopy={
-        '<h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> <h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> '
-      }
-      rightCopy={
-        '<h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> '
-      }
+      leftCopy={<RichText markup={content} />}
+      rightCopy={<RichText markup={content} />}
     />
   ).toJSON();
 
@@ -29,6 +29,7 @@ it('renders correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      padding: 4rem;
     }
 
     @media (min-width:740px) {
@@ -50,7 +51,7 @@ it('renders correctly', () => {
           className="c2"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> <h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> ",
+              "__html": "<h1> Left Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
             }
           }
         />
@@ -62,7 +63,7 @@ it('renders correctly', () => {
           className="c2"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<h1>Red Nose Day</h1> <p>On Friday 15 March, people across the UK will be coming together to do things big and small, that will add up to something massive. And we’d like you to join in.</p> ",
+              "__html": "<h1> Left Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
             }
           }
         />

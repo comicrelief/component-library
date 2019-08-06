@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import spacing from '../../../theme/shared/spacings';
+
 const Section = styled.section`
   width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
@@ -9,6 +11,7 @@ const Section = styled.section`
 
 const CopyWrapper = styled.div`
   display: flex;
+  padding: ${spacing('xl')};
 `;
 
 export { Section, CopyWrapper };
