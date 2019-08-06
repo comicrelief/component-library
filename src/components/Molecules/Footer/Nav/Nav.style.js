@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
-import zIndex from '../../../../theme/shared/zIndex';
+// import zIndex from '../../../../theme/shared/zIndex';
 
 const NavLinkClass = styled(Link)`
   border: 0;
@@ -21,13 +21,6 @@ const Nav = styled.nav`
   width: 100%;
   text-align: left;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    position: relative;
-    top: 0;
-    display: block;
-    width: auto;
-    height: 100%;
-  }
   > h2 {
     ${hideVisually};
   }
@@ -37,7 +30,10 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  display: flex;
+  transition: max-height 0.5s ease;
+  max-height: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '400px' : '0px')};
+  overflow: hidden;
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -46,21 +42,11 @@ const SubNavMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 400px;
 
   > li a {
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
     font-size: 15px;
     font-weight: 500;
-  }
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
-    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
-    top: 90px;
-    position: absolute;
-    padding: 0 0 20px;
-    width: 250px;
-    height: auto;
   }
 `;
 
@@ -104,39 +90,6 @@ const SubNavLink = styled(NavLinkClass)`
 `;
 
 /**
- * Sub menu link item underline
- */
-const SubNavLinkUnderline = styled(SubNavLink)`
-  padding: 26px 21px;
-  ::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-    left: 12px;
-    top: auto;
-    bottom: 10px;
-    margin: 0 10px;
-  }
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    ::before {
-      display: block;
-      position: absolute;
-      content: '';
-      left: 34px;
-      width: 10px;
-      height: 10px;
-      border: 11px solid transparent;
-      border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
-      top: -22px;
-    }
-    :hover::before {
-      border-bottom-color: ${({ theme }) => theme.color('violet_light')};
-    }
-  }
-`;
-
-/**
  * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
@@ -144,28 +97,12 @@ const NavMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    background-color: ${({ theme }) => theme.color('white')};
-  }
 `;
 
 /**
  * Menu item link
  */
-const NavLink = styled(NavLinkClass)`
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 7px 5px;
-    height: auto;
-    :focus + ${SubNavMenu} {
-      display: flex;
-    }
-  }
-`;
+const NavLink = styled(NavLinkClass)``;
 
 /**
  * Menu list items
@@ -205,41 +142,6 @@ const NavItem = styled.li`
       right: -25px;
     }
   }
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    margin: 0 4px;
-    padding: 30px 0;
-
-    :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
-      visibility: visible;
-      opacity: 1;
-      display: flex;
-    }
-
-    :hover {
-      background-color: transparent;
-      ${zIndex('high')};
-      ${NavLink} {
-        span {
-          border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-          padding-bottom: 2px;
-        }
-      }
-      ${SubNavMenu} {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-  }
 `;
 
-export {
-  Nav,
-  NavMenu,
-  NavItem,
-  NavLink,
-  SubNavMenu,
-  SubNavItem,
-  SubNavLink,
-  SubNavLinkUnderline
-};
+export { Nav, NavMenu, NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink };

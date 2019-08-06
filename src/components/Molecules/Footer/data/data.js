@@ -4,7 +4,7 @@ export default {
     {
       id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
       title: 'Hear from us',
-      url: 'https://www.comicrelief.com',
+      url: '/',
       links: [
         {
           title: 'Get the newsletter',
@@ -21,7 +21,7 @@ export default {
     {
       id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
       title: 'Get in touch',
-      url: 'https://www.comicrelief.com/',
+      url: '/',
       links: [
         {
           title: 'Contact us',
@@ -49,7 +49,7 @@ export default {
     {
       id: 'eaec5191-bbb3-5e8d-b966-c53fff34998b',
       title: 'About us',
-      url: 'https://www.comicrelief.com/',
+      url: '/',
       links: [
         {
           title: 'Mission',
@@ -86,7 +86,7 @@ export default {
     {
       id: '4a5b055f-1f7e-5f4b-827d-768032fd373c',
       title: 'Careers',
-      url: 'https://www.comicrelief.com',
+      url: '/',
       links: [
         {
           title: 'Working at Comic Relief',
@@ -94,7 +94,7 @@ export default {
           class: null
         },
         {
-          title: 'Open rolls',
+          title: 'Open roles',
           url: 'https://app.beapplied.com/org/comic-relief',
           class: null
         }
@@ -103,7 +103,7 @@ export default {
     {
       id: '4a5b055f-1f7e-5f4b-827d-768032fd373d',
       title: 'News',
-      url: 'https://www.comicrelief.com',
+      url: '/',
       links: [
         {
           title: 'News',
@@ -111,7 +111,7 @@ export default {
           class: null
         },
         {
-          title: 'Open rolls',
+          title: 'Press area',
           url: 'https://www.comicrelief.com/press-releases',
           class: null
         }
@@ -120,7 +120,7 @@ export default {
     {
       id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
       title: 'Legal',
-      url: 'https://www.comicrelief.com/',
+      url: '/',
       links: [
         {
           title: 'Privacy policy',

@@ -58,8 +58,8 @@ const FooterNav = ({ navItems }) => {
       isExpandable={isExpandable}
       role="navigation"
     >
-      <Text id="main-menu" tag="h2">
-        Main navigation
+      <Text id="footer-menu" tag="h2">
+        Footer navigation
       </Text>
 
       {/* First level of the navigation (ul tag): Parent */}
