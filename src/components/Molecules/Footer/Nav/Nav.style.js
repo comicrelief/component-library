@@ -61,7 +61,7 @@ const SubNavMenu = styled.ul`
  */
 const SubNavItem = styled.li`
   height: 40px;
-  width: 100%;
+  width: 50%;
   background-color: inherit;
   padding: 8px 0 !important;
 
