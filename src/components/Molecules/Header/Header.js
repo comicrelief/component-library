@@ -20,7 +20,9 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
 };
 
 Header.propTypes = {
+  /** Check data structure example in file  src/components/moleculecules/header/data/data  */
   navItems: PropTypes.objectOf(PropTypes.shape),
+  /** it can be icons, buttons  */
   metaIcons: PropTypes.node.isRequired
 };
 
