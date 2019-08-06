@@ -20,13 +20,18 @@ const FooterNav = ({ navItems }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
-  // Detect windown screen size
-  const width = window.innerWidth;
-  const mobile = width < sizes.medium;
+  // Detect window screen size
+  const isSmallBreakpoint = window.innerWidth < sizes.small;
 
+  /**
+   * Always stop the main 'parent' link from actual functioning, but do the
+   * collapsing for SM-MD breakpoints
+   */
   const toggleSubMenu = item => event => {
-    if (mobile) {
-      event.preventDefault();
+    event.preventDefault();
+
+    // Only run on SM, as we're only using the hide-show logic on SM
+    if (isSmallBreakpoint) {
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
   };
@@ -71,7 +76,7 @@ const FooterNav = ({ navItems }) => {
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
-            {!mobile ? (
+            {!isSmallBreakpoint ? (
               <NavLink
                 href={group.url}
                 inline

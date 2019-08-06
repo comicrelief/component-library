@@ -37,8 +37,6 @@ const SubNavMenu = styled.ul`
   padding: 0;
   position: relative;
   list-style: none outside;
-  left: 0;
-  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -47,6 +45,14 @@ const SubNavMenu = styled.ul`
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
     font-size: 15px;
     font-weight: 500;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    max-height: 400px;
+    height: auto;
+    > li a {
+      display: inline;
+    }
   }
 `;
 
@@ -122,8 +128,12 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
 
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      cursor: default;
+    }
+
     &:after {
-      content: '\\2303';
+      cursorcontent: '\\2303';
       position: absolute;
       font-family: Arial;
       margin-left: 4px;
@@ -132,12 +142,9 @@ const NavItem = styled.li`
       font-size: 23px;
       color: inherit;
       font-weight: 100;
+      transition: transform 0.2s ease;
       transform: ${({ isSubMenuOpen }) =>
         isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
-
-      transition-duration: 0.2s;
-      transition-property: transform;
-      transition-timing-function: ease;
       bottom: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '-3px' : '3px')};
       right: -25px;
     }
