@@ -58,7 +58,7 @@ it('renders correctly', () => {
     }
 
     .c2:focus {
-      border: 1px solid #666;
+      border: 1px solid #918791;
     }
 
     .c0 {

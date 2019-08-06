@@ -3,8 +3,7 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import RichText from './RichText';
 
-const htmlContent =
-  "<p onload='alert(`i should be sanitized`)'>Here's some copy</p><span>More copy</span>";
+const htmlContent = "<p>Here's some copy</p><span>More copy</span>";
 
 it('It sanitises markup and renders properly', () => {
   const tree = renderWithTheme(

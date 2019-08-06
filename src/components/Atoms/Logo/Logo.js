@@ -16,7 +16,7 @@ const Image = styled.img`
  */
 
 const LogoWrapper = styled.div.attrs(() => ({
-  role: 'Logo'
+  'aria-label': 'logo'
 }))`
   display: inline-block;
   width: 50px;
@@ -31,7 +31,7 @@ const LogoWrapper = styled.div.attrs(() => ({
 const Logo = ({ rotate }) => {
   return (
     <LogoWrapper rotate={rotate ? 1 : 0}>
-      <Image src={image} alt="Comic Relief logo" />
+      <Image src={image} alt="Comic Relief logo" aria-label="logo" />
     </LogoWrapper>
   );
 };

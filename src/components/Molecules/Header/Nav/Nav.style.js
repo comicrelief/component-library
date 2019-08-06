@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
+import { sizes } from '../../../../theme/shared/breakpoint';
 
-const NavLink = styled(Link)`
+const NavLinkClass = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
@@ -22,7 +23,7 @@ const Nav = styled.nav`
   top: 80px;
   left: 0;
 
-  @media (min-width: ${({ sizes }) => sizes.small}px) {
+  @media (min-width: ${sizes.small}px) {
     width: 50%;
     right: 0;
     left: inherit;
@@ -36,12 +37,98 @@ const Nav = styled.nav`
     height: 100%;
   }
   > h2 {
-    visibility: ${hideVisually};
+    ${hideVisually};
   }
 `;
 
 /**
- * Navigation Menu
+ * Sub Navigation Menu (second level)
+ */
+const SubNavMenu = styled.ul`
+  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+  background-color: ${({ theme }) => theme.color('deep_violet')};
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
+    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
+    top: 90px;
+    position: absolute;
+    padding: 0 0 20px;
+    width: 250px;
+    height: auto;
+  }
+`;
+
+/**
+ * Sub Menu list items
+ */
+const SubNavItem = styled.li`
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  :hover {
+    background-color: ${({ theme }) => theme.color('deep_violet_light')};
+    span {
+      border-bottom: 0;
+      padding-bottom: 2px;
+    }
+  }
+`;
+
+/**
+ * Sub menu link item
+ */
+const SubNavLink = styled(NavLinkClass)`
+  padding: 14px 21px;
+  color: ${({ theme }) => theme.color('white')};
+  height: auto;
+  position: relative;
+`;
+
+/**
+ * Sub menu link item underline
+ */
+const SubNavLinkUnderline = styled(SubNavLink)`
+  padding: 26px 21px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
+    left: 12px;
+    top: auto;
+    bottom: 10px;
+    margin: 0 10px;
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    ::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 34px;
+      width: 10px;
+      height: 10px;
+      border: 11px solid transparent;
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
+      top: -22px;
+    }
+    :hover::before {
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
+    }
+  }
+`;
+
+/**
+ * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('grey_extra_light')};
@@ -59,6 +146,19 @@ const NavMenu = styled.ul`
 `;
 
 /**
+ * Menu item link
+ */
+const NavLink = styled(NavLinkClass)`
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 7px 5px;
+    height: auto;
+    :focus + ${SubNavMenu} {
+      display: flex;
+    }
+  }
+`;
+
+/**
  * Menu list items
  */
 const NavItem = styled.li`
@@ -67,128 +167,40 @@ const NavItem = styled.li`
   :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
-  ul {
-    /* Display submenu items when parent(ul) item (li) is clicked */
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block' : 'none')};
-  }
-
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 4px;
     padding: 30px 0;
 
-    a {
-      padding: 7px 5px;
-      height: auto;
+    :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
     }
 
-    /* Hide submenu items and display them only when item (li) is hovered */
-    ul {
-      display: ${({ isSubMenuOpen, target }) =>
-        isSubMenuOpen[target] ? 'none' : 'none'};
-    }
     :hover {
       background-color: transparent;
       ${zIndex('high')};
-      span {
-        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-        padding-bottom: 2px;
+      ${NavLink} {
+        span {
+          border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+          padding-bottom: 2px;
+        }
       }
-
-      ul {
+      ${SubNavMenu} {
         display: flex;
         flex-direction: column;
-        span {
-          color: ${({ theme }) => theme.color('white')};
-          border: 0;
-        }
       }
     }
   }
 `;
 
-/**
- * Sub Navigation Menu
- */
-const SubNavMenu = styled.ul`
-  display: none;
-  padding: 0;
-  position: relative;
-  list-style: none outside;
-  left: 0;
-  top: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: 400px;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    top: 90px;
-    position: absolute;
-    padding: 0 0 20px;
-    width: 250px;
-    height: auto;
-    transition-property: max-height;
-    transition-duration: 850ms;
-    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
-  }
-`;
-
-/**
- * Sub Menu list items
- */
-const SubNavItem = styled.li`
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  :first-child {
-    a {
-      padding: 26px 21px;
-      height: auto;
-      position: relative;
-      ::after {
-        position: absolute;
-        width: 14px;
-        border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-        left: 12px;
-        top: auto;
-        bottom: 10px;
-        margin: 0 10px;
-        content: '';
-      }
-    }
-  }
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    :first-child {
-      :hover {
-        background-color: ${({ theme }) => theme.color('deep_violet_light')};
-      }
-      a {
-        ::before {
-          display: block;
-          position: absolute;
-          content: '';
-          left: 34px;
-          width: 10px;
-          height: 10px;
-          border: 11px solid transparent;
-          border-bottom-color: ${({ theme }) => theme.color('deep_violet')};
-          top: -22px;
-        }
-      }
-    }
-  }
-  a {
-    padding: 14px 21px;
-    color: ${({ theme }) => theme.color('white')};
-  }
-  :hover {
-    background-color: ${({ theme }) => theme.color('deep_violet_light')};
-    span {
-      border-bottom: 0;
-      padding-bottom: 2px;
-    }
-  }
-`;
-
-export { NavLink, Nav, NavMenu, NavItem, SubNavMenu, SubNavItem };
+export {
+  Nav,
+  NavMenu,
+  NavItem,
+  NavLink,
+  SubNavMenu,
+  SubNavItem,
+  SubNavLink,
+  SubNavLinkUnderline
+};

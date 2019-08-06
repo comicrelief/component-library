@@ -38,7 +38,7 @@ it('renders correctly', () => {
       top: 0px;
       width: 30px;
       height: 30px;
-      border: 1px solid #666;
+      border: 1px solid #918791;
     }
 
     .c1:checked + span {
@@ -117,7 +117,7 @@ it('renders correctly', () => {
       top: 0px;
       width: 30px;
       height: 30px;
-      border: 1px solid #666;
+      border: 1px solid #918791;
     }
 
     .c1:checked + span {
