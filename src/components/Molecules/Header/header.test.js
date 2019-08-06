@@ -532,7 +532,6 @@ it('renders correctly', () => {
                 </span>
               </a>
               <ul
-                aria-label="Fundraising"
                 className="c12 c13"
                 role="menu"
               >
@@ -668,7 +667,6 @@ it('renders correctly', () => {
                 </span>
               </a>
               <ul
-                aria-label="What your money does"
                 className="c12 c13"
                 role="menu"
               >
@@ -732,7 +730,6 @@ it('renders correctly', () => {
                 </span>
               </a>
               <ul
-                aria-label="Schools & youth"
                 className="c12 c13"
                 role="menu"
               >
@@ -868,7 +865,6 @@ it('renders correctly', () => {
                 </span>
               </a>
               <ul
-                aria-label="Funding"
                 className="c12 c13"
                 role="menu"
               >
