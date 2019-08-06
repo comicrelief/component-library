@@ -283,7 +283,11 @@ it('renders correctly', () => {
       color: transparent;
       border: 0;
     }
-
+    
+    .c2:hover {
+      border: 0;
+    }
+    
     .c17 {
       position: absolute;
       right: 60px;

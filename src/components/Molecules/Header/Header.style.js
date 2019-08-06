@@ -54,6 +54,9 @@ const Brand = styled(Link).attrs(() => ({
 }))`
   color: transparent;
   border: 0;
+  :hover {
+    border: 0;
+  }
 `;
 
 /**

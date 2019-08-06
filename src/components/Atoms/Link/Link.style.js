@@ -21,7 +21,8 @@ const linkStyle = () => css`
   ${({ linktype, theme }) =>
     linktype ? theme.linkStyles(linktype) : theme.linkStyles('standard')};
 `;
-
-export const StyledLink = styled.a`
+const StyledLink = styled.a`
   ${props => (props.linktype === 'button' ? buttonStyle : linkStyle)}
 `;
+
+export default StyledLink;

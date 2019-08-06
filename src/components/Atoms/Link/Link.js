@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledLink } from './Link.style';
+import StyledLink from './Link.style';
 
 const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';

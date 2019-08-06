@@ -9,7 +9,7 @@ const Header = ({ navItems, metaIcons, ...rest }) => {
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
-        <Brand href="/" home={true}>
+        <Brand href="/" home>
           <Logo rotate />
         </Brand>
         <MainNav navItems={navItems} />
