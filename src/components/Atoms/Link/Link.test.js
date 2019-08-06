@@ -33,6 +33,7 @@ it('renders a standard styled link correctly', () => {
       href="/test"
       rel={false}
       target="_self"
+      type="standard"
     >
       A standard link
     </a>
@@ -77,6 +78,7 @@ it('renders link styled as button correctly', () => {
       href="/test"
       rel={false}
       target="_self"
+      type="button"
     >
       A yellow button
     </a>

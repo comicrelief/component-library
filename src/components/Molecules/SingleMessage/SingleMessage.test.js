@@ -173,6 +173,7 @@ it('renders correctly', () => {
           href="/"
           rel={false}
           target="_self"
+          type="button"
         >
           CTA
         </a>

@@ -131,6 +131,7 @@ it('renders correctly', () => {
           href="https://www.comicrelief.com/cookies-policy"
           rel={false}
           target="_self"
+          type="standard_white"
         >
           here
         </a>
@@ -147,6 +148,7 @@ it('renders correctly', () => {
           onClick={[Function]}
           rel={false}
           target="_self"
+          type="button"
         >
           Accept
         </a>
@@ -158,6 +160,7 @@ it('renders correctly', () => {
           onClick={[Function]}
           rel={false}
           target="_self"
+          type="standard_white"
         >
           here
         </a>

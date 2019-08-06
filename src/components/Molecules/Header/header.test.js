@@ -514,6 +514,7 @@ it('renders correctly', () => {
           rel="home"
           target="_self"
           title="Home"
+          type="standard"
         >
           <div
             aria-label="logo"
@@ -557,6 +558,7 @@ it('renders correctly', () => {
                 onKeyUp={[Function]}
                 rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c7"
@@ -580,6 +582,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -599,6 +602,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -618,6 +622,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -637,6 +642,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -656,6 +662,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -675,6 +682,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -699,6 +707,7 @@ it('renders correctly', () => {
                 onKeyUp={[Function]}
                 rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c7"
@@ -722,6 +731,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -741,6 +751,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -765,6 +776,7 @@ it('renders correctly', () => {
                 onKeyUp={[Function]}
                 rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c7"
@@ -788,6 +800,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -807,6 +820,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -826,6 +840,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -845,6 +860,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -864,6 +880,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -883,6 +900,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -907,6 +925,7 @@ it('renders correctly', () => {
                 onKeyUp={[Function]}
                 rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c7"
@@ -930,6 +949,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -949,6 +969,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -968,6 +989,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -987,6 +1009,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -1006,6 +1029,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -1025,6 +1049,7 @@ it('renders correctly', () => {
                     rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c7"
@@ -1048,6 +1073,7 @@ it('renders correctly', () => {
           rel={false}
           role="button"
           target="_self"
+          type="standard"
         >
           <span
             className="c18 c7"
@@ -1077,6 +1103,7 @@ it('renders correctly', () => {
             href="/donation"
             rel={false}
             target="_self"
+            type="button"
           >
             Donate
           </a>
