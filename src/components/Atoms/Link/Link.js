@@ -22,15 +22,15 @@ const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
 };
 
 Link.propTypes = {
-  /** Link style: standard, bold, inline or button */
+  /** Link styling: button, standard, etc. See linkStyles in theme. */
   linktype: PropTypes.string,
-  /** Link color style */
+  /** Color for button style link. See buttonColors in theme */
   color: PropTypes.string,
-  /** link target */
+  /** Link target */
   target: PropTypes.string,
-  /** link rel attribute should be home */
+  /** Set to true if link rel attribute should be home */
   home: PropTypes.bool,
-  /** link url */
+  /** Link url */
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };
