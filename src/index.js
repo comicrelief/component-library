@@ -7,6 +7,7 @@ export { default as ThemeProvider } from './theme/ThemeProvider';
 /* Utils */
 export { default as hideVisually } from './theme/shared/hideVisually';
 export { default as zIndex } from './theme/shared/zIndex';
+export { default as whiteListed } from './utils/whiteListed';
 
 /* Atoms */
 
