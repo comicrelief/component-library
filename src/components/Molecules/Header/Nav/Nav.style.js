@@ -64,7 +64,7 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('deep_violet')};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
+    display: none;
     display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 90px;
     position: absolute;
