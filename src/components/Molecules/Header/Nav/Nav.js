@@ -110,7 +110,6 @@ const MainNav = ({ navItems }) => {
               {group.links && group.links.length > 0 && (
                 <SubNavMenu
                   role="menu"
-                  aria-label={group.title}
                   isKeyPressed={!!isKeyPressed[group.title]}
                   isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 >
