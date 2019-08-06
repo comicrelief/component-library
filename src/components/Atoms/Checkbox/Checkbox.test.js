@@ -27,7 +27,7 @@ it('renders correctly', () => {
       width: 30px;
       height: 30px;
       margin: 0;
-      border: 1px solid #918791;
+      border: 1px solid #666;
     }
 
     .c1 + span {
@@ -35,7 +35,7 @@ it('renders correctly', () => {
       width: 30px;
       height: 30px;
       background-color: #FFFFFF;
-      border: 1px solid #918791;
+      border: 1px solid #666;
       float: left;
     }
 
@@ -46,12 +46,12 @@ it('renders correctly', () => {
     }
 
     .c1:focus + span {
-      border-color: #918791;
+      border-color: #666;
       border-width: 3px;
     }
 
     .c1:focus + span {
-      border-color: #918791;
+      border-color: #666;
       border-width: 3px;
     }
 
@@ -98,7 +98,7 @@ it('renders correctly', () => {
       width: 30px;
       height: 30px;
       margin: 0;
-      border: 1px solid #918791;
+      border: 1px solid #666;
     }
 
     .c1 + span {
@@ -106,7 +106,7 @@ it('renders correctly', () => {
       width: 30px;
       height: 30px;
       background-color: #FFFFFF;
-      border: 1px solid #918791;
+      border: 1px solid #666;
       float: left;
     }
 
@@ -117,12 +117,12 @@ it('renders correctly', () => {
     }
 
     .c1:focus + span {
-      border-color: #918791;
+      border-color: #666;
       border-width: 3px;
     }
 
     .c1:focus + span {
-      border-color: #918791;
+      border-color: #666;
       border-width: 3px;
     }
 

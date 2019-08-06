@@ -161,8 +161,8 @@ const buttonColors = {
   white: {
     background: color('white'),
     color: color('black'),
-    hoverBackground: color('black'),
-    hoverColor: color('white')
+    hoverBackground: color('grey'),
+    hoverColor: color('black')
   },
   yellow: {
     background: color('yellow'),

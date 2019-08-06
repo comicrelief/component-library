@@ -8,18 +8,16 @@ const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
   const relationship = target === 'blank' ? 'noopener noreferrer' : false;
 
   return (
-    <span>
-      <StyledLink
-        {...rest}
-        color={color}
-        href={href}
-        target={window}
-        rel={home ? 'home' : relationship}
-        linktype={linktype}
-      >
-        {children}
-      </StyledLink>
-    </span>
+    <StyledLink
+      {...rest}
+      color={color}
+      href={href}
+      target={window}
+      rel={home ? 'home' : relationship}
+      linktype={linktype}
+    >
+      {children}
+    </StyledLink>
   );
 };
 

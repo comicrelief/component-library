@@ -9,8 +9,14 @@ const NavLinkClass = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
+  font-weight: 700;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
+  :hover {
+    border: 0;
+    color: ${({ theme }) => theme.color('deep_violet')};
+    font-weight: inherit;
+  }
 `;
 
 /**
@@ -80,6 +86,7 @@ const SubNavItem = styled.li`
     span {
       border-bottom: 0;
       padding-bottom: 2px;
+      color: ${({ theme }) => theme.color('white')};
     }
   }
 `;

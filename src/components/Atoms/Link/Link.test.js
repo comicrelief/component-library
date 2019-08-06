@@ -35,16 +35,14 @@ it('renders correctly', () => {
       }
     }
 
-    <span>
-      <a
-        className="c0"
-        color="yellow"
-        href="/test"
-        rel={false}
-        target="_self"
-      >
-        My paragraph small and yellow
-      </a>
-    </span>
+    <a
+      className="c0"
+      color="yellow"
+      href="/test"
+      rel={false}
+      target="_self"
+    >
+      My paragraph small and yellow
+    </a>
   `);
 });

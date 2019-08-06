@@ -25,16 +25,18 @@ it('renders correctly', () => {
     }
 
     .c4 {
-      color: #000;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
       padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
+      color: #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
+      font-weight: normal;
     }
 
     .c4:hover {
+      color: #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
       font-weight: 700;
     }
 
@@ -46,14 +48,14 @@ it('renders correctly', () => {
       text-decoration: none;
       font-weight: 700;
       border-radius: 30px;
-      cursor: point;
-      background-color: #2C0230;
-      background: #FFFFFF;
+      cursor: pointer;
+      background-color: #FFFFFF;
       color: #2C0230;
     }
 
     .c6:hover {
-      background: #918791;
+      background-color: #918791;
+      color: #2C0230;
     }
 
     .c0 {
@@ -127,6 +129,7 @@ it('renders correctly', () => {
           className="c3 c4"
           color="red"
           href="https://www.comicrelief.com/cookies-policy"
+          rel={false}
           target="_self"
         >
           here
@@ -139,9 +142,10 @@ it('renders correctly', () => {
       >
         <a
           className="c5 c6"
-          color="deep_violet"
+          color="white"
           href="/comic"
           onClick={[Function]}
+          rel={false}
           target="_self"
         >
           Accept
@@ -152,6 +156,7 @@ it('renders correctly', () => {
           color="red"
           href=""
           onClick={[Function]}
+          rel={false}
           target="_self"
         >
           here

@@ -12,7 +12,7 @@ it('renders correctly', () => {
     <Header
       navItems={data}
       metaIcons={
-        <Link color="green" href="/donation">
+        <Link color="green" linktype="button" href="/donation">
           Donate
         </Link>
       }
@@ -41,16 +41,18 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      color: #000;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
       padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: normal;
     }
 
     .c3:hover {
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
@@ -62,14 +64,14 @@ it('renders correctly', () => {
       text-decoration: none;
       font-weight: 700;
       border-radius: 30px;
-      cursor: point;
+      cursor: pointer;
       background-color: #4ECD57;
-      background: #4ECD57;
-      color: #030e1a;
+      color: #2C0230;
     }
 
     .c22:hover {
-      background: #62EF74;
+      background-color: #62EF74;
+      color: #2C0230;
     }
 
     .c18 {
@@ -115,6 +117,11 @@ it('renders correctly', () => {
       border: none;
       background-color: transparent;
       padding: 2px 5px;
+    }
+    
+    .c17:hover {
+      border: none;
+      font-weight: inherit;
     }
 
     .c17 .c19:nth-of-type(2) {
@@ -188,12 +195,14 @@ it('renders correctly', () => {
     .c14:hover span {
       border-bottom: 0;
       padding-bottom: 2px;
+      color: #FFFFFF;
     }
 
     .c16 {
       border: 0;
       padding: 17px 20px;
       height: 46px;
+      font-weight: 700;
       width: 100%;
       color: #2C0230;
       padding: 14px 21px;
@@ -201,11 +210,18 @@ it('renders correctly', () => {
       height: auto;
       position: relative;
     }
+    
+    .c16:hover {
+      border: 0;
+      color: #2C0230;
+      font-weight: inherit;
+    }
 
     .c15 {
       border: 0;
       padding: 17px 20px;
       height: 46px;
+      font-weight: 700;
       width: 100%;
       color: #2C0230;
       padding: 14px 21px;
@@ -213,6 +229,12 @@ it('renders correctly', () => {
       height: auto;
       position: relative;
       padding: 26px 21px;
+    }
+    
+    .c15:hover {
+      border: 0;
+      color: #2C0230;
+      font-weight: inherit;
     }
 
     .c15::after {
@@ -237,8 +259,15 @@ it('renders correctly', () => {
       border: 0;
       padding: 17px 20px;
       height: 46px;
+      font-weight: 700;
       width: 100%;
       color: #2C0230;
+    }
+    
+    .c11:hover {
+      border: 0;
+      color: #2C0230;
+      font-weight: inherit;
     }
 
     .c9 {
@@ -289,6 +318,10 @@ it('renders correctly', () => {
 
     .c2 {
       color: transparent;
+      border: 0;
+    }
+    
+    .c2:hover {
       border: 0;
     }
 
@@ -426,7 +459,7 @@ it('renders correctly', () => {
       }
 
       .c9:hover .c10 span {
-        border-bottom: 2px solid #030e1a;
+        border-bottom: 2px solid #2C0230;
         padding-bottom: 2px;
       }
 
@@ -522,6 +555,7 @@ it('renders correctly', () => {
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                 onClick={[Function]}
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
               >
                 <span
@@ -544,6 +578,7 @@ it('renders correctly', () => {
                     className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/fundraising/pay-in-your-money"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -562,6 +597,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -580,6 +616,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/join"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -598,6 +635,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/squads"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -616,6 +654,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -634,6 +673,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -658,6 +698,7 @@ it('renders correctly', () => {
                 href="https://www.comicrelief.com/what-your-money-does"
                 onClick={[Function]}
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
               >
                 <span
@@ -680,6 +721,7 @@ it('renders correctly', () => {
                     className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/what-your-money-does"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -698,6 +740,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/What-we-do/our-legacy"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -722,6 +765,7 @@ it('renders correctly', () => {
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onClick={[Function]}
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
               >
                 <span
@@ -744,6 +788,7 @@ it('renders correctly', () => {
                     className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -762,6 +807,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -780,6 +826,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -798,6 +845,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/nurseries"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -816,6 +864,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/youth"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -834,6 +883,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -858,6 +908,7 @@ it('renders correctly', () => {
                 href="https://www.comicrelief.com/funding"
                 onClick={[Function]}
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
               >
                 <span
@@ -880,6 +931,7 @@ it('renders correctly', () => {
                     className="c15 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -898,6 +950,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/funding-opportunities"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -916,6 +969,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/funding-strategy"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -934,6 +988,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/eligibility-criteria"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -952,6 +1007,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/applying-for-funding"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -970,6 +1026,7 @@ it('renders correctly', () => {
                     className="c16 c3"
                     color="red"
                     href="https://www.comicrelief.com/funding/managing-your-funding"
+                    rel={false}
                     role="menuitem"
                     target="_self"
                   >
@@ -992,6 +1049,7 @@ it('renders correctly', () => {
           color="red"
           href="#"
           onClick={[Function]}
+          rel={false}
           role="button"
           target="_self"
         >
@@ -1021,6 +1079,7 @@ it('renders correctly', () => {
             className="c22"
             color="green"
             href="/donation"
+            rel={false}
             target="_self"
           >
             Donate
