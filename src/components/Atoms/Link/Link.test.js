@@ -3,10 +3,46 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Link from './Link';
 
-it('renders correctly', () => {
+it('renders a standard styled link correctly', () => {
+  const tree = renderWithTheme(
+    <Link href="/test" linktype="standard">
+      A standard link
+    </Link>
+  ).toJSON();
+
+  expect(tree).toMatchInlineSnapshot(`
+    .c0 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 2px 1px;
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: normal;
+    }
+    
+    .c0:hover {
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: 700;
+    }
+    
+    <a
+      className="c0"
+      color="red"
+      href="/test"
+      rel={false}
+      target="_self"
+    >
+      A standard link
+    </a>
+   `);
+});
+
+it('renders link styled as button correctly', () => {
   const tree = renderWithTheme(
     <Link href="/test" linktype="button" color="yellow">
-      My paragraph small and yellow
+      A yellow button
     </Link>
   ).toJSON();
 
@@ -34,7 +70,7 @@ it('renders correctly', () => {
         padding: 16px 30px;
       }
     }
-
+    
     <a
       className="c0"
       color="yellow"
@@ -42,7 +78,7 @@ it('renders correctly', () => {
       rel={false}
       target="_self"
     >
-      My paragraph small and yellow
+      A yellow button
     </a>
   `);
 });
