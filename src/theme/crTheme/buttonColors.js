@@ -158,6 +158,12 @@ const buttonColors = {
     hoverBackground: color('teal_dark'),
     hoverColor: color('white')
   },
+  transparent: {
+    background: 'rgba(255, 255, 255, 0.5)',
+    color: 'inherit',
+    hoverBackground: 'rgba(255, 255, 255, 0.7)',
+    hoverColor: 'inherit'
+  },
   white: {
     background: color('white'),
     color: color('black'),

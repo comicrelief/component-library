@@ -57,5 +57,17 @@
       Link as button
     </Link>
   </div>
+  <div
+    style={{
+      display: 'block',
+      padding: '10px',
+      marginBottom: '10px',
+      backgroundColor: '#22CFD8'
+    }}
+  >
+    <Link color="transparent" href="/test" target="blank" linktype="button">
+      Link as transparent button
+    </Link>
+  </div>
 </div>
 ```
