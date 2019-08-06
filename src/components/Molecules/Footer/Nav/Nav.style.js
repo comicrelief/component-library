@@ -103,6 +103,11 @@ const NavMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
+  
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 /**
@@ -120,6 +125,10 @@ const NavItem = styled.li`
   margin: 0 1.5%;
   margin-bottom: 45px;
 
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 30.3%;
+  }
+
   a {
     width: auto;
     padding: 0;
@@ -128,12 +137,8 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      cursor: default;
-    }
-
     &:after {
-      cursorcontent: '\\2303';
+      content: '\\2303';
       position: absolute;
       font-family: Arial;
       margin-left: 4px;
@@ -145,8 +150,16 @@ const NavItem = styled.li`
       transition: transform 0.2s ease;
       transform: ${({ isSubMenuOpen }) =>
         isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
-      bottom: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '-3px' : '3px')};
+      bottom: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '-3px' : '5px')};
       right: -25px;
+    }
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      cursor: default;
+
+      &:after {
+        content: none;
+      }
     }
   }
 `;
