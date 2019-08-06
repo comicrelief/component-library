@@ -43,3 +43,9 @@ export {
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as Header } from './components/Molecules/Header/Header';
+export {
+  default as CookieBanner
+} from './components/Molecules/CookieBanner/CookieBanner';
+export {
+  default as DoubleCopy
+} from './components/Molecules/DoubleCopy/DoubleCopy';
