@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledLink from './Link.style';
 
-const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
+const Link = ({ children, color, href, target, type, home, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
   const relationship = target === 'blank' ? 'noopener noreferrer' : false;
 
@@ -14,7 +14,7 @@ const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
       href={href}
       target={window}
       rel={home ? 'home' : relationship}
-      linktype={linktype}
+      type={type}
     >
       {children}
     </StyledLink>
@@ -22,8 +22,8 @@ const Link = ({ children, color, href, target, linktype, home, ...rest }) => {
 };
 
 Link.propTypes = {
-  /** Link styling: button, standard, etc. See linkStyles in theme. */
-  linktype: PropTypes.string,
+  /** Link styling. See linkStyles in theme. */
+  type: PropTypes.oneOf(['button', 'standard', 'standard_white']),
   /** Color for button style link. See buttonColors in theme */
   color: PropTypes.string,
   /** Link target */
@@ -36,7 +36,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-  linktype: 'standard',
+  type: 'standard',
   color: 'red',
   target: 'self',
   home: false

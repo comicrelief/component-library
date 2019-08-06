@@ -5,7 +5,7 @@ import Link from './Link';
 
 it('renders a standard styled link correctly', () => {
   const tree = renderWithTheme(
-    <Link href="/test" linktype="standard">
+    <Link href="/test" type="standard">
       A standard link
     </Link>
   ).toJSON();
@@ -41,7 +41,7 @@ it('renders a standard styled link correctly', () => {
 
 it('renders link styled as button correctly', () => {
   const tree = renderWithTheme(
-    <Link href="/test" linktype="button" color="yellow">
+    <Link href="/test" type="button" color="yellow">
       A yellow button
     </Link>
   ).toJSON();

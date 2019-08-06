@@ -19,15 +19,6 @@ const linkStyles = {
     hoverColor: color('white'),
     hoverBorder: `2px solid ${color('white')}`,
     hoverWeight: '700'
-  },
-  bold: {
-    color: color('black'),
-    border: `2px solid ${color('black')}`,
-    weight: '700',
-    padding: '0 2px 1px',
-    hoverColor: color('black'),
-    hoverBorder: `2px solid ${color('black')}`,
-    hoverWeight: '800'
   }
 };
 

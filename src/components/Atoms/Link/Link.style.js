@@ -18,12 +18,12 @@ const buttonStyle = () => css`
 const linkStyle = () => css`
   text-decoration: none;
   display: inline-block;
-  ${({ linktype, theme }) =>
-    linktype ? theme.linkStyles(linktype) : theme.linkStyles('standard')};
+  ${({ type, theme }) =>
+    type ? theme.linkStyles(type) : theme.linkStyles('standard')};
 `;
 
 const StyledLink = styled.a`
-  ${props => (props.linktype === 'button' ? buttonStyle : linkStyle)}
+  ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
 `;
 
 export default StyledLink;

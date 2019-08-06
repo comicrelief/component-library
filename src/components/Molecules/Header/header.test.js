@@ -12,7 +12,7 @@ it('renders correctly', () => {
     <Header
       navItems={data}
       metaIcons={
-        <Link color="green" linktype="button" href="/donation">
+        <Link color="green" type="button" href="/donation">
           Donate
         </Link>
       }

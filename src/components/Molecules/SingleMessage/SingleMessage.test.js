@@ -21,7 +21,7 @@ it('renders correctly', () => {
       <Text tag="p" color="white">
         description
       </Text>
-      <Link href="/" linktype="button" color="white">
+      <Link href="/" type="button" color="white">
         CTA
       </Link>
     </SingleMessage>

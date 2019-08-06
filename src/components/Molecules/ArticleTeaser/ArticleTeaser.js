@@ -60,7 +60,7 @@ const CopyWrapper = styled.div`
 const ArticleTeaser = ({ date, href, images, alt, title, image }) => {
   return (
     <Wrapper>
-      <Link href={href} linktype="standard">
+      <Link href={href} type="standard">
         <ImageWrapper>
           <Picture images={images} image={image} alt={alt} objectFit="cover" />
         </ImageWrapper>
