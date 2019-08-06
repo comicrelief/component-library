@@ -11,13 +11,12 @@ import {
   NavLink,
   SubNavMenu,
   SubNavItem,
-  SubNavLink,
-  SubNavLinkUnderline
+  SubNavLink
 } from './Nav.style';
 
 const FooterNav = ({ navItems }) => {
   const { menuGroup } = navItems;
-  const [isExpandable] = useState(true);
+  const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
@@ -54,79 +53,67 @@ const FooterNav = ({ navItems }) => {
   }, []);
 
   return (
-    <>
-      <Nav
-        aria-labelledby="main-menu"
-        isExpandable={isExpandable}
-        role="navigation"
-      >
-        <Text id="main-menu" tag="h2">
-          Main navigation
-        </Text>
+    <Nav
+      aria-labelledby="main-menu"
+      isExpandable={isExpandable}
+      role="navigation"
+    >
+      <Text id="main-menu" tag="h2">
+        Main navigation
+      </Text>
 
-        {/* First level of the navigation (ul tag): Parent */}
-        <NavMenu role="menubar">
-          {menuGroup.map((group, index) => (
-            <NavItem
-              role="none"
-              key={group.id}
-              index={index}
-              isSubMenuOpen={!!isSubMenuOpen[group.id]}
-            >
-              {!mobile ? (
-                <NavLink
-                  href={group.url}
-                  inline
-                  aria-haspopup="true"
-                  onClick={toggleSubMenu(group.id)}
-                  onKeyUp={keyPressed(group.title)}
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-              ) : (
-                <NavLink
-                  href={group.url}
-                  inline
-                  aria-expanded={!!isSubMenuOpen[group.id]}
-                  aria-haspopup="true"
-                  onClick={toggleSubMenu(group.id)}
-                  onKeyUp={keyPressed(group.title)}
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-              )}
-              {/* Second level of the navigation (ul tag): Child(ren) */}
-              {group.links && group.links.length > 0 && (
-                <SubNavMenu
-                  role="menu"
-                  aria-label={group.title}
-                  isKeyPressed={!!isKeyPressed[group.title]}
-                  isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                >
-                  <SubNavItem role="none">
-                    {/* This is the previous li item from the parent */}
-                    <SubNavLinkUnderline
-                      href={group.url}
-                      inline
-                      role="menuitem"
-                    >
-                      <Text>{group.title}</Text>
-                    </SubNavLinkUnderline>
+      {/* First level of the navigation (ul tag): Parent */}
+      <NavMenu role="menubar">
+        {menuGroup.map((group, index) => (
+          <NavItem
+            role="none"
+            key={group.id}
+            index={index}
+            isSubMenuOpen={!!isSubMenuOpen[group.id]}
+          >
+            {!mobile ? (
+              <NavLink
+                href={group.url}
+                inline
+                aria-haspopup="true"
+                onClick={toggleSubMenu(group.id)}
+                onKeyUp={keyPressed(group.title)}
+              >
+                <Text>{group.title}</Text>
+              </NavLink>
+            ) : (
+              <NavLink
+                href={group.url}
+                inline
+                aria-expanded={!!isSubMenuOpen[group.id]}
+                aria-haspopup="true"
+                onClick={toggleSubMenu(group.id)}
+                onKeyUp={keyPressed(group.title)}
+              >
+                <Text>{group.title}</Text>
+              </NavLink>
+            )}
+            {/* Second level of the navigation (ul tag): Child(ren) */}
+            {group.links && group.links.length > 0 && (
+              <SubNavMenu
+                role="menu"
+                aria-label={group.title}
+                isKeyPressed={!!isKeyPressed[group.title]}
+                isSubMenuOpen={!!isSubMenuOpen[group.id]}
+              >
+                {group.links.map(child => (
+                  <SubNavItem key={child.url}>
+                    <SubNavLink href={child.url} inline role="menuitem">
+                      <Text>{child.title}</Text>
+                    </SubNavLink>
                   </SubNavItem>
-                  {group.links.map(child => (
-                    <SubNavItem key={child.url}>
-                      <SubNavLink href={child.url} inline role="menuitem">
-                        <Text>{child.title}</Text>
-                      </SubNavLink>
-                    </SubNavItem>
-                  ))}
-                </SubNavMenu>
-              )}
-            </NavItem>
-          ))}
-        </NavMenu>
-      </Nav>
-    </>
+                ))}
+              </SubNavMenu>
+            )}
+          </NavItem>
+        ))}
+      </NavMenu>
+    </Nav>
   );
 };
 

@@ -3,31 +3,23 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import { sizes } from '../../../../theme/shared/breakpoint';
 
 const NavLinkClass = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
   width: 100%;
-  color: ${({ theme }) => theme.color('deep_violet')};
+  background-color: ${({ theme }) => theme.color('deep_violet')};
+  color: ${({ theme }) => theme.color('white')};
 `;
 
 /**
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: block;
   width: 100%;
-  position: absolute;
-  top: 80px;
-  left: 0;
-
-  @media (min-width: ${sizes.small}px) {
-    width: 50%;
-    right: 0;
-    left: inherit;
-  }
+  text-align: left;
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
@@ -55,9 +47,13 @@ const SubNavMenu = styled.ul`
   justify-content: center;
   align-items: center;
   max-height: 400px;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  > li a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'none' : 'none')};
     display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 90px;
@@ -72,14 +68,27 @@ const SubNavMenu = styled.ul`
  * Sub Menu list items
  */
 const SubNavItem = styled.li`
-  padding: 0;
-  height: 100%;
+  height: 40px;
   width: 100%;
-  :hover {
-    background-color: ${({ theme }) => theme.color('violet_light')};
-    span {
-      border-bottom: 0;
-      padding-bottom: 2px;
+  background-color: inherit;
+  padding: 8px 0 !important;
+
+  a {
+    background-color: inherit;
+    height: auto;
+
+    &:after {
+      content: none !important;
+    }
+
+    &:hover,
+    &:focus {
+      // background-color: ${({ theme }) => theme.color('green')};
+      border-bottom: 2px solid #fff;
+      span {
+        border-bottom: 0;
+        padding-bottom: 2px;
+      }
     }
   }
 `;
@@ -131,7 +140,7 @@ const SubNavLinkUnderline = styled(SubNavLink)`
  * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
-  background-color: ${({ theme }) => theme.color('grey_extra_light')};
+  background-color: inherit
   list-style: none outside;
   padding: 0;
   margin: 0;
@@ -164,9 +173,39 @@ const NavLink = styled(NavLinkClass)`
 const NavItem = styled.li`
   position: relative;
   font-weight: 700;
-  :hover {
-    background-color: ${({ theme }) => theme.color('teal_light')};
+  margin-bottom: 45px;
+  margin: 0 1.5%;
+  margin-bottom: 45px;
+
+  a {
+    width: auto;
+    padding: 0;
+    height: auto;
+    position: relative;
+    background-color: inherit;
+    font-size: 19px;
+
+    &:after {
+      content: '\\2303';
+      position: absolute;
+      font-family: Arial;
+      margin-left: 4px;
+      overflow: hidden;
+      line-height: 19px;
+      font-size: 23px;
+      color: inherit;
+      font-weight: 100;
+      transform: ${({ isSubMenuOpen }) =>
+        isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
+
+      transition-duration: 0.2s;
+      transition-property: transform;
+      transition-timing-function: ease;
+      bottom: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '-3px' : '3px')};
+      right: -25px;
+    }
   }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 4px;
     padding: 30px 0;

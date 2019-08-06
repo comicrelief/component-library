@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FooterSocialLinks from './FooterSocialLinks/FooterSocialLinks';
+import SocialLinks from './SocialLinks/SocialLinks';
 import Text from '../../Atoms/Text/Text';
 
 import Logo from '../../Atoms/Logo/Logo';
@@ -17,7 +17,7 @@ const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <FooterSocialLinks />
+        <SocialLinks />
 
         <FooterNav navItems={navItems} />
 

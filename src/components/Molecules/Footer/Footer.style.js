@@ -5,8 +5,9 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: center;
   line-height: initial;
-  background: #000;
+  background: ${({ theme }) => theme.color('black')};
   padding: 65px 10px 40px;
+  position: relative;
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 79px 35px 60px;

@@ -8,8 +8,12 @@ import image4 from './assets/image4.svg';
 
 const SocialIconList = styled.ul`
   width: 100%;
-  margin: 0 0 90px;
+  margin: 0 0 50px;
   padding: 0;
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    margin: 0 0 90px;
+  }
 `;
 
 const SocialIconItem = styled.li`
@@ -17,14 +21,18 @@ const SocialIconItem = styled.li`
   height: auto;
   display: inline-block;
   margin: 5px 10px 0;
+
+  a {
+    display: block;
+  }
 `;
 
 const SocialIcon = styled.img`
-  width: 50px;
+  width: 58px;
   height: auto;
 `;
 
-const FooterSocialLinks = () => {
+const SocialLinks = () => {
   return (
     <div>
       <SocialIconList>
@@ -72,4 +80,4 @@ const FooterSocialLinks = () => {
   );
 };
 
-export default FooterSocialLinks;
+export default SocialLinks;
