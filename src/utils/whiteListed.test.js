@@ -1,7 +1,7 @@
 import whiteListed from './whiteListed';
 
 it('link is whitelisted', () => {
-  expect(whiteListed('https://www.sportrelief.com/')).toBe(true);
+  expect(whiteListed('https://www.comicrelief.com/home')).toBe(true);
 });
 
 it('link is not whitelisted', () => {

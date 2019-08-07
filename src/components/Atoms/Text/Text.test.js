@@ -12,7 +12,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      color: #fbef51;
+      color: #FFE400;
       font-size: 1.725rem;
       text-transform: inherit;
     }

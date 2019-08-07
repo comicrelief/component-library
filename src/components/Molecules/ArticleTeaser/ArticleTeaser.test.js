@@ -119,6 +119,7 @@ it('renders correctly', () => {
       <a
         className="c1"
         href="/test"
+        type="standard"
       >
         <div
           className="c2"

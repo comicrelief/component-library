@@ -9,8 +9,14 @@ const NavLinkClass = styled(Link)`
   border: 0;
   padding: 17px 20px;
   height: 46px;
+  font-weight: 700;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet')};
+  :hover {
+    border: 0;
+    color: ${({ theme }) => theme.color('deep_violet')};
+    font-weight: inherit;
+  }
 `;
 
 /**
@@ -76,10 +82,11 @@ const SubNavItem = styled.li`
   height: 100%;
   width: 100%;
   :hover {
-    background-color: ${({ theme }) => theme.color('violet_light')};
+    background-color: ${({ theme }) => theme.color('deep_violet_light')};
     span {
       border-bottom: 0;
       padding-bottom: 2px;
+      color: ${({ theme }) => theme.color('white')};
     }
   }
 `;
@@ -122,7 +129,7 @@ const SubNavLinkUnderline = styled(SubNavLink)`
       top: -22px;
     }
     :hover::before {
-      border-bottom-color: ${({ theme }) => theme.color('violet_light')};
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
     }
   }
 `;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledLink = styled.a`
   text-decoration: none;
-  cursor: point;
+  cursor: pointer;
 `;
 
 const StyledImage = styled.img`

@@ -4,7 +4,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: point;
+  cursor: pointer;
 }
 
 .c3 {
@@ -94,7 +94,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: point;
+  cursor: pointer;
 }
 
 .c3 {
@@ -184,7 +184,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: point;
+  cursor: pointer;
 }
 
 .c3 {

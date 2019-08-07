@@ -14,7 +14,7 @@ const CookieBanner = ({ acceptCookie, denyCookie, cookiePolicyUrl }) => {
       <CookieText tag="p" color="white">
         Hello! Comic Relief uses cookies to help make this website better and
         improve our services. You can learn more about our use of cookies
-        <LinkStyle href={cookiePolicyUrl} inline>
+        <LinkStyle href={cookiePolicyUrl} type="standard_white">
           here
         </LinkStyle>
         . We also use optional cookies for marketing purposes:
@@ -22,13 +22,14 @@ const CookieBanner = ({ acceptCookie, denyCookie, cookiePolicyUrl }) => {
       <CookieText tag="p" color="white">
         <AcceptCookieBtn
           href="/comic"
-          color="deep_violet"
+          type="button"
+          color="white"
           onClick={acceptCookie}
         >
           Accept
         </AcceptCookieBtn>
         Or click
-        <LinkStyle href="" inline onClick={denyCookie}>
+        <LinkStyle href="" type="standard_white" onClick={denyCookie}>
           here
         </LinkStyle>
         to deny these.

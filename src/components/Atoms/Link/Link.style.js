@@ -10,81 +10,20 @@ const buttonStyle = () => css`
   text-decoration: none;
   font-weight: 700;
   border-radius: 30px;
-  cursor: point;
-  background-color: ${({ color, theme }) =>
-    color ? theme.color(color) : theme.color('red')};
+  cursor: pointer;
   ${({ color, theme }) =>
-    (color === 'red' &&
-      css`
-        background: ${theme.color('red')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'black' &&
-      css`
-        background: ${theme.color('black')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'grey' &&
-      css`
-        background: ${theme.color('grey')};
-        color: ${theme.color('white')};
-        :hover {
-          background: ${theme.color('teal')};
-        }
-      `) ||
-    (color === 'green' &&
-      css`
-        background: ${theme.color('green')};
-        color: ${theme.color('black')};
-        :hover {
-          background: ${theme.color('green_light')};
-        }
-      `) ||
-    (color === 'deep_violet' &&
-      css`
-        background: ${theme.color('white')};
-        color: ${theme.color('deep_violet')};
-        :hover {
-          background: ${theme.color('grey')};
-        }
-      `)};
+    color ? theme.buttonColors(color) : theme.buttonColors('red')};
 `;
 
-export const StyledLink = styled.a`
-  ${props =>
-    props.inline
-      ? css`
-          color: #000;
-          text-decoration: none;
-          display: inline-block;
-          padding: 0 2px 1px;
-          border-bottom: 2px solid;
-          border-bottom-color: #000;
-          :hover {
-            font-weight: 700;
-          }
-        `
-      : buttonStyle}
+const linkStyle = () => css`
+  text-decoration: none;
+  display: inline-block;
+  ${({ type, theme }) =>
+    type ? theme.linkStyles(type) : theme.linkStyles('standard')};
 `;
 
-export const WrapperLink = styled.span`
-  a {
-    ${props =>
-      props.inline
-        ? css`
-            color: #000;
-            text-decoration: none;
-            display: inline-block;
-            padding: 0 2px 1px;
-            border-bottom: 2px solid;
-            border-bottom-color: #000;
-          `
-        : buttonStyle}
-  }
+const StyledLink = styled.a`
+  ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
 `;
+
+export default StyledLink;
