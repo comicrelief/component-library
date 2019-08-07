@@ -38,8 +38,6 @@ const SubNavMenu = styled.ul`
   position: relative;
   list-style: none outside;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   > li a {
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
@@ -48,10 +46,17 @@ const SubNavMenu = styled.ul`
   }
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    max-height: 400px;
+    max-height: none;
     height: auto;
+
+    &.cols--2 {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     > li a {
       display: inline;
+      line-height: 24px;
     }
   }
 `;
@@ -61,9 +66,19 @@ const SubNavMenu = styled.ul`
  */
 const SubNavItem = styled.li`
   height: 40px;
-  width: 50%;
+  width: 100%;
   background-color: inherit;
-  padding: 8px 0 !important;
+  padding: 8px 0;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    height: auto;
+    margin-top: 12px;
+    padding: 0;
+
+    .cols--2 & {
+      width: 50%;
+    }
+  }
 
   a {
     background-color: inherit;
@@ -75,7 +90,6 @@ const SubNavItem = styled.li`
 
     &:hover,
     &:focus {
-      // background-color: ${({ theme }) => theme.color('green')};
       border-bottom: 2px solid #fff;
       span {
         border-bottom: 0;
@@ -136,6 +150,12 @@ const NavItem = styled.li`
     position: relative;
     background-color: inherit;
     font-size: 19px;
+    line-height: 40px;
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      font-size: 20px;
+      line-height: 40px;
+    }
 
     &:after {
       content: '\\2303';
@@ -150,12 +170,13 @@ const NavItem = styled.li`
       transition: transform 0.2s ease;
       transform: ${({ isSubMenuOpen }) =>
         isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
-      bottom: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '-3px' : '5px')};
+      top: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '15px' : '6px')};
       right: -25px;
     }
 
     @media ${({ theme }) => theme.breakpoint('small')} {
       cursor: default;
+      display: inline;
 
       &:after {
         content: none;

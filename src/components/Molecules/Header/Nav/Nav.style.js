@@ -135,6 +135,7 @@ const NavMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;

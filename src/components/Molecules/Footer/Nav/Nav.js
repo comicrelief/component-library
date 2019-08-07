@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -18,13 +18,12 @@ const FooterNav = ({ navItems }) => {
   const { menuGroup } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
-  const [isKeyPressed, setIsKeyPressed] = useState({});
 
   // Detect window screen size
   const isSmallBreakpoint = window.innerWidth < sizes.small;
 
   /**
-   * Always stop the main 'parent' link from actual functioning, but do the
+   * Always stop the main 'parent' link from actually firing, but do the
    * collapsing for SM-MD breakpoints
    */
   const toggleSubMenu = item => event => {
@@ -35,27 +34,6 @@ const FooterNav = ({ navItems }) => {
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
   };
-
-  // Handle tab key on menu nav
-  const keyPressed = item => () => {
-    window.onkeyup = e => {
-      if (
-        e.target.querySelector('span') &&
-        e.target.querySelector('span').innerText === item
-      ) {
-        setIsKeyPressed({ [item]: !isKeyPressed[item] });
-      } else if (!e.target.querySelector('span')) {
-        setIsKeyPressed({});
-      }
-    };
-  };
-
-  useEffect(() => {
-    window.addEventListener('onkeyup', setIsKeyPressed);
-    return () => {
-      window.removeEventListener('onkeyup', setIsKeyPressed);
-    };
-  }, []);
 
   return (
     <Nav
@@ -82,7 +60,6 @@ const FooterNav = ({ navItems }) => {
                 inline
                 aria-haspopup="true"
                 onClick={toggleSubMenu(group.id)}
-                onKeyUp={keyPressed(group.title)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
@@ -93,7 +70,6 @@ const FooterNav = ({ navItems }) => {
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
                 onClick={toggleSubMenu(group.id)}
-                onKeyUp={keyPressed(group.title)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
@@ -103,8 +79,12 @@ const FooterNav = ({ navItems }) => {
               <SubNavMenu
                 role="menu"
                 aria-label={group.title}
-                isKeyPressed={!!isKeyPressed[group.title]}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                className={`cols--${
+                  group.links.length % 2 === 0 && group.links.length > 2
+                    ? '2'
+                    : '1'
+                }`}
               >
                 {group.links.map(child => (
                   <SubNavItem key={child.url}>

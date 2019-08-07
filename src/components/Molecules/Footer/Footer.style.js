@@ -34,6 +34,17 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 5px;
+
+    @media ${({ theme }) => theme.breakpoint('medium')} {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
 `;
 
 export { FooterWrapper, InnerWrapper, FooterCopyright, FooterBranding };
