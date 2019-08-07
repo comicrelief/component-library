@@ -38,12 +38,12 @@ it('renders correctly', () => {
       top: 0px;
       width: 30px;
       height: 30px;
-      border: 1px solid #918791;
+      border: 1px solid #666;
     }
 
     .c1:checked + span {
-      background-color: #7d2ca9;
-      border: 1px solid #7d2ca9;
+      background-color: #C180F9;
+      border: 1px solid #C180F9;
     }
 
     .c1:checked + span:before {
@@ -117,12 +117,12 @@ it('renders correctly', () => {
       top: 0px;
       width: 30px;
       height: 30px;
-      border: 1px solid #918791;
+      border: 1px solid #666;
     }
 
     .c1:checked + span {
-      background-color: #7d2ca9;
-      border: 1px solid #7d2ca9;
+      background-color: #C180F9;
+      border: 1px solid #C180F9;
     }
 
     .c1:checked + span:before {

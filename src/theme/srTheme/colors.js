@@ -1,14 +1,14 @@
 const colors = {
-  white: '#eee',
-  white_smoke: '#fbf5f5',
   black: '#030e1a',
-  coral: '#FF6F61',
-  ruby: '#e7135d',
-  blue_light: '#86E4E9',
   blue: '#223c59',
-  dark_blue: '#061d38',
+  blue_dark: '#061d38',
+  blue_light: '#86E4E9',
+  coral: '#FF6F61',
   green: '#b2e55e',
-  red: '#E52630'
+  red: '#E52630',
+  ruby: '#e7135d',
+  white: '#eee',
+  white_smoke: '#fbf5f5'
 };
 
 export default colorName => {
