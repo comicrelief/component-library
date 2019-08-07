@@ -12,8 +12,7 @@ it('renders correctly', () => {
     <Footer navItems={data} footerCopy={footerCopy.copy} />
   ).toJSON();
 
-  expect(tree).toMatchInlineSnapshot(
-    `
+  expect(tree).toMatchInlineSnapshot(`
     .c6 {
       text-transform: inherit;
     }
@@ -40,16 +39,18 @@ it('renders correctly', () => {
     }
 
     .c10 {
-      color: #000;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
       padding: 0 2px 1px;
-      border-bottom: 2px solid;
-      border-bottom-color: #000;
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: normal;
     }
 
     .c10:hover {
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
@@ -68,6 +69,13 @@ it('renders correctly', () => {
 
     .c3 a {
       display: block;
+      -webkit-transition: 0.5s opacity;
+      transition: 0.5s opacity;
+    }
+
+    .c3 a:focus,
+    .c3 a:hover {
+      opacity: 0.6;
     }
 
     .c4 {
@@ -159,6 +167,18 @@ it('renders correctly', () => {
       position: relative;
     }
 
+    .c13:hover,
+    .c13:focus {
+      color: #FFFFFF;
+      border-bottom: none;
+      font-weight: 500;
+    }
+
+    .c13:hover,
+    .c13:focus {
+      font-weight: 700;
+    }
+
     .c7 {
       background-color: inherit list-style:none outside;
       padding: 0;
@@ -172,6 +192,13 @@ it('renders correctly', () => {
       width: 100%;
       background-color: #2C0230;
       color: #FFFFFF;
+    }
+
+    .c9:hover,
+    .c9:focus {
+      color: #FFFFFF;
+      border-bottom: none;
+      font-weight: 500;
     }
 
     .c8 {
@@ -190,6 +217,12 @@ it('renders correctly', () => {
       background-color: inherit;
       font-size: 19px;
       line-height: 40px;
+      font-weight: 800;
+    }
+
+    .c8 a:focus,
+    .c8 a:hover {
+      font-weight: 800;
     }
 
     .c8 a:after {
@@ -215,7 +248,7 @@ it('renders correctly', () => {
     .c0 {
       text-align: center;
       line-height: initial;
-      background: #030e1a;
+      background: #2C0230;
       padding: 65px 10px 40px;
       position: relative;
     }
@@ -365,7 +398,7 @@ it('renders correctly', () => {
                 <img
                   className="c4"
                   src="mock.asset"
-                  title="Facebook"
+                  title="FB"
                 />
               </a>
             </li>
@@ -442,7 +475,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -463,8 +498,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/#"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -481,8 +518,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -504,7 +543,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -525,8 +566,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/contact-us"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -543,8 +586,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -561,8 +606,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -579,8 +626,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -602,7 +651,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -623,8 +674,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -641,8 +694,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -659,8 +714,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -677,8 +734,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -695,8 +754,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -713,8 +774,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.sportrelief.com/"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -736,7 +799,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -757,8 +822,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/careers"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -775,8 +842,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -798,7 +867,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -819,8 +890,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/news"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -837,8 +910,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -860,7 +935,9 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
+                rel={false}
                 target="_self"
+                type="standard"
               >
                 <span
                   className="c6"
@@ -881,8 +958,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/privacy-notice"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -899,8 +978,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/terms-of-use"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -917,8 +998,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/cookies-policy"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -935,8 +1018,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/positive-practices"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -953,8 +1038,10 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/legal/sms"
+                    rel={false}
                     role="menuitem"
                     target="_self"
+                    type="standard"
                   >
                     <span
                       className="c6"
@@ -996,6 +1083,5 @@ it('renders correctly', () => {
         </div>
       </div>
     </footer>
-  `
-  );
+  `);
 });
