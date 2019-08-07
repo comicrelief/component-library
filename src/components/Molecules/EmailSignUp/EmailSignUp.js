@@ -19,6 +19,7 @@ const EmailSignUp = ({
   successCopy,
   errorMsg,
   privacyURL,
+  HandleSubscription,
   ...rest
 }) => {
   /** Top copy and form displayed before user subscribed */
@@ -36,7 +37,12 @@ const EmailSignUp = ({
           placeholder="example@youremail.com"
         />
         <ButtonWrapper>
-          <Link type="button" as="button" href="/#">
+          <Link
+            type="button"
+            as="button"
+            href="/#"
+            onClick={HandleSubscription}
+          >
             Subscribe
           </Link>
         </ButtonWrapper>
@@ -46,7 +52,7 @@ const EmailSignUp = ({
 
   /** Swap Top copy - form with success copy if subscription is successful  */
   const isSubscriptionSuccessful = isSuccess ? (
-    <TopCopy>successCopy</TopCopy>
+    <TopCopy>{successCopy}</TopCopy>
   ) : (
     subsriptionForm
   );
@@ -77,8 +83,10 @@ EmailSignUp.propTypes = {
   isSuccess: PropTypes.bool.isRequired,
   /** boolean if true display successCopy */
   errorMsg: PropTypes.string.isRequired,
-  /** Link   */
-  privacyURL: PropTypes.string.isRequired
+  /** Link  URL */
+  privacyURL: PropTypes.string.isRequired,
+  /** Function    */
+  HandleSubscription: PropTypes.func.isRequired
 };
 
 export default EmailSignUp;

@@ -29,6 +29,7 @@ const PrivacyCopyWraper = styled.div`
 `;
 
 const PrivacyLink = styled(Link)`
+  cursor: pointer;
   padding: 0 ${spacing('xsm')};
   color: ${({ theme }) => theme.color('white')};
   border-color: ${({ theme }) => theme.color('white')};
