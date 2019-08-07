@@ -24,21 +24,6 @@ const Form = styled.form`
   margin-bottom: ${spacing('md')};
 `;
 
-const PrivacyCopyWraper = styled.div`
-  display: flex;
-`;
-
-const PrivacyLink = styled(Link)`
-  cursor: pointer;
-  padding: 0 ${spacing('xsm')};
-  color: ${({ theme }) => theme.color('white')};
-  border-color: ${({ theme }) => theme.color('white')};
-  :hover {
-    color: ${({ theme }) => theme.color('white')};
-    border-color: ${({ theme }) => theme.color('white')};
-  }
-`;
-
 const InputField = styled(Input)`
   width: 100%;
 `;
@@ -52,6 +37,21 @@ const ButtonWrapper = styled.div`
     @media ${({ theme }) => theme.breakpoint('small')} {
       width: auto;
     }
+  }
+`;
+
+const PrivacyCopyWraper = styled.div`
+  display: flex;
+`;
+
+const PrivacyLink = styled(Link)`
+  cursor: pointer;
+  padding: 0 ${spacing('xsm')};
+  color: ${({ theme }) => theme.color('white')};
+  border-color: ${({ theme }) => theme.color('white')};
+  :hover {
+    color: ${({ theme }) => theme.color('white')};
+    border-color: ${({ theme }) => theme.color('white')};
   }
 `;
 

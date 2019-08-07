@@ -175,6 +175,20 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
+    .c7 {
+      width: 100%;
+    }
+
+    .c9 {
+      margin-top: 1rem;
+    }
+
+    .c9 button {
+      border-color: #2C0230;
+      width: 100%;
+      font-size: 1rem;
+    }
+
     .c11 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -192,24 +206,6 @@ it('renders correctly', () => {
     .c13:hover {
       color: #FFFFFF;
       border-color: #FFFFFF;
-    }
-
-    .c7 {
-      width: 100%;
-    }
-
-    .c7 input {
-      width: auto;
-    }
-
-    .c9 {
-      margin-top: 1rem;
-    }
-
-    .c9 button {
-      border-color: #2C0230;
-      width: 100%;
-      font-size: 1rem;
     }
 
     @media (min-width:1440px) {
