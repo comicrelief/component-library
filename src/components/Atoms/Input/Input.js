@@ -25,7 +25,7 @@ const StyledInput = styled.input`
   color: ${({ theme }) => theme.color('black')};
 
   :focus {
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
   :focus::-webkit-input-placeholder {
     color: transparent;

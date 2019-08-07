@@ -27,7 +27,7 @@ const StyledInput = styled.input`
     top: 0px;
     width: 30px;
     height: 30px;
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
   :checked + span {
     background-color: ${({ theme }) => theme.color('purple')};

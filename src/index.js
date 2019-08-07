@@ -7,6 +7,7 @@ export { default as ThemeProvider } from './theme/ThemeProvider';
 /* Utils */
 export { default as hideVisually } from './theme/shared/hideVisually';
 export { default as zIndex } from './theme/shared/zIndex';
+export { default as whiteListed } from './utils/whiteListed';
 
 /* Atoms */
 
@@ -43,3 +44,9 @@ export {
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as Header } from './components/Molecules/Header/Header';
+export {
+  default as CookieBanner
+} from './components/Molecules/CookieBanner/CookieBanner';
+export {
+  default as DoubleCopy
+} from './components/Molecules/DoubleCopy/DoubleCopy';

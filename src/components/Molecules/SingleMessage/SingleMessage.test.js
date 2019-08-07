@@ -21,7 +21,7 @@ it('renders correctly', () => {
       <Text tag="p" color="white">
         description
       </Text>
-      <Link href="/" color="white">
+      <Link href="/" type="button" color="white">
         CTA
       </Link>
     </SingleMessage>
@@ -54,8 +54,14 @@ it('renders correctly', () => {
       text-decoration: none;
       font-weight: 700;
       border-radius: 30px;
-      cursor: point;
+      cursor: pointer;
       background-color: #FFFFFF;
+      color: #2C0230;
+    }
+    
+    .c7:hover {
+      background-color: #918791;
+      color: #2C0230;
     }
 
     .c0 {
@@ -67,7 +73,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      background: #7d2ca9;
+      background: #C180F9;
     }
 
     .c4 {
@@ -165,7 +171,9 @@ it('renders correctly', () => {
           className="c7"
           color="white"
           href="/"
+          rel={false}
           target="_self"
+          type="button"
         >
           CTA
         </a>
@@ -198,7 +206,7 @@ it('renders Single Message with no Image correctly', () => {
                                       -webkit-flex-direction: column;
                                       -ms-flex-direction: column;
                                       flex-direction: column;
-                                      background: #7d2ca9;
+                                      background: #C180F9;
                                     }
 
                                     .c1 {
@@ -280,7 +288,7 @@ it('renders fullWidth Single Message correctly', () => {
                                       -webkit-flex-direction: column;
                                       -ms-flex-direction: column;
                                       flex-direction: column;
-                                      background: #7d2ca9;
+                                      background: #C180F9;
                                     }
 
                                     .c1 {
@@ -378,7 +386,7 @@ it('renders double image Single Message correctly', () => {
               -webkit-flex-direction: column;
               -ms-flex-direction: column;
               flex-direction: column;
-              background: #fbef51;
+              background: #FFE400;
             }
 
             .c4 {

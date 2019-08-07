@@ -22,17 +22,22 @@ const MainNav = ({ navItems }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  const width = typeof window !== 'undefined' ? window.innerWidth : null;
+
+  useEffect(() => {
+    // Detect window screen size
+    setIsMobile(width < sizes.medium);
+  }, [width]);
+
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
   };
 
-  // Detect windown screen size
-  const width = window.innerWidth;
-  const mobile = width < sizes.medium;
-
   const toggleSubMenu = item => event => {
-    if (mobile) {
+    if (isMobile) {
       event.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
@@ -79,7 +84,7 @@ const MainNav = ({ navItems }) => {
               index={index}
               isSubMenuOpen={!!isSubMenuOpen[group.id]}
             >
-              {!mobile ? (
+              {!isMobile ? (
                 <NavLink
                   href={group.url}
                   inline
@@ -105,7 +110,6 @@ const MainNav = ({ navItems }) => {
               {group.links && group.links.length > 0 && (
                 <SubNavMenu
                   role="menu"
-                  aria-label={group.title}
                   isKeyPressed={!!isKeyPressed[group.title]}
                   isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 >

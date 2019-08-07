@@ -40,6 +40,10 @@ const BurgerWrapper = styled(Link)`
   border: none;
   background-color: transparent;
   padding: 2px 5px;
+  :hover {
+    border: none;
+    font-weight: inherit;
+  }
   ${BurgerBar} {
     :nth-of-type(2) {
       transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};

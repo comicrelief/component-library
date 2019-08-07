@@ -5,7 +5,8 @@ const fontSizes = {
   m: '1.2rem',
   l: '1.44rem',
   xl: '1.725rem',
-  xxl: '2.075rem'
+  xxl: '2.075rem',
+  super: '6.25rem'
 };
 
 export default size => {

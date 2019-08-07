@@ -15,13 +15,13 @@ const StyledInput = styled.input`
   width: 30px;
   height: 30px;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey')};
+  border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
     margin-right: 5px;
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
     float: left;
   }
   :checked + span {
@@ -30,11 +30,11 @@ const StyledInput = styled.input`
     background-size: contain;
   }
   :focus + span {
-    border-color: ${({ theme }) => theme.color('grey')};
+    border-color: ${({ theme }) => theme.color('grey_for_forms')};
     border-width: 3px;
   }
   :focus + span {
-    border-color: ${({ theme }) => theme.color('grey')};
+    border-color: ${({ theme }) => theme.color('grey_for_forms')};
     border-width: 3px;
   }
 `;
