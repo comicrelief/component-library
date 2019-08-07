@@ -13,7 +13,6 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(
-    '',
     `
     .c6 {
       text-transform: inherit;
