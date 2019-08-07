@@ -5,7 +5,7 @@ import StyledLink from './Link.style';
 
 const Link = ({ children, color, href, target, type, home, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
-  const relationship = target === 'blank' ? 'noopener noreferrer' : false;
+  const relationship = target === 'blank' ? 'noopener noreferrer' : 'false';
 
   return (
     <StyledLink
