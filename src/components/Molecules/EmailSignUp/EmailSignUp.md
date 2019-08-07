@@ -12,5 +12,6 @@ import RichText from '../../Atoms/RichText/RichText';
   successCopy="success"
   isSuccess={false}
   errorMsg=""
+  privacyUrl="https://www.comicrelief.com/privacy-notice"
 />;
 ```

@@ -1,60 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import Input from '../../Atoms/Input/Input';
+import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import spacing from '../../../theme/shared/spacings';
-
-const ESUWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: ${spacing('l')};
-`;
-
-const TopCopy = styled.div`
-  display: flex;
-  margin-bottom: ${spacing('md')};
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: ${spacing('md')};
-`;
-
-const PrivacyCopy = styled.div`
-  display: flex;
-`;
-
-const InputField = styled(Input)`
-  width: 100%;
-  input {
-    width: auto;
-  }
-`;
-
-const Button = styled.div`
-  margin-top: ${spacing('md')};
-  button {
-    width: 100%;
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      width: auto;
-    }
-  }
-`;
+import {
+  ESUWrapper,
+  TopCopy,
+  Form,
+  PrivacyCopyWraper,
+  PrivacyLink,
+  InputField,
+  ButtonWrapper
+} from './EmailSignUp.style';
 
 const EmailSignUp = ({
   topCopy,
   isSuccess,
   successCopy,
   errorMsg,
+  privacyURL,
   ...rest
 }) => {
-  return (
-    <ESUWrapper {...rest}>
-      <TopCopy>{!isSuccess ? topCopy : successCopy}</TopCopy>
+  /** Top copy and form displayed before user subscribed */
+  const subsriptionForm = (
+    <>
+      <TopCopy>{topCopy}</TopCopy>
       <Form>
         <InputField
           name="email"
@@ -65,13 +35,35 @@ const EmailSignUp = ({
           label="Label"
           placeholder="example@youremail.com"
         />
-        <Button>
+        <ButtonWrapper>
           <Link type="button" as="button" href="/#">
             Subscribe
           </Link>
-        </Button>
+        </ButtonWrapper>
       </Form>
-      <PrivacyCopy>Privacy Copy here</PrivacyCopy>
+    </>
+  );
+
+  /** Swap Top copy - form with success copy if subscription is successful  */
+  const isSubscriptionSuccessful = isSuccess ? (
+    <TopCopy>successCopy</TopCopy>
+  ) : (
+    subsriptionForm
+  );
+  return (
+    <ESUWrapper {...rest}>
+      {isSubscriptionSuccessful}
+      <PrivacyCopyWraper>
+        <Text tag="p">
+          Our
+          <PrivacyLink href={privacyURL}>Privacy Policy</PrivacyLink>
+          describes how we handle and protect your information.
+          <br />
+          <br />
+          If you are under 18, please make sure you have your parents permission
+          before providing us with any personal details.
+        </Text>
+      </PrivacyCopyWraper>
     </ESUWrapper>
   );
 };
@@ -83,7 +75,10 @@ EmailSignUp.propTypes = {
   successCopy: PropTypes.node.isRequired,
   /** boolean if true display successCopy */
   isSuccess: PropTypes.bool.isRequired,
-  errorMsg: PropTypes.string.isRequired
+  /** boolean if true display successCopy */
+  errorMsg: PropTypes.string.isRequired,
+  /** Link   */
+  privacyURL: PropTypes.string.isRequired
 };
 
 export default EmailSignUp;
