@@ -10,6 +10,13 @@ const NavLinkClass = styled(Link)`
   width: 100%;
   background-color: ${({ theme }) => theme.color('deep_violet')};
   color: ${({ theme }) => theme.color('white')};
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.color('white')};
+    border-bottom: none;
+    font-weight: 500;
+  }
 `;
 
 /**
@@ -106,6 +113,11 @@ const SubNavLink = styled(NavLinkClass)`
   color: ${({ theme }) => theme.color('white')};
   height: auto;
   position: relative;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
 `;
 
 /**
@@ -150,6 +162,12 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
     line-height: 40px;
+    font-weight: 700;
+
+    &:focus,
+    &:hover {
+      font-weight: 700;
+    }
 
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: 20px;
