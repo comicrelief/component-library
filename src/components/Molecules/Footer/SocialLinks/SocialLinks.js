@@ -24,6 +24,12 @@ const SocialIconItem = styled.li`
 
   a {
     display: block;
+    transition: 0.5s opacity;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
   }
 `;
 
