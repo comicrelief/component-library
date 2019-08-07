@@ -5,17 +5,9 @@ import StyledLink from './Link.style';
 
 const Link = ({ children, color, href, target, type, home, ...rest }) => {
   const window = target === 'blank' ? '_blank' : '_self';
-  const relationship = target === 'blank' ? 'noopener noreferrer' : 'false';
 
   return (
-    <StyledLink
-      {...rest}
-      color={color}
-      href={href}
-      target={window}
-      rel={home ? 'home' : relationship}
-      type={type}
-    >
+    <StyledLink {...rest} color={color} href={href} target={window} type={type}>
       {children}
     </StyledLink>
   );

@@ -129,7 +129,6 @@ it('renders correctly', () => {
           className="c3 c4"
           color="red"
           href="https://www.comicrelief.com/cookies-policy"
-          rel="false"
           target="_self"
           type="standard_white"
         >
@@ -146,7 +145,6 @@ it('renders correctly', () => {
           color="white"
           href="/comic"
           onClick={[Function]}
-          rel="false"
           target="_self"
           type="button"
         >
@@ -158,7 +156,6 @@ it('renders correctly', () => {
           color="red"
           href=""
           onClick={[Function]}
-          rel="false"
           target="_self"
           type="standard_white"
         >

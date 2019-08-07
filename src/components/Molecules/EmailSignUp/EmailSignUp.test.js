@@ -194,6 +194,9 @@ it('renders correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     .c13 {
@@ -252,7 +255,7 @@ it('renders correctly', () => {
               className="c5 c6"
               color="inherit"
             >
-              Label
+              Email
             </span>
             <input
               aria-describedby="edit-email"
@@ -271,7 +274,6 @@ it('renders correctly', () => {
               color="red"
               href="/#"
               onClick={[Function]}
-              rel="false"
               target="_self"
               type="button"
             >
@@ -291,15 +293,17 @@ it('renders correctly', () => {
               className="c13 c14"
               color="red"
               href="https://www.comicrelief.com/privacy-notice"
-              rel="false"
               target="_self"
               type="standard"
             >
               Privacy Policy
             </a>
             describes how we handle and protect your information.
-            <br />
-            <br />
+          </p>
+          <p
+            className="c12"
+            color="inherit"
+          >
             If you are under 18, please make sure you have your parents permission before providing us with any personal details.
           </p>
         </div>
@@ -355,6 +359,9 @@ it('renders correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     .c5 {
@@ -396,15 +403,17 @@ it('renders correctly', () => {
               className="c5 c6"
               color="red"
               href="https://www.comicrelief.com/privacy-notice"
-              rel="false"
               target="_self"
               type="standard"
             >
               Privacy Policy
             </a>
             describes how we handle and protect your information.
-            <br />
-            <br />
+          </p>
+          <p
+            className="c4"
+            color="inherit"
+          >
             If you are under 18, please make sure you have your parents permission before providing us with any personal details.
           </p>
         </div>

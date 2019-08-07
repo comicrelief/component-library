@@ -42,6 +42,7 @@ const ButtonWrapper = styled.div`
 
 const PrivacyCopyWraper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const PrivacyLink = styled(Link)`

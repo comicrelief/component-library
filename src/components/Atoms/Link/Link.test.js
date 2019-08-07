@@ -31,7 +31,6 @@ it('renders a standard styled link correctly', () => {
       className="c0"
       color="red"
       href="/test"
-      rel="false"
       target="_self"
       type="standard"
     >
@@ -76,7 +75,6 @@ it('renders link styled as button correctly', () => {
       className="c0"
       color="yellow"
       href="/test"
-      rel="false"
       target="_self"
       type="button"
     >

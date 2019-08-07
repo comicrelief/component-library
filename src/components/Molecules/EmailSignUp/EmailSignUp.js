@@ -22,50 +22,36 @@ const EmailSignUp = ({
   HandleSubscription,
   ...rest
 }) => {
-  /** Top copy and form displayed before user subscribed */
-  const subsriptionForm = (
-    <>
-      <TopCopy>{topCopy}</TopCopy>
-      <Form>
-        <InputField
-          name="email"
-          showLabel={false}
-          type="text"
-          id="edit-email"
-          errorMsg={errorMsg}
-          label="Label"
-          placeholder="example@youremail.com"
-        />
-        <ButtonWrapper>
-          <Link
-            type="button"
-            as="button"
-            href="/#"
-            onClick={HandleSubscription}
-          >
-            Subscribe
-          </Link>
-        </ButtonWrapper>
-      </Form>
-    </>
+  const formSubscription = (
+    <Form>
+      <InputField
+        name="email"
+        showLabel={false}
+        type="text"
+        id="edit-email"
+        errorMsg={errorMsg}
+        label="Email"
+        placeholder="example@youremail.com"
+      />
+      <ButtonWrapper>
+        <Link type="button" as="button" href="/#" onClick={HandleSubscription}>
+          Subscribe
+        </Link>
+      </ButtonWrapper>
+    </Form>
   );
 
-  /** Swap Top copy - form with success copy if subscription is successful  */
-  const isSubscriptionSuccessful = isSuccess ? (
-    <TopCopy>{successCopy}</TopCopy>
-  ) : (
-    subsriptionForm
-  );
   return (
     <ESUWrapper {...rest}>
-      {isSubscriptionSuccessful}
+      <TopCopy>{isSuccess ? successCopy : topCopy}</TopCopy>
+      {!isSuccess && formSubscription}
       <PrivacyCopyWraper>
         <Text tag="p">
           Our
           <PrivacyLink href={privacyURL}>Privacy Policy</PrivacyLink>
           describes how we handle and protect your information.
-          <br />
-          <br />
+        </Text>
+        <Text tag="p">
           If you are under 18, please make sure you have your parents permission
           before providing us with any personal details.
         </Text>
