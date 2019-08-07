@@ -15,18 +15,19 @@ body {
   padding: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
   text-transform: uppercase;
   font-family: 'Anton', Impact, sans-serif;
   margin-top: 0;
 }
 
+h2,
+h3,
+h4,
+h5,
 p,
 a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  margin-top: 0;
 }
