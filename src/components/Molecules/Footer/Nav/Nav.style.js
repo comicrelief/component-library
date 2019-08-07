@@ -162,11 +162,11 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
     line-height: 40px;
-    font-weight: 700;
+    font-weight: 800;
 
     &:focus,
     &:hover {
-      font-weight: 700;
+      font-weight: 800;
     }
 
     @media ${({ theme }) => theme.breakpoint('small')} {
