@@ -96,7 +96,7 @@ const data = require('../../../styleguide/data/data').default;
   image={data.image}
   imageAltText=""
   imageSet2={data.images}
-  image2={data.image}
+  ytIcon={data.image}
   imageAltText2=""
 >
   <Text tag="p" color="black" size="xxl">

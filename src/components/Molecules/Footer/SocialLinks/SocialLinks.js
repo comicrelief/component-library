@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import image1 from './assets/image1.svg';
-import image2 from './assets/image2.svg';
-import image3 from './assets/image3.svg';
-import image4 from './assets/image4.svg';
+import fbIcon from './assets/social-icon--fb.svg';
+import ytIcon from './assets/social-icon--yt.svg';
+import twIcon from './assets/social-icon--tw.svg';
+import igIcon from './assets/social-icon--ig.svg';
 
 const SocialIconList = styled.ul`
   width: 100%;
@@ -42,7 +42,7 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={image1} title="Facebook" />
+            <SocialIcon src={fbIcon} title="FB" />
           </a>
         </SocialIconItem>
 
@@ -52,7 +52,7 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={image2} title="Twitter" />
+            <SocialIcon src={ytIcon} title="Twitter" />
           </a>
         </SocialIconItem>
 
@@ -62,7 +62,7 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={image3} title="Youtube" />
+            <SocialIcon src={twIcon} title="Youtube" />
           </a>
         </SocialIconItem>
 
@@ -72,7 +72,7 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={image4} title="Instagram" />
+            <SocialIcon src={igIcon} title="Instagram" />
           </a>
         </SocialIconItem>
       </SocialIconList>

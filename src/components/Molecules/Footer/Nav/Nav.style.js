@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
-// import zIndex from '../../../../theme/shared/zIndex';
 
 const NavLinkClass = styled(Link)`
   border: 0;
