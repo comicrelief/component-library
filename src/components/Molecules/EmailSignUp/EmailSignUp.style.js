@@ -41,9 +41,6 @@ const PrivacyLink = styled(Link)`
 
 const InputField = styled(Input)`
   width: 100%;
-  input {
-    width: auto;
-  }
 `;
 
 const ButtonWrapper = styled.div`
