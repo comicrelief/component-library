@@ -20,24 +20,24 @@ it('renders a standard styled link correctly', () => {
       border-bottom: 2px solid #2C0230;
       font-weight: normal;
     }
-    
+
     .c0:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
-    
+
     <a
       className="c0"
       color="red"
       href="/test"
-      rel={false}
+      rel="false"
       target="_self"
       type="standard"
     >
       A standard link
     </a>
-   `);
+  `);
 });
 
 it('renders link styled as button correctly', () => {
@@ -60,7 +60,7 @@ it('renders link styled as button correctly', () => {
       background-color: #FFE400;
       color: #2C0230;
     }
-    
+
     .c0:hover {
       background-color: #FEFD5A;
       color: #2C0230;
@@ -71,12 +71,12 @@ it('renders link styled as button correctly', () => {
         padding: 16px 30px;
       }
     }
-    
+
     <a
       className="c0"
       color="yellow"
       href="/test"
-      rel={false}
+      rel="false"
       target="_self"
       type="button"
     >
