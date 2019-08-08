@@ -80,14 +80,15 @@ const FooterNav = ({ navItems }) => {
                 role="menu"
                 aria-label={group.title}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                className={`cols--${
-                  group.links.length % 2 === 0 && group.links.length > 2
-                    ? '2'
-                    : '1'
-                }`}
+                column={group.links.length % 2 === 0 && group.links.length > 2}
               >
                 {group.links.map(child => (
-                  <SubNavItem key={child.url}>
+                  <SubNavItem
+                    key={child.url}
+                    column={
+                      group.links.length % 2 === 0 && group.links.length > 2
+                    }
+                  >
                     <SubNavLink href={child.url} inline role="menuitem">
                       <Text>{child.title}</Text>
                     </SubNavLink>

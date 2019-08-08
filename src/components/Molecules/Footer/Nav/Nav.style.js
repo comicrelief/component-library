@@ -55,10 +55,8 @@ const SubNavMenu = styled.ul`
     max-height: none;
     height: auto;
 
-    &.cols--2 {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+    ${({ column }) =>
+      column === true ? 'flex-direction: row; flex-wrap: wrap;' : null};
 
     > li a {
       display: inline;
@@ -80,12 +78,9 @@ const SubNavItem = styled.li`
     height: auto;
     margin-top: 12px;
     padding: 0;
-
-    .cols--2 & {
-      width: 50%;
-    }
-  }
-
+    
+    ${({ column }) => (column === true ? 'width: 50%;' : null)};
+          
   a {
     background-color: inherit;
     height: auto;
@@ -146,12 +141,11 @@ const NavLink = styled(NavLinkClass)``;
 const NavItem = styled.li`
   position: relative;
   font-weight: 700;
-  margin-bottom: 45px;
-  margin: 0 1.5%;
-  margin-bottom: 45px;
+  margin: 0 1.5% 45px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: calc(100% / 3);
+    /* Minus 9% to remove 3 x 1.5% margins from previous rule */
+    width: calc((100% - 9%) / 3);
   }
 
   a {
