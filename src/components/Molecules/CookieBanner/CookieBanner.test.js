@@ -145,7 +145,7 @@ it('renders correctly', () => {
           color="white"
           href="/comic"
           onClick={[Function]}
-          target="_self"
+          target="_blank"
           type="button"
         >
           Accept

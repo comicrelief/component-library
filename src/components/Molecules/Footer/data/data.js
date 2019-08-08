@@ -8,13 +8,11 @@ export default {
       links: [
         {
           title: 'Get the newsletter',
-          url: 'https://www.comicrelief.com/#',
-          class: null
+          url: 'https://www.comicrelief.com/#'
         },
         {
           title: 'How we contact you',
-          url: 'https://www.comicrelief.com/update-your-preferences',
-          class: null
+          url: 'https://www.comicrelief.com/update-your-preferences'
         }
       ]
     },
@@ -25,24 +23,20 @@ export default {
       links: [
         {
           title: 'Contact us',
-          url: 'https://www.comicrelief.com/contact-us',
-          class: null
+          url: 'https://www.comicrelief.com/contact-us'
         },
         {
           title: 'Your Gift Aid',
-          url: 'https://giftaid.comicrelief.com/update',
-          class: null
+          url: 'https://giftaid.comicrelief.com/update'
         },
         {
           title: 'FAQs',
-          url: 'https://www.comicrelief.com/frequently-asked-questions',
-          class: null
+          url: 'https://www.comicrelief.com/frequently-asked-questions'
         },
         {
           title: 'Red Nose Day 2019 FAQs',
           url:
-            'https://www.comicrelief.com/red-nose-days-frequently-asked-questions',
-          class: null
+            'https://www.comicrelief.com/red-nose-days-frequently-asked-questions'
         }
       ]
     },
@@ -53,33 +47,27 @@ export default {
       links: [
         {
           title: 'Mission',
-          url: 'https://www.comicrelief.com/about-comic-relief',
-          class: null
+          url: 'https://www.comicrelief.com/about-comic-relief'
         },
         {
           title: 'Our history',
-          url: 'https://www.comicrelief.com/about-comic-relief/history',
-          class: null
+          url: 'https://www.comicrelief.com/about-comic-relief/history'
         },
         {
           title: 'Finances',
-          url: 'https://www.comicrelief.com/about-comic-relief/finances',
-          class: null
+          url: 'https://www.comicrelief.com/about-comic-relief/finances'
         },
         {
           title: 'Partners',
-          url: 'https://www.comicrelief.com/working-with-us',
-          class: null
+          url: 'https://www.comicrelief.com/working-with-us'
         },
         {
           title: 'Meet the team',
-          url: 'https://www.comicrelief.com/about-comic-relief/meet-the-team',
-          class: null
+          url: 'https://www.comicrelief.com/about-comic-relief/meet-the-team'
         },
         {
           title: 'Sport Relief',
-          url: 'https://www.sportrelief.com/',
-          class: null
+          url: 'https://www.sportrelief.com/'
         }
       ]
     },
@@ -90,13 +78,11 @@ export default {
       links: [
         {
           title: 'Working at Comic Relief',
-          url: 'https://www.comicrelief.com/careers',
-          class: null
+          url: 'https://www.comicrelief.com/careers'
         },
         {
           title: 'Open roles',
-          url: 'https://app.beapplied.com/org/comic-relief',
-          class: null
+          url: 'https://app.beapplied.com/org/comic-relief'
         }
       ]
     },
@@ -107,13 +93,11 @@ export default {
       links: [
         {
           title: 'News',
-          url: 'https://www.comicrelief.com/news',
-          class: null
+          url: 'https://www.comicrelief.com/news'
         },
         {
           title: 'Press area',
-          url: 'https://www.comicrelief.com/press-releases',
-          class: null
+          url: 'https://www.comicrelief.com/press-releases'
         }
       ]
     },
@@ -124,28 +108,23 @@ export default {
       links: [
         {
           title: 'Privacy policy',
-          url: 'https://www.comicrelief.com/privacy-notice',
-          class: null
+          url: 'https://www.comicrelief.com/privacy-notice'
         },
         {
           title: 'Terms of use',
-          url: 'https://www.comicrelief.com/terms-of-use',
-          class: null
+          url: 'https://www.comicrelief.com/terms-of-use'
         },
         {
-          title: 'Cookies',
-          url: 'https://www.comicrelief.com/cookies-policy',
-          class: null
+          title: 'Test internal link',
+          url: '/test-internal-link'
         },
         {
-          title: 'Positive practices',
-          url: 'https://www.comicrelief.com/positive-practices',
-          class: null
+          title: 'Test whitelisted external link',
+          url: 'https://www.sportrelief.com'
         },
         {
-          title: 'Text to donate terms of use',
-          url: 'https://www.comicrelief.com/legal/sms',
-          class: null
+          title: 'Test non-whitelisted external link',
+          url: 'http://bing.com'
         }
       ]
     }

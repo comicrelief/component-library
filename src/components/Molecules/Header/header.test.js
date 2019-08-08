@@ -1075,7 +1075,7 @@ it('renders correctly', () => {
             className="c22"
             color="green"
             href="/donation"
-            target="_self"
+            target="_blank"
             type="button"
           >
             Donate

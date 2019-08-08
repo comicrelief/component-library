@@ -475,7 +475,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -498,7 +497,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/#"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -518,7 +516,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -543,7 +540,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -566,7 +562,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/contact-us"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -586,7 +581,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -606,7 +600,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -626,7 +619,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -651,7 +643,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -674,7 +665,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -694,7 +684,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -714,7 +703,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -734,7 +722,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -754,7 +741,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -774,7 +760,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.sportrelief.com/"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -799,7 +784,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -822,7 +806,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/careers"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -842,9 +825,8 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
-                    rel={false}
                     role="menuitem"
-                    target="_self"
+                    target="_blank"
                     type="standard"
                   >
                     <span
@@ -867,7 +849,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -890,7 +871,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/news"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -910,7 +890,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -935,7 +914,6 @@ it('renders correctly', () => {
                 color="red"
                 href="/"
                 onClick={[Function]}
-                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -958,7 +936,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/privacy-notice"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -978,7 +955,6 @@ it('renders correctly', () => {
                     className="c13 c10"
                     color="red"
                     href="https://www.comicrelief.com/terms-of-use"
-                    rel={false}
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -997,17 +973,16 @@ it('renders correctly', () => {
                   <a
                     className="c13 c10"
                     color="red"
-                    href="https://www.comicrelief.com/cookies-policy"
-                    rel={false}
+                    href="/test-internal-link"
                     role="menuitem"
-                    target="_self"
+                    target="_blank"
                     type="standard"
                   >
                     <span
                       className="c6"
                       color="inherit"
                     >
-                      Cookies
+                      Test internal link
                     </span>
                   </a>
                 </li>
@@ -1017,8 +992,7 @@ it('renders correctly', () => {
                   <a
                     className="c13 c10"
                     color="red"
-                    href="https://www.comicrelief.com/positive-practices"
-                    rel={false}
+                    href="https://www.sportrelief.com"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1027,7 +1001,7 @@ it('renders correctly', () => {
                       className="c6"
                       color="inherit"
                     >
-                      Positive practices
+                      Test whitelisted external link
                     </span>
                   </a>
                 </li>
@@ -1037,17 +1011,16 @@ it('renders correctly', () => {
                   <a
                     className="c13 c10"
                     color="red"
-                    href="https://www.comicrelief.com/legal/sms"
-                    rel={false}
+                    href="http://bing.com"
                     role="menuitem"
-                    target="_self"
+                    target="_blank"
                     type="standard"
                   >
                     <span
                       className="c6"
                       color="inherit"
                     >
-                      Text to donate terms of use
+                      Test non-whitelisted external link
                     </span>
                   </a>
                 </li>
