@@ -17,19 +17,19 @@ it('renders correctly', () => {
       text-transform: inherit;
     }
 
-    .c18 {
+    .c20 {
       color: #FFFFFF;
       text-transform: inherit;
     }
 
-    .c16 {
+    .c18 {
       object-fit: cover;
       width: auto;
       display: block;
       height: auto;
     }
 
-    .c15 {
+    .c17 {
       display: inline-block;
       width: 70px;
       height: 70px;
@@ -127,6 +127,29 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
+    .c14 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: max-height 0.5s ease;
+      transition: max-height 0.5s ease;
+      max-height: 0px;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      list-style: none outside;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c14 > li a {
+      display: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
     .c12 {
       height: 40px;
       width: 100%;
@@ -134,24 +157,11 @@ it('renders correctly', () => {
       padding: 8px 0;
     }
 
-    .c12 a {
+    .c15 {
+      height: 40px;
+      width: 100%;
       background-color: inherit;
-      height: auto;
-    }
-
-    .c12 a:after {
-      content: none !important;
-    }
-
-    .c12 a:hover,
-    .c12 a:focus {
-      border-bottom: 2px solid #fff;
-    }
-
-    .c12 a:hover span,
-    .c12 a:focus span {
-      border-bottom: 0;
-      padding-bottom: 2px;
+      padding: 8px 0;
     }
 
     .c13 {
@@ -204,9 +214,7 @@ it('renders correctly', () => {
     .c8 {
       position: relative;
       font-weight: 700;
-      margin-bottom: 45px;
-      margin: 0 1.5%;
-      margin-bottom: 45px;
+      margin: 0 1.5% 45px;
     }
 
     .c8 a {
@@ -261,28 +269,28 @@ it('renders correctly', () => {
       margin: 0 auto;
     }
 
-    .c14 {
+    .c16 {
       display: block;
       width: 100%;
       height: 100%;
       margin: 0 0 25px;
     }
 
-    .c17 {
+    .c19 {
       display: block;
       width: 100%;
       height: 100%;
       text-align: left;
     }
 
-    .c17 p {
+    .c19 p {
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 5px;
     }
 
     @media (min-width:740px) {
-      .c15 {
+      .c17 {
         width: 70px;
         height: 70px;
       }
@@ -300,7 +308,16 @@ it('renders correctly', () => {
         height: auto;
       }
 
-      .c11.cols--2 {
+      .c11 > li a {
+        display: inline;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c14 {
+        max-height: none;
+        height: auto;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
@@ -309,7 +326,7 @@ it('renders correctly', () => {
         flex-wrap: wrap;
       }
 
-      .c11 > li a {
+      .c14 > li a {
         display: inline;
         line-height: 24px;
       }
@@ -322,8 +339,53 @@ it('renders correctly', () => {
         padding: 0;
       }
 
-      .cols--2 .c12 {
+      .c12 a {
+        background-color: inherit;
+        height: auto;
+      }
+
+      .c12 a:after {
+        content: none !important;
+      }
+
+      .c12 a:hover,
+      .c12 a:focus {
+        border-bottom: 2px solid #fff;
+      }
+
+      .c12 a:hover span,
+      .c12 a:focus span {
+        border-bottom: 0;
+        padding-bottom: 2px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c15 {
+        height: auto;
+        margin-top: 12px;
+        padding: 0;
         width: 50%;
+      }
+
+      .c15 a {
+        background-color: inherit;
+        height: auto;
+      }
+
+      .c15 a:after {
+        content: none !important;
+      }
+
+      .c15 a:hover,
+      .c15 a:focus {
+        border-bottom: 2px solid #fff;
+      }
+
+      .c15 a:hover span,
+      .c15 a:focus span {
+        border-bottom: 0;
+        padding-bottom: 2px;
       }
     }
 
@@ -341,7 +403,7 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c8 {
-        width: 30.3%;
+        width: calc((100% - 9%) / 3);
       }
     }
 
@@ -370,7 +432,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c17 p {
+      .c19 p {
         font-size: 16px;
         line-height: 27px;
       }
@@ -487,7 +549,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Hear from us"
-                className="cols--1 c11"
+                className="c11"
                 role="menu"
               >
                 <li
@@ -552,11 +614,11 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Get in touch"
-                className="cols--2 c11"
+                className="c14"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -575,7 +637,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -594,7 +656,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -613,7 +675,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -655,11 +717,11 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="About us"
-                className="cols--2 c11"
+                className="c14"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -678,7 +740,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -697,7 +759,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -716,7 +778,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -735,7 +797,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -754,7 +816,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c15"
                 >
                   <a
                     className="c13 c10"
@@ -796,7 +858,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Careers"
-                className="cols--1 c11"
+                className="c11"
                 role="menu"
               >
                 <li
@@ -861,7 +923,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="News"
-                className="cols--1 c11"
+                className="c11"
                 role="menu"
               >
                 <li
@@ -926,7 +988,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Legal"
-                className="cols--1 c11"
+                className="c11"
                 role="menu"
               >
                 <li
@@ -975,7 +1037,7 @@ it('renders correctly', () => {
                     color="red"
                     href="/test-internal-link"
                     role="menuitem"
-                    target="_blank"
+                    target="_self"
                     type="standard"
                   >
                     <span
@@ -1029,26 +1091,26 @@ it('renders correctly', () => {
           </ul>
         </nav>
         <div
-          className="c14"
+          className="c16"
         >
           <div
             aria-label="logo"
-            className="c15"
+            className="c17"
             rotate={1}
           >
             <img
               alt="Comic Relief logo"
               aria-label="logo"
-              className="c16"
+              className="c18"
               src="mock.asset"
             />
           </div>
         </div>
         <div
-          className="c17"
+          className="c19"
         >
           <p
-            className="c18"
+            className="c20"
             color="white"
           >
             Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
