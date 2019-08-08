@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SocialLinks from './SocialLinks/SocialLinks';
 import Text from '../../Atoms/Text/Text';
-
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
+import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 
 import {
   FooterWrapper,
   InnerWrapper,
   FooterBranding,
-  FooterCopyright
+  FooterCopyright,
+  SocialIconWrapper
 } from './Footer.style';
 
 const Footer = ({ navItems, footerCopy, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <SocialLinks />
+        <SocialIconWrapper>
+          <SocialIcons campaign="comicrelief" />
+        </SocialIconWrapper>
 
         <FooterNav navItems={navItems} />
 

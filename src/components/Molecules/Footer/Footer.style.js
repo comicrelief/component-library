@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: center;
   line-height: initial;
-  background: ${({ theme }) => theme.color('black')};
+  background: #000;
   padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
   position: relative;
 
@@ -48,4 +48,34 @@ const FooterCopyright = styled.div`
   }
 `;
 
-export { FooterWrapper, InnerWrapper, FooterCopyright, FooterBranding };
+const SocialIconWrapper = styled.div`
+  ul {
+    margin: 0 auto ${spacing('l')};
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      margin-bottom: ${spacing('xl')};
+    }
+
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    li a {
+      display: block;
+      transition: opacity 0.2s;
+
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
+    }
+  }
+`;
+
+export {
+  FooterWrapper,
+  InnerWrapper,
+  FooterCopyright,
+  FooterBranding,
+  SocialIconWrapper
+};

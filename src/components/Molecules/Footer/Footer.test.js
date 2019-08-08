@@ -13,23 +13,23 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c8 {
       text-transform: inherit;
     }
 
-    .c20 {
+    .c22 {
       color: #FFFFFF;
       text-transform: inherit;
     }
 
-    .c18 {
+    .c20 {
       object-fit: cover;
       width: auto;
       display: block;
       height: auto;
     }
 
-    .c17 {
+    .c19 {
       display: inline-block;
       width: 70px;
       height: 70px;
@@ -38,7 +38,7 @@ it('renders correctly', () => {
       transform: rotate(-14deg);
     }
 
-    .c10 {
+    .c12 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -48,48 +48,42 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c10:hover {
+    .c12:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
-    .c2 {
+    .c5 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .c6 {
       width: 100%;
-      margin: 0 0 50px;
-      padding: 0;
     }
 
     .c3 {
-      width: auto;
-      height: auto;
-      display: inline-block;
-      margin: 5px 10px 0;
-    }
-
-    .c3 a {
-      display: block;
-      -webkit-transition: 0.5s opacity;
-      transition: 0.5s opacity;
-    }
-
-    .c3 a:focus,
-    .c3 a:hover {
-      opacity: 0.6;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      list-style-type: none;
     }
 
     .c4 {
-      width: 58px;
-      height: auto;
+      width: 80px;
+      padding: 10px;
     }
 
-    .c5 {
+    .c7 {
       display: block;
       width: 100%;
       text-align: left;
     }
 
-    .c5 > h2 {
+    .c7 > h2 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -104,7 +98,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c11 {
+    .c13 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -121,44 +115,51 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c11 > li a {
+    .c13 > li a {
       display: none;
       font-size: 15px;
       font-weight: 500;
     }
 
-    .c11 > li a:after {
+    .c13 > li a:after {
+      content: none;
+    }
+
+    .c16 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: max-height 0.5s ease;
+      transition: max-height 0.5s ease;
+      max-height: 0px;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      list-style: none outside;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c16 > li a {
+      display: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .c16 > li a:after {
       content: none;
     }
 
     .c14 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-transition: max-height 0.5s ease;
-      transition: max-height 0.5s ease;
-      max-height: 0px;
-      overflow: hidden;
-      padding: 0;
-      position: relative;
-      list-style: none outside;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
+      height: 40px;
+      width: 100%;
+      background-color: inherit;
+      padding: 8px 0;
     }
 
-    .c14 > li a {
-      display: none;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .c14 > li a:after {
-      content: none;
-    }
-
-    .c12 {
+    .c17 {
       height: 40px;
       width: 100%;
       background-color: inherit;
@@ -166,13 +167,6 @@ it('renders correctly', () => {
     }
 
     .c15 {
-      height: 40px;
-      width: 100%;
-      background-color: inherit;
-      padding: 8px 0;
-    }
-
-    .c13 {
       border: 0;
       height: 46px;
       width: 100%;
@@ -184,25 +178,25 @@ it('renders correctly', () => {
       position: relative;
     }
 
-    .c13:hover,
-    .c13:focus {
+    .c15:hover,
+    .c15:focus {
       color: #FFFFFF;
       border-bottom: none;
       font-weight: 500;
     }
 
-    .c13:hover,
-    .c13:focus {
+    .c15:hover,
+    .c15:focus {
       font-weight: 700;
     }
 
-    .c7 {
+    .c9 {
       background-color: inherit list-style:none outside;
       padding: 0;
       margin: 0;
     }
 
-    .c9 {
+    .c11 {
       border: 0;
       height: 46px;
       width: 100%;
@@ -210,20 +204,20 @@ it('renders correctly', () => {
       color: #FFFFFF;
     }
 
-    .c9:hover,
-    .c9:focus {
+    .c11:hover,
+    .c11:focus {
       color: #FFFFFF;
       border-bottom: none;
       font-weight: 500;
     }
 
-    .c8 {
+    .c10 {
       position: relative;
       font-weight: 700;
       margin: 0 1.5% 45px;
     }
 
-    .c8 a {
+    .c10 a {
       width: auto;
       padding: 0;
       height: auto;
@@ -234,12 +228,12 @@ it('renders correctly', () => {
       font-weight: 800;
     }
 
-    .c8 a:focus,
-    .c8 a:hover {
+    .c10 a:focus,
+    .c10 a:hover {
       font-weight: 800;
     }
 
-    .c8 a:after {
+    .c10 a:after {
       content: '\\2303';
       position: absolute;
       font-family: Arial;
@@ -262,7 +256,7 @@ it('renders correctly', () => {
     .c0 {
       text-align: center;
       line-height: initial;
-      background: #2C0230;
+      background: #000;
       padding: 4rem 1rem 2rem;
       position: relative;
     }
@@ -275,53 +269,71 @@ it('renders correctly', () => {
       margin: 0 auto;
     }
 
-    .c16 {
+    .c18 {
       display: block;
       width: 100%;
       height: 100%;
       margin: 0 0 25px;
     }
 
-    .c19 {
+    .c21 {
       display: block;
       width: 100%;
       height: 100%;
       text-align: left;
     }
 
-    .c19 p {
+    .c21 p {
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 5px;
     }
 
+    .c2 ul {
+      margin: 0 auto 2rem;
+      padding: 0;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .c2 ul li a {
+      display: block;
+      -webkit-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    .c2 ul li a:hover,
+    .c2 ul li a:focus {
+      opacity: 0.6;
+    }
+
     @media (min-width:740px) {
-      .c17 {
+      .c19 {
         width: 70px;
         height: 70px;
       }
     }
 
-    @media (min-width:1024px) {
-      .c2 {
-        margin: 0 0 90px;
-      }
-    }
-
     @media (min-width:740px) {
-      .c11 {
+      .c13 {
         max-height: none;
         height: auto;
       }
 
-      .c11 > li a {
+      .c13 > li a {
         display: inline;
         line-height: 24px;
       }
     }
 
     @media (min-width:740px) {
-      .c14 {
+      .c16 {
         max-height: none;
         height: auto;
         -webkit-flex-direction: row;
@@ -332,71 +344,71 @@ it('renders correctly', () => {
         flex-wrap: wrap;
       }
 
-      .c14 > li a {
+      .c16 > li a {
         display: inline;
         line-height: 24px;
       }
     }
 
     @media (min-width:740px) {
-      .c12 {
+      .c14 {
         height: auto;
         margin-top: 12px;
         padding: 0;
       }
 
-      .c12 a {
+      .c14 a {
         background-color: inherit;
         height: auto;
       }
 
-      .c12 a:after {
+      .c14 a:after {
         content: none !important;
       }
 
-      .c12 a:hover,
-      .c12 a:focus {
+      .c14 a:hover,
+      .c14 a:focus {
         border-bottom: 2px solid #fff;
       }
 
-      .c12 a:hover span,
-      .c12 a:focus span {
+      .c14 a:hover span,
+      .c14 a:focus span {
         border-bottom: 0;
         padding-bottom: 2px;
       }
     }
 
     @media (min-width:740px) {
-      .c15 {
+      .c17 {
         height: auto;
         margin-top: 12px;
         padding: 0;
         width: 50%;
       }
 
-      .c15 a {
+      .c17 a {
         background-color: inherit;
         height: auto;
       }
 
-      .c15 a:after {
+      .c17 a:after {
         content: none !important;
       }
 
-      .c15 a:hover,
-      .c15 a:focus {
+      .c17 a:hover,
+      .c17 a:focus {
         border-bottom: 2px solid #fff;
       }
 
-      .c15 a:hover span,
-      .c15 a:focus span {
+      .c17 a:hover span,
+      .c17 a:focus span {
         border-bottom: 0;
         padding-bottom: 2px;
       }
     }
 
     @media (min-width:740px) {
-      .c7 {
+      .c9 {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -408,25 +420,25 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c10 {
         width: calc((100% - 9%) / 3);
       }
     }
 
     @media (min-width:740px) {
-      .c8 a {
+      .c10 a {
         font-size: 20px;
         line-height: 40px;
       }
     }
 
     @media (min-width:740px) {
-      .c8 a {
+      .c10 a {
         cursor: default;
         display: inline;
       }
 
-      .c8 a:after {
+      .c10 a:after {
         content: none;
       }
     }
@@ -438,9 +450,15 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c19 p {
+      .c21 p {
         font-size: 16px;
         line-height: 27px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 ul {
+        margin-bottom: 4rem;
       }
     }
 
@@ -451,67 +469,69 @@ it('renders correctly', () => {
       <div
         className="c1"
       >
-        <div>
+        <div
+          className="c2"
+        >
           <ul
-            className="c2"
+            className="c3"
           >
             <li
-              className="c3"
+              className="c4"
             >
               <a
+                className="c5"
                 href="https://www.facebook.com/comicrelief"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 <img
-                  className="c4"
+                  alt="facebook"
+                  className="c6"
                   src="mock.asset"
-                  title="FB"
                 />
               </a>
             </li>
             <li
-              className="c3"
+              className="c4"
             >
               <a
+                className="c5"
                 href="https://twitter.com/comicrelief"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 <img
-                  className="c4"
+                  alt="twitter"
+                  className="c6"
                   src="mock.asset"
-                  title="Twitter"
                 />
               </a>
             </li>
             <li
-              className="c3"
+              className="c4"
             >
               <a
+                className="c5"
                 href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 <img
-                  className="c4"
+                  alt="youtube"
+                  className="c6"
                   src="mock.asset"
-                  title="Youtube"
                 />
               </a>
             </li>
             <li
-              className="c3"
+              className="c4"
             >
               <a
-                href="https://www.instagram.com/comicrelief/"
-                rel="noopener noreferrer"
+                className="c5"
+                href="https://www.instagram.com/comicrelief"
                 target="_blank"
               >
                 <img
-                  className="c4"
+                  alt="instagram"
+                  className="c6"
                   src="mock.asset"
-                  title="Instagram"
                 />
               </a>
             </li>
@@ -519,27 +539,27 @@ it('renders correctly', () => {
         </div>
         <nav
           aria-labelledby="main-menu"
-          className="c5"
+          className="c7"
           role="navigation"
         >
           <h2
-            className="c6"
+            className="c8"
             color="inherit"
             id="footer-menu"
           >
             Footer navigation
           </h2>
           <ul
-            className="c7"
+            className="c9"
             role="menubar"
           >
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -547,7 +567,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   Hear from us
@@ -555,14 +575,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Hear from us"
-                className="c11"
+                className="c13"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/#"
                     role="menuitem"
@@ -570,7 +590,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Get the newsletter
@@ -578,10 +598,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
                     role="menuitem"
@@ -589,7 +609,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       How we contact you
@@ -599,12 +619,12 @@ it('renders correctly', () => {
               </ul>
             </li>
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -612,7 +632,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   Get in touch
@@ -620,14 +640,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Get in touch"
-                className="c14"
+                className="c16"
                 role="menu"
               >
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/contact-us"
                     role="menuitem"
@@ -635,7 +655,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Contact us
@@ -643,10 +663,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
                     role="menuitem"
@@ -654,7 +674,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Your Gift Aid
@@ -662,10 +682,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
                     role="menuitem"
@@ -673,7 +693,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       FAQs
@@ -681,10 +701,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                     role="menuitem"
@@ -692,7 +712,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Red Nose Day 2019 FAQs
@@ -702,12 +722,12 @@ it('renders correctly', () => {
               </ul>
             </li>
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -715,7 +735,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   About us
@@ -723,14 +743,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="About us"
-                className="c14"
+                className="c16"
                 role="menu"
               >
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
                     role="menuitem"
@@ -738,7 +758,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Mission
@@ -746,10 +766,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
                     role="menuitem"
@@ -757,7 +777,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Our history
@@ -765,10 +785,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
                     role="menuitem"
@@ -776,7 +796,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Finances
@@ -784,10 +804,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
                     role="menuitem"
@@ -795,7 +815,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Partners
@@ -803,10 +823,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                     role="menuitem"
@@ -814,7 +834,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Meet the team
@@ -822,10 +842,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c15"
+                  className="c17"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.sportrelief.com/"
                     role="menuitem"
@@ -833,7 +853,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Sport Relief
@@ -843,12 +863,12 @@ it('renders correctly', () => {
               </ul>
             </li>
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -856,7 +876,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   Careers
@@ -864,14 +884,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Careers"
-                className="c11"
+                className="c13"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/careers"
                     role="menuitem"
@@ -879,7 +899,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Working at Comic Relief
@@ -887,10 +907,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
@@ -898,7 +918,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Open roles
@@ -908,12 +928,12 @@ it('renders correctly', () => {
               </ul>
             </li>
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -921,7 +941,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   News
@@ -929,14 +949,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="News"
-                className="c11"
+                className="c13"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/news"
                     role="menuitem"
@@ -944,7 +964,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       News
@@ -952,10 +972,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
                     role="menuitem"
@@ -963,7 +983,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Press area
@@ -973,12 +993,12 @@ it('renders correctly', () => {
               </ul>
             </li>
             <li
-              className="c8"
+              className="c10"
               role="none"
             >
               <a
                 aria-haspopup="true"
-                className="c9 c10"
+                className="c11 c12"
                 color="red"
                 href="/"
                 onClick={[Function]}
@@ -986,7 +1006,7 @@ it('renders correctly', () => {
                 type="standard"
               >
                 <span
-                  className="c6"
+                  className="c8"
                   color="inherit"
                 >
                   Legal
@@ -994,14 +1014,14 @@ it('renders correctly', () => {
               </a>
               <ul
                 aria-label="Legal"
-                className="c11"
+                className="c13"
                 role="menu"
               >
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/privacy-notice"
                     role="menuitem"
@@ -1009,7 +1029,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Privacy policy
@@ -1017,10 +1037,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.comicrelief.com/terms-of-use"
                     role="menuitem"
@@ -1028,7 +1048,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Terms of use
@@ -1036,10 +1056,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="/test-internal-link"
                     role="menuitem"
@@ -1047,7 +1067,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Test internal link
@@ -1055,10 +1075,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1066,7 +1086,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Test whitelisted external link
@@ -1074,10 +1094,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                 >
                   <a
-                    className="c13 c10"
+                    className="c15 c12"
                     color="red"
                     href="http://bing.com"
                     role="menuitem"
@@ -1085,7 +1105,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c6"
+                      className="c8"
                       color="inherit"
                     >
                       Test non-whitelisted external link
@@ -1097,26 +1117,26 @@ it('renders correctly', () => {
           </ul>
         </nav>
         <div
-          className="c16"
+          className="c18"
         >
           <div
             aria-label="logo"
-            className="c17"
+            className="c19"
             rotate={1}
           >
             <img
               alt="Comic Relief logo"
               aria-label="logo"
-              className="c18"
+              className="c20"
               src="mock.asset"
             />
           </div>
         </div>
         <div
-          className="c19"
+          className="c21"
         >
           <p
-            className="c20"
+            className="c22"
             color="white"
           >
             Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
