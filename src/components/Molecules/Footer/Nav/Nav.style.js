@@ -151,7 +151,7 @@ const NavItem = styled.li`
   margin-bottom: 45px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 30.3%;
+    width: calc(100% / 3);
   }
 
   a {
