@@ -13,12 +13,12 @@ import {
   SocialIconWrapper
 } from './Footer.style';
 
-const Footer = ({ navItems, footerCopy, ...rest }) => {
+const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
         <SocialIconWrapper>
-          <SocialIcons campaign="comicrelief" />
+          <SocialIcons campaign={campaign} />
         </SocialIconWrapper>
 
         <FooterNav navItems={navItems} />
@@ -39,12 +39,14 @@ const Footer = ({ navItems, footerCopy, ...rest }) => {
 
 Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  footerCopy: PropTypes.string
+  footerCopy: PropTypes.string,
+  campaign: PropTypes.string
 };
 
 Footer.defaultProps = {
   navItems: {},
-  footerCopy: ''
+  footerCopy: '',
+  campaign: 'comicrelief'
 };
 
 export default Footer;
