@@ -6,7 +6,7 @@ import StyledLink from './Link.style';
 import whiteListed from '../../../utils/whiteListed';
 
 const domainRegEx = new RegExp(
-  '(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]'
+  '(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]'
 );
 
 let window = '';
