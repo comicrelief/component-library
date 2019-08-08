@@ -19,18 +19,18 @@ const LogoWrapper = styled.div.attrs(() => ({
   'aria-label': 'logo'
 }))`
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: ${props => props.sizeSm};
+  height: ${props => props.sizeSm};
   transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   @media (min-width: 740px) {
-    width: 60px;
-    height: 60px;
+    width: ${props => props.sizeMd};
+    height: ${props => props.sizeMd};
   }
 `;
 
-const Logo = ({ rotate }) => {
+const Logo = ({ rotate, sizeSm, sizeMd }) => {
   return (
-    <LogoWrapper rotate={rotate ? 1 : 0}>
+    <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
       <Image src={image} alt="Comic Relief logo" aria-label="logo" />
     </LogoWrapper>
   );
@@ -38,11 +38,15 @@ const Logo = ({ rotate }) => {
 
 Logo.propTypes = {
   /** Rotate logo */
-  rotate: PropTypes.bool
+  rotate: PropTypes.bool,
+  sizeSm: PropTypes.string,
+  sizeMd: PropTypes.string
 };
 
 Logo.defaultProps = {
-  rotate: false
+  rotate: false,
+  sizeSm: '50px',
+  sizeMd: '60px'
 };
 
 export default Logo;

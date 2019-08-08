@@ -13,6 +13,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
