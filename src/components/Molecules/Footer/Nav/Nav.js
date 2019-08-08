@@ -19,7 +19,7 @@ const FooterNav = ({ navItems }) => {
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  // Detect window screen size
+  // Detect browser width size
   const isSmallBreakpoint = window.innerWidth < sizes.small;
 
   /**
