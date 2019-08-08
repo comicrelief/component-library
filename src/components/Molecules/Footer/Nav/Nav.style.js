@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import spacing from '../../../../theme/shared/spacings';
 
 const NavLinkClass = styled(Link)`
   border: 0;
-  padding: 17px 20px;
   height: 46px;
   width: 100%;
   background-color: ${({ theme }) => theme.color('deep_violet')};
@@ -49,6 +48,9 @@ const SubNavMenu = styled.ul`
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
     font-size: 15px;
     font-weight: 500;
+    &:after {
+      content: none;
+    }
   }
 
   @media ${({ theme }) => theme.breakpoint('small')} {

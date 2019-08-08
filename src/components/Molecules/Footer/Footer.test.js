@@ -127,6 +127,10 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
+    .c11 > li a:after {
+      content: none;
+    }
+
     .c14 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -150,6 +154,10 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
+    .c14 > li a:after {
+      content: none;
+    }
+
     .c12 {
       height: 40px;
       width: 100%;
@@ -166,7 +174,6 @@ it('renders correctly', () => {
 
     .c13 {
       border: 0;
-      padding: 17px 20px;
       height: 46px;
       width: 100%;
       background-color: #2C0230;
@@ -197,7 +204,6 @@ it('renders correctly', () => {
 
     .c9 {
       border: 0;
-      padding: 17px 20px;
       height: 46px;
       width: 100%;
       background-color: #2C0230;
@@ -257,7 +263,7 @@ it('renders correctly', () => {
       text-align: center;
       line-height: initial;
       background: #2C0230;
-      padding: 65px 10px 40px;
+      padding: 4rem 1rem 2rem;
       position: relative;
     }
 
@@ -427,7 +433,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c0 {
-        padding: 79px 35px 60px;
+        padding: 4rem 2rem 4rem;
       }
     }
 

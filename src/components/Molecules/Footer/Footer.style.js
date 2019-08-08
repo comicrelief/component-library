@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacings';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -6,11 +7,11 @@ const FooterWrapper = styled.footer.attrs(() => ({
   text-align: center;
   line-height: initial;
   background: ${({ theme }) => theme.color('black')};
-  padding: 65px 10px 40px;
+  padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
   position: relative;
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 79px 35px 60px;
+    padding: ${spacing('xl')} ${spacing('l')} ${spacing('xl')};
   }
 `;
 
