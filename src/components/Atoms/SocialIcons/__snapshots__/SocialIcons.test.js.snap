@@ -5,6 +5,14 @@ exports[`renders correctly with Comic Relief links 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {
@@ -17,11 +25,27 @@ exports[`renders correctly with Comic Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 0 auto 2rem;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c1 {
   width: 80px;
   padding: 10px;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    margin-bottom: 4rem;
+  }
 }
 
 <ul
@@ -33,7 +57,9 @@ exports[`renders correctly with Comic Relief links 1`] = `
     <a
       className="c2"
       href="https://www.facebook.com/comicrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Facebook page"
     >
       <img
         alt="facebook"
@@ -48,7 +74,9 @@ exports[`renders correctly with Comic Relief links 1`] = `
     <a
       className="c2"
       href="https://twitter.com/comicrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Twitter account"
     >
       <img
         alt="twitter"
@@ -63,7 +91,9 @@ exports[`renders correctly with Comic Relief links 1`] = `
     <a
       className="c2"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our YouTube channel"
     >
       <img
         alt="youtube"
@@ -78,7 +108,9 @@ exports[`renders correctly with Comic Relief links 1`] = `
     <a
       className="c2"
       href="https://www.instagram.com/comicrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Instagram account"
     >
       <img
         alt="instagram"
@@ -95,6 +127,14 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {
@@ -107,11 +147,27 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 0 auto 2rem;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c1 {
   width: 80px;
   padding: 10px;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    margin-bottom: 4rem;
+  }
 }
 
 <ul
@@ -123,7 +179,9 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     <a
       className="c2"
       href="https://www.facebook.com/rednoseday"
+      rel="noopener noreferrer"
       target="_self"
+      title="Check out our Facebook page"
     >
       <img
         alt="facebook"
@@ -138,7 +196,9 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     <a
       className="c2"
       href="https://twitter.com/rednoseday"
+      rel="noopener noreferrer"
       target="_self"
+      title="Check out our Twitter account"
     >
       <img
         alt="twitter"
@@ -153,7 +213,9 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     <a
       className="c2"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
       target="_self"
+      title="Check out our YouTube channel"
     >
       <img
         alt="youtube"
@@ -168,7 +230,9 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     <a
       className="c2"
       href="https://www.instagram.com/rednoseday"
+      rel="noopener noreferrer"
       target="_self"
+      title="Check out our Instagram account"
     >
       <img
         alt="instagram"
@@ -185,6 +249,14 @@ exports[`renders correctly with Sport Relief links 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {
@@ -197,11 +269,27 @@ exports[`renders correctly with Sport Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 0 auto 2rem;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c1 {
   width: 80px;
   padding: 10px;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    margin-bottom: 4rem;
+  }
 }
 
 <ul
@@ -213,7 +301,9 @@ exports[`renders correctly with Sport Relief links 1`] = `
     <a
       className="c2"
       href="https://www.facebook.com/sportrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Facebook page"
     >
       <img
         alt="facebook"
@@ -228,7 +318,9 @@ exports[`renders correctly with Sport Relief links 1`] = `
     <a
       className="c2"
       href="https://twitter.com/sportrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Twitter account"
     >
       <img
         alt="twitter"
@@ -243,7 +335,9 @@ exports[`renders correctly with Sport Relief links 1`] = `
     <a
       className="c2"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our YouTube channel"
     >
       <img
         alt="youtube"
@@ -258,7 +352,9 @@ exports[`renders correctly with Sport Relief links 1`] = `
     <a
       className="c2"
       href="https://www.instagram.com/sportrelief"
+      rel="noopener noreferrer"
       target="_blank"
+      title="Check out our Instagram account"
     >
       <img
         alt="instagram"
