@@ -6,6 +6,7 @@ const whiteList = [
 
 const whiteListed = url => {
   if (
+    url !== null &&
     whiteList.some(v => {
       return url.indexOf(v) >= 0;
     })
