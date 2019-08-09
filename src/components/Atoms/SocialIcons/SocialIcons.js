@@ -30,8 +30,6 @@ const StyledItem = styled.li`
 const SocialIcons = ({ campaign, ...restProps }) => {
   const links = getLinks(campaign);
 
-  console.log('links', links);
-
   return (
     <StyledList>
       {Object.keys(icons).map(brand => (
@@ -39,8 +37,8 @@ const SocialIcons = ({ campaign, ...restProps }) => {
           {console.log('brand', brand)}
           <Icon
             icon={icons[brand]}
-            href={links[brand]['url']}
-            title={links[brand]['title']}
+            href={links[brand].url}
+            title={links[brand].title}
             brand={brand}
             {...restProps}
           />
