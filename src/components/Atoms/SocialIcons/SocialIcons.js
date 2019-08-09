@@ -34,7 +34,6 @@ const SocialIcons = ({ campaign, ...restProps }) => {
     <StyledList>
       {Object.keys(icons).map(brand => (
         <StyledItem key={brand}>
-          {console.log('brand', brand)}
           <Icon
             icon={icons[brand]}
             href={links[brand].url}

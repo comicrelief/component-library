@@ -35,7 +35,8 @@ Icon.propTypes = {
   brand: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default Icon;
