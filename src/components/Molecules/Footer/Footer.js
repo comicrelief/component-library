@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SocialLinks from './SocialLinks/SocialLinks';
 import Text from '../../Atoms/Text/Text';
-
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
+import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 
 import {
   FooterWrapper,
   InnerWrapper,
   FooterBranding,
-  FooterCopyright
+  FooterCopyright,
+  SocialIconWrapper
 } from './Footer.style';
 
-const Footer = ({ navItems, footerCopy, ...rest }) => {
+const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
-        <SocialLinks />
+        <SocialIconWrapper>
+          <SocialIcons campaign={campaign} />
+        </SocialIconWrapper>
 
         <FooterNav navItems={navItems} />
 
@@ -37,12 +39,14 @@ const Footer = ({ navItems, footerCopy, ...rest }) => {
 
 Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  footerCopy: PropTypes.string
+  footerCopy: PropTypes.string,
+  campaign: PropTypes.string
 };
 
 Footer.defaultProps = {
   navItems: {},
-  footerCopy: ''
+  footerCopy: '',
+  campaign: 'comicrelief'
 };
 
 export default Footer;

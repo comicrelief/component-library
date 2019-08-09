@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: center;
   line-height: initial;
-  background: ${({ theme }) => theme.color('black')};
+  background: #000;
   padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
   position: relative;
 
@@ -48,4 +48,12 @@ const FooterCopyright = styled.div`
   }
 `;
 
-export { FooterWrapper, InnerWrapper, FooterCopyright, FooterBranding };
+const SocialIconWrapper = styled.div``;
+
+export {
+  FooterWrapper,
+  InnerWrapper,
+  FooterCopyright,
+  FooterBranding,
+  SocialIconWrapper
+};
