@@ -48,29 +48,7 @@ const FooterCopyright = styled.div`
   }
 `;
 
-const SocialIconWrapper = styled.div`
-  ul {
-    margin: 0 auto ${spacing('l')};
-
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      margin-bottom: ${spacing('xl')};
-    }
-
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-
-    li a {
-      display: block;
-      transition: opacity 0.2s;
-
-      &:hover,
-      &:focus {
-        opacity: 0.6;
-      }
-    }
-  }
-`;
+const SocialIconWrapper = styled.div``;
 
 export {
   FooterWrapper,
