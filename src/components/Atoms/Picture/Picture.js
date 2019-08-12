@@ -11,8 +11,8 @@ const IMAGE_FALLBACK =
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: ${props => (props.width ? props.width : '100%')};
+  height: ${props => (props.height ? props.height : '100%')};
 `;
 
 const Image = styled.img`
@@ -38,7 +38,7 @@ const Picture = ({
 }) => {
   if (!images) {
     return (
-      <Wrapper>
+      <Wrapper height={height} width={width}>
         <Image
           alt={alt}
           height={height}
@@ -52,7 +52,7 @@ const Picture = ({
   }
 
   return (
-    <Wrapper>
+    <Wrapper height={height} width={width}>
       <Image
         alt={alt}
         height={height}

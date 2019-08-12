@@ -13,7 +13,7 @@ it('renders correctly', () => {
     .c0 {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     .c1 {
@@ -25,6 +25,8 @@ it('renders correctly', () => {
 
     <div
       className="c0"
+      height="auto"
+      width="100%"
     >
       <img
         alt="Test images"
@@ -56,8 +58,8 @@ it('renders correctly with custom props', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      height: 100px;
     }
 
     .c1 {
@@ -69,6 +71,8 @@ it('renders correctly with custom props', () => {
 
     <div
       className="c0"
+      height="100px"
+      width="200px"
     >
       <img
         alt="Test images"

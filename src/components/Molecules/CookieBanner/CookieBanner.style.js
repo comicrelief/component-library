@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
-import spacing from '../../../theme/shared/spacings';
+import spacing from '../../../theme/shared/spacing';
 
 const CookieWrapper = styled.div`
   display: flex;

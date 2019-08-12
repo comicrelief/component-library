@@ -31,7 +31,7 @@ it('renders correctly', () => {
     .c3 {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     .c4 {
@@ -132,6 +132,8 @@ it('renders correctly', () => {
         >
           <div
             className="c3"
+            height="auto"
+            width="100%"
           >
             <img
               alt="Image's description"

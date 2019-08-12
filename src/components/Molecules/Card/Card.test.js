@@ -71,6 +71,8 @@ it('renders correctly', () => {
       >
         <div
           className="c2"
+          height="100%"
+          width="100%"
         >
           <img
             alt=""
