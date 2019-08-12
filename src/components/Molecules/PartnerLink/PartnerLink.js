@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Picture from '../../Atoms/Picture/Picture';
-import { Wrapper, PartnerMoreInfo, LinkPartner } from './PartnerLink.style';
+import { Wrapper, MoreInfo, Item } from './PartnerLink.style';
 
-const PartnerLink = ({ src, partnerName, partnerPath, ...rest }) => {
+const PartnerLink = ({ link, title, slug, ...rest }) => {
   return (
     <Wrapper {...rest}>
-      <LinkPartner href={partnerPath} type="standard">
-        <Picture image={src} alt={partnerName} />
-        <PartnerMoreInfo>Find out more</PartnerMoreInfo>
-      </LinkPartner>
+      <Item href={slug} type="standard">
+        <Picture image={link} alt={title} />
+        <MoreInfo>Find out more</MoreInfo>
+      </Item>
     </Wrapper>
   );
 };
 
 PartnerLink.propTypes = {
-  /** Partner's image logo   */
-  src: PropTypes.string.isRequired,
+  /** Link for image  */
+  link: PropTypes.string.isRequired,
   /** Partner's name    */
-  partnerName: PropTypes.string.isRequired,
-  /** Path URL  */
-  partnerPath: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  /** Path to more info  */
+  slug: PropTypes.string.isRequired
 };
 
 export default PartnerLink;

@@ -7,7 +7,7 @@ import logo from '../../../styleguide/assets/picture-2.jpg';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <PartnerLink partnerPath="" src={logo} partnerName="partner's name" />
+    <PartnerLink slug="" link={logo} title="partner's name" />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`

@@ -9,16 +9,16 @@ const Wrapper = styled.li`
   list-style: none;
 `;
 
-const PartnerMoreInfo = styled(Text)`
+const MoreInfo = styled(Text)`
   ${hideVisually}
 `;
 
-const LinkPartner = styled(Link)`
+const Item = styled(Link)`
   position: relative;
   border: none;
   :hover {
     border: none;
-    ${PartnerMoreInfo} {
+    ${MoreInfo} {
       font-size: ${({ theme }) => theme.fontSize('m')};
       color: ${({ theme }) => theme.color('white')};
       overflow: inherit;
@@ -47,4 +47,4 @@ const LinkPartner = styled(Link)`
   }
 `;
 
-export { Wrapper, PartnerMoreInfo, LinkPartner };
+export { Wrapper, MoreInfo, Item };
