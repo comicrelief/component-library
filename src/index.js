@@ -50,3 +50,6 @@ export {
 export {
   default as DoubleCopy
 } from './components/Molecules/DoubleCopy/DoubleCopy';
+export {
+  default as PartnerLink
+} from './components/Molecules/PartnerLink/PartnerLink';
