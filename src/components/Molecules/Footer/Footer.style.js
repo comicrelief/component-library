@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import spacing from '../../../theme/shared/spacings';
+import spacing from '../../../theme/shared/spacing';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'

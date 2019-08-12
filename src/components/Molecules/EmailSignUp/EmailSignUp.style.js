@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import spacing from '../../../theme/shared/spacings';
+import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Input from '../../Atoms/Input/Input';
 

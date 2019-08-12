@@ -56,6 +56,7 @@ const Copy = styled.div`
 
 const Media = styled.div`
   height: 100%;
+  width: 100%;
 `;
 
 const Image = styled.div`
@@ -69,6 +70,7 @@ const Image = styled.div`
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
+  imageLow,
   imageSet,
   image,
   imageSet2,
@@ -95,6 +97,7 @@ const SingleMessage = ({
               <Image doubleImage={doubleImage} vhFull={vhFull}>
                 <Picture
                   alt={imageAltText}
+                  imageLow={imageLow}
                   images={imageSet}
                   image={image}
                   objectFit="cover"
@@ -107,6 +110,7 @@ const SingleMessage = ({
               <Image doubleImage={doubleImage} vhFull={vhFull}>
                 <Picture
                   alt={imageAltText2}
+                  imageLow={imageLow}
                   images={imageSet2}
                   image={image2}
                   objectFit="cover"
@@ -131,6 +135,7 @@ SingleMessage.propTypes = {
   copyFirst: PropTypes.bool,
   /** Image will be 100% wide and copy over the image (left, right or centre) */
   fullImage: PropTypes.bool,
+  imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
   imageSet2: PropTypes.string,
@@ -147,6 +152,7 @@ SingleMessage.defaultProps = {
   copyFirst: false,
   fullImage: false,
   imageSet: null,
+  imageLow: null,
   image: null,
   imageSet2: null,
   image2: null,
