@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import getLinks from './Utils/Links';
 import icons from './Utils/Icons';
 import Icon from './Icon/Icon';
-import spacing from '../../../theme/shared/spacings';
+import spacing from '../../../theme/shared/spacing';
 
 const StyledList = styled.ul`
   display: flex;
