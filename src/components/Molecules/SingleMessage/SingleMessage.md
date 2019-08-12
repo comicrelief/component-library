@@ -72,6 +72,7 @@ const data = require('../../../styleguide/data/data').default;
 
 <SingleMessage
   backgroundColor="purple"
+  imageLow={data.imageLow}
   imageSet={data.images}
   image={data.image}
   imageAltText=""
@@ -92,6 +93,7 @@ const data = require('../../../styleguide/data/data').default;
 
 <SingleMessage
   backgroundColor="yellow"
+  imageLow={data.imageLow}
   imageSet={data.images}
   image={data.image}
   imageAltText=""

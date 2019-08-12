@@ -5,18 +5,17 @@ Picture
 ```js
 const data = require('../../../styleguide/data/data').default;
 
-<Picture alt="test Image" images={data.images} image={data.image} />;
+<Picture alt="test Image" imageLow={data.imageLow} images={data.images} />;
 ```
 
-Custom value.
+Custom Size.
 
 ```js
 const data = require('../../../styleguide/data/data').default;
-console.log(data.images);
 <Picture
   alt="test Image"
+  imageLow={data.imageLow}
   images={data.images}
-  image={data.image}
   objectFit="cover"
   width="300px"
   height="200px"
@@ -27,5 +26,5 @@ Single image
 
 ```js
 const data = require('../../../styleguide/data/data').default;
-<Picture alt="test Image" images={data.image} image={data.image} />;
+<Picture alt="test Image" image={data.image} objectFit="cover" />;
 ```
