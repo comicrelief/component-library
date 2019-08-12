@@ -53,3 +53,4 @@ export {
 export {
   default as PartnerLink
 } from './components/Molecules/PartnerLink/PartnerLink';
+export { default as Footer } from './components/Molecules/Footer/Footer';
