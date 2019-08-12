@@ -1,4 +1,4 @@
-Picture has depenciy of <a href="https://github.com/aFarkas/lazysizes#readme" style="color: blue; text-decoration: underline;">lazysizes</a> for lazyload
+Picture has depenciy of <a href="https://github.com/aFarkas/lazysizes#readme" style="color: blue; text-decoration: underline;">lazysizes</a> for lazyload and <a href="https://github.com/aFarkas/lazysizes/tree/master/plugins/blur-up" style="color: blue; text-decoration: underline;">blur-up</a> for image loading state.
 
 Picture
 
