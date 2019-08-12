@@ -1,0 +1,5 @@
+# Partner Link
+
+```js
+<PartnerLink />
+```
