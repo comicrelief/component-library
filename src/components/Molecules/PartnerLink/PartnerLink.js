@@ -16,8 +16,11 @@ const PartnerLink = ({ src, partnerName, partnerPath, ...rest }) => {
 };
 
 PartnerLink.propTypes = {
+  /** Partner's image logo   */
   src: PropTypes.string.isRequired,
+  /** Partner's name    */
   partnerName: PropTypes.string.isRequired,
+  /** Path URL  */
   partnerPath: PropTypes.string.isRequired
 };
 
