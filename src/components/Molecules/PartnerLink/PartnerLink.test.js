@@ -11,11 +11,17 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c7 {
       text-transform: inherit;
     }
 
     .c3 {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .c4 {
       display: block;
       width: 100%;
       height: auto;
@@ -42,7 +48,7 @@ it('renders correctly', () => {
       list-style: none;
     }
 
-    .c5 {
+    .c6 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -66,7 +72,7 @@ it('renders correctly', () => {
       border: none;
     }
 
-    .c1:hover .c4 {
+    .c1:hover .c5 {
       font-size: 1.2rem;
       color: #FFFFFF;
       overflow: inherit;
@@ -108,15 +114,21 @@ it('renders correctly', () => {
         target="_self"
         type="standard"
       >
-        <img
-          alt="partner's name"
-          className="lazyload c3"
-          data-src="mock.asset"
+        <div
+          className="c3"
           height="auto"
           width="100%"
-        />
+        >
+          <img
+            alt="partner's name"
+            className="lazyload c4"
+            data-src="mock.asset"
+            height="auto"
+            width="100%"
+          />
+        </div>
         <span
-          className="c4 c5 c6"
+          className="c5 c6 c7"
           color="inherit"
         >
           Find out more
