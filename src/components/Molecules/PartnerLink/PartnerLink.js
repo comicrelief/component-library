@@ -1,40 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import Link from '../../Atoms/Link/Link';
-import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
-import logo from '../../../styleguide/assets/picture-2.jpg';
-import hideVisually from '../../../theme/shared/hideVisually';
-// import PropTypes from 'prop-types'
+import { Wrapper, PartnerMoreInfo, LinkPartner } from './PartnerLink.style';
 
-const Wrapper = styled.li`
-  list-style: none;
-`;
-
-const PartnerMoreInfo = styled(Text)`
-  ${hideVisually}
-`;
-
-const LinkPartner = styled(Link)`
-  border: none;
-  :hover {
-    border: none;
-  }
-`;
-
-const PartnerLink = () => {
+const PartnerLink = ({ src, partnerName, partnerPath, ...rest }) => {
   return (
-    <Wrapper>
-      <LinkPartner href="#anchor" target="blank" type="standard">
-        {' '}
-        <Picture image={logo} alt="logo" />
+    <Wrapper {...rest}>
+      <LinkPartner href={partnerPath} type="standard">
+        <Picture image={src} alt={partnerName} />
         <PartnerMoreInfo>Find out more</PartnerMoreInfo>
       </LinkPartner>
     </Wrapper>
   );
 };
 
-// PartnerLink.propTypes = {};
+PartnerLink.propTypes = {
+  src: PropTypes.string.isRequired,
+  partnerName: PropTypes.string.isRequired,
+  partnerPath: PropTypes.string.isRequired
+};
 
 export default PartnerLink;
