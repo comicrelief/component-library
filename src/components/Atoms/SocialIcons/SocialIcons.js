@@ -4,10 +4,21 @@ import styled from 'styled-components';
 import getLinks from './Utils/Links';
 import icons from './Utils/Icons';
 import Icon from './Icon/Icon';
+import spacing from '../../../theme/shared/spacings';
 
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
+
+  margin: 0 auto ${spacing('l')};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('xl')};
+  }
+
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StyledItem = styled.li`
@@ -18,13 +29,15 @@ const StyledItem = styled.li`
 /** Social media icons with customizable style linked to campaign social media accounts */
 const SocialIcons = ({ campaign, ...restProps }) => {
   const links = getLinks(campaign);
+
   return (
     <StyledList>
       {Object.keys(icons).map(brand => (
         <StyledItem key={brand}>
           <Icon
             icon={icons[brand]}
-            href={links[brand]}
+            href={links[brand].url}
+            title={links[brand].title}
             brand={brand}
             {...restProps}
           />
