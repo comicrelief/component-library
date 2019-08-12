@@ -56,6 +56,7 @@ const Copy = styled.div`
 
 const Media = styled.div`
   height: 100%;
+  width: 100%;
 `;
 
 const Image = styled.div`
