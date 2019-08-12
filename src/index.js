@@ -50,3 +50,4 @@ export {
 export {
   default as DoubleCopy
 } from './components/Molecules/DoubleCopy/DoubleCopy';
+export { default as Footer } from './components/Molecules/Footer/Footer';
