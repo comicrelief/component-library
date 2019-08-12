@@ -19,8 +19,8 @@ const FooterNav = ({ navItems }) => {
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  // Detect browser width size
-  const isSmallBreakpoint = window.innerWidth < sizes.small;
+  // Ensure this has a default value so Webpack doesn't fall-over on build
+  let isSmallBreakpoint = false;
 
   /**
    * Always stop the main 'parent' link from actually firing, but do the
@@ -28,6 +28,9 @@ const FooterNav = ({ navItems }) => {
    */
   const toggleSubMenu = item => event => {
     event.preventDefault();
+
+    // Detect browser width size each function call in case screen has been resized since load
+    isSmallBreakpoint = window.innerWidth < sizes.small;
 
     // Only run on SM, as we're only using the hide-show logic on SM
     if (isSmallBreakpoint) {
