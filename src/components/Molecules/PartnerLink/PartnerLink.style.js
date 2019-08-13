@@ -19,7 +19,7 @@ const Item = styled(Link)`
   :hover {
     border: none;
     ${MoreInfo} {
-      font-size: ${({ theme }) => theme.fontSize('m')};
+      font-size: ${({ theme }) => theme.fontSize('s')};
       color: ${({ theme }) => theme.color('white')};
       overflow: inherit;
       clip-path: none;
