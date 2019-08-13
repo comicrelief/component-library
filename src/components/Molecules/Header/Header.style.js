@@ -52,6 +52,7 @@ const InnerWrapper = styled.div`
 const Brand = styled(Link).attrs(() => ({
   title: 'Home'
 }))`
+  ${zIndex('high')};
   color: transparent;
   border: 0;
   :hover {

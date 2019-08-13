@@ -319,6 +319,7 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      z-index: 3;
       color: transparent;
       border: 0;
     }
@@ -427,7 +428,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c11 {
-        padding: 7px 5px;
+        padding: 10px 5px;
         height: auto;
       }
 
@@ -442,7 +443,7 @@ it('renders correctly', () => {
     @media (min-width:1024px) {
       .c9 {
         margin: 0 4px;
-        padding: 30px 0 27px;
+        padding: 25px 0;
       }
 
       .c9:hover > .c12,

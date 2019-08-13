@@ -159,7 +159,7 @@ const NavMenu = styled.ul`
  */
 const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 7px 5px;
+    padding: 10px 5px;
     height: auto;
     :focus + ${SubNavMenu} {
       display: flex;
@@ -179,7 +179,7 @@ const NavItem = styled.li`
   }
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 4px;
-    padding: 30px 0 27px;
+    padding: 25px 0;
 
     :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
       visibility: visible;
