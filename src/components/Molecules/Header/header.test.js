@@ -138,10 +138,11 @@ it('renders correctly', () => {
     }
 
     .c6 {
+      z-index: 3;
       display: none;
       width: 100%;
       position: absolute;
-      top: 80px;
+      top: 75px;
       left: 0;
     }
 
@@ -271,6 +272,7 @@ it('renders correctly', () => {
     }
 
     .c9 {
+      z-index: 3;
       position: relative;
       font-weight: 700;
     }
@@ -440,7 +442,7 @@ it('renders correctly', () => {
     @media (min-width:1024px) {
       .c9 {
         margin: 0 4px;
-        padding: 30px 0;
+        padding: 30px 0 27px;
       }
 
       .c9:hover > .c12,
