@@ -12,7 +12,10 @@ it('renders correctly', () => {
       image={data.image}
       date=" 01 July 2019"
       title="News article"
+      copy="News article copy"
       alt="Image's description"
+      smallImageWidth="25%"
+      largeImageWidth="100%"
     />
   ).toJSON();
 
@@ -26,6 +29,11 @@ it('renders correctly', () => {
     .c7 {
       font-size: 1.725rem;
       text-transform: uppercase;
+    }
+
+    .c8 {
+      font-size: 1.44rem;
+      text-transform: inherit;
     }
 
     .c3 {
@@ -44,10 +52,6 @@ it('renders correctly', () => {
     .c0 {
       width: 100%;
       height: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       background-color: #fff;
     }
 
@@ -67,7 +71,7 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      height: 100%;
+      height: auto;
     }
 
     .c5 {
@@ -86,17 +90,9 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1440px) {
-      .c1 {
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-      }
-    }
-
     @media (min-width:740px) {
       .c2 {
-        width: 45%;
+        width: 25%;
       }
     }
 
@@ -165,6 +161,13 @@ it('renders correctly', () => {
           >
             News article
           </h3>
+          <span
+            className="c8"
+            color="inherit"
+            size="l"
+          >
+            News article copy
+          </span>
         </div>
       </a>
     </article>
