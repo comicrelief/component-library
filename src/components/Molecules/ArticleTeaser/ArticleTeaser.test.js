@@ -70,10 +70,6 @@ it('renders correctly', () => {
       color: inherit;
     }
 
-    .c2 {
-      height: auto;
-    }
-
     .c5 {
       padding: 40px;
     }
@@ -99,6 +95,7 @@ it('renders correctly', () => {
     @media (min-width:1440px) {
       .c2 {
         width: 100%;
+        height: auto;
       }
     }
 

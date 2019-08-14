@@ -27,12 +27,12 @@ const Link = styled.a`
 `;
 
 const ImageWrapper = styled.div`
-  height: auto;
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: ${({ smallImageWidth }) => smallImageWidth};
   }
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: ${({ largeImageWidth }) => largeImageWidth};
+    height: auto;
   }
 `;
 
@@ -58,6 +58,7 @@ const ArticleTeaser = ({
   date,
   title,
   copy,
+  imageLow,
   image,
   images,
   alt,
@@ -71,7 +72,13 @@ const ArticleTeaser = ({
           smallImageWidth={smallImageWidth}
           largeImageWidth={largeImageWidth}
         >
-          <Picture images={images} image={image} alt={alt} objectFit="cover" />
+          <Picture
+            imageLow={imageLow}
+            images={images}
+            image={image}
+            alt={alt}
+            objectFit="cover"
+          />
         </ImageWrapper>
         <CopyWrapper>
           <Text size="xxs" weight="bold" uppercase>
@@ -88,8 +95,9 @@ const ArticleTeaser = ({
 };
 
 ArticleTeaser.propTypes = {
-  images: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  images: PropTypes.string,
+  image: PropTypes.string,
+  imageLow: PropTypes.string,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -102,6 +110,9 @@ ArticleTeaser.propTypes = {
 
 ArticleTeaser.defaultProps = {
   copy: '',
+  imageLow: null,
+  image: null,
+  images: null,
   smallImageWidth: '45%',
   largeImageWidth: '100%'
 };

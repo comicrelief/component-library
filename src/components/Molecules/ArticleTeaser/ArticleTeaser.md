@@ -5,7 +5,7 @@ const data = require('../../../styleguide/data/data').default;
 <ArticleTeaser
   href="/test"
   images={data.images}
-  image={data.image}
+  imageLow={data.imageLow}
   date=" 01 July 2019"
   title="News article"
   copy="News article copy"
