@@ -73,7 +73,7 @@ it('renders correctly', () => {
     }
 
     .c1:hover .c5 {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #FFFFFF;
       overflow: inherit;
       -webkit-clip-path: none;

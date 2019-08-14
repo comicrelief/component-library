@@ -138,10 +138,11 @@ it('renders correctly', () => {
     }
 
     .c6 {
+      z-index: 3;
       display: none;
       width: 100%;
       position: absolute;
-      top: 80px;
+      top: 75px;
       left: 0;
     }
 
@@ -271,6 +272,7 @@ it('renders correctly', () => {
     }
 
     .c9 {
+      z-index: 3;
       position: relative;
       font-weight: 700;
     }
@@ -317,6 +319,7 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      z-index: 3;
       color: transparent;
       border: 0;
     }
@@ -425,7 +428,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c11 {
-        padding: 7px 5px;
+        padding: 10px 5px;
         height: auto;
       }
 
@@ -440,7 +443,7 @@ it('renders correctly', () => {
     @media (min-width:1024px) {
       .c9 {
         margin: 0 4px;
-        padding: 30px 0;
+        padding: 25px 0;
       }
 
       .c9:hover > .c12,

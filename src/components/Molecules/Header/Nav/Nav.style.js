@@ -23,10 +23,11 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
+  ${zIndex('high')};
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
-  top: 80px;
+  top: 75px;
   left: 0;
 
   @media (min-width: ${sizes.small}px) {
@@ -158,7 +159,7 @@ const NavMenu = styled.ul`
  */
 const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 7px 5px;
+    padding: 10px 5px;
     height: auto;
     :focus + ${SubNavMenu} {
       display: flex;
@@ -170,6 +171,7 @@ const NavLink = styled(NavLinkClass)`
  * Menu list items
  */
 const NavItem = styled.li`
+  ${zIndex('high')};
   position: relative;
   font-weight: 700;
   :hover {
@@ -177,7 +179,7 @@ const NavItem = styled.li`
   }
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 4px;
-    padding: 30px 0;
+    padding: 25px 0;
 
     :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
       visibility: visible;
