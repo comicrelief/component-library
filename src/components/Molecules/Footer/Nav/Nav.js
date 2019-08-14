@@ -19,8 +19,6 @@ const FooterNav = ({ navItems }) => {
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
-  console.log('navItems', navItems);
-
   // Ensure this has a default value so Webpack doesn't fall-over on build
   let isSmallBreakpoint = false;
 
