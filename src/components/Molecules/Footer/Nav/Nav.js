@@ -15,9 +15,11 @@ import {
 } from './Nav.style';
 
 const FooterNav = ({ navItems }) => {
-  const { menuGroup } = navItems;
+  const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+
+  console.log('navItems', navItems);
 
   // Ensure this has a default value so Webpack doesn't fall-over on build
   let isSmallBreakpoint = false;
@@ -50,7 +52,7 @@ const FooterNav = ({ navItems }) => {
 
       {/* First level of the navigation (ul tag): Parent */}
       <NavMenu role="menubar">
-        {menuGroup.map((group, index) => (
+        {menuGroups.map((group, index) => (
           <NavItem
             role="none"
             key={group.id}
@@ -59,19 +61,21 @@ const FooterNav = ({ navItems }) => {
           >
             {!isSmallBreakpoint ? (
               <NavLink
-                href={group.url}
+                href="#"
                 inline
                 aria-haspopup="true"
+                role="button"
                 onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
             ) : (
               <NavLink
-                href={group.url}
+                href="#"
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
+                role="button"
                 onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
@@ -87,12 +91,12 @@ const FooterNav = ({ navItems }) => {
               >
                 {group.links.map(child => (
                   <SubNavItem
-                    key={child.url}
+                    key={child.path}
                     column={
                       group.links.length % 2 === 0 && group.links.length > 2
                     }
                   >
-                    <SubNavLink href={child.url} inline role="menuitem">
+                    <SubNavLink href={child.path} inline role="menuitem">
                       <Text>{child.title}</Text>
                     </SubNavLink>
                   </SubNavItem>

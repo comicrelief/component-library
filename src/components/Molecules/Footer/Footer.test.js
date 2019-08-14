@@ -563,8 +563,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -628,8 +629,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -731,8 +733,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -872,8 +875,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -937,8 +941,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -1002,8 +1007,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
