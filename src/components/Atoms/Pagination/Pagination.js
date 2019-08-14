@@ -32,6 +32,9 @@ const Pagination = ({
   pageComponentProps,
   ...restProps
 }) => {
+  if (!totalPages) {
+    return null;
+  }
   const getItem = (label, ariaLabel, value, disabled) => {
     return {
       disabled,

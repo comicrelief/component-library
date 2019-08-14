@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const StyledList = styled.ul`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
 `;

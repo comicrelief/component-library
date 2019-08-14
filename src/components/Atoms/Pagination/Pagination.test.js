@@ -245,3 +245,22 @@ it('renders correctly with custom labels', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('renders nothing in case of no pages', () => {
+  const tree = renderWithTheme(
+    <Pagination
+      maxPages={5}
+      totalPages={0}
+      currentPage={2}
+      createURL={value => `example.com/page/${value}`}
+      onSelect={value => value}
+      showFirst
+      showPrevious
+      showNext
+      showLast
+      showMore
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

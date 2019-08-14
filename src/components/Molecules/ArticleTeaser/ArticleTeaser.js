@@ -11,7 +11,6 @@ import Picture from '../../Atoms/Picture/Picture';
 const Wrapper = styled.article`
   width: 100%;
   height: 100%;
-  display: flex;
   background-color: #fff;
 `;
 
@@ -25,18 +24,15 @@ const Link = styled.a`
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    flex-direction: column;
-  }
 `;
 
 const ImageWrapper = styled.div`
-  height: 100%;
+  height: auto;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 45%;
+    width: ${({ smallImageWidth }) => smallImageWidth};
   }
   @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 100%;
+    width: ${({ largeImageWidth }) => largeImageWidth};
   }
 `;
 
@@ -57,11 +53,24 @@ const CopyWrapper = styled.div`
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({ date, href, images, alt, title, image }) => {
+const ArticleTeaser = ({
+  href,
+  date,
+  title,
+  copy,
+  image,
+  images,
+  alt,
+  smallImageWidth,
+  largeImageWidth
+}) => {
   return (
     <Wrapper>
       <Link href={href} type="standard">
-        <ImageWrapper>
+        <ImageWrapper
+          smallImageWidth={smallImageWidth}
+          largeImageWidth={largeImageWidth}
+        >
           <Picture images={images} image={image} alt={alt} objectFit="cover" />
         </ImageWrapper>
         <CopyWrapper>
@@ -71,6 +80,7 @@ const ArticleTeaser = ({ date, href, images, alt, title, image }) => {
           <Text size="xl" tag="h3" uppercase>
             {title}
           </Text>
+          {copy && <Text size="l">{copy}</Text>}
         </CopyWrapper>
       </Link>
     </Wrapper>
@@ -83,8 +93,17 @@ ArticleTeaser.propTypes = {
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  copy: PropTypes.string,
+  smallImageWidth: PropTypes.string,
+  largeImageWidth: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
+};
+
+ArticleTeaser.defaultProps = {
+  copy: '',
+  smallImageWidth: '45%',
+  largeImageWidth: '100%'
 };
 
 export default ArticleTeaser;
