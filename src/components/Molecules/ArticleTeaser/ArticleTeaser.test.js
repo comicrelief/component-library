@@ -31,11 +31,6 @@ it('renders correctly', () => {
       text-transform: uppercase;
     }
 
-    .c8 {
-      font-size: 1.44rem;
-      text-transform: inherit;
-    }
-
     .c3 {
       position: relative;
       width: 100%;
@@ -52,6 +47,10 @@ it('renders correctly', () => {
     .c0 {
       width: 100%;
       height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       background-color: #fff;
     }
 
@@ -70,6 +69,10 @@ it('renders correctly', () => {
       color: inherit;
     }
 
+    .c2 {
+      height: auto;
+    }
+
     .c5 {
       padding: 40px;
     }
@@ -86,16 +89,23 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1440px) {
+      .c1 {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+
     @media (min-width:740px) {
       .c2 {
-        width: 25%;
+        width: 45%;
       }
     }
 
     @media (min-width:1440px) {
       .c2 {
         width: 100%;
-        height: auto;
       }
     }
 
@@ -108,7 +118,6 @@ it('renders correctly', () => {
     @media (min-width:1440px) {
       .c5 {
         width: 100%;
-        height: 100%;
       }
     }
 
@@ -158,13 +167,6 @@ it('renders correctly', () => {
           >
             News article
           </h3>
-          <span
-            className="c8"
-            color="inherit"
-            size="l"
-          >
-            News article copy
-          </span>
         </div>
       </a>
     </article>
