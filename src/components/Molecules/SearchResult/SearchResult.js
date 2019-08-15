@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
+import Link from '../../Atoms/Link/Link';
 
 /**
  * Search Result
@@ -14,7 +15,7 @@ const Wrapper = styled.article`
   background-color: #fff;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   display: flex;
   height: 100%;
   border: 0;
@@ -24,6 +25,9 @@ const Link = styled.a`
   width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
+  }
+  :hover {
+    border: 0;
   }
 `;
 
@@ -64,7 +68,7 @@ const SearchResult = ({
 }) => {
   return (
     <Wrapper>
-      <Link href={href} type="standard">
+      <StyledLink href={href} type="standard">
         <ImageWrapper
           smallImageWidth={smallImageWidth}
           largeImageWidth={largeImageWidth}
@@ -84,7 +88,7 @@ const SearchResult = ({
             </Text>
           )}
         </CopyWrapper>
-      </Link>
+      </StyledLink>
     </Wrapper>
   );
 };

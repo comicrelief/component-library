@@ -1,27 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly in minimalist form 1`] = `
-.c6 {
+.c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
 }
 
-.c7 {
+.c8 {
   font-size: 1.725rem;
   text-transform: uppercase;
 }
 
-.c3 {
+.c4 {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
 }
 
 .c0 {
@@ -46,11 +62,15 @@ exports[`renders correctly in minimalist form 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c1:hover {
+  border: 0;
+}
+
+.c3 {
   height: auto;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,7 +86,7 @@ exports[`renders correctly in minimalist form 1`] = `
   width: 100%;
 }
 
-.c5 h3 {
+.c6 h3 {
   margin: 0;
 }
 
@@ -79,13 +99,13 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
+  .c3 {
     width: 45%;
   }
 }
 
 @media (min-width:1440px) {
-  .c2 {
+  .c3 {
     width: 100%;
   }
 }
@@ -94,21 +114,23 @@ exports[`renders correctly in minimalist form 1`] = `
   className="c0"
 >
   <a
-    className="c1"
+    className="c1 c2"
+    color="red"
     href="/test"
+    target="_self"
     type="standard"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         height="auto"
         width="100%"
       >
         <img
           alt="Image's description"
-          className="lazyload c4"
+          className="lazyload c5"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           height="auto"
           width="100%"
@@ -116,17 +138,17 @@ exports[`renders correctly in minimalist form 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <span
-        className="c6"
+        className="c7"
         color="inherit"
         size="xs"
       >
          
       </span>
       <h3
-        className="c7"
+        className="c8"
         color="inherit"
         size="xl"
       >
@@ -139,32 +161,48 @@ exports[`renders correctly in minimalist form 1`] = `
 `;
 
 exports[`renders correctly with copy 1`] = `
-.c6 {
+.c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
 }
 
-.c7 {
+.c8 {
   font-size: 1.725rem;
   text-transform: uppercase;
 }
 
-.c8 {
+.c9 {
   font-size: 1.2rem;
   text-transform: inherit;
 }
 
-.c3 {
+.c4 {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
 }
 
 .c0 {
@@ -189,11 +227,15 @@ exports[`renders correctly with copy 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c1:hover {
+  border: 0;
+}
+
+.c3 {
   height: auto;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +251,7 @@ exports[`renders correctly with copy 1`] = `
   width: 100%;
 }
 
-.c5 h3 {
+.c6 h3 {
   margin: 0;
 }
 
@@ -222,13 +264,13 @@ exports[`renders correctly with copy 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
+  .c3 {
     width: 45%;
   }
 }
 
 @media (min-width:1440px) {
-  .c2 {
+  .c3 {
     width: 100%;
   }
 }
@@ -237,21 +279,23 @@ exports[`renders correctly with copy 1`] = `
   className="c0"
 >
   <a
-    className="c1"
+    className="c1 c2"
+    color="red"
     href="/test"
+    target="_self"
     type="standard"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         height="auto"
         width="100%"
       >
         <img
           alt="Image's description"
-          className="lazyload c4"
+          className="lazyload c5"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           height="auto"
           width="100%"
@@ -259,24 +303,24 @@ exports[`renders correctly with copy 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <span
-        className="c6"
+        className="c7"
         color="inherit"
         size="xs"
       >
          
       </span>
       <h3
-        className="c7"
+        className="c8"
         color="inherit"
         size="xl"
       >
         News article
       </h3>
       <p
-        className="c8"
+        className="c9"
         color="inherit"
         size="m"
       >
@@ -288,27 +332,43 @@ exports[`renders correctly with copy 1`] = `
 `;
 
 exports[`renders correctly with date 1`] = `
-.c6 {
+.c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
 }
 
-.c7 {
+.c8 {
   font-size: 1.725rem;
   text-transform: uppercase;
 }
 
-.c3 {
+.c4 {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
 }
 
 .c0 {
@@ -333,11 +393,15 @@ exports[`renders correctly with date 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c1:hover {
+  border: 0;
+}
+
+.c3 {
   height: auto;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,7 +417,7 @@ exports[`renders correctly with date 1`] = `
   width: 100%;
 }
 
-.c5 h3 {
+.c6 h3 {
   margin: 0;
 }
 
@@ -366,13 +430,13 @@ exports[`renders correctly with date 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
+  .c3 {
     width: 45%;
   }
 }
 
 @media (min-width:1440px) {
-  .c2 {
+  .c3 {
     width: 100%;
   }
 }
@@ -381,21 +445,23 @@ exports[`renders correctly with date 1`] = `
   className="c0"
 >
   <a
-    className="c1"
+    className="c1 c2"
+    color="red"
     href="/test"
+    target="_self"
     type="standard"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         height="auto"
         width="100%"
       >
         <img
           alt="Image's description"
-          className="lazyload c4"
+          className="lazyload c5"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           height="auto"
           width="100%"
@@ -403,17 +469,17 @@ exports[`renders correctly with date 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <span
-        className="c6"
+        className="c7"
         color="inherit"
         size="xs"
       >
          01 July 2019
       </span>
       <h3
-        className="c7"
+        className="c8"
         color="inherit"
         size="xl"
       >
@@ -426,27 +492,43 @@ exports[`renders correctly with date 1`] = `
 `;
 
 exports[`renders correctly with date and type 1`] = `
-.c6 {
+.c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
 }
 
-.c7 {
+.c8 {
   font-size: 1.725rem;
   text-transform: uppercase;
 }
 
-.c3 {
+.c4 {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
 }
 
 .c0 {
@@ -471,11 +553,15 @@ exports[`renders correctly with date and type 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c1:hover {
+  border: 0;
+}
+
+.c3 {
   height: auto;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -491,7 +577,7 @@ exports[`renders correctly with date and type 1`] = `
   width: 100%;
 }
 
-.c5 h3 {
+.c6 h3 {
   margin: 0;
 }
 
@@ -504,13 +590,13 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
+  .c3 {
     width: 45%;
   }
 }
 
 @media (min-width:1440px) {
-  .c2 {
+  .c3 {
     width: 100%;
   }
 }
@@ -519,21 +605,23 @@ exports[`renders correctly with date and type 1`] = `
   className="c0"
 >
   <a
-    className="c1"
+    className="c1 c2"
+    color="red"
     href="/test"
+    target="_self"
     type="standard"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         height="auto"
         width="100%"
       >
         <img
           alt="Image's description"
-          className="lazyload c4"
+          className="lazyload c5"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           height="auto"
           width="100%"
@@ -541,17 +629,17 @@ exports[`renders correctly with date and type 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <span
-        className="c6"
+        className="c7"
         color="inherit"
         size="xs"
       >
          article | 01 July 2019
       </span>
       <h3
-        className="c7"
+        className="c8"
         color="inherit"
         size="xl"
       >
