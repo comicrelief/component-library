@@ -52,6 +52,10 @@ const CopyWrapper = styled.div`
   width: 100%;
 `;
 
+const Title = styled(Text)`
+  margin: 0;
+`;
+
 /**
  * Search Result component
  */
@@ -79,9 +83,9 @@ const SearchResult = ({
           <Text size="xs" uppercase>
             {`${type ? ` ${type} |` : ''} ${date}`}
           </Text>
-          <Text size="xl" tag="h3" uppercase>
+          <Title size="xl" tag="h3" uppercase>
             {title}
-          </Text>
+          </Title>
           {copy && (
             <Text size="m" tag="p">
               {copy}
