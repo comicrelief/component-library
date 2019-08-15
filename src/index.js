@@ -41,7 +41,7 @@ export {
   default as SingleMessage
 } from './components/Molecules/SingleMessage/SingleMessage';
 export {
-  default as ArticleBlock
+  default as ArticleTeaser
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as Header } from './components/Molecules/Header/Header';
