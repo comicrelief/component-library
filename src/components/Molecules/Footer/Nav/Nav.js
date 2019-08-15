@@ -87,18 +87,31 @@ const FooterNav = ({ navItems }) => {
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 column={group.links.length % 2 === 0 && group.links.length > 2}
               >
-                {group.links.map(child => (
-                  <SubNavItem
-                    key={child.path}
-                    column={
-                      group.links.length % 2 === 0 && group.links.length > 2
-                    }
-                  >
-                    <SubNavLink href={child.path} inline role="menuitem">
-                      <Text>{child.title}</Text>
-                    </SubNavLink>
-                  </SubNavItem>
-                ))}
+                {group.links.map(child => {
+                  let thisUrl;
+                  /* Determine where to grab the URL, depending on the component type and values supplied */
+                  if (child.internal.type === 'ContentfulComponentLink') {
+                    thisUrl =
+                      child.reference && child.reference.path
+                        ? child.reference.path
+                        : child.url;
+                  } else {
+                    thisUrl = child.path;
+                  }
+
+                  return (
+                    <SubNavItem
+                      key={thisUrl}
+                      column={
+                        group.links.length % 2 === 0 && group.links.length > 2
+                      }
+                    >
+                      <SubNavLink href={thisUrl} inline role="menuitem">
+                        <Text>{child.title}</Text>
+                      </SubNavLink>
+                    </SubNavItem>
+                  );
+                })}
               </SubNavMenu>
             )}
           </NavItem>
