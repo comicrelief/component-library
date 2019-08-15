@@ -22,10 +22,11 @@ const Link = styled.a`
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     flex-direction: column;
   }
 `;
@@ -35,7 +36,7 @@ const ImageWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 45%;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
 `;
@@ -48,7 +49,7 @@ const CopyWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 55%;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
 `;

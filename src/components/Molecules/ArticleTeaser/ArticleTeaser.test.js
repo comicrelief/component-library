@@ -67,6 +67,7 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       color: inherit;
+      width: 100%;
     }
 
     .c2 {
@@ -89,7 +90,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width:1024px) {
       .c1 {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
@@ -103,7 +104,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width:1024px) {
       .c2 {
         width: 100%;
       }
@@ -115,7 +116,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width:1024px) {
       .c5 {
         width: 100%;
       }
