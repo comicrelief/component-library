@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
+import spacing from '../../../theme/shared/spacing';
 
 /**
  * Search Result
@@ -12,7 +13,7 @@ import Link from '../../Atoms/Link/Link';
 const Wrapper = styled.article`
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color('white')};
 `;
 
 const StyledLink = styled(Link)`
@@ -46,10 +47,8 @@ const CopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 10px 0px 20px;
-  h3 {
-    margin: 0;
-  }
+  padding: ${spacing('none')} ${spacing('sm')} ${spacing('none')}
+    ${spacing('md')};
   width: 100%;
 `;
 
