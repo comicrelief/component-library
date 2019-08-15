@@ -64,6 +64,7 @@ exports[`renders correctly in minimalist form 1`] = `
 
 .c1:hover {
   border: 0;
+  font-weight: normal;
 }
 
 .c3 {
@@ -229,6 +230,7 @@ exports[`renders correctly with copy 1`] = `
 
 .c1:hover {
   border: 0;
+  font-weight: normal;
 }
 
 .c3 {
@@ -395,6 +397,7 @@ exports[`renders correctly with date 1`] = `
 
 .c1:hover {
   border: 0;
+  font-weight: normal;
 }
 
 .c3 {
@@ -555,6 +558,7 @@ exports[`renders correctly with date and type 1`] = `
 
 .c1:hover {
   border: 0;
+  font-weight: normal;
 }
 
 .c3 {

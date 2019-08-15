@@ -28,6 +28,7 @@ const StyledLink = styled(Link)`
   }
   :hover {
     border: 0;
+    font-weight: normal;
   }
 `;
 
