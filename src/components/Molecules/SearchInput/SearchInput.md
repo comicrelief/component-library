@@ -1,5 +1,10 @@
 # Search input
 
 ```js
-<SearchInput />
+<SearchInput
+  submitSearch={e => {
+    e.preventDefault();
+    console.log('Your search result');
+  }}
+/>
 ```
