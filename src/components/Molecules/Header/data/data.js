@@ -4,7 +4,7 @@ export default {
     {
       title: 'Fundraising',
       id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
-      url: 'https://www.comicrelief.com/fundraising/pay-in-your-money',
+      path: 'https://www.comicrelief.com/fundraising/pay-in-your-money',
       links: [
         {
           title: 'Red Nose Day',
@@ -36,8 +36,7 @@ export default {
       links: [
         {
           title: 'What your money does',
-          path: 'https://www.comicrelief.com/What-we-do/our-legacy',
-          class: null
+          path: 'https://www.comicrelief.com/What-we-do/our-legacy'
         }
       ]
     },
