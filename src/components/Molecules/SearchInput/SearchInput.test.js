@@ -83,7 +83,7 @@ it('renders correctly', () => {
 
     .c0 {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1440px;
       margin: auto;
     }
 
@@ -97,26 +97,27 @@ it('renders correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-flex-wrap: no-wrap;
+      -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
       margin: 4rem auto;
+      padding-bottom: 1rem;
       width: 100%;
       border-bottom: 4px solid #E52630;
       overflow: hidden;
     }
 
     .c3 {
-      width: 80%;
-      margin: 1rem 1rem 0;
-    }
-
-    .c3 label {
-      margin: 1rem 0;
+      width: 90%;
+      margin: 0;
+      margin-left: 1rem;
+      margin-right: 0.5rem;
     }
 
     .c7 {
       margin: 0;
-      font-size: 1.44rem;
+      padding: 0;
       max-width: 100%;
-      width: 100%;
       border: 0;
       outline: #E52630;
     }
@@ -126,29 +127,26 @@ it('renders correctly', () => {
     }
 
     .c9 {
-      width: 80%;
-      margin: 1rem 1rem 0;
-      width: calc(100% - 80% - 1rem);
-      margin: 1rem 1rem 1rem 0;
-    }
-
-    .c9 label {
-      margin: 1rem 0;
+      width: 90%;
+      margin: 0;
+      margin-left: 1rem;
+      margin-right: 0.5rem;
+      margin: 0;
+      width: 60px;
     }
 
     .c10 {
       margin: 0;
-      font-size: 1.44rem;
+      padding: 0;
       max-width: 100%;
-      width: 100%;
       border: 0;
       outline: #E52630;
       text-indent: -9999px;
       background-color: #c7c7c7;
       -webkit-mask: url(mock.asset) no-repeat right center;
       mask: url(mock.asset) no-repeat right center;
-      -webkit-mask-size: 2.075rem;
-      mask-size: 2.075rem;
+      -webkit-mask-size: 85%;
+      mask-size: 85%;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -169,36 +167,30 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
-      .c3 {
-        margin-bottom: calc(1rem - 0.25rem);
-      }
-    }
-
-    @media (min-width:1024px) {
+    @media (min-width:740px) {
       .c7 {
         height: 100px;
-        font-size: calc( 6.25rem - 2.075rem );
+        font-size: 2.075rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:740px) {
       .c9 {
-        margin-bottom: calc(1rem - 0.25rem);
+        width: 70px;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:740px) {
       .c10 {
         height: 100px;
-        font-size: calc( 6.25rem - 2.075rem );
+        font-size: 2.075rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:740px) {
       .c10 {
-        -webkit-mask-size: calc( 6.25rem - 2.075rem );
-        mask-size: calc( 6.25rem - 2.075rem );
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
       }
     }
 
