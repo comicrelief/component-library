@@ -138,7 +138,7 @@ it('renders correctly', () => {
     }
 
     .c6 {
-      z-index: 3;
+      z-index: 2;
       display: none;
       width: 100%;
       position: absolute;
