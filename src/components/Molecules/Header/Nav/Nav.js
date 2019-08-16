@@ -17,7 +17,7 @@ import {
 } from './Nav.style';
 
 const MainNav = ({ navItems }) => {
-  const { menuGroup } = navItems;
+  const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
@@ -77,7 +77,7 @@ const MainNav = ({ navItems }) => {
 
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">
-          {menuGroup.map((group, index) => (
+          {menuGroups.map((group, index) => (
             <NavItem
               role="none"
               key={group.id}
@@ -86,7 +86,7 @@ const MainNav = ({ navItems }) => {
             >
               {!isMobile ? (
                 <NavLink
-                  href={group.url}
+                  href={group.path}
                   inline
                   aria-haspopup="true"
                   onClick={toggleSubMenu(group.id)}
@@ -96,7 +96,7 @@ const MainNav = ({ navItems }) => {
                 </NavLink>
               ) : (
                 <NavLink
-                  href={group.url}
+                  href={group.path}
                   inline
                   aria-expanded={!!isSubMenuOpen[group.id]}
                   aria-haspopup="true"
@@ -116,7 +116,7 @@ const MainNav = ({ navItems }) => {
                   <SubNavItem role="none">
                     {/* This is the previous li item from the parent */}
                     <SubNavLinkUnderline
-                      href={group.url}
+                      href={group.path}
                       inline
                       role="menuitem"
                     >
@@ -124,8 +124,8 @@ const MainNav = ({ navItems }) => {
                     </SubNavLinkUnderline>
                   </SubNavItem>
                   {group.links.map(child => (
-                    <SubNavItem key={child.url}>
-                      <SubNavLink href={child.url} inline role="menuitem">
+                    <SubNavItem key={child.path}>
+                      <SubNavLink href={child.path} inline role="menuitem">
                         <Text>{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>
