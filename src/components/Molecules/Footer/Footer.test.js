@@ -1069,7 +1069,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="https://www.bing.com"
+                    href="https://www.yahoo.com"
                     role="menuitem"
                     target="_blank"
                     type="standard"

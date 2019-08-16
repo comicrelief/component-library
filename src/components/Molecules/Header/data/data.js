@@ -121,49 +121,49 @@ export default {
       ]
     },
     {
-      title: 'Funding - menu group',
-      id: '4a5b055f-1f7e-5f4b-827d-768032fd373c',
+      title: 'External Links (menu group)',
+      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
       links: [
         {
-          title: 'Funding',
-          path: 'https://www.comicrelief.com/funding',
+          title: 'Test whitelisted external link',
+          url: 'https://www.sportrelief.com',
           internal: {
-            type: 'ContentfulPageLandingPage'
+            type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Funding opportunities',
-          path: 'https://www.comicrelief.com/funding/funding-opportunities',
+          title: 'Test non-whitelisted external link',
+          url: 'https://bing.com',
           internal: {
-            type: 'ContentfulPageLandingPage'
+            type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Our strategy',
-          path: 'https://www.comicrelief.com/funding/funding-strategy',
+          title: 'Link comp: URL and Ref',
+          url: 'https://www.google.com',
+          reference: {
+            path: 'test-ref-path-1'
+          },
           internal: {
-            type: 'ContentfulPageLandingPage'
+            type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Eligibility',
-          path: 'https://www.comicrelief.com/funding/eligibility-criteria',
+          title: 'Link comp: only Ref',
+          url: null,
+          reference: {
+            path: 'test-ref-path-2'
+          },
           internal: {
-            type: 'ContentfulPageLandingPage'
+            type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Applying for funding',
-          path: 'https://www.comicrelief.com/funding/applying-for-funding',
+          title: 'Link comp: only URL',
+          url: 'test-url',
+          reference: null,
           internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Managing your funding',
-          path: 'https://www.comicrelief.com/funding/managing-your-funding',
-          internal: {
-            type: 'ContentfulPageLandingPage'
+            type: 'ContentfulComponentLink'
           }
         }
       ]

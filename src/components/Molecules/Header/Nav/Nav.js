@@ -15,6 +15,7 @@ import {
   SubNavLink,
   SubNavLinkUnderline
 } from './Nav.style';
+import NavHelper from '../../../../utils/NavHelper';
 
 const MainNav = ({ navItems }) => {
   const { menuGroups } = navItems;
@@ -81,6 +82,9 @@ const MainNav = ({ navItems }) => {
             /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
 
+            /* Determine which field represents our url path */
+            const thisUrl = NavHelper(thisFirstChild);
+
             return (
               <NavItem
                 role="none"
@@ -90,7 +94,7 @@ const MainNav = ({ navItems }) => {
               >
                 {!isMobile ? (
                   <NavLink
-                    href={thisFirstChild.path}
+                    href={thisUrl}
                     inline
                     aria-haspopup="true"
                     onClick={toggleSubMenu(group.id)}
@@ -100,12 +104,13 @@ const MainNav = ({ navItems }) => {
                   </NavLink>
                 ) : (
                   <NavLink
-                    href={thisFirstChild.path}
+                    href="#"
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup="true"
                     onClick={toggleSubMenu(group.id)}
                     onKeyUp={keyPressed(group.title)}
+                    role="button"
                   >
                     <Text>{thisFirstChild.title}</Text>
                   </NavLink>
@@ -118,12 +123,14 @@ const MainNav = ({ navItems }) => {
                     isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >
                     {group.links.map((child, childIndex) => {
+                      const thisSubUrl = NavHelper(child);
+
                       /* Wrap our first child item with special tags */
                       if (childIndex === 0) {
                         return (
-                          <SubNavItem role="none" key={child.path}>
+                          <SubNavItem role="none" key={thisSubUrl}>
                             <SubNavLinkUnderline
-                              href={child.path}
+                              href={thisSubUrl}
                               inline
                               role="menuitem"
                             >
@@ -133,8 +140,8 @@ const MainNav = ({ navItems }) => {
                         );
                       }
                       return (
-                        <SubNavItem key={child.path}>
-                          <SubNavLink href={child.path} inline role="menuitem">
+                        <SubNavItem key={thisSubUrl}>
+                          <SubNavLink href={thisSubUrl} inline role="menuitem">
                             <Text>{child.title}</Text>
                           </SubNavLink>
                         </SubNavItem>

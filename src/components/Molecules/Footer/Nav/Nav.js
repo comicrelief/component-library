@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import { sizes } from '../../../../theme/shared/breakpoint';
+import NavHelper from '../../../../utils/NavHelper';
 
 import {
   Nav,
@@ -88,16 +89,8 @@ const FooterNav = ({ navItems }) => {
                 column={group.links.length % 2 === 0 && group.links.length > 2}
               >
                 {group.links.map(child => {
-                  let thisUrl;
-                  /* Determine where to grab the URL, depending on the component type and values supplied */
-                  if (child.internal.type === 'ContentfulComponentLink') {
-                    thisUrl =
-                      child.reference && child.reference.path
-                        ? child.reference.path
-                        : child.url;
-                  } else {
-                    thisUrl = child.path;
-                  }
+                  /* Determine which field represents our url path */
+                  const thisUrl = NavHelper(child);
 
                   return (
                     <SubNavItem

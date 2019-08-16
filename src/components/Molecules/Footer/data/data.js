@@ -170,7 +170,7 @@ export default {
         },
         {
           title: 'Link comp with only URL',
-          url: 'https://www.bing.com',
+          url: 'https://www.yahoo.com',
           reference: null,
           internal: {
             type: 'ContentfulComponentLink'
