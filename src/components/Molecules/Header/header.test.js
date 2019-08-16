@@ -749,7 +749,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      What your money does
+                      Our legacy
                     </span>
                   </a>
                 </li>

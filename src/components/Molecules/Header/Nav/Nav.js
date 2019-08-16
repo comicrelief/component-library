@@ -77,63 +77,74 @@ const MainNav = ({ navItems }) => {
 
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">
-          {menuGroups.map((group, index) => (
-            <NavItem
-              role="none"
-              key={group.id}
-              index={index}
-              isSubMenuOpen={!!isSubMenuOpen[group.id]}
-            >
-              {!isMobile ? (
-                <NavLink
-                  href={group.path}
-                  inline
-                  aria-haspopup="true"
-                  onClick={toggleSubMenu(group.id)}
-                  onKeyUp={keyPressed(group.title)}
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-              ) : (
-                <NavLink
-                  href={group.path}
-                  inline
-                  aria-expanded={!!isSubMenuOpen[group.id]}
-                  aria-haspopup="true"
-                  onClick={toggleSubMenu(group.id)}
-                  onKeyUp={keyPressed(group.title)}
-                >
-                  <Text>{group.title}</Text>
-                </NavLink>
-              )}
-              {/* Second level of the navigation (ul tag): Child(ren) */}
-              {group.links && group.links.length > 0 && (
-                <SubNavMenu
-                  role="menu"
-                  isKeyPressed={!!isKeyPressed[group.title]}
-                  isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                >
-                  <SubNavItem role="none">
-                    {/* This is the previous li item from the parent */}
-                    <SubNavLinkUnderline
-                      href={group.path}
-                      inline
-                      role="menuitem"
-                    >
-                      <Text>{group.title}</Text>
-                    </SubNavLinkUnderline>
-                  </SubNavItem>
-                  {group.links.map(child => (
-                    <SubNavItem key={child.path}>
-                      <SubNavLink href={child.path} inline role="menuitem">
-                        <Text>{child.title}</Text>
-                      </SubNavLink>
-                    </SubNavItem>
-                  ))}
-                </SubNavMenu>
-              )}
-            </NavItem>
-          ))}
+          {menuGroups.map((group, index) => {
+            /* Grab the first links properties to use for our parent/button */
+            const thisFirstChild = group.links[0];
+
+            return (
+              <NavItem
+                role="none"
+                key={group.id}
+                index={index}
+                isSubMenuOpen={!!isSubMenuOpen[group.id]}
+              >
+                {!isMobile ? (
+                  <NavLink
+                    href={thisFirstChild.path}
+                    inline
+                    aria-haspopup="true"
+                    onClick={toggleSubMenu(group.id)}
+                    onKeyUp={keyPressed(group.title)}
+                  >
+                    <Text>{thisFirstChild.title}</Text>
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    href={thisFirstChild.path}
+                    inline
+                    aria-expanded={!!isSubMenuOpen[group.id]}
+                    aria-haspopup="true"
+                    onClick={toggleSubMenu(group.id)}
+                    onKeyUp={keyPressed(group.title)}
+                  >
+                    <Text>{thisFirstChild.title}</Text>
+                  </NavLink>
+                )}
+                {/* Second level of the navigation (ul tag): Child(ren) */}
+                {group.links && group.links.length > 0 && (
+                  <SubNavMenu
+                    role="menu"
+                    isKeyPressed={!!isKeyPressed[group.title]}
+                    isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                  >
+                    {group.links.map((child, childIndex) => {
+                      /* Wrap our first child item with special tags */
+                      if (childIndex === 0) {
+                        return (
+                          <SubNavItem role="none" key={child.path}>
+                            <SubNavLinkUnderline
+                              href={child.path}
+                              inline
+                              role="menuitem"
+                            >
+                              <Text>{child.title}</Text>
+                            </SubNavLinkUnderline>
+                          </SubNavItem>
+                        );
+                      }
+                      return (
+                        <SubNavItem key={child.path}>
+                          <SubNavLink href={child.path} inline role="menuitem">
+                            <Text>{child.title}</Text>
+                          </SubNavLink>
+                        </SubNavItem>
+                      );
+                    })}
+                  </SubNavMenu>
+                )}
+              </NavItem>
+            );
+          })}
         </NavMenu>
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
