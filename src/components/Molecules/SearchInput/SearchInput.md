@@ -3,7 +3,7 @@
 ```js
 initialState = { search: '' };
 <SearchInput
-  onChangeInput={e => {
+  onChange={e => {
     e.preventDefault();
     setState({ search: e.target.value });
     console.log(state.search);

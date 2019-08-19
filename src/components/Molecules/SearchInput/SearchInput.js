@@ -11,15 +11,15 @@ import {
   ActionButton
 } from './SearchInput.style';
 
-const SearchInput = ({ onChangeInput, placeholder, value }) => {
+const SearchInput = ({ onChange, placeholder, value }) => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <Form>
+        <Form onSubmit={e => e.preventDefault()}>
           <SearchWrapper>
             <SearchField
               value={value}
-              onChange={onChangeInput}
+              onChange={onChange}
               name="search"
               showLabel={false}
               type="text"
@@ -31,6 +31,8 @@ const SearchInput = ({ onChangeInput, placeholder, value }) => {
           </SearchWrapper>
           <ActionWrapper>
             <ActionButton
+              showLabel={false}
+              disabled="disabled"
               type="submit"
               id=""
               name="action"
@@ -46,7 +48,7 @@ const SearchInput = ({ onChangeInput, placeholder, value }) => {
 };
 
 SearchInput.propTypes = {
-  onChangeInput: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired
 };

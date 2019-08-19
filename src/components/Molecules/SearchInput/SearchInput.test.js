@@ -198,6 +198,7 @@ it('renders correctly', () => {
       >
         <form
           className="c2"
+          onSubmit={[Function]}
         >
           <div
             className="c3"
@@ -216,7 +217,6 @@ it('renders correctly', () => {
                 aria-describedby="search"
                 className="c7 c8"
                 name="search"
-                onChange={[Function]}
                 placeholder=""
                 type="text"
                 value=""
@@ -232,7 +232,7 @@ it('renders correctly', () => {
               htmlFor=""
             >
               <span
-                className="c6"
+                className="c5 c6"
                 color="inherit"
               >
                 
@@ -240,6 +240,7 @@ it('renders correctly', () => {
               <input
                 aria-describedby=""
                 className="c10 c8"
+                disabled="disabled"
                 name="action"
                 placeholder=""
                 type="submit"
