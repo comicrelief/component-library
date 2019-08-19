@@ -1,130 +1,194 @@
 export default {
-  menuDescription: 'Footer',
-  menuGroup: [
+  title: 'Footer',
+  menuGroups: [
     {
-      id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
       title: 'Hear from us',
-      url: '/',
+      id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
       links: [
         {
           title: 'Get the newsletter',
-          url: 'https://www.comicrelief.com/#'
+          path: 'https://www.comicrelief.com/#',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'How we contact you',
-          url: 'https://www.comicrelief.com/update-your-preferences'
+          path: 'https://www.comicrelief.com/update-your-preferences',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
       title: 'Get in touch',
-      url: '/',
+      id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
       links: [
         {
           title: 'Contact us',
-          url: 'https://www.comicrelief.com/contact-us'
+          path: 'https://www.comicrelief.com/contact-us',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Your Gift Aid',
-          url: 'https://giftaid.comicrelief.com/update'
+          path: 'https://giftaid.comicrelief.com/update',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'FAQs',
-          url: 'https://www.comicrelief.com/frequently-asked-questions'
+          path: 'https://www.comicrelief.com/frequently-asked-questions',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Red Nose Day 2019 FAQs',
-          url:
-            'https://www.comicrelief.com/red-nose-days-frequently-asked-questions'
+          path:
+            'https://www.comicrelief.com/red-nose-days-frequently-asked-questions',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998b',
       title: 'About us',
-      url: '/',
+      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998b',
       links: [
         {
           title: 'Mission',
-          url: 'https://www.comicrelief.com/about-comic-relief'
+          path: 'https://www.comicrelief.com/about-comic-relief',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Our history',
-          url: 'https://www.comicrelief.com/about-comic-relief/history'
+          path: 'https://www.comicrelief.com/about-comic-relief/history',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Finances',
-          url: 'https://www.comicrelief.com/about-comic-relief/finances'
+          path: 'https://www.comicrelief.com/about-comic-relief/finances',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Partners',
-          url: 'https://www.comicrelief.com/working-with-us'
+          path: 'https://www.comicrelief.com/working-with-us',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Meet the team',
-          url: 'https://www.comicrelief.com/about-comic-relief/meet-the-team'
+          path: 'https://www.comicrelief.com/about-comic-relief/meet-the-team',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Sport Relief',
-          url: 'https://www.sportrelief.com/'
+          path: 'https://www.sportrelief.com/',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      id: '4a5b055f-1f7e-5f4b-827d-768032fd373c',
       title: 'Careers',
-      url: '/',
+      id: '4a5b055f-1f7e-5f4b-827d-768032fd373c',
       links: [
         {
           title: 'Working at Comic Relief',
-          url: 'https://www.comicrelief.com/careers'
+          path: 'https://www.comicrelief.com/careers',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Open roles',
-          url: 'https://app.beapplied.com/org/comic-relief'
+          path: 'https://app.beapplied.com/org/comic-relief',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      id: '4a5b055f-1f7e-5f4b-827d-768032fd373d',
       title: 'News',
-      url: '/',
+      id: '4a5b055f-1f7e-5f4b-827d-768032fd373d',
       links: [
         {
           title: 'News',
-          url: 'https://www.comicrelief.com/news'
+          path: 'https://www.comicrelief.com/news',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         },
         {
           title: 'Press area',
-          url: 'https://www.comicrelief.com/press-releases'
+          path: 'https://www.comicrelief.com/press-releases',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
       title: 'Legal',
-      url: '/',
+      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
       links: [
         {
-          title: 'Privacy policy',
-          url: 'https://www.comicrelief.com/privacy-notice'
+          title: 'Link comp with both URL and Ref',
+          url: 'https://www.google.com',
+          reference: {
+            path: 'homepage'
+          },
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         },
         {
-          title: 'Terms of use',
-          url: 'https://www.comicrelief.com/terms-of-use'
+          title: 'Link comp with only Ref',
+          url: null,
+          reference: {
+            path: 'this-is-a-test'
+          },
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         },
         {
-          title: 'Test internal link',
-          url: '/test-internal-link'
+          title: 'Link comp with only URL',
+          url: 'https://www.yahoo.com',
+          reference: null,
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         },
         {
           title: 'Test whitelisted external link',
-          url: 'https://www.sportrelief.com'
+          url: 'https://www.sportrelief.com',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         },
         {
           title: 'Test non-whitelisted external link',
-          url: 'http://bing.com'
+          url: 'https://bing.com',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         }
       ]
     }

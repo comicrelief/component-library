@@ -563,8 +563,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -628,8 +629,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -731,8 +733,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -872,8 +875,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -937,8 +941,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -1002,8 +1007,9 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11"
                 color="red"
-                href="/"
+                href="#"
                 onClick={[Function]}
+                role="button"
                 target="_self"
                 type="standard"
               >
@@ -1025,7 +1031,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="https://www.comicrelief.com/privacy-notice"
+                    href="homepage"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1034,7 +1040,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Privacy policy
+                      Link comp with both URL and Ref
                     </span>
                   </a>
                 </li>
@@ -1044,7 +1050,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="https://www.comicrelief.com/terms-of-use"
+                    href="this-is-a-test"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1053,7 +1059,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Terms of use
+                      Link comp with only Ref
                     </span>
                   </a>
                 </li>
@@ -1063,16 +1069,16 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="/test-internal-link"
+                    href="https://www.yahoo.com"
                     role="menuitem"
-                    target="_self"
+                    target="_blank"
                     type="standard"
                   >
                     <span
                       className="c7"
                       color="inherit"
                     >
-                      Test internal link
+                      Link comp with only URL
                     </span>
                   </a>
                 </li>
@@ -1101,7 +1107,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="http://bing.com"
+                    href="https://bing.com"
                     role="menuitem"
                     target="_blank"
                     type="standard"

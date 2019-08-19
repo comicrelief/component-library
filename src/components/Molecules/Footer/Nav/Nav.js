@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import { sizes } from '../../../../theme/shared/breakpoint';
+import NavHelper from '../../../../utils/NavHelper';
 
 import {
   Nav,
@@ -15,7 +16,7 @@ import {
 } from './Nav.style';
 
 const FooterNav = ({ navItems }) => {
-  const { menuGroup } = navItems;
+  const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
 
@@ -50,7 +51,7 @@ const FooterNav = ({ navItems }) => {
 
       {/* First level of the navigation (ul tag): Parent */}
       <NavMenu role="menubar">
-        {menuGroup.map((group, index) => (
+        {menuGroups.map((group, index) => (
           <NavItem
             role="none"
             key={group.id}
@@ -59,19 +60,21 @@ const FooterNav = ({ navItems }) => {
           >
             {!isSmallBreakpoint ? (
               <NavLink
-                href={group.url}
+                href="#"
                 inline
                 aria-haspopup="true"
+                role="button"
                 onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
               </NavLink>
             ) : (
               <NavLink
-                href={group.url}
+                href="#"
                 inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
+                role="button"
                 onClick={toggleSubMenu(group.id)}
               >
                 <Text>{group.title}</Text>
@@ -85,18 +88,23 @@ const FooterNav = ({ navItems }) => {
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 column={group.links.length % 2 === 0 && group.links.length > 2}
               >
-                {group.links.map(child => (
-                  <SubNavItem
-                    key={child.url}
-                    column={
-                      group.links.length % 2 === 0 && group.links.length > 2
-                    }
-                  >
-                    <SubNavLink href={child.url} inline role="menuitem">
-                      <Text>{child.title}</Text>
-                    </SubNavLink>
-                  </SubNavItem>
-                ))}
+                {group.links.map(child => {
+                  /* Determine which field represents our url path */
+                  const thisUrl = NavHelper(child);
+
+                  return (
+                    <SubNavItem
+                      key={thisUrl}
+                      column={
+                        group.links.length % 2 === 0 && group.links.length > 2
+                      }
+                    >
+                      <SubNavLink href={thisUrl} inline role="menuitem">
+                        <Text>{child.title}</Text>
+                      </SubNavLink>
+                    </SubNavItem>
+                  );
+                })}
               </SubNavMenu>
             )}
           </NavItem>
