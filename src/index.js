@@ -40,10 +40,10 @@ export {
 export {
   default as SingleMessage
 } from './components/Molecules/SingleMessage/SingleMessage';
-export {
-  default as ArticleBlock
-} from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Card } from './components/Molecules/Card/Card';
+export {
+  default as ArticleTeaser
+} from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Molecules/Header/Header';
 export {
   default as CookieBanner
@@ -55,3 +55,6 @@ export {
   default as PartnerLink
 } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Molecules/Footer/Footer';
+export {
+  default as SearchResult
+} from './components/Molecules/SearchResult/SearchResult';

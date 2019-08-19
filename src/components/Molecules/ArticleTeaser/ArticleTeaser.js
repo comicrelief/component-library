@@ -6,11 +6,12 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 
 /**
- * Article tag wrapper
+ * Article Teaser
  */
 const Wrapper = styled.article`
   width: 100%;
   height: 100%;
+  display: flex;
   background-color: #fff;
 `;
 
@@ -21,18 +22,22 @@ const Link = styled.a`
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    flex-direction: column;
   }
 `;
 
 const ImageWrapper = styled.div`
+  height: auto;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: ${({ smallImageWidth }) => smallImageWidth};
+    width: 45%;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    width: ${({ largeImageWidth }) => largeImageWidth};
-    height: auto;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 100%;
   }
 `;
 
@@ -44,34 +49,19 @@ const CopyWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 55%;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
-    height: 100%;
   }
 `;
 
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({
-  href,
-  date,
-  title,
-  copy,
-  imageLow,
-  image,
-  images,
-  alt,
-  smallImageWidth,
-  largeImageWidth
-}) => {
+const ArticleTeaser = ({ href, date, title, imageLow, image, images, alt }) => {
   return (
     <Wrapper>
       <Link href={href} type="standard">
-        <ImageWrapper
-          smallImageWidth={smallImageWidth}
-          largeImageWidth={largeImageWidth}
-        >
+        <ImageWrapper>
           <Picture
             imageLow={imageLow}
             images={images}
@@ -87,7 +77,6 @@ const ArticleTeaser = ({
           <Text size="xl" tag="h3" uppercase>
             {title}
           </Text>
-          {copy && <Text size="l">{copy}</Text>}
         </CopyWrapper>
       </Link>
     </Wrapper>
@@ -101,20 +90,14 @@ ArticleTeaser.propTypes = {
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  copy: PropTypes.string,
-  smallImageWidth: PropTypes.string,
-  largeImageWidth: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
 };
 
 ArticleTeaser.defaultProps = {
-  copy: '',
   imageLow: null,
   image: null,
-  images: null,
-  smallImageWidth: '45%',
-  largeImageWidth: '100%'
+  images: null
 };
 
 export default ArticleTeaser;

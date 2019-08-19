@@ -1,0 +1,656 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in minimalist form 1`] = `
+.c7 {
+  font-size: 0.83125rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  font-size: 1.725rem;
+  text-transform: uppercase;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c1:hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.5rem 0 1rem;
+  width: 100%;
+}
+
+.c8 {
+  margin: 0;
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    className="c1 c2"
+    color="red"
+    href="/test"
+    target="_self"
+    type="standard"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="lazyload c5"
+          data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          height="auto"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
+      >
+         
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
+      >
+        News article
+      </h3>
+      
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with copy 1`] = `
+.c7 {
+  font-size: 0.83125rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  font-size: 1.725rem;
+  text-transform: uppercase;
+}
+
+.c10 {
+  font-size: 1.2rem;
+  text-transform: inherit;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c1:hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.5rem 0 1rem;
+  width: 100%;
+}
+
+.c8 {
+  margin: 0;
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    className="c1 c2"
+    color="red"
+    href="/test"
+    target="_self"
+    type="standard"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="lazyload c5"
+          data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          height="auto"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
+      >
+         
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
+      >
+        News article
+      </h3>
+      <p
+        className="c10"
+        color="inherit"
+        size="m"
+      >
+        News article copy
+      </p>
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with date 1`] = `
+.c7 {
+  font-size: 0.83125rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  font-size: 1.725rem;
+  text-transform: uppercase;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c1:hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.5rem 0 1rem;
+  width: 100%;
+}
+
+.c8 {
+  margin: 0;
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    className="c1 c2"
+    color="red"
+    href="/test"
+    target="_self"
+    type="standard"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="lazyload c5"
+          data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          height="auto"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
+      >
+         01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
+      >
+        News article
+      </h3>
+      
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with date and type 1`] = `
+.c7 {
+  font-size: 0.83125rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  font-size: 1.725rem;
+  text-transform: uppercase;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px 1px;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c2:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: 700;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c1:hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.5rem 0 1rem;
+  width: 100%;
+}
+
+.c8 {
+  margin: 0;
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    className="c1 c2"
+    color="red"
+    href="/test"
+    target="_self"
+    type="standard"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="lazyload c5"
+          data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          height="auto"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
+      >
+         article | 01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
+      >
+        News article
+      </h3>
+      
+    </div>
+  </a>
+</article>
+`;
