@@ -23,7 +23,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  ${zIndex('high')};
+  ${zIndex('medium')};
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
