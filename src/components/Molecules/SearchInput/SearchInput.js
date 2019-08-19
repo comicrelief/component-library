@@ -11,7 +11,7 @@ import {
   ActionButton
 } from './SearchInput.style';
 
-const SearchInput = ({ onChangeInput }) => {
+const SearchInput = ({ onChangeInput, placeholder }) => {
   return (
     <Wrapper>
       <InnerWrapper>
@@ -24,7 +24,7 @@ const SearchInput = ({ onChangeInput }) => {
               type="text"
               label="Search"
               id="search"
-              placeholder=""
+              placeholder={placeholder}
               errorMsg=""
             />
           </SearchWrapper>
@@ -45,7 +45,12 @@ const SearchInput = ({ onChangeInput }) => {
 };
 
 SearchInput.propTypes = {
-  onChangeInput: PropTypes.func.isRequired
+  onChangeInput: PropTypes.func.isRequired,
+  placeholder: PropTypes.string
+};
+
+SearchInput.defaultProps = {
+  placeholder: ''
 };
 
 export default SearchInput;

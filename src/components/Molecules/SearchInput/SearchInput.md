@@ -10,5 +10,6 @@ initialState = { search: '' };
     console.log(state.search);
   }}
   value={state.search}
+  placeholder="Search..."
 />
 ```
