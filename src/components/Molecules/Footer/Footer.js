@@ -20,13 +20,10 @@ const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
         <SocialIconWrapper>
           <SocialIcons campaign={campaign} />
         </SocialIconWrapper>
-
         <FooterNav navItems={navItems} />
-
         <FooterBranding>
           <Logo sizeSm="70px" sizeMd="70px" rotate />
         </FooterBranding>
-
         <FooterCopyright>
           <Text tag="p" color="white">
             {footerCopy}
