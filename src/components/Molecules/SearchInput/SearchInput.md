@@ -1,8 +1,7 @@
 # Search input
 
-initialState = { search: '' };
-
 ```js
+initialState = { search: '' };
 <SearchInput
   onChangeInput={e => {
     e.preventDefault();
@@ -11,5 +10,5 @@ initialState = { search: '' };
   }}
   value={state.search}
   placeholder="Search..."
-/>
+/>;
 ```

@@ -219,6 +219,7 @@ it('renders correctly', () => {
                 onChange={[Function]}
                 placeholder=""
                 type="text"
+                value=""
               />
               
             </label>
