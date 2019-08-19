@@ -62,10 +62,6 @@ const ActionButton = styled(SearchField)`
   mask: url(${searchIcon}) no-repeat right center;
   mask-size: 85%;
   appearance: none;
-  cursor: pointer;
-  :hover {
-    background: ${({ theme }) => theme.color('deep_violet')};
-  }
   @media ${({ theme }) => theme.breakpoint('small')} {
     mask-size: 100%;
   }

@@ -6,10 +6,11 @@ import SearchInput from './SearchInput';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SearchInput
-      submitSearch={e => {
+      onChangeInput={e => {
         e.preventDefault();
-        return 'Your search result';
+        return e.target.value;
       }}
+      value=""
     />
   ).toJSON();
 
@@ -150,15 +151,10 @@ it('renders correctly', () => {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      cursor: pointer;
     }
 
     .c10:focus {
       border: 0;
-    }
-
-    .c10:hover {
-      background: #2C0230;
     }
 
     @media (min-width:740px) {
@@ -202,14 +198,13 @@ it('renders correctly', () => {
       >
         <form
           className="c2"
-          onSubmit={[Function]}
         >
           <div
             className="c3"
           >
             <label
               className="c4"
-              htmlFor="edit-text"
+              htmlFor="search"
             >
               <span
                 className="c5 c6"
@@ -218,9 +213,10 @@ it('renders correctly', () => {
                 Search
               </span>
               <input
-                aria-describedby="edit-text"
+                aria-describedby="search"
                 className="c7 c8"
                 name="search"
+                onChange={[Function]}
                 placeholder=""
                 type="text"
               />
@@ -232,7 +228,7 @@ it('renders correctly', () => {
           >
             <label
               className="c4"
-              htmlFor="edit-submit-search"
+              htmlFor=""
             >
               <span
                 className="c6"
@@ -241,9 +237,9 @@ it('renders correctly', () => {
                 
               </span>
               <input
-                aria-describedby="edit-submit-search"
+                aria-describedby=""
                 className="c10 c8"
-                name="search action"
+                name="action"
                 placeholder=""
                 type="submit"
               />

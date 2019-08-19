@@ -11,18 +11,19 @@ import {
   ActionButton
 } from './SearchInput.style';
 
-const SearchInput = ({ submitSearch }) => {
+const SearchInput = ({ onChangeInput }) => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <Form onSubmit={submitSearch}>
+        <Form>
           <SearchWrapper>
             <SearchField
+              onChange={onChangeInput}
               name="search"
               showLabel={false}
               type="text"
               label="Search"
-              id="edit-text"
+              id="search"
               placeholder=""
               errorMsg=""
             />
@@ -30,8 +31,8 @@ const SearchInput = ({ submitSearch }) => {
           <ActionWrapper>
             <ActionButton
               type="submit"
-              id="edit-submit-search"
-              name="search action"
+              id=""
+              name="action"
               placeholder=""
               label=""
               errorMsg=""
@@ -44,7 +45,7 @@ const SearchInput = ({ submitSearch }) => {
 };
 
 SearchInput.propTypes = {
-  submitSearch: PropTypes.func.isRequired
+  onChangeInput: PropTypes.func.isRequired
 };
 
 export default SearchInput;

@@ -1,10 +1,14 @@
 # Search input
 
+initialState = { search: '' };
+
 ```js
 <SearchInput
-  submitSearch={e => {
+  onChangeInput={e => {
     e.preventDefault();
-    console.log('Your search result');
+    setState({ search: e.target.value });
+    console.log(state.search);
   }}
+  value={state.search}
 />
 ```
