@@ -6,9 +6,9 @@ import {
   InnerWrapper,
   Form,
   SearchWrapper,
-  Search,
+  SearchField,
   ActionWrapper,
-  Action
+  ActionButton
 } from './SearchInput.style';
 
 const SearchInput = ({ submitSearch }) => {
@@ -17,7 +17,7 @@ const SearchInput = ({ submitSearch }) => {
       <InnerWrapper>
         <Form onSubmit={submitSearch}>
           <SearchWrapper>
-            <Search
+            <SearchField
               name="search"
               showLabel={false}
               type="text"
@@ -28,7 +28,7 @@ const SearchInput = ({ submitSearch }) => {
             />
           </SearchWrapper>
           <ActionWrapper>
-            <Action
+            <ActionButton
               type="submit"
               id="edit-submit-search"
               name="search action"

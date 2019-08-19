@@ -32,7 +32,7 @@ const SearchWrapper = styled.div`
   margin-right: ${spacing('sm')};
 `;
 
-const Search = styled(Input)`
+const SearchField = styled(Input)`
   margin: ${spacing('none')};
   padding: ${spacing('none')};
   font-size: ${({ theme }) => theme.fontSize('md')};
@@ -56,7 +56,7 @@ const ActionWrapper = styled(SearchWrapper)`
   }
 `;
 
-const Action = styled(Search)`
+const ActionButton = styled(SearchField)`
   text-indent: -9999px;
   background-color: ${({ theme }) => theme.color('grey_medium')};
   mask: url(${searchIcon}) no-repeat right center;
@@ -76,7 +76,7 @@ export {
   InnerWrapper,
   Form,
   SearchWrapper,
-  Search,
+  SearchField,
   ActionWrapper,
-  Action
+  ActionButton
 };
