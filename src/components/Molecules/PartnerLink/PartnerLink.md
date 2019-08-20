@@ -1,7 +1,9 @@
 # Partner Link
 
 ```js
-const logo = require('../../../styleguide/assets/picture-2.jpg');
-
-<PartnerLink slug="" link={logo} title="partner's name" />;
+const data = require('../../../styleguide/data/data').default;
+import Picture from '../../Atoms/Picture/Picture';
+<PartnerLink link="https://www.comicrelief.com">
+  <Picture alt="test Image" imageLow={data.imageLow} images={data.images} />
+</PartnerLink>;
 ```

@@ -3,11 +3,14 @@ import 'jest-styled-components';
 
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import PartnerLink from './PartnerLink';
-import logo from '../../../styleguide/assets/picture-2.jpg';
+import Picture from '../../Atoms/Picture/Picture';
+import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <PartnerLink slug="" link={logo} title="partner's name" />
+    <PartnerLink link="https://www.comicrelief.com">
+      <Picture alt="test Image" imageLow={data.imageLow} images={data.images} />
+    </PartnerLink>
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -110,7 +113,7 @@ it('renders correctly', () => {
       <a
         className="c1 c2"
         color="red"
-        href=""
+        href="https://www.comicrelief.com"
         target="_self"
         type="standard"
       >
@@ -120,10 +123,14 @@ it('renders correctly', () => {
           width="100%"
         >
           <img
-            alt="partner's name"
+            alt="test Image"
             className="lazyload c4"
-            data-src="mock.asset"
+            data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+            data-sizes="auto"
+            data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
             height="auto"
+            src={null}
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             width="100%"
           />
         </div>
