@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-// import icons from '../../Atoms/SocialIcons/Utils/Icons';
-// import styled from 'styled-components';
-// import spacing from '../../../theme/shared/spacing';
-
 import PopUpHelper from './PopUpHelper';
 
+/* To move */
 import facebook from './assets/fb--share.svg';
 import twitter from './assets/twitter--share.svg';
 
+/* To move */
 const socialIcons = {
   facebook,
   twitter
@@ -67,7 +65,7 @@ const handleShare = (e, typeOfShare) => {
   PopUpHelper(shareUrl, 'some title', popUpWidth, popUpHeight);
 };
 
-/** Social media icons with customizable style linked to campaign social media accounts */
+/* Share Button component to handle FB and Twitter sharing */
 const ShareButton = ({ ...restProps }) => {
   return (
     <Wrapper>
