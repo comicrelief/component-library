@@ -1,5 +1,5 @@
 /* Handles issues related to screen/browser positions on dual-screen setups-  http://www.xtf.dk/ */
-const popUpCentre = (url, title, popUpWidth, popUpHeight) => {
+const popUpCentre = (url, popUpWidth, popUpHeight) => {
   const dualScreenLeft =
     window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
   const dualScreenTop =
@@ -24,13 +24,13 @@ const popUpCentre = (url, title, popUpWidth, popUpHeight) => {
     browserHeight = window.screen.height;
   }
 
-  const left = browserWidth / 2 - popUpWidth / 2 + dualScreenLeft;
-  const top = browserHeight / 2 - popUpHeight / 2 + dualScreenTop;
+  const popUpLeft = browserWidth / 2 - popUpWidth / 2 + dualScreenLeft;
+  const popUpTop = browserHeight / 2 - popUpHeight / 2 + dualScreenTop;
 
   const newWindow = window.open(
     url,
-    title,
-    `width=${popUpWidth}, height=${popUpHeight}, top=${top}, left=${left}`
+    '',
+    `width=${popUpWidth}, height=${popUpHeight}, top=${popUpTop}, left=${popUpLeft}`
   );
 
   // Shift browser focus to newWindow

@@ -40,29 +40,18 @@ const StyledItem = styled.li`
   margin: 4px;
 `;
 
-const shareFunctionality = typeOfShare => {
-  let shareUrl = '';
-
-  if (typeOfShare === 'twitter') {
-    shareUrl = 'http://www.twitter.com/share?url=http://www.google.com';
-  } else {
-    shareUrl =
-      'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgithub.com&quote=GitHub';
-  }
-  return shareUrl;
-};
-
 const handleShare = (e, typeOfShare) => {
   e.preventDefault();
 
-  console.log('handleShare:', e.currentTarget.href, typeOfShare);
+  const currentUrl = window.location.href;
+  let shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
 
-  const popUpWidth = 600;
-  const popUpHeight = 300;
+  if (typeOfShare === 'twitter') {
+    shareUrl = `http://www.twitter.com/share?url=${currentUrl}`;
+  }
 
-  const shareUrl = shareFunctionality(typeOfShare);
-
-  PopUpHelper(shareUrl, 'some title', popUpWidth, popUpHeight);
+  /* Use helper function for pop-up position related issues on dual-screen setups */
+  PopUpHelper(shareUrl, 600, 300);
 };
 
 /* Share Button component to handle FB and Twitter sharing */
@@ -76,7 +65,7 @@ const ShareButton = ({ ...restProps }) => {
             <StyledItem key={`share-button--${brand}`}>
               <Icon
                 icon={socialIcons[brand]}
-                href={shareFunctionality(brand)}
+                href="#"
                 title="the title"
                 brand="comicrelief"
                 target="_blank"
