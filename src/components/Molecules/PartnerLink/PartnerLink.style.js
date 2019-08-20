@@ -16,7 +16,8 @@ const MoreInfo = styled(Text)`
 const Item = styled(Link)`
   position: relative;
   border: none;
-  :hover {
+  :hover,
+  :focus {
     border: none;
     ${MoreInfo} {
       font-size: ${({ theme }) => theme.fontSize('s')};

@@ -71,11 +71,13 @@ it('renders correctly', () => {
       border: none;
     }
 
-    .c1:hover {
+    .c1:hover,
+    .c1:focus {
       border: none;
     }
 
-    .c1:hover .c5 {
+    .c1:hover .c5,
+    .c1:focus .c5 {
       font-size: 1rem;
       color: #FFFFFF;
       overflow: inherit;
@@ -94,7 +96,8 @@ it('renders correctly', () => {
       z-index: 2;
     }
 
-    .c1:hover::after {
+    .c1:hover::after,
+    .c1:focus::after {
       content: '';
       position: absolute;
       display: block;
