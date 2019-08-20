@@ -1,6 +1,5 @@
-/* Great dual-screen solution from http://www.xtf.dk/ */
+/* Handles issues related to screen/browser positions on dual-screen setups-  http://www.xtf.dk/ */
 const popUpCentre = (url, title, popUpWidth, popUpHeight) => {
-  // Fixes dual-screen position        Most browsers      Firefox
   const dualScreenLeft =
     window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
   const dualScreenTop =
