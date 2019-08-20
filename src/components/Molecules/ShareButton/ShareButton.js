@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import PopUpHelper from '../../../utils/PopUpHelper';
 
@@ -10,7 +9,7 @@ import facebook from './assets/fb--share.svg';
 import twitter from './assets/twitter--share.svg';
 
 /* To move */
-const socialIcons = {
+const shareIcons = {
   facebook,
   twitter
 };
@@ -50,7 +49,7 @@ const handleShare = (e, typeOfShare) => {
     shareUrl = `http://www.twitter.com/share?url=${currentUrl}`;
   }
 
-  /* Use helper function for pop-up position related issues on dual-screen setups */
+  /* Use our helper function for pop-up position issues on dual-screen setups */
   PopUpHelper(shareUrl, 600, 300);
 };
 
@@ -60,11 +59,11 @@ const ShareButton = ({ ...restProps }) => {
     <Wrapper>
       <StyledParagraph>Share with:</StyledParagraph>
       <StyledList>
-        {Object.keys(socialIcons).map(brand => {
+        {Object.keys(shareIcons).map(brand => {
           return (
             <StyledItem key={`share-button--${brand}`}>
               <Icon
-                icon={socialIcons[brand]}
+                icon={shareIcons[brand]}
                 href="#"
                 title="the title"
                 brand="comicrelief"
@@ -81,11 +80,11 @@ const ShareButton = ({ ...restProps }) => {
   );
 };
 
-SocialIcons.propTypes = {
+ShareButton.propTypes = {
   /** Campaign, used to get social media accounts' links */
   campaign: PropTypes.string.isRequired
 };
 
-SocialIcons.defaultProps = {};
+ShareButton.defaultProps = {};
 
 export default ShareButton;
