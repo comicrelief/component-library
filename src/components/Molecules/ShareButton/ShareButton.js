@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import PopUpHelper from './PopUpHelper';
+import PopUpHelper from '../../../utils/PopUpHelper';
 
 /* To move */
 import facebook from './assets/fb--share.svg';
@@ -73,16 +73,16 @@ const ShareButton = ({ ...restProps }) => {
       <StyledList>
         {Object.keys(socialIcons).map(brand => {
           return (
-            <StyledItem>
+            <StyledItem key={`share-button--${brand}`}>
               <Icon
-                key={`share-button--${brand}`}
                 icon={socialIcons[brand]}
                 href={shareFunctionality(brand)}
                 title="the title"
                 brand="comicrelief"
-                onClick={e => handleShare(e, brand)}
+                target="_blank"
                 role="button"
                 {...restProps}
+                onClick={e => handleShare(e, brand)}
               />
             </StyledItem>
           );

@@ -1,5 +1,5 @@
 /* Great dual-screen solution from http://www.xtf.dk/ */
-const popUpCentre = (url, popUpWidth, popUpHeight) => {
+const popUpCentre = (url, title, popUpWidth, popUpHeight) => {
   // Fixes dual-screen position        Most browsers      Firefox
   const dualScreenLeft =
     window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
@@ -30,6 +30,7 @@ const popUpCentre = (url, popUpWidth, popUpHeight) => {
 
   const newWindow = window.open(
     url,
+    title,
     `width=${popUpWidth}, height=${popUpHeight}, top=${top}, left=${left}`
   );
 
