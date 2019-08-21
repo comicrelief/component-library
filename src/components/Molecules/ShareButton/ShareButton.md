@@ -1,3 +1,3 @@
 ```js
-<ShareButton campaign="comicrelief" />
+<ShareButton />
 ```

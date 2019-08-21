@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 
 const StyledParagraph = styled.p`
   width: auto;
-  margin: 0 15px 0 0;
+  margin: 0 20px 0 0;
 `;
 
 const StyledList = styled.ul`
@@ -43,33 +43,31 @@ const StyledItem = styled.li`
 const handleShare = (e, typeOfShare) => {
   e.preventDefault();
 
-  // Encore URL so we can happily pass it as a parameter, fragments and all
-  const currentUrl = encodeURIComponent(window.location.href);
-
-  const shareUrl = ShareUrlHelper(typeOfShare, currentUrl);
+  // Pass the current page's URL and the type of share to our helper function
+  const shareUrl = ShareUrlHelper(window.location.href, typeOfShare);
 
   // Use our helper function for pop-up position issues on dual-screen setups
   PopUpHelper(shareUrl, 550, 420);
 };
 
 /* Share Button component to handle FB and Twitter sharing */
-const ShareButton = ({ ...restProps }) => {
+const ShareButton = ({ campaign, ...restProps }) => {
   return (
     <Wrapper>
       <StyledParagraph>Share with:</StyledParagraph>
       <StyledList>
-        {Object.keys(shareIcons).map(brand => {
+        {Object.keys(shareIcons).map(shareType => {
           return (
-            <StyledItem key={`share-button--${brand}`}>
+            <StyledItem key={`share-button--${shareType}`}>
               <Icon
-                icon={shareIcons[brand]}
-                href="#"
-                title={`Share on ${brand}`}
-                brand="comicrelief"
+                onClick={e => handleShare(e, shareType)}
+                icon={shareIcons[shareType]}
+                title={`Share on ${shareType}`}
+                brand={campaign}
                 target="_blank"
                 role="button"
+                href="#"
                 {...restProps}
-                onClick={e => handleShare(e, brand)}
               />
             </StyledItem>
           );
@@ -81,9 +79,11 @@ const ShareButton = ({ ...restProps }) => {
 
 ShareButton.propTypes = {
   /** Campaign, used to get social media accounts' links */
-  campaign: PropTypes.string.isRequired
+  campaign: PropTypes.string
 };
 
-ShareButton.defaultProps = {};
+ShareButton.defaultProps = {
+  campaign: 'comicrelief'
+};
 
 export default ShareButton;
