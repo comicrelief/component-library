@@ -1,27 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { MoreInfo, Item } from './PartnerLink.style';
 
-import Picture from '../../Atoms/Picture/Picture';
-import { Wrapper, MoreInfo, Item } from './PartnerLink.style';
-
-const PartnerLink = ({ link, title, slug, ...rest }) => {
+const PartnerLink = ({ children, link, ...rest }) => {
+  const childrenWithProps = React.Children.map(children, child =>
+    React.cloneElement(child, { ...rest })
+  );
   return (
-    <Wrapper {...rest}>
-      <Item href={slug} type="standard">
-        <Picture image={link} alt={title} />
-        <MoreInfo>Find out more</MoreInfo>
-      </Item>
-    </Wrapper>
+    <Item href={link} type="standard">
+      {childrenWithProps}
+      <MoreInfo color="white" size="xxs">
+        Find out more
+      </MoreInfo>
+    </Item>
   );
 };
 
 PartnerLink.propTypes = {
-  /** Link for image  */
-  link: PropTypes.string.isRequired,
-  /** Partner's name    */
-  title: PropTypes.string.isRequired,
-  /** Path to more info  */
-  slug: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired,
+  link: PropTypes.string.isRequired
 };
-
 export default PartnerLink;
