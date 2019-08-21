@@ -1,35 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import PopUpHelper from '../../../utils/ShareButton/SharePopUpHelper';
 import ShareUrlHelper from '../../../utils/ShareButton/ShareUrlHelper';
 import ShareIcons from './assets/ShareIcons';
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const StyledParagraph = styled.p`
-  width: auto;
-  margin: 0 20px 0 0;
-`;
-
-const StyledList = styled.ul`
-  width: auto;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
-
-const StyledItem = styled.li`
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  margin: 4px;
-`;
+import {
+  Wrapper,
+  StyledParagraph,
+  StyledList,
+  StyledItem
+} from './ShareButton.style';
 
 const handleShare = (e, typeOfShare) => {
   e.preventDefault();
