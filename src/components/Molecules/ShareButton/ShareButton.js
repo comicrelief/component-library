@@ -4,16 +4,7 @@ import styled from 'styled-components';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import PopUpHelper from '../../../utils/ShareButton/SharePopUpHelper';
 import ShareUrlHelper from '../../../utils/ShareButton/ShareUrlHelper';
-
-/* To move */
-import Facebook from './assets/fb--share.svg';
-import Twitter from './assets/twitter--share.svg';
-
-/* To move */
-const shareIcons = {
-  Facebook,
-  Twitter
-};
+import ShareIcons from './assets/ShareIcons';
 
 const Wrapper = styled.div`
   display: flex;
@@ -56,12 +47,12 @@ const ShareButton = ({ campaign, ...restProps }) => {
     <Wrapper>
       <StyledParagraph>Share with:</StyledParagraph>
       <StyledList>
-        {Object.keys(shareIcons).map(shareType => {
+        {Object.keys(ShareIcons).map(shareType => {
           return (
             <StyledItem key={`share-button--${shareType}`}>
               <Icon
                 onClick={e => handleShare(e, shareType)}
-                icon={shareIcons[shareType]}
+                icon={ShareIcons[shareType]}
                 title={`Share on ${shareType}`}
                 brand={campaign}
                 target="_blank"
