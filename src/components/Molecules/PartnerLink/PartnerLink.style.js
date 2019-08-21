@@ -5,16 +5,6 @@ import Text from '../../Atoms/Text/Text';
 import hideVisually from '../../../theme/shared/hideVisually';
 import zIndex from '../../../theme/shared/zIndex';
 
-const Wrapper = styled.li`
-  list-style: none;
-  width: 46%;
-  margin: 2%;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin: 1%;
-    width: 22%;
-  }
-`;
-
 const MoreInfo = styled(Text)`
   ${hideVisually}
   @media ${({ theme }) => theme.breakpoint('small')} {
@@ -56,4 +46,4 @@ const Item = styled(Link)`
   }
 `;
 
-export { Wrapper, MoreInfo, Item };
+export { MoreInfo, Item };
