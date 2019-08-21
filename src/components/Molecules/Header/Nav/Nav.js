@@ -15,7 +15,7 @@ import {
   SubNavLink,
   SubNavLinkUnderline
 } from './Nav.style';
-import NavHelper from '../../../../utils/NavHelper';
+import NavHelper from '../../../../utils/navHelper';
 
 const MainNav = ({ navItems }) => {
   const { menuGroups } = navItems;

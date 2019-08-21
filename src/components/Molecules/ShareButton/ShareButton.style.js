@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
 
 const Wrapper = styled.div`
   display: flex;
@@ -6,23 +7,23 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const StyledParagraph = styled.p`
+const Copy = styled.p`
   width: auto;
-  margin: 0 20px 0 0;
+  margin: 0 ${spacing('md')} 0 0;
 `;
 
-const StyledList = styled.ul`
+const ShareButtonList = styled.ul`
   width: auto;
   margin: 0;
   padding: 0;
   list-style: none;
 `;
 
-const StyledItem = styled.li`
+const ShareButtonItem = styled.li`
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin: 4px;
+  margin: ${spacing('sm')};
 `;
 
-export { Wrapper, StyledParagraph, StyledList, StyledItem };
+export { Wrapper, Copy, ShareButtonList, ShareButtonItem };

@@ -6,8 +6,7 @@ import ShareButton from './ShareButton';
 it('renders correctly', () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
-  expect(tree).toMatchInlineSnapshot(
-    `
+  expect(tree).toMatchInlineSnapshot(`
     .c4 {
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -43,7 +42,7 @@ it('renders correctly', () => {
 
     .c1 {
       width: auto;
-      margin: 0 20px 0 0;
+      margin: 0 1rem 0 0;
     }
 
     .c2 {
@@ -57,7 +56,7 @@ it('renders correctly', () => {
       width: 40px;
       height: 40px;
       display: inline-block;
-      margin: 4px;
+      margin: 0.5rem;
     }
 
     <div
@@ -111,6 +110,5 @@ it('renders correctly', () => {
         </li>
       </ul>
     </div>
-  `
-  );
+  `);
 });

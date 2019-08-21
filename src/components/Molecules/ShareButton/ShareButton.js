@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import PopUpHelper from '../../../utils/ShareButton/SharePopUpHelper';
-import ShareUrlHelper from '../../../utils/ShareButton/ShareUrlHelper';
+import PopUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
+import ShareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
 import ShareIcons from './assets/ShareIcons';
 
 import {
   Wrapper,
-  StyledParagraph,
-  StyledList,
-  StyledItem
+  Copy,
+  ShareButtonList,
+  ShareButtonItem
 } from './ShareButton.style';
 
 const handleShare = (e, typeOfShare, urlToShare) => {
@@ -26,11 +26,11 @@ const handleShare = (e, typeOfShare, urlToShare) => {
 const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
   return (
     <Wrapper>
-      <StyledParagraph>{copy}</StyledParagraph>
-      <StyledList>
+      <Copy>{copy}</Copy>
+      <ShareButtonList>
         {Object.keys(ShareIcons).map(shareType => {
           return (
-            <StyledItem key={`share-button--${shareType}`}>
+            <ShareButtonItem key={`share-button--${shareType}`}>
               <Icon
                 onClick={e => handleShare(e, shareType, urlToShare)}
                 icon={ShareIcons[shareType]}
@@ -41,10 +41,10 @@ const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
                 href="#"
                 {...restProps}
               />
-            </StyledItem>
+            </ShareButtonItem>
           );
         })}
-      </StyledList>
+      </ShareButtonList>
     </Wrapper>
   );
 };
