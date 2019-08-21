@@ -118,7 +118,7 @@ const MainNav = ({ navItems }) => {
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {group.links && group.links.length > 0 && (
                   <SubNavMenu
-                    role="menu"
+                    role="list"
                     isKeyPressed={!!isKeyPressed[group.title]}
                     isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >

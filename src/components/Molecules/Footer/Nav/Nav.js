@@ -83,7 +83,7 @@ const FooterNav = ({ navItems }) => {
             {/* Second level of the navigation (ul tag): Child(ren) */}
             {group.links && group.links.length > 0 && (
               <SubNavMenu
-                role="menu"
+                role="list"
                 aria-label={group.title}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 column={group.links.length % 2 === 0 && group.links.length > 2}
