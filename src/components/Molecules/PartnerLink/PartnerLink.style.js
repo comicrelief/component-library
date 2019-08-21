@@ -7,21 +7,29 @@ import zIndex from '../../../theme/shared/zIndex';
 
 const Wrapper = styled.li`
   list-style: none;
+  width: 46%;
+  margin: 2%;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin: 1%;
+    width: 22%;
+  }
 `;
 
 const MoreInfo = styled(Text)`
   ${hideVisually}
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+  }
 `;
 
 const Item = styled(Link)`
   position: relative;
+  padding: 0;
   border: none;
   :hover,
   :focus {
     border: none;
     ${MoreInfo} {
-      font-size: ${({ theme }) => theme.fontSize('s')};
-      color: ${({ theme }) => theme.color('white')};
       overflow: inherit;
       clip-path: none;
       margin: 0;

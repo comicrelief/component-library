@@ -15,6 +15,8 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
+      color: #FFFFFF;
+      font-size: 0.69375rem;
       text-transform: inherit;
     }
 
@@ -49,6 +51,8 @@ it('renders correctly', () => {
 
     .c0 {
       list-style: none;
+      width: 46%;
+      margin: 2%;
     }
 
     .c6 {
@@ -68,6 +72,7 @@ it('renders correctly', () => {
 
     .c1 {
       position: relative;
+      padding: 0;
       border: none;
     }
 
@@ -78,8 +83,6 @@ it('renders correctly', () => {
 
     .c1:hover .c5,
     .c1:focus .c5 {
-      font-size: 1rem;
-      color: #FFFFFF;
       overflow: inherit;
       -webkit-clip-path: none;
       clip-path: none;
@@ -108,6 +111,19 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       background-color: #E52630;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        margin: 1%;
+        width: 22%;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c6 {
+        font-size: 1rem;
+      }
     }
 
     <li
@@ -139,7 +155,8 @@ it('renders correctly', () => {
         </div>
         <span
           className="c5 c6 c7"
-          color="inherit"
+          color="white"
+          size="xxs"
         >
           Find out more
         </span>

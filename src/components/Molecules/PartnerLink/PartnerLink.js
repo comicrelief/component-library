@@ -10,7 +10,9 @@ const PartnerLink = ({ children, link, ...rest }) => {
     <Wrapper {...rest}>
       <Item href={link} type="standard">
         {childrenWithProps}
-        <MoreInfo>Find out more</MoreInfo>
+        <MoreInfo color="white" size="xxs">
+          Find out more
+        </MoreInfo>
       </Item>
     </Wrapper>
   );
