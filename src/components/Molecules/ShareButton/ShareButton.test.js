@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
