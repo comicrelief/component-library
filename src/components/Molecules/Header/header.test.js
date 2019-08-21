@@ -570,7 +570,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -712,7 +712,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -778,7 +778,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -920,7 +920,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"

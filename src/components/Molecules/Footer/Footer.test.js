@@ -579,7 +579,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="Hear from us"
                 className="c12"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c13"
@@ -645,7 +645,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="Get in touch"
                 className="c15"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c16"
@@ -749,7 +749,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="About us"
                 className="c15"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c16"
@@ -891,7 +891,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="Careers"
                 className="c12"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c13"
@@ -957,7 +957,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="News"
                 className="c12"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c13"
@@ -1023,7 +1023,7 @@ it('renders correctly', () => {
               <ul
                 aria-label="Legal"
                 className="c12"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c13"
