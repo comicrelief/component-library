@@ -10,6 +10,8 @@ it('renders correctly', () => {
     '<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
   const success =
     '<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+  const privacy =
+    'check <a href="https://www.comicrelief.com/privacy-notice">Privacy policy</a>';
   const tree = renderWithTheme(
     <>
       <EmailSignUp
@@ -17,32 +19,34 @@ it('renders correctly', () => {
         successCopy={<RichText markup={success} />}
         isSuccess={false}
         errorMsg=""
-        privacyURL="https://www.comicrelief.com/privacy-notice"
-        HandleSubscription={() => 'Done'}
+        buttonColor="teal"
+        privacyCopy={<RichText markup={privacy} />}
+        subscribe={() => 'Done'}
       />
       <EmailSignUp
         topCopy={<RichText markup={top} />}
         successCopy={<RichText markup={success} />}
         isSuccess
         errorMsg=""
-        privacyURL="https://www.comicrelief.com/privacy-notice"
-        HandleSubscription={() => 'Done'}
+        backgroundColor="red"
+        privacyCopy={<RichText markup={privacy} />}
+        subscribe={() => 'Done'}
       />
     </>
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c6 {
+      .c1 {
+      text-transform: inherit;
+    }
+
+    .c7 {
       text-transform: inherit;
       font-weight: bold;
     }
 
-    .c12 {
-      text-transform: inherit;
-    }
-
-    .c10 {
+    .c11 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -51,32 +55,16 @@ it('renders correctly', () => {
       font-weight: 700;
       border-radius: 30px;
       cursor: pointer;
-      background-color: #E52630;
-      color: #FFFFFF;
-    }
-
-    .c10:hover {
-      background-color: #FFCECE;
+      background-color: #22CFD8;
       color: #2C0230;
     }
 
-    .c14 {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 2px 1px;
+    .c11:hover {
+      background-color: #86E4E9;
       color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: normal;
     }
 
-    .c14:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: 700;
-    }
-
-    .c8 {
+    .c9 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -93,27 +81,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c8:focus {
+    .c9:focus {
       border: 1px solid #666;
     }
 
-    .c8:focus::-webkit-input-placeholder {
+    .c9:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-moz-placeholder {
+    .c9:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus::-moz-placeholder {
+    .c9:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-ms-input-placeholder {
+    .c9:focus:-ms-input-placeholder {
       color: transparent;
     }
 
-    .c4 {
+    .c5 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -123,7 +111,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c5 {
+    .c6 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -138,7 +126,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c2 {
+    .c3 {
       text-align: left;
     }
 
@@ -156,7 +144,7 @@ it('renders correctly', () => {
       background-color: #2C0230;
     }
 
-    .c1 {
+    .c2 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -164,7 +152,39 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c3 {
+    .c10 {
+      margin-top: 1rem;
+    }
+
+    .c10 button {
+      border-color: #2C0230;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .c12 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c12 a {
+      cursor: pointer;
+      padding: 0 0.25rem;
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+    }
+
+    .c12 a:hover {
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+    }
+
+    .c4 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -175,56 +195,24 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c7 {
+    .c8 {
       width: 100%;
-    }
-
-    .c9 {
-      margin-top: 1rem;
-    }
-
-    .c9 button {
-      border-color: #2C0230;
-      width: 100%;
-      font-size: 1rem;
-    }
-
-    .c11 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .c13 {
-      cursor: pointer;
-      padding: 0 0.25rem;
-      color: #FFFFFF;
-      border-color: #FFFFFF;
-    }
-
-    .c13:hover {
-      color: #FFFFFF;
-      border-color: #FFFFFF;
     }
 
     @media (min-width:1440px) {
-      .c10 {
+      .c11 {
         padding: 16px 30px;
       }
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c9 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c9 button {
+      .c10 button {
         width: auto;
       }
     }
@@ -232,11 +220,15 @@ it('renders correctly', () => {
     <div
         className="c0"
       >
-        <div
+        <h1
           className="c1"
+          color="inherit"
+        />
+        <div
+          className="c2"
         >
           <div
-            className="c2"
+            className="c3"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
@@ -245,33 +237,33 @@ it('renders correctly', () => {
           />
         </div>
         <form
-          className="c3"
+          className="c4"
         >
           <label
-            className="c4"
-            htmlFor="edit-email"
+            className="c5"
+            htmlFor="signup-email"
           >
             <span
-              className="c5 c6"
+              className="c6 c7"
               color="inherit"
             >
-              Email
+              
             </span>
             <input
-              aria-describedby="edit-email"
-              className="c7 c8"
+              aria-describedby="signup-email"
+              className="c8 c9"
               name="email"
               placeholder="example@youremail.com"
-              type="text"
+              type="email"
             />
             
           </label>
           <div
-            className="c9"
+            className="c10"
           >
             <button
-              className="c10"
-              color="red"
+              className="c11"
+              color="teal"
               href="/#"
               onClick={[Function]}
               target="_self"
@@ -282,53 +274,23 @@ it('renders correctly', () => {
           </div>
         </form>
         <div
-          className="c11"
+          className="c12"
         >
-          <p
-            className="c12"
-            color="inherit"
-          >
-            Our
-            <a
-              className="c13 c14"
-              color="red"
-              href="https://www.comicrelief.com/privacy-notice"
-              target="_self"
-              type="standard"
-            >
-              Privacy Policy
-            </a>
-            describes how we handle and protect your information.
-          </p>
-          <p
-            className="c12"
-            color="inherit"
-          >
-            If you are under 18, please make sure you have your parents permission before providing us with any personal details.
-          </p>
+          <div
+            className="c3"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
+              }
+            }
+          />
         </div>
       </div>,
-      .c4 {
+      .c1 {
       text-transform: inherit;
     }
 
-    .c6 {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 2px 1px;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: normal;
-    }
-
-    .c6:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: 700;
-    }
-
-    .c2 {
+    .c3 {
       text-align: left;
     }
 
@@ -343,10 +305,10 @@ it('renders correctly', () => {
       font-size: 1rem;
       padding: 2rem;
       color: #FFFFFF;
-      background-color: #2C0230;
+      background-color: #E52630;
     }
 
-    .c1 {
+    .c2 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -354,68 +316,24 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c3 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .c5 {
-      cursor: pointer;
-      padding: 0 0.25rem;
-      color: #FFFFFF;
-      border-color: #FFFFFF;
-    }
-
-    .c5:hover {
-      color: #FFFFFF;
-      border-color: #FFFFFF;
-    }
-
     <div
         className="c0"
       >
-        <div
+        <h1
           className="c1"
+          color="inherit"
+        />
+        <div
+          className="c2"
         >
           <div
-            className="c2"
+            className="c3"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
               }
             }
           />
-        </div>
-        <div
-          className="c3"
-        >
-          <p
-            className="c4"
-            color="inherit"
-          >
-            Our
-            <a
-              className="c5 c6"
-              color="red"
-              href="https://www.comicrelief.com/privacy-notice"
-              target="_self"
-              type="standard"
-            >
-              Privacy Policy
-            </a>
-            describes how we handle and protect your information.
-          </p>
-          <p
-            className="c4"
-            color="inherit"
-          >
-            If you are under 18, please make sure you have your parents permission before providing us with any personal details.
-          </p>
         </div>
       </div>,
     ]

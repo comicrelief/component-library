@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import Link from '../../Atoms/Link/Link';
 import Input from '../../Atoms/Input/Input';
 
 const ESUWrapper = styled.div`
@@ -10,12 +9,41 @@ const ESUWrapper = styled.div`
   font-size: ${({ theme }) => theme.fontSize('s')};
   padding: ${spacing('l')};
   color: ${({ theme }) => theme.color('white')};
-  background-color: ${({ theme }) => theme.color('deep_violet')};
+  background-color: ${({ theme, backgroundColor }) =>
+    theme.color(backgroundColor)};
 `;
 
-const TopCopy = styled.div`
+const TopCopyWrapper = styled.div`
   display: flex;
   margin-bottom: ${spacing('none')};
+`;
+
+const ButtonWrapper = styled.div`
+  margin-top: ${spacing('md')};
+  button {
+    border-color: ${({ theme, backgroundColor }) =>
+      theme.color(backgroundColor)};
+    width: 100%;
+    font-size: ${({ theme }) => theme.fontSize('s')};
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      width: auto;
+    }
+  }
+`;
+
+const PrivacyCopyWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  a {
+    cursor: pointer;
+    padding: 0 ${spacing('xsm')};
+    color: ${({ theme }) => theme.color('white')};
+    border-color: ${({ theme }) => theme.color('white')};
+    :hover {
+      color: ${({ theme }) => theme.color('white')};
+      border-color: ${({ theme }) => theme.color('white')};
+    }
+  }
 `;
 
 const Form = styled.form`
@@ -28,40 +56,11 @@ const InputField = styled(Input)`
   width: 100%;
 `;
 
-const ButtonWrapper = styled.div`
-  margin-top: ${spacing('md')};
-  button {
-    border-color: ${({ theme }) => theme.color('deep_violet')};
-    width: 100%;
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      width: auto;
-    }
-  }
-`;
-
-const PrivacyCopyWraper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const PrivacyLink = styled(Link)`
-  cursor: pointer;
-  padding: 0 ${spacing('xsm')};
-  color: ${({ theme }) => theme.color('white')};
-  border-color: ${({ theme }) => theme.color('white')};
-  :hover {
-    color: ${({ theme }) => theme.color('white')};
-    border-color: ${({ theme }) => theme.color('white')};
-  }
-`;
-
 export {
   ESUWrapper,
-  TopCopy,
+  TopCopyWrapper,
+  PrivacyCopyWrapper,
+  ButtonWrapper,
   Form,
-  PrivacyCopyWraper,
-  PrivacyLink,
-  InputField,
-  ButtonWrapper
+  InputField
 };
