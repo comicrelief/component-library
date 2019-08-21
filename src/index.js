@@ -61,3 +61,6 @@ export {
 export {
   default as SearchInput
 } from './components/Molecules/SearchInput/SearchInput';
+export {
+  default as EmailSignUp
+} from './components/Molecules/EmailSignUp/EmailSignUp';
