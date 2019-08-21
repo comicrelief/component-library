@@ -8,7 +8,6 @@ it('renders correctly', () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(
-    '',
     `
     .c4 {
       -webkit-text-decoration: none;
