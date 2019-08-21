@@ -5,13 +5,13 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import PopUpHelper from '../../../utils/PopUpHelper';
 
 /* To move */
-import facebook from './assets/fb--share.svg';
-import twitter from './assets/twitter--share.svg';
+import Facebook from './assets/fb--share.svg';
+import Twitter from './assets/twitter--share.svg';
 
 /* To move */
 const shareIcons = {
-  facebook,
-  twitter
+  Facebook,
+  Twitter
 };
 
 const Wrapper = styled.div`
@@ -42,15 +42,20 @@ const StyledItem = styled.li`
 const handleShare = (e, typeOfShare) => {
   e.preventDefault();
 
-  const currentUrl = window.location.href;
-  let shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+  // Encore URL so we can happily pass it as a parameter, fragments and all
+  const currentUrl = encodeURIComponent(window.location.href);
 
-  if (typeOfShare === 'twitter') {
-    shareUrl = `http://www.twitter.com/share?url=${currentUrl}`;
-  }
+  const shareURLs = {
+    Twitter: 'http://www.twitter.com/intent/tweet?url=',
+    Facebook: 'https://www.facebook.com/sharer/sharer.php?u='
+  };
 
-  /* Use our helper function for pop-up position issues on dual-screen setups */
-  PopUpHelper(shareUrl, 600, 300);
+  const shareUrl = shareURLs[typeOfShare] + currentUrl;
+
+  console.log('shareUrl', shareUrl);
+
+  // Use our helper function for pop-up position issues on dual-screen setups
+  PopUpHelper(shareUrl, 550, 420);
 };
 
 /* Share Button component to handle FB and Twitter sharing */
@@ -65,7 +70,7 @@ const ShareButton = ({ ...restProps }) => {
               <Icon
                 icon={shareIcons[brand]}
                 href="#"
-                title="the title"
+                title={`Share on ${brand}`}
                 brand="comicrelief"
                 target="_blank"
                 role="button"
