@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
@@ -23,6 +23,7 @@ const EmailSignUp = ({
   backgroundColor,
   ...rest
 }) => {
+  const [value, setValue] = useState('');
   const subscriptionForm = (
     <Form>
       <InputField
@@ -33,6 +34,8 @@ const EmailSignUp = ({
         errorMsg={errorMsg}
         label=""
         placeholder="example@youremail.com"
+        value={value}
+        onChange={event => setValue(event.target.value)}
       />
       <ButtonWrapper backgroundColor={backgroundColor}>
         <Link
@@ -40,7 +43,7 @@ const EmailSignUp = ({
           color={buttonColor}
           as="button"
           href="/#"
-          onClick={subscribe}
+          onClick={() => subscribe(value)}
         >
           Subscribe
         </Link>

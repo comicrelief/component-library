@@ -253,8 +253,10 @@ it('renders correctly', () => {
               aria-describedby="signup-email"
               className="c8 c9"
               name="email"
+              onChange={[Function]}
               placeholder="example@youremail.com"
               type="email"
+              value=""
             />
             
           </label>
