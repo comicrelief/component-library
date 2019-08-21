@@ -5,23 +5,21 @@ import Text from '../../Atoms/Text/Text';
 import hideVisually from '../../../theme/shared/hideVisually';
 import zIndex from '../../../theme/shared/zIndex';
 
-const Wrapper = styled.li`
-  list-style: none;
-`;
-
 const MoreInfo = styled(Text)`
   ${hideVisually}
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+  }
 `;
 
 const Item = styled(Link)`
   position: relative;
+  padding: 0;
   border: none;
   :hover,
   :focus {
     border: none;
     ${MoreInfo} {
-      font-size: ${({ theme }) => theme.fontSize('s')};
-      color: ${({ theme }) => theme.color('white')};
       overflow: inherit;
       clip-path: none;
       margin: 0;
@@ -48,4 +46,4 @@ const Item = styled(Link)`
   }
 `;
 
-export { Wrapper, MoreInfo, Item };
+export { MoreInfo, Item };
