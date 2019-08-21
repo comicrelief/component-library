@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import PopUpHelper from '../../../utils/PopUpHelper';
+import PopUpHelper from '../../../utils/ShareButton/SharePopUpHelper';
+import ShareUrlHelper from '../../../utils/ShareButton/ShareUrlHelper';
 
 /* To move */
 import Facebook from './assets/fb--share.svg';
@@ -45,14 +46,7 @@ const handleShare = (e, typeOfShare) => {
   // Encore URL so we can happily pass it as a parameter, fragments and all
   const currentUrl = encodeURIComponent(window.location.href);
 
-  const shareURLs = {
-    Twitter: 'http://www.twitter.com/intent/tweet?url=',
-    Facebook: 'https://www.facebook.com/sharer/sharer.php?u='
-  };
-
-  const shareUrl = shareURLs[typeOfShare] + currentUrl;
-
-  console.log('shareUrl', shareUrl);
+  const shareUrl = ShareUrlHelper(typeOfShare, currentUrl);
 
   // Use our helper function for pop-up position issues on dual-screen setups
   PopUpHelper(shareUrl, 550, 420);
