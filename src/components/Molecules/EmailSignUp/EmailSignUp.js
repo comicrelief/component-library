@@ -1,78 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import {
   ESUWrapper,
-  TopCopy,
+  TopCopyWrapper,
   Form,
-  PrivacyCopyWraper,
-  PrivacyLink,
+  PrivacyCopyWrapper,
   InputField,
   ButtonWrapper
 } from './EmailSignUp.style';
 
 const EmailSignUp = ({
+  title,
   topCopy,
   isSuccess,
   successCopy,
   errorMsg,
-  privacyURL,
-  HandleSubscription,
+  privacyCopy,
+  subscribe,
+  buttonColor,
+  backgroundColor,
   ...rest
 }) => {
-  const formSubscription = (
+  const [value, setValue] = useState('');
+  const subscriptionForm = (
     <Form>
       <InputField
         name="email"
         showLabel={false}
-        type="text"
-        id="edit-email"
+        type="email"
+        id="signup-email"
         errorMsg={errorMsg}
-        label="Email"
+        label=""
         placeholder="example@youremail.com"
+        value={value}
+        onChange={event => setValue(event.target.value)}
       />
-      <ButtonWrapper>
-        <Link type="button" as="button" href="/#" onClick={HandleSubscription}>
+      <ButtonWrapper backgroundColor={backgroundColor}>
+        <Link
+          type="button"
+          color={buttonColor}
+          as="button"
+          href="/#"
+          onClick={() => subscribe(value)}
+        >
           Subscribe
         </Link>
       </ButtonWrapper>
     </Form>
   );
 
+  const privacyContainer = (
+    <PrivacyCopyWrapper>{privacyCopy}</PrivacyCopyWrapper>
+  );
   return (
-    <ESUWrapper {...rest}>
-      <TopCopy>{isSuccess ? successCopy : topCopy}</TopCopy>
-      {!isSuccess && formSubscription}
-      <PrivacyCopyWraper>
-        <Text tag="p">
-          Our
-          <PrivacyLink href={privacyURL}>Privacy Policy</PrivacyLink>
-          describes how we handle and protect your information.
-        </Text>
-        <Text tag="p">
-          If you are under 18, please make sure you have your parents permission
-          before providing us with any personal details.
-        </Text>
-      </PrivacyCopyWraper>
+    <ESUWrapper backgroundColor={backgroundColor} {...rest}>
+      <Text tag="h1">{title}</Text>
+      <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
+      {!isSuccess && subscriptionForm}
+      {!isSuccess && privacyContainer}
     </ESUWrapper>
   );
 };
 
 EmailSignUp.propTypes = {
-  /** Top copy */
+  /** title */
+  title: PropTypes.string.isRequired,
+  /** top copy */
   topCopy: PropTypes.node.isRequired,
-  /** Copy is displayed when subscription is successful  */
+  /** displayed copy when subscription is successful */
   successCopy: PropTypes.node.isRequired,
   /** boolean if true display successCopy */
   isSuccess: PropTypes.bool.isRequired,
-  /** boolean if true display successCopy */
+  /** email error message */
   errorMsg: PropTypes.string.isRequired,
-  /** Link  URL */
-  privacyURL: PropTypes.string.isRequired,
-  /** Function    */
-  HandleSubscription: PropTypes.func.isRequired
+  /** privacy copy */
+  privacyCopy: PropTypes.node.isRequired,
+  /** subscription function */
+  subscribe: PropTypes.func.isRequired,
+  /** background color */
+  backgroundColor: PropTypes.string,
+  /** button color */
+  buttonColor: PropTypes.string
+};
+
+EmailSignUp.defaultProps = {
+  backgroundColor: 'deep_violet',
+  buttonColor: 'red'
 };
 
 export default EmailSignUp;
