@@ -22,7 +22,10 @@ const Copy = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50%;
-  padding: 20px;
+  padding: 15vw 5vw;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 5vw;
+  }
   ${props =>
     props.fullImage &&
     css`
