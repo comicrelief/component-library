@@ -64,3 +64,6 @@ export {
 export {
   default as EmailSignUp
 } from './components/Molecules/EmailSignUp/EmailSignUp';
+export {
+  default as ShareButton
+} from './components/Molecules/ShareButton/ShareButton';
