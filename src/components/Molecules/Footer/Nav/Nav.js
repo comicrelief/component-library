@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import { sizes } from '../../../../theme/shared/breakpoint';
-import NavHelper from '../../../../utils/NavHelper';
+import NavHelper from '../../../../utils/navHelper';
 
 import {
   Nav,
@@ -83,7 +83,7 @@ const FooterNav = ({ navItems }) => {
             {/* Second level of the navigation (ul tag): Child(ren) */}
             {group.links && group.links.length > 0 && (
               <SubNavMenu
-                role="menu"
+                role="list"
                 aria-label={group.title}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
                 column={group.links.length % 2 === 0 && group.links.length > 2}
