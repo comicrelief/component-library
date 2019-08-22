@@ -55,3 +55,12 @@ export {
   default as PartnerLink
 } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Molecules/Footer/Footer';
+export {
+  default as SearchResult
+} from './components/Molecules/SearchResult/SearchResult';
+export {
+  default as SearchInput
+} from './components/Molecules/SearchInput/SearchInput';
+export {
+  default as EmailSignUp
+} from './components/Molecules/EmailSignUp/EmailSignUp';

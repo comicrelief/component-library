@@ -138,7 +138,7 @@ it('renders correctly', () => {
     }
 
     .c6 {
-      z-index: 3;
+      z-index: 2;
       display: none;
       width: 100%;
       position: absolute;
@@ -570,7 +570,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -712,7 +712,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -749,7 +749,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      What your money does
+                      Our legacy
                     </span>
                   </a>
                 </li>
@@ -778,7 +778,7 @@ it('renders correctly', () => {
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -905,7 +905,7 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c10 c11 c3"
                 color="red"
-                href="https://www.comicrelief.com/funding"
+                href="https://www.sportrelief.com"
                 onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
@@ -915,12 +915,12 @@ it('renders correctly', () => {
                   className="c7"
                   color="inherit"
                 >
-                  Funding
+                  Test whitelisted external link
                 </span>
               </a>
               <ul
                 className="c12 c13"
-                role="menu"
+                role="list"
               >
                 <li
                   className="c14"
@@ -929,7 +929,7 @@ it('renders correctly', () => {
                   <a
                     className="c15 c3"
                     color="red"
-                    href="https://www.comicrelief.com/funding"
+                    href="https://www.sportrelief.com"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -938,7 +938,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Funding
+                      Test whitelisted external link
                     </span>
                   </a>
                 </li>
@@ -948,16 +948,16 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="https://www.comicrelief.com/funding/funding-opportunities"
+                    href="https://bing.com"
                     role="menuitem"
-                    target="_self"
+                    target="_blank"
                     type="standard"
                   >
                     <span
                       className="c7"
                       color="inherit"
                     >
-                      Funding opportunities
+                      Test non-whitelisted external link
                     </span>
                   </a>
                 </li>
@@ -967,7 +967,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="https://www.comicrelief.com/funding/funding-strategy"
+                    href="test-ref-path-1"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -976,7 +976,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Our strategy
+                      Link comp: URL and Ref
                     </span>
                   </a>
                 </li>
@@ -986,7 +986,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="https://www.comicrelief.com/funding/eligibility-criteria"
+                    href="test-ref-path-2"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -995,7 +995,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Eligibility
+                      Link comp: only Ref
                     </span>
                   </a>
                 </li>
@@ -1005,7 +1005,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="https://www.comicrelief.com/funding/applying-for-funding"
+                    href="test-url"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1014,26 +1014,7 @@ it('renders correctly', () => {
                       className="c7"
                       color="inherit"
                     >
-                      Applying for funding
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className="c14"
-                >
-                  <a
-                    className="c16 c3"
-                    color="red"
-                    href="https://www.comicrelief.com/funding/managing-your-funding"
-                    role="menuitem"
-                    target="_self"
-                    type="standard"
-                  >
-                    <span
-                      className="c7"
-                      color="inherit"
-                    >
-                      Managing your funding
+                      Link comp: only URL
                     </span>
                   </a>
                 </li>
