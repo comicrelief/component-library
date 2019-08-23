@@ -24,6 +24,17 @@ const handleShare = (e, typeOfShare, urlToShare) => {
 
 /* Share Button component to handle FB and Twitter sharing */
 const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
+  let checkedUrl = '';
+
+  /* Window obj isn't available during server-side rendering AND we don't have
+   * access to componentDidMount etc. in functional components, so add this check first */
+  if (typeof window === 'undefined') {
+    checkedUrl = 'http://www.some-other-domain.com';
+  } else {
+    // Else, assign the value based on the props passed
+    checkedUrl = urlToShare !== null ? urlToShare : window.location.href;
+  }
+
   return (
     <Wrapper>
       <Copy>{copy}</Copy>
@@ -32,7 +43,7 @@ const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
           return (
             <ShareButtonItem key={`share-button--${shareType}`}>
               <Icon
-                onClick={e => handleShare(e, shareType, urlToShare)}
+                onClick={e => handleShare(e, shareType, checkedUrl)}
                 icon={ShareIcons[shareType]}
                 title={`Share on ${shareType}`}
                 brand={campaign}
@@ -59,7 +70,7 @@ ShareButton.propTypes = {
 ShareButton.defaultProps = {
   campaign: 'comicrelief',
   copy: 'Share with:',
-  urlToShare: window.location.href
+  urlToShare: null
 };
 
 export default ShareButton;
