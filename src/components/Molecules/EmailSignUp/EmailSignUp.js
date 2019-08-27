@@ -28,6 +28,8 @@ const EmailSignUp = ({
     <Form>
       <InputField
         name="email"
+        id="email"
+        hasAria={false}
         showLabel={false}
         type="email"
         errorMsg={errorMsg}
