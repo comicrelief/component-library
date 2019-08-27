@@ -74,17 +74,25 @@ it('renders correctly', () => {
           height="100%"
           width="100%"
         >
-          <img
-            alt=""
-            className="lazyload c3"
-            data-lowsrc={null}
-            data-sizes="auto"
-            data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-            height="100%"
-            src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
+          <picture>
+            <source
+              data-srcset={null}
+              type="image/webp"
+            />
+            <source
+              data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+              type="image/jpg"
+            />
+            <img
+              alt=""
+              className="lazyload c3"
+              data-lowsrc={null}
+              data-sizes="auto"
+              height="100%"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              width="100%"
+            />
+          </picture>
         </div>
       </div>
       <div
