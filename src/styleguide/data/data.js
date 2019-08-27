@@ -8,6 +8,8 @@ export default {
     large: 'picture-3.jpg'
   },
   ctaText: 'Find out how',
+  webpImageSet:
+    '//images.ctfassets.net/zsfivwzfgl3t/7iUZ60VfR9cltoAyUTeK4L/c6efc5bd9c9a00331fba943dcfa8a8fe/workplace_work-mufti_4-3_2x_0.jpg?w=200&h=150&q=80&fm=webp 200w,//images.ctfassets.net/zsfivwzfgl3t/7iUZ60VfR9cltoAyUTeK4L/c6efc5bd9c9a00331fba943dcfa8a8fe/workplace_work-mufti_4-3_2x_0.jpg?w=400&h=300&q=80&fm=webp 400w,//images.ctfassets.net/zsfivwzfgl3t/7iUZ60VfR9cltoAyUTeK4L/c6efc5bd9c9a00331fba943dcfa8a8fe/workplace_work-mufti_4-3_2x_0.jpg?w=720&h=540&q=80&fm=webp 720w',
   imageLow:
     'http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100',
   image:

@@ -29,6 +29,7 @@ const Image = styled.img`
 
 const Picture = ({
   images,
+  webpImageSet,
   image,
   alt,
   width,
@@ -36,7 +37,7 @@ const Picture = ({
   objectFit,
   imageLow
 }) => {
-  if (!images) {
+  if (!webpImageSet && !images) {
     return (
       <Wrapper height={height} width={width}>
         <Image
@@ -53,23 +54,26 @@ const Picture = ({
 
   return (
     <Wrapper height={height} width={width}>
-      <Image
-        alt={alt}
-        height={height}
-        width={width}
-        objectFit={objectFit}
-        src={image}
-        srcSet={IMAGE_FALLBACK}
-        data-srcset={images}
-        data-sizes="auto"
-        data-lowsrc={imageLow}
-        className="lazyload"
-      />
+      <picture>
+        <source type="image/webp" data-srcset={webpImageSet} />
+        <source type="image/jpg" data-srcset={images} />
+        <Image
+          alt={alt}
+          height={height}
+          width={width}
+          objectFit={objectFit}
+          src={IMAGE_FALLBACK}
+          data-sizes="auto"
+          data-lowsrc={imageLow}
+          className="lazyload"
+        />
+      </picture>
     </Wrapper>
   );
 };
 
 Picture.propTypes = {
+  webpImageSet: PropTypes.string,
   images: PropTypes.string,
   image: PropTypes.string,
   imageLow: PropTypes.string,
@@ -88,6 +92,7 @@ Picture.propTypes = {
 Picture.defaultProps = {
   imageLow: null,
   image: null,
+  webpImageSet: null,
   images: null,
   objectFit: 'none',
   width: '100%',

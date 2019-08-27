@@ -26,10 +26,10 @@ Sport Relief
     My paragraph
   </Text>
   <Text tag="h3" size="m">
-    Heading 3 size 3
+    Heading 3 size m
   </Text>
   <Text tag="p" size="xl" color="red">
-    My paragraph small and yellow
+    My paragraph xl and red
   </Text>
 </div>
 ```
