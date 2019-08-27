@@ -28,11 +28,12 @@ const EmailSignUp = ({
     <Form>
       <InputField
         name="email"
+        id="email"
+        hasAria={false}
         showLabel={false}
         type="email"
-        id="signup-email"
         errorMsg={errorMsg}
-        label=""
+        label="email"
         placeholder="example@youremail.com"
         value={value}
         onChange={event => setValue(event.target.value)}

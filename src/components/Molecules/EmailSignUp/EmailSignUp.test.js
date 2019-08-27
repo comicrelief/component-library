@@ -15,6 +15,7 @@ it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
       <EmailSignUp
+        title="sign up letter"
         topCopy={<RichText markup={top} />}
         successCopy={<RichText markup={success} />}
         isSuccess={false}
@@ -37,12 +38,16 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c6 {
+      .c1 {
+      text-transform: inherit;
+    }
+
+    .c7 {
       text-transform: inherit;
       font-weight: bold;
     }
 
-    .c10 {
+    .c11 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -55,12 +60,12 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c10:hover {
+    .c11:hover {
       background-color: #86E4E9;
       color: #2C0230;
     }
 
-    .c8 {
+    .c9 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -77,27 +82,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c8:focus {
+    .c9:focus {
       border: 1px solid #666;
     }
 
-    .c8:focus::-webkit-input-placeholder {
+    .c9:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-moz-placeholder {
+    .c9:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus::-moz-placeholder {
+    .c9:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-ms-input-placeholder {
+    .c9:focus:-ms-input-placeholder {
       color: transparent;
     }
 
-    .c4 {
+    .c5 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -107,7 +112,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c5 {
+    .c6 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -122,7 +127,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c2 {
+    .c3 {
       text-align: left;
     }
 
@@ -140,7 +145,7 @@ it('renders correctly', () => {
       background-color: #2C0230;
     }
 
-    .c1 {
+    .c2 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -148,17 +153,17 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c9 {
+    .c10 {
       margin-top: 1rem;
     }
 
-    .c9 button {
+    .c10 button {
       border-color: #2C0230;
       width: 100%;
       font-size: 1rem;
     }
 
-    .c11 {
+    .c12 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -168,19 +173,19 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c11 a {
+    .c12 a {
       cursor: pointer;
       padding: 0 0.25rem;
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c11 a:hover {
+    .c12 a:hover {
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c3 {
+    .c4 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -191,24 +196,24 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c7 {
+    .c8 {
       width: 100%;
     }
 
     @media (min-width:1440px) {
-      .c10 {
+      .c11 {
         padding: 16px 30px;
       }
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c9 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c9 button {
+      .c10 button {
         width: auto;
       }
     }
@@ -216,11 +221,17 @@ it('renders correctly', () => {
     <div
         className="c0"
       >
-        <div
+        <h1
           className="c1"
+          color="inherit"
+        >
+          sign up letter
+        </h1>
+        <div
+          className="c2"
         >
           <div
-            className="c2"
+            className="c3"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
@@ -229,21 +240,20 @@ it('renders correctly', () => {
           />
         </div>
         <form
-          className="c3"
+          className="c4"
         >
           <label
-            className="c4"
-            htmlFor="signup-email"
+            className="c5"
+            htmlFor="email"
           >
             <span
-              className="c5 c6"
+              className="c6 c7"
               color="inherit"
             >
-              
+              email
             </span>
             <input
-              aria-describedby="signup-email"
-              className="c7 c8"
+              className="c8 c9"
               name="email"
               onChange={[Function]}
               placeholder="example@youremail.com"
@@ -253,10 +263,10 @@ it('renders correctly', () => {
             
           </label>
           <div
-            className="c9"
+            className="c10"
           >
             <button
-              className="c10"
+              className="c11"
               color="teal"
               href="/#"
               onClick={[Function]}
@@ -268,10 +278,10 @@ it('renders correctly', () => {
           </div>
         </form>
         <div
-          className="c11"
+          className="c12"
         >
           <div
-            className="c2"
+            className="c3"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
