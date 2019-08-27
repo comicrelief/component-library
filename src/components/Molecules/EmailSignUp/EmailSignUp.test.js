@@ -37,16 +37,12 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c1 {
-      text-transform: inherit;
-    }
-
-    .c7 {
+      .c6 {
       text-transform: inherit;
       font-weight: bold;
     }
 
-    .c11 {
+    .c10 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -59,12 +55,12 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c11:hover {
+    .c10:hover {
       background-color: #86E4E9;
       color: #2C0230;
     }
 
-    .c9 {
+    .c8 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -81,27 +77,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c9:focus {
+    .c8:focus {
       border: 1px solid #666;
     }
 
-    .c9:focus::-webkit-input-placeholder {
+    .c8:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c9:focus:-moz-placeholder {
+    .c8:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c9:focus::-moz-placeholder {
+    .c8:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c9:focus:-ms-input-placeholder {
+    .c8:focus:-ms-input-placeholder {
       color: transparent;
     }
 
-    .c5 {
+    .c4 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -111,7 +107,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c6 {
+    .c5 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -126,7 +122,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c3 {
+    .c2 {
       text-align: left;
     }
 
@@ -144,7 +140,7 @@ it('renders correctly', () => {
       background-color: #2C0230;
     }
 
-    .c2 {
+    .c1 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -152,17 +148,17 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c10 {
+    .c9 {
       margin-top: 1rem;
     }
 
-    .c10 button {
+    .c9 button {
       border-color: #2C0230;
       width: 100%;
       font-size: 1rem;
     }
 
-    .c12 {
+    .c11 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -172,19 +168,19 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c12 a {
+    .c11 a {
       cursor: pointer;
       padding: 0 0.25rem;
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c12 a:hover {
+    .c11 a:hover {
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c4 {
+    .c3 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -195,24 +191,24 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c8 {
+    .c7 {
       width: 100%;
     }
 
     @media (min-width:1440px) {
-      .c11 {
+      .c10 {
         padding: 16px 30px;
       }
     }
 
     @media (min-width:740px) {
-      .c9 {
+      .c8 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c10 button {
+      .c9 button {
         width: auto;
       }
     }
@@ -220,15 +216,11 @@ it('renders correctly', () => {
     <div
         className="c0"
       >
-        <h1
-          className="c1"
-          color="inherit"
-        />
         <div
-          className="c2"
+          className="c1"
         >
           <div
-            className="c3"
+            className="c2"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
@@ -237,21 +229,21 @@ it('renders correctly', () => {
           />
         </div>
         <form
-          className="c4"
+          className="c3"
         >
           <label
-            className="c5"
+            className="c4"
             htmlFor="signup-email"
           >
             <span
-              className="c6 c7"
+              className="c5 c6"
               color="inherit"
             >
               
             </span>
             <input
               aria-describedby="signup-email"
-              className="c8 c9"
+              className="c7 c8"
               name="email"
               onChange={[Function]}
               placeholder="example@youremail.com"
@@ -261,10 +253,10 @@ it('renders correctly', () => {
             
           </label>
           <div
-            className="c10"
+            className="c9"
           >
             <button
-              className="c11"
+              className="c10"
               color="teal"
               href="/#"
               onClick={[Function]}
@@ -276,10 +268,10 @@ it('renders correctly', () => {
           </div>
         </form>
         <div
-          className="c12"
+          className="c11"
         >
           <div
-            className="c3"
+            className="c2"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
@@ -288,11 +280,7 @@ it('renders correctly', () => {
           />
         </div>
       </div>,
-      .c1 {
-      text-transform: inherit;
-    }
-
-    .c3 {
+      .c2 {
       text-align: left;
     }
 
@@ -310,7 +298,7 @@ it('renders correctly', () => {
       background-color: #E52630;
     }
 
-    .c2 {
+    .c1 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -321,15 +309,11 @@ it('renders correctly', () => {
     <div
         className="c0"
       >
-        <h1
-          className="c1"
-          color="inherit"
-        />
         <div
-          className="c2"
+          className="c1"
         >
           <div
-            className="c3"
+            className="c2"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",

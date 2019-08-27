@@ -56,7 +56,7 @@ const EmailSignUp = ({
   );
   return (
     <ESUWrapper backgroundColor={backgroundColor} {...rest}>
-      <Text tag="h1">{title}</Text>
+      {title && <Text tag="h1">{title}</Text>}
       <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
       {!isSuccess && subscriptionForm}
       {!isSuccess && privacyContainer}
@@ -66,7 +66,7 @@ const EmailSignUp = ({
 
 EmailSignUp.propTypes = {
   /** title */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /** top copy */
   topCopy: PropTypes.node.isRequired,
   /** displayed copy when subscription is successful */
@@ -86,6 +86,7 @@ EmailSignUp.propTypes = {
 };
 
 EmailSignUp.defaultProps = {
+  title: null,
   backgroundColor: 'deep_violet',
   buttonColor: 'red'
 };
