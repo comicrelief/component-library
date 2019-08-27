@@ -83,7 +83,7 @@ const ErrorText = styled(Text)`
 const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
 `;
-const Input = ({ errorMsg, id, label, showLabel, type, ...rest }) => {
+const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
     <Label htmlFor={id}>
@@ -94,7 +94,7 @@ const Input = ({ errorMsg, id, label, showLabel, type, ...rest }) => {
         type={type}
         {...rest}
         error={error ? 1 : 0}
-        aria-describedby={id}
+        aria-describedby={hasAria ? id : undefined}
       />
       {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
@@ -107,13 +107,15 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   errorMsg: PropTypes.string.isRequired,
   showLabel: PropTypes.bool,
+  hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
   type: PropTypes.string.isRequired
 };
 
 Input.defaultProps = {
-  showLabel: true
+  showLabel: true,
+  hasAria: true
 };
 
 export default Input;

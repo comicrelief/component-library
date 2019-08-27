@@ -15,6 +15,7 @@ it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
       <EmailSignUp
+        title="sign up letter"
         topCopy={<RichText markup={top} />}
         successCopy={<RichText markup={success} />}
         isSuccess={false}
@@ -24,6 +25,7 @@ it('renders correctly', () => {
         subscribe={() => 'Done'}
       />
       <EmailSignUp
+        title="sign up letter"
         topCopy={<RichText markup={top} />}
         successCopy={<RichText markup={success} />}
         isSuccess
@@ -223,7 +225,9 @@ it('renders correctly', () => {
         <h1
           className="c1"
           color="inherit"
-        />
+        >
+          sign up letter
+        </h1>
         <div
           className="c2"
         >
@@ -241,16 +245,15 @@ it('renders correctly', () => {
         >
           <label
             className="c5"
-            htmlFor="signup-email"
+            htmlFor="email"
           >
             <span
               className="c6 c7"
               color="inherit"
             >
-              
+              email
             </span>
             <input
-              aria-describedby="signup-email"
               className="c8 c9"
               name="email"
               onChange={[Function]}
@@ -324,7 +327,9 @@ it('renders correctly', () => {
         <h1
           className="c1"
           color="inherit"
-        />
+        >
+          sign up letter
+        </h1>
         <div
           className="c2"
         >
