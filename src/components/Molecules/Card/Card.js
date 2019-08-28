@@ -12,10 +12,6 @@ const Container = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
-const Image = styled.div`
-  height: 50%;
-`;
-
 const Copy = styled.div`
   padding: 20px;
   height: 50%;
@@ -28,16 +24,14 @@ const Card = ({ backgroundColor, image, images, imageAltText, children }) => {
   return (
     <Container backgroundColor={backgroundColor}>
       {image ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            image={image}
-            images={images}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-        </Image>
+        <Picture
+          alt={imageAltText}
+          image={image}
+          images={images}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+        />
       ) : null}
       <Copy>{children}</Copy>
     </Container>
