@@ -104,6 +104,7 @@ it('renders correctly', () => {
     }
 
     .c17 {
+      z-index: 2;
       top: 0;
       position: relative;
       width: 45px;
@@ -138,7 +139,6 @@ it('renders correctly', () => {
     }
 
     .c6 {
-      z-index: 2;
       display: none;
       width: 100%;
       position: absolute;
@@ -366,6 +366,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c6 {
+        z-index: 2;
         position: relative;
         top: 0;
         display: block;
