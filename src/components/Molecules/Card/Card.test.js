@@ -44,12 +44,11 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      height: 50%;
+      height: auto;
     }
 
     .c4 {
-      padding: 20px;
-      height: 50%;
+      padding: 1rem;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -57,10 +56,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
     }
 
     <div
