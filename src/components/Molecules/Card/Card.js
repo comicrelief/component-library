@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
+import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.div`
   display: flex;
@@ -13,15 +14,13 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  height: 50%;
+  height: auto;
 `;
 
 const Copy = styled.div`
-  padding: 20px;
-  height: 50%;
+  padding: ${spacing('md')};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 const Card = ({ backgroundColor, image, images, imageAltText, children }) => {
