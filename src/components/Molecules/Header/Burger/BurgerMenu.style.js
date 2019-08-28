@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
+import zIndex from '../../../../theme/shared/zIndex';
 
 /**
  * Burger hidden text
@@ -30,6 +31,7 @@ const BurgerBar = styled.span`
  * Burger wrapper
  */
 const BurgerWrapper = styled(Link)`
+  ${zIndex('medium')};
   top: 0;
   position: relative;
   width: 45px;

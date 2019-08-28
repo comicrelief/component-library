@@ -23,7 +23,6 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  ${zIndex('medium')};
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
@@ -37,6 +36,7 @@ const Nav = styled.nav`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
+    ${zIndex('medium')};
     position: relative;
     top: 0;
     display: block;
