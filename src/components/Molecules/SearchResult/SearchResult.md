@@ -5,7 +5,8 @@ const data = require('../../../styleguide/data/data').default;
 
 <SearchResult
   href="/test"
-  image={data.image}
+  imageLow={data.imageLow}
+  images={data.images}
   title="News article"
   alt="Image's description"
 />;
@@ -18,7 +19,8 @@ const data = require('../../../styleguide/data/data').default;
 
 <SearchResult
   href="/test"
-  image={data.image}
+  imageLow={data.imageLow}
+  images={data.images}
   title="News article"
   copy="News article copy"
   alt="Image's description"
@@ -32,7 +34,8 @@ const data = require('../../../styleguide/data/data').default;
 
 <SearchResult
   href="/test"
-  image={data.image}
+  imageLow={data.imageLow}
+  images={data.images}
   date="01 July 2019"
   title="News article"
   alt="Image's description"
@@ -46,7 +49,8 @@ const data = require('../../../styleguide/data/data').default;
 
 <SearchResult
   href="/test"
-  image={data.image}
+  imageLow={data.imageLow}
+  images={data.images}
   date="01 July 2019"
   type="article"
   title="News article"

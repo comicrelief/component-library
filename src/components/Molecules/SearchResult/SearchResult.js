@@ -16,7 +16,7 @@ const Wrapper = styled.article`
   background-color: ${({ theme }) => theme.color('white')};
 `;
 
-const StyledLink = styled(Link)`
+const Item = styled(Link)`
   display: flex;
   height: 100%;
   border: 0;
@@ -47,8 +47,7 @@ const CopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: ${spacing('none')} ${spacing('sm')} ${spacing('none')}
-    ${spacing('md')};
+  padding: ${spacing('md')};
   width: 100%;
 `;
 
@@ -65,19 +64,25 @@ const SearchResult = ({
   title,
   copy,
   type,
-  image,
+  imageLow,
+  images,
   alt,
   smallImageWidth,
   largeImageWidth
 }) => {
   return (
     <Wrapper>
-      <StyledLink href={href} type="standard">
+      <Item href={href} type="standard">
         <ImageWrapper
           smallImageWidth={smallImageWidth}
           largeImageWidth={largeImageWidth}
         >
-          <Picture image={image} alt={alt} objectFit="cover" />
+          <Picture
+            imageLow={imageLow}
+            images={images}
+            objectFit="cover"
+            alt={alt}
+          />
         </ImageWrapper>
         <CopyWrapper>
           <Text size="xs" uppercase>
@@ -92,7 +97,7 @@ const SearchResult = ({
             </Text>
           )}
         </CopyWrapper>
-      </StyledLink>
+      </Item>
     </Wrapper>
   );
 };
@@ -115,10 +120,13 @@ SearchResult.propTypes = {
   /** link url */
   href: PropTypes.string.isRequired,
   /** image url */
-  image: PropTypes.string.isRequired
+  images: PropTypes.string,
+  imageLow: PropTypes.string
 };
 
 SearchResult.defaultProps = {
+  imageLow: null,
+  images: null,
   type: '',
   date: '',
   copy: '',
