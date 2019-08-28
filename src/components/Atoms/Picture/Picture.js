@@ -55,16 +55,27 @@ const Picture = ({
   return (
     <Wrapper height={height} width={width}>
       <picture>
-        <source type="image/webp" data-srcset={webpImageSet} />
-        <source type="image/jpg" data-srcset={images} />
+        {!webpImageSet ? (
+          <source
+            type="image/jpg"
+            data-srcset={images}
+            data-lowsrc={imageLow}
+            data-sizes="auto"
+          />
+        ) : (
+          <source
+            type="image/webp"
+            data-srcset={webpImageSet}
+            data-lowsrc={imageLow}
+            data-sizes="auto"
+          />
+        )}
         <Image
           alt={alt}
           height={height}
           width={width}
           objectFit={objectFit}
           src={IMAGE_FALLBACK}
-          data-sizes="auto"
-          data-lowsrc={imageLow}
           className="lazyload"
         />
       </picture>
