@@ -83,7 +83,7 @@ exports[`renders correctly in minimalist form 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 0.5rem 0 1rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -249,7 +249,7 @@ exports[`renders correctly with copy 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 0.5rem 0 1rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -416,7 +416,7 @@ exports[`renders correctly with date 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 0.5rem 0 1rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -577,7 +577,7 @@ exports[`renders correctly with date and type 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 0.5rem 0 1rem;
+  padding: 1rem;
   width: 100%;
 }
 

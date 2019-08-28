@@ -47,7 +47,7 @@ const CopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 ${spacing('sm')} 0 ${spacing('md')};
+  padding: ${spacing('md')};
   width: 100%;
 `;
 
