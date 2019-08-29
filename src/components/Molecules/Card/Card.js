@@ -8,7 +8,6 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: flex-end;
   height: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
