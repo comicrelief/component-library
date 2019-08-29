@@ -144,6 +144,7 @@ it('renders correctly', () => {
       position: absolute;
       top: 75px;
       left: 0;
+      z-index: 2;
     }
 
     .c6 > h2 {

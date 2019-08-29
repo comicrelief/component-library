@@ -1,7 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+
 import Picture from '../../Atoms/Picture/Picture';
+import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.div`
   display: flex;
@@ -16,16 +18,17 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  padding: 15vw 5vw;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 5vw;
+  padding: ${spacing('xxl')} ${spacing('xl')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    padding: 0 ${spacing('xl')};
   }
+
   ${props =>
     props.fullImage &&
     css`
