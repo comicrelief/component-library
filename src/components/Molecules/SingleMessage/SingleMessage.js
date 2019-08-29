@@ -9,6 +9,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
@@ -19,14 +20,13 @@ const Container = styled.div`
 
 const Copy = styled.div`
   padding: ${spacing('xxl')} ${spacing('xl')};
+  word-break: break-word;
   @media ${({ theme }) => theme.breakpoint('small')} {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 50%;
-    padding: 0 ${spacing('xl')};
+    width: 50%;
+    padding: ${spacing('xl')};
   }
 
   ${props =>
@@ -61,14 +61,13 @@ const Copy = styled.div`
 `;
 
 const Media = styled.div`
-  height: 100%;
   width: 100%;
 `;
 
 const Image = styled.div`
   width: 100%;
-  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : null)};
-  ${({ vhFull }) => (vhFull ? 'height: 100vh;' : null)};
+  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : 'height: 100%;')};
+  ${({ vhFull }) => vhFull && 'height: 100%'};
 `;
 
 /** Single Message is our main component usually to build landing pages */
