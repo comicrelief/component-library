@@ -18,7 +18,7 @@ body {
 h1 {
   text-transform: uppercase;
   font-family: 'Anton', Impact, sans-serif;
-  margin-top: 0;
+  margin: 0;
 }
 
 h2,
@@ -30,6 +30,10 @@ a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 /* Blur effect lazyload images */
