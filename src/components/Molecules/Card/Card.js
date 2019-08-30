@@ -22,14 +22,20 @@ const Copy = styled.div`
   flex-direction: column;
 `;
 
-const Card = ({ backgroundColor, image, images, imageAltText, children }) => {
+const Card = ({
+  backgroundColor,
+  imageLow,
+  images,
+  imageAltText,
+  children
+}) => {
   return (
     <Container backgroundColor={backgroundColor}>
-      {image ? (
+      {imageLow ? (
         <Image>
           <Picture
             alt={imageAltText}
-            image={image}
+            imageLow={imageLow}
             images={images}
             objectFit="cover"
             width="100%"
@@ -44,7 +50,7 @@ const Card = ({ backgroundColor, image, images, imageAltText, children }) => {
 
 Card.propTypes = {
   backgroundColor: PropTypes.string,
-  image: PropTypes.string,
+  imageLow: PropTypes.string,
   images: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node.isRequired
@@ -52,7 +58,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   backgroundColor: 'white',
-  image: null,
+  imageLow: null,
   images: null,
   imageAltText: ''
 };
