@@ -1,12 +1,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+
 import Picture from '../../Atoms/Picture/Picture';
+import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
@@ -16,16 +19,16 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  padding: 15vw 5vw;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 5vw;
+  padding: ${spacing('xxl')} ${spacing('xl')};
+  word-break: break-word;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: ${spacing('xl')};
   }
+
   ${props =>
     props.fullImage &&
     css`
@@ -58,14 +61,15 @@ const Copy = styled.div`
 `;
 
 const Media = styled.div`
-  height: 100%;
   width: 100%;
+  ${({ doubleImage }) =>
+    doubleImage && 'display: flex; flex-direction: column'};
 `;
 
 const Image = styled.div`
   width: 100%;
-  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : null)};
-  ${({ vhFull }) => (vhFull ? 'height: 100vh;' : null)};
+  ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
+  ${({ vhFull }) => vhFull && 'height: 100%'};
 `;
 
 /** Single Message is our main component usually to build landing pages */
@@ -95,7 +99,7 @@ const SingleMessage = ({
     >
       {imageSet || imageSet2 ? (
         <>
-          <Media>
+          <Media doubleImage={doubleImage}>
             {imageSet || image ? (
               <Image doubleImage={doubleImage} vhFull={vhFull}>
                 <Picture

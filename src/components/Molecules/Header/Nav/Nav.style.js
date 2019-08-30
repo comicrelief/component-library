@@ -28,6 +28,7 @@ const Nav = styled.nav`
   position: absolute;
   top: 75px;
   left: 0;
+  ${zIndex('medium')};
 
   @media (min-width: ${sizes.small}px) {
     width: 50%;
