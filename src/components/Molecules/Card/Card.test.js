@@ -13,19 +13,6 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .c3 {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     .c0 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -40,10 +27,6 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      height: auto;
-    }
-
-    .c4 {
       padding: 1rem;
       display: -webkit-box;
       display: -webkit-flex;
@@ -59,27 +42,6 @@ it('renders correctly', () => {
     >
       <div
         className="c1"
-      >
-        <div
-          className="c2"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="lazyload c3"
-            data-lowsrc={null}
-            data-sizes="auto"
-            data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-            height="100%"
-            src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c4"
       >
         <h2>
           Title
