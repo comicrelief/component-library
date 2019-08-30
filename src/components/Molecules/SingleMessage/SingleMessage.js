@@ -62,11 +62,13 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
+  ${({ doubleImage }) =>
+    doubleImage && 'display: flex; flex-direction: column'};
 `;
 
 const Image = styled.div`
   width: 100%;
-  ${({ doubleImage }) => (doubleImage ? 'height: 50vh;' : 'height: 100%;')};
+  ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
   ${({ vhFull }) => vhFull && 'height: 100%'};
 `;
 
@@ -97,7 +99,7 @@ const SingleMessage = ({
     >
       {imageSet || imageSet2 ? (
         <>
-          <Media>
+          <Media doubleImage={doubleImage}>
             {imageSet || image ? (
               <Image doubleImage={doubleImage} vhFull={vhFull}>
                 <Picture

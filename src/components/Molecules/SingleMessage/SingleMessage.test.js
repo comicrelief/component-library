@@ -79,23 +79,25 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      overflow: hidden;
       background: #C180F9;
     }
 
     .c5 {
       padding: 8rem 4rem;
+      word-break: break-word;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
     }
 
     .c1 {
-      height: 100%;
       width: 100%;
     }
 
     .c2 {
       width: 100%;
+      height: 100%;
     }
 
     @media (min-width:1440px) {
@@ -125,17 +127,8 @@ it('renders correctly', () => {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-flex: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding: 0 4rem;
+        width: 50%;
+        padding: 4rem;
       }
     }
 
@@ -221,11 +214,13 @@ it('renders Single Message with no Image correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      overflow: hidden;
       background: #C180F9;
     }
 
     .c1 {
       padding: 8rem 4rem;
+      word-break: break-word;
       -webkit-flex: 0 0 60%;
       -ms-flex: 0 0 60%;
       flex: 0 0 60%;
@@ -254,17 +249,8 @@ it('renders Single Message with no Image correctly', () => {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-flex: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding: 0 4rem;
+        width: 50%;
+        padding: 4rem;
       }
     }
 
@@ -309,11 +295,13 @@ it('renders fullWidth Single Message correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      overflow: hidden;
       background: #C180F9;
     }
 
     .c1 {
       padding: 8rem 4rem;
+      word-break: break-word;
       -webkit-flex: 0 0 60%;
       -ms-flex: 0 0 60%;
       flex: 0 0 60%;
@@ -342,17 +330,8 @@ it('renders fullWidth Single Message correctly', () => {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-flex: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding: 0 4rem;
+        width: 50%;
+        padding: 4rem;
       }
     }
 
@@ -419,24 +398,32 @@ it('renders double image Single Message correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      overflow: hidden;
       background: #FFE400;
     }
 
     .c5 {
       padding: 8rem 4rem;
+      word-break: break-word;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
     }
 
     .c1 {
-      height: 100%;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     .c2 {
       width: 100%;
-      height: 50vh;
+      height: 100%;
     }
 
     @media (min-width:740px) {
@@ -460,17 +447,8 @@ it('renders double image Single Message correctly', () => {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-flex: 0;
-        -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-        padding: 0 4rem;
+        width: 50%;
+        padding: 4rem;
       }
     }
 
