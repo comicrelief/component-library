@@ -29,10 +29,11 @@ const Card = ({
   imageAltText,
   height,
   width,
-  children
+  children,
+  ...rest
 }) => {
   return (
-    <Container backgroundColor={backgroundColor}>
+    <Container backgroundColor={backgroundColor} {...rest}>
       {imageLow ? (
         <Image>
           <Picture
