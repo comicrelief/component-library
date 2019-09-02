@@ -27,6 +27,8 @@ const Card = ({
   imageLow,
   images,
   imageAltText,
+  height,
+  width,
   children
 }) => {
   return (
@@ -38,8 +40,8 @@ const Card = ({
             imageLow={imageLow}
             images={images}
             objectFit="cover"
-            width="100%"
-            height="100%"
+            width={width}
+            height={height}
           />
         </Image>
       ) : null}
@@ -52,6 +54,8 @@ Card.propTypes = {
   backgroundColor: PropTypes.string,
   imageLow: PropTypes.string,
   images: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node.isRequired
 };
@@ -60,7 +64,9 @@ Card.defaultProps = {
   backgroundColor: 'white',
   imageLow: null,
   images: null,
-  imageAltText: ''
+  imageAltText: '',
+  width: '100%',
+  height: '100%'
 };
 
 export default Card;
