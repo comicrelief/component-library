@@ -14,8 +14,10 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
+      font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c1 {
@@ -80,13 +82,16 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Tenis
         </span>
       </label>,
       .c2 {
+      font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c1 {
@@ -151,6 +156,7 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Handball
         </span>

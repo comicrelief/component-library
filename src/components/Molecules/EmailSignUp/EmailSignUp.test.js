@@ -40,12 +40,17 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c1 {
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
+      font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c11 {
@@ -225,6 +230,7 @@ it('renders correctly', () => {
         <h1
           className="c1"
           color="inherit"
+          size="s"
         >
           sign up letter
         </h1>
@@ -250,6 +256,7 @@ it('renders correctly', () => {
             <span
               className="c6 c7"
               color="inherit"
+              size="s"
             >
               email
             </span>
@@ -292,7 +299,10 @@ it('renders correctly', () => {
         </div>
       </div>,
       .c1 {
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c3 {
@@ -327,6 +337,7 @@ it('renders correctly', () => {
         <h1
           className="c1"
           color="inherit"
+          size="s"
         >
           sign up letter
         </h1>

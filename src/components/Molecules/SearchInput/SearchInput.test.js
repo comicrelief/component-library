@@ -16,8 +16,10 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
+      font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c8 {
@@ -210,6 +212,7 @@ it('renders correctly', () => {
               <span
                 className="c5 c6"
                 color="inherit"
+                size="s"
               >
                 Search
               </span>
@@ -235,6 +238,7 @@ it('renders correctly', () => {
               <span
                 className="c5 c6"
                 color="inherit"
+                size="s"
               >
                 
               </span>

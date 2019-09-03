@@ -18,8 +18,10 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c2 {
@@ -100,6 +102,7 @@ it('renders correctly', () => {
       <span
         className="c1"
         color="inherit"
+        size="s"
       >
         Label
       </span>

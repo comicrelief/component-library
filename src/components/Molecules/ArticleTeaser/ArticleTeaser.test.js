@@ -24,11 +24,14 @@ it('renders correctly', () => {
       font-size: 0.69375rem;
       text-transform: uppercase;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
       font-size: 1.725rem;
       text-transform: uppercase;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c3 {

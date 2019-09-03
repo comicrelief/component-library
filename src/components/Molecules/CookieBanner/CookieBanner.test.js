@@ -21,7 +21,10 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c2 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4 {
@@ -123,6 +126,7 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
+        size="s"
       >
         Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about our use of cookies
         <a
@@ -139,6 +143,7 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
+        size="s"
       >
         <a
           className="c5 c6"

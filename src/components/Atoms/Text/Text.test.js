@@ -13,17 +13,15 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       color: #FFE400;
-      font-weight: normal;
-      font-family: 'Anton',Impact,sans-serif;
       font-size: 1.725rem;
       text-transform: inherit;
-      
+      font-weight: normal;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
     <p
       className="c0"
       color="yellow"
-      family="Anton"
       size="xl"
     >
       My paragraph extra large, yellow and font family Anton

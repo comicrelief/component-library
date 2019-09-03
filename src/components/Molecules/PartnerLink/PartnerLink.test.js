@@ -18,6 +18,8 @@ it('renders correctly', () => {
       color: #FFFFFF;
       font-size: 0.69375rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c2 {

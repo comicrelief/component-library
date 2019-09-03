@@ -14,12 +14,18 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c21 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c19 {
@@ -548,6 +554,7 @@ it('renders correctly', () => {
             className="c7"
             color="inherit"
             id="footer-menu"
+            size="s"
           >
             Footer navigation
           </h2>
@@ -572,6 +579,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Hear from us
                 </span>
@@ -595,6 +603,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Get the newsletter
                     </span>
@@ -614,6 +623,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       How we contact you
                     </span>
@@ -638,6 +648,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Get in touch
                 </span>
@@ -661,6 +672,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Contact us
                     </span>
@@ -680,6 +692,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Your Gift Aid
                     </span>
@@ -699,6 +712,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       FAQs
                     </span>
@@ -718,6 +732,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Red Nose Day 2019 FAQs
                     </span>
@@ -742,6 +757,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   About us
                 </span>
@@ -765,6 +781,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Mission
                     </span>
@@ -784,6 +801,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Our history
                     </span>
@@ -803,6 +821,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Finances
                     </span>
@@ -822,6 +841,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Partners
                     </span>
@@ -841,6 +861,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Meet the team
                     </span>
@@ -860,6 +881,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Sport Relief
                     </span>
@@ -884,6 +906,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Careers
                 </span>
@@ -907,6 +930,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Working at Comic Relief
                     </span>
@@ -926,6 +950,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Open roles
                     </span>
@@ -950,6 +975,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   News
                 </span>
@@ -973,6 +999,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       News
                     </span>
@@ -992,6 +1019,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Press area
                     </span>
@@ -1016,6 +1044,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Legal
                 </span>
@@ -1039,6 +1068,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp with both URL and Ref
                     </span>
@@ -1058,6 +1088,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp with only Ref
                     </span>
@@ -1077,6 +1108,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp with only URL
                     </span>
@@ -1096,6 +1128,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Test whitelisted external link
                     </span>
@@ -1115,6 +1148,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Test non-whitelisted external link
                     </span>
@@ -1146,6 +1180,7 @@ it('renders correctly', () => {
           <p
             className="c21"
             color="white"
+            size="s"
           >
             Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
           </p>

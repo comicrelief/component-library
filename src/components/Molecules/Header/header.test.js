@@ -21,7 +21,10 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
+      font-size: 1rem;
       text-transform: inherit;
+      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c5 {
@@ -542,6 +545,7 @@ it('renders correctly', () => {
             className="c7"
             color="inherit"
             id="main-menu"
+            size="s"
           >
             Main navigation
           </h2>
@@ -566,6 +570,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Fundraising
                 </span>
@@ -589,6 +594,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Fundraising
                     </span>
@@ -608,6 +614,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Red Nose Day
                     </span>
@@ -627,6 +634,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Regular donations
                     </span>
@@ -646,6 +654,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Squads
                     </span>
@@ -665,6 +674,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       The Noseys
                     </span>
@@ -684,6 +694,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Free downloads
                     </span>
@@ -708,6 +719,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   What your money does
                 </span>
@@ -731,6 +743,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       What your money does
                     </span>
@@ -750,6 +763,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Our legacy
                     </span>
@@ -774,6 +788,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Schools & youth
                 </span>
@@ -797,6 +812,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Schools & youth
                     </span>
@@ -816,6 +832,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Primary schools
                     </span>
@@ -835,6 +852,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Secondary schools
                     </span>
@@ -854,6 +872,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Nurseries
                     </span>
@@ -873,6 +892,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Youth groups
                     </span>
@@ -892,6 +912,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Free downloads
                     </span>
@@ -916,6 +937,7 @@ it('renders correctly', () => {
                 <span
                   className="c7"
                   color="inherit"
+                  size="s"
                 >
                   Test whitelisted external link
                 </span>
@@ -939,6 +961,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Test whitelisted external link
                     </span>
@@ -958,6 +981,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Test non-whitelisted external link
                     </span>
@@ -977,6 +1001,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp: URL and Ref
                     </span>
@@ -996,6 +1021,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp: only Ref
                     </span>
@@ -1015,6 +1041,7 @@ it('renders correctly', () => {
                     <span
                       className="c7"
                       color="inherit"
+                      size="s"
                     >
                       Link comp: only URL
                     </span>
@@ -1038,6 +1065,7 @@ it('renders correctly', () => {
           <span
             className="c18 c7"
             color="inherit"
+            size="s"
           >
             Open and close nav menu
           </span>
