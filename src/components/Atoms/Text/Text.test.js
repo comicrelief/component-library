@@ -15,7 +15,6 @@ it('renders correctly', () => {
       color: #FFE400;
       font-size: 1.725rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Anton',Impact,sans-serif;
     }
 

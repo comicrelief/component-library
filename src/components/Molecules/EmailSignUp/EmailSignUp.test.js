@@ -42,7 +42,6 @@ it('renders correctly', () => {
       .c1 {
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -301,7 +300,6 @@ it('renders correctly', () => {
       .c1 {
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

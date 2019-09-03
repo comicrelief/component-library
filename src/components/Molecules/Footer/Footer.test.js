@@ -16,7 +16,6 @@ it('renders correctly', () => {
     .c7 {
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -24,7 +23,6 @@ it('renders correctly', () => {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

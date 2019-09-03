@@ -32,7 +32,6 @@ it('renders correctly', () => {
       color: #FFFFFF;
       font-size: 2.075rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -40,7 +39,6 @@ it('renders correctly', () => {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -210,7 +208,6 @@ it('renders Single Message with no Image correctly', () => {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -295,7 +292,6 @@ it('renders fullWidth Single Message correctly', () => {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -389,7 +385,6 @@ it('renders double image Single Message correctly', () => {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
-      font-weight: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

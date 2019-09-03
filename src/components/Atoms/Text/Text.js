@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-/**
- * Text component
- */
+/** Text component */
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
@@ -14,9 +12,11 @@ export const BaseText = styled.span`
     family ? theme.fontFamilies(family) : 'inherit'};
 `;
 
-/** Text renders different elements based on the `tag` prop */
+/** Text renders different elements based on the `tag` prop
+ *  Weight is checked for existence to prevent overriding the tag's css
+ */
 const Text = ({ tag, children, weight, family, ...rest }) => (
-  <BaseText {...rest} as={tag} weight={weight} family={family}>
+  <BaseText {...rest} as={tag} weight={weight && weight} family={family}>
     {children}
   </BaseText>
 );
@@ -24,7 +24,7 @@ const Text = ({ tag, children, weight, family, ...rest }) => (
 Text.defaultProps = {
   family: 'Montserrat',
   tag: 'span',
-  weight: 'normal',
+  weight: null,
   uppercase: false,
   size: 's',
   color: 'inherit'

@@ -4,14 +4,12 @@ exports[`renders correctly in minimalist form 1`] = `
 .c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c9 {
   font-size: 1.725rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -169,21 +167,18 @@ exports[`renders correctly with copy 1`] = `
 .c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c9 {
   font-size: 1.725rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c10 {
   font-size: 1.2rem;
   text-transform: inherit;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -347,14 +342,12 @@ exports[`renders correctly with date 1`] = `
 .c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c9 {
   font-size: 1.725rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -512,14 +505,12 @@ exports[`renders correctly with date and type 1`] = `
 .c7 {
   font-size: 0.83125rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c9 {
   font-size: 1.725rem;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
