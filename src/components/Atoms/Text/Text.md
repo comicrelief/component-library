@@ -12,6 +12,9 @@
   <Text tag="p" size="xl" color="yellow">
     My paragraph xl and yellow
   </Text>
+  <Text tag="p" size="xl" family="Anton">
+    Paragraph xl and font anton
+  </Text>
 </div>
 ```
 

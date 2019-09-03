@@ -10,23 +10,29 @@ export const BaseText = styled.span`
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   font-weight: ${({ weight }) => weight};
+  font-family: ${({ family, theme }) =>
+    family ? theme.fontFamilies(family) : 'inherit'};
 `;
 
 /** Text renders different elements based on the `tag` prop */
-const Text = ({ tag, children, weight, ...rest }) => (
-  <BaseText {...rest} as={tag} weight={weight}>
+const Text = ({ tag, children, weight, family, ...rest }) => (
+  <BaseText {...rest} as={tag} weight={weight} family={family}>
     {children}
   </BaseText>
 );
 
 Text.defaultProps = {
+  family: 'Montserrat',
   tag: 'span',
   weight: 'normal',
   uppercase: false,
-  size: 's'
+  size: 's',
+  color: 'inherit'
 };
 
 Text.propTypes = {
+  /** Font family **/
+  family: PropTypes.string,
   /** Weight of Font */
   weight: PropTypes.string,
   /** Sets text transform to uppercase. */
@@ -42,10 +48,6 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.string
   ]).isRequired
-};
-
-Text.defaultProps = {
-  color: 'inherit'
 };
 
 export default Text;
