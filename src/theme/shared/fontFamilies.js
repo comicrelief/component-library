@@ -1,5 +1,3 @@
-// import { css } from 'styled-components';
-
 const fontFamilies = {
   Montserrat: { font: 'Montserrat', fallback: 'Helvetica, Arial' },
   Anton: { font: 'Anton', fallback: 'Impact' }
