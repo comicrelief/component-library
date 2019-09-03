@@ -13,7 +13,7 @@
     My paragraph xl and yellow
   </Text>
   <Text tag="p" size="xl" family="Anton">
-    Paragraph xl and font anton
+    Paragraph xl and font Anton
   </Text>
 </div>
 ```
