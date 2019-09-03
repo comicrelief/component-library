@@ -32,11 +32,14 @@ it('renders correctly', () => {
       color: #FFFFFF;
       font-size: 2.075rem;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c3 {
@@ -173,6 +176,7 @@ it('renders correctly', () => {
         <p
           className="c7"
           color="white"
+          size="s"
         >
           description
         </p>
@@ -202,7 +206,9 @@ it('renders Single Message with no Image correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c2 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c0 {
@@ -263,6 +269,7 @@ it('renders Single Message with no Image correctly', () => {
         <p
           className="c2"
           color="white"
+          size="s"
         >
           description
         </p>
@@ -283,7 +290,9 @@ it('renders fullWidth Single Message correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c2 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c0 {
@@ -344,6 +353,7 @@ it('renders fullWidth Single Message correctly', () => {
         <p
           className="c2"
           color="white"
+          size="s"
         >
           description
         </p>
@@ -373,7 +383,9 @@ it('renders double image Single Message correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
       color: #FFFFFF;
+      font-size: 1rem;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c3 {
@@ -507,6 +519,7 @@ it('renders double image Single Message correctly', () => {
         <p
           className="c6"
           color="white"
+          size="s"
         >
           description
         </p>

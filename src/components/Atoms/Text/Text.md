@@ -12,6 +12,9 @@
   <Text tag="p" size="xl" color="yellow">
     My paragraph xl and yellow
   </Text>
+  <Text tag="p" size="xl" family="Anton">
+    Paragraph size xl and font Anton
+  </Text>
 </div>
 ```
 
@@ -29,7 +32,7 @@ Sport Relief
     Heading 3 size 3
   </Text>
   <Text tag="p" size="xl" color="red">
-    My paragraph small and yellow
+    My paragraph small and red
   </Text>
 </div>
 ```

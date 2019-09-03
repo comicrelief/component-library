@@ -2,31 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-/**
- * Text component
- */
+/** Text component */
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   font-weight: ${({ weight }) => weight};
+  font-family: ${({ family, theme }) =>
+    family ? theme.fontFamilies(family) : 'inherit'};
 `;
 
-/** Text renders different elements based on the `tag` prop */
-const Text = ({ tag, children, weight, ...rest }) => (
-  <BaseText {...rest} as={tag} weight={weight}>
+/** Text renders different elements based on the `tag` prop
+ *  Weight is checked for existence to prevent overriding the tag's css
+ */
+const Text = ({ tag, children, weight, family, ...rest }) => (
+  <BaseText {...rest} as={tag} weight={weight && weight} family={family}>
     {children}
   </BaseText>
 );
 
 Text.defaultProps = {
+  family: 'Montserrat',
   tag: 'span',
-  weight: 'normal',
+  weight: null,
   uppercase: false,
-  size: 's'
+  size: 's',
+  color: 'inherit'
 };
 
 Text.propTypes = {
+  /** Font family */
+  family: PropTypes.string,
   /** Weight of Font */
   weight: PropTypes.string,
   /** Sets text transform to uppercase. */
@@ -42,10 +48,6 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.string
   ]).isRequired
-};
-
-Text.defaultProps = {
-  color: 'inherit'
 };
 
 export default Text;
