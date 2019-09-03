@@ -31,7 +31,7 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
-  /** Font family **/
+  /** Font family */
   family: PropTypes.string,
   /** Weight of Font */
   weight: PropTypes.string,
