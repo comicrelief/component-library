@@ -27,7 +27,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c8 {
+    .c9 {
       font-size: 1.725rem;
       text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -52,13 +52,11 @@ it('renders correctly', () => {
       display: inline-block;
       padding: 0 2px 1px;
       color: #2C0230;
-      border-bottom: 2px solid #2C0230;
       font-weight: normal;
     }
 
     .c2:hover {
       color: #2C0230;
-      border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
@@ -78,7 +76,6 @@ it('renders correctly', () => {
       display: -ms-flexbox;
       display: flex;
       height: 100%;
-      border: 0;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
@@ -86,10 +83,6 @@ it('renders correctly', () => {
       text-decoration: none;
       color: inherit;
       width: 100%;
-    }
-
-    .c1:hover {
-      border: 0;
     }
 
     .c3 {
@@ -100,7 +93,7 @@ it('renders correctly', () => {
       padding: 2rem;
     }
 
-    .c6 h3 {
+    .c8 {
       margin: 0;
     }
 
@@ -186,7 +179,7 @@ it('renders correctly', () => {
              01 July 2019
           </span>
           <h3
-            className="c8"
+            className="c8 c9"
             color="inherit"
             size="xl"
           >

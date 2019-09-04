@@ -1,4 +1,4 @@
-# Article teaser
+### Article teaser
 
 ```js
 const data = require('../../../styleguide/data/data').default;
@@ -12,7 +12,7 @@ const data = require('../../../styleguide/data/data').default;
 />;
 ```
 
-# Article teaser: Press release
+### Article teaser: Press release
 
 ```js
 const data = require('../../../styleguide/data/data').default;

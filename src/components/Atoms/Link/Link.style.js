@@ -18,8 +18,10 @@ const buttonStyle = () => css`
 const linkStyle = () => css`
   text-decoration: none;
   display: inline-block;
-  ${({ type, theme }) =>
-    type ? theme.linkStyles(type) : theme.linkStyles('standard')};
+  ${({ type, theme, underline }) =>
+    type
+      ? theme.linkStyles(type, underline)
+      : theme.linkStyles('standard', underline)};
 `;
 
 const StyledLink = styled.a`

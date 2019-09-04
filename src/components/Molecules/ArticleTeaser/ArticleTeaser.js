@@ -20,15 +20,11 @@ const Wrapper = styled.article`
 const Link = styled(link)`
   display: flex;
   height: 100%;
-  border: 0;
   flex-direction: ${({ category }) => (category ? 'row' : 'column')};
   align-items: ${({ category }) => category && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
-  :hover {
-    border: 0;
-  }
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
@@ -52,10 +48,6 @@ const ImageWrapper = styled.div`
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  h3 {
-    margin: 0;
-  }
-
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: ${({ category }) => (category ? '100%' : '55%')};
   }
@@ -63,6 +55,10 @@ const CopyWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
+`;
+
+const Title = styled(Text)`
+  margin: 0;
 `;
 
 /**
@@ -80,7 +76,7 @@ const ArticleTeaser = ({
 }) => {
   return (
     <Wrapper>
-      <Link href={href} type="standard" category={category}>
+      <Link href={href} type="standard" category={category} underline={false}>
         <ImageWrapper category={category}>
           <Picture
             imageLow={imageLow}
@@ -94,9 +90,9 @@ const ArticleTeaser = ({
           <Text size="xxs" weight="bold" uppercase>
             {date}
           </Text>
-          <Text size="xl" tag="h3" uppercase>
+          <Title size="xl" tag="h3" uppercase>
             {title}
-          </Text>
+          </Title>
         </CopyWrapper>
       </Link>
     </Wrapper>
