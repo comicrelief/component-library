@@ -20,30 +20,46 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c7 {
       font-size: 0.69375rem;
       text-transform: uppercase;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c7 {
+    .c8 {
       font-size: 1.725rem;
       text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c3 {
+    .c4 {
       position: relative;
       width: 100%;
       height: auto;
     }
 
-    .c4 {
+    .c5 {
       display: block;
       width: 100%;
       height: auto;
       object-fit: cover;
+    }
+
+    .c2 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 2px 1px;
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: normal;
+    }
+
+    .c2:hover {
+      color: #2C0230;
+      border-bottom: 2px solid #2C0230;
+      font-weight: 700;
     }
 
     .c0 {
@@ -72,15 +88,19 @@ it('renders correctly', () => {
       width: 100%;
     }
 
-    .c2 {
+    .c1:hover {
+      border: 0;
+    }
+
+    .c3 {
       height: auto;
     }
 
-    .c5 {
-      padding: 40px;
+    .c6 {
+      padding: 2rem;
     }
 
-    .c5 h3 {
+    .c6 h3 {
       margin: 0;
     }
 
@@ -101,25 +121,25 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c2 {
+      .c3 {
         width: 45%;
       }
     }
 
     @media (min-width:1024px) {
-      .c2 {
+      .c3 {
         width: 100%;
       }
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c6 {
         width: 55%;
       }
     }
 
     @media (min-width:1024px) {
-      .c5 {
+      .c6 {
         width: 100%;
       }
     }
@@ -128,21 +148,23 @@ it('renders correctly', () => {
       className="c0"
     >
       <a
-        className="c1"
+        className="c1 c2"
+        color="red"
         href="/test"
+        target="_self"
         type="standard"
       >
         <div
-          className="c2"
+          className="c3"
         >
           <div
-            className="c3"
+            className="c4"
             height="auto"
             width="100%"
           >
             <img
               alt="Image's description"
-              className="lazyload c4"
+              className="lazyload c5"
               data-lowsrc={null}
               data-sizes="auto"
               data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
@@ -154,17 +176,17 @@ it('renders correctly', () => {
           </div>
         </div>
         <div
-          className="c5"
+          className="c6"
         >
           <span
-            className="c6"
+            className="c7"
             color="inherit"
             size="xxs"
           >
              01 July 2019
           </span>
           <h3
-            className="c7"
+            className="c8"
             color="inherit"
             size="xl"
           >

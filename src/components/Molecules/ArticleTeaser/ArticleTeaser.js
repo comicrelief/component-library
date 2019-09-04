@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
+import link from '../../Atoms/Link/Link';
+import spacing from '../../../theme/shared/spacing';
 
 /**
  * Article Teaser
@@ -15,40 +17,49 @@ const Wrapper = styled.article`
   background-color: #fff;
 `;
 
-const Link = styled.a`
+const Link = styled(link)`
   display: flex;
   height: 100%;
   border: 0;
-  flex-direction: column;
+  flex-direction: ${({ category }) => (category ? 'row' : 'column')};
+  align-items: ${({ category }) => category && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
+  :hover {
+    border: 0;
+  }
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: column;
+    flex-direction: ${({ category }) => (category ? 'row' : 'column')};
   }
 `;
 
 const ImageWrapper = styled.div`
   height: auto;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 45%;
+    width: ${({ category }) => (category ? '70px' : '45%')};
   }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: 100%;
+    width: ${({ category }) => (category ? '70px' : '100%')};
   }
 `;
 
 const CopyWrapper = styled.div`
-  padding: 40px;
+  padding: ${spacing('l')};
   h3 {
     margin: 0;
   }
+
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 55%;
+    width: ${({ category }) => (category ? '100%' : '55%')};
   }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
@@ -57,11 +68,20 @@ const CopyWrapper = styled.div`
 /**
  * Article teaser component
  */
-const ArticleTeaser = ({ href, date, title, imageLow, image, images, alt }) => {
+const ArticleTeaser = ({
+  href,
+  date,
+  title,
+  imageLow,
+  image,
+  images,
+  alt,
+  category
+}) => {
   return (
     <Wrapper>
-      <Link href={href} type="standard">
-        <ImageWrapper>
+      <Link href={href} type="standard" category={category}>
+        <ImageWrapper category={category}>
           <Picture
             imageLow={imageLow}
             images={images}
@@ -70,7 +90,7 @@ const ArticleTeaser = ({ href, date, title, imageLow, image, images, alt }) => {
             objectFit="cover"
           />
         </ImageWrapper>
-        <CopyWrapper>
+        <CopyWrapper category={category}>
           <Text size="xxs" weight="bold" uppercase>
             {date}
           </Text>
@@ -87,6 +107,7 @@ ArticleTeaser.propTypes = {
   images: PropTypes.string,
   image: PropTypes.string,
   imageLow: PropTypes.string,
+  category: PropTypes.string,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -97,7 +118,8 @@ ArticleTeaser.propTypes = {
 ArticleTeaser.defaultProps = {
   imageLow: null,
   image: null,
-  images: null
+  images: null,
+  category: null
 };
 
 export default ArticleTeaser;
