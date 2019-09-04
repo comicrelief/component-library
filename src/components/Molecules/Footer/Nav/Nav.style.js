@@ -47,6 +47,8 @@ const SubNavMenu = styled.ul`
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
+
     &:after {
       content: none;
     }
