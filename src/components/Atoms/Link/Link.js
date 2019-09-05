@@ -11,7 +11,16 @@ const domainRegEx = new RegExp(
 
 let window = '';
 
-const Link = ({ children, color, href, target, type, home, ...rest }) => {
+const Link = ({
+  children,
+  color,
+  href,
+  target,
+  type,
+  home,
+  underline,
+  ...rest
+}) => {
   /**
    * If we haven't specifically set the target via props, check if
    * this is an internal link OR on our whitelist before making it a '_self' link
@@ -25,7 +34,14 @@ const Link = ({ children, color, href, target, type, home, ...rest }) => {
   }
 
   return (
-    <StyledLink {...rest} color={color} href={href} target={window} type={type}>
+    <StyledLink
+      {...rest}
+      color={color}
+      href={href}
+      target={window}
+      type={type}
+      underline={underline}
+    >
       {children}
     </StyledLink>
   );
@@ -40,6 +56,8 @@ Link.propTypes = {
   target: PropTypes.string,
   /** Set to true if link rel attribute should be home */
   home: PropTypes.bool,
+  /** Set border bottom */
+  underline: PropTypes.bool,
   /** Link url */
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
@@ -49,7 +67,8 @@ Link.defaultProps = {
   type: 'standard',
   color: 'red',
   target: null,
-  home: false
+  home: false,
+  underline: true
 };
 
 export default Link;

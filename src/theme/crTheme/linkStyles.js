@@ -22,7 +22,7 @@ const linkStyles = {
   }
 };
 
-export default styleName => {
+export default (styleName, underline) => {
   let style = css`
     padding: 0 2px 1px;
     color: ${color('black')};
@@ -34,18 +34,20 @@ export default styleName => {
       font-weight: 700;
     }
   `;
+
   if (styleName) {
     style = css`
       padding: ${linkStyles[styleName].padding};
       color: ${linkStyles[styleName].color};
-      border-bottom: ${linkStyles[styleName].border};
+      border-bottom: ${underline && linkStyles[styleName].border};
       font-weight: ${linkStyles[styleName].weight};
       :hover {
         color: ${linkStyles[styleName].hoverColor};
-        border-bottom: ${linkStyles[styleName].hoverBorder};
+        border-bottom: ${underline && linkStyles[styleName].hoverBorder};
         font-weight: ${linkStyles[styleName].hoverWeight};
       }
     `;
   }
+
   return style;
 };
