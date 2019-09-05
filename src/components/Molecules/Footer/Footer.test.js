@@ -141,6 +141,7 @@ it('renders correctly', () => {
       display: none;
       font-size: 15px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     .c12 > li a:after {
@@ -168,6 +169,7 @@ it('renders correctly', () => {
       display: none;
       font-size: 15px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     .c15 > li a:after {
