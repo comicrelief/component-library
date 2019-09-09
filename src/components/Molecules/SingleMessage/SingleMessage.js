@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   display: flex;
@@ -62,8 +63,29 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
+  ${zIndex('low')};
+
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
+`;
+
+const PlayButton = styled.button`
+  ${zIndex('medium')};
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0)
+    url(https://www.comicrelief.com/themes/custom/comicrelief/images/copyvideo--play-icon__hover.svg)
+    center no-repeat;
+  background-position: center center;
+  background-size: 100px;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999px;
 `;
 
 const Image = styled.div`
@@ -72,8 +94,16 @@ const Image = styled.div`
   ${({ vhFull }) => vhFull && 'height: 100%'};
 `;
 
-/** Single Message is our main component usually to build landing pages */
+const IFrame = styled.iframe`
+  ${zIndex('base')};
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
 
+/** Single Message is our main component usually to build landing pages */
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
@@ -86,10 +116,15 @@ const SingleMessage = ({
   imageAltText2,
   children,
   fullImage,
-  vhFull
+  vhFull,
+  videoID
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
+  const hasVideo = !!(videoID !== null && videoID !== '');
+  const randomTitle = Math.random()
+    .toString(36)
+    .substring(7);
 
   return (
     <Container
@@ -97,6 +132,17 @@ const SingleMessage = ({
       copyFirst={copyFirst}
       vhFull={vhFull}
     >
+      {hasVideo ? (
+        <IFrame
+          src={`https://www.youtube.com/embed/${videoID}?enablejsapi=1&rel=0&fs=0`}
+          modestbranding="1"
+          showtitle="0"
+          showinfo="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          title={randomTitle}
+        />
+      ) : null}
+
       {imageSet || imageSet2 ? (
         <>
           <Media doubleImage={doubleImage}>
@@ -129,6 +175,9 @@ const SingleMessage = ({
           </Media>
         </>
       ) : null}
+
+      {hasVideo ? <PlayButton id={randomTitle}>Play video</PlayButton> : null}
+
       <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
         {children}
       </Copy>
@@ -151,7 +200,8 @@ SingleMessage.propTypes = {
   imageAltText2: PropTypes.string,
   children: PropTypes.node.isRequired,
   /** Image will be the height of the viewport */
-  vhFull: PropTypes.bool
+  vhFull: PropTypes.bool,
+  videoID: PropTypes.string
 };
 
 SingleMessage.defaultProps = {
@@ -165,7 +215,8 @@ SingleMessage.defaultProps = {
   image2: null,
   imageAltText: '',
   imageAltText2: '',
-  vhFull: false
+  vhFull: false,
+  videoID: null
 };
 
 export default SingleMessage;

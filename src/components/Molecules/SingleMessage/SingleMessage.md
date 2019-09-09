@@ -107,3 +107,23 @@ const data = require('../../../styleguide/data/data').default;
   </Text>
 </SingleMessage>;
 ```
+
+Single Message with video
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="purple"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={false}
+  videoID="_CgqL9UiBN8"
+>
+  <Text tag="p" color="black" size="xxl">
+    I have a video
+  </Text>
+</SingleMessage>;
+```
