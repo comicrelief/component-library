@@ -40,8 +40,9 @@ const SingleMessage = ({
     .toString(36)
     .substring(7);
 
+  // Simulate componentDidMount so we can attach our YouTube API
   useEffect(() => {
-    console.log('mounted!!');
+    console.log('mounted');
   }, []); //
 
   return (
