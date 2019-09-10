@@ -13,6 +13,15 @@ const Container = styled.div`
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
   }
+
+  iframe {
+    ${zIndex('base')};
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 const Copy = styled.div`
@@ -63,6 +72,8 @@ const Media = styled.div`
 
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
+
+  display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 `;
 
 const PlayButton = styled.button`
@@ -90,13 +101,4 @@ const Image = styled.div`
   ${({ vhFull }) => vhFull && 'height: 100%'};
 `;
 
-const IFrame = styled.iframe`
-  ${zIndex('base')};
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
-
-export { Container, Copy, Media, PlayButton, Image, IFrame };
+export { Container, Copy, Media, PlayButton, Image };

@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import YouTubePlayer from 'youtube-player';
+import { UID } from 'react-uid';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
@@ -8,14 +9,8 @@ import {
   Copy,
   Media,
   PlayButton,
-  Image,
-  IFrame
+  Image
 } from './SingleMessage.style';
-
-const handlePlay = e => {
-  const thisID = e.target.id;
-  console.log('thisID', thisID);
-};
 
 /** Single Message is our main component usually to build landing pages */
 const SingleMessage = ({
@@ -36,75 +31,81 @@ const SingleMessage = ({
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
   const hasVideo = !!(videoID !== null && videoID !== '');
-  const randomTitle = Math.random()
-    .toString(36)
-    .substring(7);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Simulate componentDidMount so we can attach our YouTube API
-  useEffect(() => {
-    console.log('mounted');
-  }, []); //
+  const handlePlay = (title, videoIDToLoad) => {
+    const player = YouTubePlayer(title);
+    player.loadVideoById(videoIDToLoad);
+    setIsPlaying(true);
+  };
 
   return (
-    <Container
-      backgroundColor={backgroundColor}
-      copyFirst={copyFirst}
-      vhFull={vhFull}
-    >
-      {hasVideo ? (
-        <IFrame
-          src={`https://www.youtube.com/embed/${videoID}?enablejsapi=1&rel=0&fs=0`}
-          modestbranding="1"
-          showtitle="0"
-          showinfo="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          title={randomTitle}
-        />
-      ) : null}
+    <UID>
+      {id => (
+        <Container
+          backgroundColor={backgroundColor}
+          copyFirst={copyFirst}
+          vhFull={vhFull}
+          id={`container__${id}`}
+        >
+          {hasVideo ? (
+            <div className="video-wrapper">
+              <div id={id} />
+            </div>
+          ) : null}
 
-      {imageSet || imageSet2 ? (
-        <>
-          <Media doubleImage={doubleImage}>
-            {imageSet || image ? (
-              <Image doubleImage={doubleImage} vhFull={vhFull}>
-                <Picture
-                  alt={imageAltText}
-                  imageLow={imageLow}
-                  images={imageSet}
-                  image={image}
-                  objectFit="cover"
-                  width="100%"
-                  height="100%"
-                />
-              </Image>
-            ) : null}
-            {imageSet2 || image2 ? (
-              <Image doubleImage={doubleImage} vhFull={vhFull}>
-                <Picture
-                  alt={imageAltText2}
-                  imageLow={imageLow}
-                  images={imageSet2}
-                  image={image2}
-                  objectFit="cover"
-                  width="100%"
-                  height="100%"
-                />
-              </Image>
-            ) : null}
-          </Media>
-        </>
-      ) : null}
+          {imageSet || imageSet2 ? (
+            <>
+              <Media
+                doubleImage={doubleImage}
+                className="IAMMEDIA"
+                isPlaying={isPlaying}
+              >
+                {imageSet || image ? (
+                  <Image doubleImage={doubleImage} vhFull={vhFull}>
+                    <Picture
+                      alt={imageAltText}
+                      imageLow={imageLow}
+                      images={imageSet}
+                      image={image}
+                      objectFit="cover"
+                      width="100%"
+                      height="100%"
+                    />
+                  </Image>
+                ) : null}
+                {imageSet2 || image2 ? (
+                  <Image doubleImage={doubleImage} vhFull={vhFull}>
+                    <Picture
+                      alt={imageAltText2}
+                      imageLow={imageLow}
+                      images={imageSet2}
+                      image={image2}
+                      objectFit="cover"
+                      width="100%"
+                      height="100%"
+                    />
+                  </Image>
+                ) : null}
+              </Media>
+            </>
+          ) : null}
 
-      {hasVideo ? (
-        <PlayButton id={randomTitle} onClick={e => handlePlay(e)}>
-          Play video
-        </PlayButton>
-      ) : null}
+          {hasVideo ? (
+            <PlayButton
+              id={`play-button__${id}`}
+              onClick={() => handlePlay(id, videoID)}
+            >
+              Play video
+            </PlayButton>
+          ) : null}
 
-      <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
-        {children}
-      </Copy>
-    </Container>
+          <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
+            {children}
+          </Copy>
+        </Container>
+      )}
+    </UID>
   );
 };
 
