@@ -16,7 +16,7 @@ const Container = styled.div`
 
   iframe {
     height: 100%;
-    width: 50%;
+    width: 100%;
     position: absolute;
     top: 0;
     ${({ copyFirst }) =>
@@ -69,6 +69,7 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
+  position: relative;
 
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
@@ -77,7 +78,7 @@ const Media = styled.div`
 const PlayButton = styled.button`
   ${zIndex('high')};
   cursor: pointer;
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;

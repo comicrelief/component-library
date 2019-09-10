@@ -92,19 +92,19 @@ const SingleMessage = ({
                     />
                   </Image>
                 ) : null}
+
+                {hasVideo ? (
+                  <PlayButton
+                    id={`play-button__${id}`}
+                    copyFirst={copyFirst}
+                    isPlaying={isPlaying}
+                    onClick={() => handlePlay(id, videoID)}
+                  >
+                    Play video
+                  </PlayButton>
+                ) : null}
               </Media>
             </>
-          ) : null}
-
-          {hasVideo ? (
-            <PlayButton
-              id={`play-button__${id}`}
-              copyFirst={copyFirst}
-              isPlaying={isPlaying}
-              onClick={() => handlePlay(id, videoID)}
-            >
-              Play video
-            </PlayButton>
           ) : null}
 
           <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
