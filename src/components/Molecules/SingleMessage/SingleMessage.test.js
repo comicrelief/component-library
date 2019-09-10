@@ -86,6 +86,16 @@ it('renders correctly', () => {
       background: #C180F9;
     }
 
+    .c0 iframe {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      z-index: 2;
+    }
+
     .c5 {
       padding: 8rem 4rem;
       word-break: break-word;
@@ -101,6 +111,7 @@ it('renders correctly', () => {
     .c2 {
       width: 100%;
       height: 100%;
+      z-index: 3;
     }
 
     @media (min-width:1440px) {
@@ -137,9 +148,10 @@ it('renders correctly', () => {
 
     <div
       className="c0"
+      id="container__1"
     >
       <div
-        className="c1"
+        className="I-AM-MEDIA c1"
       >
         <div
           className="c2"
@@ -224,6 +236,16 @@ it('renders Single Message with no Image correctly', () => {
       background: #C180F9;
     }
 
+    .c0 iframe {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      z-index: 2;
+    }
+
     .c1 {
       padding: 8rem 4rem;
       word-break: break-word;
@@ -262,6 +284,7 @@ it('renders Single Message with no Image correctly', () => {
 
     <div
       className="c0"
+      id="container__2"
     >
       <div
         className="c1"
@@ -308,6 +331,16 @@ it('renders fullWidth Single Message correctly', () => {
       background: #C180F9;
     }
 
+    .c0 iframe {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      z-index: 2;
+    }
+
     .c1 {
       padding: 8rem 4rem;
       word-break: break-word;
@@ -346,6 +379,7 @@ it('renders fullWidth Single Message correctly', () => {
 
     <div
       className="c0"
+      id="container__3"
     >
       <div
         className="c1"
@@ -414,6 +448,16 @@ it('renders double image Single Message correctly', () => {
       background: #FFE400;
     }
 
+    .c0 iframe {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      z-index: 2;
+    }
+
     .c5 {
       padding: 8rem 4rem;
       word-break: break-word;
@@ -436,6 +480,7 @@ it('renders double image Single Message correctly', () => {
     .c2 {
       width: 100%;
       height: 100%;
+      z-index: 3;
     }
 
     @media (min-width:740px) {
@@ -466,9 +511,10 @@ it('renders double image Single Message correctly', () => {
 
     <div
       className="c0"
+      id="container__4"
     >
       <div
-        className="c1"
+        className="I-AM-MEDIA c1"
       >
         <div
           className="c2"
