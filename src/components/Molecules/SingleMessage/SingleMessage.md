@@ -119,7 +119,7 @@ const data = require('../../../styleguide/data/data').default;
   imageSet={data.images}
   image={data.image}
   imageAltText=""
-  copyFirst={false}
+  copyFirst={true}
   videoID="_CgqL9UiBN8"
 >
   <Text tag="p" color="black" size="xxl">
@@ -140,10 +140,10 @@ const data = require('../../../styleguide/data/data').default;
   image={data.image}
   imageAltText=""
   copyFirst={false}
-  videoID="_CgqL9UiBN8"
+  videoID="bebuiaSKtU4"
 >
   <Text tag="p" color="black" size="xxl">
-    I ALSO have a video
+    I ALSO have a video, but it's diffferent
   </Text>
 </SingleMessage>;
 ```

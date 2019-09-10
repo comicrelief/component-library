@@ -15,12 +15,13 @@ const Container = styled.div`
   }
 
   iframe {
-    ${zIndex('base')};
     height: 100%;
     width: 50%;
     position: absolute;
     top: 0;
-    left: 0;
+    ${({ copyFirst }) =>
+      copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
+    z-index: ${({ isPlaying }) => (isPlaying ? '3' : '2')};
   }
 `;
 
@@ -68,22 +69,18 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
-  ${zIndex('low')};
 
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
-
-  display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 `;
 
 const PlayButton = styled.button`
-  ${zIndex('medium')};
+  ${zIndex('high')};
   cursor: pointer;
   width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
   border: 0;
   background: rgba(0, 0, 0, 0)
     url(https://www.comicrelief.com/themes/custom/comicrelief/images/copyvideo--play-icon__hover.svg)
@@ -93,12 +90,26 @@ const PlayButton = styled.button`
   margin: 0;
   padding: 0;
   text-indent: -9999px;
+
+  ${({ copyFirst }) =>
+    copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
+
+  display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 `;
 
 const Image = styled.div`
   width: 100%;
   ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
   ${({ vhFull }) => vhFull && 'height: 100%'};
+
+  z-index: ${({ isPlaying }) => (isPlaying ? '2' : '3')};
 `;
 
-export { Container, Copy, Media, PlayButton, Image };
+const VideoWrapper = styled.div`
+  width: 100%;
+
+  /* Switch z-index layering to place video on top, allow the now-underneath image to maintain height of the wrapper */
+  z-index: ${({ isPlaying }) => (isPlaying ? '3' : '2')};
+`;
+
+export { Container, Copy, Media, PlayButton, Image, VideoWrapper };

@@ -9,7 +9,8 @@ import {
   Copy,
   Media,
   PlayButton,
-  Image
+  Image,
+  VideoWrapper
 } from './SingleMessage.style';
 
 /** Single Message is our main component usually to build landing pages */
@@ -48,21 +49,25 @@ const SingleMessage = ({
           vhFull={vhFull}
           id={`container__${id}`}
         >
-          {hasVideo ? (
-            <div className="video-wrapper">
-              <div id={id} />
-            </div>
-          ) : null}
-
           {imageSet || imageSet2 ? (
             <>
               <Media
                 doubleImage={doubleImage}
-                className="IAMMEDIA"
                 isPlaying={isPlaying}
+                className="I-AM-MEDIA"
               >
+                {hasVideo ? (
+                  <VideoWrapper className="video-wrapper" isPlaying={isPlaying}>
+                    <div id={id} />
+                  </VideoWrapper>
+                ) : null}
+
                 {imageSet || image ? (
-                  <Image doubleImage={doubleImage} vhFull={vhFull}>
+                  <Image
+                    doubleImage={doubleImage}
+                    vhFull={vhFull}
+                    isPlaying={isPlaying}
+                  >
                     <Picture
                       alt={imageAltText}
                       imageLow={imageLow}
@@ -94,6 +99,8 @@ const SingleMessage = ({
           {hasVideo ? (
             <PlayButton
               id={`play-button__${id}`}
+              copyFirst={copyFirst}
+              isPlaying={isPlaying}
               onClick={() => handlePlay(id, videoID)}
             >
               Play video
