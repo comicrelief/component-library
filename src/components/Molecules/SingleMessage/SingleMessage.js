@@ -36,13 +36,20 @@ const SingleMessage = ({
   const [isLoading, setIsLoading] = useState(false);
 
   const handlePlay = (title, videoIDToLoad) => {
-    const player = YouTubePlayer(title);
+    // Only instantiate player on click
+    const player = YouTubePlayer(title, { videoId: videoIDToLoad });
+
+    // Trigger play and update video state
+    player.playVideo();
     setIsLoading(true);
 
-    player.loadVideoById(videoIDToLoad).then(function() {
-      console.log('video is ready');
-      setIsLoading(false);
-      setIsPlaying(true);
+    // Once video is playing, switch state
+    player.on('stateChange', function(event) {
+      if (event.data === 1) {
+        console.log('Playing video', videoIDToLoad);
+        // setIsLoading(false);
+        setIsPlaying(true);
+      }
     });
   };
 
@@ -54,6 +61,7 @@ const SingleMessage = ({
           copyFirst={copyFirst}
           vhFull={vhFull}
           id={`container__${id}`}
+          isPlaying={isPlaying}
         >
           {imageSet || imageSet2 ? (
             <>

@@ -14,6 +14,7 @@ const Container = styled.div`
       copyFirst === true ? 'row-reverse' : 'row'};
   }
 
+  // Dynamically loaded via YT API, so can't make it a Styled Component
   iframe {
     height: 100%;
     width: 100%;
@@ -21,7 +22,7 @@ const Container = styled.div`
     top: 0;
     ${({ copyFirst }) =>
       copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
-    z-index: ${({ isPlaying }) => (isPlaying ? '3' : '2')};
+    z-index: ${({ isPlaying }) => (isPlaying ? '3' : '0')};
   }
 `;
 
@@ -115,7 +116,7 @@ const VideoWrapper = styled.div`
   width: 100%;
 
   /* Switch z-index layering to place video on top, allow the now-underneath image to maintain height of the wrapper */
-  z-index: ${({ isPlaying }) => (isPlaying ? '3' : '2')};
+  z-index: ${({ isPlaying }) => (isPlaying ? '3' : '0')};
 `;
 
 export { Container, Copy, Media, PlayButton, Image, VideoWrapper };
