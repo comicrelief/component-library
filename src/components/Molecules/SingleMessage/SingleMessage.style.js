@@ -95,6 +95,11 @@ const PlayButton = styled.button`
   ${({ copyFirst }) =>
     copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
 
+  ${({ isLoading }) =>
+    isLoading === true
+      ? 'background-image: url(https://www.comicrelief.com/themes/custom/comicrelief/images/loader.gif)'
+      : null};
+
   display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 `;
 

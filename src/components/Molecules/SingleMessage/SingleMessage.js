@@ -33,11 +33,17 @@ const SingleMessage = ({
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
   const hasVideo = !!(videoID !== null && videoID !== '');
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePlay = (title, videoIDToLoad) => {
     const player = YouTubePlayer(title);
-    player.loadVideoById(videoIDToLoad);
-    setIsPlaying(true);
+    setIsLoading(true);
+
+    player.loadVideoById(videoIDToLoad).then(function() {
+      console.log('video is ready');
+      setIsLoading(false);
+      setIsPlaying(true);
+    });
   };
 
   return (
@@ -54,10 +60,14 @@ const SingleMessage = ({
               <Media
                 doubleImage={doubleImage}
                 isPlaying={isPlaying}
-                className="I-AM-MEDIA"
+                isLoading={isLoading}
               >
                 {hasVideo ? (
-                  <VideoWrapper className="video-wrapper" isPlaying={isPlaying}>
+                  <VideoWrapper
+                    className="video-wrapper"
+                    isPlaying={isPlaying}
+                    isLoading={isLoading}
+                  >
                     <div id={id} />
                   </VideoWrapper>
                 ) : null}
@@ -67,6 +77,7 @@ const SingleMessage = ({
                     doubleImage={doubleImage}
                     vhFull={vhFull}
                     isPlaying={isPlaying}
+                    isLoading={isLoading}
                   >
                     <Picture
                       alt={imageAltText}
@@ -98,6 +109,7 @@ const SingleMessage = ({
                     id={`play-button__${id}`}
                     copyFirst={copyFirst}
                     isPlaying={isPlaying}
+                    isLoading={isLoading}
                     onClick={() => handlePlay(id, videoID)}
                   >
                     Play video
