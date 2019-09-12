@@ -69,7 +69,8 @@ const ArticleTeaser = ({
   images,
   alt,
   category,
-  logoSize
+  logoSize,
+  family
 }) => {
   return (
     <Wrapper>
@@ -86,10 +87,10 @@ const ArticleTeaser = ({
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
-          <Text size="xxs" weight="bold" uppercase>
+          <Text size="xxs" weight="normal" uppercase>
             {date}
           </Text>
-          <Title size="xl" tag="h3" uppercase>
+          <Title size="xl" tag="h3" uppercase family={family}>
             {title}
           </Title>
         </CopyWrapper>
@@ -103,6 +104,7 @@ ArticleTeaser.propTypes = {
   image: PropTypes.string,
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
+  family: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -116,7 +118,8 @@ ArticleTeaser.defaultProps = {
   image: null,
   images: null,
   category: null,
-  logoSize: null
+  logoSize: null,
+  family: 'Anton'
 };
 
 export default ArticleTeaser;
