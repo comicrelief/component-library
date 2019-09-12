@@ -20,29 +20,29 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c7 {
+    .c8 {
       font-size: 0.69375rem;
       text-transform: uppercase;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 1.725rem;
       text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c4 {
+    .c5 {
       position: relative;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
-    .c5 {
+    .c6 {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -71,6 +71,7 @@ it('renders correctly', () => {
     }
 
     .c1 {
+      padding: 0;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -86,15 +87,26 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      height: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
     }
 
-    .c6 {
+    .c7 {
       padding: 2rem;
+      word-break: break-all;
     }
 
-    .c8 {
+    .c9 {
       margin: 0;
+    }
+
+    .c4 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
     }
 
     @media (min-width:740px) {
@@ -115,25 +127,9 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c3 {
-        width: 45%;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c3 {
-        width: 100%;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c6 {
-        width: 55%;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c6 {
-        width: 100%;
+        -webkit-flex: 0 0 45%;
+        -ms-flex: 0 0 45%;
+        flex: 0 0 45%;
       }
     }
 
@@ -151,17 +147,17 @@ it('renders correctly', () => {
           className="c3"
         >
           <div
-            className="c4"
-            height="auto"
+            className="c4 c5"
+            height="100%"
             width="100%"
           >
             <img
               alt="Image's description"
-              className="lazyload c5"
+              className="lazyload c6"
               data-lowsrc={null}
               data-sizes="auto"
               data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-              height="auto"
+              height="100%"
               src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="100%"
@@ -169,17 +165,17 @@ it('renders correctly', () => {
           </div>
         </div>
         <div
-          className="c6"
+          className="c7"
         >
           <span
-            className="c7"
+            className="c8"
             color="inherit"
             size="xxs"
           >
              01 July 2019
           </span>
           <h3
-            className="c8 c9"
+            className="c9 c10"
             color="inherit"
             size="xl"
           >

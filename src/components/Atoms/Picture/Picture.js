@@ -34,11 +34,12 @@ const Picture = ({
   width,
   height,
   objectFit,
-  imageLow
+  imageLow,
+  ...rest
 }) => {
   if (!images) {
     return (
-      <Wrapper height={height} width={width}>
+      <Wrapper height={height} width={width} {...rest}>
         <Image
           alt={alt}
           height={height}
@@ -52,7 +53,7 @@ const Picture = ({
   }
 
   return (
-    <Wrapper height={height} width={width}>
+    <Wrapper height={height} width={width} {...rest}>
       <Image
         alt={alt}
         height={height}

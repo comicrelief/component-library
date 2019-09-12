@@ -18,6 +18,7 @@ const Wrapper = styled.article`
 `;
 
 const Link = styled(link)`
+  padding: 0;
   display: flex;
   height: 100%;
   flex-direction: ${({ category }) => (category ? 'row' : 'column')};
@@ -36,29 +37,24 @@ const Link = styled(link)`
 `;
 
 const ImageWrapper = styled.div`
-  height: auto;
+  display: flex;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: ${({ category }) => (category ? '70px' : '45%')};
-  }
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: ${({ category }) => (category ? '70px' : '100%')};
+    flex: ${({ category }) => !category && '0 0 45%'};
+    padding-left: ${({ category }) => category && `${spacing('md')}`};
   }
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: ${({ category }) => (category ? '100%' : '55%')};
-  }
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: 100%;
-  }
+  word-break: break-all;
 `;
 
 const Title = styled(Text)`
   margin: 0;
+`;
+
+const Image = styled(Picture)`
+  display: flex;
 `;
 
 /**
@@ -72,18 +68,21 @@ const ArticleTeaser = ({
   image,
   images,
   alt,
-  category
+  category,
+  logoSize
 }) => {
   return (
     <Wrapper>
       <Link href={href} type="standard" category={category} underline={false}>
         <ImageWrapper category={category}>
-          <Picture
+          <Image
             imageLow={imageLow}
             images={images}
             image={image}
             alt={alt}
             objectFit="cover"
+            width={category ? logoSize : '100%'}
+            height={category ? logoSize : '100%'}
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
@@ -103,6 +102,7 @@ ArticleTeaser.propTypes = {
   images: PropTypes.string,
   image: PropTypes.string,
   imageLow: PropTypes.string,
+  logoSize: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -115,7 +115,8 @@ ArticleTeaser.defaultProps = {
   imageLow: null,
   image: null,
   images: null,
-  category: null
+  category: null,
+  logoSize: null
 };
 
 export default ArticleTeaser;
