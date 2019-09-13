@@ -50,7 +50,6 @@ const ImageWrapper = styled.div`
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  word-break: break-all;
   flex: 1;
 `;
 
