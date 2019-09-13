@@ -6,6 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
+import { campaign } from '../../../styleguide/data/data';
 
 /**
  * Article Teaser
@@ -32,21 +33,25 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${({ category }) => (category ? 'row' : 'column')};
+    flex-direction: ${({ category }) => !category && 'column'};
   }
 `;
 
 const ImageWrapper = styled.div`
+  padding-left: ${({ category }) => category && `${spacing('md')}`};
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex: ${({ category }) => !category && '0 0 45%'};
-    padding-left: ${({ category }) => category && `${spacing('md')}`};
   }
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
   word-break: break-all;
+  flex: 1;
 `;
 
 const Title = styled(Text)`
@@ -56,6 +61,19 @@ const Title = styled(Text)`
 const Image = styled(Picture)`
   display: flex;
 `;
+
+const handleCampaignLogo = category => {
+  switch (category) {
+    case 'Comic Relief':
+      return campaign.CR;
+    case 'Sport Relief':
+      return campaign.SR;
+    case 'Red Nose Day':
+      return campaign.RND;
+    default:
+      return campaign.CR;
+  }
+};
 
 /**
  * Article teaser component
@@ -72,13 +90,14 @@ const ArticleTeaser = ({
   logoSize,
   family
 }) => {
+  console.log(campaign);
   return (
     <Wrapper>
       <Link href={href} type="standard" category={category} underline={false}>
         <ImageWrapper category={category}>
           <Image
-            imageLow={imageLow}
-            images={images}
+            imageLow={!category ? imageLow : handleCampaignLogo(category)}
+            images={!category ? images : handleCampaignLogo(category)}
             image={image}
             alt={alt}
             objectFit="cover"
@@ -87,10 +106,10 @@ const ArticleTeaser = ({
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
-          <Text size="xxs" weight="normal" uppercase>
+          <Text size="xxs" weight="800" uppercase>
             {date}
           </Text>
-          <Title size="xl" tag="h3" uppercase family={family}>
+          <Title size="xl" tag="h3" weight="normal" uppercase family={family}>
             {title}
           </Title>
         </CopyWrapper>
@@ -105,7 +124,7 @@ ArticleTeaser.propTypes = {
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
   family: PropTypes.string,
-  category: PropTypes.string,
+  category: PropTypes.oneOf(['Comic Relief', 'SportRelief', 'Red Nose Day']),
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

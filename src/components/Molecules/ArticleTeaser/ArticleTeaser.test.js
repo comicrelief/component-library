@@ -23,14 +23,15 @@ it('renders correctly', () => {
     .c8 {
       font-size: 0.69375rem;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
       font-size: 1.725rem;
       text-transform: uppercase;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
     .c5 {
@@ -91,11 +92,22 @@ it('renders correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
     }
 
     .c7 {
       padding: 2rem;
       word-break: break-all;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
     }
 
     .c9 {
