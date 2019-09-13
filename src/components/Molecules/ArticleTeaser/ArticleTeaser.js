@@ -6,6 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
+import { campaign } from '../../../styleguide/data/data';
 
 /**
  * Article Teaser
@@ -18,6 +19,7 @@ const Wrapper = styled.article`
 `;
 
 const Link = styled(link)`
+  padding: 0;
   display: flex;
   height: 100%;
   flex-direction: ${({ category }) => (category ? 'row' : 'column')};
@@ -31,35 +33,46 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${({ category }) => (category ? 'row' : 'column')};
+    flex-direction: ${({ category }) => !category && 'column'};
   }
 `;
 
 const ImageWrapper = styled.div`
-  height: auto;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: ${({ category }) => (category ? '70px' : '45%')};
-  }
+  padding-left: ${({ category }) => category && `${spacing('md')}`};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: ${({ category }) => (category ? '70px' : '100%')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    flex: ${({ category }) => !category && '0 0 45%'};
   }
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: ${({ category }) => (category ? '100%' : '55%')};
-  }
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: 100%;
-  }
+  flex: 1;
 `;
 
 const Title = styled(Text)`
   margin: 0;
 `;
+
+const Image = styled(Picture)`
+  display: flex;
+`;
+
+const handleCampaignLogo = category => {
+  switch (category) {
+    case 'Comic Relief':
+      return campaign.CR;
+    case 'Sport Relief':
+      return campaign.SR;
+    case 'Red Nose Day':
+      return campaign.RND;
+    default:
+      return campaign.CR;
+  }
+};
 
 /**
  * Article teaser component
@@ -72,25 +85,29 @@ const ArticleTeaser = ({
   image,
   images,
   alt,
-  category
+  category,
+  logoSize,
+  family
 }) => {
   return (
     <Wrapper>
       <Link href={href} type="standard" category={category} underline={false}>
         <ImageWrapper category={category}>
-          <Picture
-            imageLow={imageLow}
-            images={images}
+          <Image
+            imageLow={!category ? imageLow : handleCampaignLogo(category)}
+            images={!category ? images : handleCampaignLogo(category)}
             image={image}
             alt={alt}
             objectFit="cover"
+            width={category ? logoSize : '100%'}
+            height={category ? logoSize : '100%'}
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
-          <Text size="xxs" weight="bold" uppercase>
+          <Text size="xxs" weight="800" uppercase>
             {date}
           </Text>
-          <Title size="xl" tag="h3" uppercase>
+          <Title size="xl" tag="h3" weight="normal" uppercase family={family}>
             {title}
           </Title>
         </CopyWrapper>
@@ -103,7 +120,9 @@ ArticleTeaser.propTypes = {
   images: PropTypes.string,
   image: PropTypes.string,
   imageLow: PropTypes.string,
-  category: PropTypes.string,
+  logoSize: PropTypes.string,
+  family: PropTypes.string,
+  category: PropTypes.oneOf(['Comic Relief', 'Sport Relief', 'Red Nose Day']),
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -115,7 +134,9 @@ ArticleTeaser.defaultProps = {
   imageLow: null,
   image: null,
   images: null,
-  category: null
+  category: null,
+  logoSize: null,
+  family: 'Anton'
 };
 
 export default ArticleTeaser;
