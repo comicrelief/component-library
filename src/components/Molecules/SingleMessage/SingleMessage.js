@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import YouTubePlayer from 'youtube-player';
 import { UID } from 'react-uid';
@@ -39,9 +39,13 @@ const SingleMessage = ({
   const [isInitialised, setIsInitialised] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
+  const [uniqueID, setUniqueID] = useState(null);
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
+    // Store the dynamically-created UUID within the main render to our state so useEffect can access it
+    setUniqueID(thisRowID);
+
     return (
       <VideoWrapper
         isPlaying={isPlaying}
@@ -53,30 +57,24 @@ const SingleMessage = ({
     );
   };
 
-  // Set-up players for each of the video rows
-  const initVideoPlayers = thisRowID => {
-    if (!isInitialised) {
+  useEffect(() => {
+    if (hasVideo && uniqueID && !isInitialised) {
       // Switch state to ensure this only runs once per video row
       setIsInitialised(true);
 
-      setTimeout(function() {
-        allPlayers[thisRowID] = YouTubePlayer(thisRowID, {
-          videoId: videoID
-        });
-      }, 1);
+      allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
+        videoId: videoID
+      });
     }
-  };
+  }, [hasVideo, isInitialised, uniqueID, videoID]);
 
-  const handlePlay = thisRowID => {
-    // More specific name-spacing
-    allPlayers[thisRowID].playVideo();
-
+  const handlePlay = thisUniqueID => {
     // Trigger play and update video state
-    // player.playVideo();
+    allPlayers[thisUniqueID].playVideo();
     setIsBuffering(true);
 
     // Once video is playing, switch state
-    allPlayers[thisRowID].on('stateChange', function(event) {
+    allPlayers[thisUniqueID].on('stateChange', function(event) {
       if (event.data === 1) {
         setIsBuffering(false);
         setIsPlaying(true);
@@ -85,7 +83,7 @@ const SingleMessage = ({
   };
 
   return (
-    // Create UUIDs for these row
+    // Create UUIDs for each of these rows
     <UID name={id => `single-msg__${id}`}>
       {id => (
         <Container
@@ -102,12 +100,7 @@ const SingleMessage = ({
                 isPlaying={isPlaying}
                 isBuffering={isBuffering}
               >
-                {hasVideo
-                  ? [
-                      renderVideoPlayers(`${id}__video`),
-                      initVideoPlayers(`${id}__video`)
-                    ]
-                  : null}
+                {hasVideo && renderVideoPlayers(`${id}__video`)}
 
                 {imageSet || image ? (
                   <Image
