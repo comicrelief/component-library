@@ -104,7 +104,6 @@ it('renders correctly', () => {
 
     .c7 {
       padding: 2rem;
-      word-break: break-all;
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
