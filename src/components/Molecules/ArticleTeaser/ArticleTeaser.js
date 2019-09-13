@@ -122,7 +122,7 @@ ArticleTeaser.propTypes = {
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
   family: PropTypes.string,
-  category: PropTypes.oneOf(['Comic Relief', 'SportRelief', 'Red Nose Day']),
+  category: PropTypes.oneOf(['Comic Relief', 'Sport Relief', 'Red Nose Day']),
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
