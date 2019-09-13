@@ -149,7 +149,7 @@ it('renders correctly', () => {
 
     <div
       className="c0"
-      id="container__1"
+      id="single-msg__1__container"
     >
       <div
         className="c1"
@@ -285,7 +285,7 @@ it('renders Single Message with no Image correctly', () => {
 
     <div
       className="c0"
-      id="container__2"
+      id="single-msg__2__container"
     >
       <div
         className="c1"
@@ -380,7 +380,7 @@ it('renders fullWidth Single Message correctly', () => {
 
     <div
       className="c0"
-      id="container__3"
+      id="single-msg__3__container"
     >
       <div
         className="c1"
@@ -513,7 +513,7 @@ it('renders double image Single Message correctly', () => {
 
     <div
       className="c0"
-      id="container__4"
+      id="single-msg__4__container"
     >
       <div
         className="c1"
