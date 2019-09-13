@@ -43,7 +43,7 @@ const SingleMessage = ({
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
-    // Store the dynamically-created UUID within the main render to our state so useEffect can access it
+    // Store the dynamically-created UUID (from the main render func) in our state so useEffect can access it
     setUniqueID(thisRowID);
 
     return (
@@ -62,6 +62,7 @@ const SingleMessage = ({
       // Switch state to ensure this only runs once per video row
       setIsInitialised(true);
 
+      // Instantiate a YT Player into our array, using it's unique id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
         videoId: videoID
       });
@@ -73,7 +74,7 @@ const SingleMessage = ({
     allPlayers[thisUniqueID].playVideo();
     setIsBuffering(true);
 
-    // Once video is playing, switch state
+    // Once video is playing, switch state to allow CSS to show/hide relevant layers
     allPlayers[thisUniqueID].on('stateChange', function(event) {
       if (event.data === 1) {
         setIsBuffering(false);
@@ -83,7 +84,7 @@ const SingleMessage = ({
   };
 
   return (
-    // Create UUIDs for each of these rows
+    // Creates namespaced UUIDs for each row
     <UID name={id => `single-msg__${id}`}>
       {id => (
         <Container
