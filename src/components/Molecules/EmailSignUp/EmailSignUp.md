@@ -23,5 +23,6 @@ initialState = { isSuccess: false };
     />
   }
   subscribe={() => setState({ isSuccess: !state.isSuccess })}
+  title="Example title"
 />;
 ```
