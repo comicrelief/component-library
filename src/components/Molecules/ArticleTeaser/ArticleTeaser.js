@@ -90,7 +90,6 @@ const ArticleTeaser = ({
   logoSize,
   family
 }) => {
-  console.log(campaign);
   return (
     <Wrapper>
       <Link href={href} type="standard" category={category} underline={false}>
