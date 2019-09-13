@@ -13,6 +13,8 @@ import {
   VideoWrapper
 } from './SingleMessage.style';
 
+const allPlayers = {};
+
 /** Single Message is our main component usually to build landing pages */
 const SingleMessage = ({
   backgroundColor,
@@ -32,35 +34,65 @@ const SingleMessage = ({
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
   const hasVideo = !!(videoID !== null && videoID !== '');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
-  const handlePlay = (title, videoIDToLoad) => {
-    // Only instantiate player on click
-    const player = YouTubePlayer(title, { videoId: videoIDToLoad });
+  // States to track video status
+  const [isInitialised, setIsInitialised] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(false);
+
+  // Break-out video markup into its own function
+  const renderVideoPlayers = thisRowID => {
+    return (
+      <VideoWrapper
+        isPlaying={isPlaying}
+        isBuffering={isBuffering}
+        key={thisRowID}
+      >
+        <div id={thisRowID} />
+      </VideoWrapper>
+    );
+  };
+
+  // Set-up players for each of the video rows
+  const initVideoPlayers = thisRowID => {
+    if (!isInitialised) {
+      // Switch state to ensure this only runs once per video row
+      setIsInitialised(true);
+
+      setTimeout(function() {
+        allPlayers[thisRowID] = YouTubePlayer(thisRowID, {
+          videoId: videoID
+        });
+      }, 1);
+    }
+  };
+
+  const handlePlay = thisRowID => {
+    // More specific name-spacing
+    allPlayers[thisRowID].playVideo();
 
     // Trigger play and update video state
-    player.playVideo();
-    setIsLoading(true);
+    // player.playVideo();
+    setIsBuffering(true);
 
     // Once video is playing, switch state
-    player.on('stateChange', function(event) {
+    allPlayers[thisRowID].on('stateChange', function(event) {
       if (event.data === 1) {
-        console.log('Playing video', videoIDToLoad);
-        // setIsLoading(false);
+        setIsBuffering(false);
         setIsPlaying(true);
       }
     });
   };
 
   return (
-    <UID>
+    // Create UUIDs for these row
+    <UID name={id => `single-msg__${id}`}>
       {id => (
         <Container
           backgroundColor={backgroundColor}
           copyFirst={copyFirst}
           vhFull={vhFull}
-          id={`container__${id}`}
+          id={`${id}__container`}
           isPlaying={isPlaying}
         >
           {imageSet || imageSet2 ? (
@@ -68,24 +100,21 @@ const SingleMessage = ({
               <Media
                 doubleImage={doubleImage}
                 isPlaying={isPlaying}
-                isLoading={isLoading}
+                isBuffering={isBuffering}
               >
-                {hasVideo ? (
-                  <VideoWrapper
-                    className="video-wrapper"
-                    isPlaying={isPlaying}
-                    isLoading={isLoading}
-                  >
-                    <div id={id} />
-                  </VideoWrapper>
-                ) : null}
+                {hasVideo
+                  ? [
+                      renderVideoPlayers(`${id}__video`),
+                      initVideoPlayers(`${id}__video`)
+                    ]
+                  : null}
 
                 {imageSet || image ? (
                   <Image
                     doubleImage={doubleImage}
                     vhFull={vhFull}
                     isPlaying={isPlaying}
-                    isLoading={isLoading}
+                    isBuffering={isBuffering}
                   >
                     <Picture
                       alt={imageAltText}
@@ -114,11 +143,11 @@ const SingleMessage = ({
 
                 {hasVideo ? (
                   <PlayButton
-                    id={`play-button__${id}`}
+                    id={`${id}__play-button`}
                     copyFirst={copyFirst}
                     isPlaying={isPlaying}
-                    isLoading={isLoading}
-                    onClick={() => handlePlay(id, videoID)}
+                    isBuffering={isBuffering}
+                    onClick={() => handlePlay(`${id}__video`)}
                   >
                     Play video
                   </PlayButton>

@@ -88,12 +88,12 @@ it('renders correctly', () => {
 
     .c0 iframe {
       height: 100%;
-      width: 50%;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       right: auto;
-      z-index: 2;
+      z-index: 0;
     }
 
     .c5 {
@@ -106,6 +106,7 @@ it('renders correctly', () => {
 
     .c1 {
       width: 100%;
+      position: relative;
     }
 
     .c2 {
@@ -151,7 +152,7 @@ it('renders correctly', () => {
       id="container__1"
     >
       <div
-        className="I-AM-MEDIA c1"
+        className="c1"
       >
         <div
           className="c2"
@@ -238,12 +239,12 @@ it('renders Single Message with no Image correctly', () => {
 
     .c0 iframe {
       height: 100%;
-      width: 50%;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       right: auto;
-      z-index: 2;
+      z-index: 0;
     }
 
     .c1 {
@@ -333,12 +334,12 @@ it('renders fullWidth Single Message correctly', () => {
 
     .c0 iframe {
       height: 100%;
-      width: 50%;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       right: auto;
-      z-index: 2;
+      z-index: 0;
     }
 
     .c1 {
@@ -450,12 +451,12 @@ it('renders double image Single Message correctly', () => {
 
     .c0 iframe {
       height: 100%;
-      width: 50%;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       right: auto;
-      z-index: 2;
+      z-index: 0;
     }
 
     .c5 {
@@ -468,6 +469,7 @@ it('renders double image Single Message correctly', () => {
 
     .c1 {
       width: 100%;
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -514,7 +516,7 @@ it('renders double image Single Message correctly', () => {
       id="container__4"
     >
       <div
-        className="I-AM-MEDIA c1"
+        className="c1"
       >
         <div
           className="c2"
