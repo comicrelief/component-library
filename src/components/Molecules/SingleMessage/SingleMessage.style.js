@@ -74,6 +74,17 @@ const Media = styled.div`
 
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
+
+  // Sets-up our fixed-aspect ratio landscape using padding
+  ${({ hasVideo }) =>
+    hasVideo
+      ? '  height: auto; overflow: hidden; padding-bottom: 56.25%;'
+      : null};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ landscapeVideo, hasVideo }) =>
+      landscapeVideo && hasVideo ? 'padding-bottom: calc(56.25% / 2);' : null};
+  }
 `;
 
 const PlayButton = styled.button`
@@ -110,10 +121,21 @@ const Image = styled.div`
   ${({ vhFull }) => vhFull && 'height: 100%'};
 
   z-index: ${({ isPlaying }) => (isPlaying ? '2' : '3')};
+  
+   position: absolute; top: 0; left: 0;
+
+/*  ${({ landscapeVideo, hasVideo }) =>
+  landscapeVideo && hasVideo
+    ? ' position: absolute; top: 0; left: 0;'
+    : null};*/
 `;
 
 const VideoWrapper = styled.div`
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   /* Switch z-index layering to place video on top, allow the now-underneath image to maintain height of the wrapper */
   z-index: ${({ isPlaying }) => (isPlaying ? '3' : '0')};

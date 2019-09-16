@@ -113,6 +113,9 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     @media (min-width:1440px) {
@@ -217,89 +220,89 @@ it('renders Single Message with no Image correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
-      color: #FFFFFF;
-      font-size: 1rem;
-      text-transform: inherit;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
+                .c2 {
+                  color: #FFFFFF;
+                  font-size: 1rem;
+                  text-transform: inherit;
+                  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+                }
 
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      overflow: hidden;
-      background: #C180F9;
-    }
+                .c0 {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -ms-flexbox;
+                  display: flex;
+                  position: relative;
+                  -webkit-flex-direction: column;
+                  -ms-flex-direction: column;
+                  flex-direction: column;
+                  overflow: hidden;
+                  background: #C180F9;
+                }
 
-    .c0 iframe {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: auto;
-      z-index: 0;
-    }
+                .c0 iframe {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: auto;
+                  z-index: 0;
+                }
 
-    .c1 {
-      padding: 8rem 4rem;
-      word-break: break-word;
-      -webkit-flex: 0 0 60%;
-      -ms-flex: 0 0 60%;
-      flex: 0 0 60%;
-      margin: auto;
-      padding: 100px 20px;
-    }
+                .c1 {
+                  padding: 8rem 4rem;
+                  word-break: break-word;
+                  -webkit-flex: 0 0 60%;
+                  -ms-flex: 0 0 60%;
+                  flex: 0 0 60%;
+                  margin: auto;
+                  padding: 100px 20px;
+                }
 
-    @media (min-width:740px) {
-      .c0 {
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-      }
-    }
+                @media (min-width:740px) {
+                  .c0 {
+                    -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                  }
+                }
 
-    @media (min-width:740px) {
-      .c1 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        width: 50%;
-        padding: 4rem;
-      }
-    }
+                @media (min-width:740px) {
+                  .c1 {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    width: 50%;
+                    padding: 4rem;
+                  }
+                }
 
-    <div
-      className="c0"
-      id="single-msg__2__container"
-    >
-      <div
-        className="c1"
-      >
-        <p
-          className="c2"
-          color="white"
-          size="s"
-        >
-          description
-        </p>
-      </div>
-    </div>
-  `);
+                <div
+                  className="c0"
+                  id="single-msg__2__container"
+                >
+                  <div
+                    className="c1"
+                  >
+                    <p
+                      className="c2"
+                      color="white"
+                      size="s"
+                    >
+                      description
+                    </p>
+                  </div>
+                </div>
+        `);
 });
 
 it('renders fullWidth Single Message correctly', () => {
@@ -312,89 +315,89 @@ it('renders fullWidth Single Message correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
-      color: #FFFFFF;
-      font-size: 1rem;
-      text-transform: inherit;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
+                .c2 {
+                  color: #FFFFFF;
+                  font-size: 1rem;
+                  text-transform: inherit;
+                  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+                }
 
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      overflow: hidden;
-      background: #C180F9;
-    }
+                .c0 {
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -ms-flexbox;
+                  display: flex;
+                  position: relative;
+                  -webkit-flex-direction: column;
+                  -ms-flex-direction: column;
+                  flex-direction: column;
+                  overflow: hidden;
+                  background: #C180F9;
+                }
 
-    .c0 iframe {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: auto;
-      z-index: 0;
-    }
+                .c0 iframe {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: auto;
+                  z-index: 0;
+                }
 
-    .c1 {
-      padding: 8rem 4rem;
-      word-break: break-word;
-      -webkit-flex: 0 0 60%;
-      -ms-flex: 0 0 60%;
-      flex: 0 0 60%;
-      margin: auto;
-      padding: 100px 20px;
-    }
+                .c1 {
+                  padding: 8rem 4rem;
+                  word-break: break-word;
+                  -webkit-flex: 0 0 60%;
+                  -ms-flex: 0 0 60%;
+                  flex: 0 0 60%;
+                  margin: auto;
+                  padding: 100px 20px;
+                }
 
-    @media (min-width:740px) {
-      .c0 {
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-      }
-    }
+                @media (min-width:740px) {
+                  .c0 {
+                    -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                  }
+                }
 
-    @media (min-width:740px) {
-      .c1 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        width: 50%;
-        padding: 4rem;
-      }
-    }
+                @media (min-width:740px) {
+                  .c1 {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    width: 50%;
+                    padding: 4rem;
+                  }
+                }
 
-    <div
-      className="c0"
-      id="single-msg__3__container"
-    >
-      <div
-        className="c1"
-      >
-        <p
-          className="c2"
-          color="white"
-          size="s"
-        >
-          description
-        </p>
-      </div>
-    </div>
-  `);
+                <div
+                  className="c0"
+                  id="single-msg__3__container"
+                >
+                  <div
+                    className="c1"
+                  >
+                    <p
+                      className="c2"
+                      color="white"
+                      size="s"
+                    >
+                      description
+                    </p>
+                  </div>
+                </div>
+        `);
 });
 
 it('renders double image Single Message correctly', () => {
@@ -483,6 +486,9 @@ it('renders double image Single Message correctly', () => {
       width: 100%;
       height: 100%;
       z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     @media (min-width:740px) {

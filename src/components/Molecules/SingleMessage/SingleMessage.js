@@ -29,11 +29,13 @@ const SingleMessage = ({
   children,
   fullImage,
   vhFull,
-  videoID
+  videoID,
+  landscapeVideo
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
   const hasVideo = !!(videoID !== null && videoID !== '');
+  console.log('landscapeVideo:', landscapeVideo);
 
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
@@ -51,6 +53,7 @@ const SingleMessage = ({
         isPlaying={isPlaying}
         isBuffering={isBuffering}
         key={thisRowID}
+        landscapeVideo={landscapeVideo}
       >
         <div id={thisRowID} />
       </VideoWrapper>
@@ -100,6 +103,8 @@ const SingleMessage = ({
                 doubleImage={doubleImage}
                 isPlaying={isPlaying}
                 isBuffering={isBuffering}
+                hasVideo={hasVideo}
+                landscapeVideo={landscapeVideo}
               >
                 {hasVideo && renderVideoPlayers(`${id}__video`)}
 
@@ -109,6 +114,8 @@ const SingleMessage = ({
                     vhFull={vhFull}
                     isPlaying={isPlaying}
                     isBuffering={isBuffering}
+                    hasVideo={hasVideo}
+                    landscapeVideo={landscapeVideo}
                   >
                     <Picture
                       alt={imageAltText}
@@ -175,7 +182,8 @@ SingleMessage.propTypes = {
   children: PropTypes.node.isRequired,
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool,
-  videoID: PropTypes.string
+  videoID: PropTypes.string,
+  landscapeVideo: PropTypes.bool
 };
 
 SingleMessage.defaultProps = {
@@ -190,7 +198,8 @@ SingleMessage.defaultProps = {
   imageAltText: '',
   imageAltText2: '',
   vhFull: false,
-  videoID: null
+  videoID: null,
+  landscapeVideo: false
 };
 
 export default SingleMessage;

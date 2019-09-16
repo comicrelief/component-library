@@ -108,7 +108,7 @@ const data = require('../../../styleguide/data/data').default;
 </SingleMessage>;
 ```
 
-Single Message with video
+Single Message with 16:9 video
 
 ```js
 import Text from '../../Atoms/Text/Text';
@@ -120,15 +120,14 @@ const data = require('../../../styleguide/data/data').default;
   image={data.image}
   imageAltText=""
   copyFirst={true}
-  videoID="_CgqL9UiBN8"
+  videoID="WUgvvPRH7Oc"
+  landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
-    I have a video
+    Single Message with 16:9 video, copy first
   </Text>
 </SingleMessage>;
 ```
-
-Single Message with video again
 
 ```js
 import Text from '../../Atoms/Text/Text';
@@ -140,10 +139,52 @@ const data = require('../../../styleguide/data/data').default;
   image={data.image}
   imageAltText=""
   copyFirst={false}
-  videoID="bebuiaSKtU4"
+  videoID="WUgvvPRH7Oc"
+  landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
-    I ALSO have a video, but it's diffferent
+    Single Message with 16:9 video
+  </Text>
+</SingleMessage>;
+```
+
+Single Message with portrait video
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="purple"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={true}
+  videoID="FoMlSB6ftQg"
+>
+  <Text tag="p" color="black" size="xxl">
+    Single Message with portrait video
+  </Text>
+</SingleMessage>;
+```
+
+Single Message with portrait video, 100VH
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="purple"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={true}
+  videoID="FoMlSB6ftQg"
+  vhFull
+>
+  <Text tag="p" color="black" size="xxl">
+    Single Message with portrait video, 100VH
   </Text>
 </SingleMessage>;
 ```
