@@ -22,7 +22,8 @@ const Container = styled.div`
     top: 0;
     ${({ copyFirst }) =>
       copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
-    z-index: ${({ isPlaying }) => (isPlaying ? '3' : '0')};
+    z-index: ${({ isPlaying }) =>
+      isPlaying ? zIndex('high') : zIndex('base')};
   }
 `;
 
@@ -96,13 +97,18 @@ const PlayButton = styled.button`
   top: 0;
   border: 0;
   background: rgba(0, 0, 0, 0)
-    url(https://www.comicrelief.com/themes/custom/comicrelief/images/copyvideo--play-icon__hover.svg)
+    url(https://www.comicrelief.com/themes/custom/comicrelief/images/copyvideo--play-icon.svg)
     center no-repeat;
   background-position: center center;
   background-size: 100px;
   margin: 0;
   padding: 0;
   text-indent: -9999px;
+
+  &:focus,
+  &:hover {
+    background-image: url(https://www.comicrelief.com/themes/custom/comicrelief/images/copyvideo--play-icon__hover.svg);
+  }
 
   ${({ copyFirst }) =>
     copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
@@ -120,7 +126,8 @@ const Image = styled.div`
   ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
   ${({ vhFull }) => vhFull && 'height: 100%'};
 
-  z-index: ${({ isPlaying }) => (isPlaying ? '2' : '3')};
+  z-index: ${({ isPlaying }) =>
+    isPlaying ? zIndex('medium') : zIndex('high')};
   
    position: absolute; top: 0; left: 0;
 
@@ -138,7 +145,7 @@ const VideoWrapper = styled.div`
   left: 0;
 
   /* Switch z-index layering to place video on top, allow the now-underneath image to maintain height of the wrapper */
-  z-index: ${({ isPlaying }) => (isPlaying ? '3' : '0')};
+  z-index: ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
 `;
 
 export { Container, Copy, Media, PlayButton, Image, VideoWrapper };
