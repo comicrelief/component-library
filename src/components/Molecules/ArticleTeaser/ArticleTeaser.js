@@ -6,7 +6,9 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
-import { campaign } from '../../../styleguide/data/data';
+import SR from './assets/SR.png';
+import CR from './assets/CR.png';
+import RND from './assets/RND.png';
 
 /**
  * Article Teaser
@@ -22,8 +24,9 @@ const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: ${({ category }) => (category ? 'row' : 'column')};
-  align-items: ${({ category }) => category && 'center'};
+  flex-direction: ${({ category }) =>
+    category || category === '' ? 'row' : 'column'};
+  align-items: ${({ category }) => (category || category === '') && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
@@ -33,18 +36,20 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${({ category }) => !category && 'column'};
+    flex-direction: ${({ category }) =>
+      !category && category !== '' && 'column'};
   }
 `;
 
 const ImageWrapper = styled.div`
-  padding-left: ${({ category }) => category && `${spacing('md')}`};
+  padding-left: ${({ category }) =>
+    (category || category === '') && `${spacing('md')}`};
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex: ${({ category }) => !category && '0 0 45%'};
+    flex: ${({ category }) => !category && category !== '' && '0 0 45%'};
   }
 `;
 
@@ -64,13 +69,13 @@ const Image = styled(Picture)`
 const handleCampaignLogo = category => {
   switch (category) {
     case 'Comic Relief':
-      return campaign.CR;
+      return CR;
     case 'Sport Relief':
-      return campaign.SR;
+      return SR;
     case 'Red Nose Day':
-      return campaign.RND;
+      return RND;
     default:
-      return campaign.CR;
+      return CR;
   }
 };
 
@@ -94,13 +99,21 @@ const ArticleTeaser = ({
       <Link href={href} type="standard" category={category} underline={false}>
         <ImageWrapper category={category}>
           <Image
-            imageLow={!category ? imageLow : handleCampaignLogo(category)}
-            images={!category ? images : handleCampaignLogo(category)}
+            imageLow={
+              !category && category !== ''
+                ? imageLow
+                : handleCampaignLogo(category)
+            }
+            images={
+              !category && category !== ''
+                ? images
+                : handleCampaignLogo(category)
+            }
             image={image}
             alt={alt}
             objectFit="cover"
-            width={category ? logoSize : '100%'}
-            height={category ? logoSize : '100%'}
+            width={category || category === '' ? logoSize : '100%'}
+            height={category || category === '' ? logoSize : '100%'}
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
@@ -122,7 +135,7 @@ ArticleTeaser.propTypes = {
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
   family: PropTypes.string,
-  category: PropTypes.oneOf(['Comic Relief', 'Sport Relief', 'Red Nose Day']),
+  category: PropTypes.string,
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
