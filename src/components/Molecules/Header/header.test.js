@@ -107,16 +107,7 @@ it('renders correctly', () => {
 
     .c21 {
       background-color: #2C0230;
-      width: 25px;
       margin: 0 auto;
-      position: absolute;
-      display: block;
-      height: 3px;
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: 0.25s ease-in-out;
-      transition: 0.25s ease-in-out;
     }
 
     .c17 {
@@ -132,6 +123,12 @@ it('renders correctly', () => {
       position: relative;
       text-indent: -9999px;
       background-color: transparent;
+      height: 100%;
+      width: 45px;
+      left: 5px;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
     }
 
     .c17:hover {
@@ -146,9 +143,9 @@ it('renders correctly', () => {
     .c17 .c20,
     .c17 .c20::before,
     .c17 .c20::after {
-      width: 2rem;
-      height: 2px;
-      background-color: red;
+      width: 33px;
+      height: 3px;
+      display: inline-block;
     }
 
     .c17 .c20::before,
@@ -156,14 +153,31 @@ it('renders correctly', () => {
       content: '';
       position: absolute;
       left: 0;
+      background-color: currentColor;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
     }
 
     .c17 .c20::before {
-      top: -1rem;
+      top: -0.5rem;
     }
 
     .c17 .c20::after {
-      top: 1rem;
+      top: 0.5rem;
+    }
+
+    .c17:hover .c20,
+    .c17:hover .c20::before,
+    .c17:hover .c20::after {
+      background-color: #918791;
+    }
+
+    .c17:hover .c20::before {
+      top: -0.6rem;
+    }
+
+    .c17:hover .c20::after {
+      top: 0.6rem;
     }
 
     .c6 {
