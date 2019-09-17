@@ -58,7 +58,21 @@ it('renders correctly', () => {
       font-weight: 700;
     }
 
-    .c22 {
+    .c18 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 2px 1px;
+      color: #2C0230;
+      font-weight: normal;
+    }
+
+    .c18:hover {
+      color: #2C0230;
+      font-weight: 700;
+    }
+
+    .c23 {
       display: inline-block;
       padding: 11px 17px;
       text-align: center;
@@ -71,12 +85,12 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c22:hover {
+    .c23:hover {
       background-color: #62EF74;
       color: #2C0230;
     }
 
-    .c18 {
+    .c19 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -91,7 +105,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c20 {
+    .c21 {
       background-color: #2C0230;
       width: 25px;
       margin: 0 auto;
@@ -107,19 +121,17 @@ it('renders correctly', () => {
 
     .c17 {
       z-index: 2;
-      top: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       position: relative;
-      width: 45px;
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: 0.5s ease-in-out;
-      transition: 0.5s ease-in-out;
-      height: 100%;
       text-indent: -9999px;
-      border: none;
       background-color: transparent;
-      padding: 2px 5px;
     }
 
     .c17:hover {
@@ -127,17 +139,31 @@ it('renders correctly', () => {
       font-weight: inherit;
     }
 
-    .c17 .c19:nth-of-type(2) {
-      top: 40%;
+    .c17 .c20 {
+      position: relative;
     }
 
-    .c17 .c19:nth-of-type(3),
-    .c17 .c19:nth-of-type(4) {
-      top: 50%;
+    .c17 .c20,
+    .c17 .c20::before,
+    .c17 .c20::after {
+      width: 2rem;
+      height: 2px;
+      background-color: red;
     }
 
-    .c17 .c19:nth-of-type(5) {
-      top: 61%;
+    .c17 .c20::before,
+    .c17 .c20::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    .c17 .c20::before {
+      top: -1rem;
+    }
+
+    .c17 .c20::after {
+      top: 1rem;
     }
 
     .c6 {
@@ -331,12 +357,12 @@ it('renders correctly', () => {
       border: 0;
     }
 
-    .c21 {
+    .c22 {
       position: absolute;
       right: 60px;
     }
 
-    .c21 a {
+    .c22 a {
       margin-left: 0.69375rem;
     }
 
@@ -348,7 +374,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1440px) {
-      .c22 {
+      .c23 {
         padding: 16px 30px;
       }
     }
@@ -495,7 +521,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c21 {
+      .c22 {
         position: relative;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1053,7 +1079,7 @@ it('renders correctly', () => {
         <a
           aria-haspopup="true"
           aria-label="Open and close Navigation Menu"
-          className="c17 c3"
+          className="c17 c18"
           color="red"
           href="#"
           onClick={[Function]}
@@ -1062,30 +1088,21 @@ it('renders correctly', () => {
           type="standard"
         >
           <span
-            className="c18 c7"
+            className="c19 c7"
             color="inherit"
             size="s"
           >
             Open and close nav menu
           </span>
           <span
-            className="c19 c20"
-          />
-          <span
-            className="c19 c20"
-          />
-          <span
-            className="c19 c20"
-          />
-          <span
-            className="c19 c20"
+            className="c20 c21"
           />
         </a>
         <div
-          className="c21"
+          className="c22"
         >
           <a
-            className="c22"
+            className="c23"
             color="green"
             href="/donation"
             target="_self"

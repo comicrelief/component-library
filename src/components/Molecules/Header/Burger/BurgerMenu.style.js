@@ -18,13 +18,7 @@ const BurgerHiddenText = styled(Text)`
 
 const BurgerBar = styled.span`
   background-color: ${({ theme }) => theme.color('deep_violet')};
-  width: 25px;
   margin: 0 auto;
-  position: absolute;
-  display: block;
-  height: 3px;
-  transform: rotate(0deg);
-  transition: 0.25s ease-in-out;
 `;
 
 /**
@@ -37,6 +31,11 @@ const BurgerWrapper = styled(Link)`
   position: relative;
   text-indent: -9999px;
   background-color: transparent;
+  height: 100%;
+  width: 45px;
+  left: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
 
   :hover {
     border: none;
@@ -48,45 +47,50 @@ const BurgerWrapper = styled(Link)`
     &,
     ::before,
     ::after {
-      width: 2rem;
-      height: 2px;
-      background-color: red;
+      width: 33px;
+      height: 3px;
+      display: inline-block;
     }
+
+    ${({ isExpandable }) => isExpandable && ' background-color: transparent'};
 
     ::before,
     ::after {
       content: '';
       position: absolute;
       left: 0;
+      background-color: currentColor;
+      transition: all 0.2s;
     }
 
-    ::before {top: -1rem;}
-    ::after {top: 1rem;}
+    ::before {
+      top: -0.5rem;
+      ${({ isExpandable }) =>
+        isExpandable && ' transform:rotate(135deg); top: 0;'};
+    }
 
+    ::after {
+      top: 0.5rem;
+      ${({ isExpandable }) =>
+        isExpandable && ' transform:rotate(-135deg); top: 0;'};
+    }
+  }
 
-    /* :nth-of-type(2) {
-      transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};
-      top: 40%;
-      top: ${({ isExpandable }) => isExpandable && '50%'};
-      width: ${({ isExpandable }) => isExpandable && '0'};
-      left: ${({ isExpandable }) => isExpandable && '600%'};
+  :hover ${BurgerBar} {
+    &,
+    ::before,
+    ::after {
+      background-color: ${({ theme, isExpandable }) =>
+        !isExpandable && theme.color('grey')};
     }
-    :nth-of-type(3),
-    :nth-of-type(4) {
-      top: 50%;
+
+    ::before {
+      ${({ isExpandable }) => !isExpandable && 'top: -0.6rem;'};
     }
-    :nth-of-type(3) {
-      transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};
+
+    ::after {
+      ${({ isExpandable }) => !isExpandable && 'top: 0.6rem;'};
     }
-    :nth-of-type(4) {
-      transform: ${({ isExpandable }) => isExpandable && 'rotate(-45deg)'};
-    }
-    :nth-of-type(5) {
-      top: 61%;
-      top: ${({ isExpandable }) => isExpandable && '40%'};
-      width: ${({ isExpandable }) => isExpandable && '0'};
-      left: ${({ isExpandable }) => isExpandable && '600%'};
-    } */
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
