@@ -32,22 +32,39 @@ const BurgerBar = styled.span`
  */
 const BurgerWrapper = styled(Link)`
   ${zIndex('medium')};
-  top: 0;
+  display: flex;
+  align-items: center;
   position: relative;
-  width: 45px;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  height: 100%;
   text-indent: -9999px;
-  border: none;
   background-color: transparent;
-  padding: 2px 5px;
+
   :hover {
     border: none;
     font-weight: inherit;
   }
   ${BurgerBar} {
-    :nth-of-type(2) {
+    position: relative;
+
+    &,
+    ::before,
+    ::after {
+      width: 2rem;
+      height: 2px;
+      background-color: red;
+    }
+
+    ::before,
+    ::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    ::before {top: -1rem;}
+    ::after {top: 1rem;}
+
+
+    /* :nth-of-type(2) {
       transform: ${({ isExpandable }) => isExpandable && 'rotate(45deg)'};
       top: 40%;
       top: ${({ isExpandable }) => isExpandable && '50%'};
@@ -69,7 +86,7 @@ const BurgerWrapper = styled(Link)`
       top: ${({ isExpandable }) => isExpandable && '40%'};
       width: ${({ isExpandable }) => isExpandable && '0'};
       left: ${({ isExpandable }) => isExpandable && '600%'};
-    }
+    } */
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
