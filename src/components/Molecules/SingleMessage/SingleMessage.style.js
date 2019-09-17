@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
-import playButton from './assets/video--play-icon.svg';
-import playHoverButton from './assets/video--play-icon__hover.svg';
+import playIcon from './assets/video--play-icon.svg';
+import playIconHover from './assets/video--play-icon__hover.svg';
+import loadingIcon from './assets/loader.svg';
 
 const Container = styled.div`
   display: flex;
@@ -77,10 +78,10 @@ const Media = styled.div`
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
 
-  // Sets-up our fixed-aspect ratio landscape using padding
+  // Sets-up our fixed-aspect ratio landscape using padding for all video types
   ${({ hasVideo }) =>
     hasVideo
-      ? '  height: auto; overflow: hidden; padding-bottom: 56.25%;'
+      ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
       : null};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
@@ -97,26 +98,25 @@ const PlayButton = styled.button`
   position: absolute;
   top: 0;
   border: 0;
-  background: rgba(0, 0, 0, 0) url(${playButton}) center no-repeat;
-  background-size: 100px;
   margin: 0;
   padding: 0;
   text-indent: -9999px;
-
-  &:focus,
-  &:hover {
-    background-image: url(${playHoverButton});
-  }
+  background: rgba(0, 0, 0, 0) center no-repeat;
+  background-size: 100px;
+  background-image: ${({ isBuffering }) =>
+    isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`};
 
   ${({ copyFirst }) =>
     copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
 
-  ${({ isBuffering }) =>
-    isBuffering === true
-      ? 'background-image: url(https://www.comicrelief.com/themes/custom/comicrelief/images/loader.gif)'
-      : null};
-
+  // Hide all icons once we're actually playing the video
   display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
+
+  &:focus,
+  &:hover {
+    background-image: ${({ isBuffering }) =>
+      isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`};
+  }
 `;
 
 const Image = styled.div`
@@ -125,13 +125,10 @@ const Image = styled.div`
   ${({ vhFull }) => vhFull && 'height: 100%'};
 
   ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('high'))};
-  
-   position: absolute; top: 0; left: 0;
 
-/*  ${({ landscapeVideo, hasVideo }) =>
-  landscapeVideo && hasVideo
-    ? ' position: absolute; top: 0; left: 0;'
-    : null};*/
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const VideoWrapper = styled.div`
