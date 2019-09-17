@@ -12,7 +12,7 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
+    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
   }
@@ -31,7 +31,6 @@ const Container = styled.div`
 
 const Copy = styled.div`
   padding: ${spacing('xxl')} ${spacing('xl')};
-  word-break: break-word;
   @media ${({ theme }) => theme.breakpoint('small')} {
     display: flex;
     flex-direction: column;
@@ -85,8 +84,8 @@ const Media = styled.div`
       : null};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ landscapeVideo, hasVideo }) =>
-      landscapeVideo && hasVideo ? 'padding-bottom: calc(56.25% / 2);' : null};
+    padding-bottom: ${({ landscapeVideo, hasVideo }) =>
+      landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
   }
 `;
 
@@ -121,14 +120,14 @@ const PlayButton = styled.button`
 
 const Image = styled.div`
   width: 100%;
-  ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
+  height: 100%;
+
   ${({ vhFull }) => vhFull && 'height: 100%'};
 
   ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('high'))};
 
-  position: absolute;
-  top: 0;
-  left: 0;
+  ${({ hasVideo }) =>
+    hasVideo ? 'position: absolute; top: 0; left:0;' : null};
 `;
 
 const VideoWrapper = styled.div`
