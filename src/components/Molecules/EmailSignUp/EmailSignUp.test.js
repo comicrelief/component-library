@@ -205,12 +205,6 @@ it('renders correctly', () => {
       width: 100%;
     }
 
-    @media (min-width:1440px) {
-      .c11 {
-        padding: 16px 30px;
-      }
-    }
-
     @media (min-width:740px) {
       .c9 {
         max-width: 290px;

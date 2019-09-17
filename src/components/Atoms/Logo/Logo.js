@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import image from './assets/logo.svg';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Image = styled.img`
   object-fit: cover;
@@ -19,6 +20,7 @@ const LogoWrapper = styled.div.attrs(() => ({
   'aria-label': 'logo'
 }))`
   display: inline-block;
+  ${zIndex('high')}
   width: ${props => props.sizeSm};
   height: ${props => props.sizeSm};
   transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};

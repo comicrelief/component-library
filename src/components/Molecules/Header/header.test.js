@@ -35,6 +35,7 @@ it('renders correctly', () => {
 
     .c4 {
       display: inline-block;
+      z-index: 3;
       width: 50px;
       height: 50px;
       -webkit-transform: rotate(-14deg);
@@ -112,6 +113,9 @@ it('renders correctly', () => {
 
     .c17 {
       z-index: 2;
+      -webkit-order: 50;
+      -ms-flex-order: 50;
+      order: 50;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -340,40 +344,21 @@ it('renders correctly', () => {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
       height: 100%;
       padding: 0 15px;
       cursor: pointer;
       max-width: 1440px;
     }
 
-    .c1 > span:nth-of-type(1) {
-      z-index: 3;
-    }
-
-    .c1 > span:nth-of-type(2) {
-      left: 2px;
-      position: relative;
-      height: 100%;
-      cursor: pointer;
-    }
-
     .c2 {
       z-index: 3;
       color: transparent;
+      margin-right: auto;
       border: 0;
     }
 
     .c2:hover {
       border: 0;
-    }
-
-    .c22 {
-      position: absolute;
-      right: 60px;
     }
 
     .c22 a {
@@ -384,12 +369,6 @@ it('renders correctly', () => {
       .c4 {
         width: 60px;
         height: 60px;
-      }
-    }
-
-    @media (min-width:1440px) {
-      .c23 {
-        padding: 16px 30px;
       }
     }
 
@@ -529,8 +508,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c1 {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
       }
     }
 

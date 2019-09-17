@@ -11,32 +11,32 @@ it('renders a standard styled link correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c0 {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0 2px 1px;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: normal;
-    }
+        .c0 {
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          display: inline-block;
+          padding: 0 2px 1px;
+          color: #2C0230;
+          border-bottom: 2px solid #2C0230;
+          font-weight: normal;
+        }
 
-    .c0:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
-      font-weight: 700;
-    }
+        .c0:hover {
+          color: #2C0230;
+          border-bottom: 2px solid #2C0230;
+          font-weight: 700;
+        }
 
-    <a
-      className="c0"
-      color="red"
-      href="/test"
-      target="_self"
-      type="standard"
-    >
-      A standard link
-    </a>
-  `);
+        <a
+          className="c0"
+          color="red"
+          href="/test"
+          target="_self"
+          type="standard"
+        >
+          A standard link
+        </a>
+    `);
 });
 
 it('renders link styled as button correctly', () => {
@@ -63,12 +63,6 @@ it('renders link styled as button correctly', () => {
     .c0:hover {
       background-color: #FEFD5A;
       color: #2C0230;
-    }
-
-    @media (min-width:1440px) {
-      .c0 {
-        padding: 16px 30px;
-      }
     }
 
     <a

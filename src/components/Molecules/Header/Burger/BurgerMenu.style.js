@@ -26,6 +26,7 @@ const BurgerBar = styled.span`
  */
 const BurgerWrapper = styled(Link)`
   ${zIndex('medium')};
+  order: 50;
   display: flex;
   align-items: center;
   position: relative;

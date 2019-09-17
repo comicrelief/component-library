@@ -95,12 +95,6 @@ it('renders correctly', () => {
       border-bottom: 2px solid;
     }
 
-    @media (min-width:1440px) {
-      .c6 {
-        padding: 16px 30px;
-      }
-    }
-
     @media (min-width:740px) {
       .c1 {
         width: 75%;
