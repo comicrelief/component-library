@@ -95,6 +95,8 @@ const SingleMessage = ({
           vhFull={vhFull}
           id={`${id}__container`}
           isPlaying={isPlaying}
+          hasVideo={hasVideo}
+          landscapeVideo={landscapeVideo}
         >
           {imageSet || imageSet2 ? (
             <>

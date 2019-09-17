@@ -15,6 +15,10 @@ const Container = styled.div`
     ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
+
+    // Make sure our fixed-aspect ratio styles don't get ruined!
+    ${({ landscapeVideo, hasVideo }) =>
+      landscapeVideo && hasVideo ? 'min-height: 0;' : null};
   }
 
   // Dynamically loaded via YT API, so can't make it a Styled Component
