@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import { sizes } from '../../../../theme/shared/breakpoint';
+import { screen } from '../../../../theme/shared/size';
 
 const NavLinkClass = styled(Link)`
   border: 0;
@@ -30,7 +30,7 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('medium')};
 
-  @media (min-width: ${sizes.small}px) {
+  @media (min-width: ${screen.small}) {
     width: 50%;
     right: 0;
     left: inherit;

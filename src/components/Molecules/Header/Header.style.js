@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
+import { container } from '../../../theme/shared/size';
 
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'banner'
@@ -22,7 +23,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 15px;
   cursor: pointer;
-  max-width: 1440px;
+  max-width: ${container.large};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 auto;
