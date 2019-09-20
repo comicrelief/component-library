@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import Input from '../../Atoms/Input/Input';
+import Text from '../../Atoms/Text/Text';
 
 const ESUWrapper = styled.div`
   display: flex;
@@ -56,11 +57,21 @@ const InputField = styled(Input)`
   width: 100%;
 `;
 
+const Title = styled(Text)`
+  margin-bottom: ${spacing('l')};
+  font-size: ${({ theme }) => theme.fontSize('xxl')};
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    font-size: ${({ theme }) => theme.fontSize('big')};
+  }
+`;
+
 export {
   ESUWrapper,
   TopCopyWrapper,
   PrivacyCopyWrapper,
   ButtonWrapper,
   Form,
-  InputField
+  InputField,
+  Title
 };
