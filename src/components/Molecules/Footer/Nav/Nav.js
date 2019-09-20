@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
+import InternalLinkHelper from '../../../../utils/internalLinkHelper';
 
 import {
   Nav,
@@ -90,7 +91,9 @@ const FooterNav = ({ navItems }) => {
               >
                 {group.links.map(child => {
                   /* Determine which field represents our url path */
-                  const thisUrl = NavHelper(child);
+                  let thisUrl = NavHelper(child);
+
+                  thisUrl = InternalLinkHelper(thisUrl);
 
                   return (
                     <SubNavItem
