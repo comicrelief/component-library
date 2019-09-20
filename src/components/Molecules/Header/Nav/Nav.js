@@ -16,6 +16,7 @@ import {
   SubNavLinkUnderline
 } from './Nav.style';
 import NavHelper from '../../../../utils/navHelper';
+import InternalLinkHelper from '../../../../utils/internalLinkHelper';
 
 const MainNav = ({ navItems }) => {
   const { menuGroups } = navItems;
@@ -83,7 +84,9 @@ const MainNav = ({ navItems }) => {
             const thisFirstChild = group.links[0];
 
             /* Determine which field represents our url path */
-            const thisUrl = NavHelper(thisFirstChild);
+            let thisUrl = NavHelper(thisFirstChild);
+
+            thisUrl = InternalLinkHelper(thisUrl);
 
             return (
               <NavItem
