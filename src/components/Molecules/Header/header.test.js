@@ -75,7 +75,7 @@ it('renders correctly', () => {
 
     .c23 {
       display: inline-block;
-      padding: 11px 17px;
+      padding: 0.5rem 1rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;

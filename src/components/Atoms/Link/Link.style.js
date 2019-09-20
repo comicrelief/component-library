@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
 
 const buttonStyle = () => css`
   display: inline-block;
-  padding: 11px 17px;
+  padding: ${spacing('sm')} ${spacing('md')};
   text-align: center;
   text-decoration: none;
   font-weight: 700;
