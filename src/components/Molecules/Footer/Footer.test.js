@@ -665,7 +665,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="https://www.comicrelief.com/contact-us"
+                    href="/contact-us"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1061,7 +1061,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="homepage"
+                    href="/homepage"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1081,7 +1081,7 @@ it('renders correctly', () => {
                   <a
                     className="c14 c11"
                     color="red"
-                    href="this-is-a-test"
+                    href="/this-is-a-test"
                     role="menuitem"
                     target="_self"
                     type="standard"

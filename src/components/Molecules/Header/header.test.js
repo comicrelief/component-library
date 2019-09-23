@@ -1010,7 +1010,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="test-ref-path-1"
+                    href="/test-ref-path-1"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1030,7 +1030,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="test-ref-path-2"
+                    href="/test-ref-path-2"
                     role="menuitem"
                     target="_self"
                     type="standard"
@@ -1050,7 +1050,7 @@ it('renders correctly', () => {
                   <a
                     className="c16 c3"
                     color="red"
-                    href="test-url"
+                    href="/test-url"
                     role="menuitem"
                     target="_self"
                     type="standard"

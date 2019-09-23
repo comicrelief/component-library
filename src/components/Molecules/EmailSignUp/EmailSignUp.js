@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import {
   ESUWrapper,
@@ -8,7 +7,8 @@ import {
   Form,
   PrivacyCopyWrapper,
   InputField,
-  ButtonWrapper
+  ButtonWrapper,
+  Title
 } from './EmailSignUp.style';
 
 const EmailSignUp = ({
@@ -57,7 +57,9 @@ const EmailSignUp = ({
   );
   return (
     <ESUWrapper backgroundColor={backgroundColor} {...rest}>
-      <Text tag="h1">{title}</Text>
+      <Title tag="p" weight="400" family="Anton" uppercase>
+        {title}
+      </Title>
       <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
       {!isSuccess && subscriptionForm}
       {!isSuccess && privacyContainer}

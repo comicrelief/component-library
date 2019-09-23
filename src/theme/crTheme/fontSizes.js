@@ -6,6 +6,7 @@ const fontSizes = {
   l: '1.44rem',
   xl: '1.725rem',
   xxl: '2.075rem',
+  big: '2.75rem',
   super: '6.25rem'
 };
 

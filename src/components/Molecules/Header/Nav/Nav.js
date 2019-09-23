@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
+import NavHelper from '../../../../utils/navHelper';
+import InternalLinkHelper from '../../../../utils/internalLinkHelper';
 
 import {
   Nav,
@@ -15,7 +17,6 @@ import {
   SubNavLink,
   SubNavLinkUnderline
 } from './Nav.style';
-import NavHelper from '../../../../utils/navHelper';
 
 const MainNav = ({ navItems }) => {
   const { menuGroups } = navItems;
@@ -83,7 +84,9 @@ const MainNav = ({ navItems }) => {
             const thisFirstChild = group.links[0];
 
             /* Determine which field represents our url path */
-            const thisUrl = NavHelper(thisFirstChild);
+            let thisUrl = NavHelper(thisFirstChild);
+
+            thisUrl = InternalLinkHelper(thisUrl);
 
             return (
               <NavItem
@@ -123,7 +126,9 @@ const MainNav = ({ navItems }) => {
                     isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >
                     {group.links.map((child, childIndex) => {
-                      const thisSubUrl = NavHelper(child);
+                      let thisSubUrl = NavHelper(child);
+
+                      thisSubUrl = InternalLinkHelper(thisSubUrl);
 
                       /* Wrap our first child item with special tags */
                       if (childIndex === 0) {

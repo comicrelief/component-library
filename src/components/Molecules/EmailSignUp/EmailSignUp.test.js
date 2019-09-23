@@ -39,20 +39,21 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c1 {
+      .c2 {
       font-size: 1rem;
-      text-transform: inherit;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c7 {
+    .c8 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c11 {
+    .c12 {
       display: inline-block;
       padding: 0.5rem 1rem;
       text-align: center;
@@ -65,12 +66,12 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c11:hover {
+    .c12:hover {
       background-color: #86E4E9;
       color: #2C0230;
     }
 
-    .c9 {
+    .c10 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -87,27 +88,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c9:focus {
+    .c10:focus {
       border: 1px solid #666;
     }
 
-    .c9:focus::-webkit-input-placeholder {
+    .c10:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c9:focus:-moz-placeholder {
+    .c10:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c9:focus::-moz-placeholder {
+    .c10:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c9:focus:-ms-input-placeholder {
+    .c10:focus:-ms-input-placeholder {
       color: transparent;
     }
 
-    .c5 {
+    .c6 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -117,7 +118,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c6 {
+    .c7 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -132,7 +133,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c3 {
+    .c4 {
       text-align: left;
     }
 
@@ -150,7 +151,7 @@ it('renders correctly', () => {
       background-color: #2C0230;
     }
 
-    .c2 {
+    .c3 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -158,17 +159,17 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c10 {
+    .c11 {
       margin-top: 1rem;
     }
 
-    .c10 button {
+    .c11 button {
       border-color: #2C0230;
       width: 100%;
       font-size: 1rem;
     }
 
-    .c12 {
+    .c13 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -178,19 +179,19 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c12 a {
+    .c13 a {
       cursor: pointer;
       padding: 0 0.25rem;
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c12 a:hover {
+    .c13 a:hover {
       color: #FFFFFF;
       border-color: #FFFFFF;
     }
 
-    .c4 {
+    .c5 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -201,37 +202,54 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c8 {
+    .c9 {
       width: 100%;
     }
 
+    .c1 {
+      margin-bottom: 2rem;
+      font-size: 2.075rem;
+    }
+
+    @media (min-width:1440px) {
+      .c12 {
+        padding: 16px 30px;
+      }
+    }
+
     @media (min-width:740px) {
-      .c9 {
+      .c10 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c10 button {
+      .c11 button {
         width: auto;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 2.75rem;
       }
     }
 
     <div
         className="c0"
       >
-        <h1
-          className="c1"
+        <p
+          className="c1 c2"
           color="inherit"
           size="s"
         >
           sign up letter
-        </h1>
+        </p>
         <div
-          className="c2"
+          className="c3"
         >
           <div
-            className="c3"
+            className="c4"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
@@ -240,21 +258,21 @@ it('renders correctly', () => {
           />
         </div>
         <form
-          className="c4"
+          className="c5"
         >
           <label
-            className="c5"
+            className="c6"
             htmlFor="email"
           >
             <span
-              className="c6 c7"
+              className="c7 c8"
               color="inherit"
               size="s"
             >
               email
             </span>
             <input
-              className="c8 c9"
+              className="c9 c10"
               name="email"
               onChange={[Function]}
               placeholder="example@youremail.com"
@@ -264,10 +282,10 @@ it('renders correctly', () => {
             
           </label>
           <div
-            className="c10"
+            className="c11"
           >
             <button
-              className="c11"
+              className="c12"
               color="teal"
               href="/#"
               onClick={[Function]}
@@ -279,10 +297,10 @@ it('renders correctly', () => {
           </div>
         </form>
         <div
-          className="c12"
+          className="c13"
         >
           <div
-            className="c3"
+            className="c4"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
@@ -291,13 +309,14 @@ it('renders correctly', () => {
           />
         </div>
       </div>,
-      .c1 {
+      .c2 {
       font-size: 1rem;
-      text-transform: inherit;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c3 {
+    .c4 {
       text-align: left;
     }
 
@@ -315,7 +334,7 @@ it('renders correctly', () => {
       background-color: #E52630;
     }
 
-    .c2 {
+    .c3 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -323,21 +342,32 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
+    .c1 {
+      margin-bottom: 2rem;
+      font-size: 2.075rem;
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 2.75rem;
+      }
+    }
+
     <div
         className="c0"
       >
-        <h1
-          className="c1"
+        <p
+          className="c1 c2"
           color="inherit"
           size="s"
         >
           sign up letter
-        </h1>
+        </p>
         <div
-          className="c2"
+          className="c3"
         >
           <div
-            className="c3"
+            className="c4"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
