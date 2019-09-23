@@ -34,9 +34,16 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
+  ${({ hasVideo, fullImage }) =>
+    hasVideo === true && fullImage === true ? 'display: none;' : null};
+
   padding: ${spacing('xxl')} ${spacing('xl')};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    display: flex;
+    ${({ hasVideo, fullImage }) =>
+      hasVideo === true && fullImage === true
+        ? 'display: none;'
+        : 'display: flex;'};
+
     flex-direction: column;
     justify-content: center;
     width: 50%;
@@ -105,7 +112,7 @@ const PlayButton = styled.button`
   padding: 0;
   text-indent: -9999px;
   background: rgba(0, 0, 0, 0) center no-repeat;
-  background-size: 100px;
+  background-size: 70px;
   background-image: ${({ isBuffering }) =>
     isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`};
 
@@ -119,6 +126,10 @@ const PlayButton = styled.button`
   &:hover {
     background-image: ${({ isBuffering }) =>
       isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`};
+  }
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    background-size: 100px;
   }
 `;
 

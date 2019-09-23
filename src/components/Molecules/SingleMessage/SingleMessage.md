@@ -188,3 +188,48 @@ const data = require('../../../styleguide/data/data').default;
   </Text>
 </SingleMessage>;
 ```
+
+Single Message with landscape video, 100VH, fullwidth image
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="purple"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={true}
+  videoID="WUgvvPRH7Oc"
+  vhFull
+  fullImage={true}
+>
+  <Text tag="p" color="black" size="xxl">
+    Single Message with portrait video, 100VH, fullwidth image - (this copy
+    hidden by design)
+  </Text>
+</SingleMessage>;
+```
+
+Single Message with landscape video, 50VH, fullwidth image
+
+```js
+import Text from '../../Atoms/Text/Text';
+const data = require('../../../styleguide/data/data').default;
+
+<SingleMessage
+  backgroundColor="purple"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={true}
+  videoID="WUgvvPRH7Oc"
+  fullImage={true}
+>
+  <Text tag="p" color="black" size="xxl">
+    Single Message with portrait video, 50VH,fullwidth image - (this copy hidden
+    by design)
+  </Text>
+</SingleMessage>;
+```

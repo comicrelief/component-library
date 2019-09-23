@@ -66,7 +66,8 @@ const SingleMessage = ({
 
       // Instantiate a YT Player into our array, using it's unique id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
-        videoId: videoID
+        videoId: videoID,
+        playerVars: { rel: 0, modestbranding: 1, fs: 0 }
       });
     }
   }, [hasVideo, isInitialised, uniqueID, videoID]);
@@ -158,7 +159,12 @@ const SingleMessage = ({
             </>
           ) : null}
 
-          <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
+          <Copy
+            fullImage={fullImage}
+            hasImage={hasImage}
+            copyFirst={copyFirst}
+            hasVideo={hasVideo}
+          >
             {children}
           </Copy>
         </Container>
