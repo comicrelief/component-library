@@ -98,6 +98,7 @@ const SingleMessage = ({
           isPlaying={isPlaying}
           hasVideo={hasVideo}
           landscapeVideo={landscapeVideo}
+          fullImage={fullImage}
         >
           {imageSet || imageSet2 ? (
             <>

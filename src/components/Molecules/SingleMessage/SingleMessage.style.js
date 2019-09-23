@@ -17,8 +17,8 @@ const Container = styled.div`
       copyFirst === true ? 'row-reverse' : 'row'};
 
     // Make sure our fixed-aspect ratio styles don't get ruined!
-    ${({ landscapeVideo, hasVideo }) =>
-      landscapeVideo && hasVideo ? 'min-height: 0;' : null};
+    ${({ landscapeVideo, hasVideo, fullImage }) =>
+      landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null};
   }
 
   // Dynamically loaded via YT API, so can't make it a Styled Component
