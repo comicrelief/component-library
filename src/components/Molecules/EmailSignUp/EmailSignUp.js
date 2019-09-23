@@ -87,7 +87,7 @@ EmailSignUp.propTypes = {
 };
 
 EmailSignUp.defaultProps = {
-  backgroundColor: 'deep_violet',
+  backgroundColor: 'deep_violet_dark',
   buttonColor: 'red'
 };
 

@@ -7,7 +7,7 @@ const colors = {
   coral: '#F9686D',
   coral_dark: '#961D35',
   coral_light: '#FFCECE',
-  deep_violet: '#2C0230',
+  deep_violet_dark: '#2C0230',
   deep_violet_light: '#3e1c43',
   green: '#4ECD57',
   green_dark: '#1B651D',

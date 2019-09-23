@@ -6,7 +6,7 @@ const NavLinkClass = styled(Link)`
   border: 0;
   height: 46px;
   width: 100%;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
+  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
   color: ${({ theme }) => theme.color('white')};
 
   &:hover,

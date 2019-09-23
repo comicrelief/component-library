@@ -17,7 +17,7 @@ const BurgerHiddenText = styled(Text)`
  */
 
 const BurgerBar = styled.span`
-  background-color: ${({ theme }) => theme.color('deep_violet')};
+  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
   margin: 0 auto;
 `;
 
