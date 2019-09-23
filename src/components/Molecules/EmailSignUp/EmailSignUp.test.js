@@ -211,12 +211,6 @@ it('renders correctly', () => {
       font-size: 2.075rem;
     }
 
-    @media (min-width:1440px) {
-      .c12 {
-        padding: 16px 30px;
-      }
-    }
-
     @media (min-width:740px) {
       .c10 {
         max-width: 290px;
