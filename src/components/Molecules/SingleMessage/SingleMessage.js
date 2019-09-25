@@ -1,79 +1,21 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
+import YouTubePlayer from 'youtube-player';
+import { UID } from 'react-uid';
 import Picture from '../../Atoms/Picture/Picture';
-import spacing from '../../../theme/shared/spacing';
 
-const Container = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  overflow: hidden;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : null)};
-    flex-direction: ${({ copyFirst }) =>
-      copyFirst === true ? 'row-reverse' : 'row'};
-  }
-`;
+import {
+  Container,
+  Copy,
+  Media,
+  PlayButton,
+  Image,
+  VideoWrapper
+} from './SingleMessage.style';
 
-const Copy = styled.div`
-  padding: ${spacing('xxl')} ${spacing('xl')};
-  word-break: break-word;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding: ${spacing('xl')};
-  }
-
-  ${props =>
-    props.fullImage &&
-    css`
-      position: absolute;
-      width: 100%;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      ${
-        props.copyFirst
-          ? css`
-              left: 0;
-            `
-          : null
-      }
-      @media ${({ theme }) => theme.breakpoint('small')} {
-        width: 50%;
-      }
-    `};
-  ${props =>
-    props.hasImage
-      ? css`
-          flex: 0 0 50%;
-        `
-      : css`
-          flex: 0 0 60%;
-          margin: auto;
-          padding: 100px 20px;
-        `}
-`;
-
-const Media = styled.div`
-  width: 100%;
-  ${({ doubleImage }) =>
-    doubleImage && 'display: flex; flex-direction: column; height: 100%;'};
-`;
-
-const Image = styled.div`
-  width: 100%;
-  ${({ doubleImage }) => (doubleImage ? 'height: 100%;' : 'height: 100%;')};
-  ${({ vhFull }) => vhFull && 'height: 100%'};
-`;
+const allPlayers = {};
 
 /** Single Message is our main component usually to build landing pages */
-
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
@@ -86,53 +28,149 @@ const SingleMessage = ({
   imageAltText2,
   children,
   fullImage,
-  vhFull
+  vhFull,
+  videoID,
+  landscapeVideo
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
+  const hasVideo = !!(videoID !== null && videoID !== '');
+
+  // States to track video status
+  const [isInitialised, setIsInitialised] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(false);
+  const [uniqueID, setUniqueID] = useState(null);
+
+  // Break-out video markup into its own function
+  const renderVideoPlayers = thisRowID => {
+    // Store the dynamically-created UUID (from the main render func) in our state so useEffect can access it
+    setUniqueID(thisRowID);
+
+    return (
+      <VideoWrapper
+        isPlaying={isPlaying}
+        isBuffering={isBuffering}
+        key={thisRowID}
+        landscapeVideo={landscapeVideo}
+      >
+        <div id={thisRowID} />
+      </VideoWrapper>
+    );
+  };
+
+  useEffect(() => {
+    if (hasVideo && uniqueID && !isInitialised) {
+      // Switch state to ensure this only runs once per video row
+      setIsInitialised(true);
+
+      // Instantiate a YT Player into our array, using it's unique id as the key that PlayButton can access
+      allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
+        videoId: videoID,
+        playerVars: { rel: 0, modestbranding: 1, fs: 0 }
+      });
+    }
+  }, [hasVideo, isInitialised, uniqueID, videoID]);
+
+  const handlePlay = thisUniqueID => {
+    // Trigger play and update video state
+    allPlayers[thisUniqueID].playVideo();
+    setIsBuffering(true);
+
+    // Once video is playing, switch state to allow CSS to show/hide relevant layers
+    allPlayers[thisUniqueID].on('stateChange', function(event) {
+      if (event.data === 1) {
+        setIsBuffering(false);
+        setIsPlaying(true);
+      }
+    });
+  };
 
   return (
-    <Container
-      backgroundColor={backgroundColor}
-      copyFirst={copyFirst}
-      vhFull={vhFull}
-    >
-      {imageSet || imageSet2 ? (
-        <>
-          <Media doubleImage={doubleImage}>
-            {imageSet || image ? (
-              <Image doubleImage={doubleImage} vhFull={vhFull}>
-                <Picture
-                  alt={imageAltText}
-                  imageLow={imageLow}
-                  images={imageSet}
-                  image={image}
-                  objectFit="cover"
-                  width="100%"
-                  height="100%"
-                />
-              </Image>
-            ) : null}
-            {imageSet2 || image2 ? (
-              <Image doubleImage={doubleImage} vhFull={vhFull}>
-                <Picture
-                  alt={imageAltText2}
-                  imageLow={imageLow}
-                  images={imageSet2}
-                  image={image2}
-                  objectFit="cover"
-                  width="100%"
-                  height="100%"
-                />
-              </Image>
-            ) : null}
-          </Media>
-        </>
-      ) : null}
-      <Copy fullImage={fullImage} hasImage={hasImage} copyFirst={copyFirst}>
-        {children}
-      </Copy>
-    </Container>
+    // Creates namespaced UUIDs for each row
+    <UID name={id => `single-msg__${id}`}>
+      {id => (
+        <Container
+          backgroundColor={backgroundColor}
+          copyFirst={copyFirst}
+          vhFull={vhFull}
+          id={`${id}__container`}
+          isPlaying={isPlaying}
+          hasVideo={hasVideo}
+          landscapeVideo={landscapeVideo}
+          fullImage={fullImage}
+        >
+          {imageSet || imageSet2 ? (
+            <>
+              <Media
+                doubleImage={doubleImage}
+                isPlaying={isPlaying}
+                isBuffering={isBuffering}
+                hasVideo={hasVideo}
+                landscapeVideo={landscapeVideo}
+              >
+                {hasVideo && renderVideoPlayers(`${id}__video`)}
+
+                {imageSet || image ? (
+                  <Image
+                    doubleImage={doubleImage}
+                    vhFull={vhFull}
+                    isPlaying={isPlaying}
+                    isBuffering={isBuffering}
+                    hasVideo={hasVideo}
+                    landscapeVideo={landscapeVideo}
+                  >
+                    <Picture
+                      alt={imageAltText}
+                      imageLow={imageLow}
+                      images={imageSet}
+                      image={image}
+                      objectFit="cover"
+                      width="100%"
+                      height="100%"
+                    />
+                  </Image>
+                ) : null}
+                {imageSet2 || image2 ? (
+                  <Image doubleImage={doubleImage} vhFull={vhFull}>
+                    <Picture
+                      alt={imageAltText2}
+                      imageLow={imageLow}
+                      images={imageSet2}
+                      image={image2}
+                      objectFit="cover"
+                      width="100%"
+                      height="100%"
+                    />
+                  </Image>
+                ) : null}
+
+                {hasVideo ? (
+                  <PlayButton
+                    id={`${id}__play-button`}
+                    copyFirst={copyFirst}
+                    isPlaying={isPlaying}
+                    isBuffering={isBuffering}
+                    onClick={() => handlePlay(`${id}__video`)}
+                  >
+                    Play video
+                  </PlayButton>
+                ) : null}
+              </Media>
+            </>
+          ) : null}
+
+          <Copy
+            fullImage={fullImage}
+            hasImage={hasImage}
+            copyFirst={copyFirst}
+            hasVideo={hasVideo}
+          >
+            {children}
+          </Copy>
+        </Container>
+      )}
+    </UID>
   );
 };
 
@@ -151,7 +189,9 @@ SingleMessage.propTypes = {
   imageAltText2: PropTypes.string,
   children: PropTypes.node.isRequired,
   /** Image will be the height of the viewport */
-  vhFull: PropTypes.bool
+  vhFull: PropTypes.bool,
+  videoID: PropTypes.string,
+  landscapeVideo: PropTypes.bool
 };
 
 SingleMessage.defaultProps = {
@@ -165,7 +205,9 @@ SingleMessage.defaultProps = {
   image2: null,
   imageAltText: '',
   imageAltText2: '',
-  vhFull: false
+  vhFull: false,
+  videoID: null,
+  landscapeVideo: false
 };
 
 export default SingleMessage;
