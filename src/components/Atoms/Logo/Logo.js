@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import image from './assets/logo.svg';
 import zIndex from '../../../theme/shared/zIndex';
+import crLogo from './assets/cr-logo.svg';
+import srLogo from './assets/sr-logo.svg';
 
 const Image = styled.img`
   object-fit: cover;
@@ -30,10 +31,16 @@ const LogoWrapper = styled.div.attrs(() => ({
   }
 `;
 
-const Logo = ({ rotate, sizeSm, sizeMd }) => {
+const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
   return (
     <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
-      <Image src={image} alt="Comic Relief logo" aria-label="logo" />
+      <Image
+        src={campaign === 'comicrelief' ? crLogo : srLogo}
+        alt={
+          campaign === 'comicrelief' ? 'Comic Relief logo' : 'Sport Relief logo'
+        }
+        aria-label="logo"
+      />
     </LogoWrapper>
   );
 };
@@ -42,13 +49,15 @@ Logo.propTypes = {
   /** Rotate logo */
   rotate: PropTypes.bool,
   sizeSm: PropTypes.string,
-  sizeMd: PropTypes.string
+  sizeMd: PropTypes.string,
+  campaign: PropTypes.string
 };
 
 Logo.defaultProps = {
   rotate: false,
   sizeSm: '50px',
-  sizeMd: '60px'
+  sizeMd: '60px',
+  campaign: 'comicrelief'
 };
 
 export default Logo;

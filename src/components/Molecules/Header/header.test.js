@@ -38,9 +38,9 @@ it('renders correctly', () => {
       z-index: 3;
       width: 50px;
       height: 50px;
-      -webkit-transform: rotate(-14deg);
-      -ms-transform: rotate(-14deg);
-      transform: rotate(-14deg);
+      -webkit-transform: inherit;
+      -ms-transform: inherit;
+      transform: inherit;
     }
 
     .c3 {
@@ -543,7 +543,7 @@ it('renders correctly', () => {
           <div
             aria-label="logo"
             className="c4"
-            rotate={1}
+            rotate={0}
           >
             <img
               alt="Comic Relief logo"
