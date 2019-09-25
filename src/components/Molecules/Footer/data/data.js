@@ -27,7 +27,7 @@ export default {
       links: [
         {
           title: 'Contact us',
-          path: 'https://www.comicrelief.com/contact-us',
+          path: 'contact-us',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
