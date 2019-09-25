@@ -8,6 +8,7 @@ const colors = {
   coral_dark: '#961D35',
   coral_light: '#FFCECE',
   deep_violet_dark: '#2C0230',
+  deep_violet: '#2C0230' /** Will be removed  */,
   deep_violet_light: '#3e1c43',
   green: '#4ECD57',
   green_dark: '#1B651D',
