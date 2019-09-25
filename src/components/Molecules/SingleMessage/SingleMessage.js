@@ -63,7 +63,7 @@ const Copy = styled.div`
 const Media = styled.div`
   width: 100%;
   ${({ doubleImage }) =>
-    doubleImage && 'display: flex; flex-direction: column'};
+    doubleImage && 'display: flex; flex-direction: column; height: 100%;'};
 `;
 
 const Image = styled.div`
