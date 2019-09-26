@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
+import { container } from '../../../theme/shared/size';
 
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'banner'
@@ -14,34 +15,18 @@ const HeaderWrapper = styled.header.attrs(() => ({
   @media ${({ theme }) => theme.breakpoint('medium')} {
     height: auto;
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
-  }
 `;
 
 const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
   padding: 0 15px;
   cursor: pointer;
-  max-width: 1440px;
-  /* Add z-index to logo  */
-  > span:nth-of-type(1) {
-    ${zIndex('high')};
-  }
-
-  /* Burger menu on small and medium device  */
-  > span:nth-of-type(2) {
-    left: 2px;
-    position: relative;
-    height: 100%;
-    cursor: pointer;
-  }
+  max-width: ${container.large};
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 `;
 
@@ -53,6 +38,7 @@ const Brand = styled(Link).attrs(() => ({
 }))`
   ${zIndex('high')};
   color: transparent;
+  margin-right: auto;
   border: 0;
   :hover {
     border: 0;
@@ -63,8 +49,6 @@ const Brand = styled(Link).attrs(() => ({
  * Meta icons
  */
 const MetaIcons = styled.div`
-  position: absolute;
-  right: 60px;
   a {
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }

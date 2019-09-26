@@ -44,7 +44,7 @@ it('renders correctly', () => {
 
     .c6 {
       display: inline-block;
-      padding: 11px 17px;
+      padding: 0.5rem 1rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -93,12 +93,6 @@ it('renders correctly', () => {
       color: #FFFFFF;
       padding: 0 0.25rem 1px;
       border-bottom: 2px solid;
-    }
-
-    @media (min-width:1440px) {
-      .c6 {
-        padding: 16px 30px;
-      }
     }
 
     @media (min-width:740px) {

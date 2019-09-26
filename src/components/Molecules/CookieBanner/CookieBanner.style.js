@@ -9,7 +9,7 @@ const CookieWrapper = styled.div`
   display: flex;
   position: relative;
   padding: ${spacing('md')};
-  background: ${({ theme }) => theme.color('deep_violet')};
+  background: ${({ theme }) => theme.color('deep_violet_dark')};
   flex-direction: column;
   ${zIndex('high')};
 `;

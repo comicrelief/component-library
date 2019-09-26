@@ -16,6 +16,7 @@ it('renders correctly', () => {
 
     .c0 {
       display: inline-block;
+      z-index: 3;
       width: 50px;
       height: 50px;
       -webkit-transform: rotate(-14deg);

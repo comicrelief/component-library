@@ -12,13 +12,11 @@ const BurgerMenu = ({ toggle, isExpandable }) => {
       aria-haspopup="true"
       aria-label="Open and close Navigation Menu"
       inline
+      underline={false}
       onClick={toggle}
       isExpandable={isExpandable}
     >
       <BurgerHiddenText>Open and close nav menu</BurgerHiddenText>
-      <BurgerBar />
-      <BurgerBar />
-      <BurgerBar />
       <BurgerBar />
     </BurgerWrapper>
   );

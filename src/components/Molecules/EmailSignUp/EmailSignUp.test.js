@@ -55,7 +55,7 @@ it('renders correctly', () => {
 
     .c12 {
       display: inline-block;
-      padding: 11px 17px;
+      padding: 0.5rem 1rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -209,12 +209,6 @@ it('renders correctly', () => {
     .c1 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
-    }
-
-    @media (min-width:1440px) {
-      .c12 {
-        padding: 16px 30px;
-      }
     }
 
     @media (min-width:740px) {

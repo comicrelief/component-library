@@ -6,7 +6,7 @@ const NavLinkClass = styled(Link)`
   border: 0;
   height: 46px;
   width: 100%;
-  background-color: ${({ theme }) => theme.color('deep_violet')};
+  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
   color: ${({ theme }) => theme.color('white')};
 
   &:hover,
@@ -126,7 +126,7 @@ const NavMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
-  
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     display: flex;
     flex-wrap: wrap;
