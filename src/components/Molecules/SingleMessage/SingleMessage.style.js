@@ -125,8 +125,8 @@ const PlayButton = styled.button`
 
 const Image = styled.div`
   width: 100%;
-  height: 100%;
   ${({ vhFull }) => vhFull && 'height: 100%'};
+  ${({ doubleImage }) => doubleImage && 'height: 50%'};
   ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('high'))};
   ${({ hasVideo }) =>
     hasVideo ? 'position: absolute; top: 0; left:0;' : null};
