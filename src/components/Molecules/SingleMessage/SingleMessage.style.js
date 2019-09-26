@@ -30,6 +30,7 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
+  ${zIndex('low')};
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
   padding: ${spacing('xxl')} ${spacing('xl')};
