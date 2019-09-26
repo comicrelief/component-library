@@ -15,13 +15,9 @@ const Container = styled.div`
     ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
-
-    // Make sure our fixed-aspect ratio styles don't get ruined!
     ${({ landscapeVideo, hasVideo, fullImage }) =>
       landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null};
   }
-
-  // Dynamically loaded via YT API, so can't make it a Styled Component
   iframe {
     height: 100%;
     width: 100%;
@@ -36,7 +32,6 @@ const Container = styled.div`
 const Copy = styled.div`
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
-
   padding: ${spacing('xxl')} ${spacing('xl')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ hasVideo, fullImage }) =>
@@ -84,16 +79,12 @@ const Copy = styled.div`
 const Media = styled.div`
   width: 100%;
   position: relative;
-
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};
-
-  // Sets-up our fixed-aspect ratio landscape using padding for all video types
   ${({ hasVideo }) =>
     hasVideo
       ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
       : null};
-
   @media ${({ theme }) => theme.breakpoint('small')} {
     padding-bottom: ${({ landscapeVideo, hasVideo }) =>
       landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
@@ -119,7 +110,6 @@ const PlayButton = styled.button`
   ${({ copyFirst }) =>
     copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
 
-  // Hide all icons once we're actually playing the video
   display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 
   &:focus,
@@ -136,11 +126,8 @@ const PlayButton = styled.button`
 const Image = styled.div`
   width: 100%;
   height: 100%;
-
   ${({ vhFull }) => vhFull && 'height: 100%'};
-
   ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('high'))};
-
   ${({ hasVideo }) =>
     hasVideo ? 'position: absolute; top: 0; left:0;' : null};
 `;
@@ -151,8 +138,6 @@ const VideoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-
-  /* Switch z-index layering to place video on top, allow the now-underneath image to maintain height of the wrapper */
   ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
 `;
 
