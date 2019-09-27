@@ -131,6 +131,16 @@ const Image = styled.div`
   ${({ isPlaying }) => (isPlaying ? zIndex('base') : zIndex('low'))};
   ${({ hasVideo }) =>
     hasVideo ? 'position: absolute; top: 0; left: 0;' : null};
+
+  ${({ vhFull }) =>
+    vhFull &&
+    css`
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        img {
+          position: absolute;
+        }
+      }
+    `};
 `;
 
 const VideoWrapper = styled.div`
