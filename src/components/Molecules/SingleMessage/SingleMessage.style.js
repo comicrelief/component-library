@@ -42,7 +42,7 @@ const Copy = styled.div`
 
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    flex: 0 0 50%;
     padding: ${spacing('xl')};
   }
 
@@ -62,7 +62,7 @@ const Copy = styled.div`
           : null
       }
       @media ${({ theme }) => theme.breakpoint('small')} {
-        width: 50%;
+        flex: 0 0 50%;
       }
     `};
   ${props =>
