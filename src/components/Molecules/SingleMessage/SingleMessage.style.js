@@ -62,7 +62,7 @@ const Copy = styled.div`
           : null
       }
       @media ${({ theme }) => theme.breakpoint('small')} {
-        flex: 0 0 50%;
+        width: 50%;
       }
     `};
   ${props =>
