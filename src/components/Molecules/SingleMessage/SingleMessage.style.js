@@ -126,14 +126,11 @@ const PlayButton = styled.button`
 
 const Image = styled.div`
   width: 100%;
-  ${({ vhFull }) => vhFull && 'height: 100%'};
+  height: 100%;
   ${({ doubleImage }) => doubleImage && 'height: 50%'};
   ${({ isPlaying }) => (isPlaying ? zIndex('base') : zIndex('low'))};
   ${({ hasVideo }) =>
     hasVideo ? 'position: absolute; top: 0; left: 0;' : null};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    position: absolute;
-  }
 `;
 
 const VideoWrapper = styled.div`
