@@ -26,7 +26,6 @@ it('renders correctly', () => {
     .c2 {
       box-sizing: border-box;
       width: 100%;
-      height: 50px;
       padding: 13px;
       margin: 10px 0;
       font-size: 1.2rem;
@@ -45,19 +44,19 @@ it('renders correctly', () => {
     }
 
     .c2:focus::-webkit-input-placeholder {
-      color: transparent;
-    }
-
-    .c2:focus:-moz-placeholder {
-      color: transparent;
+      color: #666;
     }
 
     .c2:focus::-moz-placeholder {
-      color: transparent;
+      color: #666;
     }
 
     .c2:focus:-ms-input-placeholder {
-      color: transparent;
+      color: #666;
+    }
+
+    .c2:focus::placeholder {
+      color: #666;
     }
 
     .c0 {
@@ -79,6 +78,8 @@ it('renders correctly', () => {
     <label
       className="c0"
       htmlFor="Acessibility info go here"
+      name="fullname"
+      placeholder="This is the hint text"
     >
       <span
         className="c1"
@@ -90,6 +91,7 @@ it('renders correctly', () => {
       <input
         aria-describedby="Acessibility info go here"
         className="c2"
+        id="Acessibility info go here"
         name="fullname"
         placeholder="This is the hint text"
         type="text"

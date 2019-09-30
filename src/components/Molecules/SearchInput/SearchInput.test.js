@@ -15,7 +15,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c7 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
@@ -25,7 +25,6 @@ it('renders correctly', () => {
     .c8 {
       box-sizing: border-box;
       width: 100%;
-      height: 50px;
       padding: 13px;
       margin: 10px 0;
       font-size: 1.2rem;
@@ -44,22 +43,22 @@ it('renders correctly', () => {
     }
 
     .c8:focus::-webkit-input-placeholder {
-      color: transparent;
-    }
-
-    .c8:focus:-moz-placeholder {
-      color: transparent;
+      color: #666;
     }
 
     .c8:focus::-moz-placeholder {
-      color: transparent;
+      color: #666;
     }
 
     .c8:focus:-ms-input-placeholder {
-      color: transparent;
+      color: #666;
     }
 
-    .c4 {
+    .c8:focus::placeholder {
+      color: #666;
+    }
+
+    .c5 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -69,7 +68,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c5 {
+    .c6 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -117,7 +116,7 @@ it('renders correctly', () => {
       margin-right: 0.5rem;
     }
 
-    .c7 {
+    .c4 {
       margin: 0;
       padding: 0;
       max-width: 100%;
@@ -125,7 +124,7 @@ it('renders correctly', () => {
       outline: #E52630;
     }
 
-    .c7:focus {
+    .c4:focus {
       border: 0;
     }
 
@@ -166,7 +165,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c7 {
+      .c4 {
         height: 100px;
         font-size: 2.075rem;
       }
@@ -206,11 +205,15 @@ it('renders correctly', () => {
             className="c3"
           >
             <label
-              className="c4"
+              className="c4 c5"
               htmlFor="search"
+              name="search"
+              onChange={[Function]}
+              placeholder=""
+              value=""
             >
               <span
-                className="c5 c6"
+                className="c6 c7"
                 color="inherit"
                 size="s"
               >
@@ -218,7 +221,8 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby="search"
-                className="c7 c8"
+                className="c4 c8"
+                id="search"
                 name="search"
                 onChange={[Function]}
                 placeholder=""
@@ -232,11 +236,14 @@ it('renders correctly', () => {
             className="c9"
           >
             <label
-              className="c4"
+              className="c10 c5"
+              disabled="disabled"
               htmlFor=""
+              name="action"
+              placeholder=""
             >
               <span
-                className="c5 c6"
+                className="c6 c7"
                 color="inherit"
                 size="s"
               >
@@ -246,6 +253,7 @@ it('renders correctly', () => {
                 aria-describedby=""
                 className="c10 c8"
                 disabled="disabled"
+                id=""
                 name="action"
                 placeholder=""
                 type="submit"

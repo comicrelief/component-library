@@ -9,10 +9,9 @@ import hideVisually from '../../../theme/shared/hideVisually';
 /**
  * Input component
  */
-const StyledInput = styled.input`
+const InputField = styled.input`
   box-sizing: border-box;
   width: 100%;
-  height: 50px;
   padding: 13px;
   margin: 10px 0;
   font-size: ${({ theme }) => theme.fontSize('m')};
@@ -27,18 +26,10 @@ const StyledInput = styled.input`
   :focus {
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
-  :focus::-webkit-input-placeholder {
-    color: transparent;
+
+  :focus::placeholder {
+    color: ${({ theme }) => theme.color('grey_for_forms')};
   }
-  :focus:-moz-placeholder {
-    color: transparent;
-  } /* FF 4-18 */
-  :focus::-moz-placeholder {
-    color: transparent;
-  } /* FF 19+ */
-  :focus:-ms-input-placeholder {
-    color: transparent;
-  } /* IE 10+ */
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     max-width: 290px;
@@ -59,12 +50,12 @@ const Label = styled.label.attrs(({ id }) => ({
  * Text error component
  */
 const ErrorText = styled(Text)`
+  display: inline-block;
   color: red;
   font-weight: ${({ weight }) => weight};
   :before {
     position: relative;
     content: '';
-    display: inline-block;
     top: 2px;
     vertical-align: middle;
     margin-right: 6px;
@@ -86,15 +77,16 @@ const TextLabel = styled(Text)`
 const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
-    <Label htmlFor={id}>
+    <Label htmlFor={id} {...rest}>
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
       </TextLabel>
-      <StyledInput
+      <InputField
         type={type}
         {...rest}
         error={error ? 1 : 0}
         aria-describedby={hasAria ? id : undefined}
+        id={id}
       />
       {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
@@ -104,8 +96,8 @@ const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  errorMsg: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  errorMsg: PropTypes.string,
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
@@ -115,7 +107,9 @@ Input.propTypes = {
 
 Input.defaultProps = {
   showLabel: true,
-  hasAria: true
+  hasAria: true,
+  placeholder: '',
+  errorMsg: ''
 };
 
 export default Input;
