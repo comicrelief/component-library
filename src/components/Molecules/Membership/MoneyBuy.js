@@ -3,50 +3,45 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
-import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 
 const MoneyBox = styled(Input)`
-  position: relative;
-  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  font-weight: 800;
-  letter-spacing: -1px;
   display: block;
-  margin: 0;
-  max-width: 100%;
-  flex: 0 0 30%;
-  padding: ${spacing('md')} 0;
-  cursor: pointer;
-
-  ${media('small')} {
-    padding: ${spacing('l')} 0;
+  input {
+    background-color: ${({ boxBorderColor, current }) =>
+      boxBorderColor === current && 'red'};
   }
 `;
 
-const MoneyBuy = ({ amount, currency, description, ...rest }) => {
+const MoneyBuy = ({
+  setOtherAmount,
+  amount,
+  currency,
+  description,
+  ...rest
+}) => {
   return (
-    <>
-      <MoneyBox
-        {...rest}
-        name={description}
-        aria-label={description}
-        value={`${currency} ${amount}`}
-        placeholder={`${currency} ${amount}`}
-        type="button"
-        label=""
-        errorMsg=""
-        id={description}
-        showLabel
-        onClick={() => console.log(amount)}
-      />
-    </>
+    <MoneyBox
+      {...rest}
+      name={description}
+      aria-label={description}
+      value={`${currency} ${amount}`}
+      placeholder={`${currency} ${amount}`}
+      type="button"
+      label=""
+      errorMsg=""
+      id={description}
+      showLabel
+      onClick={setOtherAmount}
+    />
   );
 };
 
 MoneyBuy.propTypes = {
   amount: PropTypes.string,
   currency: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  // Function already set does'nt need to be passed as props
+  setOtherAmount: PropTypes.func.isRequired
 };
 
 MoneyBuy.defaultProps = {

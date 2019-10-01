@@ -10,6 +10,9 @@ import hideVisually from '../../../theme/shared/hideVisually';
  * Input component
  */
 const InputField = styled.input`
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  font-weight: 400;
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   padding: 13px;

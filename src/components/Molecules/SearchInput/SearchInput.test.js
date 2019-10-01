@@ -23,6 +23,9 @@ it('renders correctly', () => {
     }
 
     .c8 {
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      position: relative;
       box-sizing: border-box;
       width: 100%;
       padding: 13px;
