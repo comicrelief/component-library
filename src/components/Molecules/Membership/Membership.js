@@ -2,15 +2,23 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import MoneyBuy from './MoneyBuy';
-import { Wrapper, Form, MoneyBuys, AmountField } from './Membership.style';
+import {
+  Copy,
+  Wrapper,
+  Form,
+  MoneyBuys,
+  AmountField
+} from './Membership.style';
 
 const Membership = ({ data: { data }, ...rest }) => {
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
+  const [moneyBuyCopy, setMoneyBuyCopy] = useState('');
 
-  const changeAmount = id => {
+  const changeAmount = (id, copy) => {
     setBoxBorderColor(id);
+    setMoneyBuyCopy(copy);
     setInputBorderColor(false);
     setUserInput('');
   };
@@ -19,8 +27,9 @@ const Membership = ({ data: { data }, ...rest }) => {
     setUserInput(input);
   };
 
-  const handleUserInput = () => {
+  const hightlightInput = () => {
     setBoxBorderColor('');
+    setMoneyBuyCopy('other copy');
     setInputBorderColor(true);
   };
 
@@ -28,12 +37,12 @@ const Membership = ({ data: { data }, ...rest }) => {
     <Wrapper>
       <Form>
         <MoneyBuys>
-          {data.map(({ moneyBuy: { value, id } }) => (
+          {data.map(({ moneyBuy: { value, id, copy } }) => (
             <MoneyBuy
               boxBorderColor={boxBorderColor}
               current={id}
               amount={`${value}`}
-              setOtherAmount={() => changeAmount(id, value)}
+              setOtherAmount={() => changeAmount(id, copy)}
               key={id}
             />
           ))}
@@ -50,12 +59,13 @@ const Membership = ({ data: { data }, ...rest }) => {
           value={userInput}
           max="5000"
           min="1"
-          pattern="[^[0-9]+([,.][0-9]+)?$]"
+          pattern="[^[0-9]+([,.][0-9]+)£?$]"
           placeholder="0"
           onChange={e => handleChange(e.target.value)}
-          onClick={handleUserInput}
+          onClick={hightlightInput}
         />
       </Form>
+      <Copy as="p">{moneyBuyCopy}</Copy>
     </Wrapper>
   );
 };

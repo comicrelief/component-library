@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
+import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 
@@ -60,10 +61,17 @@ const AmountField = styled(Input)`
 
   span {
     flex: 0 0 60%;
+    font-weight: 400;
 
     ${media('small')} {
       flex: 0 0 40%;
     }
   }
 `;
-export { Wrapper, Form, MoneyBuys, AmountField };
+
+const Copy = styled(Text)`
+  margin-top: ${spacing('l')};
+  line-height: 1.5;
+`;
+
+export { Copy, Wrapper, Form, MoneyBuys, AmountField };
