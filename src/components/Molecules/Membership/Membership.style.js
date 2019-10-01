@@ -15,6 +15,20 @@ const Wrapper = styled.div`
   }
 `;
 
+const Header = styled.div`
+  margin-bottom: ${spacing('l')};
+  text-align: center;
+`;
+
+const Title = styled(Text)`
+  text-align: center;
+`;
+
+const Story = styled(Text)``;
+const FormWrapper = styled.div`
+  height: 400px;
+`;
+
 const Form = styled.form`
   display: flex;
   justify-content: space-between;
@@ -24,6 +38,9 @@ const Form = styled.form`
     margin-bottom: ${spacing('l')};
   }
 
+  h3 {
+    margin: ${spacing('l')} 0;
+  }
   input {
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     max-width: 100%;
@@ -74,4 +91,14 @@ const Copy = styled(Text)`
   line-height: 1.5;
 `;
 
-export { Copy, Wrapper, Form, MoneyBuys, AmountField };
+export {
+  Copy,
+  FormWrapper,
+  Header,
+  Wrapper,
+  Form,
+  MoneyBuys,
+  AmountField,
+  Story,
+  Title
+};

@@ -4,13 +4,17 @@ import PropTypes from 'prop-types';
 import MoneyBuy from './MoneyBuy';
 import {
   Copy,
+  FormWrapper,
+  Header,
   Wrapper,
   Form,
   MoneyBuys,
-  AmountField
+  AmountField,
+  Story,
+  Title
 } from './Membership.style';
 
-const Membership = ({ data: { data }, ...rest }) => {
+const Membership = ({ data, ...rest }) => {
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
@@ -27,45 +31,55 @@ const Membership = ({ data: { data }, ...rest }) => {
     setUserInput(input);
   };
 
-  const hightlightInput = () => {
+  const hightlightInput = otherDescription => {
     setBoxBorderColor('');
-    setMoneyBuyCopy('other copy');
+    setMoneyBuyCopy(otherDescription);
     setInputBorderColor(true);
   };
 
   return (
     <Wrapper>
-      <Form>
-        <MoneyBuys>
-          {data.map(({ moneyBuy: { value, id, copy } }) => (
-            <MoneyBuy
-              boxBorderColor={boxBorderColor}
-              current={id}
-              amount={`${value}`}
-              setOtherAmount={() => changeAmount(id, copy)}
-              key={id}
-            />
-          ))}
-        </MoneyBuys>
-        <AmountField
-          name="membership_amount"
-          type="number"
-          inputBorderColor={inputBorderColor}
-          label="Other amount"
-          errorMsg=""
-          id="Money buy description"
-          showLabel
-          {...rest}
-          value={userInput}
-          max="5000"
-          min="1"
-          pattern="[^[0-9]+([,.][0-9]+)£?$]"
-          placeholder="0"
-          onChange={e => handleChange(e.target.value)}
-          onClick={hightlightInput}
-        />
-      </Form>
-      <Copy as="p">{moneyBuyCopy}</Copy>
+      <Header>
+        <Title as="h2">Help someone like Jordan see a better tomorrow</Title>
+        <Story as="p">
+          Jordan was close to suicide - which is now the biggest killer of men
+          under 45 in the UK. Join now and help save lives.
+        </Story>
+      </Header>
+      <FormWrapper>
+        <Form>
+          <Title as="h3">Choose your monthly donation</Title>
+          <MoneyBuys>
+            {data.data.map(({ moneyBuy: { value, id, description } }) => (
+              <MoneyBuy
+                boxBorderColor={boxBorderColor}
+                current={id}
+                amount={`${value}`}
+                setOtherAmount={() => changeAmount(id, description)}
+                key={id}
+              />
+            ))}
+          </MoneyBuys>
+          <AmountField
+            name="membership_amount"
+            type="number"
+            inputBorderColor={inputBorderColor}
+            label="Other amount"
+            errorMsg=""
+            id="Money buy description"
+            showLabel
+            {...rest}
+            value={userInput}
+            max="5000"
+            min="1"
+            pattern="[^[0-9]+([,.][0-9]+)£?$]"
+            placeholder="0"
+            onChange={e => handleChange(e.target.value)}
+            onClick={() => hightlightInput(data.otherDescription)}
+          />
+        </Form>
+        <Copy as="p">{moneyBuyCopy}</Copy>
+      </FormWrapper>
     </Wrapper>
   );
 };
@@ -75,6 +89,6 @@ Membership.propTypes = {
 };
 
 Membership.defaultProps = {
-  data: []
+  data: {}
 };
 export default Membership;
