@@ -1,101 +1,10 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import Input from '../../Atoms/Input/Input';
 import MoneyBuy from './MoneyBuy';
-import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
+import { Wrapper, Form, MoneyBuys, AmountField } from './Membership.style';
 
-const Wrapper = styled.div`
-  max-width: 320px;
-  padding: 0 ${spacing('md')};
-
-  ${media('small')} {
-    max-width: 420px;
-    padding: 0 ${spacing('l')};
-  }
-`;
-
-const Form = styled.form`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-
-  > :not(:last-child) {
-    margin-bottom: ${spacing('l')};
-  }
-
-  input {
-    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
-    max-width: 100%;
-    margin: 0;
-  }
-`;
-
-const MoneyBuys = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  label {
-    flex: 0 0 30%;
-    cursor: pointer;
-
-    input {
-      cursor: pointer;
-      padding: ${spacing('md')};
-    }
-  }
-`;
-
-const AmountField = styled(Input)`
-  max-width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-  input {
-    background: transparent;
-    padding: ${spacing('sm')} ${spacing('md')};
-    ${({ inputBorderColor }) =>
-      inputBorderColor && ':focus { outline: none; border: 2px solid red;}'};
-  }
-
-  span {
-    flex: 0 0 60%;
-
-    ${media('small')} {
-      flex: 0 0 40%;
-    }
-  }
-`;
-const data = [
-  {
-    moneyBuy: {
-      id: 1,
-      value: 10,
-      description:
-        'a month could pay for two mums in the UK to attend a regular support group for postnatal depression.'
-    }
-  },
-  {
-    moneyBuy: {
-      id: 2,
-      value: 20,
-      description:
-        'a month could pay for two mums in the UK to attend a regular support group for postnatal depression.'
-    }
-  },
-  {
-    moneyBuy: {
-      id: 3,
-      value: 30,
-      description:
-        'a month could pay for two mums in the UK to attend a regular support group for postnatal depression.'
-    }
-  }
-];
-const Membership = ({ ...rest }) => {
+const Membership = ({ data: { data }, ...rest }) => {
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
@@ -114,8 +23,6 @@ const Membership = ({ ...rest }) => {
     setBoxBorderColor('');
     setInputBorderColor(true);
   };
-
-  console.log(inputBorderColor);
 
   return (
     <Wrapper>
@@ -153,9 +60,11 @@ const Membership = ({ ...rest }) => {
   );
 };
 
-// Membership.propTypes = {
-// };
+Membership.propTypes = {
+  data: PropTypes.objectOf(PropTypes.shape)
+};
 
-// Membership.defaultProps = {
-// };
+Membership.defaultProps = {
+  data: []
+};
 export default Membership;
