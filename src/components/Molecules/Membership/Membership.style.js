@@ -7,7 +7,6 @@ import { media } from '../../../theme/shared/size';
 
 const Wrapper = styled.div`
   max-width: 320px;
-  padding: 0 ${spacing('md')};
   text-align: center;
 
   ${media('small')} {
@@ -17,14 +16,17 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
+  padding: 0 ${spacing('md')};
   margin-bottom: ${spacing('l')};
 `;
 
 const FormWrapper = styled.div`
+  box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
   height: 400px;
 `;
 
 const Form = styled.form`
+  padding: 0 ${spacing('md')};
   display: flex;
   justify-content: space-between;
   flex-direction: column;

@@ -51,7 +51,7 @@ const Membership = ({ data, ...rest }) => {
       </Header>
       <FormWrapper>
         <Form>
-          <Text as="h3">Choose your monthly donation</Text>
+          <Text tag="h3">Choose your monthly donation</Text>
           <MoneyBuys>
             {data.data.map(
               ({ moneyBuy: { value, id, description } }, index) => (
@@ -83,8 +83,8 @@ const Membership = ({ data, ...rest }) => {
             onChange={e => handleChange(e.target.value)}
             onClick={() => hightlightInput(data.otherDescription)}
           />
+          <Copy as="p">{moneyBuyCopy}</Copy>
         </Form>
-        <Copy as="p">{moneyBuyCopy}</Copy>
       </FormWrapper>
     </Wrapper>
   );
