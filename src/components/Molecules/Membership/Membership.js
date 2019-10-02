@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Text from '../../Atoms/Text/Text';
 import MoneyBuy from './MoneyBuy';
 import {
   Copy,
@@ -9,9 +10,7 @@ import {
   Wrapper,
   Form,
   MoneyBuys,
-  AmountField,
-  Story,
-  Title
+  AmountField
 } from './Membership.style';
 
 const Membership = ({ data, ...rest }) => {
@@ -40,15 +39,17 @@ const Membership = ({ data, ...rest }) => {
   return (
     <Wrapper>
       <Header>
-        <Title as="h2">Help someone like Jordan see a better tomorrow</Title>
-        <Story as="p">
+        <Text tag="h2" size="l" weight="800">
+          Help someone like Jordan see a better tomorrow
+        </Text>
+        <Text tag="p">
           Jordan was close to suicide - which is now the biggest killer of men
           under 45 in the UK. Join now and help save lives.
-        </Story>
+        </Text>
       </Header>
       <FormWrapper>
         <Form>
-          <Title as="h3">Choose your monthly donation</Title>
+          <Text as="h3">Choose your monthly donation</Text>
           <MoneyBuys>
             {data.data.map(({ moneyBuy: { value, id, description } }) => (
               <MoneyBuy

@@ -8,6 +8,7 @@ import { media } from '../../../theme/shared/size';
 const Wrapper = styled.div`
   max-width: 320px;
   padding: 0 ${spacing('md')};
+  text-align: center;
 
   ${media('small')} {
     max-width: 420px;
@@ -17,14 +18,8 @@ const Wrapper = styled.div`
 
 const Header = styled.div`
   margin-bottom: ${spacing('l')};
-  text-align: center;
 `;
 
-const Title = styled(Text)`
-  text-align: center;
-`;
-
-const Story = styled(Text)``;
 const FormWrapper = styled.div`
   height: 400px;
 `;
@@ -73,21 +68,21 @@ const AmountField = styled(Input)`
   align-items: center;
   justify-content: space-around;
 
+  span {
+    flex: 0 0 60%;
+    font-weight: 400;
+
+    ${media('small')} {
+      flex: 0 0 40%;
+    }
+  }
+
   input {
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')};
     ${({ inputBorderColor, theme }) =>
       inputBorderColor &&
       `:focus { outline: none; border: 2px solid ${theme.color('red')};`}
-
-    span {
-      flex: 0 0 60%;
-      font-weight: 400;
-
-      ${media('small')} {
-        flex: 0 0 40%;
-      }
-    }
   }
 `;
 
@@ -96,14 +91,4 @@ const Copy = styled(Text)`
   line-height: 1.5;
 `;
 
-export {
-  Copy,
-  FormWrapper,
-  Header,
-  Wrapper,
-  Form,
-  MoneyBuys,
-  AmountField,
-  Story,
-  Title
-};
+export { Copy, FormWrapper, Header, Wrapper, Form, MoneyBuys, AmountField };
