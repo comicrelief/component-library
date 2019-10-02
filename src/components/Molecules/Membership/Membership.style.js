@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 
@@ -22,7 +23,7 @@ const Header = styled.div`
 
 const FormWrapper = styled.div`
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
-  height: 400px;
+  height: 430px;
 `;
 
 const Form = styled.form`
@@ -92,4 +93,22 @@ const Copy = styled(Text)`
   line-height: 1.5;
 `;
 
-export { Copy, FormWrapper, Header, Wrapper, Form, MoneyBuys, AmountField };
+const Button = styled(Link)`
+  padding: ${spacing('md')} ${spacing('sm')};
+
+  ${media('small')} {
+    padding: ${spacing('md')} ${spacing('l')};
+    margin: 0 auto ${spacing('l')};
+  }
+`;
+
+export {
+  Button,
+  Copy,
+  FormWrapper,
+  Header,
+  Wrapper,
+  Form,
+  MoneyBuys,
+  AmountField
+};

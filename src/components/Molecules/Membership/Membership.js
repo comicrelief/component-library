@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import MoneyBuy from './MoneyBuy';
 import {
+  Button,
   Copy,
   FormWrapper,
   Header,
@@ -91,6 +92,9 @@ const Membership = ({ data, ...rest }) => {
             onChange={e => handleChange(e.target.value)}
             onClick={() => hightlightInput(data.otherDescription)}
           />
+          <Button type="button" href="">
+            Donate
+          </Button>
           {moneyBuyCopy && <Copy as="p">{moneyBuyCopy}</Copy>}
         </Form>
       </FormWrapper>
