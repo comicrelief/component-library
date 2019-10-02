@@ -41,6 +41,7 @@ const Form = styled.form`
   h3 {
     margin: ${spacing('l')} 0;
   }
+
   input {
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     max-width: 100%;
@@ -54,11 +55,14 @@ const MoneyBuys = styled.div`
 
   label {
     flex: 0 0 30%;
-    cursor: pointer;
 
     input {
       cursor: pointer;
       padding: ${spacing('md')};
+    }
+
+    :hover input {
+      border-color: ${({ theme }) => theme.color('red')};
     }
   }
 `;
@@ -72,16 +76,17 @@ const AmountField = styled(Input)`
   input {
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')};
-    ${({ inputBorderColor }) =>
-      inputBorderColor && ':focus { outline: none; border: 2px solid red;}'};
-  }
+    ${({ inputBorderColor, theme }) =>
+      inputBorderColor &&
+      `:focus { outline: none; border: 2px solid ${theme.color('red')};`}
 
-  span {
-    flex: 0 0 60%;
-    font-weight: 400;
+    span {
+      flex: 0 0 60%;
+      font-weight: 400;
 
-    ${media('small')} {
-      flex: 0 0 40%;
+      ${media('small')} {
+        flex: 0 0 40%;
+      }
     }
   }
 `;
