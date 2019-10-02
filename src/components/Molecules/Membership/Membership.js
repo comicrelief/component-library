@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
@@ -18,7 +18,7 @@ const Membership = ({ data, ...rest }) => {
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
-  const [moneyBuyCopy, setMoneyBuyCopy] = useState('');
+  const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
 
   const changeAmount = (id, copy) => {
     setIsSelected(false);
@@ -38,6 +38,27 @@ const Membership = ({ data, ...rest }) => {
     setInputBorderColor(true);
   };
 
+  // Display copy for preselected amount
+  useEffect(() => {
+    data.data.map(({ moneyBuy: { description } }, index) => {
+      return isSelected && index === 1 && setMoneyBuyCopy(description);
+    });
+  }, [data.data, isSelected]);
+
+  const moneyBoxes = data.data.map(
+    ({ moneyBuy: { value, id, description } }, index) => (
+      <MoneyBuy
+        isSelected={index === 1 && isSelected}
+        boxBorderColor={boxBorderColor}
+        current={id}
+        amount={`${value}`}
+        setOtherAmount={() => changeAmount(id, description)}
+        key={id}
+        moneyBuyCopy={index === 1 && description}
+      />
+    )
+  );
+
   return (
     <Wrapper>
       <Header>
@@ -52,20 +73,7 @@ const Membership = ({ data, ...rest }) => {
       <FormWrapper>
         <Form>
           <Text tag="h3">Choose your monthly donation</Text>
-          <MoneyBuys>
-            {data.data.map(
-              ({ moneyBuy: { value, id, description } }, index) => (
-                <MoneyBuy
-                  isSelected={index === 1 && isSelected}
-                  boxBorderColor={boxBorderColor}
-                  current={id}
-                  amount={`${value}`}
-                  setOtherAmount={() => changeAmount(id, description)}
-                  key={id}
-                />
-              )
-            )}
-          </MoneyBuys>
+          <MoneyBuys>{moneyBoxes}</MoneyBuys>
           <AmountField
             name="membership_amount"
             type="number"
@@ -83,7 +91,7 @@ const Membership = ({ data, ...rest }) => {
             onChange={e => handleChange(e.target.value)}
             onClick={() => hightlightInput(data.otherDescription)}
           />
-          <Copy as="p">{moneyBuyCopy}</Copy>
+          {moneyBuyCopy && <Copy as="p">{moneyBuyCopy}</Copy>}
         </Form>
       </FormWrapper>
     </Wrapper>

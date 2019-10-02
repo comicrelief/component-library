@@ -89,7 +89,6 @@ const AmountField = styled(Input)`
 `;
 
 const Copy = styled(Text)`
-  margin-top: ${spacing('l')};
   line-height: 1.5;
 `;
 
