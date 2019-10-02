@@ -14,12 +14,14 @@ import {
 } from './Membership.style';
 
 const Membership = ({ data, ...rest }) => {
+  const [isSelected, setIsSelected] = useState(true);
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState('');
 
   const changeAmount = (id, copy) => {
+    setIsSelected(false);
     setBoxBorderColor(id);
     setMoneyBuyCopy(copy);
     setInputBorderColor(false);
@@ -51,15 +53,18 @@ const Membership = ({ data, ...rest }) => {
         <Form>
           <Text as="h3">Choose your monthly donation</Text>
           <MoneyBuys>
-            {data.data.map(({ moneyBuy: { value, id, description } }) => (
-              <MoneyBuy
-                boxBorderColor={boxBorderColor}
-                current={id}
-                amount={`${value}`}
-                setOtherAmount={() => changeAmount(id, description)}
-                key={id}
-              />
-            ))}
+            {data.data.map(
+              ({ moneyBuy: { value, id, description } }, index) => (
+                <MoneyBuy
+                  isSelected={index === 1 && isSelected}
+                  boxBorderColor={boxBorderColor}
+                  current={id}
+                  amount={`${value}`}
+                  setOtherAmount={() => changeAmount(id, description)}
+                  key={id}
+                />
+              )
+            )}
           </MoneyBuys>
           <AmountField
             name="membership_amount"

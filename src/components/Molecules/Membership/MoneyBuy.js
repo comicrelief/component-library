@@ -7,8 +7,8 @@ import Input from '../../Atoms/Input/Input';
 const MoneyBox = styled(Input)`
   display: block;
   input {
-    background-color: ${({ boxBorderColor, current }) =>
-      boxBorderColor === current && 'red'};
+    background-color: ${({ boxBorderColor, current, isSelected }) =>
+      (boxBorderColor === current || isSelected) && 'red'};
   }
 `;
 
