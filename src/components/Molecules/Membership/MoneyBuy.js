@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 
 const MoneyBox = styled(Input)`
   display: block;
   input {
-    background-color: ${({ boxBorderColor, current, isSelected }) =>
-      (boxBorderColor === current || isSelected) && 'red'};
+    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
+    font-size: ${({ theme }) => theme.fontSize('l')};
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    ${({ boxBorderColor, current, isSelected }) =>
+      (boxBorderColor === current || isSelected) &&
+      css`
+        border-color: ${({ theme }) => theme.color('red')};
+        background-color: ${({ theme }) => theme.color('red')};
+        color: ${({ theme }) => theme.color('white')};
+      `}
   }
 `;
 

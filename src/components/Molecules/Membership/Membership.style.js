@@ -38,7 +38,6 @@ const Form = styled.form`
   }
 
   input {
-    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     max-width: 100%;
     margin: 0;
   }
@@ -78,6 +77,7 @@ const AmountField = styled(Input)`
   }
 
   input {
+    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')};
     ${({ inputBorderColor, theme }) =>
