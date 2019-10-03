@@ -6,8 +6,10 @@ import MoneyBuy from './MoneyBuy';
 import {
   Button,
   Copy,
+  FormFieldset,
   FormWrapper,
   Header,
+  Label,
   Wrapper,
   Form,
   MoneyBuys,
@@ -75,23 +77,28 @@ const Membership = ({ data, ...rest }) => {
         <Form>
           <Text tag="h3">Choose your monthly donation</Text>
           <MoneyBuys>{moneyBoxes}</MoneyBuys>
-          <AmountField
-            name="membership_amount"
-            type="number"
-            inputBorderColor={inputBorderColor}
-            label="Other amount"
-            errorMsg=""
-            id="Money buy description"
-            showLabel
-            {...rest}
-            value={userInput}
-            max="5000"
-            min="1"
-            pattern="[^[0-9]+([,.][0-9]+)£?$]"
-            placeholder="0"
-            onChange={e => handleChange(e.target.value)}
-            onClick={() => hightlightInput(data.otherDescription)}
-          />
+          <FormFieldset>
+            <Label size="s" weight="500">
+              Other amount
+            </Label>
+            <AmountField
+              name="membership_amount"
+              type="number"
+              inputBorderColor={inputBorderColor}
+              label="£"
+              errorMsg=""
+              id="Money buy description"
+              showLabel
+              {...rest}
+              value={userInput}
+              max="5000"
+              min="1"
+              pattern="[^[0-9]+([,.][0-9]+)£?$]"
+              placeholder="0"
+              onChange={e => handleChange(e.target.value)}
+              onClick={() => hightlightInput(data.otherDescription)}
+            />
+          </FormFieldset>
           <Button type="button" href="">
             Donate
           </Button>

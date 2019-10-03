@@ -23,7 +23,11 @@ const Header = styled.div`
 
 const FormWrapper = styled.div`
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
-  height: 430px;
+  height: 450px;
+
+  ${media('small')} {
+    height: 430px;
+  }
 `;
 
 const Form = styled.form`
@@ -33,7 +37,7 @@ const Form = styled.form`
   flex-direction: column;
 
   > :not(:last-child) {
-    margin-bottom: ${spacing('l')};
+    margin-bottom: ${spacing('md')};
   }
 
   h3 {
@@ -64,25 +68,38 @@ const MoneyBuys = styled.div`
   }
 `;
 
-const AmountField = styled(Input)`
-  max-width: 100%;
-  flex-direction: row;
+const FormFieldset = styled.div`
+  display: flex;
   align-items: center;
-  justify-content: space-around;
+`;
+
+const Label = styled(Text)`
+  margin-right: auto;
+`;
+
+const AmountField = styled(Input)`
+  position: relative;
+  flex: 0 0 50%;
+  font-weight: 400;
+
+  ${media('small')} {
+    flex: 0 0 60%;
+  }
 
   span {
-    flex: 0 0 60%;
-    font-weight: 400;
-
-    ${media('small')} {
-      flex: 0 0 40%;
-    }
+    position: absolute;
+    padding: 0px 15px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    font-weight: 500;
   }
 
   input {
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     background: transparent;
-    padding: ${spacing('sm')} ${spacing('md')};
+    padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     ${({ inputBorderColor, theme }) =>
       inputBorderColor &&
       `:focus { outline: none; border: 2px solid ${theme.color('red')};`}
@@ -105,8 +122,10 @@ const Button = styled(Link)`
 export {
   Button,
   Copy,
+  FormFieldset,
   FormWrapper,
   Header,
+  Label,
   Wrapper,
   Form,
   MoneyBuys,
