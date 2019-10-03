@@ -30,6 +30,12 @@ const FormWrapper = styled.div`
   }
 `;
 
+const Error = styled(Text)`
+  color: #ea0043;
+  font-size: 15px;
+  font-weight: 500;
+`;
+
 const Form = styled.form`
   padding: 0 ${spacing('md')};
   display: flex;
@@ -41,12 +47,16 @@ const Form = styled.form`
   }
 
   h3 {
-    margin: ${spacing('l')} 0;
+    margin-top: ${spacing('md')};
   }
 
   input {
     max-width: 100%;
     margin: 0;
+  }
+
+  ${Error} {
+    margin: ${spacing('l')} 0;
   }
 `;
 
@@ -122,6 +132,7 @@ const Button = styled(Link)`
 export {
   Button,
   Copy,
+  Error,
   FormFieldset,
   FormWrapper,
   Header,
