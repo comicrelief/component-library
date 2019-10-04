@@ -20,6 +20,9 @@ const Signup = ({ data, ...rest }) => {
   // Hightlight one of the money buy box when page load
   const [isSelected, setIsSelected] = useState(true);
 
+  const [box1, setBox1] = useState('');
+  const [box2, setBox2] = useState('');
+  const [box3, setBox3] = useState('');
   const [errorMsg, setErrorMsg] = useState(false);
   const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
@@ -42,7 +45,15 @@ const Signup = ({ data, ...rest }) => {
     if (!isAmountValid(input)) {
       setMoneyBuyCopy(false);
       setErrorMsg(true);
+    } else if (input * 1 === box1.value) {
+      setBoxBorderColor(box1.id);
+      setMoneyBuyCopy(box1.description);
+    } else if (input * 1 === box2.value) {
+      selectMoneyBuy(box2.id, box2.description);
+    } else if (input * 1 === box3.value) {
+      selectMoneyBuy(box3.id, box3.description);
     } else {
+      setBoxBorderColor(false);
       setErrorMsg(false);
       setMoneyBuyCopy(otherDescription);
     }
@@ -50,10 +61,11 @@ const Signup = ({ data, ...rest }) => {
   };
 
   const hightlightInput = otherDescription => {
+    if (isSelected) setIsSelected(false);
     if (errorMsg) {
       setMoneyBuyCopy(false);
     } else {
-      setBoxBorderColor('');
+      setBoxBorderColor(false);
       setMoneyBuyCopy(otherDescription);
       setInputBorderColor(true);
     }
@@ -61,8 +73,12 @@ const Signup = ({ data, ...rest }) => {
 
   // Set correct money buy copy for the preselected money buy when page load
   useEffect(() => {
-    data.data.data.map(({ moneyBuy: { description } }, index) => {
-      return isSelected && index === 1 && setMoneyBuyCopy(description);
+    data.data.data.map(({ moneyBuy }, index) => {
+      // Store money buy
+      if (index === 0) setBox1(moneyBuy);
+      if (index === 1) setBox2(moneyBuy);
+      if (index === 2) setBox3(moneyBuy);
+      return isSelected && index === 1 && setMoneyBuyCopy(moneyBuy.description);
     });
   }, [data.data.data, isSelected]);
 
@@ -104,8 +120,10 @@ const Signup = ({ data, ...rest }) => {
             min="1"
             pattern="[^[1-9]+$]"
             placeholder="0.00"
-            onChange={e => handleChange(e.target.value, data.otherDescription)}
-            onClick={() => hightlightInput(data.otherDescription)}
+            onChange={e =>
+              handleChange(e.target.value, data.data.otherDescription)
+            }
+            onClick={() => hightlightInput(data.data.otherDescription)}
             onKeyPress={e => onKeyPress(e)}
           />
         </FormFieldset>
