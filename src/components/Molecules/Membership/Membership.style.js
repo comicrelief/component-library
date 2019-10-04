@@ -43,7 +43,7 @@ const Form = styled.form`
   flex-direction: column;
 
   > :not(:last-child) {
-    margin-bottom: ${spacing('md')};
+    margin-bottom: ${spacing('l')};
   }
 
   h3 {
