@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
-import Link from '../../Atoms/Link/Link';
+// import Link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 
@@ -120,8 +120,15 @@ const Copy = styled(Text)`
   line-height: 1.5;
 `;
 
-const Button = styled(Link)`
+const Button = styled.button`
+  color: ${({ theme }) => theme.color('white')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: bold;
+  cursor: pointer;
   padding: ${spacing('md')} ${spacing('sm')};
+  background: ${({ theme }) => theme.color('red')};
+  border: none;
+  border-radius: 100px;
 
   ${media('small')} {
     padding: ${spacing('md')} ${spacing('l')};
