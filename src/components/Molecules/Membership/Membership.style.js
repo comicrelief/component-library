@@ -112,7 +112,8 @@ const AmountField = styled(Input)`
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     ${({ inputBorderColor, theme }) =>
       inputBorderColor &&
-      `:focus { outline: none; border: 2px solid ${theme.color('red')};`}
+      `border: 2px solid ${theme.color('red')};
+      :focus { outline: none; border: 2px solid ${theme.color('red')};`}
   }
 `;
 

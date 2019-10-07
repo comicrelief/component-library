@@ -33,6 +33,7 @@ const Signup = ({
   const [box3, setBox3] = useState('');
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState('');
+  const [userInput, setUserInput] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -41,8 +42,14 @@ const Signup = ({
     setIsSelected(false);
     setErrorMsg(false);
     setAmountDonate('');
-    if (inputBorderColor) {
+    if (inputBorderColor && userInput * 1 !== value * 1) {
       setInputBorderColor(false);
+    }
+    if (userInput * 1 === value * 1) {
+      setUserInput(value);
+      setInputBorderColor(true);
+    } else {
+      setUserInput('');
     }
     setBoxBorderColor(value);
     setMoneyBuyCopy(copy);
@@ -54,9 +61,8 @@ const Signup = ({
     if (!isAmountValid(input)) {
       setMoneyBuyCopy(false);
       setErrorMsg(true);
-      setAmountDonate(0);
     } else if (input * 1 === box1.amount) {
-      setMoneyBuyCopy(box1.description, box1.amount);
+      selectMoneyBuy(box1.description, box1.amount);
       setAmountDonate(input);
     } else if (input * 1 === box2.amount) {
       selectMoneyBuy(box2.description, box2.amount);
@@ -70,17 +76,20 @@ const Signup = ({
       setMoneyBuyCopy(otherDescription);
       setAmountDonate(input);
     }
+    setInputBorderColor(true);
+    setUserInput(input);
   };
 
-  const hightlightInput = otherDescription => {
+  const hightlightInput = (value, otherDescription) => {
     if (isSelected) setIsSelected(false);
     if (errorMsg) {
       setMoneyBuyCopy(false);
-    } else {
+    } else if (!value) {
+      setAmountDonate(0);
       setBoxBorderColor(false);
       setMoneyBuyCopy(otherDescription);
-      setInputBorderColor(true);
     }
+    setInputBorderColor(true);
   };
 
   // Set correct money buy copy for the preselected money buy when page load
@@ -106,16 +115,18 @@ const Signup = ({
         boxBorderColor={boxBorderColor}
         current={amount}
         amount={`${amount}`}
+        description={description}
         setOtherAmount={() => selectMoneyBuy(description, amount)}
         key={amount}
       />
     )
   );
-  console.log(boxBorderColor);
 
   return (
     <FormWrapper>
-      <Form>
+      <Form
+        onSubmit={() => getUrlParameter(window.location.href, amountDonate)}
+      >
         <Text tag="h3">Choose your monthly donation</Text>
         <MoneyBuys>{moneyBoxes}</MoneyBuys>
         <FormFieldset>
@@ -134,21 +145,19 @@ const Signup = ({
             {...rest}
             max="5000"
             min="1"
+            value={userInput}
             pattern="[^[1-9]+$]"
             placeholder="0.00"
             onChange={e =>
               handleChange(e.target.value, regularGiving.otherDescription)
             }
-            onClick={() => hightlightInput(regularGiving.otherDescription)}
+            onClick={e =>
+              hightlightInput(e.target.value, regularGiving.otherDescription)
+            }
             onKeyPress={e => onKeyPress(e)}
           />
         </FormFieldset>
-        <Button
-          type="submit"
-          onClick={() => getUrlParameter(window.location.href, amountDonate)}
-        >
-          Donate
-        </Button>
+        <Button type="submit">Donate</Button>
         {errorMsg && (
           <Error>
             Please enter a number between 1 and 5000, and up to 2 decimal places
