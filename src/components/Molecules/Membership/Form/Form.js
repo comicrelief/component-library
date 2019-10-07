@@ -26,7 +26,7 @@ const Signup = ({
   },
   ...rest
 }) => {
-  // It's used to hightlight one of the money buy box when page load
+  // It's used to hightlight one of the money buy box when page load and cached money buy value
   const [isSelected, setIsSelected] = useState(true);
   const [box1, setBox1] = useState('');
   const [box2, setBox2] = useState('');
@@ -61,14 +61,14 @@ const Signup = ({
     if (!isAmountValid(input)) {
       setMoneyBuyCopy(false);
       setErrorMsg(true);
-    } else if (input * 1 === box1.amount) {
-      selectMoneyBuy(box1.description, box1.amount);
+    } else if (input * 1 === box1.value) {
+      selectMoneyBuy(box1.description, box1.value);
       setAmountDonate(input);
-    } else if (input * 1 === box2.amount) {
-      selectMoneyBuy(box2.description, box2.amount);
+    } else if (input * 1 === box2.value) {
+      selectMoneyBuy(box2.description, box2.value);
       setAmountDonate(input);
-    } else if (input * 1 === box3.amount) {
-      selectMoneyBuy(box3.description, box3.amount);
+    } else if (input * 1 === box3.value) {
+      selectMoneyBuy(box3.description, box3.value);
       setAmountDonate(input);
     } else {
       setBoxBorderColor(false);
@@ -102,22 +102,21 @@ const Signup = ({
       return (
         isSelected &&
         index === 1 &&
-        (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(moneyBuy.amount))
+        (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
       );
     });
   }, [isSelected, regularGiving.moneybuys]);
 
   const moneyBoxes = regularGiving.moneybuys.map(
-    ({ amount, description }, index) => (
+    ({ value, description }, index) => (
       <MoneyBuy
         isSelected={index === 1 && isSelected}
         boxBorderColor={boxBorderColor}
-        current={amount}
-        amount={`${amount}`}
+        current={value}
+        amount={`${value}`}
         description={description}
-        setOtherAmount={() => selectMoneyBuy(description, amount)}
-        key={amount}
+        setOtherAmount={() => selectMoneyBuy(description, value)}
+        key={value}
       />
     )
   );
