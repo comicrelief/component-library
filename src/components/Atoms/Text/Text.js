@@ -7,7 +7,8 @@ export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
-  font-weight: ${({ weight }) => weight};
+  ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
+  ${({ height }) => (height ? `line-height: ${height}` : null)};
   font-family: ${({ family, theme }) =>
     family ? theme.fontFamilies(family) : 'inherit'};
 `;
@@ -15,8 +16,8 @@ export const BaseText = styled.span`
 /** Text renders different elements based on the `tag` prop
  *  Weight is checked for existence to prevent overriding the tag's css
  */
-const Text = ({ tag, children, weight, family, ...rest }) => (
-  <BaseText {...rest} as={tag} weight={weight && weight} family={family}>
+const Text = ({ tag, children, height, weight, family, ...rest }) => (
+  <BaseText {...rest} as={tag} height={height} weight={weight} family={family}>
     {children}
   </BaseText>
 );
@@ -24,7 +25,8 @@ const Text = ({ tag, children, weight, family, ...rest }) => (
 Text.defaultProps = {
   family: 'Montserrat',
   tag: 'span',
-  weight: null,
+  weight: undefined,
+  height: undefined,
   uppercase: false,
   size: 's',
   color: 'inherit'
@@ -33,8 +35,10 @@ Text.defaultProps = {
 Text.propTypes = {
   /** Font family */
   family: PropTypes.string,
-  /** Weight of Font */
+  /** Font weight */
   weight: PropTypes.string,
+  /** Line height */
+  height: PropTypes.string,
   /** Sets text transform to uppercase. */
   uppercase: PropTypes.bool,
   /** Colors */
