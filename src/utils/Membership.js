@@ -10,7 +10,7 @@ const isAmountValid = input => {
   return isValid;
 };
 
-const getUrlParameter = (name, amount) => {
+const getUrlParameter = name => {
   const text = name.replace(/\[]/, '\\[').replace(/[\]]/, '\\]');
   const regex = new RegExp(`[\\?&]${text}=([^&#]*)`);
   const results = regex.exec(window.location.search);
@@ -18,8 +18,21 @@ const getUrlParameter = (name, amount) => {
     results === null
       ? 'generic'
       : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  console.log(amount);
   return param;
+};
+
+const donate = (e, amount) => {
+  e.preventDefault();
+  const donateLink = 'https://donation.comicrelief.com/';
+  const affiliateValue = getUrlParameter(window.location.href);
+  const currentpageUrl = window.location.href;
+  const urlString =
+    currentpageUrl.indexOf('?') > -1
+      ? currentpageUrl.substring(0, currentpageUrl.indexOf('?'))
+      : currentpageUrl;
+  // window.location.href = (donationLink + "?clientOverride=" + clientId + "&amount=" + amount + "&currency=" + currency + "&givingType=" + givingType + "&cartId=" + cartId + "&affiliate=" + affiliateValue + "&siteurl=" + url_string + '&rowID=' + rowID + '&moneybuy=' + submitNameID
+  console.log(urlString, affiliateValue, amount);
+  window.location.href = `${donateLink}?clientOverride=67888&amount=${amount}&currency=£&givingType=monthly&cartId=00000&affiliate=${affiliateValue}&siteurl=${urlString}`;
 };
 
 const isInputMatchBoxValue = (
@@ -37,4 +50,4 @@ const isInputMatchBoxValue = (
     );
   });
 };
-export { onKeyPress, isAmountValid, isInputMatchBoxValue, getUrlParameter };
+export { onKeyPress, isAmountValid, isInputMatchBoxValue, donate };

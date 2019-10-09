@@ -12,8 +12,8 @@ const MoneyBox = styled(Input)`
     font-weight: 800;
     letter-spacing: -2px;
 
-    ${({ boxBorderColor, current, isSelected }) =>
-      (boxBorderColor === current || isSelected) &&
+    ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
+      (boxBorderColor === isInputMatchBox || isSelected) &&
       css`
         border-color: ${({ theme }) => theme.color('red')};
         background-color: ${({ theme }) => theme.color('red')};
@@ -43,7 +43,7 @@ const MoneyBuy = ({
 };
 
 MoneyBuy.propTypes = {
-  amount: PropTypes.string,
+  amount: PropTypes.number,
   currency: PropTypes.string,
   description: PropTypes.string,
   // Function already set does'nt need to be passed as props

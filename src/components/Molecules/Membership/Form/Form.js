@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
+  donate,
   onKeyPress,
   isAmountValid,
-  getUrlParameter,
   isInputMatchBoxValue
 } from '../../../../utils/Membership';
 import {
@@ -40,13 +40,10 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
   const selectMoneyBuy = (copy, value) => {
     setIsSelected(false);
     if (errorMsg) setErrorMsg(false);
-    const isUserInputMatch = userInput * 1 === value * 1;
-
-    if (inputBorderColor) {
-      if (!isUserInputMatch) {
-        setInputBorderColor(false);
-        setUserInput('');
-      }
+    const isUserInputMatch = userInput * 1 === value;
+    if (inputBorderColor && !isUserInputMatch) {
+      setInputBorderColor(false);
+      setUserInput('');
     }
     setBoxBorderColor(value);
     setMoneyBuyCopy(copy);
@@ -99,8 +96,8 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
     <MoneyBuy
       isSelected={index === 1 && isSelected}
       boxBorderColor={boxBorderColor}
-      current={value}
-      amount={`${value}`}
+      isInputMatchBox={value}
+      amount={value}
       description={description}
       setOtherAmount={() => selectMoneyBuy(description, value)}
       key={value}
@@ -111,9 +108,7 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
 
   return (
     <FormWrapper>
-      <Form
-        onSubmit={() => getUrlParameter(window.location.href, amountDonate)}
-      >
+      <Form onSubmit={e => donate(e, amountDonate)}>
         <Text tag="h3">Choose your monthly donation</Text>
         <MoneyBuys>{boxes}</MoneyBuys>
         <FormFieldset>
