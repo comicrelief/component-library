@@ -31,8 +31,8 @@ const FormWrapper = styled.div`
 `;
 
 const Error = styled(Text)`
-  color: #ea0043;
-  font-size: 15px;
+  color: ${({ theme }) => theme.color('red')};
+  font-size: ${spacing('md')};
   font-weight: 500;
 `;
 
@@ -111,9 +111,11 @@ const AmountField = styled(Input)`
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     ${({ inputBorderColor, theme }) =>
-      inputBorderColor &&
-      `border: 2px solid ${theme.color('red')};
-      :focus { outline: none; border: 2px solid ${theme.color('red')};`}
+      inputBorderColor && `border: 2px solid ${theme.color('red')};`}
+
+    :focus {
+      border: 2px solid ${({ theme }) => theme.color('red')};
+    }
   }
 `;
 

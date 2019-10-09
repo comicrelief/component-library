@@ -21,20 +21,6 @@ const getUrlParameter = name => {
   return param;
 };
 
-const donate = (e, amount) => {
-  e.preventDefault();
-  const donateLink = 'https://donation.comicrelief.com/';
-  const affiliateValue = getUrlParameter(window.location.href);
-  const currentpageUrl = window.location.href;
-  const urlString =
-    currentpageUrl.indexOf('?') > -1
-      ? currentpageUrl.substring(0, currentpageUrl.indexOf('?'))
-      : currentpageUrl;
-  // window.location.href = (donationLink + "?clientOverride=" + clientId + "&amount=" + amount + "&currency=" + currency + "&givingType=" + givingType + "&cartId=" + cartId + "&affiliate=" + affiliateValue + "&siteurl=" + url_string + '&rowID=' + rowID + '&moneybuy=' + submitNameID
-  console.log(urlString, affiliateValue, amount);
-  window.location.href = `${donateLink}?clientOverride=67888&amount=${amount}&currency=£&givingType=monthly&cartId=00000&affiliate=${affiliateValue}&siteurl=${urlString}`;
-};
-
 const isInputMatchBoxValue = (
   moneyBoxes,
   selectMoneyBuy,
@@ -50,4 +36,21 @@ const isInputMatchBoxValue = (
     );
   });
 };
+
+// This function is still in progress
+const donate = (e, amount) => {
+  e.preventDefault();
+  const donateLink = 'https://donation.comicrelief.com/';
+  const affiliateValue = getUrlParameter(window.location.href);
+  const currentpageUrl = window.location.href;
+
+  const urlString =
+    currentpageUrl.indexOf('?') > -1
+      ? currentpageUrl.substring(0, currentpageUrl.indexOf('?'))
+      : currentpageUrl;
+  // window.location.href = (donationLink + "?clientOverride=" + clientId + "&amount=" + amount + "&currency=" + currency + "&givingType=" + givingType + "&cartId=" + cartId + "&affiliate=" + affiliateValue + "&siteurl=" + url_string + '&rowID=' + rowID + '&moneybuy=' + submitNameID
+  console.log(urlString, affiliateValue, amount);
+  window.location.href = `${donateLink}?clientOverride=67888&amount=${amount}&currency=£&givingType=monthly&cartId=00000&affiliate=${affiliateValue}&siteurl=${urlString}`;
+};
+
 export { onKeyPress, isAmountValid, isInputMatchBoxValue, donate };

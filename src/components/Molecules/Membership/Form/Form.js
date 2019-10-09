@@ -54,6 +54,7 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
   const handleChange = (input, otherDescription) => {
     if (!isAmountValid(input)) {
       if (moneyBuyCopy) setMoneyBuyCopy(false);
+      if (boxBorderColor) setBoxBorderColor(false);
       if (!errorMsg) setErrorMsg(true);
     } else {
       setBoxBorderColor(false);

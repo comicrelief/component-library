@@ -230,6 +230,10 @@ it('renders correctly', () => {
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
+    .c15 input:focus {
+      border: 2px solid #E52630;
+    }
+
     .c17 {
       line-height: 1.5;
     }
