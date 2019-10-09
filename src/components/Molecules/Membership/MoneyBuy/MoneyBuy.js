@@ -32,15 +32,11 @@ const MoneyBuy = ({
   return (
     <MoneyBox
       {...rest}
-      name={description}
       aria-label={description}
       value={`${currency} ${amount}`}
-      placeholder={`${currency} ${amount}`}
       type="button"
       label=""
       errorMsg=""
-      id={description}
-      showLabel
       onClick={setOtherAmount}
     />
   );

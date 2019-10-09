@@ -6,7 +6,8 @@ import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   onKeyPress,
   isAmountValid,
-  getUrlParameter
+  getUrlParameter,
+  isInputMatchBoxValue
 } from '../../../../utils/Membership';
 import {
   Button,
@@ -26,11 +27,14 @@ const Signup = ({
   },
   ...rest
 }) => {
-  // It's used to hightlight one of the money buy box when page load and cached money buy value
+  // It's used to hightlight one of the money buy box when page load
   const [isSelected, setIsSelected] = useState(true);
-  const [box1, setBox1] = useState('');
-  const [box2, setBox2] = useState('');
-  const [box3, setBox3] = useState('');
+  const [moneyBoxes, setMoneyBoxes] = useState({
+    box1: '',
+    box2: '',
+    box3: ''
+  });
+
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState('');
   const [userInput, setUserInput] = useState('');
@@ -40,16 +44,14 @@ const Signup = ({
 
   const selectMoneyBuy = (copy, value) => {
     setIsSelected(false);
-    setErrorMsg(false);
-    setAmountDonate('');
-    if (inputBorderColor && userInput * 1 !== value * 1) {
-      setInputBorderColor(false);
-    }
-    if (userInput * 1 === value * 1) {
-      setUserInput(value);
-      setInputBorderColor(true);
-    } else {
-      setUserInput('');
+    if (errorMsg) setErrorMsg(false);
+    const isUserInputMatch = userInput * 1 === value * 1;
+
+    if (inputBorderColor) {
+      if (!isUserInputMatch) {
+        setInputBorderColor(false);
+        setUserInput('');
+      }
     }
     setBoxBorderColor(value);
     setMoneyBuyCopy(copy);
@@ -59,23 +61,16 @@ const Signup = ({
   // Handle user input
   const handleChange = (input, otherDescription) => {
     if (!isAmountValid(input)) {
-      setMoneyBuyCopy(false);
-      setErrorMsg(true);
-    } else if (input * 1 === box1.value) {
-      selectMoneyBuy(box1.description, box1.value);
-      setAmountDonate(input);
-    } else if (input * 1 === box2.value) {
-      selectMoneyBuy(box2.description, box2.value);
-      setAmountDonate(input);
-    } else if (input * 1 === box3.value) {
-      selectMoneyBuy(box3.description, box3.value);
-      setAmountDonate(input);
+      if (moneyBuyCopy) setMoneyBuyCopy(false);
+      if (!errorMsg) setErrorMsg(true);
     } else {
       setBoxBorderColor(false);
-      setErrorMsg(false);
+      if (errorMsg) setErrorMsg(false);
       setMoneyBuyCopy(otherDescription);
       setAmountDonate(input);
     }
+    // Highlight both input and box
+    isInputMatchBoxValue(moneyBoxes, selectMoneyBuy, setAmountDonate, input);
     setInputBorderColor(true);
     setUserInput(input);
   };
@@ -92,13 +87,11 @@ const Signup = ({
     setInputBorderColor(true);
   };
 
-  // Set correct money buy copy for the preselected money buy when page load
   useEffect(() => {
     regularGiving.moneybuys.map((moneyBuy, index) => {
-      // Store money buy
-      if (index === 0) setBox1(moneyBuy);
-      if (index === 1) setBox2(moneyBuy);
-      if (index === 2) setBox3(moneyBuy);
+      const box = `box${index + 1}`;
+      // eslint-disable-next-line no-shadow
+      setMoneyBoxes(moneyBoxes => ({ ...moneyBoxes, [box]: moneyBuy }));
       return (
         isSelected &&
         index === 1 &&
@@ -107,19 +100,19 @@ const Signup = ({
     });
   }, [isSelected, regularGiving.moneybuys]);
 
-  const moneyBoxes = regularGiving.moneybuys.map(
-    ({ value, description }, index) => (
-      <MoneyBuy
-        isSelected={index === 1 && isSelected}
-        boxBorderColor={boxBorderColor}
-        current={value}
-        amount={`${value}`}
-        description={description}
-        setOtherAmount={() => selectMoneyBuy(description, value)}
-        key={value}
-      />
-    )
-  );
+  const boxes = regularGiving.moneybuys.map(({ value, description }, index) => (
+    <MoneyBuy
+      isSelected={index === 1 && isSelected}
+      boxBorderColor={boxBorderColor}
+      current={value}
+      amount={`${value}`}
+      description={description}
+      setOtherAmount={() => selectMoneyBuy(description, value)}
+      key={value}
+      name={`moneyBuy${index + 1}`}
+      id={`moneyBuy-box${index + 1}`}
+    />
+  ));
 
   return (
     <FormWrapper>
@@ -127,25 +120,25 @@ const Signup = ({
         onSubmit={() => getUrlParameter(window.location.href, amountDonate)}
       >
         <Text tag="h3">Choose your monthly donation</Text>
-        <MoneyBuys>{moneyBoxes}</MoneyBuys>
+        <MoneyBuys>{boxes}</MoneyBuys>
         <FormFieldset>
           <Label size="s" weight="500">
             Other amount
           </Label>
           <AmountField
-            step=".10"
+            step="0.01"
             name="membership_amount"
             type="number"
             inputBorderColor={inputBorderColor}
             label="£"
             errorMsg=""
-            id="Money buy description"
+            id="MoneyBuy-userInput"
             showLabel
             {...rest}
             max="5000"
             min="1"
             value={userInput}
-            pattern="[^[1-9]+$]"
+            pattern="[^[0-9]+([,.][0-9]+)?$]"
             placeholder="0.00"
             onChange={e =>
               handleChange(e.target.value, regularGiving.otherDescription)

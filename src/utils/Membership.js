@@ -11,12 +11,28 @@ const isAmountValid = input => {
 };
 
 const getUrlParameter = (name, amount) => {
-  console.log(amount);
   const text = name.replace(/\[]/, '\\[').replace(/[\]]/, '\\]');
   const regex = new RegExp(`[\\?&]${text}=([^&#]*)`);
   const results = regex.exec(window.location.search);
+  console.log(amount);
   return results === null
     ? ''
     : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
-export { onKeyPress, isAmountValid, getUrlParameter };
+
+const isInputMatchBoxValue = (
+  moneyBoxes,
+  selectMoneyBuy,
+  setAmountDonate,
+  input
+) => {
+  const inputToNum = input * 1;
+  return Object.keys(moneyBoxes).map(box => {
+    return (
+      moneyBoxes[box].value === inputToNum &&
+      (selectMoneyBuy(moneyBoxes[box].description, moneyBoxes[box].value),
+      setAmountDonate(input))
+    );
+  });
+};
+export { onKeyPress, isAmountValid, isInputMatchBoxValue, getUrlParameter };
