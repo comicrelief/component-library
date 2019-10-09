@@ -289,16 +289,12 @@ it('renders correctly', () => {
           className="c2"
           color="inherit"
           size="l"
-        >
-          Help someone like Jordan see a better tomorrow
-        </h2>
+        />
         <p
           className="c3"
           color="inherit"
           size="s"
-        >
-          Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
-        </p>
+        />
       </div>
       <div
         className="c4"

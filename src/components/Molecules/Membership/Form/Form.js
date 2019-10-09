@@ -21,12 +21,7 @@ import {
   AmountField
 } from '../Membership.style';
 
-const Signup = ({
-  data: {
-    data: { regularGiving }
-  },
-  ...rest
-}) => {
+const Signup = ({ data: { regularGiving }, ...rest }) => {
   // It's used to hightlight one of the money buy box when page load
   const [isSelected, setIsSelected] = useState(true);
   const [moneyBoxes, setMoneyBoxes] = useState({

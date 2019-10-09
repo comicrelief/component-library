@@ -14,10 +14,12 @@ const getUrlParameter = (name, amount) => {
   const text = name.replace(/\[]/, '\\[').replace(/[\]]/, '\\]');
   const regex = new RegExp(`[\\?&]${text}=([^&#]*)`);
   const results = regex.exec(window.location.search);
+  const param =
+    results === null
+      ? 'generic'
+      : decodeURIComponent(results[1].replace(/\+/g, ' '));
   console.log(amount);
-  return results === null
-    ? ''
-    : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  return param;
 };
 
 const isInputMatchBoxValue = (
