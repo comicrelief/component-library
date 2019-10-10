@@ -1,3 +1,4 @@
+// this function prevent e, + , - keyboard characters to be enter
 const onKeyPress = event => {
   const keyCode = event.keyCode || event.which;
   const keyValue = String.fromCharCode(keyCode);
