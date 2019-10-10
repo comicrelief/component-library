@@ -11,14 +11,22 @@ const IconWrapper = styled.div`
   margin: 5px;
 `;
 
+/* Allow our ESU modal stuff to happen */
+const handleClick = (e, iconType) => {
+  if (iconType === 'Email') {
+    e.preventDefault();
+    console.log('ESU clicked');
+  }
+};
+
 /* HeaderIcon component */
-const HeaderIcon = ({ link, campaign, iconType, ...restProps }) => {
+const HeaderIcon = ({ link, campaign, iconType, title, ...restProps }) => {
   return (
     <IconWrapper>
       <Icon
-        // onClick={e => handleShare(e, shareType, checkedUrl)}
+        onClick={e => handleClick(e, iconType)}
         icon={HeaderIcons[iconType]}
-        title="titleeeee"
+        title={title}
         brand={campaign}
         target="_blank"
         role="button"
@@ -32,7 +40,8 @@ const HeaderIcon = ({ link, campaign, iconType, ...restProps }) => {
 HeaderIcon.propTypes = {
   link: PropTypes.string,
   campaign: PropTypes.string,
-  iconType: PropTypes.string.isRequired
+  iconType: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 HeaderIcon.defaultProps = {
