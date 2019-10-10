@@ -21,7 +21,7 @@ import {
   AmountField
 } from '../Membership.style';
 
-const Signup = ({ data: { regularGiving }, ...rest }) => {
+const Signup = ({ data: { regularGiving }, otherDescription, ...rest }) => {
   // It's used to hightlight one of the money buy box when page load
   const [isSelected, setIsSelected] = useState(true);
   const [moneyBoxes, setMoneyBoxes] = useState({
@@ -51,7 +51,7 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
   };
 
   // Handle user input
-  const handleChange = (input, otherDescription) => {
+  const handleChange = (input, description) => {
     if (!isAmountValid(input)) {
       if (moneyBuyCopy) setMoneyBuyCopy(false);
       if (boxBorderColor) setBoxBorderColor(false);
@@ -59,7 +59,7 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
     } else {
       setBoxBorderColor(false);
       if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(otherDescription);
+      setMoneyBuyCopy(description);
       setAmountDonate(input);
     }
     // Highlight both input and box
@@ -68,14 +68,14 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
     setUserInput(input);
   };
 
-  const hightlightInput = (value, otherDescription) => {
+  const hightlightInput = (value, description) => {
     if (isSelected) setIsSelected(false);
     if (errorMsg) {
       setMoneyBuyCopy(false);
     } else if (!value) {
       setAmountDonate(0);
       setBoxBorderColor(false);
-      setMoneyBuyCopy(otherDescription);
+      setMoneyBuyCopy(description);
     }
     setInputBorderColor(true);
   };
@@ -131,12 +131,8 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
             value={userInput}
             pattern="[^[0-9]+([,.][0-9]+)?$]"
             placeholder="0.00"
-            onChange={e =>
-              handleChange(e.target.value, regularGiving.otherDescription)
-            }
-            onClick={e =>
-              hightlightInput(e.target.value, regularGiving.otherDescription)
-            }
+            onChange={e => handleChange(e.target.value, otherDescription)}
+            onClick={e => hightlightInput(e.target.value, otherDescription)}
             onKeyPress={e => onKeyPress(e)}
           />
         </FormFieldset>
@@ -153,6 +149,7 @@ const Signup = ({ data: { regularGiving }, ...rest }) => {
 };
 
 Signup.propTypes = {
+  otherDescription: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape)
 };
 

@@ -1,8 +1,6 @@
 export default {
   cartId: 'test-sept2019-C365',
   regularGiving: {
-    otherDescription:
-      'Your donation will help us fund amazing projects in the UK and around the world.',
     moneybuys: [
       {
         description:

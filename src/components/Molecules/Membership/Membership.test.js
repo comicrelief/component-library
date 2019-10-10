@@ -6,7 +6,12 @@ import Membership from './Membership';
 import data from './dev-data/data';
 
 it('renders correctly', () => {
-  const tree = renderWithTheme(<Membership data={data} />).toJSON();
+  const tree = renderWithTheme(
+    <Membership
+      data={data}
+      otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
+    />
+  ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c2 {
