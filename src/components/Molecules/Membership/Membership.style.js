@@ -2,17 +2,49 @@ import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
-// import Link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
+import Picture from '../../Atoms/Picture/Picture';
+
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    justify-content: inherit;
+    min-height: 750px;
+    height: 100vh;
+    max-height: 900px;
+    flex-direction: ${({ formAligntRight }) =>
+      formAligntRight ? 'row-reverse' : 'row'};
+  }
+`;
+
+const BgImage = styled(Picture)`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    height: 100%;
+  }
+`;
 
 const Wrapper = styled.div`
+  position: relative;
   max-width: 320px;
   text-align: center;
+  margin-bottom: 50%;
+  padding-top: ${spacing('l')};
 
-  ${media('small')} {
+  ${media('medium')} {
+    margin-bottom: 0;
+    padding: ${spacing('l')};
     max-width: 420px;
-    padding: 0 ${spacing('l')};
   }
 `;
 
@@ -22,6 +54,7 @@ const Header = styled.div`
 `;
 
 const FormWrapper = styled.div`
+  background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
   height: 450px;
 
@@ -140,8 +173,10 @@ const Button = styled.button`
 `;
 
 export {
+  BgImage,
   Button,
   Copy,
+  Container,
   Error,
   FormFieldset,
   FormWrapper,

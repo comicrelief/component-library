@@ -3,19 +3,45 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Form from './Form/Form';
-import { Header, Wrapper } from './Membership.style';
+import { BgImage, Container, Header, Wrapper } from './Membership.style';
 
-const Membership = ({ data, title, subtitle, otherDescription }) => {
+const Membership = ({
+  data,
+  title,
+  subtitle,
+  otherDescription,
+  formAligntRight,
+  vhFull,
+  fullImage,
+  images,
+  image,
+  imageLow
+}) => {
   return (
-    <Wrapper>
-      <Header>
-        <Text tag="h2" size="l" weight="800">
-          {title}
-        </Text>
-        <Text tag="p">{subtitle}</Text>
-      </Header>
-      <Form data={data} otherDescription={otherDescription} />
-    </Wrapper>
+    <Container
+      formAligntRight={formAligntRight}
+      vhFull={vhFull}
+      fullImage={fullImage}
+    >
+      <BgImage
+        image={image}
+        images={images}
+        imageLow={imageLow}
+        objectFit="cover"
+        width="100%"
+        height="100%"
+      />
+
+      <Wrapper>
+        <Header>
+          <Text tag="h2" size="l" weight="800">
+            {title}
+          </Text>
+          <Text tag="p">{subtitle}</Text>
+        </Header>
+        <Form data={data} otherDescription={otherDescription} />
+      </Wrapper>
+    </Container>
   );
 };
 
@@ -23,10 +49,22 @@ Membership.propTypes = {
   data: PropTypes.objectOf(PropTypes.shape),
   title: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired
+  subtitle: PropTypes.string.isRequired,
+  formAligntRight: PropTypes.bool,
+  vhFull: PropTypes.bool,
+  fullImage: PropTypes.bool,
+  imageLow: PropTypes.string,
+  image: PropTypes.string,
+  images: PropTypes.string
 };
 
 Membership.defaultProps = {
-  data: {}
+  data: {},
+  formAligntRight: true,
+  vhFull: false,
+  fullImage: false,
+  imageLow: null,
+  image: null,
+  images: null
 };
 export default Membership;

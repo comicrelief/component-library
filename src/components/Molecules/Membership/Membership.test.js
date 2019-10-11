@@ -3,45 +3,64 @@ import 'jest-styled-components';
 
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Membership from './Membership';
+import pictures from '../../../styleguide/data/data';
 import data from './dev-data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <Membership
+      formAligntRight={false}
+      images={pictures.images}
+      image={pictures.image}
       data={data}
+      title="Help someone like Jordan see a better tomorrow"
+      subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives."
       otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
     />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
+    .c6 {
       font-size: 1.44rem;
       text-transform: inherit;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c3 {
+    .c7 {
       font-size: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c13 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c14 {
+    .c18 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: 500;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c10 {
+    .c2 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .c3 {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .c14 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -60,27 +79,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c10:focus {
+    .c14:focus {
       border: 1px solid #666;
     }
 
-    .c10:focus::-webkit-input-placeholder {
+    .c14:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c10:focus::-moz-placeholder {
+    .c14:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c10:focus:-ms-input-placeholder {
+    .c14:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c10:focus::placeholder {
+    .c14:focus::placeholder {
       color: #666;
     }
 
-    .c8 {
+    .c12 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -88,20 +107,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-    }
-
-    .c7 {
-      display: block;
-    }
-
-    .c7 input {
-      border: 2px solid #c7c7c7;
-      font-size: 1.44rem;
-      font-weight: 800;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
-      letter-spacing: -2px;
     }
 
     .c11 {
@@ -116,27 +121,67 @@ it('renders correctly', () => {
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
       letter-spacing: -2px;
+    }
+
+    .c15 {
+      display: block;
+    }
+
+    .c15 input {
+      border: 2px solid #c7c7c7;
+      font-size: 1.44rem;
+      font-weight: 800;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
       border-color: #E52630;
       background-color: #E52630;
       color: #FFFFFF;
     }
 
     .c0 {
-      max-width: 320px;
-      text-align: center;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: inherit;
     }
 
     .c1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+    }
+
+    .c4 {
+      position: relative;
+      max-width: 320px;
+      text-align: center;
+      margin-bottom: 50%;
+      padding-top: 2rem;
+    }
+
+    .c5 {
       padding: 0 1rem;
       margin-bottom: 2rem;
     }
 
-    .c4 {
+    .c8 {
+      background-color: #FFFFFF;
       box-shadow: 0px 1rem 4rem rgba(0,0,0,0.3);
       height: 450px;
     }
 
-    .c5 {
+    .c9 {
       padding: 0 1rem;
       display: -webkit-box;
       display: -webkit-flex;
@@ -151,24 +196,24 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c5 >:not(:last-child) {
+    .c9 >:not(:last-child) {
       margin-bottom: 2rem;
     }
 
-    .c5 h3 {
+    .c9 h3 {
       margin-top: 1rem;
     }
 
-    .c5 input {
+    .c9 input {
       max-width: 100%;
       margin: 0;
     }
 
-    .c5 .c18 {
+    .c9 .c22 {
       margin: 2rem 0;
     }
 
-    .c6 {
+    .c10 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -179,22 +224,22 @@ it('renders correctly', () => {
       justify-content: space-between;
     }
 
-    .c6 label {
+    .c10 label {
       -webkit-flex: 0 0 30%;
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
-    .c6 label input {
+    .c10 label input {
       cursor: pointer;
       padding: 1rem;
     }
 
-    .c6 label:hover input {
+    .c10 label:hover input {
       border-color: #E52630;
     }
 
-    .c12 {
+    .c16 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -205,11 +250,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c13 {
+    .c17 {
       margin-right: auto;
     }
 
-    .c15 {
+    .c19 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -217,7 +262,7 @@ it('renders correctly', () => {
       font-weight: 400;
     }
 
-    .c15 span {
+    .c19 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -229,21 +274,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c15 input {
+    .c19 input {
       border: 2px solid #c7c7c7;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c15 input:focus {
+    .c19 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c17 {
+    .c21 {
       line-height: 1.5;
     }
 
-    .c16 {
+    .c20 {
       color: #FFFFFF;
       font-size: 1rem;
       font-weight: bold;
@@ -255,26 +300,48 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c10 {
+      .c14 {
         max-width: 290px;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1024px) {
       .c0 {
+        -webkit-box-pack: inherit;
+        -webkit-justify-content: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+        min-height: 750px;
+        height: 100vh;
+        max-height: 900px;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        height: 100%;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c4 {
+        margin-bottom: 0;
+        padding: 2rem;
         max-width: 420px;
-        padding: 0 2rem;
       }
     }
 
     @media (min-width:740px) {
-      .c4 {
+      .c8 {
         height: 430px;
       }
     }
 
     @media (min-width:740px) {
-      .c15 {
+      .c19 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -282,7 +349,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c16 {
+      .c20 {
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
       }
@@ -292,159 +359,161 @@ it('renders correctly', () => {
       className="c0"
     >
       <div
-        className="c1"
+        className="c1 c2"
+        height="100%"
+        width="100%"
       >
-        <h2
-          className="c2"
-          color="inherit"
-          size="l"
-        />
-        <p
-          className="c3"
-          color="inherit"
-          size="s"
+        <img
+          alt=""
+          className="lazyload c3"
+          data-lowsrc={null}
+          data-sizes="auto"
+          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+          height="100%"
+          src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
         />
       </div>
       <div
         className="c4"
       >
-        <form
+        <div
           className="c5"
-          onSubmit={[Function]}
         >
-          <h3
-            className="c3"
+          <h2
+            className="c6"
+            color="inherit"
+            size="l"
+          >
+            Help someone like Jordan see a better tomorrow
+          </h2>
+          <p
+            className="c7"
             color="inherit"
             size="s"
           >
-            Choose your monthly donation
-          </h3>
-          <div
-            className="c6"
+            Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <form
+            className="c9"
+            onSubmit={[Function]}
           >
-            <label
-              aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-              className="c7 c8"
-              htmlFor="moneyBuy-box1"
-              name="moneyBuy1"
-              onClick={[Function]}
-              placeholder=""
-              value="£ 5"
-            >
-              <span
-                className="c9"
-                color="inherit"
-                size="s"
-              >
-                
-              </span>
-              <input
-                aria-describedby="moneyBuy-box1"
-                aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                className="c7 c10"
-                id="moneyBuy-box1"
-                name="moneyBuy1"
-                onClick={[Function]}
-                placeholder=""
-                type="button"
-                value="£ 5"
-              />
-              
-            </label>
-            <label
-              aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-              className="c11 c8"
-              htmlFor="moneyBuy-box2"
-              name="moneyBuy2"
-              onClick={[Function]}
-              placeholder=""
-              value="£ 10"
-            >
-              <span
-                className="c9"
-                color="inherit"
-                size="s"
-              >
-                
-              </span>
-              <input
-                aria-describedby="moneyBuy-box2"
-                aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                className="c11 c10"
-                id="moneyBuy-box2"
-                name="moneyBuy2"
-                onClick={[Function]}
-                placeholder=""
-                type="button"
-                value="£ 10"
-              />
-              
-            </label>
-            <label
-              aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-              className="c7 c8"
-              htmlFor="moneyBuy-box3"
-              name="moneyBuy3"
-              onClick={[Function]}
-              placeholder=""
-              value="£ 20"
-            >
-              <span
-                className="c9"
-                color="inherit"
-                size="s"
-              >
-                
-              </span>
-              <input
-                aria-describedby="moneyBuy-box3"
-                aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                className="c7 c10"
-                id="moneyBuy-box3"
-                name="moneyBuy3"
-                onClick={[Function]}
-                placeholder=""
-                type="button"
-                value="£ 20"
-              />
-              
-            </label>
-          </div>
-          <div
-            className="c12"
-          >
-            <span
-              className="c13 c14"
+            <h3
+              className="c7"
               color="inherit"
               size="s"
             >
-              Other amount
-            </span>
-            <label
-              className="c15 c8"
-              htmlFor="MoneyBuy-userInput"
-              max="5000"
-              min="1"
-              name="membership_amount"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              pattern="[^[0-9]+([,.][0-9]+)?$]"
-              placeholder="0.00"
-              step="0.01"
-              value=""
+              Choose your monthly donation
+            </h3>
+            <div
+              className="c10"
+            >
+              <label
+                aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
+                className="c11 c12"
+                htmlFor="moneyBuy-box1"
+                name="moneyBuy1"
+                onClick={[Function]}
+                placeholder=""
+                value="£ 5"
+              >
+                <span
+                  className="c13"
+                  color="inherit"
+                  size="s"
+                >
+                  
+                </span>
+                <input
+                  aria-describedby="moneyBuy-box1"
+                  aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
+                  className="c11 c14"
+                  id="moneyBuy-box1"
+                  name="moneyBuy1"
+                  onClick={[Function]}
+                  placeholder=""
+                  type="button"
+                  value="£ 5"
+                />
+                
+              </label>
+              <label
+                aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
+                className="c15 c12"
+                htmlFor="moneyBuy-box2"
+                name="moneyBuy2"
+                onClick={[Function]}
+                placeholder=""
+                value="£ 10"
+              >
+                <span
+                  className="c13"
+                  color="inherit"
+                  size="s"
+                >
+                  
+                </span>
+                <input
+                  aria-describedby="moneyBuy-box2"
+                  aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
+                  className="c15 c14"
+                  id="moneyBuy-box2"
+                  name="moneyBuy2"
+                  onClick={[Function]}
+                  placeholder=""
+                  type="button"
+                  value="£ 10"
+                />
+                
+              </label>
+              <label
+                aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
+                className="c11 c12"
+                htmlFor="moneyBuy-box3"
+                name="moneyBuy3"
+                onClick={[Function]}
+                placeholder=""
+                value="£ 20"
+              >
+                <span
+                  className="c13"
+                  color="inherit"
+                  size="s"
+                >
+                  
+                </span>
+                <input
+                  aria-describedby="moneyBuy-box3"
+                  aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
+                  className="c11 c14"
+                  id="moneyBuy-box3"
+                  name="moneyBuy3"
+                  onClick={[Function]}
+                  placeholder=""
+                  type="button"
+                  value="£ 20"
+                />
+                
+              </label>
+            </div>
+            <div
+              className="c16"
             >
               <span
-                className="c9"
+                className="c17 c18"
                 color="inherit"
                 size="s"
               >
-                £
+                Other amount
               </span>
-              <input
-                aria-describedby="MoneyBuy-userInput"
-                className="c15 c10"
-                id="MoneyBuy-userInput"
+              <label
+                className="c19 c12"
+                htmlFor="MoneyBuy-userInput"
                 max="5000"
                 min="1"
                 name="membership_amount"
@@ -454,22 +523,45 @@ it('renders correctly', () => {
                 pattern="[^[0-9]+([,.][0-9]+)?$]"
                 placeholder="0.00"
                 step="0.01"
-                type="number"
                 value=""
-              />
-              
-            </label>
-          </div>
-          <button
-            className="c16"
-            type="submit"
-          >
-            Donate
-          </button>
-          <p
-            className="c17"
-          />
-        </form>
+              >
+                <span
+                  className="c13"
+                  color="inherit"
+                  size="s"
+                >
+                  £
+                </span>
+                <input
+                  aria-describedby="MoneyBuy-userInput"
+                  className="c19 c14"
+                  id="MoneyBuy-userInput"
+                  max="5000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  step="0.01"
+                  type="number"
+                  value=""
+                />
+                
+              </label>
+            </div>
+            <button
+              className="c20"
+              type="submit"
+            >
+              Donate
+            </button>
+            <p
+              className="c21"
+            />
+          </form>
+        </div>
       </div>
     </div>
   `);

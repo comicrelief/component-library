@@ -2,8 +2,12 @@
 
 ```js
 import data from './dev-data/data';
+const pictures = require('../../../styleguide/data/data').default;
 
 <Membership
+  formAligntRight={false}
+  imageLow={pictures.imageLow}
+  images={pictures.images}
   data={data}
   title="Help someone like Jordan see a better tomorrow"
   subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives."
