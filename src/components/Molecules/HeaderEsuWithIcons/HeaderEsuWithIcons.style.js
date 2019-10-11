@@ -7,7 +7,6 @@ const IconWrapper = styled.div`
   width: 35px;
   height: 35px;
   display: inline-block;
-  margin: 5px;
 `;
 
 const EsuWrapper = styled.div`

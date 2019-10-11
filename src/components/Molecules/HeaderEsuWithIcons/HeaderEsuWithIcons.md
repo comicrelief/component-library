@@ -2,12 +2,12 @@
 <div>
   <HeaderEsuWithIcons
     link={'/search'}
-    iconType="Search"
+    iconType="search"
     title="Click here to search"
   />
   <HeaderEsuWithIcons
-    link={'https://www.facebook.com'}
-    iconType="Email"
+    link={'#'}
+    iconType="email"
     title="Sign up for our emails"
   />
 </div>

@@ -56,6 +56,7 @@ const MetaIcons = styled.div`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;
+    align-items: center;
     background-color: ${({ theme }) => theme.color('white')};
     margin-right: 0px;
     right: 0px;

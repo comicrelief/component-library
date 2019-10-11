@@ -3,6 +3,7 @@
 ```js
 import data from './data/data';
 import Link from '../../Atoms/Link/Link';
+import HeaderEsuWithIcons from '../HeaderEsuWithIcons/HeaderEsuWithIcons';
 
 <Header
   navItems={data}
@@ -12,6 +13,16 @@ import Link from '../../Atoms/Link/Link';
       <Link color="green" type="button" href="/donation">
         Donate
       </Link>
+      <HeaderEsuWithIcons
+        link={'/search'}
+        iconType="search"
+        title="Click here to search"
+      />
+      <HeaderEsuWithIcons
+        link={'#'}
+        iconType="email"
+        title="Sign up for our emails"
+      />
     </>
   }
 />;
