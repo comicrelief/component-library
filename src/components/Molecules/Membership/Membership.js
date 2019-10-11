@@ -6,6 +6,7 @@ import Form from './Form/Form';
 import { BgImage, Container, Header, Wrapper } from './Membership.style';
 
 const Membership = ({
+  backgroundColor,
   data,
   title,
   subtitle,
@@ -22,6 +23,7 @@ const Membership = ({
       formAligntRight={formAligntRight}
       vhFull={vhFull}
       fullImage={fullImage}
+      backgroundColor={backgroundColor}
     >
       <BgImage
         image={image}
@@ -55,7 +57,8 @@ Membership.propTypes = {
   fullImage: PropTypes.bool,
   imageLow: PropTypes.string,
   image: PropTypes.string,
-  images: PropTypes.string
+  images: PropTypes.string,
+  backgroundColor: PropTypes.string
 };
 
 Membership.defaultProps = {
@@ -65,6 +68,7 @@ Membership.defaultProps = {
   fullImage: false,
   imageLow: null,
   image: null,
-  images: null
+  images: null,
+  backgroundColor: null
 };
 export default Membership;

@@ -5,6 +5,7 @@ import data from './dev-data/data';
 const pictures = require('../../../styleguide/data/data').default;
 
 <Membership
+  backgroundColor="orange_light"
   formAligntRight={false}
   imageLow={pictures.imageLow}
   images={pictures.images}
