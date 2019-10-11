@@ -29,7 +29,7 @@ const HeaderEsuWithIcons = ({ link, campaign, iconType, title }) => {
   const handleESUClick = (e, typeOfIcon) => {
     if (typeOfIcon === 'Email' || typeOfIcon === 'Close') {
       e.preventDefault();
-      // Toggle our 'opened' stateß
+      // Toggle our 'opened' state
       setIsESUOpen(!isESUOpen);
     }
   };
