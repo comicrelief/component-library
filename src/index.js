@@ -69,3 +69,6 @@ export {
 export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
+export {
+  default as VideoBanner
+} from './components/Molecules/VideoBanner/VideoBanner';
