@@ -75,3 +75,4 @@ export {
 export {
   default as HeaderEsuWithIcon
 } from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
+export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
