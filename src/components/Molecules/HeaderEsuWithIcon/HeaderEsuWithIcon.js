@@ -44,6 +44,7 @@ const HeaderEsuWithIcon = ({ campaign, title }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   // TODO: need to figure out how to handle validation here
+  /* eslint-disable-next-line no-unused-vars */
   const [isErroring, setIsErroring] = useState('');
 
   /* Allow our ESU modal stuff to happen */
