@@ -64,6 +64,7 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
           target="self"
           role="button"
           href="/search"
+          brand="comicrelief"
         />
       </div>
 
