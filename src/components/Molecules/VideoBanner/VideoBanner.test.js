@@ -3,15 +3,14 @@ import 'jest-styled-components';
 
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import VideoBanner from './VideoBanner';
+import poster from '../../../styleguide/assets/poster.png';
 
 it('renders correctly', () => {
-  const image =
-    'https://www.comicrelief.com/sites/default/files/2019-10/Creativists_Logo_Colour_on%20background.png';
   const src =
     'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
   const tree = renderWithTheme(
-    <VideoBanner poster={image} video={src} loop autoPlay />
+    <VideoBanner poster={poster} video={src} autoPlay />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -25,9 +24,9 @@ it('renders correctly', () => {
     <video
       autoPlay={true}
       className="c0"
-      loop={true}
+      loop={false}
       muted={true}
-      poster="https://www.comicrelief.com/sites/default/files/2019-10/Creativists_Logo_Colour_on%20background.png"
+      poster="mock.asset"
     >
       <source
         src="https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4"
