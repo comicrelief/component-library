@@ -365,6 +365,22 @@ it('renders correctly', () => {
       margin-left: 0.69375rem;
     }
 
+    .c22 > div {
+      height: 35px;
+      width: auto;
+    }
+
+    .c22 > div > a {
+      height: inherit;
+      width: inherit;
+    }
+
+    .c22 > div > a img {
+      padding: 5px;
+      height: inherit;
+      width: inherit;
+    }
+
     @media (min-width:740px) {
       .c4 {
         width: 60px;
@@ -519,6 +535,10 @@ it('renders correctly', () => {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         background-color: #FFFFFF;
         margin-right: 0px;
         right: 0px;

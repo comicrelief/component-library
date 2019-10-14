@@ -42,7 +42,6 @@ it('renders correctly', () => {
       width: 35px;
       height: 35px;
       display: inline-block;
-      margin: 5px;
     }
 
     <div>
