@@ -70,5 +70,8 @@ export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
 export {
+  default as VideoBanner
+} from './components/Molecules/VideoBanner/VideoBanner';
+export {
   default as HeaderEsuWithIcon
 } from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
