@@ -17,8 +17,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       width: 100%;
-      background-image: url();
-      background-size: 100% 100%;
+      background-size: 100%;
       object-fit: contain;
       overflow: hidden;
     }
@@ -28,6 +27,7 @@ it('renders correctly', () => {
       className="c0"
       loop={true}
       muted={true}
+      poster="https://www.comicrelief.com/sites/default/files/2019-10/Creativists_Logo_Colour_on%20background.png"
     >
       <source
         src="https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4"
