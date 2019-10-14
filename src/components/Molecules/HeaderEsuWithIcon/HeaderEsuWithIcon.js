@@ -14,14 +14,32 @@ import {
 // Faux Contentful copy for now
 const fauxEsuCopy = {
   title: 'Title (plain text)',
-  topCopy: <RichText markup={'<p>topCopy</p> '} />,
-  successCopy: <RichText markup={'<p>successCopy</p> '} />,
-  privacyCopy: <RichText markup={'<p>privacyCopy</p> '} />,
+  topCopy: (
+    <RichText
+      markup={
+        '<p>topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy </p> '
+      }
+    />
+  ),
+  successCopy: (
+    <RichText
+      markup={
+        '<p>successCopy successCopy successCopy successCopy successCopy successCopy successCopy successCopy </p> '
+      }
+    />
+  ),
+  privacyCopy: (
+    <RichText
+      markup={
+        '<p>privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy </p> '
+      }
+    />
+  ),
   errorMsg: ''
 };
 
 /* HeaderEsuWithIcon component */
-const HeaderEsuWithIcon = ({ link, campaign, iconType, title }) => {
+const HeaderEsuWithIcon = ({ campaign, title }) => {
   const [isESUOpen, setIsESUOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -75,7 +93,7 @@ const HeaderEsuWithIcon = ({ link, campaign, iconType, title }) => {
         brand={campaign}
         target="_blank"
         role="button"
-        href={link}
+        href="#"
       />
 
       {/* Render the ESU itself if our ESU button is present */}
@@ -90,14 +108,11 @@ const HeaderEsuWithIcon = ({ link, campaign, iconType, title }) => {
 };
 
 HeaderEsuWithIcon.propTypes = {
-  link: PropTypes.string,
   campaign: PropTypes.string,
-  iconType: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
 
 HeaderEsuWithIcon.defaultProps = {
-  link: null,
   campaign: 'comicrelief'
 };
 

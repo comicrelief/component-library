@@ -25,16 +25,26 @@ const EsuWrapper = styled.div`
 
 const CloseButton = styled(Icon)`
   position: absolute;
-  top: 10px;
-  right: 25%;
-  width: 30px;
-  height: 30px;
-  margin: ${spacing('xl')} 10px 10px;
+  top: 0;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin: ${spacing('xl')} 10px 10px;
+
+    right: 25%;
+  }
 `;
 
 const HeaderESU = styled(EmailSignUp)`
-  margin-top: ${spacing('xl')};
-  width: 50%;
+  width: 100%;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-top: ${spacing('xl')};
+    width: 50%;
+  }
 `;
 
 export { IconWrapper, EsuWrapper, CloseButton, HeaderESU };

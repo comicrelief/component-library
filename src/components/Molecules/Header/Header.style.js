@@ -21,7 +21,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 15px;
+  padding: 0 12px;
   cursor: pointer;
   max-width: ${container.large};
 
@@ -49,14 +49,17 @@ const Brand = styled(Link).attrs(() => ({
  * Meta icons
  */
 const MetaIcons = styled.div`
+  width: auto;
+  display: flex;
+
   a {
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }
 
-  /* Target and align any metaicons */
   > div {
     height: 35px;
     width: auto;
+    display: inline-block;
 
     > a {
       height: inherit;
