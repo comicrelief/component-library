@@ -70,5 +70,5 @@ export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
 export {
-  default as HeaderEsuWithIcons
-} from './components/Molecules/HeaderEsuWithIcons/HeaderEsuWithIcons';
+  default as HeaderEsuWithIcon
+} from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';

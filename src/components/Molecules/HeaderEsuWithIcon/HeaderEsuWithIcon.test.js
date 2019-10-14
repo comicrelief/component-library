@@ -1,17 +1,17 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import HeaderEsuWithIcons from './HeaderEsuWithIcons';
+import HeaderEsuWithIcon from './HeaderEsuWithIcon';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <div>
-      <HeaderEsuWithIcons
+      <HeaderEsuWithIcon
         link="/search"
         iconType="Search"
         title="Click here to search"
       />
-      <HeaderEsuWithIcons
+      <HeaderEsuWithIcon
         link="https://www.facebook.com"
         iconType="Email"
         title="Sign up for our emails"

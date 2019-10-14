@@ -53,6 +53,22 @@ const MetaIcons = styled.div`
     margin-left: ${({ theme }) => theme.fontSize('xxs')};
   }
 
+  /* Target and align any metaicons */
+  > div {
+    height: 35px;
+    width: auto;
+
+    > a {
+      height: inherit;
+      width: inherit;
+      img {
+        padding: 5px;
+        height: inherit;
+        width: inherit;
+      }
+    }
+  }
+
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;

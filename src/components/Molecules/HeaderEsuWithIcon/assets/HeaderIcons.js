@@ -1,5 +1,5 @@
 import EmailIcon from './icon--email.svg';
-import SearchIcon from './icon--search.svg';
+import SearchIcon from '../../Header/assets/icon--search.svg';
 import CloseIcon from './icon--close.svg';
 
 const HeaderIcons = {
