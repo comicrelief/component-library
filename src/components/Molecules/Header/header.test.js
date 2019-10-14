@@ -147,7 +147,7 @@ it('renders correctly', () => {
     .c17 .c20,
     .c17 .c20::before,
     .c17 .c20::after {
-      width: 33px;
+      width: 25px;
       height: 3px;
       display: inline-block;
     }
@@ -345,7 +345,7 @@ it('renders correctly', () => {
       -ms-flex-align: center;
       align-items: center;
       height: 100%;
-      padding: 0 15px;
+      padding: 0 12px;
       cursor: pointer;
       max-width: 1440px;
     }
@@ -361,6 +361,14 @@ it('renders correctly', () => {
       border: 0;
     }
 
+    .c22 {
+      width: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
     .c22 a {
       margin-left: 0.69375rem;
     }
@@ -368,6 +376,7 @@ it('renders correctly', () => {
     .c22 > div {
       height: 35px;
       width: auto;
+      display: inline-block;
     }
 
     .c22 > div > a {

@@ -50,7 +50,7 @@ it('renders correctly', () => {
       >
         <a
           className="c1"
-          href="/search"
+          href="#"
           onClick={[Function]}
           rel="noopener noreferrer"
           role="button"
@@ -69,7 +69,7 @@ it('renders correctly', () => {
       >
         <a
           className="c1"
-          href="https://www.facebook.com"
+          href="#"
           onClick={[Function]}
           rel="noopener noreferrer"
           role="button"
