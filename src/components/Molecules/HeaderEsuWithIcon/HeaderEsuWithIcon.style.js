@@ -26,14 +26,13 @@ const EsuWrapper = styled.div`
 const CloseButton = styled(Icon)`
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   width: 40px;
   height: 40px;
   margin-left: 0;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    margin: ${spacing('xl')} 10px 10px;
-
+    margin: ${spacing('xl')} 0 0;
     right: 25%;
   }
 `;
