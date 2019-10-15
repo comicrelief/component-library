@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import HeaderIcons from './assets/HeaderIcons';
-import RichText from '../../Atoms/RichText/RichText';
 
 import {
   IconWrapper,
@@ -11,35 +10,14 @@ import {
   HeaderESU
 } from './HeaderEsuWithIcon.style';
 
-// Faux Contentful copy for now
-const fauxEsuCopy = {
-  title: 'Title (plain text)',
-  topCopy: (
-    <RichText
-      markup={
-        '<p>topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy topCopy </p> '
-      }
-    />
-  ),
-  successCopy: (
-    <RichText
-      markup={
-        '<p>successCopy successCopy successCopy successCopy successCopy successCopy successCopy successCopy </p> '
-      }
-    />
-  ),
-  privacyCopy: (
-    <RichText
-      markup={
-        '<p>privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy privacyCopy </p> '
-      }
-    />
-  ),
-  errorMsg: ''
-};
-
 /* HeaderEsuWithIcon component */
-const HeaderEsuWithIcon = ({ campaign, title }) => {
+const HeaderEsuWithIcon = ({
+  campaign,
+  title,
+  topCopy,
+  successCopy,
+  privacyCopy
+}) => {
   const [isESUOpen, setIsESUOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -58,10 +36,10 @@ const HeaderEsuWithIcon = ({ campaign, title }) => {
   const renderESU = () => {
     return (
       <HeaderESU
-        title={fauxEsuCopy.title}
-        topCopy={fauxEsuCopy.topCopy}
-        successCopy={fauxEsuCopy.successCopy}
-        privacyCopy={fauxEsuCopy.privacyCopy}
+        title={title}
+        topCopy={topCopy}
+        successCopy={successCopy}
+        privacyCopy={privacyCopy}
         isSuccess={isSuccess}
         subscribe={() => setIsSuccess(!isSuccess)}
         errorMsg={isErroring}
@@ -90,7 +68,7 @@ const HeaderEsuWithIcon = ({ campaign, title }) => {
       <Icon
         onClick={e => handleESUClick(e)}
         icon={HeaderIcons.email.icon}
-        title={title}
+        title={HeaderIcons.email.title}
         brand={campaign}
         target="_blank"
         role="button"
@@ -110,7 +88,10 @@ const HeaderEsuWithIcon = ({ campaign, title }) => {
 
 HeaderEsuWithIcon.propTypes = {
   campaign: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.node.isRequired,
+  topCopy: PropTypes.node.isRequired,
+  privacyCopy: PropTypes.node.isRequired,
+  successCopy: PropTypes.node.isRequired
 };
 
 HeaderEsuWithIcon.defaultProps = {
