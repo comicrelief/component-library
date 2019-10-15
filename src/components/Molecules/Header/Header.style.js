@@ -52,10 +52,6 @@ const MetaIcons = styled.div`
   width: auto;
   display: flex;
 
-  a {
-    margin-left: ${({ theme }) => theme.fontSize('xxs')};
-  }
-
   > div {
     height: 35px;
     width: auto;
@@ -64,6 +60,8 @@ const MetaIcons = styled.div`
     > a {
       height: inherit;
       width: inherit;
+      margin-left: ${({ theme }) => theme.fontSize('xxs')};
+
       img {
         padding: 5px;
         height: inherit;
