@@ -9,7 +9,7 @@ const Video = styled.video`
   overflow: hidden;
 `;
 
-const VideoBanner = ({ video, autoPlay, loop, poster }) => {
+const VideoBanner = ({ video, autoPlay, loop }) => {
   const videoEl = useRef(null);
 
   const onPlay = () => {
@@ -21,14 +21,7 @@ const VideoBanner = ({ video, autoPlay, loop, poster }) => {
   });
 
   return (
-    <Video
-      poster={poster}
-      ref={videoEl}
-      autoPlay={autoPlay}
-      loop={loop}
-      muted
-      playsinline
-    >
+    <Video ref={videoEl} autoPlay={autoPlay} loop={loop} muted playsinline>
       <source src={video} type="video/mp4" />
       Your browser does not support video.
     </Video>
@@ -37,7 +30,6 @@ const VideoBanner = ({ video, autoPlay, loop, poster }) => {
 
 VideoBanner.propTypes = {
   video: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
   autoPlay: PropTypes.bool.isRequired,
   loop: PropTypes.bool
 };
