@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  padding: 60px 0;
+  background: #2C0230;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.c2 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.c3 {
+  font-size: 14px;
+}
+
+@media (min-width:700px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:700px) {
+  .c1 {
+    width: calc(100% / 3);
+  }
+}
+
+<section
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Project Name
+    </h3>
+    <p
+      className="c3"
+    >
+      Hello There
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      End Date
+    </h3>
+    <p
+      className="c3"
+    >
+      1st June 2020
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Funding theme
+    </h3>
+    <p
+      className="c3"
+    >
+      Be happy
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Amount Awarded
+    </h3>
+    <p
+      className="c3"
+    >
+      £2,000,000
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Start Date
+    </h3>
+    <p
+      className="c3"
+    >
+      1st June 2010
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Beneficiary Country
+    </h3>
+    <p
+      className="c3"
+    >
+      Uk
+    </p>
+  </div>
+</section>
+`;
