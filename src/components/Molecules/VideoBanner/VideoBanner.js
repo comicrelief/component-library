@@ -4,12 +4,14 @@ import styled from 'styled-components';
 
 const Video = styled.video`
   width: 100%;
+  background-image: url(${({ placeholder }) => placeholder});
+  background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
   object-fit: contain;
-  overflow: hidden;
 `;
 
-const VideoBanner = ({ video, autoPlay, loop }) => {
+const VideoBanner = ({ video, autoPlay, loop, placeholder }) => {
   const videoEl = useRef(null);
 
   const onPlay = () => {
@@ -21,7 +23,15 @@ const VideoBanner = ({ video, autoPlay, loop }) => {
   });
 
   return (
-    <Video ref={videoEl} autoPlay={autoPlay} loop={loop} muted playsinline>
+    <Video
+      placeholder={placeholder}
+      poster="data:image/gif,AAAA"
+      ref={videoEl}
+      autoPlay={autoPlay}
+      loop={loop}
+      muted
+      playsinline
+    >
       <source src={video} type="video/mp4" />
       Your browser does not support video.
     </Video>
@@ -30,6 +40,7 @@ const VideoBanner = ({ video, autoPlay, loop }) => {
 
 VideoBanner.propTypes = {
   video: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
   autoPlay: PropTypes.bool.isRequired,
   loop: PropTypes.bool
 };
