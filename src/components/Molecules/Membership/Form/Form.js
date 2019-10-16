@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
-import MoneyBuy from '../MoneyBuy/MoneyBuy';
+import MoneyBox from '../MoneyBox/MoneyBox';
 import {
   handleDonate,
   onKeyPress,
@@ -29,14 +29,13 @@ const Signup = ({
   mbshipID,
   ...rest
 }) => {
-  // It's used to hightlight one of the money buy box when page load
-  const [isSelected, setIsSelected] = useState(true);
   const [moneyBoxes, setMoneyBoxes] = useState({
     box1: '',
     box2: '',
     box3: ''
   });
 
+  const [isSelected, setIsSelected] = useState(true); // Highlight one the money buy box when the page load
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState('');
   const [userInput, setUserInput] = useState('');
@@ -44,10 +43,12 @@ const Signup = ({
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
 
+  // This function is triggered when one of the money buy box is selected
   const selectMoneyBuy = (copy, value) => {
-    setIsSelected(false);
+    if (isSelected) setIsSelected(false);
     if (errorMsg) setErrorMsg(false);
-    const isUserInputMatch = userInput * 1 === value;
+    // Check if input is highlighted and his value matches one of the money buy box
+    const isUserInputMatch = userInput * 1 === value; // convert string to number string * 1
     if (inputBorderColor && !isUserInputMatch) {
       setInputBorderColor(false);
       setUserInput('');
@@ -57,7 +58,7 @@ const Signup = ({
     setAmountDonate(value);
   };
 
-  // Handle user input
+  // Handle user other amount input
   const handleChange = (input, description) => {
     if (!isAmountValid(input)) {
       if (moneyBuyCopy) setMoneyBuyCopy(false);
@@ -110,19 +111,21 @@ const Signup = ({
     }
   };
   // Create money buy boxes
-  const boxes = regularGiving.moneybuys.map(({ value, description }, index) => (
-    <MoneyBuy
-      isSelected={index === 1 && isSelected}
-      boxBorderColor={boxBorderColor}
-      isInputMatchBox={value}
-      amount={value}
-      description={description}
-      setOtherAmount={() => selectMoneyBuy(description, value)}
-      key={value}
-      name={`moneyBuy${index + 1}`}
-      id={`moneyBuy-box${index + 1}`}
-    />
-  ));
+  const MoneyBoxes = regularGiving.moneybuys.map(
+    ({ value, description }, index) => (
+      <MoneyBox
+        isSelected={index === 1 && isSelected}
+        boxBorderColor={boxBorderColor}
+        isInputMatchBox={value}
+        amount={value}
+        description={description}
+        setOtherAmount={() => selectMoneyBuy(description, value)}
+        key={value}
+        name={`moneyBuy${index + 1}`}
+        id={`moneyBuy-box${index + 1}`}
+      />
+    )
+  );
 
   return (
     <FormWrapper>
@@ -132,7 +135,7 @@ const Signup = ({
         }
       >
         <Text tag="h3">Choose your monthly donation</Text>
-        <MoneyBuys>{boxes}</MoneyBuys>
+        <MoneyBuys>{MoneyBoxes}</MoneyBuys>
         <FormFieldset>
           <Label size="s" weight="500">
             Other amount
