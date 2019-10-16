@@ -141,6 +141,7 @@ it('renders correctly', () => {
     }
 
     .c0 {
+      background-color: inherit;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -151,7 +152,6 @@ it('renders correctly', () => {
       -ms-flex-pack: center;
       justify-content: center;
       min-height: 100vh;
-      background: inherit;
     }
 
     .c1 {
@@ -160,6 +160,15 @@ it('renders correctly', () => {
       left: 0;
       right: 0;
       height: auto;
+    }
+
+    .c1:before {
+      color: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0px 4rem 2rem -2rem;
     }
 
     .c4 {
@@ -323,6 +332,10 @@ it('renders correctly', () => {
     @media (min-width:1024px) {
       .c1 {
         height: 100%;
+      }
+
+      .c1:before {
+        content: none;
       }
     }
 

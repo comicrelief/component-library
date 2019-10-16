@@ -7,11 +7,12 @@ import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`
+  background-color: ${({ theme, backgroundColor }) =>
+    theme.color(backgroundColor)};
   position: relative;
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('medium')} {
     justify-content: inherit;
     min-height: 750px;
@@ -29,8 +30,20 @@ const BgImage = styled(Picture)`
   right: 0;
   height: auto;
 
+  :before {
+    color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px ${spacing('xl')} ${spacing('l')} -${spacing('l')};
+  }
   @media ${({ theme }) => theme.breakpoint('medium')} {
     height: 100%;
+
+    :before {
+      content: none;
+    }
   }
 `;
 
@@ -165,6 +178,11 @@ const Button = styled.button`
   background: ${({ theme }) => theme.color('red')};
   border: none;
   border-radius: 100px;
+  :active,
+  :focus,
+  :hover {
+    background-color: ${({ theme }) => theme.color('coral_dark')};
+  }
 
   ${media('small')} {
     padding: ${spacing('md')} ${spacing('l')};

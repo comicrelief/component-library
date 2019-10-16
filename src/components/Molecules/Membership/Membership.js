@@ -26,6 +26,7 @@ const Membership = ({
       backgroundColor={backgroundColor}
     >
       <BgImage
+        backgroundColor={backgroundColor}
         image={image}
         images={images}
         imageLow={imageLow}
