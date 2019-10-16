@@ -1,4 +1,4 @@
-// this function prevent e, + , - keyboard characters to be enter
+// this function prevent keyboard characters like  e, + , - to be pass on the input
 const onKeyPress = event => {
   const keyCode = event.keyCode || event.which;
   const keyValue = String.fromCharCode(keyCode);
@@ -39,7 +39,7 @@ const isInputMatchBoxValue = (
 };
 
 // This function is still in progress
-const handleDonate = (amount, clientID, cartID, mbshipID) => {
+const handleDonateSubmission = (amount, clientID, cartID, mbshipID) => {
   const donateLink = 'https://donation.comicrelief.com/';
   const affiliateValue = getUrlParameter(window.location.href);
   const currentpageUrl = window.location.href;
@@ -50,4 +50,9 @@ const handleDonate = (amount, clientID, cartID, mbshipID) => {
   window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${urlString}&rowID=${mbshipID}`;
 };
 
-export { onKeyPress, isAmountValid, isInputMatchBoxValue, handleDonate };
+export {
+  onKeyPress,
+  isAmountValid,
+  isInputMatchBoxValue,
+  handleDonateSubmission
+};

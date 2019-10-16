@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBox from '../MoneyBox/MoneyBox';
 import {
-  handleDonate,
+  handleDonateSubmission,
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue
@@ -104,7 +104,7 @@ const Signup = ({
   const submitDonation = (event, amount, clientId, cartId, mbshipId) => {
     event.preventDefault();
     if (isAmountValid(amount)) {
-      handleDonate(amount, clientId, cartId, mbshipId);
+      handleDonateSubmission(amount, clientId, cartId, mbshipId);
     } else {
       setErrorMsg(true);
       setMoneyBuyCopy(false);
