@@ -308,6 +308,12 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
+    .c20:active,
+    .c20:focus,
+    .c20:hover {
+      background-color: #961D35;
+    }
+
     @media (min-width:740px) {
       .c14 {
         max-width: 290px;
@@ -370,6 +376,7 @@ it('renders correctly', () => {
 
     <div
       className="c0"
+      id={null}
     >
       <div
         className="c1 c2"

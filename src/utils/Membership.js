@@ -39,19 +39,15 @@ const isInputMatchBoxValue = (
 };
 
 // This function is still in progress
-const donate = (e, amount) => {
-  e.preventDefault();
+const handleDonate = (amount, clientID, cartID, mbshipID) => {
   const donateLink = 'https://donation.comicrelief.com/';
   const affiliateValue = getUrlParameter(window.location.href);
   const currentpageUrl = window.location.href;
-
   const urlString =
     currentpageUrl.indexOf('?') > -1
       ? currentpageUrl.substring(0, currentpageUrl.indexOf('?'))
       : currentpageUrl;
-  // window.location.href = (donationLink + "?clientOverride=" + clientId + "&amount=" + amount + "&currency=" + currency + "&givingType=" + givingType + "&cartId=" + cartId + "&affiliate=" + affiliateValue + "&siteurl=" + url_string + '&rowID=' + rowID + '&moneybuy=' + submitNameID
-  console.log(urlString, affiliateValue, amount);
-  window.location.href = `${donateLink}?clientOverride=67888&amount=${amount}&currency=£&givingType=monthly&cartId=00000&affiliate=${affiliateValue}&siteurl=${urlString}`;
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${urlString}&rowID=${mbshipID}`;
 };
 
-export { onKeyPress, isAmountValid, isInputMatchBoxValue, donate };
+export { onKeyPress, isAmountValid, isInputMatchBoxValue, handleDonate };

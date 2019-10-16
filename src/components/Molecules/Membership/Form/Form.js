@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
-  donate,
+  handleDonate,
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue
@@ -21,7 +21,14 @@ import {
   AmountField
 } from '../Membership.style';
 
-const Signup = ({ data: { regularGiving }, otherDescription, ...rest }) => {
+const Signup = ({
+  data: { regularGiving },
+  otherDescription,
+  clientID,
+  cartID,
+  mbshipID,
+  ...rest
+}) => {
   // It's used to hightlight one of the money buy box when page load
   const [isSelected, setIsSelected] = useState(true);
   const [moneyBoxes, setMoneyBoxes] = useState({
@@ -93,6 +100,16 @@ const Signup = ({ data: { regularGiving }, otherDescription, ...rest }) => {
     });
   }, [isSelected, regularGiving.moneybuys]);
 
+  const submitDonation = (event, amount, clientId, cartId, mbshipId) => {
+    event.preventDefault();
+    if (isAmountValid(amount)) {
+      handleDonate(amount, clientId, cartId, mbshipId);
+    } else {
+      setErrorMsg(true);
+      setMoneyBuyCopy(false);
+    }
+  };
+  // Create money buy boxes
   const boxes = regularGiving.moneybuys.map(({ value, description }, index) => (
     <MoneyBuy
       isSelected={index === 1 && isSelected}
@@ -109,7 +126,11 @@ const Signup = ({ data: { regularGiving }, otherDescription, ...rest }) => {
 
   return (
     <FormWrapper>
-      <Form onSubmit={e => donate(e, amountDonate)}>
+      <Form
+        onSubmit={e =>
+          submitDonation(e, amountDonate, clientID, cartID, mbshipID)
+        }
+      >
         <Text tag="h3">Choose your monthly donation</Text>
         <MoneyBuys>{boxes}</MoneyBuys>
         <FormFieldset>
@@ -149,11 +170,15 @@ const Signup = ({ data: { regularGiving }, otherDescription, ...rest }) => {
 };
 
 Signup.propTypes = {
+  clientID: PropTypes.string,
+  cartID: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
+  mbshipID: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape)
 };
 
 Signup.defaultProps = {
+  clientID: 'the_fix',
   data: {}
 };
 export default Signup;
