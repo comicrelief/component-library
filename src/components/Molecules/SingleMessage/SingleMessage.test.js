@@ -98,7 +98,7 @@ it('renders correctly', () => {
 
     .c5 {
       z-index: 1;
-      padding: 8rem 4rem;
+      padding: 1rem;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
@@ -252,7 +252,7 @@ it('renders Single Message with no Image correctly', () => {
 
     .c1 {
       z-index: 1;
-      padding: 8rem 4rem;
+      padding: 1rem;
       -webkit-flex: 0 0 60%;
       -ms-flex: 0 0 60%;
       flex: 0 0 60%;
@@ -350,7 +350,7 @@ it('renders fullWidth Single Message correctly', () => {
 
     .c1 {
       z-index: 1;
-      padding: 8rem 4rem;
+      padding: 1rem;
       -webkit-flex: 0 0 60%;
       -ms-flex: 0 0 60%;
       flex: 0 0 60%;
@@ -470,7 +470,7 @@ it('renders double image Single Message correctly', () => {
 
     .c5 {
       z-index: 1;
-      padding: 8rem 4rem;
+      padding: 1rem;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;

@@ -33,7 +33,7 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
-  padding: ${spacing('xxl')} ${spacing('xl')};
+  padding: ${spacing('md')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ hasVideo, fullImage }) =>
       hasVideo === true && fullImage === true

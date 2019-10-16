@@ -71,3 +71,6 @@ export {
 export {
   default as Membership
 } from './components/Molecules/Membership/Membership';
+export {
+  default as VideoBanner
+} from './components/Molecules/VideoBanner/VideoBanner';

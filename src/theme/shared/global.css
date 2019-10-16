@@ -37,6 +37,10 @@ button {
   margin-top: 0;
 }
 
+p {
+  word-break: break-word;
+}
+
 p:first-child {
   margin-bottom: 1rem;
 }
