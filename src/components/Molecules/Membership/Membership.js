@@ -13,8 +13,6 @@ const Membership = ({
   subtitle,
   otherDescription,
   formAligntRight,
-  vhFull,
-  fullImage,
   images,
   image,
   imageLow,
@@ -23,8 +21,6 @@ const Membership = ({
   return (
     <Container
       formAligntRight={formAligntRight}
-      vhFull={vhFull}
-      fullImage={fullImage}
       backgroundColor={backgroundColor}
       id={mbshipID}
     >
@@ -63,8 +59,6 @@ Membership.propTypes = {
   otherDescription: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   formAligntRight: PropTypes.bool,
-  vhFull: PropTypes.bool,
-  fullImage: PropTypes.bool,
   imageLow: PropTypes.string,
   image: PropTypes.string,
   images: PropTypes.string,
@@ -75,8 +69,6 @@ Membership.propTypes = {
 Membership.defaultProps = {
   data: {},
   formAligntRight: true,
-  vhFull: false,
-  fullImage: false,
   imageLow: null,
   image: null,
   images: null,

@@ -1,4 +1,4 @@
-// this function prevent keyboard characters like  e, + , - to be pass on the input
+// this function prevent keyboard characters like  e, + , - to be passed on the input
 const onKeyPress = event => {
   const keyCode = event.keyCode || event.which;
   const keyValue = String.fromCharCode(keyCode);
@@ -39,15 +39,24 @@ const isInputMatchBoxValue = (
 };
 
 // This function is still in progress
-const handleDonateSubmission = (amount, clientID, cartID, mbshipID) => {
-  const donateLink = 'https://donation.comicrelief.com/';
-  const affiliateValue = getUrlParameter(window.location.href);
-  const currentpageUrl = window.location.href;
-  const urlString =
-    currentpageUrl.indexOf('?') > -1
-      ? currentpageUrl.substring(0, currentpageUrl.indexOf('?'))
-      : currentpageUrl;
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${urlString}&rowID=${mbshipID}`;
+const handleDonateSubmission = (
+  amount,
+  clientID,
+  cartID,
+  mbshipID,
+  donateLink
+) => {
+  let currentpageUrl = window.location.href;
+  const affiliateValue = getUrlParameter(currentpageUrl);
+  const reg = /[#?|[\]\\]/g;
+  if (currentpageUrl.match(reg) !== null) {
+    const thisMatch = currentpageUrl.match(reg)[0];
+    currentpageUrl = currentpageUrl.substring(
+      0,
+      currentpageUrl.indexOf(thisMatch)
+    );
+  }
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
 export {
