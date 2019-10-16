@@ -8,6 +8,7 @@ import { BgImage, Container, Header, Wrapper } from './Membership.style';
 const Membership = ({
   cartID,
   backgroundColor,
+  donateLink,
   data,
   title,
   subtitle,
@@ -46,6 +47,7 @@ const Membership = ({
           otherDescription={otherDescription}
           cartID={cartID}
           mbshipID={mbshipID}
+          donateLink={donateLink}
         />
       </Wrapper>
     </Container>
@@ -55,6 +57,7 @@ const Membership = ({
 Membership.propTypes = {
   cartID: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape),
+  donateLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,

@@ -23,6 +23,7 @@ import {
 
 const Signup = ({
   data: { regularGiving },
+  donateLink,
   otherDescription,
   clientID,
   cartID,
@@ -101,15 +102,23 @@ const Signup = ({
     });
   }, [isSelected, regularGiving.moneybuys]);
 
-  const submitDonation = (event, amount, clientId, cartId, mbshipId) => {
+  const submitDonation = (
+    event,
+    amount,
+    clientId,
+    cartId,
+    mbshipId,
+    donateURL
+  ) => {
     event.preventDefault();
     if (isAmountValid(amount)) {
-      handleDonateSubmission(amount, clientId, cartId, mbshipId);
+      handleDonateSubmission(amount, clientId, cartId, mbshipId, donateURL);
     } else {
       setErrorMsg(true);
       setMoneyBuyCopy(false);
     }
   };
+
   // Create money buy boxes
   const MoneyBoxes = regularGiving.moneybuys.map(
     ({ value, description }, index) => (
@@ -131,7 +140,14 @@ const Signup = ({
     <FormWrapper>
       <Form
         onSubmit={e =>
-          submitDonation(e, amountDonate, clientID, cartID, mbshipID)
+          submitDonation(
+            e,
+            amountDonate,
+            clientID,
+            cartID,
+            mbshipID,
+            donateLink
+          )
         }
       >
         <Text tag="h3">Choose your monthly donation</Text>
@@ -175,6 +191,7 @@ const Signup = ({
 Signup.propTypes = {
   clientID: PropTypes.string,
   cartID: PropTypes.string.isRequired,
+  donateLink: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape)

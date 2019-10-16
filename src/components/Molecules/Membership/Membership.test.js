@@ -9,10 +9,14 @@ import data from './dev-data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <Membership
+      backgroundColor="orange_light"
       formAligntRight={false}
+      imageLow={pictures.imageLow}
       images={pictures.images}
-      image={pictures.image}
       data={data}
+      mbshipID="mship-1"
+      donateLink="https://donation.comicrelief.com/"
+      cartID="refugee1-365"
       title="Help someone like Jordan see a better tomorrow"
       subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives."
       otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
@@ -141,7 +145,7 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      background-color: inherit;
+      background-color: #FEE3CC;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -163,7 +167,7 @@ it('renders correctly', () => {
     }
 
     .c1:before {
-      color: inherit;
+      color: #FEE3CC;
       content: '';
       position: absolute;
       width: 100%;
@@ -376,7 +380,7 @@ it('renders correctly', () => {
 
     <div
       className="c0"
-      id={null}
+      id="mship-1"
     >
       <div
         className="c1 c2"
@@ -386,11 +390,11 @@ it('renders correctly', () => {
         <img
           alt=""
           className="lazyload c3"
-          data-lowsrc={null}
+          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
-          src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          src={null}
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
