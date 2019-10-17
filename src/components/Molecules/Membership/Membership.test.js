@@ -439,10 +439,10 @@ it('renders correctly', () => {
             <div
               className="c10"
             >
-              <label
+              <form
                 aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
                 className="c11 c12"
-                htmlFor="undefined"
+                htmlFor="moneyBuy-box1"
                 name="moneyBuy1"
                 onClick={[Function]}
                 placeholder=""
@@ -467,11 +467,11 @@ it('renders correctly', () => {
                   value="£ 5"
                 />
                 
-              </label>
-              <label
+              </form>
+              <form
                 aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
                 className="c11 c15"
-                htmlFor="undefined"
+                htmlFor="moneyBuy-box2"
                 name="moneyBuy2"
                 onClick={[Function]}
                 placeholder=""
@@ -496,11 +496,11 @@ it('renders correctly', () => {
                   value="£ 10"
                 />
                 
-              </label>
-              <label
+              </form>
+              <form
                 aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
                 className="c11 c12"
-                htmlFor="undefined"
+                htmlFor="moneyBuy-box3"
                 name="moneyBuy3"
                 onClick={[Function]}
                 placeholder=""
@@ -525,7 +525,7 @@ it('renders correctly', () => {
                   value="£ 20"
                 />
                 
-              </label>
+              </form>
             </div>
             <div
               className="c16"
@@ -537,9 +537,9 @@ it('renders correctly', () => {
               >
                 Other amount
               </span>
-              <label
+              <form
                 className="c11 c19"
-                htmlFor="undefined"
+                htmlFor="MoneyBuy-userInput"
                 max="5000"
                 min="1"
                 name="membership_amount"
@@ -575,7 +575,7 @@ it('renders correctly', () => {
                   value=""
                 />
                 
-              </label>
+              </form>
             </div>
             <button
               className="c20"

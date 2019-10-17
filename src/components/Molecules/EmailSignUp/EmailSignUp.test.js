@@ -256,9 +256,9 @@ it('renders correctly', () => {
         <form
           className="c5"
         >
-          <label
+          <form
             className="c6 c7"
-            htmlFor="undefined"
+            htmlFor="email"
             name="email"
             onChange={[Function]}
             placeholder="example@youremail.com"
@@ -281,7 +281,7 @@ it('renders correctly', () => {
               value=""
             />
             
-          </label>
+          </form>
           <div
             className="c11"
           >

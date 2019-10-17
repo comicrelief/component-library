@@ -6,7 +6,7 @@
     type="text"
     label="Label"
     errorMsg=""
-    id="Acessibility information go here"
+    id="Accessibility information go here"
     showLabel={true}
   />
 ```
@@ -19,7 +19,7 @@
     type="text"
     label="Label"
     errorMsg="This is an error message"
-    id="Acessibility info"
+    id="Accessibility info"
     showLabel={false}
   />
 ```
@@ -32,7 +32,7 @@
     type="text"
     label="Label"
     errorMsg=""
-    id="Acessibility info go here"
+    id="Accessibility info go here"
     showLabel={true}
   />
 ```

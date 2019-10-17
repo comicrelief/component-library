@@ -11,7 +11,7 @@ it('renders correctly', () => {
       type="text"
       label="Label"
       errorMsg=""
-      id="Acessibility info go here"
+      id="Accessibility info go here"
     />
   ).toJSON();
 
@@ -78,9 +78,9 @@ it('renders correctly', () => {
       }
     }
 
-    <label
+    <form
       className="c0"
-      htmlFor="undefined"
+      htmlFor="Accessibility info go here"
       name="fullname"
       placeholder="This is the hint text"
     >
@@ -92,14 +92,14 @@ it('renders correctly', () => {
         Label
       </span>
       <input
-        aria-describedby="Acessibility info go here"
+        aria-describedby="Accessibility info go here"
         className="c2"
-        id="Acessibility info go here"
+        id="Accessibility info go here"
         name="fullname"
         placeholder="This is the hint text"
         type="text"
       />
       
-    </label>
+    </form>
   `);
 });

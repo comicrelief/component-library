@@ -42,9 +42,7 @@ const InputField = styled.input`
 /**
  * Label component
  */
-const Label = styled.label.attrs(({ id }) => ({
-  htmlFor: `${id}`
-}))`
+const Label = styled.form`
   display: flex;
   flex-direction: column;
 `;
@@ -77,6 +75,7 @@ const ErrorText = styled(Text)`
 const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
 `;
+
 const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
   return (

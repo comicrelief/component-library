@@ -207,9 +207,9 @@ it('renders correctly', () => {
           <div
             className="c3"
           >
-            <label
+            <form
               className="c4 c5"
-              htmlFor="undefined"
+              htmlFor="search"
               name="search"
               onChange={[Function]}
               placeholder=""
@@ -233,15 +233,15 @@ it('renders correctly', () => {
                 value=""
               />
               
-            </label>
+            </form>
           </div>
           <div
             className="c9"
           >
-            <label
+            <form
               className="c4 c10"
               disabled="disabled"
-              htmlFor="undefined"
+              htmlFor=""
               name="action"
               placeholder=""
             >
@@ -262,7 +262,7 @@ it('renders correctly', () => {
                 type="submit"
               />
               
-            </label>
+            </form>
           </div>
         </form>
       </div>
