@@ -19,14 +19,14 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
+    .c1 {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c4 {
+    .c3 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -36,13 +36,13 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c4:hover {
+    .c3:hover {
       color: #FFFFFF;
       border-bottom: 2px solid #FFFFFF;
       font-weight: 700;
     }
 
-    .c6 {
+    .c5 {
       display: inline-block;
       padding: 0.5rem 1rem;
       text-align: center;
@@ -55,7 +55,7 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c6:hover {
+    .c5:hover {
       background-color: #918791;
       color: #2C0230;
     }
@@ -74,40 +74,40 @@ it('renders correctly', () => {
       z-index: 3;
     }
 
-    .c1 {
+    .c2 {
       line-height: 1.5;
       margin: 0;
     }
 
-    .c1:first-of-type {
+    .c2:first-of-type {
       margin-bottom: 0.5rem;
     }
 
-    .c5 {
+    .c6 {
       padding: 0.5rem 1rem;
       display: block;
       margin-bottom: 10px;
     }
 
-    .c3 {
+    .c4 {
       color: #FFFFFF;
       padding: 0 0.25rem 1px;
       border-bottom: 2px solid;
     }
 
     @media (min-width:740px) {
-      .c1 {
+      .c2 {
         width: 75%;
         margin: 0 auto;
       }
 
-      .c1:first-of-type {
+      .c2:first-of-type {
         margin-bottom: 1rem;
       }
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c6 {
         margin: 0 0.25rem 0 0;
         display: inline-block;
       }
@@ -121,7 +121,7 @@ it('renders correctly', () => {
         color="white"
         size="s"
       >
-        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about 
+        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
           className="c3 c4"
           color="red"

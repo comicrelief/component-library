@@ -15,14 +15,14 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c5 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c8 {
+    .c7 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -39,23 +39,23 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c8:focus {
+    .c7:focus {
       border: 1px solid #666;
     }
 
-    .c8:focus::-webkit-input-placeholder {
+    .c7:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-moz-placeholder {
+    .c7:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus::-moz-placeholder {
+    .c7:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c8:focus:-ms-input-placeholder {
+    .c7:focus:-ms-input-placeholder {
       color: transparent;
     }
 
@@ -69,7 +69,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c5 {
+    .c6 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -117,7 +117,7 @@ it('renders correctly', () => {
       margin-right: 0.5rem;
     }
 
-    .c7 {
+    .c8 {
       margin: 0;
       padding: 0;
       max-width: 100%;
@@ -125,7 +125,7 @@ it('renders correctly', () => {
       outline: #E52630;
     }
 
-    .c7:focus {
+    .c8:focus {
       border: 0;
     }
 
@@ -160,13 +160,13 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c7 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c7 {
+      .c8 {
         height: 100px;
         font-size: 2.075rem;
       }
@@ -219,6 +219,7 @@ it('renders correctly', () => {
               <input
                 aria-describedby="search"
                 className="c7 c8"
+                id="search"
                 name="search"
                 onChange={[Function]}
                 placeholder=""
@@ -244,8 +245,9 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby=""
-                className="c10 c8"
+                className="c7 c10"
                 disabled="disabled"
+                id=""
                 name="action"
                 placeholder=""
                 type="submit"

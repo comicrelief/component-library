@@ -39,14 +39,14 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c2 {
+      .c1 {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: 400;
       font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c8 {
+    .c7 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
@@ -71,7 +71,7 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c10 {
+    .c9 {
       box-sizing: border-box;
       width: 100%;
       height: 50px;
@@ -88,23 +88,23 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c10:focus {
+    .c9:focus {
       border: 1px solid #666;
     }
 
-    .c10:focus::-webkit-input-placeholder {
+    .c9:focus::-webkit-input-placeholder {
       color: transparent;
     }
 
-    .c10:focus:-moz-placeholder {
+    .c9:focus:-moz-placeholder {
       color: transparent;
     }
 
-    .c10:focus::-moz-placeholder {
+    .c9:focus::-moz-placeholder {
       color: transparent;
     }
 
-    .c10:focus:-ms-input-placeholder {
+    .c9:focus:-ms-input-placeholder {
       color: transparent;
     }
 
@@ -118,7 +118,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c7 {
+    .c8 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -202,17 +202,17 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c9 {
+    .c10 {
       width: 100%;
     }
 
-    .c1 {
+    .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
     }
 
     @media (min-width:740px) {
-      .c10 {
+      .c9 {
         max-width: 290px;
       }
     }
@@ -224,7 +224,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         font-size: 2.75rem;
       }
     }
@@ -267,6 +267,7 @@ it('renders correctly', () => {
             </span>
             <input
               className="c9 c10"
+              id="email"
               name="email"
               onChange={[Function]}
               placeholder="example@youremail.com"
@@ -303,7 +304,7 @@ it('renders correctly', () => {
           />
         </div>
       </div>,
-      .c2 {
+      .c1 {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: 400;
@@ -336,13 +337,13 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c1 {
+    .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         font-size: 2.75rem;
       }
     }
