@@ -48,9 +48,7 @@ const StyledInput = styled.input`
 /**
  * Label component
  */
-const Label = styled.label.attrs(({ id }) => ({
-  htmlFor: `${id}`
-}))`
+const Label = styled.label`
   display: flex;
   flex-direction: column;
 `;
@@ -91,6 +89,7 @@ const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
         {label}
       </TextLabel>
       <StyledInput
+        id={id}
         type={type}
         {...rest}
         error={error ? 1 : 0}

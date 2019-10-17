@@ -27,14 +27,14 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c10 {
+    .c9 {
       font-size: 1.725rem;
       text-transform: uppercase;
       font-weight: normal;
       font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c5 {
+    .c4 {
       position: relative;
       width: 100%;
       height: 100%;
@@ -47,7 +47,7 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c2 {
+    .c1 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -56,7 +56,7 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c2:hover {
+    .c1:hover {
       color: #2C0230;
       font-weight: 700;
     }
@@ -71,7 +71,7 @@ it('renders correctly', () => {
       background-color: #fff;
     }
 
-    .c1 {
+    .c2 {
       padding: 0;
       display: -webkit-box;
       display: -webkit-flex;
@@ -109,11 +109,11 @@ it('renders correctly', () => {
       flex: 1;
     }
 
-    .c9 {
+    .c10 {
       margin: 0;
     }
 
-    .c4 {
+    .c5 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -121,7 +121,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c1 {
+      .c2 {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
@@ -129,7 +129,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
@@ -164,7 +164,7 @@ it('renders correctly', () => {
           >
             <img
               alt="Image's description"
-              className="lazyload c6"
+              className="c6 lazyload"
               data-lowsrc={null}
               data-sizes="auto"
               data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"

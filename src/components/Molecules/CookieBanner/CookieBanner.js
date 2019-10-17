@@ -12,9 +12,8 @@ const CookieBanner = ({ acceptCookie, denyCookie, cookiePolicyUrl }) => {
   return (
     <CookieWrapper>
       <CookieText tag="p" color="white">
-        {
-          'Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about '
-        }
+        Hello! Comic Relief uses cookies to help make this website better and
+        improve our services. You can learn more about
         <LinkStyle href={cookiePolicyUrl} type="standard_white">
           our use of cookies
         </LinkStyle>
