@@ -78,7 +78,7 @@ it('renders correctly', () => {
       }
     }
 
-    <form
+    <label
       className="c0"
       htmlFor="Accessibility info go here"
       name="fullname"
@@ -100,6 +100,6 @@ it('renders correctly', () => {
         type="text"
       />
       
-    </form>
+    </label>
   `);
 });

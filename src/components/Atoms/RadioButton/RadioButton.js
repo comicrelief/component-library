@@ -52,9 +52,7 @@ const StyledInput = styled.input`
 /**
  * Label component
  */
-const Label = styled.label.attrs(({ label }) => ({
-  htmlFor: `${label}`
-}))`
+const Label = styled.label`
   display: flex;
   align-items: center;
   position: relative;

@@ -256,7 +256,7 @@ it('renders correctly', () => {
         <form
           className="c5"
         >
-          <form
+          <label
             className="c6 c7"
             htmlFor="email"
             name="email"
@@ -281,7 +281,7 @@ it('renders correctly', () => {
               value=""
             />
             
-          </form>
+          </label>
           <div
             className="c11"
           >

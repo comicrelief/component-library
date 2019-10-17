@@ -207,7 +207,7 @@ it('renders correctly', () => {
           <div
             className="c3"
           >
-            <form
+            <label
               className="c4 c5"
               htmlFor="search"
               name="search"
@@ -233,12 +233,12 @@ it('renders correctly', () => {
                 value=""
               />
               
-            </form>
+            </label>
           </div>
           <div
             className="c9"
           >
-            <form
+            <label
               className="c4 c10"
               disabled="disabled"
               htmlFor=""
@@ -262,7 +262,7 @@ it('renders correctly', () => {
                 type="submit"
               />
               
-            </form>
+            </label>
           </div>
         </form>
       </div>

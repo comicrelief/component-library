@@ -439,7 +439,7 @@ it('renders correctly', () => {
             <div
               className="c10"
             >
-              <form
+              <label
                 aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
                 className="c11 c12"
                 htmlFor="moneyBuy-box1"
@@ -467,8 +467,8 @@ it('renders correctly', () => {
                   value="£ 5"
                 />
                 
-              </form>
-              <form
+              </label>
+              <label
                 aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
                 className="c11 c15"
                 htmlFor="moneyBuy-box2"
@@ -496,8 +496,8 @@ it('renders correctly', () => {
                   value="£ 10"
                 />
                 
-              </form>
-              <form
+              </label>
+              <label
                 aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
                 className="c11 c12"
                 htmlFor="moneyBuy-box3"
@@ -525,7 +525,7 @@ it('renders correctly', () => {
                   value="£ 20"
                 />
                 
-              </form>
+              </label>
             </div>
             <div
               className="c16"
@@ -537,7 +537,7 @@ it('renders correctly', () => {
               >
                 Other amount
               </span>
-              <form
+              <label
                 className="c11 c19"
                 htmlFor="MoneyBuy-userInput"
                 max="5000"
@@ -575,7 +575,7 @@ it('renders correctly', () => {
                   value=""
                 />
                 
-              </form>
+              </label>
             </div>
             <button
               className="c20"

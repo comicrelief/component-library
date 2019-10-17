@@ -6,8 +6,8 @@ import RadioButton from './RadioButton';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
-      <RadioButton name="gender" value="male" label="Male" />
-      <RadioButton name="gender" value="female" label="Female" />
+      <RadioButton id="male" name="gender" value="male" label="Male" />
+      <RadioButton id="female" name="gender" value="female" label="Female" />
     </>
   ).toJSON();
 
@@ -77,7 +77,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="undefined"
+        htmlFor="male"
       >
         <input
           className="c1"
@@ -159,7 +159,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="undefined"
+        htmlFor="female"
       >
         <input
           className="c1"

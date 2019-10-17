@@ -42,7 +42,7 @@ const InputField = styled.input`
 /**
  * Label component
  */
-const Label = styled.form`
+const Label = styled.label`
   display: flex;
   flex-direction: column;
 `;
@@ -84,11 +84,11 @@ const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
         {label}
       </TextLabel>
       <InputField
+        id={id}
         type={type}
         {...rest}
         error={error ? 1 : 0}
         aria-describedby={hasAria ? id : undefined}
-        id={id}
       />
       {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
