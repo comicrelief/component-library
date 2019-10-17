@@ -44,14 +44,14 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c18 {
+    .c17 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: 500;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c2 {
+    .c1 {
       position: relative;
       width: 100%;
       height: 100%;
@@ -103,7 +103,7 @@ it('renders correctly', () => {
       color: #666;
     }
 
-    .c12 {
+    .c11 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -113,11 +113,11 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c11 {
+    .c12 {
       display: block;
     }
 
-    .c11 input {
+    .c12 input {
       border: 2px solid #c7c7c7;
       font-size: 1.44rem;
       font-weight: 800;
@@ -158,7 +158,7 @@ it('renders correctly', () => {
       min-height: 100vh;
     }
 
-    .c1 {
+    .c2 {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -166,7 +166,7 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c1:before {
+    .c2:before {
       color: #FEE3CC;
       content: '';
       position: absolute;
@@ -180,11 +180,10 @@ it('renders correctly', () => {
       max-width: 320px;
       text-align: center;
       margin-bottom: 50%;
-      padding-top: 2rem;
     }
 
     .c5 {
-      padding: 0 1rem;
+      padding: 2rem 1rem 0;
       margin-bottom: 2rem;
     }
 
@@ -263,7 +262,7 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c17 {
+    .c18 {
       margin-right: auto;
     }
 
@@ -326,6 +325,10 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c0 {
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: inherit;
         -webkit-justify-content: inherit;
         -ms-flex-pack: inherit;
@@ -340,30 +343,29 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         height: 100%;
       }
 
-      .c1:before {
+      .c2:before {
         content: none;
       }
     }
 
     @media (min-width:1024px) {
       .c4 {
-        margin-bottom: 0;
-        padding: 2rem;
+        margin: 0 8rem;
         max-width: 420px;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1024px) {
       .c8 {
         height: 430px;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1024px) {
       .c19 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
@@ -371,7 +373,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1024px) {
       .c20 {
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -389,7 +391,7 @@ it('renders correctly', () => {
       >
         <img
           alt=""
-          className="lazyload c3"
+          className="c3 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
@@ -440,14 +442,14 @@ it('renders correctly', () => {
               <label
                 aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
                 className="c11 c12"
-                htmlFor="moneyBuy-box1"
+                htmlFor="undefined"
                 name="moneyBuy1"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 5"
               >
                 <span
-                  className="c13"
+                  className="c13 "
                   color="inherit"
                   size="s"
                 >
@@ -456,7 +458,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box1"
                   aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                  className="c11 c14"
+                  className="c14 c12"
                   id="moneyBuy-box1"
                   name="moneyBuy1"
                   onClick={[Function]}
@@ -468,15 +470,15 @@ it('renders correctly', () => {
               </label>
               <label
                 aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                className="c15 c12"
-                htmlFor="moneyBuy-box2"
+                className="c11 c15"
+                htmlFor="undefined"
                 name="moneyBuy2"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 10"
               >
                 <span
-                  className="c13"
+                  className="c13 "
                   color="inherit"
                   size="s"
                 >
@@ -485,7 +487,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box2"
                   aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                  className="c15 c14"
+                  className="c14 c15"
                   id="moneyBuy-box2"
                   name="moneyBuy2"
                   onClick={[Function]}
@@ -498,14 +500,14 @@ it('renders correctly', () => {
               <label
                 aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
                 className="c11 c12"
-                htmlFor="moneyBuy-box3"
+                htmlFor="undefined"
                 name="moneyBuy3"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 20"
               >
                 <span
-                  className="c13"
+                  className="c13 "
                   color="inherit"
                   size="s"
                 >
@@ -514,7 +516,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box3"
                   aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                  className="c11 c14"
+                  className="c14 c12"
                   id="moneyBuy-box3"
                   name="moneyBuy3"
                   onClick={[Function]}
@@ -536,8 +538,8 @@ it('renders correctly', () => {
                 Other amount
               </span>
               <label
-                className="c19 c12"
-                htmlFor="MoneyBuy-userInput"
+                className="c11 c19"
+                htmlFor="undefined"
                 max="5000"
                 min="1"
                 name="membership_amount"
@@ -550,7 +552,7 @@ it('renders correctly', () => {
                 value=""
               >
                 <span
-                  className="c13"
+                  className="c13 "
                   color="inherit"
                   size="s"
                 >
@@ -558,7 +560,7 @@ it('renders correctly', () => {
                 </span>
                 <input
                   aria-describedby="MoneyBuy-userInput"
-                  className="c19 c14"
+                  className="c14 c19"
                   id="MoneyBuy-userInput"
                   max="5000"
                   min="1"

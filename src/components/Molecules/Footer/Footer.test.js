@@ -43,7 +43,7 @@ it('renders correctly', () => {
       transform: rotate(-14deg);
     }
 
-    .c11 {
+    .c10 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -53,7 +53,7 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c11:hover {
+    .c10:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: 700;
@@ -221,7 +221,7 @@ it('renders correctly', () => {
       margin: 0;
     }
 
-    .c10 {
+    .c11 {
       border: 0;
       height: 46px;
       width: 100%;
@@ -229,8 +229,8 @@ it('renders correctly', () => {
       color: #FFFFFF;
     }
 
-    .c10:hover,
-    .c10:focus {
+    .c11:hover,
+    .c11:focus {
       color: #FFFFFF;
       border-bottom: none;
       font-weight: 500;
@@ -594,7 +594,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/#"
                     role="menuitem"
@@ -614,7 +614,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
                     role="menuitem"
@@ -663,7 +663,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="/contact-us"
                     role="menuitem"
@@ -683,7 +683,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
                     role="menuitem"
@@ -703,7 +703,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
                     role="menuitem"
@@ -723,7 +723,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                     role="menuitem"
@@ -772,7 +772,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
                     role="menuitem"
@@ -792,7 +792,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
                     role="menuitem"
@@ -812,7 +812,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
                     role="menuitem"
@@ -832,7 +832,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
                     role="menuitem"
@@ -852,7 +852,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                     role="menuitem"
@@ -872,7 +872,7 @@ it('renders correctly', () => {
                   className="c16"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.sportrelief.com/"
                     role="menuitem"
@@ -921,7 +921,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/careers"
                     role="menuitem"
@@ -941,7 +941,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
@@ -990,7 +990,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/news"
                     role="menuitem"
@@ -1010,7 +1010,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
                     role="menuitem"
@@ -1059,7 +1059,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="/homepage"
                     role="menuitem"
@@ -1079,7 +1079,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="/this-is-a-test"
                     role="menuitem"
@@ -1099,7 +1099,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.yahoo.com"
                     role="menuitem"
@@ -1119,7 +1119,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1139,7 +1139,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 c11"
+                    className="c10 c14"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"

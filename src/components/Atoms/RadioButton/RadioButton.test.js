@@ -77,7 +77,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="male"
+        htmlFor="undefined"
       >
         <input
           className="c1"
@@ -159,7 +159,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="female"
+        htmlFor="undefined"
       >
         <input
           className="c1"

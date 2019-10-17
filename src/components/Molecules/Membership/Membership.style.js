@@ -14,6 +14,7 @@ const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   @media ${({ theme }) => theme.breakpoint('medium')} {
+    align-items: center;
     justify-content: inherit;
     min-height: 750px;
     height: 100vh;
@@ -52,17 +53,15 @@ const Wrapper = styled.div`
   max-width: 320px;
   text-align: center;
   margin-bottom: 50%;
-  padding-top: ${spacing('l')};
 
   ${media('medium')} {
-    margin-bottom: 0;
-    padding: ${spacing('l')};
+    margin: 0 ${spacing('xxl')};
     max-width: 420px;
   }
 `;
 
 const Header = styled.div`
-  padding: 0 ${spacing('md')};
+  padding: ${spacing('l')} ${spacing('md')} 0;
   margin-bottom: ${spacing('l')};
 `;
 
@@ -71,7 +70,7 @@ const FormWrapper = styled.div`
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
   height: 450px;
 
-  ${media('small')} {
+  ${media('medium')} {
     height: 430px;
   }
 `;
@@ -138,7 +137,7 @@ const AmountField = styled(Input)`
   flex: 0 0 50%;
   font-weight: 400;
 
-  ${media('small')} {
+  ${media('medium')} {
     flex: 0 0 60%;
   }
 
@@ -184,7 +183,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 
-  ${media('small')} {
+  ${media('medium')} {
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};
   }

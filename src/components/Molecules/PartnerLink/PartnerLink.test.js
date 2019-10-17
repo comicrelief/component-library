@@ -14,7 +14,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c4 {
       color: #FFFFFF;
       font-size: 0.69375rem;
       text-transform: inherit;
@@ -34,7 +34,7 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
-    .c1 {
+    .c0 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -44,13 +44,13 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c1:hover {
+    .c0:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
-    .c5 {
+    .c6 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -65,19 +65,19 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c0 {
+    .c1 {
       position: relative;
       padding: 0;
       border: none;
     }
 
-    .c0:hover,
-    .c0:focus {
+    .c1:hover,
+    .c1:focus {
       border: none;
     }
 
-    .c0:hover .c4,
-    .c0:focus .c4 {
+    .c1:hover .c5,
+    .c1:focus .c5 {
       overflow: inherit;
       -webkit-clip-path: none;
       clip-path: none;
@@ -94,8 +94,8 @@ it('renders correctly', () => {
       z-index: 2;
     }
 
-    .c0:hover::after,
-    .c0:focus::after {
+    .c1:hover::after,
+    .c1:focus::after {
       content: '';
       position: absolute;
       display: block;
@@ -109,7 +109,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c6 {
         font-size: 1rem;
       }
     }
@@ -128,7 +128,7 @@ it('renders correctly', () => {
       >
         <img
           alt="test Image"
-          className="lazyload c3"
+          className="c3 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"

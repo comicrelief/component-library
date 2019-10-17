@@ -39,14 +39,14 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-      .c2 {
+      .c1 {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: 400;
       font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c9 {
+    .c8 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
@@ -110,7 +110,7 @@ it('renders correctly', () => {
       color: #666;
     }
 
-    .c7 {
+    .c6 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -120,7 +120,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c8 {
+    .c9 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -204,11 +204,11 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c6 {
+    .c7 {
       width: 100%;
     }
 
-    .c1 {
+    .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
     }
@@ -226,7 +226,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         font-size: 2.75rem;
       }
     }
@@ -258,7 +258,7 @@ it('renders correctly', () => {
         >
           <label
             className="c6 c7"
-            htmlFor="email"
+            htmlFor="undefined"
             name="email"
             onChange={[Function]}
             placeholder="example@youremail.com"
@@ -272,7 +272,7 @@ it('renders correctly', () => {
               email
             </span>
             <input
-              className="c6 c10"
+              className="c10 c7"
               id="email"
               name="email"
               onChange={[Function]}
@@ -310,7 +310,7 @@ it('renders correctly', () => {
           />
         </div>
       </div>,
-      .c2 {
+      .c1 {
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: 400;
@@ -343,13 +343,13 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-    .c1 {
+    .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
     }
 
     @media (min-width:1024px) {
-      .c1 {
+      .c2 {
         font-size: 2.75rem;
       }
     }

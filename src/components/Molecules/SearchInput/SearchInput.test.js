@@ -15,7 +15,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c7 {
+    .c6 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
@@ -61,7 +61,7 @@ it('renders correctly', () => {
       color: #666;
     }
 
-    .c5 {
+    .c4 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -71,7 +71,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c6 {
+    .c7 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -119,7 +119,7 @@ it('renders correctly', () => {
       margin-right: 0.5rem;
     }
 
-    .c4 {
+    .c5 {
       margin: 0;
       padding: 0;
       max-width: 100%;
@@ -127,7 +127,7 @@ it('renders correctly', () => {
       outline: #E52630;
     }
 
-    .c4:focus {
+    .c5:focus {
       border: 0;
     }
 
@@ -168,7 +168,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c4 {
+      .c5 {
         height: 100px;
         font-size: 2.075rem;
       }
@@ -209,7 +209,7 @@ it('renders correctly', () => {
           >
             <label
               className="c4 c5"
-              htmlFor="search"
+              htmlFor="undefined"
               name="search"
               onChange={[Function]}
               placeholder=""
@@ -224,7 +224,7 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby="search"
-                className="c4 c8"
+                className="c8 c5"
                 id="search"
                 name="search"
                 onChange={[Function]}
@@ -239,9 +239,9 @@ it('renders correctly', () => {
             className="c9"
           >
             <label
-              className="c10 c5"
+              className="c4 c10"
               disabled="disabled"
-              htmlFor=""
+              htmlFor="undefined"
               name="action"
               placeholder=""
             >
@@ -254,7 +254,7 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby=""
-                className="c10 c8"
+                className="c8 c10"
                 disabled="disabled"
                 id=""
                 name="action"

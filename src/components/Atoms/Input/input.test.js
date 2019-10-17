@@ -80,12 +80,12 @@ it('renders correctly', () => {
 
     <label
       className="c0"
-      htmlFor="Acessibility info go here"
+      htmlFor="undefined"
       name="fullname"
       placeholder="This is the hint text"
     >
       <span
-        className="c1"
+        className="c1 "
         color="inherit"
         size="s"
       >
