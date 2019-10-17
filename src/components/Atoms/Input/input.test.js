@@ -90,6 +90,7 @@ it('renders correctly', () => {
       <input
         aria-describedby="Acessibility info go here"
         className="c2"
+        id="Acessibility info go here"
         name="fullname"
         placeholder="This is the hint text"
         type="text"

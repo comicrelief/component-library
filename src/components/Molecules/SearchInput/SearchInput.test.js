@@ -219,6 +219,7 @@ it('renders correctly', () => {
               <input
                 aria-describedby="search"
                 className="c7 c8"
+                id="search"
                 name="search"
                 onChange={[Function]}
                 placeholder=""
@@ -246,6 +247,7 @@ it('renders correctly', () => {
                 aria-describedby=""
                 className="c7 c10"
                 disabled="disabled"
+                id=""
                 name="action"
                 placeholder=""
                 type="submit"

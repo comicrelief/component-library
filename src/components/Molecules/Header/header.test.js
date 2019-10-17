@@ -147,7 +147,11 @@ it('renders correctly', () => {
     .c18 .c20,
     .c18 .c20::before,
     .c18 .c20::after {
+<<<<<<< HEAD
       width: 25px;
+=======
+      width: 33px;
+>>>>>>> 86b86b61b3298e1b3c40152e635572d7aa1d38b7
       height: 3px;
       display: inline-block;
     }

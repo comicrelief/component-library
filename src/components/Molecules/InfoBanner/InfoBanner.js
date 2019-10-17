@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Moment from 'react-moment';
 import CurrencyFormat from 'react-currency-format';
 import PropTypes from 'prop-types';
 
@@ -61,9 +60,7 @@ const InfoBanner = ({
       </Info>
       <Info>
         <Label>End Date</Label>
-        <Desc>
-          <Moment format="MMMM Do YYYY">{endDate}</Moment>
-        </Desc>
+        <Desc>{endDate}</Desc>
       </Info>
       <Info>
         <Label>Funding theme</Label>
@@ -83,9 +80,7 @@ const InfoBanner = ({
       </Info>
       <Info>
         <Label>Start Date</Label>
-        <Desc>
-          <Moment format="MMMM Do YYYY">{startDate}</Moment>
-        </Desc>
+        <Desc>{startDate}</Desc>
       </Info>
       <Info>
         <Label>Beneficiary Country</Label>

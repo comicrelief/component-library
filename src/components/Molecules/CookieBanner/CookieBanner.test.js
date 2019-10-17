@@ -121,7 +121,7 @@ it('renders correctly', () => {
         color="white"
         size="s"
       >
-        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about 
+        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
           className="c3 c4"
           color="red"

@@ -267,6 +267,7 @@ it('renders correctly', () => {
             </span>
             <input
               className="c9 c10"
+              id="email"
               name="email"
               onChange={[Function]}
               placeholder="example@youremail.com"
@@ -336,6 +337,7 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
+<<<<<<< HEAD
     .c5 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -359,6 +361,8 @@ it('renders correctly', () => {
       border-color: #FFFFFF;
     }
 
+=======
+>>>>>>> 86b86b61b3298e1b3c40152e635572d7aa1d38b7
     .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;

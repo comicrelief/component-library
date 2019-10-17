@@ -10,15 +10,13 @@ it('renders correctly', () => {
     'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
   const tree = renderWithTheme(
-    <VideoBanner poster={poster} video={src} autoPlay />
+    <VideoBanner poster={poster} video={src} />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       width: 100%;
-      background-size: 100%;
-      object-fit: contain;
-      overflow: hidden;
+      height: 100%;
     }
 
     <video
@@ -26,12 +24,10 @@ it('renders correctly', () => {
       className="c0"
       loop={false}
       muted={true}
+      playsInline={true}
       poster="mock.asset"
+      src="https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4"
     >
-      <source
-        src="https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4"
-        type="video/mp4"
-      />
       Your browser does not support video.
     </video>
   `);
