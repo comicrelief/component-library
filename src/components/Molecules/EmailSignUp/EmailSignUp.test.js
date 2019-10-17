@@ -256,7 +256,7 @@ it('renders correctly', () => {
         >
           <label
             className="c6"
-            htmlFor="undefined"
+            htmlFor="email"
           >
             <span
               className="c7 c8"
@@ -337,7 +337,6 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
-<<<<<<< HEAD
     .c5 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -361,8 +360,6 @@ it('renders correctly', () => {
       border-color: #FFFFFF;
     }
 
-=======
->>>>>>> 86b86b61b3298e1b3c40152e635572d7aa1d38b7
     .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;

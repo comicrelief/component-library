@@ -78,7 +78,7 @@ it('renders correctly', () => {
 
     <label
       className="c0"
-      htmlFor="undefined"
+      htmlFor="Acessibility info go here"
     >
       <span
         className="c1 "

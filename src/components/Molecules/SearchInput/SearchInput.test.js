@@ -207,7 +207,7 @@ it('renders correctly', () => {
           >
             <label
               className="c4"
-              htmlFor="undefined"
+              htmlFor="search"
             >
               <span
                 className="c5 c6"
@@ -234,7 +234,7 @@ it('renders correctly', () => {
           >
             <label
               className="c4"
-              htmlFor="undefined"
+              htmlFor=""
             >
               <span
                 className="c5 c6"
