@@ -2,16 +2,17 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Video = styled.video`
+const Video = styled.video.attrs(() => ({
+  autoPlay: true,
+  playsInline: true,
+  muted: true,
+  loop: false
+}))`
   width: 100%;
-  background-image: url(${({ placeholder }) => placeholder});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  object-fit: contain;
+  height: 100%;
 `;
 
-const VideoBanner = ({ video, autoPlay, loop, placeholder }) => {
+const VideoBanner = ({ video, poster }) => {
   const videoEl = useRef(null);
 
   const onPlay = () => {
@@ -23,16 +24,7 @@ const VideoBanner = ({ video, autoPlay, loop, placeholder }) => {
   });
 
   return (
-    <Video
-      placeholder={placeholder}
-      poster="data:image/gif,AAAA"
-      ref={videoEl}
-      autoPlay={autoPlay}
-      loop={loop}
-      muted
-      playsinline
-    >
-      <source src={video} type="video/mp4" />
+    <Video poster={poster} src={video} ref={videoEl}>
       Your browser does not support video.
     </Video>
   );
@@ -40,13 +32,7 @@ const VideoBanner = ({ video, autoPlay, loop, placeholder }) => {
 
 VideoBanner.propTypes = {
   video: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  autoPlay: PropTypes.bool.isRequired,
-  loop: PropTypes.bool
-};
-
-VideoBanner.defaultProps = {
-  loop: false
+  poster: PropTypes.string.isRequired
 };
 
 export default VideoBanner;
