@@ -43,7 +43,7 @@ it('renders correctly', () => {
       transform: inherit;
     }
 
-    .c3 {
+    .c2 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -53,13 +53,13 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c3:hover {
+    .c2:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: 700;
     }
 
-    .c18 {
+    .c17 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline-block;
@@ -68,7 +68,7 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c18:hover {
+    .c17:hover {
       color: #2C0230;
       font-weight: 700;
     }
@@ -111,7 +111,7 @@ it('renders correctly', () => {
       margin: 0 auto;
     }
 
-    .c17 {
+    .c18 {
       z-index: 2;
       -webkit-order: 50;
       -ms-flex-order: 50;
@@ -135,25 +135,25 @@ it('renders correctly', () => {
       transition: all 0.2s;
     }
 
-    .c17:hover {
+    .c18:hover {
       border: none;
       font-weight: inherit;
     }
 
-    .c17 .c20 {
+    .c18 .c20 {
       position: relative;
     }
 
-    .c17 .c20,
-    .c17 .c20::before,
-    .c17 .c20::after {
+    .c18 .c20,
+    .c18 .c20::before,
+    .c18 .c20::after {
       width: 25px;
       height: 3px;
       display: inline-block;
     }
 
-    .c17 .c20::before,
-    .c17 .c20::after {
+    .c18 .c20::before,
+    .c18 .c20::after {
       content: '';
       position: absolute;
       left: 0;
@@ -162,25 +162,25 @@ it('renders correctly', () => {
       transition: all 0.2s;
     }
 
-    .c17 .c20::before {
+    .c18 .c20::before {
       top: -0.5rem;
     }
 
-    .c17 .c20::after {
+    .c18 .c20::after {
       top: 0.5rem;
     }
 
-    .c17:hover .c20,
-    .c17:hover .c20::before,
-    .c17:hover .c20::after {
+    .c18:hover .c20,
+    .c18:hover .c20::before,
+    .c18:hover .c20::after {
       background-color: #918791;
     }
 
-    .c17:hover .c20::before {
+    .c18:hover .c20::before {
       top: -0.6rem;
     }
 
-    .c17:hover .c20::after {
+    .c18:hover .c20::after {
       top: 0.6rem;
     }
 
@@ -350,14 +350,14 @@ it('renders correctly', () => {
       max-width: 1440px;
     }
 
-    .c2 {
+    .c3 {
       z-index: 3;
       color: transparent;
       margin-right: auto;
       border: 0;
     }
 
-    .c2:hover {
+    .c3:hover {
       border: 0;
     }
 
@@ -369,10 +369,6 @@ it('renders correctly', () => {
       display: flex;
     }
 
-    .c22 a {
-      margin-left: 0.69375rem;
-    }
-
     .c22 > div {
       height: 35px;
       width: auto;
@@ -382,6 +378,7 @@ it('renders correctly', () => {
     .c22 > div > a {
       height: inherit;
       width: inherit;
+      margin-left: 0.69375rem;
     }
 
     .c22 > div > a img {
@@ -398,7 +395,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c17 {
+      .c18 {
         display: none;
       }
     }
@@ -605,7 +602,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c10 c11 c3"
+                className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                 onClick={[Function]}
@@ -630,7 +627,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c15 c3"
+                    className="c2 c15"
                     color="red"
                     href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                     role="menuitem"
@@ -650,7 +647,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday"
                     role="menuitem"
@@ -670,7 +667,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/join"
                     role="menuitem"
@@ -690,7 +687,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/squads"
                     role="menuitem"
@@ -710,7 +707,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
                     role="menuitem"
@@ -730,7 +727,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
                     role="menuitem"
@@ -754,7 +751,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c10 c11 c3"
+                className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
                 onClick={[Function]}
@@ -779,7 +776,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c15 c3"
+                    className="c2 c15"
                     color="red"
                     href="https://www.comicrelief.com/what-your-money-does"
                     role="menuitem"
@@ -799,7 +796,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/What-we-do/our-legacy"
                     role="menuitem"
@@ -823,7 +820,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c10 c11 c3"
+                className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onClick={[Function]}
@@ -848,7 +845,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c15 c3"
+                    className="c2 c15"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools"
                     role="menuitem"
@@ -868,7 +865,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
                     role="menuitem"
@@ -888,7 +885,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
                     role="menuitem"
@@ -908,7 +905,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/nurseries"
                     role="menuitem"
@@ -928,7 +925,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/youth"
                     role="menuitem"
@@ -948,7 +945,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
                     role="menuitem"
@@ -972,7 +969,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c10 c11 c3"
+                className="c2 c10 c11"
                 color="red"
                 href="https://www.sportrelief.com"
                 onClick={[Function]}
@@ -997,7 +994,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c15 c3"
+                    className="c2 c15"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1017,7 +1014,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"
@@ -1037,7 +1034,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="/test-ref-path-1"
                     role="menuitem"
@@ -1057,7 +1054,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="/test-ref-path-2"
                     role="menuitem"
@@ -1077,7 +1074,7 @@ it('renders correctly', () => {
                   className="c14"
                 >
                   <a
-                    className="c16 c3"
+                    className="c2 c16"
                     color="red"
                     href="/test-url"
                     role="menuitem"
@@ -1109,7 +1106,7 @@ it('renders correctly', () => {
           type="standard"
         >
           <span
-            className="c19 c7"
+            className="c7 c19"
             color="inherit"
             size="s"
           >
