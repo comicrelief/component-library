@@ -9,6 +9,7 @@ import data from './dev-data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <Membership
+      alt="Background image"
       backgroundColor="orange_light"
       formAligntRight={false}
       imageLow={pictures.imageLow}
@@ -390,7 +391,7 @@ it('renders correctly', () => {
         width="100%"
       >
         <img
-          alt=""
+          alt="Background image"
           className="c3 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"

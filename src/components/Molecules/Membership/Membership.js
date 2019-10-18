@@ -6,6 +6,7 @@ import Form from './Form/Form';
 import { BgImage, Container, Header, Wrapper } from './Membership.style';
 
 const Membership = ({
+  alt,
   cartID,
   backgroundColor,
   donateLink,
@@ -33,6 +34,7 @@ const Membership = ({
         objectFit="cover"
         width="100%"
         height="100%"
+        alt={alt}
       />
 
       <Wrapper>
@@ -55,6 +57,7 @@ const Membership = ({
 };
 
 Membership.propTypes = {
+  alt: PropTypes.string,
   cartID: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape),
   donateLink: PropTypes.string.isRequired,
@@ -70,6 +73,7 @@ Membership.propTypes = {
 };
 
 Membership.defaultProps = {
+  alt: '',
   data: {},
   formAligntRight: true,
   imageLow: null,
