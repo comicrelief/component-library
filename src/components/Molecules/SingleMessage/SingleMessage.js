@@ -78,7 +78,7 @@ const SingleMessage = ({
     setIsBuffering(true);
 
     // Once video is playing, switch state to allow CSS to show/hide relevant layers
-    allPlayers[thisUniqueID].on('stateChange', function(event) {
+    allPlayers[thisUniqueID].on('stateChange', event => {
       if (event.data === 1) {
         setIsBuffering(false);
         setIsPlaying(true);

@@ -46,7 +46,7 @@ it('renders correctly', () => {
       font-family: 'Anton',Impact,sans-serif;
     }
 
-    .c7 {
+    .c8 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
@@ -71,10 +71,12 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c9 {
+    .c10 {
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      position: relative;
       box-sizing: border-box;
       width: 100%;
-      height: 50px;
       padding: 13px;
       margin: 10px 0;
       font-size: 1.2rem;
@@ -88,24 +90,24 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c9:focus {
+    .c10:focus {
       border: 1px solid #666;
     }
 
-    .c9:focus::-webkit-input-placeholder {
-      color: transparent;
+    .c10:focus::-webkit-input-placeholder {
+      color: #666;
     }
 
-    .c9:focus:-moz-placeholder {
-      color: transparent;
+    .c10:focus::-moz-placeholder {
+      color: #666;
     }
 
-    .c9:focus::-moz-placeholder {
-      color: transparent;
+    .c10:focus:-ms-input-placeholder {
+      color: #666;
     }
 
-    .c9:focus:-ms-input-placeholder {
-      color: transparent;
+    .c10:focus::placeholder {
+      color: #666;
     }
 
     .c6 {
@@ -118,7 +120,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c8 {
+    .c9 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -202,7 +204,7 @@ it('renders correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c10 {
+    .c7 {
       width: 100%;
     }
 
@@ -212,7 +214,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c9 {
+      .c10 {
         max-width: 290px;
       }
     }
@@ -255,18 +257,22 @@ it('renders correctly', () => {
           className="c5"
         >
           <label
-            className="c6"
+            className="c6 c7"
             htmlFor="email"
+            name="email"
+            onChange={[Function]}
+            placeholder="example@youremail.com"
+            value=""
           >
             <span
-              className="c7 c8"
+              className="c8 c9"
               color="inherit"
               size="s"
             >
               email
             </span>
             <input
-              className="c9 c10"
+              className="c10 c7"
               id="email"
               name="email"
               onChange={[Function]}
