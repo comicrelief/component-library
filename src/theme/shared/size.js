@@ -6,7 +6,7 @@ const screen = {
 
 const media = size => {
   if (size) {
-    return `(min-width: ${screen[size]})`;
+    return `@media (min-width: ${screen[size]})`;
   }
   return 'inherit';
 };

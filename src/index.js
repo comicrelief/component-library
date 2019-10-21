@@ -1,5 +1,4 @@
 /* Theme */
-
 export { default as crTheme } from './theme/crTheme/theme';
 export { default as srTheme } from './theme/srTheme/theme';
 export { default as ThemeProvider } from './theme/ThemeProvider';
@@ -69,6 +68,9 @@ export {
 export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
+export {
+  default as Membership
+} from './components/Molecules/Membership/Membership';
 export {
   default as VideoBanner
 } from './components/Molecules/VideoBanner/VideoBanner';
