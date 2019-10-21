@@ -3,7 +3,7 @@
 ```js
 import RichText from '../../Atoms/RichText/RichText';
 
-const title = 'Stay in the know!';
+const title = 'Stay in the know';
 const topCopy = (
   <RichText
     markup={`<p>Get regular email updates and info on what we're up to!</p>`}
