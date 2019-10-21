@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with modal closed 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.6;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c0 {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <a
+      className="c1"
+      href="#"
+      onClick={[Function]}
+      rel="noopener noreferrer"
+      role="button"
+      target="__blank"
+      title="Sign up for emails"
+    >
+      <img
+        alt="comicrelief"
+        className="c2"
+        src="mock.asset"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with modal open 1`] = `
+.c6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Anton',Impact,sans-serif;
+}
+
+.c12 {
+  font-size: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c17 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c17:hover {
+  background-color: #FFCECE;
+  color: #2C0230;
+}
+
+.c14 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 13px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #2C0230;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #2C0230;
+}
+
+.c14:focus {
+  border: 1px solid #666;
+}
+
+.c14:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c14:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.c14:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c14:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c13 {
+  visibility: border:0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c9 {
+  text-align: left;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: 0.6;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 2rem;
+  color: #FFFFFF;
+  background-color: #2C0230;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.c16 {
+  margin-top: 1rem;
+}
+
+.c16 button {
+  border-color: #2C0230;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.c18 a {
+  cursor: pointer;
+  padding: 0 0.25rem;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.c18 a:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c7 {
+  margin-bottom: 2rem;
+  font-size: 2.075rem;
+}
+
+.c0 {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+.c3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c19 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+}
+
+.c5 {
+  width: 100%;
+}
+
+@media (min-width:740px) {
+  .c14 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 button {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 {
+    margin: 4rem 0 0;
+    right: 25%;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    margin-top: 4rem;
+    width: 50%;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <a
+      className="c1"
+      href="#"
+      onClick={[Function]}
+      rel="noopener noreferrer"
+      role="button"
+      target="__blank"
+      title="Sign up for emails"
+    >
+      <img
+        alt="comicrelief"
+        className="c2"
+        src="mock.asset"
+      />
+    </a>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4 c5"
+      >
+        <p
+          className="c6 c7"
+          color="inherit"
+          size="s"
+        >
+          Stay in the know!
+        </p>
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Get regular email updates and info on what we're up to!</p>",
+              }
+            }
+          />
+        </div>
+        <form
+          className="c10"
+        >
+          <label
+            className="c11"
+            htmlFor="email"
+          >
+            <span
+              className="c12 c13"
+              color="inherit"
+              size="s"
+            >
+              email
+            </span>
+            <input
+              className="c14 c15"
+              id="email"
+              name="email"
+              onChange={[Function]}
+              placeholder="example@youremail.com"
+              type="email"
+              value=""
+            />
+            
+          </label>
+          <div
+            className="c16"
+          >
+            <button
+              className="c17"
+              color="red"
+              href="/#"
+              onClick={[Function]}
+              target="_self"
+              type="button"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+        <div
+          className="c18"
+        >
+          <div
+            className="c9"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Our <a class=\\"link link--white inline\\" href=\\"/privacy-notice\\">Privacy Policy</a> describes how we handle and protect your information.<br><br>If you are under 18, please make sure you have your parents’ permission before providing us with any personal details.</p>",
+              }
+            }
+          />
+        </div>
+      </div>
+      <a
+        className="c1 c19"
+        href="#"
+        onClick={[Function]}
+        rel="noopener noreferrer"
+        role="button"
+        target="__self"
+        title="Close email sign-up"
+      >
+        <img
+          alt="comicrelief"
+          className="c2"
+          src="mock.asset"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -23,7 +23,7 @@ const successCopy = (
   />
 );
 
-it('renders correctly', () => {
+it('renders correctly with modal closed', () => {
   const tree = renderWithTheme(
     <div>
       <HeaderEsuWithIcon
@@ -35,51 +35,21 @@ it('renders correctly', () => {
     </div>
   ).toJSON();
 
-  expect(tree).toMatchInlineSnapshot(`
-    .c1 {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      cursor: pointer;
-      display: block;
-      -webkit-transition: opacity 0.2s;
-      transition: opacity 0.2s;
-    }
+  expect(tree).toMatchSnapshot();
+});
 
-    .c1:hover,
-    .c1:focus {
-      opacity: 0.6;
-    }
-
-    .c2 {
-      width: 100%;
-    }
-
-    .c0 {
-      width: 35px;
-      height: 35px;
-      display: inline-block;
-    }
-
+it('renders correctly with modal open', () => {
+  const tree = renderWithTheme(
     <div>
-      <div
-        className="c0"
-      >
-        <a
-          className="c1"
-          href="#"
-          onClick={[Function]}
-          rel="noopener noreferrer"
-          role="button"
-          target="__blank"
-          title="Sign up for emails"
-        >
-          <img
-            alt="comicrelief"
-            className="c2"
-            src="mock.asset"
-          />
-        </a>
-      </div>
+      <HeaderEsuWithIcon
+        title={title}
+        topCopy={topCopy}
+        privacyCopy={privacyCopy}
+        successCopy={successCopy}
+        isESUOpen
+      />
     </div>
-  `);
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

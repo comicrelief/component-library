@@ -16,9 +16,10 @@ const HeaderEsuWithIcon = ({
   title,
   topCopy,
   successCopy,
-  privacyCopy
+  privacyCopy,
+  isESUOpen: isESUOpenInitial
 }) => {
-  const [isESUOpen, setIsESUOpen] = useState(false);
+  const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
   const [isSuccess, setIsSuccess] = useState(false);
 
   // TODO: need to figure out how to handle validation here
@@ -88,6 +89,7 @@ const HeaderEsuWithIcon = ({
 
 HeaderEsuWithIcon.propTypes = {
   campaign: PropTypes.string,
+  isESUOpen: PropTypes.bool,
   title: PropTypes.node.isRequired,
   topCopy: PropTypes.node.isRequired,
   privacyCopy: PropTypes.node.isRequired,
@@ -95,7 +97,8 @@ HeaderEsuWithIcon.propTypes = {
 };
 
 HeaderEsuWithIcon.defaultProps = {
-  campaign: 'comicrelief'
+  campaign: 'comicrelief',
+  isESUOpen: false
 };
 
 export default HeaderEsuWithIcon;
