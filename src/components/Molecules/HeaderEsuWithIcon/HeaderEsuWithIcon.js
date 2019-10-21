@@ -17,6 +17,7 @@ const HeaderEsuWithIcon = ({
   topCopy,
   successCopy,
   privacyCopy,
+  buttonColor,
   isESUOpen: isESUOpenInitial
 }) => {
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
@@ -44,6 +45,7 @@ const HeaderEsuWithIcon = ({
         isSuccess={isSuccess}
         subscribe={() => setIsSuccess(!isSuccess)}
         errorMsg={isErroring}
+        buttonColor={buttonColor}
       />
     );
   };
@@ -93,12 +95,14 @@ HeaderEsuWithIcon.propTypes = {
   title: PropTypes.node.isRequired,
   topCopy: PropTypes.node.isRequired,
   privacyCopy: PropTypes.node.isRequired,
-  successCopy: PropTypes.node.isRequired
+  successCopy: PropTypes.node.isRequired,
+  buttonColor: PropTypes.string
 };
 
 HeaderEsuWithIcon.defaultProps = {
   campaign: 'comicrelief',
-  isESUOpen: false
+  isESUOpen: false,
+  buttonColor: 'red'
 };
 
 export default HeaderEsuWithIcon;
