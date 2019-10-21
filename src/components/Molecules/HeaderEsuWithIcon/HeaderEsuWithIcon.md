@@ -1,3 +1,5 @@
+# Header Email Sign Up
+
 ```js
 import RichText from '../../Atoms/RichText/RichText';
 
@@ -18,10 +20,15 @@ const successCopy = (
   />
 );
 
+initialState = { isSuccess: false };
+
 <HeaderEsuWithIcon
   title={title}
   topCopy={topCopy}
-  privacyCopy={privacyCopy}
   successCopy={successCopy}
+  isSuccess={state.isSuccess}
+  privacyCopy={privacyCopy}
+  errorMsg=""
+  subscribe={() => setState({ isSuccess: !state.isSuccess })}
 />;
 ```

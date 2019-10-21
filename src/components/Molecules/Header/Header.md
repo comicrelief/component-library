@@ -63,6 +63,8 @@ const successCopy = (
   />
 );
 
+initialState = { isSuccess: false };
+
 <Header
   navItems={data}
   rotate
@@ -88,6 +90,10 @@ const successCopy = (
         topCopy={topCopy}
         privacyCopy={privacyCopy}
         successCopy={successCopy}
+        isSuccess={state.isSuccess}
+        privacyCopy={privacyCopy}
+        errorMsg=""
+        subscribe={() => setState({ isSuccess: !state.isSuccess })}
       />
     </>
   }

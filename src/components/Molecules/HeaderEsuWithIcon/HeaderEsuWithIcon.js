@@ -18,14 +18,12 @@ const HeaderEsuWithIcon = ({
   successCopy,
   privacyCopy,
   buttonColor,
+  subscribe,
+  isSuccess,
+  errorMsg,
   isESUOpen: isESUOpenInitial
 }) => {
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  // TODO: need to figure out how to handle validation here
-  /* eslint-disable-next-line no-unused-vars */
-  const [isErroring, setIsErroring] = useState('');
 
   /* Allow our ESU modal stuff to happen */
   const handleESUClick = e => {
@@ -43,8 +41,8 @@ const HeaderEsuWithIcon = ({
         successCopy={successCopy}
         privacyCopy={privacyCopy}
         isSuccess={isSuccess}
-        subscribe={() => setIsSuccess(!isSuccess)}
-        errorMsg={isErroring}
+        subscribe={subscribe}
+        errorMsg={errorMsg}
         buttonColor={buttonColor}
       />
     );
@@ -78,7 +76,7 @@ const HeaderEsuWithIcon = ({
         href="#"
       />
 
-      {/* Render the ESU itself if our ESU button is present */}
+      {/* Render the ESU itself */}
       {isESUOpen ? (
         <EsuWrapper>
           {renderESU()}
@@ -96,7 +94,10 @@ HeaderEsuWithIcon.propTypes = {
   topCopy: PropTypes.node.isRequired,
   privacyCopy: PropTypes.node.isRequired,
   successCopy: PropTypes.node.isRequired,
-  buttonColor: PropTypes.string
+  buttonColor: PropTypes.string,
+  subscribe: PropTypes.func.isRequired,
+  isSuccess: PropTypes.bool.isRequired,
+  errorMsg: PropTypes.string.isRequired
 };
 
 HeaderEsuWithIcon.defaultProps = {
