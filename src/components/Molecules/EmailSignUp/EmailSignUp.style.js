@@ -35,6 +35,7 @@ const ButtonWrapper = styled.div`
 const PrivacyCopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: ${spacing('md')};
   a {
     cursor: pointer;
     padding: 0 ${spacing('xsm')};
@@ -50,7 +51,6 @@ const PrivacyCopyWrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${spacing('md')};
 `;
 
 const InputField = styled(Input)`

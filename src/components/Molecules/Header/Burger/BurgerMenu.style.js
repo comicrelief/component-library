@@ -48,7 +48,7 @@ const BurgerWrapper = styled(Link)`
     &,
     ::before,
     ::after {
-      width: 33px;
+      width: 25px;
       height: 3px;
       display: inline-block;
     }

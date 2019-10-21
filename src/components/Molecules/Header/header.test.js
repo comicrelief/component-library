@@ -147,7 +147,7 @@ it('renders correctly', () => {
     .c18 .c20,
     .c18 .c20::before,
     .c18 .c20::after {
-      width: 33px;
+      width: 25px;
       height: 3px;
       display: inline-block;
     }
@@ -345,7 +345,7 @@ it('renders correctly', () => {
       -ms-flex-align: center;
       align-items: center;
       height: 100%;
-      padding: 0 15px;
+      padding: 0 12px;
       cursor: pointer;
       max-width: 1440px;
     }
@@ -361,8 +361,30 @@ it('renders correctly', () => {
       border: 0;
     }
 
-    .c22 a {
+    .c22 {
+      width: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .c22 > div {
+      height: 35px;
+      width: auto;
+      display: inline-block;
+    }
+
+    .c22 > div > a {
+      height: inherit;
+      width: inherit;
       margin-left: 0.69375rem;
+    }
+
+    .c22 > div > a img {
+      padding: 5px;
+      height: inherit;
+      width: inherit;
     }
 
     @media (min-width:740px) {
@@ -519,6 +541,10 @@ it('renders correctly', () => {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         background-color: #FFFFFF;
         margin-right: 0px;
         right: 0px;

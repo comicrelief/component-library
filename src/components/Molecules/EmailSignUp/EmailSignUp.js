@@ -62,7 +62,7 @@ const EmailSignUp = ({
       </Title>
       <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
       {!isSuccess && subscriptionForm}
-      {!isSuccess && privacyContainer}
+      {privacyContainer}
     </ESUWrapper>
   );
 };

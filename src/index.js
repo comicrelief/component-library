@@ -74,3 +74,7 @@ export {
 export {
   default as VideoBanner
 } from './components/Molecules/VideoBanner/VideoBanner';
+export {
+  default as HeaderEsuWithIcon
+} from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
+export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';

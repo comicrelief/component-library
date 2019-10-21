@@ -179,6 +179,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      margin-top: 1rem;
     }
 
     .c13 a {
@@ -201,7 +202,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      margin-bottom: 1rem;
     }
 
     .c7 {
@@ -343,6 +343,29 @@ it('renders correctly', () => {
       margin-bottom: 0;
     }
 
+    .c5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+    .c5 a {
+      cursor: pointer;
+      padding: 0 0.25rem;
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+    }
+
+    .c5 a:hover {
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+    }
+
     .c2 {
       margin-bottom: 2rem;
       font-size: 2.075rem;
@@ -372,6 +395,18 @@ it('renders correctly', () => {
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <div
+            className="c4"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
               }
             }
           />

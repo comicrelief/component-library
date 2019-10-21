@@ -21,7 +21,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 15px;
+  padding: 0 12px;
   cursor: pointer;
   max-width: ${container.large};
 
@@ -49,13 +49,31 @@ const Brand = styled(Link).attrs(() => ({
  * Meta icons
  */
 const MetaIcons = styled.div`
-  a {
-    margin-left: ${({ theme }) => theme.fontSize('xxs')};
+  width: auto;
+  display: flex;
+
+  > div {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+
+    > a {
+      height: inherit;
+      width: inherit;
+      margin-left: ${({ theme }) => theme.fontSize('xxs')};
+
+      img {
+        padding: 5px;
+        height: inherit;
+        width: inherit;
+      }
+    }
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     position: relative;
     display: flex;
+    align-items: center;
     background-color: ${({ theme }) => theme.color('white')};
     margin-right: 0px;
     right: 0px;
