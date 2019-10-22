@@ -33,16 +33,11 @@ const HeaderEsuWithIcon = ({
 
   useEffect(() => {
     if (isClicked) {
+      const thisESU = document.getElementById(thisEsuID);
       if (isESUOpen) {
-        // Focus on input
-        document
-          .getElementById(thisEsuID)
-          .getElementsByTagName('input')[0]
-          .focus();
+        thisESU.querySelector('input').focus();
       } else {
-        // Focus on ESU nav button
-        document.getElementById('header-esu--open').focus();
-        console.log('focus on esu button');
+        thisESU.querySelector('a').focus();
       }
     }
   }, [isClicked, isESUOpen, thisEsuID]);
@@ -50,9 +45,8 @@ const HeaderEsuWithIcon = ({
   /* Allow our ESU modal stuff to happen */
   const handleESUClick = e => {
     e.preventDefault();
-    console.log('event:', e);
 
-    console.log('event target:', e.currentTarget);
+    // Update flag
     setisClicked(true);
 
     // Toggle our 'opened' state
