@@ -34,13 +34,13 @@ const HeaderEsuWithIcon = ({
   useEffect(() => {
     if (isClicked) {
       const thisESU = document.getElementById(thisEsuID);
-      if (isESUOpen) {
+      if (isESUOpen && !isSuccess) {
         thisESU.querySelector('input').focus();
       } else {
         thisESU.querySelector('a').focus();
       }
     }
-  }, [isClicked, isESUOpen, thisEsuID]);
+  }, [isClicked, isESUOpen, isSuccess, thisEsuID]);
 
   /* Allow our ESU modal stuff to happen */
   const handleESUClick = e => {
@@ -74,7 +74,6 @@ const HeaderEsuWithIcon = ({
         buttonColor={buttonColor}
         aria-modal="true"
         id={thisEsuID}
-        onKeyDown={e => handleEscClose(e)}
       />
     );
   };
@@ -97,7 +96,7 @@ const HeaderEsuWithIcon = ({
 
   /* Main render */
   return (
-    <IconWrapper id={thisEsuID}>
+    <IconWrapper id={thisEsuID} onKeyDown={e => handleEscClose(e)}>
       <Icon
         onClick={e => handleESUClick(e)}
         icon={HeaderIcons.email.icon}
