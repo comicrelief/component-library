@@ -31,6 +31,9 @@ it('renders correctly with modal closed', () => {
         topCopy={topCopy}
         privacyCopy={privacyCopy}
         successCopy={successCopy}
+        isSuccess={false}
+        errorMsg=""
+        subscribe={() => 'Done'}
       />
     </div>
   ).toJSON();
@@ -47,6 +50,47 @@ it('renders correctly with modal open', () => {
         privacyCopy={privacyCopy}
         successCopy={successCopy}
         isESUOpen
+        isSuccess={false}
+        errorMsg=""
+        subscribe={() => 'Done'}
+      />
+    </div>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with error message', () => {
+  const tree = renderWithTheme(
+    <div>
+      <HeaderEsuWithIcon
+        title={title}
+        topCopy={topCopy}
+        privacyCopy={privacyCopy}
+        successCopy={successCopy}
+        isESUOpen
+        isSuccess={false}
+        errorMsg="invalid email"
+        subscribe={() => 'Done'}
+      />
+    </div>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with success message', () => {
+  const tree = renderWithTheme(
+    <div>
+      <HeaderEsuWithIcon
+        title={title}
+        topCopy={topCopy}
+        privacyCopy={privacyCopy}
+        successCopy={successCopy}
+        isESUOpen
+        isSuccess
+        errorMsg=""
+        subscribe={() => 'Done'}
       />
     </div>
   ).toJSON();
