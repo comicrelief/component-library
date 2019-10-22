@@ -82,6 +82,7 @@ initialState = { isSuccess: false };
           role="button"
           href="/search"
           brand="comicrelief"
+          tabIndex="0"
         />
       </div>
 

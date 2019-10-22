@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import HeaderIcons from './assets/HeaderIcons';
@@ -9,6 +9,9 @@ import {
   CloseButton,
   HeaderESU
 } from './HeaderEsuWithIcon.style';
+
+// Quick way to produce unique IDs per page
+let esuCount = 0;
 
 /* HeaderEsuWithIcon component */
 const HeaderEsuWithIcon = ({
@@ -23,11 +26,35 @@ const HeaderEsuWithIcon = ({
   errorMsg,
   isESUOpen: isESUOpenInitial
 }) => {
+  // Pre-interaction flag
+  const [isClicked, setisClicked] = useState(false);
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
+  const [thisEsuID] = useState(`header-esu--${(esuCount += 1)}`);
+
+  useEffect(() => {
+    if (isClicked) {
+      if (isESUOpen) {
+        // Focus on input
+        document
+          .getElementById(thisEsuID)
+          .getElementsByTagName('input')[0]
+          .focus();
+      } else {
+        // Focus on ESU nav button
+        document.getElementById('header-esu--open').focus();
+        console.log('focus on esu button');
+      }
+    }
+  }, [isClicked, isESUOpen, thisEsuID]);
 
   /* Allow our ESU modal stuff to happen */
   const handleESUClick = e => {
     e.preventDefault();
+    console.log('event:', e);
+
+    console.log('event target:', e.currentTarget);
+    setisClicked(true);
+
     // Toggle our 'opened' state
     setIsESUOpen(!isESUOpen);
   };
@@ -44,6 +71,8 @@ const HeaderEsuWithIcon = ({
         subscribe={subscribe}
         errorMsg={errorMsg}
         buttonColor={buttonColor}
+        aria-modal="true"
+        id={thisEsuID}
       />
     );
   };
@@ -56,24 +85,26 @@ const HeaderEsuWithIcon = ({
         icon={HeaderIcons.close.icon}
         title="Close email sign-up"
         brand={campaign}
-        target="_self"
+        target="self"
         role="button"
         href="#"
+        tabIndex="0"
       />
     );
   };
 
   /* Main render */
   return (
-    <IconWrapper>
+    <IconWrapper id={thisEsuID}>
       <Icon
         onClick={e => handleESUClick(e)}
         icon={HeaderIcons.email.icon}
         title={HeaderIcons.email.title}
         brand={campaign}
-        target="_blank"
+        target="self"
         role="button"
         href="#"
+        tabIndex="0"
       />
 
       {/* Render the ESU itself */}
