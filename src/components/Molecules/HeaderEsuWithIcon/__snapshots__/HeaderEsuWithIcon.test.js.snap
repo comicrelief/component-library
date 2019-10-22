@@ -319,6 +319,7 @@ exports[`renders correctly with error message 1`] = `
         aria-modal="true"
         className="c4 c5"
         id="header-esu--3"
+        onKeyDown={[Function]}
       >
         <p
           className="c6 c7"
@@ -768,6 +769,7 @@ exports[`renders correctly with modal open 1`] = `
         aria-modal="true"
         className="c4 c5"
         id="header-esu--2"
+        onKeyDown={[Function]}
       >
         <p
           className="c6 c7"
@@ -1036,6 +1038,7 @@ exports[`renders correctly with success message 1`] = `
         aria-modal="true"
         className="c4 c5"
         id="header-esu--4"
+        onKeyDown={[Function]}
       >
         <p
           className="c6 c7"

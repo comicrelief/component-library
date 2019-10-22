@@ -53,6 +53,13 @@ const HeaderEsuWithIcon = ({
     setIsESUOpen(!isESUOpen);
   };
 
+  const handleEscClose = e => {
+    // Close the modal if this is the ESC key
+    if (e.keyCode === 27) {
+      setIsESUOpen(false);
+    }
+  };
+
   /* Break out ESU render into own function */
   const renderESU = () => {
     return (
@@ -67,6 +74,7 @@ const HeaderEsuWithIcon = ({
         buttonColor={buttonColor}
         aria-modal="true"
         id={thisEsuID}
+        onKeyDown={e => handleEscClose(e)}
       />
     );
   };
