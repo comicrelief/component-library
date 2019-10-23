@@ -245,6 +245,7 @@ it('renders correctly', () => {
     }
 
     .c16 {
+      display: inline-block;
       border: 0;
       padding: 17px 20px;
       height: 46px;
@@ -264,6 +265,7 @@ it('renders correctly', () => {
     }
 
     .c15 {
+      display: inline-block;
       border: 0;
       padding: 17px 20px;
       height: 46px;
@@ -302,6 +304,7 @@ it('renders correctly', () => {
     }
 
     .c11 {
+      display: inline-block;
       border: 0;
       padding: 17px 20px;
       height: 46px;

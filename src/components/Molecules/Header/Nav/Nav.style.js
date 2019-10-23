@@ -6,6 +6,7 @@ import zIndex from '../../../../theme/shared/zIndex';
 import { screen } from '../../../../theme/shared/size';
 
 const NavLinkClass = styled(Link)`
+  display: inline-block;
   border: 0;
   padding: 17px 20px;
   height: 46px;
