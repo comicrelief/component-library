@@ -8,8 +8,7 @@ const linkStyles = {
     weight: 'normal',
     padding: '0 2px 1px',
     hoverColor: color('black'),
-    hoverBorder: `2px solid ${color('black')}`,
-    hoverWeight: '700'
+    hoverBorder: `2px solid ${color('black')}`
   },
   standard_white: {
     color: color('white'),
@@ -17,8 +16,7 @@ const linkStyles = {
     weight: 'normal',
     padding: '0 2px 1px',
     hoverColor: color('white'),
-    hoverBorder: `2px solid ${color('white')}`,
-    hoverWeight: '700'
+    hoverBorder: `2px solid ${color('white')}`
   }
 };
 

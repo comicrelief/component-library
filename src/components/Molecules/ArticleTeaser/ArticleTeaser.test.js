@@ -50,7 +50,7 @@ it('renders correctly', () => {
     .c1 {
       -webkit-text-decoration: none;
       text-decoration: none;
-      display: inline-block;
+      display: inline;
       padding: 0 2px 1px;
       color: #2C0230;
       font-weight: normal;
@@ -58,7 +58,6 @@ it('renders correctly', () => {
 
     .c1:hover {
       color: #2C0230;
-      font-weight: 700;
     }
 
     .c0 {

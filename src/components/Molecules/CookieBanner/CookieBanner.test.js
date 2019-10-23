@@ -29,7 +29,7 @@ it('renders correctly', () => {
     .c3 {
       -webkit-text-decoration: none;
       text-decoration: none;
-      display: inline-block;
+      display: inline;
       padding: 0 2px 1px;
       color: #FFFFFF;
       border-bottom: 2px solid #FFFFFF;
@@ -39,7 +39,6 @@ it('renders correctly', () => {
     .c3:hover {
       color: #FFFFFF;
       border-bottom: 2px solid #FFFFFF;
-      font-weight: 700;
     }
 
     .c5 {

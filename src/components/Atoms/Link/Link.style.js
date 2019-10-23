@@ -15,7 +15,7 @@ const buttonStyle = () => css`
 
 const linkStyle = () => css`
   text-decoration: none;
-  display: inline-block;
+  display: inline;
   ${({ type, theme, underline }) =>
     type
       ? theme.linkStyles(type, underline)

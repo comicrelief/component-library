@@ -37,7 +37,7 @@ it('renders correctly', () => {
     .c0 {
       -webkit-text-decoration: none;
       text-decoration: none;
-      display: inline-block;
+      display: inline;
       padding: 0 2px 1px;
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
@@ -47,7 +47,6 @@ it('renders correctly', () => {
     .c0:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
-      font-weight: 700;
     }
 
     .c6 {
