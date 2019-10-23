@@ -294,6 +294,8 @@ exports[`renders correctly with error message 1`] = `
 <div>
   <div
     className="c0"
+    id="header-esu--3"
+    onKeyDown={[Function]}
   >
     <a
       className="c1"
@@ -301,7 +303,8 @@ exports[`renders correctly with error message 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
-      target="__blank"
+      tabIndex="0"
+      target="_self"
       title="Sign up for emails"
     >
       <img
@@ -314,7 +317,9 @@ exports[`renders correctly with error message 1`] = `
       className="c3"
     >
       <div
+        aria-modal="true"
         className="c4 c5"
+        id="header-esu--3"
       >
         <p
           className="c6 c7"
@@ -404,7 +409,8 @@ exports[`renders correctly with error message 1`] = `
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
-        target="__self"
+        tabIndex="0"
+        target="_self"
         title="Close email sign-up"
       >
         <img
@@ -446,6 +452,8 @@ exports[`renders correctly with modal closed 1`] = `
 <div>
   <div
     className="c0"
+    id="header-esu--1"
+    onKeyDown={[Function]}
   >
     <a
       className="c1"
@@ -453,7 +461,8 @@ exports[`renders correctly with modal closed 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
-      target="__blank"
+      tabIndex="0"
+      target="_self"
       title="Sign up for emails"
     >
       <img
@@ -736,6 +745,8 @@ exports[`renders correctly with modal open 1`] = `
 <div>
   <div
     className="c0"
+    id="header-esu--2"
+    onKeyDown={[Function]}
   >
     <a
       className="c1"
@@ -743,7 +754,8 @@ exports[`renders correctly with modal open 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
-      target="__blank"
+      tabIndex="0"
+      target="_self"
       title="Sign up for emails"
     >
       <img
@@ -756,7 +768,9 @@ exports[`renders correctly with modal open 1`] = `
       className="c3"
     >
       <div
+        aria-modal="true"
         className="c4 c5"
+        id="header-esu--2"
       >
         <p
           className="c6 c7"
@@ -840,7 +854,8 @@ exports[`renders correctly with modal open 1`] = `
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
-        target="__self"
+        tabIndex="0"
+        target="_self"
         title="Close email sign-up"
       >
         <img
@@ -999,6 +1014,8 @@ exports[`renders correctly with success message 1`] = `
 <div>
   <div
     className="c0"
+    id="header-esu--4"
+    onKeyDown={[Function]}
   >
     <a
       className="c1"
@@ -1006,7 +1023,8 @@ exports[`renders correctly with success message 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
-      target="__blank"
+      tabIndex="0"
+      target="_self"
       title="Sign up for emails"
     >
       <img
@@ -1019,7 +1037,9 @@ exports[`renders correctly with success message 1`] = `
       className="c3"
     >
       <div
+        aria-modal="true"
         className="c4 c5"
+        id="header-esu--4"
       >
         <p
           className="c6 c7"
@@ -1059,7 +1079,8 @@ exports[`renders correctly with success message 1`] = `
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
-        target="__self"
+        tabIndex="0"
+        target="_self"
         title="Close email sign-up"
       >
         <img
