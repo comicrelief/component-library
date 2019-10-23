@@ -6,6 +6,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off", // no need to disallow spreading in props, it is convenient, and readability is not that harmed!
+    "react/jsx-curly-newline": "off", // already handled by prettier, but differently, so we have to disable one
     "quotes": [
       2,
       "single",
