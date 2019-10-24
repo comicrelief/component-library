@@ -255,6 +255,7 @@ it('renders correctly', () => {
         </div>
         <form
           className="c5"
+          onSubmit={[Function]}
         >
           <label
             className="c6 c7"

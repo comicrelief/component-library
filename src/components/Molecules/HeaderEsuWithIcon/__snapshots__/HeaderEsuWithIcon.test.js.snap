@@ -342,6 +342,7 @@ exports[`renders correctly with error message 1`] = `
         </div>
         <form
           className="c10"
+          onSubmit={[Function]}
         >
           <label
             className="c11 c12"
@@ -793,6 +794,7 @@ exports[`renders correctly with modal open 1`] = `
         </div>
         <form
           className="c10"
+          onSubmit={[Function]}
         >
           <label
             className="c11 c12"
