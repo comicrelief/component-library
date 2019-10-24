@@ -29,7 +29,7 @@ const EmailSignUp = ({
     // Just stopping weird things happening for now when the user submits with the enter key
     // rather than the Submit button
     e.preventDefault();
-    console.log('');
+    console.log('Preventing default form submission');
   };
 
   const subscriptionForm = (
