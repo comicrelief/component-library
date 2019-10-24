@@ -24,8 +24,16 @@ const EmailSignUp = ({
   ...rest
 }) => {
   const [value, setValue] = useState('');
+
+  const handleSubmit = e => {
+    // Just stopping weird things happening for now when the user submits with the enter key
+    // rather than the Submit button
+    e.preventDefault();
+    console.log('');
+  };
+
   const subscriptionForm = (
-    <Form>
+    <Form onSubmit={e => handleSubmit(e)}>
       <InputField
         name="email"
         id="email"
