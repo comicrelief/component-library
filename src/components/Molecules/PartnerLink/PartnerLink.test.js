@@ -65,6 +65,7 @@ it('renders correctly', () => {
     }
 
     .c1 {
+      display: block;
       position: relative;
       padding: 0;
       border: none;

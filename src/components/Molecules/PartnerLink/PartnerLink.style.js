@@ -13,6 +13,7 @@ const MoreInfo = styled(Text)`
 `;
 
 const Item = styled(Link)`
+  display: block;
   position: relative;
   padding: 0;
   border: none;
