@@ -212,7 +212,6 @@ const data = require('../../../styleguide/data/data').default;
   videoID="WUgvvPRH7Oc"
   vhFull
   fullImage={true}
-  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video, 100VH, fullwidth image - (this copy
@@ -235,7 +234,6 @@ const data = require('../../../styleguide/data/data').default;
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
   fullImage={true}
-  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video, 50VH,fullwidth image - (this copy hidden
