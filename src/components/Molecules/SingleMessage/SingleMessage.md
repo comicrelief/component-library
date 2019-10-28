@@ -11,6 +11,7 @@ import Link from '../../Atoms/Link/Link';
   image={data.image}
   imageAltText=""
   copyFirst={false}
+  label="label"
 >
   <Text tag="h1" color="white" size="xxl">
     title
@@ -38,6 +39,7 @@ import Link from '../../Atoms/Link/Link';
   imageAltText=""
   copyFirst={false}
   fullImage={true}
+  label="label"
 >
   <Text tag="h1" color="white" size="xxl">
     title
@@ -56,7 +58,7 @@ Single Message with no Image
 ```js
 import Text from '../../Atoms/Text/Text';
 
-<SingleMessage backgroundColor="purple" copyFirst={false}>
+<SingleMessage backgroundColor="purple" copyFirst={false} label="label">
   <Text tag="p" color="white" size="xxl">
     “The creativity that goes into helping people have a better life is
     extraordinary.”
@@ -77,6 +79,7 @@ const data = require('../../../styleguide/data/data').default;
   image={data.image}
   imageAltText=""
   vhFull
+  label="label"
 >
   <Text tag="p" color="white" size="xxl">
     “The creativity that goes into helping people have a better life is
@@ -100,6 +103,7 @@ const data = require('../../../styleguide/data/data').default;
   imageSet2={data.images}
   image2={data.image}
   imageAltText2=""
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     “The creativity that goes into helping people have a better life is
@@ -122,6 +126,7 @@ const data = require('../../../styleguide/data/data').default;
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
   landscapeVideo
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with 16:9 video, copy first
@@ -141,6 +146,7 @@ const data = require('../../../styleguide/data/data').default;
   copyFirst={false}
   videoID="WUgvvPRH7Oc"
   landscapeVideo
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with 16:9 video
@@ -161,6 +167,7 @@ const data = require('../../../styleguide/data/data').default;
   imageAltText=""
   copyFirst={true}
   videoID="FoMlSB6ftQg"
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video
@@ -182,6 +189,7 @@ const data = require('../../../styleguide/data/data').default;
   copyFirst={true}
   videoID="FoMlSB6ftQg"
   vhFull
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video, 100VH
@@ -204,6 +212,7 @@ const data = require('../../../styleguide/data/data').default;
   videoID="WUgvvPRH7Oc"
   vhFull
   fullImage={true}
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video, 100VH, fullwidth image - (this copy
@@ -226,6 +235,7 @@ const data = require('../../../styleguide/data/data').default;
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
   fullImage={true}
+  label="label"
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video, 50VH,fullwidth image - (this copy hidden

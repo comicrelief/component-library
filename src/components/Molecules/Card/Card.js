@@ -29,6 +29,7 @@ const Card = ({
   imageAltText,
   height,
   width,
+  label,
   children,
   ...rest
 }) => {
@@ -46,12 +47,14 @@ const Card = ({
           />
         </Image>
       ) : null}
+      {label ? <span>{label}</span> : null}
       <Copy>{children}</Copy>
     </Container>
   );
 };
 
 Card.propTypes = {
+  label: PropTypes.string,
   backgroundColor: PropTypes.string,
   imageLow: PropTypes.string,
   images: PropTypes.string,
@@ -62,6 +65,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
+  label: '',
   backgroundColor: 'white',
   imageLow: null,
   images: null,

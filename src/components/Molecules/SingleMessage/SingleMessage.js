@@ -26,6 +26,7 @@ const SingleMessage = ({
   image2,
   imageAltText,
   imageAltText2,
+  label,
   children,
   fullImage,
   vhFull,
@@ -159,7 +160,7 @@ const SingleMessage = ({
               </Media>
             </>
           ) : null}
-
+          {label ? <span>{label}</span> : null}
           <Copy
             fullImage={fullImage}
             hasImage={hasImage}
@@ -191,7 +192,8 @@ SingleMessage.propTypes = {
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool,
   videoID: PropTypes.string,
-  landscapeVideo: PropTypes.bool
+  landscapeVideo: PropTypes.bool,
+  label: PropTypes.string
 };
 
 SingleMessage.defaultProps = {
@@ -207,7 +209,8 @@ SingleMessage.defaultProps = {
   imageAltText2: '',
   vhFull: false,
   videoID: null,
-  landscapeVideo: false
+  landscapeVideo: false,
+  label: ''
 };
 
 export default SingleMessage;
