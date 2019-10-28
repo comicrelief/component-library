@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Single Message with 100% vertical height image and label correctly 1`] = `
-.c6 {
+.c7 {
   color: #FFFFFF;
   font-size: 2.075rem;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -31,7 +38,7 @@ exports[`renders Single Message with 100% vertical height image and label correc
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #48276E;
 }
 
 .c0 iframe {
@@ -133,14 +140,18 @@ exports[`renders Single Message with 100% vertical height image and label correc
       </div>
     </div>
   </div>
-  <span>
-    test label
-  </span>
   <div
     className="c5"
   >
-    <p
+    <span
       className="c6"
+      color="white"
+      size="s"
+    >
+      test label
+    </span>
+    <p
+      className="c7"
       color="white"
       size="xxl"
     >
@@ -298,17 +309,24 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 `;
 
 exports[`renders Single Message with Image and label correctly 1`] = `
-.c6 {
+.c7 {
   color: #FFFFFF;
   font-size: 2.075rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c7 {
+.c8 {
   color: #FFFFFF;
   font-size: 1rem;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -325,7 +343,7 @@ exports[`renders Single Message with Image and label correctly 1`] = `
   object-fit: cover;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -338,7 +356,7 @@ exports[`renders Single Message with Image and label correctly 1`] = `
   color: #2C0230;
 }
 
-.c8:hover {
+.c9:hover {
   background-color: #918791;
   color: #2C0230;
 }
@@ -353,7 +371,7 @@ exports[`renders Single Message with Image and label correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #48276E;
 }
 
 .c0 iframe {
@@ -449,28 +467,32 @@ exports[`renders Single Message with Image and label correctly 1`] = `
       </div>
     </div>
   </div>
-  <span>
-    test label
-  </span>
   <div
     className="c5"
   >
-    <h1
+    <span
       className="c6"
+      color="white"
+      size="s"
+    >
+      test label
+    </span>
+    <h1
+      className="c7"
       color="white"
       size="xxl"
     >
       title
     </h1>
     <p
-      className="c7"
+      className="c8"
       color="white"
       size="s"
     >
       description
     </p>
     <a
-      className="c8"
+      className="c9"
       color="white"
       href="/"
       target="_self"
@@ -665,10 +687,17 @@ exports[`renders Single Message with Image correctly 1`] = `
 `;
 
 exports[`renders Single Message with double image and label correctly 1`] = `
-.c6 {
+.c7 {
   color: #2C0230;
   font-size: 2.075rem;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  color: #2C0230;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -820,14 +849,18 @@ exports[`renders Single Message with double image and label correctly 1`] = `
       </div>
     </div>
   </div>
-  <span>
-    test label
-  </span>
   <div
     className="c5"
   >
-    <p
+    <span
       className="c6"
+      color="black"
+      size="s"
+    >
+      test label
+    </span>
+    <p
+      className="c7"
       color="black"
       size="xxl"
     >
@@ -1008,17 +1041,24 @@ exports[`renders Single Message with double image correctly 1`] = `
 `;
 
 exports[`renders Single Message with full width and label correctly 1`] = `
-.c6 {
+.c7 {
   color: #FFFFFF;
   font-size: 2.075rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c7 {
+.c8 {
   color: #FFFFFF;
   font-size: 1rem;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -1035,7 +1075,7 @@ exports[`renders Single Message with full width and label correctly 1`] = `
   object-fit: cover;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -1048,7 +1088,7 @@ exports[`renders Single Message with full width and label correctly 1`] = `
   color: #2C0230;
 }
 
-.c8:hover {
+.c9:hover {
   background-color: #918791;
   color: #2C0230;
 }
@@ -1063,7 +1103,7 @@ exports[`renders Single Message with full width and label correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #48276E;
 }
 
 .c0 iframe {
@@ -1172,28 +1212,32 @@ exports[`renders Single Message with full width and label correctly 1`] = `
       </div>
     </div>
   </div>
-  <span>
-    test label
-  </span>
   <div
     className="c5"
   >
-    <h1
+    <span
       className="c6"
+      color="white"
+      size="s"
+    >
+      test label
+    </span>
+    <h1
+      className="c7"
       color="white"
       size="xxl"
     >
       title
     </h1>
     <p
-      className="c7"
+      className="c8"
       color="white"
       size="s"
     >
       description
     </p>
     <a
-      className="c8"
+      className="c9"
       color="white"
       href="/"
       target="_self"
@@ -1401,10 +1445,17 @@ exports[`renders Single Message with full width correctly 1`] = `
 `;
 
 exports[`renders Single Message with label but no Image correctly 1`] = `
-.c2 {
+.c3 {
   color: #FFFFFF;
   font-size: 2.075rem;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c2 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -1418,7 +1469,7 @@ exports[`renders Single Message with label but no Image correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #48276E;
 }
 
 .c0 iframe {
@@ -1474,14 +1525,18 @@ exports[`renders Single Message with label but no Image correctly 1`] = `
   className="c0"
   id="single-msg__7__container"
 >
-  <span>
-    test label
-  </span>
   <div
     className="c1"
   >
-    <p
+    <span
       className="c2"
+      color="white"
+      size="s"
+    >
+      test label
+    </span>
+    <p
+      className="c3"
       color="white"
       size="xxl"
     >

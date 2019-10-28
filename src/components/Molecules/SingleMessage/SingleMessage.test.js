@@ -113,7 +113,7 @@ it('renders Single Message with double image correctly', () => {
 it('renders Single Message with Image and label correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
-      backgroundColor="purple"
+      backgroundColor="purple_dark"
       imageSet={data.images}
       image={data.image}
       imageAltText=""
@@ -138,7 +138,7 @@ it('renders Single Message with Image and label correctly', () => {
 it('renders Single Message with label but no Image correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
-      backgroundColor="purple"
+      backgroundColor="purple_dark"
       copyFirst={false}
       label="test label"
     >
@@ -155,7 +155,7 @@ it('renders Single Message with label but no Image correctly', () => {
 it('renders Single Message with full width and label correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
-      backgroundColor="purple"
+      backgroundColor="purple_dark"
       imageSet={data.images}
       image={data.image}
       imageAltText=""
@@ -181,7 +181,7 @@ it('renders Single Message with full width and label correctly', () => {
 it('renders Single Message with 100% vertical height image and label correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
-      backgroundColor="purple"
+      backgroundColor="purple_dark"
       imageLow={data.imageLow}
       imageSet={data.images}
       image={data.image}
