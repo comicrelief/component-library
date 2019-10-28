@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
-import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.div`
@@ -30,7 +29,6 @@ const Card = ({
   imageAltText,
   height,
   width,
-  label,
   children,
   ...rest
 }) => {
@@ -48,31 +46,12 @@ const Card = ({
           />
         </Image>
       ) : null}
-      <Copy>
-        <>
-          {label ? (
-            <Text
-              tag="span"
-              size="s"
-              color={
-                backgroundColor && backgroundColor.includes('dark')
-                  ? 'white'
-                  : 'black'
-              }
-              uppercase
-            >
-              {label}
-            </Text>
-          ) : null}
-          {children}
-        </>
-      </Copy>
+      <Copy>{children}</Copy>
     </Container>
   );
 };
 
 Card.propTypes = {
-  label: PropTypes.string,
   backgroundColor: PropTypes.string,
   imageLow: PropTypes.string,
   images: PropTypes.string,
@@ -83,7 +62,6 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  label: '',
   backgroundColor: 'white',
   imageLow: null,
   images: null,

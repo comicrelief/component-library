@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import YouTubePlayer from 'youtube-player';
 import { UID } from 'react-uid';
 import Picture from '../../Atoms/Picture/Picture';
-import Text from '../../Atoms/Text/Text';
 
 import {
   Container,
@@ -27,7 +26,6 @@ const SingleMessage = ({
   image2,
   imageAltText,
   imageAltText2,
-  label,
   children,
   fullImage,
   vhFull,
@@ -167,23 +165,7 @@ const SingleMessage = ({
             copyFirst={copyFirst}
             hasVideo={hasVideo}
           >
-            <>
-              {label ? (
-                <Text
-                  tag="span"
-                  size="s"
-                  color={
-                    backgroundColor && backgroundColor.includes('dark')
-                      ? 'white'
-                      : 'black'
-                  }
-                  uppercase
-                >
-                  {label}
-                </Text>
-              ) : null}
-              {children}
-            </>
+            {children}
           </Copy>
         </Container>
       )}
@@ -208,8 +190,7 @@ SingleMessage.propTypes = {
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool,
   videoID: PropTypes.string,
-  landscapeVideo: PropTypes.bool,
-  label: PropTypes.string
+  landscapeVideo: PropTypes.bool
 };
 
 SingleMessage.defaultProps = {
@@ -225,8 +206,7 @@ SingleMessage.defaultProps = {
   imageAltText2: '',
   vhFull: false,
   videoID: null,
-  landscapeVideo: false,
-  label: ''
+  landscapeVideo: false
 };
 
 export default SingleMessage;
