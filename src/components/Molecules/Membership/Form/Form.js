@@ -40,7 +40,9 @@ const Signup = ({
   const [isSelected, setIsSelected] = useState(true); // Highlight one the money buy box when the page load
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState('');
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState({
+    [`membership-${mbshipID}`]: ''
+  });
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -61,21 +63,25 @@ const Signup = ({
   };
 
   // Handle user other amount input
-  const handleChange = (input, description) => {
-    if (!isAmountValid(input)) {
+  const handleChange = (value, id) => {
+    if (!isAmountValid(value)) {
       if (moneyBuyCopy) setMoneyBuyCopy(false);
       if (boxBorderColor) setBoxBorderColor(false);
       if (!errorMsg) setErrorMsg(true);
     } else {
       setBoxBorderColor(false);
       if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(description);
-      setAmountDonate(input);
+      setMoneyBuyCopy(otherDescription);
+      setAmountDonate(value);
     }
     // Highlight both input and box
-    isInputMatchBoxValue(moneyBoxes, selectMoneyBuy, setAmountDonate, input);
+    isInputMatchBoxValue(moneyBoxes, selectMoneyBuy, setAmountDonate, value);
     setInputBorderColor(true);
-    setUserInput(input);
+    // setUserInput(value);
+    setUserInput(fields => ({
+      ...fields,
+      [`membership-${id}`]: value
+    }));
   };
 
   const hightlightInput = (value, description) => {
@@ -93,8 +99,8 @@ const Signup = ({
   useEffect(() => {
     document.addEventListener('DOMContentLoaded', () => {
       getRowID();
-      const paramsAmount = getRowID() * 1;
-      setUserInput(paramsAmount);
+      const paramsAmount = getRowID();
+      handleChange(paramsAmount.amount * 1, paramsAmount.rowID);
     });
 
     regularGiving.moneybuys.map((moneyBuy, index) => {
@@ -165,7 +171,7 @@ const Signup = ({
           </Label>
           <AmountField
             step="0.01"
-            name="membership_amount"
+            name={`membership-${mbshipID}`}
             type="number"
             inputBorderColor={inputBorderColor}
             label="£"
@@ -175,10 +181,10 @@ const Signup = ({
             {...rest}
             max="5000"
             min="1"
-            value={userInput}
+            value={userInput[`membership-${mbshipID}`]}
             pattern="[^[0-9]+([,.][0-9]+)?$]"
             placeholder="0.00"
-            onChange={e => handleChange(e.target.value, otherDescription)}
+            onChange={e => handleChange(e.target.value, mbshipID)}
             onClick={e => hightlightInput(e.target.value, otherDescription)}
             onKeyPress={e => onKeyPress(e)}
           />

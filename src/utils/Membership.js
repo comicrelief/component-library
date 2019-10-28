@@ -32,7 +32,6 @@ const getUrlParameter = name => {
 // };
 
 const getRowID = () => {
-  let amount = 0;
   const paramObj = `${window.location.href}?`
     .split('?')[1]
     .split('&')
@@ -48,9 +47,8 @@ const getRowID = () => {
       .getElementById(paramObj.rowID)
       .scrollIntoView({ behavior: 'smooth' });
     // scroll(paramObj.rowID);
-    amount = paramObj.amount;
   }
-  return amount;
+  return paramObj;
 };
 
 const isInputMatchBoxValue = (
