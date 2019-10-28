@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Card from './Card';
 import data from '../../../styleguide/data/data';
 
-it('renders correctly without label', () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <Card image={data.image} images={data.image} backgroundColor="yellow">
       <h2>Title</h2>
