@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly without label 1`] = `
+exports[`renders correctly 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
