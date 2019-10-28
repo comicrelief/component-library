@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import YouTubePlayer from 'youtube-player';
 import { UID } from 'react-uid';
 import Picture from '../../Atoms/Picture/Picture';
+import Text from '../../Atoms/Text/Text';
 
 import {
   Container,
@@ -160,14 +161,29 @@ const SingleMessage = ({
               </Media>
             </>
           ) : null}
-          {label ? <span>{label}</span> : null}
           <Copy
             fullImage={fullImage}
             hasImage={hasImage}
             copyFirst={copyFirst}
             hasVideo={hasVideo}
           >
-            {children}
+            <>
+              {label ? (
+                <Text
+                  tag="span"
+                  size="s"
+                  color={
+                    backgroundColor && backgroundColor.includes('dark')
+                      ? 'white'
+                      : 'black'
+                  }
+                  uppercase
+                >
+                  {label}
+                </Text>
+              ) : null}
+              {children}
+            </>
           </Copy>
         </Container>
       )}
