@@ -22,6 +22,37 @@ const getUrlParameter = name => {
   return param;
 };
 
+// const scroll = id => {
+//   setTimeout(() => {
+//     window.scrollTo({
+//       top: document.getElementById(id).top,
+//       behavior: 'smooth'
+//     });
+//   }, 100);
+// };
+
+const getRowID = () => {
+  let amount = 0;
+  const paramObj = `${window.location.href}?`
+    .split('?')[1]
+    .split('&')
+    .reduce(
+      (params, pair) =>
+        ((key, val) => (key ? { ...params, [key]: val } : params))(
+          ...`${pair}=`.split('=').map(decodeURIComponent)
+        ),
+      {}
+    );
+  if (paramObj.rowID) {
+    document
+      .getElementById(paramObj.rowID)
+      .scrollIntoView({ behavior: 'smooth' });
+    // scroll(paramObj.rowID);
+    amount = paramObj.amount;
+  }
+  return amount;
+};
+
 const isInputMatchBoxValue = (
   moneyBoxes,
   selectMoneyBuy,
@@ -63,5 +94,6 @@ export {
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue,
-  handleDonateSubmission
+  handleDonateSubmission,
+  getRowID
 };

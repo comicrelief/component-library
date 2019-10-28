@@ -24,7 +24,6 @@ const Membership = ({
     <Container
       formAligntRight={formAligntRight}
       backgroundColor={backgroundColor}
-      id={mbshipID}
     >
       <BgImage
         backgroundColor={backgroundColor}

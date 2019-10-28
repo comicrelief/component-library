@@ -7,7 +7,8 @@ import {
   handleDonateSubmission,
   onKeyPress,
   isAmountValid,
-  isInputMatchBoxValue
+  isInputMatchBoxValue,
+  getRowID
 } from '../../../../utils/Membership';
 import {
   Button,
@@ -90,6 +91,12 @@ const Signup = ({
   };
 
   useEffect(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+      getRowID();
+      const paramsAmount = getRowID() * 1;
+      setUserInput(paramsAmount);
+    });
+
     regularGiving.moneybuys.map((moneyBuy, index) => {
       const box = `box${index + 1}`;
       // eslint-disable-next-line no-shadow
@@ -100,7 +107,7 @@ const Signup = ({
         (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
       );
     });
-  }, [isSelected, regularGiving.moneybuys]);
+  }, [isSelected, regularGiving.moneybuys, userInput]);
 
   const submitDonation = (
     event,
@@ -152,7 +159,7 @@ const Signup = ({
       >
         <Text tag="h3">Choose your monthly donation</Text>
         <MoneyBuys>{MoneyBoxes}</MoneyBuys>
-        <FormFieldset>
+        <FormFieldset id={mbshipID}>
           <Label size="s" weight="500">
             Other amount
           </Label>

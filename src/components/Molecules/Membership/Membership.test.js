@@ -383,7 +383,6 @@ it('renders correctly', () => {
 
     <div
       className="c0"
-      id="mship-1"
     >
       <div
         className="c1 c2"
@@ -530,6 +529,7 @@ it('renders correctly', () => {
             </div>
             <div
               className="c16"
+              id="mship-1"
             >
               <span
                 className="c17 c18"
