@@ -159,7 +159,6 @@ const SingleMessage = ({
               </Media>
             </>
           ) : null}
-
           <Copy
             fullImage={fullImage}
             hasImage={hasImage}

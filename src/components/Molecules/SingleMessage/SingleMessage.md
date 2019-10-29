@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
-  backgroundColor="purple"
+  backgroundColor="purple_dark"
   imageSet={data.images}
   image={data.image}
   imageAltText=""
@@ -32,7 +32,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
-  backgroundColor="purple"
+  backgroundColor="purple_dark"
   imageSet={data.images}
   image={data.image}
   imageAltText=""
@@ -56,7 +56,7 @@ Single Message with no Image
 ```js
 import Text from '../../Atoms/Text/Text';
 
-<SingleMessage backgroundColor="purple" copyFirst={false}>
+<SingleMessage backgroundColor="purple_dark" copyFirst={false}>
   <Text tag="p" color="white" size="xxl">
     “The creativity that goes into helping people have a better life is
     extraordinary.”
@@ -71,7 +71,7 @@ import Text from '../../Atoms/Text/Text';
 const data = require('../../../styleguide/data/data').default;
 
 <SingleMessage
-  backgroundColor="purple"
+  backgroundColor="purple_dark"
   imageLow={data.imageLow}
   imageSet={data.images}
   image={data.image}
