@@ -61,6 +61,7 @@ const Picture = ({
         objectFit={objectFit}
         src={image}
         srcSet={IMAGE_FALLBACK}
+        data-src={image}
         data-srcset={images}
         data-sizes="auto"
         data-lowsrc={imageLow}
