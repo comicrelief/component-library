@@ -58,7 +58,12 @@ const ImageWrapper = styled.div`
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  flex: 1;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 55%;
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 100%;
+  }
 `;
 
 const Title = styled(Text)`

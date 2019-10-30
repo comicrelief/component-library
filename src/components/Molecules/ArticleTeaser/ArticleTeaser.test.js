@@ -103,9 +103,6 @@ it('renders correctly', () => {
 
     .c7 {
       padding: 2rem;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
     }
 
     .c10 {
@@ -143,6 +140,18 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c3 {
+        width: 100%;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c7 {
+        width: 55%;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
         width: 100%;
       }
     }
