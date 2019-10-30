@@ -33,7 +33,7 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
-  padding: ${spacing('md')};
+  padding: ${spacing('l')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ hasVideo, fullImage }) =>
       hasVideo === true && fullImage === true
@@ -49,11 +49,6 @@ const Copy = styled.div`
   ${props =>
     props.fullImage &&
     css`
-      position: absolute;
-      width: 100%;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
       ${
         props.copyFirst
           ? css`

@@ -46,7 +46,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 .c5 {
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -218,7 +218,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 .c5 {
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -375,7 +375,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 .c5 {
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -570,14 +570,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 .c5 {
   z-index: 1;
-  padding: 1rem;
-  position: absolute;
-  width: 100%;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  padding: 2rem;
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -727,7 +720,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 .c1 {
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 0 0 60%;
   -ms-flex: 0 0 60%;
   flex: 0 0 60%;
