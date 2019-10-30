@@ -51,7 +51,7 @@ const ImageWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ category }) => !category && category !== '' && 'width: 45%'};
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
 `;

@@ -141,7 +141,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1440px) {
+    @media (min-width:1024px) {
       .c3 {
         width: 100%;
       }
