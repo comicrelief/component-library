@@ -50,6 +50,16 @@ const Copy = styled.div`
     props.fullImage &&
     css`
       @media ${({ theme }) => theme.breakpoint('small')} {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        ${props.copyFirst
+          ? css`
+              left: 0;
+            `
+          : null}
         width: 50%;
       }
     `};

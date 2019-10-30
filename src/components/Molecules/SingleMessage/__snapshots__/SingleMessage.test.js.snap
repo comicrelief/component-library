@@ -618,6 +618,13 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 50%;
   }
 }
