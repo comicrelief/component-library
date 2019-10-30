@@ -12,7 +12,6 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
     ${({ landscapeVideo, hasVideo, fullImage }) =>
@@ -36,6 +35,7 @@ const Copy = styled.div`
     hasVideo === true && fullImage === true ? 'display: none;' : null};
   padding: ${spacing('md')};
   @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ vhFull }) => vhFull && 'min-height: 100vh;'};
     ${({ hasVideo, fullImage }) =>
       hasVideo === true && fullImage === true
         ? 'display: none;'
