@@ -49,13 +49,6 @@ const Copy = styled.div`
   ${props =>
     props.fullImage &&
     css`
-      ${
-        props.copyFirst
-          ? css`
-              left: 0;
-            `
-          : null
-      }
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 50%;
       }
