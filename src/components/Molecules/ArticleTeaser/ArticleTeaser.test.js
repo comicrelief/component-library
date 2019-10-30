@@ -137,9 +137,13 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c3 {
-        -webkit-flex: 0 0 45%;
-        -ms-flex: 0 0 45%;
-        flex: 0 0 45%;
+        width: 45%;
+      }
+    }
+
+    @media (min-width:1440px) {
+      .c3 {
+        width: 100%;
       }
     }
 

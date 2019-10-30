@@ -49,7 +49,10 @@ const ImageWrapper = styled.div`
   justify-content: center;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex: ${({ category }) => !category && category !== '' && '0 0 45%'};
+    ${({ category }) => !category && category !== '' && 'width: 45%'};
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
   }
 `;
 
