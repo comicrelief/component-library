@@ -47,7 +47,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .c1 {
@@ -72,7 +72,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c5 {
-    min-height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -227,7 +226,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .c1 {
@@ -391,7 +390,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .c1 {
@@ -593,14 +592,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 1rem;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 50%;
+  padding: 2rem;
 }
 
 .c1 {
@@ -637,6 +629,19 @@ exports[`renders Single Message with full width correctly 1`] = `
     -ms-flex-pack: center;
     justify-content: center;
     padding: 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50%;
   }
 }
 
@@ -751,7 +756,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 .c1 {
   width: 100%;
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem;
   margin: auto;
   padding: 100px 20px;
 }
