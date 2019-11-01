@@ -85,11 +85,13 @@ const SingleMessage = ({
 
   const handlePlay = thisUniqueID => {
     // Trigger play and update video state
-    allPlayers[thisUniqueID].playVideo();
+    const thisVideoID = `${thisUniqueID}__video`;
+
+    allPlayers[thisVideoID].playVideo();
     setIsBuffering(true);
 
     // Once video is playing, switch state to allow CSS to show/hide relevant layers
-    allPlayers[thisUniqueID].on('stateChange', event => {
+    allPlayers[thisVideoID].on('stateChange', event => {
       if (event.data === 1) {
         setIsBuffering(false);
         setIsPlaying(true);
@@ -98,7 +100,7 @@ const SingleMessage = ({
   };
 
   /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
-  const getParentID = refWithID => {
+  const getID = refWithID => {
     const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
 
     return thisID;
@@ -130,7 +132,7 @@ const SingleMessage = ({
               >
                 {hasVideo &&
                   hasParentID &&
-                  renderVideoPlayers(getParentID(thisRef.current))}
+                  renderVideoPlayers(getID(thisRef.current))}
 
                 {imageSet || image ? (
                   <Image
@@ -171,9 +173,7 @@ const SingleMessage = ({
                     copyFirst={copyFirst}
                     isPlaying={isPlaying}
                     isBuffering={isBuffering}
-                    onClick={() =>
-                      handlePlay(`${getParentID(thisRef.current)}__video`)
-                    }
+                    onClick={() => handlePlay(getID(thisRef.current))}
                   >
                     Play video
                   </PlayButton>
