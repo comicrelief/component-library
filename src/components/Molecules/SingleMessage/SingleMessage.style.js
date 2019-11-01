@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import { media } from '../../../theme/shared/size';
 import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';
@@ -11,7 +12,8 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  ${media('small')} {
+    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
     ${({ landscapeVideo, hasVideo, fullImage }) =>
@@ -60,7 +62,6 @@ const Copy = styled.div`
             `
           : null
       }
-      @media ${({ theme }) => theme.breakpoint('small')} {
         width: 50%;
       }
     `};
@@ -92,7 +93,7 @@ const Media = styled.div`
     hasVideo
       ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
       : null};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  ${media('small')} {
     padding-bottom: ${({ landscapeVideo, hasVideo }) =>
       landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
   }
@@ -125,7 +126,7 @@ const PlayButton = styled.button`
       isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`};
   }
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  ${media('small')} {
     background-size: 100px;
   }
 `;
@@ -141,7 +142,7 @@ const Image = styled.div`
   ${({ vhFull }) =>
     vhFull &&
     css`
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      ${media('small')} {
         img {
           position: absolute;
         }
