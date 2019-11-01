@@ -35,9 +35,8 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
-  padding: ${spacing('md')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ vhFull }) => vhFull && 'min-height: 100vh;'};
+  padding: ${spacing('l')};
+  ${media('small')} {
     ${({ hasVideo, fullImage }) =>
       hasVideo === true && fullImage === true
         ? 'display: none;'
@@ -51,17 +50,17 @@ const Copy = styled.div`
   ${props =>
     props.fullImage &&
     css`
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      ${
-        props.copyFirst
+      ${media('small')} {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        ${props.copyFirst
           ? css`
               left: 0;
             `
-          : null
-      }
+          : null}
         width: 50%;
       }
     `};
