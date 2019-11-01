@@ -31,6 +31,7 @@ const Container = styled.div`
 `;
 
 const Copy = styled.div`
+  width: 100%;
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) =>
     hasVideo === true && fullImage === true ? 'display: none;' : null};
@@ -43,7 +44,6 @@ const Copy = styled.div`
 
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 50%;
     padding: ${spacing('xl')};
   }
 
@@ -67,10 +67,14 @@ const Copy = styled.div`
   ${props =>
     props.hasImage
       ? css`
-          flex: 0 0 50%;
+          @media ${({ theme }) => theme.breakpoint('small')} {
+            width: 50%;
+          }
         `
       : css`
-          flex: 0 0 60%;
+          @media ${({ theme }) => theme.breakpoint('small')} {
+            width: 80%;
+          }
           margin: auto;
           padding: 100px 20px;
         `}
@@ -78,6 +82,9 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 50%;
+  }
   position: relative;
   ${({ doubleImage }) =>
     doubleImage && 'display: flex; flex-direction: column'};

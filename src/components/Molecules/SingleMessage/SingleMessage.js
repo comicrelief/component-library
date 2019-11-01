@@ -93,7 +93,6 @@ const SingleMessage = ({
         <Container
           backgroundColor={backgroundColor}
           copyFirst={copyFirst}
-          vhFull={vhFull}
           id={`${id}__container`}
           isPlaying={isPlaying}
           hasVideo={hasVideo}
@@ -164,6 +163,7 @@ const SingleMessage = ({
             hasImage={hasImage}
             copyFirst={copyFirst}
             hasVideo={hasVideo}
+            vhFull={vhFull}
           >
             {children}
           </Copy>

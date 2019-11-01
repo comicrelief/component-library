@@ -45,11 +45,9 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 }
 
 .c5 {
+  width: 100%;
   z-index: 1;
   padding: 2rem;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
 }
 
 .c1 {
@@ -65,7 +63,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c0 {
-    min-height: 100vh;
+    min-height: 50vh;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -85,10 +83,19 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
     padding: 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 50%;
   }
 }
 
@@ -217,11 +224,9 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c5 {
+  width: 100%;
   z-index: 1;
   padding: 2rem;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
 }
 
 .c1 {
@@ -257,10 +262,19 @@ exports[`renders Single Message with Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
     padding: 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 50%;
   }
 }
 
@@ -374,11 +388,9 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 .c5 {
+  width: 100%;
   z-index: 1;
   padding: 2rem;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
 }
 
 .c1 {
@@ -422,10 +434,19 @@ exports[`renders Single Message with double image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
     padding: 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 50%;
   }
 }
 
@@ -569,11 +590,9 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c5 {
+  width: 100%;
   z-index: 1;
   padding: 2rem;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
 }
 
 .c1 {
@@ -609,9 +628,6 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
     padding: 4rem;
   }
 }
@@ -625,6 +641,18 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
     width: 50%;
   }
 }
@@ -726,11 +754,9 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 .c1 {
+  width: 100%;
   z-index: 1;
   padding: 2rem;
-  -webkit-flex: 0 0 60%;
-  -ms-flex: 0 0 60%;
-  flex: 0 0 60%;
   margin: auto;
   padding: 100px 20px;
 }
@@ -757,10 +783,13 @@ exports[`renders Single Message with no Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
     padding: 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 80%;
   }
 }
 
