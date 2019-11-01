@@ -106,7 +106,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 <div
   className="c0"
-  id="single-msg__4__container"
+  id="single-msg__4"
 >
   <div
     className="c1"
@@ -272,7 +272,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__1__container"
+  id="single-msg__1"
 >
   <div
     className="c1"
@@ -437,7 +437,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__5__container"
+  id="single-msg__5"
 >
   <div
     className="c1"
@@ -637,7 +637,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__3__container"
+  id="single-msg__3"
 >
   <div
     className="c1"
@@ -766,7 +766,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__2__container"
+  id="single-msg__2"
 >
   <div
     className="c1"
