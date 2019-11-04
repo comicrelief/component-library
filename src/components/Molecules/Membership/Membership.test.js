@@ -195,18 +195,7 @@ it('renders correctly', () => {
     }
 
     .c9 {
-      padding: 0 1rem;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
+      padding: 1rem;
     }
 
     .c9 >:not(:last-child) {
@@ -220,10 +209,6 @@ it('renders correctly', () => {
     .c9 input {
       max-width: 100%;
       margin: 0;
-    }
-
-    .c9 .c22 {
-      margin: 2rem 0;
     }
 
     .c10 {
@@ -273,6 +258,7 @@ it('renders correctly', () => {
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
       font-weight: 400;
+      display: block;
     }
 
     .c19 span {
@@ -302,6 +288,7 @@ it('renders correctly', () => {
     }
 
     .c20 {
+      width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
       font-weight: bold;
@@ -376,6 +363,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c20 {
+        width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
       }

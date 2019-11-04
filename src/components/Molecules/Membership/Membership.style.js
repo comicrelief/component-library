@@ -82,10 +82,7 @@ const Error = styled(Text)`
 `;
 
 const Form = styled.form`
-  padding: 0 ${spacing('md')};
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  padding: ${spacing('md')};
 
   > :not(:last-child) {
     margin-bottom: ${spacing('l')};
@@ -98,10 +95,6 @@ const Form = styled.form`
   input {
     max-width: 100%;
     margin: 0;
-  }
-
-  ${Error} {
-    margin: ${spacing('l')} 0;
   }
 `;
 
@@ -136,6 +129,7 @@ const AmountField = styled(Input)`
   position: relative;
   flex: 0 0 50%;
   font-weight: 400;
+  display: block;
 
   ${media('medium')} {
     flex: 0 0 60%;
@@ -169,6 +163,7 @@ const Copy = styled(Text)`
 `;
 
 const Button = styled.button`
+  width: 100%;
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
@@ -184,6 +179,7 @@ const Button = styled.button`
   }
 
   ${media('medium')} {
+    width: auto;
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};
   }
