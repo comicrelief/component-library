@@ -63,7 +63,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c0 {
-    min-height: 50vh;
+    min-height: 100vh;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
