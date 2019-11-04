@@ -42,11 +42,17 @@ const Nav = styled.nav`
     position: relative;
     top: 0;
     display: block;
+    margin: 0 auto;
     width: auto;
     height: 100%;
+    order: 2;
   }
   > h2 {
     ${hideVisually};
+  }
+  @media (min-width: 1182) {
+    margin: 0;
+    order: 1;
   }
 `;
 
@@ -180,7 +186,7 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    margin: 0 4px;
+    margin: 0 2px;
     padding: 25px 0;
 
     :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
