@@ -657,7 +657,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 @media (min-width:740px) {
   .c1 {
-    width: 50%;
+    width: 100%;
   }
 }
 
