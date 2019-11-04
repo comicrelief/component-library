@@ -49,13 +49,21 @@ const ImageWrapper = styled.div`
   justify-content: center;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex: ${({ category }) => !category && category !== '' && '0 0 45%'};
+    ${({ category }) => !category && category !== '' && 'width: 45%'};
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 100%;
   }
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  flex: 1;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 55%;
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 100%;
+  }
 `;
 
 const Title = styled(Text)`
