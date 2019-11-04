@@ -83,7 +83,7 @@ const Copy = styled.div`
 const Media = styled.div`
   width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 50%;
+    width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
   ${({ doubleImage }) =>
