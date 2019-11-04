@@ -38,6 +38,7 @@ import Link from '../../Atoms/Link/Link';
   imageAltText=""
   copyFirst={false}
   fullImage={true}
+  vhFull
 >
   <Text tag="h1" color="white" size="xxl">
     title
