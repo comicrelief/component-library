@@ -45,14 +45,14 @@ const Nav = styled.nav`
     margin: 0 auto;
     width: auto;
     height: 100%;
-    order: 2;
+    order: 1;
   }
   > h2 {
     ${hideVisually};
   }
   @media (min-width: 1182px) {
     margin: 0;
-    order: 1;
+    order: 0;
   }
 `;
 
