@@ -103,9 +103,6 @@ it('renders correctly', () => {
 
     .c7 {
       padding: 2rem;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
     }
 
     .c10 {
@@ -137,9 +134,25 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c3 {
-        -webkit-flex: 0 0 45%;
-        -ms-flex: 0 0 45%;
-        flex: 0 0 45%;
+        width: 45%;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c3 {
+        width: 100%;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c7 {
+        width: 55%;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
+        width: 100%;
       }
     }
 
@@ -166,6 +179,7 @@ it('renders correctly', () => {
               className="c6 lazyload"
               data-lowsrc={null}
               data-sizes="auto"
+              data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
               data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
               height="100%"
               src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"

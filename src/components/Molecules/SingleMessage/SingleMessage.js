@@ -186,6 +186,7 @@ const SingleMessage = ({
             hasImage={hasImage}
             copyFirst={copyFirst}
             hasVideo={hasVideo}
+            vhFull={vhFull}
           >
             {children}
           </Copy>
