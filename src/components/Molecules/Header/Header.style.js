@@ -29,7 +29,7 @@ const InnerWrapper = styled.div`
     margin: 0 auto;
     flex-wrap: wrap;
   }
-  @media (min-width: 1182) {
+  @media (min-width: 1182px) {
     flex-wrap: no-wrap;
   }
 `;
