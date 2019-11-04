@@ -13,7 +13,9 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
-    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
+    ${({ vhFull, fullImage }) =>
+      vhFull || fullImage ? 'min-height: 100vh;' : 'min-height: 50vh;'};
+
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
     ${({ landscapeVideo, hasVideo, fullImage }) =>
