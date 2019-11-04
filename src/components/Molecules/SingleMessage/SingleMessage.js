@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import YouTubePlayer from 'youtube-player';
 import { UID } from 'react-uid';
@@ -41,30 +41,41 @@ const SingleMessage = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
   const [uniqueID, setUniqueID] = useState(null);
+  const [hasParentID, setHasParentID] = useState(false);
+
+  const thisRef = useRef(null);
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
     // Store the dynamically-created UUID (from the main render func) in our state so useEffect can access it
-    setUniqueID(thisRowID);
+    const thisVideoID = `${thisRowID}__video`;
+
+    setUniqueID(thisVideoID);
 
     return (
       <VideoWrapper
         isPlaying={isPlaying}
         isBuffering={isBuffering}
-        key={thisRowID}
+        key={thisVideoID}
         landscapeVideo={landscapeVideo}
       >
-        <div id={thisRowID} />
+        <div id={thisVideoID} />
       </VideoWrapper>
     );
   };
 
+  /* Waiting on a usable ref from render before setting our flag used in other functions */
+  useEffect(() => {
+    setHasParentID(true);
+  }, [thisRef]);
+
+  /* Sets up YT players once all of the ID stuff is taken care of */
   useEffect(() => {
     if (hasVideo && uniqueID && !isInitialised) {
       // Switch state to ensure this only runs once per video row
       setIsInitialised(true);
 
-      // Instantiate a YT Player into our array, using it's unique id as the key that PlayButton can access
+      // Instantiate a YT Player into our array, using its unique id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
         videoId: videoID,
         playerVars: { rel: 0, modestbranding: 1, fs: 0 }
@@ -74,16 +85,25 @@ const SingleMessage = ({
 
   const handlePlay = thisUniqueID => {
     // Trigger play and update video state
-    allPlayers[thisUniqueID].playVideo();
+    const thisVideoID = `${thisUniqueID}__video`;
+
+    allPlayers[thisVideoID].playVideo();
     setIsBuffering(true);
 
     // Once video is playing, switch state to allow CSS to show/hide relevant layers
-    allPlayers[thisUniqueID].on('stateChange', event => {
+    allPlayers[thisVideoID].on('stateChange', event => {
       if (event.data === 1) {
         setIsBuffering(false);
         setIsPlaying(true);
       }
     });
+  };
+
+  /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
+  const getID = refWithID => {
+    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
+
+    return thisID;
   };
 
   return (
@@ -93,11 +113,13 @@ const SingleMessage = ({
         <Container
           backgroundColor={backgroundColor}
           copyFirst={copyFirst}
-          id={`${id}__container`}
+          vhFull={vhFull}
+          id={`${id}`}
           isPlaying={isPlaying}
           hasVideo={hasVideo}
           landscapeVideo={landscapeVideo}
           fullImage={fullImage}
+          ref={thisRef}
         >
           {imageSet || imageSet2 ? (
             <>
@@ -108,7 +130,9 @@ const SingleMessage = ({
                 hasVideo={hasVideo}
                 landscapeVideo={landscapeVideo}
               >
-                {hasVideo && renderVideoPlayers(`${id}__video`)}
+                {hasVideo &&
+                  hasParentID &&
+                  renderVideoPlayers(getID(thisRef.current))}
 
                 {imageSet || image ? (
                   <Image
@@ -146,11 +170,10 @@ const SingleMessage = ({
 
                 {hasVideo ? (
                   <PlayButton
-                    id={`${id}__play-button`}
                     copyFirst={copyFirst}
                     isPlaying={isPlaying}
                     isBuffering={isBuffering}
-                    onClick={() => handlePlay(`${id}__video`)}
+                    onClick={() => handlePlay(getID(thisRef.current))}
                   >
                     Play video
                   </PlayButton>
