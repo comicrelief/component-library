@@ -178,7 +178,7 @@ const Signup = ({
         </FormFieldset>
         <Button type="submit">Donate</Button>
         {errorMsg && (
-          <Error>
+          <Error as="p">
             Please enter a number between 1 and 5000, and up to 2 decimal places
           </Error>
         )}
