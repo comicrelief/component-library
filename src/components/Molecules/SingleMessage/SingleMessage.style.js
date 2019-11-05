@@ -13,7 +13,9 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
-    ${({ vhFull }) => (vhFull ? 'min-height: 100vh;' : 'min-height: 50vh;')};
+    ${({ vhFull, fullImage }) =>
+      vhFull || fullImage ? 'height: 100vh;' : 'min-height: 50vh;'};
+
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
     ${({ landscapeVideo, hasVideo, fullImage }) =>
@@ -83,7 +85,7 @@ const Copy = styled.div`
 const Media = styled.div`
   width: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 50%;
+    width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
   ${({ doubleImage }) =>
@@ -137,16 +139,6 @@ const Image = styled.div`
   ${({ isPlaying }) => (isPlaying ? zIndex('base') : zIndex('low'))};
   ${({ hasVideo }) =>
     hasVideo ? 'position: absolute; top: 0; left: 0;' : null};
-
-  ${({ vhFull }) =>
-    vhFull &&
-    css`
-      ${media('small')} {
-        img {
-          position: absolute;
-        }
-      }
-    `};
 `;
 
 const VideoWrapper = styled.div`

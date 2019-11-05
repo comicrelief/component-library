@@ -129,6 +129,7 @@ const SingleMessage = ({
                 isBuffering={isBuffering}
                 hasVideo={hasVideo}
                 landscapeVideo={landscapeVideo}
+                fullImage={fullImage}
               >
                 {hasVideo &&
                   hasParentID &&
