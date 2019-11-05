@@ -45,14 +45,9 @@ const Nav = styled.nav`
     margin: 0 auto;
     width: auto;
     height: 100%;
-    order: 1;
   }
   > h2 {
     ${hideVisually};
-  }
-  @media (min-width: 1158px) {
-    margin: 0;
-    order: 0;
   }
 `;
 
@@ -157,7 +152,7 @@ const NavMenu = styled.ul`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: ${({ theme }) => theme.color('white')};
   }
 `;

@@ -27,10 +27,6 @@ const InnerWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
     margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  @media (min-width: 1158px) {
-    flex-wrap: no-wrap;
   }
 `;
 
