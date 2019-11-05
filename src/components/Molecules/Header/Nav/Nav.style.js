@@ -174,7 +174,7 @@ const NavLink = styled(NavLinkClass)`
  * Menu list items
  */
 const NavItem = styled.li`
-  ${zIndex('high')};
+  ${zIndex('medium')};
   position: relative;
   font-weight: 700;
   :hover {
