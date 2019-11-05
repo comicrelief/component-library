@@ -14,7 +14,7 @@ const Container = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
     ${({ vhFull, fullImage }) =>
-      vhFull || fullImage ? 'min-height: 100vh;' : 'min-height: 50vh;'};
+      vhFull || fullImage ? 'height: 100vh;' : 'min-height: 50vh;'};
 
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
