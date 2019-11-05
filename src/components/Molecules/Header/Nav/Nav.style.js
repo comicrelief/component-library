@@ -50,7 +50,7 @@ const Nav = styled.nav`
   > h2 {
     ${hideVisually};
   }
-  @media (min-width: 1182px) {
+  @media (min-width: 1158px) {
     margin: 0;
     order: 0;
   }
