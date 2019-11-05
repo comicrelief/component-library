@@ -181,7 +181,7 @@ const NavItem = styled.li`
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    margin: 0 2px;
+    margin: 0 4px;
     padding: 25px 0;
 
     :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
