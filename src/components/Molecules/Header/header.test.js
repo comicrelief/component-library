@@ -320,7 +320,7 @@ it('renders correctly', () => {
     }
 
     .c9 {
-      z-index: 3;
+      z-index: 2;
       position: relative;
       font-weight: 700;
     }
