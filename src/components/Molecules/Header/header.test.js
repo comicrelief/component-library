@@ -415,6 +415,7 @@ it('renders correctly', () => {
         position: relative;
         top: 0;
         display: block;
+        margin: 0 auto;
         width: auto;
         height: 100%;
       }
@@ -464,10 +465,10 @@ it('renders correctly', () => {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: space-around;
-        -webkit-justify-content: space-around;
-        -ms-flex-pack: space-around;
-        justify-content: space-around;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         background-color: #FFFFFF;
       }
     }
