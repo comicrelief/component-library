@@ -42,6 +42,7 @@ const Nav = styled.nav`
     position: relative;
     top: 0;
     display: block;
+    margin: 0 10px;
     width: auto;
     height: 100%;
   }
@@ -151,7 +152,7 @@ const NavMenu = styled.ul`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: ${({ theme }) => theme.color('white')};
   }
 `;
@@ -173,7 +174,7 @@ const NavLink = styled(NavLinkClass)`
  * Menu list items
  */
 const NavItem = styled.li`
-  ${zIndex('high')};
+  ${zIndex('medium')};
   position: relative;
   font-weight: 700;
   :hover {
