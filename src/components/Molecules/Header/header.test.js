@@ -415,7 +415,7 @@ it('renders correctly', () => {
         position: relative;
         top: 0;
         display: block;
-        margin: 0 auto;
+        margin: 0 10px;
         width: auto;
         height: 100%;
       }
