@@ -28,12 +28,6 @@ const HeaderEsuWithIcon = ({
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
   const thisRef = useRef(null);
 
-  /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
-  const getID = refWithID => {
-    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
-    return thisID;
-  };
-
   useEffect(() => {
     if (isClicked) {
       if (isESUOpen && !isSuccess) {
