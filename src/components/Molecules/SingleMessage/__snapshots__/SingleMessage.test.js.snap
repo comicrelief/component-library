@@ -83,7 +83,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -237,7 +237,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    min-height: 50vh;
+    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -257,7 +257,7 @@ exports[`renders Single Message with Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -410,7 +410,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    min-height: 50vh;
+    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -430,7 +430,7 @@ exports[`renders Single Message with double image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -626,7 +626,7 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -762,7 +762,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    min-height: 50vh;
+    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -782,7 +782,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 }
 
