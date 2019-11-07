@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import HeaderIcons from './assets/HeaderIcons';
@@ -29,21 +29,32 @@ const HeaderEsuWithIcon = ({
   // Pre-interaction flag
   const [isClicked, setisClicked] = useState(false);
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
-  const [thisEsuID] = useState(`header-esu--${(esuCount += 1)}`);
+  const [hasParentRef, setHasParentRef] = useState(false);
+  const thisRef = useRef(null);
+
+  /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
+  const getID = refWithID => {
+    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
+    return thisID;
+  };
 
   useEffect(() => {
     if (isClicked) {
-      const thisESU = document.getElementById(thisEsuID);
       if (isESUOpen && !isSuccess) {
-        thisESU.querySelector('input').focus();
+        thisRef.current.querySelector('input').focus();
       } else {
-        thisESU.querySelector('a').focus();
+        thisRef.current.querySelector('a').focus();
       }
     }
-  }, [isClicked, isESUOpen, isSuccess, thisEsuID]);
+  }, [isClicked, isESUOpen, isSuccess]);
+
+  /* Waiting on a usable ref from render before setting our flag used in other functions */
+  useEffect(() => {
+    setHasParentRef(true);
+  }, [thisRef]);
 
   /* Allow our ESU modal stuff to happen */
-  const handleESUClick = e => {
+  const handleESUOpen = e => {
     e.preventDefault();
 
     // Update flag
@@ -73,7 +84,6 @@ const HeaderEsuWithIcon = ({
         errorMsg={errorMsg}
         buttonColor={buttonColor}
         aria-modal="true"
-        id={thisEsuID}
       />
     );
   };
@@ -82,7 +92,7 @@ const HeaderEsuWithIcon = ({
   const renderCloseButton = () => {
     return (
       <CloseButton
-        onClick={e => handleESUClick(e)}
+        onClick={e => handleESUOpen(e, getID(thisRef.current))}
         icon={HeaderIcons.close.icon}
         title="Close email sign-up"
         brand={campaign}
@@ -96,20 +106,21 @@ const HeaderEsuWithIcon = ({
 
   /* Main render */
   return (
-    <IconWrapper id={thisEsuID} onKeyDown={e => handleEscClose(e)}>
-      <Icon
-        onClick={e => handleESUClick(e)}
-        icon={HeaderIcons.email.icon}
-        title={HeaderIcons.email.title}
-        brand={campaign}
-        target="self"
-        role="button"
-        href="#"
-        tabIndex="0"
-      />
+    <IconWrapper onKeyDown={e => handleEscClose(e)} ref={thisRef}>
+      {hasParentRef ? (
+        <Icon
+          onClick={e => handleESUOpen(e)}
+          icon={HeaderIcons.email.icon}
+          title={HeaderIcons.email.title}
+          brand={campaign}
+          target="self"
+          role="button"
+          href="#"
+          tabIndex="0"
+        />
+      ) : null}
 
-      {/* Render the ESU itself */}
-      {isESUOpen ? (
+      {isESUOpen && hasParentRef ? (
         <EsuWrapper>
           {renderESU()}
           {renderCloseButton()}
