@@ -83,7 +83,7 @@ const HeaderEsuWithIcon = ({
   const renderCloseButton = () => {
     return (
       <CloseButton
-        onClick={e => handleESUOpen(e, getID(thisRef.current))}
+        onClick={e => handleESUOpen(e)}
         icon={HeaderIcons.close.icon}
         title="Close email sign-up"
         brand={campaign}
