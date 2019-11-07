@@ -10,9 +10,6 @@ import {
   HeaderESU
 } from './HeaderEsuWithIcon.style';
 
-// Quick way to produce unique IDs per page
-let esuCount = 0;
-
 /* HeaderEsuWithIcon component */
 const HeaderEsuWithIcon = ({
   campaign,
@@ -29,7 +26,6 @@ const HeaderEsuWithIcon = ({
   // Pre-interaction flag
   const [isClicked, setisClicked] = useState(false);
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
-  const [hasParentRef, setHasParentRef] = useState(false);
   const thisRef = useRef(null);
 
   /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
@@ -47,11 +43,6 @@ const HeaderEsuWithIcon = ({
       }
     }
   }, [isClicked, isESUOpen, isSuccess]);
-
-  /* Waiting on a usable ref from render before setting our flag used in other functions */
-  useEffect(() => {
-    setHasParentRef(true);
-  }, [thisRef]);
 
   /* Allow our ESU modal stuff to happen */
   const handleESUOpen = e => {
@@ -107,20 +98,18 @@ const HeaderEsuWithIcon = ({
   /* Main render */
   return (
     <IconWrapper onKeyDown={e => handleEscClose(e)} ref={thisRef}>
-      {hasParentRef ? (
-        <Icon
-          onClick={e => handleESUOpen(e)}
-          icon={HeaderIcons.email.icon}
-          title={HeaderIcons.email.title}
-          brand={campaign}
-          target="self"
-          role="button"
-          href="#"
-          tabIndex="0"
-        />
-      ) : null}
+      <Icon
+        onClick={e => handleESUOpen(e)}
+        icon={HeaderIcons.email.icon}
+        title={HeaderIcons.email.title}
+        brand={campaign}
+        target="self"
+        role="button"
+        href="#"
+        tabIndex="0"
+      />
 
-      {isESUOpen && hasParentRef ? (
+      {isESUOpen ? (
         <EsuWrapper>
           {renderESU()}
           {renderCloseButton()}
