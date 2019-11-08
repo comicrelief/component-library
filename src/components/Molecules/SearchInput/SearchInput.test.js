@@ -106,7 +106,6 @@ it('renders correctly', () => {
       -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
       margin: 4rem auto;
-      padding-bottom: 1rem;
       width: 100%;
       border-bottom: 4px solid #E52630;
       overflow: hidden;
@@ -114,14 +113,11 @@ it('renders correctly', () => {
 
     .c3 {
       width: 90%;
-      margin: 0;
-      margin-left: 1rem;
-      margin-right: 0.5rem;
+      padding: 0 0.5rem;
     }
 
     .c5 {
       margin: 0;
-      padding: 0;
       max-width: 100%;
       border: 0;
       outline: #E52630;
@@ -133,16 +129,13 @@ it('renders correctly', () => {
 
     .c9 {
       width: 90%;
-      margin: 0;
-      margin-left: 1rem;
-      margin-right: 0.5rem;
+      padding: 0 0.5rem;
       margin: 0;
       width: 60px;
     }
 
     .c10 {
       margin: 0;
-      padding: 0;
       max-width: 100%;
       border: 0;
       outline: #E52630;
@@ -150,8 +143,8 @@ it('renders correctly', () => {
       background-color: #c7c7c7;
       -webkit-mask: url(mock.asset) no-repeat right center;
       mask: url(mock.asset) no-repeat right center;
-      -webkit-mask-size: 85%;
-      mask-size: 85%;
+      -webkit-mask-size: 45%;
+      mask-size: 45%;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -164,6 +157,12 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c8 {
         max-width: 290px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        padding-bottom: 0.5rem;
       }
     }
 
