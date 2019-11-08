@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
+import { media } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 import searchIcon from './assets/search.svg';
-import { media } from '../../../theme/shared/size';
 
 const Wrapper = styled.div`
   width: 100%;
