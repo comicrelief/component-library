@@ -4,7 +4,8 @@ const indexes = {
   base: 0,
   low: 1,
   medium: 2,
-  high: 3
+  high: 3,
+  higher: 4
 };
 
 const zIndex = index => {

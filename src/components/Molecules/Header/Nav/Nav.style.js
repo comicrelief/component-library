@@ -29,7 +29,7 @@ const Nav = styled.nav`
   position: absolute;
   top: 75px;
   left: 0;
-  ${zIndex('medium')};
+  ${zIndex('higher')};
 
   @media (min-width: ${screen.small}) {
     width: 50%;
