@@ -792,6 +792,12 @@ exports[`renders Single Message with no Image correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c1 {
+    padding: 8rem 2rem;
+  }
+}
+
 <div
   className="c0"
   id="single-msg__2"
