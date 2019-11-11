@@ -51,6 +51,19 @@ export default {
       ]
     },
     {
+      title: 'Schools & youth - menu group',
+      id: 'eaec51921-bbb3-5e8d-b966-c53fff34998b5',
+      links: [
+        {
+          title: 'Single menu link',
+          path: 'https://www.comicrelief.com/rednoseday/schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        }
+      ]
+    },
+    {
       title: 'What your money does - menu group',
       id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
       links: [
@@ -114,6 +127,19 @@ export default {
         {
           title: 'Free downloads',
           path: 'https://www.comicrelief.com/rednoseday/schools/free-downloads',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        }
+      ]
+    },
+    {
+      title: 'Schools & youth - menu group',
+      id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
+      links: [
+        {
+          title: 'I am single menu link',
+          path: 'https://www.comicrelief.com/rednoseday/schools',
           internal: {
             type: 'ContentfulPageLandingPage'
           }

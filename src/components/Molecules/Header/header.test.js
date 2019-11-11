@@ -755,6 +755,29 @@ it('renders correctly', () => {
                 aria-haspopup="true"
                 className="c2 c10 c11"
                 color="red"
+                href="https://www.comicrelief.com/rednoseday/schools"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+                type="standard"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
+                  size="s"
+                >
+                  Single menu link
+                </span>
+              </a>
+            </li>
+            <li
+              className="c9"
+              role="none"
+            >
+              <a
+                aria-haspopup="true"
+                className="c2 c10 c11"
+                color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
                 onClick={[Function]}
                 onKeyUp={[Function]}
@@ -964,6 +987,29 @@ it('renders correctly', () => {
                   </a>
                 </li>
               </ul>
+            </li>
+            <li
+              className="c9"
+              role="none"
+            >
+              <a
+                aria-haspopup="true"
+                className="c2 c10 c11"
+                color="red"
+                href="https://www.comicrelief.com/rednoseday/schools"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                target="_self"
+                type="standard"
+              >
+                <span
+                  className="c7"
+                  color="inherit"
+                  size="s"
+                >
+                  I am single menu link
+                </span>
+              </a>
             </li>
             <li
               className="c9"
