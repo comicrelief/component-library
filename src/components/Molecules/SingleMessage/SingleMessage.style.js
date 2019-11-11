@@ -79,7 +79,14 @@ const Copy = styled.div`
           }
           margin: auto;
           padding: 100px 20px;
-        `}
+        `};
+  ${props =>
+    props.hasImage === false &&
+    css`
+      ${media('small')} {
+        padding: ${spacing('xxl')} ${spacing('l')};
+      }
+    `}
 `;
 
 const Media = styled.div`
