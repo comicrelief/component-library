@@ -944,7 +944,7 @@ it('renders correctly', () => {
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
-                    target="_blank"
+                    target="_self"
                     type="standard"
                   >
                     <span

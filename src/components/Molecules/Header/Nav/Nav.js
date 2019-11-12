@@ -107,11 +107,15 @@ const MainNav = ({ navItems }) => {
                   </NavLink>
                 ) : (
                   <NavLink
-                    href="#"
+                    href={thisUrl}
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup="true"
-                    onClick={toggleSubMenu(group.id)}
+                    onClick={
+                      group.links &&
+                      group.links.length > 1 &&
+                      toggleSubMenu(group.id)
+                    }
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
@@ -119,7 +123,7 @@ const MainNav = ({ navItems }) => {
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
-                {group.links && group.links.length > 0 && (
+                {group.links && group.links.length > 1 && (
                   <SubNavMenu
                     role="list"
                     isKeyPressed={!!isKeyPressed[group.title]}
