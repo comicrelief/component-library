@@ -106,9 +106,7 @@ exports[`renders Single Message only h1 correctly 1`] = `
       className="c3"
       color="white"
       size="s"
-    >
-      ""
-    </p>
+    />
   </div>
 </div>
 `;
