@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
@@ -48,19 +48,29 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ category }) => !category && category !== '' && 'width: 45%'};
-  }
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: 100%;
-  }
+  ${({ category }) =>
+    !category &&
+    category !== '' &&
+    css`
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        width: 45%;
+      }
+      @media ${({ theme }) => theme.breakpoint('medium')} {
+        width: 100%;
+      }
+    `};
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 55%;
-  }
+  ${({ category }) =>
+    !category &&
+    category !== '' &&
+    css`
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        width: 55%;
+      }
+    `};
   @media ${({ theme }) => theme.breakpoint('medium')} {
     width: 100%;
   }
