@@ -107,7 +107,7 @@ exports[`renders Single Message only h1 correctly 1`] = `
       color="white"
       size="s"
     >
-      
+      ""
     </p>
   </div>
 </div>

@@ -49,7 +49,9 @@ it('renders Single Message only h1 correctly', () => {
       <Text tag="h1" color="white" size="xxl">
         “H1 only followed by empty p tag”
       </Text>
-      <Text tag="p" color="white" children=""></Text>
+      <Text tag="p" color="white">
+        ""
+      </Text>
     </SingleMessage>
   ).toJSON();
 
