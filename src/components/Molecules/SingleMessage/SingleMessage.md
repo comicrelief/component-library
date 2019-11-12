@@ -65,6 +65,20 @@ import Text from '../../Atoms/Text/Text';
 </SingleMessage>;
 ```
 
+Single Message h1 only.
+(RTE will add an empty p tag)
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<SingleMessage backgroundColor="purple_dark" copyFirst={false}>
+  <Text tag="h1" color="white" size="xxl">
+    “H1 only followed by empty p tag”
+  </Text>
+  <Text tag="p" color="white" size="l" children=""></Text>
+</SingleMessage>;
+```
+
 Single Message vertical height 100%
 
 ```js

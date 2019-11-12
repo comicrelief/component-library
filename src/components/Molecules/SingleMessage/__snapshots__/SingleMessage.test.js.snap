@@ -1,5 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders Single Message only h1 correctly 1`] = `
+.c2 {
+  color: #FFFFFF;
+  font-size: 2.075rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background: #C180F9;
+}
+
+.c0 iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  z-index: 0;
+}
+
+.c1 {
+  width: 100%;
+  z-index: 1;
+  padding: 2rem;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.c1 p:empty {
+  margin-top: -2rem;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    height: auto;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 80%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    padding: 8rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+  id="single-msg__3"
+>
+  <div
+    className="c1"
+  >
+    <h1
+      className="c2"
+      color="white"
+      size="xxl"
+    >
+      “H1 only followed by empty p tag”
+    </h1>
+    <p
+      className="c3"
+      color="white"
+      size="s"
+    >
+      
+    </p>
+  </div>
+</div>
+`;
+
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
   color: #FFFFFF;
@@ -107,7 +220,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 <div
   className="c0"
-  id="single-msg__4"
+  id="single-msg__5"
 >
   <div
     className="c1"
@@ -454,7 +567,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__5"
+  id="single-msg__6"
 >
   <div
     className="c1"
@@ -663,7 +776,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__3"
+  id="single-msg__4"
 >
   <div
     className="c1"
@@ -758,6 +871,10 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 2rem;
   margin: auto;
   padding: 100px 20px;
+}
+
+.c1 p:empty {
+  margin-top: -2rem;
 }
 
 @media (min-width:740px) {

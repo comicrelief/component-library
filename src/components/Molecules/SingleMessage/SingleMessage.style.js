@@ -48,7 +48,6 @@ const Copy = styled.div`
     justify-content: center;
     padding: ${spacing('l')} ${spacing('xl')};
   }
-
   ${props =>
     props.fullImage &&
     css`
@@ -79,6 +78,10 @@ const Copy = styled.div`
           }
           margin: auto;
           padding: 100px 20px;
+          // move empty p tag up with negative margin equal to h1's margin
+          & p:empty {
+            margin-top: ${`-${spacing('l')}`};
+          }
         `};
   ${props =>
     props.hasImage === false &&
