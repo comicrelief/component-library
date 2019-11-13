@@ -43,19 +43,6 @@ it('renders Single Message with no Image correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders Single Message only h1 correctly', () => {
-  const tree = renderWithTheme(
-    <SingleMessage backgroundColor="purple" copyFirst={false}>
-      <Text tag="h1" color="white" size="xxl">
-        “H1 only followed by empty p tag”
-      </Text>
-      <Text tag="p" color="white" />
-    </SingleMessage>
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
-
 it('renders Single Message with full width correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
