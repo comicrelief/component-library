@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
 import data from '../../../styleguide/data/data';
 
-it('renders correctly', () => {
+it('renders article teaser correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -204,6 +204,189 @@ it('renders correctly', () => {
             size="xl"
           >
             News article
+          </h3>
+        </div>
+      </a>
+    </article>
+  `);
+});
+
+it('renders press realese correctly', () => {
+  const tree = renderWithTheme(
+    <ArticleTeaser
+      href="/test"
+      category=""
+      date=" 01 July 2019"
+      title="Press Release"
+      alt="Image's description"
+      logoSize="80px"
+    />
+  ).toJSON();
+
+  expect(tree).toMatchInlineSnapshot(`
+    .c8 {
+      font-size: 0.69375rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    .c9 {
+      font-size: 1.725rem;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-family: 'Anton',Impact,sans-serif;
+    }
+
+    .c4 {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .c6 {
+      display: block;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+
+    .c1 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      display: inline;
+      padding: 0 2px 1px;
+      color: #2C0230;
+      font-weight: normal;
+    }
+
+    .c1:hover {
+      color: #2C0230;
+    }
+
+    .c0 {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: #fff;
+    }
+
+    .c2 {
+      padding: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+    }
+
+    .c3 {
+      padding-left: 1rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .c7 {
+      padding: 2rem;
+    }
+
+    .c10 {
+      margin: 0;
+    }
+
+    .c5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
+        width: 100%;
+      }
+    }
+
+    <article
+      className="c0"
+    >
+      <a
+        className="c1 c2"
+        color="red"
+        href="/test"
+        target="_self"
+        type="standard"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+            height="80px"
+            width="80px"
+          >
+            <img
+              alt="Image's description"
+              className="c6 lazyload"
+              data-lowsrc="mock.asset"
+              data-sizes="auto"
+              data-src={null}
+              data-srcset="mock.asset"
+              height="80px"
+              src={null}
+              srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              width="80px"
+            />
+          </div>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+            color="inherit"
+            size="xxs"
+          >
+             01 July 2019
+          </span>
+          <h3
+            className="c9 c10"
+            color="inherit"
+            size="xl"
+          >
+            Press Release
           </h3>
         </div>
       </a>
