@@ -81,23 +81,24 @@ const SubNavItem = styled.li`
     height: auto;
     margin-top: 12px;
     padding: 0;
-    
+
     ${({ column }) => (column === true ? 'width: 50%;' : null)};
-          
-  a {
-    background-color: inherit;
-    height: auto;
 
-    &:after {
-      content: none !important;
-    }
+    a {
+      background-color: inherit;
+      height: auto;
 
-    &:hover,
-    &:focus {
-      border-bottom: 2px solid #fff;
-      span {
-        border-bottom: 0;
-        padding-bottom: 2px;
+      &:after {
+        content: none !important;
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid #fff;
+        span {
+          border-bottom: 0;
+          padding-bottom: 2px;
+        }
       }
     }
   }
@@ -122,7 +123,7 @@ const SubNavLink = styled(NavLinkClass)`
  * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
-  background-color: inherit
+  background-color: inherit;
   list-style: none outside;
   padding: 0;
   margin: 0;
@@ -184,7 +185,7 @@ const NavItem = styled.li`
       transition: transform 0.2s ease;
       transform: ${({ isSubMenuOpen }) =>
         isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
-      top: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '15px' : '6px')};
+      top: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '6px' : '0')};
       right: -25px;
     }
 

@@ -215,7 +215,8 @@ it('renders correctly', () => {
     }
 
     .c8 {
-      background-color: inherit list-style:none outside;
+      background-color: inherit;
+      list-style: none outside;
       padding: 0;
       margin: 0;
     }
@@ -273,7 +274,7 @@ it('renders correctly', () => {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg);
-      top: 6px;
+      top: 0;
       right: -25px;
     }
 
