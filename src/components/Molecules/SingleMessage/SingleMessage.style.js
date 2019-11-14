@@ -48,7 +48,6 @@ const Copy = styled.div`
     justify-content: center;
     padding: ${spacing('l')} ${spacing('xl')};
   }
-
   ${props =>
     props.fullImage &&
     css`
@@ -76,10 +75,11 @@ const Copy = styled.div`
       : css`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 80%;
+            padding: ${spacing('xxl')} ${spacing('l')};
           }
           margin: auto;
-          padding: 100px 20px;
-        `}
+          padding: ${spacing('l')};
+        `};
 `;
 
 const Media = styled.div`

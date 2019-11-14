@@ -757,7 +757,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   z-index: 1;
   padding: 2rem;
   margin: auto;
-  padding: 100px 20px;
+  padding: 2rem;
 }
 
 @media (min-width:740px) {
@@ -789,6 +789,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 @media (min-width:740px) {
   .c1 {
     width: 80%;
+    padding: 8rem 2rem;
   }
 }
 
