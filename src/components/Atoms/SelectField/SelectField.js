@@ -27,7 +27,7 @@ const StyledInput = styled.select`
   padding: 12px 50px 8px 10px;
   height: 50px;
   font-weight: 300;
-  background: transparent url(${dropDownIcon}) calc(100% - 20px) 18px/20px 20px
+  background: white url(${dropDownIcon}) calc(100% - 20px) 18px/20px 20px
     no-repeat;
   cursor: pointer;
   margin-bottom: 0;
