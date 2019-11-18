@@ -66,6 +66,11 @@ const selectItems = [
 
 initialState = { isSuccessSchools: false };
 
+sendEmail = e => {
+  setState({ isSuccessSchools: !state.isSuccessSchools });
+  console.log(e);
+};
+
 <EmailSignUp
   title={title}
   topCopy={topCopy}
@@ -76,6 +81,6 @@ initialState = { isSuccessSchools: false };
   isSchools
   privacyCopy={privacyCopy}
   errorMsg=""
-  subscribe={() => setState({ isSuccessSchools: !state.isSuccessSchools })}
+  subscribe={e => sendEmail(e)}
 />;
 ```

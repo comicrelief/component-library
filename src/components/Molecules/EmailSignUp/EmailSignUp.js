@@ -29,6 +29,7 @@ const EmailSignUp = ({
   ...rest
 }) => {
   const [value, setValue] = useState('');
+  const [age, setAge] = useState('test');
   const [next, setNext] = useState(false);
 
   const handleSubmit = e => {
@@ -40,10 +41,14 @@ const EmailSignUp = ({
   const schoolsSelect = (
     <>
       <Select
+        hideLabel
+        label="Please choose an option"
         placeholder="Please choose an option"
         description="Please choose an option"
         errorMsg={errorMsg}
         options={selectItems}
+        value={age}
+        onChange={event => setAge(event.target.value)}
       />
       <Text tag="p" weight="400" size="m">
         {schoolsCopy}
@@ -89,7 +94,7 @@ const EmailSignUp = ({
               color={buttonColor}
               as="button"
               href="/#"
-              onClick={() => subscribe(value)}
+              onClick={() => subscribe({ email: `${value}`, age: `${age}` })}
             >
               Subscribe
             </Link>
@@ -161,10 +166,13 @@ EmailSignUp.propTypes = {
   /** privacy copy */
   privacyCopy: PropTypes.node.isRequired,
   /** privacy copy */
-  // eslint-disable-next-line react/require-default-props
   schoolsCopy: PropTypes.node,
-  // eslint-disable-next-line react/require-default-props
-  selectItems: PropTypes.objectOf,
+  selectItems: PropTypes.PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      displayValue: PropTypes.string.isRequired
+    })
+  ),
   /** subscription function */
   subscribe: PropTypes.func.isRequired,
   /** background color */
@@ -175,7 +183,9 @@ EmailSignUp.propTypes = {
 
 EmailSignUp.defaultProps = {
   backgroundColor: 'deep_violet_dark',
-  buttonColor: 'red'
+  buttonColor: 'red',
+  schoolsCopy: '',
+  selectItems: {}
 };
 
 export default EmailSignUp;
