@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
+import hideVisually from '../../../theme/shared/hideVisually';
 import dropDownIcon from './assets/drop-down-dark-purple.svg';
 import alertIcon from './assets/error-alert-icon.png';
 
@@ -49,6 +50,10 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
+const LabelText = styled(Text)`
+  ${({ hideLabel }) => hideLabel && hideVisually}
+`;
+
 /**
  * Text error component
  */
@@ -73,15 +78,24 @@ const ErrorText = styled(Text)`
   }
 `;
 
-const Select = ({ errorMsg, description, label, options, ...rest }) => {
+const Select = ({
+  errorMsg,
+  description,
+  label,
+  options,
+  hideLabel,
+  ...rest
+}) => {
   const error = errorMsg && errorMsg.length > 0;
   return (
     <Label>
-      <Text weight="bold">{label}</Text>
-      <StyledInput error={error ? 1 : 0}>
+      <LabelText hideLabel={hideLabel} weight="bold">
+        {label}
+      </LabelText>
+      <StyledInput {...rest} error={error ? 1 : 0}>
         <option disabled>{description}</option>
         {options.map(option => (
-          <option key={option.value} value={option.value} {...rest}>
+          <option key={option.value} value={option.value}>
             {option.displayValue}
           </option>
         ))}
@@ -93,10 +107,15 @@ const Select = ({ errorMsg, description, label, options, ...rest }) => {
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,
+  hideLabel: PropTypes.bool,
   errorMsg: PropTypes.string.isRequired,
   /** options */
   options: PropTypes.instanceOf(Array).isRequired,
   description: PropTypes.string.isRequired
+};
+
+Select.defaultProps = {
+  hideLabel: false
 };
 
 export default Select;
