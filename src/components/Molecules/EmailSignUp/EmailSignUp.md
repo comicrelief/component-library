@@ -55,6 +55,7 @@ const successCopy = (
   />
 );
 const selectItems = [
+  { value: '', displayValue: '-- Select age group --' },
   { value: 'Option one', displayValue: 'The first option' },
   {
     value: 'Option two',

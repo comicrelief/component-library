@@ -29,13 +29,18 @@ const EmailSignUp = ({
   ...rest
 }) => {
   const [value, setValue] = useState('');
-  const [age, setAge] = useState('test');
+  const [age, setAge] = useState('');
   const [next, setNext] = useState(false);
 
   const handleSubmit = e => {
     // Just stopping weird things happening for now when the user submits with the enter key
     // rather than the Submit button
     e.preventDefault();
+  };
+
+  const subscribeSchool = () => {
+    subscribe({ email: `${value}`, age: `${age}` });
+    setNext(false);
   };
 
   const schoolsSelect = (
@@ -94,7 +99,7 @@ const EmailSignUp = ({
               color={buttonColor}
               as="button"
               href="/#"
-              onClick={() => subscribe({ email: `${value}`, age: `${age}` })}
+              onClick={() => subscribeSchool()}
             >
               Subscribe
             </Link>
