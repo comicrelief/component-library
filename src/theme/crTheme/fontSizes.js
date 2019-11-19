@@ -1,12 +1,12 @@
 const fontSizes = {
-  xxs: '0.69375rem',
-  xs: '0.83125rem',
+  xxs: '0.6875',
+  xs: '0.6875',
   s: '1rem',
-  m: '1.2rem',
-  l: '1.44rem',
-  xl: '1.725rem',
-  xxl: '2.075rem',
-  big: '2.75rem',
+  m: '1.25rem',
+  l: '1.25rem',
+  xl: '1.625rem',
+  xxl: '2.625rem',
+  big: '4rem',
   super: '6.25rem'
 };
 

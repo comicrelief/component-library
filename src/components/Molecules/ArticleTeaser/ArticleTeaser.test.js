@@ -21,14 +21,14 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.69375rem;
+      font-size: 0.6875;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c9 {
-      font-size: 1.725rem;
+      font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
       font-family: 'Anton',Impact,sans-serif;
@@ -225,14 +225,14 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.69375rem;
+      font-size: 0.6875;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c9 {
-      font-size: 1.725rem;
+      font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
       font-family: 'Anton',Impact,sans-serif;

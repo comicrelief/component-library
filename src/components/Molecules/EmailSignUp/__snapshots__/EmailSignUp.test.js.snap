@@ -16,7 +16,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-transform: inherit;
   font-weight: 400;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -24,12 +24,12 @@ exports[`renders ESU School correctly 1`] = `
 
 .c10 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -43,7 +43,7 @@ exports[`renders ESU School correctly 1`] = `
 .c7 {
   background-color: #FFFFFF;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -157,7 +157,7 @@ exports[`renders ESU School correctly 1`] = `
 
 .c2 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 @media (min-width:740px) {
@@ -174,7 +174,7 @@ exports[`renders ESU School correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 
@@ -295,12 +295,12 @@ exports[`renders correctly 1`] = `
 
 .c12 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -319,7 +319,7 @@ exports[`renders correctly 1`] = `
   width: 100%;
   padding: 13px;
   margin: 10px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   background-color: #FFFFFF;
   border: 1px solid;
   border-color: #2C0230;
@@ -450,7 +450,7 @@ exports[`renders correctly 1`] = `
 
 .c2 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 @media (min-width:740px) {
@@ -467,7 +467,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 

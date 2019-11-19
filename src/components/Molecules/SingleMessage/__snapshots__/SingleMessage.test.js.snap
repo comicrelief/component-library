@@ -3,7 +3,7 @@
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -152,7 +152,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 exports[`renders Single Message with Image correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -179,12 +179,12 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 .c8 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #FFFFFF;
   color: #2C0230;
@@ -342,7 +342,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 exports[`renders Single Message with double image correctly 1`] = `
 .c6 {
   color: #2C0230;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -521,7 +521,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 exports[`renders Single Message with full width correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -548,12 +548,12 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 .c8 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #FFFFFF;
   color: #2C0230;
@@ -724,7 +724,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 exports[`renders Single Message with no Image correctly 1`] = `
 .c2 {
   color: #FFFFFF;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }

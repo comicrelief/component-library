@@ -73,12 +73,12 @@ it('renders correctly', () => {
 
     .c23 {
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1.5rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      border-radius: 30px;
+      border-radius: 2rem;
       cursor: pointer;
       background-color: #4ECD57;
       color: #2C0230;
@@ -379,7 +379,7 @@ it('renders correctly', () => {
     .c22 > div > a {
       height: inherit;
       width: inherit;
-      margin-left: 0.69375rem;
+      margin-left: 0.6875;
     }
 
     .c22 > div > a img {

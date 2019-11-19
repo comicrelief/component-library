@@ -12,7 +12,7 @@ import Link from '../../Atoms/Link/Link';
   imageAltText=""
   copyFirst={false}
 >
-  <Text tag="h1" color="white" size="xxl">
+  <Text tag="h1" color="white" size="super">
     title
   </Text>
   <Text tag="p" color="white">

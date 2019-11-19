@@ -16,7 +16,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
       color: #FFFFFF;
-      font-size: 0.69375rem;
+      font-size: 0.6875;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }

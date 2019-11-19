@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 /** Text component */
@@ -11,6 +11,18 @@ export const BaseText = styled.span`
   ${({ height }) => (height ? `line-height: ${height}` : null)};
   font-family: ${({ family, theme }) =>
     family ? theme.fontFamilies(family) : 'inherit'};
+  ${({ size, theme }) =>
+    size === 'super'
+      ? css`
+          font-size: ${theme.fontSize('xxl')};
+          line-height: 3rem;
+          @media ${theme.breakpoint('small')} {
+            font-size: ${theme.fontSize('super')};
+            line-height: 4.5rem;
+            margin-bottom: 2rem;
+          }
+        `
+      : null};
 `;
 
 /** Text renders different elements based on the `tag` prop

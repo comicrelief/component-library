@@ -30,7 +30,7 @@ it('renders correctly', () => {
       width: 100%;
       padding: 13px;
       margin: 10px 0;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
       border-color: #2C0230;
@@ -169,7 +169,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c5 {
         height: 100px;
-        font-size: 2.075rem;
+        font-size: 2.625rem;
       }
     }
 
@@ -182,7 +182,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c10 {
         height: 100px;
-        font-size: 2.075rem;
+        font-size: 2.625rem;
       }
     }
 
