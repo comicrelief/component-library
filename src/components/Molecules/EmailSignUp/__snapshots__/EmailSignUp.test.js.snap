@@ -1,8 +1,285 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders ESU School correctly 1`] = `
+.c1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Anton',Impact,sans-serif;
+}
+
+.c5 {
+  font-size: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c8 {
+  font-size: 1.2rem;
+  text-transform: inherit;
+  font-weight: 400;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #22CFD8;
+  color: #2C0230;
+}
+
+.c10:hover {
+  background-color: #86E4E9;
+  color: #2C0230;
+}
+
+.c7 {
+  background-color: #FFFFFF;
+  width: 100%;
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #2C0230;
+  margin: 0;
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0px;
+  padding: 12px 50px 8px 10px;
+  height: 50px;
+  font-weight: 300;
+  background: white url(mock.asset) calc(100% - 20px) 18px/20px 20px no-repeat;
+  cursor: pointer;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: border-box;
+  border-radius: 0;
+}
+
+.c7:focus {
+  border: 1px solid #666;
+}
+
+.c4 {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.c6 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c12 {
+  text-align: left;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 2rem;
+  color: #FFFFFF;
+  background-color: #2C0230;
+}
+
+.c9 {
+  margin-top: 1rem;
+}
+
+.c9 button {
+  border-color: #2C0230;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.c11 a {
+  cursor: pointer;
+  padding: 0 0.25rem;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.c11 a:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  margin-bottom: 2rem;
+  font-size: 2.075rem;
+}
+
+@media (min-width:740px) {
+  .c7 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 button {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 2.75rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1 c2"
+    color="inherit"
+    size="s"
+  >
+    sign up letter
+  </p>
+  <form
+    className="c3"
+    onSubmit={[Function]}
+  >
+    <label
+      className="c4"
+    >
+      <span
+        className="c5 c6"
+        color="inherit"
+        size="s"
+      >
+        Please choose an option
+      </span>
+      <select
+        className="c7"
+        onChange={[Function]}
+        placeholder="Please choose an option"
+        value=""
+      >
+        <option
+          disabled={true}
+        >
+          Please choose an option
+        </option>
+        <option
+          value=""
+        >
+          -- Select age group --
+        </option>
+        <option
+          value="Option one"
+        >
+          The first option
+        </option>
+        <option
+          value="Option two"
+        >
+          The second option
+        </option>
+        <option
+          value="Option three"
+        >
+          The third option
+        </option>
+        <option
+          value="Option four"
+        >
+          The fourth option
+        </option>
+      </select>
+      
+    </label>
+    <p
+      className="c8"
+      color="inherit"
+      size="m"
+    >
+      Now please select your teaching group so you get the right updates.
+    </p>
+    <div
+      className="c9"
+    >
+      <button
+        className="c10"
+        color="teal"
+        href="/#"
+        onClick={[Function]}
+        target="_self"
+        type="button"
+      >
+        Subscribe
+      </button>
+    </div>
+  </form>
+  <div
+    className="c11"
+  >
+    <div
+      className="c12"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`renders correctly 1`] = `
-Array [
-  .c1 {
+.c1 {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -195,186 +472,83 @@ Array [
 }
 
 <div
-    className="c0"
+  className="c0"
+>
+  <p
+    className="c1 c2"
+    color="inherit"
+    size="s"
   >
-    <p
-      className="c1 c2"
-      color="inherit"
-      size="s"
-    >
-      sign up letter
-    </p>
+    sign up letter
+  </p>
+  <div
+    className="c3"
+  >
     <div
-      className="c3"
-    >
-      <div
-        className="c4"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-          }
+      className="c4"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
         }
-      />
-    </div>
-    <form
-      className="c5"
-      onSubmit={[Function]}
+      }
+    />
+  </div>
+  <form
+    className="c5"
+    onSubmit={[Function]}
+  >
+    <label
+      className="c6 c7"
+      htmlFor="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="example@youremail.com"
+      value=""
     >
-      <label
-        className="c6 c7"
-        htmlFor="email"
+      <span
+        className="c8 c9"
+        color="inherit"
+        size="s"
+      >
+        email
+      </span>
+      <input
+        className="c10 c7"
+        id="email"
         name="email"
         onChange={[Function]}
         placeholder="example@youremail.com"
+        type="email"
         value=""
-      >
-        <span
-          className="c8 c9"
-          color="inherit"
-          size="s"
-        >
-          email
-        </span>
-        <input
-          className="c10 c7"
-          id="email"
-          name="email"
-          onChange={[Function]}
-          placeholder="example@youremail.com"
-          type="email"
-          value=""
-        />
-        
-      </label>
-      <div
-        className="c11"
-      >
-        <button
-          className="c12"
-          color="teal"
-          href="/#"
-          onClick={[Function]}
-          target="_self"
-          type="button"
-        >
-          Subscribe
-        </button>
-      </div>
-    </form>
-    <div
-      className="c13"
-    >
-      <div
-        className="c4"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-          }
-        }
       />
+      
+    </label>
+    <div
+      className="c11"
+    >
+      <button
+        className="c12"
+        color="teal"
+        href="/#"
+        onClick={[Function]}
+        target="_self"
+        type="button"
+      >
+        Subscribe
+      </button>
     </div>
-  </div>,
-  .c1 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-family: 'Anton',Impact,sans-serif;
-}
-
-.c4 {
-  text-align: left;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 1rem;
-  padding: 2rem;
-  color: #FFFFFF;
-  background-color: #E52630;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-
-.c5 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-.c5 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-.c2 {
-  margin-bottom: 2rem;
-  font-size: 2.075rem;
-}
-
-@media (min-width:1024px) {
-  .c2 {
-    font-size: 2.75rem;
-  }
-}
-
-<div
-    className="c0"
+  </form>
+  <div
+    className="c13"
   >
-    <p
-      className="c1 c2"
-      color="inherit"
-      size="s"
-    >
-      sign up letter
-    </p>
     <div
-      className="c3"
-    >
-      <div
-        className="c4"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<h1> Success Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-          }
+      className="c4"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
         }
-      />
-    </div>
-    <div
-      className="c5"
-    >
-      <div
-        className="c4"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-          }
-        }
-      />
-    </div>
-  </div>,
-]
+      }
+    />
+  </div>
+</div>
 `;

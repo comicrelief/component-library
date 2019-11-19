@@ -165,7 +165,7 @@ EmailSignUp.propTypes = {
   /** boolean if true display successCopy */
   isSuccess: PropTypes.bool.isRequired,
   /** boolean if true display schools dropdown */
-  isSchools: PropTypes.bool.isRequired,
+  isSchools: PropTypes.bool,
   /** email error message */
   errorMsg: PropTypes.string.isRequired,
   /** privacy copy */
@@ -189,8 +189,9 @@ EmailSignUp.propTypes = {
 EmailSignUp.defaultProps = {
   backgroundColor: 'deep_violet_dark',
   buttonColor: 'red',
+  isSchools: false,
   schoolsCopy: '',
-  selectItems: {}
+  selectItems: []
 };
 
 export default EmailSignUp;
