@@ -8,7 +8,6 @@ const ESUWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  padding: ${spacing('l')};
   color: ${({ theme }) => theme.color('white')};
   background-color: ${({ theme, backgroundColor }) =>
     theme.color(backgroundColor)};

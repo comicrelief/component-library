@@ -152,7 +152,6 @@ exports[`renders correctly with error message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -601,7 +600,6 @@ exports[`renders correctly with modal open 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -905,7 +903,6 @@ exports[`renders correctly with success message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
