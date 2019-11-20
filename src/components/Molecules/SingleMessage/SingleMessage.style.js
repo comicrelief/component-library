@@ -14,7 +14,7 @@ const Container = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
     ${({ vhFull, fullImage }) =>
-      vhFull || fullImage ? 'height: 100vh;' : 'height: auto;'};
+      vhFull || fullImage ? 'min-height: 100vh;' : 'height: auto;'};
 
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
@@ -75,7 +75,7 @@ const Copy = styled.div`
       : css`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 80%;
-            padding: ${spacing('xxl')} ${spacing('l')};
+            padding: calc(${spacing('xxl')} - ${spacing('l')}) ${spacing('l')};
           }
           margin: auto;
           padding: ${spacing('l')};

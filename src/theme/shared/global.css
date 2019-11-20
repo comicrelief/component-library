@@ -21,7 +21,8 @@ h1 {
   margin: 0 0 1rem 0;
 }
 
-h1:only-child {
+h1:only-child,
+h2:only-child {
   margin: 0;
 }
 
