@@ -18,7 +18,7 @@ export const BaseText = styled.span`
           line-height: 3rem;
           @media ${theme.breakpoint('small')} {
             font-size: ${theme.fontSize('super')};
-            line-height: 4.5rem;
+            line-height: 6rem;
             margin-bottom: 2rem;
           }
         `
