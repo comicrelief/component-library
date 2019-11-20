@@ -45,6 +45,10 @@ it('renders correctly', () => {
       margin: 0 1rem 0 0;
     }
 
+    .c1:first-child {
+      margin-bottom: 0;
+    }
+
     .c2 {
       width: auto;
       margin: 0;

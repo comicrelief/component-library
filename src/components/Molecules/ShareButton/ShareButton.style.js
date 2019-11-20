@@ -10,6 +10,9 @@ const Wrapper = styled.div`
 const Copy = styled.p`
   width: auto;
   margin: 0 ${spacing('md')} 0 0;
+  &:first-child {
+    margin-bottom: 0;
+  }
 `;
 
 const ShareButtonList = styled.ul`
