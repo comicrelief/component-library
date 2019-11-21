@@ -136,14 +136,10 @@ exports[`renders ESU School correctly 1`] = `
   font-size: 1rem;
 }
 
-.c11 p a {
+.c11 p a span {
   cursor: pointer;
+  font-size: 1rem;
   padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-.c11 p a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
@@ -428,14 +424,10 @@ exports[`renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c13 p a {
+.c13 p a span {
   cursor: pointer;
+  font-size: 1rem;
   padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-.c13 p a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
 }

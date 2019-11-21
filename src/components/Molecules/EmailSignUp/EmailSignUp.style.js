@@ -38,11 +38,10 @@ const PrivacyCopyWrapper = styled.div`
   p {
     font-size: ${({ theme }) => theme.fontSize('s')};
     a {
-      cursor: pointer;
-      padding: 0 ${spacing('xsm')};
-      color: ${({ theme }) => theme.color('white')};
-      border-color: ${({ theme }) => theme.color('white')};
-      :hover {
+      span {
+        cursor: pointer;
+        font-size: ${({ theme }) => theme.fontSize('s')};
+        padding: 0 ${spacing('xsm')};
         color: ${({ theme }) => theme.color('white')};
         border-color: ${({ theme }) => theme.color('white')};
       }
