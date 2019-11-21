@@ -134,14 +134,11 @@ exports[`renders ESU School correctly 1`] = `
 
 .c11 p {
   font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 .c11 p a span {
-  cursor: pointer;
   font-size: 1rem;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
 }
 
 .c3 {
@@ -422,14 +419,11 @@ exports[`renders correctly 1`] = `
 
 .c13 p {
   font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 .c13 p a span {
-  cursor: pointer;
   font-size: 1rem;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
 }
 
 .c5 {

@@ -187,14 +187,11 @@ exports[`renders correctly with error message 1`] = `
 
 .c20 p {
   font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 .c20 p a span {
-  cursor: pointer;
   font-size: 1rem;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
 }
 
 .c10 {
@@ -635,14 +632,11 @@ exports[`renders correctly with modal open 1`] = `
 
 .c18 p {
   font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 .c18 p a span {
-  cursor: pointer;
   font-size: 1rem;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
 }
 
 .c10 {
@@ -928,14 +922,11 @@ exports[`renders correctly with success message 1`] = `
 
 .c10 p {
   font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 .c10 p a span {
-  cursor: pointer;
   font-size: 1rem;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
 }
 
 .c7 {

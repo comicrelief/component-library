@@ -37,13 +37,10 @@ const PrivacyCopyWrapper = styled.div`
   margin-top: ${spacing('md')};
   p {
     font-size: ${({ theme }) => theme.fontSize('s')};
+    line-height: ${({ theme }) => theme.fontSize('xl')};
     a {
       span {
-        cursor: pointer;
         font-size: ${({ theme }) => theme.fontSize('s')};
-        padding: 0 ${spacing('xsm')};
-        color: ${({ theme }) => theme.color('white')};
-        border-color: ${({ theme }) => theme.color('white')};
       }
     }
   }
