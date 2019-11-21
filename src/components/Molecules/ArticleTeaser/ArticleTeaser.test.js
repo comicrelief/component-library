@@ -21,7 +21,7 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875;
+      font-size: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -225,7 +225,7 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875;
+      font-size: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;

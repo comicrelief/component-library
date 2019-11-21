@@ -161,11 +161,11 @@ exports[`renders correctly with error message 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c18 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c18 button {
@@ -195,6 +195,10 @@ exports[`renders correctly with error message 1`] = `
 .c20 a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.c20 p {
+  font-size: 0.6875rem;
 }
 
 .c10 {
@@ -609,11 +613,11 @@ exports[`renders correctly with modal open 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c16 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c16 button {
@@ -643,6 +647,10 @@ exports[`renders correctly with modal open 1`] = `
 .c18 a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.c18 p {
+  font-size: 0.6875rem;
 }
 
 .c10 {
@@ -912,7 +920,7 @@ exports[`renders correctly with success message 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c10 {
@@ -936,6 +944,10 @@ exports[`renders correctly with success message 1`] = `
 .c10 a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.c10 p {
+  font-size: 0.6875rem;
 }
 
 .c7 {

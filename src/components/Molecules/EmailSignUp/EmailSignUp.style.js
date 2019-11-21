@@ -15,11 +15,11 @@ const ESUWrapper = styled.div`
 
 const TopCopyWrapper = styled.div`
   display: flex;
-  margin-bottom: ${spacing('none')};
+  margin-bottom: ${spacing('md')};
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: ${spacing('md')};
+  margin-top: ${spacing('xl')};
   button {
     border-color: ${({ theme, backgroundColor }) =>
       theme.color(backgroundColor)};
@@ -44,6 +44,9 @@ const PrivacyCopyWrapper = styled.div`
       color: ${({ theme }) => theme.color('white')};
       border-color: ${({ theme }) => theme.color('white')};
     }
+  }
+  p {
+    font-size: ${({ theme }) => theme.fontSize('xs')};
   }
 `;
 

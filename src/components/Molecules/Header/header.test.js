@@ -379,7 +379,7 @@ it('renders correctly', () => {
     .c22 > div > a {
       height: inherit;
       width: inherit;
-      margin-left: 0.6875;
+      margin-left: 0.6875rem;
     }
 
     .c22 > div > a img {

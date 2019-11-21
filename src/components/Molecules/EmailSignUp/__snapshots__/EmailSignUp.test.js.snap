@@ -112,7 +112,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c9 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c9 button {
@@ -142,6 +142,10 @@ exports[`renders ESU School correctly 1`] = `
 .c11 a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.c11 p {
+  font-size: 0.6875rem;
 }
 
 .c3 {
@@ -396,11 +400,11 @@ exports[`renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c11 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c11 button {
@@ -430,6 +434,10 @@ exports[`renders correctly 1`] = `
 .c13 a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.c13 p {
+  font-size: 0.6875rem;
 }
 
 .c5 {
