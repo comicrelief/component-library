@@ -35,18 +35,18 @@ const PrivacyCopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${spacing('md')};
-  a {
-    cursor: pointer;
-    padding: 0 ${spacing('xsm')};
-    color: ${({ theme }) => theme.color('white')};
-    border-color: ${({ theme }) => theme.color('white')};
-    :hover {
+  p {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+    a {
+      cursor: pointer;
+      padding: 0 ${spacing('xsm')};
       color: ${({ theme }) => theme.color('white')};
       border-color: ${({ theme }) => theme.color('white')};
+      :hover {
+        color: ${({ theme }) => theme.color('white')};
+        border-color: ${({ theme }) => theme.color('white')};
+      }
     }
-  }
-  p {
-    font-size: ${({ theme }) => theme.fontSize('xs')};
   }
 `;
 

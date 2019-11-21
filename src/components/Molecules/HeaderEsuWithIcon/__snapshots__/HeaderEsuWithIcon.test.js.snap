@@ -185,20 +185,20 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c20 a {
+.c20 p {
+  font-size: 1rem;
+}
+
+.c20 p a {
   cursor: pointer;
   padding: 0 0.25rem;
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
-.c20 a:hover {
+.c20 p a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
-}
-
-.c20 p {
-  font-size: 0.6875rem;
 }
 
 .c10 {
@@ -637,20 +637,20 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c18 a {
+.c18 p {
+  font-size: 1rem;
+}
+
+.c18 p a {
   cursor: pointer;
   padding: 0 0.25rem;
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
-.c18 a:hover {
+.c18 p a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
-}
-
-.c18 p {
-  font-size: 0.6875rem;
 }
 
 .c10 {
@@ -934,20 +934,20 @@ exports[`renders correctly with success message 1`] = `
   margin-top: 1rem;
 }
 
-.c10 a {
+.c10 p {
+  font-size: 1rem;
+}
+
+.c10 p a {
   cursor: pointer;
   padding: 0 0.25rem;
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
-.c10 a:hover {
+.c10 p a:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
-}
-
-.c10 p {
-  font-size: 0.6875rem;
 }
 
 .c7 {
