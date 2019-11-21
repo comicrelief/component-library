@@ -182,15 +182,17 @@ const SingleMessage = ({
               </Media>
             </>
           ) : null}
-          <Copy
-            fullImage={fullImage}
-            hasImage={hasImage}
-            copyFirst={copyFirst}
-            hasVideo={hasVideo}
-            vhFull={vhFull}
-          >
-            {children}
-          </Copy>
+          {children ? (
+            <Copy
+              fullImage={fullImage}
+              hasImage={hasImage}
+              copyFirst={copyFirst}
+              hasVideo={hasVideo}
+              vhFull={vhFull}
+            >
+              {children}
+            </Copy>
+          ) : null}
         </Container>
       )}
     </UID>
@@ -210,7 +212,7 @@ SingleMessage.propTypes = {
   image2: PropTypes.string,
   imageAltText: PropTypes.string,
   imageAltText2: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool,
   videoID: PropTypes.string,
@@ -228,6 +230,7 @@ SingleMessage.defaultProps = {
   image2: null,
   imageAltText: '',
   imageAltText2: '',
+  children: null,
   vhFull: false,
   videoID: null,
   landscapeVideo: false
