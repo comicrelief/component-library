@@ -77,7 +77,7 @@ it('renders Single Message with full width image and no text correctly', () => {
       imageAltText=""
       copyFirst={false}
       fullImage
-    ></SingleMessage>
+    />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
