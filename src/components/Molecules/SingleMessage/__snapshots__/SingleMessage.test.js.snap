@@ -107,7 +107,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 <div
   className="c0"
-  id="single-msg__4"
+  id="single-msg__5"
 >
   <div
     className="c1"
@@ -454,7 +454,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 <div
   className="c0"
-  id="single-msg__5"
+  id="single-msg__6"
 >
   <div
     className="c1"
@@ -717,6 +717,108 @@ exports[`renders Single Message with full width correctly 1`] = `
     >
       CTA
     </a>
+  </div>
+</div>
+`;
+
+exports[`renders Single Message with full width image and no text correctly 1`] = `
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background: #C180F9;
+}
+
+.c0 iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  z-index: 0;
+}
+
+.c1 {
+  width: 100%;
+  position: relative;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    height: 100vh;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    padding-bottom: 0;
+  }
+}
+
+<div
+  className="c0"
+  id="single-msg__4"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        height="100%"
+        width="100%"
+      >
+        <img
+          alt=""
+          className="c4 lazyload"
+          data-lowsrc={null}
+          data-sizes="auto"
+          data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+          height="100%"
+          src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;

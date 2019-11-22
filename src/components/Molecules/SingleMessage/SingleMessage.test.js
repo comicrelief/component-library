@@ -68,6 +68,21 @@ it('renders Single Message with full width correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
+it('renders Single Message with full width image and no text correctly', () => {
+  const tree = renderWithTheme(
+    <SingleMessage
+      backgroundColor="purple"
+      imageSet={data.images}
+      image={data.image}
+      imageAltText=""
+      copyFirst={false}
+      fullImage
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
 it('renders Single Message with 100% vertical height image correctly', () => {
   const tree = renderWithTheme(
     <SingleMessage
