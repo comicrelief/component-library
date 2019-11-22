@@ -30,7 +30,6 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      padding: 0 2px 1px;
       color: #FFFFFF;
       border-bottom: 2px solid #FFFFFF;
       font-weight: normal;

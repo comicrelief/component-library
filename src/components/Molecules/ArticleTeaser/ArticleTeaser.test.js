@@ -51,7 +51,6 @@ it('renders article teaser correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      padding: 0 2px 1px;
       color: #2C0230;
       font-weight: normal;
     }
@@ -255,7 +254,6 @@ it('renders press realese correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      padding: 0 2px 1px;
       color: #2C0230;
       font-weight: normal;
     }

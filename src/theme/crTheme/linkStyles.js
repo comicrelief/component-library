@@ -6,7 +6,6 @@ const linkStyles = {
     color: color('black'),
     border: `2px solid ${color('black')}`,
     weight: 'normal',
-    padding: '0 2px 1px',
     hoverColor: color('black'),
     hoverBorder: `2px solid ${color('black')}`
   },
@@ -14,7 +13,6 @@ const linkStyles = {
     color: color('white'),
     border: `2px solid ${color('white')}`,
     weight: 'normal',
-    padding: '0 2px 1px',
     hoverColor: color('white'),
     hoverBorder: `2px solid ${color('white')}`
   }
@@ -22,7 +20,6 @@ const linkStyles = {
 
 export default (styleName, underline) => {
   let style = css`
-    padding: 0 2px 1px;
     color: ${color('black')};
     border-bottom: solid 2px;
     border-bottom-color: inherit;
@@ -35,7 +32,6 @@ export default (styleName, underline) => {
 
   if (styleName) {
     style = css`
-      padding: ${linkStyles[styleName].padding};
       color: ${linkStyles[styleName].color};
       border-bottom: ${underline && linkStyles[styleName].border};
       font-weight: ${linkStyles[styleName].weight};
