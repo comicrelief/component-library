@@ -52,6 +52,24 @@ import Link from '../../Atoms/Link/Link';
 </SingleMessage>;
 ```
 
+Single Message fullImage no copy
+
+```js
+const data = require('../../../styleguide/data/data').default;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+
+<SingleMessage
+  backgroundColor="purple_dark"
+  imageSet={data.images}
+  image={data.image}
+  imageAltText=""
+  copyFirst={false}
+  fullImage={true}
+  vhFull
+></SingleMessage>;
+```
+
 Single Message with no Image
 
 ```js
