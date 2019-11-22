@@ -16,7 +16,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-transform: inherit;
   font-weight: 400;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -24,12 +24,12 @@ exports[`renders ESU School correctly 1`] = `
 
 .c10 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -43,7 +43,7 @@ exports[`renders ESU School correctly 1`] = `
 .c7 {
   background-color: #FFFFFF;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -107,13 +107,12 @@ exports[`renders ESU School correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
 
 .c9 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c9 button {
@@ -133,16 +132,13 @@ exports[`renders ESU School correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c11 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c11 p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
-.c11 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c11 p a span {
+  font-size: 1rem;
 }
 
 .c3 {
@@ -157,7 +153,7 @@ exports[`renders ESU School correctly 1`] = `
 
 .c2 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 @media (min-width:740px) {
@@ -174,7 +170,7 @@ exports[`renders ESU School correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 
@@ -295,12 +291,12 @@ exports[`renders correctly 1`] = `
 
 .c12 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -319,7 +315,7 @@ exports[`renders correctly 1`] = `
   width: 100%;
   padding: 13px;
   margin: 10px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   background-color: #FFFFFF;
   border: 1px solid;
   border-color: #2C0230;
@@ -388,7 +384,6 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -398,11 +393,11 @@ exports[`renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c11 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c11 button {
@@ -422,16 +417,13 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c13 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c13 p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
-.c13 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c13 p a span {
+  font-size: 1rem;
 }
 
 .c5 {
@@ -450,7 +442,7 @@ exports[`renders correctly 1`] = `
 
 .c2 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 @media (min-width:740px) {
@@ -467,7 +459,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 

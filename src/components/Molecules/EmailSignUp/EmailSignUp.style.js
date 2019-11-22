@@ -8,7 +8,6 @@ const ESUWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  padding: ${spacing('l')};
   color: ${({ theme }) => theme.color('white')};
   background-color: ${({ theme, backgroundColor }) =>
     theme.color(backgroundColor)};
@@ -16,11 +15,11 @@ const ESUWrapper = styled.div`
 
 const TopCopyWrapper = styled.div`
   display: flex;
-  margin-bottom: ${spacing('none')};
+  margin-bottom: ${spacing('md')};
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: ${spacing('md')};
+  margin-top: ${spacing('xl')};
   button {
     border-color: ${({ theme, backgroundColor }) =>
       theme.color(backgroundColor)};
@@ -36,14 +35,13 @@ const PrivacyCopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${spacing('md')};
-  a {
-    cursor: pointer;
-    padding: 0 ${spacing('xsm')};
-    color: ${({ theme }) => theme.color('white')};
-    border-color: ${({ theme }) => theme.color('white')};
-    :hover {
-      color: ${({ theme }) => theme.color('white')};
-      border-color: ${({ theme }) => theme.color('white')};
+  p {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+    line-height: ${({ theme }) => theme.fontSize('xl')};
+    a {
+      span {
+        font-size: ${({ theme }) => theme.fontSize('s')};
+      }
     }
   }
 `;

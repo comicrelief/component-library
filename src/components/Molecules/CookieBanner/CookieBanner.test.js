@@ -43,12 +43,12 @@ it('renders correctly', () => {
 
     .c5 {
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1.5rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      border-radius: 30px;
+      border-radius: 2rem;
       cursor: pointer;
       background-color: #FFFFFF;
       color: #2C0230;

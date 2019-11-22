@@ -51,6 +51,7 @@ const Brand = styled(Link).attrs(() => ({
 const MetaIcons = styled.div`
   width: auto;
   display: flex;
+  align-items: center;
 
   > div {
     height: 35px;

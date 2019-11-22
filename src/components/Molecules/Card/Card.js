@@ -17,7 +17,7 @@ const Image = styled.div`
 `;
 
 const Copy = styled.div`
-  padding: ${spacing('md')};
+  padding: ${spacing('l')};
   display: flex;
   flex-direction: column;
 `;

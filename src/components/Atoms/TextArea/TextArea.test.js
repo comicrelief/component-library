@@ -30,7 +30,7 @@ it('renders correctly', () => {
       margin: 10px 0;
       min-height: 65px;
       padding: 6px 12px;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
       border-radius: 0;

@@ -26,7 +26,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      font-size: 1.44rem;
+      font-size: 1.25rem;
       text-transform: inherit;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -73,7 +73,7 @@ it('renders correctly', () => {
       width: 100%;
       padding: 13px;
       margin: 10px 0;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
       border-color: #2C0230;
@@ -120,7 +120,7 @@ it('renders correctly', () => {
 
     .c12 input {
       border: 2px solid #c7c7c7;
-      font-size: 1.44rem;
+      font-size: 1.25rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
@@ -134,7 +134,7 @@ it('renders correctly', () => {
 
     .c15 input {
       border: 2px solid #c7c7c7;
-      font-size: 1.44rem;
+      font-size: 1.25rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;

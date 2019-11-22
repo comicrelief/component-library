@@ -3,11 +3,11 @@ import spacing from '../../../theme/shared/spacing';
 
 const buttonStyle = () => css`
   display: inline-block;
-  padding: ${spacing('sm')} ${spacing('md')};
+  padding: ${spacing('md')} ${spacing('m')};
   text-align: center;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   ${({ color, theme }) =>
     color ? theme.buttonColors(color) : theme.buttonColors('red')};

@@ -37,7 +37,7 @@ exports[`renders high heading correctly 1`] = `
 
 exports[`renders large heading correctly 1`] = `
 .c0 {
-  font-size: 1.44rem;
+  font-size: 1.25rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -53,7 +53,7 @@ exports[`renders large heading correctly 1`] = `
 
 exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
-  font-size: 1.725rem;
+  font-size: 1.625rem;
   text-transform: inherit;
   font-family: 'Anton',Impact,sans-serif;
 }
@@ -70,7 +70,7 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
   color: #FFE400;
-  font-size: 1.725rem;
+  font-size: 1.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }

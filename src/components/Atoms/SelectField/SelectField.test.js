@@ -32,7 +32,7 @@ it('renders correctly', () => {
     .c2 {
       background-color: #FFFFFF;
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       display: block;
       width: 100%;
       box-sizing: border-box;

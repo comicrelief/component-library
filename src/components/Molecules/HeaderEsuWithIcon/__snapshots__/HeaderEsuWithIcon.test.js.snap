@@ -22,12 +22,12 @@ exports[`renders correctly with error message 1`] = `
 
 .c19 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
   padding: 13px;
   margin: 10px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   background-color: #FFFFFF;
   border: 1px solid;
   border-color: #E52630;
@@ -152,7 +152,6 @@ exports[`renders correctly with error message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -162,11 +161,11 @@ exports[`renders correctly with error message 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c18 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c18 button {
@@ -186,16 +185,13 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c20 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c20 p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
-.c20 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c20 p a span {
+  font-size: 1rem;
 }
 
 .c10 {
@@ -214,7 +210,7 @@ exports[`renders correctly with error message 1`] = `
 
 .c7 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 .c0 {
@@ -273,7 +269,7 @@ exports[`renders correctly with error message 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 
@@ -490,12 +486,12 @@ exports[`renders correctly with modal open 1`] = `
 
 .c17 {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -514,7 +510,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 100%;
   padding: 13px;
   margin: 10px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   background-color: #FFFFFF;
   border: 1px solid;
   border-color: #2C0230;
@@ -601,7 +597,6 @@ exports[`renders correctly with modal open 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -611,11 +606,11 @@ exports[`renders correctly with modal open 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c16 {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .c16 button {
@@ -635,16 +630,13 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c18 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c18 p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
-.c18 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c18 p a span {
+  font-size: 1rem;
 }
 
 .c10 {
@@ -663,7 +655,7 @@ exports[`renders correctly with modal open 1`] = `
 
 .c7 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 .c0 {
@@ -722,7 +714,7 @@ exports[`renders correctly with modal open 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 
@@ -905,7 +897,6 @@ exports[`renders correctly with success message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  padding: 2rem;
   color: #FFFFFF;
   background-color: #2C0230;
 }
@@ -915,7 +906,7 @@ exports[`renders correctly with success message 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .c10 {
@@ -929,21 +920,18 @@ exports[`renders correctly with success message 1`] = `
   margin-top: 1rem;
 }
 
-.c10 a {
-  cursor: pointer;
-  padding: 0 0.25rem;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c10 p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
-.c10 a:hover {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.c10 p a span {
+  font-size: 1rem;
 }
 
 .c7 {
   margin-bottom: 2rem;
-  font-size: 2.075rem;
+  font-size: 2.625rem;
 }
 
 .c0 {
@@ -990,7 +978,7 @@ exports[`renders correctly with success message 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    font-size: 2.75rem;
+    font-size: 4rem;
   }
 }
 
