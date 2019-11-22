@@ -67,7 +67,7 @@ import Link from '../../Atoms/Link/Link';
   copyFirst={false}
   fullImage={true}
   vhFull
-></SingleMessage>;
+/>;
 ```
 
 Single Message with no Image
