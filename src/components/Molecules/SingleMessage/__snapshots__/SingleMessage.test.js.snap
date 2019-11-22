@@ -771,7 +771,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 @media (min-width:740px) {
   .c0 {
-    height: 100vh;
+    height: calc(100vh - 90px);
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
