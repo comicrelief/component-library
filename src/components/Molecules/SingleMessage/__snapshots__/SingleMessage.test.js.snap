@@ -859,7 +859,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   z-index: 1;
   padding: 2rem;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 @media (min-width:740px) {

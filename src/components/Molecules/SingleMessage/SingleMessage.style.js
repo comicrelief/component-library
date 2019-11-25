@@ -78,7 +78,7 @@ const Copy = styled.div`
             padding: calc(${spacing('xxl')} - ${spacing('l')}) ${spacing('l')};
           }
           margin: auto;
-          padding: ${spacing('l')};
+          padding: ${spacing('md')};
         `};
 `;
 
@@ -101,7 +101,7 @@ const Media = styled.div`
 `;
 
 const PlayButton = styled.button`
-  ${zIndex('high')};
+  ${zIndex('medium')};
   cursor: pointer;
   width: 100%;
   height: 100%;
