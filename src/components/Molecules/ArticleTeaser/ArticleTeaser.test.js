@@ -31,6 +31,7 @@ it('renders article teaser correctly', () => {
       font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
+      line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
     }
 
@@ -201,6 +202,7 @@ it('renders article teaser correctly', () => {
           <h3
             className="c9 c10"
             color="inherit"
+            height="2rem"
             size="xl"
           >
             News article
@@ -235,6 +237,7 @@ it('renders press realese correctly', () => {
       font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
+      line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
     }
 
@@ -384,6 +387,7 @@ it('renders press realese correctly', () => {
           <h3
             className="c9 c10"
             color="inherit"
+            height="2rem"
             size="xl"
           >
             Press Release

@@ -138,7 +138,14 @@ const ArticleTeaser = ({
           <Text size="xxs" weight="800" uppercase>
             {date}
           </Text>
-          <Title size="xl" tag="h3" weight="normal" uppercase family={family}>
+          <Title
+            size="xl"
+            tag="h3"
+            height="2rem"
+            weight="normal"
+            uppercase
+            family={family}
+          >
             {title}
           </Title>
         </CopyWrapper>
