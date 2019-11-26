@@ -28,9 +28,9 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
       object-fit: none;
     }
 
@@ -107,18 +107,6 @@ it('renders correctly', () => {
       background-color: #E52630;
     }
 
-    @supports not (object-fit:cover) {
-      .c2 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c3 {
-        display: none;
-      }
-    }
-
     @media (min-width:740px) {
       .c6 {
         font-size: 1rem;
@@ -133,7 +121,7 @@ it('renders correctly', () => {
       type="standard"
     >
       <div
-        className="c2"
+        className="c2 lazyload"
         height="auto"
         width="100%"
       >

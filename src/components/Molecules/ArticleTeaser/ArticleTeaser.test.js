@@ -20,14 +20,14 @@ it('renders article teaser correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c8 {
+    .c7 {
       font-size: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c8 {
       font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
@@ -40,10 +40,10 @@ it('renders article teaser correctly', () => {
       height: 100%;
     }
 
-    .c6 {
-      display: block;
+    .c5 {
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
     }
 
@@ -100,31 +100,12 @@ it('renders article teaser correctly', () => {
       justify-content: center;
     }
 
-    .c7 {
+    .c6 {
       padding: 2rem;
     }
 
-    .c10 {
+    .c9 {
       margin: 0;
-    }
-
-    .c5 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    @supports not (object-fit:cover) {
-      .c4 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c6 {
-        display: none;
-      }
     }
 
     @media (min-width:740px) {
@@ -156,13 +137,13 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c7 {
+      .c6 {
         width: 55%;
       }
     }
 
     @media (min-width:1024px) {
-      .c7 {
+      .c6 {
         width: 100%;
       }
     }
@@ -181,13 +162,13 @@ it('renders article teaser correctly', () => {
           className="c3"
         >
           <div
-            className="c4 c5"
+            className="c4 lazyload"
             height="100%"
             width="100%"
           >
             <img
               alt="Image's description"
-              className="c6 lazyload"
+              className="c5 lazyload"
               data-lowsrc={null}
               data-sizes="auto"
               data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -200,17 +181,17 @@ it('renders article teaser correctly', () => {
           </div>
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <span
-            className="c8"
+            className="c7"
             color="inherit"
             size="xxs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c8 c9"
             color="inherit"
             size="xl"
           >
@@ -235,14 +216,14 @@ it('renders press realese correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c8 {
+    .c7 {
       font-size: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c8 {
       font-size: 1.625rem;
       text-transform: uppercase;
       font-weight: normal;
@@ -255,10 +236,10 @@ it('renders press realese correctly', () => {
       height: 80px;
     }
 
-    .c6 {
-      display: block;
+    .c5 {
       width: 80px;
       height: 80px;
+      display: block;
       object-fit: cover;
     }
 
@@ -320,31 +301,12 @@ it('renders press realese correctly', () => {
       justify-content: center;
     }
 
-    .c7 {
+    .c6 {
       padding: 2rem;
     }
 
-    .c10 {
+    .c9 {
       margin: 0;
-    }
-
-    .c5 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    @supports not (object-fit:cover) {
-      .c4 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c6 {
-        display: none;
-      }
     }
 
     @media (min-width:740px) {
@@ -356,7 +318,7 @@ it('renders press realese correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c7 {
+      .c6 {
         width: 100%;
       }
     }
@@ -375,13 +337,13 @@ it('renders press realese correctly', () => {
           className="c3"
         >
           <div
-            className="c4 c5"
+            className="c4 lazyload"
             height="80px"
             width="80px"
           >
             <img
               alt="Image's description"
-              className="c6 lazyload"
+              className="c5 lazyload"
               data-lowsrc="mock.asset"
               data-sizes="auto"
               data-src={null}
@@ -394,17 +356,17 @@ it('renders press realese correctly', () => {
           </div>
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <span
-            className="c8"
+            className="c7"
             color="inherit"
             size="xxs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c8 c9"
             color="inherit"
             size="xl"
           >

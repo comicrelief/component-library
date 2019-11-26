@@ -15,9 +15,9 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -60,18 +60,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   width: 100%;
   height: 100%;
   z-index: 1;
-}
-
-@supports not (object-fit:cover) {
-  .c3 {
-    background-color: red;
-  }
-}
-
-@supports not (object-fit:cover) {
-  .c4 {
-    display: none;
-  }
 }
 
 @media (min-width:740px) {
@@ -130,7 +118,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >
@@ -185,9 +173,9 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -250,18 +238,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
-  .c3 {
-    background-color: red;
-  }
-}
-
-@supports not (object-fit:cover) {
-  .c4 {
-    display: none;
-  }
-}
-
 @media (min-width:740px) {
   .c0 {
     height: auto;
@@ -318,7 +294,7 @@ exports[`renders Single Message with Image correctly 1`] = `
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >
@@ -382,9 +358,9 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -435,18 +411,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   height: 100%;
   height: 50%;
   z-index: 1;
-}
-
-@supports not (object-fit:cover) {
-  .c3 {
-    background-color: red;
-  }
-}
-
-@supports not (object-fit:cover) {
-  .c4 {
-    display: none;
-  }
 }
 
 @media (min-width:740px) {
@@ -505,7 +469,7 @@ exports[`renders Single Message with double image correctly 1`] = `
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >
@@ -527,7 +491,7 @@ exports[`renders Single Message with double image correctly 1`] = `
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >
@@ -582,9 +546,9 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -645,18 +609,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   width: 100%;
   height: 100%;
   z-index: 1;
-}
-
-@supports not (object-fit:cover) {
-  .c3 {
-    background-color: red;
-  }
-}
-
-@supports not (object-fit:cover) {
-  .c4 {
-    display: none;
-  }
 }
 
 @media (min-width:740px) {
@@ -728,7 +680,7 @@ exports[`renders Single Message with full width correctly 1`] = `
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >
@@ -785,9 +737,9 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -826,18 +778,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
-  .c3 {
-    background-color: red;
-  }
-}
-
-@supports not (object-fit:cover) {
-  .c4 {
-    display: none;
-  }
-}
-
 @media (min-width:740px) {
   .c0 {
     height: calc(100vh - 90px);
@@ -871,7 +811,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="100%"
         width="100%"
       >

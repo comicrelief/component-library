@@ -17,26 +17,14 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
       object-fit: none;
     }
 
-    @supports not (object-fit:cover) {
-      .c0 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c1 {
-        display: none;
-      }
-    }
-
     <div
-      className="c0"
+      className="c0 lazyload"
       height="auto"
       width="100%"
     >
@@ -76,26 +64,14 @@ it('renders correctly with custom props', () => {
     }
 
     .c1 {
-      display: block;
       width: 200px;
       height: 100px;
+      display: block;
       object-fit: cover;
     }
 
-    @supports not (object-fit:cover) {
-      .c0 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c1 {
-        display: none;
-      }
-    }
-
     <div
-      className="c0"
+      className="c0 lazyload"
       height="100px"
       width="200px"
     >

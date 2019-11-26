@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -10,22 +10,17 @@ const IMAGE_FALLBACK =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
+  ${({ objFit, image }) =>
+    !objFit && `background-image: url(${image}); background-size: cover;`};
   position: relative;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
-  @supports not (object-fit: cover) {
-    background-color: red;
-  }
 `;
 
 const Image = styled.img`
-  @supports not (object-fit: cover) {
-    display: none;
-  }
-
-  display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
+  display: block;
   object-fit: ${props =>
     (props.objectFit === 'none' && 'none') ||
     (props.objectFit === 'cover' && 'cover') ||
@@ -44,9 +39,16 @@ const Picture = ({
   imageLow,
   ...rest
 }) => {
+  const document = typeof window !== 'undefined' ? window.document : null;
+  const [objFit, setObjFit] = useState(true);
+  useEffect(() => {
+    if (document.documentElement.style.objectFit === undefined) {
+      setObjFit(false);
+    }
+  }, [document.documentElement.style.objectFit]);
   if (!images) {
     return (
-      <Wrapper height={height} width={width} {...rest}>
+      <Wrapper height={height} width={width} {...rest} image={image}>
         <Image
           alt={alt}
           height={height}
@@ -60,20 +62,29 @@ const Picture = ({
   }
 
   return (
-    <Wrapper height={height} width={width} {...rest}>
-      <Image
-        alt={alt}
-        height={height}
-        width={width}
-        objectFit={objectFit}
-        src={image}
-        srcSet={IMAGE_FALLBACK}
-        data-src={image}
-        data-srcset={images}
-        data-sizes="auto"
-        data-lowsrc={imageLow}
-        className="lazyload"
-      />
+    <Wrapper
+      height={height}
+      width={width}
+      {...rest}
+      image={image}
+      objFit={objFit}
+      className="lazyload"
+    >
+      {objFit && (
+        <Image
+          alt={alt}
+          height={height}
+          width={width}
+          objectFit={objectFit}
+          src={image}
+          srcSet={IMAGE_FALLBACK}
+          data-src={image}
+          data-srcset={images}
+          data-sizes="auto"
+          data-lowsrc={imageLow}
+          className="lazyload"
+        />
+      )}
     </Wrapper>
   );
 };

@@ -25,27 +25,27 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c5 {
       font-size: 1.25rem;
       text-transform: inherit;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c7 {
+    .c6 {
       font-size: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c13 {
+    .c12 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c17 {
+    .c16 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: 500;
@@ -58,14 +58,14 @@ it('renders correctly', () => {
       height: 100%;
     }
 
-    .c3 {
-      display: block;
+    .c2 {
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
     }
 
-    .c14 {
+    .c13 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -84,27 +84,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c14:focus {
+    .c13:focus {
       border: 1px solid #666;
     }
 
-    .c14:focus::-webkit-input-placeholder {
+    .c13:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c14:focus::-moz-placeholder {
+    .c13:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c14:focus:-ms-input-placeholder {
+    .c13:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c14:focus::placeholder {
+    .c13:focus::placeholder {
       color: #666;
     }
 
-    .c11 {
+    .c10 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -114,11 +114,11 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c12 {
+    .c11 {
       display: block;
     }
 
-    .c12 input {
+    .c11 input {
       border: 2px solid #c7c7c7;
       font-size: 1.25rem;
       font-weight: 800;
@@ -128,11 +128,11 @@ it('renders correctly', () => {
       letter-spacing: -2px;
     }
 
-    .c15 {
+    .c14 {
       display: block;
     }
 
-    .c15 input {
+    .c14 input {
       border: 2px solid #c7c7c7;
       font-size: 1.25rem;
       font-weight: 800;
@@ -159,59 +159,42 @@ it('renders correctly', () => {
       min-height: 100vh;
     }
 
-    .c2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: auto;
-    }
-
-    .c2:before {
-      color: #FEE3CC;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      box-shadow: inset 0px 4rem 2rem -2rem;
-    }
-
-    .c4 {
+    .c3 {
       position: relative;
       max-width: 320px;
       text-align: center;
       margin-bottom: 50%;
     }
 
-    .c5 {
+    .c4 {
       padding: 2rem 1rem 0;
       margin-bottom: 2rem;
     }
 
-    .c8 {
+    .c7 {
       background-color: #FFFFFF;
       box-shadow: 0px 1rem 4rem rgba(0,0,0,0.3);
       height: 450px;
     }
 
-    .c9 {
+    .c8 {
       padding: 1rem;
     }
 
-    .c9 >:not(:last-child) {
+    .c8 >:not(:last-child) {
       margin-bottom: 2rem;
     }
 
-    .c9 h3 {
+    .c8 h3 {
       margin-top: 1rem;
     }
 
-    .c9 input {
+    .c8 input {
       max-width: 100%;
       margin: 0;
     }
 
-    .c10 {
+    .c9 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -222,22 +205,22 @@ it('renders correctly', () => {
       justify-content: space-between;
     }
 
-    .c10 label {
+    .c9 label {
       -webkit-flex: 0 0 30%;
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
-    .c10 label input {
+    .c9 label input {
       cursor: pointer;
       padding: 1rem;
     }
 
-    .c10 label:hover input {
+    .c9 label:hover input {
       border-color: #E52630;
     }
 
-    .c16 {
+    .c15 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -248,11 +231,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c18 {
+    .c17 {
       margin-right: auto;
     }
 
-    .c19 {
+    .c18 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -261,7 +244,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c19 span {
+    .c18 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -273,21 +256,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c19 input {
+    .c18 input {
       border: 2px solid #c7c7c7;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c19 input:focus {
+    .c18 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c21 {
+    .c20 {
       line-height: 1.5;
     }
 
-    .c20 {
+    .c19 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -299,26 +282,14 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c20:active,
-    .c20:focus,
-    .c20:hover {
+    .c19:active,
+    .c19:focus,
+    .c19:hover {
       background-color: #961D35;
     }
 
-    @supports not (object-fit:cover) {
-      .c1 {
-        background-color: red;
-      }
-    }
-
-    @supports not (object-fit:cover) {
-      .c3 {
-        display: none;
-      }
-    }
-
     @media (min-width:740px) {
-      .c14 {
+      .c13 {
         max-width: 290px;
       }
     }
@@ -343,30 +314,20 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c2 {
-        height: 100%;
-      }
-
-      .c2:before {
-        content: none;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c4 {
+      .c3 {
         margin: 0 8rem;
         max-width: 420px;
       }
     }
 
     @media (min-width:1024px) {
-      .c8 {
+      .c7 {
         height: 430px;
       }
     }
 
     @media (min-width:1024px) {
-      .c19 {
+      .c18 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -374,7 +335,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c20 {
+      .c19 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -386,13 +347,13 @@ it('renders correctly', () => {
       id="mship-1"
     >
       <div
-        className="c1 c2"
+        className="c1 lazyload"
         height="100%"
         width="100%"
       >
         <img
           alt="Background image"
-          className="c3 lazyload"
+          className="c2 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-src={null}
@@ -404,20 +365,20 @@ it('renders correctly', () => {
         />
       </div>
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="c5"
+          className="c4"
         >
           <h2
-            className="c6"
+            className="c5"
             color="inherit"
             size="l"
           >
             Help someone like Jordan see a better tomorrow
           </h2>
           <p
-            className="c7"
+            className="c6"
             color="inherit"
             size="s"
           >
@@ -425,25 +386,25 @@ it('renders correctly', () => {
           </p>
         </div>
         <div
-          className="c8"
+          className="c7"
         >
           <form
-            className="c9"
+            className="c8"
             onSubmit={[Function]}
           >
             <h3
-              className="c7"
+              className="c6"
               color="inherit"
               size="s"
             >
               Choose your monthly donation
             </h3>
             <div
-              className="c10"
+              className="c9"
             >
               <label
                 aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                className="c11 c12"
+                className="c10 c11"
                 htmlFor="moneyBuy-box1"
                 name="moneyBuy1"
                 onClick={[Function]}
@@ -451,7 +412,7 @@ it('renders correctly', () => {
                 value="£ 5"
               >
                 <span
-                  className="c13 "
+                  className="c12 "
                   color="inherit"
                   size="s"
                 >
@@ -460,7 +421,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box1"
                   aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                  className="c14 c12"
+                  className="c13 c11"
                   id="moneyBuy-box1"
                   name="moneyBuy1"
                   onClick={[Function]}
@@ -472,7 +433,7 @@ it('renders correctly', () => {
               </label>
               <label
                 aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                className="c11 c15"
+                className="c10 c14"
                 htmlFor="moneyBuy-box2"
                 name="moneyBuy2"
                 onClick={[Function]}
@@ -480,7 +441,7 @@ it('renders correctly', () => {
                 value="£ 10"
               >
                 <span
-                  className="c13 "
+                  className="c12 "
                   color="inherit"
                   size="s"
                 >
@@ -489,7 +450,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box2"
                   aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                  className="c14 c15"
+                  className="c13 c14"
                   id="moneyBuy-box2"
                   name="moneyBuy2"
                   onClick={[Function]}
@@ -501,7 +462,7 @@ it('renders correctly', () => {
               </label>
               <label
                 aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                className="c11 c12"
+                className="c10 c11"
                 htmlFor="moneyBuy-box3"
                 name="moneyBuy3"
                 onClick={[Function]}
@@ -509,7 +470,7 @@ it('renders correctly', () => {
                 value="£ 20"
               >
                 <span
-                  className="c13 "
+                  className="c12 "
                   color="inherit"
                   size="s"
                 >
@@ -518,7 +479,7 @@ it('renders correctly', () => {
                 <input
                   aria-describedby="moneyBuy-box3"
                   aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                  className="c14 c12"
+                  className="c13 c11"
                   id="moneyBuy-box3"
                   name="moneyBuy3"
                   onClick={[Function]}
@@ -530,17 +491,17 @@ it('renders correctly', () => {
               </label>
             </div>
             <div
-              className="c16"
+              className="c15"
             >
               <span
-                className="c17 c18"
+                className="c16 c17"
                 color="inherit"
                 size="s"
               >
                 Other amount
               </span>
               <label
-                className="c11 c19"
+                className="c10 c18"
                 htmlFor="MoneyBuy-userInput"
                 max="5000"
                 min="1"
@@ -554,7 +515,7 @@ it('renders correctly', () => {
                 value=""
               >
                 <span
-                  className="c13 "
+                  className="c12 "
                   color="inherit"
                   size="s"
                 >
@@ -562,7 +523,7 @@ it('renders correctly', () => {
                 </span>
                 <input
                   aria-describedby="MoneyBuy-userInput"
-                  className="c14 c19"
+                  className="c13 c18"
                   id="MoneyBuy-userInput"
                   max="5000"
                   min="1"
@@ -580,13 +541,13 @@ it('renders correctly', () => {
               </label>
             </div>
             <button
-              className="c20"
+              className="c19"
               type="submit"
             >
               Donate
             </button>
             <p
-              className="c21"
+              className="c20"
             />
           </form>
         </div>
