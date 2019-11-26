@@ -84,7 +84,9 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
+  ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
   @media ${({ theme }) => theme.breakpoint('small')} {
+    height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
@@ -147,7 +149,7 @@ const VideoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
+  ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('base'))};
 `;
 
 export { Container, Copy, Media, PlayButton, Image, VideoWrapper };
