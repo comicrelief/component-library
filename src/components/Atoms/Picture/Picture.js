@@ -13,9 +13,16 @@ const Wrapper = styled.div`
   position: relative;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
+  @supports not (object-fit: cover) {
+    background-color: red;
+  }
 `;
 
 const Image = styled.img`
+  @supports not (object-fit: cover) {
+    display: none;
+  }
+
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
