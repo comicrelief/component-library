@@ -107,6 +107,18 @@ it('renders correctly', () => {
       background-color: #E52630;
     }
 
+    @supports not (object-fit:cover) {
+      .c2 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c3 {
+        display: none;
+      }
+    }
+
     @media (min-width:740px) {
       .c6 {
         font-size: 1rem;

@@ -91,6 +91,18 @@ exports[`renders correctly in minimalist form 1`] = `
   margin: 0;
 }
 
+@supports not (object-fit:cover) {
+  .c4 {
+    background-color: red;
+  }
+}
+
+@supports not (object-fit:cover) {
+  .c5 {
+    display: none;
+  }
+}
+
 @media (min-width:740px) {
   .c2 {
     -webkit-flex-direction: row;
@@ -256,6 +268,18 @@ exports[`renders correctly with copy 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@supports not (object-fit:cover) {
+  .c4 {
+    background-color: red;
+  }
+}
+
+@supports not (object-fit:cover) {
+  .c5 {
+    display: none;
+  }
 }
 
 @media (min-width:740px) {
@@ -425,6 +449,18 @@ exports[`renders correctly with date 1`] = `
   margin: 0;
 }
 
+@supports not (object-fit:cover) {
+  .c4 {
+    background-color: red;
+  }
+}
+
+@supports not (object-fit:cover) {
+  .c5 {
+    display: none;
+  }
+}
+
 @media (min-width:740px) {
   .c2 {
     -webkit-flex-direction: row;
@@ -584,6 +620,18 @@ exports[`renders correctly with date and type 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@supports not (object-fit:cover) {
+  .c4 {
+    background-color: red;
+  }
+}
+
+@supports not (object-fit:cover) {
+  .c5 {
+    display: none;
+  }
 }
 
 @media (min-width:740px) {

@@ -115,6 +115,18 @@ it('renders article teaser correctly', () => {
       display: flex;
     }
 
+    @supports not (object-fit:cover) {
+      .c4 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c6 {
+        display: none;
+      }
+    }
+
     @media (min-width:740px) {
       .c2 {
         -webkit-flex-direction: row;
@@ -321,6 +333,18 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @supports not (object-fit:cover) {
+      .c4 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c6 {
+        display: none;
+      }
     }
 
     @media (min-width:740px) {

@@ -305,6 +305,18 @@ it('renders correctly', () => {
       background-color: #961D35;
     }
 
+    @supports not (object-fit:cover) {
+      .c1 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c3 {
+        display: none;
+      }
+    }
+
     @media (min-width:740px) {
       .c14 {
         max-width: 290px;

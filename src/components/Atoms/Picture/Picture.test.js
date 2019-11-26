@@ -23,6 +23,18 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
+    @supports not (object-fit:cover) {
+      .c0 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c1 {
+        display: none;
+      }
+    }
+
     <div
       className="c0"
       height="auto"
@@ -68,6 +80,18 @@ it('renders correctly with custom props', () => {
       width: 200px;
       height: 100px;
       object-fit: cover;
+    }
+
+    @supports not (object-fit:cover) {
+      .c0 {
+        background-color: red;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c1 {
+        display: none;
+      }
     }
 
     <div
