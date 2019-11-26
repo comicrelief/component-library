@@ -47,6 +47,7 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
+      line-height: 1.5rem;
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
       font-weight: normal;
@@ -61,6 +62,7 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
+      line-height: 1.5rem;
       color: #2C0230;
       font-weight: normal;
     }
@@ -246,6 +248,7 @@ it('renders correctly', () => {
       display: inline-block;
       border: 0;
       padding: 17px 20px;
+      line-height: 1.3rem;
       height: 46px;
       font-weight: 700;
       width: 100%;
@@ -266,6 +269,7 @@ it('renders correctly', () => {
       display: inline-block;
       border: 0;
       padding: 17px 20px;
+      line-height: 1.3rem;
       height: 46px;
       font-weight: 700;
       width: 100%;
@@ -305,6 +309,7 @@ it('renders correctly', () => {
       display: inline-block;
       border: 0;
       padding: 17px 20px;
+      line-height: 1.3rem;
       height: 46px;
       font-weight: 700;
       width: 100%;

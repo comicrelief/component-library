@@ -9,6 +9,7 @@ const NavLinkClass = styled(Link)`
   display: inline-block;
   border: 0;
   padding: 17px 20px;
+  line-height: 1.3rem;
   height: 46px;
   font-weight: 700;
   width: 100%;

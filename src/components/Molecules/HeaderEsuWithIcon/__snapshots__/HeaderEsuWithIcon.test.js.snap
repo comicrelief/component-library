@@ -242,6 +242,10 @@ exports[`renders correctly with error message 1`] = `
   align-items: flex-start;
 }
 
+.c3 div[aria-modal='true'] {
+  padding: 2rem;
+}
+
 .c21 {
   position: absolute;
   top: 0;
@@ -687,6 +691,10 @@ exports[`renders correctly with modal open 1`] = `
   align-items: flex-start;
 }
 
+.c3 div[aria-modal='true'] {
+  padding: 2rem;
+}
+
 .c19 {
   position: absolute;
   top: 0;
@@ -961,6 +969,10 @@ exports[`renders correctly with success message 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c3 div[aria-modal='true'] {
+  padding: 2rem;
 }
 
 .c11 {

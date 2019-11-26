@@ -51,6 +51,7 @@ it('renders article teaser correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
+      line-height: 1.5rem;
       color: #2C0230;
       font-weight: normal;
     }
@@ -254,6 +255,7 @@ it('renders press realese correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
+      line-height: 1.5rem;
       color: #2C0230;
       font-weight: normal;
     }

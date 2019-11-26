@@ -21,6 +21,9 @@ const EsuWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  div[aria-modal='true'] {
+    padding: ${spacing('l')};
+  }
 `;
 
 const CloseButton = styled(Icon)`
