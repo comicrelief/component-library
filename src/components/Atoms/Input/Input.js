@@ -16,7 +16,6 @@ const InputField = styled.input`
   box-sizing: border-box;
   width: 100%;
   padding: 13px;
-  margin: 10px 0;
   font-size: ${({ theme }) => theme.fontSize('m')};
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid;

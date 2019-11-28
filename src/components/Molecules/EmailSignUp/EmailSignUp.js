@@ -143,7 +143,7 @@ const EmailSignUp = ({
 
   return (
     <ESUWrapper backgroundColor={backgroundColor} {...rest}>
-      <Title tag="p" weight="400" family="Anton" uppercase>
+      <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
       {!next && (

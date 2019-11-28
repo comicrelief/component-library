@@ -29,7 +29,6 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       padding: 13px;
-      margin: 10px 0;
       font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;

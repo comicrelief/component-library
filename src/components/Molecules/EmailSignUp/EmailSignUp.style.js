@@ -19,7 +19,7 @@ const TopCopyWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: ${spacing('xl')};
+  margin-top: ${spacing('md')};
   button {
     border-color: ${({ theme, backgroundColor }) =>
       theme.color(backgroundColor)};
@@ -39,9 +39,7 @@ const PrivacyCopyWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize('s')};
     line-height: ${({ theme }) => theme.fontSize('xl')};
     a {
-      span {
-        font-size: ${({ theme }) => theme.fontSize('s')};
-      }
+      font-size: ${({ theme }) => theme.fontSize('s')};
     }
   }
 `;
@@ -49,6 +47,7 @@ const PrivacyCopyWrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  margin: ${spacing('md')} 0;
 `;
 
 const InputField = styled(Input)`
@@ -56,12 +55,7 @@ const InputField = styled(Input)`
 `;
 
 const Title = styled(Text)`
-  margin-bottom: ${spacing('l')};
-  font-size: ${({ theme }) => theme.fontSize('xxl')};
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    font-size: ${({ theme }) => theme.fontSize('big')};
-  }
+  margin-bottom: ${spacing('m')};
 `;
 
 export {
