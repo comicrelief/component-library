@@ -6,8 +6,8 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
-import SR from './assets/SR.png';
-import CR from './assets/CR.png';
+import SR from '../../Atoms/Logo/assets/sr-logo.svg';
+import CR from '../../Atoms/Logo/assets/cr-logo.svg';
 import RND from './assets/RND.png';
 
 /**
