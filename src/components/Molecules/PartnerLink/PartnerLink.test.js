@@ -62,6 +62,7 @@ it('renders correctly', () => {
       position: absolute;
       white-space: nowrap;
       width: 1px;
+      height: auto;
     }
 
     .c1 {
