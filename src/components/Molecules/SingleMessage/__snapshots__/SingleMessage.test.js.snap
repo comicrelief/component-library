@@ -900,7 +900,8 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c1 {
-    width: 80%;
+    width: 100%;
+    max-width: 880px;
     padding: calc(8rem - 2rem) 2rem;
   }
 }
