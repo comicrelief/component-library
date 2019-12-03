@@ -9,7 +9,6 @@ const endDate = '1st June 2020';
 const country = 'Uk';
 
 <InfoBanner
-  background="#2C0230"
   title={title}
   amount={amount}
   theme={theme}
