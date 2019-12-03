@@ -19,7 +19,6 @@ const Container = styled.section`
 const Info = styled.div`
   display: flex;
   align-items: start;
-  justify-content: center;
   width: 100%;
   margin-bottom: ${spacing('l')};
   flex-direction: column;
