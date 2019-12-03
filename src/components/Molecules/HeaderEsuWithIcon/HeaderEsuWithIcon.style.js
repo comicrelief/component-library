@@ -42,10 +42,16 @@ const CloseButton = styled(Icon)`
 
 const HeaderESU = styled(EmailSignUp)`
   width: 100%;
+  input {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+  }
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin-top: ${spacing('xl')};
     width: 50%;
+    input {
+      font-size: ${({ theme }) => theme.fontSize('m')};
+    }
   }
 `;
 
