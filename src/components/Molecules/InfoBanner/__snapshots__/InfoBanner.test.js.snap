@@ -121,20 +121,21 @@ exports[`renders correctly 1`] = `
     >
       Funding theme
     </h3>
-    <a
-      className="c4"
-      color="red"
-      target="_self"
-      type="standard"
+    <p
+      className="c3"
+      color="inherit"
+      size="sm"
     >
-      <p
-        className="c3"
-        color="inherit"
-        size="sm"
+      <a
+        className="c4"
+        color="red"
+        href="cr.com"
+        target="_self"
+        type="standard"
       >
         Be happy
-      </p>
-    </a>
+      </a>
+    </p>
   </div>
   <div
     className="c1"

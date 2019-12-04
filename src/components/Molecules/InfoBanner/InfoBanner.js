@@ -64,11 +64,11 @@ const InfoBanner = ({
         <Text tag="h3" size="md" uppercase>
           Funding theme
         </Text>
-        <Link href={themeLink} target="self" type="standard">
-          <Text tag="p" size="sm">
+        <Text tag="p" size="sm">
+          <Link href={themeLink} target="self" type="standard">
             {theme}
-          </Text>
-        </Link>
+          </Link>
+        </Text>
       </Info>
       <Info>
         <Text tag="h3" size="md" uppercase>
