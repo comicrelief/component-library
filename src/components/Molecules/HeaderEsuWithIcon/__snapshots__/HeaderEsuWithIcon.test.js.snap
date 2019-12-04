@@ -258,6 +258,10 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
 }
 
+.c5 input {
+  font-size: 1rem;
+}
+
 @media (min-width:740px) {
   .c15 {
     max-width: 290px;
@@ -281,6 +285,10 @@ exports[`renders correctly with error message 1`] = `
   .c5 {
     margin-top: 4rem;
     width: 50%;
+  }
+
+  .c5 input {
+    font-size: 1.25rem;
   }
 }
 
@@ -700,6 +708,10 @@ exports[`renders correctly with modal open 1`] = `
   width: 100%;
 }
 
+.c5 input {
+  font-size: 1rem;
+}
+
 @media (min-width:740px) {
   .c15 {
     max-width: 290px;
@@ -723,6 +735,10 @@ exports[`renders correctly with modal open 1`] = `
   .c5 {
     margin-top: 4rem;
     width: 50%;
+  }
+
+  .c5 input {
+    font-size: 1.25rem;
   }
 }
 
@@ -973,6 +989,10 @@ exports[`renders correctly with success message 1`] = `
   width: 100%;
 }
 
+.c5 input {
+  font-size: 1rem;
+}
+
 @media (min-width:740px) {
   .c11 {
     margin: 4rem 0 0;
@@ -984,6 +1004,10 @@ exports[`renders correctly with success message 1`] = `
   .c5 {
     margin-top: 4rem;
     width: 50%;
+  }
+
+  .c5 input {
+    font-size: 1.25rem;
   }
 }
 
