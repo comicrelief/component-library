@@ -10,7 +10,7 @@ const Container = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  padding: ${spacing('l')} 0 0;
+  padding: ${spacing('md')} 0;
   @media (min-width: 700px) {
     flex-direction: row;
   }
