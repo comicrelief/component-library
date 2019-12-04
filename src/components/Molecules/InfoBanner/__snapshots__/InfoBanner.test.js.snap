@@ -11,6 +11,21 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+  line-height: 1.5rem;
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+  font-weight: normal;
+}
+
+.c4:hover {
+  color: #2C0230;
+  border-bottom: 2px solid #2C0230;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -106,13 +121,20 @@ exports[`renders correctly 1`] = `
     >
       Funding theme
     </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
+    <a
+      className="c4"
+      color="red"
+      target="_self"
+      type="standard"
     >
-      Be happy
-    </p>
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        Be happy
+      </p>
+    </a>
   </div>
   <div
     className="c1"
