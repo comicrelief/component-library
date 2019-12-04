@@ -27,6 +27,9 @@ const HeaderEsuWithIcon = ({
   const [isClicked, setisClicked] = useState(false);
   const [isESUOpen, setIsESUOpen] = useState(isESUOpenInitial);
   const thisRef = useRef(null);
+  const esuHash = '#open-esu';
+  const { hash: currentHash } =
+    typeof window !== 'undefined' ? window.location : null;
 
   useEffect(() => {
     if (isClicked) {
@@ -35,8 +38,12 @@ const HeaderEsuWithIcon = ({
       } else {
         thisRef.current.querySelector('a').focus();
       }
+    } else if (currentHash === esuHash && !isClicked) {
+      setIsESUOpen(true);
+    } else if (currentHash === esuHash) {
+      setIsESUOpen(false);
     }
-  }, [isClicked, isESUOpen, isSuccess]);
+  }, [currentHash, isClicked, isESUOpen, isSuccess]);
 
   /* Allow our ESU modal stuff to happen */
   const handleESUOpen = e => {
