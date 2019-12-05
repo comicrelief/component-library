@@ -11,8 +11,7 @@ const Container = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  padding: ${spacing('md')} 0;
-  @media (min-width: 700px) {
+  @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
 `;
@@ -23,8 +22,7 @@ const Info = styled.div`
   width: 100%;
   margin-bottom: ${spacing('l')};
   flex-direction: column;
-  padding: 0 20px;
-  @media (min-width: 700px) {
+  @media ${({ theme }) => theme.breakpoint('small')} {
     width: calc(100% / 3);
   }
 `;

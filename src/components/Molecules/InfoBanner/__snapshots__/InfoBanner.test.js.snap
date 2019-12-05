@@ -38,7 +38,6 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  padding: 1rem 0;
 }
 
 .c1 {
@@ -55,10 +54,9 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0 20px;
 }
 
-@media (min-width:700px) {
+@media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -66,7 +64,7 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:700px) {
+@media (min-width:740px) {
   .c1 {
     width: calc(100% / 3);
   }
