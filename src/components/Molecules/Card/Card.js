@@ -48,7 +48,7 @@ const Card = ({
           />
         </Image>
       ) : null}
-      <Copy>{children}</Copy>
+      {children ? <Copy>{children}</Copy> : null}
     </Container>
   );
 };
@@ -61,11 +61,12 @@ Card.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 };
 
 Card.defaultProps = {
   backgroundColor: 'white',
+  children: null,
   imageLow: null,
   images: null,
   image: null,

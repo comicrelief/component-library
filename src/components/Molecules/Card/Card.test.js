@@ -14,3 +14,11 @@ it('renders correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('renders correctly with no body', () => {
+  const tree = renderWithTheme(
+    <Card imageLow={data.image} images={data.image} backgroundColor="yellow" />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
