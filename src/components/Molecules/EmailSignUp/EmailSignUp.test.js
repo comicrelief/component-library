@@ -25,6 +25,7 @@ it('renders correctly', () => {
         buttonColor="teal"
         privacyCopy={<RichText markup={privacy} />}
         subscribe={() => 'Done'}
+        validate={() => true}
       />
     </>
   ).toJSON();
@@ -64,6 +65,7 @@ it('renders ESU School correctly', () => {
         buttonColor="teal"
         privacyCopy={<RichText markup={privacy} />}
         subscribe={mockNext}
+        validate={() => true}
       />
     </>
   );

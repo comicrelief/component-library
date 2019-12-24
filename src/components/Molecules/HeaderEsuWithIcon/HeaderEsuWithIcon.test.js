@@ -34,6 +34,7 @@ it('renders correctly with modal closed', () => {
         isSuccess={false}
         errorMsg=""
         subscribe={() => 'Done'}
+        validate={() => true}
       />
     </div>
   ).toJSON();
@@ -53,6 +54,7 @@ it('renders correctly with modal open', () => {
         isSuccess={false}
         errorMsg=""
         subscribe={() => 'Done'}
+        validate={() => true}
       />
     </div>
   ).toJSON();
@@ -72,6 +74,7 @@ it('renders correctly with error message', () => {
         isSuccess={false}
         errorMsg="invalid email"
         subscribe={() => 'Done'}
+        validate={() => true}
       />
     </div>
   ).toJSON();
@@ -91,6 +94,7 @@ it('renders correctly with success message', () => {
         isSuccess
         errorMsg=""
         subscribe={() => 'Done'}
+        validate={() => true}
       />
     </div>
   ).toJSON();
