@@ -20,7 +20,23 @@ const successCopy = (
   />
 );
 
-initialState = { isSuccess: false };
+initialState = { isSuccess: false, errorMsg: '' };
+
+const sendEmail = email => {
+  setTimeout(() => setState({ isSuccess: !state.isSuccess }), 2000);
+  console.log(email);
+};
+
+const validate = ({ email }) => {
+  let isValid = false;
+  if (email.includes('@')) {
+    isValid = true;
+    setState({ errorMsg: '' });
+  } else {
+    setState({ errorMsg: 'invalid email!' });
+  }
+  return isValid;
+};
 
 <EmailSignUp
   title={title}
@@ -28,8 +44,9 @@ initialState = { isSuccess: false };
   successCopy={successCopy}
   isSuccess={state.isSuccess}
   privacyCopy={privacyCopy}
-  errorMsg=""
-  subscribe={() => setState({ isSuccess: !state.isSuccess })}
+  errorMsg={state.errorMsg}
+  subscribe={sendEmail}
+  validate={validate}
 />;
 ```
 
@@ -65,11 +82,33 @@ const selectItems = [
   { value: 'Option four', displayValue: 'The fourth option' }
 ];
 
-initialState = { isSuccessSchools: false };
+initialState = { isSuccessSchools: false, errorMsg: '' };
 
-sendEmail = e => {
-  setState({ isSuccessSchools: !state.isSuccessSchools });
-  console.log(e);
+sendEmail = emailAndAge => {
+  setTimeout(
+    () => setState({ isSuccessSchools: !state.isSuccessSchools }),
+    2000
+  );
+  console.log(emailAndAge);
+};
+
+const validate = ({ email, age }) => {
+  let isValid = false;
+  if (email.includes('@')) {
+    isValid = true;
+    setState({ errorMsg: '' });
+  } else {
+    setState({ errorMsg: 'invalid email!' });
+  }
+  if (isValid === true && typeof age !== 'undefined') {
+    if (age) {
+      setState({ errorMsg: '' });
+    } else {
+      isValid = false;
+      setState({ errorMsg: 'invalid age!' });
+    }
+  }
+  return isValid;
 };
 
 <EmailSignUp
@@ -81,7 +120,8 @@ sendEmail = e => {
   selectItems={selectItems}
   isSchools
   privacyCopy={privacyCopy}
-  errorMsg=""
-  subscribe={e => sendEmail(e)}
+  errorMsg={state.errorMsg}
+  subscribe={sendEmail}
+  validate={validate}
 />;
 ```

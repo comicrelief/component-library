@@ -20,7 +20,18 @@ const successCopy = (
   />
 );
 
-initialState = { isSuccess: false };
+initialState = { isSuccess: false, errorMsg: '' };
+
+const validate = ({ email }) => {
+  let isValid = false;
+  if (email.includes('@')) {
+    isValid = true;
+    setState({ errorMsg: '' });
+  } else {
+    setState({ errorMsg: 'invalid email!' });
+  }
+  return isValid;
+};
 
 <HeaderEsuWithIcon
   title={title}
@@ -28,7 +39,8 @@ initialState = { isSuccess: false };
   successCopy={successCopy}
   isSuccess={state.isSuccess}
   privacyCopy={privacyCopy}
-  errorMsg=""
+  errorMsg={state.errorMsg}
   subscribe={() => setState({ isSuccess: !state.isSuccess })}
+  validate={validate}
 />;
 ```

@@ -24,6 +24,7 @@ const EmailSignUp = ({
   errorMsg,
   privacyCopy,
   subscribe,
+  validate,
   buttonColor,
   backgroundColor,
   ...rest
@@ -36,11 +37,6 @@ const EmailSignUp = ({
     // Just stopping weird things happening for now when the user submits with the enter key
     // rather than the Submit button
     e.preventDefault();
-  };
-
-  const subscribeSchool = () => {
-    subscribe({ email: `${value}`, age: `${age}` });
-    setNext(false);
   };
 
   const schoolsSelect = (
@@ -83,7 +79,7 @@ const EmailSignUp = ({
               color={buttonColor}
               as="button"
               href="/#"
-              onClick={() => setNext(true)}
+              onClick={() => validate({ email: value }) && setNext(true)}
             >
               Next
             </Link>
@@ -99,7 +95,10 @@ const EmailSignUp = ({
               color={buttonColor}
               as="button"
               href="/#"
-              onClick={() => subscribeSchool()}
+              onClick={() =>
+                validate({ email: value, age }) &&
+                subscribe({ email: `${value}`, age: `${age}` })
+              }
             >
               Subscribe
             </Link>
@@ -129,7 +128,7 @@ const EmailSignUp = ({
           color={buttonColor}
           as="button"
           href="/#"
-          onClick={() => subscribe(value)}
+          onClick={() => validate({ email: value }) && subscribe(value)}
         >
           Subscribe
         </Link>
@@ -146,7 +145,7 @@ const EmailSignUp = ({
       <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
-      {!next && (
+      {(!next || isSuccess) && (
         <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
       )}
       {!isSuccess && (isSchools ? subscriptionSchoolsForm : subscriptionForm)}
@@ -180,6 +179,8 @@ EmailSignUp.propTypes = {
   ),
   /** subscription function */
   subscribe: PropTypes.func.isRequired,
+  /** validation function */
+  validate: PropTypes.func.isRequired,
   /** background color */
   backgroundColor: PropTypes.string,
   /** button color */
