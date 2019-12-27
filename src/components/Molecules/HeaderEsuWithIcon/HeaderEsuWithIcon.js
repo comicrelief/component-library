@@ -19,6 +19,7 @@ const HeaderEsuWithIcon = ({
   privacyCopy,
   buttonColor,
   subscribe,
+  validate,
   isSuccess,
   errorMsg,
   isESUOpen: isESUOpenInitial
@@ -66,6 +67,7 @@ const HeaderEsuWithIcon = ({
         privacyCopy={privacyCopy}
         isSuccess={isSuccess}
         subscribe={subscribe}
+        validate={validate}
         errorMsg={errorMsg}
         buttonColor={buttonColor}
         aria-modal="true"
@@ -122,6 +124,7 @@ HeaderEsuWithIcon.propTypes = {
   successCopy: PropTypes.node.isRequired,
   buttonColor: PropTypes.string,
   subscribe: PropTypes.func.isRequired,
+  validate: PropTypes.func.isRequired,
   isSuccess: PropTypes.bool.isRequired,
   errorMsg: PropTypes.string.isRequired
 };
