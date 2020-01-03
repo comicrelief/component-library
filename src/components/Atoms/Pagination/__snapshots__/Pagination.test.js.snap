@@ -6,6 +6,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -217,6 +218,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -428,6 +430,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -655,6 +658,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -898,6 +902,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1113,6 +1118,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1356,6 +1362,7 @@ exports[`renders correctly in full size with more on left 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1583,6 +1590,7 @@ exports[`renders correctly in full size with more on right 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1810,6 +1818,7 @@ exports[`renders correctly in minimalist form 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1945,6 +1954,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2080,6 +2090,7 @@ exports[`renders correctly with custom labels 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2279,6 +2290,7 @@ exports[`renders correctly with custom style 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;

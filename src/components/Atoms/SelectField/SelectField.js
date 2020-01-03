@@ -98,7 +98,7 @@ const Select = ({
           <option
             key={option.value}
             value={option.value}
-            selected={option.selected}
+            defaultValue={option.defaultValue}
           >
             {option.displayValue}
           </option>
