@@ -95,7 +95,11 @@ const Select = ({
       <StyledInput {...rest} error={error ? 1 : 0}>
         <option disabled>{description}</option>
         {options.map(option => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            selected={option.selected}
+          >
             {option.displayValue}
           </option>
         ))}
