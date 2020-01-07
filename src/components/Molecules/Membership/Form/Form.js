@@ -44,6 +44,57 @@ const Signup = ({
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
 
+  // eslint-disable-next-line no-multi-assign
+  const dataLayer = (window.dataLayer = window.dataLayer || []);
+
+  // Called by UseEffect later on first load
+  const DataLayerInit = (
+    thisRowID,
+    thisClientID,
+    thisCartID,
+    theseMoneyBuys
+  ) => {
+    // Construct object to push to datalayer,staring with manual entry 'Other Amount' field
+    const ecommerceObj = {
+      ecommerce: {
+        currencyCode: 'GBP',
+        impressions: [
+          {
+            id: 'manual-entry',
+            name: 'manual-entry',
+            price: 0.0,
+            category: thisCartID,
+            position: 0,
+            list: `${thisClientID}_${thisRowID}`,
+            dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+          }
+        ]
+      }
+    };
+
+    /* Iterate over all moneybuys */
+    theseMoneyBuys.map((moneyBuy, index) => {
+      const thisMoneyBuy = {
+        id: `moneybuy-${moneyBuy.value}`,
+        name: `moneybuy-${moneyBuy.value}`,
+        price: moneyBuy.value,
+        brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
+        category: thisCartID,
+        position: index + 1,
+        list: `${thisClientID}_${thisRowID}`,
+        dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+      };
+
+      // Add this 'button' object to the impressions array
+      ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
+
+      // Push to the data layer
+      dataLayer.push(ecommerceObj);
+
+      return null;
+    });
+  };
+
   // This function is triggered when one of the money buy box is selected
   const selectMoneyBuy = (copy, value) => {
     if (isSelected) setIsSelected(false);
@@ -94,6 +145,7 @@ const Signup = ({
       const box = `box${index + 1}`;
       // eslint-disable-next-line no-shadow
       setMoneyBoxes(moneyBoxes => ({ ...moneyBoxes, [box]: moneyBuy }));
+
       return (
         isSelected &&
         index === 1 &&
@@ -101,6 +153,11 @@ const Signup = ({
       );
     });
   }, [isSelected, regularGiving.moneybuys]);
+
+  /* Set up default DataLayer obj on pageload */
+  useEffect(() => {
+    DataLayerInit(mbshipID, clientID, cartID, regularGiving.moneybuys);
+  }, [DataLayerInit, cartID, clientID, mbshipID, regularGiving.moneybuys]);
 
   const submitDonation = (
     event,
