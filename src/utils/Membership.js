@@ -59,9 +59,59 @@ const handleDonateSubmission = (
   window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
+// Called by UseEffect later on first load
+const DataLayerInit = (
+  thisRowID,
+  thisClientID,
+  thisCartID,
+  theseMoneyBuys,
+  thisDataLayer
+) => {
+  // Construct object to push to datalayer,staring with manual entry 'Other Amount' field
+  const ecommerceObj = {
+    ecommerce: {
+      currencyCode: 'GBP',
+      impressions: [
+        {
+          id: 'manual-entry',
+          name: 'manual-entry',
+          price: 0.0,
+          category: thisCartID,
+          position: 0,
+          list: `${thisClientID}_${thisRowID}`,
+          dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+        }
+      ]
+    }
+  };
+
+  /* Iterate over all moneybuys */
+  theseMoneyBuys.map((moneyBuy, index) => {
+    const thisMoneyBuy = {
+      id: `moneybuy-${moneyBuy.value}`,
+      name: `moneybuy-${moneyBuy.value}`,
+      price: moneyBuy.value,
+      brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
+      category: thisCartID,
+      position: index + 1,
+      list: `${thisClientID}_${thisRowID}`,
+      dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+    };
+
+    // Add this 'button' object to the impressions array
+    ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
+
+    // Push to the data layer
+    thisDataLayer.push(ecommerceObj);
+
+    return null;
+  });
+};
+
 export {
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue,
-  handleDonateSubmission
+  handleDonateSubmission,
+  DataLayerInit
 };
