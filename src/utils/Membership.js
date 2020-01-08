@@ -100,12 +100,13 @@ const DataLayerInit = (
 
     // Add this 'button' object to the impressions array
     ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
-
-    // Push to the data layer
-    thisDataLayer.push(ecommerceObj);
-
+    console.log('DL:', ecommerceObj);
     return null;
   });
+
+  // Push to the data layer
+  alert('pushing to DL');
+  thisDataLayer.push(ecommerceObj);
 };
 
 export {
