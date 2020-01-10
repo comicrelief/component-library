@@ -9,7 +9,7 @@ import {
   isAmountValid,
   isInputMatchBoxValue,
   DataLayerInit
-} from '../../../../utils/Membership';
+} from '../../../../utils/membershipHelper';
 import {
   Button,
   Copy,

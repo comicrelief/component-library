@@ -59,7 +59,7 @@ const handleDonateSubmission = (
   window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
-// Called by UseEffect later on first load
+// Sets-up initial DataLayer values
 const DataLayerInit = (
   thisRowID,
   thisClientID,
@@ -67,7 +67,7 @@ const DataLayerInit = (
   theseMoneyBuys,
   thisDataLayer
 ) => {
-  // Construct object to push to datalayer,staring with manual entry 'Other Amount' field
+  // Construct object to push to datalayer, staring with manual entry 'Other Amount' field
   const ecommerceObj = {
     ecommerce: {
       currencyCode: 'GBP',
@@ -85,7 +85,7 @@ const DataLayerInit = (
     }
   };
 
-  /* Iterate over all moneybuys */
+  // Iterate over all moneybuys
   theseMoneyBuys.map((moneyBuy, index) => {
     const thisMoneyBuy = {
       id: `moneybuy-${moneyBuy.value}`,
@@ -100,8 +100,8 @@ const DataLayerInit = (
 
     // Add this 'button' object to the impressions array
     ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
-    console.log('DL:', ecommerceObj);
-    return null;
+
+    return true;
   });
 
   // Push to the data layer
