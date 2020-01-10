@@ -13,9 +13,6 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
-    ${({ vhFull, fullImage }) =>
-      vhFull || fullImage ? 'height: calc(100vh - 90px);' : 'height: auto;'};
-
     flex-direction: ${({ copyFirst }) =>
       copyFirst === true ? 'row-reverse' : 'row'};
     ${({ landscapeVideo, hasVideo, fullImage }) =>
@@ -39,6 +36,11 @@ const Copy = styled.div`
     hasVideo === true && fullImage === true ? 'display: none;' : null};
   padding: ${spacing('l')};
   ${media('small')} {
+    ${({ vhFull, fullImage }) =>
+      vhFull || fullImage
+        ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
+        : 'height: auto;'};
+
     ${({ hasVideo, fullImage }) =>
       hasVideo === true && fullImage === true
         ? 'display: none;'
@@ -46,7 +48,7 @@ const Copy = styled.div`
 
     flex-direction: column;
     justify-content: center;
-    padding: ${spacing('l')} ${spacing('xl')};
+    padding: ${spacing('xl')};
   }
   ${props =>
     props.fullImage &&
@@ -76,7 +78,7 @@ const Copy = styled.div`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 100%;
             max-width ${container.small};
-            padding: calc(${spacing('xxl')} - ${spacing('l')}) ${spacing('l')};
+            padding: ${spacing('l')};
           }
           margin: auto;
           padding: ${spacing('md')};
@@ -136,6 +138,11 @@ const PlayButton = styled.button`
 `;
 
 const Image = styled.div`
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    img {
+      position: absolute;
+    }
+  }
   width: 100%;
   height: 100%;
   ${({ doubleImage }) => doubleImage && 'height: 50%'};

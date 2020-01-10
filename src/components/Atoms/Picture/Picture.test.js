@@ -12,6 +12,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
+      display: block;
       width: 100%;
       height: auto;
     }
@@ -59,6 +60,7 @@ it('renders correctly with custom props', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
+      display: block;
       width: 200px;
       height: 100px;
     }

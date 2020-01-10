@@ -23,6 +23,7 @@ it('renders correctly', () => {
 
     .c2 {
       position: relative;
+      display: block;
       width: 100%;
       height: auto;
     }

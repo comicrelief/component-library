@@ -395,7 +395,7 @@ it('renders correctly', () => {
       width: inherit;
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1150px) {
       .c4 {
         width: 60px;
         height: 60px;
