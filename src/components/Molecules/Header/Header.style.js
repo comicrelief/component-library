@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.breakpoint('nav')} {
     height: auto;
   }
 `;
@@ -25,7 +25,7 @@ const InnerWrapper = styled.div`
   cursor: pointer;
   max-width: ${container.large};
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.breakpoint('nav')} {
     margin: 0 auto;
   }
 `;
@@ -71,7 +71,7 @@ const MetaIcons = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.breakpoint('nav')} {
     position: relative;
     display: flex;
     align-items: center;

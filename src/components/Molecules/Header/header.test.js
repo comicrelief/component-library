@@ -402,7 +402,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c18 {
         display: none;
       }
@@ -416,7 +416,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c6 {
         z-index: 2;
         position: relative;
@@ -428,7 +428,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c13 {
         display: none;
         display: none;
@@ -440,7 +440,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c15::before {
         display: block;
         position: absolute;
@@ -458,7 +458,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c8 {
         position: relative;
         display: -webkit-box;
@@ -480,7 +480,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c11 {
         padding: 10px 5px;
         height: auto;
@@ -494,7 +494,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c9 {
         margin: 0 4px;
         padding: 25px 0;
@@ -531,19 +531,19 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c0 {
         height: auto;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c1 {
         margin: 0 auto;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1150px) {
       .c22 {
         position: relative;
         display: -webkit-box;

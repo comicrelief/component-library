@@ -1,6 +1,7 @@
 export const sizes = {
   small: 740,
   medium: 1024,
+  nav: 1150,
   large: 1440
 };
 
