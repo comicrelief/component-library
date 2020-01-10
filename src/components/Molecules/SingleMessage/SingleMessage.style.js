@@ -87,8 +87,9 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
-  ${({ fullImage }) => (fullImage ? 'height: 200px;' : null)};
+  ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
   @media ${({ theme }) => theme.breakpoint('small')} {
+    height: 100%;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
@@ -137,8 +138,10 @@ const PlayButton = styled.button`
 `;
 
 const Image = styled.div`
-  img {
-    position: absolute;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    img {
+      position: absolute;
+    }
   }
   width: 100%;
   height: 100%;
