@@ -53,8 +53,9 @@ const Signup = ({
   const selectMoneyBuy = (copy, value, event) => {
     // Stops outer label clickevent being passed down to the input, triggering twice
     event.stopPropagation();
-    alert('selectMoneyBuy');
-    DataLayerUpdate(copy, value);
+
+    DataLayerUpdate(value, 'add', dataLayer);
+
     if (isSelected) setIsSelected(false);
     if (errorMsg) setErrorMsg(false);
     // Check if input is highlighted and his value matches one of the money buy box
@@ -86,7 +87,7 @@ const Signup = ({
     setUserInput(input);
   };
 
-  const hightlightInput = (value, description) => {
+  const highlightInput = (value, description) => {
     if (isSelected) setIsSelected(false);
     if (errorMsg) {
       setMoneyBuyCopy(false);
@@ -195,7 +196,7 @@ const Signup = ({
             pattern="[^[0-9]+([,.][0-9]+)?$]"
             placeholder="0.00"
             onChange={e => handleChange(e.target.value, otherDescription)}
-            onClick={e => hightlightInput(e.target.value, otherDescription)}
+            onClick={e => highlightInput(e.target.value, otherDescription)}
             onKeyPress={e => onKeyPress(e)}
           />
         </FormFieldset>
