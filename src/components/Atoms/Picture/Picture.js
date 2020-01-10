@@ -17,7 +17,7 @@ const Wrapper = styled.picture`
 `;
 
 const Image = styled.img`
-  position: absolute;
+  display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
   object-fit: ${props =>

@@ -137,6 +137,9 @@ const PlayButton = styled.button`
 `;
 
 const Image = styled.div`
+  img {
+    position: absolute;
+  }
   width: 100%;
   height: 100%;
   ${({ doubleImage }) => doubleImage && 'height: 50%'};
