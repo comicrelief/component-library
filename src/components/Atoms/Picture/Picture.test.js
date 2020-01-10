@@ -12,6 +12,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
+      display: block;
       width: 100%;
       height: auto;
     }
@@ -23,7 +24,7 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
-    <div
+    <picture
       className="c0"
       height="auto"
       width="100%"
@@ -40,7 +41,7 @@ it('renders correctly', () => {
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
       />
-    </div>
+    </picture>
   `);
 });
 
@@ -59,6 +60,7 @@ it('renders correctly with custom props', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
+      display: block;
       width: 200px;
       height: 100px;
     }
@@ -70,7 +72,7 @@ it('renders correctly with custom props', () => {
       object-fit: cover;
     }
 
-    <div
+    <picture
       className="c0"
       height="100px"
       width="200px"
@@ -87,6 +89,6 @@ it('renders correctly with custom props', () => {
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="200px"
       />
-    </div>
+    </picture>
   `);
 });

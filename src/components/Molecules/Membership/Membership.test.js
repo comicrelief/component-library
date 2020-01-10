@@ -54,6 +54,7 @@ it('renders correctly', () => {
 
     .c1 {
       position: relative;
+      display: block;
       width: 100%;
       height: 100%;
     }
@@ -372,7 +373,7 @@ it('renders correctly', () => {
       className="c0"
       id="mship-1"
     >
-      <div
+      <picture
         className="c1 c2"
         height="100%"
         width="100%"
@@ -389,7 +390,7 @@ it('renders correctly', () => {
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </div>
+      </picture>
       <div
         className="c4"
       >

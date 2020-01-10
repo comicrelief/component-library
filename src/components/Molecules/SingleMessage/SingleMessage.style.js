@@ -78,7 +78,7 @@ const Copy = styled.div`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 100%;
             max-width ${container.small};
-            padding: calc(${spacing('xxl')} - ${spacing('l')}) ${spacing('l')};
+            padding: ${spacing('l')};
           }
           margin: auto;
           padding: ${spacing('md')};

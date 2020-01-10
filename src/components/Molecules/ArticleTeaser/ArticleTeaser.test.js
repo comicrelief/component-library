@@ -37,6 +37,7 @@ it('renders article teaser correctly', () => {
 
     .c4 {
       position: relative;
+      display: block;
       width: 100%;
       height: 100%;
     }
@@ -170,7 +171,7 @@ it('renders article teaser correctly', () => {
         <div
           className="c3"
         >
-          <div
+          <picture
             className="c4 c5"
             height="100%"
             width="100%"
@@ -187,7 +188,7 @@ it('renders article teaser correctly', () => {
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="100%"
             />
-          </div>
+          </picture>
         </div>
         <div
           className="c7"
@@ -243,6 +244,7 @@ it('renders press realese correctly', () => {
 
     .c4 {
       position: relative;
+      display: block;
       width: 80px;
       height: 80px;
     }
@@ -355,7 +357,7 @@ it('renders press realese correctly', () => {
         <div
           className="c3"
         >
-          <div
+          <picture
             className="c4 c5"
             height="80px"
             width="80px"
@@ -372,7 +374,7 @@ it('renders press realese correctly', () => {
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="80px"
             />
-          </div>
+          </picture>
         </div>
         <div
           className="c7"

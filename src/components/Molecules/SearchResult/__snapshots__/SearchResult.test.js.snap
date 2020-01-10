@@ -15,6 +15,7 @@ exports[`renders correctly in minimalist form 1`] = `
 
 .c4 {
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -125,7 +126,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <div
       className="c3"
     >
-      <div
+      <picture
         className="c4"
         height="auto"
         width="100%"
@@ -137,7 +138,7 @@ exports[`renders correctly in minimalist form 1`] = `
           height="auto"
           width="100%"
         />
-      </div>
+      </picture>
     </div>
     <div
       className="c6"
@@ -183,6 +184,7 @@ exports[`renders correctly with copy 1`] = `
 
 .c4 {
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -293,7 +295,7 @@ exports[`renders correctly with copy 1`] = `
     <div
       className="c3"
     >
-      <div
+      <picture
         className="c4"
         height="auto"
         width="100%"
@@ -305,7 +307,7 @@ exports[`renders correctly with copy 1`] = `
           height="auto"
           width="100%"
         />
-      </div>
+      </picture>
     </div>
     <div
       className="c6"
@@ -351,6 +353,7 @@ exports[`renders correctly with date 1`] = `
 
 .c4 {
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -461,7 +464,7 @@ exports[`renders correctly with date 1`] = `
     <div
       className="c3"
     >
-      <div
+      <picture
         className="c4"
         height="auto"
         width="100%"
@@ -473,7 +476,7 @@ exports[`renders correctly with date 1`] = `
           height="auto"
           width="100%"
         />
-      </div>
+      </picture>
     </div>
     <div
       className="c6"
@@ -513,6 +516,7 @@ exports[`renders correctly with date and type 1`] = `
 
 .c4 {
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -623,7 +627,7 @@ exports[`renders correctly with date and type 1`] = `
     <div
       className="c3"
     >
-      <div
+      <picture
         className="c4"
         height="auto"
         width="100%"
@@ -635,7 +639,7 @@ exports[`renders correctly with date and type 1`] = `
           height="auto"
           width="100%"
         />
-      </div>
+      </picture>
     </div>
     <div
       className="c6"
