@@ -8,7 +8,8 @@ import {
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue,
-  DataLayerInit
+  DataLayerInit,
+  DataLayerUpdate
 } from '../../../../utils/membershipHelper';
 import {
   Button,
@@ -49,7 +50,11 @@ const Signup = ({
   const dataLayer = (window.dataLayer = window.dataLayer || []);
 
   // This function is triggered when one of the money buy box is selected
-  const selectMoneyBuy = (copy, value) => {
+  const selectMoneyBuy = (copy, value, event) => {
+    // Stops outer label clickevent being passed down to the input, triggering twice
+    event.stopPropagation();
+    alert('selectMoneyBuy');
+    DataLayerUpdate(copy, value);
     if (isSelected) setIsSelected(false);
     if (errorMsg) setErrorMsg(false);
     // Check if input is highlighted and his value matches one of the money buy box
@@ -144,7 +149,9 @@ const Signup = ({
         isInputMatchBox={value}
         amount={value}
         description={description}
-        setOtherAmount={() => selectMoneyBuy(description, value)}
+        setOtherAmount={e => {
+          selectMoneyBuy(description, value, e);
+        }}
         key={value}
         name={`moneyBuy${index + 1}`}
         id={`moneyBuy-box${index + 1}`}

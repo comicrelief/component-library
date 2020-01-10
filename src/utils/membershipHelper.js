@@ -105,8 +105,12 @@ const DataLayerInit = (
   });
 
   // Push to the data layer
-  alert('pushing to DL');
+  // alert('pushing to DL');
   thisDataLayer.push(ecommerceObj);
+};
+
+const DataLayerUpdate = (input1, input2) => {
+  // alert(input1, input2);
 };
 
 export {
@@ -114,5 +118,6 @@ export {
   isAmountValid,
   isInputMatchBoxValue,
   handleDonateSubmission,
-  DataLayerInit
+  DataLayerInit,
+  DataLayerUpdate
 };

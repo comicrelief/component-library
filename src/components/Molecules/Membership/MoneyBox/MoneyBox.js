@@ -37,7 +37,9 @@ const MoneyBuy = ({
       type="button"
       label=""
       errorMsg=""
-      onClick={setOtherAmount}
+      onClick={e => {
+        setOtherAmount(e);
+      }}
     />
   );
 };
@@ -46,7 +48,7 @@ MoneyBuy.propTypes = {
   amount: PropTypes.number,
   currency: PropTypes.string,
   description: PropTypes.string,
-  // Function already set does'nt need to be passed as props
+  // Function already set doesn't need to be passed as props
   setOtherAmount: PropTypes.func.isRequired
 };
 
