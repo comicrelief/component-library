@@ -34,6 +34,18 @@ p,
 a,
 button {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+p,
+a,
+button {
+  margin-top: 0;
+}
+
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
   margin-top: 0;
 }
 
@@ -47,6 +59,16 @@ p:first-child {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #2c0230;
 }
 
 /* Blur effect lazyload images */
