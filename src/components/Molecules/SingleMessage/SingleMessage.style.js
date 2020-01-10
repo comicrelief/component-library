@@ -38,7 +38,7 @@ const Copy = styled.div`
   ${media('small')} {
     ${({ vhFull, fullImage }) =>
       vhFull || fullImage
-        ? 'min-height: calc(100vh - 90px); flex-direction: column; justify-content: center;'
+        ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
         : 'height: auto;'};
 
     ${({ hasVideo, fullImage }) =>
@@ -89,7 +89,6 @@ const Media = styled.div`
   width: 100%;
   ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
@@ -101,7 +100,9 @@ const Media = styled.div`
       : null};
   ${media('small')} {
     padding-bottom: ${({ landscapeVideo, hasVideo }) =>
-      landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
+      landscapeVideo && hasVideo
+        ? 'calc(56.25% / 2);'
+        : '0; min-height: calc(100vh - 5.625rem); display: flex;'};
   }
 `;
 
