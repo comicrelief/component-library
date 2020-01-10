@@ -131,7 +131,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -148,7 +148,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
   </div>
   <div
@@ -314,7 +314,7 @@ exports[`renders Single Message with Image correctly 1`] = `
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -331,7 +331,7 @@ exports[`renders Single Message with Image correctly 1`] = `
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
   </div>
   <div
@@ -496,7 +496,7 @@ exports[`renders Single Message with double image correctly 1`] = `
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -513,12 +513,12 @@ exports[`renders Single Message with double image correctly 1`] = `
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -535,7 +535,7 @@ exports[`renders Single Message with double image correctly 1`] = `
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
   </div>
   <div
@@ -721,7 +721,7 @@ exports[`renders Single Message with full width correctly 1`] = `
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -738,7 +738,7 @@ exports[`renders Single Message with full width correctly 1`] = `
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
   </div>
   <div
@@ -858,7 +858,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
     <div
       className="c2"
     >
-      <picture
+      <div
         className="c3"
         height="100%"
         width="100%"
@@ -875,7 +875,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
   </div>
 </div>

@@ -373,7 +373,7 @@ it('renders correctly', () => {
       className="c0"
       id="mship-1"
     >
-      <picture
+      <div
         className="c1 c2"
         height="100%"
         width="100%"
@@ -390,7 +390,7 @@ it('renders correctly', () => {
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
       <div
         className="c4"
       >

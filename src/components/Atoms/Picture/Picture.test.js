@@ -24,7 +24,7 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
-    <picture
+    <div
       className="c0"
       height="auto"
       width="100%"
@@ -41,7 +41,7 @@ it('renders correctly', () => {
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
       />
-    </picture>
+    </div>
   `);
 });
 
@@ -72,7 +72,7 @@ it('renders correctly with custom props', () => {
       object-fit: cover;
     }
 
-    <picture
+    <div
       className="c0"
       height="100px"
       width="200px"
@@ -89,6 +89,6 @@ it('renders correctly with custom props', () => {
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="200px"
       />
-    </picture>
+    </div>
   `);
 });

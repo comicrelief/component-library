@@ -9,7 +9,7 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-const Wrapper = styled.picture`
+const Wrapper = styled.div`
   position: relative;
   display: block;
   width: ${props => (props.width ? props.width : '100%')};

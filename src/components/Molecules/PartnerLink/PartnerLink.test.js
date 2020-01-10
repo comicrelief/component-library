@@ -123,7 +123,7 @@ it('renders correctly', () => {
       target="_self"
       type="standard"
     >
-      <picture
+      <div
         className="c2"
         height="auto"
         width="100%"
@@ -140,7 +140,7 @@ it('renders correctly', () => {
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
-      </picture>
+      </div>
       <span
         className="c4 c5 c6"
         color="white"

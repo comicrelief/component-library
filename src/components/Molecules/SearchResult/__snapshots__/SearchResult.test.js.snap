@@ -126,7 +126,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <div
       className="c3"
     >
-      <picture
+      <div
         className="c4"
         height="auto"
         width="100%"
@@ -138,7 +138,7 @@ exports[`renders correctly in minimalist form 1`] = `
           height="auto"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
     <div
       className="c6"
@@ -295,7 +295,7 @@ exports[`renders correctly with copy 1`] = `
     <div
       className="c3"
     >
-      <picture
+      <div
         className="c4"
         height="auto"
         width="100%"
@@ -307,7 +307,7 @@ exports[`renders correctly with copy 1`] = `
           height="auto"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
     <div
       className="c6"
@@ -464,7 +464,7 @@ exports[`renders correctly with date 1`] = `
     <div
       className="c3"
     >
-      <picture
+      <div
         className="c4"
         height="auto"
         width="100%"
@@ -476,7 +476,7 @@ exports[`renders correctly with date 1`] = `
           height="auto"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
     <div
       className="c6"
@@ -627,7 +627,7 @@ exports[`renders correctly with date and type 1`] = `
     <div
       className="c3"
     >
-      <picture
+      <div
         className="c4"
         height="auto"
         width="100%"
@@ -639,7 +639,7 @@ exports[`renders correctly with date and type 1`] = `
           height="auto"
           width="100%"
         />
-      </picture>
+      </div>
     </div>
     <div
       className="c6"
