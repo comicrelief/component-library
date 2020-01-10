@@ -89,7 +89,7 @@ const Media = styled.div`
   width: 100%;
   ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 100%;
+    height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
   position: relative;
