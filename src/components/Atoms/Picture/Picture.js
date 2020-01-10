@@ -9,14 +9,15 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-const Wrapper = styled.div`
+const Wrapper = styled.picture`
   position: relative;
+  display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
 `;
 
 const Image = styled.img`
-  display: block;
+  position: absolute;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
   object-fit: ${props =>

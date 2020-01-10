@@ -87,7 +87,7 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
-  ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
+  ${({ fullImage }) => (fullImage ? 'height: 200px;' : null)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
   }
@@ -100,9 +100,7 @@ const Media = styled.div`
       : null};
   ${media('small')} {
     padding-bottom: ${({ landscapeVideo, hasVideo }) =>
-      landscapeVideo && hasVideo
-        ? 'calc(56.25% / 2);'
-        : '0; min-height: calc(100vh - 5.625rem); display: flex;'};
+      landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
   }
 `;
 
