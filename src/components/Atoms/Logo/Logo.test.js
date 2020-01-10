@@ -24,7 +24,7 @@ it('renders correctly', () => {
       transform: rotate(-14deg);
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1150px) {
       .c0 {
         width: 60px;
         height: 60px;

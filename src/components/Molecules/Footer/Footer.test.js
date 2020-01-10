@@ -314,7 +314,7 @@ it('renders correctly', () => {
       margin-bottom: 5px;
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1150px) {
       .c18 {
         width: 70px;
         height: 70px;
