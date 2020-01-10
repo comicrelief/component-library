@@ -101,6 +101,7 @@ it('renders article teaser correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
     }
 
     .c7 {
@@ -313,6 +314,7 @@ it('renders press realese correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
     }
 
     .c7 {

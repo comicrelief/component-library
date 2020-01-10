@@ -48,7 +48,7 @@ const Copy = styled.div`
 
     flex-direction: column;
     justify-content: center;
-    padding: ${spacing('l')} ${spacing('xl')};
+    padding: ${spacing('xl')};
   }
   ${props =>
     props.fullImage &&
