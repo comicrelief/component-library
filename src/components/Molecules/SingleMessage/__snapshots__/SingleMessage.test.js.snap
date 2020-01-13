@@ -117,7 +117,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c2 img {
-    position: absolute;
+    position: relative;
   }
 }
 
@@ -300,7 +300,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c2 img {
-    position: absolute;
+    position: relative;
   }
 }
 
@@ -482,7 +482,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 @media (min-width:740px) {
   .c2 img {
-    position: absolute;
+    position: relative;
   }
 }
 

@@ -143,6 +143,7 @@ const SingleMessage = ({
                     isPlaying={isPlaying}
                     isBuffering={isBuffering}
                     hasVideo={hasVideo}
+                    fullImage={fullImage}
                     landscapeVideo={landscapeVideo}
                   >
                     <Picture
