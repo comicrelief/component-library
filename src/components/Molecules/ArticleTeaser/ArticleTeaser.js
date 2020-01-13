@@ -47,6 +47,7 @@ const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   ${({ category }) =>
     !category &&

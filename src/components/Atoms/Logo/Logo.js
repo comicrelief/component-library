@@ -25,7 +25,7 @@ const LogoWrapper = styled.div.attrs(() => ({
   width: ${props => props.sizeSm};
   height: ${props => props.sizeSm};
   transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
-  @media (min-width: 740px) {
+  @media ${({ theme }) => theme.breakpoint('nav')} {
     width: ${props => props.sizeMd};
     height: ${props => props.sizeMd};
   }

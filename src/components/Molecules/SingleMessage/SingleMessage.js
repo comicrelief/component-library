@@ -130,6 +130,7 @@ const SingleMessage = ({
                 hasVideo={hasVideo}
                 landscapeVideo={landscapeVideo}
                 fullImage={fullImage}
+                vhFull={vhFull}
               >
                 {hasVideo &&
                   hasParentID &&

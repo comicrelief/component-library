@@ -11,6 +11,7 @@ const IMAGE_FALLBACK =
 
 const Wrapper = styled.div`
   position: relative;
+  display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
 `;

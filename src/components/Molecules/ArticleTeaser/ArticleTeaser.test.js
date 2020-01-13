@@ -37,6 +37,7 @@ it('renders article teaser correctly', () => {
 
     .c4 {
       position: relative;
+      display: block;
       width: 100%;
       height: 100%;
     }
@@ -100,6 +101,7 @@ it('renders article teaser correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
     }
 
     .c7 {
@@ -243,6 +245,7 @@ it('renders press realese correctly', () => {
 
     .c4 {
       position: relative;
+      display: block;
       width: 80px;
       height: 80px;
     }
@@ -311,6 +314,7 @@ it('renders press realese correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
     }
 
     .c7 {
