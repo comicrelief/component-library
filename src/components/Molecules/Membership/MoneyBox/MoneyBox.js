@@ -27,6 +27,7 @@ const MoneyBuy = ({
   amount,
   currency,
   description,
+  position,
   ...rest
 }) => {
   return (
@@ -37,6 +38,7 @@ const MoneyBuy = ({
       type="button"
       label=""
       errorMsg=""
+      data-pos={position}
       onClick={e => {
         setOtherAmount(e);
       }}
@@ -49,7 +51,8 @@ MoneyBuy.propTypes = {
   currency: PropTypes.string,
   description: PropTypes.string,
   // Function already set doesn't need to be passed as props
-  setOtherAmount: PropTypes.func.isRequired
+  setOtherAmount: PropTypes.func.isRequired,
+  position: PropTypes.string.isRequired
 };
 
 MoneyBuy.defaultProps = {

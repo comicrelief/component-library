@@ -56,7 +56,8 @@ const handleDonateSubmission = (
       currentpageUrl.indexOf(thisMatch)
     );
   }
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+  // DEBUG
+  // window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
 // Sets-up initial DataLayer values
@@ -109,36 +110,44 @@ const DataLayerInit = (
   thisDataLayer.push(ecommerceObj);
 };
 
-const DataLayerUpdate = (thisValue, isAddUpdate, thisDataLayer) => {
-  // Construct generic ecommerce object for all use cases
-  // TODO: handle currency changes
+const DataLayerUpdate = (
+  amount,
+  updateType,
+  currentMoneyBuyPosition,
+  clientId,
+  cartId,
+  mbshipRowID,
+  thisDataLayer
+) => {
+  const isManualEntry = currentMoneyBuyPosition === '0';
+
   const ecommerceObj = {
     ecommerce: { currencyCode: 'GBP' },
-    event: isAddUpdate ? 'addToBasket' : 'removeFromBasket'
+    event: updateType === 'add' ? 'addToBasket' : 'removeFromBasket'
   };
 
-  const thisMoneyBuy = {
-    id: `moneybuy-${thisValue}`,
-    name: `moneybuy-${thisValue}`,
-    price: thisValue,
-    brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
-    // category: thisCartID,
-    // position: index + 1,
-    // list: `${thisClientID}_${thisRowID}`,
-    dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
-  };
+  const submitNameID = isManualEntry ? 'manual-entry' : `moneybuy-${amount}`;
 
-  // Add this 'button' object to the impressions array
-  ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
+  // Parse this to a 2-decimal place float, need to re-parse after toFixed
+  let thisAmount = parseFloat(amount).toFixed(2);
+  thisAmount = parseFloat(thisAmount);
+
+  ecommerceObj.ecommerce[updateType] = {
+    actionField: { list: `${clientId}_${mbshipRowID}` },
+    products: [
+      {
+        id: submitNameID,
+        name: submitNameID,
+        price: thisAmount,
+        brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
+        category: cartId,
+        quantity: 1,
+        dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+      }
+    ]
+  };
 
   thisDataLayer.push(ecommerceObj);
-
-  /*   if (isAddUpdate) {
-    // Add
-    alert(`Adding - ${input1} : ${input2} : ${isAddUpdate}`);
-  } else {
-    alert(`Removal - ${input1} : ${input2} : ${isAddUpdate}`);
-  } */
 
   return true;
 };

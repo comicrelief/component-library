@@ -29,7 +29,7 @@ const Signup = ({
   otherDescription,
   clientID,
   cartID,
-  mbshipID,
+  mbshipID: mbshipRowID,
   ...rest
 }) => {
   const [moneyBoxes, setMoneyBoxes] = useState({
@@ -40,11 +40,12 @@ const Signup = ({
 
   const [isSelected, setIsSelected] = useState(true); // Highlight one the money buy box when the page load
   const [errorMsg, setErrorMsg] = useState(false);
-  const [amountDonate, setAmountDonate] = useState('');
-  const [userInput, setUserInput] = useState('');
+  const [currentDonationAmount, setCurrentDonationAmount] = useState('');
+  const [userInputValue, setUserInputValue] = useState('');
   const [boxBorderColor, setBoxBorderColor] = useState('');
   const [inputBorderColor, setInputBorderColor] = useState(false);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
+  const [currentMoneyBuyPosition, setCurrentMoneyBuyPosition] = useState(true);
 
   // eslint-disable-next-line no-multi-assign
   const dataLayer = (window.dataLayer = window.dataLayer || []);
@@ -52,21 +53,24 @@ const Signup = ({
   // This function is triggered when one of the money buy box is selected
   const selectMoneyBuy = (copy, value, event) => {
     // Stops outer label clickevent being passed down to the input, triggering twice
-    event.stopPropagation();
+    if (event && event.type === 'click') {
+      event.stopPropagation();
+    }
 
-    DataLayerUpdate(value, 'add', dataLayer);
+    // Make a record of what position our currently selected amount is
+    setCurrentMoneyBuyPosition(event.target.getAttribute('data-pos'));
 
     if (isSelected) setIsSelected(false);
     if (errorMsg) setErrorMsg(false);
     // Check if input is highlighted and his value matches one of the money buy box
-    const isUserInputMatch = userInput * 1 === value; // convert string to number string * 1
+    const isUserInputMatch = userInputValue * 1 === value; // convert string to number string * 1
     if (inputBorderColor && !isUserInputMatch) {
       setInputBorderColor(false);
-      setUserInput('');
+      setUserInputValue('');
     }
     setBoxBorderColor(value);
     setMoneyBuyCopy(copy);
-    setAmountDonate(value);
+    setCurrentDonationAmount(value);
   };
 
   // Handle user other amount input
@@ -79,20 +83,27 @@ const Signup = ({
       setBoxBorderColor(false);
       if (errorMsg) setErrorMsg(false);
       setMoneyBuyCopy(description);
-      setAmountDonate(input);
+      setCurrentDonationAmount(input);
     }
     // Highlight both input and box
-    isInputMatchBoxValue(moneyBoxes, selectMoneyBuy, setAmountDonate, input);
+    isInputMatchBoxValue(
+      moneyBoxes,
+      selectMoneyBuy,
+      setCurrentDonationAmount,
+      input
+    );
     setInputBorderColor(true);
-    setUserInput(input);
+    setUserInputValue(input);
   };
 
   const highlightInput = (value, description) => {
+    // The manual input field always represnts the '0' MoneyBuy position in the DL
+    setCurrentMoneyBuyPosition('0');
     if (isSelected) setIsSelected(false);
     if (errorMsg) {
       setMoneyBuyCopy(false);
     } else if (!value) {
-      setAmountDonate(0);
+      setCurrentDonationAmount(0);
       setBoxBorderColor(false);
       setMoneyBuyCopy(description);
     }
@@ -108,7 +119,8 @@ const Signup = ({
       return (
         isSelected &&
         index === 1 &&
-        (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
+        (setMoneyBuyCopy(moneyBuy.description),
+        setCurrentDonationAmount(moneyBuy.value))
       );
     });
   }, [isSelected, regularGiving.moneybuys]);
@@ -116,13 +128,13 @@ const Signup = ({
   /* Set up default DataLayer obj on pageload */
   useEffect(() => {
     DataLayerInit(
-      mbshipID,
+      mbshipRowID,
       clientID,
       cartID,
       regularGiving.moneybuys,
       dataLayer
     );
-  }, [cartID, clientID, dataLayer, mbshipID, regularGiving.moneybuys]);
+  }, [cartID, clientID, dataLayer, mbshipRowID, regularGiving.moneybuys]);
 
   const submitDonation = (
     event,
@@ -133,7 +145,17 @@ const Signup = ({
     donateURL
   ) => {
     event.preventDefault();
+
     if (isAmountValid(amount)) {
+      DataLayerUpdate(
+        amount,
+        'add',
+        currentMoneyBuyPosition,
+        clientId,
+        cartId,
+        mbshipRowID,
+        dataLayer
+      );
       handleDonateSubmission(amount, clientId, cartId, mbshipId, donateURL);
     } else {
       setErrorMsg(true);
@@ -156,6 +178,7 @@ const Signup = ({
         key={value}
         name={`moneyBuy${index + 1}`}
         id={`moneyBuy-box${index + 1}`}
+        position={`${index + 1}`}
       />
     )
   );
@@ -166,10 +189,10 @@ const Signup = ({
         onSubmit={e =>
           submitDonation(
             e,
-            amountDonate,
+            currentDonationAmount,
             clientID,
             cartID,
-            mbshipID,
+            mbshipRowID,
             donateLink
           )
         }
@@ -192,7 +215,7 @@ const Signup = ({
             {...rest}
             max="5000"
             min="1"
-            value={userInput}
+            value={userInputValue}
             pattern="[^[0-9]+([,.][0-9]+)?$]"
             placeholder="0.00"
             onChange={e => handleChange(e.target.value, otherDescription)}
