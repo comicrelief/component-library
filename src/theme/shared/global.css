@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800&display=swap');
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -19,6 +22,9 @@ h1 {
   text-transform: uppercase;
   font-family: 'Anton', Impact, sans-serif;
   margin: 0 0 1rem 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 h1:only-child,
@@ -49,6 +55,11 @@ h5:first-child {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
 p {
   word-break: break-word;
 }
@@ -87,17 +98,22 @@ table td {
 
   /* only if you want to change the blur-up option from always to auto or want to use blur up effect without a lowsrc image. */
   font-family: 'blur-up: auto', 'object-fit: cover';
-
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .ls-blur-up-img {
+  -webkit-filter: blur(10px);
   filter: blur(10px);
   opacity: 1;
+  -webkit-transition: opacity 1000ms, -webkit-filter 1500ms;
+  transition: opacity 1000ms, -webkit-filter 1500ms;
   transition: opacity 1000ms, filter 1500ms;
+  transition: opacity 1000ms, filter 1500ms, -webkit-filter 1500ms;
 }
 
 .ls-blur-up-img.ls-inview.ls-original-loaded {
   opacity: 0;
+  -webkit-filter: blur(5px);
   filter: blur(5px);
 }
