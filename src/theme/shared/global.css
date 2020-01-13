@@ -98,17 +98,12 @@ table td {
 }
 
 .ls-blur-up-img {
-  -webkit-filter: blur(10px);
   filter: blur(10px);
   opacity: 1;
-  -webkit-transition: opacity 1000ms, -webkit-filter 1500ms;
-  transition: opacity 1000ms, -webkit-filter 1500ms;
   transition: opacity 1000ms, filter 1500ms;
-  transition: opacity 1000ms, filter 1500ms, -webkit-filter 1500ms;
 }
 
 .ls-blur-up-img.ls-inview.ls-original-loaded {
   opacity: 0;
-  -webkit-filter: blur(5px);
   filter: blur(5px);
 }
