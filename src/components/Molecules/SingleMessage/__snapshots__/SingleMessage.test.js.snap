@@ -115,12 +115,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   }
 }
 
-@media (min-width:740px) {
-  .c2 img {
-    position: relative;
-  }
-}
-
 <div
   className="c0"
   id="single-msg__5"
@@ -298,12 +292,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c2 img {
-    position: relative;
-  }
-}
-
 <div
   className="c0"
   id="single-msg__1"
@@ -477,12 +465,6 @@ exports[`renders Single Message with double image correctly 1`] = `
 @media (min-width:740px) {
   .c1 {
     padding-bottom: 0;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 img {
-    position: relative;
   }
 }
 
