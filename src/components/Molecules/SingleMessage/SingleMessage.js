@@ -130,6 +130,7 @@ const SingleMessage = ({
                 hasVideo={hasVideo}
                 landscapeVideo={landscapeVideo}
                 fullImage={fullImage}
+                vhFull={vhFull}
               >
                 {hasVideo &&
                   hasParentID &&
@@ -142,6 +143,7 @@ const SingleMessage = ({
                     isPlaying={isPlaying}
                     isBuffering={isBuffering}
                     hasVideo={hasVideo}
+                    fullImage={fullImage}
                     landscapeVideo={landscapeVideo}
                   >
                     <Picture
