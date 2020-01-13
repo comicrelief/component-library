@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800&display=swap');
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -22,8 +20,6 @@ h1 {
   text-transform: uppercase;
   font-family: 'Anton', Impact, sans-serif;
   margin: 0 0 1rem 0;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
 }
 
@@ -98,7 +94,6 @@ table td {
 
   /* only if you want to change the blur-up option from always to auto or want to use blur up effect without a lowsrc image. */
   font-family: 'blur-up: auto', 'object-fit: cover';
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
