@@ -78,7 +78,7 @@ const Copy = styled.div`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 100%;
             max-width ${container.small};
-            padding: ${spacing('l')};
+            padding: ${spacing('xl')};
           }
           margin: auto;
           padding: ${spacing('md')};
@@ -91,6 +91,9 @@ const Media = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
+    ${({ fullImage }) => (fullImage ? 'min-height: 500px;' : null)};
+    ${({ vhFull, fullImage }) =>
+      vhFull && fullImage ? 'min-height: calc(100vh - 5.625rem);' : null};
   }
   position: relative;
   ${({ doubleImage }) =>

@@ -696,6 +696,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   .c1 {
     height: auto;
     width: 100%;
+    min-height: 500px;
   }
 }
 
@@ -833,6 +834,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   .c1 {
     height: auto;
     width: 100%;
+    min-height: 500px;
   }
 }
 
@@ -950,7 +952,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 880px;
-    padding: 2rem;
+    padding: 4rem;
   }
 }
 
