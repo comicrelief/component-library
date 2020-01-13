@@ -143,7 +143,8 @@ const PlayButton = styled.button`
 const Image = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     img {
-      position: ${({ fullImage }) => (fullImage ? 'absolute' : null)};
+      position: ${({ fullImage, vhFull }) =>
+        fullImage || vhFull ? 'absolute' : null};
     }
   }
   width: 100%;

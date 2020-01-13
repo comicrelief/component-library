@@ -115,6 +115,12 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   }
 }
 
+@media (min-width:740px) {
+  .c2 img {
+    position: absolute;
+  }
+}
+
 <div
   className="c0"
   id="single-msg__5"
