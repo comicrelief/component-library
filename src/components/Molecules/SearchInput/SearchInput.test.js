@@ -185,6 +185,12 @@ it('renders correctly', () => {
       }
     }
 
+    @media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+      .c10 {
+        background: url(mock.asset) no-repeat right center;
+      }
+    }
+
     @media (min-width:740px) {
       .c10 {
         -webkit-mask-size: 100%;

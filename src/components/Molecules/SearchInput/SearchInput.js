@@ -11,7 +11,7 @@ import {
   ActionButton
 } from './SearchInput.style';
 
-const SearchInput = ({ onChange, placeholder, value }) => {
+const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
   return (
     <Wrapper>
       <InnerWrapper>
@@ -27,6 +27,7 @@ const SearchInput = ({ onChange, placeholder, value }) => {
               id="search"
               placeholder={placeholder}
               errorMsg=""
+              {...rest}
             />
           </SearchWrapper>
           <ActionWrapper>
