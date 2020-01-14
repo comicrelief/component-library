@@ -7,9 +7,7 @@ import {
   handleDonateSubmission,
   onKeyPress,
   isAmountValid,
-  isInputMatchBoxValue,
-  DataLayerInit,
-  DataLayerUpdate
+  isInputMatchBoxValue
 } from '../../../../utils/membershipHelper';
 import {
   Button,
@@ -22,6 +20,13 @@ import {
   MoneyBuys,
   AmountField
 } from '../Membership.style';
+
+import {
+  DataLayerInit,
+  DataLayerUpdate,
+  updateCookie,
+  checkCookie
+} from '../../../../utils/membershipDataLayer';
 
 const Signup = ({
   data: { regularGiving },
