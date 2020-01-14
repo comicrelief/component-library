@@ -1284,6 +1284,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/cookie@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.3.3.tgz#85bc74ba782fb7aa3a514d11767832b0e3bc6803"
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -1332,6 +1336,10 @@
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
+
+"@types/object-assign@^4.0.30":
+  version "4.0.30"
+  resolved "https://registry.yarnpkg.com/@types/object-assign/-/object-assign-4.0.30.tgz#8949371d5a99f4381ee0f1df0a9b7a187e07e652"
 
 "@types/q@^1.5.1":
   version "1.5.2"
@@ -3029,7 +3037,7 @@ cookie-signature@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
 
-cookie@0.4.0:
+cookie@0.4.0, cookie@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.0.tgz#beb437e7022b3b6d49019d088665303ebe9c14ba"
 
@@ -11581,6 +11589,15 @@ unist-util-visit@^1.1.0, unist-util-visit@^1.4.0:
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   dependencies:
     unist-util-visit-parents "^2.0.0"
+
+universal-cookie@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-4.0.3.tgz#c2fa59127260e6ad21ef3e0cdd66ad453cbc41f6"
+  dependencies:
+    "@types/cookie" "^0.3.3"
+    "@types/object-assign" "^4.0.30"
+    cookie "^0.4.0"
+    object-assign "^4.1.1"
 
 universal-user-agent@^4.0.0:
   version "4.0.0"

@@ -1,3 +1,5 @@
+import Cookies from 'universal-cookie';
+
 // this function prevent keyboard characters like  e, + , - to be passed on the input
 const onKeyPress = event => {
   const keyCode = event.keyCode || event.which;
@@ -57,6 +59,7 @@ const handleDonateSubmission = (
     );
   }
   // ** DEBUG! **
+  alert('submitting');
   // window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
@@ -109,6 +112,26 @@ const DataLayerInit = (
   thisDataLayer.push(ecommerceObj);
 };
 
+const updateCookie = (thisRowID, btnPos, addOrRemove) => {
+  const thisDomain = window.location.hostname;
+  const cookieName = 'mship-previous-amount';
+  let expireDate;
+
+  if (addOrRemove === 'add') {
+    expireDate = new Date(); // Current time
+    expireDate.setTime(expireDate.getTime() + 0.5 * 60 * 60 * 1000); // Add 30m
+  } else {
+    expireDate = new Date(1970, 1, 1, 0, 0, 0, 0);
+  }
+
+  const cookies = new Cookies();
+  cookies.set(`${cookieName}`, `${thisRowID}_${btnPos}`, {
+    path: '/',
+    expires: expireDate,
+    domain: thisDomain
+  });
+};
+
 const DataLayerUpdate = (
   amount,
   updateType,
@@ -138,13 +161,17 @@ const DataLayerUpdate = (
         id: submitNameID,
         name: submitNameID,
         price: thisAmount,
-        brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
-        category: cartId,
+        brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
         quantity: 1,
         dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
       }
     ]
   };
+
+  // Update our 'previously submitted cookie
+  if (updateType === 'add') {
+    updateCookie(mbshipRowID, currentMoneyBuyPosition, updateType);
+  }
 
   thisDataLayer.push(ecommerceObj);
 
