@@ -147,6 +147,7 @@ const Signup = ({
     event.preventDefault();
 
     if (isAmountValid(amount)) {
+      // Pass current values to function to fire DL event
       DataLayerUpdate(
         amount,
         'add',
@@ -176,8 +177,8 @@ const Signup = ({
           selectMoneyBuy(description, value, e);
         }}
         key={value}
-        name={`moneyBuy${index + 1}`}
-        id={`moneyBuy-box${index + 1}`}
+        name={`${mbshipRowID}--moneyBuy${index + 1}`}
+        id={`${mbshipRowID}--moneyBuy-box${index + 1}`}
         position={`${index + 1}`}
       />
     )

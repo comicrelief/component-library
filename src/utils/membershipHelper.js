@@ -56,7 +56,7 @@ const handleDonateSubmission = (
       currentpageUrl.indexOf(thisMatch)
     );
   }
-  // DEBUG
+  // ** DEBUG! **
   // window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
@@ -106,7 +106,6 @@ const DataLayerInit = (
   });
 
   // Push to the data layer
-  // alert('pushing to DL');
   thisDataLayer.push(ecommerceObj);
 };
 
@@ -128,9 +127,9 @@ const DataLayerUpdate = (
 
   const submitNameID = isManualEntry ? 'manual-entry' : `moneybuy-${amount}`;
 
-  // Parse this to a 2-decimal place float, need to re-parse after toFixed
-  let thisAmount = parseFloat(amount).toFixed(2);
-  thisAmount = parseFloat(thisAmount);
+  // Parse this to a 2-decimal place float and back to a string
+  let thisAmount = parseFloat(amount);
+  thisAmount = thisAmount.toFixed(2);
 
   ecommerceObj.ecommerce[updateType] = {
     actionField: { list: `${clientId}_${mbshipRowID}` },
