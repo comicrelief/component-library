@@ -139,7 +139,7 @@ it('renders correctly', () => {
       border: 0;
       outline: #E52630;
       text-indent: -9999px;
-      background-color: #c7c7c7;
+      background-color: #666;
       -webkit-mask: url(mock.asset) no-repeat right center;
       mask: url(mock.asset) no-repeat right center;
       -webkit-mask-size: 45%;
@@ -182,6 +182,12 @@ it('renders correctly', () => {
       .c10 {
         height: 100px;
         font-size: 2.625rem;
+      }
+    }
+
+    @media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+      .c10 {
+        background: url(mock.asset) no-repeat right center;
       }
     }
 
