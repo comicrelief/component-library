@@ -12,7 +12,6 @@ import {
 
 /* HeaderEsuWithIcon component */
 const HeaderEsuWithIcon = ({
-  campaign,
   title,
   topCopy,
   successCopy,
@@ -116,7 +115,6 @@ const HeaderEsuWithIcon = ({
 };
 
 HeaderEsuWithIcon.propTypes = {
-  campaign: PropTypes.string,
   isESUOpen: PropTypes.bool,
   title: PropTypes.node.isRequired,
   topCopy: PropTypes.node.isRequired,
@@ -130,7 +128,6 @@ HeaderEsuWithIcon.propTypes = {
 };
 
 HeaderEsuWithIcon.defaultProps = {
-  campaign: 'comicrelief',
   isESUOpen: false,
   buttonColor: 'red'
 };
