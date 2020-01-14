@@ -214,10 +214,7 @@ it('renders correctly', () => {
             <label
               className="c4 c5"
               htmlFor="search"
-              name="search"
               onChange={[Function]}
-              placeholder=""
-              value=""
             >
               <span
                 className="c6 c7"
@@ -246,8 +243,6 @@ it('renders correctly', () => {
               className="c4 c10"
               disabled="disabled"
               htmlFor=""
-              name="action"
-              placeholder=""
             >
               <span
                 className="c6 c7"
