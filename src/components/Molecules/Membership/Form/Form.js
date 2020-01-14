@@ -172,7 +172,7 @@ const Signup = ({
         boxBorderColor={boxBorderColor}
         isInputMatchBox={value}
         amount={value}
-        description={description}
+        description={`£${value}`}
         setOtherAmount={e => {
           selectMoneyBuy(description, value, e);
         }}
@@ -222,6 +222,7 @@ const Signup = ({
             onChange={e => handleChange(e.target.value, otherDescription)}
             onClick={e => highlightInput(e.target.value, otherDescription)}
             onKeyPress={e => onKeyPress(e)}
+            aria-label="Input a different amount"
           />
         </FormFieldset>
         <Button type="submit">Donate</Button>
