@@ -24,7 +24,6 @@ import {
 import {
   DataLayerInit,
   DataLayerUpdate,
-  updateCookie,
   checkCookie
 } from '../../../../utils/membershipDataLayer';
 
@@ -188,6 +187,10 @@ const Signup = ({
       />
     )
   );
+
+  useEffect(() => {
+    checkCookie(clientID, cartID, dataLayer);
+  });
 
   return (
     <FormWrapper>

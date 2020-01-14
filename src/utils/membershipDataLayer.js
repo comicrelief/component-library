@@ -21,12 +21,6 @@ const updateCookie = (thisRowID, btnPos, addOrRemove) => {
   });
 };
 
-const checkCookie = () => {
-  /*   const cookies = new Cookies();
-  const x = cookies.get(); */
-  alert('checkCookie');
-};
-
 // Sets-up initial DataLayer values
 const DataLayerInit = (
   thisRowID,
@@ -120,6 +114,29 @@ const DataLayerUpdate = (
 
   thisDataLayer.push(ecommerceObj);
   return true;
+};
+
+const checkCookie = (thisClientID, thisCartID, thisDataLayer) => {
+  const cookies = new Cookies();
+
+  // See if we've got a previously saved interaction in our cookie
+  let checkCookieValues = cookies.get('mship-previous-amount');
+
+  if (checkCookieValues) {
+    checkCookieValues = checkCookieValues.split('_');
+    const thisRowID = checkCookieValues[0];
+    const thisBtnPos = checkCookieValues[1];
+
+    // Remove this cookie
+    updateCookie(thisRowID, thisBtnPos, 'remove');
+
+    alert(
+      `thisClientID: ${thisClientID}, thisCartID: ${thisCartID}, thisDataLayer: ${thisDataLayer}`
+    );
+
+    // NEED TO DETERMINE AMOUNTS ETC. FROM THE SUPPLIED BTNPOS AND ROWID
+    //DataLayerUpdate(thisRowID, thisBtnPos, 'remove');
+  }
 };
 
 export { DataLayerInit, DataLayerUpdate, updateCookie, checkCookie };
