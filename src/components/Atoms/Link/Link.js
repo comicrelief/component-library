@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import StyledLink from './Link.style';
+import StyledLink, { HelperText } from './Link.style';
 
 import whiteListed from '../../../utils/whiteListed';
 
@@ -25,9 +25,10 @@ const Link = ({
    * If we haven't specifically set the target via props, check if
    * this is an internal link OR on our whitelist before making it a '_self' link
    */
+  const isExternalLink = domainRegEx.test(href);
+  const isWhiteListed = whiteListed(href);
+
   if (target === null) {
-    const isExternalLink = domainRegEx.test(href);
-    const isWhiteListed = whiteListed(href);
     window = !isExternalLink || isWhiteListed ? '_self' : '_blank';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
@@ -43,6 +44,7 @@ const Link = ({
       underline={underline}
     >
       {children}
+      {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
     </StyledLink>
   );
 };

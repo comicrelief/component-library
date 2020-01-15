@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import hideVisually from '../../../theme/shared/hideVisually';
 
 const buttonStyle = () => css`
   display: inline-block;
@@ -25,6 +26,10 @@ const linkStyle = () => css`
 
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
+`;
+
+export const HelperText = styled.span`
+  ${hideVisually};
 `;
 
 export default StyledLink;
