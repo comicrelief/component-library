@@ -308,7 +308,7 @@ exports[`renders correctly with error message 1`] = `
       title="Sign up for emails"
     >
       <img
-        alt="comicrelief"
+        alt="Sign up for emails"
         className="c2"
         src="mock.asset"
       />
@@ -346,10 +346,7 @@ exports[`renders correctly with error message 1`] = `
           <label
             className="c11 c12"
             htmlFor="email"
-            name="email"
             onChange={[Function]}
-            placeholder="example@youremail.com"
-            value=""
           >
             <span
               className="c13 c14"
@@ -414,7 +411,7 @@ exports[`renders correctly with error message 1`] = `
         title="Close email sign-up"
       >
         <img
-          alt="comicrelief"
+          alt="Close email sign-up"
           className="c2"
           src="mock.asset"
         />
@@ -465,7 +462,7 @@ exports[`renders correctly with modal closed 1`] = `
       title="Sign up for emails"
     >
       <img
-        alt="comicrelief"
+        alt="Sign up for emails"
         className="c2"
         src="mock.asset"
       />
@@ -758,7 +755,7 @@ exports[`renders correctly with modal open 1`] = `
       title="Sign up for emails"
     >
       <img
-        alt="comicrelief"
+        alt="Sign up for emails"
         className="c2"
         src="mock.asset"
       />
@@ -796,10 +793,7 @@ exports[`renders correctly with modal open 1`] = `
           <label
             className="c11 c12"
             htmlFor="email"
-            name="email"
             onChange={[Function]}
-            placeholder="example@youremail.com"
-            value=""
           >
             <span
               className="c13 c14"
@@ -858,7 +852,7 @@ exports[`renders correctly with modal open 1`] = `
         title="Close email sign-up"
       >
         <img
-          alt="comicrelief"
+          alt="Close email sign-up"
           className="c2"
           src="mock.asset"
         />
@@ -1027,7 +1021,7 @@ exports[`renders correctly with success message 1`] = `
       title="Sign up for emails"
     >
       <img
-        alt="comicrelief"
+        alt="Sign up for emails"
         className="c2"
         src="mock.asset"
       />
@@ -1082,7 +1076,7 @@ exports[`renders correctly with success message 1`] = `
         title="Close email sign-up"
       >
         <img
-          alt="comicrelief"
+          alt="Close email sign-up"
           className="c2"
           src="mock.asset"
         />

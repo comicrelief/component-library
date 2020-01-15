@@ -479,10 +479,7 @@ exports[`renders correctly 1`] = `
     <label
       className="c6 c7"
       htmlFor="email"
-      name="email"
       onChange={[Function]}
-      placeholder="example@youremail.com"
-      value=""
     >
       <span
         className="c8 c9"
