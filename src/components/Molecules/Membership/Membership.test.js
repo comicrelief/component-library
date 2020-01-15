@@ -452,10 +452,7 @@ it('renders correctly', () => {
                   aria-label="£5"
                   className="c13 c14"
                   htmlFor="mship-1--moneyBuy-box1"
-                  name="mship-1--moneyBuy1"
                   onClick={[Function]}
-                  placeholder=""
-                  value="£ 5"
                 >
                   <span
                     className="c15 "
@@ -481,10 +478,7 @@ it('renders correctly', () => {
                   aria-label="£10"
                   className="c13 c17"
                   htmlFor="mship-1--moneyBuy-box2"
-                  name="mship-1--moneyBuy2"
                   onClick={[Function]}
-                  placeholder=""
-                  value="£ 10"
                 >
                   <span
                     className="c15 "
@@ -510,10 +504,7 @@ it('renders correctly', () => {
                   aria-label="£20"
                   className="c13 c14"
                   htmlFor="mship-1--moneyBuy-box3"
-                  name="mship-1--moneyBuy3"
                   onClick={[Function]}
-                  placeholder=""
-                  value="£ 20"
                 >
                   <span
                     className="c15 "
@@ -552,14 +543,11 @@ it('renders correctly', () => {
                   htmlFor="mship-1--MoneyBuy-userInput"
                   max="5000"
                   min="1"
-                  name="membership_amount"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  placeholder="0.00"
                   step="0.01"
-                  value=""
                 >
                   <span
                     className="c15 "
