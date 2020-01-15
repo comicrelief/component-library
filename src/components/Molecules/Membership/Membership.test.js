@@ -38,14 +38,14 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c13 {
+    .c15 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c17 {
+    .c19 {
       font-size: 1rem;
       text-transform: inherit;
       font-weight: 500;
@@ -66,7 +66,7 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c14 {
+    .c16 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -84,27 +84,27 @@ it('renders correctly', () => {
       color: #2C0230;
     }
 
-    .c14:focus {
+    .c16:focus {
       border: 1px solid #666;
     }
 
-    .c14:focus::-webkit-input-placeholder {
+    .c16:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c14:focus::-moz-placeholder {
+    .c16:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c14:focus:-ms-input-placeholder {
+    .c16:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c14:focus::placeholder {
+    .c16:focus::placeholder {
       color: #666;
     }
 
-    .c11 {
+    .c13 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -114,11 +114,11 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c12 {
+    .c14 {
       display: block;
     }
 
-    .c12 input {
+    .c14 input {
       border: 2px solid #c7c7c7;
       font-size: 1.25rem;
       font-weight: 800;
@@ -128,11 +128,11 @@ it('renders correctly', () => {
       letter-spacing: -2px;
     }
 
-    .c15 {
+    .c17 {
       display: block;
     }
 
-    .c15 input {
+    .c17 input {
       border: 2px solid #c7c7c7;
       font-size: 1.25rem;
       font-weight: 800;
@@ -198,10 +198,6 @@ it('renders correctly', () => {
       padding: 1rem;
     }
 
-    .c9 >:not(:last-child) {
-      margin-bottom: 2rem;
-    }
-
     .c9 h3 {
       margin-top: 1rem;
     }
@@ -212,6 +208,21 @@ it('renders correctly', () => {
     }
 
     .c10 {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    .c10 >:not(:last-child):not(legend) {
+      margin-bottom: 2rem;
+    }
+
+    .c11 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .c12 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -222,22 +233,22 @@ it('renders correctly', () => {
       justify-content: space-between;
     }
 
-    .c10 label {
+    .c12 label {
       -webkit-flex: 0 0 30%;
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
-    .c10 label input {
+    .c12 label input {
       cursor: pointer;
       padding: 1rem;
     }
 
-    .c10 label:hover input {
+    .c12 label:hover input {
       border-color: #E52630;
     }
 
-    .c16 {
+    .c18 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -248,11 +259,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c18 {
+    .c20 {
       margin-right: auto;
     }
 
-    .c19 {
+    .c21 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -261,7 +272,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c19 span {
+    .c21 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -273,21 +284,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c19 input {
+    .c21 input {
       border: 2px solid #c7c7c7;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c19 input:focus {
+    .c21 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c21 {
+    .c23 {
       line-height: 1.5;
     }
 
-    .c20 {
+    .c22 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -299,14 +310,14 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c20:active,
-    .c20:focus,
-    .c20:hover {
+    .c22:active,
+    .c22:focus,
+    .c22:hover {
       background-color: #961D35;
     }
 
     @media (min-width:740px) {
-      .c14 {
+      .c16 {
         max-width: 290px;
       }
     }
@@ -354,7 +365,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c19 {
+      .c21 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -362,7 +373,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c20 {
+      .c22 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -419,151 +430,161 @@ it('renders correctly', () => {
             className="c9"
             onSubmit={[Function]}
           >
-            <h3
-              className="c7"
-              color="inherit"
-              size="s"
-            >
-              Choose your monthly donation
-            </h3>
-            <div
+            <fieldset
               className="c10"
             >
-              <label
-                aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                className="c11 c12"
-                htmlFor="moneyBuy-box1"
-                onClick={[Function]}
+              <legend
+                className="c11"
               >
-                <span
-                  className="c13 "
+                <h3
+                  className="c7"
                   color="inherit"
                   size="s"
                 >
-                  
-                </span>
-                <input
-                  aria-describedby="moneyBuy-box1"
-                  aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
-                  className="c14 c12"
-                  id="moneyBuy-box1"
-                  name="moneyBuy1"
+                  Choose your monthly donation
+                </h3>
+              </legend>
+              <div
+                className="c12"
+              >
+                <label
+                  aria-label="£5"
+                  className="c13 c14"
+                  htmlFor="mship-1--moneyBuy-box1"
                   onClick={[Function]}
-                  placeholder=""
-                  type="button"
-                  value="£ 5"
-                />
-                
-              </label>
-              <label
-                aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                className="c11 c15"
-                htmlFor="moneyBuy-box2"
-                onClick={[Function]}
-              >
-                <span
-                  className="c13 "
-                  color="inherit"
-                  size="s"
                 >
+                  <span
+                    className="c15 "
+                    color="inherit"
+                    size="s"
+                  >
+                    
+                  </span>
+                  <input
+                    aria-describedby="mship-1--moneyBuy-box1"
+                    aria-label="£5"
+                    className="c16 c14"
+                    id="mship-1--moneyBuy-box1"
+                    name="mship-1--moneyBuy1"
+                    onClick={[Function]}
+                    placeholder=""
+                    type="button"
+                    value="£ 5"
+                  />
                   
-                </span>
-                <input
-                  aria-describedby="moneyBuy-box2"
-                  aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
-                  className="c14 c15"
-                  id="moneyBuy-box2"
-                  name="moneyBuy2"
+                </label>
+                <label
+                  aria-label="£10"
+                  className="c13 c17"
+                  htmlFor="mship-1--moneyBuy-box2"
                   onClick={[Function]}
-                  placeholder=""
-                  type="button"
-                  value="£ 10"
-                />
-                
-              </label>
-              <label
-                aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                className="c11 c12"
-                htmlFor="moneyBuy-box3"
-                onClick={[Function]}
-              >
-                <span
-                  className="c13 "
-                  color="inherit"
-                  size="s"
                 >
+                  <span
+                    className="c15 "
+                    color="inherit"
+                    size="s"
+                  >
+                    
+                  </span>
+                  <input
+                    aria-describedby="mship-1--moneyBuy-box2"
+                    aria-label="£10"
+                    className="c16 c17"
+                    id="mship-1--moneyBuy-box2"
+                    name="mship-1--moneyBuy2"
+                    onClick={[Function]}
+                    placeholder=""
+                    type="button"
+                    value="£ 10"
+                  />
                   
-                </span>
-                <input
-                  aria-describedby="moneyBuy-box3"
-                  aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
-                  className="c14 c12"
-                  id="moneyBuy-box3"
-                  name="moneyBuy3"
+                </label>
+                <label
+                  aria-label="£20"
+                  className="c13 c14"
+                  htmlFor="mship-1--moneyBuy-box3"
                   onClick={[Function]}
-                  placeholder=""
-                  type="button"
-                  value="£ 20"
-                />
-                
-              </label>
-            </div>
-            <div
-              className="c16"
-            >
-              <span
-                className="c17 c18"
-                color="inherit"
-                size="s"
-              >
-                Other amount
-              </span>
-              <label
-                className="c11 c19"
-                htmlFor="MoneyBuy-userInput"
-                max="5000"
-                min="1"
-                onChange={[Function]}
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                pattern="[^[0-9]+([,.][0-9]+)?$]"
-                step="0.01"
+                >
+                  <span
+                    className="c15 "
+                    color="inherit"
+                    size="s"
+                  >
+                    
+                  </span>
+                  <input
+                    aria-describedby="mship-1--moneyBuy-box3"
+                    aria-label="£20"
+                    className="c16 c14"
+                    id="mship-1--moneyBuy-box3"
+                    name="mship-1--moneyBuy3"
+                    onClick={[Function]}
+                    placeholder=""
+                    type="button"
+                    value="£ 20"
+                  />
+                  
+                </label>
+              </div>
+              <div
+                className="c18"
               >
                 <span
-                  className="c13 "
+                  className="c19 c20"
                   color="inherit"
                   size="s"
                 >
-                  £
+                  Other amount
                 </span>
-                <input
-                  aria-describedby="MoneyBuy-userInput"
-                  className="c14 c19"
-                  id="MoneyBuy-userInput"
+                <label
+                  aria-label="Input a different amount"
+                  className="c13 c21"
+                  htmlFor="mship-1--MoneyBuy-userInput"
                   max="5000"
                   min="1"
-                  name="membership_amount"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  placeholder="0.00"
                   step="0.01"
-                  type="number"
-                  value=""
-                />
-                
-              </label>
-            </div>
-            <button
-              className="c20"
-              type="submit"
-            >
-              Donate
-            </button>
-            <p
-              className="c21"
-            />
+                >
+                  <span
+                    className="c15 "
+                    color="inherit"
+                    size="s"
+                  >
+                    £
+                  </span>
+                  <input
+                    aria-describedby="mship-1--MoneyBuy-userInput"
+                    aria-label="Input a different amount"
+                    className="c16 c21"
+                    id="mship-1--MoneyBuy-userInput"
+                    max="5000"
+                    min="1"
+                    name="membership_amount"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    pattern="[^[0-9]+([,.][0-9]+)?$]"
+                    placeholder="0.00"
+                    step="0.01"
+                    type="number"
+                    value=""
+                  />
+                  
+                </label>
+              </div>
+              <button
+                className="c22"
+                type="submit"
+              >
+                Donate
+              </button>
+              <p
+                className="c23"
+              />
+            </fieldset>
           </form>
         </div>
       </div>
