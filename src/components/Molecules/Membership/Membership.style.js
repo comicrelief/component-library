@@ -84,10 +84,6 @@ const Error = styled(Text)`
 const Form = styled.form`
   padding: ${spacing('md')};
 
-  > :not(:last-child) {
-    margin-bottom: ${spacing('l')};
-  }
-
   h3 {
     margin-top: ${spacing('md')};
   }
@@ -96,6 +92,21 @@ const Form = styled.form`
     max-width: 100%;
     margin: 0;
   }
+`;
+
+const OuterFieldset = styled.fieldset`
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  > :not(:last-child),
+  > :not(legend) {
+    margin-bottom: ${spacing('l')};
+  }
+`;
+const Legend = styled.legend`
+  margin: 0;
+  padding: 0;
 `;
 
 const MoneyBuys = styled.div`
@@ -198,5 +209,7 @@ export {
   Wrapper,
   Form,
   MoneyBuys,
-  AmountField
+  AmountField,
+  OuterFieldset,
+  Legend
 };
