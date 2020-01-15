@@ -430,10 +430,10 @@ it('renders correctly', () => {
               className="c10"
             >
               <label
-                aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
+                aria-label="£5"
                 className="c11 c12"
-                htmlFor="moneyBuy-box1"
-                name="moneyBuy1"
+                htmlFor="mship-1--moneyBuy-box1"
+                name="mship-1--moneyBuy1"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 5"
@@ -446,11 +446,11 @@ it('renders correctly', () => {
                   
                 </span>
                 <input
-                  aria-describedby="moneyBuy-box1"
-                  aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
+                  aria-describedby="mship-1--moneyBuy-box1"
+                  aria-label="£5"
                   className="c14 c12"
-                  id="moneyBuy-box1"
-                  name="moneyBuy1"
+                  id="mship-1--moneyBuy-box1"
+                  name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
                   type="button"
@@ -459,10 +459,10 @@ it('renders correctly', () => {
                 
               </label>
               <label
-                aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
+                aria-label="£10"
                 className="c11 c15"
-                htmlFor="moneyBuy-box2"
-                name="moneyBuy2"
+                htmlFor="mship-1--moneyBuy-box2"
+                name="mship-1--moneyBuy2"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 10"
@@ -475,11 +475,11 @@ it('renders correctly', () => {
                   
                 </span>
                 <input
-                  aria-describedby="moneyBuy-box2"
-                  aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
+                  aria-describedby="mship-1--moneyBuy-box2"
+                  aria-label="£10"
                   className="c14 c15"
-                  id="moneyBuy-box2"
-                  name="moneyBuy2"
+                  id="mship-1--moneyBuy-box2"
+                  name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
                   type="button"
@@ -488,10 +488,10 @@ it('renders correctly', () => {
                 
               </label>
               <label
-                aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
+                aria-label="£20"
                 className="c11 c12"
-                htmlFor="moneyBuy-box3"
-                name="moneyBuy3"
+                htmlFor="mship-1--moneyBuy-box3"
+                name="mship-1--moneyBuy3"
                 onClick={[Function]}
                 placeholder=""
                 value="£ 20"
@@ -504,11 +504,11 @@ it('renders correctly', () => {
                   
                 </span>
                 <input
-                  aria-describedby="moneyBuy-box3"
-                  aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
+                  aria-describedby="mship-1--moneyBuy-box3"
+                  aria-label="£20"
                   className="c14 c12"
-                  id="moneyBuy-box3"
-                  name="moneyBuy3"
+                  id="mship-1--moneyBuy-box3"
+                  name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
                   type="button"
@@ -528,8 +528,9 @@ it('renders correctly', () => {
                 Other amount
               </span>
               <label
+                aria-label="Input a different amount"
                 className="c11 c19"
-                htmlFor="MoneyBuy-userInput"
+                htmlFor="mship-1--MoneyBuy-userInput"
                 max="5000"
                 min="1"
                 name="membership_amount"
@@ -549,9 +550,10 @@ it('renders correctly', () => {
                   £
                 </span>
                 <input
-                  aria-describedby="MoneyBuy-userInput"
+                  aria-describedby="mship-1--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c14 c19"
-                  id="MoneyBuy-userInput"
+                  id="mship-1--MoneyBuy-userInput"
                   max="5000"
                   min="1"
                   name="membership_amount"

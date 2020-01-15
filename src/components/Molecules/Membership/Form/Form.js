@@ -127,11 +127,11 @@ const Signup = ({
         boxBorderColor={boxBorderColor}
         isInputMatchBox={value}
         amount={value}
-        description={description}
+        description={`£${value}`}
         setOtherAmount={() => selectMoneyBuy(description, value)}
         key={value}
-        name={`moneyBuy${index + 1}`}
-        id={`moneyBuy-box${index + 1}`}
+        name={`${mbshipID}--moneyBuy${index + 1}`}
+        id={`${mbshipID}--moneyBuy-box${index + 1}`}
       />
     )
   );
@@ -163,7 +163,7 @@ const Signup = ({
             inputBorderColor={inputBorderColor}
             label="£"
             errorMsg=""
-            id="MoneyBuy-userInput"
+            id={`${mbshipID}--MoneyBuy-userInput`}
             showLabel
             {...rest}
             max="5000"
@@ -174,6 +174,7 @@ const Signup = ({
             onChange={e => handleChange(e.target.value, otherDescription)}
             onClick={e => hightlightInput(e.target.value, otherDescription)}
             onKeyPress={e => onKeyPress(e)}
+            aria-label="Input a different amount"
           />
         </FormFieldset>
         <Button type="submit">Donate</Button>
