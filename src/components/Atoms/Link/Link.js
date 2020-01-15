@@ -25,10 +25,9 @@ const Link = ({
    * If we haven't specifically set the target via props, check if
    * this is an internal link OR on our whitelist before making it a '_self' link
    */
-  const isExternalLink = domainRegEx.test(href);
-  const isWhiteListed = whiteListed(href);
-
   if (target === null) {
+    const isExternalLink = domainRegEx.test(href);
+    const isWhiteListed = whiteListed(href);
     window = !isExternalLink || isWhiteListed ? '_self' : '_blank';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
