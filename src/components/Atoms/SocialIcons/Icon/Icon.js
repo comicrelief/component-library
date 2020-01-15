@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import hideVisually from '../../../../theme/shared/hideVisually';
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -19,6 +20,10 @@ const StyledImage = styled.img`
   width: 100%;
 `;
 
+const HelperText = styled.span`
+  ${hideVisually};
+`;
+
 const Icon = ({ href, target, icon, brand, title, ...restProps }) => (
   <StyledLink
     href={href}
@@ -28,6 +33,9 @@ const Icon = ({ href, target, icon, brand, title, ...restProps }) => (
     rel="noopener noreferrer"
   >
     <StyledImage src={icon} alt={brand} />
+    {title !== 'Sign up for emails' && (
+      <HelperText>(opens in new window)</HelperText>
+    )}
   </StyledLink>
 );
 
