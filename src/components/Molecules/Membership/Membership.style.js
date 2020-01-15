@@ -99,8 +99,7 @@ const OuterFieldset = styled.fieldset`
   margin: 0;
   border: none;
 
-  > :not(:last-child),
-  > :not(legend) {
+  > :not(:last-child):not(legend) {
     margin-bottom: ${spacing('l')};
   }
 `;
