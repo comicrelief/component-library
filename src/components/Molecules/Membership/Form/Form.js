@@ -18,7 +18,9 @@ import {
   Label,
   Form,
   MoneyBuys,
-  AmountField
+  AmountField,
+  OuterFieldset,
+  Legend
 } from '../Membership.style';
 
 const Signup = ({
@@ -127,11 +129,11 @@ const Signup = ({
         boxBorderColor={boxBorderColor}
         isInputMatchBox={value}
         amount={value}
-        description={description}
+        description={`£${value}`}
         setOtherAmount={() => selectMoneyBuy(description, value)}
         key={value}
-        name={`moneyBuy${index + 1}`}
-        id={`moneyBuy-box${index + 1}`}
+        name={`${mbshipID}--moneyBuy${index + 1}`}
+        id={`${mbshipID}--moneyBuy-box${index + 1}`}
       />
     )
   );
@@ -150,39 +152,45 @@ const Signup = ({
           )
         }
       >
-        <Text tag="h3">Choose your monthly donation</Text>
-        <MoneyBuys>{MoneyBoxes}</MoneyBuys>
-        <FormFieldset>
-          <Label size="s" weight="500">
-            Other amount
-          </Label>
-          <AmountField
-            step="0.01"
-            name="membership_amount"
-            type="number"
-            inputBorderColor={inputBorderColor}
-            label="£"
-            errorMsg=""
-            id="MoneyBuy-userInput"
-            showLabel
-            {...rest}
-            max="5000"
-            min="1"
-            value={userInput}
-            pattern="[^[0-9]+([,.][0-9]+)?$]"
-            placeholder="0.00"
-            onChange={e => handleChange(e.target.value, otherDescription)}
-            onClick={e => hightlightInput(e.target.value, otherDescription)}
-            onKeyPress={e => onKeyPress(e)}
-          />
-        </FormFieldset>
-        <Button type="submit">Donate</Button>
-        {errorMsg && (
-          <Error tag="p">
-            Please enter a number between 1 and 5000, and up to 2 decimal places
-          </Error>
-        )}
-        {moneyBuyCopy && <Copy as="p">{moneyBuyCopy}</Copy>}
+        <OuterFieldset>
+          <Legend>
+            <Text tag="h3">Choose your monthly donation</Text>
+          </Legend>
+          <MoneyBuys>{MoneyBoxes}</MoneyBuys>
+          <FormFieldset>
+            <Label size="s" weight="500">
+              Other amount
+            </Label>
+            <AmountField
+              step="0.01"
+              name="membership_amount"
+              type="number"
+              inputBorderColor={inputBorderColor}
+              label="£"
+              errorMsg=""
+              id={`${mbshipID}--MoneyBuy-userInput`}
+              showLabel
+              {...rest}
+              max="5000"
+              min="1"
+              value={userInput}
+              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              placeholder="0.00"
+              onChange={e => handleChange(e.target.value, otherDescription)}
+              onClick={e => hightlightInput(e.target.value, otherDescription)}
+              onKeyPress={e => onKeyPress(e)}
+              aria-label="Input a different amount"
+            />
+          </FormFieldset>
+          <Button type="submit">Donate</Button>
+          {errorMsg && (
+            <Error tag="p">
+              Please enter a number between 1 and 5000, and up to 2 decimal
+              places
+            </Error>
+          )}
+          {moneyBuyCopy && <Copy as="p">{moneyBuyCopy}</Copy>}
+        </OuterFieldset>
       </Form>
     </FormWrapper>
   );

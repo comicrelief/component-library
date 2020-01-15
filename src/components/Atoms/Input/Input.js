@@ -77,8 +77,18 @@ const TextLabel = styled(Text)`
 
 const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
   const error = errorMsg && errorMsg.length > 0;
+  const labelRest = { ...rest };
+  // Remove unrelated attributes to label element
+  Object.keys(labelRest).map(propKey => {
+    if (['value', 'name', 'placeholder', 'role'].includes(propKey)) {
+      delete labelRest[propKey];
+    } else if (propKey.match(/^aria-/) && propKey !== 'aria-label') {
+      delete labelRest[propKey];
+    }
+    return true;
+  });
   return (
-    <Label htmlFor={id} {...rest}>
+    <Label htmlFor={id} {...labelRest}>
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
       </TextLabel>
