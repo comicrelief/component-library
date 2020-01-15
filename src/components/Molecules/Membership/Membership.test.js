@@ -433,10 +433,7 @@ it('renders correctly', () => {
                 aria-label="a regular supply of toiletries for someone living in a refugee camp in Serbia."
                 className="c11 c12"
                 htmlFor="moneyBuy-box1"
-                name="moneyBuy1"
                 onClick={[Function]}
-                placeholder=""
-                value="£ 5"
               >
                 <span
                   className="c13 "
@@ -462,10 +459,7 @@ it('renders correctly', () => {
                 aria-label="a potentially lifesaving call for a man at risk of suicide in the UK."
                 className="c11 c15"
                 htmlFor="moneyBuy-box2"
-                name="moneyBuy2"
                 onClick={[Function]}
-                placeholder=""
-                value="£ 10"
               >
                 <span
                   className="c13 "
@@ -491,10 +485,7 @@ it('renders correctly', () => {
                 aria-label="the distribution of enough surplus food for a school breakfast club to feed 80 children."
                 className="c11 c12"
                 htmlFor="moneyBuy-box3"
-                name="moneyBuy3"
                 onClick={[Function]}
-                placeholder=""
-                value="£ 20"
               >
                 <span
                   className="c13 "
@@ -532,14 +523,11 @@ it('renders correctly', () => {
                 htmlFor="MoneyBuy-userInput"
                 max="5000"
                 min="1"
-                name="membership_amount"
                 onChange={[Function]}
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 pattern="[^[0-9]+([,.][0-9]+)?$]"
-                placeholder="0.00"
                 step="0.01"
-                value=""
               >
                 <span
                   className="c13 "
