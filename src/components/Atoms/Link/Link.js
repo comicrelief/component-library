@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import StyledLink from './Link.style';
+import StyledLink, { HelperText } from './Link.style';
 
 import whiteListed from '../../../utils/whiteListed';
 
@@ -43,6 +43,7 @@ const Link = ({
       underline={underline}
     >
       {children}
+      {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
     </StyledLink>
   );
 };
