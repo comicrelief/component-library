@@ -46,7 +46,7 @@ Footer.propTypes = {
 Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
-  campaign: 'comicrelief'
+  campaign: 'Comic Relief'
 };
 
 export default Footer;

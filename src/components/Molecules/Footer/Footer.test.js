@@ -506,7 +506,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
-                href="https://www.facebook.com/comicrelief"
+                href="https://www.facebook.com/Comic Relief"
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Facebook page"
@@ -528,7 +528,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
-                href="https://twitter.com/comicrelief"
+                href="https://twitter.com/Comic Relief"
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Twitter account"
@@ -572,7 +572,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
-                href="https://www.instagram.com/comicrelief"
+                href="https://www.instagram.com/Comic Relief"
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Instagram account"
@@ -1212,7 +1212,7 @@ it('renders correctly', () => {
             color="red"
             href="/"
             target="_self"
-            title="Go to comicrelief homepage"
+            title="Go to Comic Relief homepage"
             type="standard"
           >
             <div
