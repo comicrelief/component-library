@@ -15,16 +15,16 @@ import {
 } from './Footer.style';
 
 const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
+  // Concatenate campaign in one string
+  const campaignName = campaign
+    .split(' ')
+    .join('')
+    .toLowerCase();
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
         <SocialIconWrapper>
-          <SocialIcons
-            campaign={campaign
-              .split(' ')
-              .join('')
-              .toLowerCase()}
-          />
+          <SocialIcons campaign={campaignName} />
         </SocialIconWrapper>
         <FooterNav navItems={navItems} />
         <FooterBranding>
