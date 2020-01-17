@@ -19,21 +19,21 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c22 {
+    .c23 {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c20 {
+    .c21 {
       object-fit: cover;
       width: auto;
       display: block;
       height: auto;
     }
 
-    .c19 {
+    .c20 {
       display: inline-block;
       z-index: 3;
       width: 70px;
@@ -316,21 +316,31 @@ it('renders correctly', () => {
       margin: 0 0 25px;
     }
 
-    .c21 {
+    .c22 {
       display: block;
       width: 100%;
       height: 100%;
       text-align: left;
     }
 
-    .c21 p {
+    .c22 p {
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 5px;
     }
 
+    .c19 {
+      color: transparent;
+      margin-right: auto;
+      border: 0;
+    }
+
+    .c19:hover {
+      border: 0;
+    }
+
     @media (min-width:1150px) {
-      .c19 {
+      .c20 {
         width: 70px;
         height: 70px;
       }
@@ -472,7 +482,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c21 p {
+      .c22 p {
         font-size: 16px;
         line-height: 27px;
       }
@@ -1197,23 +1207,31 @@ it('renders correctly', () => {
         <div
           className="c18"
         >
-          <div
-            className="c19"
-            rotate={1}
+          <a
+            className="c11 c19"
+            color="red"
+            href="/"
+            target="_self"
+            title="Go to comicrelief homepage"
+            type="standard"
           >
-            <img
-              alt="Comic Relief logo - home page"
-              aria-label="logo"
+            <div
               className="c20"
-              src="mock.asset"
-            />
-          </div>
+              rotate={1}
+            >
+              <img
+                alt="Comic Relief logo"
+                className="c21"
+                src="mock.asset"
+              />
+            </div>
+          </a>
         </div>
         <div
-          className="c21"
+          className="c22"
         >
           <p
-            className="c22"
+            className="c23"
             color="white"
             size="s"
           >

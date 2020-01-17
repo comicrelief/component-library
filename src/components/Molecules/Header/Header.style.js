@@ -33,9 +33,7 @@ const InnerWrapper = styled.div`
 /**
  * Brand wrapper
  */
-const Brand = styled(Link).attrs(() => ({
-  title: 'Home'
-}))`
+const Brand = styled(Link)`
   ${zIndex('high')};
   color: transparent;
   margin-right: auto;

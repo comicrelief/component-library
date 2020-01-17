@@ -9,7 +9,7 @@ const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
-        <Brand href="/" home>
+        <Brand href="/" title={`Go to ${campaign} homepage`}>
           <Logo rotate={rotate} campaign={campaign} />
         </Brand>
         <MainNav navItems={navItems} />
@@ -30,7 +30,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   navItems: {},
-  campaign: 'comicrelief',
+  campaign: 'Comic Relief',
   rotate: false
 };
 

@@ -572,7 +572,7 @@ it('renders correctly', () => {
           color="red"
           href="/"
           target="_self"
-          title="Home"
+          title="Go to Comic Relief homepage"
           type="standard"
         >
           <div
@@ -580,8 +580,7 @@ it('renders correctly', () => {
             rotate={0}
           >
             <img
-              alt="Comic Relief logo - home page"
-              aria-label="logo"
+              alt="Sport Relief logo"
               className="c5"
               src="mock.asset"
             />

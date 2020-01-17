@@ -35,11 +35,8 @@ const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
       <Image
         src={campaign === 'comicrelief' ? crLogo : srLogo}
         alt={
-          campaign === 'comicrelief'
-            ? 'Comic Relief logo - home page'
-            : 'Sport Relief logo - home page'
+          campaign === 'comicrelief' ? 'Comic Relief logo' : 'Sport Relief logo'
         }
-        aria-label="logo"
       />
     </LogoWrapper>
   );

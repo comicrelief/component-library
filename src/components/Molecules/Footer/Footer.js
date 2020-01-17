@@ -10,7 +10,8 @@ import {
   InnerWrapper,
   FooterBranding,
   FooterCopyright,
-  SocialIconWrapper
+  SocialIconWrapper,
+  Brand
 } from './Footer.style';
 
 const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
@@ -22,7 +23,9 @@ const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
         </SocialIconWrapper>
         <FooterNav navItems={navItems} />
         <FooterBranding>
-          <Logo sizeSm="70px" sizeMd="70px" rotate />
+          <Brand href="/" title={`Go to ${campaign} homepage`}>
+            <Logo sizeSm="70px" sizeMd="70px" rotate />
+          </Brand>
         </FooterBranding>
         <FooterCopyright>
           <Text tag="p" color="white">
