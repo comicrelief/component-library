@@ -580,7 +580,7 @@ it('renders correctly', () => {
             rotate={0}
           >
             <img
-              alt="Comic Relief homepage"
+              alt="Comic Relief logo - home page"
               aria-label="logo"
               className="c5"
               src="mock.asset"
