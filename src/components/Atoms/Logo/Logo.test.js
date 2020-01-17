@@ -32,12 +32,11 @@ it('renders correctly', () => {
     }
 
     <div
-      aria-label="logo"
       className="c0"
       rotate={1}
     >
       <img
-        alt="Comic Relief logo"
+        alt="Comic Relief homepage"
         aria-label="logo"
         className="c1"
         src="mock.asset"

@@ -1198,12 +1198,11 @@ it('renders correctly', () => {
           className="c18"
         >
           <div
-            aria-label="logo"
             className="c19"
             rotate={1}
           >
             <img
-              alt="Comic Relief logo"
+              alt="Comic Relief homepage"
               aria-label="logo"
               className="c20"
               src="mock.asset"

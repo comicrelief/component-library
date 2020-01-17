@@ -17,9 +17,7 @@ const Image = styled.img`
  * Logo wrapper
  */
 
-const LogoWrapper = styled.div.attrs(() => ({
-  'aria-label': 'logo'
-}))`
+const LogoWrapper = styled.div`
   display: inline-block;
   ${zIndex('high')}
   width: ${props => props.sizeSm};
@@ -37,7 +35,9 @@ const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
       <Image
         src={campaign === 'comicrelief' ? crLogo : srLogo}
         alt={
-          campaign === 'comicrelief' ? 'Comic Relief logo' : 'Sport Relief logo'
+          campaign === 'comicrelief'
+            ? 'Comic Relief homepage'
+            : 'Sport Relief homepage'
         }
         aria-label="logo"
       />

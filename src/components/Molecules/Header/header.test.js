@@ -576,12 +576,11 @@ it('renders correctly', () => {
           type="standard"
         >
           <div
-            aria-label="logo"
             className="c4"
             rotate={0}
           >
             <img
-              alt="Comic Relief logo"
+              alt="Comic Relief homepage"
               aria-label="logo"
               className="c5"
               src="mock.asset"
