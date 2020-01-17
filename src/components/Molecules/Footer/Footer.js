@@ -19,7 +19,12 @@ const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
         <SocialIconWrapper>
-          <SocialIcons campaign={campaign} />
+          <SocialIcons
+            campaign={campaign
+              .split(' ')
+              .join('')
+              .toLowerCase()}
+          />
         </SocialIconWrapper>
         <FooterNav navItems={navItems} />
         <FooterBranding>
