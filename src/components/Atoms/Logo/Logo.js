@@ -36,8 +36,8 @@ const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
         src={campaign === 'comicrelief' ? crLogo : srLogo}
         alt={
           campaign === 'comicrelief'
-            ? 'Comic Relief homepage'
-            : 'Sport Relief homepage'
+            ? 'Comic Relief logo - home page'
+            : 'Sport Relief logo - home page'
         }
         aria-label="logo"
       />
