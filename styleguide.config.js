@@ -11,7 +11,6 @@ module.exports = {
   },
   skipComponentsWithoutExample: true,
   ignore: [
-    '**/assets/**',
     '**/data/**',
     '**/__tests__/**',
     '**/*.test.{js,jsx,ts,tsx}',
