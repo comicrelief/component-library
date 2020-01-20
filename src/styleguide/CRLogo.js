@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Logo from './assets/pattern_logo.png';
 
@@ -11,7 +10,7 @@ const Image = styled.img`
 export function LogoRenderer() {
   return (
     <a href="/" title="Go to homepage" rel="noopener noreferrer">
-      <Image src={Logo} alt="Comic Relief Logo" />
+      <Image src={Logo} alt="Comic Relief Pattern Library Logo" />
     </a>
   );
 }
