@@ -15,7 +15,7 @@ import {
 } from './Footer.style';
 
 const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
-  // Concatenate campaign in one string
+  // Remove white scape between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
     <FooterWrapper navItems {...rest}>
