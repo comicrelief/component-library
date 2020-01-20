@@ -58,8 +58,11 @@ const ActionWrapper = styled(SearchWrapper)`
 
 const ActionButton = styled(SearchField)`
   text-indent: -9999px;
-  background-color: ${({ theme }) => theme.color('grey_medium')};
+  background-color: ${({ theme }) => theme.color('grey_for_forms')};
   mask: url(${searchIcon}) no-repeat right center;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background: url(${searchIcon}) no-repeat right center;
+  }
   mask-size: 45%;
   appearance: none;
   ${media('small')} {

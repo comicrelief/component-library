@@ -139,7 +139,7 @@ it('renders correctly', () => {
       border: 0;
       outline: #E52630;
       text-indent: -9999px;
-      background-color: #c7c7c7;
+      background-color: #666;
       -webkit-mask: url(mock.asset) no-repeat right center;
       mask: url(mock.asset) no-repeat right center;
       -webkit-mask-size: 45%;
@@ -185,6 +185,12 @@ it('renders correctly', () => {
       }
     }
 
+    @media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+      .c10 {
+        background: url(mock.asset) no-repeat right center;
+      }
+    }
+
     @media (min-width:740px) {
       .c10 {
         -webkit-mask-size: 100%;
@@ -208,10 +214,7 @@ it('renders correctly', () => {
             <label
               className="c4 c5"
               htmlFor="search"
-              name="search"
               onChange={[Function]}
-              placeholder=""
-              value=""
             >
               <span
                 className="c6 c7"
@@ -240,8 +243,6 @@ it('renders correctly', () => {
               className="c4 c10"
               disabled="disabled"
               htmlFor=""
-              name="action"
-              placeholder=""
             >
               <span
                 className="c6 c7"

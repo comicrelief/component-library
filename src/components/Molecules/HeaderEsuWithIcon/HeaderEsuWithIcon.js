@@ -12,7 +12,6 @@ import {
 
 /* HeaderEsuWithIcon component */
 const HeaderEsuWithIcon = ({
-  campaign,
   title,
   topCopy,
   successCopy,
@@ -81,8 +80,8 @@ const HeaderEsuWithIcon = ({
       <CloseButton
         onClick={e => handleESUOpen(e)}
         icon={HeaderIcons.close.icon}
-        title="Close email sign-up"
-        brand={campaign}
+        title={HeaderIcons.close.title}
+        brand={HeaderIcons.close.title}
         target="self"
         role="button"
         href="#"
@@ -98,7 +97,7 @@ const HeaderEsuWithIcon = ({
         onClick={e => handleESUOpen(e)}
         icon={HeaderIcons.email.icon}
         title={HeaderIcons.email.title}
-        brand={campaign}
+        brand={HeaderIcons.email.title}
         target="self"
         role="button"
         href="#"
@@ -116,7 +115,6 @@ const HeaderEsuWithIcon = ({
 };
 
 HeaderEsuWithIcon.propTypes = {
-  campaign: PropTypes.string,
   isESUOpen: PropTypes.bool,
   title: PropTypes.node.isRequired,
   topCopy: PropTypes.node.isRequired,
@@ -130,7 +128,6 @@ HeaderEsuWithIcon.propTypes = {
 };
 
 HeaderEsuWithIcon.defaultProps = {
-  campaign: 'comicrelief',
   isESUOpen: false,
   buttonColor: 'red'
 };
