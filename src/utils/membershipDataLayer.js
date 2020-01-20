@@ -1,7 +1,7 @@
 import Cookies from 'universal-cookie';
 
 /* Add/remove the cookie used to track previous interaction */
-const updateCookie = (thisRowID, btnPos, addOrRemove) => {
+const updateCookie = (thisRowID, btnPos, thisAmount, addOrRemove) => {
   const cookies = new Cookies();
   const thisDomain = window.location.hostname;
   let expireDate;
@@ -10,11 +10,11 @@ const updateCookie = (thisRowID, btnPos, addOrRemove) => {
     expireDate = new Date(); // Current time
     expireDate.setTime(expireDate.getTime() + 0.5 * 60 * 60 * 1000); // Add 30m
   } else {
-    // Effectively acts as a removal of the cookie by setting expiry in the past
+    // Set an expired date to act as removal of the cookie
     expireDate = new Date(1970, 1, 1, 0, 0, 0, 0);
   }
 
-  cookies.set('mship-previous-amount', `${thisRowID}_${btnPos}`, {
+  cookies.set('mship-previous-amount', `${thisRowID}_${btnPos}_${thisAmount}`, {
     path: '/',
     expires: expireDate,
     domain: thisDomain
@@ -53,7 +53,7 @@ const DataLayerInit = (
       id: `moneybuy-${moneyBuy.value}`,
       name: `moneybuy-${moneyBuy.value}`,
       price: moneyBuy.value,
-      brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF .. also, is this right? "brand"?
+      brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
       category: thisCartID,
       position: index + 1,
       list: `${thisClientID}_${thisRowID}`,
@@ -109,7 +109,7 @@ const DataLayerUpdate = (
 
   // Update our 'previously submitted cookie
   if (updateType === 'add') {
-    updateCookie(mbshipRowID, currentMoneyBuyPosition, updateType);
+    updateCookie(mbshipRowID, currentMoneyBuyPosition, thisAmount, updateType);
   }
 
   thisDataLayer.push(ecommerceObj);
@@ -126,16 +126,21 @@ const checkCookie = (thisClientID, thisCartID, thisDataLayer) => {
     checkCookieValues = checkCookieValues.split('_');
     const thisRowID = checkCookieValues[0];
     const thisBtnPos = checkCookieValues[1];
+    const thisAmount = checkCookieValues[2];
 
     // Remove this cookie
-    updateCookie(thisRowID, thisBtnPos, 'remove');
+    updateCookie(thisRowID, thisBtnPos, thisAmount, 'remove');
 
-    alert(
-      `thisClientID: ${thisClientID}, thisCartID: ${thisCartID}, thisDataLayer: ${thisDataLayer}`
+    // Trigger 'remove' event for these values
+    DataLayerUpdate(
+      thisAmount,
+      'remove',
+      thisBtnPos,
+      thisClientID,
+      thisCartID,
+      thisRowID,
+      thisDataLayer
     );
-
-    // NEED TO DETERMINE AMOUNTS ETC. FROM THE SUPPLIED BTNPOS AND ROWID
-    //DataLayerUpdate(thisRowID, thisBtnPos, 'remove');
   }
 };
 

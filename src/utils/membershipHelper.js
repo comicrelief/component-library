@@ -56,9 +56,7 @@ const handleDonateSubmission = (
       currentpageUrl.indexOf(thisMatch)
     );
   }
-  // ** DEBUG! **
-  alert('submitting');
-  // window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
 export {

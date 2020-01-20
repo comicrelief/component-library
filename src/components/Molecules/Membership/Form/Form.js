@@ -190,6 +190,10 @@ const Signup = ({
     )
   );
 
+  /*
+   * Check to see if we've got any previously 'added' values in the last 30min, if so 'remove'
+   * them from the 'basket' to avoid duplicates in the DL for the same user session
+   */
   useEffect(() => {
     checkCookie(clientID, cartID, dataLayer);
   });
