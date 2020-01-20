@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import Link from '../../Atoms/Link/Link';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -48,6 +49,15 @@ const FooterCopyright = styled.div`
   }
 `;
 
+const Brand = styled(Link)`
+  color: transparent;
+  margin-right: auto;
+  border: 0;
+  :hover {
+    border: 0;
+  }
+`;
+
 const SocialIconWrapper = styled.div``;
 
 export {
@@ -55,5 +65,6 @@ export {
   InnerWrapper,
   FooterCopyright,
   FooterBranding,
-  SocialIconWrapper
+  SocialIconWrapper,
+  Brand
 };

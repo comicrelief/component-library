@@ -25,7 +25,7 @@ import Link from '../../Atoms/Link/Link';
 
 <Header
   navItems={data}
-  campaign="sportrelief"
+  campaign="Sport Relief"
   metaIcons={
     <>
       <Link color="green" type="button" href="/donation">

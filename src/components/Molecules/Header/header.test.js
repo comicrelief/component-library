@@ -572,17 +572,15 @@ it('renders correctly', () => {
           color="red"
           href="/"
           target="_self"
-          title="Home"
+          title="Go to Comic Relief homepage"
           type="standard"
         >
           <div
-            aria-label="logo"
             className="c4"
             rotate={0}
           >
             <img
               alt="Comic Relief logo"
-              aria-label="logo"
               className="c5"
               src="mock.asset"
             />

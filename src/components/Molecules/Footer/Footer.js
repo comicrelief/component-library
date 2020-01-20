@@ -10,19 +10,24 @@ import {
   InnerWrapper,
   FooterBranding,
   FooterCopyright,
-  SocialIconWrapper
+  SocialIconWrapper,
+  Brand
 } from './Footer.style';
 
 const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
+  // Remove white space between words
+  const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
         <SocialIconWrapper>
-          <SocialIcons campaign={campaign} />
+          <SocialIcons campaign={campaignName} />
         </SocialIconWrapper>
         <FooterNav navItems={navItems} />
         <FooterBranding>
-          <Logo sizeSm="70px" sizeMd="70px" rotate />
+          <Brand href="/" title={`Go to ${campaign} homepage`}>
+            <Logo sizeSm="70px" sizeMd="70px" rotate campaign={campaign} />
+          </Brand>
         </FooterBranding>
         <FooterCopyright>
           <Text tag="p" color="white">
@@ -43,7 +48,7 @@ Footer.propTypes = {
 Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
-  campaign: 'comicrelief'
+  campaign: 'Comic Relief'
 };
 
 export default Footer;
