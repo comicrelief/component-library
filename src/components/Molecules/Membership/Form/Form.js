@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -53,8 +53,7 @@ const Signup = ({
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
   const [currentMoneyBuyPosition, setCurrentMoneyBuyPosition] = useState(true);
 
-  // eslint-disable-next-line no-multi-assign
-  const dataLayer = (window.dataLayer = window.dataLayer || []);
+  const dataLayer = useRef(null);
 
   // This function is triggered when one of the money buy box is selected
   const selectMoneyBuy = (copy, value, event) => {
@@ -63,7 +62,7 @@ const Signup = ({
       event.stopPropagation();
     }
 
-    // Make a record of what position our currently selected amount is
+    // Make a record of what position our currently-selected amount is
     setCurrentMoneyBuyPosition(event.target.getAttribute('data-pos'));
 
     if (isSelected) setIsSelected(false);
@@ -117,6 +116,11 @@ const Signup = ({
   };
 
   useEffect(() => {
+    // eslint--next-line no-multi-assign
+    dataLayer.current = window.dataLayer = window.dataLayer || [];
+  }, []);
+
+  useEffect(() => {
     regularGiving.moneybuys.map((moneyBuy, index) => {
       const box = `box${index + 1}`;
       // eslint-disable-next-line no-shadow
@@ -138,9 +142,9 @@ const Signup = ({
       clientID,
       cartID,
       regularGiving.moneybuys,
-      dataLayer
+      dataLayer.current
     );
-  }, [cartID, clientID, dataLayer, mbshipRowID, regularGiving.moneybuys]);
+  }, [cartID, clientID, mbshipRowID, regularGiving.moneybuys]);
 
   const submitDonation = (
     event,
@@ -161,7 +165,7 @@ const Signup = ({
         clientId,
         cartId,
         mbshipRowID,
-        dataLayer
+        dataLayer.current
       );
       handleDonateSubmission(amount, clientId, cartId, mbshipId, donateURL);
     } else {
@@ -195,7 +199,7 @@ const Signup = ({
    * them from the 'basket' to avoid duplicates in the DL for the same user session
    */
   useEffect(() => {
-    checkCookie(clientID, cartID, dataLayer);
+    checkCookie(clientID, cartID, dataLayer.current);
   });
 
   return (
