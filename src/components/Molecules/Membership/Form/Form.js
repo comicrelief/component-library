@@ -117,7 +117,7 @@ const Signup = ({
 
   useEffect(() => {
     // eslint--next-line no-multi-assign
-    dataLayer.current = window.dataLayer = window.dataLayer || [];
+    dataLayer.current = window.dataLayer ? window.dataLayer : [];
   }, []);
 
   useEffect(() => {
