@@ -33,9 +33,11 @@ const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
   return (
     <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
       <Image
-        src={campaign === 'comicrelief' ? crLogo : srLogo}
+        src={campaign === 'Comic Relief' ? crLogo : srLogo}
         alt={
-          campaign === 'comicrelief' ? 'Comic Relief logo' : 'Sport Relief logo'
+          campaign === 'Comic Relief'
+            ? 'Comic Relief logo'
+            : 'Sport Relief logo'
         }
       />
     </LogoWrapper>
@@ -54,7 +56,7 @@ Logo.defaultProps = {
   rotate: false,
   sizeSm: '50px',
   sizeMd: '60px',
-  campaign: 'comicrelief'
+  campaign: 'Comic Relief'
 };
 
 export default Logo;

@@ -16,10 +16,7 @@ import {
 
 const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
   // Concatenate campaign in one string
-  const campaignName = campaign
-    .split(' ')
-    .join('')
-    .toLowerCase();
+  const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
     <FooterWrapper navItems {...rest}>
       <InnerWrapper>
@@ -29,7 +26,7 @@ const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
         <FooterNav navItems={navItems} />
         <FooterBranding>
           <Brand href="/" title={`Go to ${campaign} homepage`}>
-            <Logo sizeSm="70px" sizeMd="70px" rotate />
+            <Logo sizeSm="70px" sizeMd="70px" rotate campaign={campaign} />
           </Brand>
         </FooterBranding>
         <FooterCopyright>

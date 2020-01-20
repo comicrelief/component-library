@@ -580,7 +580,7 @@ it('renders correctly', () => {
             rotate={0}
           >
             <img
-              alt="Sport Relief logo"
+              alt="Comic Relief logo"
               className="c5"
               src="mock.asset"
             />
