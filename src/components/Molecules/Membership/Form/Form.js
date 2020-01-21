@@ -113,7 +113,7 @@ const Signup = ({
     donateURL
   ) => {
     event.preventDefault();
-    if (isAmountValid(amount)) {
+    if (isAmountValid(amount) && !errorMsg) {
       handleDonateSubmission(amount, clientId, cartId, mbshipId, donateURL);
     } else {
       setErrorMsg(true);
