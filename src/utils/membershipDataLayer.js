@@ -1,0 +1,147 @@
+import Cookies from 'universal-cookie';
+
+/* Add/remove the cookie used to track previous interaction */
+const updateCookie = (thisRowID, btnPos, thisAmount, addOrRemove) => {
+  const cookies = new Cookies();
+  const thisDomain = window.location.hostname;
+  let expireDate;
+
+  if (addOrRemove === 'add') {
+    expireDate = new Date(); // Current time
+    expireDate.setTime(expireDate.getTime() + 0.5 * 60 * 60 * 1000); // Add 30m
+  } else {
+    // Set an expired date to act as removal of the cookie
+    expireDate = new Date(1970, 1, 1, 0, 0, 0, 0);
+  }
+
+  cookies.set('mship-previous-amount', `${thisRowID}_${btnPos}_${thisAmount}`, {
+    path: '/',
+    expires: expireDate,
+    domain: thisDomain
+  });
+};
+
+// Sets-up initial DataLayer values
+const DataLayerInit = (
+  thisRowID,
+  thisClientID,
+  thisCartID,
+  theseMoneyBuys,
+  thisDataLayer
+) => {
+  // Construct object to push to datalayer, staring with manual entry 'Other Amount' field
+  const ecommerceObj = {
+    ecommerce: {
+      currencyCode: 'GBP',
+      impressions: [
+        {
+          id: 'manual-entry',
+          name: 'manual-entry',
+          price: 0.0,
+          category: thisCartID,
+          position: 0,
+          list: `${thisClientID}_${thisRowID}`,
+          dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+        }
+      ]
+    }
+  };
+
+  // Iterate over all moneybuys
+  theseMoneyBuys.map((moneyBuy, index) => {
+    const thisMoneyBuy = {
+      id: `moneybuy-${moneyBuy.value}`,
+      name: `moneybuy-${moneyBuy.value}`,
+      price: moneyBuy.value,
+      brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+      category: thisCartID,
+      position: index + 1,
+      list: `${thisClientID}_${thisRowID}`,
+      dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+    };
+
+    // Add this 'button' object to the impressions array
+    ecommerceObj.ecommerce.impressions.push(thisMoneyBuy);
+
+    return true;
+  });
+
+  // Push to the data layer
+  thisDataLayer.push(ecommerceObj);
+};
+
+/* Call Datalayer events */
+const DataLayerUpdate = (
+  amount,
+  updateType,
+  currentMoneyBuyPosition,
+  clientId,
+  cartId,
+  mbshipRowID,
+  thisDataLayer
+) => {
+  const isManualEntry = currentMoneyBuyPosition === '0';
+
+  const ecommerceObj = {
+    ecommerce: { currencyCode: 'GBP' },
+    event: updateType === 'add' ? 'addToBasket' : 'removeFromBasket'
+  };
+
+  const submitNameID = isManualEntry ? 'manual-entry' : `moneybuy-${amount}`;
+
+  // Parse this to a 2-decimal place float and back to a string
+  let thisAmount = parseFloat(amount);
+  thisAmount = thisAmount.toFixed(2);
+
+  ecommerceObj.ecommerce[updateType] = {
+    actionField: { list: `${clientId}_${mbshipRowID}` },
+    products: [
+      {
+        id: submitNameID,
+        name: submitNameID,
+        price: thisAmount,
+        brand: 'membership-payment', // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+        quantity: 1,
+        dimenstion10: 'membership-payment' // ** CURRENTLY MONTHLY ONLY, NEEDS UPDATE TO ALLOW SINGLE DONATION STUFF
+      }
+    ]
+  };
+
+  // Update our 'previously submitted cookie
+  if (updateType === 'add') {
+    updateCookie(mbshipRowID, currentMoneyBuyPosition, thisAmount, updateType);
+  }
+
+  thisDataLayer.push(ecommerceObj);
+  return true;
+};
+
+const checkCookie = (thisClientID, thisCartID, thisDataLayer) => {
+  const cookies = new Cookies();
+
+  // See if we've got a previously saved interaction in our cookie
+  let checkCookieValues = cookies.get('mship-previous-amount');
+
+  if (checkCookieValues) {
+    checkCookieValues = checkCookieValues.split('_');
+    const thisRowID = checkCookieValues[0];
+    const thisBtnPos = checkCookieValues[1];
+    const thisAmount = checkCookieValues[2];
+
+    // Remove this cookie
+    updateCookie(thisRowID, thisBtnPos, thisAmount, 'remove');
+
+    // Trigger 'remove' event for these values
+    DataLayerUpdate(
+      thisAmount,
+      'remove',
+      thisBtnPos,
+      thisClientID,
+      thisCartID,
+      thisRowID,
+      thisDataLayer
+    );
+  }
+};
+
+export { DataLayerInit, DataLayerUpdate, updateCookie, checkCookie };

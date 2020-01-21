@@ -450,6 +450,7 @@ it('renders correctly', () => {
                 <label
                   aria-label="£5"
                   className="c13 c14"
+                  data-pos="1"
                   htmlFor="mship-1--moneyBuy-box1"
                   onClick={[Function]}
                 >
@@ -464,6 +465,7 @@ it('renders correctly', () => {
                     aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£5"
                     className="c16 c14"
+                    data-pos="1"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
@@ -476,6 +478,7 @@ it('renders correctly', () => {
                 <label
                   aria-label="£10"
                   className="c13 c17"
+                  data-pos="2"
                   htmlFor="mship-1--moneyBuy-box2"
                   onClick={[Function]}
                 >
@@ -490,6 +493,7 @@ it('renders correctly', () => {
                     aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£10"
                     className="c16 c17"
+                    data-pos="2"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
@@ -502,6 +506,7 @@ it('renders correctly', () => {
                 <label
                   aria-label="£20"
                   className="c13 c14"
+                  data-pos="3"
                   htmlFor="mship-1--moneyBuy-box3"
                   onClick={[Function]}
                 >
@@ -516,6 +521,7 @@ it('renders correctly', () => {
                     aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£20"
                     className="c16 c14"
+                    data-pos="3"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
