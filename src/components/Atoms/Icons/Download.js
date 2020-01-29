@@ -17,8 +17,8 @@ const Download = ({ colour, ...rest }) => {
         x2="1.03912"
         y2="15.3984"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="17.0939"
@@ -26,8 +26,8 @@ const Download = ({ colour, ...rest }) => {
         x2="17.0939"
         y2="15.3984"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="1.75"
@@ -35,8 +35,8 @@ const Download = ({ colour, ...rest }) => {
         x2="16.7508"
         y2="19.25"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="0.75"
@@ -45,8 +45,8 @@ const Download = ({ colour, ...rest }) => {
         y2="-0.75"
         transform="matrix(4.37114e-08 1 1 -4.37114e-08 9.91882 0)"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="0.75"
@@ -55,8 +55,8 @@ const Download = ({ colour, ...rest }) => {
         y2="-0.75"
         transform="matrix(0.707107 0.707107 0.707107 -0.707107 2.26862 6.20935)"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="15.7852"
@@ -64,8 +64,8 @@ const Download = ({ colour, ...rest }) => {
         x2="9.29875"
         y2="13.7565"
         stroke={colour}
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );

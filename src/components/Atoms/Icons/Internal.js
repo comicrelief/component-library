@@ -17,8 +17,8 @@ const Internal = ({ colour, ...rest }) => {
         x2="19.25"
         y2="9.71143"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="12.5992"
@@ -26,8 +26,8 @@ const Internal = ({ colour, ...rest }) => {
         x2="20.0001"
         y2="9.40088"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <line
         x1="0.75"
@@ -36,8 +36,8 @@ const Internal = ({ colour, ...rest }) => {
         y2="-0.75"
         transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );
