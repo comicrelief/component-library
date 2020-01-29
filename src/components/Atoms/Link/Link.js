@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText } from './Link.style';
-
 import whiteListed from '../../../utils/whiteListed';
 
 const domainRegEx = new RegExp(
@@ -19,6 +18,7 @@ const Link = ({
   type,
   home,
   underline,
+  icon,
   ...rest
 }) => {
   /**
@@ -44,6 +44,7 @@ const Link = ({
     >
       {children}
       {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
+      {icon}
     </StyledLink>
   );
 };
@@ -61,7 +62,8 @@ Link.propTypes = {
   underline: PropTypes.bool,
   /** Link url */
   href: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  icon: PropTypes.node
 };
 
 Link.defaultProps = {

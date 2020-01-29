@@ -3,12 +3,14 @@ import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
 const buttonStyle = () => css`
-  display: inline-block;
+  display: inline-flex;
   padding: ${spacing('md')} ${spacing('m')};
   text-align: center;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
+  line-height: 1.4rem;
+  transition: background 0.5s;
   cursor: pointer;
   ${({ color, theme }) =>
     color ? theme.buttonColors(color) : theme.buttonColors('red')};
