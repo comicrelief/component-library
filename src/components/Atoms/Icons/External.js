@@ -14,7 +14,7 @@ const External = ({ colour, ...rest }) => {
       <line
         x1="1.25"
         y1="18.7932"
-        x2="2.28333"
+        x2="1.28333"
         y2="4.79321"
         stroke="#F4F3F5"
         strokeWidth="1.5"
