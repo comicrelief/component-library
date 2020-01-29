@@ -44,7 +44,7 @@ const linkStyle = () => css`
 export const IconWrapper = styled.span`
   margin: auto;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-left: ${spacing('sm')};
+    margin-left: ${spacing('md')};
   }
 `;
 

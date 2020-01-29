@@ -73,7 +73,7 @@ it('renders a button with an icon', () => {
 
     @media (min-width:740px) {
       .c1 {
-        margin-left: 0.5rem;
+        margin-left: 1rem;
       }
     }
 
