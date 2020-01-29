@@ -42,13 +42,19 @@ it('renders correctly', () => {
     }
 
     .c5 {
-      display: inline-block;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
       padding: 1rem 1.5rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
       border-radius: 2rem;
+      line-height: 1.4rem;
+      -webkit-transition: background 0.5s;
+      transition: background 0.5s;
       cursor: pointer;
       background-color: #FFFFFF;
       color: #2C0230;
