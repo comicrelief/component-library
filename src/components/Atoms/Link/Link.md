@@ -20,6 +20,59 @@
 </div>
 ```
 
+## Iconography
+
+```js
+import { External, Download, Favourite, Internal } from '../Icons/index';
+
+<div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<Internal colour="#ffffff" />}
+    >
+      Internal link
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<External colour="#ffffff" />}
+    >
+      External link
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<Download colour="#ffffff" />}
+    >
+      Download link
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<Favourite colour="#ffffff" />}
+    >
+      Favourite link
+    </Link>
+  </div>
+</div>;
+```
+
 ```js
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>

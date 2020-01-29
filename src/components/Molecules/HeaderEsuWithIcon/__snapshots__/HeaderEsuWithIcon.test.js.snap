@@ -21,21 +21,31 @@ exports[`renders correctly with error message 1`] = `
 }
 
 .c19 {
-  display: inline-block;
-  padding: 1rem 1.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.875rem 1.5rem 0.625rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
+  line-height: 1.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
 }
 
 .c19:hover {
-  background-color: #FFCECE;
-  color: #2C0230;
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c19 span {
+  text-indent: 0;
 }
 
 .c15 {
@@ -278,6 +288,14 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
+  .c19 {
+    text-indent: 0;
+    width: auto;
+    padding: 0.875rem 1.5rem 0.625rem;
+  }
+}
+
+@media (min-width:740px) {
   .c15 {
     max-width: 290px;
   }
@@ -507,21 +525,31 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 .c17 {
-  display: inline-block;
-  padding: 1rem 1.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.875rem 1.5rem 0.625rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
+  line-height: 1.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
 }
 
 .c17:hover {
-  background-color: #FFCECE;
-  color: #2C0230;
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c17 span {
+  text-indent: 0;
 }
 
 .c15 {
@@ -742,6 +770,14 @@ exports[`renders correctly with modal open 1`] = `
 
 .c5 input {
   font-size: 1rem;
+}
+
+@media (min-width:740px) {
+  .c17 {
+    text-indent: 0;
+    width: auto;
+    padding: 0.875rem 1.5rem 0.625rem;
+  }
 }
 
 @media (min-width:740px) {

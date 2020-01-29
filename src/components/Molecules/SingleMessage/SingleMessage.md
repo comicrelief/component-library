@@ -18,9 +18,11 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="p" color="white">
     description
   </Text>
-  <Link href="/" type="button" color="white">
-    CTA
-  </Link>
+  <span>
+    <Link href="/" type="button" color="white">
+      CTA
+    </Link>
+  </span>
 </SingleMessage>;
 ```
 
@@ -46,9 +48,11 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="p" color="white">
     description
   </Text>
-  <Link href="/" type="button" color="white">
-    CTA
-  </Link>
+  <span>
+    <Link href="/" type="button" color="white">
+      CTA
+    </Link>
+  </span>
 </SingleMessage>;
 ```
 

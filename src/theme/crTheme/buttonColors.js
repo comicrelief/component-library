@@ -137,8 +137,8 @@ const buttonColors = {
   red: {
     background: color('red'),
     color: color('white'),
-    hoverBackground: color('coral_light'),
-    hoverColor: color('black')
+    hoverBackground: color('red_dark'),
+    hoverColor: color('white')
   },
   teal: {
     background: color('teal'),

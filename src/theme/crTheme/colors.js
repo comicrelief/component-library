@@ -29,6 +29,7 @@ const colors = {
   purple_dark: '#48276E',
   purple_light: '#DFC6F6',
   red: '#E52630',
+  red_dark: '#890B11',
   teal: '#22CFD8',
   teal_dark: '#13767C',
   teal_light: '#86E4E9',

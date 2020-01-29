@@ -42,13 +42,19 @@ it('renders correctly', () => {
     }
 
     .c5 {
-      display: inline-block;
-      padding: 1rem 1.5rem;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      padding: 0.875rem 1.5rem 0.625rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
       border-radius: 2rem;
+      line-height: 1.4rem;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
       cursor: pointer;
       background-color: #FFFFFF;
       color: #2C0230;
@@ -57,6 +63,10 @@ it('renders correctly', () => {
     .c5:hover {
       background-color: #918791;
       color: #2C0230;
+    }
+
+    .c5 span {
+      text-indent: 0;
     }
 
     .c0 {
@@ -92,6 +102,14 @@ it('renders correctly', () => {
       color: #FFFFFF;
       padding: 0 0.25rem 1px;
       border-bottom: 2px solid;
+    }
+
+    @media (min-width:740px) {
+      .c5 {
+        text-indent: 0;
+        width: auto;
+        padding: 0.875rem 1.5rem 0.625rem;
+      }
     }
 
     @media (min-width:740px) {
