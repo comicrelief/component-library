@@ -52,6 +52,10 @@ it('renders a button with an icon', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+    .c1 {
+      margin: auto;
+    }
+
     .c0 {
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -67,6 +71,12 @@ it('renders a button with an icon', () => {
       border-bottom: 2px solid #2C0230;
     }
 
+    @media (min-width:740px) {
+      .c1 {
+        margin-left: 0.5rem;
+      }
+    }
+
     <a
       className="c0"
       color="red"
@@ -75,42 +85,46 @@ it('renders a button with an icon', () => {
       type="standard"
     >
       Internal link
-      <svg
-        fill="none"
-        height="19"
-        viewBox="0 0 22 19"
-        width="22"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        className="c1"
       >
-        <line
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-          x1="0.75"
-          x2="19.25"
-          y1="9.71143"
-          y2="9.71143"
-        />
-        <line
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-          x1="12.5992"
-          x2="20.0001"
-          y1="2"
-          y2="9.40088"
-        />
-        <line
-          stroke="white"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-          transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
-          x1="0.75"
-          x2="11.2164"
-          y1="-0.75"
-          y2="-0.75"
-        />
-      </svg>
+        <svg
+          fill="none"
+          height="19"
+          viewBox="0 0 22 19"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+            x1="0.75"
+            x2="19.25"
+            y1="9.71143"
+            y2="9.71143"
+          />
+          <line
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+            x1="12.5992"
+            x2="20.0001"
+            y1="2"
+            y2="9.40088"
+          />
+          <line
+            stroke="white"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+            transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
+            x1="0.75"
+            x2="11.2164"
+            y1="-0.75"
+            y2="-0.75"
+          />
+        </svg>
+      </span>
     </a>
   `);
 });
@@ -183,15 +197,15 @@ it('renders link styled as button correctly', () => {
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      padding: 1rem 1.5rem;
+      padding: 0.875rem 1.5rem 0.625rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
       border-radius: 2rem;
       line-height: 1.4rem;
-      -webkit-transition: background 0.5s;
-      transition: background 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
       cursor: pointer;
       background-color: #FFE400;
       color: #2C0230;
@@ -200,6 +214,18 @@ it('renders link styled as button correctly', () => {
     .c0:hover {
       background-color: #FEFD5A;
       color: #2C0230;
+    }
+
+    .c0 span {
+      text-indent: 0;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        text-indent: 0;
+        width: auto;
+        padding: 0.875rem 1.5rem 0.625rem;
+      }
     }
 
     <a

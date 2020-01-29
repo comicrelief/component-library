@@ -27,15 +27,15 @@ exports[`renders ESU School correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem 0.625rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
   line-height: 1.4rem;
-  -webkit-transition: background 0.5s;
-  transition: background 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -44,6 +44,10 @@ exports[`renders ESU School correctly 1`] = `
 .c10:hover {
   background-color: #86E4E9;
   color: #2C0230;
+}
+
+.c10 span {
+  text-indent: 0;
 }
 
 .c7 {
@@ -160,6 +164,14 @@ exports[`renders ESU School correctly 1`] = `
 
 .c2 {
   margin-bottom: 1.5rem;
+}
+
+@media (min-width:740px) {
+  .c10 {
+    text-indent: 0;
+    width: auto;
+    padding: 0.875rem 1.5rem 0.625rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -294,15 +306,15 @@ exports[`renders correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem 0.625rem;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
   line-height: 1.4rem;
-  -webkit-transition: background 0.5s;
-  transition: background 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -311,6 +323,10 @@ exports[`renders correctly 1`] = `
 .c12:hover {
   background-color: #86E4E9;
   color: #2C0230;
+}
+
+.c12 span {
+  text-indent: 0;
 }
 
 .c10 {
@@ -448,6 +464,14 @@ exports[`renders correctly 1`] = `
 
 .c2 {
   margin-bottom: 1.5rem;
+}
+
+@media (min-width:740px) {
+  .c12 {
+    text-indent: 0;
+    width: auto;
+    padding: 0.875rem 1.5rem 0.625rem;
+  }
 }
 
 @media (min-width:740px) {

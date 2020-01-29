@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import StyledLink, { HelperText } from './Link.style';
+import StyledLink, { HelperText, IconWrapper } from './Link.style';
 import whiteListed from '../../../utils/whiteListed';
 
 const domainRegEx = new RegExp(
@@ -32,6 +32,7 @@ const Link = ({
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
+  const hasIcon = icon !== null;
 
   return (
     <StyledLink
@@ -41,10 +42,11 @@ const Link = ({
       target={window}
       type={type}
       underline={underline}
+      hasIcon={hasIcon}
     >
       {children}
       {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
-      {icon}
+      {hasIcon && <IconWrapper hasIcon={hasIcon}>{icon}</IconWrapper>}
     </StyledLink>
   );
 };

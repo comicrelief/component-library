@@ -32,7 +32,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Internal style={{ marginLeft: '10px' }} colour="#ffffff" />}
+      icon={<Internal colour="#ffffff" />}
     >
       Internal link
     </Link>
@@ -43,7 +43,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       href="#anchor"
       target="blank"
       type="button"
-      icon={<External style={{ marginLeft: '10px' }} colour="#ffffff" />}
+      icon={<External colour="#ffffff" />}
     >
       External link
     </Link>
@@ -54,7 +54,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Download style={{ marginLeft: '10px' }} colour="#ffffff" />}
+      icon={<Download colour="#ffffff" />}
     >
       Download link
     </Link>
@@ -65,7 +65,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Favourite style={{ marginLeft: '10px' }} colour="#ffffff" />}
+      icon={<Favourite colour="#ffffff" />}
     >
       Favourite link
     </Link>

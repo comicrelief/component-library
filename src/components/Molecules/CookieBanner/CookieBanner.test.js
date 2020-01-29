@@ -46,15 +46,15 @@ it('renders correctly', () => {
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      padding: 1rem 1.5rem;
+      padding: 0.875rem 1.5rem 0.625rem;
       text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
       border-radius: 2rem;
       line-height: 1.4rem;
-      -webkit-transition: background 0.5s;
-      transition: background 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
       cursor: pointer;
       background-color: #FFFFFF;
       color: #2C0230;
@@ -63,6 +63,10 @@ it('renders correctly', () => {
     .c5:hover {
       background-color: #918791;
       color: #2C0230;
+    }
+
+    .c5 span {
+      text-indent: 0;
     }
 
     .c0 {
@@ -98,6 +102,14 @@ it('renders correctly', () => {
       color: #FFFFFF;
       padding: 0 0.25rem 1px;
       border-bottom: 2px solid;
+    }
+
+    @media (min-width:740px) {
+      .c5 {
+        text-indent: 0;
+        width: auto;
+        padding: 0.875rem 1.5rem 0.625rem;
+      }
     }
 
     @media (min-width:740px) {
