@@ -208,6 +208,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #FFFFFF;
   color: #2C0230;
@@ -601,6 +602,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #FFFFFF;
   color: #2C0230;

@@ -11,6 +11,7 @@ const buttonStyle = () => css`
   border-radius: 2rem;
   line-height: 1.4rem;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   ${({ color, theme }) =>
     color ? theme.buttonColors(color) : theme.buttonColors('red')};

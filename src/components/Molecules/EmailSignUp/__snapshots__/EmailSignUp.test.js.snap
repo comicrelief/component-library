@@ -36,6 +36,7 @@ exports[`renders ESU School correctly 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;
@@ -315,6 +316,7 @@ exports[`renders correctly 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #22CFD8;
   color: #2C0230;

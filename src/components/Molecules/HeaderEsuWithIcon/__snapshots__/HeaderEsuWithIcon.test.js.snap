@@ -34,6 +34,7 @@ exports[`renders correctly with error message 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -538,6 +539,7 @@ exports[`renders correctly with modal open 1`] = `
   line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 50px;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;

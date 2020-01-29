@@ -206,6 +206,7 @@ it('renders link styled as button correctly', () => {
       line-height: 1.4rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
+      height: 50px;
       cursor: pointer;
       background-color: #FFE400;
       color: #2C0230;
