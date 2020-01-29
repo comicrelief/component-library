@@ -84,8 +84,8 @@ it('renders a button with an icon', () => {
       >
         <line
           stroke="white"
-          stroke-linecap="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeWidth="1.5"
           x1="0.75"
           x2="19.25"
           y1="9.71143"
@@ -93,8 +93,8 @@ it('renders a button with an icon', () => {
         />
         <line
           stroke="white"
-          stroke-linecap="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeWidth="1.5"
           x1="12.5992"
           x2="20.0001"
           y1="2"
@@ -102,8 +102,8 @@ it('renders a button with an icon', () => {
         />
         <line
           stroke="white"
-          stroke-linecap="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeWidth="1.5"
           transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
           x1="0.75"
           x2="11.2164"

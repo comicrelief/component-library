@@ -71,7 +71,8 @@ Link.defaultProps = {
   color: 'red',
   target: null,
   home: false,
-  underline: true
+  underline: true,
+  icon: null
 };
 
 export default Link;
