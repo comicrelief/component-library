@@ -16,7 +16,7 @@ const External = ({ colour, ...rest }) => {
         y1="18.7932"
         x2="1.28333"
         y2="4.79321"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -25,7 +25,7 @@ const External = ({ colour, ...rest }) => {
         y1="18.7932"
         x2="16.0939"
         y2="15.2932"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -34,7 +34,7 @@ const External = ({ colour, ...rest }) => {
         y1="4.79321"
         x2="5.25"
         y2="4.79321"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -43,7 +43,7 @@ const External = ({ colour, ...rest }) => {
         y1="18.7932"
         x2="15.75"
         y2="18.7932"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -53,7 +53,7 @@ const External = ({ colour, ...rest }) => {
         x2="12.629"
         y2="-0.75"
         transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 9.53259 9.65442)"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -63,7 +63,7 @@ const External = ({ colour, ...rest }) => {
         x2="9.92324"
         y2="-0.75"
         transform="matrix(0 -1 -1 0 19.3328 10.6732)"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -72,7 +72,7 @@ const External = ({ colour, ...rest }) => {
         y1="0.793213"
         x2="19.6983"
         y2="0.793213"
-        stroke="#F4F3F5"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />

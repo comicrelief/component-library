@@ -16,7 +16,7 @@ const Internal = ({ colour, ...rest }) => {
         y1="9.71143"
         x2="19.25"
         y2="9.71143"
-        stroke="white"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -25,7 +25,7 @@ const Internal = ({ colour, ...rest }) => {
         y1="2"
         x2="20.0001"
         y2="9.40088"
-        stroke="white"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -35,7 +35,7 @@ const Internal = ({ colour, ...rest }) => {
         x2="11.2164"
         y2="-0.75"
         transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
-        stroke="white"
+        stroke={colour}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
