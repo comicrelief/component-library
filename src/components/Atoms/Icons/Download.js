@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
 
-const Download = ({ colour, ...rest }) => {
+const Download = ({ colour, theme, ...rest }) => {
+  console.log(theme);
   return (
     <svg
       {...rest}
@@ -16,7 +18,7 @@ const Download = ({ colour, ...rest }) => {
         y1="19.25"
         x2="1.03912"
         y2="15.3984"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -25,7 +27,7 @@ const Download = ({ colour, ...rest }) => {
         y1="19.25"
         x2="17.0939"
         y2="15.3984"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -34,7 +36,7 @@ const Download = ({ colour, ...rest }) => {
         y1="19.25"
         x2="16.7508"
         y2="19.25"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -44,7 +46,7 @@ const Download = ({ colour, ...rest }) => {
         x2="12.629"
         y2="-0.75"
         transform="matrix(4.37114e-08 1 1 -4.37114e-08 9.91882 0)"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -54,7 +56,7 @@ const Download = ({ colour, ...rest }) => {
         x2="9.92324"
         y2="-0.75"
         transform="matrix(0.707107 0.707107 0.707107 -0.707107 2.26862 6.20935)"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -63,7 +65,7 @@ const Download = ({ colour, ...rest }) => {
         y1="7.27001"
         x2="9.29875"
         y2="13.7565"
-        stroke={colour}
+        stroke={theme.color(colour)}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -76,7 +78,7 @@ Download.propTypes = {
 };
 
 Download.defaultProps = {
-  colour: '#ffffff'
+  colour: 'white'
 };
 
-export default Download;
+export default withTheme(Download);
