@@ -201,10 +201,6 @@ it('renders link styled as button correctly', () => {
       transition: all 0.5s;
       height: 50px;
       width: 100%;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;

@@ -12,7 +12,6 @@ const buttonStyle = () => css`
   transition: all 0.5s;
   height: 50px;
   width: 100%;
-  align-items: center;
   justify-content: center;
   cursor: pointer;
   ${({ color, theme }) =>
