@@ -21,7 +21,10 @@ const Favourite = ({ colour, theme, ...rest }) => {
 };
 
 Favourite.propTypes = {
-  colour: PropTypes.string
+  colour: PropTypes.string,
+  theme: PropTypes.objectOf({
+    color: PropTypes.func.isRequired
+  }).isRequired
 };
 
 Favourite.defaultProps = {

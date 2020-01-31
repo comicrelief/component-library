@@ -45,7 +45,10 @@ const Internal = ({ colour, theme, ...rest }) => {
 };
 
 Internal.propTypes = {
-  colour: PropTypes.string
+  colour: PropTypes.string,
+  theme: PropTypes.objectOf({
+    color: PropTypes.func.isRequired
+  }).isRequired
 };
 
 Internal.defaultProps = {

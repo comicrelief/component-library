@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 
 const Download = ({ colour, theme, ...rest }) => {
-  console.log(theme);
   return (
     <svg
       {...rest}
@@ -74,7 +73,10 @@ const Download = ({ colour, theme, ...rest }) => {
 };
 
 Download.propTypes = {
-  colour: PropTypes.string
+  colour: PropTypes.string,
+  theme: PropTypes.objectOf({
+    color: PropTypes.func.isRequired
+  }).isRequired
 };
 
 Download.defaultProps = {
