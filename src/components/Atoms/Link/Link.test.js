@@ -90,7 +90,7 @@ it('renders a button with an icon', () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <line
-            stroke="white"
+            stroke="#FFFFFF"
             strokeLinecap="round"
             strokeWidth="1.5"
             x1="0.75"
@@ -99,7 +99,7 @@ it('renders a button with an icon', () => {
             y2="9.71143"
           />
           <line
-            stroke="white"
+            stroke="#FFFFFF"
             strokeLinecap="round"
             strokeWidth="1.5"
             x1="12.5992"
@@ -108,7 +108,7 @@ it('renders a button with an icon', () => {
             y2="9.40088"
           />
           <line
-            stroke="white"
+            stroke="#FFFFFF"
             strokeLinecap="round"
             strokeWidth="1.5"
             transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
