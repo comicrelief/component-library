@@ -5,30 +5,20 @@ import hideVisually from '../../../theme/shared/hideVisually';
 const buttonStyle = () => css`
   display: inline-flex;
   padding: 0.875rem ${spacing('m')} 0.625rem;
-  text-align: center;
   text-decoration: none;
   font-weight: 700;
   border-radius: 2rem;
   line-height: 1.4rem;
   transition: all 0.5s;
   height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   ${({ color, theme }) =>
     color ? theme.buttonColors(color) : theme.buttonColors('red')};
-  ${({ hasIcon }) =>
-    hasIcon &&
-    css`
-      text-indent: -1000rem;
-      width: 50px;
-      padding: 0.875rem 0 0.625rem;
-    `}
   @media ${({ theme }) => theme.breakpoint('small')} {
-    text-indent: 0;
     width: auto;
-    padding: 0.875rem ${spacing('m')} 0.625rem;
-  }
-  span {
-    text-indent: 0;
   }
 `;
 
@@ -43,10 +33,7 @@ const linkStyle = () => css`
 `;
 
 export const IconWrapper = styled.span`
-  margin: auto;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-left: ${spacing('md')};
-  }
+  margin-left: ${spacing('md')};
 `;
 
 const StyledLink = styled.a`
