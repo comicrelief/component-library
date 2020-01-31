@@ -47,7 +47,6 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       padding: 0.875rem 1.5rem 0.625rem;
-      text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -56,6 +55,15 @@ it('renders correctly', () => {
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
       height: 50px;
+      width: 100%;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       cursor: pointer;
       background-color: #FFFFFF;
       color: #2C0230;
@@ -64,10 +72,6 @@ it('renders correctly', () => {
     .c5:hover {
       background-color: #918791;
       color: #2C0230;
-    }
-
-    .c5 span {
-      text-indent: 0;
     }
 
     .c0 {
@@ -107,9 +111,7 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c5 {
-        text-indent: 0;
         width: auto;
-        padding: 0.875rem 1.5rem 0.625rem;
       }
     }
 

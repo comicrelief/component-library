@@ -77,7 +77,6 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       padding: 0.875rem 1.5rem 0.625rem;
-      text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -86,6 +85,15 @@ it('renders correctly', () => {
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
       height: 50px;
+      width: 100%;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       cursor: pointer;
       background-color: #4ECD57;
       color: #2C0230;
@@ -94,10 +102,6 @@ it('renders correctly', () => {
     .c23:hover {
       background-color: #62EF74;
       color: #2C0230;
-    }
-
-    .c23 span {
-      text-indent: 0;
     }
 
     .c19 {
@@ -415,9 +419,7 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c23 {
-        text-indent: 0;
         width: auto;
-        padding: 0.875rem 1.5rem 0.625rem;
       }
     }
 

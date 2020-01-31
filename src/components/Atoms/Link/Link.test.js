@@ -53,7 +53,7 @@ it('renders a button with an icon', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      margin: auto;
+      margin-left: 1rem;
     }
 
     .c0 {
@@ -69,12 +69,6 @@ it('renders a button with an icon', () => {
     .c0:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
-    }
-
-    @media (min-width:740px) {
-      .c1 {
-        margin-left: 1rem;
-      }
     }
 
     <a
@@ -198,7 +192,6 @@ it('renders link styled as button correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       padding: 0.875rem 1.5rem 0.625rem;
-      text-align: center;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -207,6 +200,15 @@ it('renders link styled as button correctly', () => {
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
       height: 50px;
+      width: 100%;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       cursor: pointer;
       background-color: #FFE400;
       color: #2C0230;
@@ -217,15 +219,9 @@ it('renders link styled as button correctly', () => {
       color: #2C0230;
     }
 
-    .c0 span {
-      text-indent: 0;
-    }
-
     @media (min-width:740px) {
       .c0 {
-        text-indent: 0;
         width: auto;
-        padding: 0.875rem 1.5rem 0.625rem;
       }
     }
 
