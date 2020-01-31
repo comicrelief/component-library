@@ -3,23 +3,30 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
   height: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 const Image = styled.div`
   height: auto;
+  img {
+    border-radius: 10px;
+  }
 `;
 
 const Copy = styled.div`
   padding: ${spacing('l')};
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  margin: -${spacing('xxl')} ${spacing('md')} 0 -${spacing('l')};
+  ${zIndex('medium')};
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 const Card = ({
@@ -34,7 +41,7 @@ const Card = ({
   ...rest
 }) => {
   return (
-    <Container backgroundColor={backgroundColor} {...rest}>
+    <Container {...rest}>
       {imageLow ? (
         <Image>
           <Picture
@@ -48,7 +55,9 @@ const Card = ({
           />
         </Image>
       ) : null}
-      {children ? <Copy>{children}</Copy> : null}
+      {children ? (
+        <Copy backgroundColor={backgroundColor}>{children}</Copy>
+      ) : null}
     </Container>
   );
 };
