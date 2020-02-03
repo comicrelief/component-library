@@ -25,16 +25,21 @@ exports[`renders correctly with error message 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0.875rem 1.5rem 0.625rem;
-  text-align: center;
+  position: relative;
+  padding: 0.875rem 1.25rem 0.625rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 2rem;
-  line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  height: 50px;
+  min-height: 48px;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -43,10 +48,6 @@ exports[`renders correctly with error message 1`] = `
 .c19:hover {
   background-color: #890B11;
   color: #FFFFFF;
-}
-
-.c19 span {
-  text-indent: 0;
 }
 
 .c15 {
@@ -290,9 +291,7 @@ exports[`renders correctly with error message 1`] = `
 
 @media (min-width:740px) {
   .c19 {
-    text-indent: 0;
     width: auto;
-    padding: 0.875rem 1.5rem 0.625rem;
   }
 }
 
@@ -530,16 +529,21 @@ exports[`renders correctly with modal open 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0.875rem 1.5rem 0.625rem;
-  text-align: center;
+  position: relative;
+  padding: 0.875rem 1.25rem 0.625rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 2rem;
-  line-height: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  height: 50px;
+  min-height: 48px;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -548,10 +552,6 @@ exports[`renders correctly with modal open 1`] = `
 .c17:hover {
   background-color: #890B11;
   color: #FFFFFF;
-}
-
-.c17 span {
-  text-indent: 0;
 }
 
 .c15 {
@@ -776,9 +776,7 @@ exports[`renders correctly with modal open 1`] = `
 
 @media (min-width:740px) {
   .c17 {
-    text-indent: 0;
     width: auto;
-    padding: 0.875rem 1.5rem 0.625rem;
   }
 }
 

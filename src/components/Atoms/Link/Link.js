@@ -42,11 +42,10 @@ const Link = ({
       target={window}
       type={type}
       underline={underline}
-      hasIcon={hasIcon}
     >
       {children}
       {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
-      {hasIcon && <IconWrapper hasIcon={hasIcon}>{icon}</IconWrapper>}
+      {hasIcon && <IconWrapper>{icon}</IconWrapper>}
     </StyledLink>
   );
 };
