@@ -5,13 +5,13 @@ import hideVisually from '../../../theme/shared/hideVisually';
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
-  padding: 0.875rem ${spacing('m')} 0.625rem;
+  padding: 0.875rem 1.25rem 0.625rem;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 2rem;
-  line-height: 1.4rem;
   transition: all 0.5s;
-  height: 50px;
+  min-height: 48px;
   width: 100%;
   justify-content: center;
   cursor: pointer;
