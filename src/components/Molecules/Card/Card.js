@@ -14,7 +14,8 @@ const Container = styled.div`
 
 const Image = styled.div`
   height: auto;
-  margin: 0 -${spacing('l')} 0 ${spacing('l')} img {
+  margin: 0 -${spacing('l')} 0 ${spacing('l')};
+  img {
     border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   }
@@ -23,6 +24,7 @@ const Image = styled.div`
 const Copy = styled.div`
   padding: ${spacing('l')};
   display: flex;
+  min-height: calc(5 * ${spacing('l')});
   flex-direction: column;
   border-radius: 10px;
   margin-top: -${spacing('xxl')};
