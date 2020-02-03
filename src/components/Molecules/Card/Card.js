@@ -30,6 +30,7 @@ const Copy = styled.div`
   margin-top: -${spacing('xxl')};
   ${zIndex('medium')};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 `;
 
 const Card = ({
