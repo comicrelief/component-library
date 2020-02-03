@@ -54,6 +54,11 @@ it('renders a button with an icon', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
       margin-left: 1rem;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      position: absolute;
+      right: 1.5rem;
     }
 
     .c0 {
@@ -69,6 +74,14 @@ it('renders a button with an icon', () => {
     .c0:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
+    }
+
+    @media (min-width:740px) {
+      .c1 {
+        width: auto;
+        right: auto;
+        position: relative;
+      }
     }
 
     <a
@@ -191,6 +204,7 @@ it('renders link styled as button correctly', () => {
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
+      position: relative;
       padding: 0.875rem 1.5rem 0.625rem;
       -webkit-text-decoration: none;
       text-decoration: none;

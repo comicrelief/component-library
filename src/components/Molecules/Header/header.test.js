@@ -76,6 +76,7 @@ it('renders correctly', () => {
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
+      position: relative;
       padding: 0.875rem 1.5rem 0.625rem;
       -webkit-text-decoration: none;
       text-decoration: none;

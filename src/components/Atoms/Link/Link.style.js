@@ -4,6 +4,7 @@ import hideVisually from '../../../theme/shared/hideVisually';
 
 const buttonStyle = () => css`
   display: inline-flex;
+  position: relative;
   padding: 0.875rem ${spacing('m')} 0.625rem;
   text-decoration: none;
   font-weight: 700;
@@ -33,6 +34,14 @@ const linkStyle = () => css`
 
 export const IconWrapper = styled.span`
   margin-left: ${spacing('md')};
+  align-self: center;
+  position: absolute;
+  right: ${spacing('m')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: auto;
+    right: auto;
+    position: relative;
+  }
 `;
 
 const StyledLink = styled.a`

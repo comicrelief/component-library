@@ -199,6 +199,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  position: relative;
   padding: 0.875rem 1.5rem 0.625rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -591,6 +592,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  position: relative;
   padding: 0.875rem 1.5rem 0.625rem;
   -webkit-text-decoration: none;
   text-decoration: none;
