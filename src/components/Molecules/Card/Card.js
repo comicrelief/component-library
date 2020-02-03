@@ -14,8 +14,9 @@ const Container = styled.div`
 
 const Image = styled.div`
   height: auto;
-  img {
+  margin: 0 -${spacing('l')} 0 ${spacing('l')} img {
     border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   }
 `;
 
@@ -24,7 +25,7 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  margin: -${spacing('xxl')} ${spacing('md')} 0 -${spacing('l')};
+  margin-top: -${spacing('xxl')};
   ${zIndex('medium')};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
