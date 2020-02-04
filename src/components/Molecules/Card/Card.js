@@ -35,6 +35,7 @@ const Copy = styled.div`
     `};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
 `;
 
 const Card = ({
