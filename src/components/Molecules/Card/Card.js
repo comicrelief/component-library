@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
@@ -24,11 +24,15 @@ const Image = styled.div`
 const Copy = styled.div`
   padding: ${spacing('l')};
   display: flex;
-  min-height: calc(5 * ${spacing('l')});
   flex-direction: column;
   border-radius: 10px;
-  margin-top: -${spacing('xxl')};
   ${zIndex('medium')};
+  ${({ hasImage }) =>
+    hasImage &&
+    css`
+      margin-top: -${spacing('xxl')};
+      min-height: calc(5 * ${spacing('l')});
+    `};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 `;
@@ -60,7 +64,9 @@ const Card = ({
         </Image>
       ) : null}
       {children ? (
-        <Copy backgroundColor={backgroundColor}>{children}</Copy>
+        <Copy hasImage={imageLow} backgroundColor={backgroundColor}>
+          {children}
+        </Copy>
       ) : null}
     </Container>
   );
