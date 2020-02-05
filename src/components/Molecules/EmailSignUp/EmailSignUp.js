@@ -75,7 +75,7 @@ const EmailSignUp = ({
           />
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Link
-              data-test="subscribe-button"
+              data-test="subscribe-button-school"
               type="button"
               color={buttonColor}
               as="button"
@@ -92,7 +92,7 @@ const EmailSignUp = ({
           {schoolsSelect}
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Link
-              data-test="subscribe-button"
+              data-test="subscribe-button-school"
               type="button"
               color={buttonColor}
               as="button"
