@@ -24,6 +24,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -39,7 +40,7 @@ it('renders correctly', () => {
       padding: 6px 10px;
       border-width: 1px;
       border-style: solid;
-      border-color: #2C0230;
+      border-color: #000000;
       margin: 0;
       position: relative;
       -moz-appearance: none;

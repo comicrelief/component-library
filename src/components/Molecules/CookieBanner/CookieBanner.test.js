@@ -22,6 +22,7 @@ it('renders correctly', () => {
     .c1 {
       color: #FFFFFF;
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -47,7 +48,7 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.875rem 1.25rem 0.625rem;
+      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -55,20 +56,24 @@ it('renders correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      min-height: 48px;
+      min-height: 50px;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       cursor: pointer;
       background-color: #FFFFFF;
-      color: #2C0230;
+      color: #000000;
     }
 
     .c5:hover {
-      background-color: #918791;
-      color: #2C0230;
+      background-color: #969598;
+      color: #000000;
     }
 
     .c0 {

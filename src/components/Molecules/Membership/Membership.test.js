@@ -26,7 +26,8 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
       text-transform: inherit;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -34,12 +35,14 @@ it('renders correctly', () => {
 
     .c7 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c15 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -47,6 +50,7 @@ it('renders correctly', () => {
 
     .c19 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: 500;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -76,12 +80,12 @@ it('renders correctly', () => {
       font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
-      border-color: #2C0230;
+      border-color: #000000;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      color: #2C0230;
+      color: #000000;
     }
 
     .c16:focus {
@@ -120,7 +124,7 @@ it('renders correctly', () => {
 
     .c14 input {
       border: 2px solid #c7c7c7;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
@@ -134,7 +138,7 @@ it('renders correctly', () => {
 
     .c17 input {
       border: 2px solid #c7c7c7;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;

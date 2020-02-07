@@ -30,11 +30,11 @@ exports[`renders correctly in full size with first page selected 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c4:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -242,11 +242,11 @@ exports[`renders correctly in full size with last page selected 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -454,11 +454,11 @@ exports[`renders correctly in full size with max pages less than current page 1`
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -682,11 +682,11 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -926,11 +926,11 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1142,11 +1142,11 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1386,11 +1386,11 @@ exports[`renders correctly in full size with more on left 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1614,11 +1614,11 @@ exports[`renders correctly in full size with more on right 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1842,11 +1842,11 @@ exports[`renders correctly in minimalist form 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1978,11 +1978,11 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -1994,7 +1994,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   text-decoration: none;
   font-weight: 700;
   cursor: default;
-  background: #6489FC;
+  background: #0565D1;
   color: #FFFFFF;
 }
 
@@ -2114,11 +2114,11 @@ exports[`renders correctly with custom labels 1`] = `
   font-weight: 700;
   cursor: pointer;
   background: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFFFFF;
 }
 
@@ -2318,7 +2318,7 @@ exports[`renders correctly with custom style 1`] = `
 }
 
 .c2:hover {
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFE400;
 }
 
@@ -2342,7 +2342,7 @@ exports[`renders correctly with custom style 1`] = `
   text-decoration: none;
   font-weight: 700;
   cursor: default;
-  background: #22CFD8;
+  background: #4ECDBE;
   color: #FFE400;
 }
 

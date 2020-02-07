@@ -17,6 +17,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -32,12 +33,12 @@ it('renders correctly', () => {
       font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
-      border-color: #2C0230;
+      border-color: #000000;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      color: #2C0230;
+      color: #000000;
     }
 
     .c8:focus {
@@ -168,7 +169,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c5 {
         height: 100px;
-        font-size: 2.625rem;
+        font-size: 3rem;
       }
     }
 
@@ -181,7 +182,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c10 {
         height: 100px;
-        font-size: 2.625rem;
+        font-size: 3rem;
       }
     }
 

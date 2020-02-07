@@ -22,17 +22,23 @@ it('renders article teaser correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-size: 0.6875rem;
+      line-height: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c9 {
-      font-size: 1.625rem;
+      font-size: 2.125rem;
+      line-height: 2.125rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
+      -webkit-letter-spacing: 0.03rem;
+      -moz-letter-spacing: 0.03rem;
+      -ms-letter-spacing: 0.03rem;
+      letter-spacing: 0.03rem;
     }
 
     .c4 {
@@ -54,12 +60,12 @@ it('renders article teaser correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
+      color: #000000;
       font-weight: normal;
     }
 
     .c1:hover {
-      color: #2C0230;
+      color: #000000;
     }
 
     .c0 {
@@ -230,17 +236,23 @@ it('renders press realese correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-size: 0.6875rem;
+      line-height: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c9 {
-      font-size: 1.625rem;
+      font-size: 2.125rem;
+      line-height: 2.125rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
+      -webkit-letter-spacing: 0.03rem;
+      -moz-letter-spacing: 0.03rem;
+      -ms-letter-spacing: 0.03rem;
+      letter-spacing: 0.03rem;
     }
 
     .c4 {
@@ -262,12 +274,12 @@ it('renders press realese correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
+      color: #000000;
       font-weight: normal;
     }
 
     .c1:hover {
-      color: #2C0230;
+      color: #000000;
     }
 
     .c0 {
