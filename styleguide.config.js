@@ -58,6 +58,10 @@ module.exports = {
       content: './docs/utils.md'
     },
     {
+      name: 'Theme',
+      content: './src/theme/crTheme/Colors.md'
+    },
+    {
       name: 'Atoms',
       components: 'src/components/Atoms/**/*.js',
       sectionDepth: 2
