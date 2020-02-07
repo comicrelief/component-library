@@ -123,7 +123,7 @@ it('renders correctly', () => {
     }
 
     .c14 input {
-      border: 2px solid #c7c7c7;
+      border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
@@ -137,7 +137,7 @@ it('renders correctly', () => {
     }
 
     .c17 input {
-      border: 2px solid #c7c7c7;
+      border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
       -webkit-letter-spacing: -2px;
@@ -289,7 +289,7 @@ it('renders correctly', () => {
     }
 
     .c21 input {
-      border: 2px solid #c7c7c7;
+      border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
