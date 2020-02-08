@@ -1,6 +1,6 @@
 export default {
   cartId: 'test-sept2019-C365',
-  single: {
+  singleGiving: {
     moneybuys: [
       {
         description:

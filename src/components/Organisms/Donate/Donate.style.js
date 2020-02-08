@@ -66,6 +66,9 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
+  margin-left: auto;
+  width: 100%;
+
   ${media('medium')} {
     padding: ${({ formAlignRight }) =>
       formAlignRight === true ? '2rem 0 0 4rem' : '2rem 4rem 0 0'};

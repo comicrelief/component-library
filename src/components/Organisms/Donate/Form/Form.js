@@ -25,7 +25,7 @@ import {
 import GivingSelector from '../GivingSelector/GivingSelector';
 
 const Signup = ({
-  data: { single, regularGiving },
+  data: { singleGiving, regularGiving },
   donateLink,
   otherDescription,
   clientID,
@@ -94,19 +94,28 @@ const Signup = ({
   };
 
   useEffect(() => {
-    const givingData = givingType === 'single' ? single : regularGiving;
+    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+
+    let moneyBuyNewDescription = otherDescription;
 
     givingData.moneybuys.map((moneyBuy, index) => {
       const box = `box${index + 1}`;
       // eslint-disable-next-line no-shadow
       setMoneyBoxes(moneyBoxes => ({ ...moneyBoxes, [box]: moneyBuy }));
+
+      if (moneyBuy.value === amountDonate) {
+        moneyBuyNewDescription = moneyBuy.description;
+      }
+
       return (
         isSelected &&
         index === 1 &&
         (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
       );
     });
-  }, [isSelected, single, regularGiving, givingType]);
+
+    setMoneyBuyCopy(moneyBuyNewDescription);
+  }, [isSelected, singleGiving, regularGiving, givingType]);
 
   const submitDonation = (
     event,
@@ -133,7 +142,7 @@ const Signup = ({
   };
 
   // Create money buy boxes
-  const givingData = givingType === 'single' ? single : regularGiving;
+  const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
   const MoneyBoxes = givingData.moneybuys.map(
     ({ value, description }, index) => (
