@@ -123,7 +123,7 @@ const Legend = styled.legend`
   width: 100%;
   top: 0;
   left: 0;
-  margin-top: 1em;
+  margin: 0;
 `;
 
 const MoneyBuys = styled.div`
