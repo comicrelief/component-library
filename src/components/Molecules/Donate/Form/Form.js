@@ -215,7 +215,11 @@ const Signup = ({
           )}
           {moneyBuyCopy && (
             <Copy as="p">
-              <strong>Could pay for </strong>
+              {moneyBuyCopy !== otherDescription ? (
+                <strong>{`£${amountDonate} could pay for `}</strong>
+              ) : (
+                <strong>{`£${amountDonate} `}</strong>
+              )}
               {moneyBuyCopy}
             </Copy>
           )}

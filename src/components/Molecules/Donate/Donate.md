@@ -18,7 +18,7 @@ const pictures = require('../../../styleguide/data/data').default;
   cartID="refugee1-365"
   title="Help someone like Jordan see a better tomorrow"
   subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Donate now and help save lives."
-  otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
+  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -39,6 +39,6 @@ const pictures = require('../../../styleguide/data/data').default;
   cartID="refugee1-365"
   title="Help someone like Jordan see a better tomorrow"
   subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Donate now and help save lives."
-  otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
+  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
