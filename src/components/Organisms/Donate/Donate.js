@@ -42,7 +42,7 @@ const Donate = ({
       <Wrapper formAlignRight={formAlignRight}>
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
-            <Text tag="h2" color="white" size="xl" uppercase={true}>
+            <Text tag="h2" color="white" size="xl" uppercase>
               {title}
             </Text>
             <Text tag="p" color="white">
