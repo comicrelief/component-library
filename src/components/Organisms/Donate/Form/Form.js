@@ -170,14 +170,14 @@ const Signup = ({
           )
         }
       >
+        <Legend>
+          <Text tag="h3">
+            {givingType === 'single'
+              ? 'Choose an amount to give'
+              : 'Choose an amount to give per month'}
+          </Text>
+        </Legend>
         <OuterFieldset>
-          <Legend>
-            <Text tag="h3">
-              {givingType === 'single'
-                ? 'Choose an amount to give'
-                : 'Choose an amount to give per month'}
-            </Text>
-          </Legend>
           <MoneyBuys>{MoneyBoxes}</MoneyBuys>
           <FormFieldset>
             <Label size="s" weight="500">

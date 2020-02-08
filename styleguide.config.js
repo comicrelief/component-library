@@ -67,6 +67,11 @@ module.exports = {
       name: 'Molecules',
       components: 'src/components/Molecules/**/*.js',
       sectionDepth: 2
+    },
+    {
+      name: 'Organisms',
+      components: 'src/components/Organisms/**/*.js',
+      sectionDepth: 2
     }
     // {
     //   name: 'Utilities',

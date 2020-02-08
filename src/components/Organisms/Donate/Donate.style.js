@@ -55,7 +55,7 @@ const Wrapper = styled.div`
   margin-bottom: 3em;
   flex-direction: row;
   display: block;
-  width: 80%;
+  width: 90%;
   flex-direction: ${({ formAlignRight }) =>
     formAlignRight === true ? 'row-reverse' : 'row'};
 
@@ -84,7 +84,6 @@ const Error = styled(Text)`
 `;
 
 const Form = styled.form`
-  padding: ${spacing('md')};
   position: relative;
   width: 100%%;
   background-color: ${({ theme }) => theme.color('white')};
@@ -108,28 +107,29 @@ const Form = styled.form`
 `;
 
 const OuterFieldset = styled.fieldset`
-  padding: 0;
+  padding: ${spacing('md')};
   margin: 0;
   border: none;
 `;
+
 const Legend = styled.legend`
   margin: 0;
-  padding: 0;
+  padding: 1em 0;
   border-bottom: 1px solid #dfdfd7;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   display: block;
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: 1em;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 4em;
   margin-bottom: 1em;
 
   label {
