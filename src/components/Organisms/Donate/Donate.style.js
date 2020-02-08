@@ -75,6 +75,10 @@ const HeaderInner = styled.div`
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
+
+    h2 {
+      font-size: 3em;
+    }
   }
 `;
 
