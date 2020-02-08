@@ -49,6 +49,7 @@ export { default as Header } from './components/Molecules/Header/Header';
 export {
   default as CookieBanner
 } from './components/Molecules/CookieBanner/CookieBanner';
+export { default as Donate } from './components/Molecules/Donate/Donate';
 export {
   default as DoubleCopy
 } from './components/Molecules/DoubleCopy/DoubleCopy';

@@ -42,7 +42,8 @@ module.exports = {
       h4: 16,
       h5: 16,
       h6: 16
-    }
+    },
+    maxWidth: '100%',
   },
   sections: [
     {
