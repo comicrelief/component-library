@@ -52,7 +52,7 @@ const BgImage = styled(Picture)`
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  margin-bottom: 50%;
+  margin-bottom: 3em;
   flex-direction: row;
   display: block;
   width: 80%;
