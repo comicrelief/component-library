@@ -215,7 +215,8 @@ const Signup = ({
           )}
           {moneyBuyCopy && (
             <Copy as="p">
-              <strong>Could pay for</strong> {moneyBuyCopy}
+              <strong>Could pay for</strong>
+              {moneyBuyCopy}
             </Copy>
           )}
         </OuterFieldset>
