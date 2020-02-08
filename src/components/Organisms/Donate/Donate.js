@@ -14,6 +14,7 @@ import {
 const Donate = ({
   alt,
   cartID,
+  clientID,
   backgroundColor,
   donateLink,
   data,
@@ -55,6 +56,7 @@ const Donate = ({
           data={data}
           otherDescription={otherDescription}
           cartID={cartID}
+          clientID={clientID}
           mbshipID={mbshipID}
           donateLink={donateLink}
         />
@@ -67,6 +69,7 @@ Donate.propTypes = {
   alt: PropTypes.string,
   cartID: PropTypes.string.isRequired,
   data: PropTypes.objectOf(PropTypes.shape),
+  clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
@@ -89,4 +92,5 @@ Donate.defaultProps = {
   backgroundColor: null,
   mbshipID: null
 };
+
 export default Donate;

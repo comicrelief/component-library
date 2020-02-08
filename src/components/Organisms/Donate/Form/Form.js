@@ -246,7 +246,7 @@ const Signup = ({
 };
 
 Signup.propTypes = {
-  clientID: PropTypes.string,
+  clientID: PropTypes.string.isRequired,
   cartID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
@@ -255,7 +255,6 @@ Signup.propTypes = {
 };
 
 Signup.defaultProps = {
-  clientID: 'the_fix',
   data: {}
 };
 export default Signup;
