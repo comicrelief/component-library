@@ -8,7 +8,7 @@ const pictures = require('../../../styleguide/data/data').default;
 
 <Donate
   alt="Background image"
-  backgroundColor="orange_light"
+  backgroundColor="blue_dark"
   formAlignRight={true}
   imageLow={pictures.imageLow}
   images={pictures.images}
@@ -16,8 +16,8 @@ const pictures = require('../../../styleguide/data/data').default;
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
   cartID="refugee1-365"
-  title="Help someone like Jordan see a better tomorrow"
-  subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Donate now and help save lives."
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
@@ -29,7 +29,7 @@ import data from './dev-data/data';
 const pictures = require('../../../styleguide/data/data').default;
 
 <Donate
-  backgroundColor="orange_light"
+  backgroundColor="blue_dark"
   formAlignRight={false}
   imageLow={pictures.imageLow}
   images={pictures.images}
@@ -37,8 +37,8 @@ const pictures = require('../../../styleguide/data/data').default;
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
   cartID="refugee1-365"
-  title="Help someone like Jordan see a better tomorrow"
-  subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Donate now and help save lives."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
 />;
 ```

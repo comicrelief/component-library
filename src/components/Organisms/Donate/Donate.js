@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Form from './Form/Form';
-import { BgImage, Container, Header, Wrapper } from './Donate.style';
+import {
+  BgImage,
+  Container,
+  Header,
+  HeaderInner,
+  Wrapper
+} from './Donate.style';
 
 const Donate = ({
   alt,
@@ -35,10 +41,14 @@ const Donate = ({
 
       <Wrapper formAlignRight={formAlignRight}>
         <Header formAlignRight={formAlignRight}>
-          <Text tag="h2" size="xl" weight="800">
-            {title}
-          </Text>
-          <Text tag="p">{subtitle}</Text>
+          <HeaderInner>
+            <Text tag="h2" color="white" size="xl" uppercase={true}>
+              {title}
+            </Text>
+            <Text tag="p" color="white">
+              {subtitle}
+            </Text>
+          </HeaderInner>
         </Header>
 
         <Form

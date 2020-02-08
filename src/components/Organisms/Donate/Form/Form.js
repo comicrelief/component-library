@@ -115,7 +115,14 @@ const Signup = ({
     });
 
     setMoneyBuyCopy(moneyBuyNewDescription);
-  }, [isSelected, singleGiving, regularGiving, givingType]);
+  }, [
+    isSelected,
+    singleGiving,
+    regularGiving,
+    givingType,
+    amountDonate,
+    otherDescription
+  ]);
 
   const submitDonation = (
     event,

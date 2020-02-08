@@ -26,27 +26,7 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-
-  :before {
-    background-image: linear-gradient( bottom,
-        rgba( 244, 242, 244, 0 ) 0%, 
-        rgba( 244, 242, 244, 1 ) 90% );
-        rgba( 244, 242, 244, 0 ) 0%, 
-        rgba( 244, 242, 244, 1 ) 90% );
-    background-image: -ms-linear-gradient( bottom, 
-        rgba( 244, 242, 244, 0 ) 0%, 
-        rgba( 244, 242, 244, 1 ) 90% );
-    background-image: -o-linear-gradient( bottom, 
-        rgba( 244, 242, 244, 0 ) 0%, 
-        rgba( 244, 242, 244, 1 ) 90% );
-    background-image: -webkit-linear-gradient( bottom,
-        rgba( 244, 242, 244, 0 ) 0%, 
-        rgba( 244, 242, 244, 1 ) 90% );
-    content: " ";
-    height: 100%;
-    position: absolute;
-    width: 100%;
-  }
+  opacity: 0.2;
 `;
 
 const Wrapper = styled.div`
@@ -61,7 +41,7 @@ const Wrapper = styled.div`
 
   ${media('medium')} {
     display: flex;
-    margin: 0 ${spacing('xxl')} ${spacing('l')};
+    margin: ${spacing('m')} ${spacing('xxl')};
   }
 `;
 
@@ -70,9 +50,31 @@ const Header = styled.div`
   width: 100%;
 
   ${media('medium')} {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     padding: ${({ formAlignRight }) =>
       formAlignRight === true ? '2rem 0 0 4rem' : '2rem 4rem 0 0'};
     margin-bottom: ${spacing('l')};
+  }
+`;
+
+const HeaderInner = styled.div`
+  position: relative;
+  text-align: left;
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  ${media('medium')} {
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
   }
 `;
 
@@ -224,6 +226,7 @@ export {
   FormFieldset,
   FormWrapper,
   Header,
+  HeaderInner,
   Label,
   Wrapper,
   Form,
