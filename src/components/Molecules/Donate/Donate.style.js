@@ -29,19 +29,19 @@ const BgImage = styled(Picture)`
 
   :before {
     background-image: linear-gradient( bottom,
-        rgba( 255, 255, 255, 0 ) 0%, 
-        rgba( 255, 255, 255, 1 ) 90% );
-        rgba( 255, 255, 255, 0 ) 0%, 
-        rgba( 255, 255, 255, 1 ) 90% );
+        rgba( 244, 242, 244, 0 ) 0%, 
+        rgba( 244, 242, 244, 1 ) 90% );
+        rgba( 244, 242, 244, 0 ) 0%, 
+        rgba( 244, 242, 244, 1 ) 90% );
     background-image: -ms-linear-gradient( bottom, 
-        rgba( 255, 255, 255, 0 ) 0%, 
-        rgba( 255, 255, 255, 1 ) 90% );
+        rgba( 244, 242, 244, 0 ) 0%, 
+        rgba( 244, 242, 244, 1 ) 90% );
     background-image: -o-linear-gradient( bottom, 
-        rgba( 255, 255, 255, 0 ) 0%, 
-        rgba( 255, 255, 255, 1 ) 90% );
-    background-image: -webkit-linear-gradient( bottom, 
-        rgba( 255, 255, 255, 0 ) 0%, 
-        rgba( 255, 255, 255, 1 ) 90% );
+        rgba( 244, 242, 244, 0 ) 0%, 
+        rgba( 244, 242, 244, 1 ) 90% );
+    background-image: -webkit-linear-gradient( bottom,
+        rgba( 244, 242, 244, 0 ) 0%, 
+        rgba( 244, 242, 244, 1 ) 90% );
     content: " ";
     height: 100%;
     position: absolute;
@@ -123,7 +123,7 @@ const Legend = styled.legend`
   width: 100%;
   top: 0;
   left: 0;
-  margin: 0;
+  margin-top: 1em;
 `;
 
 const MoneyBuys = styled.div`
