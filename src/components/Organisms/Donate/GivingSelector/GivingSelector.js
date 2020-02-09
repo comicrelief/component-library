@@ -7,6 +7,7 @@ import { media } from '../../../../theme/shared/size';
 
 const Wrapper = styled.div`
   margin-top: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   ${media('medium')} {
     margin-left: 0;
