@@ -72,7 +72,7 @@ Donate.propTypes = {
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  otherDescription: PropTypes.string.isRequired,
+  otherDescription: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   formAlignRight: PropTypes.bool,
   imageLow: PropTypes.string,
@@ -90,7 +90,9 @@ Donate.defaultProps = {
   image: null,
   images: null,
   backgroundColor: null,
-  mbshipID: null
+  mbshipID: null,
+  otherDescription:
+    'will help us fund amazing projects in the UK and around the world.'
 };
 
 export default Donate;
