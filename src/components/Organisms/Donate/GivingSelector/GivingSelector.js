@@ -6,7 +6,6 @@ import Input from '../../../Atoms/Input/Input';
 import { media } from '../../../../theme/shared/size';
 
 const Wrapper = styled.div`
-  border: 1px solid ${({ theme }) => theme.color('red')};
   margin-top: 2em;
 
   ${media('medium')} {
@@ -33,11 +32,10 @@ const MoneyBox = styled(Input)`
       (boxBorderColor === isInputMatchBox || isSelected) &&
       css`
         border-color: ${({ active, theme }) =>
-          active === true ? theme.color('red') : theme.color('white')};
+          active === true ? theme.color('red') : theme.color('black')};
         background-color: ${({ active, theme }) =>
-          active === true ? theme.color('red') : theme.color('white')};
-        color: ${({ active, theme }) =>
-          active === true ? theme.color('white') : theme.color('red')};
+          active === true ? theme.color('red') : theme.color('black')};
+        color: ${({ theme }) => theme.color('white')};
       `}
   }
 `;

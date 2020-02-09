@@ -129,6 +129,7 @@ const Legend = styled.legend`
   border-top-right-radius: 3px;
   display: block;
   width: 100%;
+  background: ${({ theme }) => theme.color('grey_extra_light')};
 
   h3 {
     padding: 0;
