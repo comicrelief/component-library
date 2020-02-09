@@ -17,11 +17,17 @@ const Wrapper = styled.div`
 
 const MoneyBox = styled(Input)`
   display: inline;
+
+  :focus {
+    outline: none;
+  }
+
   input {
     font-size: ${({ theme }) => theme.fontSize('s')};
     width: 50%;
     max-width: 100%;
     padding: 0.5em 0;
+    cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
 
     ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
       (boxBorderColor === isInputMatchBox || isSelected) &&
