@@ -4,39 +4,51 @@ import PropTypes from 'prop-types';
 
 import Input from '../../../Atoms/Input/Input';
 import { media } from '../../../../theme/shared/size';
+import spacing from '../../../../theme/shared/spacing';
+import zIndex from '../../../../theme/shared/zIndex';
 
 const Wrapper = styled.div`
-  margin-top: 2em;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: ${spacing('l')};
+  display: flex;
+  flex-direction: row;
 
   ${media('medium')} {
     margin-left: 0;
     margin-top: 0;
   }
+  label {
+    flex-basis: 50%;
+  }
 `;
 
 const MoneyBox = styled(Input)`
-  display: inline;
-
-  :focus {
-    outline: none;
+  input[aria-label='Give Once'] {
+    border-radius: 10px 0 0 10px;
   }
-
+  input[aria-label='Give Monthly'] {
+    border-radius: 0 10px 10px 0;
+  }
   input {
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    width: 50%;
+    border: none;
+    width: 100%;
     max-width: 100%;
-    padding: 0.5em 0;
+    font-size: ${({ theme }) => theme.fontSize('s')};
+    font-weight: bold;
+    padding: ${spacing('md')};
     cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
 
     ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
       (boxBorderColor === isInputMatchBox || isSelected) &&
       css`
-        border-color: ${({ active, theme }) =>
-          active === true ? theme.color('red') : theme.color('black')};
+        ${({ active }) =>
+          active === true
+            ? 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);'
+            : null};
+        ${({ active }) => (active === true ? zIndex('high') : null)};
         background-color: ${({ active, theme }) =>
-          active === true ? theme.color('red') : theme.color('black')};
-        color: ${({ theme }) => theme.color('white')};
+          active === true ? theme.color('blue') : theme.color('blue_light')};
+        color: ${({ active, theme }) =>
+          active === true ? theme.color('white') : theme.color('black')};
       `}
   }
 `;
@@ -59,7 +71,7 @@ const GivingSelector = ({ givingType, changeGivingType, ...rest }) => {
       <MoneyBox
         {...rest}
         aria-label="Give Monthly"
-        value="Monthly"
+        value="Give Monthly"
         type="button"
         label=""
         errorMsg=""

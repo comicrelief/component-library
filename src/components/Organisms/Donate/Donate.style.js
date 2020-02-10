@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
-  padding: 2rem 0;
+  padding: ${spacing('l')} 0;
   @media ${({ theme }) => theme.breakpoint('medium')} {
     align-items: center;
     justify-content: inherit;
@@ -32,7 +32,7 @@ const BgImage = styled(Picture)`
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: ${spacing('l')};
   flex-direction: row;
   display: block;
   width: 90%;
@@ -50,11 +50,11 @@ const Header = styled.div`
   width: 100%;
 
   ${media('medium')} {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     padding: ${({ formAlignRight }) =>
-      formAlignRight === true ? '2rem 0 0 4rem' : '2rem 4rem 0 0'};
+      formAlignRight === true
+        ? `${spacing('l')} 0 0 ${spacing('xl')}`
+        : `${spacing('l')} ${spacing('xl')} 0 0`};
     margin-bottom: ${spacing('l')};
   }
 `;
@@ -62,23 +62,10 @@ const Header = styled.div`
 const HeaderInner = styled.div`
   position: relative;
   text-align: left;
-
-  h2 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1.5em;
-  }
-
   ${media('medium')} {
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
-
-    h2 {
-      font-size: 3em;
-    }
   }
 `;
 
@@ -94,12 +81,11 @@ const Error = styled(Text)`
 
 const Form = styled.form`
   position: relative;
-  width: 100%%;
+  width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
-  border: 1px solid #dfdfd7;
-  border-radius: 3px;
-  margin-top: 1em;
+  border-radius: 10px;
+  margin-top: ${spacing('md')};
 
   h3 {
     margin-top: ${spacing('md')};
@@ -110,37 +96,28 @@ const Form = styled.form`
     margin: 0;
   }
 
-  ${media('medium')} {
-    width: 380px;
+  ${media('small')} {
+    width: 450px;
   }
 `;
 
 const OuterFieldset = styled.fieldset`
-  padding: ${spacing('md')};
+  padding: 0 ${spacing('l')} ${spacing('l')};
   margin: 0;
   border: none;
 `;
 
 const Legend = styled.legend`
   margin: 0;
-  padding: 1em 0;
-  border-bottom: 1px solid #dfdfd7;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  padding: ${spacing('l')} 0;
   display: block;
   width: 100%;
-  background: ${({ theme }) => theme.color('grey_extra_light')};
-
-  h3 {
-    padding: 0;
-    margin: 0;
-  }
 `;
 
 const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1em;
+  margin-bottom: ${spacing('l')};
 
   label {
     flex: 0 0 30%;
@@ -188,12 +165,6 @@ const AmountField = styled(Input)`
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
-    ${({ inputBorderColor, theme }) =>
-      inputBorderColor && `border: 2px solid ${theme.color('red')};`}
-
-    :focus {
-      border: 2px solid ${({ theme }) => theme.color('red')};
-    }
   }
 `;
 
@@ -203,13 +174,16 @@ const Copy = styled(Text)`
 
 const Button = styled.button`
   width: 100%;
-  margin: 2rem 0 2rem;
+  margin: ${spacing('l')} 0 ${spacing('l')};
   color: ${({ theme }) => theme.color('white')};
-  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-size: ${({ theme }) => theme.fontSize('m')};
   font-weight: bold;
   cursor: pointer;
-  padding: ${spacing('md')} ${spacing('sm')};
+  min-height: 48px;
   background: ${({ theme }) => theme.color('red')};
+  padding: 0.875rem 1.25rem 0.625rem;
+  text-decoration: none;
+  border-radius: 2rem;
   border: none;
   :active,
   :focus,

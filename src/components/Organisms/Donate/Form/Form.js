@@ -124,7 +124,7 @@ const Signup = ({
         }
       >
         <Legend>
-          <Text tag="h3">
+          <Text tag="span" size="l" weight="bold">
             {givingType === 'single'
               ? 'Choose an amount to give'
               : 'Choose an amount to give per month'}

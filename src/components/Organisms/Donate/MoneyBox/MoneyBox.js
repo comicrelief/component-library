@@ -3,20 +3,27 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
+import spacing from '../../../../theme/shared/spacing';
 
 const MoneyBox = styled(Input)`
   display: block;
   input {
-    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
-    font-size: ${({ theme }) => theme.fontSize('l')};
-    font-weight: 800;
-    letter-spacing: -2px;
+    border: none;
+    background-color: ${({ theme }) => theme.color('blue_light')};
+    color: ${({ theme }) => theme.color('black')};
+    font-size: ${({ theme }) => theme.fontSize('xl')};
+    font-weight: bold;
+    border-radius: 10px;
+    padding: ${spacing('m')};
+    &:focus {
+      border: none;
+    }
 
     ${({ isSelected }) =>
       isSelected &&
       css`
-        border-color: ${({ theme }) => theme.color('red')};
-        background-color: ${({ theme }) => theme.color('red')};
+        background-color: ${({ theme }) => theme.color('blue')};
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         color: ${({ theme }) => theme.color('white')};
       `}
   }
