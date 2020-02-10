@@ -39,6 +39,12 @@ const Signup = ({
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
+    setAmountDonate(parseFloat(givingData.moneybuys[1].value));
+  }, [givingType, singleGiving, regularGiving]);
+
+  useEffect(() => {
+    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+
     let moneyBuyNewDescription = otherDescription;
 
     givingData.moneybuys.map((moneyBuy, index) => {
