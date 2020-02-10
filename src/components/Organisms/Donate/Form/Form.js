@@ -5,9 +5,7 @@ import Text from '../../../Atoms/Text/Text';
 import MoneyBox from '../MoneyBox/MoneyBox';
 import {
   handleDonateSubmission,
-  onKeyPress,
-  isAmountValid,
-  isInputMatchBoxValue
+  isAmountValid
 } from '../../../../utils/Membership';
 import {
   Button,
@@ -33,65 +31,10 @@ const Signup = ({
   mbshipID,
   ...rest
 }) => {
-  const [moneyBoxes, setMoneyBoxes] = useState({
-    box1: '',
-    box2: '',
-    box3: ''
-  });
-
   const [givingType, setGivingType] = useState('single');
-  const [isSelected, setIsSelected] = useState(true); // Highlight one the money buy box when the page load
   const [errorMsg, setErrorMsg] = useState(false);
-  const [amountDonate, setAmountDonate] = useState('');
-  const [userInput, setUserInput] = useState('');
-  const [boxBorderColor, setBoxBorderColor] = useState('');
-  const [inputBorderColor, setInputBorderColor] = useState(false);
+  const [amountDonate, setAmountDonate] = useState(' ');
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
-
-  // This function is triggered when one of the money buy box is selected
-  const selectMoneyBuy = (copy, value) => {
-    if (isSelected) setIsSelected(false);
-    if (errorMsg) setErrorMsg(false);
-    // Check if input is highlighted and his value matches one of the money buy box
-    const isUserInputMatch = userInput * 1 === value; // convert string to number string * 1
-    if (inputBorderColor && !isUserInputMatch) {
-      setInputBorderColor(false);
-      setUserInput('');
-    }
-    setBoxBorderColor(value);
-    setMoneyBuyCopy(copy);
-    setAmountDonate(value);
-  };
-
-  // Handle user other amount input
-  const handleChange = (input, description) => {
-    if (!isAmountValid(input)) {
-      if (moneyBuyCopy) setMoneyBuyCopy(false);
-      if (boxBorderColor) setBoxBorderColor(false);
-      if (!errorMsg) setErrorMsg(true);
-    } else {
-      setBoxBorderColor(false);
-      if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(description);
-      setAmountDonate(input);
-    }
-    // Highlight both input and box
-    isInputMatchBoxValue(moneyBoxes, selectMoneyBuy, setAmountDonate, input);
-    setInputBorderColor(true);
-    setUserInput(input);
-  };
-
-  const hightlightInput = (value, description) => {
-    if (isSelected) setIsSelected(false);
-    if (errorMsg) {
-      setMoneyBuyCopy(false);
-    } else if (!value) {
-      setAmountDonate(0);
-      setBoxBorderColor(false);
-      setMoneyBuyCopy(description);
-    }
-    setInputBorderColor(true);
-  };
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -99,24 +42,28 @@ const Signup = ({
     let moneyBuyNewDescription = otherDescription;
 
     givingData.moneybuys.map((moneyBuy, index) => {
-      const box = `box${index + 1}`;
-      // eslint-disable-next-line no-shadow
-      setMoneyBoxes(moneyBoxes => ({ ...moneyBoxes, [box]: moneyBuy }));
-
       if (moneyBuy.value === amountDonate) {
         moneyBuyNewDescription = moneyBuy.description;
       }
 
       return (
-        isSelected &&
         index === 1 &&
-        (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
+        amountDonate === ' ' &&
+        (setMoneyBuyCopy(moneyBuy.description),
+        setAmountDonate(parseFloat(moneyBuy.value)))
       );
     });
 
-    setMoneyBuyCopy(moneyBuyNewDescription);
+    if (!isAmountValid(amountDonate)) {
+      if (moneyBuyCopy) setMoneyBuyCopy(false);
+      if (!errorMsg) setErrorMsg(true);
+    } else {
+      if (errorMsg) setErrorMsg(false);
+      setMoneyBuyCopy(moneyBuyNewDescription);
+    }
   }, [
-    isSelected,
+    errorMsg,
+    moneyBuyCopy,
     singleGiving,
     regularGiving,
     givingType,
@@ -151,22 +98,6 @@ const Signup = ({
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-  const MoneyBoxes = givingData.moneybuys.map(
-    ({ value, description }, index) => (
-      <MoneyBox
-        isSelected={index === 1 && isSelected}
-        boxBorderColor={boxBorderColor}
-        isInputMatchBox={value}
-        amount={value}
-        description={`£${value}`}
-        setOtherAmount={() => selectMoneyBuy(description, value)}
-        key={value}
-        name={`${mbshipID}--moneyBuy${index + 1}`}
-        id={`${mbshipID}--moneyBuy-box${index + 1}`}
-      />
-    )
-  );
-
   return (
     <FormWrapper>
       <GivingSelector
@@ -194,7 +125,19 @@ const Signup = ({
           </Text>
         </Legend>
         <OuterFieldset>
-          <MoneyBuys>{MoneyBoxes}</MoneyBuys>
+          <MoneyBuys>
+            {givingData.moneybuys.map(({ value }, index) => (
+              <MoneyBox
+                isSelected={amountDonate === value}
+                amount={value}
+                description={`£${value}`}
+                setOtherAmount={() => setAmountDonate(parseFloat(value))}
+                key={value}
+                name={`${mbshipID}--moneyBuy${index + 1}`}
+                id={`${mbshipID}--moneyBuy-box${index + 1}`}
+              />
+            ))}
+          </MoneyBuys>
           <FormFieldset>
             <Label size="s" weight="500">
               Other amount
@@ -203,7 +146,7 @@ const Signup = ({
               step="0.01"
               name="membership_amount"
               type="number"
-              inputBorderColor={inputBorderColor}
+              inputBorderColor={isAmountValid(amountDonate) === false}
               label="£"
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}
@@ -211,12 +154,10 @@ const Signup = ({
               {...rest}
               max="5000"
               min="1"
-              value={userInput}
+              value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
               placeholder="0.00"
-              onChange={e => handleChange(e.target.value, otherDescription)}
-              onClick={e => hightlightInput(e.target.value, otherDescription)}
-              onKeyPress={e => onKeyPress(e)}
+              onChange={e => setAmountDonate(parseFloat(e.target.value))}
               aria-label="Input a different amount"
             />
           </FormFieldset>
@@ -225,16 +166,16 @@ const Signup = ({
           </Button>
           {errorMsg && (
             <Error tag="p">
-              Please enter a number between 1 and 5000, and up to 2 decimal
+              Please enter an amount between £1 and £5,000, and up to 2 decimal
               places
             </Error>
           )}
-          {moneyBuyCopy && (
+          {amountDonate >= 1 && moneyBuyCopy && (
             <Copy as="p">
               {moneyBuyCopy !== otherDescription ? (
-                <strong>{`£${amountDonate} could pay for `}</strong>
+                <strong>{`£${amountDonate.toFixed(2)} could pay for `}</strong>
               ) : (
-                <strong>{`£${amountDonate} `}</strong>
+                <strong>{`£${amountDonate.toFixed(2)} `}</strong>
               )}
               {moneyBuyCopy}
             </Copy>

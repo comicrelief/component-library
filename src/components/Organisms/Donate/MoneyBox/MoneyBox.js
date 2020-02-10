@@ -12,8 +12,8 @@ const MoneyBox = styled(Input)`
     font-weight: 800;
     letter-spacing: -2px;
 
-    ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
-      (boxBorderColor === isInputMatchBox || isSelected) &&
+    ${({ isSelected }) =>
+      isSelected &&
       css`
         border-color: ${({ theme }) => theme.color('red')};
         background-color: ${({ theme }) => theme.color('red')};
