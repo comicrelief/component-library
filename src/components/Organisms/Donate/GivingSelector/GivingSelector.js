@@ -58,7 +58,7 @@ const GivingSelector = ({ givingType, changeGivingType, ...rest }) => {
       />
       <MoneyBox
         {...rest}
-        aria-label="Give Once"
+        aria-label="Give Monthly"
         value="Monthly"
         type="button"
         label=""
