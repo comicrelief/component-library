@@ -125,9 +125,7 @@ const Signup = ({
       >
         <Legend>
           <Text tag="span" size="l" weight="bold">
-            {givingType === 'single'
-              ? 'Choose an amount to give'
-              : 'Choose an amount to give per month'}
+            Choose an amount to give
           </Text>
         </Legend>
         <OuterFieldset>
@@ -168,7 +166,7 @@ const Signup = ({
             />
           </FormFieldset>
           <Button type="submit">
-            {givingType === 'single' ? 'Donate' : 'Donate Monthly'}
+            {givingType === 'single' ? 'Donate once' : 'Donate monthly'}
           </Button>
           {errorMsg && (
             <Error tag="p">

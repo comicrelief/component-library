@@ -31,14 +31,14 @@ const Wrapper = styled.div`
 `;
 
 const MoneyBox = styled(Input)`
-  input[aria-label='Give Once'] {
+  input[aria-label='Give once'] {
     border-radius: 2rem;
     margin-bottom: ${spacing('sm')};
     ${media('small')} {
       margin-bottom: 0;
     }
   }
-  input[aria-label='Give Monthly'] {
+  input[aria-label='Give monthly'] {
     border-radius: 2rem;
   }
   input {
@@ -74,8 +74,8 @@ const GivingSelector = ({ givingType, changeGivingType, ...rest }) => {
     <Wrapper>
       <MoneyBox
         {...rest}
-        aria-label="Give Once"
-        value="Give Once"
+        aria-label="Give once"
+        value="Give once"
         type="button"
         label=""
         errorMsg=""
@@ -86,8 +86,8 @@ const GivingSelector = ({ givingType, changeGivingType, ...rest }) => {
       />
       <MoneyBox
         {...rest}
-        aria-label="Give Monthly"
-        value="Give Monthly"
+        aria-label="Give monthly"
+        value="Give monthly"
         type="button"
         label=""
         errorMsg=""

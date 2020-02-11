@@ -26,13 +26,13 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.4;
 `;
 
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  padding: ${spacing('md')};
+  padding: ${spacing('l')} ${spacing('md')};
   flex-direction: row;
   display: block;
   width: 100%;
