@@ -29,8 +29,10 @@ const FooterNav = ({ navItems }) => {
       setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
     }
   };
-  window.onresize = resize;
 
+  if (typeof window !== 'undefined') {
+    window.onresize = resize;
+  }
   /**
    * Always stop the main 'parent' link from actually firing, but do the
    * collapsing for SM-MD breakpoints
@@ -63,7 +65,6 @@ const FooterNav = ({ navItems }) => {
       <NavMenu role="menubar">
         {menuGroups.map((group, index) => (
           <NavItem
-            role="none"
             key={group.id}
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
