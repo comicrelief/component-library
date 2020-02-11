@@ -22,8 +22,15 @@ const FooterNav = ({ navItems }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isSmallBreakpoint, setIsSmallBreakpoint] = useState(false);
 
-  // Detect window screen size
-  const width = typeof window !== 'undefined' ? window.innerWidth : null;
+  // Detect window screen size when screen is resized
+  const resize = () => {
+    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
+    if (screenSize !== null) {
+      setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
+    }
+  };
+  window.onresize = resize;
+
   /**
    * Always stop the main 'parent' link from actually firing, but do the
    * collapsing for SM-MD breakpoints
@@ -37,8 +44,10 @@ const FooterNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    setIsSmallBreakpoint(width < sizes.small);
-  }, [width]);
+    // Detect window screen size when page load
+    const width = typeof window !== 'undefined' ? window.innerWidth : null;
+    setIsSmallBreakpoint(width < parseFloat(sizes.small));
+  }, []);
 
   return (
     <Nav
