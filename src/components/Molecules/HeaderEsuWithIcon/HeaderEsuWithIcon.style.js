@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import spacing from '../../../theme/shared/spacing';
-import EmailSignUp from '../EmailSignUp/EmailSignUp';
+import EmailSignUp from '../../Organisms/EmailSignUp/EmailSignUp';
 
 const IconWrapper = styled.div`
   width: 35px;

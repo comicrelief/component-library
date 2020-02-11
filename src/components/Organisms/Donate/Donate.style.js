@@ -1,0 +1,227 @@
+import styled from 'styled-components';
+
+import Input from '../../Atoms/Input/Input';
+import Text from '../../Atoms/Text/Text';
+import spacing from '../../../theme/shared/spacing';
+import { media } from '../../../theme/shared/size';
+import Picture from '../../Atoms/Picture/Picture';
+import zIndex from '../../../theme/shared/zIndex';
+
+const Container = styled.div`
+  background-color: ${({ theme, backgroundColor }) =>
+    theme.color(backgroundColor)};
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  ${media('medium')} {
+    align-items: center;
+    justify-content: inherit;
+  }
+`;
+
+const BgImage = styled(Picture)`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.4;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  text-align: center;
+  padding: ${spacing('l')} ${spacing('md')};
+  flex-direction: row;
+  display: block;
+  width: 100%;
+  flex-direction: ${({ formAlignRight }) =>
+    formAlignRight === true ? 'row-reverse' : 'row'};
+  ${media('small')} {
+    padding: ${spacing('xl')} ${spacing('md')};
+  }
+  ${media('medium')} {
+    display: flex;
+    padding: ${spacing('xl')} 0;
+  }
+`;
+
+const Header = styled.div`
+  width: 100%;
+  display: flex;
+  ${media('medium')} {
+    width: 50%;
+    padding: ${spacing('xl')};
+    align-items: center;
+  }
+  h2 {
+    font-size: ${({ theme }) => theme.fontSize('xxl')};
+  }
+`;
+
+const HeaderInner = styled.div`
+  position: relative;
+  text-align: left;
+`;
+
+const FormWrapper = styled.div`
+  position: relative;
+  ${media('medium')} {
+    width: 50%;
+  }
+`;
+
+const Error = styled(Text)`
+  color: ${({ theme }) => theme.color('red')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: 500;
+`;
+
+const Form = styled.form`
+  position: relative;
+  width: 100%;
+  background-color: ${({ theme }) => theme.color('white')};
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-top: ${spacing('md')};
+
+  h3 {
+    margin-top: ${spacing('md')};
+  }
+
+  input {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  ${media('small')} {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+`;
+
+const OuterFieldset = styled.fieldset`
+  padding: 0 ${spacing('md')} ${spacing('md')};
+  margin: 0;
+  border: none;
+  ${media('small')} {
+    padding: 0 ${spacing('l')} ${spacing('l')};
+  }
+`;
+
+const Legend = styled.legend`
+  margin: 0;
+  padding: ${spacing('l')} ${spacing('sm')};
+  display: block;
+  width: 100%;
+`;
+
+const MoneyBuys = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: ${spacing('l')};
+  ${media('small')} {
+    flex-direction: row;
+  }
+  label {
+    flex: 0 0 30%;
+    margin-bottom: ${spacing('sm')};
+    ${media('small')} {
+      margin-bottom: 0;
+    }
+    input {
+      cursor: pointer;
+    }
+  }
+`;
+
+const FormFieldset = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Label = styled(Text)`
+  margin-right: ${spacing('sm')};
+`;
+
+const AmountField = styled(Input)`
+  position: relative;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+
+  ${media('small')} {
+    flex-basis: 60%;
+  }
+
+  span {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    font-weight: 500;
+    padding: 0px 15px;
+    ${zIndex('low')};
+  }
+
+  input {
+    border: 2px solid ${({ theme }) => theme.color('grey')};
+    background: ${({ theme }) => theme.color('grey_light')};
+    border-radius: 10px;
+    padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
+  }
+`;
+
+const Copy = styled(Text)`
+  line-height: 1.5;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  margin: ${spacing('l')} 0 ${spacing('l')};
+  color: ${({ theme }) => theme.color('white')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: ${({ theme }) => theme.color('red')};
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  :active,
+  :focus,
+  :hover {
+    background-color: ${({ theme }) => theme.color('coral_dark')};
+  }
+
+  ${media('small')} {
+    padding: ${spacing('md')} ${spacing('l')};
+  }
+`;
+
+export {
+  BgImage,
+  Button,
+  Copy,
+  Container,
+  Error,
+  FormFieldset,
+  FormWrapper,
+  Header,
+  HeaderInner,
+  Label,
+  Wrapper,
+  Form,
+  MoneyBuys,
+  AmountField,
+  OuterFieldset,
+  Legend
+};
