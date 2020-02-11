@@ -1,28 +1,49 @@
 ```js
 <div>
   <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
-    Heading 1
+    <b style={{ width: '100px', display: 'inline-block' }}>H1 </b>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 80px / 5rem /
+      super
+    </Text>
   </Text>
   <Text tag="h2" family="Anton" uppercase weight="normal" size="big">
-    Heading 2
+    <b style={{ width: '100px', display: 'inline-block' }}>H2 </b>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 64px / 4rem / big
+    </Text>
   </Text>
   <Text tag="h3" family="Anton" uppercase weight="normal" size="xxl">
-    Heading 3
+    <b style={{ width: '100px', display: 'inline-block' }}>H3 </b>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 48px / 3rem / xxl
+    </Text>
   </Text>
   <Text tag="h4" family="Anton" uppercase weight="normal" size="xl">
-    Heading 4
+    <b style={{ width: '100px', display: 'inline-block' }}>H4 </b>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 32px / 2rem / xl
+    </Text>
   </Text>
   <Text tag="h4" family="Anton" uppercase weight="normal" size="l">
-    Heading 5
+    <b style={{ width: '100px', display: 'inline-block' }}>H5 </b>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 24px / 1.5rem / l
+    </Text>
   </Text>
   <Text tag="p" size="m">
-    Body 1
+    <span style={{ width: '100px', display: 'inline-block' }}>Body1</span>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
+      1.25rem / m
+    </Text>
   </Text>
   <Text tag="p" size="s">
-    Body 2
-  </Text>
-  <Text tag="p" size="s" weight="bold" uppercase>
-    Bold and Uppercase
+    <span style={{ width: '100px', display: 'inline-block' }}>Body2</span>
+    <Text style={{ textTransform: 'none' }} tag="span" size="s">
+      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 16px / 1rem
+      / s
+    </Text>
   </Text>
 </div>
 ```
