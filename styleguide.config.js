@@ -42,7 +42,8 @@ module.exports = {
       h4: 16,
       h5: 16,
       h6: 16
-    }
+    },
+    maxWidth: '100%',
   },
   sections: [
     {
@@ -69,6 +70,11 @@ module.exports = {
     {
       name: 'Molecules',
       components: 'src/components/Molecules/**/*.js',
+      sectionDepth: 2
+    },
+    {
+      name: 'Organisms',
+      components: 'src/components/Organisms/**/*.js',
       sectionDepth: 2
     }
     // {
