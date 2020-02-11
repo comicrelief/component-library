@@ -72,7 +72,7 @@ const FooterNav = ({ navItems }) => {
                 role="button"
                 onClick={toggleSubMenu(group.id)}
               >
-                <Text>{group.title}</Text>
+                <Text color="white">{group.title}</Text>
               </NavLink>
             )}
             {/* Second level of the navigation (ul tag): Child(ren) */}
@@ -97,7 +97,7 @@ const FooterNav = ({ navItems }) => {
                       }
                     >
                       <SubNavLink href={thisUrl} inline role="menuitem">
-                        <Text>{child.title}</Text>
+                        <Text color="white">{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>
                   );
