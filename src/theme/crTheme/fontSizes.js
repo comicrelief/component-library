@@ -4,7 +4,7 @@ const fontSizes = {
   s: '1rem',
   m: '1.25rem',
   l: '1.5rem',
-  xl: '2.125rem',
+  xl: '2rem',
   xxl: '3rem',
   big: '4rem',
   super: '5rem'

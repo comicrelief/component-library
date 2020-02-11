@@ -29,8 +29,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c9 {
-      font-size: 2.125rem;
-      line-height: 2.125rem;
+      font-size: 2rem;
+      line-height: 2rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -243,8 +243,8 @@ it('renders press realese correctly', () => {
     }
 
     .c9 {
-      font-size: 2.125rem;
-      line-height: 2.125rem;
+      font-size: 2rem;
+      line-height: 2rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;

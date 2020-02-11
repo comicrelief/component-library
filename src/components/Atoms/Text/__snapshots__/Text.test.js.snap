@@ -56,8 +56,8 @@ exports[`renders large heading correctly 1`] = `
 
 exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
   font-family: 'Anton',Impact,sans-serif;
   -webkit-letter-spacing: 0.03rem;
@@ -78,8 +78,8 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
   color: #FFE400;
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }

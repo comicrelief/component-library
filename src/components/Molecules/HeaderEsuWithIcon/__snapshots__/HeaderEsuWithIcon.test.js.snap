@@ -223,7 +223,7 @@ exports[`renders correctly with error message 1`] = `
 
 .c20 p {
   font-size: 1rem;
-  line-height: 2.125rem;
+  line-height: 2rem;
 }
 
 .c20 p a {
@@ -718,7 +718,7 @@ exports[`renders correctly with modal open 1`] = `
 
 .c18 p {
   font-size: 1rem;
-  line-height: 2.125rem;
+  line-height: 2rem;
 }
 
 .c18 p a {
@@ -1042,7 +1042,7 @@ exports[`renders correctly with success message 1`] = `
 
 .c10 p {
   font-size: 1rem;
-  line-height: 2.125rem;
+  line-height: 2rem;
 }
 
 .c10 p a {

@@ -157,7 +157,7 @@ exports[`renders ESU School correctly 1`] = `
 
 .c11 p {
   font-size: 1rem;
-  line-height: 2.125rem;
+  line-height: 2rem;
 }
 
 .c11 p a {
@@ -463,7 +463,7 @@ exports[`renders correctly 1`] = `
 
 .c13 p {
   font-size: 1rem;
-  line-height: 2.125rem;
+  line-height: 2rem;
 }
 
 .c13 p a {

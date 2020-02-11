@@ -9,8 +9,8 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c8 {
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -174,8 +174,8 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c8 {
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -352,8 +352,8 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c8 {
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -517,8 +517,8 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c8 {
-  font-size: 2.125rem;
-  line-height: 2.125rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }

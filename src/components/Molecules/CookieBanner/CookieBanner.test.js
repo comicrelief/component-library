@@ -72,8 +72,8 @@ it('renders correctly', () => {
     }
 
     .c5:hover {
-      background-color: #969598;
-      color: #000000;
+      background-color: #E52630;
+      color: #FFFFFF;
     }
 
     .c0 {
