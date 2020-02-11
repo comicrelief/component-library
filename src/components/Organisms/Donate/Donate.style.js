@@ -5,6 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   background-color: ${({ theme, backgroundColor }) =>
@@ -31,7 +32,6 @@ const BgImage = styled(Picture)`
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  margin-bottom: ${spacing('l')};
   padding: ${spacing('md')};
   flex-direction: row;
   display: block;
@@ -40,19 +40,16 @@ const Wrapper = styled.div`
 
   ${media('medium')} {
     display: flex;
-    margin: ${spacing('m')};
+    padding: ${spacing('xl')} 0;
   }
 `;
 
 const Header = styled.div`
   width: 100%;
   display: flex;
-  ${media('small')} {
-    padding: ${({ formAlignRight }) =>
-      formAlignRight === true
-        ? `${spacing('l')} 0 0 ${spacing('xl')}`
-        : `${spacing('l')} ${spacing('xl')} 0 0`};
-    margin-bottom: ${spacing('l')};
+  ${media('medium')} {
+    width: 50%;
+    padding: ${spacing('xl')};
     align-items: center;
   }
   h2 {
@@ -67,6 +64,9 @@ const HeaderInner = styled.div`
 
 const FormWrapper = styled.div`
   position: relative;
+  ${media('medium')} {
+    width: 50%;
+  }
 `;
 
 const Error = styled(Text)`
@@ -119,7 +119,7 @@ const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-bottom: ${spacing('m')};
+  margin-bottom: ${spacing('l')};
   ${media('small')} {
     flex-direction: row;
   }
@@ -147,27 +147,31 @@ const Label = styled(Text)`
 
 const AmountField = styled(Input)`
   position: relative;
-  flex: 0 0 50%;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
   font-weight: 400;
   display: block;
 
   ${media('small')} {
-    flex: 0 0 60%;
+    flex-basis: 60%;
   }
 
   span {
     position: absolute;
-    padding: 0px 15px;
     font-size: 20px;
     top: 50%;
     transform: translateY(-50%);
     left: 0px;
     font-weight: 500;
+    padding: 0px 15px;
+    ${zIndex('low')};
   }
 
   input {
-    border: 2px solid ${({ theme }) => theme.color('grey_small')};
-    background: transparent;
+    border: 2px solid ${({ theme }) => theme.color('grey')};
+    background: ${({ theme }) => theme.color('grey_light')};
+    border-radius: 10px;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
   }
 `;

@@ -10,16 +10,17 @@ import zIndex from '../../../../theme/shared/zIndex';
 const Wrapper = styled.div`
   border-radius: 2rem;
   padding: 4px;
-  margin-top: ${spacing('l')};
   display: flex;
   flex-direction: column;
+  margin: ${spacing('md')} 0;
   ${media('small')} {
     flex-direction: row;
-    margin-left: 0;
-    margin-top: 0;
     background: ${({ theme }) => theme.color('blue_light')};
     width: 450px;
-    margin: ${spacing('l')} auto 0;
+    margin: ${spacing('md')} auto 0;
+  }
+  ${media('medium')} {
+    margin: 0 auto;
   }
   label {
     flex-basis: 100%;
@@ -42,6 +43,9 @@ const MoneyBox = styled(Input)`
   }
   input {
     border: none;
+    &:focus {
+      border: none;
+    }
     width: 100%;
     max-width: 100%;
     font-size: ${({ theme }) => theme.fontSize('s')};
