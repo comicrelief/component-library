@@ -53,7 +53,7 @@ const Donate = ({
             >
               {title}
             </Text>
-            <Text tag="p" color="white">
+            <Text tag="p" color="white" size="m">
               {subtitle}
             </Text>
           </HeaderInner>

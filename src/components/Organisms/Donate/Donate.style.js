@@ -13,8 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   height: auto;
-  padding: ${spacing('l')} 0;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  ${media('medium')} {
     align-items: center;
     justify-content: inherit;
   }
@@ -33,40 +32,37 @@ const Wrapper = styled.div`
   position: relative;
   text-align: center;
   margin-bottom: ${spacing('l')};
+  padding: ${spacing('md')};
   flex-direction: row;
   display: block;
-  width: 90%;
   flex-direction: ${({ formAlignRight }) =>
     formAlignRight === true ? 'row-reverse' : 'row'};
 
   ${media('medium')} {
     display: flex;
-    margin: ${spacing('m')} ${spacing('xxl')};
+    margin: ${spacing('m')};
   }
 `;
 
 const Header = styled.div`
-  margin-left: auto;
   width: 100%;
-
-  ${media('medium')} {
-    transform-style: preserve-3d;
+  display: flex;
+  ${media('small')} {
     padding: ${({ formAlignRight }) =>
       formAlignRight === true
         ? `${spacing('l')} 0 0 ${spacing('xl')}`
         : `${spacing('l')} ${spacing('xl')} 0 0`};
     margin-bottom: ${spacing('l')};
+    align-items: center;
+  }
+  h2 {
+    font-size: ${({ theme }) => theme.fontSize('xxl')};
   }
 `;
 
 const HeaderInner = styled.div`
   position: relative;
   text-align: left;
-  ${media('medium')} {
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: left;
-  }
 `;
 
 const FormWrapper = styled.div`
@@ -75,7 +71,7 @@ const FormWrapper = styled.div`
 
 const Error = styled(Text)`
   color: ${({ theme }) => theme.color('red')};
-  font-size: ${spacing('md')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 500;
 `;
 
@@ -83,7 +79,7 @@ const Form = styled.form`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin-top: ${spacing('md')};
 
@@ -98,18 +94,23 @@ const Form = styled.form`
 
   ${media('small')} {
     width: 450px;
+    margin-right: auto;
+    margin-left: auto;
   }
 `;
 
 const OuterFieldset = styled.fieldset`
-  padding: 0 ${spacing('l')} ${spacing('l')};
+  padding: 0 ${spacing('md')} ${spacing('md')};
   margin: 0;
   border: none;
+  ${media('small')} {
+    padding: 0 ${spacing('l')} ${spacing('l')};
+  }
 `;
 
 const Legend = styled.legend`
   margin: 0;
-  padding: ${spacing('l')} 0;
+  padding: ${spacing('l')} ${spacing('sm')};
   display: block;
   width: 100%;
 `;
@@ -117,17 +118,19 @@ const Legend = styled.legend`
 const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${spacing('l')};
-
+  flex-direction: column;
+  margin-bottom: ${spacing('m')};
+  ${media('small')} {
+    flex-direction: row;
+  }
   label {
     flex: 0 0 30%;
-
+    margin-bottom: ${spacing('sm')};
+    ${media('small')} {
+      margin-bottom: 0;
+    }
     input {
       cursor: pointer;
-    }
-
-    :hover input {
-      border-color: ${({ theme }) => theme.color('red')};
     }
   }
 `;
@@ -135,10 +138,11 @@ const MoneyBuys = styled.div`
 const FormFieldset = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const Label = styled(Text)`
-  margin-right: auto;
+  margin-right: ${spacing('sm')};
 `;
 
 const AmountField = styled(Input)`
@@ -147,7 +151,7 @@ const AmountField = styled(Input)`
   font-weight: 400;
   display: block;
 
-  ${media('medium')} {
+  ${media('small')} {
     flex: 0 0 60%;
   }
 
@@ -162,7 +166,7 @@ const AmountField = styled(Input)`
   }
 
   input {
-    border: 2px solid ${({ theme }) => theme.color('grey_medium')};
+    border: 2px solid ${({ theme }) => theme.color('grey_small')};
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
   }
@@ -176,22 +180,22 @@ const Button = styled.button`
   width: 100%;
   margin: ${spacing('l')} 0 ${spacing('l')};
   color: ${({ theme }) => theme.color('white')};
-  font-size: ${({ theme }) => theme.fontSize('m')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
   cursor: pointer;
   min-height: 48px;
   background: ${({ theme }) => theme.color('red')};
-  padding: 0.875rem 1.25rem 0.625rem;
   text-decoration: none;
   border-radius: 2rem;
   border: none;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   :active,
   :focus,
   :hover {
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 
-  ${media('medium')} {
+  ${media('small')} {
     padding: ${spacing('md')} ${spacing('l')};
   }
 `;

@@ -8,25 +8,37 @@ import spacing from '../../../../theme/shared/spacing';
 import zIndex from '../../../../theme/shared/zIndex';
 
 const Wrapper = styled.div`
+  border-radius: 2rem;
+  padding: 4px;
   margin-top: ${spacing('l')};
   display: flex;
-  flex-direction: row;
-
-  ${media('medium')} {
+  flex-direction: column;
+  ${media('small')} {
+    flex-direction: row;
     margin-left: 0;
     margin-top: 0;
+    background: ${({ theme }) => theme.color('blue_light')};
+    width: 450px;
+    margin: ${spacing('l')} auto 0;
   }
   label {
-    flex-basis: 50%;
+    flex-basis: 100%;
+    ${media('small')} {
+      flex-basis: 50%;
+    }
   }
 `;
 
 const MoneyBox = styled(Input)`
   input[aria-label='Give Once'] {
-    border-radius: 10px 0 0 10px;
+    border-radius: 2rem;
+    margin-bottom: ${spacing('sm')};
+    ${media('small')} {
+      margin-bottom: 0;
+    }
   }
   input[aria-label='Give Monthly'] {
-    border-radius: 0 10px 10px 0;
+    border-radius: 2rem;
   }
   input {
     border: none;
@@ -34,7 +46,7 @@ const MoneyBox = styled(Input)`
     max-width: 100%;
     font-size: ${({ theme }) => theme.fontSize('s')};
     font-weight: bold;
-    padding: ${spacing('md')};
+    min-height: 48px;
     cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
 
     ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
@@ -44,7 +56,7 @@ const MoneyBox = styled(Input)`
           active === true
             ? 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);'
             : null};
-        ${({ active }) => (active === true ? zIndex('high') : null)};
+        ${({ active }) => (active === true ? zIndex('low') : null)};
         background-color: ${({ active, theme }) =>
           active === true ? theme.color('blue') : theme.color('blue_light')};
         color: ${({ active, theme }) =>

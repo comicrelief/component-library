@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
+import { media } from '../../../../theme/shared/size';
 
 const MoneyBox = styled(Input)`
   display: block;
@@ -11,10 +12,16 @@ const MoneyBox = styled(Input)`
     border: none;
     background-color: ${({ theme }) => theme.color('blue_light')};
     color: ${({ theme }) => theme.color('black')};
-    font-size: ${({ theme }) => theme.fontSize('xl')};
-    font-weight: bold;
+    font-size: ${({ theme }) => theme.fontSize('l')};
+    font-family: ${({ theme }) => theme.fontFamilies('Anton')};
+    font-weight: normal;
     border-radius: 10px;
-    padding: ${spacing('m')};
+    padding: ${spacing('s')};
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    ${media('small')} {
+      font-size: ${({ theme }) => theme.fontSize('xl')};
+      padding: ${spacing('m')};
+    }
     &:focus {
       border: none;
     }
@@ -23,7 +30,7 @@ const MoneyBox = styled(Input)`
       isSelected &&
       css`
         background-color: ${({ theme }) => theme.color('blue')};
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
         color: ${({ theme }) => theme.color('white')};
       `}
   }
