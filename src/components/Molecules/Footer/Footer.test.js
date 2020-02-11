@@ -19,7 +19,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c23 {
+    .c11 {
       color: #FFFFFF;
       font-size: 1rem;
       text-transform: inherit;
@@ -43,7 +43,7 @@ it('renders correctly', () => {
       transform: rotate(-14deg);
     }
 
-    .c11 {
+    .c14 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -53,7 +53,7 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c11:hover {
+    .c14:hover {
       color: #2C0230;
       border-bottom: 2px solid #2C0230;
     }
@@ -135,7 +135,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c13 {
+    .c12 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -152,14 +152,14 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c13 > li a {
+    .c12 > li a {
       display: none;
       font-size: 15px;
       font-weight: 500;
       cursor: pointer;
     }
 
-    .c13 > li a:after {
+    .c12 > li a:after {
       content: none;
     }
 
@@ -191,7 +191,7 @@ it('renders correctly', () => {
       content: none;
     }
 
-    .c14 {
+    .c13 {
       height: 40px;
       width: 100%;
       background-color: inherit;
@@ -210,16 +210,13 @@ it('renders correctly', () => {
       height: 46px;
       width: 100%;
       background-color: #2C0230;
-      color: #FFFFFF;
       padding: 14px 21px;
-      color: #FFFFFF;
       height: auto;
       position: relative;
     }
 
     .c15:hover,
     .c15:focus {
-      color: #FFFFFF;
       border-bottom: none;
       font-weight: 500;
     }
@@ -234,21 +231,6 @@ it('renders correctly', () => {
       list-style: none outside;
       padding: 0;
       margin: 0;
-    }
-
-    .c12 {
-      border: 0;
-      height: 46px;
-      width: 100%;
-      background-color: #2C0230;
-      color: #FFFFFF;
-    }
-
-    .c12:hover,
-    .c12:focus {
-      color: #FFFFFF;
-      border-bottom: none;
-      font-weight: 500;
     }
 
     .c10 {
@@ -281,7 +263,7 @@ it('renders correctly', () => {
       overflow: hidden;
       line-height: 19px;
       font-size: 23px;
-      color: inherit;
+      color: #FFFFFF;
       font-weight: 100;
       -webkit-transition: -webkit-transform 0.2s ease;
       -webkit-transition: transform 0.2s ease;
@@ -353,12 +335,12 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c13 {
+      .c12 {
         max-height: none;
         height: auto;
       }
 
-      .c13 > li a {
+      .c12 > li a {
         display: inline;
         line-height: 24px;
       }
@@ -383,28 +365,28 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c14 {
+      .c13 {
         height: auto;
         margin-top: 12px;
         padding: 0;
       }
 
-      .c14 a {
+      .c13 a {
         background-color: inherit;
         height: auto;
       }
 
-      .c14 a:after {
+      .c13 a:after {
         content: none !important;
       }
 
-      .c14 a:hover,
-      .c14 a:focus {
+      .c13 a:hover,
+      .c13 a:focus {
         border-bottom: 2px solid #fff;
       }
 
-      .c14 a:hover span,
-      .c14 a:focus span {
+      .c13 a:hover span,
+      .c13 a:focus span {
         border-bottom: 0;
         padding-bottom: 2px;
       }
@@ -612,34 +594,23 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  Hear from us
-                </span>
-              </a>
+                Hear from us
+              </h2>
               <ul
                 aria-label="Hear from us"
-                className="c13"
+                className="c12"
                 role="list"
               >
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/#"
                     role="menuitem"
@@ -647,8 +618,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Get the newsletter
@@ -656,10 +627,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
                     role="menuitem"
@@ -667,8 +638,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       How we contact you
@@ -681,24 +652,13 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  Get in touch
-                </span>
-              </a>
+                Get in touch
+              </h2>
               <ul
                 aria-label="Get in touch"
                 className="c16"
@@ -708,7 +668,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="/contact-us"
                     role="menuitem"
@@ -716,8 +676,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Contact us
@@ -728,7 +688,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
                     role="menuitem"
@@ -736,8 +696,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Your Gift Aid
@@ -748,7 +708,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
                     role="menuitem"
@@ -756,8 +716,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       FAQs
@@ -768,7 +728,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                     role="menuitem"
@@ -776,8 +736,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Red Nose Day 2019 FAQs
@@ -790,24 +750,13 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  About us
-                </span>
-              </a>
+                About us
+              </h2>
               <ul
                 aria-label="About us"
                 className="c16"
@@ -817,7 +766,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
                     role="menuitem"
@@ -825,8 +774,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Mission
@@ -837,7 +786,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
                     role="menuitem"
@@ -845,8 +794,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Our history
@@ -857,7 +806,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
                     role="menuitem"
@@ -865,8 +814,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Finances
@@ -877,7 +826,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
                     role="menuitem"
@@ -885,8 +834,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Partners
@@ -897,7 +846,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                     role="menuitem"
@@ -905,8 +854,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Meet the team
@@ -917,7 +866,7 @@ it('renders correctly', () => {
                   className="c17"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.sportrelief.com/"
                     role="menuitem"
@@ -925,8 +874,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Sport Relief
@@ -939,34 +888,23 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  Careers
-                </span>
-              </a>
+                Careers
+              </h2>
               <ul
                 aria-label="Careers"
-                className="c13"
+                className="c12"
                 role="list"
               >
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/careers"
                     role="menuitem"
@@ -974,8 +912,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Working at Comic Relief
@@ -983,10 +921,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
@@ -994,8 +932,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Open roles
@@ -1008,34 +946,23 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  News
-                </span>
-              </a>
+                News
+              </h2>
               <ul
                 aria-label="News"
-                className="c13"
+                className="c12"
                 role="list"
               >
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/news"
                     role="menuitem"
@@ -1043,8 +970,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       News
@@ -1052,10 +979,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
                     role="menuitem"
@@ -1063,8 +990,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Press area
@@ -1077,34 +1004,23 @@ it('renders correctly', () => {
               className="c10"
               role="none"
             >
-              <a
-                aria-haspopup="true"
-                className="c11 c12"
-                color="red"
-                href="#"
-                onClick={[Function]}
-                role="button"
-                target="_self"
-                type="standard"
+              <h2
+                className="c11"
+                color="white"
+                size="s"
               >
-                <span
-                  className="c8"
-                  color="inherit"
-                  size="s"
-                >
-                  Legal
-                </span>
-              </a>
+                Legal
+              </h2>
               <ul
                 aria-label="Legal"
-                className="c13"
+                className="c12"
                 role="list"
               >
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="/homepage"
                     role="menuitem"
@@ -1112,8 +1028,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Link comp with both URL and Ref
@@ -1121,10 +1037,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="/this-is-a-test"
                     role="menuitem"
@@ -1132,8 +1048,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Link comp with only Ref
@@ -1141,10 +1057,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.yahoo.com"
                     role="menuitem"
@@ -1152,8 +1068,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Link comp with only URL
@@ -1161,10 +1077,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1172,8 +1088,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Test whitelisted external link
@@ -1181,10 +1097,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c14"
+                  className="c13"
                 >
                   <a
-                    className="c11 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"
@@ -1192,8 +1108,8 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c8"
-                      color="inherit"
+                      className="c11"
+                      color="white"
                       size="s"
                     >
                       Test non-whitelisted external link
@@ -1208,7 +1124,7 @@ it('renders correctly', () => {
           className="c18"
         >
           <a
-            className="c11 c19"
+            className="c14 c19"
             color="red"
             href="/"
             target="_self"
@@ -1231,7 +1147,7 @@ it('renders correctly', () => {
           className="c22"
         >
           <p
-            className="c23"
+            className="c11"
             color="white"
             size="s"
           >
