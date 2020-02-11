@@ -44,7 +44,8 @@ const handleDonateSubmission = (
   clientID,
   cartID,
   mbshipID,
-  donateLink
+  donateLink,
+  givingType = 'monthly'
 ) => {
   let currentpageUrl = window.location.href;
   const affiliateValue = getUrlParameter(currentpageUrl);
@@ -56,7 +57,9 @@ const handleDonateSubmission = (
       currentpageUrl.indexOf(thisMatch)
     );
   }
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=monthly&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+  const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
+
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 };
 
 export {
