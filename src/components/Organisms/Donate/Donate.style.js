@@ -35,9 +35,12 @@ const Wrapper = styled.div`
   padding: ${spacing('md')};
   flex-direction: row;
   display: block;
+  width: 100%;
   flex-direction: ${({ formAlignRight }) =>
     formAlignRight === true ? 'row-reverse' : 'row'};
-
+  ${media('small')} {
+    padding: ${spacing('xl')} ${spacing('md')};
+  }
   ${media('medium')} {
     display: flex;
     padding: ${spacing('xl')} 0;
