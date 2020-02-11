@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -20,25 +20,25 @@ const FooterNav = ({ navItems }) => {
   const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+  const [isSmallBreakpoint, setIsSmallBreakpoint] = useState(false);
 
-  // Ensure this has a default value so Webpack doesn't fall-over on build
-  let isSmallBreakpoint = false;
-
+  // Detect window screen size
+  const width = typeof window !== 'undefined' ? window.innerWidth : null;
   /**
    * Always stop the main 'parent' link from actually firing, but do the
    * collapsing for SM-MD breakpoints
    */
   const toggleSubMenu = item => event => {
     event.preventDefault();
-
-    // Detect browser width size each function call in case screen has been resized since load
-    isSmallBreakpoint = window.innerWidth < sizes.small;
-
     // Only run on SM, as we're only using the hide-show logic on SM
     if (isSmallBreakpoint) {
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
   };
+
+  useEffect(() => {
+    setIsSmallBreakpoint(width < sizes.medium);
+  }, [width]);
 
   return (
     <Nav
