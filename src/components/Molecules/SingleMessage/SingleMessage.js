@@ -39,6 +39,7 @@ const SingleMessage = ({
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [onPlay, setonPlay] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
   const [uniqueID, setUniqueID] = useState(null);
   const [hasParentID, setHasParentID] = useState(false);
@@ -71,32 +72,33 @@ const SingleMessage = ({
 
   /* Sets up YT players once all of the ID stuff is taken care of */
   useEffect(() => {
-    if (hasVideo && uniqueID && !isInitialised) {
-      // Switch state to ensure this only runs once per video row
+    if (hasVideo && onPlay && uniqueID && !isInitialised) {
       setIsInitialised(true);
-
+      // Switch state to ensure this only runs once per video row
       // Instantiate a YT Player into our array, using its unique id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
         videoId: videoID,
         playerVars: { rel: 0, modestbranding: 1, fs: 0 }
       });
     }
-  }, [hasVideo, isInitialised, uniqueID, videoID]);
+  }, [hasVideo, isInitialised, uniqueID, videoID, onPlay]);
 
   const handlePlay = thisUniqueID => {
+    setonPlay(true);
     // Trigger play and update video state
     const thisVideoID = `${thisUniqueID}__video`;
 
-    allPlayers[thisVideoID].playVideo();
+    setTimeout(() => {
+      allPlayers[thisVideoID].playVideo();
+      // Once video is playing, switch state to allow CSS to show/hide relevant layers
+      allPlayers[thisVideoID].on('stateChange', event => {
+        if (event.data === 1) {
+          setIsBuffering(false);
+          setIsPlaying(true);
+        }
+      });
+    }, 1000);
     setIsBuffering(true);
-
-    // Once video is playing, switch state to allow CSS to show/hide relevant layers
-    allPlayers[thisVideoID].on('stateChange', event => {
-      if (event.data === 1) {
-        setIsBuffering(false);
-        setIsPlaying(true);
-      }
-    });
   };
 
   /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
