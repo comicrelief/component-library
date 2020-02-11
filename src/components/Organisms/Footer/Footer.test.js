@@ -592,7 +592,6 @@ it('renders correctly', () => {
           >
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
@@ -650,7 +649,6 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
@@ -748,7 +746,6 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
@@ -886,7 +883,6 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
@@ -944,7 +940,6 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
@@ -1002,7 +997,6 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
-              role="none"
             >
               <h2
                 className="c11"
