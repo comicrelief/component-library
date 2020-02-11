@@ -37,7 +37,7 @@ const FooterNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    setIsSmallBreakpoint(width < sizes.medium);
+    setIsSmallBreakpoint(width < sizes.small);
   }, [width]);
 
   return (
@@ -60,15 +60,9 @@ const FooterNav = ({ navItems }) => {
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
-              <NavLink
-                href="#"
-                inline
-                aria-haspopup="true"
-                role="button"
-                onClick={toggleSubMenu(group.id)}
-              >
-                <Text>{group.title}</Text>
-              </NavLink>
+              <Text tag="h2" color="white">
+                {group.title}
+              </Text>
             ) : (
               <NavLink
                 href="#"
