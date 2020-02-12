@@ -172,10 +172,15 @@ const AmountField = styled(Input)`
   }
 
   input {
+    height: 48px;
     border: 2px solid ${({ theme }) => theme.color('grey')};
     background: ${({ theme }) => theme.color('grey_light')};
     border-radius: 10px;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
+    &:focus {
+      outline: none;
+      border: 2px solid ${({ theme }) => theme.color('grey')};
+    }
   }
 `;
 
@@ -199,6 +204,7 @@ const Button = styled.button`
   :active,
   :focus,
   :hover {
+    outline: none;
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 

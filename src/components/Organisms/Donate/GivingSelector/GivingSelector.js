@@ -43,8 +43,13 @@ const MoneyBox = styled(Input)`
   }
   input {
     border: none;
+    &:active:focus {
+      box-shadow: none;
+    }
     &:focus {
       border: none;
+      outline: none;
+      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue')};
     }
     width: 100%;
     max-width: 100%;
