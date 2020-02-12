@@ -3,10 +3,10 @@ import color from './colors';
 
 const buttonColors = {
   black: {
-    background: color('black'),
+    background: color('grey_dark'),
     color: color('white'),
-    hoverBackground: color('grey'),
-    hoverColor: color('black')
+    hoverBackground: color('black'),
+    hoverColor: color('white')
   },
   blue: {
     background: color('blue'),
@@ -167,8 +167,8 @@ const buttonColors = {
   white: {
     background: color('white'),
     color: color('black'),
-    hoverBackground: color('grey'),
-    hoverColor: color('black')
+    hoverBackground: color('red'),
+    hoverColor: color('white')
   },
   yellow: {
     background: color('yellow'),

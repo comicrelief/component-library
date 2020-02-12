@@ -15,6 +15,7 @@ it('renders correctly', () => {
     Array [
       .c2 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -44,8 +45,8 @@ it('renders correctly', () => {
     }
 
     .c1:checked + span {
-      background-color: #C180F9;
-      border: 1px solid #C180F9;
+      background-color: #6F3AAB;
+      border: 1px solid #6F3AAB;
     }
 
     .c1:checked + span:before {
@@ -97,6 +98,7 @@ it('renders correctly', () => {
       </label>,
       .c2 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -126,8 +128,8 @@ it('renders correctly', () => {
     }
 
     .c1:checked + span {
-      background-color: #C180F9;
-      border: 1px solid #C180F9;
+      background-color: #6F3AAB;
+      border: 1px solid #6F3AAB;
     }
 
     .c1:checked + span:before {

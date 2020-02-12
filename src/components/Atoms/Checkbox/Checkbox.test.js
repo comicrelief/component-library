@@ -15,6 +15,7 @@ it('renders correctly', () => {
     Array [
       .c2 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -43,7 +44,7 @@ it('renders correctly', () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #C180F9;
+      background-color: #6F3AAB;
       background-size: contain;
     }
 
@@ -89,6 +90,7 @@ it('renders correctly', () => {
       </label>,
       .c2 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -117,7 +119,7 @@ it('renders correctly', () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #C180F9;
+      background-color: #6F3AAB;
       background-size: contain;
     }
 
