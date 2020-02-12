@@ -49,7 +49,7 @@ const MoneyBox = styled(Input)`
     &:focus {
       border: none;
       outline: none;
-      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue_royal')};
+      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue')};
     }
     width: 100%;
     max-width: 100%;
@@ -67,9 +67,7 @@ const MoneyBox = styled(Input)`
             : null};
         ${({ active }) => (active === true ? zIndex('low') : null)};
         background-color: ${({ active, theme }) =>
-          active === true
-            ? theme.color('blue_royal')
-            : theme.color('blue_light')};
+          active === true ? theme.color('blue') : theme.color('blue_light')};
         color: ${({ active, theme }) =>
           active === true ? theme.color('white') : theme.color('black')};
       `}
