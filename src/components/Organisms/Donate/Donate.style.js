@@ -55,9 +55,6 @@ const Header = styled.div`
     padding: ${spacing('xl')};
     align-items: center;
   }
-  h2 {
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
-  }
 `;
 
 const HeaderInner = styled.div`
