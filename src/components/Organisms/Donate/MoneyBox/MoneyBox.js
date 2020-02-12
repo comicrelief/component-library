@@ -24,7 +24,7 @@ const MoneyBox = styled(Input)`
     &:focus {
       border: none;
       outline: none;
-      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue')};
+      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue_royal')};
     }
     ${media('small')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
@@ -37,7 +37,7 @@ const MoneyBox = styled(Input)`
     ${({ isSelected }) =>
       isSelected &&
       css`
-        background-color: ${({ theme }) => theme.color('blue')};
+        background-color: ${({ theme }) => theme.color('blue_royal')};
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
         color: ${({ theme }) => theme.color('white')};
       `}
