@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -20,25 +20,36 @@ const FooterNav = ({ navItems }) => {
   const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+  const [isSmallBreakpoint, setIsSmallBreakpoint] = useState(false);
 
-  // Ensure this has a default value so Webpack doesn't fall-over on build
-  let isSmallBreakpoint = false;
+  // Detect window screen size when screen is resized
+  const resize = () => {
+    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
+    if (screenSize !== null) {
+      setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
+    }
+  };
 
+  if (typeof window !== 'undefined') {
+    window.onresize = resize;
+  }
   /**
    * Always stop the main 'parent' link from actually firing, but do the
    * collapsing for SM-MD breakpoints
    */
   const toggleSubMenu = item => event => {
     event.preventDefault();
-
-    // Detect browser width size each function call in case screen has been resized since load
-    isSmallBreakpoint = window.innerWidth < sizes.small;
-
     // Only run on SM, as we're only using the hide-show logic on SM
     if (isSmallBreakpoint) {
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
   };
+
+  useEffect(() => {
+    // Detect window screen size when page load
+    const width = typeof window !== 'undefined' ? window.innerWidth : null;
+    setIsSmallBreakpoint(width < parseFloat(sizes.small));
+  }, []);
 
   return (
     <Nav
@@ -54,21 +65,14 @@ const FooterNav = ({ navItems }) => {
       <NavMenu role="menubar">
         {menuGroups.map((group, index) => (
           <NavItem
-            role="none"
             key={group.id}
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
-              <NavLink
-                href="#"
-                inline
-                aria-haspopup="true"
-                role="button"
-                onClick={toggleSubMenu(group.id)}
-              >
-                <Text>{group.title}</Text>
-              </NavLink>
+              <Text tag="h2" color="white">
+                {group.title}
+              </Text>
             ) : (
               <NavLink
                 href="#"
@@ -78,7 +82,7 @@ const FooterNav = ({ navItems }) => {
                 role="button"
                 onClick={toggleSubMenu(group.id)}
               >
-                <Text>{group.title}</Text>
+                <Text color="white">{group.title}</Text>
               </NavLink>
             )}
             {/* Second level of the navigation (ul tag): Child(ren) */}
@@ -103,7 +107,7 @@ const FooterNav = ({ navItems }) => {
                       }
                     >
                       <SubNavLink href={thisUrl} inline role="menuitem">
-                        <Text>{child.title}</Text>
+                        <Text color="white">{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>
                   );

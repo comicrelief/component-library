@@ -7,11 +7,9 @@ const NavLinkClass = styled(Link)`
   height: 46px;
   width: 100%;
   background-color: ${({ theme }) => theme.color('deep_violet_dark')};
-  color: ${({ theme }) => theme.color('white')};
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.color('white')};
     border-bottom: none;
     font-weight: 500;
   }
@@ -109,7 +107,6 @@ const SubNavItem = styled.li`
  */
 const SubNavLink = styled(NavLinkClass)`
   padding: 14px 21px;
-  color: ${({ theme }) => theme.color('white')};
   height: auto;
   position: relative;
 
@@ -180,7 +177,7 @@ const NavItem = styled.li`
       overflow: hidden;
       line-height: 19px;
       font-size: 23px;
-      color: inherit;
+      color: ${({ theme }) => theme.color('white')};
       font-weight: 100;
       transition: transform 0.2s ease;
       transform: ${({ isSubMenuOpen }) =>
