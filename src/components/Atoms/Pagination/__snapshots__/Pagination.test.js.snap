@@ -1994,7 +1994,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   text-decoration: none;
   font-weight: 700;
   cursor: default;
-  background: #2042AD;
+  background: #0565D1;
   color: #FFFFFF;
 }
 
