@@ -56,8 +56,8 @@ it('renders correctly', () => {
     }
 
     .c14:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     .c4 {
