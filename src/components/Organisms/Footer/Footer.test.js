@@ -20,7 +20,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c11 {
+    .c12 {
       color: #FFFFFF;
       font-size: 1rem;
       line-height: 1rem;
@@ -28,14 +28,14 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c21 {
+    .c22 {
       object-fit: cover;
       width: auto;
       display: block;
       height: auto;
     }
 
-    .c20 {
+    .c21 {
       display: inline-block;
       z-index: 3;
       width: 70px;
@@ -45,7 +45,7 @@ it('renders correctly', () => {
       transform: rotate(-14deg);
     }
 
-    .c14 {
+    .c15 {
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -55,7 +55,7 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c14:hover {
+    .c15:hover {
       color: #000000;
       border-bottom: 2px solid #000000;
     }
@@ -137,77 +137,81 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c12 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-transition: max-height 0.5s ease;
-      transition: max-height 0.5s ease;
-      max-height: 0px;
-      overflow: hidden;
-      padding: 0;
-      position: relative;
-      list-style: none outside;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .c12 > li a {
-      display: none;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .c12 > li a:after {
-      content: none;
-    }
-
-    .c16 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-transition: max-height 0.5s ease;
-      transition: max-height 0.5s ease;
-      max-height: 0px;
-      overflow: hidden;
-      padding: 0;
-      position: relative;
-      list-style: none outside;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .c16 > li a {
-      display: none;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .c16 > li a:after {
-      content: none;
-    }
-
     .c13 {
-      height: 40px;
-      width: 100%;
-      background-color: inherit;
-      padding: 8px 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: max-height 0.5s ease;
+      transition: max-height 0.5s ease;
+      max-height: 0px;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      list-style: none outside;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c13 > li a {
+      display: none;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .c13 > li a:after {
+      content: none;
     }
 
     .c17 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: max-height 0.5s ease;
+      transition: max-height 0.5s ease;
+      max-height: 0px;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      list-style: none outside;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c17 > li a {
+      display: none;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .c17 > li a:after {
+      content: none;
+    }
+
+    .c11 {
+      margin-bottom: 1rem;
+    }
+
+    .c14 {
       height: 40px;
       width: 100%;
       background-color: inherit;
       padding: 8px 0;
     }
 
-    .c15 {
+    .c18 {
+      height: 40px;
+      width: 100%;
+      background-color: inherit;
+      padding: 8px 0;
+    }
+
+    .c16 {
       border: 0;
       height: 46px;
       width: 100%;
@@ -217,14 +221,14 @@ it('renders correctly', () => {
       position: relative;
     }
 
-    .c15:hover,
-    .c15:focus {
+    .c16:hover,
+    .c16:focus {
       border-bottom: none;
       font-weight: 500;
     }
 
-    .c15:hover,
-    .c15:focus {
+    .c16:hover,
+    .c16:focus {
       font-weight: 700;
     }
 
@@ -293,38 +297,38 @@ it('renders correctly', () => {
       margin: 0 auto;
     }
 
-    .c18 {
+    .c19 {
       display: block;
       width: 100%;
       height: 100%;
       margin: 0 0 25px;
     }
 
-    .c22 {
+    .c23 {
       display: block;
       width: 100%;
       height: 100%;
       text-align: left;
     }
 
-    .c22 p {
+    .c23 p {
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 5px;
     }
 
-    .c19 {
+    .c20 {
       color: transparent;
       margin-right: auto;
       border: 0;
     }
 
-    .c19:hover {
+    .c20:hover {
       border: 0;
     }
 
     @media (min-width:1150px) {
-      .c20 {
+      .c21 {
         width: 70px;
         height: 70px;
       }
@@ -337,19 +341,19 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c12 {
+      .c13 {
         max-height: none;
         height: auto;
       }
 
-      .c12 > li a {
+      .c13 > li a {
         display: inline;
         line-height: 24px;
       }
     }
 
     @media (min-width:740px) {
-      .c16 {
+      .c17 {
         max-height: none;
         height: auto;
         -webkit-flex-direction: row;
@@ -360,64 +364,64 @@ it('renders correctly', () => {
         flex-wrap: wrap;
       }
 
-      .c16 > li a {
+      .c17 > li a {
         display: inline;
         line-height: 24px;
       }
     }
 
     @media (min-width:740px) {
-      .c13 {
+      .c14 {
         height: auto;
         margin-top: 12px;
         padding: 0;
       }
 
-      .c13 a {
+      .c14 a {
         background-color: inherit;
         height: auto;
       }
 
-      .c13 a:after {
+      .c14 a:after {
         content: none !important;
       }
 
-      .c13 a:hover,
-      .c13 a:focus {
+      .c14 a:hover,
+      .c14 a:focus {
         border-bottom: 2px solid #fff;
       }
 
-      .c13 a:hover span,
-      .c13 a:focus span {
+      .c14 a:hover span,
+      .c14 a:focus span {
         border-bottom: 0;
         padding-bottom: 2px;
       }
     }
 
     @media (min-width:740px) {
-      .c17 {
+      .c18 {
         height: auto;
         margin-top: 12px;
         padding: 0;
         width: 50%;
       }
 
-      .c17 a {
+      .c18 a {
         background-color: inherit;
         height: auto;
       }
 
-      .c17 a:after {
+      .c18 a:after {
         content: none !important;
       }
 
-      .c17 a:hover,
-      .c17 a:focus {
+      .c18 a:hover,
+      .c18 a:focus {
         border-bottom: 2px solid #fff;
       }
 
-      .c17 a:hover span,
-      .c17 a:focus span {
+      .c18 a:hover span,
+      .c18 a:focus span {
         border-bottom: 0;
         padding-bottom: 2px;
       }
@@ -466,7 +470,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c22 p {
+      .c23 p {
         font-size: 16px;
         line-height: 27px;
       }
@@ -595,23 +599,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                Hear from us
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  Hear from us
+                </h2>
+              </li>
               <ul
                 aria-label="Hear from us"
-                className="c12"
+                className="c13"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/#"
                     role="menuitem"
@@ -619,7 +627,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -628,10 +636,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
                     role="menuitem"
@@ -639,7 +647,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -652,23 +660,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                Get in touch
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  Get in touch
+                </h2>
+              </li>
               <ul
                 aria-label="Get in touch"
-                className="c16"
+                className="c17"
                 role="list"
               >
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="/contact-us"
                     role="menuitem"
@@ -676,7 +688,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -685,10 +697,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
                     role="menuitem"
@@ -696,7 +708,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -705,10 +717,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
                     role="menuitem"
@@ -716,7 +728,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -725,10 +737,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                     role="menuitem"
@@ -736,7 +748,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -749,23 +761,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                About us
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  About us
+                </h2>
+              </li>
               <ul
                 aria-label="About us"
-                className="c16"
+                className="c17"
                 role="list"
               >
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
                     role="menuitem"
@@ -773,7 +789,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -782,10 +798,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
                     role="menuitem"
@@ -793,7 +809,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -802,10 +818,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
                     role="menuitem"
@@ -813,7 +829,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -822,10 +838,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
                     role="menuitem"
@@ -833,7 +849,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -842,10 +858,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                     role="menuitem"
@@ -853,7 +869,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -862,10 +878,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c17"
+                  className="c18"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.sportrelief.com/"
                     role="menuitem"
@@ -873,7 +889,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -886,23 +902,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                Careers
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  Careers
+                </h2>
+              </li>
               <ul
                 aria-label="Careers"
-                className="c12"
+                className="c13"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/careers"
                     role="menuitem"
@@ -910,7 +930,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -919,10 +939,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
@@ -930,7 +950,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -943,23 +963,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                News
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  News
+                </h2>
+              </li>
               <ul
                 aria-label="News"
-                className="c12"
+                className="c13"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/news"
                     role="menuitem"
@@ -967,7 +991,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -976,10 +1000,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
                     role="menuitem"
@@ -987,7 +1011,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1000,23 +1024,27 @@ it('renders correctly', () => {
             <li
               className="c10"
             >
-              <h2
+              <li
                 className="c11"
-                color="white"
-                size="s"
               >
-                Legal
-              </h2>
+                <h2
+                  className="c12"
+                  color="white"
+                  size="s"
+                >
+                  Legal
+                </h2>
+              </li>
               <ul
                 aria-label="Legal"
-                className="c12"
+                className="c13"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="/homepage"
                     role="menuitem"
@@ -1024,7 +1052,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1033,10 +1061,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="/this-is-a-test"
                     role="menuitem"
@@ -1044,7 +1072,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1053,10 +1081,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.yahoo.com"
                     role="menuitem"
@@ -1064,7 +1092,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1073,10 +1101,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1084,7 +1112,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1093,10 +1121,10 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c14"
                 >
                   <a
-                    className="c14 c15"
+                    className="c15 c16"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"
@@ -1104,7 +1132,7 @@ it('renders correctly', () => {
                     type="standard"
                   >
                     <span
-                      className="c11"
+                      className="c12"
                       color="white"
                       size="s"
                     >
@@ -1117,10 +1145,10 @@ it('renders correctly', () => {
           </ul>
         </nav>
         <div
-          className="c18"
+          className="c19"
         >
           <a
-            className="c14 c19"
+            className="c15 c20"
             color="red"
             href="/"
             target="_self"
@@ -1128,22 +1156,22 @@ it('renders correctly', () => {
             type="standard"
           >
             <div
-              className="c20"
+              className="c21"
               rotate={1}
             >
               <img
                 alt="Comic Relief logo"
-                className="c21"
+                className="c22"
                 src="mock.asset"
               />
             </div>
           </a>
         </div>
         <div
-          className="c22"
+          className="c23"
         >
           <p
-            className="c11"
+            className="c12"
             color="white"
             size="s"
           >

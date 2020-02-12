@@ -66,6 +66,9 @@ const SubNavMenu = styled.ul`
   }
 `;
 
+const FirstItem = styled.li`
+  margin-bottom: 1rem;
+`;
 /**
  * Sub Menu list items
  */
@@ -197,4 +200,13 @@ const NavItem = styled.li`
   }
 `;
 
-export { Nav, NavMenu, NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink };
+export {
+  Nav,
+  NavMenu,
+  NavItem,
+  NavLink,
+  SubNavMenu,
+  SubNavItem,
+  SubNavLink,
+  FirstItem
+};
