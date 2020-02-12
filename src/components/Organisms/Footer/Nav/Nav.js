@@ -13,8 +13,7 @@ import {
   NavLink,
   SubNavMenu,
   SubNavItem,
-  SubNavLink,
-  FirstItem
+  SubNavLink
 } from './Nav.style';
 
 const FooterNav = ({ navItems }) => {
@@ -71,11 +70,9 @@ const FooterNav = ({ navItems }) => {
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
-              <FirstItem>
-                <Text tag="h2" color="white">
-                  {group.title}
-                </Text>
-              </FirstItem>
+              <Text color="white" weight="bold">
+                {group.title}
+              </Text>
             ) : (
               <NavLink
                 href="#"
