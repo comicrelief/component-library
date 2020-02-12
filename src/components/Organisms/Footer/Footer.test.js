@@ -15,6 +15,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -22,6 +23,7 @@ it('renders correctly', () => {
     .c23 {
       color: #FFFFFF;
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -48,14 +50,14 @@ it('renders correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c11:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     .c4 {

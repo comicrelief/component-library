@@ -26,8 +26,6 @@ _Spacing_
 
 Default spacing scale
 
-One spacing unit is equal to 0.25rem, which translates to 4px by default in common browsers.
-
 | Name |  Size   |
 | :--- | :-----: |
 | none |    0    |

@@ -18,6 +18,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -33,12 +34,12 @@ it('renders correctly', () => {
       font-size: 1.25rem;
       background-color: #FFFFFF;
       border: 1px solid;
-      border-color: #2C0230;
+      border-color: #000000;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      color: #2C0230;
+      color: #000000;
     }
 
     .c2:focus {

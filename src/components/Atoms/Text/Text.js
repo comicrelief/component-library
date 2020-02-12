@@ -6,11 +6,13 @@ import PropTypes from 'prop-types';
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
+  line-height: ${({ size, theme }) => theme.fontSize(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
   font-family: ${({ family, theme }) =>
     family ? theme.fontFamilies(family) : 'inherit'};
+  ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
   ${({ size, theme }) =>
     size === 'super'
       ? css`
