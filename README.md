@@ -44,6 +44,11 @@ $ yarn test
 ```
 _Test will run through all jest tests and watch for any changes on snapshots._
 
+To update snapshots
+```
+$ yarn test -u
+```
+
 To publish
 ```
 $ yarn publish:npm
