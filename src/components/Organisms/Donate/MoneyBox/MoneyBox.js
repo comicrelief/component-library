@@ -24,7 +24,7 @@ const MoneyBox = styled(Input)`
     &:focus {
       border: none;
       outline: none;
-      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue')};
+      box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
     }
     ${media('small')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};

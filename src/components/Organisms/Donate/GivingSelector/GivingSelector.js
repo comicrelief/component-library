@@ -9,7 +9,7 @@ import zIndex from '../../../../theme/shared/zIndex';
 
 const Wrapper = styled.div`
   border-radius: 2rem;
-  padding: 4px;
+  padding: 2px;
   display: flex;
   flex-direction: column;
   margin: ${spacing('md')} 0;
@@ -49,7 +49,7 @@ const MoneyBox = styled(Input)`
     &:focus {
       border: none;
       outline: none;
-      box-shadow: inset 0 0 4px ${({ theme }) => theme.color('blue')};
+      box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
     }
     width: 100%;
     max-width: 100%;
