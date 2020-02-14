@@ -53,6 +53,10 @@ it('renders a button with an icon', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       margin-left: 1rem;
       -webkit-align-self: center;
       -ms-flex-item-align: center;
