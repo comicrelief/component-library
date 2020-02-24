@@ -2,14 +2,20 @@
 
 exports[`renders correctly with error message 1`] = `
 .c6 {
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
 }
 
 .c13 {
   font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
   font-weight: bold;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -26,7 +32,7 @@ exports[`renders correctly with error message 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.875rem 1.25rem 0.625rem;
+  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
@@ -34,12 +40,16 @@ exports[`renders correctly with error message 1`] = `
   border-radius: 2rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  min-height: 48px;
+  min-height: 50px;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -65,7 +75,7 @@ exports[`renders correctly with error message 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c15:focus {
@@ -213,7 +223,7 @@ exports[`renders correctly with error message 1`] = `
 
 .c20 p {
   font-size: 1rem;
-  line-height: 1.625rem;
+  line-height: 2rem;
 }
 
 .c20 p a {
@@ -513,14 +523,20 @@ exports[`renders correctly with modal closed 1`] = `
 
 exports[`renders correctly with modal open 1`] = `
 .c6 {
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
 }
 
 .c13 {
   font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
   font-weight: bold;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -532,7 +548,7 @@ exports[`renders correctly with modal open 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.875rem 1.25rem 0.625rem;
+  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
@@ -540,12 +556,16 @@ exports[`renders correctly with modal open 1`] = `
   border-radius: 2rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  min-height: 48px;
+  min-height: 50px;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
@@ -566,12 +586,12 @@ exports[`renders correctly with modal open 1`] = `
   font-size: 1.25rem;
   background-color: #FFFFFF;
   border: 1px solid;
-  border-color: #2C0230;
+  border-color: #000000;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c15:focus {
@@ -700,7 +720,7 @@ exports[`renders correctly with modal open 1`] = `
 
 .c18 p {
   font-size: 1rem;
-  line-height: 1.625rem;
+  line-height: 2rem;
 }
 
 .c18 p a {
@@ -943,10 +963,15 @@ exports[`renders correctly with modal open 1`] = `
 
 exports[`renders correctly with success message 1`] = `
 .c6 {
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
 }
 
 .c9 {
@@ -1020,7 +1045,7 @@ exports[`renders correctly with success message 1`] = `
 
 .c10 p {
   font-size: 1rem;
-  line-height: 1.625rem;
+  line-height: 2rem;
 }
 
 .c10 p a {

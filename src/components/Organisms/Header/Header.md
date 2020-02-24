@@ -41,7 +41,7 @@ import Link from '../../Atoms/Link/Link';
 ```js
 import data from './data/data';
 import Link from '../../Atoms/Link/Link';
-import HeaderEsuWithIcon from '../HeaderEsuWithIcon/HeaderEsuWithIcon';
+import HeaderEsuWithIcon from '../../Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
 import searchIcon from './assets/icon--search.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import RichText from '../../Atoms/RichText/RichText';

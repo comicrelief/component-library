@@ -22,6 +22,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
       font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -48,14 +49,14 @@ it('renders correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c2:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     .c17 {
@@ -63,12 +64,12 @@ it('renders correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
+      color: #000000;
       font-weight: normal;
     }
 
     .c17:hover {
-      color: #2C0230;
+      color: #000000;
     }
 
     .c23 {
@@ -77,7 +78,7 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.875rem 1.25rem 0.625rem;
+      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -85,20 +86,24 @@ it('renders correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      min-height: 48px;
+      min-height: 50px;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       cursor: pointer;
-      background-color: #4ECD57;
-      color: #2C0230;
+      background-color: #49D267;
+      color: #000000;
     }
 
     .c23:hover {
-      background-color: #62EF74;
-      color: #2C0230;
+      background-color: #F4F2F4;
+      color: #000000;
     }
 
     .c19 {
@@ -183,7 +188,7 @@ it('renders correctly', () => {
     .c18:hover .c20,
     .c18:hover .c20::before,
     .c18:hover .c20::after {
-      background-color: #918791;
+      background-color: #969598;
     }
 
     .c18:hover .c20::before {
@@ -534,7 +539,7 @@ it('renders correctly', () => {
       }
 
       .c9:hover .c10 span {
-        border-bottom: 2px solid #2C0230;
+        border-bottom: 2px solid #000000;
         padding-bottom: 2px;
       }
 

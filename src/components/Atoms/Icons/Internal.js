@@ -2,57 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 
-const Internal = ({ colour, theme, ...rest }) => {
+const Internal = ({ colour, theme, size, ...rest }) => {
   return (
     <svg
       {...rest}
-      width="22"
-      height="19"
-      viewBox="0 0 22 19"
-      fill="none"
+      width={size}
+      heiht={size}
+      fill={theme.color(colour)}
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 96 96"
     >
-      <line
-        x1="0.75"
-        y1="9.71143"
-        x2="19.25"
-        y2="9.71143"
-        stroke={theme.color(colour)}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <line
-        x1="12.5992"
-        y1="2"
-        x2="20.0001"
-        y2="9.40088"
-        stroke={theme.color(colour)}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <line
-        x1="0.75"
-        y1="-0.75"
-        x2="11.2164"
-        y2="-0.75"
-        transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
-        stroke={theme.color(colour)}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
+      <path d="M90.871 50.776c-.016.016-.026.036-.043.052l-32 32C58.047 83.609 57.024 84 56 84s-2.047-.391-2.829-1.171a4 4 0 010-5.657L78.343 52H8a4 4 0 010-8h70.343L53.171 18.829a4 4 0 015.657-5.657l32 32c.016.016.027.036.043.052.167.172.321.357.455.557.069.104.118.216.176.325.065.121.138.236.191.364.057.137.09.279.13.42.032.109.074.214.097.327a4.017 4.017 0 010 1.568c-.023.113-.065.217-.097.327-.041.141-.074.283-.13.42-.053.128-.126.243-.191.364-.059.109-.107.221-.176.325a4.035 4.035 0 01-.455.555z" />
     </svg>
   );
 };
 
 Internal.propTypes = {
   colour: PropTypes.string,
+  size: PropTypes.number,
   theme: PropTypes.objectOf({
     color: PropTypes.func.isRequired
   }).isRequired
 };
 
 Internal.defaultProps = {
-  colour: 'white'
+  colour: 'white',
+  size: 24
 };
 
 export default withTheme(Internal);

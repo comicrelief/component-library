@@ -17,14 +17,14 @@ it('renders a standard styled link correctly', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c0:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     <a
@@ -53,6 +53,10 @@ it('renders a button with an icon', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       margin-left: 1rem;
       -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -66,14 +70,14 @@ it('renders a button with an icon', () => {
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c0:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     @media (min-width:740px) {
@@ -96,39 +100,14 @@ it('renders a button with an icon', () => {
         className="c1"
       >
         <svg
-          fill="none"
-          height="19"
-          viewBox="0 0 22 19"
-          width="22"
+          fill="#FFFFFF"
+          heiht={24}
+          viewBox="0 0 96 96"
+          width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <line
-            stroke="#FFFFFF"
-            strokeLinecap="round"
-            strokeWidth="1.5"
-            x1="0.75"
-            x2="19.25"
-            y1="9.71143"
-            y2="9.71143"
-          />
-          <line
-            stroke="#FFFFFF"
-            strokeLinecap="round"
-            strokeWidth="1.5"
-            x1="12.5992"
-            x2="20.0001"
-            y1="2"
-            y2="9.40088"
-          />
-          <line
-            stroke="#FFFFFF"
-            strokeLinecap="round"
-            strokeWidth="1.5"
-            transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.5386 17.1538)"
-            x1="0.75"
-            x2="11.2164"
-            y1="-0.75"
-            y2="-0.75"
+          <path
+            d="M90.871 50.776c-.016.016-.026.036-.043.052l-32 32C58.047 83.609 57.024 84 56 84s-2.047-.391-2.829-1.171a4 4 0 010-5.657L78.343 52H8a4 4 0 010-8h70.343L53.171 18.829a4 4 0 015.657-5.657l32 32c.016.016.027.036.043.052.167.172.321.357.455.557.069.104.118.216.176.325.065.121.138.236.191.364.057.137.09.279.13.42.032.109.074.214.097.327a4.017 4.017 0 010 1.568c-.023.113-.065.217-.097.327-.041.141-.074.283-.13.42-.053.128-.126.243-.191.364-.059.109-.107.221-.176.325a4.035 4.035 0 01-.455.555z"
           />
         </svg>
       </span>
@@ -149,14 +128,14 @@ it('renders a standard styled link correctly with target blank and assistive tex
       text-decoration: none;
       display: inline;
       line-height: 1.5rem;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c0:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     .c1 {
@@ -205,7 +184,7 @@ it('renders link styled as button correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.875rem 1.25rem 0.625rem;
+      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
@@ -213,20 +192,24 @@ it('renders link styled as button correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      min-height: 48px;
+      min-height: 50px;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       cursor: pointer;
       background-color: #FFE400;
-      color: #2C0230;
+      color: #000000;
     }
 
     .c0:hover {
       background-color: #FEFD5A;
-      color: #2C0230;
+      color: #000000;
     }
 
     @media (min-width:740px) {

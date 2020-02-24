@@ -5,15 +5,16 @@ import hideVisually from '../../../theme/shared/hideVisually';
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
-  padding: 0.875rem 1.25rem 0.625rem;
+  padding: 0.5rem 1.25rem;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
   border-radius: 2rem;
   transition: all 0.5s;
-  min-height: 48px;
+  min-height: 50px;
   width: 100%;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   ${({ color, theme }) =>
     color ? theme.buttonColors(color) : theme.buttonColors('red')};
@@ -33,6 +34,7 @@ const linkStyle = () => css`
 `;
 
 export const IconWrapper = styled.span`
+  display: flex;
   margin-left: ${spacing('md')};
   align-self: center;
   position: absolute;
