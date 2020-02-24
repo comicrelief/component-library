@@ -18,6 +18,8 @@ const Wrapper = styled.article`
   height: 100%;
   display: flex;
   background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
 `;
 
 const Link = styled(link)`
@@ -42,22 +44,37 @@ const Link = styled(link)`
 `;
 
 const ImageWrapper = styled.div`
-  padding-left: ${({ category }) =>
-    (category || category === '') && `${spacing('md')}`};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  ${({ category }) =>
+    (category || category === '') &&
+    css`
+      padding-left: ${spacing('md')};
+      img {
+        border-radius: 0;
+      }
+    `};
 
   ${({ category }) =>
     !category &&
     category !== '' &&
     css`
+      img {
+        border-radius: 1rem 1rem 0 0;
+      }
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 45%;
+        img {
+          border-radius: 1rem 0 0 1rem;
+        }
       }
       @media ${({ theme }) => theme.breakpoint('medium')} {
         width: 100%;
+        img {
+          border-radius: 1rem 1rem 0 0;
+        }
       }
     `};
 `;

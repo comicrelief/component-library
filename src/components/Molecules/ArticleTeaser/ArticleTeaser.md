@@ -2,14 +2,18 @@
 
 ```js
 const data = require('../../../styleguide/data/data').default;
-<ArticleTeaser
-  href="/test"
-  images={data.images}
-  imageLow={data.imageLow}
-  date=" 01 July 2019"
-  title="News article"
-  alt="Image's description"
-/>;
+<div style={{ display: 'flex', background: '#E1E2E3' }}>
+  <div style={{ margin: '1rem' }}>
+    <ArticleTeaser
+      href="/test"
+      images={data.images}
+      imageLow={data.imageLow}
+      date=" 01 July 2019"
+      title="News article"
+      alt="Image's description"
+    />
+  </div>
+</div>;
 ```
 
 ### Article teaser: Press release
