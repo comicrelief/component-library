@@ -18,8 +18,13 @@ const Wrapper = styled.article`
   height: 100%;
   display: flex;
   background-color: #fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(4px);
+  }
 `;
 
 const Link = styled(link)`

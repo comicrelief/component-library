@@ -76,8 +76,17 @@ it('renders article teaser correctly', () => {
       display: -ms-flexbox;
       display: flex;
       background-color: #fff;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
       border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+      transform: translateY(4px);
     }
 
     .c2 {
@@ -304,8 +313,17 @@ it('renders press realese correctly', () => {
       display: -ms-flexbox;
       display: flex;
       background-color: #fff;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
       border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+      transform: translateY(4px);
     }
 
     .c2 {
