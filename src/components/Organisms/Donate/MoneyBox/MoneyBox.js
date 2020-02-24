@@ -18,16 +18,17 @@ const MoneyBox = styled(Input)`
     border-radius: 10px;
     padding: ${spacing('s')};
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-    &:focus {
-      border: none;
-      outline: none;
-    }
     ${media('small')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
       padding: ${spacing('m')};
     }
+    &:active:focus {
+      box-shadow: none;
+    }
     &:focus {
       border: none;
+      outline: none;
+      box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
     }
 
     ${({ isSelected }) =>

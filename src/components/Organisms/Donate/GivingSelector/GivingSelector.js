@@ -44,6 +44,9 @@ const MoneyBox = styled.div`
   input {
     ${hideVisually}
   }
+  input:focus:not(:checked) + label {
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
+  }
 `;
 
 const Label = styled.label`
