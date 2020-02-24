@@ -25,6 +25,7 @@ it('renders article teaser correctly', () => {
       line-height: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -239,6 +240,7 @@ it('renders press realese correctly', () => {
       line-height: 0.6875rem;
       text-transform: uppercase;
       font-weight: 800;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

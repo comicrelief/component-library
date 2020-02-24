@@ -10,6 +10,7 @@ export const BaseText = styled.span`
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
+  ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
   font-family: ${({ family, theme }) =>
     family ? theme.fontFamilies(family) : 'inherit'};
   ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};

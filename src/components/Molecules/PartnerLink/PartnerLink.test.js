@@ -19,6 +19,7 @@ it('renders correctly', () => {
       font-size: 0.6875rem;
       line-height: 0.6875rem;
       text-transform: inherit;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
