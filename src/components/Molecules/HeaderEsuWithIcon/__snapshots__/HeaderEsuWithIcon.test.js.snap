@@ -410,6 +410,7 @@ exports[`renders correctly with error message 1`] = `
             <span
               className="c16 c17"
               color="inherit"
+              data-test="error-message"
               size="sm"
             >
               invalid email
@@ -421,6 +422,7 @@ exports[`renders correctly with error message 1`] = `
             <button
               className="c19"
               color="red"
+              data-test="subscribe-button"
               href="/#"
               onClick={[Function]}
               target="_self"
@@ -910,6 +912,7 @@ exports[`renders correctly with modal open 1`] = `
             <button
               className="c17"
               color="red"
+              data-test="subscribe-button"
               href="/#"
               onClick={[Function]}
               target="_self"

@@ -99,7 +99,11 @@ const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
         error={error ? 1 : 0}
         aria-describedby={hasAria ? id : undefined}
       />
-      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
+      {error && (
+        <ErrorText size="sm" data-test="error-message">
+          {errorMsg}
+        </ErrorText>
+      )}
     </Label>
   );
 };

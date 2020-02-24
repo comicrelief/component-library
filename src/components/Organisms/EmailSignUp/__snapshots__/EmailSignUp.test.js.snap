@@ -273,6 +273,7 @@ exports[`renders ESU School correctly 1`] = `
       <button
         className="c10"
         color="teal"
+        data-test="subscribe-button-school"
         href="/#"
         onClick={[Function]}
         target="_self"
@@ -562,6 +563,7 @@ exports[`renders correctly 1`] = `
       <button
         className="c12"
         color="teal"
+        data-test="subscribe-button"
         href="/#"
         onClick={[Function]}
         target="_self"
