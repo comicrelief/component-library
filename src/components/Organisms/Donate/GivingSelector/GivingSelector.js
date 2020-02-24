@@ -1,106 +1,123 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Input from '../../../Atoms/Input/Input';
 import { media } from '../../../../theme/shared/size';
 import spacing from '../../../../theme/shared/spacing';
 import zIndex from '../../../../theme/shared/zIndex';
+import hideVisually from '../../../../theme/shared/hideVisually';
+
+const Switch = styled.span`
+  width: 50%;
+  height: 48px;
+  border-radius: 2rem;
+  ${zIndex('low')};
+  display: block;
+  position: absolute;
+  transition: left 0.15s ease-out;
+  background-color: ${({ theme }) => theme.color('blue')};
+  left: 2px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+`;
 
 const Wrapper = styled.div`
-  border-radius: 2rem;
-  padding: 2px;
   display: flex;
-  flex-direction: column;
   margin: ${spacing('md')} 0;
+`;
+
+const MoneyBox = styled.div`
+  width: 100%;
+  padding: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: ${spacing('md')} 0;
+  border-radius: 2rem;
+  background: ${({ theme }) => theme.color('blue_light')};
   ${media('small')} {
-    flex-direction: row;
-    background: ${({ theme }) => theme.color('blue_light')};
     width: 450px;
-    margin: ${spacing('md')} auto 0;
-  }
-  ${media('medium')} {
     margin: 0 auto;
   }
-  label {
-    flex-basis: 100%;
-    ${media('small')} {
-      flex-basis: 50%;
-    }
-  }
-`;
-
-const MoneyBox = styled(Input)`
-  input[aria-label='Give once'] {
-    border-radius: 2rem;
-    margin-bottom: ${spacing('sm')};
-    ${media('small')} {
-      margin-bottom: 0;
-    }
-  }
-  input[aria-label='Give monthly'] {
-    border-radius: 2rem;
+  #give-monthly:checked ~ ${Switch} {
+    left: calc(50% - 2px);
   }
   input {
-    border: none;
-    &:active:focus {
-      box-shadow: none;
-    }
-    &:focus {
-      border: none;
-      outline: none;
-      box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
-    }
-    width: 100%;
-    max-width: 100%;
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    font-weight: bold;
-    min-height: 48px;
-    cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
-
-    ${({ boxBorderColor, isInputMatchBox, isSelected }) =>
-      (boxBorderColor === isInputMatchBox || isSelected) &&
-      css`
-        ${({ active }) =>
-          active === true
-            ? 'box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);'
-            : null};
-        ${({ active }) => (active === true ? zIndex('low') : null)};
-        background-color: ${({ active, theme }) =>
-          active === true ? theme.color('blue') : theme.color('blue_light')};
-        color: ${({ active, theme }) =>
-          active === true ? theme.color('white') : theme.color('black')};
-      `}
+    ${hideVisually}
+  }
+  input:focus:not(:checked) + label {
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
   }
 `;
 
-const GivingSelector = ({ givingType, changeGivingType, ...rest }) => {
+const Label = styled.label`
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  font-weight: bold;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-basis: 50%;
+  border: none;
+  transition: color 0.15s ease-out;
+  ${zIndex('medium')};
+  cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
+  &:active:focus {
+    box-shadow: none;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
+  }
+  &[for='give-once'] {
+    border-radius: 2rem;
+    color: ${({ active, theme }) =>
+      active === true ? theme.color('white') : theme.color('black')};
+  }
+  &[for='give-monthly'] {
+    border-radius: 2rem;
+    color: ${({ active, theme }) =>
+      active === true ? theme.color('white') : theme.color('black')};
+  }
+`;
+
+const GivingSelector = ({ givingType, changeGivingType }) => {
   return (
     <Wrapper>
-      <MoneyBox
-        {...rest}
-        aria-label="Give once"
-        value="Give once"
-        type="button"
-        label=""
-        errorMsg=""
-        active={givingType === 'single'}
-        onClick={() => {
-          changeGivingType('single');
-        }}
-      />
-      <MoneyBox
-        {...rest}
-        aria-label="Give monthly"
-        value="Give monthly"
-        type="button"
-        label=""
-        errorMsg=""
-        active={givingType === 'monthly'}
-        onClick={() => {
-          changeGivingType('monthly');
-        }}
-      />
+      <MoneyBox>
+        <input
+          aria-label="Give once"
+          id="give-once"
+          value="Give once"
+          type="radio"
+          label=""
+          errorMsg=""
+          checked={givingType === 'single'}
+          onClick={() => {
+            changeGivingType('single');
+          }}
+        />
+        <Label active={givingType === 'single'} for="give-once">
+          Give once
+        </Label>
+        <input
+          aria-label="Give monthly"
+          id="give-monthly"
+          value="Give monthly"
+          type="radio"
+          label=""
+          errorMsg=""
+          checked={givingType === 'monthly'}
+          onClick={() => {
+            changeGivingType('monthly');
+          }}
+        />
+        <Label active={givingType === 'monthly'} for="give-monthly">
+          Give monthly
+        </Label>
+        <Switch />
+      </MoneyBox>
     </Wrapper>
   );
 };
