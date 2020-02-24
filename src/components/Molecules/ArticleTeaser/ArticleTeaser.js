@@ -23,7 +23,7 @@ const Wrapper = styled.article`
   transition: all 0.2s;
   &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(4px);
+    transform: translateY(-4px);
   }
 `;
 

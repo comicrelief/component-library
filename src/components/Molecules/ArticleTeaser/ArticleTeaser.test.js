@@ -84,9 +84,9 @@ it('renders article teaser correctly', () => {
 
     .c0:hover {
       box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-      -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-      transform: translateY(4px);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
@@ -321,9 +321,9 @@ it('renders press realese correctly', () => {
 
     .c0:hover {
       box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-      -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-      transform: translateY(4px);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
