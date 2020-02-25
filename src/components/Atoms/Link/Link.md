@@ -1,8 +1,19 @@
 ```js
+import { External, Download, Favourite, Internal } from '../Icons/index';
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link href="#anchor" target="blank" type="standard">
       Link standard
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      href="#anchor"
+      target="blank"
+      type="standard"
+      icon={<Download colour="black" />}
+    >
+      Link standard icon
     </Link>
   </div>
   <div
@@ -17,7 +28,7 @@
       Link standard white
     </Link>
   </div>
-</div>
+</div>;
 ```
 
 ## Iconography

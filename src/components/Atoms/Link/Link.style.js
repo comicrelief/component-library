@@ -34,7 +34,7 @@ const linkStyle = () => css`
 `;
 
 export const IconWrapper = styled.span`
-  display: flex;
+  display: inline-flex;
   margin-left: ${spacing('md')};
   align-self: center;
   position: absolute;
