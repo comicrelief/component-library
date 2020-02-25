@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background: inherit;
+}
+
+.c1 {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 1rem;
+  z-index: 2;
+  background: #FFE400;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  height: 100%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2>
+      Title
+    </h2>
+    <p>
+      Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no body 1`] = `
+.c2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background: inherit;
+}
+
+.c1 {
+  height: auto;
+  margin: 0 -1.5rem 0 1.5rem;
+}
+
+.c1 img {
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      height="100%"
+      width="100%"
+    >
+      <img
+        alt=""
+        className="c3 lazyload"
+        data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        data-sizes="auto"
+        data-src={null}
+        data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        height="100%"
+        src={null}
+        srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        width="100%"
+      />
+    </div>
+  </div>
+</div>
+`;
