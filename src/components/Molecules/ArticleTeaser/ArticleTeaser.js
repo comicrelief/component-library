@@ -17,7 +17,7 @@ const Wrapper = styled.article`
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color('white')};
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.2s;

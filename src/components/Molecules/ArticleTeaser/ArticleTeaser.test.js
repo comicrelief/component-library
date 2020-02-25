@@ -76,7 +76,7 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
       border-radius: 1rem;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
       -webkit-transition: all 0.2s;
@@ -319,7 +319,7 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
       border-radius: 1rem;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
       -webkit-transition: all 0.2s;
