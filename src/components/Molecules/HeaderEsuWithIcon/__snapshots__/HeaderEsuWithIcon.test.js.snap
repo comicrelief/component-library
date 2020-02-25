@@ -344,6 +344,7 @@ exports[`renders correctly with error message 1`] = `
   >
     <a
       className="c1"
+      data-test="header-esu"
       href="#"
       onClick={[Function]}
       rel="noopener noreferrer"
@@ -505,6 +506,7 @@ exports[`renders correctly with modal closed 1`] = `
   >
     <a
       className="c1"
+      data-test="header-esu"
       href="#"
       onClick={[Function]}
       rel="noopener noreferrer"
@@ -842,6 +844,7 @@ exports[`renders correctly with modal open 1`] = `
   >
     <a
       className="c1"
+      data-test="header-esu"
       href="#"
       onClick={[Function]}
       rel="noopener noreferrer"
@@ -1134,6 +1137,7 @@ exports[`renders correctly with success message 1`] = `
   >
     <a
       className="c1"
+      data-test="header-esu"
       href="#"
       onClick={[Function]}
       rel="noopener noreferrer"
