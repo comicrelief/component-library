@@ -17,7 +17,14 @@ const Wrapper = styled.article`
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color('white')};
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+  }
 `;
 
 const Link = styled(link)`
@@ -42,22 +49,37 @@ const Link = styled(link)`
 `;
 
 const ImageWrapper = styled.div`
-  padding-left: ${({ category }) =>
-    (category || category === '') && `${spacing('md')}`};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  ${({ category }) =>
+    (category || category === '') &&
+    css`
+      padding-left: ${spacing('md')};
+      img {
+        border-radius: 0;
+      }
+    `};
 
   ${({ category }) =>
     !category &&
     category !== '' &&
     css`
+      img {
+        border-radius: 1rem 1rem 0 0;
+      }
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 45%;
+        img {
+          border-radius: 1rem 0 0 1rem;
+        }
       }
       @media ${({ theme }) => theme.breakpoint('medium')} {
         width: 100%;
+        img {
+          border-radius: 1rem 1rem 0 0;
+        }
       }
     `};
 `;
@@ -79,6 +101,16 @@ const CopyWrapper = styled.div`
 
 const Title = styled(Text)`
   margin: 0;
+`;
+
+const Date = styled(Text)`
+  display: block;
+  margin-bottom: ${spacing('md')};
+`;
+
+const Time = styled(Text)`
+  display: block;
+  margin-top: ${spacing('md')};
 `;
 
 const Image = styled(Picture)`
@@ -111,7 +143,8 @@ const ArticleTeaser = ({
   alt,
   category,
   logoSize,
-  family
+  family,
+  time
 }) => {
   return (
     <Wrapper>
@@ -136,9 +169,9 @@ const ArticleTeaser = ({
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
-          <Text size="xxs" weight="800" uppercase>
+          <Date size="xs" weight="bold">
             {date}
-          </Text>
+          </Date>
           <Title
             size="xl"
             tag="h3"
@@ -149,6 +182,11 @@ const ArticleTeaser = ({
           >
             {title}
           </Title>
+          {time && (
+            <Time size="xs" weight="400" color="grey_dark">
+              {time}
+            </Time>
+          )}
         </CopyWrapper>
       </Link>
     </Wrapper>
@@ -165,6 +203,7 @@ ArticleTeaser.propTypes = {
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  time: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
 };
@@ -175,6 +214,7 @@ ArticleTeaser.defaultProps = {
   images: null,
   category: null,
   logoSize: null,
+  time: null,
   family: 'Anton'
 };
 
