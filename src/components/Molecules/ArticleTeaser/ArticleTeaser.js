@@ -182,9 +182,11 @@ const ArticleTeaser = ({
           >
             {title}
           </Title>
-          <Time size="xs" weight="400" color="grey_dark">
-            {time}
-          </Time>
+          {time && (
+            <Time size="xs" weight="400" color="grey_dark">
+              {time}
+            </Time>
+          )}
         </CopyWrapper>
       </Link>
     </Wrapper>

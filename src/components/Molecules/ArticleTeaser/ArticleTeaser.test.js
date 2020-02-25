@@ -42,16 +42,6 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0.03rem;
     }
 
-    .c12 {
-      color: #222222;
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      text-transform: inherit;
-      font-weight: 400;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
     .c4 {
       position: relative;
       display: block;
@@ -147,11 +137,6 @@ it('renders article teaser correctly', () => {
     .c9 {
       display: block;
       margin-bottom: 1rem;
-    }
-
-    .c13 {
-      display: block;
-      margin-top: 1rem;
     }
 
     .c5 {
@@ -259,11 +244,6 @@ it('renders article teaser correctly', () => {
           >
             News article
           </h3>
-          <span
-            className="c12 c13"
-            color="grey_dark"
-            size="xs"
-          />
         </div>
       </a>
     </article>
@@ -303,16 +283,6 @@ it('renders press realese correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
-    }
-
-    .c12 {
-      color: #222222;
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      text-transform: inherit;
-      font-weight: 400;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4 {
@@ -417,11 +387,6 @@ it('renders press realese correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c13 {
-      display: block;
-      margin-top: 1rem;
-    }
-
     .c5 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -493,11 +458,6 @@ it('renders press realese correctly', () => {
           >
             Press Release
           </h3>
-          <span
-            className="c12 c13"
-            color="grey_dark"
-            size="xs"
-          />
         </div>
       </a>
     </article>
