@@ -8,11 +8,10 @@ const StyledLink = styled.a`
   cursor: pointer;
   display: block;
   transition: opacity 0.2s;
-  
+
   &:hover,
   &:focus {
     opacity: 0.6;
-   }
   }
 `;
 
@@ -31,6 +30,7 @@ const Icon = ({ href, target, icon, brand, title, ...restProps }) => (
     {...restProps}
     title={title}
     rel="noopener noreferrer"
+    data-test="header-esu"
   >
     <StyledImage src={icon} alt={brand} />
     {title !== 'Sign up for emails' && (

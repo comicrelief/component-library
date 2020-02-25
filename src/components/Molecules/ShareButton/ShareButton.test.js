@@ -94,6 +94,7 @@ it('renders correctly', () => {
         >
           <a
             className="c4"
+            data-test="header-esu"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -118,6 +119,7 @@ it('renders correctly', () => {
         >
           <a
             className="c4"
+            data-test="header-esu"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"

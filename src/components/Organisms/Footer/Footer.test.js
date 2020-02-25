@@ -501,6 +501,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu"
                 href="https://www.facebook.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -523,6 +524,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu"
                 href="https://twitter.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -545,6 +547,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu"
                 href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -567,6 +570,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu"
                 href="https://www.instagram.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"

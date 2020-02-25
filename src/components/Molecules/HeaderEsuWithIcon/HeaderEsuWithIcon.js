@@ -102,7 +102,6 @@ const HeaderEsuWithIcon = ({
         role="button"
         href="#"
         tabIndex="0"
-        data-test="header-esu"
       />
 
       {isESUOpen ? (
