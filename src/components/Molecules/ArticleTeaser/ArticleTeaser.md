@@ -3,13 +3,24 @@
 ```js
 const data = require('../../../styleguide/data/data').default;
 <div style={{ display: 'flex', background: '#E1E2E3' }}>
-  <div style={{ margin: '1rem' }}>
+  <div style={{ margin: '1rem', width: '300px' }}>
     <ArticleTeaser
       href="/test"
       images={data.images}
       imageLow={data.imageLow}
       date=" 01 July 2019"
       title="News article"
+      alt="Image's description"
+      time="4 min read"
+    />
+  </div>
+  <div style={{ margin: '1rem', width: '300px' }}>
+    <ArticleTeaser
+      href="/test"
+      images={data.images}
+      imageLow={data.imageLow}
+      date=" 01 July 2019"
+      title="News article News article"
       alt="Image's description"
       time="4 min read"
     />

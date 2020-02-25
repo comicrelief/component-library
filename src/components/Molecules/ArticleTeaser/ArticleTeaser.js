@@ -86,6 +86,9 @@ const ImageWrapper = styled.div`
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   ${({ category }) =>
     !category &&
     category !== '' &&
@@ -100,7 +103,7 @@ const CopyWrapper = styled.div`
 `;
 
 const Title = styled(Text)`
-  margin: 0;
+  margin: ${({ time }) => (time ? `0 0 ${spacing('md')}` : '0')};
 `;
 
 const Date = styled(Text)`
@@ -110,7 +113,7 @@ const Date = styled(Text)`
 
 const Time = styled(Text)`
   display: block;
-  margin-top: ${spacing('md')};
+  margin-top: auto;
 `;
 
 const Image = styled(Picture)`
@@ -173,6 +176,7 @@ const ArticleTeaser = ({
             {date}
           </Date>
           <Title
+            time={time}
             size="xl"
             tag="h3"
             height="2rem"
