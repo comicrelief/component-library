@@ -18,6 +18,7 @@ exports[`renders ESU School correctly 1`] = `
   line-height: 1rem;
   text-transform: inherit;
   font-weight: bold;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -26,6 +27,7 @@ exports[`renders ESU School correctly 1`] = `
   line-height: 1.25rem;
   text-transform: inherit;
   font-weight: 400;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -316,6 +318,7 @@ exports[`renders correctly 1`] = `
   line-height: 1rem;
   text-transform: inherit;
   font-weight: bold;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 

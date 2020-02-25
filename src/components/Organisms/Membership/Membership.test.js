@@ -37,22 +37,32 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c15 {
+    .c12 {
+      font-size: 1rem;
+      line-height: 1rem;
+      text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    .c16 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c19 {
+    .c20 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
       font-weight: 500;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -70,7 +80,7 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c16 {
+    .c17 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -88,27 +98,27 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c16:focus {
+    .c17:focus {
       border: 1px solid #666;
     }
 
-    .c16:focus::-webkit-input-placeholder {
+    .c17:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c16:focus::-moz-placeholder {
+    .c17:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c16:focus:-ms-input-placeholder {
+    .c17:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c16:focus::placeholder {
+    .c17:focus::placeholder {
       color: #666;
     }
 
-    .c13 {
+    .c14 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -118,11 +128,11 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c14 {
+    .c15 {
       display: block;
     }
 
-    .c14 input {
+    .c15 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -132,11 +142,11 @@ it('renders correctly', () => {
       letter-spacing: -2px;
     }
 
-    .c17 {
+    .c18 {
       display: block;
     }
 
-    .c17 input {
+    .c18 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -226,7 +236,7 @@ it('renders correctly', () => {
       padding: 0;
     }
 
-    .c12 {
+    .c13 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -237,22 +247,22 @@ it('renders correctly', () => {
       justify-content: space-between;
     }
 
-    .c12 label {
+    .c13 label {
       -webkit-flex: 0 0 30%;
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
-    .c12 label input {
+    .c13 label input {
       cursor: pointer;
       padding: 1rem;
     }
 
-    .c12 label:hover input {
+    .c13 label:hover input {
       border-color: #E52630;
     }
 
-    .c18 {
+    .c19 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -263,11 +273,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c20 {
+    .c21 {
       margin-right: auto;
     }
 
-    .c21 {
+    .c22 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -276,7 +286,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c21 span {
+    .c22 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -288,21 +298,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c21 input {
+    .c22 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c21 input:focus {
+    .c22 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c23 {
+    .c24 {
       line-height: 1.5;
     }
 
-    .c22 {
+    .c23 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -314,14 +324,14 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c22:active,
-    .c22:focus,
-    .c22:hover {
+    .c23:active,
+    .c23:focus,
+    .c23:hover {
       background-color: #961D35;
     }
 
     @media (min-width:740px) {
-      .c16 {
+      .c17 {
         max-width: 290px;
       }
     }
@@ -369,7 +379,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c21 {
+      .c22 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -377,7 +387,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c22 {
+      .c23 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -441,7 +451,7 @@ it('renders correctly', () => {
                 className="c11"
               >
                 <h3
-                  className="c7"
+                  className="c12"
                   color="inherit"
                   size="s"
                 >
@@ -449,16 +459,16 @@ it('renders correctly', () => {
                 </h3>
               </legend>
               <div
-                className="c12"
+                className="c13"
               >
                 <label
                   aria-label="£5"
-                  className="c13 c14"
+                  className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box1"
                   onClick={[Function]}
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -467,7 +477,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£5"
-                    className="c16 c14"
+                    className="c17 c15"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
@@ -479,12 +489,12 @@ it('renders correctly', () => {
                 </label>
                 <label
                   aria-label="£10"
-                  className="c13 c17"
+                  className="c14 c18"
                   htmlFor="mship-1--moneyBuy-box2"
                   onClick={[Function]}
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -493,7 +503,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£10"
-                    className="c16 c17"
+                    className="c17 c18"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
@@ -505,12 +515,12 @@ it('renders correctly', () => {
                 </label>
                 <label
                   aria-label="£20"
-                  className="c13 c14"
+                  className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box3"
                   onClick={[Function]}
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -519,7 +529,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£20"
-                    className="c16 c14"
+                    className="c17 c15"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
@@ -531,10 +541,10 @@ it('renders correctly', () => {
                 </label>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <span
-                  className="c19 c20"
+                  className="c20 c21"
                   color="inherit"
                   size="s"
                 >
@@ -542,7 +552,7 @@ it('renders correctly', () => {
                 </span>
                 <label
                   aria-label="Input a different amount"
-                  className="c13 c21"
+                  className="c14 c22"
                   htmlFor="mship-1--MoneyBuy-userInput"
                   max="5000"
                   min="1"
@@ -553,7 +563,7 @@ it('renders correctly', () => {
                   step="0.01"
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -562,7 +572,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
-                    className="c16 c21"
+                    className="c17 c22"
                     id="mship-1--MoneyBuy-userInput"
                     max="5000"
                     min="1"
@@ -580,13 +590,13 @@ it('renders correctly', () => {
                 </label>
               </div>
               <button
-                className="c22"
+                className="c23"
                 type="submit"
               >
                 Donate
               </button>
               <p
-                className="c23"
+                className="c24"
               />
             </fieldset>
           </form>

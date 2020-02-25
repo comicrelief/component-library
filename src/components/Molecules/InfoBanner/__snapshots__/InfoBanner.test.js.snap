@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
 
 .c3 {
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 

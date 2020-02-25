@@ -25,6 +25,7 @@ it('renders article teaser correctly', () => {
       line-height: 0.75rem;
       text-transform: inherit;
       font-weight: bold;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -47,6 +48,7 @@ it('renders article teaser correctly', () => {
       line-height: 0.75rem;
       text-transform: inherit;
       font-weight: 400;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -286,6 +288,7 @@ it('renders press realese correctly', () => {
       line-height: 0.75rem;
       text-transform: inherit;
       font-weight: bold;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -308,6 +311,7 @@ it('renders press realese correctly', () => {
       line-height: 0.75rem;
       text-transform: inherit;
       font-weight: 400;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

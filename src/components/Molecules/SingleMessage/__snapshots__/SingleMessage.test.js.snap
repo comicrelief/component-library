@@ -6,6 +6,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -180,6 +181,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -389,6 +391,7 @@ exports[`renders Single Message with double image correctly 1`] = `
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -580,6 +583,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -927,6 +931,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
