@@ -30,7 +30,7 @@ const Icon = ({ href, target, icon, brand, title, ...restProps }) => (
     {...restProps}
     title={title}
     rel="noopener noreferrer"
-    data-test="header-esu"
+    data-test="header-esu-icon"
   >
     <StyledImage src={icon} alt={brand} />
     {title !== 'Sign up for emails' && (
