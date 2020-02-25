@@ -6,7 +6,7 @@ import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <Box image={data.image} images={data.image}>
+    <Box imageLow={data.image} images={data.image}>
       <h2>Title</h2>
       <p>Description</p>
     </Box>
@@ -15,9 +15,12 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly with no body', () => {
+it('renders correctly with no image', () => {
   const tree = renderWithTheme(
-    <Box imageLow={data.image} images={data.image} />
+    <Box>
+      <h2>Title</h2>
+      <p>Description</p>
+    </Box>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
