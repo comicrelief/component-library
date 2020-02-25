@@ -92,7 +92,11 @@ const HeaderEsuWithIcon = ({
 
   /* Main render */
   return (
-    <IconWrapper onKeyDown={e => handleEscClose(e)} ref={thisRef}>
+    <IconWrapper
+      onKeyDown={e => handleEscClose(e)}
+      ref={thisRef}
+      data-test="header-esu"
+    >
       <Icon
         onClick={e => handleESUOpen(e)}
         icon={HeaderIcons.email.icon}
