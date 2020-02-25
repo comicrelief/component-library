@@ -103,6 +103,16 @@ const Title = styled(Text)`
   margin: 0;
 `;
 
+const Date = styled(Text)`
+  display: block;
+  margin-bottom: ${spacing('md')};
+`;
+
+const Time = styled(Text)`
+  display: block;
+  margin-top: ${spacing('md')};
+`;
+
 const Image = styled(Picture)`
   display: flex;
 `;
@@ -133,7 +143,8 @@ const ArticleTeaser = ({
   alt,
   category,
   logoSize,
-  family
+  family,
+  time
 }) => {
   return (
     <Wrapper>
@@ -158,9 +169,9 @@ const ArticleTeaser = ({
           />
         </ImageWrapper>
         <CopyWrapper category={category}>
-          <Text size="xxs" weight="800" uppercase>
+          <Date size="xs" weight="bold">
             {date}
-          </Text>
+          </Date>
           <Title
             size="xl"
             tag="h3"
@@ -171,6 +182,9 @@ const ArticleTeaser = ({
           >
             {title}
           </Title>
+          <Time size="xs" weight="400" color="grey_dark">
+            {time}
+          </Time>
         </CopyWrapper>
       </Link>
     </Wrapper>
@@ -187,6 +201,7 @@ ArticleTeaser.propTypes = {
   alt: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  time: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
 };
@@ -197,6 +212,7 @@ ArticleTeaser.defaultProps = {
   images: null,
   category: null,
   logoSize: null,
+  time: null,
   family: 'Anton'
 };
 

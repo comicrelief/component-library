@@ -11,6 +11,7 @@ const data = require('../../../styleguide/data/data').default;
       date=" 01 July 2019"
       title="News article"
       alt="Image's description"
+      time="4 min read"
     />
   </div>
 </div>;

@@ -21,14 +21,14 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875rem;
-      line-height: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -39,6 +39,15 @@ it('renders article teaser correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
+    }
+
+    .c12 {
+      color: #222222;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: 400;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4 {
@@ -129,8 +138,18 @@ it('renders article teaser correctly', () => {
       padding: 2rem;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
+    }
+
+    .c9 {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .c13 {
+      display: block;
+      margin-top: 1rem;
     }
 
     .c5 {
@@ -224,20 +243,25 @@ it('renders article teaser correctly', () => {
           className="c7"
         >
           <span
-            className="c8"
+            className="c8 c9"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"
           >
             News article
           </h3>
+          <span
+            className="c12 c13"
+            color="grey_dark"
+            size="xs"
+          />
         </div>
       </a>
     </article>
@@ -258,14 +282,14 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875rem;
-      line-height: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -276,6 +300,15 @@ it('renders press realese correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
+    }
+
+    .c12 {
+      color: #222222;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: 400;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4 {
@@ -371,8 +404,18 @@ it('renders press realese correctly', () => {
       padding: 2rem;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
+    }
+
+    .c9 {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .c13 {
+      display: block;
+      margin-top: 1rem;
     }
 
     .c5 {
@@ -432,20 +475,25 @@ it('renders press realese correctly', () => {
           className="c7"
         >
           <span
-            className="c8"
+            className="c8 c9"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"
           >
             Press Release
           </h3>
+          <span
+            className="c12 c13"
+            color="grey_dark"
+            size="xs"
+          />
         </div>
       </a>
     </article>
