@@ -11,7 +11,7 @@ const buttonStyle = () => css`
   font-size: 1rem;
   border-radius: 2rem;
   transition: all 0.5s;
-  min-height: 50px;
+  height: 50px;
   width: 100%;
   justify-content: center;
   align-items: center;

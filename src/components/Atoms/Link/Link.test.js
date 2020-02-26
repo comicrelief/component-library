@@ -192,7 +192,7 @@ it('renders link styled as button correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      min-height: 50px;
+      height: 50px;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;

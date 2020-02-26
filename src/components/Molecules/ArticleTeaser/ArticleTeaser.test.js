@@ -21,15 +21,15 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875rem;
-      line-height: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -76,7 +76,18 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
@@ -111,12 +122,29 @@ it('renders article teaser correctly', () => {
       position: relative;
     }
 
-    .c7 {
-      padding: 2rem;
+    .c3 img {
+      border-radius: 1rem 1rem 0 0;
     }
 
-    .c10 {
+    .c7 {
+      padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .c11 {
       margin: 0;
+    }
+
+    .c9 {
+      display: block;
+      margin-bottom: 1rem;
     }
 
     .c5 {
@@ -146,11 +174,19 @@ it('renders article teaser correctly', () => {
       .c3 {
         width: 45%;
       }
+
+      .c3 img {
+        border-radius: 1rem 0 0 1rem;
+      }
     }
 
     @media (min-width:1024px) {
       .c3 {
         width: 100%;
+      }
+
+      .c3 img {
+        border-radius: 1rem 1rem 0 0;
       }
     }
 
@@ -202,14 +238,14 @@ it('renders article teaser correctly', () => {
           className="c7"
         >
           <span
-            className="c8"
+            className="c8 c9"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"
@@ -236,15 +272,15 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.6875rem;
-      line-height: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -291,7 +327,18 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
@@ -315,7 +362,6 @@ it('renders press realese correctly', () => {
     }
 
     .c3 {
-      padding-left: 1rem;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -329,14 +375,32 @@ it('renders press realese correctly', () => {
       -ms-flex-pack: center;
       justify-content: center;
       position: relative;
+      padding-left: 1rem;
+    }
+
+    .c3 img {
+      border-radius: 0;
     }
 
     .c7 {
       padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
+    }
+
+    .c9 {
+      display: block;
+      margin-bottom: 1rem;
     }
 
     .c5 {
@@ -396,14 +460,14 @@ it('renders press realese correctly', () => {
           className="c7"
         >
           <span
-            className="c8"
+            className="c8 c9"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"
