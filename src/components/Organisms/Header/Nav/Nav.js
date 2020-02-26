@@ -27,10 +27,6 @@ const MainNav = ({ navItems }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
 
-  const isDeviceTouch =
-    'ontouchstart' in window || window.navigator.msMaxTouchPoints > 0;
-  const width = typeof window !== 'undefined' ? window.innerWidth : null;
-
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
@@ -58,14 +54,19 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('onkeyup', setIsKeyPressed);
+    const isTouchDevice =
+      'ontouchstart' in window || window.navigator.msMaxTouchPoints > 0;
+
+    const width = typeof window !== 'undefined' ? window.innerWidth : null;
     // Detect window screen size
     setIsMobile(width < sizes.medium);
-    setIsTouch(isDeviceTouch);
+    // Detect if it is a touch device
+    setIsTouch(isTouchDevice);
+    window.addEventListener('onkeyup', setIsKeyPressed);
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
     };
-  }, [isDeviceTouch, width]);
+  }, []);
 
   return (
     <>
