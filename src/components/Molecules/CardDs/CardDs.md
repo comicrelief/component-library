@@ -6,8 +6,17 @@
 const data = require('../../../styleguide/data/data').default;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-<div style={{ display: 'flex', background: '#E1E2E3' }}>
+<div
+  style={{
+    display: 'flex',
+    padding: '2rem 0',
+    background: '#E1E2E3',
+    justifyContent: 'space-around'
+  }}
+>
   <CardDs
+    target="_blank"
+    link="/home"
     imageLow={data.image}
     images={data.images}
     backgroundColor="white"
@@ -15,6 +24,17 @@ import Link from '../../Atoms/Link/Link';
   >
     <Text tag="h3" color="purple" size="xl">
       Title
+    </Text>
+    <Text tag="p">Text body copy description</Text>
+  </CardDs>
+  <CardDs
+    imageLow={data.image}
+    images={data.images}
+    backgroundColor="white"
+    height="auto"
+  >
+    <Text tag="h3" color="purple" size="xl">
+      No link
     </Text>
     <Text tag="p">Text body copy description</Text>
   </CardDs>

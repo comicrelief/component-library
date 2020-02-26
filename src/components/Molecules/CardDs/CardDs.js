@@ -48,49 +48,59 @@ const CardDs = ({
   height,
   width,
   children,
+  link,
+  target,
   ...rest
 }) => {
+  const Media = (
+    <Image>
+      <Picture
+        alt={imageAltText}
+        imageLow={imageLow}
+        images={images}
+        image={image}
+        objectFit="cover"
+        width={width}
+        height={height}
+      />
+    </Image>
+  );
+
   return (
     <Container {...rest}>
-      {imageLow ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            imageLow={imageLow}
-            images={images}
-            image={image}
-            objectFit="cover"
-            width={width}
-            height={height}
-          />
-        </Image>
-      ) : null}
-      {children ? (
-        <Copy hasImage={imageLow} backgroundColor={backgroundColor}>
-          {children}
-        </Copy>
-      ) : null}
+      {imageLow && link ? (
+        <a href={link} target={target} {...rest}>
+          {Media}
+        </a>
+      ) : (
+        Media
+      )}
+      <Copy hasImage={imageLow} backgroundColor={backgroundColor}>
+        {children}
+      </Copy>
     </Container>
   );
 };
 
 CardDs.propTypes = {
   backgroundColor: PropTypes.string,
-  imageLow: PropTypes.string,
+  imageLow: PropTypes.string.isRequired,
   images: PropTypes.string,
   image: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node
+  link: PropTypes.string,
+  target: PropTypes.string,
+  children: PropTypes.node.isRequired
 };
 
 CardDs.defaultProps = {
   backgroundColor: 'white',
-  children: null,
-  imageLow: null,
   images: null,
   image: null,
+  link: null,
+  target: null,
   imageAltText: '',
   width: '100%',
   height: '100%'
