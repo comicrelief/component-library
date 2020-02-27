@@ -52,9 +52,8 @@ const Box = ({
             imageLow={imageLow}
             images={images}
             image={image}
-            objectFit="cover"
             width={width}
-            height={height}
+            height="auto"
           />
         </Image>
       ) : null}
