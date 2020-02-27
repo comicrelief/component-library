@@ -369,6 +369,10 @@ it('renders correctly', () => {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
       }
 
       .c17 > li a {
@@ -410,7 +414,9 @@ it('renders correctly', () => {
         height: auto;
         margin-top: 12px;
         padding: 0;
-        width: 50%;
+        -webkit-flex: 0 0 49%;
+        -ms-flex: 0 0 49%;
+        flex: 0 0 49%;
       }
 
       .c18 a {
@@ -448,7 +454,9 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c10 {
-        width: calc((100% - 9%) / 3);
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
       }
     }
 
