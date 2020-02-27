@@ -381,7 +381,7 @@ it('renders correctly', () => {
       .c13 {
         height: auto;
         margin-top: 12px;
-        padding: 10px;
+        padding: 0 2%;
       }
 
       .c13 a {
@@ -409,10 +409,10 @@ it('renders correctly', () => {
       .c18 {
         height: auto;
         margin-top: 12px;
-        padding: 10px;
-        -webkit-flex: 0 0 49%;
-        -ms-flex: 0 0 49%;
-        flex: 0 0 49%;
+        padding: 0 2%;
+        -webkit-flex: 0 0 44%;
+        -ms-flex: 0 0 44%;
+        flex: 0 0 44%;
       }
 
       .c18 a {
@@ -436,6 +436,14 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c18 {
+        -webkit-flex: 0 0 46%;
+        -ms-flex: 0 0 46%;
+        flex: 0 0 46%;
+      }
+    }
+
     @media (min-width:740px) {
       .c9 {
         display: -webkit-box;
@@ -456,7 +464,7 @@ it('renders correctly', () => {
       }
 
       .c10 > span {
-        padding: 10px;
+        padding: 0 2%;
       }
     }
 

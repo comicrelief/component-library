@@ -78,9 +78,9 @@ const SubNavItem = styled.li`
   @media ${({ theme }) => theme.breakpoint('small')} {
     height: auto;
     margin-top: 12px;
-    padding: 10px;
+    padding: 0 2%;
 
-    ${({ column }) => (column === true ? 'flex: 0 0 49%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 44%;' : null)};
 
     a {
       background-color: inherit;
@@ -99,6 +99,10 @@ const SubNavItem = styled.li`
         }
       }
     }
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    ${({ column }) => (column === true ? 'flex: 0 0 46%;' : null)};
   }
 `;
 
@@ -149,7 +153,7 @@ const NavItem = styled.li`
     flex: 0 0 30%;
 
     > span {
-      padding: 10px;
+      padding: 0 2%;
     }
   }
 
