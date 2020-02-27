@@ -78,9 +78,9 @@ const SubNavItem = styled.li`
   @media ${({ theme }) => theme.breakpoint('small')} {
     height: auto;
     margin-top: 12px;
-    padding: 0;
+    padding: 0 2%;
 
-    ${({ column }) => (column === true ? 'width: 50%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 44%;' : null)};
 
     a {
       background-color: inherit;
@@ -99,6 +99,10 @@ const SubNavItem = styled.li`
         }
       }
     }
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    ${({ column }) => (column === true ? 'flex: 0 0 46%;' : null)};
   }
 `;
 
@@ -146,7 +150,11 @@ const NavItem = styled.li`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     /* Minus 9% to remove 3 x 1.5% margins from previous rule */
-    width: calc((100% - 9%) / 3);
+    flex: 0 0 30%;
+
+    > span {
+      padding: 0 2%;
+    }
   }
 
   a {
