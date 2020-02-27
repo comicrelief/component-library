@@ -13,13 +13,14 @@ const Container = styled.div`
     flex-direction: row;
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.breakpoint('large')} {
     flex-direction: column;
   }
 `;
 
 const Image = styled.div`
   height: auto;
+  flex-basis: calc(100% / 3);
 `;
 
 const Copy = styled.div`
@@ -27,6 +28,9 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(200% / 3);
 `;
 
 const Box = ({
