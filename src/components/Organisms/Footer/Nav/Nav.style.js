@@ -57,7 +57,9 @@ const SubNavMenu = styled.ul`
     height: auto;
 
     ${({ column }) =>
-      column === true ? 'flex-direction: row; flex-wrap: wrap;' : null};
+      column === true
+        ? 'flex-direction: row; flex-wrap: wrap; justify-content: center'
+        : null};
 
     > li a {
       display: inline;
@@ -80,7 +82,7 @@ const SubNavItem = styled.li`
     margin-top: 12px;
     padding: 0;
 
-    ${({ column }) => (column === true ? 'width: 50%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 49%;' : null)};
 
     a {
       background-color: inherit;
@@ -146,7 +148,7 @@ const NavItem = styled.li`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     /* Minus 9% to remove 3 x 1.5% margins from previous rule */
-    width: calc((100% - 9%) / 3);
+    flex: 0 0 30%;
   }
 
   a {
