@@ -369,10 +369,6 @@ it('renders correctly', () => {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
       }
 
       .c17 > li a {
@@ -385,7 +381,7 @@ it('renders correctly', () => {
       .c13 {
         height: auto;
         margin-top: 12px;
-        padding: 0;
+        padding: 10px;
       }
 
       .c13 a {
@@ -413,7 +409,7 @@ it('renders correctly', () => {
       .c18 {
         height: auto;
         margin-top: 12px;
-        padding: 0;
+        padding: 10px;
         -webkit-flex: 0 0 49%;
         -ms-flex: 0 0 49%;
         flex: 0 0 49%;
@@ -457,6 +453,10 @@ it('renders correctly', () => {
         -webkit-flex: 0 0 30%;
         -ms-flex: 0 0 30%;
         flex: 0 0 30%;
+      }
+
+      .c10 > span {
+        padding: 10px;
       }
     }
 
@@ -1032,11 +1032,11 @@ it('renders correctly', () => {
               </span>
               <ul
                 aria-label="Legal"
-                className="c12"
+                className="c17"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1056,7 +1056,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1076,7 +1076,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1096,7 +1096,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1116,7 +1116,27 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
+                >
+                  <a
+                    className="c14 c15"
+                    color="red"
+                    href="https://bing.com"
+                    role="menuitem"
+                    target="_blank"
+                    type="standard"
+                  >
+                    <span
+                      className="c16"
+                      color="white"
+                      size="s"
+                    >
+                      Test non-whitelisted external link
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
