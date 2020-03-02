@@ -27,17 +27,6 @@ import Link from '../../Atoms/Link/Link';
     </Text>
     <Text tag="p">Text body copy description</Text>
   </CardDs>
-  <CardDs
-    imageLow={data.image}
-    images={data.images}
-    backgroundColor="white"
-    height="auto"
-  >
-    <Text tag="h3" color="purple" size="xl">
-      No link
-    </Text>
-    <Text tag="p">Text body copy description</Text>
-  </CardDs>
 </div>;
 ```
 
