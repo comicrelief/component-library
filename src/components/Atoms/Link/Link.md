@@ -97,11 +97,6 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
     </Link>
   </div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="grey" href="/test" target="blank" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link color="yellow" href="/test" target="blank" type="button">
       Link as button
     </Link>
@@ -124,6 +119,11 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       backgroundColor: '#22CFD8'
     }}
   >
+    <div style={{ display: 'block', marginBottom: '10px' }}>
+      <Link color="grey" href="/test" target="blank" type="button">
+        Link as button
+      </Link>
+    </div>
     <Link color="transparent" href="/test" target="blank" type="button">
       Link as transparent button
     </Link>
