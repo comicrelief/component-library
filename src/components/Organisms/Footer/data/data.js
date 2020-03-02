@@ -189,6 +189,13 @@ export default {
           internal: {
             type: 'ContentfulComponentLink'
           }
+        },
+        {
+          title: 'Test non-whitelisted external link',
+          url: 'https://bing.com',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
         }
       ]
     }

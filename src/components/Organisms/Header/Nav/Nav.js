@@ -25,21 +25,17 @@ const MainNav = ({ navItems }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
-
-  const width = typeof window !== 'undefined' ? window.innerWidth : null;
-
-  useEffect(() => {
-    // Detect window screen size
-    setIsMobile(width < sizes.medium);
-  }, [width]);
+  const [isTouch, setIsTouch] = useState(false);
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
   };
 
-  const toggleSubMenu = item => event => {
-    if (isMobile) {
+  const toggleSubMenu = (item, group) => event => {
+    // Check if navLink element has more than one subNav item
+    const checkSubnav = group && group.length > 1;
+    if ((isMobile || isTouch) && checkSubnav) {
       event.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
@@ -60,12 +56,20 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
+    const isTouchDevice =
+      (typeof window !== 'undefined' && 'ontouchstart' in window) ||
+      window.navigator.msMaxTouchPoints > 0;
+
+    const width = typeof window !== 'undefined' ? window.innerWidth : null;
+    // Detect window screen size
+    setIsMobile(width < sizes.nav);
+    // Detect if it is a touch device
+    setIsTouch(isTouchDevice);
     window.addEventListener('onkeyup', setIsKeyPressed);
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
     };
   }, []);
-
   return (
     <>
       <Nav
@@ -100,7 +104,6 @@ const MainNav = ({ navItems }) => {
                     href={thisUrl}
                     inline
                     aria-haspopup="true"
-                    onClick={toggleSubMenu(group.id)}
                     onKeyUp={keyPressed(group.title)}
                   >
                     <Text>{thisFirstChild.title}</Text>
@@ -111,11 +114,7 @@ const MainNav = ({ navItems }) => {
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup="true"
-                    onClick={
-                      group.links &&
-                      group.links.length > 1 &&
-                      toggleSubMenu(group.id)
-                    }
+                    onClick={toggleSubMenu(group.id, group.links)}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
