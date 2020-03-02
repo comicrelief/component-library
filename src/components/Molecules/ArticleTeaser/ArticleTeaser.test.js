@@ -128,6 +128,14 @@ it('renders article teaser correctly', () => {
 
     .c7 {
       padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     .c11 {
@@ -376,6 +384,14 @@ it('renders press realese correctly', () => {
 
     .c7 {
       padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
     .c11 {

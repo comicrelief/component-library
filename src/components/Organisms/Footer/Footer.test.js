@@ -381,7 +381,7 @@ it('renders correctly', () => {
       .c13 {
         height: auto;
         margin-top: 12px;
-        padding: 0;
+        padding: 0 2%;
       }
 
       .c13 a {
@@ -409,8 +409,10 @@ it('renders correctly', () => {
       .c18 {
         height: auto;
         margin-top: 12px;
-        padding: 0;
-        width: 50%;
+        padding: 0 2%;
+        -webkit-flex: 0 0 44%;
+        -ms-flex: 0 0 44%;
+        flex: 0 0 44%;
       }
 
       .c18 a {
@@ -434,6 +436,14 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c18 {
+        -webkit-flex: 0 0 46%;
+        -ms-flex: 0 0 46%;
+        flex: 0 0 46%;
+      }
+    }
+
     @media (min-width:740px) {
       .c9 {
         display: -webkit-box;
@@ -448,7 +458,13 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c10 {
-        width: calc((100% - 9%) / 3);
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+      }
+
+      .c10 > span {
+        padding: 0 2%;
       }
     }
 
@@ -501,6 +517,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu-icon"
                 href="https://www.facebook.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -523,6 +540,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu-icon"
                 href="https://twitter.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -545,6 +563,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu-icon"
                 href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -567,6 +586,7 @@ it('renders correctly', () => {
             >
               <a
                 className="c4"
+                data-test="header-esu-icon"
                 href="https://www.instagram.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1020,11 +1040,11 @@ it('renders correctly', () => {
               </span>
               <ul
                 aria-label="Legal"
-                className="c12"
+                className="c17"
                 role="list"
               >
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1044,7 +1064,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1064,7 +1084,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1084,7 +1104,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
                 >
                   <a
                     className="c14 c15"
@@ -1104,7 +1124,27 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c13"
+                  className="c18"
+                >
+                  <a
+                    className="c14 c15"
+                    color="red"
+                    href="https://bing.com"
+                    role="menuitem"
+                    target="_blank"
+                    type="standard"
+                  >
+                    <span
+                      className="c16"
+                      color="white"
+                      size="s"
+                    >
+                      Test non-whitelisted external link
+                    </span>
+                  </a>
+                </li>
+                <li
+                  className="c18"
                 >
                   <a
                     className="c14 c15"

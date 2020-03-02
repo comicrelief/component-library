@@ -94,7 +94,7 @@ it('renders correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      min-height: 50px;
+      height: 50px;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -643,7 +643,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
@@ -792,7 +791,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
@@ -815,7 +813,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
@@ -884,7 +881,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
@@ -1033,7 +1029,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
@@ -1056,7 +1051,6 @@ it('renders correctly', () => {
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.sportrelief.com"
-                onClick={[Function]}
                 onKeyUp={[Function]}
                 target="_self"
                 type="standard"
