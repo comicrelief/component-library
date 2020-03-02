@@ -127,6 +127,11 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
     <Link color="transparent" href="/test" target="blank" type="button">
       Link as transparent button
     </Link>
+    <div style={{ display: 'block', marginTop: '10px' }}>
+      <Link color="white" href="/test" target="blank" type="button">
+        White button
+      </Link>
+    </div>
   </div>
 </div>
 ```
