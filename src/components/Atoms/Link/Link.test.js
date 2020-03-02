@@ -61,7 +61,6 @@ it('renders a button with an icon', () => {
       -webkit-align-self: center;
       -ms-flex-item-align: center;
       align-self: center;
-      position: absolute;
       right: 1.5rem;
     }
 

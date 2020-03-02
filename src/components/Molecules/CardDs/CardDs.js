@@ -143,7 +143,7 @@ const CardDs = ({
 
 CardDs.propTypes = {
   backgroundColor: PropTypes.string,
-  imageLow: PropTypes.string.isRequired,
+  imageLow: PropTypes.string,
   images: PropTypes.string,
   image: PropTypes.string,
   width: PropTypes.string,
@@ -156,6 +156,7 @@ CardDs.propTypes = {
 
 CardDs.defaultProps = {
   backgroundColor: 'white',
+  imageLow: null,
   images: null,
   image: null,
   link: null,

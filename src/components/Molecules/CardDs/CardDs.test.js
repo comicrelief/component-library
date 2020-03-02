@@ -6,22 +6,16 @@ import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <CardDs image={data.image} images={data.image} backgroundColor="yellow">
-      <h2>Title</h2>
-      <p>Description</p>
-    </CardDs>
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
-
-it('renders correctly with no body', () => {
-  const tree = renderWithTheme(
     <CardDs
+      target="_blank"
+      link="/home"
       imageLow={data.image}
-      images={data.image}
-      backgroundColor="yellow"
-    />
+      images={data.images}
+      backgroundColor="white"
+      height="auto"
+    >
+      Text body copy description
+    </CardDs>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
