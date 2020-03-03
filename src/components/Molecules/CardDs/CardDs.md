@@ -17,6 +17,7 @@ import Link from '../../Atoms/Link/Link';
   <CardDs
     target="_blank"
     link="/home"
+    linkLabel="find out more"
     imageLow={data.image}
     images={data.images}
     backgroundColor="white"
@@ -44,7 +45,13 @@ import Link from '../../Atoms/Link/Link';
     justifyContent: 'space-around'
   }}
 >
-  <CardDs target="_blank" link="/home" backgroundColor="white" height="auto">
+  <CardDs
+    target="_blank"
+    link="/home"
+    linkLabel="find out more"
+    backgroundColor="white"
+    height="auto"
+  >
     <Text tag="h3" color="purple" size="xl">
       Title
     </Text>

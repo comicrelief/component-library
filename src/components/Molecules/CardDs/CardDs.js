@@ -105,6 +105,7 @@ const CardDs = ({
   width,
   children,
   link,
+  linkLabel,
   target,
   ...rest
 }) => {
@@ -153,7 +154,7 @@ const CardDs = ({
             type="button"
             icon={icon()}
           >
-            External link
+            {linkLabel}
           </Link>
         </CTA>
       )}
@@ -170,6 +171,7 @@ CardDs.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   link: PropTypes.string,
+  linkLabel: PropTypes.string,
   target: PropTypes.string,
   children: PropTypes.node.isRequired
 };
@@ -180,6 +182,7 @@ CardDs.defaultProps = {
   images: null,
   image: null,
   link: null,
+  linkLabel: null,
   target: null,
   imageAltText: '',
   width: '100%',

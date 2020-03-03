@@ -246,7 +246,7 @@ exports[`renders correctly 1`] = `
       target="_self"
       type="button"
     >
-      External link
+      Find out more
       <span
         className="c8"
       >

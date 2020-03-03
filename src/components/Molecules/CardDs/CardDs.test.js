@@ -9,6 +9,7 @@ it('renders correctly', () => {
     <CardDs
       target="_blank"
       link="/home"
+      linkLabel="Find out more"
       imageLow={data.image}
       images={data.images}
       backgroundColor="white"
