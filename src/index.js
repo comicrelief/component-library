@@ -42,6 +42,7 @@ export {
   default as SingleMessage
 } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
+export { default as CardDs } from './components/Molecules/CardDs/CardDs';
 export { default as Box } from './components/Molecules/Box/Box';
 export {
   default as ArticleTeaser
