@@ -53,10 +53,10 @@ it('renders a button with an icon', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
       margin-left: 1rem;
       -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -190,9 +190,9 @@ it('renders link styled as button correctly', () => {
       font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
-      height: 50px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      height: 3.125rem;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;

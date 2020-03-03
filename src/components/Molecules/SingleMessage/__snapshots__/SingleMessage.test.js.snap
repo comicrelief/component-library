@@ -211,9 +211,9 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-weight: 700;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -229,8 +229,8 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c8:hover {
-  background-color: #E52630;
-  color: #FFFFFF;
+  background-color: #969598;
+  color: #000000;
 }
 
 .c0 {
@@ -613,9 +613,9 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-weight: 700;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -631,8 +631,8 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c8:hover {
-  background-color: #E52630;
-  color: #FFFFFF;
+  background-color: #969598;
+  color: #000000;
 }
 
 .c0 {

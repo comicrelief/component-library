@@ -1,8 +1,19 @@
 ```js
+import { External, Download, Favourite, Internal } from '../Icons/index';
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link href="#anchor" target="blank" type="standard">
       Link standard
+    </Link>
+  </div>
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      href="#anchor"
+      target="blank"
+      type="standard"
+      icon={<Download colour="black" />}
+    >
+      Link standard icon
     </Link>
   </div>
   <div
@@ -17,7 +28,7 @@
       Link standard white
     </Link>
   </div>
-</div>
+</div>;
 ```
 
 ## Iconography
@@ -86,11 +97,6 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
     </Link>
   </div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="grey" href="/test" target="blank" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link color="yellow" href="/test" target="blank" type="button">
       Link as button
     </Link>
@@ -113,9 +119,19 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       backgroundColor: '#22CFD8'
     }}
   >
+    <div style={{ display: 'block', marginBottom: '10px' }}>
+      <Link color="grey" href="/test" target="blank" type="button">
+        Link as button
+      </Link>
+    </div>
     <Link color="transparent" href="/test" target="blank" type="button">
       Link as transparent button
     </Link>
+    <div style={{ display: 'block', marginTop: '10px' }}>
+      <Link color="white" href="/test" target="blank" type="button">
+        White button
+      </Link>
+    </div>
   </div>
 </div>
 ```
