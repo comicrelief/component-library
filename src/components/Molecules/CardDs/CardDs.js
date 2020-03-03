@@ -12,9 +12,11 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
+  width: calc(100% - 3rem);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
+    width: 100%;
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
@@ -36,6 +38,13 @@ const Image = styled.div`
     border-radius: 1rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   }
+`;
+
+const MediaLink = styled.a`
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
 `;
 
 const Copy = styled.div`
@@ -111,9 +120,9 @@ const CardDs = ({
   return (
     <Container {...rest}>
       {imageLow && link ? (
-        <a href={link} target={target} {...rest}>
+        <MediaLink href={link} target={target} {...rest}>
           {Media}
-        </a>
+        </MediaLink>
       ) : (
         Media
       )}
