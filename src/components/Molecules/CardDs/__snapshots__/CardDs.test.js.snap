@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c2 {
+.c3 {
   position: relative;
   display: block;
   width: 100%;
   height: auto;
 }
 
-.c3 {
+.c4 {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-left: 1rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
   right: 1.5rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,9 +39,9 @@ exports[`renders correctly 1`] = `
   font-weight: 700;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -56,7 +56,7 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c6:hover {
+.c7:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
@@ -71,20 +71,25 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  width: calc(100% - 3rem);
   background: inherit;
 }
 
-.c1 {
+.c2 {
   height: auto;
   margin: 0 -1.5rem 0 1.5rem;
 }
 
-.c1 img {
+.c2 img {
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
 }
 
-.c4 {
+.c1 {
+  width: 100%;
+}
+
+.c5 {
   padding: 2rem;
   padding-bottom: 4rem;
   display: -webkit-box;
@@ -102,7 +107,7 @@ exports[`renders correctly 1`] = `
   min-height: calc(5 * 2rem);
 }
 
-.c5 {
+.c6 {
   position: absolute;
   right: 1.5rem;
   bottom: -1.5rem;
@@ -110,7 +115,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c8 {
     width: auto;
     right: auto;
     position: relative;
@@ -118,7 +123,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c6 {
+  .c7 {
     width: auto;
   }
 }
@@ -128,6 +133,7 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    width: 100%;
   }
 }
 
@@ -140,31 +146,55 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c1 {
+  .c2 {
     margin: 0;
   }
 }
 
 @media (min-width:1440px) {
-  .c1 {
+  .c2 {
     margin: 0 -1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:740px) {
-  .c4 {
-    margin: 1.5rem 0 -1.5rem -1.5rem;
+  .c1 {
+    width: calc(50% + 6rem);
   }
 }
 
 @media (min-width:1440px) {
-  .c4 {
-    margin: calc(-1 * (4rem + 2rem)) 0 -1.5rem 0;
+  .c1 {
+    width: 100%;
   }
 }
 
 @media (min-width:740px) {
   .c5 {
+    width: calc(50% + 6rem);
+  }
+}
+
+@media (min-width:1440px) {
+  .c5 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    margin: 1.5rem 0 -1.5rem -1.5rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .c5 {
+    margin: calc(-1 * (4rem + 2rem)) 0 -1.5rem 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
     bottom: calc(-1 * (2rem + 1rem));
   }
 }
@@ -173,20 +203,21 @@ exports[`renders correctly 1`] = `
   className="c0"
 >
   <a
+    className="c1"
     href="/home"
     target="_blank"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <div
-        className="c2"
+        className="c3"
         height="auto"
         width="100%"
       >
         <img
           alt=""
-          className="c3 lazyload"
+          className="c4 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-sizes="auto"
           data-src={null}
@@ -200,15 +231,15 @@ exports[`renders correctly 1`] = `
     </div>
   </a>
   <div
-    className="c4"
+    className="c5"
   >
     Text body copy description
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <a
-      className="c6"
+      className="c7"
       color="red"
       href="/home"
       target="_self"
@@ -216,7 +247,7 @@ exports[`renders correctly 1`] = `
     >
       External link
       <span
-        className="c7"
+        className="c8"
       >
         <svg
           fill="#FFFFFF"

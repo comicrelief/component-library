@@ -29,6 +29,7 @@ const Image = styled.div`
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin: 0;
+    ${({ hasLink }) => !hasLink && `width: calc(50% - ${spacing('xl')})`};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
@@ -41,10 +42,13 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  display: flex;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: auto;
+  width: 100%;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: calc(50% + 6rem);
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
+  }
 `;
 
 const Copy = styled.div`
@@ -55,6 +59,12 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: calc(50% + 6rem);
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
+  }
   ${zIndex('low')};
   ${({ hasImage }) =>
     hasImage &&
@@ -98,7 +108,7 @@ const CardDs = ({
   ...rest
 }) => {
   const Media = (
-    <Image>
+    <Image hasLink={link}>
       <Picture
         alt={imageAltText}
         imageLow={imageLow}
