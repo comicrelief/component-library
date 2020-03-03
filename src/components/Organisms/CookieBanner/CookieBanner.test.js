@@ -57,7 +57,7 @@ it('renders correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
-      height: 50px;
+      height: 3.125rem;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;

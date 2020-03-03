@@ -213,7 +213,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 50px;
+  height: 3.125rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -615,7 +615,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 50px;
+  height: 3.125rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;

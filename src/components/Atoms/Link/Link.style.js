@@ -8,10 +8,10 @@ const buttonStyle = () => css`
   padding: 0.5rem 1.25rem;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
   transition: all 0.3s;
-  height: 50px;
+  height: 3.125rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ const buttonStyle = () => css`
 const linkStyle = () => css`
   text-decoration: none;
   display: inline;
-  line-height: 1.5rem;
+  line-height: ${({ theme }) => theme.fontSize('l')};
   ${({ type, theme, underline }) =>
     type
       ? theme.linkStyles(type, underline)
