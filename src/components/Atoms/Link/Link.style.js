@@ -10,7 +10,7 @@ const buttonStyle = () => css`
   font-weight: 700;
   font-size: 1rem;
   border-radius: 2rem;
-  transition: all 0.5s;
+  transition: all 0.3s;
   height: 50px;
   width: 100%;
   justify-content: center;

@@ -55,8 +55,8 @@ it('renders correctly', () => {
       font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
       height: 50px;
       width: 100%;
       -webkit-box-pack: center;
