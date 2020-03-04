@@ -132,7 +132,13 @@ const CardDs = ({
   return (
     <Container {...rest}>
       {imageLow && link ? (
-        <MediaLink href={link} target={target} {...rest}>
+        <MediaLink
+          aria-hidden="true"
+          tabIndex="-1"
+          href={link}
+          target={target}
+          {...rest}
+        >
           {Media}
         </MediaLink>
       ) : (

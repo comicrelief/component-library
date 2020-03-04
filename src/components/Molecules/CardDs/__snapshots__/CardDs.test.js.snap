@@ -204,8 +204,10 @@ exports[`renders correctly 1`] = `
   className="c0"
 >
   <a
+    aria-hidden="true"
     className="c1"
     href="/home"
+    tabIndex="-1"
     target="_blank"
   >
     <div

@@ -20,6 +20,7 @@ import Link from '../../Atoms/Link/Link';
     linkLabel="find out more"
     imageLow={data.image}
     images={data.images}
+    imageAltText="Happy man going to work"
     backgroundColor="white"
     height="auto"
   >
