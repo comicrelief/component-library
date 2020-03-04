@@ -30,8 +30,12 @@ const Copy = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: calc(200% / 3);
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.breakpoint('small')} {
     justify-content: center;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    justify-content: top;
   }
 `;
 

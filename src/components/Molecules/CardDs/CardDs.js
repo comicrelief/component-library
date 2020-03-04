@@ -12,7 +12,7 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  width: calc(100% - 3rem);
+  width: calc(100% - ${spacing('m')});
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
@@ -70,7 +70,7 @@ const Copy = styled.div`
   ${({ hasImage }) =>
     hasImage &&
     css`
-      margin-top: calc(-1 * (${spacing('xl')} + ${spacing('l')}));
+      margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
       @media ${({ theme }) => theme.breakpoint('small')} {
         margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};

@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  width: calc(100% - 3rem);
+  width: calc(100% - 1.5rem);
   background: inherit;
 }
 
@@ -103,7 +103,7 @@ exports[`renders correctly 1`] = `
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
   z-index: 1;
-  margin-top: calc(-1 * (4rem + 2rem));
+  margin-top: calc(-2 * 1.5rem);
   min-height: calc(5 * 2rem);
 }
 

@@ -71,12 +71,21 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width:740px) {
   .c4 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media (min-width:1440px) {
+  .c4 {
+    -webkit-box-pack: top;
+    -webkit-justify-content: top;
+    -ms-flex-pack: top;
+    justify-content: top;
   }
 }
 
@@ -168,12 +177,21 @@ exports[`renders correctly with no image 1`] = `
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width:740px) {
   .c1 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-box-pack: top;
+    -webkit-justify-content: top;
+    -ms-flex-pack: top;
+    justify-content: top;
   }
 }
 
