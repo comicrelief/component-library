@@ -82,10 +82,10 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1440px) {
   .c4 {
-    -webkit-box-pack: top;
-    -webkit-justify-content: top;
-    -ms-flex-pack: top;
-    justify-content: top;
+    -webkit-box-pack: normal;
+    -webkit-justify-content: normal;
+    -ms-flex-pack: normal;
+    justify-content: normal;
   }
 }
 
@@ -188,10 +188,10 @@ exports[`renders correctly with no image 1`] = `
 
 @media (min-width:1440px) {
   .c1 {
-    -webkit-box-pack: top;
-    -webkit-justify-content: top;
-    -ms-flex-pack: top;
-    justify-content: top;
+    -webkit-box-pack: normal;
+    -webkit-justify-content: normal;
+    -ms-flex-pack: normal;
+    justify-content: normal;
   }
 }
 

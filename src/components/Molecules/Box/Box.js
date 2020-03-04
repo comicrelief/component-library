@@ -35,7 +35,7 @@ const Copy = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
-    justify-content: top;
+    justify-content: normal;
   }
 `;
 
