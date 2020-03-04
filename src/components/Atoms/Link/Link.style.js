@@ -37,7 +37,6 @@ export const IconWrapper = styled.span`
   display: inline-flex;
   margin-left: ${spacing('md')};
   align-self: center;
-  position: absolute;
   right: ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
