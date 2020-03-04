@@ -190,7 +190,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    margin: calc(-2 * (1.5rem + 2rem)) 0 -1.5rem 0;
+    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
   }
 }
 

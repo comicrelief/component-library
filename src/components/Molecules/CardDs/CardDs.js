@@ -77,9 +77,7 @@ const Copy = styled.div`
       }
 
       @media ${({ theme }) => theme.breakpoint('large')} {
-        margin: calc(-2 * (${spacing('m')} + ${spacing('l')})) 0 -${spacing(
-            'm'
-          )} 0;
+        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
       }
     `};
 `;
