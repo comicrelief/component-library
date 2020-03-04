@@ -123,7 +123,7 @@ const CardDs = ({
     </Image>
   );
   const icon = () => {
-    if (target === '_blank') {
+    if (target === 'blank') {
       return <External colour="white" />;
     }
     return <Internal colour="white" />;
