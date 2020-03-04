@@ -59,11 +59,8 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: calc(50% + 6rem);
-  }
+  width: 100%;
   @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 100%;
     height: 100%;
   }
   ${zIndex('low')};
@@ -74,10 +71,12 @@ const Copy = styled.div`
       min-height: calc(5 * ${spacing('l')});
       @media ${({ theme }) => theme.breakpoint('small')} {
         margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};
+        width: calc(50% + 6rem);
       }
 
       @media ${({ theme }) => theme.breakpoint('large')} {
         margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
+        width: 100%;
       }
     `};
 `;
@@ -120,16 +119,10 @@ const CardDs = ({
       />
     </Image>
   );
-  const icon = () => {
-    if (target === 'blank') {
-      return <External colour="white" />;
-    }
-    return <Internal colour="white" />;
-  };
 
-  return (
-    <Container {...rest}>
-      {imageLow && link ? (
+  const hasMedia = () => {
+    if (imageLow && link) {
+      return (
         <MediaLink
           aria-hidden="true"
           tabIndex="-1"
@@ -139,9 +132,26 @@ const CardDs = ({
         >
           {Media}
         </MediaLink>
-      ) : (
-        Media
-      )}
+      );
+    }
+    if (imageLow) {
+      return Media;
+    }
+    return null;
+  };
+
+  const icon = () => {
+    if (target === 'blank') {
+      return <External colour="white" />;
+    }
+    return <Internal colour="white" />;
+  };
+
+  const external = target === 'blank' ? 'noopener noreferrer' : null;
+
+  return (
+    <Container {...rest}>
+      {hasMedia()}
       <Copy
         hasImage={imageLow}
         hasLink={link}
@@ -152,6 +162,7 @@ const CardDs = ({
       {link && (
         <CTA hasImage={imageLow}>
           <Link
+            rel={external}
             color="red"
             href={link}
             target={target}

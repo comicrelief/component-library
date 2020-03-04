@@ -47,7 +47,7 @@ import Link from '../../Atoms/Link/Link';
   }}
 >
   <CardDs
-    target="_blank"
+    target="blank"
     link="/home"
     linkLabel="find out more"
     backgroundColor="white"

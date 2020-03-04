@@ -102,6 +102,7 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
+  width: 100%;
   z-index: 1;
   margin-top: calc(-2 * 1.5rem);
   min-height: calc(5 * 2rem);
@@ -169,15 +170,8 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c5 {
-    width: calc(50% + 6rem);
-  }
-}
-
 @media (min-width:1440px) {
   .c5 {
-    width: 100%;
     height: 100%;
   }
 }
@@ -185,12 +179,14 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c5 {
     margin: 1.5rem 0 -1.5rem -1.5rem;
+    width: calc(50% + 6rem);
   }
 }
 
 @media (min-width:1440px) {
   .c5 {
     margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+    width: 100%;
   }
 }
 
@@ -245,6 +241,7 @@ exports[`renders correctly 1`] = `
       className="c7"
       color="red"
       href="/home"
+      rel={null}
       target="_self"
       type="button"
     >
