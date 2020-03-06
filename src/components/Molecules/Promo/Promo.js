@@ -25,7 +25,7 @@ const Promo = ({
   const hasImage = imageSet || false;
 
   return (
-    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
+    <Container backgroundColor={backgroundColor}>
       {nudge === 'top' ? <NudgeTop /> : null}
       <Media>
         <Picture
@@ -38,10 +38,8 @@ const Promo = ({
           height="100%"
         />
       </Media>
-      <Wrapper>
-        <Copy hasImage={hasImage} copyFirst={copyFirst}>
-          {children}
-        </Copy>
+      <Wrapper copyFirst={copyFirst}>
+        <Copy hasImage={hasImage}>{children}</Copy>
       </Wrapper>
       {nudge === 'bottom' ? <NudgeBottom /> : null}
     </Container>

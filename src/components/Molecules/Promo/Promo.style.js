@@ -54,6 +54,7 @@ const Wrapper = styled.div`
   align-items: center;
   ${media('small')} {
     position: absolute;
+    ${({ copyFirst }) => (copyFirst ? 'justify-content: flex-end;' : null)}
   }
 `;
 
