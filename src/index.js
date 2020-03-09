@@ -44,6 +44,7 @@ export {
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
 export { default as Box } from './components/Molecules/Box/Box';
+export { default as Promo } from './components/Molecules/Promo/Promo';
 export {
   default as ArticleTeaser
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
