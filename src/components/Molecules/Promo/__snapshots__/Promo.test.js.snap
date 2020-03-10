@@ -85,6 +85,10 @@ exports[`renders Single Message with Image correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #274084;
+  border-radius: 0 0 0 2rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c4 {
@@ -102,6 +106,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: absolute;
 }
 
 .c5 {
@@ -136,15 +141,6 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c0 {
-    border-radius: 0 0 0 2rem;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-@media (min-width:740px) {
   .c9 {
     border-top: 0 solid transparent;
     border-bottom: 160px solid white;
@@ -155,12 +151,6 @@ exports[`renders Single Message with Image correctly 1`] = `
     left: 2rem;
     right: 0;
     bottom: 0;
-  }
-}
-
-@media (min-width:740px) {
-  .c4 {
-    position: absolute;
   }
 }
 

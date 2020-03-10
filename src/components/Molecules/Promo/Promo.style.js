@@ -9,10 +9,8 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${media('small')} {
-    border-radius: 0 0 0 2rem;
-    flex-direction: row;
-  }
+  border-radius: 0 0 0 2rem;
+  flex-direction: row;
 `;
 
 const NudgeBottom = styled.div`
@@ -52,8 +50,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: absolute;
   ${media('small')} {
-    position: absolute;
     ${({ copyFirst }) => (copyFirst ? 'justify-content: flex-end;' : null)}
   }
 `;
