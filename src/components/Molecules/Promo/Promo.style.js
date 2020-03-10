@@ -14,31 +14,27 @@ const Container = styled.div`
 `;
 
 const NudgeBottom = styled.div`
-  ${media('small')} {
-    border-top: 0 solid transparent;
-    border-bottom: 160px solid white;
-    border-left: 2160px solid transparent;
-    border-right: 0 solid transparent;
-    position: absolute;
-    height: 0;
-    left: 2rem;
-    right: 0;
-    bottom: 0;
-  }
+  border-top: 0 solid transparent;
+  border-bottom: 160px solid white;
+  border-left: 2160px solid transparent;
+  border-right: 0 solid transparent;
+  position: absolute;
+  height: 0;
+  left: 2rem;
+  right: 0;
+  bottom: 0;
 `;
 
 const NudgeTop = styled.div`
-  ${media('small')} {
-    border-top: 70px solid white;
-    border-bottom: 0 solid transparent;
-    border-left: 0 solid white;
-    border-right: 999px solid transparent;
-    position: absolute;
-    height: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
+  border-top: 70px solid white;
+  border-bottom: 0 solid transparent;
+  border-left: 0 solid white;
+  border-right: 999px solid transparent;
+  position: absolute;
+  height: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 `;
 
 const Wrapper = styled.div`

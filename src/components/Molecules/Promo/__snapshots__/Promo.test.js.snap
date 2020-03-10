@@ -91,6 +91,18 @@ exports[`renders Single Message with Image correctly 1`] = `
   flex-direction: row;
 }
 
+.c9 {
+  border-top: 0 solid transparent;
+  border-bottom: 160px solid white;
+  border-left: 2160px solid transparent;
+  border-right: 0 solid transparent;
+  position: absolute;
+  height: 0;
+  left: 2rem;
+  right: 0;
+  bottom: 0;
+}
+
 .c4 {
   width: 100%;
   max-width: 1440px;
@@ -137,20 +149,6 @@ exports[`renders Single Message with Image correctly 1`] = `
 @media (min-width:740px) {
   .c8 {
     width: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c9 {
-    border-top: 0 solid transparent;
-    border-bottom: 160px solid white;
-    border-left: 2160px solid transparent;
-    border-right: 0 solid transparent;
-    position: absolute;
-    height: 0;
-    left: 2rem;
-    right: 0;
-    bottom: 0;
   }
 }
 
