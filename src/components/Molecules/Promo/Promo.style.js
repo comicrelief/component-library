@@ -57,9 +57,12 @@ const Wrapper = styled.div`
 `;
 
 const Copy = styled.div`
-  width: 100%;
+  width: 90%;
   padding: ${spacing('m')};
   ${media('small')} {
+    width: 70%;
+  }
+  ${media('medium')} {
     width: 50%;
   }
 `;
