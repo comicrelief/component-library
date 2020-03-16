@@ -589,12 +589,11 @@ it('renders correctly', () => {
                   
                 </label>
               </div>
-              <button
+              <input
                 className="c23"
                 type="submit"
-              >
-                Donate
-              </button>
+                value="Donate"
+              />
               <p
                 className="c24"
               />

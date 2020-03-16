@@ -69,12 +69,12 @@ it('renders ESU School correctly', () => {
       />
     </>
   );
-  const input = tree.root.findByType('input');
+  const input = tree.root.findAllByType('input')[0];
   input.value = 'test@test.com';
 
   act(() => {
     /* fire events that update state */
-    tree.root.findByType('button').props.onClick();
+    tree.root.findAllByType('input')[1].props.onClick();
   });
 
   const treeJson = tree.toJSON();

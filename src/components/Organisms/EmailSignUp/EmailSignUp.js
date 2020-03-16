@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 import Select from '../../Atoms/SelectField/SelectField';
 import Text from '../../Atoms/Text/Text';
 import {
@@ -11,7 +12,6 @@ import {
   ButtonWrapper,
   Title
 } from './EmailSignUp.style';
-
 import { Button } from '../Membership/Membership.style';
 
 const EmailSignUp = ({
@@ -76,12 +76,12 @@ const EmailSignUp = ({
           />
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
+              as="input"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() => validate({ email: value }) && setNext(true)}
-            >
-              Next
-            </Button>
+              value=" Subscribe"
+            />
           </ButtonWrapper>
         </>
       )}
@@ -90,15 +90,15 @@ const EmailSignUp = ({
           {schoolsSelect}
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
+              as="input"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() =>
                 validate({ email: value, age }) &&
                 subscribe({ email: `${value}`, age: `${age}` })
               }
-            >
-              Subscribe
-            </Button>
+              value=" Subscribe"
+            />
           </ButtonWrapper>
         </>
       )}
@@ -121,13 +121,13 @@ const EmailSignUp = ({
       />
       <ButtonWrapper backgroundColor={backgroundColor}>
         <Button
+          as="input"
           data-test="subscribe-button"
           type="submit"
           color={buttonColor}
           onClick={() => validate({ email: value }) && subscribe(value)}
-        >
-          Subscribe
-        </Button>
+          value=" Subscribe"
+        />
       </ButtonWrapper>
     </Form>
   );

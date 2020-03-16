@@ -106,7 +106,7 @@ exports[`renders ESU School correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c9 button {
+.c9 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -172,7 +172,8 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c9 button {
+  .c9 input {
+    font-size: 1.25rem;
     width: auto;
   }
 }
@@ -258,14 +259,13 @@ exports[`renders ESU School correctly 1`] = `
     <div
       className="c9"
     >
-      <button
+      <input
         className="c10"
         color="teal"
         data-test="subscribe-button-school"
         onClick={[Function]}
-      >
-        Subscribe
-      </button>
+        value=" Subscribe"
+      />
     </div>
   </form>
   <div
@@ -397,7 +397,7 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c11 button {
+.c11 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -467,7 +467,8 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c11 button {
+  .c11 input {
+    font-size: 1.25rem;
     width: auto;
   }
 }
@@ -532,15 +533,14 @@ exports[`renders correctly 1`] = `
     <div
       className="c11"
     >
-      <button
+      <input
         className="c12"
         color="teal"
         data-test="subscribe-button"
         onClick={[Function]}
         type="submit"
-      >
-        Subscribe
-      </button>
+        value=" Subscribe"
+      />
     </div>
   </form>
   <div

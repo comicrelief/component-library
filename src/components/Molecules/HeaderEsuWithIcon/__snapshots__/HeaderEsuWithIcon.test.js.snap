@@ -172,7 +172,7 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c18 button {
+.c18 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -292,7 +292,8 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c18 button {
+  .c18 input {
+    font-size: 1.25rem;
     width: auto;
   }
 }
@@ -409,15 +410,14 @@ exports[`renders correctly with error message 1`] = `
           <div
             className="c18"
           >
-            <button
+            <input
               className="c19"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
               type="submit"
-            >
-              Subscribe
-            </button>
+              value=" Subscribe"
+            />
           </div>
         </form>
         <div
@@ -659,7 +659,7 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c16 button {
+.c16 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -779,7 +779,8 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c16 button {
+  .c16 input {
+    font-size: 1.25rem;
     width: auto;
   }
 }
@@ -889,15 +890,14 @@ exports[`renders correctly with modal open 1`] = `
           <div
             className="c16"
           >
-            <button
+            <input
               className="c17"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
               type="submit"
-            >
-              Subscribe
-            </button>
+              value=" Subscribe"
+            />
           </div>
         </form>
         <div
