@@ -13,6 +13,8 @@ import {
   Title
 } from './EmailSignUp.style';
 
+import { Button } from '../Membership/Membership.style';
+
 const EmailSignUp = ({
   title,
   topCopy,
@@ -74,16 +76,13 @@ const EmailSignUp = ({
             onChange={event => setValue(event.target.value)}
           />
           <ButtonWrapper backgroundColor={backgroundColor}>
-            <Link
+            <Button
               data-test="subscribe-button-school"
-              type="button"
               color={buttonColor}
-              as="button"
-              href="/#"
               onClick={() => validate({ email: value }) && setNext(true)}
             >
               Next
-            </Link>
+            </Button>
           </ButtonWrapper>
         </>
       )}
@@ -91,19 +90,16 @@ const EmailSignUp = ({
         <>
           {schoolsSelect}
           <ButtonWrapper backgroundColor={backgroundColor}>
-            <Link
+            <Button
               data-test="subscribe-button-school"
-              type="button"
               color={buttonColor}
-              as="button"
-              href="/#"
               onClick={() =>
                 validate({ email: value, age }) &&
                 subscribe({ email: `${value}`, age: `${age}` })
               }
             >
               Subscribe
-            </Link>
+            </Button>
           </ButtonWrapper>
         </>
       )}
@@ -125,16 +121,14 @@ const EmailSignUp = ({
         onChange={event => setValue(event.target.value)}
       />
       <ButtonWrapper backgroundColor={backgroundColor}>
-        <Link
+        <Button
           data-test="subscribe-button"
-          type="button"
+          type="submit"
           color={buttonColor}
-          as="button"
-          href="/#"
           onClick={() => validate({ email: value }) && subscribe(value)}
         >
           Subscribe
-        </Link>
+        </Button>
       </ButtonWrapper>
     </Form>
   );

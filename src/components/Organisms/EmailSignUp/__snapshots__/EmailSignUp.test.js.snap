@@ -31,40 +31,6 @@ exports[`renders ESU School correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #4ECDBE;
-  color: #000000;
-}
-
-.c10:hover {
-  background-color: #86E4E9;
-  color: #000000;
-}
-
 .c7 {
   background-color: #FFFFFF;
   width: 100%;
@@ -181,10 +147,22 @@ exports[`renders ESU School correctly 1`] = `
   margin-bottom: 1.5rem;
 }
 
-@media (min-width:740px) {
-  .c10 {
-    width: auto;
-  }
+.c10 {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  background: #4ECDBE;
+  border: none;
+  border-radius: 100px;
+}
+
+.c10:active,
+.c10:focus,
+.c10:hover {
+  background-color: #961D35;
 }
 
 @media (min-width:740px) {
@@ -196,6 +174,14 @@ exports[`renders ESU School correctly 1`] = `
 @media (min-width:740px) {
   .c9 button {
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -276,10 +262,7 @@ exports[`renders ESU School correctly 1`] = `
         className="c10"
         color="teal"
         data-test="subscribe-button-school"
-        href="/#"
         onClick={[Function]}
-        target="_self"
-        type="button"
       >
         Subscribe
       </button>
@@ -320,40 +303,6 @@ exports[`renders correctly 1`] = `
   font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #4ECDBE;
-  color: #000000;
-}
-
-.c12:hover {
-  background-color: #86E4E9;
-  color: #000000;
 }
 
 .c10 {
@@ -493,10 +442,22 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1.5rem;
 }
 
-@media (min-width:740px) {
-  .c12 {
-    width: auto;
-  }
+.c12 {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  background: #4ECDBE;
+  border: none;
+  border-radius: 100px;
+}
+
+.c12:active,
+.c12:focus,
+.c12:hover {
+  background-color: #961D35;
 }
 
 @media (min-width:740px) {
@@ -508,6 +469,14 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c11 button {
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -567,10 +536,8 @@ exports[`renders correctly 1`] = `
         className="c12"
         color="teal"
         data-test="subscribe-button"
-        href="/#"
         onClick={[Function]}
-        target="_self"
-        type="button"
+        type="submit"
       >
         Subscribe
       </button>
