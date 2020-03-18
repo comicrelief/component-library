@@ -179,7 +179,8 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   padding: ${spacing('md')} ${spacing('sm')};
-  background: ${({ theme }) => theme.color('red')};
+  background: ${({ theme, color }) =>
+    color ? theme.color(color) : theme.color('red')};
   border: none;
   border-radius: 100px;
   :active,
