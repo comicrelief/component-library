@@ -28,40 +28,6 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c19 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #E52630;
-  color: #FFFFFF;
-}
-
-.c19:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
-}
-
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -206,7 +172,7 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c18 button {
+.c18 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -249,6 +215,24 @@ exports[`renders correctly with error message 1`] = `
 
 .c7 {
   margin-bottom: 1.5rem;
+}
+
+.c19 {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  background: #E52630;
+  border: none;
+  border-radius: 100px;
+}
+
+.c19:active,
+.c19:focus,
+.c19:hover {
+  background-color: #961D35;
 }
 
 .c0 {
@@ -302,20 +286,23 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
   .c15 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c18 button {
+  .c18 input {
+    font-size: 1.25rem;
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c19 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -423,17 +410,14 @@ exports[`renders correctly with error message 1`] = `
           <div
             className="c18"
           >
-            <button
+            <input
               className="c19"
               color="red"
               data-test="subscribe-button"
-              href="/#"
               onClick={[Function]}
-              target="_self"
-              type="button"
-            >
-              Subscribe
-            </button>
+              type="submit"
+              value=" Subscribe"
+            />
           </div>
         </form>
         <div
@@ -548,40 +532,6 @@ exports[`renders correctly with modal open 1`] = `
   font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #E52630;
-  color: #FFFFFF;
-}
-
-.c17:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
 }
 
 .c15 {
@@ -709,7 +659,7 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c16 button {
+.c16 input {
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -752,6 +702,24 @@ exports[`renders correctly with modal open 1`] = `
 
 .c7 {
   margin-bottom: 1.5rem;
+}
+
+.c17 {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  background: #E52630;
+  border: none;
+  border-radius: 100px;
+}
+
+.c17:active,
+.c17:focus,
+.c17:hover {
+  background-color: #961D35;
 }
 
 .c0 {
@@ -805,20 +773,23 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
   .c15 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c16 button {
+  .c16 input {
+    font-size: 1.25rem;
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -919,17 +890,14 @@ exports[`renders correctly with modal open 1`] = `
           <div
             className="c16"
           >
-            <button
+            <input
               className="c17"
               color="red"
               data-test="subscribe-button"
-              href="/#"
               onClick={[Function]}
-              target="_self"
-              type="button"
-            >
-              Subscribe
-            </button>
+              type="submit"
+              value=" Subscribe"
+            />
           </div>
         </form>
         <div

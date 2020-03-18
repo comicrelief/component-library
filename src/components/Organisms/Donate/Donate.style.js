@@ -91,6 +91,9 @@ const Form = styled.form`
     max-width: 100%;
     margin: 0;
   }
+  input[type='submit'] {
+    margin: ${spacing('l')} 0;
+  }
 
   ${media('small')} {
     width: 450px;

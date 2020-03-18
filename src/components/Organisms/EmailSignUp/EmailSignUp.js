@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Link from '../../Atoms/Link/Link';
+
 import Select from '../../Atoms/SelectField/SelectField';
 import Text from '../../Atoms/Text/Text';
 import {
@@ -12,6 +12,7 @@ import {
   ButtonWrapper,
   Title
 } from './EmailSignUp.style';
+import { Button } from '../Membership/Membership.style';
 
 const EmailSignUp = ({
   title,
@@ -74,16 +75,13 @@ const EmailSignUp = ({
             onChange={event => setValue(event.target.value)}
           />
           <ButtonWrapper backgroundColor={backgroundColor}>
-            <Link
+            <Button
+              as="input"
               data-test="subscribe-button-school"
-              type="button"
               color={buttonColor}
-              as="button"
-              href="/#"
               onClick={() => validate({ email: value }) && setNext(true)}
-            >
-              Next
-            </Link>
+              value=" Subscribe"
+            />
           </ButtonWrapper>
         </>
       )}
@@ -91,19 +89,16 @@ const EmailSignUp = ({
         <>
           {schoolsSelect}
           <ButtonWrapper backgroundColor={backgroundColor}>
-            <Link
+            <Button
+              as="input"
               data-test="subscribe-button-school"
-              type="button"
               color={buttonColor}
-              as="button"
-              href="/#"
               onClick={() =>
                 validate({ email: value, age }) &&
                 subscribe({ email: `${value}`, age: `${age}` })
               }
-            >
-              Subscribe
-            </Link>
+              value=" Subscribe"
+            />
           </ButtonWrapper>
         </>
       )}
@@ -125,16 +120,14 @@ const EmailSignUp = ({
         onChange={event => setValue(event.target.value)}
       />
       <ButtonWrapper backgroundColor={backgroundColor}>
-        <Link
+        <Button
+          as="input"
           data-test="subscribe-button"
-          type="button"
+          type="submit"
           color={buttonColor}
-          as="button"
-          href="/#"
           onClick={() => validate({ email: value }) && subscribe(value)}
-        >
-          Subscribe
-        </Link>
+          value=" Subscribe"
+        />
       </ButtonWrapper>
     </Form>
   );

@@ -128,37 +128,6 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c15 {
-      display: block;
-    }
-
-    .c15 input {
-      border: 2px solid #E1E2E3;
-      font-size: 1.5rem;
-      font-weight: 800;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
-      letter-spacing: -2px;
-    }
-
-    .c18 {
-      display: block;
-    }
-
-    .c18 input {
-      border: 2px solid #E1E2E3;
-      font-size: 1.5rem;
-      font-weight: 800;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
-      letter-spacing: -2px;
-      border-color: #E52630;
-      background-color: #E52630;
-      color: #FFFFFF;
-    }
-
     .c0 {
       background-color: #FEE3CC;
       position: relative;
@@ -328,6 +297,37 @@ it('renders correctly', () => {
     .c23:focus,
     .c23:hover {
       background-color: #961D35;
+    }
+
+    .c15 {
+      display: block;
+    }
+
+    .c15 input {
+      border: 2px solid #E1E2E3;
+      font-size: 1.5rem;
+      font-weight: 800;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
+    }
+
+    .c18 {
+      display: block;
+    }
+
+    .c18 input {
+      border: 2px solid #E1E2E3;
+      font-size: 1.5rem;
+      font-weight: 800;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
+      border-color: #E52630;
+      background-color: #E52630;
+      color: #FFFFFF;
     }
 
     @media (min-width:740px) {
@@ -589,12 +589,11 @@ it('renders correctly', () => {
                   
                 </label>
               </div>
-              <button
+              <input
                 className="c23"
                 type="submit"
-              >
-                Donate
-              </button>
+                value="Donate"
+              />
               <p
                 className="c24"
               />
