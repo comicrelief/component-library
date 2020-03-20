@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Single Message with Image correctly 1`] = `
+.c0 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+<h1
+  className="c0"
+  color="white"
+  size="xxl"
+>
+  title
+</h1>
+`;

@@ -60,7 +60,7 @@ const Label = styled.label`
 
 const RadioButton = ({ label, name, value, ...rest }) => {
   return (
-    <Label htmlFor={label.toLowerCase()}>
+    <Label htmlFor={value}>
       <StyledInput
         type="radio"
         {...rest}
