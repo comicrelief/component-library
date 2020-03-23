@@ -173,6 +173,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 .c18 input {
+  text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -294,7 +295,7 @@ exports[`renders correctly with error message 1`] = `
 @media (min-width:740px) {
   .c18 input {
     font-size: 1.25rem;
-    width: auto;
+    max-width: 160px;
   }
 }
 
@@ -660,6 +661,7 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 .c16 input {
+  text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -781,7 +783,7 @@ exports[`renders correctly with modal open 1`] = `
 @media (min-width:740px) {
   .c16 input {
     font-size: 1.25rem;
-    width: auto;
+    max-width: 160px;
   }
 }
 

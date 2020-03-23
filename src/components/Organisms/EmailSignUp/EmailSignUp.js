@@ -77,6 +77,7 @@ const EmailSignUp = ({
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
               as="input"
+              type="submit"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() => validate({ email: value }) && setNext(true)}
@@ -91,6 +92,7 @@ const EmailSignUp = ({
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
               as="input"
+              type="submit"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() =>
