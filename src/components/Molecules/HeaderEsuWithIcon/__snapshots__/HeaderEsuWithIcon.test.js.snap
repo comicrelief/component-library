@@ -391,6 +391,7 @@ exports[`renders correctly with error message 1`] = `
               email
             </span>
             <input
+              aria-labelledby="Email address"
               className="c15 c12"
               id="email"
               name="email"
@@ -879,6 +880,7 @@ exports[`renders correctly with modal open 1`] = `
               email
             </span>
             <input
+              aria-labelledby="Email address"
               className="c15 c12"
               id="email"
               name="email"

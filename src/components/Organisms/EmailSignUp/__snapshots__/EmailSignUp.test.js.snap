@@ -523,6 +523,7 @@ exports[`renders correctly 1`] = `
         email
       </span>
       <input
+        aria-labelledby="Email address"
         className="c10 c7"
         id="email"
         name="email"
