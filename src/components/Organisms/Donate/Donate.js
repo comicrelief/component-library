@@ -29,16 +29,18 @@ const Donate = ({
 }) => {
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
-      <BgImage
-        backgroundColor={backgroundColor}
-        image={image}
-        images={images}
-        imageLow={imageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={alt}
-      />
+      {images ? (
+        <BgImage
+          backgroundColor={backgroundColor}
+          image={image}
+          images={images}
+          imageLow={imageLow}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          alt={alt}
+        />
+      ) : null}
 
       <Wrapper formAlignRight={formAlignRight}>
         <Header formAlignRight={formAlignRight}>
