@@ -28,7 +28,7 @@ const ButtonWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize('s')};
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: ${({ theme }) => theme.fontSize('m')};
-      max-width: 160px;
+      max-width: 180px;
     }
   }
 `;
