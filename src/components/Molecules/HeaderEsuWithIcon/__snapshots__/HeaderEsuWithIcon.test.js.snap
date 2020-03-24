@@ -295,7 +295,7 @@ exports[`renders correctly with error message 1`] = `
 @media (min-width:740px) {
   .c18 input {
     font-size: 1.25rem;
-    max-width: 160px;
+    max-width: 180px;
   }
 }
 
@@ -784,7 +784,7 @@ exports[`renders correctly with modal open 1`] = `
 @media (min-width:740px) {
   .c16 input {
     font-size: 1.25rem;
-    max-width: 160px;
+    max-width: 180px;
   }
 }
 

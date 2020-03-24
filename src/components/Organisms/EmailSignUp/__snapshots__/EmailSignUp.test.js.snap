@@ -175,7 +175,7 @@ exports[`renders ESU School correctly 1`] = `
 @media (min-width:740px) {
   .c9 input {
     font-size: 1.25rem;
-    max-width: 160px;
+    max-width: 180px;
   }
 }
 
@@ -472,7 +472,7 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c11 input {
     font-size: 1.25rem;
-    max-width: 160px;
+    max-width: 180px;
   }
 }
 
