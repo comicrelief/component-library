@@ -107,6 +107,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c9 input {
+  text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -174,7 +175,7 @@ exports[`renders ESU School correctly 1`] = `
 @media (min-width:740px) {
   .c9 input {
     font-size: 1.25rem;
-    width: auto;
+    max-width: 180px;
   }
 }
 
@@ -264,6 +265,7 @@ exports[`renders ESU School correctly 1`] = `
         color="teal"
         data-test="subscribe-button-school"
         onClick={[Function]}
+        type="submit"
         value=" Subscribe"
       />
     </div>
@@ -398,6 +400,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c11 input {
+  text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
@@ -469,7 +472,7 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c11 input {
     font-size: 1.25rem;
-    width: auto;
+    max-width: 180px;
   }
 }
 
@@ -520,6 +523,7 @@ exports[`renders correctly 1`] = `
         email
       </span>
       <input
+        aria-labelledby="Email address"
         className="c10 c7"
         id="email"
         name="email"

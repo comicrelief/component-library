@@ -63,6 +63,7 @@ const EmailSignUp = ({
       {!next && (
         <>
           <InputField
+            aria-labelledby="Email address"
             name="email"
             id="email"
             hasAria={false}
@@ -77,6 +78,7 @@ const EmailSignUp = ({
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
               as="input"
+              type="submit"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() => validate({ email: value }) && setNext(true)}
@@ -91,6 +93,7 @@ const EmailSignUp = ({
           <ButtonWrapper backgroundColor={backgroundColor}>
             <Button
               as="input"
+              type="submit"
               data-test="subscribe-button-school"
               color={buttonColor}
               onClick={() =>
@@ -108,6 +111,7 @@ const EmailSignUp = ({
   const subscriptionForm = (
     <Form onSubmit={e => handleSubmit(e)}>
       <InputField
+        aria-labelledby="Email address"
         name="email"
         id="email"
         hasAria={false}

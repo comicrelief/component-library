@@ -21,13 +21,14 @@ const TopCopyWrapper = styled.div`
 const ButtonWrapper = styled.div`
   margin-top: ${spacing('md')};
   input {
+    text-align: center;
     border-color: ${({ theme, backgroundColor }) =>
       theme.color(backgroundColor)};
     width: 100%;
     font-size: ${({ theme }) => theme.fontSize('s')};
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: ${({ theme }) => theme.fontSize('m')};
-      width: auto;
+      max-width: 180px;
     }
   }
 `;
