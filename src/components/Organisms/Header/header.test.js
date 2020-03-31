@@ -618,7 +618,7 @@ it('renders correctly', () => {
           </div>
         </a>
         <nav
-          aria-labelledby="main-menu"
+          aria-label="main-menu"
           className="c6"
           role="navigation"
         >

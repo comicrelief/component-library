@@ -63,7 +63,7 @@ const EmailSignUp = ({
       {!next && (
         <>
           <InputField
-            aria-labelledby="Email address"
+            aria-label="Email address"
             name="email"
             id="email"
             hasAria={false}
@@ -111,7 +111,7 @@ const EmailSignUp = ({
   const subscriptionForm = (
     <Form onSubmit={e => handleSubmit(e)}>
       <InputField
-        aria-labelledby="Email address"
+        aria-label="Email address"
         name="email"
         id="email"
         hasAria={false}

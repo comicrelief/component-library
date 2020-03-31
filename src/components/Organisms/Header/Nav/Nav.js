@@ -72,11 +72,7 @@ const MainNav = ({ navItems }) => {
   }, []);
   return (
     <>
-      <Nav
-        aria-labelledby="main-menu"
-        isExpandable={isExpandable}
-        role="navigation"
-      >
+      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
         <Text id="main-menu" tag="h2">
           Main navigation
         </Text>

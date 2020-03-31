@@ -511,6 +511,7 @@ exports[`renders correctly 1`] = `
     onSubmit={[Function]}
   >
     <label
+      aria-label="Email address"
       className="c6 c7"
       htmlFor="email"
       onChange={[Function]}
@@ -523,7 +524,7 @@ exports[`renders correctly 1`] = `
         email
       </span>
       <input
-        aria-labelledby="Email address"
+        aria-label="Email address"
         className="c10 c7"
         id="email"
         name="email"

@@ -607,7 +607,7 @@ it('renders correctly', () => {
           </ul>
         </div>
         <nav
-          aria-labelledby="main-menu"
+          aria-label="main-menu"
           className="c7"
           role="navigation"
         >
@@ -625,6 +625,7 @@ it('renders correctly', () => {
           >
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
@@ -682,6 +683,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
@@ -779,6 +781,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
@@ -916,6 +919,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
@@ -973,6 +977,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
@@ -1030,6 +1035,7 @@ it('renders correctly', () => {
             </li>
             <li
               className="c10"
+              role="none"
             >
               <span
                 className="c11"
