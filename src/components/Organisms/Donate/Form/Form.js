@@ -126,12 +126,12 @@ const Signup = ({
           )
         }
       >
-        <Legend>
-          <Text tag="span" size="l" weight="bold">
-            Choose an amount to give
-          </Text>
-        </Legend>
         <OuterFieldset>
+          <Legend>
+            <Text tag="span" size="l" weight="bold">
+              Choose an amount to give
+            </Text>
+          </Legend>
           <MoneyBuys>
             {givingData.moneybuys.map(({ value }, index) => (
               <MoneyBox

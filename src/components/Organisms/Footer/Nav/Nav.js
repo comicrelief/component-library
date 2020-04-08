@@ -52,11 +52,7 @@ const FooterNav = ({ navItems }) => {
   }, []);
 
   return (
-    <Nav
-      aria-labelledby="main-menu"
-      isExpandable={isExpandable}
-      role="navigation"
-    >
+    <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
       <Text id="footer-menu" tag="h2">
         Footer navigation
       </Text>
@@ -65,6 +61,7 @@ const FooterNav = ({ navItems }) => {
       <NavMenu role="menubar">
         {menuGroups.map((group, index) => (
           <NavItem
+            role="none"
             key={group.id}
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
