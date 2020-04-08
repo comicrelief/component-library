@@ -1,5 +1,6 @@
 {
   "name": "@comicrelief/component-library",
+  "author": "Comic Relief Engineering Team",
   "version": "0.0.0-see.readme.for.semantic.release.process",
   "main": "dist/index.js",
   "license": "ISC",

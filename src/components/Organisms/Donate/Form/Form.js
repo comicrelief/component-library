@@ -103,13 +103,16 @@ const Signup = ({
 
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
+  const showGivingSelector = singleGiving !== null && regularGiving !== null;
 
   return (
     <FormWrapper>
-      <GivingSelector
-        givingType={givingType}
-        changeGivingType={data => setGivingType(data)}
-      />
+      {showGivingSelector && (
+        <GivingSelector
+          givingType={givingType}
+          changeGivingType={data => setGivingType(data)}
+        />
+      )}
 
       <Form
         onSubmit={e =>
