@@ -278,7 +278,7 @@ it('renders correctly', () => {
       font-weight: 700;
       width: 100%;
       color: #2C0230;
-      padding: 14px 21px;
+      padding: 14px 14px 7px 21px;
       color: #FFFFFF;
       height: auto;
       position: relative;
@@ -299,7 +299,7 @@ it('renders correctly', () => {
       font-weight: 700;
       width: 100%;
       color: #2C0230;
-      padding: 14px 21px;
+      padding: 14px 14px 7px 21px;
       color: #FFFFFF;
       height: auto;
       position: relative;
