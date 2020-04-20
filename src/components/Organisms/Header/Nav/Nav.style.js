@@ -100,7 +100,7 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 14px 21px;
+  padding: 14px 14px 7px 21px;
   color: ${({ theme }) => theme.color('white')};
   height: auto;
   position: relative;
