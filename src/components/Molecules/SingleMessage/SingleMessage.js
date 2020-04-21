@@ -46,11 +46,12 @@ const SingleMessage = ({
 
   const thisRef = useRef(null);
 
-  const isIOS = navigator
-    ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-      !window.MSStream &&
-      (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform))
-    : false;
+  const isIOS =
+    typeof navigator === 'object'
+      ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+        !window.MSStream &&
+        (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform))
+      : false;
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
