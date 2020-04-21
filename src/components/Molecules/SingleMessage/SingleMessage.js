@@ -46,6 +46,13 @@ const SingleMessage = ({
 
   const thisRef = useRef(null);
 
+  const isIOS =
+    typeof navigator === 'object'
+      ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+        !window.MSStream &&
+        (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform))
+      : false;
+
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
     // Store the dynamically-created UUID (from the main render func) in our state so useEffect can access it
@@ -78,7 +85,11 @@ const SingleMessage = ({
       // Instantiate a YT Player into our array, using its unique id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
         videoId: videoID,
-        playerVars: { rel: 0, modestbranding: 1, fs: 0 }
+        playerVars: {
+          rel: 0,
+          modestbranding: 1,
+          fs: 0
+        }
       });
     }
   }, [hasVideo, isInitialised, uniqueID, videoID, onPlay]);
@@ -92,7 +103,7 @@ const SingleMessage = ({
       allPlayers[thisVideoID].playVideo();
       // Once video is playing, switch state to allow CSS to show/hide relevant layers
       allPlayers[thisVideoID].on('stateChange', event => {
-        if (event.data === 1) {
+        if ((event.data === 1 && !isIOS) || isIOS) {
           setIsBuffering(false);
           setIsPlaying(true);
         }
