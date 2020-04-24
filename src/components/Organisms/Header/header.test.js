@@ -1034,7 +1034,7 @@ it('renders correctly', () => {
                 color="red"
                 href="https://shop.comicrelief.com"
                 onKeyUp={[Function]}
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
                 type="standard"
               >
