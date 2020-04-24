@@ -87,7 +87,7 @@ const MainNav = ({ navItems }) => {
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
             const relNoopener = !whiteListed(thisUrl) && 'noopener';
-            const hasSubmenu =
+            const haspopup =
               group.links && group.links.length > 1 ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
@@ -103,7 +103,7 @@ const MainNav = ({ navItems }) => {
                     href={thisUrl}
                     inline
                     rel={relNoopener}
-                    aria-haspopup={hasSubmenu}
+                    aria-haspopup={haspopup}
                     onKeyUp={keyPressed(group.title)}
                   >
                     <Text>{thisFirstChild.title}</Text>
@@ -113,7 +113,7 @@ const MainNav = ({ navItems }) => {
                     href={thisUrl}
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
-                    aria-haspopup={hasSubmenu}
+                    aria-haspopup={haspopup}
                     onClick={toggleSubMenu(group.id, group.links)}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
@@ -122,7 +122,7 @@ const MainNav = ({ navItems }) => {
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
-                {hasSubmenu > 1 && (
+                {group.links && group.links.length > 1 && (
                   <SubNavMenu
                     role="list"
                     isKeyPressed={!!isKeyPressed[group.title]}
