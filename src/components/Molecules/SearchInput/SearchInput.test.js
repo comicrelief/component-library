@@ -113,7 +113,7 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      width: 90%;
+      width: 100%;
       padding: 0 0.5rem;
     }
 
@@ -126,36 +126,6 @@ it('renders correctly', () => {
     }
 
     .c5:focus {
-      border: 0;
-    }
-
-    .c9 {
-      width: 90%;
-      padding: 0 0.5rem;
-      margin: 0;
-      width: 60px;
-    }
-
-    .c10 {
-      padding: 13px 0;
-      margin: 0;
-      max-width: 100%;
-      border: 0;
-      outline: #E52630;
-      height: 76px;
-      text-indent: -9999px;
-      background-color: #666;
-      -webkit-mask: url(mock.asset) no-repeat right center;
-      mask: url(mock.asset) no-repeat right center;
-      -webkit-mask-size: 50%;
-      mask-size: 50%;
-      width: 100%;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    .c10:focus {
       border: 0;
     }
 
@@ -175,33 +145,6 @@ it('renders correctly', () => {
       .c5 {
         height: 100px;
         font-size: 3rem;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c9 {
-        width: 70px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c10 {
-        height: 100px;
-        font-size: 3rem;
-      }
-    }
-
-    @media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
-      .c10 {
-        background: url(mock.asset) no-repeat right center;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c10 {
-        -webkit-mask-size: 100%;
-        mask-size: 100%;
-        width: 100%;
       }
     }
 
@@ -242,17 +185,6 @@ it('renders correctly', () => {
               />
               
             </label>
-          </div>
-          <div
-            className="c9"
-          >
-            <button
-              aria-disabled="true"
-              aria-label="Search button disabled"
-              className="c10"
-              disabled="disabled"
-              type="submit"
-            />
           </div>
         </form>
       </div>
