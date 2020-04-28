@@ -201,6 +201,7 @@ const Button = styled.button`
   border-radius: 2rem;
   border: none;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  appearance: none;
   :active,
   :focus,
   :hover {

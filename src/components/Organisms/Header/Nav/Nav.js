@@ -6,6 +6,7 @@ import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
 import InternalLinkHelper from '../../../../utils/internalLinkHelper';
+import whiteListed from '../../../../utils/whiteListed';
 
 import {
   Nav,
@@ -85,7 +86,9 @@ const MainNav = ({ navItems }) => {
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
-
+            const relNoopener = !whiteListed(thisUrl) && 'noopener noreferrer';
+            const hasSubMenu = group.links && group.links.length > 1;
+            const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
             return (
@@ -99,7 +102,8 @@ const MainNav = ({ navItems }) => {
                   <NavLink
                     href={thisUrl}
                     inline
-                    aria-haspopup="true"
+                    rel={relNoopener}
+                    aria-haspopup={hasPopUp}
                     onKeyUp={keyPressed(group.title)}
                   >
                     <Text>{thisFirstChild.title}</Text>
@@ -109,7 +113,7 @@ const MainNav = ({ navItems }) => {
                     href={thisUrl}
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
-                    aria-haspopup="true"
+                    aria-haspopup={hasPopUp}
                     onClick={toggleSubMenu(group.id, group.links)}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
@@ -118,7 +122,7 @@ const MainNav = ({ navItems }) => {
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
-                {group.links && group.links.length > 1 && (
+                {hasSubMenu && (
                   <SubNavMenu
                     role="list"
                     isKeyPressed={!!isKeyPressed[group.title]}

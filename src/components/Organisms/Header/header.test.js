@@ -644,6 +644,7 @@ it('renders correctly', () => {
                 color="red"
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -787,11 +788,12 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-haspopup="true"
+                aria-haspopup={null}
                 className="c2 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -814,6 +816,7 @@ it('renders correctly', () => {
                 color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -882,6 +885,7 @@ it('renders correctly', () => {
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
                 type="standard"
               >
@@ -1025,12 +1029,13 @@ it('renders correctly', () => {
               role="none"
             >
               <a
-                aria-haspopup="true"
+                aria-haspopup={null}
                 className="c2 c10 c11"
                 color="red"
-                href="https://www.comicrelief.com/rednoseday/schools"
+                href="https://shop.comicrelief.com"
                 onKeyUp={[Function]}
-                target="_self"
+                rel="noopener noreferrer"
+                target="_blank"
                 type="standard"
               >
                 <span
@@ -1038,7 +1043,7 @@ it('renders correctly', () => {
                   color="inherit"
                   size="s"
                 >
-                  I am single menu link
+                  Shop
                 </span>
               </a>
             </li>
@@ -1052,6 +1057,7 @@ it('renders correctly', () => {
                 color="red"
                 href="https://www.sportrelief.com"
                 onKeyUp={[Function]}
+                rel={false}
                 target="_self"
                 type="standard"
               >

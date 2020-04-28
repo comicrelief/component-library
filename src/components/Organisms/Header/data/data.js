@@ -134,12 +134,12 @@ export default {
       ]
     },
     {
-      title: 'Schools & youth - menu group',
+      title: 'Shop',
       id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
       links: [
         {
-          title: 'I am single menu link',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          title: 'Shop',
+          path: 'https://shop.comicrelief.com',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
