@@ -32,13 +32,12 @@ const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
           </SearchWrapper>
           <ActionWrapper>
             <ActionButton
+              as="button"
               showLabel={false}
               disabled="disabled"
+              aria-disabled="true"
               type="submit"
-              id=""
-              name="action"
-              placeholder=""
-              label=""
+              aria-label="Search button disabled"
               errorMsg=""
             />
           </ActionWrapper>

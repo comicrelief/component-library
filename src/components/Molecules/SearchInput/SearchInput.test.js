@@ -118,6 +118,7 @@ it('renders correctly', () => {
     }
 
     .c5 {
+      padding: 13px 0;
       margin: 0;
       max-width: 100%;
       border: 0;
@@ -136,16 +137,19 @@ it('renders correctly', () => {
     }
 
     .c10 {
+      padding: 13px 0;
       margin: 0;
       max-width: 100%;
       border: 0;
       outline: #E52630;
+      height: 76px;
       text-indent: -9999px;
       background-color: #666;
       -webkit-mask: url(mock.asset) no-repeat right center;
       mask: url(mock.asset) no-repeat right center;
-      -webkit-mask-size: 45%;
-      mask-size: 45%;
+      -webkit-mask-size: 50%;
+      mask-size: 50%;
+      width: 100%;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -197,6 +201,7 @@ it('renders correctly', () => {
       .c10 {
         -webkit-mask-size: 100%;
         mask-size: 100%;
+        width: 100%;
       }
     }
 
@@ -241,29 +246,13 @@ it('renders correctly', () => {
           <div
             className="c9"
           >
-            <label
-              className="c4 c10"
+            <button
+              aria-disabled="true"
+              aria-label="Search button disabled"
+              className="c10"
               disabled="disabled"
-              htmlFor=""
-            >
-              <span
-                className="c6 c7"
-                color="inherit"
-                size="s"
-              >
-                
-              </span>
-              <input
-                aria-describedby=""
-                className="c8 c10"
-                disabled="disabled"
-                id=""
-                name="action"
-                placeholder=""
-                type="submit"
-              />
-              
-            </label>
+              type="submit"
+            />
           </div>
         </form>
       </div>

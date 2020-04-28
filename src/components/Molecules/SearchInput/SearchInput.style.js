@@ -34,6 +34,7 @@ const SearchWrapper = styled.div`
 `;
 
 const SearchField = styled(Input)`
+  padding: 13px 0;
   margin: 0;
   font-size: ${({ theme }) => theme.fontSize('md')};
   max-width: 100%;
@@ -57,16 +58,19 @@ const ActionWrapper = styled(SearchWrapper)`
 `;
 
 const ActionButton = styled(SearchField)`
+  height: 76px;
   text-indent: -9999px;
   background-color: ${({ theme }) => theme.color('grey_for_forms')};
   mask: url(${searchIcon}) no-repeat right center;
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     background: url(${searchIcon}) no-repeat right center;
   }
-  mask-size: 45%;
+  mask-size: 50%;
+  width: 100%;
   appearance: none;
   ${media('small')} {
     mask-size: 100%;
+    width: 100%;
   }
 `;
 
