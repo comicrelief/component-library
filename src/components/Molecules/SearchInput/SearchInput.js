@@ -37,7 +37,7 @@ const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
               disabled="disabled"
               aria-disabled="true"
               type="submit"
-              aria-label="Disable search button"
+              aria-label="Search button disabled"
               errorMsg=""
             />
           </ActionWrapper>
