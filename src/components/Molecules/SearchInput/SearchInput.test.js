@@ -248,7 +248,7 @@ it('renders correctly', () => {
           >
             <button
               aria-disabled="true"
-              aria-label="Disable search button"
+              aria-label="Search button disabled"
               className="c10"
               disabled="disabled"
               type="submit"
