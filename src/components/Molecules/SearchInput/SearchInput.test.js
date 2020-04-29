@@ -154,9 +154,9 @@ it('renders correctly', () => {
       <div
         className="c1"
       >
-        <form
+        <div
           className="c2"
-          onSubmit={[Function]}
+          role="search"
         >
           <div
             className="c3"
@@ -180,13 +180,14 @@ it('renders correctly', () => {
                 name="search"
                 onChange={[Function]}
                 placeholder=""
+                role="searchbox"
                 type="text"
                 value=""
               />
               
             </label>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   `);

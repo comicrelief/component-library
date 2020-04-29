@@ -15,7 +15,7 @@ const InnerWrapper = styled.div`
   padding: 0 calc((4 * ${spacing('xsm')}));
 `;
 
-const Form = styled.form`
+const SearchBox = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   margin: ${spacing('xl')} auto;
@@ -48,4 +48,4 @@ const SearchField = styled(Input)`
   }
 `;
 
-export { Wrapper, InnerWrapper, Form, SearchWrapper, SearchField };
+export { Wrapper, InnerWrapper, SearchBox, SearchWrapper, SearchField };

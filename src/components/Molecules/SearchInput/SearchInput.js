@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Wrapper,
   InnerWrapper,
-  Form,
+  SearchBox,
   SearchWrapper,
   SearchField
 } from './SearchInput.style';
@@ -13,9 +13,10 @@ const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <Form onSubmit={e => e.preventDefault()}>
+        <SearchBox role="search">
           <SearchWrapper>
             <SearchField
+              role="searchbox"
               value={value}
               onChange={onChange}
               name="search"
@@ -28,7 +29,7 @@ const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
               {...rest}
             />
           </SearchWrapper>
-        </Form>
+        </SearchBox>
       </InnerWrapper>
     </Wrapper>
   );
