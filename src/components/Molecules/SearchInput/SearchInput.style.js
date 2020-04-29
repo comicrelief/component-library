@@ -16,15 +16,10 @@ const InnerWrapper = styled.div`
 `;
 
 const SearchBox = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
   margin: ${spacing('xl')} auto;
   width: 100%;
   border-bottom: 4px solid ${({ theme }) => theme.color('red')};
   overflow: hidden;
-  ${media('small')} {
-    padding-bottom: ${spacing('sm')};
-  }
 `;
 
 const SearchWrapper = styled.div`

@@ -99,13 +99,6 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: no-wrap;
-      -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
       margin: 4rem auto;
       width: 100%;
       border-bottom: 4px solid #E52630;
@@ -132,12 +125,6 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c8 {
         max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c2 {
-        padding-bottom: 0.5rem;
       }
     }
 
