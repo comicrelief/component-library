@@ -6,9 +6,7 @@ import {
   InnerWrapper,
   Form,
   SearchWrapper,
-  SearchField,
-  ActionWrapper,
-  ActionButton
+  SearchField
 } from './SearchInput.style';
 
 const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
@@ -30,17 +28,6 @@ const SearchInput = ({ onChange, placeholder, value, ...rest }) => {
               {...rest}
             />
           </SearchWrapper>
-          <ActionWrapper>
-            <ActionButton
-              as="button"
-              showLabel={false}
-              disabled="disabled"
-              aria-disabled="true"
-              type="submit"
-              aria-label="Search button disabled"
-              errorMsg=""
-            />
-          </ActionWrapper>
         </Form>
       </InnerWrapper>
     </Wrapper>
