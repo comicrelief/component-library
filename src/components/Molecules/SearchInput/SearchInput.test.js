@@ -99,13 +99,6 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: no-wrap;
-      -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
       margin: 4rem auto;
       width: 100%;
       border-bottom: 4px solid #E52630;
@@ -136,12 +129,6 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c2 {
-        padding-bottom: 0.5rem;
-      }
-    }
-
-    @media (min-width:740px) {
       .c5 {
         height: 100px;
         font-size: 3rem;
@@ -154,9 +141,9 @@ it('renders correctly', () => {
       <div
         className="c1"
       >
-        <form
+        <div
           className="c2"
-          onSubmit={[Function]}
+          role="search"
         >
           <div
             className="c3"
@@ -180,13 +167,14 @@ it('renders correctly', () => {
                 name="search"
                 onChange={[Function]}
                 placeholder=""
+                role="searchbox"
                 type="text"
                 value=""
               />
               
             </label>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   `);

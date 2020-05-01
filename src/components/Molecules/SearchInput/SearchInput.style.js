@@ -15,16 +15,11 @@ const InnerWrapper = styled.div`
   padding: 0 calc((4 * ${spacing('xsm')}));
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-wrap: no-wrap;
+const SearchBox = styled.div`
   margin: ${spacing('xl')} auto;
   width: 100%;
   border-bottom: 4px solid ${({ theme }) => theme.color('red')};
   overflow: hidden;
-  ${media('small')} {
-    padding-bottom: ${spacing('sm')};
-  }
 `;
 
 const SearchWrapper = styled.div`
@@ -48,4 +43,4 @@ const SearchField = styled(Input)`
   }
 `;
 
-export { Wrapper, InnerWrapper, Form, SearchWrapper, SearchField };
+export { Wrapper, InnerWrapper, SearchBox, SearchWrapper, SearchField };
