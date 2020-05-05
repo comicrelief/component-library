@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800&display=swap');
 
+@font-face {
+  font-family: 'Founders-GroteskXCondensed-Bold';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.woff')
+      format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Founders-Grotesk-Semibold';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.woff')
+      format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Founders-Grotesk-Regular';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.woff')
+      format('woff');
+  font-display: fallback;
+}
+
 html {
   box-sizing: border-box;
 }
