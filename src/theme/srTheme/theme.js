@@ -3,7 +3,7 @@ import buttonColors from './buttonColors';
 import linkStyles from './linkStyles';
 import fontSize from './fontSizes';
 import breakpoint from '../shared/breakpoint';
-import fontFamilies, { fonts } from '../shared/fontFamilies';
+import fontFamilies from '../shared/fontFamilies';
 
 export default {
   color,
@@ -12,5 +12,5 @@ export default {
   fontSize,
   breakpoint,
   fontFamilies,
-  fonts
+  font: 'Founders'
 };

@@ -1,4 +1,4 @@
-export const fonts = {
+const fonts = {
   Montserrat: { font: 'Montserrat', fallback: 'Helvetica, Arial' },
   Anton: { font: 'Anton', fallback: 'Impact' },
   Founders: {
