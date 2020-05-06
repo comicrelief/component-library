@@ -1,4 +1,4 @@
-const fontFamilies = {
+export const fonts = {
   Montserrat: { font: 'Montserrat', fallback: 'Helvetica, Arial' },
   Anton: { font: 'Anton', fallback: 'Impact' },
   Founders: {
@@ -14,7 +14,7 @@ const fontFamilies = {
 export default family => {
   let style = 'inherit';
   if (family) {
-    style = `'${fontFamilies[family].font}', ${fontFamilies[family].fallback}, sans-serif`;
+    style = `'${fonts[family].font}', ${fonts[family].fallback}, sans-serif`;
   }
   return style;
 };
