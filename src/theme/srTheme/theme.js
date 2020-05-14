@@ -12,5 +12,8 @@ export default {
   fontSize,
   breakpoint,
   fontFamilies,
-  font: 'Founders_bold'
+  font: {
+    regular: 'Founders',
+    bold: 'Founders_bold'
+  }
 };
