@@ -12,5 +12,8 @@ export default {
   fontSize,
   breakpoint,
   fontFamilies,
-  font: 'Anton'
+  font: {
+    regular: 'Montserrat',
+    bold: 'Anton'
+  }
 };
