@@ -43,7 +43,7 @@ const Text = ({ tag, children, height, weight, family, ...rest }) => (
 );
 
 Text.defaultProps = {
-  family: 'Montserrat',
+  family: null,
   tag: 'span',
   weight: undefined,
   height: undefined,
