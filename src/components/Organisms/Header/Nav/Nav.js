@@ -106,7 +106,7 @@ const MainNav = ({ navItems }) => {
                     aria-haspopup={hasPopUp}
                     onKeyUp={keyPressed(group.title)}
                   >
-                    <Text>{thisFirstChild.title}</Text>
+                    <span>{thisFirstChild.title}</span>
                   </NavLink>
                 ) : (
                   <NavLink
@@ -118,7 +118,7 @@ const MainNav = ({ navItems }) => {
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
-                    <Text>{thisFirstChild.title}</Text>
+                    <span>{thisFirstChild.title}</span>
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
@@ -142,7 +142,7 @@ const MainNav = ({ navItems }) => {
                               inline
                               role="menuitem"
                             >
-                              <Text>{child.title}</Text>
+                              <span>{child.title}</span>
                             </SubNavLinkUnderline>
                           </SubNavItem>
                         );
@@ -150,7 +150,7 @@ const MainNav = ({ navItems }) => {
                       return (
                         <SubNavItem key={thisSubUrl}>
                           <SubNavLink href={thisSubUrl} inline role="menuitem">
-                            <Text>{child.title}</Text>
+                            <span>{child.title}</span>
                           </SubNavLink>
                         </SubNavItem>
                       );
