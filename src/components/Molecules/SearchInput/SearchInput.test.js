@@ -99,13 +99,6 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: no-wrap;
-      -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
       margin: 4rem auto;
       width: 100%;
       border-bottom: 4px solid #E52630;
@@ -113,11 +106,12 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      width: 90%;
+      width: 100%;
       padding: 0 0.5rem;
     }
 
     .c5 {
+      padding: 13px 0;
       margin: 0;
       max-width: 100%;
       border: 0;
@@ -128,42 +122,9 @@ it('renders correctly', () => {
       border: 0;
     }
 
-    .c9 {
-      width: 90%;
-      padding: 0 0.5rem;
-      margin: 0;
-      width: 60px;
-    }
-
-    .c10 {
-      margin: 0;
-      max-width: 100%;
-      border: 0;
-      outline: #E52630;
-      text-indent: -9999px;
-      background-color: #666;
-      -webkit-mask: url(mock.asset) no-repeat right center;
-      mask: url(mock.asset) no-repeat right center;
-      -webkit-mask-size: 45%;
-      mask-size: 45%;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    .c10:focus {
-      border: 0;
-    }
-
     @media (min-width:740px) {
       .c8 {
         max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c2 {
-        padding-bottom: 0.5rem;
       }
     }
 
@@ -174,41 +135,15 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c9 {
-        width: 70px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c10 {
-        height: 100px;
-        font-size: 3rem;
-      }
-    }
-
-    @media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
-      .c10 {
-        background: url(mock.asset) no-repeat right center;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c10 {
-        -webkit-mask-size: 100%;
-        mask-size: 100%;
-      }
-    }
-
     <div
       className="c0"
     >
       <div
         className="c1"
       >
-        <form
+        <div
           className="c2"
-          onSubmit={[Function]}
+          role="search"
         >
           <div
             className="c3"
@@ -232,40 +167,14 @@ it('renders correctly', () => {
                 name="search"
                 onChange={[Function]}
                 placeholder=""
+                role="searchbox"
                 type="text"
                 value=""
               />
               
             </label>
           </div>
-          <div
-            className="c9"
-          >
-            <label
-              className="c4 c10"
-              disabled="disabled"
-              htmlFor=""
-            >
-              <span
-                className="c6 c7"
-                color="inherit"
-                size="s"
-              >
-                
-              </span>
-              <input
-                aria-describedby=""
-                className="c8 c10"
-                disabled="disabled"
-                id=""
-                name="action"
-                placeholder=""
-                type="submit"
-              />
-              
-            </label>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   `);
