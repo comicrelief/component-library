@@ -5,6 +5,10 @@ const fonts = {
     font: 'Founders-Grotesk-Regular',
     fallback: 'helvetica, arial, sans-serif'
   },
+  Founders_semi_bold: {
+    font: 'Founders-Grotesk-Semibold',
+    fallback: 'helvetica, arial, sans-serif'
+  },
   Founders_bold: {
     font: 'Founders-GroteskXCondensed-Bold',
     fallback: 'helvetica, arial, sans-serif'

@@ -14,6 +14,7 @@ export default {
   fontFamilies,
   font: {
     regular: 'Founders',
+    semiBold: 'Founders_semi_bold',
     bold: 'Founders_bold'
   }
 };
