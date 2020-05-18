@@ -11,5 +11,10 @@ export default {
   linkStyles,
   fontSize,
   breakpoint,
-  fontFamilies
+  fontFamilies,
+  font: {
+    regular: 'Founders',
+    semiBold: 'Founders_semi_bold',
+    bold: 'Founders_bold'
+  }
 };

@@ -19,13 +19,13 @@ exports[`renders correctly with error message 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c16 {
   text-transform: inherit;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c15 {
@@ -534,7 +534,7 @@ exports[`renders correctly with modal open 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c15 {

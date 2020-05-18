@@ -52,28 +52,28 @@ Sport Relief
 
 ```js
 <div>
-  <Text tag="h1" family="Anton" size="super">
+  <Text tag="h1" family="Founders_bold" uppercase size="super">
     Heading 1
   </Text>
-  <Text tag="h2" family="Anton" size="big">
+  <Text tag="h2" family="Founders_bold" uppercase size="big">
     Heading 2
   </Text>
-  <Text tag="h3" family="Anton" size="xxl">
+  <Text tag="h3" family="Founders_bold" uppercase size="xxl">
     Heading 3
   </Text>
-  <Text tag="h4" family="Anton" size="xl">
+  <Text tag="h4" family="Founders_bold" uppercase size="xl">
     Heading 4
   </Text>
-  <Text tag="h4" family="Anton" size="l">
+  <Text tag="h4" family="Founders_bold" uppercase size="l">
     Heading 5
   </Text>
-  <Text tag="p" size="m">
+  <Text tag="p" family="Founders" size="m">
     Body 1
   </Text>
-  <Text tag="p" size="s">
+  <Text tag="p" family="Founders" size="s">
     Body 2
   </Text>
-  <Text tag="p" size="s" weight="bold" uppercase>
+  <Text tag="p" family="Founders" size="s" weight="bold" uppercase>
     Bold and Uppercase
   </Text>
 </div>

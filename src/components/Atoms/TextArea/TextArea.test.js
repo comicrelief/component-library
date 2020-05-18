@@ -23,7 +23,7 @@ it('renders correctly', () => {
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c2 {
