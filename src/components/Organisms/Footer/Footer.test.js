@@ -44,13 +44,13 @@ it('renders correctly', () => {
       width: auto;
       display: block;
       height: auto;
+      margin-right: 1rem;
     }
 
     .c21 {
       display: inline-block;
       z-index: 3;
       width: 70px;
-      height: 70px;
       -webkit-transform: rotate(-14deg);
       -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
@@ -337,7 +337,6 @@ it('renders correctly', () => {
     @media (min-width:1150px) {
       .c21 {
         width: 70px;
-        height: 70px;
       }
     }
 
