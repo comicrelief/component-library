@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import Link from '../../Atoms/Link/Link';
 import zIndex from '../../../theme/shared/zIndex';
 import { container } from '../../../theme/shared/size';
 
@@ -33,13 +32,18 @@ const InnerWrapper = styled.div`
 /**
  * Brand wrapper
  */
-const Brand = styled(Link)`
+const Brand = styled.div`
   ${zIndex('high')};
-  color: transparent;
   margin-right: auto;
-  border: 0;
-  :hover {
+  display: flex;
+  align-items: center;
+  a {
     border: 0;
+    color: transparent;
+
+    :hover {
+      border: 0;
+    }
   }
 `;
 
