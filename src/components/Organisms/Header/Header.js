@@ -9,8 +9,25 @@ const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
-        <Brand href="/" title={`Go to ${campaign} homepage`}>
-          <Logo rotate={rotate} campaign={campaign} />
+        <Brand>
+          {campaign === 'Sport Relief Gameon' ? (
+            <>
+              <a href="/" title={`Go to ${campaign} homepage`}>
+                <Logo rotate campaign="Comic Relief" />
+              </a>
+              <a href="/sportrelief/" title={`Go to ${campaign} homepage`}>
+                <Logo
+                  sizeSm="100px"
+                  sizeMd="120px"
+                  campaign="Sport Relief Gameon"
+                />
+              </a>
+            </>
+          ) : (
+            <a href="/" title={`Go to ${campaign} homepage`}>
+              <Logo rotate={rotate} campaign={campaign} />
+            </a>
+          )}
         </Brand>
         <MainNav navItems={navItems} />
         <MetaIcons>{metaIcons}</MetaIcons>
