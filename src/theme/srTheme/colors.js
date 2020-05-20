@@ -36,7 +36,7 @@ const colors = {
   teal: '#4ECDBE',
   teal_dark: '#13767C',
   teal_light: '#86E4E9',
-  white: '#eee',
+  white: '#FFFFFF',
   white_smoke: '#fbf5f5',
   yellow: '#FFE400',
   yellow_dark: '#665700',
