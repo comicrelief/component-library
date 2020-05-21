@@ -395,6 +395,12 @@ it('renders correctly', () => {
     .c2 a {
       border: 0;
       color: transparent;
+      margin-right: 1rem;
+    }
+
+    .c2 a img {
+      width: 100%;
+      object-fit: contain;
     }
 
     .c2 a:hover {
