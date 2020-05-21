@@ -80,7 +80,9 @@ const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
   const labelRest = { ...rest };
   // Remove unrelated attributes to label element
   Object.keys(labelRest).map(propKey => {
-    if (['value', 'name', 'placeholder', 'role'].includes(propKey)) {
+    if (
+      ['value', 'name', 'placeholder', 'role', 'onChange'].includes(propKey)
+    ) {
       delete labelRest[propKey];
     } else if (propKey.match(/^aria-/) && propKey !== 'aria-label') {
       delete labelRest[propKey];

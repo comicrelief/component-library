@@ -5,6 +5,7 @@ const Container = styled.div`
 `;
 
 const Dropdown = styled.div`
+  z-index: 1;
   position: absolute;
   left: 0;
   max-height: 300px;
