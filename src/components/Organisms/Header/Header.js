@@ -29,7 +29,7 @@ const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
               </a>
             </>
           ) : (
-            <a href="/" title={`Go to ${campaign} homepage`}>
+            <a href="/" title="Go to Comic Relief homepage">
               <Logo rotate={rotate} campaign={campaign} />
             </a>
           )}
