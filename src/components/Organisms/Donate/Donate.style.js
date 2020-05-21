@@ -50,7 +50,7 @@ const Wrapper = styled.div`
 const Header = styled.div`
   width: 100%;
   display: flex;
-  font-family: ${({ theme }) => theme.font.regular};
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   ${media('medium')} {
     width: 50%;
     padding: ${spacing('xl')};
@@ -65,7 +65,7 @@ const HeaderInner = styled.div`
 
 const FormWrapper = styled.div`
   position: relative;
-  font-family: ${({ theme }) => theme.font.regular};
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   ${media('medium')} {
     width: 50%;
   }
