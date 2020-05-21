@@ -30,9 +30,6 @@ const InnerWrapper = styled.div`
   }
 `;
 
-/**
- * Brand wrapper
- */
 const Brand = styled.div`
   ${zIndex('high')};
   margin-right: auto;
@@ -52,9 +49,6 @@ const Brand = styled.div`
   }
 `;
 
-/**
- * Meta icons
- */
 const MetaIcons = styled.div`
   width: auto;
   display: flex;
