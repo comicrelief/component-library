@@ -1,5 +1,3 @@
-/* eslint-disable */ // todo: remove this
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,8 +5,8 @@ import SchoolLookup from '../../Molecules/SchoolLookup/SchoolLookup';
 import AddressForm from '../../Molecules/AddressForm/AddressForm';
 import Text from '../../Atoms/Text/Text';
 
-const OR_ENTER_MANUALLY_MESSAGE = 'Or enter details manually';
-const EDIT_MESSAGE = 'Edit';
+const ENTER_MANUALLY_TEXT = 'Or enter details manually';
+const EDIT_TEXT = 'Edit address';
 const NOT_FOUND_MESSAGE =
   "Sorry, we can't find this. If the school or postcode you entered is correct then please add the address manually below.";
 const LABEL_MAP = {
@@ -54,20 +52,25 @@ const SchoolAddressFormWithLookup = () => {
 
   const onSelect = school => {
     setAddress(getAddressFromSchoolObject(school));
+    setEditing(false);
   };
 
+  // Todo: what happens if they don't submit it?
+  //  ... need to change the way this works.
   const onValidSubmission = manualAddress => {
     setAddress(manualAddress);
     setEditing(false);
   };
 
+  const EditButton = () => (
+    <button type="button" onClick={() => setEditing(true)}>
+      {address ? EDIT_TEXT : ENTER_MANUALLY_TEXT}
+    </button>
+  );
+
   return (
     <>
-      {editing === false && address === null && (
-        <SchoolLookup onSelect={onSelect} notFoundMessage={NOT_FOUND_MESSAGE} />
-      )}
-
-      {editing === false && address && <SchoolAddress {...address} />}
+      <SchoolLookup onSelect={onSelect} notFoundMessage={NOT_FOUND_MESSAGE} />
 
       {editing && (
         <AddressForm
@@ -76,6 +79,13 @@ const SchoolAddressFormWithLookup = () => {
           enableReinitialize
           {...address}
         />
+      )}
+
+      {editing === false && (
+        <>
+          {address && <SchoolAddress {...address} />}
+          <EditButton />
+        </>
       )}
     </>
   );

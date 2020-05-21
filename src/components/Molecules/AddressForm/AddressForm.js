@@ -5,6 +5,7 @@ import Postcode from 'postcode';
 
 import Input from '../../Atoms/Input/Input';
 
+const DEFAULT_SUBMIT_BUTTON_TEXT = 'Submit';
 const DEFAULT_LABEL_MAP = {
   name: 'Name',
   line1: 'Address line 1',
@@ -39,6 +40,7 @@ const AddressForm = ({
   labelMap,
   requiredFields,
   onValidSubmission,
+  submitButtonText,
   ...formikProps
 }) => {
   const onSubmit = (values, { setSubmitting }) => {
@@ -92,7 +94,7 @@ const AddressForm = ({
             <AddressInput fieldName="town" {...defaults} />
             <AddressInput fieldName="postcode" {...defaults} />
             <button type="submit" disabled={isSubmitting}>
-              Submit
+              {submitButtonText}
             </button>
           </Form>
         );
@@ -127,7 +129,8 @@ AddressForm.propTypes = {
   postcode: PropTypes.string,
   labelMap: PropTypes.objectOf(PropTypes.string),
   requiredFields: PropTypes.arrayOf(PropTypes.string),
-  onValidSubmission: PropTypes.func.isRequired
+  onValidSubmission: PropTypes.func.isRequired,
+  submitButtonText: PropTypes.string
 };
 
 AddressForm.defaultProps = {
@@ -138,7 +141,8 @@ AddressForm.defaultProps = {
   town: '',
   postcode: '',
   labelMap: DEFAULT_LABEL_MAP,
-  requiredFields: ['name', 'line1', 'town', 'postcode']
+  requiredFields: ['name', 'line1', 'town', 'postcode'],
+  submitButtonText: DEFAULT_SUBMIT_BUTTON_TEXT
 };
 
 export default AddressForm;
