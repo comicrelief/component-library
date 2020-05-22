@@ -3,5 +3,5 @@
 ```jsx
 import SchoolAddressFormWithLookup from './SchoolAddressFormWithLookup';
 
-<SchoolAddressFormWithLookup />;
+<SchoolAddressFormWithLookup onSetState={state => console.log(state)} />;
 ```

@@ -36,7 +36,12 @@ const lookup = async (query, config = {}) => {
  *  - Tests
  *  - ??
  */
-const SchoolLookup = ({ onSelect, notFoundMessage, lookupErrorMessage }) => {
+const SchoolLookup = ({
+  onSelect,
+  onChangeAction,
+  notFoundMessage,
+  lookupErrorMessage
+}) => {
   const initialState = {
     query: '',
     schoolOptions: [],
@@ -50,6 +55,10 @@ const SchoolLookup = ({ onSelect, notFoundMessage, lookupErrorMessage }) => {
 
   const lookupHandler = async e => {
     const query = e.currentTarget.value;
+
+    // If the parent component wants to trigger some arbitrary action on change.
+    onChangeAction(query);
+
     let { errorMsg, schoolOptions } = initialState;
     // clearing error and dropdown as soon as input changes (seemed to me to be the nicest UX.)
     updateState({ query, errorMsg, schoolOptions });
@@ -141,12 +150,14 @@ const SchoolLookupInput = props => (
 
 SchoolLookup.propTypes = {
   onSelect: PropTypes.func.isRequired,
+  onChangeAction: PropTypes.func,
   notFoundMessage: PropTypes.string.isRequired,
   lookupErrorMessage: PropTypes.string
 };
 
 SchoolLookup.defaultProps = {
-  lookupErrorMessage: DEFAULT_LOOKUP_ERROR_MESSAGE
+  lookupErrorMessage: DEFAULT_LOOKUP_ERROR_MESSAGE,
+  onChangeAction: () => {}
 };
 
 export default SchoolLookup;

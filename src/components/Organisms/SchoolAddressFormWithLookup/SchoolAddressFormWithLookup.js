@@ -38,53 +38,73 @@ const getAddressFromSchoolObject = ({
 
 /**
  * Todo:
- *  - Buttons: Edit / Or edit manually etc.
- *  - Provide address to parent (whether selected or manual)
+ *  - How best to provide data back up to parent component?
  *  - Proper styling
  *  - Responsiveness
  *  - Accessibility
  *  - Tests
  *  - ??
  */
-const SchoolAddressFormWithLookup = () => {
-  const [address, setAddress] = useState(null);
-  const [editing, setEditing] = useState(false);
-
+const SchoolAddressFormWithLookup = ({
+  isEditing,
+  onSetState,
+  ...formikProps
+}) => {
+  const [state, _setState] = useState({
+    address: null,
+    valid: false,
+    editing: false
+  });
+  const setState = newState => {
+    _setState(newState);
+    onSetState(newState);
+  };
+  const afterValidation = (address, errors) => {
+    setState({
+      address,
+      valid: Object.keys(errors).length === 0,
+      editing: false
+    });
+  };
   const onSelect = school => {
-    setAddress(getAddressFromSchoolObject(school));
-    setEditing(false);
+    setState({
+      address: getAddressFromSchoolObject(school),
+      // Assuming addresses from the school lookup API are valid.
+      valid: true,
+      editing: false
+    });
   };
-
-  // Todo: what happens if they don't submit it?
-  //  ... need to change the way this works.
-  const onValidSubmission = manualAddress => {
-    setAddress(manualAddress);
-    setEditing(false);
-  };
-
-  const EditButton = () => (
-    <button type="button" onClick={() => setEditing(true)}>
-      {address ? EDIT_TEXT : ENTER_MANUALLY_TEXT}
-    </button>
-  );
 
   return (
     <>
-      <SchoolLookup onSelect={onSelect} notFoundMessage={NOT_FOUND_MESSAGE} />
+      <SchoolLookup
+        onSelect={onSelect}
+        // Clearing any address if the lookup is used again.
+        // todo: not sure this is the correct behaviour.
+        // todo fix this: ...state is stale in this closure.
+        onChangeAction={() => setState({ ...state, address: null })}
+        notFoundMessage={NOT_FOUND_MESSAGE}
+      />
 
-      {editing && (
+      {state.editing && (
         <AddressForm
-          onValidSubmission={onValidSubmission}
           labelMap={LABEL_MAP}
-          enableReinitialize
-          {...address}
+          afterValidation={afterValidation}
+          {...state.address}
+          {...formikProps}
         />
       )}
 
-      {editing === false && (
+      {state.editing === false && (
         <>
-          {address && <SchoolAddress {...address} />}
-          <EditButton />
+          {state.address && <SchoolAddress {...state.address} />}
+          <button
+            type="button"
+            // todo fix this: ...state is stale in this closure.
+            onClick={() => setState({ ...state, editing: true })}
+          >
+            {state.address ? EDIT_TEXT : ENTER_MANUALLY_TEXT}
+          </button>
         </>
       )}
     </>
@@ -114,6 +134,15 @@ SchoolAddress.propTypes = {
 SchoolAddress.defaultProps = {
   line2: '',
   line3: ''
+};
+
+SchoolAddressFormWithLookup.propTypes = {
+  isEditing: PropTypes.bool,
+  onSetState: PropTypes.func.isRequired
+};
+
+SchoolAddressFormWithLookup.defaultProps = {
+  isEditing: false
 };
 
 export default SchoolAddressFormWithLookup;

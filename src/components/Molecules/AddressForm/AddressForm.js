@@ -5,7 +5,6 @@ import Postcode from 'postcode';
 
 import Input from '../../Atoms/Input/Input';
 
-const DEFAULT_SUBMIT_BUTTON_TEXT = 'Submit';
 const DEFAULT_LABEL_MAP = {
   name: 'Name',
   line1: 'Address line 1',
@@ -16,14 +15,9 @@ const DEFAULT_LABEL_MAP = {
 };
 const POSTCODE_INVALID_MESSAGE = 'Please provide a valid postcode';
 const getRequiredFieldMsg = label => `${label} is required`;
-const defaultIfUndefined = (value, defaultValue) =>
-  value === undefined ? defaultValue : value;
 
 /**
  * Todo:
- *  - I think it needs to be possible for a parent component to trigger submission and validation itself?
- *   (Via it's own submit button)
- *   (Or perhaps it just doesn't make sense to have this generic address form component at all?)
  *  - Proper styling
  *  - Responsiveness
  *  - Accessibility
@@ -39,52 +33,46 @@ const AddressForm = ({
   postcode,
   labelMap,
   requiredFields,
-  onValidSubmission,
-  submitButtonText,
+  customValidator,
+  SubmitButton,
+
+  // Used to provide values, and any errors, to parent component after every validation.
+  //  (which happens after every change, unless you alter this behaviour via formikProps.)
+  afterValidation,
+
+  // The parent component can control the form's behaviour via the various Formik props such as submitForm,
+  //  validateForm, handleSubmit, handleChange, handleBlur.
+  // See: https://jaredpalmer.com/formik/docs/api/formik#props-1
   ...formikProps
 }) => {
-  const onSubmit = (values, { setSubmitting }) => {
-    onValidSubmission(values);
-    setSubmitting(false);
-  };
+  const validator =
+    customValidator ||
+    (values => {
+      const errors = {};
 
-  const validator = values => {
-    const errors = {};
+      requiredFields.forEach(requiredField => {
+        if (!values[requiredField]) {
+          errors[requiredField] = getRequiredFieldMsg(labelMap[requiredField]);
+        }
+      });
 
-    requiredFields.forEach(requiredField => {
-      if (!values[requiredField]) {
-        errors[requiredField] = getRequiredFieldMsg(labelMap[requiredField]);
+      if (values.postcode && Postcode.isValid(values.postcode) === false) {
+        errors.postcode = POSTCODE_INVALID_MESSAGE;
       }
+
+      afterValidation(values, errors);
+
+      return errors;
     });
-
-    if (values.postcode && Postcode.isValid(values.postcode) === false) {
-      errors.postcode = POSTCODE_INVALID_MESSAGE;
-    }
-
-    return errors;
-  };
-
-  const {
-    validateOnChange,
-    validateOnBlur,
-    enableReinitialize,
-    ...otherFormikProps
-  } = formikProps;
 
   return (
     <Formik
       initialValues={{ name, line1, line2, line3, town, postcode }}
-      onSubmit={onSubmit}
       validate={validator}
-      // Validate on submit only (but can override these defaults with formikProps}
-      validateOnChange={defaultIfUndefined(validateOnChange, false)}
-      validateOnBlur={defaultIfUndefined(validateOnBlur, false)}
-      // If true, the form will re-initialize if passed-in props change (i.e. initial values)
-      enableReinitialize={defaultIfUndefined(enableReinitialize, true)}
-      {...otherFormikProps}
+      {...formikProps}
     >
-      {({ isSubmitting, errors }) => {
-        const defaults = { errors, labelMap };
+      {({ touched, errors, ...otherProps }) => {
+        const defaults = { errors, touched, labelMap };
         return (
           <Form>
             <AddressInput fieldName="name" {...defaults} />
@@ -93,9 +81,9 @@ const AddressForm = ({
             <AddressInput fieldName="line3" {...defaults} />
             <AddressInput fieldName="town" {...defaults} />
             <AddressInput fieldName="postcode" {...defaults} />
-            <button type="submit" disabled={isSubmitting}>
-              {submitButtonText}
-            </button>
+            {SubmitButton && (
+              <SubmitButton {...{ touched, errors, ...otherProps }} />
+            )}
           </Form>
         );
       }}
@@ -103,20 +91,21 @@ const AddressForm = ({
   );
 };
 
-const AddressInput = ({ fieldName, errors, labelMap }) => (
+const AddressInput = ({ fieldName, errors, touched, labelMap }) => (
   <Field
     as={Input}
     id={fieldName}
     type="text"
     name={fieldName}
     label={labelMap[fieldName]}
-    errorMsg={errors[fieldName]}
+    errorMsg={touched[fieldName] && errors[fieldName]}
   />
 );
 
 AddressInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
   errors: PropTypes.objectOf(PropTypes.string).isRequired,
+  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   labelMap: PropTypes.objectOf(PropTypes.string).isRequired
 };
 
@@ -129,8 +118,9 @@ AddressForm.propTypes = {
   postcode: PropTypes.string,
   labelMap: PropTypes.objectOf(PropTypes.string),
   requiredFields: PropTypes.arrayOf(PropTypes.string),
-  onValidSubmission: PropTypes.func.isRequired,
-  submitButtonText: PropTypes.string
+  customValidator: PropTypes.func,
+  SubmitButton: PropTypes.node,
+  afterValidation: PropTypes.func.isRequired
 };
 
 AddressForm.defaultProps = {
@@ -142,7 +132,8 @@ AddressForm.defaultProps = {
   postcode: '',
   labelMap: DEFAULT_LABEL_MAP,
   requiredFields: ['name', 'line1', 'town', 'postcode'],
-  submitButtonText: DEFAULT_SUBMIT_BUTTON_TEXT
+  customValidator: null,
+  SubmitButton: null
 };
 
 export default AddressForm;
