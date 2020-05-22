@@ -75,6 +75,7 @@ const Error = styled(Text)`
   color: ${({ theme }) => theme.color('red')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 500;
+  margin-top: ${spacing('l')};
 `;
 
 const Form = styled.form`
@@ -110,6 +111,10 @@ const OuterFieldset = styled.fieldset`
   border: none;
   ${media('small')} {
     padding: 0 ${spacing('l')} ${spacing('l')};
+  }
+
+  input[type='submit'] {
+    margin-bottom: 0;
   }
 `;
 
@@ -188,6 +193,7 @@ const AmountField = styled(Input)`
 
 const Copy = styled(Text)`
   line-height: 1.5;
+  margin-top: ${spacing('l')};
 `;
 
 const Button = styled.button`

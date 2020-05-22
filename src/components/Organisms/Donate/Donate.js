@@ -25,7 +25,8 @@ const Donate = ({
   images,
   image,
   imageLow,
-  mbshipID
+  mbshipID,
+  noMoneyBuys
 }) => {
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
@@ -68,6 +69,7 @@ const Donate = ({
           clientID={clientID}
           mbshipID={mbshipID}
           donateLink={donateLink}
+          noMoneyBuys={noMoneyBuys}
         />
       </Wrapper>
     </Container>
@@ -88,7 +90,8 @@ Donate.propTypes = {
   image: PropTypes.string,
   images: PropTypes.string,
   backgroundColor: PropTypes.string,
-  mbshipID: PropTypes.string
+  mbshipID: PropTypes.string,
+  noMoneyBuys: PropTypes.bool
 };
 
 Donate.defaultProps = {
@@ -101,7 +104,8 @@ Donate.defaultProps = {
   backgroundColor: null,
   mbshipID: null,
   otherDescription:
-    'will help us fund amazing projects in the UK and around the world.'
+    'will help us fund amazing projects in the UK and around the world.',
+  noMoneyBuys: false
 };
 
 export default Donate;
