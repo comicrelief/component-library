@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   text-align: center;
   padding: ${spacing('l')} ${spacing('md')};
   flex-direction: row;
+  align-items: center;
   display: block;
   width: 100%;
   flex-direction: ${({ formAlignRight }) =>
