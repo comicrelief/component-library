@@ -81,13 +81,14 @@ const Input = ({
   showLabel,
   type,
   hasAria,
+  className,
   labelProps,
   ...rest
 }) => {
   const error = errorMsg && errorMsg.length > 0;
 
   return (
-    <Label htmlFor={id} {...labelProps}>
+    <Label htmlFor={id} className={className} {...labelProps}>
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
       </TextLabel>
@@ -117,7 +118,8 @@ Input.propTypes = {
   id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
   type: PropTypes.string.isRequired,
-  labelProps: PropTypes.objectOf(PropTypes.any)
+  labelProps: PropTypes.objectOf(PropTypes.any),
+  className: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -125,7 +127,8 @@ Input.defaultProps = {
   hasAria: true,
   placeholder: '',
   errorMsg: '',
-  labelProps: {}
+  labelProps: {},
+  className: ''
 };
 
 export default Input;
