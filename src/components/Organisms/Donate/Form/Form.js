@@ -173,11 +173,15 @@ const Signup = ({
               aria-label="Input a different amount"
             />
           </FormFieldset>
-          <Button
-            type="submit"
-            as="input"
-            value={givingType === 'single' ? 'Donate once' : 'Donate monthly'}
-          />
+          {noMoneyBuys ? (
+            <Button type="submit" as="input" value="Donate" />
+          ) : (
+            <Button
+              type="submit"
+              as="input"
+              value={givingType === 'single' ? 'Donate once' : 'Donate monthly'}
+            />
+          )}
           {errorMsg && (
             <Error tag="p">
               Please enter an amount between £1 and £5,000, and up to 2 decimal
