@@ -48,7 +48,7 @@ it('renders correctly', () => {
       font-family: inherit;
     }
 
-    .c16 {
+    .c15 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -80,7 +80,7 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c17 {
+    .c16 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -98,23 +98,23 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c17:focus {
+    .c16:focus {
       border: 1px solid #666;
     }
 
-    .c17:focus::-webkit-input-placeholder {
+    .c16:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c17:focus::-moz-placeholder {
+    .c16:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c17:focus:-ms-input-placeholder {
+    .c16:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c17:focus::placeholder {
+    .c16:focus::placeholder {
       color: #666;
     }
 
@@ -299,11 +299,11 @@ it('renders correctly', () => {
       background-color: #961D35;
     }
 
-    .c15 {
+    .c17 {
       display: block;
     }
 
-    .c15 input {
+    .c17 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -331,7 +331,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c17 {
+      .c16 {
         max-width: 290px;
       }
     }
@@ -462,13 +462,11 @@ it('renders correctly', () => {
                 className="c13"
               >
                 <label
-                  aria-label="£5"
-                  className="c14 c15"
+                  className="c14"
                   htmlFor="mship-1--moneyBuy-box1"
-                  onClick={[Function]}
                 >
                   <span
-                    className="c16 "
+                    className="c15 "
                     color="inherit"
                     size="s"
                   >
@@ -477,7 +475,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£5"
-                    className="c17 c15"
+                    className="c16 c17"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
@@ -488,13 +486,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  aria-label="£10"
-                  className="c14 c18"
+                  className="c14"
                   htmlFor="mship-1--moneyBuy-box2"
-                  onClick={[Function]}
                 >
                   <span
-                    className="c16 "
+                    className="c15 "
                     color="inherit"
                     size="s"
                   >
@@ -503,7 +499,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£10"
-                    className="c17 c18"
+                    className="c16 c18"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
@@ -514,13 +510,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  aria-label="£20"
-                  className="c14 c15"
+                  className="c14"
                   htmlFor="mship-1--moneyBuy-box3"
-                  onClick={[Function]}
                 >
                   <span
-                    className="c16 "
+                    className="c15 "
                     color="inherit"
                     size="s"
                   >
@@ -529,7 +523,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£20"
-                    className="c17 c15"
+                    className="c16 c17"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
@@ -551,19 +545,11 @@ it('renders correctly', () => {
                   Other amount
                 </span>
                 <label
-                  aria-label="Input a different amount"
-                  className="c14 c22"
+                  className="c14"
                   htmlFor="mship-1--MoneyBuy-userInput"
-                  max="5000"
-                  min="1"
-                  onChange={[Function]}
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  step="0.01"
                 >
                   <span
-                    className="c16 "
+                    className="c15 "
                     color="inherit"
                     size="s"
                   >
@@ -572,7 +558,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
-                    className="c17 c22"
+                    className="c16 c22"
                     id="mship-1--MoneyBuy-userInput"
                     max="5000"
                     min="1"

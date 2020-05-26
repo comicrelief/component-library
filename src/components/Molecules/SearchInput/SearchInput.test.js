@@ -15,7 +15,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c5 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -24,7 +24,7 @@ it('renders correctly', () => {
       font-family: inherit;
     }
 
-    .c8 {
+    .c7 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       position: relative;
@@ -42,23 +42,23 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c8:focus {
+    .c7:focus {
       border: 1px solid #666;
     }
 
-    .c8:focus::-webkit-input-placeholder {
+    .c7:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c8:focus::-moz-placeholder {
+    .c7:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c8:focus:-ms-input-placeholder {
+    .c7:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c8:focus::placeholder {
+    .c7:focus::placeholder {
       color: #666;
     }
 
@@ -72,7 +72,7 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    .c7 {
+    .c6 {
       visibility: border:0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -110,7 +110,7 @@ it('renders correctly', () => {
       padding: 0 0.5rem;
     }
 
-    .c5 {
+    .c8 {
       padding: 13px 0;
       margin: 0;
       max-width: 100%;
@@ -118,18 +118,18 @@ it('renders correctly', () => {
       outline: #E52630;
     }
 
-    .c5:focus {
+    .c8:focus {
       border: 0;
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c7 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c8 {
         height: 100px;
         font-size: 3rem;
       }
@@ -149,12 +149,11 @@ it('renders correctly', () => {
             className="c3"
           >
             <label
-              className="c4 c5"
+              className="c4"
               htmlFor="search"
-              onChange={[Function]}
             >
               <span
-                className="c6 c7"
+                className="c5 c6"
                 color="inherit"
                 size="s"
               >
@@ -162,7 +161,7 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby="search"
-                className="c8 c5"
+                className="c7 c8"
                 id="search"
                 name="search"
                 onChange={[Function]}

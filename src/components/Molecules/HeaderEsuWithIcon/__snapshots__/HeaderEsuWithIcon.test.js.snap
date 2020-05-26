@@ -13,7 +13,7 @@ exports[`renders correctly with error message 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c13 {
+.c12 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -28,7 +28,7 @@ exports[`renders correctly with error message 1`] = `
   font-family: inherit;
 }
 
-.c15 {
+.c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -46,23 +46,23 @@ exports[`renders correctly with error message 1`] = `
   color: #000000;
 }
 
-.c15:focus {
+.c14:focus {
   border: 1px solid #666;
 }
 
-.c15:focus::-webkit-input-placeholder {
+.c14:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c15:focus::-moz-placeholder {
+.c14:focus::-moz-placeholder {
   color: #666;
 }
 
-.c15:focus:-ms-input-placeholder {
+.c14:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c15:focus::placeholder {
+.c14:focus::placeholder {
   color: #666;
 }
 
@@ -85,7 +85,6 @@ exports[`renders correctly with error message 1`] = `
   position: relative;
   content: '';
   top: 2px;
-  vertical-align: middle;
   margin-right: 6px;
   background: url(mock.asset) left 0/100% no-repeat;
   width: 18px;
@@ -95,7 +94,7 @@ exports[`renders correctly with error message 1`] = `
   color: #E52630;
 }
 
-.c14 {
+.c13 {
   visibility: border:0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -210,7 +209,7 @@ exports[`renders correctly with error message 1`] = `
   margin: 1rem 0;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
@@ -287,7 +286,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c14 {
     max-width: 290px;
   }
 }
@@ -379,13 +378,11 @@ exports[`renders correctly with error message 1`] = `
           onSubmit={[Function]}
         >
           <label
-            aria-label="Email address"
-            className="c11 c12"
+            className="c11"
             htmlFor="email"
-            onChange={[Function]}
           >
             <span
-              className="c13 c14"
+              className="c12 c13"
               color="inherit"
               size="s"
             >
@@ -393,7 +390,7 @@ exports[`renders correctly with error message 1`] = `
             </span>
             <input
               aria-label="Email address"
-              className="c15 c12"
+              className="c14 c15"
               id="email"
               name="email"
               onChange={[Function]}
@@ -528,7 +525,7 @@ exports[`renders correctly with modal open 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c13 {
+.c12 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -537,7 +534,7 @@ exports[`renders correctly with modal open 1`] = `
   font-family: inherit;
 }
 
-.c15 {
+.c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -555,23 +552,23 @@ exports[`renders correctly with modal open 1`] = `
   color: #000000;
 }
 
-.c15:focus {
+.c14:focus {
   border: 1px solid #666;
 }
 
-.c15:focus::-webkit-input-placeholder {
+.c14:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c15:focus::-moz-placeholder {
+.c14:focus::-moz-placeholder {
   color: #666;
 }
 
-.c15:focus:-ms-input-placeholder {
+.c14:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c15:focus::placeholder {
+.c14:focus::placeholder {
   color: #666;
 }
 
@@ -585,7 +582,7 @@ exports[`renders correctly with modal open 1`] = `
   flex-direction: column;
 }
 
-.c14 {
+.c13 {
   visibility: border:0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -700,7 +697,7 @@ exports[`renders correctly with modal open 1`] = `
   margin: 1rem 0;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
@@ -777,7 +774,7 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c14 {
     max-width: 290px;
   }
 }
@@ -869,13 +866,11 @@ exports[`renders correctly with modal open 1`] = `
           onSubmit={[Function]}
         >
           <label
-            aria-label="Email address"
-            className="c11 c12"
+            className="c11"
             htmlFor="email"
-            onChange={[Function]}
           >
             <span
-              className="c13 c14"
+              className="c12 c13"
               color="inherit"
               size="s"
             >
@@ -883,7 +878,7 @@ exports[`renders correctly with modal open 1`] = `
             </span>
             <input
               aria-label="Email address"
-              className="c15 c12"
+              className="c14 c15"
               id="email"
               name="email"
               onChange={[Function]}

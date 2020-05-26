@@ -298,7 +298,7 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c8 {
+.c7 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -307,7 +307,7 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c10 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -325,23 +325,23 @@ exports[`renders correctly 1`] = `
   color: #000000;
 }
 
-.c10:focus {
+.c9:focus {
   border: 1px solid #666;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c9:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c10:focus::-moz-placeholder {
+.c9:focus::-moz-placeholder {
   color: #666;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c9:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c10:focus::placeholder {
+.c9:focus::placeholder {
   color: #666;
 }
 
@@ -355,7 +355,7 @@ exports[`renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c9 {
+.c8 {
   visibility: border:0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -437,7 +437,7 @@ exports[`renders correctly 1`] = `
   margin: 1rem 0;
 }
 
-.c7 {
+.c10 {
   width: 100%;
 }
 
@@ -464,7 +464,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c9 {
     max-width: 290px;
   }
 }
@@ -511,13 +511,11 @@ exports[`renders correctly 1`] = `
     onSubmit={[Function]}
   >
     <label
-      aria-label="Email address"
-      className="c6 c7"
+      className="c6"
       htmlFor="email"
-      onChange={[Function]}
     >
       <span
-        className="c8 c9"
+        className="c7 c8"
         color="inherit"
         size="s"
       >
@@ -525,7 +523,7 @@ exports[`renders correctly 1`] = `
       </span>
       <input
         aria-label="Email address"
-        className="c10 c7"
+        className="c9 c10"
         id="email"
         name="email"
         onChange={[Function]}
