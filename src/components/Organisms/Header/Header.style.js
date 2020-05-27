@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
 import { container } from '../../../theme/shared/size';
+import spacing from '../../../theme/shared/spacing';
 
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'banner'
@@ -29,9 +30,6 @@ const InnerWrapper = styled.div`
   }
 `;
 
-/**
- * Brand wrapper
- */
 const Brand = styled.div`
   ${zIndex('high')};
   margin-right: auto;
@@ -40,16 +38,17 @@ const Brand = styled.div`
   a {
     border: 0;
     color: transparent;
-
+    margin-right: ${spacing('md')};
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
     :hover {
       border: 0;
     }
   }
 `;
 
-/**
- * Meta icons
- */
 const MetaIcons = styled.div`
   width: auto;
   display: flex;

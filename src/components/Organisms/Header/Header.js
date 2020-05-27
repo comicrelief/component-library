@@ -13,7 +13,12 @@ const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
           {campaign === 'Sport Relief Gameon' ? (
             <>
               <a href="/" title={`Go to ${campaign} homepage`}>
-                <Logo rotate campaign="Comic Relief" />
+                <Logo
+                  rotate
+                  sizeSm="50px"
+                  sizeMd="60px"
+                  campaign="Comic Relief"
+                />
               </a>
               <a href="/sportrelief/" title={`Go to ${campaign} homepage`}>
                 <Logo
@@ -24,7 +29,7 @@ const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
               </a>
             </>
           ) : (
-            <a href="/" title={`Go to ${campaign} homepage`}>
+            <a href="/" title="Go to Comic Relief homepage">
               <Logo rotate={rotate} campaign={campaign} />
             </a>
           )}
