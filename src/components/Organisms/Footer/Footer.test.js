@@ -41,7 +41,7 @@ it('renders correctly', () => {
 
     .c22 {
       object-fit: cover;
-      width: auto;
+      width: 100%;
       display: block;
       height: auto;
       margin-right: 1rem;

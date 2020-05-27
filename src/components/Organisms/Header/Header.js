@@ -1,38 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Logo from '../../Atoms/Logo/Logo';
+import Logos from '../../Molecules/Logos/Logos';
 import MainNav from './Nav/Nav';
 import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Header.style';
 
-const Header = ({ navItems, metaIcons, campaign, rotate, ...rest }) => {
+const Header = ({ navItems, metaIcons, campaign, ...rest }) => {
   return (
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
         <Brand>
-          {campaign === 'Sport Relief Gameon' ? (
-            <>
-              <a href="/" title={`Go to ${campaign} homepage`}>
-                <Logo
-                  rotate
-                  sizeSm="50px"
-                  sizeMd="60px"
-                  campaign="Comic Relief"
-                />
-              </a>
-              <a href="/sportrelief/" title={`Go to ${campaign} homepage`}>
-                <Logo
-                  sizeSm="100px"
-                  sizeMd="120px"
-                  campaign="Sport Relief Gameon"
-                />
-              </a>
-            </>
-          ) : (
-            <a href="/" title="Go to Comic Relief homepage">
-              <Logo rotate={rotate} campaign={campaign} />
-            </a>
-          )}
+          <Logos campaign={campaign} />
         </Brand>
         <MainNav navItems={navItems} />
         <MetaIcons>{metaIcons}</MetaIcons>
@@ -46,14 +24,12 @@ Header.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   /** it can be icons, buttons  */
   metaIcons: PropTypes.node.isRequired,
-  campaign: PropTypes.string,
-  rotate: PropTypes.bool
+  campaign: PropTypes.string
 };
 
 Header.defaultProps = {
   navItems: {},
-  campaign: 'Comic Relief',
-  rotate: false
+  campaign: 'Comic Relief'
 };
 
 export default Header;

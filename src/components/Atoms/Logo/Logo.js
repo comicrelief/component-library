@@ -7,10 +7,11 @@ import spacing from '../../../theme/shared/spacing';
 import crLogo from './assets/cr-logo.svg';
 import srLogo from './assets/sr-logo.svg';
 import srLogoGameOn from './assets/sr-gameon-logo.svg';
+import bigNiht from './assets/big-night-logo.png';
 
 const Image = styled.img`
   object-fit: cover;
-  width: auto;
+  width: 100%;
   display: block;
   height: auto;
   margin-right: ${spacing('md')};
@@ -36,6 +37,8 @@ const themeSwitcher = theme => {
       return srLogo;
     case 'Sport Relief Gameon':
       return srLogoGameOn;
+    case 'Big Night In':
+      return bigNiht;
     default:
       return crLogo;
   }
