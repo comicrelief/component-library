@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Input from '../Input/Input';
+import Text from '../Text/Text';
 import {
   Container,
   Dropdown,
@@ -9,14 +10,15 @@ import {
   DropdownItem,
   DropdownItemSelectable
 } from './TextInputWithDropdown.style';
-import Text from '../Text/Text';
+import makeOnEnterHandler from '../../../utils/makeOnEnterHandler';
 
 /**
- * This component handles the visual aspect of a text input with typeahead-style functionality, but not
- *  the logic, API querying, state management, etc.
- * See the Typeahead molecule for the full functionality.
+ * This component deals with the visual aspect of a text input with typeahead-style functionality
  *
- * Todo: does the dropdown need accessibility improvements?
+ * Proper functionality / behaviour (e.g. API querying, state management, etc.) are handled by the parent
+ *  component (via the value, options, onChange and onSelect props)
+ *
+ * See the Typeahead and SchoolLookup molecules for the full implementation
  */
 const TextInputWithDropdown = ({
   value,
@@ -67,14 +69,19 @@ const Options = ({ options, dropdownInstruction, onSelect, ...rest }) => {
             <Text>{dropdownInstruction}</Text>
           </DropdownItem>
         )}
-        {options.map((option, index) => (
-          <DropdownItemSelectable
-            key={option}
-            onClick={() => onSelect(option, index)}
-          >
-            <Text>{option}</Text>
-          </DropdownItemSelectable>
-        ))}
+        {options.map((option, index) => {
+          const handler = () => onSelect(option, index);
+          return (
+            <DropdownItemSelectable
+              key={option}
+              onClick={handler}
+              onKeyPress={makeOnEnterHandler(handler)}
+              tabIndex="0"
+            >
+              <Text>{option}</Text>
+            </DropdownItemSelectable>
+          );
+        })}
       </DropdownList>
     </Dropdown>
   );

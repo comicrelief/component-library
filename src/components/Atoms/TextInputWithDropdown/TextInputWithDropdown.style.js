@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
 import { screen } from '../../../theme/shared/size';
 
 const Container = styled.div`
@@ -8,7 +10,7 @@ const Container = styled.div`
 
 const Dropdown = styled.div`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  z-index: 1;
+  z-index: ${zIndex('high')};
   position: absolute;
   left: 0;
   max-height: 300px;
@@ -29,8 +31,7 @@ const DropdownList = styled.ul`
 `;
 
 const DropdownItem = styled.li`
-  line-height: 1.5rem;
-  padding: 0.5rem;
+  padding: ${spacing('sm')};
 `;
 
 const DropdownItemSelectable = styled(DropdownItem)`
