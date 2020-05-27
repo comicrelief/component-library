@@ -8,18 +8,18 @@ import {
   DropdownList,
   DropdownItem,
   DropdownItemSelectable
-} from './TextInputWithTypeahead.style';
+} from './TextInputWithDropdown.style';
 import Text from '../Text/Text';
 
-const TextInputWithTypeahead = ({
+const TextInputWithDropdown = ({
   value,
+  options,
   onChange,
+  onSelect,
   id,
   name,
   label,
-  options,
-  dropdownInstructions,
-  onSelect,
+  dropdownInstruction,
   ...otherInputProps
 }) => {
   const inputProps = {
@@ -28,13 +28,14 @@ const TextInputWithTypeahead = ({
     id,
     name,
     label,
+    autoComplete: 'off',
     ...otherInputProps
   };
 
   const optionsProps = {
     options,
-    dropdownInstructions,
-    onSelect
+    onSelect,
+    dropdownInstruction
   };
 
   return (
@@ -45,23 +46,22 @@ const TextInputWithTypeahead = ({
   );
 };
 
-const Options = ({ options, dropdownInstructions, onSelect }) => {
+const Options = ({ options, dropdownInstruction, onSelect }) => {
   if (options.length === 0) {
     return null;
   }
-  const getSelectHandler = (option, index) => () => onSelect({ option, index });
   return (
     <Dropdown>
       <DropdownList>
-        {dropdownInstructions && (
+        {dropdownInstruction && (
           <DropdownItem>
-            <Text>{dropdownInstructions}</Text>
+            <Text>{dropdownInstruction}</Text>
           </DropdownItem>
         )}
         {options.map((option, index) => (
           <DropdownItemSelectable
             key={option}
-            onClick={getSelectHandler(option, index)}
+            onClick={() => onSelect(option, index)}
           >
             <Text>{option}</Text>
           </DropdownItemSelectable>
@@ -71,27 +71,29 @@ const Options = ({ options, dropdownInstructions, onSelect }) => {
   );
 };
 
-TextInputWithTypeahead.propTypes = {
-  value: PropTypes.string,
+TextInputWithDropdown.propTypes = {
+  value: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string),
-  dropdownInstructions: PropTypes.string,
-  onSelect: PropTypes.func.isRequired
+  dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
-TextInputWithTypeahead.defaultProps = {
-  value: '',
-  options: [],
-  dropdownInstructions: ''
+TextInputWithDropdown.defaultProps = {
+  dropdownInstruction: null
 };
 
 Options.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  dropdownInstructions: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
-export default TextInputWithTypeahead;
+Options.defaultProps = {
+  dropdownInstruction: null
+};
+
+export default TextInputWithDropdown;

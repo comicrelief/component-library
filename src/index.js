@@ -29,6 +29,9 @@ export {
 export {
   default as SocialIcons
 } from './components/Atoms/SocialIcons/SocialIcons';
+export {
+  default as TextInputWithDropdown
+} from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 
 /* Molecules */
 
@@ -81,3 +84,9 @@ export {
   default as HeaderEsuWithIcon
 } from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
 export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
+export {
+  default as Typeahead
+} from './components/Molecules/Typeahead/Typeahead';
+export {
+  default as SchoolLookup
+} from './components/Molecules/SchoolLookup/SchoolLookup';
