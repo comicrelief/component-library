@@ -164,7 +164,7 @@ const Signup = ({
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel
               {...rest}
-              max="5000"
+              max="20000"
               min="1"
               value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
@@ -184,7 +184,7 @@ const Signup = ({
           )}
           {errorMsg && (
             <Error tag="p">
-              Please enter an amount between £1 and £5,000, and up to 2 decimal
+              Please enter an amount between £1 and £20,000, and up to 2 decimal
               places
             </Error>
           )}
