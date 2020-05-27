@@ -27,6 +27,7 @@ const TextInputWithDropdown = ({
   name,
   label,
   dropdownInstruction,
+  className,
   ...otherInputProps
 }) => {
   const inputProps = {
@@ -47,19 +48,19 @@ const TextInputWithDropdown = ({
   };
 
   return (
-    <Container className="TextInputWithDropdown">
-      <Input {...inputProps} />
-      <Options {...optionsProps} />
+    <Container className={`TextInputWithDropdown ${className}`.trim()}>
+      <Input {...inputProps} className="TextInputWithDropdown__input" />
+      <Options {...optionsProps} className="TextInputWithDropdown__options" />
     </Container>
   );
 };
 
-const Options = ({ options, dropdownInstruction, onSelect }) => {
+const Options = ({ options, dropdownInstruction, onSelect, ...rest }) => {
   if (options.length === 0) {
     return null;
   }
   return (
-    <Dropdown className="TextInputWithDropdown__dropdown">
+    <Dropdown {...rest}>
       <DropdownList>
         {dropdownInstruction && (
           <DropdownItem>
@@ -87,11 +88,13 @@ TextInputWithDropdown.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  className: PropTypes.string,
   dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
 TextInputWithDropdown.defaultProps = {
-  dropdownInstruction: null
+  dropdownInstruction: null,
+  className: ''
 };
 
 Options.propTypes = {

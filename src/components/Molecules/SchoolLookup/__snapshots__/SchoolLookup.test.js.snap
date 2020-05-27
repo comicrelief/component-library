@@ -72,7 +72,7 @@ exports[`renders correctly 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1"
+    className="c1 TextInputWithDropdown__input"
     htmlFor="school-lookup"
   >
     <span

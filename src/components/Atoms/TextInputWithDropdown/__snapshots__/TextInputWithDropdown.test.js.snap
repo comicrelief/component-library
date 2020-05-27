@@ -72,7 +72,7 @@ exports[`renders correctly with no value and no options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1"
+    className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -170,7 +170,7 @@ exports[`renders correctly with value and no options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1"
+    className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -311,7 +311,7 @@ exports[`renders correctly with value and options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1"
+    className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -335,7 +335,7 @@ exports[`renders correctly with value and options 1`] = `
     
   </label>
   <div
-    className="c4 TextInputWithDropdown__dropdown"
+    className="c4 TextInputWithDropdown__options"
   >
     <ul
       className="c5"

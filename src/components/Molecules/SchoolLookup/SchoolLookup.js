@@ -19,7 +19,8 @@ const SchoolLookup = ({
   placeholder,
   notFoundMessage,
   dropdownInstruction,
-  onSelect
+  onSelect,
+  ...rest
 }) => {
   const props = {
     optionFetcher,
@@ -30,7 +31,8 @@ const SchoolLookup = ({
     label,
     placeholder,
     notFoundMessage,
-    dropdownInstruction
+    dropdownInstruction,
+    ...rest
   };
 
   return <Typeahead {...props} />;
