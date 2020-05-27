@@ -29,6 +29,7 @@ const Signup = ({
   clientID,
   cartID,
   mbshipID,
+  noMoneyBuys,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -129,26 +130,30 @@ const Signup = ({
         <OuterFieldset>
           <Legend>
             <Text tag="span" size="l" weight="bold">
-              Choose an amount to give
+              {`${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
-          <MoneyBuys>
-            {givingData.moneybuys.map(({ value }, index) => (
-              <MoneyBox
-                isSelected={amountDonate === value}
-                amount={value}
-                description={`£${value}`}
-                setOtherAmount={() => setAmountDonate(parseFloat(value))}
-                key={value}
-                name={`${mbshipID}--moneyBuy${index + 1}`}
-                id={`${mbshipID}--moneyBuy-box${index + 1}`}
-              />
-            ))}
-          </MoneyBuys>
+          {!noMoneyBuys && (
+            <MoneyBuys>
+              {givingData.moneybuys.map(({ value }, index) => (
+                <MoneyBox
+                  isSelected={amountDonate === value}
+                  amount={value}
+                  description={`£${value}`}
+                  setOtherAmount={() => setAmountDonate(parseFloat(value))}
+                  key={value}
+                  name={`${mbshipID}--moneyBuy${index + 1}`}
+                  id={`${mbshipID}--moneyBuy-box${index + 1}`}
+                />
+              ))}
+            </MoneyBuys>
+          )}
           <FormFieldset>
-            <Label size="s" weight="500">
-              Other amount
-            </Label>
+            {!noMoneyBuys && (
+              <Label size="s" weight="500">
+                Other amount
+              </Label>
+            )}
             <AmountField
               step="0.01"
               name="membership_amount"
@@ -159,7 +164,7 @@ const Signup = ({
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel
               {...rest}
-              max="5000"
+              max="20000"
               min="1"
               value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
@@ -168,18 +173,22 @@ const Signup = ({
               aria-label="Input a different amount"
             />
           </FormFieldset>
-          <Button
-            type="submit"
-            as="input"
-            value={givingType === 'single' ? 'Donate once' : 'Donate monthly'}
-          />
+          {noMoneyBuys ? (
+            <Button type="submit" as="input" value="Donate" />
+          ) : (
+            <Button
+              type="submit"
+              as="input"
+              value={givingType === 'single' ? 'Donate once' : 'Donate monthly'}
+            />
+          )}
           {errorMsg && (
             <Error tag="p">
-              Please enter an amount between £1 and £5,000, and up to 2 decimal
+              Please enter an amount between £1 and £20,000, and up to 2 decimal
               places
             </Error>
           )}
-          {amountDonate >= 1 && moneyBuyCopy && (
+          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
             <Copy as="p">
               <strong>{`£${amountDonate.toFixed(2)} `}</strong>
               {moneyBuyCopy}
@@ -197,10 +206,12 @@ Signup.propTypes = {
   donateLink: PropTypes.string.isRequired,
   otherDescription: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
+  noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape)
 };
 
 Signup.defaultProps = {
+  noMoneyBuys: false,
   data: {}
 };
 export default Signup;

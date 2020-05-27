@@ -1,0 +1,2055 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Monthly donation renders correctly 1`] = `
+.c7 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c8 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c19 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c23 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c26 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: 500;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c24 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c24:focus {
+  border: 1px solid #666;
+}
+
+.c24:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c24:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c24:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c24:focus::placeholder {
+  color: #666;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c22 {
+  display: block;
+}
+
+.c22 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+}
+
+.c22 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c22 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.c4 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  text-align: left;
+}
+
+.c9 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c16 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c16 h3 {
+  margin-top: 1rem;
+}
+
+.c16 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c16 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c17 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c17 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c18 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.c20 label {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  margin-bottom: 0.5rem;
+}
+
+.c20 label input {
+  cursor: pointer;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c27 {
+  margin-right: 0.5rem;
+}
+
+.c28 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c28 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c28 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c28 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c29 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c29:active,
+.c29:focus,
+.c29:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+.c15 {
+  width: 50%;
+  height: 48px;
+  border-radius: 2rem;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  -webkit-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+  background-color: #0565D1;
+  left: 2px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.c11 {
+  width: 100%;
+  padding: 2px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 1rem 0;
+  border-radius: 2rem;
+  background: #BECCF9;
+}
+
+.c11 #give-monthly:checked ~ .c14 {
+  left: calc(50% - 2px);
+}
+
+.c11 input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c11 input:focus:not(:checked) + label {
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c12 {
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  min-height: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  border: none;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  z-index: 2;
+  cursor: default;
+}
+
+.c12:active:focus {
+  box-shadow: none;
+}
+
+.c12:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c12[for='give-once'] {
+  border-radius: 2rem;
+  color: #FFFFFF;
+}
+
+.c12[for='give-monthly'] {
+  border-radius: 2rem;
+  color: #FFFFFF;
+}
+
+.c13 {
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  min-height: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  border: none;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.c13:active:focus {
+  box-shadow: none;
+}
+
+.c13:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c13[for='give-once'] {
+  border-radius: 2rem;
+  color: #000000;
+}
+
+.c13[for='give-monthly'] {
+  border-radius: 2rem;
+  color: #000000;
+}
+
+@media (min-width:740px) {
+  .c24 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c22 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c17 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c28 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c29 {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c11 {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 c2"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt="Background image"
+      className="c3 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c4"
+  >
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <h2
+          className="c7"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c8"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c9"
+    >
+      <div
+        className="c10"
+      >
+        <div
+          className="c11"
+        >
+          <input
+            aria-label="Give once"
+            checked={true}
+            errorMsg=""
+            id="give-once"
+            label=""
+            onClick={[Function]}
+            type="radio"
+            value="Give once"
+          />
+          <label
+            className="c12"
+            for="give-once"
+          >
+            Give once
+          </label>
+          <input
+            aria-label="Give monthly"
+            checked={false}
+            errorMsg=""
+            id="give-monthly"
+            label=""
+            onClick={[Function]}
+            type="radio"
+            value="Give monthly"
+          />
+          <label
+            className="c13"
+            for="give-monthly"
+          >
+            Give monthly
+          </label>
+          <span
+            className="c14 c15"
+          />
+        </div>
+      </div>
+      <form
+        className="c16"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c17"
+        >
+          <legend
+            className="c18"
+          >
+            <span
+              className="c19"
+              color="inherit"
+              size="l"
+            >
+              Choose an amount to give
+            </span>
+          </legend>
+          <div
+            className="c20"
+          >
+            <label
+              aria-label="£10"
+              className="c21 c22"
+              htmlFor="mship-1--moneyBuy-box1"
+              onClick={[Function]}
+            >
+              <span
+                className="c23 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box1"
+                aria-label="£10"
+                className="c24 c22"
+                id="mship-1--moneyBuy-box1"
+                name="mship-1--moneyBuy1"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 10"
+              />
+              
+            </label>
+            <label
+              aria-label="£20"
+              className="c21 c22"
+              htmlFor="mship-1--moneyBuy-box2"
+              onClick={[Function]}
+            >
+              <span
+                className="c23 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box2"
+                aria-label="£20"
+                className="c24 c22"
+                id="mship-1--moneyBuy-box2"
+                name="mship-1--moneyBuy2"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 20"
+              />
+              
+            </label>
+            <label
+              aria-label="£30"
+              className="c21 c22"
+              htmlFor="mship-1--moneyBuy-box3"
+              onClick={[Function]}
+            >
+              <span
+                className="c23 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box3"
+                aria-label="£30"
+                className="c24 c22"
+                id="mship-1--moneyBuy-box3"
+                name="mship-1--moneyBuy3"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 30"
+              />
+              
+            </label>
+          </div>
+          <div
+            className="c25"
+          >
+            <span
+              className="c26 c27"
+              color="inherit"
+              size="s"
+            >
+              Other amount
+            </span>
+            <label
+              aria-label="Input a different amount"
+              className="c21 c28"
+              htmlFor="mship-1--MoneyBuy-userInput"
+              max="20000"
+              min="1"
+              onChange={[Function]}
+              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              step="0.01"
+            >
+              <span
+                className="c23 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c24 c28"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value=" "
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c29"
+            type="submit"
+            value="Donate once"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Single donation renders correctly 1`] = `
+.c7 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c8 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c13 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c17 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c21 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: 500;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c18 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c18:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c18:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c18:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c18:focus::placeholder {
+  color: #666;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c16 {
+  display: block;
+}
+
+.c16 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+}
+
+.c16 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c16 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c19 {
+  display: block;
+}
+
+.c19 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  background-color: #0565D1;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  color: #FFFFFF;
+}
+
+.c19 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c19 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c19 input:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.c4 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  text-align: left;
+}
+
+.c9 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c10 h3 {
+  margin-top: 1rem;
+}
+
+.c10 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c10 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c11 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c11 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c12 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.c14 label {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  margin-bottom: 0.5rem;
+}
+
+.c14 label input {
+  cursor: pointer;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c22 {
+  margin-right: 0.5rem;
+}
+
+.c23 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c23 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c23 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c23 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c25 {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.c24 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c24:active,
+.c24:focus,
+.c24:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c18 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c11 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c23 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c24 {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 c2"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt=""
+      className="c3 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c4"
+  >
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <h2
+          className="c7"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c8"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c9"
+    >
+      <form
+        className="c10"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c11"
+        >
+          <legend
+            className="c12"
+          >
+            <span
+              className="c13"
+              color="inherit"
+              size="l"
+            >
+              Choose an amount to give
+            </span>
+          </legend>
+          <div
+            className="c14"
+          >
+            <label
+              aria-label="£10"
+              className="c15 c16"
+              htmlFor="mship-1--moneyBuy-box1"
+              onClick={[Function]}
+            >
+              <span
+                className="c17 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box1"
+                aria-label="£10"
+                className="c18 c16"
+                id="mship-1--moneyBuy-box1"
+                name="mship-1--moneyBuy1"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 10"
+              />
+              
+            </label>
+            <label
+              aria-label="£20"
+              className="c15 c19"
+              htmlFor="mship-1--moneyBuy-box2"
+              onClick={[Function]}
+            >
+              <span
+                className="c17 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box2"
+                aria-label="£20"
+                className="c18 c19"
+                id="mship-1--moneyBuy-box2"
+                name="mship-1--moneyBuy2"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 20"
+              />
+              
+            </label>
+            <label
+              aria-label="£30"
+              className="c15 c16"
+              htmlFor="mship-1--moneyBuy-box3"
+              onClick={[Function]}
+            >
+              <span
+                className="c17 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box3"
+                aria-label="£30"
+                className="c18 c16"
+                id="mship-1--moneyBuy-box3"
+                name="mship-1--moneyBuy3"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 30"
+              />
+              
+            </label>
+          </div>
+          <div
+            className="c20"
+          >
+            <span
+              className="c21 c22"
+              color="inherit"
+              size="s"
+            >
+              Other amount
+            </span>
+            <label
+              aria-label="Input a different amount"
+              className="c15 c23"
+              htmlFor="mship-1--MoneyBuy-userInput"
+              max="20000"
+              min="1"
+              onChange={[Function]}
+              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              step="0.01"
+            >
+              <span
+                className="c17 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c18 c23"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value={20}
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c24"
+            type="submit"
+            value="Donate once"
+          />
+          <p
+            className="c25"
+          >
+            <strong>
+              £20.00 
+            </strong>
+            a support worker to visit 10 isolated young mums with postnatal depression in the UK.
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Single donation with no Money Buys renders correctly 1`] = `
+.c7 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c8 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c13 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c17 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c18 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c18:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c18:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c18:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c18:focus::placeholder {
+  color: #666;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.c4 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  position: relative;
+  text-align: left;
+}
+
+.c9 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c10 h3 {
+  margin-top: 1rem;
+}
+
+.c10 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c10 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c11 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c11 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c12 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c16 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c16 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c16 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c19 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c19:active,
+.c19:focus,
+.c19:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c18 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c11 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 c2"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt=""
+      className="c3 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c4"
+  >
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <h2
+          className="c7"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c8"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c9"
+    >
+      <form
+        className="c10"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c11"
+        >
+          <legend
+            className="c12"
+          >
+            <span
+              className="c13"
+              color="inherit"
+              size="l"
+            >
+              Enter an amount to give
+            </span>
+          </legend>
+          <div
+            className="c14"
+          >
+            <label
+              aria-label="Input a different amount"
+              className="c15 c16"
+              htmlFor="mship-1--MoneyBuy-userInput"
+              max="20000"
+              min="1"
+              onChange={[Function]}
+              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              step="0.01"
+            >
+              <span
+                className="c17 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c18 c16"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value=" "
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c19"
+            type="submit"
+            value="Donate"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
