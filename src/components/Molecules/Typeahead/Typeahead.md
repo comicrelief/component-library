@@ -16,9 +16,9 @@ const schoolsLookup = async query => {
   optionFetcher={schoolsLookup}
   onSelect={school => alert(JSON.stringify(school, null, 2))}
   id="typeahead-test"
-  label="Typeahead test"
+  label="Typeahead test (school lookup)"
   name="q"
-  placeholder="Type to start searching..."
+  placeholder="Start searching..."
   notFoundMessage="Sorry, we couldn't find anything"
 />;
 ```

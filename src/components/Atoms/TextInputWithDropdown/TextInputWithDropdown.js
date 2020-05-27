@@ -11,6 +11,13 @@ import {
 } from './TextInputWithDropdown.style';
 import Text from '../Text/Text';
 
+/**
+ * This component handles the visual aspect of a text input with typeahead-style functionality, but not
+ *  the logic, API querying, state management, etc.
+ * See the Typeahead molecule for the full functionality.
+ *
+ * Todo: does the dropdown need accessibility improvements?
+ */
 const TextInputWithDropdown = ({
   value,
   options,
@@ -29,6 +36,7 @@ const TextInputWithDropdown = ({
     name,
     label,
     autoComplete: 'off',
+    type: 'text',
     ...otherInputProps
   };
 
@@ -39,7 +47,7 @@ const TextInputWithDropdown = ({
   };
 
   return (
-    <Container>
+    <Container className="TextInputWithDropdown">
       <Input {...inputProps} />
       <Options {...optionsProps} />
     </Container>
@@ -51,7 +59,7 @@ const Options = ({ options, dropdownInstruction, onSelect }) => {
     return null;
   }
   return (
-    <Dropdown>
+    <Dropdown className="TextInputWithDropdown__dropdown">
       <DropdownList>
         {dropdownInstruction && (
           <DropdownItem>

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c2 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c3 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c3:focus {
+  border: 1px solid #666;
+}
+
+.c3:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c3:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c3:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c3:focus::placeholder {
+  color: #666;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  position: relative;
+}
+
+@media (min-width:740px) {
+  .c3 {
+    max-width: 290px;
+  }
+}
+
+<div
+  className="c0 TextInputWithDropdown"
+>
+  <label
+    className="c1"
+    htmlFor="school-lookup"
+  >
+    <span
+      className="c2 "
+      color="inherit"
+      size="s"
+    >
+      Enter the name or postcode of your school or nursery
+    </span>
+    <input
+      aria-describedby="school-lookup"
+      autoComplete="off"
+      className="c3"
+      id="school-lookup"
+      name="query"
+      onChange={[Function]}
+      placeholder="Type to start search"
+      type="text"
+      value=""
+    />
+    
+  </label>
+</div>
+`;

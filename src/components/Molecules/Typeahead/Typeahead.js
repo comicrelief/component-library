@@ -15,7 +15,7 @@ const initialState = {
 const DELAY_DURATION = 200;
 const MIN_CHARS_FOR_FETCH = 3;
 
-// Todo: Some UX and design input might be handy for this
+// Todo: Some UX or design input might be handy?
 const Typeahead = ({
   optionFetcher,
   optionParser,
@@ -52,7 +52,7 @@ const Typeahead = ({
   const onChange = async e => {
     const { value } = e.currentTarget;
     // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
-    // (but not super confident about this)
+    // (but happy to take advice on this!)
     const { options, errorMsg } = initialState;
     updateState({ value, options, errorMsg });
     debouncedFetch(value);
@@ -65,8 +65,9 @@ const Typeahead = ({
       errorMsg={state.errorMsg}
       onChange={onChange}
       onSelect={(v, index) => {
+        const selected = state.options[index];
         // pass the selected value up to the parent via callback
-        onSelect(state.options[index]);
+        onSelect(selected);
         // reset
         updateState(initialState);
       }}
@@ -85,11 +86,14 @@ Typeahead.propTypes = {
   // Used to parse the options returned by the optionFetcher into strings - if they aren't already strings -
   //  which can then be displayed in the dropdown list.
   optionParser: PropTypes.func,
+  // This function is used to provide data to the parent component when a selection is made.
   onSelect: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   notFoundMessage: PropTypes.string.isRequired,
+  // An optional error handling function which can either return a bespoke error message to be displayed here,
+  //  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
   fetchErrorHandler: PropTypes.func,
   dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
