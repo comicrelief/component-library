@@ -1045,11 +1045,11 @@ it('renders correctly', () => {
               </span>
               <ul
                 aria-label="Legal"
-                className="c17"
+                className="c12"
                 role="list"
               >
                 <li
-                  className="c18"
+                  className="c13"
                 >
                   <a
                     className="c14 c15"
@@ -1069,7 +1069,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c18"
+                  className="c13"
                 >
                   <a
                     className="c14 c15"
@@ -1089,7 +1089,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c18"
+                  className="c13"
                 >
                   <a
                     className="c14 c15"
@@ -1109,7 +1109,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c18"
+                  className="c13"
                 >
                   <a
                     className="c14 c15"
@@ -1129,27 +1129,7 @@ it('renders correctly', () => {
                   </a>
                 </li>
                 <li
-                  className="c18"
-                >
-                  <a
-                    className="c14 c15"
-                    color="red"
-                    href="https://bing.com"
-                    role="menuitem"
-                    target="_blank"
-                    type="standard"
-                  >
-                    <span
-                      className="c16"
-                      color="white"
-                      size="s"
-                    >
-                      Test non-whitelisted external link
-                    </span>
-                  </a>
-                </li>
-                <li
-                  className="c18"
+                  className="c13"
                 >
                   <a
                     className="c14 c15"

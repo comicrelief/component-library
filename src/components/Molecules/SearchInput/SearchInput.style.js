@@ -28,18 +28,20 @@ const SearchWrapper = styled.div`
 `;
 
 const SearchField = styled(Input)`
-  padding: 13px 0;
-  margin: 0;
-  font-size: ${({ theme }) => theme.fontSize('md')};
-  max-width: 100%;
-  border: 0;
-  outline: ${({ theme }) => theme.color('red')};
-  :focus {
+  input {
+    padding: 13px 0;
+    margin: 0;
+    font-size: ${({ theme }) => theme.fontSize('md')};
+    max-width: 100%;
     border: 0;
-  }
-  ${media('small')} {
-    height: 100px;
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
+    outline: ${({ theme }) => theme.color('red')};
+    :focus {
+      border: 0;
+    }
+    ${media('small')} {
+      height: 100px;
+      font-size: ${({ theme }) => theme.fontSize('xxl')};
+    }
   }
 `;
 

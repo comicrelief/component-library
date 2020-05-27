@@ -110,7 +110,7 @@ it('renders correctly', () => {
       padding: 0 0.5rem;
     }
 
-    .c5 {
+    .c5 input {
       padding: 13px 0;
       margin: 0;
       max-width: 100%;
@@ -118,7 +118,7 @@ it('renders correctly', () => {
       outline: #E52630;
     }
 
-    .c5:focus {
+    .c5 input:focus {
       border: 0;
     }
 
@@ -129,7 +129,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c5 input {
         height: 100px;
         font-size: 3rem;
       }
@@ -151,7 +151,6 @@ it('renders correctly', () => {
             <label
               className="c4 c5"
               htmlFor="search"
-              onChange={[Function]}
             >
               <span
                 className="c6 c7"
@@ -162,7 +161,7 @@ it('renders correctly', () => {
               </span>
               <input
                 aria-describedby="search"
-                className="c8 c5"
+                className="c8"
                 id="search"
                 name="search"
                 onChange={[Function]}

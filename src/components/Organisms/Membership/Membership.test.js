@@ -462,10 +462,8 @@ it('renders correctly', () => {
                 className="c13"
               >
                 <label
-                  aria-label="£5"
                   className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box1"
-                  onClick={[Function]}
                 >
                   <span
                     className="c16 "
@@ -477,7 +475,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£5"
-                    className="c17 c15"
+                    className="c17"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
@@ -488,10 +486,8 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  aria-label="£10"
                   className="c14 c18"
                   htmlFor="mship-1--moneyBuy-box2"
-                  onClick={[Function]}
                 >
                   <span
                     className="c16 "
@@ -503,7 +499,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£10"
-                    className="c17 c18"
+                    className="c17"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
@@ -514,10 +510,8 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  aria-label="£20"
                   className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box3"
-                  onClick={[Function]}
                 >
                   <span
                     className="c16 "
@@ -529,7 +523,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£20"
-                    className="c17 c15"
+                    className="c17"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
@@ -551,16 +545,8 @@ it('renders correctly', () => {
                   Other amount
                 </span>
                 <label
-                  aria-label="Input a different amount"
                   className="c14 c22"
                   htmlFor="mship-1--MoneyBuy-userInput"
-                  max="5000"
-                  min="1"
-                  onChange={[Function]}
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  step="0.01"
                 >
                   <span
                     className="c16 "
@@ -572,7 +558,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
-                    className="c17 c22"
+                    className="c17"
                     id="mship-1--MoneyBuy-userInput"
                     max="5000"
                     min="1"

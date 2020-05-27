@@ -57,7 +57,6 @@ const ErrorText = styled(Text)`
     position: relative;
     content: '';
     top: 2px;
-    vertical-align: middle;
     margin-right: 6px;
     background: url(${alertIcon}) left 0/100% no-repeat;
     width: 18px;
@@ -75,20 +74,21 @@ const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
 `;
 
-const Input = ({ errorMsg, id, label, showLabel, type, hasAria, ...rest }) => {
+const Input = ({
+  errorMsg,
+  id,
+  label,
+  showLabel,
+  type,
+  hasAria,
+  className,
+  labelProps,
+  ...rest
+}) => {
   const error = errorMsg && errorMsg.length > 0;
-  const labelRest = { ...rest };
-  // Remove unrelated attributes to label element
-  Object.keys(labelRest).map(propKey => {
-    if (['value', 'name', 'placeholder', 'role'].includes(propKey)) {
-      delete labelRest[propKey];
-    } else if (propKey.match(/^aria-/) && propKey !== 'aria-label') {
-      delete labelRest[propKey];
-    }
-    return true;
-  });
+
   return (
-    <Label htmlFor={id} {...labelRest}>
+    <Label htmlFor={id} className={className} {...labelProps}>
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
       </TextLabel>
@@ -117,14 +117,18 @@ Input.propTypes = {
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, serach, tel, url, password */
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  labelProps: PropTypes.objectOf(PropTypes.any),
+  className: PropTypes.string
 };
 
 Input.defaultProps = {
   showLabel: true,
   hasAria: true,
   placeholder: '',
-  errorMsg: ''
+  errorMsg: '',
+  labelProps: {},
+  className: ''
 };
 
 export default Input;

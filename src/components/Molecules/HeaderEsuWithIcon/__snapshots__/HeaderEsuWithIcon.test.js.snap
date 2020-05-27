@@ -85,7 +85,6 @@ exports[`renders correctly with error message 1`] = `
   position: relative;
   content: '';
   top: 2px;
-  vertical-align: middle;
   margin-right: 6px;
   background: url(mock.asset) left 0/100% no-repeat;
   width: 18px;
@@ -379,10 +378,8 @@ exports[`renders correctly with error message 1`] = `
           onSubmit={[Function]}
         >
           <label
-            aria-label="Email address"
             className="c11 c12"
             htmlFor="email"
-            onChange={[Function]}
           >
             <span
               className="c13 c14"
@@ -393,7 +390,7 @@ exports[`renders correctly with error message 1`] = `
             </span>
             <input
               aria-label="Email address"
-              className="c15 c12"
+              className="c15"
               id="email"
               name="email"
               onChange={[Function]}
@@ -869,10 +866,8 @@ exports[`renders correctly with modal open 1`] = `
           onSubmit={[Function]}
         >
           <label
-            aria-label="Email address"
             className="c11 c12"
             htmlFor="email"
-            onChange={[Function]}
           >
             <span
               className="c13 c14"
@@ -883,7 +878,7 @@ exports[`renders correctly with modal open 1`] = `
             </span>
             <input
               aria-label="Email address"
-              className="c15 c12"
+              className="c15"
               id="email"
               name="email"
               onChange={[Function]}
