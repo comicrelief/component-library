@@ -67,7 +67,7 @@ const pictures = require('../../../styleguide/data/data').default;
 />;
 ```
 
-## Single Giving with No Money Buys
+## Single Giving "No Money Buys"
 
 ```js
 import data from './dev-data/data-single';
