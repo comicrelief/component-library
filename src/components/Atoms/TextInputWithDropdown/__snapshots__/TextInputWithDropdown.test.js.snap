@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with no value and no options 1`] = `
-.c2 {
+.c3 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -10,7 +10,7 @@ exports[`renders correctly with no value and no options 1`] = `
   font-family: inherit;
 }
 
-.c3 {
+.c4 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -28,23 +28,23 @@ exports[`renders correctly with no value and no options 1`] = `
   color: #000000;
 }
 
-.c3:focus {
+.c4:focus {
   border: 1px solid #666;
 }
 
-.c3:focus::-webkit-input-placeholder {
+.c4:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c3:focus::-moz-placeholder {
+.c4:focus::-moz-placeholder {
   color: #666;
 }
 
-.c3:focus:-ms-input-placeholder {
+.c4:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c3:focus::placeholder {
+.c4:focus::placeholder {
   color: #666;
 }
 
@@ -62,8 +62,12 @@ exports[`renders correctly with no value and no options 1`] = `
   position: relative;
 }
 
+.c2 input {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     max-width: 290px;
   }
 }
@@ -72,11 +76,11 @@ exports[`renders correctly with no value and no options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1 TextInputWithDropdown__input"
+    className="c1 c2 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
-      className="c2 "
+      className="c3 "
       color="inherit"
       size="s"
     >
@@ -85,7 +89,7 @@ exports[`renders correctly with no value and no options 1`] = `
     <input
       aria-describedby="text-input-with-dropdown"
       autoComplete="off"
-      className="c3"
+      className="c4"
       id="text-input-with-dropdown"
       name="query"
       onChange={[Function]}
@@ -99,7 +103,7 @@ exports[`renders correctly with no value and no options 1`] = `
 `;
 
 exports[`renders correctly with value and no options 1`] = `
-.c2 {
+.c3 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -108,7 +112,7 @@ exports[`renders correctly with value and no options 1`] = `
   font-family: inherit;
 }
 
-.c3 {
+.c4 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -126,23 +130,23 @@ exports[`renders correctly with value and no options 1`] = `
   color: #000000;
 }
 
-.c3:focus {
+.c4:focus {
   border: 1px solid #666;
 }
 
-.c3:focus::-webkit-input-placeholder {
+.c4:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c3:focus::-moz-placeholder {
+.c4:focus::-moz-placeholder {
   color: #666;
 }
 
-.c3:focus:-ms-input-placeholder {
+.c4:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c3:focus::placeholder {
+.c4:focus::placeholder {
   color: #666;
 }
 
@@ -160,8 +164,12 @@ exports[`renders correctly with value and no options 1`] = `
   position: relative;
 }
 
+.c2 input {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     max-width: 290px;
   }
 }
@@ -170,11 +178,11 @@ exports[`renders correctly with value and no options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1 TextInputWithDropdown__input"
+    className="c1 c2 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
-      className="c2 "
+      className="c3 "
       color="inherit"
       size="s"
     >
@@ -183,7 +191,7 @@ exports[`renders correctly with value and no options 1`] = `
     <input
       aria-describedby="text-input-with-dropdown"
       autoComplete="off"
-      className="c3"
+      className="c4"
       id="text-input-with-dropdown"
       name="query"
       onChange={[Function]}
@@ -197,7 +205,7 @@ exports[`renders correctly with value and no options 1`] = `
 `;
 
 exports[`renders correctly with value and options 1`] = `
-.c2 {
+.c3 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -206,7 +214,7 @@ exports[`renders correctly with value and options 1`] = `
   font-family: inherit;
 }
 
-.c7 {
+.c8 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -214,7 +222,7 @@ exports[`renders correctly with value and options 1`] = `
   font-family: inherit;
 }
 
-.c3 {
+.c4 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -232,23 +240,23 @@ exports[`renders correctly with value and options 1`] = `
   color: #000000;
 }
 
-.c3:focus {
+.c4:focus {
   border: 1px solid #666;
 }
 
-.c3:focus::-webkit-input-placeholder {
+.c4:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c3:focus::-moz-placeholder {
+.c4:focus::-moz-placeholder {
   color: #666;
 }
 
-.c3:focus:-ms-input-placeholder {
+.c4:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c3:focus::placeholder {
+.c4:focus::placeholder {
   color: #666;
 }
 
@@ -266,42 +274,47 @@ exports[`renders correctly with value and options 1`] = `
   position: relative;
 }
 
-.c4 {
+.c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   z-index: z-index:3;
   position: absolute;
   left: 0;
   max-height: 300px;
   overflow: auto;
-  background-color: white;
-  border: 1px solid #F4F3F5;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  margin-top: -1px;
   width: 100%;
 }
 
-.c5 {
+.c6 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.c6 {
+.c7 {
   padding: 0.5rem;
   cursor: pointer;
   border-top: 1px solid #F4F3F5;
 }
 
-.c6:hover {
+.c7:hover {
   background-color: #F4F3F5;
 }
 
+.c2 input {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c5 {
     max-width: 500px;
   }
 }
@@ -310,11 +323,11 @@ exports[`renders correctly with value and options 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1 TextInputWithDropdown__input"
+    className="c1 c2 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
     <span
-      className="c2 "
+      className="c3 "
       color="inherit"
       size="s"
     >
@@ -323,7 +336,7 @@ exports[`renders correctly with value and options 1`] = `
     <input
       aria-describedby="text-input-with-dropdown"
       autoComplete="off"
-      className="c3"
+      className="c4"
       id="text-input-with-dropdown"
       name="query"
       onChange={[Function]}
@@ -334,19 +347,19 @@ exports[`renders correctly with value and options 1`] = `
     
   </label>
   <div
-    className="c4 TextInputWithDropdown__options"
+    className="c5 TextInputWithDropdown__options"
   >
     <ul
-      className="c5"
+      className="c6"
     >
       <li
-        className="c6"
+        className="c7"
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
       >
         <span
-          className="c7"
+          className="c8"
           color="inherit"
           size="s"
         >
@@ -354,13 +367,13 @@ exports[`renders correctly with value and options 1`] = `
         </span>
       </li>
       <li
-        className="c6"
+        className="c7"
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
       >
         <span
-          className="c7"
+          className="c8"
           color="inherit"
           size="s"
         >
@@ -368,13 +381,13 @@ exports[`renders correctly with value and options 1`] = `
         </span>
       </li>
       <li
-        className="c6"
+        className="c7"
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
       >
         <span
-          className="c7"
+          className="c8"
           color="inherit"
           size="s"
         >
@@ -382,13 +395,13 @@ exports[`renders correctly with value and options 1`] = `
         </span>
       </li>
       <li
-        className="c6"
+        className="c7"
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
       >
         <span
-          className="c7"
+          className="c8"
           color="inherit"
           size="s"
         >

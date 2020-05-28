@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c2 {
+.c3 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c3 {
+.c4 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   position: relative;
@@ -28,23 +28,23 @@ exports[`renders correctly 1`] = `
   color: #000000;
 }
 
-.c3:focus {
+.c4:focus {
   border: 1px solid #666;
 }
 
-.c3:focus::-webkit-input-placeholder {
+.c4:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c3:focus::-moz-placeholder {
+.c4:focus::-moz-placeholder {
   color: #666;
 }
 
-.c3:focus:-ms-input-placeholder {
+.c4:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c3:focus::placeholder {
+.c4:focus::placeholder {
   color: #666;
 }
 
@@ -62,8 +62,12 @@ exports[`renders correctly 1`] = `
   position: relative;
 }
 
+.c2 input {
+  margin-top: 0.5rem;
+}
+
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     max-width: 290px;
   }
 }
@@ -72,11 +76,11 @@ exports[`renders correctly 1`] = `
   className="c0 TextInputWithDropdown"
 >
   <label
-    className="c1 TextInputWithDropdown__input"
+    className="c1 c2 TextInputWithDropdown__input"
     htmlFor="typeahead-test"
   >
     <span
-      className="c2 "
+      className="c3 "
       color="inherit"
       size="s"
     >
@@ -85,7 +89,7 @@ exports[`renders correctly 1`] = `
     <input
       aria-describedby="typeahead-test"
       autoComplete="off"
-      className="c3"
+      className="c4"
       id="typeahead-test"
       name="q"
       onChange={[Function]}
