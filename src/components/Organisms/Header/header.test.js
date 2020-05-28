@@ -37,7 +37,7 @@ it('renders correctly', () => {
 
     .c4 {
       object-fit: cover;
-      width: auto;
+      width: 100%;
       display: block;
       height: auto;
       margin-right: 1rem;
@@ -47,9 +47,9 @@ it('renders correctly', () => {
       display: inline-block;
       z-index: 3;
       width: 50px;
-      -webkit-transform: inherit;
-      -ms-transform: inherit;
-      transform: inherit;
+      -webkit-transform: rotate(-14deg);
+      -ms-transform: rotate(-14deg);
+      transform: rotate(-14deg);
     }
 
     .c9 {
@@ -623,7 +623,7 @@ it('renders correctly', () => {
           >
             <div
               className="c3"
-              rotate={0}
+              rotate={1}
             >
               <img
                 alt="Comic Relief logo"
