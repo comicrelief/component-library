@@ -13,8 +13,6 @@ const schoolsLookup = async query => {
   return response.data.data.schools.map(school => school.name);
 };
 
-// todo: can we test the interactions?
-
 it('renders correctly', () => {
   const renderer = renderWithTheme(
     <Typeahead

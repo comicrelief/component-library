@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 import { screen } from '../../../theme/shared/size';
+import Text from '../Text/Text';
 
 const Container = styled.div`
   position: relative;
@@ -15,8 +16,9 @@ const Dropdown = styled.div`
   left: 0;
   max-height: 300px;
   overflow: auto;
-  background-color: white;
-  border: 1px solid ${({ theme }) => theme.color('grey_light')};
+  background-color: ${({ theme }) => theme.color('white')};
+  border: 1px solid;
+  margin-top: -1px;
   width: 100%;
 
   @media (min-width: ${screen.small}) {
@@ -43,10 +45,15 @@ const DropdownItemSelectable = styled(DropdownItem)`
   }
 `;
 
+const TextItalic = styled(Text)`
+  font-style: italic;
+`;
+
 export {
   Container,
   Dropdown,
   DropdownList,
   DropdownItem,
-  DropdownItemSelectable
+  DropdownItemSelectable,
+  TextItalic
 };

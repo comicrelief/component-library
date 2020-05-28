@@ -8,7 +8,8 @@ import {
   Dropdown,
   DropdownList,
   DropdownItem,
-  DropdownItemSelectable
+  DropdownItemSelectable,
+  TextItalic
 } from './TextInputWithDropdown.style';
 import makeOnEnterHandler from '../../../utils/makeOnEnterHandler';
 
@@ -66,7 +67,7 @@ const Options = ({ options, dropdownInstruction, onSelect, ...rest }) => {
       <DropdownList>
         {dropdownInstruction && (
           <DropdownItem>
-            <Text>{dropdownInstruction}</Text>
+            <TextItalic>{dropdownInstruction}</TextItalic>
           </DropdownItem>
         )}
         {options.map((option, index) => {
@@ -96,7 +97,7 @@ TextInputWithDropdown.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
-  dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+  dropdownInstruction: PropTypes.string
 };
 
 TextInputWithDropdown.defaultProps = {
@@ -107,7 +108,7 @@ TextInputWithDropdown.defaultProps = {
 Options.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onSelect: PropTypes.func.isRequired,
-  dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+  dropdownInstruction: PropTypes.string
 };
 
 Options.defaultProps = {

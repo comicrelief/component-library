@@ -15,7 +15,6 @@ const initialState = {
 const DELAY_DURATION = 200;
 const MIN_CHARS_FOR_FETCH = 3;
 
-// Todo: Some UX or design input might be handy?
 const Typeahead = ({
   optionFetcher,
   optionParser,
@@ -49,7 +48,7 @@ const Typeahead = ({
     []
   );
 
-  const onChange = async e => {
+  const onChange = e => {
     const { value } = e.currentTarget;
     // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
     // (but happy to take advice on this!)
@@ -58,14 +57,16 @@ const Typeahead = ({
     debouncedFetch(value);
   };
 
+  const { value, options, errorMsg } = state;
+
   return (
     <TextInputWithDropdown
-      value={state.value}
-      options={optionParser ? state.options.map(optionParser) : state.options}
-      errorMsg={state.errorMsg}
+      value={value}
+      options={optionParser ? options.map(optionParser) : options}
+      errorMsg={errorMsg}
       onChange={onChange}
       onSelect={(v, index) => {
-        const selected = state.options[index];
+        const selected = options[index];
         // pass the selected value up to the parent via callback
         onSelect(selected);
         // reset
@@ -95,7 +96,7 @@ Typeahead.propTypes = {
   // An optional error handling function which can either return a bespoke error message to be displayed here,
   //  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
   fetchErrorHandler: PropTypes.func,
-  dropdownInstruction: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+  dropdownInstruction: PropTypes.string
 };
 
 Typeahead.defaultProps = {
