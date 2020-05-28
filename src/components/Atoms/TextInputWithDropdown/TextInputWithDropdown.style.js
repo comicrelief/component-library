@@ -4,6 +4,7 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 import { screen } from '../../../theme/shared/size';
 import Text from '../Text/Text';
+import Input from '../Input/Input';
 
 const Container = styled.div`
   position: relative;
@@ -49,11 +50,18 @@ const TextItalic = styled(Text)`
   font-style: italic;
 `;
 
+const InputWithSpaceAfterLabel = styled(Input)`
+  input {
+    margin-top: ${spacing('sm')};
+  }
+`;
+
 export {
   Container,
   Dropdown,
   DropdownList,
   DropdownItem,
   DropdownItemSelectable,
-  TextItalic
+  TextItalic,
+  InputWithSpaceAfterLabel
 };

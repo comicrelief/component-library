@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Input from '../Input/Input';
 import Text from '../Text/Text';
 import {
   Container,
@@ -9,7 +8,8 @@ import {
   DropdownList,
   DropdownItem,
   DropdownItemSelectable,
-  TextItalic
+  TextItalic,
+  InputWithSpaceAfterLabel
 } from './TextInputWithDropdown.style';
 import makeOnEnterHandler from '../../../utils/makeOnEnterHandler';
 
@@ -52,7 +52,10 @@ const TextInputWithDropdown = ({
 
   return (
     <Container className={`TextInputWithDropdown ${className}`.trim()}>
-      <Input {...inputProps} className="TextInputWithDropdown__input" />
+      <InputWithSpaceAfterLabel
+        {...inputProps}
+        className="TextInputWithDropdown__input"
+      />
       <Options {...optionsProps} className="TextInputWithDropdown__options" />
     </Container>
   );
