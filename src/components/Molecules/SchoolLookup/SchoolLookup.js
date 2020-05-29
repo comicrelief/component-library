@@ -39,6 +39,7 @@ const SchoolLookup = ({
 };
 
 SchoolLookup.propTypes = {
+  /** This function is used to provide data to the parent component when a selection is made. */
   onSelect: PropTypes.func.isRequired,
   label: PropTypes.string,
   placeholder: PropTypes.string,
