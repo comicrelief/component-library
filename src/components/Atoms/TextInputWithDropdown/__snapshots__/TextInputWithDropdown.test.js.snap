@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no value and no options 1`] = `
+.c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c4:focus {
+  border: 1px solid #666;
+}
+
+.c4:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c4:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::placeholder {
+  color: #666;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c2 input {
+  margin-top: 0.5rem;
+}
+
+@media (min-width:740px) {
+  .c4 {
+    max-width: 290px;
+  }
+}
+
+<div
+  className="c0 TextInputWithDropdown"
+>
+  <label
+    className="c1 c2 TextInputWithDropdown__input"
+    htmlFor="text-input-with-dropdown"
+  >
+    <span
+      className="c3 "
+      color="inherit"
+      size="s"
+    >
+      Search for bikes
+    </span>
+    <input
+      aria-describedby="text-input-with-dropdown"
+      autoComplete="off"
+      className="c4"
+      id="text-input-with-dropdown"
+      name="query"
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+    
+  </label>
+</div>
+`;
+
+exports[`renders correctly with value and no options 1`] = `
+.c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c4:focus {
+  border: 1px solid #666;
+}
+
+.c4:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c4:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::placeholder {
+  color: #666;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c2 input {
+  margin-top: 0.5rem;
+}
+
+@media (min-width:740px) {
+  .c4 {
+    max-width: 290px;
+  }
+}
+
+<div
+  className="c0 TextInputWithDropdown"
+>
+  <label
+    className="c1 c2 TextInputWithDropdown__input"
+    htmlFor="text-input-with-dropdown"
+  >
+    <span
+      className="c3 "
+      color="inherit"
+      size="s"
+    >
+      Search for bikes
+    </span>
+    <input
+      aria-describedby="text-input-with-dropdown"
+      autoComplete="off"
+      className="c4"
+      id="text-input-with-dropdown"
+      name="query"
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value="bikes"
+    />
+    
+  </label>
+</div>
+`;
+
+exports[`renders correctly with value and options 1`] = `
+.c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+}
+
+.c4:focus {
+  border: 1px solid #666;
+}
+
+.c4:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c4:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c4:focus::placeholder {
+  color: #666;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c5 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  z-index: z-index:3;
+  position: absolute;
+  left: 0;
+  max-height: 300px;
+  overflow: auto;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  margin-top: -1px;
+  width: 100%;
+}
+
+.c6 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c7 {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-top: 1px solid #F4F3F5;
+}
+
+.c7:hover {
+  background-color: #F4F3F5;
+}
+
+.c2 input {
+  margin-top: 0.5rem;
+}
+
+@media (min-width:740px) {
+  .c4 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    max-width: 500px;
+  }
+}
+
+<div
+  className="c0 TextInputWithDropdown"
+>
+  <label
+    className="c1 c2 TextInputWithDropdown__input"
+    htmlFor="text-input-with-dropdown"
+  >
+    <span
+      className="c3 "
+      color="inherit"
+      size="s"
+    >
+      Search for bikes
+    </span>
+    <input
+      aria-describedby="text-input-with-dropdown"
+      autoComplete="off"
+      className="c4"
+      id="text-input-with-dropdown"
+      name="query"
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value="c"
+    />
+    
+  </label>
+  <div
+    className="c5 TextInputWithDropdown__options"
+  >
+    <ul
+      className="c6"
+    >
+      <li
+        className="c7"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="c8"
+          color="inherit"
+          size="s"
+        >
+          Canyon
+        </span>
+      </li>
+      <li
+        className="c7"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="c8"
+          color="inherit"
+          size="s"
+        >
+          Cannondale
+        </span>
+      </li>
+      <li
+        className="c7"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="c8"
+          color="inherit"
+          size="s"
+        >
+          Condor
+        </span>
+      </li>
+      <li
+        className="c7"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="c8"
+          color="inherit"
+          size="s"
+        >
+          Cube
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

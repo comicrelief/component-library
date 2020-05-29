@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",
+    "axios": "^0.19.2",
     "lazysizes": "^5.1.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
