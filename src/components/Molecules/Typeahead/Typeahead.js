@@ -82,19 +82,23 @@ const Typeahead = ({
 };
 
 Typeahead.propTypes = {
-  // Takes the value and returns an array of options (e.g. by calling some lookup api)
+  /** Takes the value and returns an array of options (e.g. by calling some lookup api.) */
   optionFetcher: PropTypes.func.isRequired,
-  // Used to parse the options returned by the optionFetcher into strings - if they aren't already strings -
-  //  which can then be displayed in the dropdown list.
+  /**
+   * Used to parse the options returned by the optionFetcher into strings - if they aren't already
+   *  strings - which can then be displayed in the dropdown list.
+   */
   optionParser: PropTypes.func,
-  // This function is used to provide data to the parent component when a selection is made.
+  /** This function is used to provide data to the parent component when a selection is made. */
   onSelect: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   notFoundMessage: PropTypes.string.isRequired,
-  // An optional error handling function which can either return a bespoke error message to be displayed here,
-  //  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
+  /**
+   * An optional error handling function which can either return a bespoke error message to be displayed here,
+   *  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
+   */
   fetchErrorHandler: PropTypes.func,
   dropdownInstruction: PropTypes.string
 };
