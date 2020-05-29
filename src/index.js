@@ -50,18 +50,12 @@ export { default as Box } from './components/Molecules/Box/Box';
 export {
   default as ArticleTeaser
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
-export { default as Header } from './components/Organisms/Header/Header';
-export {
-  default as CookieBanner
-} from './components/Organisms/CookieBanner/CookieBanner';
-export { default as Donate } from './components/Organisms/Donate/Donate';
 export {
   default as DoubleCopy
 } from './components/Molecules/DoubleCopy/DoubleCopy';
 export {
   default as PartnerLink
 } from './components/Molecules/PartnerLink/PartnerLink';
-export { default as Footer } from './components/Organisms/Footer/Footer';
 export {
   default as SearchResult
 } from './components/Molecules/SearchResult/SearchResult';
@@ -69,14 +63,8 @@ export {
   default as SearchInput
 } from './components/Molecules/SearchInput/SearchInput';
 export {
-  default as EmailSignUp
-} from './components/Organisms/EmailSignUp/EmailSignUp';
-export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
-export {
-  default as Membership
-} from './components/Organisms/Membership/Membership';
 export {
   default as VideoBanner
 } from './components/Molecules/VideoBanner/VideoBanner';
@@ -90,3 +78,20 @@ export {
 export {
   default as SchoolLookup
 } from './components/Molecules/SchoolLookup/SchoolLookup';
+export {
+  AddressFieldset
+} from './components/Molecules/AddressFieldset/AddressFieldset';
+
+/* Organisms */
+export { default as Header } from './components/Organisms/Header/Header';
+export {
+  default as CookieBanner
+} from './components/Organisms/CookieBanner/CookieBanner';
+export { default as Donate } from './components/Organisms/Donate/Donate';
+export { default as Footer } from './components/Organisms/Footer/Footer';
+export {
+  default as EmailSignUp
+} from './components/Organisms/EmailSignUp/EmailSignUp';
+export {
+  default as Membership
+} from './components/Organisms/Membership/Membership';
