@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 const Dropdown = styled.div`
+  ${zIndex('high')}
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  z-index: ${zIndex('high')};
   position: absolute;
   left: 0;
   max-height: 300px;
