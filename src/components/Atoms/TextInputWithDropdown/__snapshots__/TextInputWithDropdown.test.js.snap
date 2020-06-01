@@ -275,8 +275,8 @@ exports[`renders correctly with value and options 1`] = `
 }
 
 .c5 {
+  z-index: 3;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  z-index: z-index:3;
   position: absolute;
   left: 0;
   max-height: 300px;
