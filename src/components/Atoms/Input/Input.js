@@ -5,25 +5,28 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import alertIcon from './assets/error-alert-icon.png';
 import hideVisually from '../../../theme/shared/hideVisually';
+import spacing from '../../../theme/shared/spacing';
 
 /**
  * Input component
  */
 const InputField = styled.input`
-  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  font-weight: 400;
+  font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding: 13px;
+  height: 48px;
+  padding: ${spacing('md')} ${spacing('m')};
   font-size: ${({ theme }) => theme.fontSize('m')};
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: ${({ theme }) => theme.color('grey_light')};
   border: 1px solid;
   border-color: ${({ theme, error }) =>
-    !error ? theme.color('black') : theme.color('red')};
+    !error ? theme.color('grey_medium') : theme.color('red')};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};
+  border-radius: 0.5rem;
+  margin-top: ${spacing('sm')};
 
   :focus {
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
@@ -44,6 +47,8 @@ const InputField = styled.input`
 const Label = styled.label`
   display: flex;
   flex-direction: column;
+  font-weight: bold;
+  color: ${({ theme }) => theme.color('grey')};
 `;
 
 /**
@@ -53,6 +58,7 @@ const ErrorText = styled(Text)`
   display: inline-block;
   color: red;
   font-weight: ${({ weight }) => weight};
+  margin-top: ${spacing('sm')};
   :before {
     position: relative;
     content: '';
