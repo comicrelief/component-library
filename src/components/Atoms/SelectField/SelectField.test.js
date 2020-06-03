@@ -92,6 +92,8 @@ it('renders correctly', () => {
       >
         <option
           disabled={true}
+          selected={true}
+          value=""
         >
           Please choose an option
         </option>

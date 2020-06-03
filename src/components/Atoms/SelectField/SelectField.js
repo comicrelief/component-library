@@ -8,7 +8,7 @@ import dropDownIcon from './assets/drop-down-dark-purple.svg';
 import alertIcon from './assets/error-alert-icon.png';
 import spacing from '../../../theme/shared/spacing';
 
-const StyledInput = styled.select`
+const StyledSelect = styled.select`
   width: 100%;
   font-size: ${({ theme }) => theme.fontSize('m')};
   display: block;
@@ -83,13 +83,16 @@ const Select = ({
   ...rest
 }) => {
   const error = errorMsg && errorMsg.length > 0;
+
   return (
     <Label>
       <LabelText hideLabel={hideLabel} weight="bold">
         {label}
       </LabelText>
-      <StyledInput {...rest} error={error ? 1 : 0}>
-        <option disabled>{description}</option>
+      <StyledSelect {...rest} error={error ? 1 : 0}>
+        <option disabled value="" selected>
+          {description}
+        </option>
         {options.map(option => (
           <option
             key={option.value}
@@ -99,7 +102,7 @@ const Select = ({
             {option.displayValue}
           </option>
         ))}
-      </StyledInput>
+      </StyledSelect>
       {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
     </Label>
   );
