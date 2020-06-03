@@ -21,7 +21,7 @@ export { default as Button } from './components/Atoms/Button/Button';
 export { default as Radio } from './components/Atoms/RadioButton/RadioButton';
 export { default as Checkbox } from './components/Atoms/Checkbox/Checkbox';
 export { default as Input } from './components/Atoms/Input/Input';
-export { default as Select } from './components/Atoms/SelectField/SelectField';
+export { default as Select } from './components/Atoms/Select/Select';
 export { default as TextArea } from './components/Atoms/TextArea/TextArea';
 export { default as RichText } from './components/Atoms/RichText/RichText';
 export {

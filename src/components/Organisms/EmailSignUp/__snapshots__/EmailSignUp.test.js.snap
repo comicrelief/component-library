@@ -214,12 +214,14 @@ exports[`renders ESU School correctly 1`] = `
       </span>
       <select
         className="c7"
+        defaultValue=""
         onChange={[Function]}
         placeholder="Please choose an option"
         value=""
       >
         <option
           disabled={true}
+          value=""
         >
           Please choose an option
         </option>

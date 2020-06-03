@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Select from './SelectField';
+import Select from './Select';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
@@ -89,9 +89,11 @@ it('renders correctly', () => {
       </span>
       <select
         className="c2"
+        defaultValue=""
       >
         <option
           disabled={true}
+          value=""
         >
           Please choose an option
         </option>

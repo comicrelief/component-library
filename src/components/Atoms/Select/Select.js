@@ -8,7 +8,7 @@ import dropDownIcon from './assets/drop-down-dark-purple.svg';
 import alertIcon from './assets/error-alert-icon.png';
 import spacing from '../../../theme/shared/spacing';
 
-const StyledInput = styled.select`
+const StyledSelect = styled.select`
   width: 100%;
   font-size: ${({ theme }) => theme.fontSize('m')};
   display: block;
@@ -23,7 +23,7 @@ const StyledInput = styled.select`
     calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
   border-color: ${({ theme, error }) =>
-    !error ? theme.color('grey_medium') : theme.color('red')};
+    error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};
@@ -80,42 +80,44 @@ const Select = ({
   label,
   options,
   hideLabel,
+  defaultValue,
   ...rest
-}) => {
-  const error = errorMsg && errorMsg.length > 0;
-  return (
-    <Label>
-      <LabelText hideLabel={hideLabel} weight="bold">
-        {label}
-      </LabelText>
-      <StyledInput {...rest} error={error ? 1 : 0}>
-        <option disabled>{description}</option>
-        {options.map(option => (
-          <option
-            key={option.value}
-            value={option.value}
-            defaultValue={option.defaultValue}
-          >
-            {option.displayValue}
-          </option>
-        ))}
-      </StyledInput>
-      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
-    </Label>
-  );
-};
+}) => (
+  <Label>
+    <LabelText hideLabel={hideLabel} weight="bold">
+      {label}
+    </LabelText>
+    <StyledSelect {...rest} error={errorMsg} defaultValue={defaultValue}>
+      <option disabled value="">
+        {description}
+      </option>
+      {options.map(option => (
+        <option key={option.value} value={option.value}>
+          {option.displayValue}
+        </option>
+      ))}
+    </StyledSelect>
+    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+  </Label>
+);
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
   errorMsg: PropTypes.string.isRequired,
-  /** options */
-  options: PropTypes.instanceOf(Array).isRequired,
-  description: PropTypes.string.isRequired
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      displayValue: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  description: PropTypes.string.isRequired,
+  defaultValue: PropTypes.string
 };
 
 Select.defaultProps = {
-  hideLabel: false
+  hideLabel: false,
+  defaultValue: ''
 };
 
 export default Select;

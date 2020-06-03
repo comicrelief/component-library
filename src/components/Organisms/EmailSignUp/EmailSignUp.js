@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Select from '../../Atoms/SelectField/SelectField';
+import Select from '../../Atoms/Select/Select';
 import Text from '../../Atoms/Text/Text';
 import {
   ESUWrapper,
