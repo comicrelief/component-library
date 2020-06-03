@@ -1,4 +1,4 @@
-# Select Field
+# Select
 
 ```js
 <h4>DROPDOWN MENU</h4>

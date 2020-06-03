@@ -23,7 +23,7 @@ const StyledSelect = styled.select`
     calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
   border-color: ${({ theme, error }) =>
-    !error ? theme.color('grey_medium') : theme.color('red')};
+    error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};
@@ -80,45 +80,44 @@ const Select = ({
   label,
   options,
   hideLabel,
+  defaultValue,
   ...rest
-}) => {
-  const error = errorMsg && errorMsg.length > 0;
-
-  return (
-    <Label>
-      <LabelText hideLabel={hideLabel} weight="bold">
-        {label}
-      </LabelText>
-      <StyledSelect {...rest} error={error ? 1 : 0}>
-        <option disabled value="" selected>
-          {description}
+}) => (
+  <Label>
+    <LabelText hideLabel={hideLabel} weight="bold">
+      {label}
+    </LabelText>
+    <StyledSelect {...rest} error={errorMsg} defaultValue={defaultValue}>
+      <option disabled value="">
+        {description}
+      </option>
+      {options.map(option => (
+        <option key={option.value} value={option.value}>
+          {option.displayValue}
         </option>
-        {options.map(option => (
-          <option
-            key={option.value}
-            value={option.value}
-            defaultValue={option.defaultValue}
-          >
-            {option.displayValue}
-          </option>
-        ))}
-      </StyledSelect>
-      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
-    </Label>
-  );
-};
+      ))}
+    </StyledSelect>
+    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+  </Label>
+);
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
   errorMsg: PropTypes.string.isRequired,
-  /** options */
-  options: PropTypes.instanceOf(Array).isRequired,
-  description: PropTypes.string.isRequired
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      displayValue: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  description: PropTypes.string.isRequired,
+  defaultValue: PropTypes.string
 };
 
 Select.defaultProps = {
-  hideLabel: false
+  hideLabel: false,
+  defaultValue: ''
 };
 
 export default Select;
