@@ -12,7 +12,9 @@ export const BaseText = styled.span`
   ${({ height }) => (height ? `line-height: ${height}` : null)};
   ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
   font-family: ${({ family, theme }) =>
-    family ? theme.fontFamilies(family) : 'inherit'};
+    family
+      ? theme.fontFamilies(family)
+      : theme.fontFamilies(theme.font.regular)};
   ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
   ${({ size, theme }) =>
     size === 'super'

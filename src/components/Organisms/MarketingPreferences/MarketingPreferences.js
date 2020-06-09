@@ -3,7 +3,9 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
 import InputController from './InputController';
+import CheckAnswer from './CheckAnswer';
 import {
   emailValidation,
   addressValidation,
@@ -52,15 +54,10 @@ const MarketingPreferences = () => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
           </Text>
-          <div>
-            <input type="radio" name="email" value="yes" ref={register} />
-            Yes, please
-            <input type="radio" name="email" value="no" ref={register} />
-            No, thanks
-          </div>
+          <CheckAnswer name="email" register={register} />
         </Head>
         <Body>
-          <Text tag="p">
+          <Text tag="p" color="grey">
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
@@ -80,15 +77,10 @@ const MarketingPreferences = () => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Post
           </Text>
-          <div>
-            <input type="radio" name="address" value="yes" ref={register} />
-            Yes, please
-            <input type="radio" name="address" value="no" ref={register} />
-            No, thanks
-          </div>
+          <CheckAnswer name="address" register={register} />
         </Head>
         <Body>
-          <Text tag="p">
+          <Text tag="p" color="grey">
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
@@ -145,15 +137,10 @@ const MarketingPreferences = () => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Phone
           </Text>
-          <div>
-            <input type="radio" name="telephone" value="yes" ref={register} />
-            Yes, please
-            <input type="radio" name="telephone" value="no" ref={register} />
-            No, thanks
-          </div>
+          <CheckAnswer name="telephone" register={register} />
         </Head>
         <Body>
-          <Text tag="p">
+          <Text tag="p" color="grey">
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
@@ -173,15 +160,10 @@ const MarketingPreferences = () => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
           </Text>
-          <div>
-            <input type="radio" name="mobilePhone" value="yes" ref={register} />
-            Yes, please
-            <input type="radio" name="mobilePhone" value="no" ref={register} />
-            No, thanks
-          </div>
+          <CheckAnswer name="mobilePhone" register={register} />
         </Head>
         <Body>
-          <Text tag="p">
+          <Text tag="p" color="grey">
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
@@ -197,6 +179,20 @@ const MarketingPreferences = () => {
         </Body>
       </div>
       <input type="submit" />
+      <Text tag="p" color="black">
+        You can update your communication preferences at any time at{' '}
+        <Link
+          type="standard"
+          href="https://www.comicrelief.com/update-your-preferences"
+        >
+          update your preferences
+        </Link>
+        . Your details will be kept safe, check out our{' '}
+        <Link type="standard" href="https://www.comicrelief.com/privacy-policy">
+          privacy policy
+        </Link>{' '}
+        for more details.
+      </Text>
     </form>
   );
 };
