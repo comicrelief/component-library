@@ -36,3 +36,13 @@ jobs:
       - run:
           name: Release to npm
           command: yarn semantic-release
+
+      - run:
+          name: Run e2e tests
+          command: yarn feature-test
+
+      - store_artifacts:
+          path: cypress/videos
+
+      - store_artifacts:
+          path: cypress/screenshots
