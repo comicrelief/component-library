@@ -6,6 +6,7 @@ version: 2
 jobs:
   build:
     docker:
+
       # See https://github.com/cypress-io/cypress-docker-images
       - image: cypress/base:13.8.0
         environment:

@@ -169,7 +169,5 @@ describe('Input component', () => {
                 .find('textarea')
                 .should('not.exist');
         });
-
     });
-
 });
