@@ -26,21 +26,23 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: 400;
+      font-weight: normal;
       position: relative;
       box-sizing: border-box;
       width: 100%;
-      padding: 13px;
+      height: 48px;
+      padding: 1rem 1.5rem;
       font-size: 1.25rem;
-      background-color: #FFFFFF;
+      background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #000000;
+      border-color: #E1E2E3;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
       color: #000000;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
     }
 
     .c2:focus {
@@ -71,6 +73,8 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      font-weight: bold;
+      color: #969598;
     }
 
     @media (min-width:740px) {

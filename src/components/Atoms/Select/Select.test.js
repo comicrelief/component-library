@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Select from './SelectField';
+import Select from './Select';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
@@ -32,33 +32,27 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      background-color: #FFFFFF;
       width: 100%;
       font-size: 1.25rem;
       display: block;
-      width: 100%;
       box-sizing: border-box;
-      padding: 6px 10px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #000000;
+      padding: 0.8rem 1.5rem;
+      padding-right: 4rem;
       margin: 0;
       position: relative;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      border-radius: 0px;
-      padding: 12px 50px 8px 10px;
-      height: 50px;
-      font-weight: 300;
-      background: white url(mock.asset) calc(100% - 20px) 18px/20px 20px no-repeat;
-      cursor: pointer;
-      margin-bottom: 0;
-      cursor: pointer;
+      height: 48px;
+      font-weight: 400;
+      background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
+      border: 1px solid;
+      border-color: #E1E2E3;
+      box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      box-shadow: border-box;
-      border-radius: 0;
+      color: #000000;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
     }
 
     .c2:focus {
@@ -66,8 +60,15 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: block;
-      margin-bottom: 8px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-weight: bold;
+      color: #969598;
     }
 
     @media (min-width:740px) {
@@ -88,9 +89,11 @@ it('renders correctly', () => {
       </span>
       <select
         className="c2"
+        defaultValue=""
       >
         <option
           disabled={true}
+          value=""
         >
           Please choose an option
         </option>
