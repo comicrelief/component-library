@@ -95,8 +95,6 @@ describe('Input component', () => {
                 .as('viewCodeBtn');
         });
 
-
-
         it('renders Input field with error message', () => {
             //Input with error message
             cy.get('[data-testid="Input-example-1"] div > h4')
@@ -144,8 +142,6 @@ describe('Input component', () => {
                 .contains('View Code')
                 .as('viewCodeBtn');
         });
-
-
 
         it('renders Input field with simple input', () => {
             //Input with simple input

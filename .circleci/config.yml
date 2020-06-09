@@ -7,6 +7,10 @@ jobs:
   build:
     docker:
       - image: node:11
+      # See https://github.com/cypress-io/cypress-docker-images
+      - image: cypress/base:10.16.0
+        environment:
+          TERM: xterm
 
     working_directory: ~/repo
 
@@ -23,6 +27,7 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
+            - /root/.cache/Cypress
 
       # run tests!
       - run:
@@ -34,10 +39,6 @@ jobs:
           command: yarn test
 
       - run:
-          name: Release to npm
-          command: yarn semantic-release
-
-      - run:
           name: Run e2e tests
           command: yarn feature-test
 
@@ -46,3 +47,7 @@ jobs:
 
       - store_artifacts:
           path: cypress/screenshots
+
+      - run:
+          name: Release to npm
+          command: yarn semantic-release
