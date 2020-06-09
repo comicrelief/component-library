@@ -32,7 +32,7 @@ jobs:
       # run tests!
       - run:
           name: Test Code Style
-          command: yarn eslint src
+          command: yarn lint
 
       - run:
           name: Run unit tests
