@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # See https://github.com/cypress-io/cypress-docker-images
-      - image: cypress/base:11
+      - image: cypress/base:12.7.0
         environment:
           TERM: xterm
 
