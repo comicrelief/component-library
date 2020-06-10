@@ -204,7 +204,7 @@ ArticleTeaser.propTypes = {
   logoSize: PropTypes.string,
   family: PropTypes.string,
   category: PropTypes.string,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   time: PropTypes.string,
@@ -219,6 +219,7 @@ ArticleTeaser.defaultProps = {
   category: null,
   logoSize: null,
   time: null,
+  alt: '',
   family: 'Anton'
 };
 
