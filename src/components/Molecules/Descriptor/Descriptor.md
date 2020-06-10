@@ -1,11 +1,11 @@
 ### File Component
 
 ```js
-const tag = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
+const tags = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
 <Descriptor
   title="Title"
   date="Date"
-  tag={tag}
+  tags={tags}
   categoryIcon="Icon"
   file="download"
 >

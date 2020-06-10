@@ -86,8 +86,8 @@ const FileLink = styled(Link)`
 /**
  * File component
  */
-const Descriptor = ({ date, title, categoryIcon, tag, children, file }) => {
-  const tagItems = tag.splice(0, 3).join(' ');
+const Descriptor = ({ date, title, categoryIcon, tags, children, file }) => {
+  const tagItems = tags.splice(0, 3).join(' ');
   return (
     <Wrapper>
       <CopyWrapper>
@@ -133,7 +133,7 @@ Descriptor.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   // Array of 3 items
-  tag: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   // Link url to the file
   file: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([

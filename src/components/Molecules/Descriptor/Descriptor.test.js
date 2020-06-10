@@ -4,12 +4,12 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Descriptor from './Descriptor';
 
 it('renders article teaser correctly', () => {
-  const tag = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
+  const tags = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
       date="Date"
-      tag={tag}
+      tags={tags}
       categoryIcon="Icon"
       file="download"
     >
@@ -24,7 +24,6 @@ it('renders article teaser correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(
-    '',
     `
     .c3 {
       font-size: 0.75rem;
