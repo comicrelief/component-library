@@ -6,7 +6,6 @@ import { useForm, FormContext, useFormContext } from 'react-hook-form';
 import * as yup from 'yup';
 
 import MarketingPreferences from './MarketingPreferences';
-import { ValidationSchemaProvider } from './validationSchemaContext';
 
 import {
   emailValidation,
