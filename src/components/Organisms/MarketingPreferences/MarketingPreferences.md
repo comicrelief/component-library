@@ -13,6 +13,7 @@ import {
   mobileValidation
 } from './marketingRules';
 
+// Update validation schema conforming selection
 const [emailActive, setEmailActive] = useState(false);
 const [addressActive, setAddressActive] = useState(false);
 const [phoneActive, setPhoneActive] = useState(false);
