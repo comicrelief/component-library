@@ -19,7 +19,7 @@ const CheckAnswer = ({ register, name }) => (
       <input
         type="radio"
         id={`${name}-no`}
-        name="email"
+        name={name}
         value="no"
         ref={register}
       />

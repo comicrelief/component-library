@@ -1,45 +1,11 @@
 Marketing Preferences
 
 ```js
-import React, { useState, useEffect } from 'react';
-import { useForm, FormContext, useFormContext } from 'react-hook-form';
-import * as yup from 'yup';
+import { useForm, FormContext } from 'react-hook-form';
 
 import MarketingPreferences from './MarketingPreferences';
 
-import {
-  emailValidation,
-  addressValidation,
-  phoneValidation,
-  mobileValidation
-} from './marketingRules';
-
-// Update validation schema conforming selection
-const [emailActive, setEmailActive] = useState(false);
-const [addressActive, setAddressActive] = useState(false);
-const [phoneActive, setPhoneActive] = useState(false);
-const [mobileActive, setMobileActive] = useState(false);
-
-const marketingValidations = yup.object().shape({
-  ...(emailActive === 'yes' && emailValidation),
-  ...(addressActive === 'yes' && addressValidation),
-  ...(phoneActive === 'yes' && phoneValidation),
-  ...(mobileActive === 'yes' && mobileValidation)
-});
-
-const methods = useForm({
-  validationSchema: marketingValidations,
-  mode: 'onBlur'
-});
-
-const watcher = methods.watch();
-
-useEffect(() => {
-  setEmailActive(watcher && watcher.email);
-  setAddressActive(watcher && watcher.address);
-  setPhoneActive(watcher && watcher.telephone);
-  setMobileActive(watcher && watcher.mobilePhone);
-}, [watcher]);
+const methods = useForm();
 
 const onSubmit = data => console.log(data);
 

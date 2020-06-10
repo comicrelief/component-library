@@ -34,6 +34,7 @@ const MarketingPreferences = () => {
               placeholder="Email Address"
               fieldName="emailAddress"
               label="Email Address"
+              rules={{ required: 'This is required.' }}
               control={control}
               errors={errors}
             />
@@ -58,6 +59,7 @@ const MarketingPreferences = () => {
                 placeholder="Address Line 1"
                 fieldName="address1"
                 label="Address Line 1"
+                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -65,6 +67,7 @@ const MarketingPreferences = () => {
                 placeholder="Address Line 2"
                 fieldName="address2"
                 label="Address Line 2"
+                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -79,6 +82,7 @@ const MarketingPreferences = () => {
                 placeholder="Town/City"
                 fieldName="townCity"
                 label="Town/City"
+                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -86,6 +90,7 @@ const MarketingPreferences = () => {
                 placeholder="Postcode"
                 fieldName="postcode"
                 label="Postcode"
+                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -93,6 +98,7 @@ const MarketingPreferences = () => {
                 placeholder="Country"
                 fieldName="country"
                 label="Country"
+                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -117,6 +123,7 @@ const MarketingPreferences = () => {
               placeholder="Phone Number"
               fieldName="phone"
               label="Phone Number"
+              rules={{ required: 'This is required.' }}
               control={control}
               errors={errors}
             />
@@ -140,6 +147,7 @@ const MarketingPreferences = () => {
               placeholder="Mobile Number"
               fieldName="mobile"
               label="Mobile Number"
+              rules={{ required: 'This is required.' }}
               control={control}
               errors={errors}
             />
