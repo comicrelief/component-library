@@ -8,7 +8,6 @@ import CheckAnswer from './CheckAnswer';
 import { Head, Body } from './MarketingPreferences.style';
 
 const MarketingPreferences = () => {
-  console.log(useFormContext());
   const { control, errors, watch, register } = useFormContext();
 
   const watchEmail = watch('email', 'no');
