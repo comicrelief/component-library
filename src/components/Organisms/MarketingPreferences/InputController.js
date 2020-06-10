@@ -12,7 +12,7 @@ const InputController = ({ fieldName, label, control, errors, ...rest }) => {
     type: 'text',
     label,
     placeholder: label,
-    errorMsg: errors[fieldName] && errors[fieldName].message,
+    errorMsg: errors && errors[fieldName] && errors[fieldName].message,
     ...rest
   };
 

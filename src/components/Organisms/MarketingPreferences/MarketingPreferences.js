@@ -35,7 +35,8 @@ const MarketingPreferences = () => {
               placeholder="Email Address"
               fieldName="emailAddress"
               label="Email Address"
-              register={register}
+              control={control}
+              errors={errors}
             />
           )}
         </Body>

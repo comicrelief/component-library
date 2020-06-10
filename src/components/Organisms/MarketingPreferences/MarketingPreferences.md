@@ -3,6 +3,8 @@ import { useForm, FormContext, useFormContext } from 'react-hook-form';
 import * as yup from 'yup';
 
 import MarketingPreferences from './MarketingPreferences';
+import { ValidationSchemaProvider } from './validationSchemaContext';
+
 import {
   emailValidation,
   addressValidation,
@@ -10,17 +12,17 @@ import {
   mobileValidation
 } from './marketingRules';
 
-const methods = useForm({
-  validationSchema: marketingValidations,
-  mode: 'onBlur'
-});
-
 const marketingValidations = yup.object().shape({
   ...emailValidation
   // ...(emailActive === 'yes' && emailValidation),
   // ...(addressActive === 'yes' && addressValidation),
   // ...(phoneActive === 'yes' && phoneValidation),
   // ...(mobileActive === 'yes' && mobileValidation)
+});
+
+const methods = useForm({
+  validationSchema: marketingValidations,
+  mode: 'onBlur'
 });
 
 const onSubmit = data => console.log(data);
