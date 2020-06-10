@@ -20,7 +20,7 @@ exports[`Monthly donation renders correctly 1`] = `
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c19 {
@@ -29,7 +29,7 @@ exports[`Monthly donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c23 {
@@ -38,7 +38,7 @@ exports[`Monthly donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c26 {
@@ -47,7 +47,7 @@ exports[`Monthly donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: 500;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c1 {
@@ -874,7 +874,7 @@ exports[`Single donation renders correctly 1`] = `
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c13 {
@@ -883,7 +883,7 @@ exports[`Single donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c17 {
@@ -892,7 +892,7 @@ exports[`Single donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c21 {
@@ -901,7 +901,7 @@ exports[`Single donation renders correctly 1`] = `
   text-transform: inherit;
   font-weight: 500;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c1 {
@@ -1575,7 +1575,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c13 {
@@ -1584,7 +1584,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c17 {
@@ -1593,7 +1593,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c1 {

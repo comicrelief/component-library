@@ -24,7 +24,7 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c12 {
@@ -32,7 +32,7 @@ it('renders correctly', () => {
       line-height: 1rem;
       text-transform: inherit;
       line-height: normal;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4 {

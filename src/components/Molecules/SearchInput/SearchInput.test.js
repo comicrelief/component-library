@@ -21,7 +21,7 @@ it('renders correctly', () => {
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c8 {
