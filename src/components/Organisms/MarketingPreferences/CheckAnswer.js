@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 
-const Label = ({ register, name }) => (
+const CheckAnswer = ({ register, name }) => (
   <Text>
     <label htmlFor={`${name}-yes`}>
       <input
@@ -28,9 +28,9 @@ const Label = ({ register, name }) => (
   </Text>
 );
 
-Label.propTypes = {
+CheckAnswer.propTypes = {
   register: PropTypes.objectOf.isRequired,
   name: PropTypes.string.isRequired
 };
 
-export default Label;
+export default CheckAnswer;
