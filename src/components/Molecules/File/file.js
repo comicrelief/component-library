@@ -15,7 +15,7 @@ const Wrapper = styled.article`
   height: 100%;
   display: flex;
   background-color: ${({ theme }) => theme.color('white')};
-  border-radius: 1rem;
+  border-radius: ${spacing('md')};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 `;
 
@@ -67,7 +67,7 @@ const FileLink = styled(Link)`
   margin-left: auto;
   position: absolute;
   bottom: -15px;
-  right: 30px;
+  right: 20px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 
@@ -77,10 +77,12 @@ const FileLink = styled(Link)`
     height: 22px;
   }
 `;
+
 /**
  * File component
  */
-const File = ({ date, title, categoryIcon, tag, children }) => {
+const File = ({ date, title, categoryIcon, tag, children, file }) => {
+  const tagItems = tag.splice(0, 3).join(' ');
   return (
     <Wrapper>
       <CopyWrapper>
@@ -103,16 +105,19 @@ const File = ({ date, title, categoryIcon, tag, children }) => {
           {title}
         </Title>
         <Tag size="xs" weight="normal" color="grey" family="Montserrat">
-          {tag}
+          {tagItems}
         </Tag>
         <Body>{children}</Body>
         <FileLink
+          rel="noopener noreferrer"
           color="red"
-          href="#anchor"
+          href={file}
           target="blank"
           type="button"
           icon={<Download colour="white" />}
-        />
+        >
+          <span />
+        </FileLink>
       </CopyWrapper>
     </Wrapper>
   );
@@ -122,16 +127,15 @@ File.propTypes = {
   categoryIcon: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  tag: PropTypes.string,
+  // Array of 3 items
+  tag: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // Link url to the file
+  file: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string
   ]).isRequired
-};
-
-File.defaultProps = {
-  tag: null
 };
 
 export default File;
