@@ -147,17 +147,17 @@ const MarketingPreferences = () => {
         </Body>
       </div>
       <Text tag="p" color="black">
-        You can update your communication preferences at any time at{' '}
+        You can update your communication preferences at any time at
         <Link
           type="standard"
           href="https://www.comicrelief.com/update-your-preferences"
         >
           update your preferences
         </Link>
-        . Your details will be kept safe, check out our{' '}
+        . Your details will be kept safe, check out our
         <Link type="standard" href="https://www.comicrelief.com/privacy-policy">
           privacy policy
-        </Link>{' '}
+        </Link>
         for more details.
       </Text>
     </>
