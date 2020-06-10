@@ -91,3 +91,6 @@ export {
 export {
   default as SchoolLookup
 } from './components/Molecules/SchoolLookup/SchoolLookup';
+export {
+  default as Descriptor
+} from './components/Molecules/Descriptor/Descriptor';

@@ -70,6 +70,11 @@ const FileLink = styled(Link)`
   right: 20px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+  }
 
   span {
     margin-left: auto;
