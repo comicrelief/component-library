@@ -52,9 +52,6 @@ export {
   default as ArticleTeaser
 } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Organisms/Header/Header';
-export {
-  default as CookieBanner
-} from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Donate } from './components/Organisms/Donate/Donate';
 export {
   default as DoubleCopy
@@ -70,14 +67,8 @@ export {
   default as SearchInput
 } from './components/Molecules/SearchInput/SearchInput';
 export {
-  default as EmailSignUp
-} from './components/Organisms/EmailSignUp/EmailSignUp';
-export {
   default as ShareButton
 } from './components/Molecules/ShareButton/ShareButton';
-export {
-  default as Membership
-} from './components/Organisms/Membership/Membership';
 export {
   default as VideoBanner
 } from './components/Molecules/VideoBanner/VideoBanner';
@@ -91,3 +82,17 @@ export {
 export {
   default as SchoolLookup
 } from './components/Molecules/SchoolLookup/SchoolLookup';
+
+/* Organisms */
+export {
+  default as EmailSignUp
+} from './components/Organisms/EmailSignUp/EmailSignUp';
+export {
+  default as CookieBanner
+} from './components/Organisms/CookieBanner/CookieBanner';
+export {
+  default as Membership
+} from './components/Organisms/Membership/Membership';
+export {
+  default as MarketingPreferences
+} from './components/Organisms/MarketingPreferences/MarketingPreferences';
