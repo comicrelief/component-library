@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Descriptor from './Descriptor';
 
 it('renders article teaser correctly', () => {
-  const tag = ['tag1', 'tag2', 'tag2', 'tag2', 'tag2'];
+  const tag = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
