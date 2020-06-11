@@ -6,7 +6,13 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import MarketingPreferences from './MarketingPreferences';
 
-const methods = useForm();
+const data = {
+  mpEmailAddress: 'email@cr.com'
+};
+
+const methods = useForm({
+  defaultValues: data
+});
 
 const onSubmit = data => console.log(data);
 
@@ -40,7 +46,11 @@ const copyBottom = (
 
 <FormContext {...methods}>
   <form onSubmit={methods.handleSubmit(onSubmit)}>
-    <MarketingPreferences copyTop={copyTop} copyBottom={copyBottom} />
+    <MarketingPreferences
+      copyTop={copyTop}
+      copyBottom={copyBottom}
+      defaultValues={data}
+    />
     <input type="submit" />
   </form>
 </FormContext>;
