@@ -11,6 +11,11 @@ const CopyWrapper = styled.div`
 const Head = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  ${media('small')} {
+    width: 50%;
+    flex-direction: row;
+  }
 `;
 
 const Body = styled.div`
@@ -26,17 +31,25 @@ const Field = styled.div`
 `;
 
 const CheckContainer = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-bottom: ${spacing('l')};
   font-size: ${({ theme }) => theme.fontSize('md')};
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  ${media('small')} {
+    width: 50%;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
 `;
 
 const CheckLabel = styled.label`
   display: flex;
   align-items: center;
-  margin-left: ${spacing('l')};
+  ${media('small')} {
+    margin-left: ${spacing('l')};
+  }
 `;
 
 const CheckInput = styled.input`

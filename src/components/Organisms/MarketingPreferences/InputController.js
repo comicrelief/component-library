@@ -22,8 +22,8 @@ const InputController = ({ fieldName, label, control, errors, ...rest }) => {
 InputController.propTypes = {
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  errors: PropTypes.objectOf.isRequired,
-  control: PropTypes.objectOf.isRequired
+  errors: PropTypes.objectOf(PropTypes.shape).isRequired,
+  control: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 export default InputController;

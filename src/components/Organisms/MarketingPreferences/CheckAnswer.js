@@ -35,7 +35,7 @@ const CheckAnswer = ({ register, name }) => (
 );
 
 CheckAnswer.propTypes = {
-  register: PropTypes.objectOf.isRequired,
+  register: PropTypes.objectOf(PropTypes.shape).isRequired,
   name: PropTypes.string.isRequired
 };
 

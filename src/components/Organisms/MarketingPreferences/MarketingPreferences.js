@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
+import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import InputController from './InputController';
@@ -157,6 +158,16 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
   );
+};
+
+MarketingPreferences.propTypes = {
+  copyTop: PropTypes.node,
+  copyBottom: PropTypes.node
+};
+
+MarketingPreferences.defaultProps = {
+  copyTop: null,
+  copyBottom: null
 };
 
 export default MarketingPreferences;
