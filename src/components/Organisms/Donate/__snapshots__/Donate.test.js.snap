@@ -129,6 +129,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-weight: normal;
   border-radius: 10px;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
 }
 
 .c22 input:focus {
@@ -983,6 +984,7 @@ exports[`Single donation renders correctly 1`] = `
   font-weight: normal;
   border-radius: 10px;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
 }
 
 .c16 input:focus {
@@ -1008,6 +1010,7 @@ exports[`Single donation renders correctly 1`] = `
   font-weight: normal;
   border-radius: 10px;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
   background-color: #0565D1;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
   color: #FFFFFF;
