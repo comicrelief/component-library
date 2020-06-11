@@ -13,6 +13,17 @@ const onSubmit = data => console.log(data);
 <FormContext {...methods}>
   <form onSubmit={methods.handleSubmit(onSubmit)}>
     <MarketingPreferences
+      copyTop={
+        <div>
+          <Text tag="h3" size="xl" family="Anton" uppercase weight="400">
+            How would you like to hear from us?
+          </Text>
+          <Text tag="p" size="md">
+            Hear more about the project Comic Relief funds and other ways you
+            can support our work including fundraising, campaigns and products.
+          </Text>
+        </div>
+      }
       copyBottom={
         <Text tag="p" color="black">
           You can update your communication preferences at any time at

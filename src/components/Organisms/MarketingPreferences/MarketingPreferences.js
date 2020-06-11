@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import Text from '../../Atoms/Text/Text';
 import InputController from './InputController';
 import CheckAnswer from './CheckAnswer';
-import { Head, Body, Field } from './MarketingPreferences.style';
+import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 
 const MarketingPreferences = ({ copyTop, copyBottom }) => {
   const { control, errors, watch, register } = useFormContext();
@@ -17,7 +17,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
   return (
     <>
       <Field>
-        {copyTop && copyTop}
+        {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
@@ -154,7 +154,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
           )}
         </Body>
       </Field>
-      {copyBottom && copyBottom}
+      {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
   );
 };

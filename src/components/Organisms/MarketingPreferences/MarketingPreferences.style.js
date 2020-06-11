@@ -4,6 +4,10 @@ import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 import checkBoxIcon from './assets/checkbox-white-tick.png';
 
+const CopyWrapper = styled.div`
+  margin: ${spacing('l')} 0;
+`;
+
 const Head = styled.div`
   display: flex;
   justify-content: space-between;
@@ -69,4 +73,12 @@ const CheckInput = styled.input`
   }
 `;
 
-export { Head, Body, Field, CheckLabel, CheckInput, CheckContainer };
+export {
+  CopyWrapper,
+  Head,
+  Body,
+  Field,
+  CheckLabel,
+  CheckInput,
+  CheckContainer
+};
