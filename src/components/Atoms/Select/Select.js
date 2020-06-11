@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
+import ErrorText from '../ErrorText/ErrorText';
 import hideVisually from '../../../theme/shared/hideVisually';
 import dropDownIcon from './assets/drop-down-dark-purple.svg';
-import alertIcon from './assets/error-alert-icon.png';
 import spacing from '../../../theme/shared/spacing';
 
 const StyledSelect = styled.select`
@@ -48,30 +48,6 @@ const Label = styled.label`
 
 const LabelText = styled(Text)`
   ${({ hideLabel }) => hideLabel && hideVisually}
-`;
-
-/**
- * Text error component
- */
-const ErrorText = styled(Text)`
-  display: inline-block;
-  color: ${({ theme }) => theme.color('red')};
-  font-weight: ${({ weight }) => weight};
-  margin-top: ${({ theme }) => theme.fontSize('xxs')};
-  :before {
-    position: relative;
-    content: '';
-    display: inline-block;
-    top: 2px;
-    vertical-align: middle;
-    margin-right: 6px;
-    background: url(${alertIcon}) left 0/100% no-repeat;
-    width: 18px;
-    height: 19px;
-    display: inline-block;
-    vertical-align: top;
-    color: ${({ theme }) => theme.color('red')};
-  }
 `;
 
 const Select = ({

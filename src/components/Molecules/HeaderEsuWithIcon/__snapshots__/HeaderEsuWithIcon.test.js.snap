@@ -28,6 +28,25 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c17 {
+  display: inline-block;
+  color: #E52630;
+  margin-top: 0.5rem;
+}
+
+.c17:before {
+  position: relative;
+  content: '';
+  top: 2px;
+  margin-right: 6px;
+  background: url(mock.asset) left 0/100% no-repeat;
+  width: 18px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: top;
+  color: #E52630;
+}
+
 .c15 {
   font-weight: normal;
   position: relative;
@@ -78,25 +97,6 @@ exports[`renders correctly with error message 1`] = `
   flex-direction: column;
   font-weight: bold;
   color: #969598;
-}
-
-.c17 {
-  display: inline-block;
-  color: red;
-  margin-top: 0.5rem;
-}
-
-.c17:before {
-  position: relative;
-  content: '';
-  top: 2px;
-  margin-right: 6px;
-  background: url(mock.asset) left 0/100% no-repeat;
-  width: 18px;
-  height: 19px;
-  display: inline-block;
-  vertical-align: top;
-  color: #E52630;
 }
 
 .c14 {
