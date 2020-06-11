@@ -13,7 +13,6 @@ const Head = styled.div`
   justify-content: space-between;
   flex-direction: column;
   ${media('small')} {
-    width: 50%;
     flex-direction: row;
   }
 `;
@@ -28,6 +27,9 @@ const Body = styled.div`
 const Field = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
   margin-bottom: ${spacing('l')};
+  label {
+    margin-bottom: ${spacing('md')};
+  }
 `;
 
 const CheckContainer = styled.div`
