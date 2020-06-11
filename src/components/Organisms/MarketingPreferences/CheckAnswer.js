@@ -1,31 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Text from '../../Atoms/Text/Text';
+import {
+  CheckContainer,
+  CheckLabel,
+  CheckInput
+} from './MarketingPreferences.style';
 
 const CheckAnswer = ({ register, name }) => (
-  <Text>
-    <label htmlFor={`${name}-yes`}>
-      <input
+  <CheckContainer>
+    <CheckLabel htmlFor={`${name}-yes`}>
+      <CheckInput
         type="radio"
         name={name}
         id={`${name}-yes`}
         value="yes"
         ref={register}
       />
+      <span />
       Yes, please
-    </label>
-    <label htmlFor={`${name}-no`}>
-      <input
+    </CheckLabel>
+    <CheckLabel htmlFor={`${name}-no`}>
+      <CheckInput
         type="radio"
         id={`${name}-no`}
         name={name}
         value="no"
         ref={register}
       />
+      <span />
       No, thanks
-    </label>
-  </Text>
+    </CheckLabel>
+  </CheckContainer>
 );
 
 CheckAnswer.propTypes = {

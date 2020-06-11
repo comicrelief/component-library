@@ -2,12 +2,11 @@ import React from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import Text from '../../Atoms/Text/Text';
-import Link from '../../Atoms/Link/Link';
 import InputController from './InputController';
 import CheckAnswer from './CheckAnswer';
-import { Head, Body } from './MarketingPreferences.style';
+import { Head, Body, Field } from './MarketingPreferences.style';
 
-const MarketingPreferences = () => {
+const MarketingPreferences = ({ copyTop, copyBottom }) => {
   const { control, errors, watch, register } = useFormContext();
 
   const watchEmail = watch('email', 'no');
@@ -17,7 +16,8 @@ const MarketingPreferences = () => {
 
   return (
     <>
-      <div>
+      <Field>
+        {copyTop && copyTop}
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
@@ -32,7 +32,7 @@ const MarketingPreferences = () => {
           {watchEmail === 'yes' && (
             <InputController
               placeholder="Email Address"
-              fieldName="emailAddress"
+              fieldName="mpEmailAddress"
               label="Email Address"
               rules={{ required: 'This is required.' }}
               control={control}
@@ -40,8 +40,8 @@ const MarketingPreferences = () => {
             />
           )}
         </Body>
-      </div>
-      <div>
+      </Field>
+      <Field>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Post
@@ -57,7 +57,7 @@ const MarketingPreferences = () => {
             <>
               <InputController
                 placeholder="Address Line 1"
-                fieldName="address1"
+                fieldName="mpAddress1"
                 label="Address Line 1"
                 rules={{ required: 'This is required.' }}
                 control={control}
@@ -65,7 +65,7 @@ const MarketingPreferences = () => {
               />
               <InputController
                 placeholder="Address Line 2"
-                fieldName="address2"
+                fieldName="mpAddress2"
                 label="Address Line 2"
                 rules={{ required: 'This is required.' }}
                 control={control}
@@ -73,14 +73,14 @@ const MarketingPreferences = () => {
               />
               <InputController
                 placeholder="Address Line 3"
-                fieldName="address3"
+                fieldName="mpAddress3"
                 label="Address Line 3"
                 control={control}
                 errors={errors}
               />
               <InputController
                 placeholder="Town/City"
-                fieldName="townCity"
+                fieldName="mpTownCity"
                 label="Town/City"
                 rules={{ required: 'This is required.' }}
                 control={control}
@@ -88,7 +88,7 @@ const MarketingPreferences = () => {
               />
               <InputController
                 placeholder="Postcode"
-                fieldName="postcode"
+                fieldName="mpPostcode"
                 label="Postcode"
                 rules={{ required: 'This is required.' }}
                 control={control}
@@ -96,7 +96,7 @@ const MarketingPreferences = () => {
               />
               <InputController
                 placeholder="Country"
-                fieldName="country"
+                fieldName="mpCountry"
                 label="Country"
                 rules={{ required: 'This is required.' }}
                 control={control}
@@ -105,8 +105,8 @@ const MarketingPreferences = () => {
             </>
           )}
         </Body>
-      </div>
-      <div>
+      </Field>
+      <Field>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Phone
@@ -121,7 +121,7 @@ const MarketingPreferences = () => {
           {watchPhone === 'yes' && (
             <InputController
               placeholder="Phone Number"
-              fieldName="phone"
+              fieldName="mpPhone"
               label="Phone Number"
               rules={{ required: 'This is required.' }}
               control={control}
@@ -129,8 +129,8 @@ const MarketingPreferences = () => {
             />
           )}
         </Body>
-      </div>
-      <div>
+      </Field>
+      <Field>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
@@ -145,7 +145,7 @@ const MarketingPreferences = () => {
           {watchMobile === 'yes' && (
             <InputController
               placeholder="Mobile Number"
-              fieldName="mobile"
+              fieldName="mpMobile"
               label="Mobile Number"
               rules={{ required: 'This is required.' }}
               control={control}
@@ -153,21 +153,8 @@ const MarketingPreferences = () => {
             />
           )}
         </Body>
-      </div>
-      <Text tag="p" color="black">
-        You can update your communication preferences at any time at
-        <Link
-          type="standard"
-          href="https://www.comicrelief.com/update-your-preferences"
-        >
-          update your preferences
-        </Link>
-        . Your details will be kept safe, check out our
-        <Link type="standard" href="https://www.comicrelief.com/privacy-policy">
-          privacy policy
-        </Link>
-        for more details.
-      </Text>
+      </Field>
+      {copyBottom && copyBottom}
     </>
   );
 };
