@@ -55,7 +55,7 @@
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "cy:run": "export NODE_ENV=development; cypress run --headless --browser chrome",
     "cy:open": "export NODE_ENV=development; cypress open",
-    "feature-test": "run-p --race styleguide cy:run",
+    "feature-test": "run-p --race styleguide cy:open",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
