@@ -187,7 +187,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c11 {
-      display: block;
+      margin: 0 0 1rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

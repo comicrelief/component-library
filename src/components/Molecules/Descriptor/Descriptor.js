@@ -56,8 +56,8 @@ const Tag = styled(Text)`
   margin: 0 0 ${spacing('md')};
 `;
 
-const Body = styled.div`
-  display: block;
+const Description = styled.div`
+  margin: 0 0 ${spacing('md')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
 `;
 
@@ -112,7 +112,7 @@ const Descriptor = ({ date, title, categoryIcon, tags, children, file }) => {
         <Tag size="xs" weight="normal" color="grey" family="Montserrat">
           {tagItems}
         </Tag>
-        <Body>{children}</Body>
+        <Description>{children}</Description>
         <FileLink
           rel="noopener noreferrer"
           color="red"
