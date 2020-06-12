@@ -50,7 +50,8 @@ const SingleMessage = ({
     typeof navigator === 'object'
       ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
         !window.MSStream &&
-        (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform))
+        !!navigator.platform &&
+        /iPad|iPhone|iPod/.test(navigator.platform)
       : false;
 
   // Break-out video markup into its own function
