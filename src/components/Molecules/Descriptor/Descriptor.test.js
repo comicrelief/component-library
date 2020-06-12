@@ -23,8 +23,7 @@ it('renders article teaser correctly', () => {
     </Descriptor>
   ).toJSON();
 
-  expect(tree).toMatchInlineSnapshot(
-    `
+  expect(tree).toMatchInlineSnapshot(`
     .c3 {
       font-size: 0.75rem;
       line-height: 0.75rem;
@@ -207,9 +206,9 @@ it('renders article teaser correctly', () => {
 
     .c13:hover {
       box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-      -webkit-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-      transform: translateY(-4px);
+      -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+      transform: translateY(4px);
     }
 
     .c13 span {
@@ -310,6 +309,5 @@ it('renders article teaser correctly', () => {
         </a>
       </div>
     </article>
-  `
-  );
+  `);
 });
