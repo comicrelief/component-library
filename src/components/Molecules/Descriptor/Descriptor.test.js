@@ -4,7 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Descriptor from './Descriptor';
 
 it('renders article teaser correctly', () => {
-  const tags = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
+  const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
@@ -178,16 +178,17 @@ it('renders article teaser correctly', () => {
     }
 
     .c8 {
-      margin: 0 0 1rem;
+      margin: 0 0 1.5rem;
     }
 
     .c10 {
+      text-transform: uppercase;
       display: block;
       margin: 0 0 1rem;
     }
 
     .c11 {
-      margin: 0 0 1rem;
+      padding: 0 0 2rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -196,8 +197,8 @@ it('renders article teaser correctly', () => {
       height: 48px;
       margin-left: auto;
       position: absolute;
-      bottom: -15px;
-      right: 20px;
+      bottom: -20px;
+      right: 25px;
       border-radius: 24px;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
       -webkit-transition: all 0.2s;
@@ -266,7 +267,7 @@ it('renders article teaser correctly', () => {
           color="grey"
           size="xs"
         >
-          tag1 tag2 tag2
+          tag1 tag2 tag3
         </span>
         <div
           className="c11"

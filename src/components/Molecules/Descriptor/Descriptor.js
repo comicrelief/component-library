@@ -48,16 +48,17 @@ const Category = styled(Text)`
 `;
 
 const Title = styled(Text)`
-  margin: 0 0 ${spacing('md')};
+  margin: 0 0 ${spacing('m')};
 `;
 
 const Tag = styled(Text)`
+  text-transform: uppercase;
   display: block;
   margin: 0 0 ${spacing('md')};
 `;
 
 const Description = styled.div`
-  margin: 0 0 ${spacing('md')};
+  padding: 0 0 ${spacing('l')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
 `;
 
@@ -66,8 +67,8 @@ const FileLink = styled(Link)`
   height: 48px;
   margin-left: auto;
   position: absolute;
-  bottom: -15px;
-  right: 20px;
+  bottom: -20px;
+  right: 25px;
   border-radius: 24px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.2s;
