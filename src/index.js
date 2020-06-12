@@ -27,9 +27,6 @@ export { default as RichText } from './components/Atoms/RichText/RichText';
 export { default as Pagination } from './components/Atoms/Pagination/Pagination';
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
-export { default as Pagination } from './components/Atoms/Pagination/Pagination';
-export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
-export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 
 /* Molecules */
