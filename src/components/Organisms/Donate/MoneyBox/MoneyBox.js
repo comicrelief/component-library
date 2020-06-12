@@ -18,6 +18,7 @@ const MoneyBox = styled(Input)`
     border-radius: 10px;
     padding: ${spacing('s')};
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    height: auto;
     ${media('small')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
       padding: ${spacing('m')};

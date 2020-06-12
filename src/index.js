@@ -33,6 +33,7 @@ export {
 export {
   default as TextInputWithDropdown
 } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
+export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 
 /* Molecules */
 
