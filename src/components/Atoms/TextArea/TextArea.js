@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import alertIcon from './assets/error-alert-icon.png';
+import ErrorText from '../ErrorText/ErrorText';
 
 /**
  * Textarea component
@@ -70,28 +70,6 @@ const Label = styled.label.attrs(({ id }) => ({
 }))`
   display: flex;
   flex-direction: column;
-`;
-
-/**
- * Text error component
- */
-const ErrorText = styled(Text)`
-  color: red;
-  font-weight: ${({ weight }) => weight};
-  :before {
-    position: relative;
-    content: '';
-    display: inline-block;
-    top: 2px;
-    vertical-align: middle;
-    margin-right: 6px;
-    background: url(${alertIcon}) left 0/100% no-repeat;
-    width: 18px;
-    height: 19px;
-    display: inline-block;
-    vertical-align: top;
-    color: ${({ theme }) => theme.color('red')};
-  }
 `;
 
 const TextArea = ({ id, label, errorMsg, ...rest }) => {
