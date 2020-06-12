@@ -6,7 +6,7 @@ const tags = ['tag1', 'tag2', 'tag2', 'tag3', 'tag4'];
   title="Title"
   date="Date"
   tags={tags}
-  categoryIcon="Icon"
+  category="Icon"
   file="download"
 >
   Description go here...

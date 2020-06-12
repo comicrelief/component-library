@@ -19,7 +19,7 @@ const Wrapper = styled.article`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 `;
 
-const CopyWrapper = styled.div`
+const InnerWrapper = styled.div`
   position: relative;
   padding: ${spacing('l')};
   height: 100%;
@@ -40,7 +40,7 @@ const Date = styled(Text)`
   margin-bottom: ${spacing('md')};
 `;
 
-const CategoryIcon = styled(Text)`
+const Category = styled(Text)`
   font-size: ${({ theme }) => theme.fontSize('s')};
   display: block;
   color: ${({ theme: { color } }) => color('grey')};
@@ -86,18 +86,18 @@ const FileLink = styled(Link)`
 /**
  * File component
  */
-const Descriptor = ({ date, title, categoryIcon, tags, children, file }) => {
+const Descriptor = ({ date, title, category, tags, children, file }) => {
   const tagItems = tags.splice(0, 3).join(' ');
   return (
     <Wrapper>
-      <CopyWrapper>
+      <InnerWrapper>
         <Header>
           <Date size="xs" weight="bold" family="Montserrat">
             {date}
           </Date>
-          <CategoryIcon size="xs" weight="bold">
-            {categoryIcon}
-          </CategoryIcon>
+          <Category size="xs" weight="bold">
+            {category}
+          </Category>
         </Header>
         <Title
           size="xl"
@@ -123,13 +123,13 @@ const Descriptor = ({ date, title, categoryIcon, tags, children, file }) => {
         >
           <span />
         </FileLink>
-      </CopyWrapper>
+      </InnerWrapper>
     </Wrapper>
   );
 };
 
 Descriptor.propTypes = {
-  categoryIcon: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   // Array of 3 items

@@ -251,9 +251,7 @@ it('renders article teaser correctly', () => {
             className="c5 c6"
             color="inherit"
             size="xs"
-          >
-            Icon
-          </span>
+          />
         </div>
         <h3
           className="c7 c8"
