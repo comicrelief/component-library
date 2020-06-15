@@ -24,6 +24,8 @@ export { default as Input } from './components/Atoms/Input/Input';
 export { default as Select } from './components/Atoms/Select/Select';
 export { default as TextArea } from './components/Atoms/TextArea/TextArea';
 export { default as RichText } from './components/Atoms/RichText/RichText';
+export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
+
 export {
   default as Pagination
 } from './components/Atoms/Pagination/Pagination';
@@ -85,7 +87,6 @@ export {
 export {
   default as HeaderEsuWithIcon
 } from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
-export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export {
   default as Typeahead
 } from './components/Molecules/Typeahead/Typeahead';
