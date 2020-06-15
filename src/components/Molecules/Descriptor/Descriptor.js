@@ -7,10 +7,18 @@ import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Download from '../../Atoms/Icons/Download';
 
+import fundingIcon from './assets/CR_Funding.svg';
+import justiceIcon from './assets/CR_Justice.svg';
+import mentalHealthIcon from './assets/CR_MentalHealth.svg';
+import redShedcon from './assets/CR_RedShed.svg';
+import socialTechIcon from './assets/CR_SocialTech.svg';
+import sportIcon from './assets/CR_Sport.svg';
+
 /**
  * Article Teaser
  */
 const Wrapper = styled.article`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -20,7 +28,6 @@ const Wrapper = styled.article`
 `;
 
 const InnerWrapper = styled.div`
-  position: relative;
   padding: ${spacing('l')};
   height: 100%;
   display: flex;
@@ -29,23 +36,45 @@ const InnerWrapper = styled.div`
 `;
 
 const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: block;
 `;
 
 const Date = styled(Text)`
   font-size: ${({ theme }) => theme.fontSize('s')};
-  display: block;
+  display: inline-block;
   color: ${({ theme: { color } }) => color('grey')};
   margin-bottom: ${spacing('md')};
 `;
 
-const Category = styled(Text)`
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  display: block;
-  color: ${({ theme: { color } }) => color('grey')};
-  margin-bottom: ${spacing('md')};
+const Image = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  margin-top: ${spacing('md')};
+  margin-right: ${spacing('m')};
 `;
+
+const iconSwitcher = category => {
+  switch (category) {
+    case 'How we found':
+      return fundingIcon;
+    case 'Social tech':
+      return socialTechIcon;
+    case 'Red Shed':
+      return redShedcon;
+    case 'Global Mental Health Matters':
+      return mentalHealthIcon;
+    case 'Sport for Change':
+      return sportIcon;
+    case 'Gender Justice':
+      return justiceIcon;
+    default:
+      return fundingIcon;
+  }
+};
 
 const Title = styled(Text)`
   margin: 0 0 ${spacing('m')};
@@ -58,7 +87,7 @@ const Tag = styled(Text)`
 `;
 
 const Description = styled.div`
-  padding: 0 0 ${spacing('l')};
+  padding: 0 0 ${spacing('m')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
 `;
 
@@ -85,10 +114,12 @@ const FileLink = styled(Link)`
 `;
 
 /**
- * File component
+ * Descriptor component
  */
+
 const Descriptor = ({ date, title, category, tags, children, file }) => {
   const tagItems = tags.splice(0, 3).join(' ');
+
   return (
     <Wrapper>
       <InnerWrapper>
@@ -96,9 +127,7 @@ const Descriptor = ({ date, title, category, tags, children, file }) => {
           <Date size="xs" weight="bold" family="Montserrat">
             {date}
           </Date>
-          <Category size="xs" weight="bold">
-            {category}
-          </Category>
+          <Image src={iconSwitcher(category)} alt="" />
         </Header>
         <Title
           size="xl"

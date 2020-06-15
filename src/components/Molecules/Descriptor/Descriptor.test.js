@@ -10,7 +10,7 @@ it('renders article teaser correctly', () => {
       title="Title"
       date="Date"
       tags={tags}
-      categoryIcon="Icon"
+      category="How we found"
       file="download"
     >
       Description go here...
@@ -33,16 +33,7 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c5 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      text-transform: inherit;
-      font-weight: bold;
-      line-height: normal;
-      font-family: inherit;
-    }
-
-    .c7 {
+    .c6 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -55,7 +46,7 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0.03rem;
     }
 
-    .c9 {
+    .c8 {
       color: #969598;
       font-size: 0.75rem;
       line-height: 0.75rem;
@@ -65,7 +56,7 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c15 {
+    .c14 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -77,7 +68,7 @@ it('renders article teaser correctly', () => {
       right: 1.5rem;
     }
 
-    .c12 {
+    .c11 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -106,12 +97,12 @@ it('renders article teaser correctly', () => {
       color: #FFFFFF;
     }
 
-    .c12:hover {
+    .c11:hover {
       background-color: #890B11;
       color: #FFFFFF;
     }
 
-    .c14 {
+    .c13 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -127,6 +118,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c0 {
+      position: relative;
       width: 100%;
       height: 100%;
       display: -webkit-box;
@@ -139,7 +131,6 @@ it('renders article teaser correctly', () => {
     }
 
     .c1 {
-      position: relative;
       padding: 2rem;
       height: 100%;
       display: -webkit-box;
@@ -153,46 +144,43 @@ it('renders article teaser correctly', () => {
     }
 
     .c2 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      display: block;
     }
 
     .c4 {
       font-size: 1rem;
-      display: block;
+      display: inline-block;
       color: #969598;
       margin-bottom: 1rem;
     }
 
-    .c6 {
-      font-size: 1rem;
-      display: block;
-      color: #969598;
-      margin-bottom: 1rem;
+    .c5 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
+      width: 24px;
+      height: 24px;
+      margin-top: 1rem;
+      margin-right: 1.5rem;
     }
 
-    .c8 {
+    .c7 {
       margin: 0 0 1.5rem;
     }
 
-    .c10 {
+    .c9 {
       text-transform: uppercase;
       display: block;
       margin: 0 0 1rem;
     }
 
-    .c11 {
-      padding: 0 0 2rem;
+    .c10 {
+      padding: 0 0 1.5rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c13 {
+    .c12 {
       width: 48px;
       height: 48px;
       margin-left: auto;
@@ -205,21 +193,21 @@ it('renders article teaser correctly', () => {
       transition: all 0.2s;
     }
 
-    .c13:hover {
+    .c12:hover {
       box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
       -webkit-transform: translateY(4px);
       -ms-transform: translateY(4px);
       transform: translateY(4px);
     }
 
-    .c13 span {
+    .c12 span {
       margin-left: auto;
       width: 20px;
       height: 22px;
     }
 
     @media (min-width:740px) {
-      .c15 {
+      .c14 {
         width: auto;
         right: auto;
         position: relative;
@@ -227,7 +215,7 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c12 {
+      .c11 {
         width: auto;
       }
     }
@@ -248,14 +236,14 @@ it('renders article teaser correctly', () => {
           >
             Date
           </span>
-          <span
-            className="c5 c6"
-            color="inherit"
-            size="xs"
+          <img
+            alt=""
+            className="c5"
+            src="mock.asset"
           />
         </div>
         <h3
-          className="c7 c8"
+          className="c6 c7"
           color="inherit"
           height="2rem"
           size="xl"
@@ -263,21 +251,21 @@ it('renders article teaser correctly', () => {
           Title
         </h3>
         <span
-          className="c9 c10"
+          className="c8 c9"
           color="grey"
           size="xs"
         >
           tag1 tag2 tag3
         </span>
         <div
-          className="c11"
+          className="c10"
         >
           Description go here...
           <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </div>
         <a
-          className="c12 c13"
+          className="c11 c12"
           color="red"
           href="download"
           rel="noopener noreferrer"
@@ -286,12 +274,12 @@ it('renders article teaser correctly', () => {
         >
           <span />
           <span
-            className="c14"
+            className="c13"
           >
             (opens in new window)
           </span>
           <span
-            className="c15"
+            className="c14"
           >
             <svg
               fill="#FFFFFF"
