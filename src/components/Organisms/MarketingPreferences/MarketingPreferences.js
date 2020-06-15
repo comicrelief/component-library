@@ -10,10 +10,10 @@ import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
   const { control, errors, watch, register } = useFormContext();
 
-  const watchEmail = watch(`${fieldPrefix}permissionEmail`, 'no');
-  const watchAddress = watch(`${fieldPrefix}permissionPost`, 'no');
-  const watchPhone = watch(`${fieldPrefix}permissionPhone`, 'no');
-  const watchMobile = watch(`${fieldPrefix}permissionSMS`, 'no');
+  const watchEmail = watch(`${fieldPrefix}permissionEmail`, '');
+  const watchAddress = watch(`${fieldPrefix}permissionPost`, '');
+  const watchPhone = watch(`${fieldPrefix}permissionPhone`, '');
+  const watchMobile = watch(`${fieldPrefix}permissionSMS`, '');
 
   return (
     <>
@@ -33,7 +33,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchEmail === 'yes' && (
+          {watchEmail !== '' && (
             <InputController
               placeholder="Email Address"
               fieldName={`${fieldPrefix}email`}
@@ -60,7 +60,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchAddress === 'yes' && (
+          {watchAddress !== '' && (
             <>
               <InputController
                 placeholder="Address Line 1"
@@ -127,7 +127,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchPhone === 'yes' && (
+          {watchPhone !== '' && (
             <InputController
               placeholder="Phone Number"
               fieldName={`${fieldPrefix}phone`}
@@ -154,7 +154,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchMobile === 'yes' && (
+          {watchMobile !== '' && (
             <InputController
               placeholder="Mobile Number"
               fieldName={`${fieldPrefix}mobile`}
