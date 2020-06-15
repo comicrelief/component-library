@@ -48,9 +48,9 @@ const Date = styled(Text)`
 
 const Image = styled.img`
   position: absolute;
+  object-fit: cover;
   top: 0;
   right: 0;
-  object-fit: cover;
   width: 24px;
   height: 24px;
   margin-top: ${spacing('md')};
