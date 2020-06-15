@@ -10,10 +10,10 @@ import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 const MarketingPreferences = ({ copyTop, copyBottom }) => {
   const { control, errors, watch, register } = useFormContext();
 
-  const watchEmail = watch('email', 'no');
-  const watchAddress = watch('address', 'no');
-  const watchPhone = watch('telephone', 'no');
-  const watchMobile = watch('mobilePhone', 'no');
+  const watchEmail = watch('mpEmail', 'no');
+  const watchAddress = watch('mpAddress', 'no');
+  const watchPhone = watch('mpTelephone', 'no');
+  const watchMobile = watch('mpMobilePhone', 'no');
 
   return (
     <>
@@ -23,7 +23,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
           </Text>
-          <CheckAnswer name="email" register={register} />
+          <CheckAnswer name="mpEmail" register={register} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -47,7 +47,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Post
           </Text>
-          <CheckAnswer name="address" register={register} />
+          <CheckAnswer name="mpAddress" register={register} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -68,7 +68,6 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
                 placeholder="Address Line 2"
                 fieldName="mpAddress2"
                 label="Address Line 2"
-                rules={{ required: 'This is required.' }}
                 control={control}
                 errors={errors}
               />
@@ -112,7 +111,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Phone
           </Text>
-          <CheckAnswer name="telephone" register={register} />
+          <CheckAnswer name="mpTelephone" register={register} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -136,7 +135,7 @@ const MarketingPreferences = ({ copyTop, copyBottom }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
           </Text>
-          <CheckAnswer name="mobilePhone" register={register} />
+          <CheckAnswer name="mpMobilePhone" register={register} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
