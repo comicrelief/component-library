@@ -61,7 +61,7 @@ const iconSwitcher = category => {
   switch (category) {
     case 'How we found':
       return fundingIcon;
-    case 'Social tech':
+    case 'Social Tech':
       return socialTechIcon;
     case 'Red Shed':
       return redShedcon;

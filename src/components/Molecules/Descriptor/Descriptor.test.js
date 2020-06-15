@@ -156,9 +156,9 @@ it('renders article teaser correctly', () => {
 
     .c5 {
       position: absolute;
+      object-fit: cover;
       top: 0;
       right: 0;
-      object-fit: cover;
       width: 24px;
       height: 24px;
       margin-top: 1rem;
