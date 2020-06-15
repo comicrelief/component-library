@@ -159,7 +159,9 @@ const Descriptor = ({ date, title, category, tags, children, file }) => {
 };
 
 Descriptor.propTypes = {
-  category: PropTypes.string.isRequired,
+  category: PropTypes.oneOf(
+    'How we found, Social Tech, Red Shed, Sport for Change, Global Mental Health Matters, Gender Justice'
+  ).isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   // Array of 3 items
