@@ -3,12 +3,13 @@ import { useFormContext } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
+import Button from '../../Atoms/Button/Button';
 import InputController from './InputController';
 import CheckAnswer from './CheckAnswer';
 import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 
 const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
-  const { control, errors, watch, register } = useFormContext();
+  const { control, errors, watch, register, reset } = useFormContext();
 
   const watchEmail = watch(`${fieldPrefix}permissionEmail`, '');
   const watchAddress = watch(`${fieldPrefix}permissionPost`, '');
@@ -26,6 +27,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <CheckAnswer
             name={`${fieldPrefix}permissionEmail`}
             register={register}
+            control={control}
           />
         </Head>
         <Body>
@@ -166,6 +168,9 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           )}
         </Body>
       </Field>
+      <Button color="grey_light" type="button" onClick={() => reset()}>
+        <Text>Reset All</Text>
+      </Button>
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
   );
