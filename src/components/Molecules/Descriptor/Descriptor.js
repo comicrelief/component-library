@@ -6,7 +6,6 @@ import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Download from '../../Atoms/Icons/Download';
-
 import fundingIcon from './assets/CR_Funding.svg';
 import justiceIcon from './assets/CR_Justice.svg';
 import mentalHealthIcon from './assets/CR_MentalHealth.svg';
@@ -53,12 +52,16 @@ const Image = styled.img`
   right: 0;
   width: 24px;
   height: 24px;
+  margin-right: ${spacing('md')};
   margin-top: ${spacing('md')};
-  margin-right: ${spacing('m')};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-right: ${spacing('m')};
+  }
 `;
 
 const iconSwitcher = category => {
-  switch (category) {
+  switch (category.trim()) {
     case 'How we found':
       return fundingIcon;
     case 'Social Tech':
@@ -127,7 +130,7 @@ const Descriptor = ({ date, title, category, tags, children, file }) => {
           <Date size="xs" weight="bold" family="Montserrat">
             {date}
           </Date>
-          <Image src={iconSwitcher(category)} alt="" />
+          <Image src={iconSwitcher(category)} alt={category} />
         </Header>
         <Title
           size="xl"
@@ -159,9 +162,12 @@ const Descriptor = ({ date, title, category, tags, children, file }) => {
 };
 
 Descriptor.propTypes = {
-  category: PropTypes.oneOf(
-    'How we found, Social Tech, Red Shed, Sport for Change, Global Mental Health Matters, Gender Justice'
-  ).isRequired,
+  category: PropTypes.oneOf([
+    'How we found, Social Tech, Red Shed',
+    'Sport for Change',
+    'Global Mental Health Matters',
+    'Gender Justice'
+  ]).isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   // Array of 3 items

@@ -161,8 +161,8 @@ it('renders article teaser correctly', () => {
       right: 0;
       width: 24px;
       height: 24px;
+      margin-right: 1rem;
       margin-top: 1rem;
-      margin-right: 1.5rem;
     }
 
     .c7 {
@@ -220,6 +220,12 @@ it('renders article teaser correctly', () => {
       }
     }
 
+    @media (min-width:740px) {
+      .c5 {
+        margin-right: 1.5rem;
+      }
+    }
+
     <article
       className="c0"
     >
@@ -237,7 +243,7 @@ it('renders article teaser correctly', () => {
             Date
           </span>
           <img
-            alt=""
+            alt="How we found"
             className="c5"
             src="mock.asset"
           />
