@@ -56,67 +56,6 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c14 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      margin-left: 1rem;
-      -webkit-align-self: center;
-      -ms-flex-item-align: center;
-      align-self: center;
-      right: 1.5rem;
-    }
-
-    .c11 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      position: relative;
-      padding: 0.5rem 1.25rem;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      height: 3.125rem;
-      width: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      cursor: pointer;
-      background-color: #E52630;
-      color: #FFFFFF;
-    }
-
-    .c11:hover {
-      background-color: #890B11;
-      color: #FFFFFF;
-    }
-
-    .c13 {
-      border: 0;
-      -webkit-clip: rect(0 0 0 0);
-      clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(50%);
-      clip-path: inset(50%);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-
     .c0 {
       position: relative;
       width: 100%;
@@ -161,8 +100,8 @@ it('renders article teaser correctly', () => {
       right: 0;
       width: 24px;
       height: 24px;
-      margin-right: 1rem;
-      margin-top: 1rem;
+      margin-right: 2rem;
+      margin-top: 1.5rem;
     }
 
     .c7 {
@@ -178,52 +117,6 @@ it('renders article teaser correctly', () => {
     .c10 {
       padding: 0 0 1.5rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
-    .c12 {
-      width: 48px;
-      height: 48px;
-      margin-left: auto;
-      position: absolute;
-      bottom: -20px;
-      right: 25px;
-      border-radius: 24px;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-    }
-
-    .c12:hover {
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-      -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-      transform: translateY(4px);
-    }
-
-    .c12 span {
-      margin-left: auto;
-      width: 20px;
-      height: 22px;
-    }
-
-    @media (min-width:740px) {
-      .c14 {
-        width: auto;
-        right: auto;
-        position: relative;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c11 {
-        width: auto;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c5 {
-        margin-right: 1.5rem;
-      }
     }
 
     <article
@@ -270,36 +163,6 @@ it('renders article teaser correctly', () => {
           <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </div>
-        <a
-          className="c11 c12"
-          color="red"
-          href="download"
-          rel="noopener noreferrer"
-          target="_blank"
-          type="button"
-        >
-          <span />
-          <span
-            className="c13"
-          >
-            (opens in new window)
-          </span>
-          <span
-            className="c14"
-          >
-            <svg
-              fill="#FFFFFF"
-              heiht={24}
-              viewBox="0 0 96 96"
-              width={24}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.171 38.829a4 4 0 015.657-5.657L44 54.343V8a4 4 0 018 0v46.343l21.172-21.172a4 4 0 115.656 5.657l-28 28-.005.004a3.976 3.976 0 01-.604.493c-.101.068-.211.115-.317.172-.123.067-.241.141-.372.195-.133.055-.273.087-.41.127-.113.033-.22.077-.337.1a3.89 3.89 0 01-1.566.002c-.116-.023-.224-.067-.336-.1-.138-.04-.277-.072-.411-.128-.13-.054-.248-.128-.37-.195-.106-.058-.216-.105-.318-.173a4.037 4.037 0 01-.604-.493l-.005-.004-28.002-27.999zM84 68a4 4 0 00-4 4v12H16V72a4 4 0 00-8 0v16a4 4 0 004 4h72a4 4 0 004-4V72a4 4 0 00-4-4z"
-              />
-            </svg>
-          </span>
-        </a>
       </div>
     </article>
   `);

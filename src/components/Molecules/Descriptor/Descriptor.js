@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import Link from '../../Atoms/Link/Link';
-import Download from '../../Atoms/Icons/Download';
 import fundingIcon from './assets/CR_Funding.svg';
 import justiceIcon from './assets/CR_Justice.svg';
 import mentalHealthIcon from './assets/CR_MentalHealth.svg';
@@ -52,12 +50,8 @@ const Image = styled.img`
   right: 0;
   width: 24px;
   height: 24px;
-  margin-right: ${spacing('md')};
-  margin-top: ${spacing('md')};
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-right: ${spacing('m')};
-  }
+  margin-right: ${spacing('l')};
+  margin-top: ${spacing('m')};
 `;
 
 const iconSwitcher = category => {
@@ -94,33 +88,11 @@ const Description = styled.div`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
 `;
 
-const FileLink = styled(Link)`
-  width: 48px;
-  height: 48px;
-  margin-left: auto;
-  position: absolute;
-  bottom: -20px;
-  right: 25px;
-  border-radius: 24px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s;
-  &:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(4px);
-  }
-
-  span {
-    margin-left: auto;
-    width: 20px;
-    height: 22px;
-  }
-`;
-
 /**
  * Descriptor component
  */
 
-const Descriptor = ({ date, title, category, tags, children, file }) => {
+const Descriptor = ({ date, title, category, tags, children }) => {
   const tagItems = tags.splice(0, 3).join(' ');
 
   return (
@@ -146,16 +118,6 @@ const Descriptor = ({ date, title, category, tags, children, file }) => {
           {tagItems}
         </Tag>
         <Description>{children}</Description>
-        <FileLink
-          rel="noopener noreferrer"
-          color="red"
-          href={file}
-          target="blank"
-          type="button"
-          icon={<Download colour="white" />}
-        >
-          <span />
-        </FileLink>
       </InnerWrapper>
     </Wrapper>
   );
@@ -172,8 +134,6 @@ Descriptor.propTypes = {
   title: PropTypes.string.isRequired,
   // Array of 3 items
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  // Link url to the file
-  file: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

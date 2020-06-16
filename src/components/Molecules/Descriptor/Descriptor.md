@@ -2,13 +2,7 @@
 
 ```js
 const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
-<Descriptor
-  title="Title"
-  date="Date"
-  tags={tags}
-  category="How we found"
-  file="download"
->
+<Descriptor title="Title" date="Date" tags={tags} category="How we found">
   Description go here...
   <br />
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
