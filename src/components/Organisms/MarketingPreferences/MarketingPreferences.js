@@ -1,22 +1,32 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+// import Button from '../../Atoms/Button/Button';
 import Text from '../../Atoms/Text/Text';
-import Button from '../../Atoms/Button/Button';
 import InputController from './InputController';
 import CheckAnswer from './CheckAnswer';
 import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 
+// inputs should remain in the dom whether or not they are displayed,
+//  otherwise you get unpredictable behaviour from react-hook-form APIs.
+const ShowHide = styled.div`
+  display: ${({ show }) => (show ? 'block' : 'none')};
+`;
+
+// Note: this component uses a mix of controlled and uncontrolled inputs.
+// (This is due to react-hook-form's Controller component not seeming to work as expected
+//  with radio buttons.)
+// todo: more investigation of this.
 const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
-  const { control, errors, watch, register, reset } = useFormContext();
+  const { control, errors, watch, register } = useFormContext();
+  const prefixName = name => fieldPrefix + name;
 
-  const watchEmail = watch(`${fieldPrefix}permissionEmail`, '');
-  const watchAddress = watch(`${fieldPrefix}permissionPost`, '');
-  const watchPhone = watch(`${fieldPrefix}permissionPhone`, '');
-  const watchMobile = watch(`${fieldPrefix}permissionSMS`, '');
-
-  console.log(watchEmail);
+  const watchEmail = watch(prefixName('permissionEmail'), '');
+  const watchAddress = watch(prefixName('permissionPost'), '');
+  const watchPhone = watch(prefixName('permissionPhone'), '');
+  const watchMobile = watch(prefixName('permissionSMS'), '');
 
   return (
     <>
@@ -27,9 +37,8 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             Email
           </Text>
           <CheckAnswer
-            name={`${fieldPrefix}permissionEmail`}
+            name={prefixName('permissionEmail')}
             register={register}
-            control={control}
           />
         </Head>
         <Body>
@@ -37,31 +46,20 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchEmail === 'yes' ? (
-            <InputController
-              placeholder="Email Address"
-              fieldName={`${fieldPrefix}email`}
-              label="Email Address"
-              rules={{ required: 'This is required.' }}
-              control={control}
-              errors={errors}
-            />
-          ) : null}
-          {watchEmail === 'no' ? (
-            <>
+          <ShowHide show={watchEmail}>
+            {watchEmail === 'no' && (
               <Text tag="p" size="s">
                 Enter email you wish us to remove from our list
               </Text>
-              <InputController
-                placeholder="Email Address"
-                fieldName={`${fieldPrefix}email`}
-                label="Email Address"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-            </>
-          ) : null}
+            )}
+            <InputController
+              placeholder="Email Address"
+              fieldName={prefixName('email')}
+              label="Email Address"
+              control={control}
+              errors={errors}
+            />
+          </ShowHide>
         </Body>
       </Field>
       <Field>
@@ -70,7 +68,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             Post
           </Text>
           <CheckAnswer
-            name={`${fieldPrefix}permissionPost`}
+            name={prefixName('permissionPost')}
             register={register}
           />
         </Head>
@@ -79,56 +77,50 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchAddress !== '' && (
-            <>
-              <InputController
-                placeholder="Address Line 1"
-                fieldName={`${fieldPrefix}address1`}
-                label="Address Line 1"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-              <InputController
-                placeholder="Address Line 2"
-                fieldName={`${fieldPrefix}address2`}
-                label="Address Line 2"
-                control={control}
-                errors={errors}
-              />
-              <InputController
-                placeholder="Address Line 3"
-                fieldName={`${fieldPrefix}address3`}
-                label="Address Line 3"
-                control={control}
-                errors={errors}
-              />
-              <InputController
-                placeholder="Town/City"
-                fieldName={`${fieldPrefix}town`}
-                label="Town/City"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-              <InputController
-                placeholder="Postcode"
-                fieldName={`${fieldPrefix}postcode`}
-                label="Postcode"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-              <InputController
-                placeholder="Country"
-                fieldName={`${fieldPrefix}country`}
-                label="Country"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-            </>
-          )}
+          <ShowHide show={watchAddress}>
+            <InputController
+              placeholder="Address Line 1"
+              fieldName={prefixName('address1')}
+              label="Address Line 1"
+              control={control}
+              errors={errors}
+            />
+            <InputController
+              placeholder="Address Line 2"
+              fieldName={prefixName('address2')}
+              label="Address Line 2"
+              control={control}
+              errors={errors}
+            />
+            <InputController
+              placeholder="Address Line 3"
+              fieldName={prefixName('address3')}
+              label="Address Line 3"
+              control={control}
+              errors={errors}
+            />
+            <InputController
+              placeholder="Town/City"
+              fieldName={prefixName('town')}
+              label="Town/City"
+              control={control}
+              errors={errors}
+            />
+            <InputController
+              placeholder="Postcode"
+              fieldName={prefixName('postcode')}
+              label="Postcode"
+              control={control}
+              errors={errors}
+            />
+            <InputController
+              placeholder="Country"
+              fieldName={prefixName('country')}
+              label="Country"
+              control={control}
+              errors={errors}
+            />
+          </ShowHide>
         </Body>
       </Field>
       <Field>
@@ -137,7 +129,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             Phone
           </Text>
           <CheckAnswer
-            name={`${fieldPrefix}permissionPhone`}
+            name={prefixName('permissionPhone')}
             register={register}
           />
         </Head>
@@ -146,16 +138,15 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchPhone !== '' && (
+          <ShowHide show={watchPhone}>
             <InputController
               placeholder="Phone Number"
-              fieldName={`${fieldPrefix}phone`}
+              fieldName={prefixName('phone')}
               label="Phone Number"
-              rules={{ required: 'This is required.' }}
               control={control}
               errors={errors}
             />
-          )}
+          </ShowHide>
         </Body>
       </Field>
       <Field>
@@ -163,35 +154,35 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
           </Text>
-          <CheckAnswer
-            name={`${fieldPrefix}permissionSMS`}
-            register={register}
-          />
+          <CheckAnswer name={prefixName('permissionSMS')} register={register} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchMobile !== '' && (
+          <ShowHide show={watchMobile}>
             <InputController
               placeholder="Mobile Number"
-              fieldName={`${fieldPrefix}mobile`}
+              fieldName={prefixName('mobile')}
               label="Mobile Number"
-              rules={{ required: 'This is required.' }}
               control={control}
               errors={errors}
             />
-          )}
+          </ShowHide>
         </Body>
       </Field>
-      <Button color="grey_light" type="button" onClick={() => reset()}>
-        <Text>Reset marketing preferences</Text>
-      </Button>
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
   );
 };
+
+// todo
+// const ResetButton = ({onClick}) => (
+//   <Button color="grey_light" type="button" onClick={onClick}>
+//     <Text>Reset marketing preferences</Text>
+//   </Button>
+// );
 
 MarketingPreferences.propTypes = {
   copyTop: PropTypes.node,
