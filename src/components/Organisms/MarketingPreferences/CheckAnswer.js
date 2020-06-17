@@ -9,7 +9,9 @@ import {
 } from './MarketingPreferences.style';
 
 const CheckAnswer = ({ name }) => {
-  const { control } = useFormContext();
+  const { control, watch } = useFormContext();
+  const value = watch(name, '');
+
   return (
     <CheckContainer>
       <CheckLabel htmlFor={`${name}-yes`}>
@@ -21,6 +23,7 @@ const CheckAnswer = ({ name }) => {
           value="yes"
           valueName="selected"
           control={control}
+          checked={value === 'yes'}
         />
         <span />
         Yes, please
@@ -34,6 +37,7 @@ const CheckAnswer = ({ name }) => {
           value="no"
           valueName="selected"
           control={control}
+          checked={value === 'no'}
         />
         <span />
         No, thanks
