@@ -56,7 +56,7 @@ const Image = styled.img`
   object-fit: cover;
   width: 24px;
   height: 24px;
-  margin-right: 5px;
+  margin-right: 8px;
 `;
 
 const iconSwitcher = category => {

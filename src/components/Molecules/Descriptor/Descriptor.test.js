@@ -9,7 +9,7 @@ it('renders article teaser correctly', () => {
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
-      date="15th June 2020"
+      date="15/06/2020"
       tags={tags}
       categories={categories}
     >
@@ -109,7 +109,7 @@ it('renders article teaser correctly', () => {
       object-fit: cover;
       width: 24px;
       height: 24px;
-      margin-right: 5px;
+      margin-right: 8px;
     }
 
     .c8 {
@@ -141,7 +141,7 @@ it('renders article teaser correctly', () => {
             color="inherit"
             size="xs"
           >
-            15th June 2020
+            15/06/2020
           </span>
           <div
             className="c5"
