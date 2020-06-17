@@ -38,18 +38,17 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             marketing material from Comic Relief brand.
           </Text>
           {watchEmail === 'yes' ? (
-            <div>
-              <InputController
-                placeholder="Email Address"
-                fieldName={`${fieldPrefix}email`}
-                label="Email Address"
-                rules={{ required: 'This is required.' }}
-                control={control}
-                errors={errors}
-              />
-            </div>
-          ) : (
-            <div>
+            <InputController
+              placeholder="Email Address"
+              fieldName={`${fieldPrefix}email`}
+              label="Email Address"
+              rules={{ required: 'This is required.' }}
+              control={control}
+              errors={errors}
+            />
+          ) : null}
+          {watchEmail === 'no' ? (
+            <>
               <Text tag="p" size="s">
                 Enter email you wish us to remove from our list
               </Text>
@@ -61,8 +60,8 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
                 control={control}
                 errors={errors}
               />
-            </div>
-          )}
+            </>
+          ) : null}
         </Body>
       </Field>
       <Field>
@@ -186,8 +185,21 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           )}
         </Body>
       </Field>
-      <Button color="grey_light" type="button" onClick={() => reset()}>
-        <Text>Reset All</Text>
+      <Button
+        color="grey_light"
+        type="button"
+        onClick={() =>
+          reset({
+            fieldName: [
+              `${fieldPrefix}permissionEmail`,
+              `${fieldPrefix}email`,
+              `${fieldPrefix}phone`,
+              `${fieldPrefix}mobile`
+            ]
+          })
+        }
+      >
+        <Text>Reset marketing preferences</Text>
       </Button>
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
