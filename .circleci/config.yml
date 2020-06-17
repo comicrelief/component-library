@@ -6,7 +6,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: node:11
+
+      # See https://github.com/cypress-io/cypress-docker-images
+      - image: cypress/browsers:node13.8.0-chrome81-ff75
+        environment:
+          TERM: xterm
 
     working_directory: ~/repo
 
@@ -23,11 +27,12 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
+            - /root/.cache/Cypress
 
       # run tests!
       - run:
           name: Test Code Style
-          command: yarn eslint src
+          command: yarn lint
 
       - run:
           name: Run unit tests
@@ -36,3 +41,13 @@ jobs:
       - run:
           name: Release to npm
           command: yarn semantic-release
+
+      - run:
+          name: Run feature tests
+          command: yarn feature-test
+
+      - store_artifacts:
+          path: cypress/videos
+
+      - store_artifacts:
+          path: cypress/screenshots

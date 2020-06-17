@@ -7,6 +7,7 @@
   "jest": {
     "verbose": true,
     "testPathIgnorePatterns": [
+      "<rootDir>/cypress/",
       "<rootDir>/dist/",
       "<rootDir>/node_modules/"
     ],
@@ -54,7 +55,12 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "cy:run": "export NODE_ENV=development; cypress run --headless --browser chrome",
+    "cy:open": "export NODE_ENV=development; cypress open",
+    "feature-test": "run-p --race styleguide cy:run",
+    "lint": "eslint src",
+    "lint-fix": "yarn lint --fix"
   },
   "browserslist": {
     "production": [
@@ -70,6 +76,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
+    "cypress": "^4.7.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
@@ -82,6 +89,7 @@
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
     "lint-staged": "^9.4.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "semantic-release": "^15.13.17"
   }
