@@ -92,7 +92,7 @@ const Tag = styled(Text)`
 `;
 
 const Description = styled.div`
-  padding: 0 0 ${spacing('m')};
+  padding: 0 0 ${spacing('l')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
 `;
 
