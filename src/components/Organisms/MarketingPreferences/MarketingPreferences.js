@@ -15,12 +15,8 @@ const ShowHide = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
 `;
 
-// Note: this component uses a mix of controlled and uncontrolled inputs.
-// (This is due to react-hook-form's Controller component not seeming to work as expected
-//  with radio buttons.)
-// todo: more investigation of this.
 const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
-  const { control, errors, watch, register } = useFormContext();
+  const { watch } = useFormContext();
   const prefixName = name => fieldPrefix + name;
 
   const watchEmail = watch(prefixName('permissionEmail'), '');
@@ -36,10 +32,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
           </Text>
-          <CheckAnswer
-            name={prefixName('permissionEmail')}
-            register={register}
-          />
+          <CheckAnswer name={prefixName('permissionEmail')} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -56,8 +49,6 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
               placeholder="Email Address"
               fieldName={prefixName('email')}
               label="Email Address"
-              control={control}
-              errors={errors}
             />
           </ShowHide>
         </Body>
@@ -67,10 +58,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Post
           </Text>
-          <CheckAnswer
-            name={prefixName('permissionPost')}
-            register={register}
-          />
+          <CheckAnswer name={prefixName('permissionPost')} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -82,43 +70,31 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
               placeholder="Address Line 1"
               fieldName={prefixName('address1')}
               label="Address Line 1"
-              control={control}
-              errors={errors}
             />
             <InputController
               placeholder="Address Line 2"
               fieldName={prefixName('address2')}
               label="Address Line 2"
-              control={control}
-              errors={errors}
             />
             <InputController
               placeholder="Address Line 3"
               fieldName={prefixName('address3')}
               label="Address Line 3"
-              control={control}
-              errors={errors}
             />
             <InputController
               placeholder="Town/City"
               fieldName={prefixName('town')}
               label="Town/City"
-              control={control}
-              errors={errors}
             />
             <InputController
               placeholder="Postcode"
               fieldName={prefixName('postcode')}
               label="Postcode"
-              control={control}
-              errors={errors}
             />
             <InputController
               placeholder="Country"
               fieldName={prefixName('country')}
               label="Country"
-              control={control}
-              errors={errors}
             />
           </ShowHide>
         </Body>
@@ -128,10 +104,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Phone
           </Text>
-          <CheckAnswer
-            name={prefixName('permissionPhone')}
-            register={register}
-          />
+          <CheckAnswer name={prefixName('permissionPhone')} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -143,8 +116,6 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
               placeholder="Phone Number"
               fieldName={prefixName('phone')}
               label="Phone Number"
-              control={control}
-              errors={errors}
             />
           </ShowHide>
         </Body>
@@ -154,7 +125,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
           </Text>
-          <CheckAnswer name={prefixName('permissionSMS')} register={register} />
+          <CheckAnswer name={prefixName('permissionSMS')} />
         </Head>
         <Body>
           <Text tag="p" color="grey">
@@ -166,8 +137,6 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
               placeholder="Mobile Number"
               fieldName={prefixName('mobile')}
               label="Mobile Number"
-              control={control}
-              errors={errors}
             />
           </ShowHide>
         </Body>
