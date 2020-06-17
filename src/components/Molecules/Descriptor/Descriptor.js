@@ -43,15 +43,20 @@ const Date = styled(Text)`
   margin-bottom: ${spacing('md')};
 `;
 
-const Image = styled.img`
+const IconWrapper = styled.div`
+  display: flex;
   position: absolute;
-  object-fit: cover;
   top: 0;
   right: 0;
-  width: 24px;
-  height: 24px;
   margin-right: ${spacing('l')};
   margin-top: ${spacing('m')};
+`;
+
+const Image = styled.img`
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 `;
 
 const iconSwitcher = category => {
@@ -92,8 +97,15 @@ const Description = styled.div`
  * Descriptor component
  */
 
-const Descriptor = ({ date, title, category, tags, children }) => {
+const Descriptor = ({ date, title, categories, tags, children }) => {
   const tagItems = tags.splice(0, 3).join(' ');
+  const icons = categories.map((category, index) => {
+    const catObj = { ...categories };
+    const key = catObj[index];
+    return (
+      <Image src={iconSwitcher(category)} alt={`${category} icon`} key={key} />
+    );
+  });
 
   return (
     <Wrapper>
@@ -102,7 +114,7 @@ const Descriptor = ({ date, title, category, tags, children }) => {
           <Date size="xs" weight="bold" family="Montserrat">
             {date}
           </Date>
-          <Image src={iconSwitcher(category)} alt={category} />
+          <IconWrapper>{icons}</IconWrapper>
         </Header>
         <Title
           size="xl"
@@ -124,11 +136,19 @@ const Descriptor = ({ date, title, category, tags, children }) => {
 };
 
 Descriptor.propTypes = {
-  category: PropTypes.oneOf([
-    'How we found, Social Tech, Red Shed',
-    'Sport for Change',
-    'Global Mental Health Matters',
-    'Gender Justice'
+  categories: PropTypes.oneOfType([
+    PropTypes.arrayOf(
+      PropTypes.oneOf([
+        'How we found',
+        'Social Tech',
+        'Red Shed',
+        'Sport for Change',
+        'Global Mental Health Matters',
+        'Gender Justice'
+      ]).isRequired
+    ),
+    PropTypes.node,
+    PropTypes.string
   ]).isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

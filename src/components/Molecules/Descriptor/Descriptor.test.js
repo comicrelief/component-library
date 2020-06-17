@@ -5,13 +5,13 @@ import Descriptor from './Descriptor';
 
 it('renders article teaser correctly', () => {
   const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
+  const categories = ['How we found', 'Social Tech', 'Sport for Change'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
-      date="Date"
+      date="15th June 2020"
       tags={tags}
-      category="How we found"
-      file="download"
+      categories={categories}
     >
       Description go here...
       <br />
@@ -33,7 +33,7 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c6 {
+    .c7 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -46,7 +46,7 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0.03rem;
     }
 
-    .c8 {
+    .c9 {
       color: #969598;
       font-size: 0.75rem;
       line-height: 0.75rem;
@@ -94,27 +94,35 @@ it('renders article teaser correctly', () => {
     }
 
     .c5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       position: absolute;
-      object-fit: cover;
       top: 0;
       right: 0;
-      width: 24px;
-      height: 24px;
       margin-right: 2rem;
       margin-top: 1.5rem;
     }
 
-    .c7 {
+    .c6 {
+      object-fit: cover;
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+    }
+
+    .c8 {
       margin: 0 0 1.5rem;
     }
 
-    .c9 {
+    .c10 {
       text-transform: uppercase;
       display: block;
       margin: 0 0 1rem;
     }
 
-    .c10 {
+    .c11 {
       padding: 0 0 1.5rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -133,16 +141,30 @@ it('renders article teaser correctly', () => {
             color="inherit"
             size="xs"
           >
-            Date
+            15th June 2020
           </span>
-          <img
-            alt="How we found"
+          <div
             className="c5"
-            src="mock.asset"
-          />
+          >
+            <img
+              alt="How we found icon"
+              className="c6"
+              src="mock.asset"
+            />
+            <img
+              alt="Social Tech icon"
+              className="c6"
+              src="mock.asset"
+            />
+            <img
+              alt="Sport for Change icon"
+              className="c6"
+              src="mock.asset"
+            />
+          </div>
         </div>
         <h3
-          className="c6 c7"
+          className="c7 c8"
           color="inherit"
           height="2rem"
           size="xl"
@@ -150,14 +172,14 @@ it('renders article teaser correctly', () => {
           Title
         </h3>
         <span
-          className="c8 c9"
+          className="c9 c10"
           color="grey"
           size="xs"
         >
           tag1 tag2 tag3
         </span>
         <div
-          className="c10"
+          className="c11"
         >
           Description go here...
           <br />
