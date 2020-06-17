@@ -50,13 +50,16 @@ const IconWrapper = styled.div`
   right: 0;
   margin-right: ${spacing('l')};
   margin-top: ${spacing('m')};
+
+  img:not(:last-child) {
+    margin-right: 8px;
+  }
 `;
 
 const Image = styled.img`
   object-fit: cover;
   width: 24px;
   height: 24px;
-  margin-right: 8px;
 `;
 
 const iconSwitcher = category => {

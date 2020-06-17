@@ -105,11 +105,14 @@ it('renders article teaser correctly', () => {
       margin-top: 1.5rem;
     }
 
+    .c5 img:not(:last-child) {
+      margin-right: 8px;
+    }
+
     .c6 {
       object-fit: cover;
       width: 24px;
       height: 24px;
-      margin-right: 8px;
     }
 
     .c8 {
