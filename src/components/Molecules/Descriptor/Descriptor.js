@@ -11,9 +11,6 @@ import redShedcon from './assets/CR_RedShed.svg';
 import socialTechIcon from './assets/CR_SocialTech.svg';
 import sportIcon from './assets/CR_Sport.svg';
 
-/**
- * Article Teaser
- */
 const Wrapper = styled.article`
   position: relative;
   width: 100%;
@@ -64,13 +61,13 @@ const Image = styled.img`
 
 const iconSwitcher = category => {
   switch (category.trim()) {
-    case 'How we found':
+    case 'How we fund':
       return fundingIcon;
     case 'Social Tech':
       return socialTechIcon;
     case 'Red Shed':
       return redShedcon;
-    case 'Global Mental Health Matters':
+    case 'Mental Health':
       return mentalHealthIcon;
     case 'Sport for Change':
       return sportIcon;
@@ -142,11 +139,11 @@ Descriptor.propTypes = {
   categories: PropTypes.oneOfType([
     PropTypes.arrayOf(
       PropTypes.oneOf([
-        'How we found',
+        'How we fund',
         'Social Tech',
         'Red Shed',
         'Sport for Change',
-        'Global Mental Health Matters',
+        'Mental Health',
         'Gender Justice'
       ]).isRequired
     ),

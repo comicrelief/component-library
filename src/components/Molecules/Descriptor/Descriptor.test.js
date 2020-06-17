@@ -5,7 +5,7 @@ import Descriptor from './Descriptor';
 
 it('renders article teaser correctly', () => {
   const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
-  const categories = ['How we found', 'Social Tech', 'Sport for Change'];
+  const categories = ['How we fund', 'Social Tech', 'Sport for Change'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
@@ -150,7 +150,7 @@ it('renders article teaser correctly', () => {
             className="c5"
           >
             <img
-              alt="How we found icon"
+              alt="How we fund icon"
               className="c6"
               src="mock.asset"
             />
