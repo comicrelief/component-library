@@ -16,6 +16,8 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
   const watchPhone = watch(`${fieldPrefix}permissionPhone`, '');
   const watchMobile = watch(`${fieldPrefix}permissionSMS`, '');
 
+  console.log(watchEmail);
+
   return (
     <>
       <Field>
@@ -35,15 +37,31 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
             You will receive the latest fundraising activities updates and
             marketing material from Comic Relief brand.
           </Text>
-          {watchEmail !== '' && (
-            <InputController
-              placeholder="Email Address"
-              fieldName={`${fieldPrefix}email`}
-              label="Email Address"
-              rules={{ required: 'This is required.' }}
-              control={control}
-              errors={errors}
-            />
+          {watchEmail === 'yes' ? (
+            <div>
+              <InputController
+                placeholder="Email Address"
+                fieldName={`${fieldPrefix}email`}
+                label="Email Address"
+                rules={{ required: 'This is required.' }}
+                control={control}
+                errors={errors}
+              />
+            </div>
+          ) : (
+            <div>
+              <Text tag="p" size="s">
+                Enter email you wish us to remove from our list
+              </Text>
+              <InputController
+                placeholder="Email Address"
+                fieldName={`${fieldPrefix}email`}
+                label="Email Address"
+                rules={{ required: 'This is required.' }}
+                control={control}
+                errors={errors}
+              />
+            </div>
           )}
         </Body>
       </Field>
