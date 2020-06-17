@@ -185,20 +185,7 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           )}
         </Body>
       </Field>
-      <Button
-        color="grey_light"
-        type="button"
-        onClick={() =>
-          reset({
-            fieldName: [
-              `${fieldPrefix}permissionEmail`,
-              `${fieldPrefix}email`,
-              `${fieldPrefix}phone`,
-              `${fieldPrefix}mobile`
-            ]
-          })
-        }
-      >
+      <Button color="grey_light" type="button" onClick={() => reset()}>
         <Text>Reset marketing preferences</Text>
       </Button>
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
