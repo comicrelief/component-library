@@ -46,7 +46,7 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0.03rem;
     }
 
-    .c9 {
+    .c10 {
       color: #969598;
       font-size: 0.75rem;
       line-height: 0.75rem;
@@ -119,13 +119,35 @@ it('renders article teaser correctly', () => {
       margin: 0 0 1.5rem;
     }
 
-    .c10 {
-      text-transform: uppercase;
-      display: block;
-      margin: 0 0 1rem;
+    .c9 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .c9 span:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    .c9 span:not(:first-child)::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      bottom: 5px;
+      width: 3px;
+      height: 3px;
+      background-color: currentColor;
+      border-radius: 50%;
     }
 
     .c11 {
+      position: relative;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+
+    .c12 {
       padding: 0 0 2rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -174,15 +196,33 @@ it('renders article teaser correctly', () => {
         >
           Title
         </h3>
-        <span
-          className="c9 c10"
-          color="grey"
-          size="xs"
-        >
-          tag1 tag2 tag3
-        </span>
         <div
-          className="c11"
+          className="c9"
+        >
+          <span
+            className="c10 c11"
+            color="grey"
+            size="xs"
+          >
+            tag1
+          </span>
+          <span
+            className="c10 c11"
+            color="grey"
+            size="xs"
+          >
+            tag2
+          </span>
+          <span
+            className="c10 c11"
+            color="grey"
+            size="xs"
+          >
+            tag3
+          </span>
+        </div>
+        <div
+          className="c12"
         >
           Description go here...
           <br />
