@@ -6,7 +6,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 <h1

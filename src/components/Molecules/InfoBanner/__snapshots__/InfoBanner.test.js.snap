@@ -3,13 +3,13 @@
 exports[`renders correctly 1`] = `
 .c2 {
   text-transform: uppercase;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c4 {

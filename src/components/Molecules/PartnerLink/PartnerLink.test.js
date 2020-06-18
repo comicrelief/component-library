@@ -20,7 +20,7 @@ it('renders correctly', () => {
       line-height: 0.6875rem;
       text-transform: inherit;
       line-height: normal;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c2 {

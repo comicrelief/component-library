@@ -7,7 +7,7 @@ exports[`renders correctly with no value and no options 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c4 {
@@ -113,7 +113,7 @@ exports[`renders correctly with value and no options 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c4 {
@@ -219,7 +219,7 @@ exports[`renders correctly with value and options 1`] = `
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
@@ -227,7 +227,7 @@ exports[`renders correctly with value and options 1`] = `
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c4 {
