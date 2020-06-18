@@ -6,7 +6,7 @@ exports[`renders heavy heading correctly 1`] = `
   line-height: 1rem;
   text-transform: inherit;
   font-weight: 1000;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 <h3
@@ -24,7 +24,7 @@ exports[`renders high heading correctly 1`] = `
   line-height: 1rem;
   text-transform: inherit;
   line-height: 5;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 <h3
@@ -42,7 +42,7 @@ exports[`renders large heading correctly 1`] = `
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 <h3
@@ -83,7 +83,7 @@ exports[`renders xl yellow paragraph correctly 1`] = `
   line-height: 2rem;
   text-transform: inherit;
   line-height: normal;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 <p

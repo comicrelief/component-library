@@ -26,7 +26,7 @@ it('renders article teaser correctly', () => {
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
@@ -277,7 +277,7 @@ it('renders press realese correctly', () => {
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
-      font-family: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {

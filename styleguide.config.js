@@ -43,7 +43,10 @@ module.exports = {
       h5: 16,
       h6: 16
     },
-    maxWidth: '100%',
+    fontFamily: {
+      base: ['Montserrat']
+    },
+    maxWidth: '100%'
   },
   sections: [
     {
