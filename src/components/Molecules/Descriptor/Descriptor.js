@@ -101,7 +101,8 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
   const tagItems = tags.splice(0, 3).join(' ');
   const icons = categories.map((category, index) => {
     const catObj = { ...categories };
-    const key = catObj[index];
+    const key = catObj[index] + index;
+    console.log(key);
     return (
       <Image src={iconSwitcher(category)} alt={`${category} icon`} key={key} />
     );
