@@ -35,10 +35,6 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <CheckAnswer name={prefixName('permissionEmail')} />
         </Head>
         <Body>
-          <Text tag="p" color="grey">
-            You will receive the latest fundraising activities updates and
-            marketing material from Comic Relief brand.
-          </Text>
           <ShowHide show={watchEmail}>
             {watchEmail === 'no' && (
               <Text tag="p" size="s">
@@ -61,11 +57,12 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <CheckAnswer name={prefixName('permissionPost')} />
         </Head>
         <Body>
-          <Text tag="p" color="grey">
-            You will receive the latest fundraising activities updates and
-            marketing material from Comic Relief brand.
-          </Text>
           <ShowHide show={watchAddress}>
+            {watchAddress === 'no' && (
+              <Text tag="p" size="s">
+                Enter address you wish us to remove from our list
+              </Text>
+            )}
             <InputController
               placeholder="Address Line 1"
               fieldName={prefixName('address1')}
@@ -107,11 +104,12 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <CheckAnswer name={prefixName('permissionPhone')} />
         </Head>
         <Body>
-          <Text tag="p" color="grey">
-            You will receive the latest fundraising activities updates and
-            marketing material from Comic Relief brand.
-          </Text>
           <ShowHide show={watchPhone}>
+            {watchPhone === 'no' && (
+              <Text tag="p" size="s">
+                Enter phone number you wish us to remove from our list
+              </Text>
+            )}
             <InputController
               placeholder="Phone Number"
               fieldName={prefixName('phone')}
@@ -128,11 +126,12 @@ const MarketingPreferences = ({ copyTop, copyBottom, fieldPrefix }) => {
           <CheckAnswer name={prefixName('permissionSMS')} />
         </Head>
         <Body>
-          <Text tag="p" color="grey">
-            You will receive the latest fundraising activities updates and
-            marketing material from Comic Relief brand.
-          </Text>
           <ShowHide show={watchMobile}>
+            {watchMobile === 'no' && (
+              <Text tag="p" size="s">
+                Enter mobile number you wish us to remove from our list
+              </Text>
+            )}
             <InputController
               placeholder="Mobile Number"
               fieldName={prefixName('mobile')}
