@@ -83,7 +83,7 @@ const Title = styled(Text)`
 `;
 
 const TagWrapper = styled.div`
-  display: flex;
+  margin: 0 0 ${spacing('md')} 0;
 
   span:not(:first-child) {
     margin-left: ${spacing('md')};
@@ -104,7 +104,6 @@ const TagWrapper = styled.div`
 const Tag = styled(Text)`
   position: relative;
   text-transform: uppercase;
-  margin: 0 0 ${spacing('md')} 0;
 `;
 
 const Description = styled.div`
