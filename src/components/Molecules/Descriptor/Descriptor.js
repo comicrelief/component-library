@@ -82,10 +82,29 @@ const Title = styled(Text)`
   margin: 0 0 ${spacing('m')};
 `;
 
+const TagWrapper = styled.div`
+  display: flex;
+
+  span:not(:first-child) {
+    margin-left: ${spacing('md')};
+  }
+
+  span:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    bottom: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+`;
+
 const Tag = styled(Text)`
+  position: relative;
   text-transform: uppercase;
-  display: block;
-  margin: 0 0 ${spacing('md')};
+  margin: 0 0 ${spacing('md')} 0;
 `;
 
 const Description = styled.div`
@@ -98,7 +117,15 @@ const Description = styled.div`
  */
 
 const Descriptor = ({ date, title, categories, tags, children }) => {
-  const tagItems = tags.splice(0, 3).join(' ');
+  const tagItems = tags.splice(0, 3).map((tag, index) => {
+    const key = tag + index;
+    return (
+      <Tag size="xs" weight="normal" color="grey" family="Montserrat" key={key}>
+        {tag}
+      </Tag>
+    );
+  });
+
   const icons = categories.map((category, index) => {
     const key = category + index;
     return (
@@ -125,9 +152,7 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
         >
           {title}
         </Title>
-        <Tag size="xs" weight="normal" color="grey" family="Montserrat">
-          {tagItems}
-        </Tag>
+        <TagWrapper>{tagItems}</TagWrapper>
         <Description>{children}</Description>
       </InnerWrapper>
     </Wrapper>

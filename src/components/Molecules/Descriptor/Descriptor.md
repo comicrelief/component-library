@@ -1,7 +1,7 @@
 ### Descriptor Component
 
 ```js
-const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
+const tags = ['How we fund', 'Social Tech', 'Sport for Change', 'tag4'];
 const categories = ['How we fund'];
 <Descriptor title="Title" date="15/06/2020" tags={tags} categories={categories}>
   Description go here...
@@ -15,7 +15,7 @@ const categories = ['How we fund'];
 ```
 
 ```js
-const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
+const tags = ['How we fund', 'Social Tech', 'Sport for Change', 'tag4'];
 const categories = ['How we found', 'Social Tech', 'Sport for Change'];
 <Descriptor title="Title" date="15/06/2020" tags={tags} categories={categories}>
   Description go here...
