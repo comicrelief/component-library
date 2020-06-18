@@ -144,7 +144,6 @@ it('renders article teaser correctly', () => {
     }
 
     .c12 {
-      padding: 0 0 2rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
