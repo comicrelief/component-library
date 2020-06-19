@@ -4,12 +4,18 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import fundingIcon from './assets/CR_Funding.svg';
-import justiceIcon from './assets/CR_Justice.svg';
-import mentalHealthIcon from './assets/CR_MentalHealth.svg';
-import redShedcon from './assets/CR_RedShed.svg';
-import socialTechIcon from './assets/CR_SocialTech.svg';
-import sportIcon from './assets/CR_Sport.svg';
+import fundingIcon from './assets/CR__Funding.svg';
+import justiceIcon from './assets/CR__Justice.svg';
+import mentalHealthIcon from './assets/CR__MentalHealth.svg';
+import redShedcon from './assets/CR__Shed.svg';
+import socialTechIcon from './assets/CR__SocialTech.svg';
+import sportIcon from './assets/CR__Sport.svg';
+import childrenIcon from './assets/CR__Children.svg';
+import homeIcon from './assets/CR__Home.svg';
+import learningIcon from './assets/CR__Learning.svg';
+import worldIcon from './assets/CR__World.svg';
+import safePlaceIcon from './assets/CR__SafePlace.svg';
+import environmentIcon from './assets/CR__Environment.svg';
 
 const Wrapper = styled.article`
   position: relative;
@@ -59,8 +65,18 @@ const Image = styled.img`
   height: 24px;
 `;
 
-const iconSwitcher = category => {
-  switch (category.trim()) {
+const themeSwitcher = theme => {
+  switch (theme.trim()) {
+    case 'Environment':
+      return environmentIcon;
+    case 'Safe Place':
+      return safePlaceIcon;
+    case 'World':
+      return worldIcon;
+    case 'Learning':
+      return learningIcon;
+    case 'Home':
+      return homeIcon;
     case 'How we fund':
       return fundingIcon;
     case 'Social Tech':
@@ -73,6 +89,8 @@ const iconSwitcher = category => {
       return sportIcon;
     case 'Gender Justice':
       return justiceIcon;
+    case 'Children':
+      return childrenIcon;
     default:
       return fundingIcon;
   }
@@ -124,11 +142,9 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
     );
   });
 
-  const icons = categories.map((category, index) => {
-    const key = category + index;
-    return (
-      <Image src={iconSwitcher(category)} alt={`${category} icon`} key={key} />
-    );
+  const icons = categories.map((theme, index) => {
+    const key = theme + index;
+    return <Image src={themeSwitcher(theme)} alt={`${theme} icon`} key={key} />;
   });
 
   return (
@@ -159,16 +175,7 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
 
 Descriptor.propTypes = {
   categories: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.oneOf([
-        'How we fund',
-        'Social Tech',
-        'Red Shed',
-        'Sport for Change',
-        'Mental Health',
-        'Gender Justice'
-      ]).isRequired
-    ),
+    PropTypes.arrayOf(PropTypes.string),
     PropTypes.node,
     PropTypes.string
   ]).isRequired,
