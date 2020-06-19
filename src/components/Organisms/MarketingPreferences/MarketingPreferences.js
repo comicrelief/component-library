@@ -3,7 +3,6 @@ import { useFormContext } from 'react-hook-form';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-// import Button from '../../Atoms/Button/Button';
 import Text from '../../Atoms/Text/Text';
 import InputController from './InputController';
 import CheckAnswer from './CheckAnswer';
@@ -27,10 +26,10 @@ const MarketingPreferences = ({
   const { watch } = useFormContext();
   const prefixName = name => fieldPrefix + name;
 
-  const watchEmail = watch(prefixName('permissionEmail'), '');
-  const watchAddress = watch(prefixName('permissionPost'), '');
-  const watchPhone = watch(prefixName('permissionPhone'), '');
-  const watchMobile = watch(prefixName('permissionSMS'), '');
+  const watchEmail = watch(prefixName('permissionEmail'), []);
+  const watchAddress = watch(prefixName('permissionPost'), []);
+  const watchPhone = watch(prefixName('permissionPhone'), []);
+  const watchMobile = watch(prefixName('permissionSMS'), []);
 
   return (
     <>
@@ -44,8 +43,8 @@ const MarketingPreferences = ({
         </Head>
         <MaybeDisabled disabled={disableEmailInput}>
           <Body>
-            <ShowHide show={watchEmail}>
-              {watchEmail === 'no' && (
+            <ShowHide show={watchEmail.length > 0}>
+              {watchEmail.includes('no') && (
                 <Text tag="p" size="s">
                   Enter email you wish us to remove from our list
                 </Text>
@@ -68,8 +67,8 @@ const MarketingPreferences = ({
         </Head>
         <MaybeDisabled disabled={disablePostInputs}>
           <Body>
-            <ShowHide show={watchAddress}>
-              {watchAddress === 'no' && (
+            <ShowHide show={watchAddress.length > 0}>
+              {watchAddress.includes('no') && (
                 <Text tag="p" size="s">
                   Enter address you wish us to remove from our list
                 </Text>
@@ -117,8 +116,8 @@ const MarketingPreferences = ({
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
           <Body>
-            <ShowHide show={watchPhone}>
-              {watchPhone === 'no' && (
+            <ShowHide show={watchPhone.length > 0}>
+              {watchPhone.includes('no') && (
                 <Text tag="p" size="s">
                   Enter phone number you wish us to remove from our list
                 </Text>
@@ -141,8 +140,8 @@ const MarketingPreferences = ({
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <Body>
-            <ShowHide show={watchMobile}>
-              {watchMobile === 'no' && (
+            <ShowHide show={watchMobile.length > 0}>
+              {watchMobile.includes('no') && (
                 <Text tag="p" size="s">
                   Enter mobile number you wish us to remove from our list
                 </Text>
@@ -160,13 +159,6 @@ const MarketingPreferences = ({
     </>
   );
 };
-
-// todo
-// const ResetButton = ({onClick}) => (
-//   <Button color="grey_light" type="button" onClick={onClick}>
-//     <Text>Reset marketing preferences</Text>
-//   </Button>
-// );
 
 const MaybeDisabled = ({ children, disabled }) => {
   if (disabled) {
