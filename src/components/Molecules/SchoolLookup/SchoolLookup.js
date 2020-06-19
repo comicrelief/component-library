@@ -7,7 +7,10 @@ import Typeahead from '../Typeahead/Typeahead';
 const optionFetcher = async query => {
   const response = await axios.get(
     'https://lookups.sls.comicrelief.com/schools/lookup',
-    { params: { query } }
+    {
+      params: { query },
+      timeout: 3000
+    }
   );
   return response.data.data.schools;
 };
@@ -27,7 +30,7 @@ const SchoolLookup = ({
     optionParser,
     onSelect,
     id: 'school-lookup',
-    name: 'query',
+    name: 'school-lookup',
     label,
     placeholder,
     notFoundMessage,

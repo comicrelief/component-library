@@ -13,7 +13,7 @@ const initialState = {
 
 // These just felt about right to me but could be changed.
 const DELAY_DURATION = 200;
-const MIN_CHARS_FOR_FETCH = 3;
+const MIN_CHARS_FOR_FETCH = 2;
 
 const Typeahead = ({
   optionFetcher,
