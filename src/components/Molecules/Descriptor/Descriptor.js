@@ -16,6 +16,7 @@ import learningIcon from './assets/CR__Learning.svg';
 import worldIcon from './assets/CR__World.svg';
 import safePlaceIcon from './assets/CR__SafePlace.svg';
 import environmentIcon from './assets/CR__Environment.svg';
+import partnershipsIcon from './assets/CR__Partnerships.svg';
 
 const Wrapper = styled.article`
   position: relative;
@@ -67,9 +68,11 @@ const Image = styled.img`
 
 const themeSwitcher = theme => {
   switch (theme.trim()) {
+    case 'Partnerships':
+      return partnershipsIcon;
     case 'Environment':
       return environmentIcon;
-    case 'Safe Place':
+    case 'Safe Place to Be':
       return safePlaceIcon;
     case 'World':
       return worldIcon;
@@ -89,7 +92,7 @@ const themeSwitcher = theme => {
       return sportIcon;
     case 'Gender Justice':
       return justiceIcon;
-    case 'Children':
+    case 'Survive & Thrive':
       return childrenIcon;
     default:
       return fundingIcon;
