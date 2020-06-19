@@ -18,7 +18,6 @@ const Head = styled.div`
 `;
 
 const Body = styled.div`
-  margin-bottom: ${spacing('l')};
   ${media('small')} {
     width: 50%;
   }
@@ -42,7 +41,7 @@ const CheckContainer = styled.div`
   ${media('small')} {
     width: 50%;
     justify-content: flex-end;
-    margin-bottom: 0;
+    margin-bottom: ${spacing('m')};
   }
 `;
 

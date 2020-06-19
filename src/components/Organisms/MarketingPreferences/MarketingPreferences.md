@@ -50,6 +50,7 @@ const copyBottom = (
       copyTop={copyTop}
       copyBottom={copyBottom}
       defaultValues={data}
+      disableEmailInput
     />
     <input type="submit" />
   </form>
