@@ -1,5 +1,5 @@
 # ErrorText
 
-```js
+```jsx
 <ErrorText>This is an error</ErrorText>
 ```
