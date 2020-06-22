@@ -6,13 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import MarketingPreferences from './MarketingPreferences';
 
-const data = {
-  mpEmailAddress: 'email@cr.com'
-};
-
-const methods = useForm({
-  defaultValues: data
-});
+const methods = useForm();
 
 const onSubmit = data => console.log(data);
 
@@ -49,7 +43,6 @@ const copyBottom = (
     <MarketingPreferences
       copyTop={copyTop}
       copyBottom={copyBottom}
-      defaultValues={data}
       disableEmailInput
     />
     <input type="submit" />

@@ -120,6 +120,7 @@ it('renders correctly', () => {
       max-width: 100%;
       border: 0;
       outline: #E52630;
+      background: none;
     }
 
     .c5 input:focus {

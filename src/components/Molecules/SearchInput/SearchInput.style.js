@@ -35,6 +35,7 @@ const SearchField = styled(Input)`
     max-width: 100%;
     border: 0;
     outline: ${({ theme }) => theme.color('red')};
+    background: none;
     :focus {
       border: 0;
     }
