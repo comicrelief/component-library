@@ -23,6 +23,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 .c16 {
+  color: #E52630;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -30,7 +31,6 @@ exports[`renders correctly with error message 1`] = `
 
 .c17 {
   display: inline-block;
-  color: #E52630;
   margin-top: 0.5rem;
 }
 
@@ -404,12 +404,16 @@ exports[`renders correctly with error message 1`] = `
               value=""
             />
             <span
-              className="c16 c17"
-              color="inherit"
+              className="c16"
+              color="red"
               data-test="error-message"
               size="sm"
             >
-              invalid email
+              <span
+                className="c17"
+              >
+                invalid email
+              </span>
             </span>
           </label>
           <div

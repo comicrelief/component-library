@@ -20,9 +20,7 @@ const External = ({ colour, theme, size, ...rest }) => {
 External.propTypes = {
   colour: PropTypes.string,
   size: PropTypes.number,
-  theme: PropTypes.objectOf({
-    color: PropTypes.func.isRequired
-  }).isRequired
+  theme: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 External.defaultProps = {
