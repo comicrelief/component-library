@@ -1,12 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import alertIcon from '../Input/assets/error-alert-icon.png';
 
-const ErrorText = styled(Text)`
+const ErrorIcon = styled.span`
   display: inline-block;
-  color: ${({ theme }) => theme.color('red')};
-  font-weight: ${({ weight }) => weight};
   margin-top: ${spacing('sm')};
   :before {
     position: relative;
@@ -21,5 +21,17 @@ const ErrorText = styled(Text)`
     color: ${({ theme }) => theme.color('red')};
   }
 `;
+
+const ErrorText = ({ children, ...rest }) => {
+  return (
+    <Text {...rest} color="red">
+      <ErrorIcon>{children}</ErrorIcon>
+    </Text>
+  );
+};
+
+ErrorText.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default ErrorText;
