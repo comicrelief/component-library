@@ -90,6 +90,7 @@ it('renders correctly', () => {
       <select
         className="c2"
         defaultValue=""
+        onChange={[Function]}
       >
         <option
           disabled={true}
