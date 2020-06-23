@@ -80,6 +80,7 @@ const Select = ({
         error={errorMsg}
         defaultValue={defaultValue}
         hasValue={!!value}
+        greyDescription={greyDescription}
       >
         <option disabled value="">
           {description}
