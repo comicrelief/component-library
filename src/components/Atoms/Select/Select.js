@@ -26,7 +26,8 @@ const StyledSelect = styled.select`
     error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme, hasValue }) => (hasValue ? theme.color('black') : 'grey')};
+  color: ${({ theme, greyDescription, hasValue }) =>
+    greyDescription && !hasValue ? 'grey' : theme.color('black')};
   border-radius: 0.5rem;
   margin-top: ${spacing('sm')};
   cursor: pointer;
@@ -58,6 +59,7 @@ const Select = ({
   hideLabel,
   defaultValue,
   onChange,
+  greyDescription,
   ...rest
 }) => {
   const [value, setValue] = useState('');
@@ -105,13 +107,17 @@ Select.propTypes = {
   ).isRequired,
   description: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  greyDescription: PropTypes.string
 };
 
 Select.defaultProps = {
   hideLabel: false,
   defaultValue: '',
-  onChange: null
+  onChange: null,
+  /** If true, the 'description' option, which is initially selected but disabled, will be grey
+   *   - like a text input's placeholder */
+  greyDescription: false
 };
 
 export default Select;
