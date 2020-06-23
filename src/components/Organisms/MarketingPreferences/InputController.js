@@ -15,6 +15,7 @@ const InputController = ({ fieldName, label, ...rest }) => {
     placeholder: label,
     errorMsg: errors && errors[fieldName] && errors[fieldName].message,
     control,
+    defaultValue: '',
     ...rest
   };
 
