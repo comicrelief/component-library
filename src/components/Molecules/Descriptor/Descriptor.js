@@ -67,7 +67,7 @@ const Image = styled.img`
 `;
 
 const themeSwitcher = theme => {
-  switch (theme.trim()) {
+  switch (theme) {
     case 'Partnerships':
       return partnershipsIcon;
     case 'Environment':
@@ -80,7 +80,7 @@ const themeSwitcher = theme => {
       return learningIcon;
     case 'Home':
       return homeIcon;
-    case 'How we fund':
+    case 'How We Fund':
       return fundingIcon;
     case 'Social Tech':
       return socialTechIcon;
@@ -92,7 +92,7 @@ const themeSwitcher = theme => {
       return sportIcon;
     case 'Gender Justice':
       return justiceIcon;
-    case 'Survive & Thrive':
+    case 'Children Survive & Thrive':
       return childrenIcon;
     default:
       return fundingIcon;

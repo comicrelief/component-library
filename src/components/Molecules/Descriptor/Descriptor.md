@@ -2,7 +2,7 @@
 
 ```js
 const tags = ['Tag1', 'tag2', 'tag3', 'tag4'];
-const categories = ['How we fund'];
+const categories = ['How we Fund', 'Children Survive & Thrive'];
 <Descriptor title="Title" date="15/06/2020" tags={tags} categories={categories}>
   Description go here...
   <br />
