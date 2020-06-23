@@ -51,50 +51,56 @@ const LabelText = styled(Text)`
   ${({ hideLabel }) => hideLabel && hideVisually}
 `;
 
-const Select = ({
-  errorMsg,
-  description,
-  label,
-  options,
-  hideLabel,
-  defaultValue,
-  onChange,
-  greyDescription,
-  ...rest
-}) => {
-  const [value, setValue] = useState('');
+const Select = React.forwardRef(
+  (
+    {
+      errorMsg,
+      description,
+      label,
+      options,
+      hideLabel,
+      defaultValue,
+      onChange,
+      greyDescription,
+      ...rest
+    },
+    ref
+  ) => {
+    const [value, setValue] = useState('');
 
-  return (
-    <Label>
-      <LabelText hideLabel={hideLabel} weight="bold">
-        {label}
-      </LabelText>
-      <StyledSelect
-        onChange={e => {
-          setValue(e.currentTarget.value);
-          if (onChange) {
-            onChange(e);
-          }
-        }}
-        {...rest}
-        error={errorMsg}
-        defaultValue={defaultValue}
-        hasValue={!!value}
-        greyDescription={greyDescription}
-      >
-        <option disabled value="">
-          {description}
-        </option>
-        {options.map(option => (
-          <option key={option.value} value={option.value}>
-            {option.displayValue}
+    return (
+      <Label>
+        <LabelText hideLabel={hideLabel} weight="bold">
+          {label}
+        </LabelText>
+        <StyledSelect
+          onChange={e => {
+            setValue(e.currentTarget.value);
+            if (onChange) {
+              onChange(e);
+            }
+          }}
+          {...rest}
+          error={errorMsg}
+          defaultValue={defaultValue}
+          hasValue={!!value}
+          greyDescription={greyDescription}
+          ref={ref}
+        >
+          <option disabled value="">
+            {description}
           </option>
-        ))}
-      </StyledSelect>
-      {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
-    </Label>
-  );
-};
+          {options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.displayValue}
+            </option>
+          ))}
+        </StyledSelect>
+        {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+      </Label>
+    );
+  }
+);
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,

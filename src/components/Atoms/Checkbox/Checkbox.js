@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import checkBoxIcon from './assets/checkbox-white-tick.png';
 
-const StyledInput = styled.input`
+const StyledCheckboxInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize('sm')};
   display: block;
   box-sizing: border-box;
@@ -45,15 +45,13 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-const Checkbox = ({ label, value, ...rest }) => {
-  return (
-    <Label>
-      <StyledInput type="checkbox" {...rest} value={value} />
-      <span />
-      <Text weight="bold">{label}</Text>
-    </Label>
-  );
-};
+const Checkbox = React.forwardRef(({ label, value, ...rest }, ref) => (
+  <Label>
+    <StyledCheckboxInput type="checkbox" {...rest} value={value} ref={ref} />
+    <span />
+    <Text weight="bold">{label}</Text>
+  </Label>
+));
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,

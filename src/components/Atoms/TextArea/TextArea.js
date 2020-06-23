@@ -8,7 +8,7 @@ import ErrorText from '../ErrorText/ErrorText';
 /**
  * Textarea component
  */
-const StyledInput = styled.textarea`
+const StyledTextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   margin: 10px 0;
@@ -72,16 +72,18 @@ const Label = styled.label.attrs(({ id }) => ({
   flex-direction: column;
 `;
 
-const TextArea = ({ id, label, errorMsg, ...rest }) => {
-  const error = errorMsg && errorMsg.length > 0;
-  return (
-    <Label>
-      <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} error={error ? 1 : 0} aria-describedby={id} />
-      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
-    </Label>
-  );
-};
+const TextArea = React.forwardRef(({ id, label, errorMsg, ...rest }, ref) => (
+  <Label>
+    <Text weight="bold">{label}</Text>
+    <StyledTextArea
+      {...rest}
+      error={!!errorMsg}
+      aria-describedby={id}
+      ref={ref}
+    />
+    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+  </Label>
+));
 
 TextArea.propTypes = {
   name: PropTypes.string.isRequired,

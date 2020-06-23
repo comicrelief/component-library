@@ -58,20 +58,21 @@ const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
 `;
 
-const Input = ({
-  errorMsg,
-  id,
-  label,
-  showLabel,
-  type,
-  hasAria,
-  className,
-  labelProps,
-  ...rest
-}) => {
-  const error = errorMsg && errorMsg.length > 0;
-
-  return (
+const Input = React.forwardRef(
+  (
+    {
+      errorMsg,
+      id,
+      label,
+      showLabel,
+      type,
+      hasAria,
+      className,
+      labelProps,
+      ...rest
+    },
+    ref
+  ) => (
     <Label htmlFor={id} className={className} {...labelProps}>
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
@@ -80,17 +81,18 @@ const Input = ({
         id={id}
         type={type}
         {...rest}
-        error={error ? 1 : 0}
+        error={!!errorMsg}
         aria-describedby={hasAria ? id : undefined}
+        ref={ref}
       />
-      {error && (
+      {errorMsg && (
         <ErrorText size="sm" data-test="error-message">
           {errorMsg}
         </ErrorText>
       )}
     </Label>
-  );
-};
+  )
+);
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
