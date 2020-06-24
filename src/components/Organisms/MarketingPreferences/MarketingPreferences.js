@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../../Atoms/Text/Text';
-import InputController from './InputController';
+import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
 import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
 
@@ -49,7 +49,7 @@ const MarketingPreferences = ({
                   Enter email you wish us to remove from our list
                 </Text>
               )}
-              <InputController
+              <TextInput
                 placeholder="Email Address"
                 fieldName={prefixName('email')}
                 label="Email Address"
@@ -73,32 +73,32 @@ const MarketingPreferences = ({
                   Enter address you wish us to remove from our list
                 </Text>
               )}
-              <InputController
+              <TextInput
                 placeholder="Address Line 1"
                 fieldName={prefixName('address1')}
                 label="Address Line 1"
               />
-              <InputController
+              <TextInput
                 placeholder="Address Line 2"
                 fieldName={prefixName('address2')}
                 label="Address Line 2"
               />
-              <InputController
+              <TextInput
                 placeholder="Address Line 3"
                 fieldName={prefixName('address3')}
                 label="Address Line 3"
               />
-              <InputController
+              <TextInput
                 placeholder="Town/City"
                 fieldName={prefixName('town')}
                 label="Town/City"
               />
-              <InputController
+              <TextInput
                 placeholder="Postcode"
                 fieldName={prefixName('postcode')}
                 label="Postcode"
               />
-              <InputController
+              <TextInput
                 placeholder="Country"
                 fieldName={prefixName('country')}
                 label="Country"
@@ -122,7 +122,7 @@ const MarketingPreferences = ({
                   Enter phone number you wish us to remove from our list
                 </Text>
               )}
-              <InputController
+              <TextInput
                 placeholder="Phone Number"
                 fieldName={prefixName('phone')}
                 label="Phone Number"
@@ -146,7 +146,7 @@ const MarketingPreferences = ({
                   Enter mobile number you wish us to remove from our list
                 </Text>
               )}
-              <InputController
+              <TextInput
                 placeholder="Mobile Number"
                 fieldName={prefixName('mobile')}
                 label="Mobile Number"
