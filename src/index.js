@@ -98,3 +98,6 @@ export {
 export {
   default as MarketingPreferences
 } from './components/Organisms/MarketingPreferences/MarketingPreferences';
+export {
+  default as Descriptor
+} from './components/Molecules/Descriptor/Descriptor';
