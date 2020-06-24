@@ -215,6 +215,13 @@ it('renders article teaser correctly', () => {
           >
             tag3
           </span>
+          <span
+            className="c10 c11"
+            color="grey"
+            size="xs"
+          >
+            tag4
+          </span>
         </div>
         <div
           className="c12"

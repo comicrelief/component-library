@@ -136,7 +136,7 @@ const Description = styled.div`
  */
 
 const Descriptor = ({ date, title, categories, tags, children }) => {
-  const tagItems = tags.splice(0, 3).map((tag, index) => {
+  const tagItems = tags.map((tag, index) => {
     const key = tag + index;
     return (
       <Tag size="xs" weight="normal" color="grey" family="Montserrat" key={key}>
