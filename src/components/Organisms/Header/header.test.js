@@ -53,6 +53,7 @@ it('renders correctly', () => {
     }
 
     .c9 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -68,6 +69,7 @@ it('renders correctly', () => {
     }
 
     .c18 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;

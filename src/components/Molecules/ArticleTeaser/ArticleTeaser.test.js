@@ -57,6 +57,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c1 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -308,6 +309,7 @@ it('renders press realese correctly', () => {
     }
 
     .c1 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;

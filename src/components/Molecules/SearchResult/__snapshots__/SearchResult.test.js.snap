@@ -31,6 +31,7 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
@@ -205,6 +206,7 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
@@ -377,6 +379,7 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
@@ -543,6 +546,7 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;

@@ -248,6 +248,7 @@ exports[`renders correctly 1`] = `
       Find out more
       <span
         className="c8"
+        type="button"
       >
         <svg
           fill="#FFFFFF"

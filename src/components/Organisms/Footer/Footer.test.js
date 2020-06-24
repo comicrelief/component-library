@@ -57,6 +57,7 @@ it('renders correctly', () => {
     }
 
     .c14 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;

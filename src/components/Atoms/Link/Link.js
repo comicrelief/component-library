@@ -45,7 +45,7 @@ const Link = ({
     >
       {children}
       {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
-      {hasIcon && <IconWrapper>{icon}</IconWrapper>}
+      {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
     </StyledLink>
   );
 };

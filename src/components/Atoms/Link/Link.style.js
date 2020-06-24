@@ -24,6 +24,7 @@ const buttonStyle = () => css`
 `;
 
 const linkStyle = () => css`
+  position: relative;
   text-decoration: none;
   display: inline;
   line-height: ${({ theme }) => theme.fontSize('l')};
@@ -43,6 +44,12 @@ export const IconWrapper = styled.span`
     right: auto;
     position: relative;
   }
+  ${({ type }) =>
+    type === 'standard' &&
+    css`
+      position: absolute;
+      right: -2rem;
+    `};
 `;
 
 const StyledLink = styled.a`

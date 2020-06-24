@@ -13,6 +13,7 @@ it('renders a standard styled link correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -62,9 +63,12 @@ it('renders a button with an icon', () => {
       -ms-flex-item-align: center;
       align-self: center;
       right: 1.5rem;
+      position: absolute;
+      right: -2rem;
     }
 
     .c0 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
@@ -97,6 +101,7 @@ it('renders a button with an icon', () => {
       Internal link
       <span
         className="c1"
+        type="standard"
       >
         <svg
           fill="#FFFFFF"
@@ -123,6 +128,7 @@ it('renders a standard styled link correctly with target blank and assistive tex
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;

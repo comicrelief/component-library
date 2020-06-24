@@ -29,6 +29,7 @@ it('renders correctly', () => {
     }
 
     .c3 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
