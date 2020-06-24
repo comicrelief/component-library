@@ -115,7 +115,7 @@ Select.propTypes = {
   description: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   onChange: PropTypes.func,
-  greyDescription: PropTypes.string
+  greyDescription: PropTypes.bool
 };
 
 Select.defaultProps = {
