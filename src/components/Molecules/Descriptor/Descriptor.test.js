@@ -120,6 +120,13 @@ it('renders article teaser correctly', () => {
 
     .c9 {
       margin: 0 0 1rem 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
     }
 
     .c9 span:not(:first-child) {

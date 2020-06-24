@@ -103,6 +103,8 @@ const Title = styled(Text)`
 
 const TagWrapper = styled.div`
   margin: 0 0 ${spacing('md')} 0;
+  display: flex;
+  flex-wrap: wrap;
 
   span:not(:first-child) {
     margin-left: ${spacing('md')};
