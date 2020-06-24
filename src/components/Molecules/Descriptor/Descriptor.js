@@ -41,9 +41,7 @@ const Header = styled.div`
 `;
 
 const Date = styled(Text)`
-  font-size: ${({ theme }) => theme.fontSize('s')};
   display: inline-block;
-  color: ${({ theme: { color } }) => color('grey')};
   margin-bottom: ${spacing('md')};
 `;
 
@@ -139,7 +137,13 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
   const tagItems = tags.map((tag, index) => {
     const key = tag + index;
     return (
-      <Tag size="xs" weight="normal" color="grey" family="Montserrat" key={key}>
+      <Tag
+        size="xs"
+        weight="normal"
+        color="grey_dark"
+        family="Montserrat"
+        key={key}
+      >
         {tag}
       </Tag>
     );
@@ -154,7 +158,7 @@ const Descriptor = ({ date, title, categories, tags, children }) => {
     <Wrapper>
       <InnerWrapper>
         <Header>
-          <Date size="xs" weight="bold" family="Montserrat">
+          <Date size="s" weight="bold" color="grey_dark" family="Montserrat">
             {date}
           </Date>
           <IconWrapper>{icons}</IconWrapper>

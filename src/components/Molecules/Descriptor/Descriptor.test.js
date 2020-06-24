@@ -25,8 +25,9 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
+      color: #222222;
+      font-size: 1rem;
+      line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -47,7 +48,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      color: #969598;
+      color: #222222;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -87,9 +88,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c4 {
-      font-size: 1rem;
       display: inline-block;
-      color: #969598;
       margin-bottom: 1rem;
     }
 
@@ -158,8 +157,8 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c3 c4"
-            color="inherit"
-            size="xs"
+            color="grey_dark"
+            size="s"
           >
             15/06/2020
           </span>
@@ -196,28 +195,28 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c10 c11"
-            color="grey"
+            color="grey_dark"
             size="xs"
           >
             tag1
           </span>
           <span
             className="c10 c11"
-            color="grey"
+            color="grey_dark"
             size="xs"
           >
             tag2
           </span>
           <span
             className="c10 c11"
-            color="grey"
+            color="grey_dark"
             size="xs"
           >
             tag3
           </span>
           <span
             className="c10 c11"
-            color="grey"
+            color="grey_dark"
             size="xs"
           >
             tag4
