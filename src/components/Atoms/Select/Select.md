@@ -22,6 +22,7 @@
   label="Label"
   errorMsg="This is an error message"
   description="Please choose an option"
+  greyDescription
   options={[
     { value: 'Option one', displayValue: 'The first option' },
     {
