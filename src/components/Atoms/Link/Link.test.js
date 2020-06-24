@@ -88,6 +88,8 @@ it('renders a button with an icon', () => {
         width: auto;
         right: auto;
         position: relative;
+        position: absolute;
+        right: -2rem;
       }
     }
 

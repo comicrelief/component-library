@@ -39,17 +39,23 @@ export const IconWrapper = styled.span`
   margin-left: ${spacing('md')};
   align-self: center;
   right: ${spacing('m')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: auto;
-    right: auto;
-    position: relative;
-  }
   ${({ type }) =>
     type === 'standard' &&
     css`
       position: absolute;
       right: -2rem;
     `};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: auto;
+    right: auto;
+    position: relative;
+    ${({ type }) =>
+      type === 'standard' &&
+      css`
+        position: absolute;
+        right: -2rem;
+      `};
+  }
 `;
 
 const StyledLink = styled.a`
