@@ -35,16 +35,11 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, wrapper, ...rest }) => {
-  if (wrapper) {
-    return (
-      <StyledButton as="span" {...rest}>
-        {children}
-      </StyledButton>
-    );
-  }
-  return <StyledButton {...rest}>{children}</StyledButton>;
-};
+const Button = React.forwardRef(({ children, wrapper, ...rest }, ref) => (
+  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref}>
+    {children}
+  </StyledButton>
+));
 
 Button.propTypes = {
   /** Buttons as span */
