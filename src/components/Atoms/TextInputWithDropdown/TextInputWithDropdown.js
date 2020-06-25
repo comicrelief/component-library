@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../Text/Text';
@@ -11,7 +11,12 @@ import {
   TextItalic,
   InputWithSpaceAfterLabel
 } from './TextInputWithDropdown.style';
-import makeOnEnterHandler from '../../../utils/makeOnEnterHandler';
+
+const KEY_CODE_ENTER = 13;
+const KEY_CODE_SPACE = 32;
+const KEY_CODE_UP = 38;
+const KEY_CODE_DOWN = 40;
+const KEY_CODE_ESCAPE = 27;
 
 /**
  * This component deals with the visual aspect of a text input with typeahead-style functionality
@@ -37,6 +42,41 @@ const TextInputWithDropdown = React.forwardRef(
     },
     ref
   ) => {
+    const [activeOption, setActiveOption] = useState(-1);
+    const [forceClosed, setForceClosed] = useState(false);
+    useEffect(() => {
+      // reset if options change
+      setActiveOption(-1);
+      setForceClosed(false);
+    }, [options]);
+
+    const down = () =>
+      activeOption < options.length - 1
+        ? setActiveOption(activeOption + 1)
+        : setActiveOption(0);
+    const up = () =>
+      activeOption < 1
+        ? setActiveOption(options.length - 1)
+        : setActiveOption(activeOption - 1);
+
+    const navigateOptions = e => {
+      if (options.length === 0) {
+        return;
+      }
+
+      const keyCode = e.keyCode || e.which;
+
+      if (keyCode === KEY_CODE_DOWN) {
+        e.preventDefault();
+        down();
+      } else if (keyCode === KEY_CODE_UP) {
+        e.preventDefault();
+        up();
+      } else if (keyCode === KEY_CODE_ESCAPE) {
+        setForceClosed(true);
+      }
+    };
+
     const inputProps = {
       value,
       onChange,
@@ -51,47 +91,70 @@ const TextInputWithDropdown = React.forwardRef(
     const optionsProps = {
       options,
       onSelect,
-      dropdownInstruction
+      dropdownInstruction,
+      activeOption
     };
 
     return (
-      <Container className={`TextInputWithDropdown ${className}`.trim()}>
+      <Container
+        className={`TextInputWithDropdown ${className}`.trim()}
+        onKeyDown={navigateOptions}
+      >
         <InputWithSpaceAfterLabel
           {...inputProps}
           className="TextInputWithDropdown__input"
           ref={ref}
         />
-        <Options {...optionsProps} className="TextInputWithDropdown__options" />
+        {options.length > 0 && forceClosed === false && (
+          <Options
+            {...optionsProps}
+            className="TextInputWithDropdown__options"
+          />
+        )}
       </Container>
     );
   }
 );
 
-const Options = ({ options, dropdownInstruction, onSelect, ...rest }) => {
-  if (options.length === 0) {
-    return null;
-  }
+const Options = ({
+  options,
+  dropdownInstruction,
+  onSelect,
+  activeOption,
+  ...rest
+}) => {
   return (
     <Dropdown {...rest}>
-      <DropdownList>
+      <DropdownList
+        role="listbox"
+        aria-activedescendant={`option-${activeOption}`}
+      >
         {dropdownInstruction && (
-          <DropdownItem>
+          <DropdownItem role="option">
             <TextItalic>{dropdownInstruction}</TextItalic>
           </DropdownItem>
         )}
-        {options.map((option, index) => {
-          const handler = () => onSelect(option, index);
-          return (
-            <DropdownItemSelectable
-              key={option}
-              onClick={handler}
-              onKeyPress={makeOnEnterHandler(handler)}
-              tabIndex="0"
-            >
-              <Text>{option}</Text>
-            </DropdownItemSelectable>
-          );
-        })}
+        {options.map((option, index) => (
+          <DropdownItemSelectable
+            id={`option-${index}`}
+            role="option"
+            key={option}
+            onClick={() => onSelect(option, index)}
+            onKeyPress={e => {
+              const keyCode = e.keyCode || e.which;
+              if (keyCode === KEY_CODE_SPACE || keyCode === KEY_CODE_ENTER) {
+                onSelect(option, index);
+              }
+            }}
+            tabIndex="-1"
+            aria-selected={index === activeOption}
+            ref={element =>
+              element && index === activeOption && element.focus()
+            }
+          >
+            <Text>{option}</Text>
+          </DropdownItemSelectable>
+        ))}
       </DropdownList>
     </Dropdown>
   );
@@ -117,7 +180,8 @@ TextInputWithDropdown.defaultProps = {
 Options.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onSelect: PropTypes.func.isRequired,
-  dropdownInstruction: PropTypes.string
+  dropdownInstruction: PropTypes.string,
+  activeOption: PropTypes.number.isRequired
 };
 
 Options.defaultProps = {

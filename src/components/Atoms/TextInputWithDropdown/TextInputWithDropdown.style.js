@@ -41,7 +41,8 @@ const DropdownItemSelectable = styled(DropdownItem)`
   cursor: pointer;
   border-top: 1px solid ${({ theme }) => theme.color('grey_light')};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${({ theme }) => theme.color('grey_light')};
   }
 `;
