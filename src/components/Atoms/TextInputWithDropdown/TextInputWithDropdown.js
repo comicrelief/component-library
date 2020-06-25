@@ -21,45 +21,51 @@ import makeOnEnterHandler from '../../../utils/makeOnEnterHandler';
  *
  * See the Typeahead and SchoolLookup molecules for the full implementation
  */
-const TextInputWithDropdown = ({
-  value,
-  options,
-  onChange,
-  onSelect,
-  id,
-  name,
-  label,
-  dropdownInstruction,
-  className,
-  ...otherInputProps
-}) => {
-  const inputProps = {
-    value,
-    onChange,
-    id,
-    name,
-    label,
-    autoComplete: 'off',
-    type: 'text',
-    ...otherInputProps
-  };
+const TextInputWithDropdown = React.forwardRef(
+  (
+    {
+      value,
+      options,
+      onChange,
+      onSelect,
+      id,
+      name,
+      label,
+      dropdownInstruction,
+      className,
+      ...otherInputProps
+    },
+    ref
+  ) => {
+    const inputProps = {
+      value,
+      onChange,
+      id,
+      name,
+      label,
+      autoComplete: 'off',
+      type: 'text',
+      ...otherInputProps
+    };
 
-  const optionsProps = {
-    options,
-    onSelect,
-    dropdownInstruction
-  };
+    const optionsProps = {
+      options,
+      onSelect,
+      dropdownInstruction
+    };
 
-  return (
-    <Container className={`TextInputWithDropdown ${className}`.trim()}>
-      <InputWithSpaceAfterLabel
-        {...inputProps}
-        className="TextInputWithDropdown__input"
-      />
-      <Options {...optionsProps} className="TextInputWithDropdown__options" />
-    </Container>
-  );
-};
+    return (
+      <Container className={`TextInputWithDropdown ${className}`.trim()}>
+        <InputWithSpaceAfterLabel
+          {...inputProps}
+          className="TextInputWithDropdown__input"
+          ref={ref}
+        />
+        <Options {...optionsProps} className="TextInputWithDropdown__options" />
+      </Container>
+    );
+  }
+);
 
 const Options = ({ options, dropdownInstruction, onSelect, ...rest }) => {
   if (options.length === 0) {
