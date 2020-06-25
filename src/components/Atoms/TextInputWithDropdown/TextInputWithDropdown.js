@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../Text/Text';
@@ -123,12 +123,10 @@ const Options = ({
   activeOption,
   ...rest
 }) => {
+  // todo: aria-activedescendant
   return (
-    <Dropdown {...rest}>
-      <DropdownList
-        role="listbox"
-        aria-activedescendant={`option-${activeOption}`}
-      >
+    <Dropdown {...rest} tabIndex="0">
+      <DropdownList role="listbox">
         {dropdownInstruction && (
           <DropdownItem role="option">
             <TextItalic>{dropdownInstruction}</TextItalic>
@@ -149,7 +147,7 @@ const Options = ({
             tabIndex="-1"
             aria-selected={index === activeOption}
             ref={element =>
-              element && index === activeOption && element.focus()
+              index === activeOption && element && element.focus()
             }
           >
             <Text>{option}</Text>
