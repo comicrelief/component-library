@@ -352,7 +352,6 @@ exports[`renders correctly with value and options 1`] = `
   </label>
   <div
     className="c4 TextInputWithDropdown__options"
-    tabIndex="0"
   >
     <ul
       className="c5"

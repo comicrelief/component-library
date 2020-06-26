@@ -138,7 +138,7 @@ const Options = ({
   };
 
   return (
-    <Dropdown {...rest} tabIndex="0">
+    <Dropdown {...rest}>
       <DropdownList
         role="listbox"
         onBlur={onBlur}
