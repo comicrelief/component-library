@@ -92,7 +92,8 @@ const TextInputWithDropdown = React.forwardRef(
       options,
       onSelect,
       dropdownInstruction,
-      activeOption
+      activeOption,
+      resetActiveOption: () => setActiveOption(-1)
     };
 
     return (
@@ -121,12 +122,30 @@ const Options = ({
   dropdownInstruction,
   onSelect,
   activeOption,
+  resetActiveOption,
   ...rest
 }) => {
-  // todo: aria-activedescendant
+  // Reset 'activeOption' when the list is unfocused.
+  const onBlur = e => {
+    const { target } = e;
+    // There's a delay before the new activeOption becomes the document.activeElement when
+    //  scrolling through the dropdown list via keyboard.
+    setTimeout(() => {
+      if (document.activeElement.parentNode !== target.parentNode) {
+        resetActiveOption();
+      }
+    }, 100);
+  };
+
   return (
     <Dropdown {...rest} tabIndex="0">
-      <DropdownList role="listbox">
+      <DropdownList
+        role="listbox"
+        onBlur={onBlur}
+        aria-activedescendant={
+          activeOption > -1 ? `option-${activeOption}` : undefined
+        }
+      >
         {dropdownInstruction && (
           <DropdownItem role="option">
             <TextItalic>{dropdownInstruction}</TextItalic>
@@ -146,8 +165,10 @@ const Options = ({
             }}
             tabIndex="-1"
             aria-selected={index === activeOption}
-            ref={element =>
-              index === activeOption && element && element.focus()
+            ref={
+              index === activeOption
+                ? element => element && element.focus()
+                : null
             }
           >
             <Text>{option}</Text>
@@ -179,7 +200,8 @@ Options.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onSelect: PropTypes.func.isRequired,
   dropdownInstruction: PropTypes.string,
-  activeOption: PropTypes.number.isRequired
+  activeOption: PropTypes.number.isRequired,
+  resetActiveOption: PropTypes.func.isRequired
 };
 
 Options.defaultProps = {
