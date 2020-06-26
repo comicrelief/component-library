@@ -17,29 +17,34 @@ const optionFetcher = async query => {
 
 const optionParser = school => `${school.name}, ${school.post_code}`;
 
-const SchoolLookup = ({
-  label,
-  placeholder,
-  notFoundMessage,
-  dropdownInstruction,
-  onSelect,
-  ...rest
-}) => {
-  const props = {
-    optionFetcher,
-    optionParser,
-    onSelect,
-    id: 'school-lookup',
-    name: 'school-lookup',
-    label,
-    placeholder,
-    notFoundMessage,
-    dropdownInstruction,
-    ...rest
-  };
+const SchoolLookup = React.forwardRef(
+  (
+    {
+      label,
+      placeholder,
+      notFoundMessage,
+      dropdownInstruction,
+      onSelect,
+      ...rest
+    },
+    ref
+  ) => {
+    const props = {
+      optionFetcher,
+      optionParser,
+      onSelect,
+      id: 'school-lookup',
+      name: 'school-lookup',
+      label,
+      placeholder,
+      notFoundMessage,
+      dropdownInstruction,
+      ...rest
+    };
 
-  return <Typeahead {...props} />;
-};
+    return <Typeahead {...props} ref={ref} />;
+  }
+);
 
 SchoolLookup.propTypes = {
   /** This function is used to provide data to the parent component when a selection is made. */
