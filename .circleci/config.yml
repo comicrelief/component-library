@@ -11,6 +11,7 @@ jobs:
       - image: cypress/browsers:node12.18.0-chrome83-ff77
         environment:
           TERM: xterm
+          NODE_OPTIONS: --max_old_space_size=4096
 
     working_directory: ~/repo
 
@@ -36,7 +37,7 @@ jobs:
 
       - run:
           name: Run unit tests
-          command: yarn test --max_old_space_size=4096 --maxWorkers=2
+          command: yarn test --maxWorkers=2
 
       - run:
           name: Release to npm
