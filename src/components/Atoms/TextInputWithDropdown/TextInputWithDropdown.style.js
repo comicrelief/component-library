@@ -51,18 +51,11 @@ const TextItalic = styled(Text)`
   font-style: italic;
 `;
 
-const InputWithSpaceAfterLabel = styled(Input)`
-  input {
-    margin-top: ${spacing('sm')};
-  }
-`;
-
 export {
   Container,
   Dropdown,
   DropdownList,
   DropdownItem,
   DropdownItemSelectable,
-  TextItalic,
-  InputWithSpaceAfterLabel
+  TextItalic
 };

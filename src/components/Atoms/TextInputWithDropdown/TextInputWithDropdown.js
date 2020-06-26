@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import Input from '../Input/Input';
 import Text from '../Text/Text';
 import {
   Container,
@@ -8,8 +9,7 @@ import {
   DropdownList,
   DropdownItem,
   DropdownItemSelectable,
-  TextItalic,
-  InputWithSpaceAfterLabel
+  TextItalic
 } from './TextInputWithDropdown.style';
 
 const KEY_CODE_ENTER = 13;
@@ -21,8 +21,8 @@ const KEY_CODE_ESCAPE = 27;
 /**
  * This component deals with the visual aspect of a text input with typeahead-style functionality
  *
- * Proper functionality / behaviour (e.g. API querying, state management, etc.) are handled by the parent
- *  component (via the value, options, onChange and onSelect props)
+ * API querying and state management (aside from that related to keyboard usage/accessibility) are
+ *  handled by the parent component (via the value, options, onChange and onSelect props)
  *
  * See the Typeahead and SchoolLookup molecules for the full implementation
  */
@@ -101,7 +101,7 @@ const TextInputWithDropdown = React.forwardRef(
         className={`TextInputWithDropdown ${className}`.trim()}
         onKeyDown={navigateOptions}
       >
-        <InputWithSpaceAfterLabel
+        <Input
           {...inputProps}
           className="TextInputWithDropdown__input"
           ref={ref}
