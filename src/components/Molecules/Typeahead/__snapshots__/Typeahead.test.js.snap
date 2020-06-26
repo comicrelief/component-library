@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c3 {
+.c2 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4 {
+.c3 {
   font-weight: normal;
   position: relative;
   box-sizing: border-box;
@@ -30,23 +30,23 @@ exports[`renders correctly 1`] = `
   margin-top: 0.5rem;
 }
 
-.c4:focus {
+.c3:focus {
   border: 1px solid #666;
 }
 
-.c4:focus::-webkit-input-placeholder {
+.c3:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c4:focus::-moz-placeholder {
+.c3:focus::-moz-placeholder {
   color: #666;
 }
 
-.c4:focus:-ms-input-placeholder {
+.c3:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c4:focus::placeholder {
+.c3:focus::placeholder {
   color: #666;
 }
 
@@ -66,25 +66,22 @@ exports[`renders correctly 1`] = `
   position: relative;
 }
 
-.c2 input {
-  margin-top: 0.5rem;
-}
-
 @media (min-width:740px) {
-  .c4 {
+  .c3 {
     max-width: 290px;
   }
 }
 
 <div
   className="c0 TextInputWithDropdown"
+  onKeyDown={[Function]}
 >
   <label
-    className="c1 c2 TextInputWithDropdown__input"
+    className="c1 TextInputWithDropdown__input"
     htmlFor="typeahead-test"
   >
     <span
-      className="c3 "
+      className="c2 "
       color="inherit"
       size="s"
     >
@@ -93,7 +90,7 @@ exports[`renders correctly 1`] = `
     <input
       aria-describedby="typeahead-test"
       autoComplete="off"
-      className="c4"
+      className="c3"
       id="typeahead-test"
       name="q"
       onChange={[Function]}
