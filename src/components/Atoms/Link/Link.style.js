@@ -44,6 +44,8 @@ export const IconWrapper = styled.span`
     css`
       position: absolute;
       right: -2rem;
+      top: 0;
+      bottom: 0;
     `};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
@@ -54,6 +56,8 @@ export const IconWrapper = styled.span`
       css`
         position: absolute;
         right: -2rem;
+        top: 0;
+        bottom: 0;
       `};
   }
 `;

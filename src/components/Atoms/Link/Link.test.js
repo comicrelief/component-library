@@ -65,6 +65,8 @@ it('renders a button with an icon', () => {
       right: 1.5rem;
       position: absolute;
       right: -2rem;
+      top: 0;
+      bottom: 0;
     }
 
     .c0 {
@@ -90,6 +92,8 @@ it('renders a button with an icon', () => {
         position: relative;
         position: absolute;
         right: -2rem;
+        top: 0;
+        bottom: 0;
       }
     }
 
