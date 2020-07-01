@@ -315,6 +315,7 @@ it('renders correctly', () => {
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
       letter-spacing: -2px;
+      height: auto;
     }
 
     .c18 {
@@ -329,6 +330,7 @@ it('renders correctly', () => {
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
       letter-spacing: -2px;
+      height: auto;
       border-color: #E52630;
       background-color: #E52630;
       color: #FFFFFF;
