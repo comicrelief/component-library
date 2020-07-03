@@ -39,13 +39,17 @@ React.useEffect(() => {
       return null;
     })
     .filter(el => el != null);
-  console.log(filtered);
   setSelected(filtered);
 }, [categories]);
+
+const resetSelection = () => {
+  setCategories(newGroup);
+};
 
 <Chips
   categories={categories}
   handleToggle={handleToggle}
   selected={selected}
+  resetSelection={resetSelection}
 />;
 ```
