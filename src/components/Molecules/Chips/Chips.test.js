@@ -42,9 +42,7 @@ it('renders article teaser correctly', () => {
     />
   ).toJSON();
 
-  expect(tree).toMatchInlineSnapshot(
-    '',
-    `
+  expect(tree).toMatchInlineSnapshot(`
     .c5 {
       font-size: 1rem;
       line-height: 1rem;
@@ -285,6 +283,5 @@ it('renders article teaser correctly', () => {
         </span>
       </button>
     </div>
-  `
-  );
+  `);
 });
