@@ -102,7 +102,7 @@ const CheckInput = styled.input`
   }
   :checked ~ span {
     background-size: 24px;
-    background-color: ${({ theme }) => theme.color('purple')};
+    background-color: ${({ theme, color }) => theme.color(color)};
   }
   :focus + span {
     border-color: ${({ theme }) => theme.color('grey_for_forms')};
