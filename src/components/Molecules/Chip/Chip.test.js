@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Chips from './Chips';
+import Chip from './Chip';
 
 it('renders article teaser correctly', () => {
   const group = [
@@ -30,16 +30,8 @@ it('renders article teaser correctly', () => {
     newGroup = result;
   };
 
-  const resetSelection = () => {
-    return newGroup;
-  };
   const tree = renderWithTheme(
-    <Chips
-      categories={newGroup}
-      handleToggle={handleToggle}
-      selected
-      resetSelection={resetSelection}
-    />
+    <Chip categories={newGroup} handleToggle={handleToggle} />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`

@@ -59,4 +59,4 @@ export { default as CookieBanner } from './components/Organisms/CookieBanner/Coo
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export { default as MarketingPreferences } from './components/Organisms/MarketingPreferences/MarketingPreferences';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
-export { default as Chips } from './components/Molecules/Chips/Chips';
+export { default as Chip } from './components/Molecules/Chip/Chip';
