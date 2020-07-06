@@ -4,56 +4,13 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Chip from './Chip';
 
 it('renders article teaser correctly', () => {
-  const group = [
-    { fieldValue: 'Gender Justice' },
-    { fieldValue: 'How we Fund' },
-    { fieldValue: 'Partnerships' },
-    { fieldValue: 'Red Shed' },
-    { fieldValue: 'Social Tech' },
-    { fieldValue: 'Sport for Change' }
-  ];
-
-  let newGroup = group.map((cats, index) => ({
-    id: index,
-    ...cats,
-    checked: false
-  }));
-
-  const handleToggle = e => {
-    const result = newGroup.map(cat => {
-      const newCat = { ...cat };
-      if (newCat.fieldValue === e.target.value) {
-        newCat.checked = !newCat.checked;
-      }
-      return newCat;
-    });
-    newGroup = result;
-  };
-
+  const handleToggle = e => {};
   const tree = renderWithTheme(
-    <Chip categories={newGroup} handleToggle={handleToggle} />
+    <Chip category="Gender Justice" handleToggle={handleToggle} />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c5 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
-
-    .c1 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -75,11 +32,11 @@ it('renders article teaser correctly', () => {
       position: relative;
     }
 
-    .c1 (min-width:740px) {
+    .c0 (min-width:740px) {
       margin: 1rem 1rem 0 0;
     }
 
-    .c3 {
+    .c2 {
       display: block;
       position: absolute;
       width: 100%;
@@ -93,11 +50,11 @@ it('renders article teaser correctly', () => {
       z-index: 1;
     }
 
-    .c3:hover {
+    .c2:hover {
       background: #E1E2E3;
     }
 
-    .c2 {
+    .c1 {
       display: block;
       box-sizing: border-box;
       opacity: 0;
@@ -109,7 +66,7 @@ it('renders article teaser correctly', () => {
       border: 1px solid #666;
     }
 
-    .c2 + span {
+    .c1 + span {
       background: url(mock.asset) no-repeat center;
       background-size: 24px;
       margin-right: 1rem;
@@ -121,159 +78,35 @@ it('renders article teaser correctly', () => {
       z-index: 2;
     }
 
-    .c2:checked ~ span {
+    .c1:checked ~ span {
       background-size: 24px;
       background-color: #6F3AAB;
     }
 
-    .c2:focus + span {
+    .c1:focus + span {
       border-color: #666;
       border-width: 3px;
     }
 
-    .c2:focus + span {
+    .c1:focus + span {
       border-color: #666;
       border-width: 3px;
     }
 
-    .c4 {
-      border-radius: 2rem;
-      background: none;
-      padding: 0.5rem 1rem;
-      margin: 1rem 0 0 0;
-      border: 1px solid #E1E2E3;
-      outline: none;
-      padding-left: 3rem;
-      position: relative;
-      height: 48px;
-    }
-
-    .c4:focus {
-      border-color: #666;
-    }
-
-    .c4:before {
-      content: '';
-      background: url(mock.asset) no-repeat center;
-      width: 20px;
-      height: 20px;
-      display: block;
-      position: absolute;
-      left: 1rem;
-    }
-
-    <div
+    <label
       className="c0"
     >
-      <label
+      <input
         className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="Gender Justice"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        Gender Justice
-      </label>
-      <label
-        className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="How we Fund"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        How we Fund
-      </label>
-      <label
-        className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="Partnerships"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        Partnerships
-      </label>
-      <label
-        className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="Red Shed"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        Red Shed
-      </label>
-      <label
-        className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="Social Tech"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        Social Tech
-      </label>
-      <label
-        className="c1"
-      >
-        <input
-          checked={false}
-          className="c2"
-          onChange={[Function]}
-          type="checkbox"
-          value="Sport for Change"
-        />
-        <span />
-        <span
-          className="c3"
-        />
-        Sport for Change
-      </label>
-      <button
-        className="c4"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="c5"
-          color="inherit"
-          size="s"
-        >
-          Clear selection
-        </span>
-      </button>
-    </div>
+        onChange={[Function]}
+        type="checkbox"
+        value="Gender Justice"
+      />
+      <span />
+      <span
+        className="c2"
+      />
+      Gender Justice
+    </label>
   `);
 });
