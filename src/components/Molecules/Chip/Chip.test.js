@@ -99,6 +99,7 @@ it('renders article teaser correctly', () => {
       className="c0"
     >
       <input
+        checked={false}
         className="c1"
         color="purple"
         onChange={[Function]}
