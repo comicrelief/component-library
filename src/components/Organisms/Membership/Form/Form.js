@@ -37,8 +37,8 @@ const Signup = ({
     box2: '',
     box3: ''
   });
-
-  const [isSelected, setIsSelected] = useState(true); // Highlight one the money buy box when the page load
+  // Highlight one the money buy box when the page load
+  const [isSelected, setIsSelected] = useState(true);
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState('');
   const [userInput, setUserInput] = useState('');

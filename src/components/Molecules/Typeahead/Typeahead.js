@@ -102,7 +102,8 @@ Typeahead.propTypes = {
   label: PropTypes.string.isRequired,
   notFoundMessage: PropTypes.string.isRequired,
   /**
-   * An optional error handling function which can either return a bespoke error message to be displayed here,
+   * An optional error handling function which can either return a bespoke error message to
+   * be displayed here,
    *  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
    */
   fetchErrorHandler: PropTypes.func,

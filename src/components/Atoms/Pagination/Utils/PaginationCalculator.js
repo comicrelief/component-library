@@ -6,10 +6,8 @@ import { range } from 'lodash';
  * @param  {Integer} totalPages
  * @return {Integer}
  */
-export const calculateDisplayedPages = (maxPages, totalPages) =>
-  // Use totalPages as displayed pages if it is less than allowed max number of pages
-  Math.min(maxPages, totalPages)
-;
+// Use totalPages as displayed pages if it is less than allowed max number of pages
+export const calculateDisplayedPages = (maxPages, totalPages) => Math.min(maxPages, totalPages);
 
 /**
  * Determines the number of displayed pages to the left

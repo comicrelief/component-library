@@ -172,7 +172,8 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferences.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  /** Can be used to prevent clashes with other fields if this component is being used in a larger form. */
+  /** Can be used to prevent clashes with other fields if this component
+   * is being used in a larger form. */
   fieldPrefix: PropTypes.string,
   disableEmailInput: PropTypes.bool,
   disablePostInputs: PropTypes.bool,
