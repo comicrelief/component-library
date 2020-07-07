@@ -48,25 +48,23 @@ const Box = ({
   width,
   children,
   ...rest
-}) => {
-  return (
-    <Container {...rest}>
-      {imageLow ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            imageLow={imageLow}
-            images={images}
-            image={image}
-            width={width}
-            height="auto"
-          />
-        </Image>
-      ) : null}
-      {children ? <Copy>{children}</Copy> : null}
-    </Container>
-  );
-};
+}) => (
+  <Container {...rest}>
+    {imageLow ? (
+      <Image>
+        <Picture
+          alt={imageAltText}
+          imageLow={imageLow}
+          images={images}
+          image={image}
+          width={width}
+          height="auto"
+        />
+      </Image>
+    ) : null}
+    {children ? <Copy>{children}</Copy> : null}
+  </Container>
+);
 
 Box.propTypes = {
   imageLow: PropTypes.string,

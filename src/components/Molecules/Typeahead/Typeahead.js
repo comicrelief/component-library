@@ -8,7 +8,7 @@ import useStateObject from '../../../utils/useStateObject';
 const initialState = {
   value: '',
   options: [],
-  errorMsg: '',
+  errorMsg: ''
 };
 
 // These just felt about right to me but could be changed.
@@ -34,7 +34,7 @@ const Typeahead = React.forwardRef(
     const [state, updateState] = useStateObject(initialState);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const debouncedFetch = useCallback(
-      debounce(async (value) => {
+      debounce(async value => {
         const valueTrimmed = value.trim();
         let { options, errorMsg } = initialState;
         if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
@@ -52,7 +52,7 @@ const Typeahead = React.forwardRef(
       []
     );
 
-    const onChange = (e) => {
+    const onChange = e => {
       const { value } = e.currentTarget;
       // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
       // (but happy to take advice on this!)
@@ -106,14 +106,13 @@ Typeahead.propTypes = {
    *  or re-throw so the error can be handled further up the tree e.g. be an error boundary.
    */
   fetchErrorHandler: PropTypes.func,
-  dropdownInstruction: PropTypes.string,
+  dropdownInstruction: PropTypes.string
 };
 
 Typeahead.defaultProps = {
   dropdownInstruction: null,
   optionParser: null,
-  fetchErrorHandler: () =>
-    'Sorry, there was an unexpected error. Please try again',
+  fetchErrorHandler: () => 'Sorry, there was an unexpected error. Please try again'
 };
 
 export default Typeahead;

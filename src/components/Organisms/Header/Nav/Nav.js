@@ -46,8 +46,8 @@ const MainNav = ({ navItems }) => {
   const keyPressed = item => () => {
     window.onkeyup = e => {
       if (
-        e.target.querySelector('span') &&
-        e.target.querySelector('span').innerText === item
+        e.target.querySelector('span')
+        && e.target.querySelector('span').innerText === item
       ) {
         setIsKeyPressed({ [item]: !isKeyPressed[item] });
       } else if (!e.target.querySelector('span')) {
@@ -57,9 +57,8 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    const isTouchDevice =
-      (typeof window !== 'undefined' && 'ontouchstart' in window) ||
-      window.navigator.msMaxTouchPoints > 0;
+    const isTouchDevice = (typeof window !== 'undefined' && 'ontouchstart' in window)
+      || window.navigator.msMaxTouchPoints > 0;
 
     const width = typeof window !== 'undefined' ? window.innerWidth : null;
     // Detect window screen size

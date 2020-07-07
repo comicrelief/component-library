@@ -64,9 +64,8 @@ const Copy = styled.div`
     height: 100%;
   }
   ${zIndex('low')};
-  ${({ hasImage }) =>
-    hasImage &&
-    css`
+  ${({ hasImage }) => hasImage
+    && css`
       margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
       @media ${({ theme }) => theme.breakpoint('small')} {

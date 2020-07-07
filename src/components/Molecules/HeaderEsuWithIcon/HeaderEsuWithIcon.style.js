@@ -55,4 +55,6 @@ const HeaderESU = styled(EmailSignUp)`
   }
 `;
 
-export { IconWrapper, EsuWrapper, CloseButton, HeaderESU };
+export {
+  IconWrapper, EsuWrapper, CloseButton, HeaderESU
+};

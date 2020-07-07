@@ -4,10 +4,9 @@ const NavHelper = navItem => {
   let thisUrl = navItem.path;
 
   if (navItem.internal.type === 'ContentfulComponentLink') {
-    thisUrl =
-      navItem.reference && navItem.reference.path
-        ? navItem.reference.path
-        : navItem.url;
+    thisUrl = navItem.reference && navItem.reference.path
+      ? navItem.reference.path
+      : navItem.url;
   }
 
   return thisUrl;

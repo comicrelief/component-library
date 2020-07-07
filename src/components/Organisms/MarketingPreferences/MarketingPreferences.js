@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
-import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
+import {
+  CopyWrapper, Head, Body, Field
+} from './MarketingPreferences.style';
 
 // inputs should remain in the dom whether or not they are displayed,
 //  otherwise you get unpredictable behaviour from react-hook-form APIs.

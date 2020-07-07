@@ -1,9 +1,7 @@
 /* Handles issues related to screen/browser positions on dual-screen setups-  http://www.xtf.dk/ */
 const popUpCentre = (url, popUpWidth, popUpHeight) => {
-  const dualScreenLeft =
-    window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
-  const dualScreenTop =
-    window.screenTop !== undefined ? window.screenTop : window.screen.top;
+  const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
+  const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screen.top;
 
   let browserWidth;
   let browserHeight;

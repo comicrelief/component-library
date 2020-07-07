@@ -7,10 +7,7 @@ import _ from 'lodash';
  */
 const useStateObject = initialState => {
   const [state, setState] = useState(initialState);
-  const updateState = updatedValues =>
-    setState(prevState =>
-      Object.assign(_.cloneDeep(prevState), _.cloneDeep(updatedValues))
-    );
+  const updateState = updatedValues => setState(prevState => Object.assign(_.cloneDeep(prevState), _.cloneDeep(updatedValues)));
 
   return [state, updateState];
 };

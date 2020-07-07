@@ -46,4 +46,6 @@ const SearchField = styled(Input)`
   }
 `;
 
-export { Wrapper, InnerWrapper, SearchBox, SearchWrapper, SearchField };
+export {
+  Wrapper, InnerWrapper, SearchBox, SearchWrapper, SearchField
+};

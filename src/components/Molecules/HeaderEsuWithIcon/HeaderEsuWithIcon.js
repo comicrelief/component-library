@@ -57,38 +57,34 @@ const HeaderEsuWithIcon = ({
   };
 
   /* Break out ESU render into own function */
-  const renderESU = () => {
-    return (
-      <HeaderESU
-        title={title}
-        topCopy={topCopy}
-        successCopy={successCopy}
-        privacyCopy={privacyCopy}
-        isSuccess={isSuccess}
-        subscribe={subscribe}
-        validate={validate}
-        errorMsg={errorMsg}
-        buttonColor={buttonColor}
-        aria-modal="true"
-      />
-    );
-  };
+  const renderESU = () => (
+    <HeaderESU
+      title={title}
+      topCopy={topCopy}
+      successCopy={successCopy}
+      privacyCopy={privacyCopy}
+      isSuccess={isSuccess}
+      subscribe={subscribe}
+      validate={validate}
+      errorMsg={errorMsg}
+      buttonColor={buttonColor}
+      aria-modal="true"
+    />
+  );
 
   /* Break out Close button render into own function */
-  const renderCloseButton = () => {
-    return (
-      <CloseButton
-        onClick={e => handleESUOpen(e)}
-        icon={HeaderIcons.close.icon}
-        title={HeaderIcons.close.title}
-        brand={HeaderIcons.close.title}
-        target="self"
-        role="button"
-        href="#"
-        tabIndex="0"
-      />
-    );
-  };
+  const renderCloseButton = () => (
+    <CloseButton
+      onClick={e => handleESUOpen(e)}
+      icon={HeaderIcons.close.icon}
+      title={HeaderIcons.close.title}
+      brand={HeaderIcons.close.title}
+      target="self"
+      role="button"
+      href="#"
+      tabIndex="0"
+    />
+  );
 
   /* Main render */
   return (

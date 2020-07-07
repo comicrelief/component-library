@@ -13,18 +13,15 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
-    flex-direction: ${({ copyFirst }) =>
-      copyFirst === true ? 'row-reverse' : 'row'};
-    ${({ landscapeVideo, hasVideo, fullImage }) =>
-      landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null};
+    flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
+    ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
   }
   iframe {
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
-    ${({ copyFirst }) =>
-      copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
+    ${({ copyFirst }) => (copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
     ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
   }
 `;
@@ -32,27 +29,23 @@ const Container = styled.div`
 const Copy = styled.div`
   width: 100%;
   ${zIndex('low')};
-  ${({ hasVideo, fullImage }) =>
-    hasVideo === true && fullImage === true ? 'display: none;' : null};
+  ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
   padding: ${spacing('l')};
   ${media('small')} {
-    ${({ vhFull, fullImage }) =>
-      vhFull || fullImage
-        ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
-        : 'height: auto;'};
+    ${({ vhFull, fullImage }) => (vhFull || fullImage
+    ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
+    : 'height: auto;')};
 
-    ${({ hasVideo, fullImage }) =>
-      hasVideo === true && fullImage === true
-        ? 'display: none;'
-        : 'display: flex;'};
+    ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true
+    ? 'display: none;'
+    : 'display: flex;')};
 
     flex-direction: column;
     justify-content: center;
     padding: ${spacing('xl')};
   }
-  ${props =>
-    props.fullImage &&
-    css`
+  ${props => props.fullImage
+    && css`
       ${media('small')} {
         position: absolute;
         width: 100%;
@@ -60,21 +53,20 @@ const Copy = styled.div`
         top: 50%;
         transform: translateY(-50%);
         ${props.copyFirst
-          ? css`
+    ? css`
               left: 0;
             `
-          : null}
+    : null}
         width: 50%;
       }
     `};
-  ${props =>
-    props.hasImage
-      ? css`
+  ${props => (props.hasImage
+    ? css`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 50%;
           }
         `
-      : css`
+    : css`
           @media ${({ theme }) => theme.breakpoint('small')} {
             width: 100%;
             max-width ${container.small};
@@ -82,7 +74,7 @@ const Copy = styled.div`
           }
           margin: auto;
           padding: ${spacing('md')};
-        `};
+        `)};
 `;
 
 const Media = styled.div`
@@ -92,19 +84,15 @@ const Media = styled.div`
     height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
     ${({ fullImage }) => (fullImage ? 'min-height: 500px;' : null)};
-    ${({ vhFull, fullImage }) =>
-      vhFull && fullImage ? 'min-height: calc(100vh - 5.625rem);' : null};
+    ${({ vhFull, fullImage }) => (vhFull && fullImage ? 'min-height: calc(100vh - 5.625rem);' : null)};
   }
   position: relative;
-  ${({ doubleImage }) =>
-    doubleImage && 'display: flex; flex-direction: column'};
-  ${({ hasVideo }) =>
-    hasVideo
-      ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
-      : null};
+  ${({ doubleImage }) => doubleImage && 'display: flex; flex-direction: column'};
+  ${({ hasVideo }) => (hasVideo
+    ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
+    : null)};
   ${media('small')} {
-    padding-bottom: ${({ landscapeVideo, hasVideo }) =>
-      landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;'};
+    padding-bottom: ${({ landscapeVideo, hasVideo }) => (landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;')};
   }
 `;
 
@@ -121,18 +109,15 @@ const PlayButton = styled.button`
   text-indent: -9999px;
   background: rgba(0, 0, 0, 0) center no-repeat;
   background-size: 70px;
-  background-image: ${({ isBuffering }) =>
-    isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`};
+  background-image: ${({ isBuffering }) => (isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`)};
 
-  ${({ copyFirst }) =>
-    copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;'};
+  ${({ copyFirst }) => (copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
 
   display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
 
   &:focus,
   &:hover {
-    background-image: ${({ isBuffering }) =>
-      isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`};
+    background-image: ${({ isBuffering }) => (isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`)};
   }
 
   ${media('small')} {
@@ -143,16 +128,14 @@ const PlayButton = styled.button`
 const Image = styled.div`
   @media ${({ theme }) => theme.breakpoint('small')} {
     img {
-      position: ${({ fullImage, vhFull }) =>
-        fullImage || vhFull ? 'absolute' : null};
+      position: ${({ fullImage, vhFull }) => (fullImage || vhFull ? 'absolute' : null)};
     }
   }
   width: 100%;
   height: 100%;
   ${({ doubleImage }) => doubleImage && 'height: 50%'};
   ${({ isPlaying }) => (isPlaying ? zIndex('base') : zIndex('low'))};
-  ${({ hasVideo }) =>
-    hasVideo ? 'position: absolute; top: 0; left: 0;' : null};
+  ${({ hasVideo }) => (hasVideo ? 'position: absolute; top: 0; left: 0;' : null)};
 `;
 
 const VideoWrapper = styled.div`
@@ -164,4 +147,6 @@ const VideoWrapper = styled.div`
   ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('base'))};
 `;
 
-export { Container, Copy, Media, PlayButton, Image, VideoWrapper };
+export {
+  Container, Copy, Media, PlayButton, Image, VideoWrapper
+};

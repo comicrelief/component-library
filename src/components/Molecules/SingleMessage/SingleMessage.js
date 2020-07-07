@@ -46,13 +46,12 @@ const SingleMessage = ({
 
   const thisRef = useRef(null);
 
-  const isIOS =
-    typeof navigator === 'object'
-      ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-        !window.MSStream &&
-        !!navigator.platform &&
-        /iPad|iPhone|iPod/.test(navigator.platform)
-      : false;
+  const isIOS = typeof navigator === 'object'
+    ? /iPad|iPhone|iPod/.test(navigator.userAgent)
+        && !window.MSStream
+        && !!navigator.platform
+        && /iPad|iPhone|iPod/.test(navigator.platform)
+    : false;
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
@@ -146,9 +145,9 @@ const SingleMessage = ({
                 fullImage={fullImage}
                 vhFull={vhFull}
               >
-                {hasVideo &&
-                  hasParentID &&
-                  renderVideoPlayers(getID(thisRef.current))}
+                {hasVideo
+                  && hasParentID
+                  && renderVideoPlayers(getID(thisRef.current))}
 
                 {imageSet || image ? (
                   <Image

@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier", "react-hooks"],
+  "extends": ["airbnb"],
+  "plugins": ["react-hooks"],
   "rules": {
     "comma-dangle": ["error", {
       "arrays": "never",
@@ -17,13 +17,6 @@
     "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "prettier/prettier": ["error",
-      {
-        "singleQuote": true,
-        "trailingComma": "none",
-        "arrowParens": "avoid"
-      }
-    ],
     "react/jsx-filename-extension": "off",
     "react/no-danger": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["importers/**/*.js"]}],

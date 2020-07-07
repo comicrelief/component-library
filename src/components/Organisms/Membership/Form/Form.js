@@ -97,9 +97,9 @@ const Signup = ({
       // eslint-disable-next-line no-shadow
       setMoneyBoxes(moneyBoxes => ({ ...moneyBoxes, [box]: moneyBuy }));
       return (
-        isSelected &&
-        index === 1 &&
-        (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
+        isSelected
+        && index === 1
+        && (setMoneyBuyCopy(moneyBuy.description), setAmountDonate(moneyBuy.value))
       );
     });
   }, [isSelected, regularGiving.moneybuys]);
@@ -141,15 +141,14 @@ const Signup = ({
   return (
     <FormWrapper>
       <Form
-        onSubmit={e =>
-          submitDonation(
-            e,
-            amountDonate,
-            clientID,
-            cartID,
-            mbshipID,
-            donateLink
-          )
+        onSubmit={e => submitDonation(
+          e,
+          amountDonate,
+          clientID,
+          cartID,
+          mbshipID,
+          donateLink
+        )
         }
       >
         <OuterFieldset>

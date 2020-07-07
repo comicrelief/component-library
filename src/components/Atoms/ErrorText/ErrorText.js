@@ -22,13 +22,11 @@ const ErrorIcon = styled.span`
   }
 `;
 
-const ErrorText = ({ children, ...rest }) => {
-  return (
-    <Text {...rest} color="red">
-      <ErrorIcon>{children}</ErrorIcon>
-    </Text>
-  );
-};
+const ErrorText = ({ children, ...rest }) => (
+  <Text {...rest} color="red">
+    <ErrorIcon>{children}</ErrorIcon>
+  </Text>
+);
 
 ErrorText.propTypes = {
   children: PropTypes.node.isRequired

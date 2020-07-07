@@ -96,9 +96,8 @@ const EmailSignUp = ({
               type="submit"
               data-test="subscribe-button-school"
               color={buttonColor}
-              onClick={() =>
-                validate({ email: value, age }) &&
-                subscribe({ email: `${value}`, age: `${age}` })
+              onClick={() => validate({ email: value, age })
+                && subscribe({ email: `${value}`, age: `${age}` })
               }
               value=" Subscribe"
             />

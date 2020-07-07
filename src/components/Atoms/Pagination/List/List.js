@@ -21,32 +21,32 @@ const List = ({
   onSelect,
   pageComponentProps,
   ...restProps
-}) => {
-  return (
-    <StyledList>
-      {pages.map(({ selected, disabled, label, ariaLabel, value }) => (
-        <StyledItem key={`${ariaLabel} ${value}`}>
-          <PageComponent
-            selected={selected}
-            disabled={disabled}
-            aria-label={ariaLabel}
-            href={selected || disabled ? null : createURL(value)}
-            onClick={event => {
-              if (selected || disabled) {
-                return event.preventDefault();
-              }
-              return onSelect(event, value);
-            }}
-            {...restProps}
-            {...pageComponentProps}
-          >
-            {label}
-          </PageComponent>
-        </StyledItem>
-      ))}
-    </StyledList>
-  );
-};
+}) => (
+  <StyledList>
+    {pages.map(({
+      selected, disabled, label, ariaLabel, value
+    }) => (
+      <StyledItem key={`${ariaLabel} ${value}`}>
+        <PageComponent
+          selected={selected}
+          disabled={disabled}
+          aria-label={ariaLabel}
+          href={selected || disabled ? null : createURL(value)}
+          onClick={event => {
+            if (selected || disabled) {
+              return event.preventDefault();
+            }
+            return onSelect(event, value);
+          }}
+          {...restProps}
+          {...pageComponentProps}
+        >
+          {label}
+        </PageComponent>
+      </StyledItem>
+    ))}
+  </StyledList>
+);
 
 List.propTypes = {
   pages: PropTypes.arrayOf(

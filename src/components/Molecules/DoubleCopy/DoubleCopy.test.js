@@ -6,8 +6,7 @@ import DoubleCopy from './DoubleCopy';
 import RichText from '../../Atoms/RichText/RichText';
 
 it('renders correctly', () => {
-  const content =
-    '<h1> Left Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+  const content = '<h1> Left Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
   const tree = renderWithTheme(
     <DoubleCopy
       leftCopy={<RichText markup={content} />}
