@@ -18,9 +18,6 @@ import Link from '../../Atoms/Link/Link';
     backgroundColor="white"
     height="auto"
   >
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
     <Text tag="p">Text body copy description</Text>
   </BiteSize>
 </div>;

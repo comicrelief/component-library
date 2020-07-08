@@ -5,6 +5,7 @@ import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
+import Text from '../../Atoms/Text/Text';
 
 const Container = styled.div`
   display: flex;
@@ -23,9 +24,18 @@ const Container = styled.div`
   }
 `;
 
+const Subtitle = styled(Text)`
+  display: block;
+  margin: 0 0 ${spacing('m')};
+`;
+
+const Title = styled(Text)`
+  margin: 0 0 ${spacing('l')};
+`;
+
 const Copy = styled.div`
-  padding: ${spacing('l')};
-  ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('xl')}`};
+  padding: calc(2 * ${spacing('m')});
+  ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('l')}`};
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -84,6 +94,19 @@ const BiteSize = ({
   return (
     <Container {...rest}>
       <Copy hasLink={link} backgroundColor={backgroundColor}>
+        <Subtitle size="s" weight="normal" family="Montserrat" tag="h6">
+          Subtitle
+        </Subtitle>
+        <Title
+          size="xl"
+          tag="h4"
+          height="2rem"
+          weight="normal"
+          uppercase
+          family="Anton"
+        >
+          Title
+        </Title>
         {children}
       </Copy>
       {link && (
