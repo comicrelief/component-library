@@ -1,9 +1,14 @@
 # Chip
 
 ```js
+const [checked, setChecked] = React.useState(false);
 const handleToggle = e => {
-  return;
+  setChecked(!checked);
 };
 
-<Chip category="Gender Justice" handleToggle={handleToggle} />;
+<Chip
+  category="Gender Justice"
+  handleToggle={handleToggle}
+  checked={checked}
+/>;
 ```
