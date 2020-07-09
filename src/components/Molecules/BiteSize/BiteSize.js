@@ -76,6 +76,10 @@ const Li = styled(Link)`
       width: 48px;
       span {
         margin-left: 0;
+
+        svg {
+          width: 22px;
+        }
       }
       span:first-child {
         hidden: ${hideVisually};
@@ -105,10 +109,16 @@ const BiteSize = ({
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
   useEffect(() => {
-    const width = typeof window !== 'undefined' ? window.innerWidth : null;
-    if (width < 759) {
-      setMobile(true);
+    let width = typeof window !== 'undefined' ? window.innerWidth : null;
+    function displayWindowSize() {
+      width = typeof window !== 'undefined' ? window.innerWidth : null;
+      setMobile(width < 759);
     }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', displayWindowSize);
+    }
+    setMobile(width < 759);
   }, []);
 
   return (
