@@ -325,6 +325,10 @@ exports[`renders Single Message with Image correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+
+}
+
 <div
   className="c0"
   id="single-msg__1"
@@ -467,6 +471,10 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c5 {
     height: auto;
     display: -webkit-box;
@@ -491,6 +499,14 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c1 {
     height: auto;
     width: 50%;
@@ -501,6 +517,22 @@ exports[`renders Single Message with double image correctly 1`] = `
   .c1 {
     padding-bottom: 0;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 <div
@@ -873,6 +905,18 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c1 {
     height: auto;
     width: 100%;
@@ -998,6 +1042,26 @@ exports[`renders Single Message with no Image correctly 1`] = `
     max-width: 880px;
     padding: 4rem;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 <div

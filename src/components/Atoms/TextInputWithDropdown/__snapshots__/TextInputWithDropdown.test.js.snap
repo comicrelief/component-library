@@ -360,7 +360,7 @@ exports[`renders correctly with value and options 1`] = `
     >
       <li
         aria-selected={false}
-        className="c6"
+        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c6"
         id="option-0"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -377,7 +377,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="c6"
+        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c6"
         id="option-1"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -394,7 +394,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="c6"
+        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c6"
         id="option-2"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -411,7 +411,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="c6"
+        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c6"
         id="option-3"
         onClick={[Function]}
         onKeyPress={[Function]}
