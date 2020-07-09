@@ -168,10 +168,6 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
   .c7 {
     max-width: 290px;
   }

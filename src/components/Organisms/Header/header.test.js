@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Header from './Header';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Header from "./Header";
 
-import data from './data/data';
-import Link from '../../Atoms/Link/Link';
+import data from "./data/data";
+import Link from "../../Atoms/Link/Link";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Header
       navItems={data}
@@ -658,7 +658,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                 onKeyUp={[Function]}
@@ -683,7 +683,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c16"
+                    className="c9 c16"
                     color="red"
                     href="https://www.comicrelief.com/fundraising/pay-in-your-money"
                     role="menuitem"
@@ -703,7 +703,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday"
                     role="menuitem"
@@ -723,7 +723,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/join"
                     role="menuitem"
@@ -743,7 +743,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/squads"
                     role="menuitem"
@@ -763,7 +763,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/the-noseys"
                     role="menuitem"
@@ -783,7 +783,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/fundraising/free-downloads"
                     role="menuitem"
@@ -807,7 +807,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup={null}
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onKeyUp={[Function]}
@@ -830,7 +830,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/what-your-money-does"
                 onKeyUp={[Function]}
@@ -855,7 +855,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c16"
+                    className="c9 c16"
                     color="red"
                     href="https://www.comicrelief.com/what-your-money-does"
                     role="menuitem"
@@ -875,7 +875,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/What-we-do/our-legacy"
                     role="menuitem"
@@ -899,7 +899,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://www.comicrelief.com/rednoseday/schools"
                 onKeyUp={[Function]}
@@ -924,7 +924,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c16"
+                    className="c9 c16"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools"
                     role="menuitem"
@@ -944,7 +944,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/primary-schools"
                     role="menuitem"
@@ -964,7 +964,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/secondary-schools"
                     role="menuitem"
@@ -984,7 +984,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/nurseries"
                     role="menuitem"
@@ -1004,7 +1004,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/youth"
                     role="menuitem"
@@ -1024,7 +1024,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://www.comicrelief.com/rednoseday/schools/free-downloads"
                     role="menuitem"
@@ -1048,7 +1048,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup={null}
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://shop.comicrelief.com"
                 onKeyUp={[Function]}
@@ -1071,7 +1071,7 @@ it('renders correctly', () => {
             >
               <a
                 aria-haspopup="true"
-                className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c10 c11"
+                className="c9 c10 c11"
                 color="red"
                 href="https://www.sportrelief.com"
                 onKeyUp={[Function]}
@@ -1096,7 +1096,7 @@ it('renders correctly', () => {
                   role="none"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c16"
+                    className="c9 c16"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1116,7 +1116,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"
@@ -1136,7 +1136,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="/test-ref-path-1"
                     role="menuitem"
@@ -1156,7 +1156,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="/test-ref-path-2"
                     role="menuitem"
@@ -1176,7 +1176,7 @@ it('renders correctly', () => {
                   className="c15"
                 >
                   <a
-                    className="c9 Navstyle__NavLinkClass-sc-1ss3uk2-0 c17"
+                    className="c9 c17"
                     color="red"
                     href="/test-url"
                     role="menuitem"

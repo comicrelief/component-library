@@ -149,7 +149,7 @@ const BiteSize = ({
             type="button"
             icon={icon()}
           >
-            <span>{linkLabel}</span>
+            <Text>{linkLabel}</Text>
           </Li>
         </CTA>
       )}

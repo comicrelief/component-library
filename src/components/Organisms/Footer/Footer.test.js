@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Footer from './Footer';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Footer from "./Footer";
 
-import data from './data/data';
-import footerCopy from './data/footerCopy';
+import data from "./data/data";
+import footerCopy from "./data/footerCopy";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Footer navItems={data} footerCopy={footerCopy.copy} />
   ).toJSON();
@@ -405,10 +405,6 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:1024px) {
-
-    }
-
     @media (min-width:740px) {
       .c18 {
         height: auto;
@@ -647,7 +643,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/#"
                     role="menuitem"
@@ -667,7 +663,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/update-your-preferences"
                     role="menuitem"
@@ -705,7 +701,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="/contact-us"
                     role="menuitem"
@@ -725,7 +721,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://giftaid.comicrelief.com/update"
                     role="menuitem"
@@ -745,7 +741,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/frequently-asked-questions"
                     role="menuitem"
@@ -765,7 +761,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                     role="menuitem"
@@ -803,7 +799,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief"
                     role="menuitem"
@@ -823,7 +819,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/history"
                     role="menuitem"
@@ -843,7 +839,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/finances"
                     role="menuitem"
@@ -863,7 +859,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/working-with-us"
                     role="menuitem"
@@ -883,7 +879,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                     role="menuitem"
@@ -903,7 +899,7 @@ it('renders correctly', () => {
                   className="c18"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.sportrelief.com/"
                     role="menuitem"
@@ -941,7 +937,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/careers"
                     role="menuitem"
@@ -961,7 +957,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://app.beapplied.com/org/comic-relief"
                     role="menuitem"
@@ -999,7 +995,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/news"
                     role="menuitem"
@@ -1019,7 +1015,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.comicrelief.com/press-releases"
                     role="menuitem"
@@ -1057,7 +1053,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="/homepage"
                     role="menuitem"
@@ -1077,7 +1073,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="/this-is-a-test"
                     role="menuitem"
@@ -1097,7 +1093,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.yahoo.com"
                     role="menuitem"
@@ -1117,7 +1113,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://www.sportrelief.com"
                     role="menuitem"
@@ -1137,7 +1133,7 @@ it('renders correctly', () => {
                   className="c13"
                 >
                   <a
-                    className="c14 Navstyle__NavLinkClass-uzf5hs-0 c15"
+                    className="c14 c15"
                     color="red"
                     href="https://bing.com"
                     role="menuitem"
