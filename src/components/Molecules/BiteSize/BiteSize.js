@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
+import hideVisually from '../../../theme/shared/hideVisually';
 import Text from '../../Atoms/Text/Text';
 
 const Container = styled.div`
@@ -13,6 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
   width: calc(100% - ${spacing('m')});
+  color: ${({ theme }) => theme.color('grey_dark')};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
@@ -24,17 +26,21 @@ const Container = styled.div`
   }
 `;
 
-const Subtitle = styled(Text)`
-  display: block;
+const Heading = styled(Text)`
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+`;
+
+const Subtitle = styled(Heading)`
   margin: 0 0 ${spacing('m')};
 `;
 
-const Title = styled(Text)`
+const Title = styled(Heading)`
   margin: 0 0 ${spacing('l')};
 `;
 
 const Copy = styled.div`
-  padding: calc(2 * ${spacing('m')});
+  padding: calc(2 * ${spacing('md')});
   ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('l')}`};
   display: flex;
   flex-direction: column;
@@ -42,25 +48,14 @@ const Copy = styled.div`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   width: 100%;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: calc(2 * ${spacing('m')});
+  }
+
   @media ${({ theme }) => theme.breakpoint('large')} {
     height: 100%;
   }
-  ${zIndex('low')};
-  ${({ hasImage }) =>
-    hasImage &&
-    css`
-      margin-top: calc(-2 * ${spacing('m')});
-      min-height: calc(5 * ${spacing('l')});
-      @media ${({ theme }) => theme.breakpoint('small')} {
-        margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};
-        width: calc(50% + 6rem);
-      }
-
-      @media ${({ theme }) => theme.breakpoint('large')} {
-        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
-        width: 100%;
-      }
-    `};
 `;
 
 const CTA = styled.div`
@@ -74,14 +69,32 @@ const CTA = styled.div`
   }
 `;
 
+const Li = styled(Link)`
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      width: 48px;
+      span {
+        margin-left: 0;
+      }
+      span:first-child {
+        hidden: ${hideVisually};
+      }
+    `}
+`;
+
 const BiteSize = ({
   backgroundColor,
   children,
   link,
   linkLabel,
   target,
+  title,
+  subtitle,
   ...rest
 }) => {
+  const [mobile, setMobile] = useState(false);
+
   const icon = () => {
     if (target === 'blank') {
       return <External colour="white" />;
@@ -91,11 +104,18 @@ const BiteSize = ({
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
+  useEffect(() => {
+    const width = typeof window !== 'undefined' ? window.innerWidth : null;
+    if (width < 759) {
+      setMobile(true);
+    }
+  }, []);
+
   return (
     <Container {...rest}>
       <Copy hasLink={link} backgroundColor={backgroundColor}>
-        <Subtitle size="s" weight="normal" family="Montserrat" tag="h6">
-          Subtitle
+        <Subtitle size="m" weight="normal" family="Montserrat" tag="h6">
+          {subtitle}
         </Subtitle>
         <Title
           size="xl"
@@ -105,13 +125,14 @@ const BiteSize = ({
           uppercase
           family="Anton"
         >
-          Title
+          {title}
         </Title>
         {children}
       </Copy>
       {link && (
         <CTA>
-          <Link
+          <Li
+            mobile={mobile}
             rel={external}
             color="red"
             href={link}
@@ -119,8 +140,8 @@ const BiteSize = ({
             type="button"
             icon={icon()}
           >
-            {linkLabel}
-          </Link>
+            <span>{linkLabel}</span>
+          </Li>
         </CTA>
       )}
     </Container>
@@ -130,6 +151,8 @@ const BiteSize = ({
 BiteSize.propTypes = {
   backgroundColor: PropTypes.string,
   link: PropTypes.string,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   linkLabel: PropTypes.string,
   target: PropTypes.string,
   children: PropTypes.node.isRequired
