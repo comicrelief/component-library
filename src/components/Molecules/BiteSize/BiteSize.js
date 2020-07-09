@@ -123,7 +123,7 @@ const BiteSize = ({
   return (
     <Container {...rest}>
       <Copy hasLink={link} backgroundColor={backgroundColor}>
-        <Subtitle size="m" weight="normal" family="Montserrat" tag="h6">
+        <Subtitle size="m" weight="normal" family="Anton" tag="h6">
           {subtitle}
         </Subtitle>
         <Title
