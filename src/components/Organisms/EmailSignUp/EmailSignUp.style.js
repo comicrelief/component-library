@@ -9,8 +9,7 @@ const ESUWrapper = styled.div`
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
   color: ${({ theme }) => theme.color('white')};
-  background-color: ${({ theme, backgroundColor }) =>
-    theme.color(backgroundColor)};
+  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 const TopCopyWrapper = styled.div`
@@ -22,8 +21,7 @@ const ButtonWrapper = styled.div`
   margin-top: ${spacing('md')};
   input {
     text-align: center;
-    border-color: ${({ theme, backgroundColor }) =>
-      theme.color(backgroundColor)};
+    border-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
     width: 100%;
     font-size: ${({ theme }) => theme.fontSize('s')};
     @media ${({ theme }) => theme.breakpoint('small')} {

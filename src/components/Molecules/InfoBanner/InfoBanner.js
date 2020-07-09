@@ -39,68 +39,66 @@ const InfoBanner = ({
   endDate,
   country,
   amount
-}) => {
-  return (
-    <Container>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          Project Name
-        </Text>
-        <Text tag="p" size="sm">
-          {title}
-        </Text>
-      </Info>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          End Date
-        </Text>
-        <Text tag="p" size="sm">
-          {endDate}
-        </Text>
-      </Info>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          Funding theme
-        </Text>
-        <Text tag="p" size="sm">
-          <Link href={themeLink} target="self" type="standard">
-            {theme}
-          </Link>
-        </Text>
-      </Info>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          Amount Awarded
-        </Text>
-        <Text tag="p" size="sm">
-          <CurrencyFormat
-            value={amount}
-            displayType="text"
-            thousandSeparator
-            prefix="£"
-            renderText={value => value}
-          />
-        </Text>
-      </Info>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          Start Date
-        </Text>
-        <Text tag="p" size="sm">
-          {startDate}
-        </Text>
-      </Info>
-      <Info>
-        <Text tag="h3" size="md" uppercase>
-          Beneficiary Country
-        </Text>
-        <Text tag="p" size="sm">
-          {country}
-        </Text>
-      </Info>
-    </Container>
-  );
-};
+}) => (
+  <Container>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Project Name
+      </Text>
+      <Text tag="p" size="sm">
+        {title}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        End Date
+      </Text>
+      <Text tag="p" size="sm">
+        {endDate}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Funding theme
+      </Text>
+      <Text tag="p" size="sm">
+        <Link href={themeLink} target="self" type="standard">
+          {theme}
+        </Link>
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Amount Awarded
+      </Text>
+      <Text tag="p" size="sm">
+        <CurrencyFormat
+          value={amount}
+          displayType="text"
+          thousandSeparator
+          prefix="£"
+          renderText={value => value}
+        />
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Start Date
+      </Text>
+      <Text tag="p" size="sm">
+        {startDate}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Beneficiary Country
+      </Text>
+      <Text tag="p" size="sm">
+        {country}
+      </Text>
+    </Info>
+  </Container>
+);
 
 InfoBanner.propTypes = {
   title: PropTypes.string.isRequired,

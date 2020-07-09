@@ -74,4 +74,6 @@ const Image = styled.div`
   height: 100%;
 `;
 
-export { Container, NudgeBottom, NudgeTop, Wrapper, Copy, Media, Image };
+export {
+  Container, NudgeBottom, NudgeTop, Wrapper, Copy, Media, Image
+};

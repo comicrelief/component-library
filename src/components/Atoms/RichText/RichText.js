@@ -6,15 +6,13 @@ export const Inner = styled.div`
   text-align: ${props => props.align};
 `;
 
-const RichText = ({ align, markup, ...rest }) => {
-  return (
-    <Inner
-      align={align}
-      dangerouslySetInnerHTML={{ __html: markup }}
-      {...rest}
-    />
-  );
-};
+const RichText = ({ align, markup, ...rest }) => (
+  <Inner
+    align={align}
+    dangerouslySetInnerHTML={{ __html: markup }}
+    {...rest}
+  />
+);
 
 RichText.propTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right']),

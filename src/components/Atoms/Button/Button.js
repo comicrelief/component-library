@@ -22,8 +22,7 @@ const StyledButton = styled.button`
   > a {
     text-decoration: none;
   }
-  ${({ color, theme }) =>
-    color ? theme.buttonColors(color) : theme.buttonColors('red')};
+  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
   }

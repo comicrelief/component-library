@@ -44,20 +44,20 @@ const themeSwitcher = theme => {
   }
 };
 
-const Logo = ({ rotate, sizeSm, sizeMd, campaign }) => {
-  return (
-    <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
-      <Image
-        src={themeSwitcher(campaign)}
-        alt={
+const Logo = ({
+  rotate, sizeSm, sizeMd, campaign
+}) => (
+  <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
+    <Image
+      src={themeSwitcher(campaign)}
+      alt={
           campaign === 'Comic Relief'
             ? 'Comic Relief logo'
             : 'Sport Relief logo'
         }
-      />
-    </LogoWrapper>
-  );
-};
+    />
+  </LogoWrapper>
+);
 
 Logo.propTypes = {
   /** Rotate logo */

@@ -14,7 +14,9 @@ import {
   Brand
 } from './Footer.style';
 
-const Footer = ({ navItems, footerCopy, campaign, ...rest }) => {
+const Footer = ({
+  navItems, footerCopy, campaign, ...rest
+}) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (

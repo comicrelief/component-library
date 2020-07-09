@@ -20,8 +20,7 @@ const InputField = styled.input`
   font-size: ${({ theme }) => theme.fontSize('m')};
   background-color: ${({ theme }) => theme.color('grey_light')};
   border: 1px solid;
-  border-color: ${({ theme, error }) =>
-    !error ? theme.color('grey_medium') : theme.color('red')};
+  border-color: ${({ theme, error }) => (!error ? theme.color('grey_medium') : theme.color('red'))};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};

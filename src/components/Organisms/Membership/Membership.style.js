@@ -7,8 +7,7 @@ import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`
-  background-color: ${({ theme, backgroundColor }) =>
-    theme.color(backgroundColor)};
+  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   position: relative;
   display: flex;
   justify-content: center;
@@ -19,8 +18,7 @@ const Container = styled.div`
     min-height: 750px;
     height: 100vh;
     max-height: 900px;
-    flex-direction: ${({ formAligntRight }) =>
-      formAligntRight ? 'row-reverse' : 'row'};
+    flex-direction: ${({ formAligntRight }) => (formAligntRight ? 'row-reverse' : 'row')};
   }
 `;
 
@@ -159,8 +157,7 @@ const AmountField = styled(Input)`
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
-    ${({ inputBorderColor, theme }) =>
-      inputBorderColor && `border: 2px solid ${theme.color('red')};`}
+    ${({ inputBorderColor, theme }) => inputBorderColor && `border: 2px solid ${theme.color('red')};`}
 
     :focus {
       border: 2px solid ${({ theme }) => theme.color('red')};
@@ -179,8 +176,7 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   padding: ${spacing('md')} ${spacing('sm')};
-  background: ${({ theme, color }) =>
-    color ? theme.color(color) : theme.color('red')};
+  background: ${({ theme, color }) => (color ? theme.color(color) : theme.color('red'))};
   border: none;
   border-radius: 100px;
   :active,

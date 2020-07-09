@@ -6,8 +6,7 @@ import VideoBanner from './VideoBanner';
 import poster from '../../../styleguide/assets/poster.png';
 
 it('renders correctly', () => {
-  const src =
-    'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
+  const src = 'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
   const tree = renderWithTheme(
     <VideoBanner poster={poster} video={src} />

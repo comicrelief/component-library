@@ -16,8 +16,7 @@ const buttonStyle = () => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  ${({ color, theme }) =>
-    color ? theme.buttonColors(color) : theme.buttonColors('red')};
+  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
   }
@@ -28,10 +27,9 @@ const linkStyle = () => css`
   text-decoration: none;
   display: inline;
   line-height: ${({ theme }) => theme.fontSize('l')};
-  ${({ type, theme, underline }) =>
-    type
-      ? theme.linkStyles(type, underline)
-      : theme.linkStyles('standard', underline)};
+  ${({ type, theme, underline }) => (type
+    ? theme.linkStyles(type, underline)
+    : theme.linkStyles('standard', underline))};
 `;
 
 export const IconWrapper = styled.span`
@@ -39,9 +37,8 @@ export const IconWrapper = styled.span`
   margin-left: ${spacing('md')};
   align-self: center;
   right: ${spacing('m')};
-  ${({ type }) =>
-    type === 'standard' &&
-    css`
+  ${({ type }) => type === 'standard'
+    && css`
       position: absolute;
       right: -2rem;
       top: 0;
@@ -51,9 +48,8 @@ export const IconWrapper = styled.span`
     width: auto;
     right: auto;
     position: relative;
-    ${({ type }) =>
-      type === 'standard' &&
-      css`
+    ${({ type }) => type === 'standard'
+      && css`
         position: absolute;
         right: -2rem;
         top: 0;

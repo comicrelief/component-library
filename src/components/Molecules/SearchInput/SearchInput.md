@@ -1,14 +1,15 @@
 # Search input
 
 ```js
-initialState = { search: '' };
+const [search, setSearch] = React.useState('');
+
 <SearchInput
   onChange={e => {
     e.preventDefault();
-    setState({ search: e.target.value });
-    console.log(state.search);
+    setSearch(e.target.value);
+    console.log(search);
   }}
-  value={state.search}
+  value={search}
   placeholder="Search..."
 />;
 ```

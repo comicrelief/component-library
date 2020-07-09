@@ -21,8 +21,9 @@
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
-    "@babel/cli": "^7.4.4",
+    "@babel/cli": "^7.10.4",
     "axios": "^0.19.2",
+    "jest-styled-components": "^7.0.2",
     "lazysizes": "^5.1.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
@@ -30,23 +31,12 @@
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-hook-form": "^5.7.2",
-    "react-scripts": "3.2.0",
-    "react-styleguidist": "^9.1.5",
+    "react-scripts": "3.4.1",
+    "react-styleguidist": "^11.0.8",
     "react-test-renderer": "^16.8.6",
     "react-uid": "^2.2.0",
-    "styled-components": "^4.3.1",
+    "styled-components": "^5.1.1",
     "youtube-player": "^5.5.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
   },
   "scripts": {
     "test": "yarn run jest",
@@ -74,21 +64,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
-    "cypress": "^4.7.0",
-    "eslint": "^6.0.1",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^3.0.9",
-    "jest": "^24.8.0",
-    "jest-styled-components": "^6.3.3",
-    "lint-staged": "^9.4.2",
+    "cypress": "^4.9.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "jest": "^26.1.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
     "semantic-release": "^15.13.17"
   }
 }

@@ -8,8 +8,7 @@ import Text from '../Text/Text';
  * Input radio component
  */
 const StyledRadioInput = styled.input`
-  background-color: ${({ color, theme }) =>
-    color ? theme.color(color) : theme.color('white')};
+  background-color: ${({ color, theme }) => (color ? theme.color(color) : theme.color('white'))};
   font-size: ${({ theme }) => theme.fontSize('sm')};
   z-index: 1;
   top: 0;
@@ -58,7 +57,9 @@ const Label = styled.label`
   position: relative;
 `;
 
-const RadioButton = React.forwardRef(({ label, name, value, ...rest }, ref) => (
+const RadioButton = React.forwardRef(({
+  label, name, value, ...rest
+}, ref) => (
   <Label htmlFor={value}>
     <StyledRadioInput
       type="radio"

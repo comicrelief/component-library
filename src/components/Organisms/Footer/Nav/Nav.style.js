@@ -56,8 +56,7 @@ const SubNavMenu = styled.ul`
     max-height: none;
     height: auto;
 
-    ${({ column }) =>
-      column === true ? 'flex-direction: row; flex-wrap: wrap;' : null};
+    ${({ column }) => (column === true ? 'flex-direction: row; flex-wrap: wrap;' : null)};
 
     > li a {
       display: inline;
@@ -188,8 +187,7 @@ const NavItem = styled.li`
       color: ${({ theme }) => theme.color('white')};
       font-weight: 100;
       transition: transform 0.2s ease;
-      transform: ${({ isSubMenuOpen }) =>
-        isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
+      transform: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
       top: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '6px' : '0')};
       right: -25px;
     }
@@ -205,4 +203,6 @@ const NavItem = styled.li`
   }
 `;
 
-export { Nav, NavMenu, NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink };
+export {
+  Nav, NavMenu, NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink
+};

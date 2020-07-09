@@ -31,8 +31,7 @@ const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: ${({ category }) =>
-    category || category === '' ? 'row' : 'column'};
+  flex-direction: ${({ category }) => (category || category === '' ? 'row' : 'column')};
   align-items: ${({ category }) => (category || category === '') && 'center'};
   text-decoration: none;
   color: inherit;
@@ -43,8 +42,7 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${({ category }) =>
-      !category && category !== '' && 'column'};
+    flex-direction: ${({ category }) => !category && category !== '' && 'column'};
   }
 `;
 
@@ -53,19 +51,17 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  ${({ category }) =>
-    (category || category === '') &&
-    css`
+  ${({ category }) => (category || category === '')
+    && css`
       padding-left: ${spacing('md')};
       img {
         border-radius: 0;
       }
     `};
 
-  ${({ category }) =>
-    !category &&
-    category !== '' &&
-    css`
+  ${({ category }) => !category
+    && category !== ''
+    && css`
       img {
         border-radius: 1rem 1rem 0 0;
       }
@@ -89,10 +85,9 @@ const CopyWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  ${({ category }) =>
-    !category &&
-    category !== '' &&
-    css`
+  ${({ category }) => !category
+    && category !== ''
+    && css`
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 55%;
       }
@@ -148,54 +143,52 @@ const ArticleTeaser = ({
   logoSize,
   family,
   time
-}) => {
-  return (
-    <Wrapper>
-      <Link href={href} type="standard" category={category} underline={false}>
-        <ImageWrapper category={category}>
-          <Image
-            imageLow={
+}) => (
+  <Wrapper>
+    <Link href={href} type="standard" category={category} underline={false}>
+      <ImageWrapper category={category}>
+        <Image
+          imageLow={
               !category && category !== ''
                 ? imageLow
                 : handleCampaignLogo(category)
             }
-            images={
+          images={
               !category && category !== ''
                 ? images
                 : handleCampaignLogo(category)
             }
-            image={image}
-            alt={alt}
-            objectFit="cover"
-            width={category || category === '' ? logoSize : '100%'}
-            height={category || category === '' ? logoSize : '100%'}
-          />
-        </ImageWrapper>
-        <CopyWrapper category={category}>
-          <Date size="xs" weight="bold">
-            {date}
-          </Date>
-          <Title
-            time={time}
-            size="xl"
-            tag="h3"
-            height="2rem"
-            weight="normal"
-            uppercase
-            family={family}
-          >
-            {title}
-          </Title>
-          {time && (
-            <Time size="xs" weight="400" color="grey_dark">
-              {time}
-            </Time>
-          )}
-        </CopyWrapper>
-      </Link>
-    </Wrapper>
-  );
-};
+          image={image}
+          alt={alt}
+          objectFit="cover"
+          width={category || category === '' ? logoSize : '100%'}
+          height={category || category === '' ? logoSize : '100%'}
+        />
+      </ImageWrapper>
+      <CopyWrapper category={category}>
+        <Date size="xs" weight="bold">
+          {date}
+        </Date>
+        <Title
+          time={time}
+          size="xl"
+          tag="h3"
+          height="2rem"
+          weight="normal"
+          uppercase
+          family={family}
+        >
+          {title}
+        </Title>
+        {time && (
+        <Time size="xs" weight="400" color="grey_dark">
+          {time}
+        </Time>
+        )}
+      </CopyWrapper>
+    </Link>
+  </Wrapper>
+);
 
 ArticleTeaser.propTypes = {
   images: PropTypes.string,

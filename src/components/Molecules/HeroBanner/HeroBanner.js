@@ -35,18 +35,16 @@ const Title = styled.h1`
  * Hero Banner to be used as Header of landing pages.
  */
 
-const HeroBanner = ({ url, title, background }) => {
-  return (
-    <Container background={background}>
-      <Image src={url} />
-      <Title>
-        <Text size="xxl" color="white">
-          {title}
-        </Text>
-      </Title>
-    </Container>
-  );
-};
+const HeroBanner = ({ url, title, background }) => (
+  <Container background={background}>
+    <Image src={url} />
+    <Title>
+      <Text size="xxl" color="white">
+        {title}
+      </Text>
+    </Title>
+  </Container>
+);
 
 HeroBanner.propTypes = {
   /** Image url */

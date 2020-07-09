@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 import Text from '../../Atoms/Text/Text';
 import Form from './Form/Form';
-import { BgImage, Container, Header, Wrapper } from './Membership.style';
+import {
+  BgImage, Container, Header, Wrapper
+} from './Membership.style';
 
 const Membership = ({
   alt,
@@ -19,42 +21,40 @@ const Membership = ({
   image,
   imageLow,
   mbshipID
-}) => {
-  return (
-    <Container
-      formAligntRight={formAligntRight}
+}) => (
+  <Container
+    formAligntRight={formAligntRight}
+    backgroundColor={backgroundColor}
+    id={mbshipID}
+  >
+    <BgImage
       backgroundColor={backgroundColor}
-      id={mbshipID}
-    >
-      <BgImage
-        backgroundColor={backgroundColor}
-        image={image}
-        images={images}
-        imageLow={imageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={alt}
-      />
+      image={image}
+      images={images}
+      imageLow={imageLow}
+      objectFit="cover"
+      width="100%"
+      height="100%"
+      alt={alt}
+    />
 
-      <Wrapper>
-        <Header>
-          <Text tag="h2" size="l" weight="800">
-            {title}
-          </Text>
-          <Text tag="p">{subtitle}</Text>
-        </Header>
-        <Form
-          data={data}
-          otherDescription={otherDescription}
-          cartID={cartID}
-          mbshipID={mbshipID}
-          donateLink={donateLink}
-        />
-      </Wrapper>
-    </Container>
-  );
-};
+    <Wrapper>
+      <Header>
+        <Text tag="h2" size="l" weight="800">
+          {title}
+        </Text>
+        <Text tag="p">{subtitle}</Text>
+      </Header>
+      <Form
+        data={data}
+        otherDescription={otherDescription}
+        cartID={cartID}
+        mbshipID={mbshipID}
+        donateLink={donateLink}
+      />
+    </Wrapper>
+  </Container>
+);
 
 Membership.propTypes = {
   alt: PropTypes.string,
