@@ -82,4 +82,6 @@ const MetaIcons = styled.div`
   }
 `;
 
-export { Brand, HeaderWrapper, InnerWrapper, MetaIcons };
+export {
+  Brand, HeaderWrapper, InnerWrapper, MetaIcons
+};

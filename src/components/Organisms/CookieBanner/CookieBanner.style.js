@@ -45,4 +45,6 @@ const LinkStyle = styled(Link)`
   border-bottom: 2px solid;
 `;
 
-export { CookieWrapper, CookieText, AcceptCookieBtn, LinkStyle };
+export {
+  CookieWrapper, CookieText, AcceptCookieBtn, LinkStyle
+};

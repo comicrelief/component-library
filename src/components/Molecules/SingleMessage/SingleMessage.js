@@ -46,17 +46,17 @@ const SingleMessage = ({
 
   const thisRef = useRef(null);
 
-  const isIOS =
-    typeof navigator === 'object'
-      ? /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-        !window.MSStream &&
-        !!navigator.platform &&
-        /iPad|iPhone|iPod/.test(navigator.platform)
-      : false;
+  const isIOS = typeof navigator === 'object'
+    ? /iPad|iPhone|iPod/.test(navigator.userAgent)
+        && !window.MSStream
+        && !!navigator.platform
+        && /iPad|iPhone|iPod/.test(navigator.platform)
+    : false;
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
-    // Store the dynamically-created UUID (from the main render func) in our state so useEffect can access it
+    // Store the dynamically-created UUID (from the main render func) in our state
+    // so useEffect can access it
     const thisVideoID = `${thisRowID}__video`;
 
     setUniqueID(thisVideoID);
@@ -83,7 +83,8 @@ const SingleMessage = ({
     if (hasVideo && onPlay && uniqueID && !isInitialised) {
       setIsInitialised(true);
       // Switch state to ensure this only runs once per video row
-      // Instantiate a YT Player into our array, using its unique id as the key that PlayButton can access
+      // Instantiate a YT Player into our array, using its unique
+      // id as the key that PlayButton can access
       allPlayers[uniqueID] = YouTubePlayer(uniqueID, {
         videoId: videoID,
         playerVars: {
@@ -113,7 +114,8 @@ const SingleMessage = ({
     setIsBuffering(true);
   };
 
-  /* Dynamically retrieve ID that Gatsby has already baked into the page, need to null check for initial render */
+  /* Dynamically retrieve ID that Gatsby has already baked into the page,
+  need to null check for initial render */
   const getID = refWithID => {
     const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
 
@@ -146,9 +148,9 @@ const SingleMessage = ({
                 fullImage={fullImage}
                 vhFull={vhFull}
               >
-                {hasVideo &&
-                  hasParentID &&
-                  renderVideoPlayers(getID(thisRef.current))}
+                {hasVideo
+                  && hasParentID
+                  && renderVideoPlayers(getID(thisRef.current))}
 
                 {imageSet || image ? (
                   <Image

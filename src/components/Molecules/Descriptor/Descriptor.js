@@ -135,7 +135,9 @@ const Description = styled.div`
  * Descriptor component
  */
 
-const Descriptor = ({ date, title, categories, tags, children }) => {
+const Descriptor = ({
+  date, title, categories, tags, children
+}) => {
   const tagItems = tags.map((tag, index) => {
     const key = tag + index;
     return (

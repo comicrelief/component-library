@@ -32,9 +32,8 @@ const MoneyBox = styled(Input)`
       box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
     }
 
-    ${({ isSelected }) =>
-      isSelected &&
-      css`
+    ${({ isSelected }) => isSelected
+      && css`
         background-color: ${({ theme }) => theme.color('blue')};
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
         color: ${({ theme }) => theme.color('white')};
@@ -51,19 +50,17 @@ const MoneyBuy = ({
   currency,
   description,
   ...rest
-}) => {
-  return (
-    <MoneyBox
-      {...rest}
-      aria-label={description}
-      value={`${currency} ${amount}`}
-      type="button"
-      label=""
-      errorMsg=""
-      onClick={setOtherAmount}
-    />
-  );
-};
+}) => (
+  <MoneyBox
+    {...rest}
+    aria-label={description}
+    value={`${currency} ${amount}`}
+    type="button"
+    label=""
+    errorMsg=""
+    onClick={setOtherAmount}
+  />
+);
 
 MoneyBuy.propTypes = {
   amount: PropTypes.number,

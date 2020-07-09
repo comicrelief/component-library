@@ -18,8 +18,7 @@ const StyledTextArea = styled.textarea`
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid;
   border-radius: 0;
-  border-color: ${({ theme, error }) =>
-    !error ? theme.color('black') : theme.color('red')};
+  border-color: ${({ theme, error }) => (!error ? theme.color('black') : theme.color('red'))};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};
@@ -72,7 +71,9 @@ const Label = styled.label.attrs(({ id }) => ({
   flex-direction: column;
 `;
 
-const TextArea = React.forwardRef(({ id, label, errorMsg, ...rest }, ref) => (
+const TextArea = React.forwardRef(({
+  id, label, errorMsg, ...rest
+}, ref) => (
   <Label>
     <Text weight="bold">{label}</Text>
     <StyledTextArea

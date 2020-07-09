@@ -54,9 +54,9 @@ const Signup = ({
       }
 
       return (
-        index === 1 &&
-        amountDonate === ' ' &&
-        (setMoneyBuyCopy(moneyBuy.description),
+        index === 1
+        && amountDonate === ' '
+        && (setMoneyBuyCopy(moneyBuy.description),
         setAmountDonate(parseFloat(moneyBuy.value)))
       );
     });
@@ -116,15 +116,14 @@ const Signup = ({
       )}
 
       <Form
-        onSubmit={e =>
-          submitDonation(
-            e,
-            amountDonate,
-            clientID,
-            cartID,
-            mbshipID,
-            donateLink
-          )
+        onSubmit={e => submitDonation(
+          e,
+          amountDonate,
+          clientID,
+          cartID,
+          mbshipID,
+          donateLink
+        )
         }
       >
         <OuterFieldset>

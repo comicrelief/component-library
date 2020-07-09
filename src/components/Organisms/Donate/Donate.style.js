@@ -8,8 +8,7 @@ import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  background-color: ${({ theme, backgroundColor }) =>
-    theme.color(backgroundColor)};
+  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   position: relative;
   display: flex;
   justify-content: center;
@@ -37,8 +36,7 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
-  flex-direction: ${({ formAlignRight }) =>
-    formAlignRight === true ? 'row-reverse' : 'row'};
+  flex-direction: ${({ formAlignRight }) => (formAlignRight === true ? 'row-reverse' : 'row')};
   ${media('small')} {
     padding: ${spacing('xl')} ${spacing('md')};
   }

@@ -20,10 +20,11 @@ const successCopy = (
   />
 );
 
-initialState = { isSuccess: false, errorMsg: '' };
+const [success, setSuccess] = React.useState(false);
+const [error, setError] = React.useState('');
 
 const sendEmail = email => {
-  setTimeout(() => setState({ isSuccess: !state.isSuccess }), 2000);
+  setTimeout(() => setSuccess(!success), 2000);
   console.log(email);
 };
 
@@ -31,9 +32,9 @@ const validate = ({ email }) => {
   let isValid = false;
   if (email.includes('@')) {
     isValid = true;
-    setState({ errorMsg: '' });
+    setError('');
   } else {
-    setState({ errorMsg: 'invalid email!' });
+    setError('invalid email!');
   }
   return isValid;
 };
@@ -42,9 +43,9 @@ const validate = ({ email }) => {
   title={title}
   topCopy={topCopy}
   successCopy={successCopy}
-  isSuccess={state.isSuccess}
+  isSuccess={success}
   privacyCopy={privacyCopy}
-  errorMsg={state.errorMsg}
+  errorMsg={error}
   subscribe={sendEmail}
   validate={validate}
 />;
@@ -82,11 +83,12 @@ const selectItems = [
   { value: 'Option four', displayValue: 'The fourth option' }
 ];
 
-initialState = { isSuccessSchools: false, errorMsg: '' };
+const [successSchools, setSuccessSchools] = React.useState(false);
+const [error, setError] = React.useState('');
 
 sendEmail = emailAndAge => {
   setTimeout(
-    () => setState({ isSuccessSchools: !state.isSuccessSchools }),
+    () => setSuccessSchools(!successSchools),
     2000
   );
   console.log(emailAndAge);
@@ -96,16 +98,16 @@ const validate = ({ email, age }) => {
   let isValid = false;
   if (email.includes('@')) {
     isValid = true;
-    setState({ errorMsg: '' });
+    setError('');
   } else {
-    setState({ errorMsg: 'invalid email!' });
+    setError('invalid email!');
   }
   if (isValid === true && typeof age !== 'undefined') {
     if (age) {
-      setState({ errorMsg: '' });
+      setError('');
     } else {
       isValid = false;
-      setState({ errorMsg: 'invalid age!' });
+      setError('invalid age!');
     }
   }
   return isValid;
@@ -116,11 +118,11 @@ const validate = ({ email, age }) => {
   topCopy={topCopy}
   successCopy={successCopy}
   schoolsCopy="Now please select your teaching group so you get the right updates."
-  isSuccess={state.isSuccessSchools}
+  isSuccess={successSchools}
   selectItems={selectItems}
   isSchools
   privacyCopy={privacyCopy}
-  errorMsg={state.errorMsg}
+  errorMsg={error}
   subscribe={sendEmail}
   validate={validate}
 />;

@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 import { Section, CopyWrapper } from './DoubleCopy.style';
 
-const DoubleCopy = ({ leftCopy, rightCopy }) => {
-  return (
-    <Section>
-      <CopyWrapper>{leftCopy}</CopyWrapper>
-      <CopyWrapper>{rightCopy}</CopyWrapper>
-    </Section>
-  );
-};
+const DoubleCopy = ({ leftCopy, rightCopy }) => (
+  <Section>
+    <CopyWrapper>{leftCopy}</CopyWrapper>
+    <CopyWrapper>{rightCopy}</CopyWrapper>
+  </Section>
+);
 
 DoubleCopy.propTypes = {
   /** Copy left  */

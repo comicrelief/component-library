@@ -19,9 +19,7 @@ it('renders correctly with no value and no options', () => {
   );
 
   expect(renderer.toJSON()).toMatchSnapshot();
-  expect(() =>
-    renderer.root.findByType(Container).findByType(Dropdown)
-  ).toThrow();
+  expect(() => renderer.root.findByType(Container).findByType(Dropdown)).toThrow();
 });
 
 it('renders correctly with value and no options', () => {
@@ -38,9 +36,7 @@ it('renders correctly with value and no options', () => {
   );
 
   expect(renderer.toJSON()).toMatchSnapshot();
-  expect(() =>
-    renderer.root.findByType(Container).findByType(Dropdown)
-  ).toThrow();
+  expect(() => renderer.root.findByType(Container).findByType(Dropdown)).toThrow();
 });
 
 it('renders correctly with value and options', () => {

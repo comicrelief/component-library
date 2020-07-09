@@ -3,21 +3,23 @@ import PropTypes from 'prop-types';
 
 import Logos from '../../Molecules/Logos/Logos';
 import MainNav from './Nav/Nav';
-import { Brand, HeaderWrapper, InnerWrapper, MetaIcons } from './Header.style';
+import {
+  Brand, HeaderWrapper, InnerWrapper, MetaIcons
+} from './Header.style';
 
-const Header = ({ navItems, metaIcons, campaign, ...rest }) => {
-  return (
-    <HeaderWrapper navItems {...rest}>
-      <InnerWrapper>
-        <Brand>
-          <Logos campaign={campaign} />
-        </Brand>
-        <MainNav navItems={navItems} />
-        <MetaIcons>{metaIcons}</MetaIcons>
-      </InnerWrapper>
-    </HeaderWrapper>
-  );
-};
+const Header = ({
+  navItems, metaIcons, campaign, ...rest
+}) => (
+  <HeaderWrapper navItems {...rest}>
+    <InnerWrapper>
+      <Brand>
+        <Logos campaign={campaign} />
+      </Brand>
+      <MainNav navItems={navItems} />
+      <MetaIcons>{metaIcons}</MetaIcons>
+    </InnerWrapper>
+  </HeaderWrapper>
+);
 
 Header.propTypes = {
   /** Check data structure example in file  src/components/moleculecules/header/data/data  */

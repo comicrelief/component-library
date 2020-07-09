@@ -23,7 +23,9 @@ const handleShare = (e, typeOfShare, urlToShare) => {
 };
 
 /* Share Button component to handle FB and Twitter sharing */
-const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
+const ShareButton = ({
+  campaign, copy, urlToShare, ...restProps
+}) => {
   let checkedUrl = '';
 
   /* Window obj isn't available during server-side rendering AND we don't have
@@ -39,22 +41,20 @@ const ShareButton = ({ campaign, copy, urlToShare, ...restProps }) => {
     <Wrapper>
       <Copy>{copy}</Copy>
       <ShareButtonList>
-        {Object.keys(ShareIcons).map(shareType => {
-          return (
-            <ShareButtonItem key={`share-button--${shareType}`}>
-              <Icon
-                onClick={e => handleShare(e, shareType, checkedUrl)}
-                icon={ShareIcons[shareType]}
-                title={`Share on ${shareType}`}
-                brand={campaign}
-                target="_blank"
-                role="button"
-                href="#"
-                {...restProps}
-              />
-            </ShareButtonItem>
-          );
-        })}
+        {Object.keys(ShareIcons).map(shareType => (
+          <ShareButtonItem key={`share-button--${shareType}`}>
+            <Icon
+              onClick={e => handleShare(e, shareType, checkedUrl)}
+              icon={ShareIcons[shareType]}
+              title={`Share on ${shareType}`}
+              brand={campaign}
+              target="_blank"
+              role="button"
+              href="#"
+              {...restProps}
+            />
+          </ShareButtonItem>
+        ))}
       </ShareButtonList>
     </Wrapper>
   );
