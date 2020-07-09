@@ -81,7 +81,7 @@ describe('Typeahead component', () => {
                 .find('#typeahead-test')
                 .type('se1 7tp')
                 .get('@container')
-                .find('[data-test="error-message"]')
+                .find('span[data-test="error-message"] span')
                 .contains('Sorry, we couldn\'t find anything');
             //enter non-school name should give an error message
             cy.get('@container')
@@ -89,7 +89,7 @@ describe('Typeahead component', () => {
                 .clear()
                 .type('Comic Relief')
                 .get('@container')
-                .find('[data-test="error-message"]')
+                .find('span[data-test="error-message"] span')
                 .contains('Sorry, we couldn\'t find anything');
             //enter valid school name should show in the list
             cy.get('@container')
