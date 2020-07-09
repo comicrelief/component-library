@@ -21,30 +21,6 @@ exports[`renders correctly in full size with first page selected 1`] = `
   padding: 10px;
 }
 
-.c2 {
-  padding: 9px 14px 9px 14px;
-  border-radius: 30px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: default;
-  background: #FFFFFF;
-  color: #E1E2E3;
-}
-
-.c3 {
-  padding: 9px 14px 9px 14px;
-  border-radius: 30px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: default;
-  background: #E52630;
-  color: #FFFFFF;
-}
-
 .c4 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
@@ -60,6 +36,30 @@ exports[`renders correctly in full size with first page selected 1`] = `
 .c4:hover {
   background: #4ECDBE;
   color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
 }
 
 <ul
@@ -462,18 +462,6 @@ exports[`renders correctly in full size with max pages less than current page 1`
   color: #FFFFFF;
 }
 
-.c3 {
-  padding: 9px 14px 9px 14px;
-  border-radius: 30px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: default;
-  background: #FFFFFF;
-  color: #E1E2E3;
-}
-
 .c4 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
@@ -484,6 +472,18 @@ exports[`renders correctly in full size with max pages less than current page 1`
   cursor: default;
   background: #E52630;
   color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
 }
 
 <ul
@@ -1150,18 +1150,6 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   color: #FFFFFF;
 }
 
-.c3 {
-  padding: 9px 14px 9px 14px;
-  border-radius: 30px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: default;
-  background: #FFFFFF;
-  color: #E1E2E3;
-}
-
 .c4 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
@@ -1172,6 +1160,18 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   cursor: default;
   background: #E52630;
   color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
 }
 
 <ul
@@ -1394,18 +1394,6 @@ exports[`renders correctly in full size with more on left 1`] = `
   color: #FFFFFF;
 }
 
-.c3 {
-  padding: 9px 14px 9px 14px;
-  border-radius: 30px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: default;
-  background: #FFFFFF;
-  color: #E1E2E3;
-}
-
 .c4 {
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
@@ -1416,6 +1404,18 @@ exports[`renders correctly in full size with more on left 1`] = `
   cursor: default;
   background: #E52630;
   color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
 }
 
 <ul

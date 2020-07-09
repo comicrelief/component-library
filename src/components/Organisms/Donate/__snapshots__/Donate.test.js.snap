@@ -1355,10 +1355,6 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-
-}
-
 <div
   className="c0"
   id="mship-1"
