@@ -70,9 +70,8 @@ const CTA = styled.div`
 `;
 
 const Li = styled(Link)`
-  ${({ mobile }) =>
-    mobile &&
-    css`
+  ${({ mobile }) => mobile
+    && css`
       width: 48px;
       span {
         margin-left: 0;
