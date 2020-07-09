@@ -89,13 +89,13 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         value="Give once"
         type="radio"
         label=""
-        errorMsg=""
+        errormsg=""
         checked={givingType === 'single'}
         onClick={() => {
           changeGivingType('single');
         }}
       />
-      <Label active={givingType === 'single'} for="give-once">
+      <Label active={givingType === 'single'} htmlFor="give-once">
         Give once
       </Label>
       <input
@@ -104,13 +104,13 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         value="Give monthly"
         type="radio"
         label=""
-        errorMsg=""
+        errormsg=""
         checked={givingType === 'monthly'}
         onClick={() => {
           changeGivingType('monthly');
         }}
       />
-      <Label active={givingType === 'monthly'} for="give-monthly">
+      <Label active={givingType === 'monthly'} htmlFor="give-monthly">
         Give monthly
       </Label>
       <Switch />
