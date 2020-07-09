@@ -139,4 +139,6 @@ const ClearButton = styled.button`
   }
 `;
 
-export { LabelGroup, CheckLabel, Overlay, CheckInput, ClearButton };
+export {
+  LabelGroup, CheckLabel, Overlay, CheckInput, ClearButton
+};

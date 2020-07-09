@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 import { CheckLabel, Overlay, CheckInput } from './Chip.style';
 
-const Chip = ({ category, handleToggle, color, checked }) => {
-  return (
-    <CheckLabel>
-      <CheckInput
-        onChange={handleToggle}
-        type="checkbox"
-        value={category}
-        color={color}
-        checked={checked}
-      />
-      <span />
-      <Overlay />
-      {category}
-    </CheckLabel>
-  );
-};
+const Chip = ({
+  category, handleToggle, color, checked
+}) => (
+  <CheckLabel>
+    <CheckInput
+      onChange={handleToggle}
+      type="checkbox"
+      value={category}
+      color={color}
+      checked={checked}
+    />
+    <span />
+    <Overlay />
+    {category}
+  </CheckLabel>
+);
 
 Chip.propTypes = {
   category: PropTypes.string.isRequired,

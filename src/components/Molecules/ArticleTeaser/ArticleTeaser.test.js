@@ -1,10 +1,10 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import ArticleTeaser from "./ArticleTeaser";
-import data from "../../../styleguide/data/data";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
+import ArticleTeaser from './ArticleTeaser';
+import data from '../../../styleguide/data/data';
 
-it("renders article teaser correctly", () => {
+it('renders article teaser correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -259,7 +259,7 @@ it("renders article teaser correctly", () => {
   `);
 });
 
-it("renders press realese correctly", () => {
+it('renders press realese correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"

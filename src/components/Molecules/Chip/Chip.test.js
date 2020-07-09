@@ -4,9 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Chip from './Chip';
 
 it('renders article teaser correctly', () => {
-  const handleToggle = e => {
-    return e.target.value;
-  };
+  const handleToggle = e => e.target.value;
   const tree = renderWithTheme(
     <Chip category="Gender Justice" handleToggle={handleToggle} />
   ).toJSON();
