@@ -15,10 +15,9 @@ const getUrlParameter = name => {
   const text = name.replace(/\[]/, '\\[').replace(/[\]]/, '\\]');
   const regex = new RegExp(`[\\?&]${text}=([^&#]*)`);
   const results = regex.exec(window.location.search);
-  const param =
-    results === null
-      ? 'generic'
-      : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  const param = results === null
+    ? 'generic'
+    : decodeURIComponent(results[1].replace(/\+/g, ' '));
   return param;
 };
 
@@ -29,13 +28,11 @@ const isInputMatchBoxValue = (
   input
 ) => {
   const inputToNum = input * 1;
-  return Object.keys(moneyBoxes).map(box => {
-    return (
-      moneyBoxes[box].value === inputToNum &&
-      (selectMoneyBuy(moneyBoxes[box].description, moneyBoxes[box].value),
+  return Object.keys(moneyBoxes).map(box => (
+    moneyBoxes[box].value === inputToNum
+      && (selectMoneyBuy(moneyBoxes[box].description, moneyBoxes[box].value),
       setAmountDonate(input))
-    );
-  });
+  ));
 };
 
 // This function is still in progress

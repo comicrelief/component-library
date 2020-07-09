@@ -20,15 +20,16 @@ const successCopy = (
   />
 );
 
-initialState = { isSuccess: false, errorMsg: '' };
+const [success, setSuccess] = React.useState(false);
+const [error, setError] = React.useState('');
 
 const validate = ({ email }) => {
   let isValid = false;
   if (email.includes('@')) {
     isValid = true;
-    setState({ errorMsg: '' });
+    setError('');
   } else {
-    setState({ errorMsg: 'invalid email!' });
+    setError('invalid email!');
   }
   return isValid;
 };
@@ -37,10 +38,10 @@ const validate = ({ email }) => {
   title={title}
   topCopy={topCopy}
   successCopy={successCopy}
-  isSuccess={state.isSuccess}
+  isSuccess={success}
   privacyCopy={privacyCopy}
-  errorMsg={state.errorMsg}
-  subscribe={() => setState({ isSuccess: !state.isSuccess })}
+  errorMsg={error}
+  subscribe={() => setSuccess(!success)}
   validate={validate}
 />;
 ```

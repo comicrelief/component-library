@@ -50,14 +50,12 @@ const TextInputWithDropdown = React.forwardRef(
       setForceClosed(false);
     }, [options]);
 
-    const down = () =>
-      activeOption < options.length - 1
-        ? setActiveOption(activeOption + 1)
-        : setActiveOption(0);
-    const up = () =>
-      activeOption < 1
-        ? setActiveOption(options.length - 1)
-        : setActiveOption(activeOption - 1);
+    const down = () => (activeOption < options.length - 1
+      ? setActiveOption(activeOption + 1)
+      : setActiveOption(0));
+    const up = () => (activeOption < 1
+      ? setActiveOption(options.length - 1)
+      : setActiveOption(activeOption - 1));
 
     const navigateOptions = e => {
       if (options.length === 0) {

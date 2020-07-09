@@ -6,8 +6,7 @@ import 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
 
 // Transparent pixel png
-const IMAGE_FALLBACK =
-  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
   position: relative;
@@ -20,10 +19,9 @@ const Image = styled.img`
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
-  object-fit: ${props =>
-    (props.objectFit === 'none' && 'none') ||
-    (props.objectFit === 'cover' && 'cover') ||
-    (props.objectFit === 'contain' && 'contain')};
+  object-fit: ${props => (props.objectFit === 'none' && 'none')
+    || (props.objectFit === 'cover' && 'cover')
+    || (props.objectFit === 'contain' && 'contain')};
 `;
 
 /** Responsive Picture */

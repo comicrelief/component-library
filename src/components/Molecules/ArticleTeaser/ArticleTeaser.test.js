@@ -421,6 +421,10 @@ it('renders press realese correctly', () => {
     }
 
     @media (min-width:1024px) {
+
+    }
+
+    @media (min-width:1024px) {
       .c7 {
         width: 100%;
       }

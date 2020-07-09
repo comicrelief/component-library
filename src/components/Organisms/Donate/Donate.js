@@ -27,54 +27,52 @@ const Donate = ({
   imageLow,
   mbshipID,
   noMoneyBuys
-}) => {
-  return (
-    <Container backgroundColor={backgroundColor} id={mbshipID}>
-      {images ? (
-        <BgImage
-          backgroundColor={backgroundColor}
-          image={image}
-          images={images}
-          imageLow={imageLow}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-          alt={alt}
-        />
-      ) : null}
+}) => (
+  <Container backgroundColor={backgroundColor} id={mbshipID}>
+    {images ? (
+      <BgImage
+        backgroundColor={backgroundColor}
+        image={image}
+        images={images}
+        imageLow={imageLow}
+        objectFit="cover"
+        width="100%"
+        height="100%"
+        alt={alt}
+      />
+    ) : null}
 
-      <Wrapper formAlignRight={formAlignRight}>
-        <Header formAlignRight={formAlignRight}>
-          <HeaderInner>
-            <Text
-              tag="h2"
-              color="white"
-              size="big"
-              family="Anton"
-              weight="normal"
-              uppercase
-            >
-              {title}
-            </Text>
-            <Text tag="p" color="white" size="m">
-              {subtitle}
-            </Text>
-          </HeaderInner>
-        </Header>
+    <Wrapper formAlignRight={formAlignRight}>
+      <Header formAlignRight={formAlignRight}>
+        <HeaderInner>
+          <Text
+            tag="h2"
+            color="white"
+            size="big"
+            family="Anton"
+            weight="normal"
+            uppercase
+          >
+            {title}
+          </Text>
+          <Text tag="p" color="white" size="m">
+            {subtitle}
+          </Text>
+        </HeaderInner>
+      </Header>
 
-        <Form
-          data={data}
-          otherDescription={otherDescription}
-          cartID={cartID}
-          clientID={clientID}
-          mbshipID={mbshipID}
-          donateLink={donateLink}
-          noMoneyBuys={noMoneyBuys}
-        />
-      </Wrapper>
-    </Container>
-  );
-};
+      <Form
+        data={data}
+        otherDescription={otherDescription}
+        cartID={cartID}
+        clientID={clientID}
+        mbshipID={mbshipID}
+        donateLink={donateLink}
+        noMoneyBuys={noMoneyBuys}
+      />
+    </Wrapper>
+  </Container>
+);
 
 Donate.propTypes = {
   alt: PropTypes.string,

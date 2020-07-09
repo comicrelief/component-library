@@ -23,7 +23,9 @@ const HelperText = styled.span`
   ${hideVisually};
 `;
 
-const Icon = ({ href, target, icon, brand, title, ...restProps }) => (
+const Icon = ({
+  href, target, icon, brand, title, ...restProps
+}) => (
   <StyledLink
     href={href}
     target={`_${target}`}

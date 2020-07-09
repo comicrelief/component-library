@@ -69,38 +69,36 @@ const SearchResult = ({
   alt,
   smallImageWidth,
   largeImageWidth
-}) => {
-  return (
-    <Wrapper>
-      <Item href={href} type="standard">
-        <ImageWrapper
-          smallImageWidth={smallImageWidth}
-          largeImageWidth={largeImageWidth}
-        >
-          <Picture
-            imageLow={imageLow}
-            images={images}
-            objectFit="cover"
-            alt={alt}
-          />
-        </ImageWrapper>
-        <CopyWrapper>
-          <Text size="xs" uppercase>
-            {`${type ? ` ${type} |` : ''} ${date}`}
-          </Text>
-          <Title size="xl" tag="h3" uppercase>
-            {title}
-          </Title>
-          {copy && (
-            <Text size="m" tag="p">
-              {copy}
-            </Text>
-          )}
-        </CopyWrapper>
-      </Item>
-    </Wrapper>
-  );
-};
+}) => (
+  <Wrapper>
+    <Item href={href} type="standard">
+      <ImageWrapper
+        smallImageWidth={smallImageWidth}
+        largeImageWidth={largeImageWidth}
+      >
+        <Picture
+          imageLow={imageLow}
+          images={images}
+          objectFit="cover"
+          alt={alt}
+        />
+      </ImageWrapper>
+      <CopyWrapper>
+        <Text size="xs" uppercase>
+          {`${type ? ` ${type} |` : ''} ${date}`}
+        </Text>
+        <Title size="xl" tag="h3" uppercase>
+          {title}
+        </Title>
+        {copy && (
+        <Text size="m" tag="p">
+          {copy}
+        </Text>
+        )}
+      </CopyWrapper>
+    </Item>
+  </Wrapper>
+);
 
 SearchResult.propTypes = {
   /** type */

@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
-import { CopyWrapper, Head, Body, Field } from './MarketingPreferences.style';
+import {
+  CopyWrapper, Head, Body, Field
+} from './MarketingPreferences.style';
 
 // inputs should remain in the dom whether or not they are displayed,
 //  otherwise you get unpredictable behaviour from react-hook-form APIs.
@@ -170,7 +172,8 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferences.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  /** Can be used to prevent clashes with other fields if this component is being used in a larger form. */
+  /** Can be used to prevent clashes with other fields if this component
+   * is being used in a larger form. */
   fieldPrefix: PropTypes.string,
   disableEmailInput: PropTypes.bool,
   disablePostInputs: PropTypes.bool,

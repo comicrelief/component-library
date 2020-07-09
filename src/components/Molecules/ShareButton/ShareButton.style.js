@@ -29,4 +29,6 @@ const ShareButtonItem = styled.li`
   margin: ${spacing('sm')};
 `;
 
-export { Wrapper, Copy, ShareButtonList, ShareButtonItem };
+export {
+  Wrapper, Copy, ShareButtonList, ShareButtonItem
+};

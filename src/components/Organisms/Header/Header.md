@@ -6,7 +6,7 @@ import Link from '../../Atoms/Link/Link';
 
 <Header
   navItems={data}
-  rotate
+  rotate="true"
   metaIcons={
     <>
       <Link color="green" type="button" href="/donation">
@@ -64,10 +64,11 @@ const successCopy = (
 );
 
 initialState = { isSuccess: false };
+const [success, setSuccess] = React.useState(false);
 
 <Header
   navItems={data}
-  rotate
+  rotate="true"
   metaIcons={
     <>
       <Link color="green" type="button" href="/donation">
@@ -91,10 +92,10 @@ initialState = { isSuccess: false };
         topCopy={topCopy}
         privacyCopy={privacyCopy}
         successCopy={successCopy}
-        isSuccess={state.isSuccess}
+        isSuccess={success}
         privacyCopy={privacyCopy}
         errorMsg=""
-        subscribe={() => setState({ isSuccess: !state.isSuccess })}
+        subscribe={() => setSuccess(!success)}
       />
     </>
   }

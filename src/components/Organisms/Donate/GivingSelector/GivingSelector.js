@@ -72,55 +72,51 @@ const Label = styled.label`
   }
   &[for='give-once'] {
     border-radius: 2rem;
-    color: ${({ active, theme }) =>
-      active === true ? theme.color('white') : theme.color('black')};
+    color: ${({ active, theme }) => (active === true ? theme.color('white') : theme.color('black'))};
   }
   &[for='give-monthly'] {
     border-radius: 2rem;
-    color: ${({ active, theme }) =>
-      active === true ? theme.color('white') : theme.color('black')};
+    color: ${({ active, theme }) => (active === true ? theme.color('white') : theme.color('black'))};
   }
 `;
 
-const GivingSelector = ({ givingType, changeGivingType }) => {
-  return (
-    <Wrapper>
-      <MoneyBox>
-        <input
-          aria-label="Give once"
-          id="give-once"
-          value="Give once"
-          type="radio"
-          label=""
-          errorMsg=""
-          checked={givingType === 'single'}
-          onClick={() => {
-            changeGivingType('single');
-          }}
-        />
-        <Label active={givingType === 'single'} for="give-once">
-          Give once
-        </Label>
-        <input
-          aria-label="Give monthly"
-          id="give-monthly"
-          value="Give monthly"
-          type="radio"
-          label=""
-          errorMsg=""
-          checked={givingType === 'monthly'}
-          onClick={() => {
-            changeGivingType('monthly');
-          }}
-        />
-        <Label active={givingType === 'monthly'} for="give-monthly">
-          Give monthly
-        </Label>
-        <Switch />
-      </MoneyBox>
-    </Wrapper>
-  );
-};
+const GivingSelector = ({ givingType, changeGivingType }) => (
+  <Wrapper>
+    <MoneyBox>
+      <input
+        aria-label="Give once"
+        id="give-once"
+        value="Give once"
+        type="radio"
+        label=""
+        errormsg=""
+        checked={givingType === 'single'}
+        onClick={() => {
+          changeGivingType('single');
+        }}
+      />
+      <Label active={givingType === 'single'} htmlFor="give-once">
+        Give once
+      </Label>
+      <input
+        aria-label="Give monthly"
+        id="give-monthly"
+        value="Give monthly"
+        type="radio"
+        label=""
+        errormsg=""
+        checked={givingType === 'monthly'}
+        onClick={() => {
+          changeGivingType('monthly');
+        }}
+      />
+      <Label active={givingType === 'monthly'} htmlFor="give-monthly">
+        Give monthly
+      </Label>
+      <Switch />
+    </MoneyBox>
+  </Wrapper>
+);
 
 GivingSelector.propTypes = {
   givingType: PropTypes.string.isRequired,
