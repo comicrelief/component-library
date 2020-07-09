@@ -676,7 +676,7 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             aria-label="Give once"
             checked={true}
-            errorMsg=""
+            errormsg=""
             id="give-once"
             label=""
             onClick={[Function]}
@@ -685,14 +685,14 @@ exports[`Monthly donation renders correctly 1`] = `
           />
           <label
             className="c12"
-            for="give-once"
+            htmlFor="give-once"
           >
             Give once
           </label>
           <input
             aria-label="Give monthly"
             checked={false}
-            errorMsg=""
+            errormsg=""
             id="give-monthly"
             label=""
             onClick={[Function]}
@@ -701,7 +701,7 @@ exports[`Monthly donation renders correctly 1`] = `
           />
           <label
             className="c13"
-            for="give-monthly"
+            htmlFor="give-monthly"
           >
             Give monthly
           </label>
