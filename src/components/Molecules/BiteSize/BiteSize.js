@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
-import hideVisually from '../../../theme/shared/hideVisually';
 import Text from '../../Atoms/Text/Text';
 
 const Container = styled.div`
@@ -68,6 +67,7 @@ const Copy = styled.div`
 
 const CTA = styled.div`
   position: absolute;
+  max-width: 296px;
   right: ${spacing('m')};
   bottom: -${spacing('m')};
   ${zIndex('medium')};
@@ -75,22 +75,6 @@ const CTA = styled.div`
 
 const Anchor = styled(Link)`
   height: 48px;
-  max-width: 296px;
-
-  ${({ isMobile }) => isMobile
-    && `
-      padding: ${spacing('sm')} calc(${spacing('md')} + ${spacing('l')});
-      span {
-        margin-left: 0;
-
-        svg {
-          width: 22px;
-        }
-      }
-      span:first-child {
-        hidden: ${hideVisually};
-      }
-    `}
 `;
 
 const BiteSize = ({
@@ -103,8 +87,6 @@ const BiteSize = ({
   subtitle,
   ...rest
 }) => {
-  const [mobile, setMobile] = useState(false);
-
   const icon = () => {
     if (target === 'blank') {
       return <External colour="white" />;
@@ -113,19 +95,6 @@ const BiteSize = ({
   };
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
-
-  useEffect(() => {
-    let width = typeof window !== 'undefined' ? window.innerWidth : null;
-    function getWindowSize() {
-      width = typeof window !== 'undefined' ? window.innerWidth : null;
-      setMobile(width < 759);
-    }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', getWindowSize);
-    }
-    setMobile(width < 759);
-  }, []);
 
   return (
     <Container {...rest}>
@@ -148,7 +117,6 @@ const BiteSize = ({
       {link && (
         <CTA>
           <Anchor
-            isMobile={mobile}
             rel={external}
             color="red"
             href={link}

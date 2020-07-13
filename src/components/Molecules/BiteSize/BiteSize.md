@@ -16,7 +16,7 @@ import Link from '../../Atoms/Link/Link';
   <BiteSize
     target=""
     link="/home"
-    linkLabel="Main action here"
+    linkLabel="Main action"
     backgroundColor="white"
     title="Heading"
     subtitle="Subtitle"
