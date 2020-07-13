@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
@@ -41,7 +41,10 @@ const Title = styled(Heading)`
 
 const Copy = styled.div`
   padding: calc(2 * ${spacing('md')});
-  ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('l')}`};
+  ${({ hasLink }) => hasLink
+    && `
+    padding-bottom: calc(${spacing('m')} + ${spacing('l')});
+  `};
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -51,6 +54,11 @@ const Copy = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     padding: calc(2 * ${spacing('m')});
+
+    ${({ hasLink }) => hasLink
+    && `
+      padding-bottom: calc(${spacing('m')} + ${spacing('l')});
+  `};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
@@ -63,16 +71,15 @@ const CTA = styled.div`
   right: ${spacing('m')};
   bottom: -${spacing('m')};
   ${zIndex('medium')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    bottom: calc(-1 * (${spacing('l')} + ${spacing('md')}));
-    ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`};
-  }
 `;
 
-const Li = styled(Link)`
-  ${({ mobile }) => mobile
-    && css`
-      width: 48px;
+const Anchor = styled(Link)`
+  height: 48px;
+  max-width: 296px;
+
+  ${({ isMobile }) => isMobile
+    && `
+      padding: ${spacing('sm')} calc(${spacing('md')} + ${spacing('l')});
       span {
         margin-left: 0;
 
@@ -109,13 +116,13 @@ const BiteSize = ({
 
   useEffect(() => {
     let width = typeof window !== 'undefined' ? window.innerWidth : null;
-    function displayWindowSize() {
+    function getWindowSize() {
       width = typeof window !== 'undefined' ? window.innerWidth : null;
       setMobile(width < 759);
     }
 
     if (typeof window !== 'undefined') {
-      window.addEventListener('resize', displayWindowSize);
+      window.addEventListener('resize', getWindowSize);
     }
     setMobile(width < 759);
   }, []);
@@ -140,8 +147,8 @@ const BiteSize = ({
       </Copy>
       {link && (
         <CTA>
-          <Li
-            mobile={mobile}
+          <Anchor
+            isMobile={mobile}
             rel={external}
             color="red"
             href={link}
@@ -150,7 +157,7 @@ const BiteSize = ({
             icon={icon()}
           >
             <Text>{linkLabel}</Text>
-          </Li>
+          </Anchor>
         </CTA>
       )}
     </Container>
