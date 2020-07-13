@@ -131,6 +131,7 @@ exports[`renders correctly 1`] = `
 
 .c6 {
   position: absolute;
+  max-width: 296px;
   right: 1.5rem;
   bottom: -1.5rem;
   z-index: 2;
@@ -138,7 +139,6 @@ exports[`renders correctly 1`] = `
 
 .c8 {
   height: 48px;
-  max-width: 296px;
 }
 
 @media (min-width:740px) {
