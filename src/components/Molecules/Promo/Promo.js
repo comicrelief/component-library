@@ -5,7 +5,6 @@ import Picture from '../../Atoms/Picture/Picture';
 import {
   Container,
   NudgeBottom,
-  NudgeTop,
   Wrapper,
   Copy,
   Media
@@ -19,14 +18,12 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children,
-  nudge
+  children
 }) => {
   const hasImage = imageSet || false;
 
   return (
     <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
-      {nudge === 'top' ? <NudgeTop /> : null}
       <Media>
         <Picture
           alt={imageAltText}
@@ -43,7 +40,7 @@ const Promo = ({
           {children}
         </Copy>
       </Wrapper>
-      {nudge === 'bottom' ? <NudgeBottom /> : null}
+      <NudgeBottom />
     </Container>
   );
 };
@@ -51,7 +48,6 @@ const Promo = ({
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
-  nudge: PropTypes.string,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -62,7 +58,6 @@ Promo.propTypes = {
 Promo.defaultProps = {
   backgroundColor: 'white',
   copyFirst: false,
-  nudge: null,
   imageSet: null,
   imageLow: null,
   image: null,

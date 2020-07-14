@@ -10,7 +10,6 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${media('small')} {
-    border-radius: 0 0 0 2rem;
     flex-direction: row;
   }
 `;
@@ -23,29 +22,15 @@ const NudgeBottom = styled.div`
     border-right: 0 solid transparent;
     position: absolute;
     height: 0;
-    left: 2rem;
+    left: 0;
     right: 0;
-    bottom: 0;
-  }
-`;
-
-const NudgeTop = styled.div`
-  ${media('small')} {
-    border-top: 70px solid white;
-    border-bottom: 0 solid transparent;
-    border-left: 0 solid white;
-    border-right: 999px solid transparent;
-    position: absolute;
-    height: 0;
-    right: 0;
-    top: 0;
     bottom: 0;
   }
 `;
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: ${container.large};
+  max-width: ${container.medium};
   height: 100%;
   left: 0;
   right: 0;
@@ -75,5 +60,5 @@ const Image = styled.div`
 `;
 
 export {
-  Container, NudgeBottom, NudgeTop, Wrapper, Copy, Media, Image
+  Container, NudgeBottom, Wrapper, Copy, Media, Image
 };

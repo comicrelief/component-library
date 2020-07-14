@@ -11,7 +11,6 @@ import Link from '../../Atoms/Link/Link';
   image={data.promoImage}
   imageAltText=""
   copyFirst={false}
-  nudge="bottom"
 >
   <Text
     tag="h1"
