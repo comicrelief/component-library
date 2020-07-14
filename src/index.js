@@ -52,6 +52,7 @@ export { default as HeaderEsuWithIcon } from './components/Molecules/HeaderEsuWi
 export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
+export { default as Promo } from './components/Molecules/Promo/Promo';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';

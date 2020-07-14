@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { media, container } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   width: 100%;
@@ -9,23 +10,19 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${media('small')} {
-    flex-direction: row;
-  }
+  flex-direction: row;
 `;
 
 const NudgeBottom = styled.div`
-  ${media('small')} {
-    border-top: 0 solid transparent;
-    border-bottom: 160px solid white;
-    border-left: 2160px solid transparent;
-    border-right: 0 solid transparent;
-    position: absolute;
-    height: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+  border-top: 0 solid transparent;
+  border-bottom: 160px solid white;
+  border-left: 2160px solid transparent;
+  border-right: 0 solid transparent;
+  position: absolute;
+  height: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 const Wrapper = styled.div`
@@ -37,21 +34,24 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  ${media('small')} {
-    position: absolute;
-  }
 `;
 
 const Copy = styled.div`
-  width: 100%;
-  padding: ${spacing('m')};
+  width: 90%;
+  padding: ${spacing('m')} ${spacing('m')} ${spacing('l')};
+  ${zIndex('low')};
   ${media('small')} {
+    width: 70%;
+  }
+  ${media('medium')} {
     width: 50%;
   }
 `;
 
 const Media = styled.div`
   width: 100%;
+  height: 100%;
+  position: absolute;
 `;
 
 const Image = styled.div`
