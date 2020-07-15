@@ -9,8 +9,9 @@ import Link from '../../Atoms/Link/Link';
   backgroundColor="blue_dark"
   imageSet={data.promoImage}
   image={data.promoImage}
+  imageLow={data.promoImage}
   imageAltText=""
-  copyFirst={false}
+  copyFirst={true}
 >
   <Text
     tag="h1"

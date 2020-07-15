@@ -23,20 +23,22 @@ const Promo = ({
   const hasImage = imageSet || false;
 
   return (
-    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
-      <Media>
-        <Picture
-          alt={imageAltText}
-          imageLow={imageLow}
-          images={imageSet}
-          image={image}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-        />
-      </Media>
-      <Wrapper>
-        <Copy hasImage={hasImage} copyFirst={copyFirst}>
+    <Container backgroundColor={backgroundColor}>
+      {hasImage && (
+        <Media>
+          <Picture
+            alt={imageAltText}
+            imageLow={imageLow}
+            images={imageSet}
+            image={image}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+          />
+        </Media>
+      )}
+      <Wrapper copyFirst={copyFirst}>
+        <Copy>
           {children}
         </Copy>
       </Wrapper>

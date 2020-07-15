@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
 `;
 
 const Copy = styled.div`
