@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
 const Copy = styled.div`
   width: 90%;
-  padding: ${spacing('m')} ${spacing('m')} ${spacing('l')};
+  padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
   ${zIndex('low')};
   ${media('small')} {
     width: 70%;
