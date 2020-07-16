@@ -31,6 +31,7 @@ const Heading = styled(Text)`
 `;
 
 const Title = styled(Heading)`
+  margin: ${spacing('md')} 0;
 `;
 
 const Subtile = styled(Heading)`
@@ -63,8 +64,19 @@ const MediaLink = styled.a`
 `;
 
 const Copy = styled.div`
-  padding: ${spacing('l')};
-  ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('xl')}`};
+  padding: ${spacing('m')};
+  ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: ${spacing('l')};
+    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+  }
+
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    padding: ${spacing('l')};
+    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+  }
+
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -93,9 +105,14 @@ const Copy = styled.div`
 
 const CTA = styled.div`
   position: absolute;
-  right: ${spacing('m')};
+  right: ${spacing('md')};
   bottom: -${spacing('m')};
   ${zIndex('medium')};
+
+  a {
+    font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  }
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     bottom: calc(-1 * (${spacing('l')} + ${spacing('md')}));
     ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`};
@@ -170,8 +187,8 @@ const SingleMessageDs = ({
         <Subtile color="blue_dark" size="s" weight="bold" family="Montserrat">
           Subtile
         </Subtile>
-        <Title tag="h3" color="purple" size="xl">
-          Title
+        <Title tag="h3" color="grey_dark" size="xl" family="Anton">
+          Heading Line 1 Heading Line 2
         </Title>
         {children}
       </Copy>
