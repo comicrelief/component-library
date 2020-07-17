@@ -13,7 +13,7 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  width: calc(100% - ${spacing('m')});
+  width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
@@ -32,10 +32,22 @@ const Heading = styled(Text)`
 
 const Title = styled(Heading)`
   margin: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('m')};
+  }
 `;
 
 const Subtile = styled(Heading)`
 `;
+
+const Tag = styled(Text)`
+  margin: 0 0 ${spacing('m')};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('l')};
+  }
+`;
+
 const Image = styled.div`
   height: auto;
   margin: 0 ${spacing('m')} 0 -${spacing('m')};
@@ -45,6 +57,7 @@ const Image = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
+
     margin: 0 -${spacing('m')} 0 ${spacing('m')};
   }
   img {
@@ -54,25 +67,30 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  width: 100%;
+  width: 320px;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: calc(50% + 6rem);
+    width: 360px;
   }
+
   @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 100%;
+    width: 600px;
   }
 `;
 
 const Copy = styled.div`
+  position: relative;
+  width: 320px;
   padding: ${spacing('m')};
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    padding: ${spacing('l')};
+    width: 360px;
+    padding: ${spacing('l')} ${spacing('m')} ${spacing('l')} ${spacing('l')};
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 600px;
     padding: ${spacing('l')};
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
   }
@@ -82,7 +100,7 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  width: 100%;
+
   @media ${({ theme }) => theme.breakpoint('large')} {
     height: 100%;
   }
@@ -92,20 +110,18 @@ const Copy = styled.div`
       margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
       @media ${({ theme }) => theme.breakpoint('small')} {
-        margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};
-        width: calc(50% + 6rem);
+        margin: ${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2);
       }
 
       @media ${({ theme }) => theme.breakpoint('large')} {
         margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
-        width: 100%;
       }
     `};
 `;
 
 const CTA = styled.div`
   position: absolute;
-  right: ${spacing('md')};
+  right: ${spacing('m')};
   bottom: -${spacing('m')};
   ${zIndex('medium')};
 
@@ -114,8 +130,7 @@ const CTA = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    bottom: calc(-1 * (${spacing('l')} + ${spacing('md')}));
-    ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`};
+    ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`}
   }
 `;
 
@@ -190,9 +205,9 @@ const SingleMessageDs = ({
         <Title tag="h3" color="grey_dark" size="xl" family="Anton">
           Heading Line 1 Heading Line 2
         </Title>
+        <Tag size="xs" family="Montserrat" color="grey"> &#8226;Tag</Tag>
         {children}
-      </Copy>
-      {link && (
+        {link && (
         <CTA hasImage={imageLow}>
           <Link
             rel={external}
@@ -205,7 +220,8 @@ const SingleMessageDs = ({
             {linkLabel}
           </Link>
         </CTA>
-      )}
+        )}
+      </Copy>
     </Container>
   );
 };
