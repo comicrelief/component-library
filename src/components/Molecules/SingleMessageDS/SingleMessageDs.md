@@ -21,7 +21,11 @@ import Link from '../../Atoms/Link/Link';
       images={data.images}
       imageAltText='Happy man going to work'
       backgroundColor='white'
-      height='auto'>
+      subtitle="Subtitle"
+      title="Heading Line 1 Heading Line 2"
+      tags={["REFUGEE", "SAFE PLACE TO"]}
+      height='auto'
+    >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
         to get you looking your best while you’re raising some cash. Also
@@ -49,7 +53,11 @@ import Link from '../../Atoms/Link/Link';
       link='/home'
       linkLabel='Check out the shop'
       backgroundColor='white'
-      height='auto'>
+      subtitle="Subtitle"
+      title="Heading Line 1 Heading Line 2"
+      tags={["REFUGEE", "SAFE PLACE TO"]}
+      height='auto'
+    >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
         to get you looking your best while you’re raising some cash. Also
@@ -72,7 +80,13 @@ import Link from '../../Atoms/Link/Link';
       background: '#E1E2E3',
       justifyContent: 'space-around',
     }}>
-    <SingleMessageDs backgroundColor='white' height='auto'>
+    <SingleMessageDs
+      backgroundColor='white'
+      height='auto'
+      subtitle="Subtitle"
+      title="Heading Line 1 Heading Line 2"
+      tags={["REFUGEE", "SAFE PLACE TO"]}
+    >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
         to get you looking your best while you’re raising some cash. Also
