@@ -15,13 +15,10 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: ${({ direction }) => (direction === 'right' ? 'row-reverse' : 'row')};
     width: 100%;
-  }
-
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    flex-direction: column;
   }
 `;
 
@@ -38,6 +35,7 @@ const Title = styled(Heading)`
 `;
 
 const Subtitle = styled(Heading)`
+  display: inline-block;
 `;
 
 const Image = styled.div`
@@ -74,44 +72,48 @@ const Copy = styled.div`
   width: 320px;
   padding: ${spacing('m')};
   ${zIndex('low')};
-
-  ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
-
-  ${({ hasImage }) => hasImage
-    && css`
-      margin-top: calc(-2 * ${spacing('m')});
-      min-height: calc(5 * ${spacing('l')});
-      @media ${({ theme }) => theme.breakpoint('small')} {
-        margin: ${({ direction }) => (direction === 'left'
-    ? `${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2)`
-    : `${spacing('l')} calc(-${spacing('m')} * 2) -${spacing('m')} 0`)};
-    }
-
-      @media ${({ theme }) => theme.breakpoint('large')} {
-        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
-      }
-    `};
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 360px;
-    padding: ${spacing('l')} ${spacing('m')} ${spacing('l')} ${spacing('l')};
-    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
-  }
-
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 600px;
-    padding: ${spacing('l')};
-    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
-  }
-
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
+  ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+
+  ${({ hasImage }) => hasImage
+    && css`
+      min-height: calc(5 * ${spacing('l')});
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        margin: ${({ direction }) => (direction === 'left'
+    ? `${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2)`
+    : `${spacing('l')} calc(-${spacing('m')} * 2) -${spacing('m')} 0`)};
+    }
+    `};
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 360px;
+    padding: ${({ direction }) => (direction === 'left'
+    ? `${spacing('l')} ${spacing('m')} ${spacing('l')} ${spacing('l')}`
+    : `${spacing('l')} ${spacing('l')} ${spacing('l')} ${spacing('m')}`)};
+    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+  }
+
   @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 600px;
+    background: red;
     height: 100%;
+    padding: calc(${spacing('m')} * 2);
+    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
+
+    ${({ hasImage }) => hasImage
+    && css`
+      min-height: calc(5 * ${spacing('l')});
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        margin: ${({ direction }) => (direction === 'left'
+    ? `${spacing('l')} 0 ${spacing('m')} -${spacing('l')}`
+    : `${spacing('l')} calc(-${spacing('l')} * 2) ${spacing('m')} 0`)};
+    }
+    `};
   }
 `;
 
