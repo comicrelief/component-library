@@ -40,28 +40,6 @@ const Title = styled(Heading)`
 const Subtitle = styled(Heading)`
 `;
 
-const TagWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-
-  span:not(:first-child) {
-    margin-left: ${spacing('sm')};
-  }
-`;
-
-const Tag = styled(Text)`
-  text-transform: uppercase;
-  margin: 0 0 ${spacing('m')};
-
-  span {
-    font-weight: 900;
-  }
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-bottom: ${spacing('l')};
-  }
-`;
-
 const Image = styled.div`
   height: auto;
   margin: 0 ${spacing('m')} 0 -${spacing('m')};
@@ -158,7 +136,6 @@ const SingleMessageDs = ({
   width,
   subtitle,
   title,
-  tags,
   children,
   link,
   linkLabel,
@@ -208,22 +185,6 @@ const SingleMessageDs = ({
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
-  const tagItems = tags.map((tag, index) => {
-    const key = tag + index;
-    return (
-      <Tag
-        size="xs"
-        weight="normal"
-        color="grey"
-        family="Montserrat"
-        key={key}
-      >
-        <span> &#8226;</span>
-        {' '}
-        {tag}
-      </Tag>
-    );
-  });
   return (
     <Container {...rest}>
       {hasMedia()}
@@ -238,7 +199,6 @@ const SingleMessageDs = ({
         <Title tag="h3" color="grey_dark" size="xl" family="Anton">
           {title}
         </Title>
-        <TagWrapper>{tagItems}</TagWrapper>
         {children}
         {link && (
         <CTA hasImage={imageLow}>
@@ -271,7 +231,6 @@ SingleMessageDs.propTypes = {
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  tags: PropTypes.string,
   target: PropTypes.string,
   children: PropTypes.node.isRequired
 };
@@ -284,7 +243,6 @@ SingleMessageDs.defaultProps = {
   link: null,
   linkLabel: null,
   target: null,
-  tags: null,
   imageAltText: '',
   width: '100%',
   height: '100%'

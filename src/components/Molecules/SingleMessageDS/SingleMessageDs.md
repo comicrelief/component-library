@@ -23,7 +23,6 @@ import Link from '../../Atoms/Link/Link';
       backgroundColor='white'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
-      tags={["REFUGEE", "SAFE PLACE TO"]}
       height='auto'
     >
       <Text tag='p'>
@@ -55,7 +54,6 @@ import Link from '../../Atoms/Link/Link';
       backgroundColor='white'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
-      tags={["REFUGEE", "SAFE PLACE TO"]}
       height='auto'
     >
       <Text tag='p'>
@@ -85,7 +83,6 @@ import Link from '../../Atoms/Link/Link';
       height='auto'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
-      tags={["REFUGEE", "SAFE PLACE TO"]}
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
