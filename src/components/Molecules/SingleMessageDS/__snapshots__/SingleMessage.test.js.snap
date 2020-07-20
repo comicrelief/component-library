@@ -294,13 +294,13 @@ exports[`renders correctly 1`] = `
     >
       Subtitle
     </span>
-    <h3
+    <h4
       className="c8 SingleMessageDs__Heading-sc-1dprx4j-1 c9"
       color="grey_dark"
       size="xl"
     >
       Heading Line 1 Heading Line 2
-    </h3>
+    </h4>
     <p
       className="c10"
       color="inherit"
