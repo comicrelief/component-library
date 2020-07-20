@@ -40,16 +40,11 @@ const Subtitle = styled(Heading)`
 
 const Image = styled.div`
   height: auto;
-  margin: 0 ${spacing('m')} 0 -${spacing('m')};
+
   @media ${({ theme }) => theme.breakpoint('small')} {
-    margin: 0;
     ${({ hasLink }) => !hasLink && `width: calc(50% - ${spacing('xl')})`};
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
-
-    margin: 0 -${spacing('m')} 0 ${spacing('m')};
-  }
   img {
     border-radius: 1rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
@@ -71,6 +66,7 @@ const Copy = styled.div`
   position: relative;
   width: 320px;
   padding: ${spacing('m')};
+  margin-top: calc(-${spacing('m')} * 2);
   ${zIndex('low')};
   display: flex;
   flex-direction: column;
@@ -92,15 +88,13 @@ const Copy = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 360px;
-    padding: ${({ direction }) => (direction === 'left'
-    ? `${spacing('l')} ${spacing('m')} ${spacing('l')} ${spacing('l')}`
-    : `${spacing('l')} ${spacing('l')} ${spacing('l')} ${spacing('m')}`)};
+    padding: ${spacing('l')};
+
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: 600px;
-    background: red;
     height: 100%;
     padding: calc(${spacing('m')} * 2);
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
@@ -111,7 +105,7 @@ const Copy = styled.div`
       @media ${({ theme }) => theme.breakpoint('small')} {
         margin: ${({ direction }) => (direction === 'left'
     ? `${spacing('l')} 0 ${spacing('m')} -${spacing('l')}`
-    : `${spacing('l')} calc(-${spacing('l')} * 2) ${spacing('m')} 0`)};
+    : `${spacing('l')} -${spacing('l')} ${spacing('m')} 0`)};
     }
     `};
   }
