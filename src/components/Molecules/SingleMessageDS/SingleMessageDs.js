@@ -16,7 +16,7 @@ const Container = styled.div`
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex-direction: row;
+    flex-direction: ${({ direction }) => (direction === 'right' ? 'row-reverse' : 'row')};
     width: 100%;
   }
 
@@ -73,7 +73,24 @@ const Copy = styled.div`
   position: relative;
   width: 320px;
   padding: ${spacing('m')};
+  ${zIndex('low')};
+
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+
+  ${({ hasImage }) => hasImage
+    && css`
+      margin-top: calc(-2 * ${spacing('m')});
+      min-height: calc(5 * ${spacing('l')});
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        margin: ${({ direction }) => (direction === 'left'
+    ? `${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2)`
+    : `${spacing('l')} calc(-${spacing('m')} * 2) -${spacing('m')} 0`)};
+    }
+
+      @media ${({ theme }) => theme.breakpoint('large')} {
+        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
+      }
+    `};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 360px;
@@ -96,19 +113,6 @@ const Copy = styled.div`
   @media ${({ theme }) => theme.breakpoint('large')} {
     height: 100%;
   }
-  ${zIndex('low')};
-  ${({ hasImage }) => hasImage
-    && css`
-      margin-top: calc(-2 * ${spacing('m')});
-      min-height: calc(5 * ${spacing('l')});
-      @media ${({ theme }) => theme.breakpoint('small')} {
-        margin: ${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2);
-      }
-
-      @media ${({ theme }) => theme.breakpoint('large')} {
-        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
-      }
-    `};
 `;
 
 const CTA = styled.div`
@@ -128,6 +132,7 @@ const CTA = styled.div`
 
 const SingleMessageDs = ({
   backgroundColor,
+  imageDirection,
   imageLow,
   images,
   image,
@@ -139,7 +144,7 @@ const SingleMessageDs = ({
   children,
   link,
   linkLabel,
-  ctaColor,
+  ctaBgColor,
   target,
   ...rest
 }) => {
@@ -187,12 +192,13 @@ const SingleMessageDs = ({
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
   return (
-    <Container {...rest}>
+    <Container {...rest} direction={imageDirection}>
       {hasMedia()}
       <Copy
         hasImage={imageLow}
         hasLink={link}
         backgroundColor={backgroundColor}
+        direction={imageDirection}
       >
         <Subtitle color="blue_dark" size="s" weight="bold" family="Montserrat">
           {subtitle}
@@ -205,7 +211,7 @@ const SingleMessageDs = ({
         <CTA hasImage={imageLow}>
           <Link
             rel={external}
-            color={ctaColor}
+            color={ctaBgColor}
             href={link}
             target={target}
             type="button"
@@ -222,6 +228,7 @@ const SingleMessageDs = ({
 
 SingleMessageDs.propTypes = {
   backgroundColor: PropTypes.string,
+  imageDirection: PropTypes.string,
   imageLow: PropTypes.string,
   images: PropTypes.string,
   image: PropTypes.string,
@@ -229,7 +236,7 @@ SingleMessageDs.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   link: PropTypes.string,
-  ctaColor: PropTypes.string,
+  ctaBgColor: PropTypes.string,
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -239,11 +246,12 @@ SingleMessageDs.propTypes = {
 
 SingleMessageDs.defaultProps = {
   backgroundColor: 'white',
+  imageDirection: 'left',
   imageLow: null,
   images: null,
   image: null,
   link: null,
-  ctaColor: 'red',
+  ctaBgColor: 'red',
   linkLabel: null,
   target: null,
   imageAltText: '',
