@@ -205,7 +205,7 @@ const SingleMessageDs = ({
         <Subtitle color="blue_dark" size="s" weight="bold" family="Montserrat">
           {subtitle}
         </Subtitle>
-        <Title tag="h4" color="grey_dark" size="xl" family="Anton">
+        <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
           {title}
         </Title>
         {children}

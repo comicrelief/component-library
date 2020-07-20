@@ -16,6 +16,7 @@ exports[`renders correctly 1`] = `
   font-size: 2rem;
   line-height: 2rem;
   text-transform: inherit;
+  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
   -webkit-letter-spacing: 0.03rem;
   -moz-letter-spacing: 0.03rem;
