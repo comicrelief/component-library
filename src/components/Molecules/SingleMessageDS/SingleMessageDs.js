@@ -139,6 +139,7 @@ const SingleMessageDs = ({
   children,
   link,
   linkLabel,
+  ctaColor,
   target,
   ...rest
 }) => {
@@ -204,7 +205,7 @@ const SingleMessageDs = ({
         <CTA hasImage={imageLow}>
           <Link
             rel={external}
-            color="red"
+            color={ctaColor}
             href={link}
             target={target}
             type="button"
@@ -228,6 +229,7 @@ SingleMessageDs.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   link: PropTypes.string,
+  ctaColor: PropTypes.string,
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -241,6 +243,7 @@ SingleMessageDs.defaultProps = {
   images: null,
   image: null,
   link: null,
+  ctaColor: 'red',
   linkLabel: null,
   target: null,
   imageAltText: '',

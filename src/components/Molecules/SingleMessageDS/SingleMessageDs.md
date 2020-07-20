@@ -55,6 +55,7 @@ import Link from '../../Atoms/Link/Link';
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
       height='auto'
+      ctaColor="blue_dark"
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
@@ -83,6 +84,7 @@ import Link from '../../Atoms/Link/Link';
       height='auto'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
+      ctaColor="blue_dark"
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
