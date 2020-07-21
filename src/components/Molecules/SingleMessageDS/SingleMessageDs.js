@@ -98,6 +98,7 @@ const Copy = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: 360px;
+    min-height: 350px;
     padding: ${spacing('l')};
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
@@ -109,6 +110,7 @@ const Copy = styled.div`
 
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: 600px;
+    height: 448px;
     padding: calc(${spacing('m')} * 2);
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
