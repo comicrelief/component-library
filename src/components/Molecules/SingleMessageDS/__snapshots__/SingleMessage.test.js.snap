@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c13 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -58,7 +58,7 @@ exports[`renders correctly 1`] = `
   right: 1.5rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -87,7 +87,7 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c12:hover {
+.c13:hover {
   background-color: #0565D1;
   color: #000000;
 }
@@ -102,7 +102,6 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  width: 100%;
   background: inherit;
 }
 
@@ -135,13 +134,24 @@ exports[`renders correctly 1`] = `
 
 .c1 {
   width: 320px;
+  height: 240px;
+}
+
+.c12 {
+  position: absolute;
+  bottom: -1.5rem;
+  z-index: 2;
+}
+
+.c12 a {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c5 {
   position: relative;
+  height: 100%;
   width: 320px;
   padding: 1.5rem;
-  margin-top: calc(-1.5rem * 2);
   z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
@@ -154,22 +164,15 @@ exports[`renders correctly 1`] = `
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
   padding-bottom: calc(2rem + 1.5rem);
-  min-height: calc(5 * 2rem);
+  margin: calc(-1.5rem * 2) 0 -1.5rem -1.5rem;
 }
 
-.c11 {
-  position: absolute;
-  right: 1.5rem;
-  bottom: -1.5rem;
-  z-index: 2;
-}
-
-.c11 a {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+.c5 .c11 {
+  left: 1.5rem;
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c14 {
     width: auto;
     right: auto;
     position: relative;
@@ -177,7 +180,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c13 {
     width: auto;
   }
 }
@@ -187,7 +190,6 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    width: 100%;
   }
 }
 
@@ -203,6 +205,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c1 {
+    height: 448px;
     width: 360px;
   }
 }
@@ -214,9 +217,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c5 {
-    margin: 2rem calc(-1.5rem * 2) -1.5rem 0;
-  }
+
 }
 
 @media (min-width:740px) {
@@ -224,21 +225,17 @@ exports[`renders correctly 1`] = `
     width: 360px;
     padding: 2rem;
     padding-bottom: calc(2rem + 1.5rem);
+    margin: 2rem calc(-1.5rem * 2) -1.5rem 0;
   }
 }
 
 @media (min-width:1440px) {
   .c5 {
     width: 600px;
-    height: 100%;
     padding: calc(1.5rem * 2);
     padding-bottom: calc(1.5rem * 3);
-    min-height: calc(5 * 2rem);
+    margin: 2rem -2rem 1.5rem 0;
   }
-}
-
-@media (min-width:740px) {
-
 }
 
 <div
@@ -301,10 +298,10 @@ exports[`renders correctly 1`] = `
       Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
     </p>
     <div
-      className="c11"
+      className="c11 c12"
     >
       <a
-        className="c12"
+        className="c13"
         color="blue_dark"
         href="/home"
         rel={null}
@@ -313,7 +310,7 @@ exports[`renders correctly 1`] = `
       >
         Check out the shop
         <span
-          className="c13"
+          className="c14"
           type="button"
         >
           <svg
