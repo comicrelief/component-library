@@ -88,18 +88,8 @@ exports[`renders Promo correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-}
-
-.c9 {
-  border-top: 0 solid transparent;
-  border-bottom: 160px solid white;
-  border-left: 2160px solid transparent;
-  border-right: 0 solid transparent;
-  position: absolute;
-  height: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+  clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
 }
 
 .c4 {
@@ -227,8 +217,5 @@ exports[`renders Promo correctly 1`] = `
       </span>
     </div>
   </div>
-  <div
-    className="c9"
-  />
 </div>
 `;
