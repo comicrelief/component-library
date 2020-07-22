@@ -10,7 +10,6 @@ import {
   Media
 } from './Promo.style';
 
-/** Single Message is our main component usually to build landing pages */
 const Promo = ({
   copyFirst,
   backgroundColor,

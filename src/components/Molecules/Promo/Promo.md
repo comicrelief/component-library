@@ -1,4 +1,4 @@
-Single Message
+Promo
 
 ```js
 const data = require('../../../styleguide/data/data').default;
