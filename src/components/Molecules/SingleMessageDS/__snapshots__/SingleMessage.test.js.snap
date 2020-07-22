@@ -12,19 +12,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c8 {
-  color: #222222;
-  font-size: 2rem;
-  line-height: 2rem;
-  text-transform: inherit;
-  font-weight: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
-}
-
-.c10 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -46,7 +33,7 @@ exports[`renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c14 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -58,7 +45,7 @@ exports[`renders correctly 1`] = `
   right: 1.5rem;
 }
 
-.c13 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -87,7 +74,7 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c13:hover {
+.c11:hover {
   background-color: #0565D1;
   color: #000000;
 }
@@ -105,22 +92,12 @@ exports[`renders correctly 1`] = `
   background: inherit;
 }
 
-.c9 {
-  -webkit-letter-spacing: 0.03em;
-  -moz-letter-spacing: 0.03em;
-  -ms-letter-spacing: 0.03em;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin: 1rem 0;
-}
-
 .c7 {
   -webkit-letter-spacing: 0.03em;
   -moz-letter-spacing: 0.03em;
   -ms-letter-spacing: 0.03em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
 }
 
 .c2 {
@@ -137,13 +114,13 @@ exports[`renders correctly 1`] = `
   height: 240px;
 }
 
-.c12 {
+.c10 {
   position: absolute;
   bottom: -1.5rem;
   z-index: 2;
 }
 
-.c12 a {
+.c10 a {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -164,15 +141,15 @@ exports[`renders correctly 1`] = `
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
   padding-bottom: calc(2rem + 1.5rem);
-  margin: calc(-1.5rem * 2) 0 -1.5rem -1.5rem;
+  margin: calc(-1.5rem * 2) 0 -1.5rem 1.5rem;
 }
 
-.c5 .c11 {
-  left: 1.5rem;
+.c5 .c9 {
+  right: 1.5rem;
 }
 
 @media (min-width:740px) {
-  .c14 {
+  .c12 {
     width: auto;
     right: auto;
     position: relative;
@@ -180,22 +157,16 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c11 {
     width: auto;
   }
 }
 
 @media (min-width:740px) {
   .c0 {
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-  }
-}
-
-@media (min-width:740px) {
-  .c9 {
-    margin-bottom: 1.5rem;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -226,7 +197,7 @@ exports[`renders correctly 1`] = `
     min-height: 350px;
     padding: 2rem;
     padding-bottom: calc(2rem + 1.5rem);
-    margin: 2rem calc(-1.5rem * 2) -1.5rem 0;
+    margin: 2rem 0 -1.5rem calc(-1.5rem * 2);
   }
 }
 
@@ -236,13 +207,13 @@ exports[`renders correctly 1`] = `
     height: 448px;
     padding: calc(1.5rem * 2);
     padding-bottom: calc(1.5rem * 3);
-    margin: 2rem -2rem 1.5rem 0;
+    margin: 2rem 0 1.5rem -2rem;
   }
 }
 
 <div
   className="c0"
-  direction="right"
+  title="Heading Line 1 Heading Line 2"
 >
   <a
     aria-hidden="true"
@@ -250,6 +221,7 @@ exports[`renders correctly 1`] = `
     href="/home"
     tabIndex="-1"
     target="_blank"
+    title="Heading Line 1 Heading Line 2"
   >
     <div
       className="c2"
@@ -276,34 +248,26 @@ exports[`renders correctly 1`] = `
   </a>
   <div
     className="c5"
-    direction="right"
   >
     <span
-      className="c6 SingleMessageDs__Heading-sc-1dprx4j-1 c7"
+      className="c6 c7"
       color="blue_dark"
       size="s"
     >
       Subtitle
     </span>
-    <h4
-      className="c8 SingleMessageDs__Heading-sc-1dprx4j-1 c9"
-      color="grey_dark"
-      size="xl"
-    >
-      Heading Line 1 Heading Line 2
-    </h4>
     <p
-      className="c10"
+      className="c8"
       color="inherit"
       size="s"
     >
       Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
     </p>
     <div
-      className="c11 c12"
+      className="c9 c10"
     >
       <a
-        className="c13"
+        className="c11"
         color="blue_dark"
         href="/home"
         rel={null}
@@ -312,7 +276,7 @@ exports[`renders correctly 1`] = `
       >
         Check out the shop
         <span
-          className="c14"
+          className="c12"
           type="button"
         >
           <svg

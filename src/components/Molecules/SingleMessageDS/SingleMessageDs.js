@@ -16,24 +16,13 @@ const Container = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    flex-direction: ${({ direction }) => (direction === 'right' ? 'row-reverse' : 'row')};
+    flex-direction: ${({ imageLeft }) => (imageLeft ? 'row' : 'row-reverse')};
   }
 `;
 
-const Heading = styled(Text)`
+const Subtitle = styled(Text)`
   letter-spacing: 0.03em;
   text-transform: uppercase;
-`;
-
-const Title = styled(Heading)`
-  margin: ${spacing('md')} 0;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-bottom: ${spacing('m')};
-  }
-`;
-
-const Subtitle = styled(Heading)`
-  display: inline-block;
 `;
 
 const Image = styled.div`
@@ -90,7 +79,7 @@ const Copy = styled.div`
 
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
-  ${({ direction }) => (direction === 'left'
+  ${({ imageLeft }) => (imageLeft
     ? `${CTA} { right: ${spacing('m')};} margin: calc(-${spacing('m')} * 2) 0 -${spacing('m')} ${spacing('m')}`
     : `${CTA} { left: ${spacing('m')};} margin: calc(-${spacing('m')} * 2) 0 -${spacing('m')} -${spacing('m')}`
   )};
@@ -103,7 +92,7 @@ const Copy = styled.div`
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
-    ${({ direction }) => (direction === 'left'
+    ${({ imageLeft }) => (imageLeft
     ? `margin: ${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2)`
     : `margin: ${spacing('l')} calc(-${spacing('m')} * 2) -${spacing('m')} 0`)};
   }
@@ -115,7 +104,7 @@ const Copy = styled.div`
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
 
-    margin: ${({ direction }) => (direction === 'left'
+    margin: ${({ imageLeft }) => (imageLeft
     ? `${spacing('l')} 0 ${spacing('m')} -${spacing('l')}`
     : `${spacing('l')} -${spacing('l')} ${spacing('m')} 0`)};
   }
@@ -123,7 +112,7 @@ const Copy = styled.div`
 
 const SingleMessageDs = ({
   backgroundColor,
-  imageDirection,
+  imageLeft,
   imageLow,
   images,
   image,
@@ -131,7 +120,6 @@ const SingleMessageDs = ({
   height,
   width,
   subtitle,
-  title,
   children,
   link,
   linkLabel,
@@ -184,20 +172,17 @@ const SingleMessageDs = ({
   const subtitleColour = ctaBgColor === 'red' ? 'grey_dark' : ctaBgColor;
 
   return (
-    <Container {...rest} direction={imageDirection}>
+    <Container {...rest} imageLeft={imageLeft}>
       {hasMedia()}
       <Copy
         hasImage={imageLow}
         hasLink={link}
         backgroundColor={backgroundColor}
-        direction={imageDirection}
+        imageLeft={imageLeft}
       >
         <Subtitle color={subtitleColour} size="s" weight="bold" family="Montserrat">
           {subtitle}
         </Subtitle>
-        <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
-          {title}
-        </Title>
         {children}
         {link && (
         <CTA hasImage={imageLow}>
@@ -220,7 +205,7 @@ const SingleMessageDs = ({
 
 SingleMessageDs.propTypes = {
   backgroundColor: PropTypes.string,
-  imageDirection: PropTypes.string,
+  imageLeft: PropTypes.bool,
   imageLow: PropTypes.string,
   images: PropTypes.string,
   image: PropTypes.string,
@@ -231,14 +216,13 @@ SingleMessageDs.propTypes = {
   ctaBgColor: PropTypes.string,
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
   target: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
 SingleMessageDs.defaultProps = {
   backgroundColor: 'white',
-  imageDirection: 'left',
+  imageLeft: true,
   imageLow: null,
   images: null,
   image: null,
