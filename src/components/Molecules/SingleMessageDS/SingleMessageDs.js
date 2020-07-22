@@ -181,6 +181,7 @@ const SingleMessageDs = ({
   };
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
+  const subtitleColour = ctaBgColor === 'red' ? 'grey_dark' : ctaBgColor;
 
   return (
     <Container {...rest} direction={imageDirection}>
@@ -191,7 +192,7 @@ const SingleMessageDs = ({
         backgroundColor={backgroundColor}
         direction={imageDirection}
       >
-        <Subtitle color="blue_dark" size="s" weight="bold" family="Montserrat">
+        <Subtitle color={subtitleColour} size="s" weight="bold" family="Montserrat">
           {subtitle}
         </Subtitle>
         <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
