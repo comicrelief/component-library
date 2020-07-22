@@ -14,7 +14,6 @@ import Link from '../../Atoms/Link/Link';
       justifyContent: 'space-around',
     }}>
     <SingleMessageDs
-      target='_blank'
       link='/home'
       linkLabel='Check out the shop'
       backgroundColor='white'
@@ -23,7 +22,7 @@ import Link from '../../Atoms/Link/Link';
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
-      height='auto'
+      height='100%'
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
@@ -48,7 +47,7 @@ import Link from '../../Atoms/Link/Link';
       justifyContent: 'space-around',
     }}>
     <SingleMessageDs
-      target='_blank'
+      target='blank'
       link='/home'
       linkLabel='Check out the shop'
       ctaBgColor="blue_dark"
@@ -59,7 +58,7 @@ import Link from '../../Atoms/Link/Link';
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
-      height='auto'
+      height='100%'
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
