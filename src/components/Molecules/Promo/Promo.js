@@ -4,7 +4,6 @@ import Picture from '../../Atoms/Picture/Picture';
 
 import {
   Container,
-  NudgeBottom,
   Wrapper,
   Copy,
   Media
@@ -41,7 +40,6 @@ const Promo = ({
           {children}
         </Copy>
       </Wrapper>
-      <NudgeBottom />
     </Container>
   );
 };

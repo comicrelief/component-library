@@ -11,18 +11,7 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   flex-direction: row;
-`;
-
-const NudgeBottom = styled.div`
-  border-top: 0 solid transparent;
-  border-bottom: 160px solid white;
-  border-left: 2160px solid transparent;
-  border-right: 0 solid transparent;
-  position: absolute;
-  height: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 `;
 
 const Wrapper = styled.div`
@@ -61,5 +50,5 @@ const Image = styled.div`
 `;
 
 export {
-  Container, NudgeBottom, Wrapper, Copy, Media, Image
+  Container, Wrapper, Copy, Media, Image
 };
