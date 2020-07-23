@@ -143,7 +143,7 @@ exports[`renders correctly 1`] = `
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
   padding-bottom: calc(2rem + 1.5rem);
-  margin: calc(-1.5rem * 2) 1.5rem -1.5rem 0;
+  margin: calc(-1.5rem * 2) 1.5rem 1.5rem 0;
 }
 
 .c5 .c9 {
