@@ -80,6 +80,7 @@ const Copy = styled.div`
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
+    height: 448px;
     width: 50%;
     flex-grow: 0;
     flex-shrink: 0;
