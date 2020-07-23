@@ -74,8 +74,8 @@ const Copy = styled.div`
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
   ${({ imageLeft }) => (imageLeft
-    ? `margin: calc(-${spacing('m')} * 2) 0 -${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
-    : `margin: calc(-${spacing('m')} * 2) ${spacing('m')} -${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
+    ? `margin: calc(-${spacing('m')} * 2) 0 ${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
+    : `margin: calc(-${spacing('m')} * 2) ${spacing('m')} ${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
   )};
 
 
