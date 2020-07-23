@@ -32,9 +32,11 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${media('small')} {
     width: 70%;
+    padding: ${spacing('xl')} ${spacing('m')};
   }
   ${media('medium')} {
     width: 50%;
+    padding: ${spacing('xxl')} ${spacing('m')};
   }
 `;
 
