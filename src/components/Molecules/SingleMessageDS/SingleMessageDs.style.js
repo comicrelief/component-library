@@ -89,8 +89,8 @@ const Copy = styled.div`
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
     ${({ imageLeft }) => (imageLeft
-    ? `margin: ${spacing('l')} 0 -${spacing('m')} calc(-${spacing('m')} * 2)`
-    : `margin: ${spacing('l')} calc(-${spacing('m')} * 2) -${spacing('m')} 0`)};
+    ? `margin: ${spacing('l')} 0 ${spacing('m')} calc(-${spacing('m')} * 2)`
+    : `margin: ${spacing('l')} calc(-${spacing('m')} * 2) ${spacing('m')} 0`)};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
