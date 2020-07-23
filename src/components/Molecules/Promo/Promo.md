@@ -1,4 +1,4 @@
-Single Message
+Promo
 
 ```js
 const data = require('../../../styleguide/data/data').default;
@@ -9,9 +9,9 @@ import Link from '../../Atoms/Link/Link';
   backgroundColor="blue_dark"
   imageSet={data.promoImage}
   image={data.promoImage}
+  imageLow={data.promoImage}
   imageAltText=""
-  copyFirst={false}
-  nudge="bottom"
+  copyFirst={true}
 >
   <Text
     tag="h1"

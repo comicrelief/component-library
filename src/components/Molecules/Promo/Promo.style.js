@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { media, container } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   width: 100%;
@@ -9,64 +10,40 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${media('small')} {
-    border-radius: 0 0 0 2rem;
-    flex-direction: row;
-  }
-`;
-
-const NudgeBottom = styled.div`
-  ${media('small')} {
-    border-top: 0 solid transparent;
-    border-bottom: 160px solid white;
-    border-left: 2160px solid transparent;
-    border-right: 0 solid transparent;
-    position: absolute;
-    height: 0;
-    left: 2rem;
-    right: 0;
-    bottom: 0;
-  }
-`;
-
-const NudgeTop = styled.div`
-  ${media('small')} {
-    border-top: 70px solid white;
-    border-bottom: 0 solid transparent;
-    border-left: 0 solid white;
-    border-right: 999px solid transparent;
-    position: absolute;
-    height: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
+  flex-direction: row;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 `;
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: ${container.large};
+  max-width: ${container.medium};
   height: 100%;
   left: 0;
   right: 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  ${media('small')} {
-    position: absolute;
-  }
+  ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
 `;
 
 const Copy = styled.div`
-  width: 100%;
-  padding: ${spacing('m')};
+  width: 90%;
+  padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
+  ${zIndex('low')};
   ${media('small')} {
+    width: 70%;
+    padding: ${spacing('xl')} ${spacing('m')};
+  }
+  ${media('medium')} {
     width: 50%;
+    padding: ${spacing('xxl')} ${spacing('m')};
   }
 `;
 
 const Media = styled.div`
   width: 100%;
+  height: 100%;
+  position: absolute;
 `;
 
 const Image = styled.div`
@@ -75,5 +52,5 @@ const Image = styled.div`
 `;
 
 export {
-  Container, NudgeBottom, NudgeTop, Wrapper, Copy, Media, Image
+  Container, Wrapper, Copy, Media, Image
 };

@@ -4,14 +4,11 @@ import Picture from '../../Atoms/Picture/Picture';
 
 import {
   Container,
-  NudgeBottom,
-  NudgeTop,
   Wrapper,
   Copy,
   Media
 } from './Promo.style';
 
-/** Single Message is our main component usually to build landing pages */
 const Promo = ({
   copyFirst,
   backgroundColor,
@@ -19,31 +16,30 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children,
-  nudge
+  children
 }) => {
   const hasImage = imageSet || false;
 
   return (
-    <Container backgroundColor={backgroundColor} copyFirst={copyFirst}>
-      {nudge === 'top' ? <NudgeTop /> : null}
-      <Media>
-        <Picture
-          alt={imageAltText}
-          imageLow={imageLow}
-          images={imageSet}
-          image={image}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-        />
-      </Media>
-      <Wrapper>
-        <Copy hasImage={hasImage} copyFirst={copyFirst}>
+    <Container backgroundColor={backgroundColor}>
+      {hasImage && (
+        <Media>
+          <Picture
+            alt={imageAltText}
+            imageLow={imageLow}
+            images={imageSet}
+            image={image}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+          />
+        </Media>
+      )}
+      <Wrapper copyFirst={copyFirst}>
+        <Copy>
           {children}
         </Copy>
       </Wrapper>
-      {nudge === 'bottom' ? <NudgeBottom /> : null}
     </Container>
   );
 };
@@ -51,7 +47,6 @@ const Promo = ({
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
-  nudge: PropTypes.string,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -62,7 +57,6 @@ Promo.propTypes = {
 Promo.defaultProps = {
   backgroundColor: 'white',
   copyFirst: false,
-  nudge: null,
   imageSet: null,
   imageLow: null,
   image: null,

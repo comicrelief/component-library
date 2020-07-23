@@ -54,6 +54,7 @@ export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
 export { default as SingleMessageDs } from './components/Molecules/SingleMessageDS/SingleMessageDs';
 
+export { default as Promo } from './components/Molecules/Promo/Promo';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
