@@ -25,8 +25,9 @@ const Title = styled(Text)`
       justifyContent: 'space-around',
     }}>
     <SingleMessageDs
+      imageLeft={true}
       link='/home'
-      linkLabel='Check out the shop'
+      linkLabel='Check out'
       backgroundColor='white'
       imageLow={data.image}
       images={data.images}
@@ -71,7 +72,7 @@ const Title = styled(Text)`
     <SingleMessageDs
       target='blank'
       link='/home'
-      linkLabel='Check out the shop'
+      linkLabel='Check out'
       ctaBgColor="blue_dark"
       backgroundColor='white'
       imageLeft={false}
@@ -91,85 +92,4 @@ const Title = styled(Text)`
       </Text>
     </SingleMessageDs>
 </div>;
-```
-
-### SingleMessageDs no Image with Link
-
-```js
-  const data = require('../../../styleguide/data/data').default;
-  import Text from '../../Atoms/Text/Text';
-  import Link from '../../Atoms/Link/Link';
-  import styled from 'styled-components';
-  import spacing from '../../../theme/shared/spacing';
-
-  const Title = styled(Text)`
-    margin: ${spacing('md')} 0;
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      margin-bottom: ${spacing('m')};
-    }
-  `;
-
-  <div
-    style={{
-      display: 'flex',
-      padding: '4rem 0',
-      background: '#E1E2E3',
-      justifyContent: 'space-around',
-    }}>
-    <SingleMessageDs
-      target='blank'
-      link='/home'
-      linkLabel='Check out the shop'
-      backgroundColor='white'
-      subtitle="Subtitle"
-      height='auto'
-      ctaBgColor="blue_dark"
-    >
-      <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
-        Heading Line 1 Heading Line 2
-      </Title>
-      <Text tag='p'>
-        Whatever you’ve got planned, the Sport Relief shop has everything you need
-        to get you looking your best while you’re raising some cash. Also
-        available in Sainsbury’s stores and online and in selected Argos stores.
-      </Text>
-    </SingleMessageDs>
-  </div>;
-  ```
-
-### SingleMessageDs no Image no Link
-
-  ```js
-  const data = require('../../../styleguide/data/data').default;
-  import Text from '../../Atoms/Text/Text';
-  import Link from '../../Atoms/Link/Link';
-  import styled from 'styled-components';
-  import spacing from '../../../theme/shared/spacing';
-
-  const Title = styled(Text)`
-    margin: ${spacing('md')} 0;
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      margin-bottom: ${spacing('m')};
-    }
-  `;
-  <div
-    style={{
-      display: 'flex',
-      padding: '4rem 0',
-      background: '#E1E2E3',
-      justifyContent: 'space-around',
-    }}>
-    <SingleMessageDs
-      backgroundColor='white'
-      height='auto'
-      subtitle="Subtitle"
-      ctaBgColor="blue_dark"
-    >
-      <Text tag='p'>
-        Whatever you’ve got planned, the Sport Relief shop has everything you need
-        to get you looking your best while you’re raising some cash. Also
-        available in Sainsbury’s stores and online and in selected Argos stores.
-      </Text>
-    </SingleMessageDs>
-  </div>;
 ```

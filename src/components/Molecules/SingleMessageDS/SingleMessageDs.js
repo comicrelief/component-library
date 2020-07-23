@@ -43,6 +43,7 @@ const SingleMessageDs = ({
     if (imageLow && link) {
       return (
         <MediaLink
+          imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
           href={link}
@@ -103,7 +104,7 @@ const SingleMessageDs = ({
 
 SingleMessageDs.propTypes = {
   backgroundColor: PropTypes.string,
-  imageLeft: PropTypes.bool,
+  imageLeft: PropTypes.bool.isRequired,
   imageLow: PropTypes.string,
   images: PropTypes.string,
   image: PropTypes.string,
@@ -120,7 +121,6 @@ SingleMessageDs.propTypes = {
 
 SingleMessageDs.defaultProps = {
   backgroundColor: 'white',
-  imageLeft: true,
   imageLow: null,
   images: null,
   image: null,

@@ -9,11 +9,10 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    max-height: 448px;
     flex-direction: ${({ imageLeft }) => (imageLeft ? 'row' : 'row-reverse')};
   }
 `;
@@ -35,12 +34,15 @@ const Image = styled.div`
 const MediaLink = styled.a`
   height: 240px;
 
+  ${({ imageLeft }) => (imageLeft
+    ? `margin-right: ${spacing('m')}`
+    : `margin-left: ${spacing('m')}`)};
+
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: auto;
-    flex-basis: 50%;
-    /* flex-grow: 0;
+    height: 448px;
+    flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 50%; */
+    flex-basis: 50%;
   }
 `;
 
@@ -68,16 +70,17 @@ const Copy = styled.div`
   border-radius: 1rem;
   ${boxShadow};
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  margin: calc(-${spacing('m')} * 2) 0 -${spacing('m')} ${spacing('m')};
+
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
   ${({ imageLeft }) => (imageLeft
-    ? `${CTA} { right: ${spacing('m')};}`
-    : `${CTA} { left: ${spacing('m')};} margin-left: -${spacing('m')}`
+    ? `margin: calc(-${spacing('m')} * 2) 0 -${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
+    : `margin: calc(-${spacing('m')} * 2) ${spacing('m')} -${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
   )};
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 50%;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50%;
