@@ -20,7 +20,7 @@ const Title = styled(Text)`
 <div
     style={{
       display: 'flex',
-      padding: '2rem 0',
+      padding: '4rem 0',
       background: '#E1E2E3',
       justifyContent: 'space-around',
     }}>
@@ -64,7 +64,7 @@ const Title = styled(Text)`
 <div
     style={{
       display: 'flex',
-      padding: '2rem 0',
+      padding: '4rem 0',
       background: '#E1E2E3',
       justifyContent: 'space-around',
     }}>
@@ -112,7 +112,7 @@ const Title = styled(Text)`
   <div
     style={{
       display: 'flex',
-      padding: '2rem 0',
+      padding: '4rem 0',
       background: '#E1E2E3',
       justifyContent: 'space-around',
     }}>
@@ -155,7 +155,7 @@ const Title = styled(Text)`
   <div
     style={{
       display: 'flex',
-      padding: '2rem 0',
+      padding: '4rem 0',
       background: '#E1E2E3',
       justifyContent: 'space-around',
     }}>

@@ -9,10 +9,11 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 100%;
+  justify-content: center;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
+    max-height: 448px;
     flex-direction: ${({ imageLeft }) => (imageLeft ? 'row' : 'row-reverse')};
   }
 `;
@@ -23,6 +24,8 @@ const Subtitle = styled(Text)`
 `;
 
 const Image = styled.div`
+  height: 100%;
+
   img {
     border-radius: 1rem;
     ${boxShadow};
@@ -30,15 +33,14 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  width: 320px;
   height: 240px;
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 448px;
-    width: 360px;
-  }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 600px;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    height: auto;
+    flex-basis: 50%;
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%; */
   }
 `;
 
@@ -59,7 +61,6 @@ const CTA = styled.div`
 const Copy = styled.div`
   position: relative;
   height: 100%;
-  width: 320px;
   padding: ${spacing('m')};
   ${zIndex('low')};
   display: flex;
@@ -77,8 +78,9 @@ const Copy = styled.div`
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 360px;
-    min-height: 350px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
     padding: ${spacing('l')};
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
@@ -89,8 +91,6 @@ const Copy = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
-    width: 600px;
-    height: 448px;
     padding: calc(${spacing('m')} * 2);
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};

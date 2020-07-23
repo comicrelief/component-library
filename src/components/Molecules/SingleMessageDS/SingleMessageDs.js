@@ -26,7 +26,7 @@ const SingleMessageDs = ({
   ...rest
 }) => {
   const Media = (
-    <Image hasLink={link}>
+    <Image>
       <Picture
         alt={imageAltText}
         imageLow={imageLow}

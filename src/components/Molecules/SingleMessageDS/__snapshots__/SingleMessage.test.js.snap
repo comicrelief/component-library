@@ -88,7 +88,10 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: inherit;
 }
 
@@ -100,13 +103,16 @@ exports[`renders correctly 1`] = `
   text-transform: uppercase;
 }
 
+.c2 {
+  height: 100%;
+}
+
 .c2 img {
   border-radius: 1rem;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
 }
 
 .c1 {
-  width: 320px;
   height: 240px;
 }
 
@@ -123,7 +129,6 @@ exports[`renders correctly 1`] = `
 .c5 {
   position: relative;
   height: 100%;
-  width: 320px;
   padding: 1.5rem;
   z-index: 1;
   display: -webkit-box;
@@ -160,6 +165,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
+    max-height: 448px;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -168,14 +174,10 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c1 {
-    height: 448px;
-    width: 360px;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    width: 600px;
+    height: auto;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
 }
 
@@ -185,8 +187,16 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    width: 360px;
-    min-height: 350px;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
     padding: 2rem;
     padding-bottom: calc(2rem + 1.5rem);
     margin: 2rem 0 -1.5rem calc(-1.5rem * 2);
@@ -195,8 +205,6 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    width: 600px;
-    height: 448px;
     padding: calc(1.5rem * 2);
     padding-bottom: calc(1.5rem * 3);
     margin: 2rem 0 1.5rem -2rem;
