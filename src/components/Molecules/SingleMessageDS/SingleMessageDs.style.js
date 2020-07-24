@@ -39,6 +39,7 @@ const MediaLink = styled.a`
     : `margin-left: ${spacing('m')}`)};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
+    margin: 0;
     height: 448px;
     flex-grow: 0;
     flex-shrink: 0;
