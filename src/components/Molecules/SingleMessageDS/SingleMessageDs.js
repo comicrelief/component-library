@@ -61,13 +61,13 @@ const SingleMessageDs = ({
   };
 
   const icon = () => {
-    if (target === '_blank') {
+    if (target === 'blank') {
       return <External colour="white" />;
     }
     return <Internal colour="white" />;
   };
 
-  const external = target === '_blank' ? 'noopener noreferrer' : null;
+  const external = target === 'blank' ? 'noopener noreferrer' : null;
   const subtitleColour = ctaBgColor === 'red' ? 'grey_dark' : ctaBgColor;
 
   return (
