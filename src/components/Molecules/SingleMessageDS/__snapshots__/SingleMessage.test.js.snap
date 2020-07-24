@@ -279,7 +279,7 @@ exports[`renders correctly 1`] = `
         className="c11"
         color="blue_dark"
         href="/home"
-        rel={null}
+        rel="noopener noreferrer"
         target="_self"
         type="button"
       >

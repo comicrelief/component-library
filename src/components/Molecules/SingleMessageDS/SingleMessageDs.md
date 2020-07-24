@@ -70,7 +70,7 @@ const Title = styled(Text)`
       justifyContent: 'space-around',
     }}>
     <SingleMessageDs
-      target='blank'
+      target='_blank'
       link='/home'
       linkLabel='Check out'
       ctaBgColor="blue_dark"
