@@ -61,7 +61,7 @@ const SingleMessageDs = ({
   };
 
   const icon = () => {
-    if (target === 'blank') {
+    if (target === '_blank') {
       return <External colour="white" />;
     }
     return <Internal colour="white" />;
