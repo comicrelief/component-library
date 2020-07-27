@@ -129,7 +129,7 @@ exports[`renders correctly 1`] = `
 
 .c5 {
   position: relative;
-  height: 100%;
+  height: auto;
   padding: 1.5rem;
   z-index: 1;
   display: -webkit-box;

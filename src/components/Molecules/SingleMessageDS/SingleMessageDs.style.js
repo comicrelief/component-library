@@ -63,7 +63,7 @@ const CTA = styled.div`
 
 const Copy = styled.div`
   position: relative;
-  height: 100%;
+  height: auto;
   padding: ${spacing('m')};
   ${zIndex('low')};
   display: flex;
