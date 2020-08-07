@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 
 const Wrapper = styled.div`
-  background-color: red;
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 const Container = styled.div`
@@ -24,8 +24,8 @@ const Container = styled.div`
   }
 `;
 
-const Banner = ({ children }) => (
-  <Wrapper>
+const Banner = ({ children, backgroundColor }) => (
+  <Wrapper backgroundColor={backgroundColor}>
     <Container>
       { children }
     </Container>
@@ -33,7 +33,12 @@ const Banner = ({ children }) => (
 );
 
 Banner.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  backgroundColor: PropTypes.string
+};
+
+Banner.defaultProps = {
+  backgroundColor: 'grey_dark'
 };
 
 export default Banner;
