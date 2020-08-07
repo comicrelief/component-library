@@ -17,12 +17,10 @@ exports[`renders correctly 1`] = `
 .c1 {
   padding: calc(1.5rem * 2) 1.5rem;
   margin: 0 auto;
-  width: calc(100% - (1.5rem * 2));
 }
 
 @media (min-width:740px) {
   .c1 {
-    width: 90%;
     padding: 4rem 5%;
   }
 }
@@ -30,7 +28,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:1440px) {
   .c1 {
     padding: 4rem 10%;
-    width: 80%;
   }
 }
 

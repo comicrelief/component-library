@@ -11,16 +11,13 @@ const Wrapper = styled.div`
 const Container = styled.div`
   padding: calc(${spacing('m')} * 2) ${spacing('m')};
   margin: 0 auto;
-  width: calc(100% - (${spacing('m')} * 2));
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    width: 90%;
     padding: ${spacing('xl')} 5%;
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
     padding: ${spacing('xl')} 10%;
-    width: 80%;
   }
 `;
 
