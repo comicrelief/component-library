@@ -1,4 +1,5 @@
 const screen = {
+  xsmall: '375px',
   small: '740px',
   medium: '1024px',
   large: '1440px'
