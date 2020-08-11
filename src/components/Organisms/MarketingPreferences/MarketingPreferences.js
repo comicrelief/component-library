@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
+import { useWatch } from 'react-hook-form';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -25,13 +25,12 @@ const MarketingPreferences = ({
   disablePhoneInput,
   disableSMSInput
 }) => {
-  const { watch } = useFormContext();
   const prefixName = name => fieldPrefix + name;
 
-  const watchEmail = watch(prefixName('permissionEmail'), []);
-  const watchAddress = watch(prefixName('permissionPost'), []);
-  const watchPhone = watch(prefixName('permissionPhone'), []);
-  const watchMobile = watch(prefixName('permissionSMS'), []);
+  const watchEmail = useWatch({ name: prefixName('permissionEmail'), defaultValue: [] });
+  const watchAddress = useWatch({ name: prefixName('permissionPost'), defaultValue: [] });
+  const watchPhone = useWatch({ name: prefixName('permissionPhone'), defaultValue: [] });
+  const watchMobile = useWatch({ name: prefixName('permissionSMS'), defaultValue: [] });
 
   return (
     <>
