@@ -34,7 +34,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
 ## Iconography
 
 ```js
-import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from '../Icons/index';
+import { External, Download, Favourite, Internal, Chevron} from '../Icons/index';
 
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
@@ -91,7 +91,7 @@ import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, Chevro
       href="#anchor"
       target="blank"
       type="button"
-      icon={<ChevronUp colour="white" />}
+      icon={<Chevron direction="up" colour="white" />}
     >
       Chevron Up
     </Link>
@@ -103,7 +103,7 @@ import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, Chevro
       href="#anchor"
       target="blank"
       type="button"
-      icon={<ChevronDown colour="white" />}
+      icon={<Chevron direction="down" colour="white" />}
     >
       Chevron Down
     </Link>
@@ -115,7 +115,7 @@ import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, Chevro
       href="#anchor"
       target="blank"
       type="button"
-      icon={<ChevronLeft colour="white" />}
+      icon={<Chevron direction="left" colour="white" />}
     >
       Chevron Left
     </Link>
@@ -127,7 +127,7 @@ import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, Chevro
       href="#anchor"
       target="blank"
       type="button"
-      icon={<ChevronRight colour="white" />}
+      icon={<Chevron direction="right" colour="white" />}
     >
       Chevron Right
     </Link>
