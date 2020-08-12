@@ -34,7 +34,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
 ## Iconography
 
 ```js
-import { External, Download, Favourite, Internal } from '../Icons/index';
+import { External, Download, Favourite, Internal, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from '../Icons/index';
 
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
@@ -48,6 +48,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       Internal link
     </Link>
   </div>
+
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
       color="red"
@@ -59,6 +60,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       External link
     </Link>
   </div>
+
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
       color="red"
@@ -70,6 +72,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       Download link
     </Link>
   </div>
+
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
       color="red"
@@ -79,6 +82,54 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
       icon={<Favourite colour="white" />}
     >
       Favourite link
+    </Link>
+  </div>
+
+    <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<ChevronUp colour="white" />}
+    >
+      Chevron Up
+    </Link>
+  </div>
+
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<ChevronDown colour="white" />}
+    >
+      Chevron Down
+    </Link>
+  </div>
+
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<ChevronLeft colour="white" />}
+    >
+      Chevron Left
+    </Link>
+  </div>
+
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<ChevronRight colour="white" />}
+    >
+      Chevron Right
     </Link>
   </div>
 </div>;
