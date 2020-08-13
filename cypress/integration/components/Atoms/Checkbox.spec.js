@@ -43,7 +43,7 @@ describe('Checkbox component', () => {
         it('should click checkboxes', () => {
             cy.get('[data-preview="Checkbox"] p').contains('List of checkboxes');
             cy.get('[data-testid="Checkbox-example-1"] div > label:nth-child(2)')
-                .contains('Tenis')
+                .contains('Tennis')
                 .click();
             cy.get('[data-testid="Checkbox-example-1"] div > label:nth-child(3)')
                 .contains('Basketball')
