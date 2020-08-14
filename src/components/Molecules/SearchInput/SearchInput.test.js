@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import SearchInput from './SearchInput';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import SearchInput from "./SearchInput";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
@@ -73,7 +73,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       font-weight: bold;
-      color: #969598;
+      color: #5C5C5E;
     }
 
     .c7 {

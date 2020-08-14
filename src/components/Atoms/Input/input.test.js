@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Input from './Input';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Input from "./Input";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Input
       name="fullname"
@@ -74,7 +74,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       font-weight: bold;
-      color: #969598;
+      color: #5C5C5E;
     }
 
     @media (min-width:740px) {

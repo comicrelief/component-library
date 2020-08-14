@@ -47,7 +47,7 @@ const Label = styled.label`
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  color: ${({ theme }) => theme.color('grey')};
+  color: ${({ theme }) => theme.color('grey_label')};
 `;
 
 /**

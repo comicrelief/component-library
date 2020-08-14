@@ -1,22 +1,22 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Select from './Select';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Select from "./Select";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Select
       label="Label"
       description="Please choose an option"
       errorMsg=""
       options={[
-        { value: 'Option one', displayValue: 'The first option' },
+        { value: "Option one", displayValue: "The first option" },
         {
-          value: 'Option two',
-          displayValue: 'The second option'
+          value: "Option two",
+          displayValue: "The second option",
         },
-        { value: 'Option three', displayValue: 'The third option' },
-        { value: 'Option four', displayValue: 'The fourth option' }
+        { value: "Option three", displayValue: "The third option" },
+        { value: "Option four", displayValue: "The fourth option" },
       ]}
     />
   ).toJSON();
@@ -68,7 +68,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       font-weight: bold;
-      color: #969598;
+      color: #5C5C5E;
     }
 
     @media (min-width:740px) {
