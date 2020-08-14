@@ -17,6 +17,7 @@ const colors = {
   grey_dark: '#222222',
   grey_extra_light: '#f0f0f0',
   grey_for_forms: '#666',
+  grey_label: '#5C5C5E',
   grey_light: '#F4F3F5',
   grey_medium: '#E1E2E3',
   magenta: '#FC59CE',
