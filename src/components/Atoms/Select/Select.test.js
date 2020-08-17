@@ -68,7 +68,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       font-weight: bold;
-      color: #969598;
+      color: #5C5C5E;
     }
 
     @media (min-width:740px) {

@@ -113,7 +113,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-weight: bold;
-  color: #969598;
+  color: #5C5C5E;
 }
 
 .c22 {
@@ -968,7 +968,7 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-weight: bold;
-  color: #969598;
+  color: #5C5C5E;
 }
 
 .c16 {
@@ -1666,7 +1666,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-weight: bold;
-  color: #969598;
+  color: #5C5C5E;
 }
 
 .c0 {

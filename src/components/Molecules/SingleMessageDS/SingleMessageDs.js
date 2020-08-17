@@ -68,7 +68,6 @@ const SingleMessageDs = ({
   };
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
-  const subtitleColour = ctaBgColor === 'red' ? 'grey_dark' : ctaBgColor;
 
   return (
     <Container {...rest} imageLeft={imageLeft}>
@@ -79,7 +78,7 @@ const SingleMessageDs = ({
         backgroundColor={backgroundColor}
         imageLeft={imageLeft}
       >
-        <Subtitle color={subtitleColour} size="s" weight="bold" family="Montserrat">
+        <Subtitle color={ctaBgColor} size="s" weight="bold" family="Montserrat">
           {subtitle}
         </Subtitle>
         {children}
