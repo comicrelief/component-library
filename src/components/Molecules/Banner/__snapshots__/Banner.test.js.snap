@@ -15,8 +15,10 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
+  text-align: center;
   padding: calc(1.5rem * 2) 1.5rem;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 @media (min-width:740px) {
