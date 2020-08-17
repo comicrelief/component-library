@@ -16,11 +16,11 @@ const Container = styled.div`
   max-width: ${screen.large};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    padding: ${spacing('xl')} 5%;
+    padding: ${spacing('xl')} ${spacing('l')};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
-    padding: ${spacing('xl')} 10%;
+    padding: ${spacing('xl')} ${spacing('xl')};
   }
 `;
 
