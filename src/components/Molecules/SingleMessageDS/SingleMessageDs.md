@@ -47,6 +47,65 @@ const Title = styled(Text)`
 </div>;
 ```
 
+## Image align left and CTA are clickable, links user through to full content and a header
+
+```js
+const data = require('../../../styleguide/data/data').default;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
+
+const Title = styled(Text)`
+  margin: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('m')};
+  }
+`;
+
+const header =
+<div style={{padding: '2rem 2rem 5rem', background: '#E1E2E3'}}>
+  <Title tag="h3" color="grey_dark" size="xl" family="Anton" weight="normal">
+    Section Heading
+  </Title>
+  <Text tag='p'>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+  </Text>
+</div>;
+
+<div
+    style={{
+      display: 'flex',
+      padding: '4rem 0',
+      background: '#E1E2E3',
+      justifyContent: 'space-around',
+    }}>
+    <SingleMessageDs
+      target='blank'
+      link='https://www.comicrelief.com/'
+      linkLabel='Check out'
+      ctaBgColor="blue_dark"
+      backgroundColor='white'
+      imageLeft={true}
+      imageLow={data.image}
+      images={data.images}
+      imageAltText='Happy man going to work'
+      subtitle="Subtitle"
+      height='100%'
+      header={header}
+    >
+      <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
+        Heading Line 1 Heading Line 2
+      </Title>
+      <Text tag='p'>
+        Whatever you’ve got planned, the Sport Relief shop has everything you need
+        to get you looking your best while you’re raising some cash. Also
+        available in Sainsbury’s stores and online and in selected Argos stores.
+      </Text>
+    </SingleMessageDs>
+</div>;
+```
+
 ## Image align right  and CTA are clickable and links user through to full content
 
 ```js

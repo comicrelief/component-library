@@ -5,7 +5,7 @@ import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import {
-  Container, Copy, CTA, MediaLink, Image, Subtitle
+  Container, Copy, CTA, MediaLink, Image, Subtitle, Wrapper
 } from './SingleMessageDs.style';
 
 const SingleMessageDs = ({
@@ -23,6 +23,7 @@ const SingleMessageDs = ({
   linkLabel,
   ctaBgColor,
   target,
+  header,
   ...rest
 }) => {
   const Media = (
@@ -70,34 +71,37 @@ const SingleMessageDs = ({
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
   return (
-    <Container {...rest} imageLeft={imageLeft}>
-      {hasMedia()}
-      <Copy
-        hasImage={imageLow}
-        hasLink={link}
-        backgroundColor={backgroundColor}
-        imageLeft={imageLeft}
-      >
-        <Subtitle color={ctaBgColor} size="s" weight="bold" family="Montserrat">
-          {subtitle}
-        </Subtitle>
-        {children}
-        {link && (
-        <CTA hasImage={imageLow}>
-          <Link
-            rel={external}
-            color={ctaBgColor}
-            href={link}
-            target={target}
-            type="button"
-            icon={icon()}
-          >
-            {linkLabel}
-          </Link>
-        </CTA>
-        )}
-      </Copy>
-    </Container>
+    <Wrapper>
+      {header && header}
+      <Container {...rest} imageLeft={imageLeft}>
+        {hasMedia()}
+        <Copy
+          hasImage={imageLow}
+          hasLink={link}
+          backgroundColor={backgroundColor}
+          imageLeft={imageLeft}
+        >
+          <Subtitle color={ctaBgColor} size="s" weight="bold" family="Montserrat">
+            {subtitle}
+          </Subtitle>
+          {children}
+          {link && (
+          <CTA hasImage={imageLow}>
+            <Link
+              rel={external}
+              color={ctaBgColor}
+              href={link}
+              target={target}
+              type="button"
+              icon={icon()}
+            >
+              {linkLabel}
+            </Link>
+          </CTA>
+          )}
+        </Copy>
+      </Container>
+    </Wrapper>
   );
 };
 
@@ -115,7 +119,8 @@ SingleMessageDs.propTypes = {
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   target: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  header: PropTypes.node
 };
 
 SingleMessageDs.defaultProps = {
@@ -129,7 +134,8 @@ SingleMessageDs.defaultProps = {
   target: null,
   imageAltText: '',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  header: null
 };
 
 export default SingleMessageDs;
