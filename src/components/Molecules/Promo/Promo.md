@@ -11,7 +11,7 @@ import Link from '../../Atoms/Link/Link';
   image={data.promoImage}
   imageLow={data.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
 >
   <Text
     tag="h1"
