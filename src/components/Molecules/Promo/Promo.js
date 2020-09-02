@@ -7,7 +7,7 @@ import {
 } from './Promo.style';
 
 const Promo = ({
-  copyLeft,
+  copyFirst,
   backgroundColor,
   imageLow,
   imageSet,
@@ -32,7 +32,7 @@ const Promo = ({
         />
       </Media>
       )}
-      <Wrapper copyLeft={copyLeft}>
+      <Wrapper copyFirst={copyFirst}>
         <Copy>{children}</Copy>
       </Wrapper>
     </Container>
@@ -41,7 +41,7 @@ const Promo = ({
 
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
-  copyLeft: PropTypes.bool,
+  copyFirst: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -51,7 +51,7 @@ Promo.propTypes = {
 
 Promo.defaultProps = {
   backgroundColor: 'white',
-  copyLeft: false,
+  copyFirst: false,
   imageSet: null,
   imageLow: null,
   image: null,
