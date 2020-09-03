@@ -125,6 +125,16 @@ exports[`renders Promo correctly 1`] = `
   position: absolute;
 }
 
+.c1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
 @media (min-width:740px) {
   .c6 {
     font-size: 4rem;
