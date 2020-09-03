@@ -12,6 +12,7 @@ import Link from '../../Atoms/Link/Link';
   imageLow={data.promoImage}
   imageAltText=""
   copyFirst={true}
+  hasOverlay={true}
 >
   <Text
     tag="h1"
