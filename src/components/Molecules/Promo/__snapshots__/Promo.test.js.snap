@@ -132,7 +132,7 @@ exports[`renders Promo correctly 1`] = `
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
 }
 
 @media (min-width:740px) {
