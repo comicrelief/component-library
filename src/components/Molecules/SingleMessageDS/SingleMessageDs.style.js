@@ -75,24 +75,24 @@ const Copy = styled.div`
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
   ${({ imageLeft }) => (imageLeft
-    ? `margin: calc(-${spacing('m')} * 2) 0 ${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
-    : `margin: calc(-${spacing('m')} * 2) ${spacing('m')} ${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
+    ? `margin: -${spacing('m')} 0 ${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
+    : `margin: -${spacing('m')} ${spacing('m')} ${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
   )};
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     height: 448px;
-    width: 50%;
+    width: calc(50% + 1.5rem);
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 50%;
+    flex-basis: calc(50% + 1.5rem);
     padding: ${spacing('l')};
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
     ${({ imageLeft }) => (imageLeft
-    ? `margin: ${spacing('l')} 0 ${spacing('m')} calc(-${spacing('m')} * 2)`
-    : `margin: ${spacing('l')} calc(-${spacing('m')} * 2) ${spacing('m')} 0`)};
+    ? `margin: ${spacing('l')} 0 ${spacing('m')} -${spacing('m')}`
+    : `margin: ${spacing('l')} -${spacing('m')} ${spacing('m')} 0`)};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
