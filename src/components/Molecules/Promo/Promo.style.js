@@ -59,6 +59,9 @@ const Media = styled.div`
       background-color: rgba(0, 0, 0, 0.4);
     }
   `};
+  img {
+    object-position: ${({ imageRight }) => imageRight ? 'right': 'left'};
+  }
 `;
 
 export {

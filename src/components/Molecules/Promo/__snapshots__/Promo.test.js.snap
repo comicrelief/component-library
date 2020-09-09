@@ -136,6 +136,10 @@ exports[`renders Promo correctly 1`] = `
   background-color: rgba(0,0,0,0.4);
 }
 
+.c1 img {
+  object-position: left;
+}
+
 @media (min-width:740px) {
   .c6 {
     font-size: 4rem;

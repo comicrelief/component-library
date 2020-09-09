@@ -21,7 +21,7 @@ const Promo = ({
   return (
     <Container backgroundColor={backgroundColor}>
       {hasImage && (
-      <Media hasOverlay={hasOverlay}>
+      <Media hasOverlay={hasOverlay} imageRight={copyFirst}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
