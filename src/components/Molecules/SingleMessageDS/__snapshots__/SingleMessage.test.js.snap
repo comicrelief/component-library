@@ -70,13 +70,13 @@ exports[`renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  background-color: #274084;
+  background-color: #2042AD;
   color: #FFFFFF;
 }
 
 .c11:hover {
-  background-color: #0565D1;
-  color: #000000;
+  background-color: #274084;
+  color: #FFFFFF;
 }
 
 .c0 {
