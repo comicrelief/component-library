@@ -24,10 +24,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
+  min-height: calc(100vh - 75px);
   ${media('small')} {
-    min-height: 640px;
-  }
-  ${media('medium')} {
     min-height: 840px;
   }
 `;

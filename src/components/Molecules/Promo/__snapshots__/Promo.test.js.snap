@@ -111,6 +111,7 @@ exports[`renders Promo correctly 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  min-height: calc(100vh - 75px);
 }
 
 .c5 {
@@ -158,12 +159,6 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c4 {
-    min-height: 640px;
-  }
-}
-
-@media (min-width:1024px) {
   .c4 {
     min-height: 840px;
   }
