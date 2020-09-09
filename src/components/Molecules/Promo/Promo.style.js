@@ -60,7 +60,7 @@ const Media = styled.div`
     }
   `};
   img {
-    object-position: ${({ imageRight }) => imageRight ? 'right': 'left'};
+    object-position: ${({ imageRight }) => (imageRight ? 'right' : 'left')};
   }
 `;
 

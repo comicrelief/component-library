@@ -15,7 +15,7 @@ it('renders Promo correctly', () => {
       image={data.promoImage}
       imageAltText=""
       copyFirst={false}
-      hasOverlay={true}
+      hasOverlay
     >
       <Text
         tag="h1"
