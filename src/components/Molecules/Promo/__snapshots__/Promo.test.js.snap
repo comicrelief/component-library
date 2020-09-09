@@ -158,6 +158,18 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c4 {
+    min-height: 640px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    min-height: 840px;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
     width: 70%;
     padding: 4rem 1.5rem;
