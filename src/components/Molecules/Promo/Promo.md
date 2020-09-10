@@ -30,7 +30,9 @@ import Link from '../../Atoms/Link/Link';
   </Text>
   <span>
     <Link href="/" type="button" color="white">
-      Show me this
+      <Text>
+        Show me this
+      </Text>
     </Link>
   </span>
 </Promo>;
