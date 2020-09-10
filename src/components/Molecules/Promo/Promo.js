@@ -13,14 +13,15 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children
+  children,
+  hasOverlay
 }) => {
   const hasImage = imageSet || false;
 
   return (
     <Container backgroundColor={backgroundColor}>
       {hasImage && (
-      <Media>
+      <Media hasOverlay={hasOverlay} imageRight={copyFirst}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -42,6 +43,7 @@ const Promo = ({
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
+  hasOverlay: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -52,6 +54,7 @@ Promo.propTypes = {
 Promo.defaultProps = {
   backgroundColor: 'white',
   copyFirst: false,
+  hasOverlay: false,
   imageSet: null,
   imageLow: null,
   image: null,
