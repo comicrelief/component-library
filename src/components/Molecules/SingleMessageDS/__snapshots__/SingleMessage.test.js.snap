@@ -70,13 +70,13 @@ exports[`renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  background-color: #274084;
+  background-color: #2042AD;
   color: #FFFFFF;
 }
 
 .c11:hover {
-  background-color: #0565D1;
-  color: #000000;
+  background-color: #274084;
+  color: #FFFFFF;
 }
 
 .c0 {
@@ -143,7 +143,7 @@ exports[`renders correctly 1`] = `
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   background: #FFFFFF;
   padding-bottom: calc(2rem + 1.5rem);
-  margin: calc(-1.5rem * 2) 1.5rem 1.5rem 0;
+  margin: -1.5rem 1.5rem 1.5rem 0;
 }
 
 .c5 .c9 {
@@ -196,7 +196,7 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c5 {
     height: 448px;
-    width: 50%;
+    width: calc(50% + 1.5rem);
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
@@ -204,12 +204,12 @@ exports[`renders correctly 1`] = `
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -webkit-flex-basis: calc(50% + 1.5rem);
+    -ms-flex-preferred-size: calc(50% + 1.5rem);
+    flex-basis: calc(50% + 1.5rem);
     padding: 2rem;
     padding-bottom: calc(2rem + 1.5rem);
-    margin: 2rem calc(-1.5rem * 2) 1.5rem 0;
+    margin: 2rem -1.5rem 1.5rem 0;
   }
 }
 

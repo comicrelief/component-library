@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media, container } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
@@ -24,6 +24,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
+  min-height: calc(100vh - 75px);
+  ${media('small')} {
+    min-height: 840px;
+  }
 `;
 
 const Copy = styled.div`
@@ -44,13 +48,22 @@ const Media = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-`;
-
-const Image = styled.div`
-  width: 100%;
-  height: 100%;
+  ${({ hasOverlay }) => hasOverlay && css`
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  `};
+  img {
+    object-position: ${({ imageRight }) => (imageRight ? 'right' : 'left')};
+  }
 `;
 
 export {
-  Container, Wrapper, Copy, Media, Image
+  Container, Wrapper, Copy, Media
 };

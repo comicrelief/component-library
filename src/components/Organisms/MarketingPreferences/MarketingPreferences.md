@@ -1,7 +1,7 @@
 Marketing Preferences
 
 ```js
-import { useForm, FormContext } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import MarketingPreferences from './MarketingPreferences';
@@ -38,14 +38,13 @@ const copyBottom = (
   </Text>
 );
 
-<FormContext {...methods}>
+<FormProvider {...methods}>
   <form onSubmit={methods.handleSubmit(onSubmit)}>
     <MarketingPreferences
       copyTop={copyTop}
       copyBottom={copyBottom}
-      disableEmailInput
     />
     <input type="submit" />
   </form>
-</FormContext>;
+</FormProvider>;
 ```

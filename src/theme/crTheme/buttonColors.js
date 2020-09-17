@@ -10,15 +10,15 @@ const buttonColors = {
   },
   blue: {
     background: color('blue'),
-    color: color('black'),
-    hoverBackground: color('blue_light'),
-    hoverColor: color('black')
+    color: color('white'),
+    hoverBackground: color('blue_dark'),
+    hoverColor: color('white')
   },
   blue_dark: {
-    background: color('blue_dark'),
+    background: '#2042AD',
     color: color('white'),
-    hoverBackground: color('blue'),
-    hoverColor: color('black')
+    hoverBackground: color('blue_dark'),
+    hoverColor: color('white')
   },
   blue_light: {
     background: color('blue_light'),
@@ -118,15 +118,15 @@ const buttonColors = {
   },
   purple: {
     background: color('purple'),
-    color: color('black'),
-    hoverBackground: color('purple_light'),
-    hoverColor: color('black')
+    color: color('white'),
+    hoverBackground: color('purple_dark'),
+    hoverColor: color('white')
   },
   purple_dark: {
     background: color('purple_dark'),
     color: color('white'),
     hoverBackground: color('purple'),
-    hoverColor: color('black')
+    hoverColor: color('white')
   },
   purple_light: {
     background: color('purple_light'),

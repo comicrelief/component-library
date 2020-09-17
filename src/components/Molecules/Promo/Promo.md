@@ -12,6 +12,7 @@ import Link from '../../Atoms/Link/Link';
   imageLow={data.promoImage}
   imageAltText=""
   copyFirst={true}
+  hasOverlay={true}
 >
   <Text
     tag="h1"
@@ -29,7 +30,9 @@ import Link from '../../Atoms/Link/Link';
   </Text>
   <span>
     <Link href="/" type="button" color="white">
-      Show me this
+      <Text>
+        Show me this
+      </Text>
     </Link>
   </span>
 </Promo>;

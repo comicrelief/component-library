@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container,
-  Wrapper,
-  Copy,
-  Media
+  Container, Wrapper, Copy, Media
 } from './Promo.style';
 
 const Promo = ({
@@ -16,29 +13,28 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children
+  children,
+  hasOverlay
 }) => {
   const hasImage = imageSet || false;
 
   return (
     <Container backgroundColor={backgroundColor}>
       {hasImage && (
-        <Media>
-          <Picture
-            alt={imageAltText}
-            imageLow={imageLow}
-            images={imageSet}
-            image={image}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-        </Media>
+      <Media hasOverlay={hasOverlay} imageRight={copyFirst}>
+        <Picture
+          alt={imageAltText}
+          imageLow={imageLow}
+          images={imageSet}
+          image={image}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+        />
+      </Media>
       )}
       <Wrapper copyFirst={copyFirst}>
-        <Copy>
-          {children}
-        </Copy>
+        <Copy>{children}</Copy>
       </Wrapper>
     </Container>
   );
@@ -47,6 +43,7 @@ const Promo = ({
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
+  hasOverlay: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -57,6 +54,7 @@ Promo.propTypes = {
 Promo.defaultProps = {
   backgroundColor: 'white',
   copyFirst: false,
+  hasOverlay: false,
   imageSet: null,
   imageLow: null,
   image: null,
