@@ -20,6 +20,7 @@ it('renders correctly', () => {
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
       height="auto"
+      imageLeft={true}
     >
       <Text tag="p">
         Whatever you’ve got planned, the Sport Relief shop has everything you need
