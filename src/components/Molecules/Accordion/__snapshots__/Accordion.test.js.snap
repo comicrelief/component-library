@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  padding: 2rem 8rem 2rem 4rem;
+}
+
+.c4 {
+  background: none;
+  border: 2px solid #E52630;
+  position: absolute;
+  bottom: -1rem;
+  right: calc(1.5rem * 2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #E52630;
+  -webkit-transition: bottom 0.1s linear;
+  transition: bottom 0.1s linear;
+}
+
+.c4:focus,
+.c4:hover {
+  outline: none;
+  border: 2px solid #890B11;
+}
+
+.c4:focus > div,
+.c4:hover > div {
+  -webkit-animation-name: fYdghb;
+  animation-name: fYdghb;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c2 {
+  overflow: hidden;
+  visibility: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+    color="inherit"
+    size="l"
+  >
+    I am the title
+  </h2>
+  <div
+    className="c2"
+    style={
+      Object {
+        "height": "0",
+      }
+    }
+  >
+    <p
+      className="c3"
+      color="inherit"
+      size="s"
+    >
+      Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
+    </p>
+  </div>
+  <button
+    aria-expanded="false"
+    className="c4"
+    onClick={[Function]}
+  >
+    <div
+      className="c5"
+    >
+      <svg
+        className="c6"
+        direction="down"
+        fill="#FFFFFF"
+        viewBox="0 0 48 48"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M40 33a1.992 1.992 0 01-1.414-.586L24 17.829 9.414 32.414a2 2 0 11-2.828-2.828l16-16a2 2 0 012.828 0l16 16A2 2 0 0140 33z"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;
