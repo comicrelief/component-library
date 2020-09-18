@@ -54,11 +54,11 @@ const Icon = styled.div`
 const Copy = styled.div`
   overflow: hidden;
   visibility: none;
-  transition: all 0.2s linear;
+  transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
   ${({ isOpen }) => (isOpen && css`
     visibility: visible;
     margin-top: ${spacing('l')};
-    transition: all 0.2s linear;
+    transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
   `)}
 `;
 

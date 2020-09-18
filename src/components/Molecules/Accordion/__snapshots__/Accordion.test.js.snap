@@ -84,8 +84,8 @@ exports[`renders correctly 1`] = `
 .c2 {
   overflow: hidden;
   visibility: none;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
 }
 
 <div
