@@ -5,7 +5,7 @@ import Text from '../../Atoms/Text/Text';
 
 <Accordion
   title={
-    <Text tag="h2" font="Anton" size="l">
+    <Text family="Anton" size="l" uppercase>
       I am the title
     </Text>
   }
