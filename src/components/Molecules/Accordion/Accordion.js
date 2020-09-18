@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import Text from '../../Atoms/Text/Text';
+import { Chevron } from '../../Atoms/Icons/index';
 
 const Container = styled.div`
   position: relative;
@@ -11,26 +11,35 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  padding: calc(${spacing('md')} + ${spacing('m')}) calc(${spacing('m')} * 2);
+  border-radius: 1rem;
+  background: ${({ theme }) => theme.color("white")};
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  padding: ${spacing('l')} ${spacing('xxl')} ${spacing('l')} ${spacing('xl')};
 `;
 
 const Icon = styled.div`
   cursor: pointer;
   position: absolute;
-  bottom: -10px;
+  bottom: -1rem;
   right: calc(${spacing('m')} * 2);
-`;
-
-const Title = styled(Text)`
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin: 0 0 ${spacing('md')};
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: ${({ theme }) => theme.color("red")};
 `;
 
 const Copy = styled.div`
-  margin: ${spacing('l')} 0 ${spacing('m')};
-  ${({ isOpen }) => (isOpen ? 'display: block;' : 'display: none;')}
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  ${({ isOpen }) => (isOpen && css`
+    max-height: 100px;
+    margin-top: ${spacing('l')};
+    transition: all 0.5s linear;
+  `)}
 `;
 
 const Accordion = ({ children, title }) => {
@@ -41,16 +50,18 @@ const Accordion = ({ children, title }) => {
 
   return (
     <Container>
-      <Title tag="h6" family="Anton" weight="normal">{title}</Title>
+      {title}
       <Copy isOpen={isOpen}>{children}</Copy>
-      <Icon onClick={handleOpen}>⬆</Icon>
+      <Icon tabindex="0" onClick={handleOpen} role="button" aria-expanded={isOpen ? 'true' : 'false'}>
+        <Chevron direction={isOpen ? 'up' : 'down'} />
+      </Icon>
     </Container>
   );
 };
 
 Accordion.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.node.isRequired
 };
 
 export default Accordion;

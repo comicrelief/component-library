@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  padding: 2rem 8rem 2rem 4rem;
+}
+
+.c4 {
+  cursor: pointer;
+  position: absolute;
+  bottom: -1rem;
+  right: calc(1.5rem * 2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background: #E52630;
+}
+
+.c2 {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+    color="inherit"
+    size="l"
+  >
+    I am the title
+  </h2>
+  <div
+    className="c2"
+  >
+    <p
+      className="c3"
+      color="inherit"
+      size="s"
+    >
+      Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
+    </p>
+  </div>
+  <div
+    aria-expanded="false"
+    className="c4"
+    onClick={[Function]}
+    role="button"
+  >
+    <svg
+      className="c5"
+      direction="down"
+      fill="#FFFFFF"
+      viewBox="0 0 48 48"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M40 33a1.992 1.992 0 01-1.414-.586L24 17.829 9.414 32.414a2 2 0 11-2.828-2.828l16-16a2 2 0 012.828 0l16 16A2 2 0 0140 33z"
+      />
+    </svg>
+  </div>
+</div>
+`;
