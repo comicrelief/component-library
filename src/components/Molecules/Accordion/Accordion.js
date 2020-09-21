@@ -7,10 +7,6 @@ import { Chevron } from '../../Atoms/Icons/index';
 
 const Container = styled.div`
   position: relative;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  height: 100%;
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
