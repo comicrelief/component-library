@@ -53,8 +53,8 @@ export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
 export { default as SingleMessageDs } from './components/Molecules/SingleMessageDS/SingleMessageDs';
-
 export { default as Promo } from './components/Molecules/Promo/Promo';
+export { default as Accordion } from './components/Molecules/Accordion/Accordion';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
