@@ -10,7 +10,7 @@ const Container = styled.div`
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  padding: ${spacing('l')} ${spacing('xxl')} ${spacing('l')} ${spacing('xl')};
+  padding: ${spacing('l')} ${spacing('xl')};
 `;
 
 const ChevAnima = keyframes`
@@ -22,9 +22,6 @@ const ChevAnima = keyframes`
 const Button = styled.button`
   background: none;
   border: 2px solid ${({ theme }) => theme.color('red')};
-  position: absolute;
-  bottom: -1rem;
-  right: calc(${spacing('m')} * 2);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -45,6 +42,12 @@ const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+`;
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Copy = styled.div`
@@ -74,13 +77,15 @@ const Accordion = ({ children, title }) => {
 
   return (
     <Container>
-      {title}
+      <Header>
+        {title}
+        <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
+          <Icon>
+            <Chevron direction={isOpen ? 'up' : 'down'} />
+          </Icon>
+        </Button>
+      </Header>
       <Copy style={{ height: isOpen ? 'auto' : '0' }} ref={stageCanvasRef} isOpen={isOpen}>{children}</Copy>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
-        <Icon>
-          <Chevron direction={isOpen ? 'up' : 'down'} />
-        </Icon>
-      </Button>
     </Container>
   );
 };
