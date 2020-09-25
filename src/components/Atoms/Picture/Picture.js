@@ -39,11 +39,13 @@ const Picture = ({
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
   const [objFit, setObjFit] = useState(true);
+
   useEffect(() => {
-    if (document.documentElement.style.objectFit === undefined) {
+    if ('objectFit' in document.documentElement.style === false) {
       setObjFit(false);
     }
-  }, [document.documentElement.style.objectFit]);
+  }, [document.documentElement.style]);
+
   if (!images) {
     return (
       <Wrapper height={height} width={width} {...rest} image={image}>
