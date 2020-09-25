@@ -4,48 +4,36 @@ import PropTypes from 'prop-types';
 import {
   Wrapper,
   InnerWrapper,
-  Form,
+  SearchBox,
   SearchWrapper,
-  SearchField,
-  ActionWrapper,
-  ActionButton
+  SearchField
 } from './SearchInput.style';
 
-const SearchInput = ({ onChange, placeholder, value }) => {
-  return (
-    <Wrapper>
-      <InnerWrapper>
-        <Form onSubmit={e => e.preventDefault()}>
-          <SearchWrapper>
-            <SearchField
-              value={value}
-              onChange={onChange}
-              name="search"
-              showLabel={false}
-              type="text"
-              label="Search"
-              id="search"
-              placeholder={placeholder}
-              errorMsg=""
-            />
-          </SearchWrapper>
-          <ActionWrapper>
-            <ActionButton
-              showLabel={false}
-              disabled="disabled"
-              type="submit"
-              id=""
-              name="action"
-              placeholder=""
-              label=""
-              errorMsg=""
-            />
-          </ActionWrapper>
-        </Form>
-      </InnerWrapper>
-    </Wrapper>
-  );
-};
+const SearchInput = ({
+  onChange, placeholder, value, ...rest
+}) => (
+  <Wrapper>
+    <InnerWrapper>
+      <SearchBox role="search">
+        <SearchWrapper>
+          <SearchField
+            role="searchbox"
+            value={value}
+            onChange={onChange}
+            name="search"
+            showLabel={false}
+            type="text"
+            label="Search"
+            id="search"
+            placeholder={placeholder}
+            errorMsg=""
+            {...rest}
+          />
+        </SearchWrapper>
+      </SearchBox>
+    </InnerWrapper>
+  </Wrapper>
+);
 
 SearchInput.propTypes = {
   onChange: PropTypes.func.isRequired,

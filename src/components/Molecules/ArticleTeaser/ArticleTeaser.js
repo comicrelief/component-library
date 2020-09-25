@@ -6,8 +6,8 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
-import SR from './assets/SR.png';
-import CR from './assets/CR.png';
+import SR from '../../Atoms/Logo/assets/sr-logo.svg';
+import CR from '../../Atoms/Logo/assets/cr-logo.svg';
 import RND from './assets/RND.png';
 
 /**
@@ -17,15 +17,21 @@ const Wrapper = styled.article`
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color('white')};
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+  }
 `;
 
 const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: ${({ category }) =>
-    category || category === '' ? 'row' : 'column'};
+  flex-direction: ${({ category }) => (category || category === '' ? 'row' : 'column')};
   align-items: ${({ category }) => (category || category === '') && 'center'};
   text-decoration: none;
   color: inherit;
@@ -36,37 +42,52 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${({ category }) =>
-      !category && category !== '' && 'column'};
+    flex-direction: ${({ category }) => !category && category !== '' && 'column'};
   }
 `;
 
 const ImageWrapper = styled.div`
-  padding-left: ${({ category }) =>
-    (category || category === '') && `${spacing('md')}`};
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  ${({ category }) => (category || category === '')
+    && css`
+      padding-left: ${spacing('md')};
+      img {
+        border-radius: 0;
+      }
+    `};
 
-  ${({ category }) =>
-    !category &&
-    category !== '' &&
-    css`
+  ${({ category }) => !category
+    && category !== ''
+    && css`
+      img {
+        border-radius: 1rem 1rem 0 0;
+      }
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 45%;
+        img {
+          border-radius: 1rem 0 0 1rem;
+        }
       }
       @media ${({ theme }) => theme.breakpoint('medium')} {
         width: 100%;
+        img {
+          border-radius: 1rem 1rem 0 0;
+        }
       }
     `};
 `;
 
 const CopyWrapper = styled.div`
   padding: ${spacing('l')};
-  ${({ category }) =>
-    !category &&
-    category !== '' &&
-    css`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  ${({ category }) => !category
+    && category !== ''
+    && css`
       @media ${({ theme }) => theme.breakpoint('small')} {
         width: 55%;
       }
@@ -77,7 +98,17 @@ const CopyWrapper = styled.div`
 `;
 
 const Title = styled(Text)`
-  margin: 0;
+  margin: ${({ time }) => (time ? `0 0 ${spacing('md')}` : '0')};
+`;
+
+const Date = styled(Text)`
+  display: block;
+  margin-bottom: ${spacing('md')};
+`;
+
+const Time = styled(Text)`
+  display: block;
+  margin-top: auto;
 `;
 
 const Image = styled(Picture)`
@@ -110,42 +141,54 @@ const ArticleTeaser = ({
   alt,
   category,
   logoSize,
-  family
-}) => {
-  return (
-    <Wrapper>
-      <Link href={href} type="standard" category={category} underline={false}>
-        <ImageWrapper category={category}>
-          <Image
-            imageLow={
+  family,
+  time
+}) => (
+  <Wrapper>
+    <Link href={href} type="standard" category={category} underline={false}>
+      <ImageWrapper category={category}>
+        <Image
+          imageLow={
               !category && category !== ''
                 ? imageLow
                 : handleCampaignLogo(category)
             }
-            images={
+          images={
               !category && category !== ''
                 ? images
                 : handleCampaignLogo(category)
             }
-            image={image}
-            alt={alt}
-            objectFit="cover"
-            width={category || category === '' ? logoSize : '100%'}
-            height={category || category === '' ? logoSize : '100%'}
-          />
-        </ImageWrapper>
-        <CopyWrapper category={category}>
-          <Text size="xxs" weight="800" uppercase>
-            {date}
-          </Text>
-          <Title size="xl" tag="h3" weight="normal" uppercase family={family}>
-            {title}
-          </Title>
-        </CopyWrapper>
-      </Link>
-    </Wrapper>
-  );
-};
+          image={image}
+          alt={alt}
+          objectFit="cover"
+          width={category || category === '' ? logoSize : '100%'}
+          height={category || category === '' ? logoSize : '100%'}
+        />
+      </ImageWrapper>
+      <CopyWrapper category={category}>
+        <Date size="xs" weight="bold">
+          {date}
+        </Date>
+        <Title
+          time={time}
+          size="xl"
+          tag="h3"
+          height="2rem"
+          weight="normal"
+          uppercase
+          family={family}
+        >
+          {title}
+        </Title>
+        {time && (
+        <Time size="xs" weight="400" color="grey_dark">
+          {time}
+        </Time>
+        )}
+      </CopyWrapper>
+    </Link>
+  </Wrapper>
+);
 
 ArticleTeaser.propTypes = {
   images: PropTypes.string,
@@ -154,9 +197,10 @@ ArticleTeaser.propTypes = {
   logoSize: PropTypes.string,
   family: PropTypes.string,
   category: PropTypes.string,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  time: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
 };
@@ -167,6 +211,8 @@ ArticleTeaser.defaultProps = {
   images: null,
   category: null,
   logoSize: null,
+  time: null,
+  alt: '',
   family: 'Anton'
 };
 

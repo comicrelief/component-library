@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import checkBoxIcon from './assets/checkbox-white-tick.png';
 
-const StyledInput = styled.input`
+const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   font-size: ${({ theme }) => theme.fontSize('sm')};
   display: block;
   box-sizing: border-box;
@@ -41,24 +41,30 @@ const StyledInput = styled.input`
 
 const Label = styled.label`
   display: flex;
-  align-items: center;
+  ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
   margin-bottom: 8px;
 `;
 
-const Checkbox = ({ label, value, ...rest }) => {
-  return (
-    <Label>
-      <StyledInput type="checkbox" {...rest} value={value} />
-      <span />
-      <Text weight="bold">{label}</Text>
-    </Label>
-  );
-};
+const Checkbox = React.forwardRef(({
+  label, value, children, ...rest
+}, ref) => (
+  <Label hasLabelAsString={!!label}>
+    <StyledCheckboxInput {...rest} value={value} ref={ref} />
+    <span />
+    {label ? <Text weight="bold">{label}</Text> : children}
+  </Label>
+));
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string,
+  children: PropTypes.node
+};
+
+Checkbox.defaultProps = {
+  label: undefined,
+  children: undefined
 };
 
 export default Checkbox;

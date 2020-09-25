@@ -1,0 +1,2017 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Monthly donation renders correctly 1`] = `
+.c6 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c7 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c18 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c25 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: 500;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c23 {
+  font-weight: normal;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.c23:focus {
+  border: 1px solid #666;
+}
+
+.c23:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c23:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c23:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c23:focus::placeholder {
+  color: #666;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: bold;
+  color: #5C5C5E;
+}
+
+.c21 {
+  display: block;
+}
+
+.c21 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
+}
+
+.c21 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c21 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c3 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  text-align: left;
+}
+
+.c8 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c15 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c15 h3 {
+  margin-top: 1rem;
+}
+
+.c15 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c15 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c16 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c16 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c17 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.c19 label {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  margin-bottom: 0.5rem;
+}
+
+.c19 label input {
+  cursor: pointer;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c26 {
+  margin-right: 0.5rem;
+}
+
+.c27 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c27 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c27 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c27 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c28 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c28:active,
+.c28:focus,
+.c28:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+.c14 {
+  width: 50%;
+  height: 48px;
+  border-radius: 2rem;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  -webkit-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+  background-color: #0565D1;
+  left: 2px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.c10 {
+  width: 100%;
+  padding: 2px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 1rem 0;
+  border-radius: 2rem;
+  background: #BECCF9;
+}
+
+.c10 #give-monthly:checked ~ .c13 {
+  left: calc(50% - 2px);
+}
+
+.c10 input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c10 input:focus:not(:checked) + label {
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c11 {
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  min-height: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  border: none;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  z-index: 2;
+  cursor: default;
+}
+
+.c11:active:focus {
+  box-shadow: none;
+}
+
+.c11:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c11[for='give-once'] {
+  border-radius: 2rem;
+  color: #FFFFFF;
+}
+
+.c11[for='give-monthly'] {
+  border-radius: 2rem;
+  color: #FFFFFF;
+}
+
+.c12 {
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  min-height: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  border: none;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.c12:active:focus {
+  box-shadow: none;
+}
+
+.c12:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c12[for='give-once'] {
+  border-radius: 2rem;
+  color: #000000;
+}
+
+.c12[for='give-monthly'] {
+  border-radius: 2rem;
+  color: #000000;
+}
+
+@media (min-width:740px) {
+  .c23 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c21 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c27 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c28 {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 lazyload"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt="Background image"
+      className="c2 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <h2
+          className="c6"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c7"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
+        >
+          <input
+            aria-label="Give once"
+            checked={true}
+            errormsg=""
+            id="give-once"
+            label=""
+            onClick={[Function]}
+            type="radio"
+            value="Give once"
+          />
+          <label
+            className="c11"
+            htmlFor="give-once"
+          >
+            Give once
+          </label>
+          <input
+            aria-label="Give monthly"
+            checked={false}
+            errormsg=""
+            id="give-monthly"
+            label=""
+            onClick={[Function]}
+            type="radio"
+            value="Give monthly"
+          />
+          <label
+            className="c12"
+            htmlFor="give-monthly"
+          >
+            Give monthly
+          </label>
+          <span
+            className="c13 c14"
+          />
+        </div>
+      </div>
+      <form
+        className="c15"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c16"
+        >
+          <legend
+            className="c17"
+          >
+            <span
+              className="c18"
+              color="inherit"
+              size="l"
+            >
+              Choose an amount to give
+            </span>
+          </legend>
+          <div
+            className="c19"
+          >
+            <label
+              className="c20 c21"
+              htmlFor="mship-1--moneyBuy-box1"
+            >
+              <span
+                className="c22 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box1"
+                aria-label="£10"
+                className="c23"
+                id="mship-1--moneyBuy-box1"
+                name="mship-1--moneyBuy1"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 10"
+              />
+              
+            </label>
+            <label
+              className="c20 c21"
+              htmlFor="mship-1--moneyBuy-box2"
+            >
+              <span
+                className="c22 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box2"
+                aria-label="£20"
+                className="c23"
+                id="mship-1--moneyBuy-box2"
+                name="mship-1--moneyBuy2"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 20"
+              />
+              
+            </label>
+            <label
+              className="c20 c21"
+              htmlFor="mship-1--moneyBuy-box3"
+            >
+              <span
+                className="c22 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box3"
+                aria-label="£30"
+                className="c23"
+                id="mship-1--moneyBuy-box3"
+                name="mship-1--moneyBuy3"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 30"
+              />
+              
+            </label>
+          </div>
+          <div
+            className="c24"
+          >
+            <span
+              className="c25 c26"
+              color="inherit"
+              size="s"
+            >
+              Other amount
+            </span>
+            <label
+              className="c20 c27"
+              htmlFor="mship-1--MoneyBuy-userInput"
+            >
+              <span
+                className="c22 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c23"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value=" "
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c28"
+            type="submit"
+            value="Donate once"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Single donation renders correctly 1`] = `
+.c6 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c7 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c12 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c20 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: 500;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
+  font-weight: normal;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.c17:focus {
+  border: 1px solid #666;
+}
+
+.c17:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c17:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c17:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c17:focus::placeholder {
+  color: #666;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: bold;
+  color: #5C5C5E;
+}
+
+.c15 {
+  display: block;
+}
+
+.c15 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
+}
+
+.c15 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c15 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c18 {
+  display: block;
+}
+
+.c18 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
+  background-color: #0565D1;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  color: #FFFFFF;
+}
+
+.c18 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c18 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c18 input:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c3 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  text-align: left;
+}
+
+.c8 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c9 h3 {
+  margin-top: 1rem;
+}
+
+.c9 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c9 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c10 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c10 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c11 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.c13 label {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  margin-bottom: 0.5rem;
+}
+
+.c13 label input {
+  cursor: pointer;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c21 {
+  margin-right: 0.5rem;
+}
+
+.c22 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c22 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c22 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c22 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c24 {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.c23 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c23:active,
+.c23:focus,
+.c23:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c17 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c18 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c13 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c13 label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c22 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c23 {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 lazyload"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt=""
+      className="c2 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <h2
+          className="c6"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c7"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c8"
+    >
+      <form
+        className="c9"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c10"
+        >
+          <legend
+            className="c11"
+          >
+            <span
+              className="c12"
+              color="inherit"
+              size="l"
+            >
+              Choose an amount to give
+            </span>
+          </legend>
+          <div
+            className="c13"
+          >
+            <label
+              className="c14 c15"
+              htmlFor="mship-1--moneyBuy-box1"
+            >
+              <span
+                className="c16 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box1"
+                aria-label="£10"
+                className="c17"
+                id="mship-1--moneyBuy-box1"
+                name="mship-1--moneyBuy1"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 10"
+              />
+              
+            </label>
+            <label
+              className="c14 c18"
+              htmlFor="mship-1--moneyBuy-box2"
+            >
+              <span
+                className="c16 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box2"
+                aria-label="£20"
+                className="c17"
+                id="mship-1--moneyBuy-box2"
+                name="mship-1--moneyBuy2"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 20"
+              />
+              
+            </label>
+            <label
+              className="c14 c15"
+              htmlFor="mship-1--moneyBuy-box3"
+            >
+              <span
+                className="c16 "
+                color="inherit"
+                size="s"
+              >
+                
+              </span>
+              <input
+                aria-describedby="mship-1--moneyBuy-box3"
+                aria-label="£30"
+                className="c17"
+                id="mship-1--moneyBuy-box3"
+                name="mship-1--moneyBuy3"
+                onClick={[Function]}
+                placeholder=""
+                type="button"
+                value="£ 30"
+              />
+              
+            </label>
+          </div>
+          <div
+            className="c19"
+          >
+            <span
+              className="c20 c21"
+              color="inherit"
+              size="s"
+            >
+              Other amount
+            </span>
+            <label
+              className="c14 c22"
+              htmlFor="mship-1--MoneyBuy-userInput"
+            >
+              <span
+                className="c16 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c17"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value={20}
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c23"
+            type="submit"
+            value="Donate once"
+          />
+          <p
+            className="c24"
+          >
+            <strong>
+              £20.00 
+            </strong>
+            a support worker to visit 10 isolated young mums with postnatal depression in the UK.
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Single donation with no Money Buys renders correctly 1`] = `
+.c6 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c7 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c12 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
+  font-weight: normal;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.c17:focus {
+  border: 1px solid #666;
+}
+
+.c17:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c17:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c17:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c17:focus::placeholder {
+  color: #666;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: bold;
+  color: #5C5C5E;
+}
+
+.c0 {
+  background-color: #274084;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+}
+
+.c3 {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  text-align: left;
+}
+
+.c8 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c9 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.c9 h3 {
+  margin-top: 1rem;
+}
+
+.c9 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c9 input[type='submit'] {
+  margin: 2rem 0;
+}
+
+.c10 {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border: none;
+}
+
+.c10 input[type='submit'] {
+  margin-bottom: 0;
+}
+
+.c11 {
+  margin: 0;
+  padding: 2rem 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c15 {
+  position: relative;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  font-weight: 400;
+  display: block;
+}
+
+.c15 span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  font-weight: 500;
+  padding: 0px 15px;
+  z-index: 1;
+}
+
+.c15 input {
+  height: 48px;
+  border: 2px solid #969598;
+  background: #F4F3F5;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.c15 input:focus {
+  outline: none;
+  border: 2px solid #969598;
+}
+
+.c18 {
+  width: 100%;
+  margin: 2rem 0 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 48px;
+  background: #E52630;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c18:active,
+.c18:focus,
+.c18:hover {
+  outline: none;
+  background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c17 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    width: 50%;
+    padding: 4rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width:740px) {
+  .c18 {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+  id="mship-1"
+>
+  <div
+    className="c1 lazyload"
+    height="100%"
+    width="100%"
+  >
+    <img
+      alt=""
+      className="c2 lazyload"
+      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
+      data-sizes="auto"
+      data-src={null}
+      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      height="100%"
+      src={null}
+      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      width="100%"
+    />
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <h2
+          className="c6"
+          color="white"
+          size="big"
+        >
+          Donate Now
+        </h2>
+        <p
+          className="c7"
+          color="white"
+          size="m"
+        >
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c8"
+    >
+      <form
+        className="c9"
+        onSubmit={[Function]}
+      >
+        <fieldset
+          className="c10"
+        >
+          <legend
+            className="c11"
+          >
+            <span
+              className="c12"
+              color="inherit"
+              size="l"
+            >
+              Enter an amount to give
+            </span>
+          </legend>
+          <div
+            className="c13"
+          >
+            <label
+              className="c14 c15"
+              htmlFor="mship-1--MoneyBuy-userInput"
+            >
+              <span
+                className="c16 "
+                color="inherit"
+                size="s"
+              >
+                £
+              </span>
+              <input
+                aria-describedby="mship-1--MoneyBuy-userInput"
+                aria-label="Input a different amount"
+                className="c17"
+                id="mship-1--MoneyBuy-userInput"
+                max="20000"
+                min="1"
+                name="membership_amount"
+                onChange={[Function]}
+                pattern="[^[0-9]+([,.][0-9]+)?$]"
+                placeholder="0.00"
+                step="0.01"
+                type="number"
+                value=" "
+              />
+              
+            </label>
+          </div>
+          <input
+            className="c18"
+            type="submit"
+            value="Donate"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;

@@ -6,8 +6,7 @@ const StyledItem = styled.a`
   text-align: center;
   text-decoration: none;
   font-weight: 700;
-  cursor: ${({ selected, disabled }) =>
-    selected || disabled ? 'default' : 'pointer'};
+  cursor: ${({ selected, disabled }) => (selected || disabled ? 'default' : 'pointer')};
   background: ${({
     theme,
     selected,
@@ -40,7 +39,9 @@ const StyledItem = styled.a`
     }
     return theme.color(processedColor);
   }};
-  ${({ theme, selected, disabled, backgroundColorOnHover, colorOnHover }) => {
+  ${({
+    theme, selected, disabled, backgroundColorOnHover, colorOnHover
+  }) => {
     if (!(selected || disabled)) {
       return css`
         :hover {

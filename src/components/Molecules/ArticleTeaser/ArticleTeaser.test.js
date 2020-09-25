@@ -1,10 +1,10 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleTeaser from './ArticleTeaser';
-import data from '../../../styleguide/data/data';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ArticleTeaser from "./ArticleTeaser";
+import data from "../../../styleguide/data/data";
 
-it('renders article teaser correctly', () => {
+it("renders article teaser correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -21,21 +21,30 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c8 {
-      font-size: 1.625rem;
+    .c9 {
+      font-size: 2rem;
+      line-height: 2rem;
       text-transform: uppercase;
       font-weight: normal;
+      line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
+      -webkit-letter-spacing: 0.03rem;
+      -moz-letter-spacing: 0.03rem;
+      -ms-letter-spacing: 0.03rem;
+      letter-spacing: 0.03rem;
     }
 
     .c4 {
       position: relative;
+      display: block;
       width: 100%;
       height: 100%;
     }
@@ -48,15 +57,17 @@ it('renders article teaser correctly', () => {
     }
 
     .c1 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      color: #2C0230;
+      line-height: 1.5rem;
+      color: #000000;
       font-weight: normal;
     }
 
     .c1:hover {
-      color: #2C0230;
+      color: #000000;
     }
 
     .c0 {
@@ -66,7 +77,18 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
@@ -98,14 +120,32 @@ it('renders article teaser correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
+    }
+
+    .c3 img {
+      border-radius: 1rem 1rem 0 0;
     }
 
     .c6 {
       padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
-    .c9 {
+    .c10 {
       margin: 0;
+    }
+
+    .c8 {
+      display: block;
+      margin-bottom: 1rem;
     }
 
     @media (min-width:740px) {
@@ -128,11 +168,19 @@ it('renders article teaser correctly', () => {
       .c3 {
         width: 45%;
       }
+
+      .c3 img {
+        border-radius: 1rem 0 0 1rem;
+      }
     }
 
     @media (min-width:1024px) {
       .c3 {
         width: 100%;
+      }
+
+      .c3 img {
+        border-radius: 1rem 1rem 0 0;
       }
     }
 
@@ -184,15 +232,16 @@ it('renders article teaser correctly', () => {
           className="c6"
         >
           <span
-            className="c7"
+            className="c7 c8"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c8 c9"
+            className="c9 c10"
             color="inherit"
+            height="2rem"
             size="xl"
           >
             News article
@@ -203,7 +252,7 @@ it('renders article teaser correctly', () => {
   `);
 });
 
-it('renders press realese correctly', () => {
+it("renders press realese correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -217,21 +266,30 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c7 {
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      font-weight: 800;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      text-transform: inherit;
+      font-weight: bold;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c8 {
-      font-size: 1.625rem;
+    .c9 {
+      font-size: 2rem;
+      line-height: 2rem;
       text-transform: uppercase;
       font-weight: normal;
+      line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
+      -webkit-letter-spacing: 0.03rem;
+      -moz-letter-spacing: 0.03rem;
+      -ms-letter-spacing: 0.03rem;
+      letter-spacing: 0.03rem;
     }
 
     .c4 {
       position: relative;
+      display: block;
       width: 80px;
       height: 80px;
     }
@@ -244,15 +302,17 @@ it('renders press realese correctly', () => {
     }
 
     .c1 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      color: #2C0230;
+      line-height: 1.5rem;
+      color: #000000;
       font-weight: normal;
     }
 
     .c1:hover {
-      color: #2C0230;
+      color: #000000;
     }
 
     .c0 {
@@ -262,7 +322,18 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      background-color: #fff;
+      background-color: #FFFFFF;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    .c0:hover {
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .c2 {
@@ -286,7 +357,6 @@ it('renders press realese correctly', () => {
     }
 
     .c3 {
-      padding-left: 1rem;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -299,14 +369,33 @@ it('renders press realese correctly', () => {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .c3 img {
+      border-radius: 0;
     }
 
     .c6 {
       padding: 2rem;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
     }
 
-    .c9 {
+    .c10 {
       margin: 0;
+    }
+
+    .c8 {
+      display: block;
+      margin-bottom: 1rem;
     }
 
     @media (min-width:740px) {
@@ -315,6 +404,10 @@ it('renders press realese correctly', () => {
         -ms-flex-direction: row;
         flex-direction: row;
       }
+    }
+
+    @media (min-width:1024px) {
+
     }
 
     @media (min-width:1024px) {
@@ -359,15 +452,16 @@ it('renders press realese correctly', () => {
           className="c6"
         >
           <span
-            className="c7"
+            className="c7 c8"
             color="inherit"
-            size="xxs"
+            size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c8 c9"
+            className="c9 c10"
             color="inherit"
+            height="2rem"
             size="xl"
           >
             Press Release

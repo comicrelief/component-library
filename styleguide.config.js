@@ -7,6 +7,7 @@ module.exports = {
   },
   assetsDir: 'src/styleguide/assets/',
   styleguideComponents: {
+    LogoRenderer: path.resolve(__dirname, './src/styleguide/CRLogo'),
     Wrapper: path.join(__dirname, 'src/styleguide/ThemeWrapper')
   },
   skipComponentsWithoutExample: true,
@@ -41,20 +42,11 @@ module.exports = {
       h4: 16,
       h5: 16,
       h6: 16
-    }
-  },
-  styles: {
-    Logo: {
-      // We're changing the LogoRenderer component
-      logo: {
-        backgroundImage: "url('/pattern_logo.png')",
-        backgroundSize: '100%',
-        backgroundRepeat: 'no-repeat',
-        height: '50px',
-        width: '150px',
-        textIndent: '-9999px'
-      }
-    }
+    },
+    fontFamily: {
+      base: ['Montserrat']
+    },
+    maxWidth: '100%'
   },
   sections: [
     {
@@ -70,6 +62,10 @@ module.exports = {
       content: './docs/utils.md'
     },
     {
+      name: 'Theme',
+      content: './src/theme/crTheme/Colors.md'
+    },
+    {
       name: 'Atoms',
       components: 'src/components/Atoms/**/*.js',
       sectionDepth: 2
@@ -77,6 +73,11 @@ module.exports = {
     {
       name: 'Molecules',
       components: 'src/components/Molecules/**/*.js',
+      sectionDepth: 2
+    },
+    {
+      name: 'Organisms',
+      components: 'src/components/Organisms/**/*.js',
       sectionDepth: 2
     }
     // {

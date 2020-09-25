@@ -17,12 +17,15 @@ it('renders correctly', () => {
     .c4 {
       color: #FFFFFF;
       font-size: 0.6875rem;
+      line-height: 0.6875rem;
       text-transform: inherit;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c2 {
       position: relative;
+      display: block;
       width: 100%;
       height: auto;
     }
@@ -35,17 +38,19 @@ it('renders correctly', () => {
     }
 
     .c0 {
+      position: relative;
       -webkit-text-decoration: none;
       text-decoration: none;
       display: inline;
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      line-height: 1.5rem;
+      color: #000000;
+      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
     .c0:hover {
-      color: #2C0230;
-      border-bottom: 2px solid #2C0230;
+      color: #000000;
+      border-bottom: 2px solid #000000;
     }
 
     .c6 {
@@ -61,6 +66,7 @@ it('renders correctly', () => {
       position: absolute;
       white-space: nowrap;
       width: 1px;
+      height: auto;
     }
 
     .c1 {

@@ -26,3 +26,7 @@ yarn-error.log*
 
 .idea
 .vscode
+
+/cypress/videos
+/cypress/screenshots
+/cypress/**/__diff_output__

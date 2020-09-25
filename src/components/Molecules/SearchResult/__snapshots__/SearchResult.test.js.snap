@@ -2,13 +2,16 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
   text-transform: uppercase;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.625rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -17,6 +20,7 @@ exports[`renders correctly in minimalist form 1`] = `
   background-image: url(null);
   background-size: cover;
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -29,17 +33,19 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  line-height: 1.5rem;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  color: #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -165,20 +171,25 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
   text-transform: uppercase;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.625rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c10 {
   font-size: 1.25rem;
+  line-height: 1.25rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -186,6 +197,7 @@ exports[`renders correctly with copy 1`] = `
   background-image: url(null);
   background-size: cover;
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -198,17 +210,19 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  line-height: 1.5rem;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  color: #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -340,13 +354,16 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
   text-transform: uppercase;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.625rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -355,6 +372,7 @@ exports[`renders correctly with date 1`] = `
   background-image: url(null);
   background-size: cover;
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -367,17 +385,19 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  line-height: 1.5rem;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  color: #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -503,13 +523,16 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
   text-transform: uppercase;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.625rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -518,6 +541,7 @@ exports[`renders correctly with date and type 1`] = `
   background-image: url(null);
   background-size: cover;
   position: relative;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -530,17 +554,19 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c1 {
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline;
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  line-height: 1.5rem;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
-  color: #2C0230;
-  border-bottom: 2px solid #2C0230;
+  color: #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .c0 {

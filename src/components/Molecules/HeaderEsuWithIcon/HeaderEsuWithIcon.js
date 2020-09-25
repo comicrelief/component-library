@@ -12,13 +12,13 @@ import {
 
 /* HeaderEsuWithIcon component */
 const HeaderEsuWithIcon = ({
-  campaign,
   title,
   topCopy,
   successCopy,
   privacyCopy,
   buttonColor,
   subscribe,
+  validate,
   isSuccess,
   errorMsg,
   isESUOpen: isESUOpenInitial
@@ -57,46 +57,47 @@ const HeaderEsuWithIcon = ({
   };
 
   /* Break out ESU render into own function */
-  const renderESU = () => {
-    return (
-      <HeaderESU
-        title={title}
-        topCopy={topCopy}
-        successCopy={successCopy}
-        privacyCopy={privacyCopy}
-        isSuccess={isSuccess}
-        subscribe={subscribe}
-        errorMsg={errorMsg}
-        buttonColor={buttonColor}
-        aria-modal="true"
-      />
-    );
-  };
+  const renderESU = () => (
+    <HeaderESU
+      title={title}
+      topCopy={topCopy}
+      successCopy={successCopy}
+      privacyCopy={privacyCopy}
+      isSuccess={isSuccess}
+      subscribe={subscribe}
+      validate={validate}
+      errorMsg={errorMsg}
+      buttonColor={buttonColor}
+      aria-modal="true"
+    />
+  );
 
   /* Break out Close button render into own function */
-  const renderCloseButton = () => {
-    return (
-      <CloseButton
-        onClick={e => handleESUOpen(e)}
-        icon={HeaderIcons.close.icon}
-        title="Close email sign-up"
-        brand={campaign}
-        target="self"
-        role="button"
-        href="#"
-        tabIndex="0"
-      />
-    );
-  };
+  const renderCloseButton = () => (
+    <CloseButton
+      onClick={e => handleESUOpen(e)}
+      icon={HeaderIcons.close.icon}
+      title={HeaderIcons.close.title}
+      brand={HeaderIcons.close.title}
+      target="self"
+      role="button"
+      href="#"
+      tabIndex="0"
+    />
+  );
 
   /* Main render */
   return (
-    <IconWrapper onKeyDown={e => handleEscClose(e)} ref={thisRef}>
+    <IconWrapper
+      onKeyDown={e => handleEscClose(e)}
+      ref={thisRef}
+      data-test="header-esu"
+    >
       <Icon
         onClick={e => handleESUOpen(e)}
         icon={HeaderIcons.email.icon}
         title={HeaderIcons.email.title}
-        brand={campaign}
+        brand={HeaderIcons.email.title}
         target="self"
         role="button"
         href="#"
@@ -114,7 +115,6 @@ const HeaderEsuWithIcon = ({
 };
 
 HeaderEsuWithIcon.propTypes = {
-  campaign: PropTypes.string,
   isESUOpen: PropTypes.bool,
   title: PropTypes.node.isRequired,
   topCopy: PropTypes.node.isRequired,
@@ -122,12 +122,12 @@ HeaderEsuWithIcon.propTypes = {
   successCopy: PropTypes.node.isRequired,
   buttonColor: PropTypes.string,
   subscribe: PropTypes.func.isRequired,
+  validate: PropTypes.func.isRequired,
   isSuccess: PropTypes.bool.isRequired,
   errorMsg: PropTypes.string.isRequired
 };
 
 HeaderEsuWithIcon.defaultProps = {
-  campaign: 'comicrelief',
   isESUOpen: false,
   buttonColor: 'red'
 };

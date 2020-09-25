@@ -17,3 +17,11 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="p">Text body copy description</Text>
 </Card>;
 ```
+
+### Card no body
+
+```js
+const data = require('../../../styleguide/data/data').default;
+
+<Card imageLow={data.image} images={data.image} />;
+```

@@ -32,26 +32,24 @@ const Card = ({
   width,
   children,
   ...rest
-}) => {
-  return (
-    <Container backgroundColor={backgroundColor} {...rest}>
-      {imageLow ? (
-        <Image>
-          <Picture
-            alt={imageAltText}
-            imageLow={imageLow}
-            images={images}
-            image={image}
-            objectFit="cover"
-            width={width}
-            height={height}
-          />
-        </Image>
-      ) : null}
-      <Copy>{children}</Copy>
-    </Container>
-  );
-};
+}) => (
+  <Container backgroundColor={backgroundColor} {...rest}>
+    {imageLow ? (
+      <Image>
+        <Picture
+          alt={imageAltText}
+          imageLow={imageLow}
+          images={images}
+          image={image}
+          objectFit="cover"
+          width={width}
+          height={height}
+        />
+      </Image>
+    ) : null}
+    {children ? <Copy>{children}</Copy> : null}
+  </Container>
+);
 
 Card.propTypes = {
   backgroundColor: PropTypes.string,
@@ -61,11 +59,12 @@ Card.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 };
 
 Card.defaultProps = {
   backgroundColor: 'white',
+  children: null,
   imageLow: null,
   images: null,
   image: null,

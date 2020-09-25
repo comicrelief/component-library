@@ -1,8 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800&display=swap');
 
+@font-face {
+  font-family: 'Founders-GroteskXCondensed-Bold';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskX-CondensedWeb-Bold.woff')
+      format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Founders-Grotesk-Semibold';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Semibold.woff')
+      format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Founders-Grotesk-Regular';
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.eot');
+  src: url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.woff2')
+      format('woff2'),
+    url('https://d1r885f187bvv1.cloudfront.net/FoundersGroteskWeb-Regular.woff')
+      format('woff');
+  font-display: fallback;
+}
+
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -33,10 +62,27 @@ h5,
 p,
 a,
 button {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: inherit;
+}
+
+p,
+a,
+button {
   margin-top: 0;
 }
 
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 p {
   word-break: break-word;
 }
@@ -47,6 +93,16 @@ p:first-child {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: normal;
+}
+
+table td {
+  padding: 10px;
 }
 
 /* Blur effect lazyload images */
@@ -64,7 +120,6 @@ p:last-child {
 
   /* only if you want to change the blur-up option from always to auto or want to use blur up effect without a lowsrc image. */
   font-family: 'blur-up: auto', 'object-fit: cover';
-
   object-fit: cover;
 }
 

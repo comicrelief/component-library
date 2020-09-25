@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.c4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 1rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  right: 1.5rem;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c7:hover {
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: calc(100% - 1.5rem);
+  background: inherit;
+}
+
+.c2 {
+  height: auto;
+  margin: 0 -1.5rem 0 1.5rem;
+}
+
+.c2 img {
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  background: #FFFFFF;
+  width: 100%;
+  z-index: 1;
+  margin-top: calc(-2 * 1.5rem);
+  min-height: calc(5 * 2rem);
+}
+
+.c6 {
+  position: absolute;
+  right: 1.5rem;
+  bottom: -1.5rem;
+  z-index: 2;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    width: auto;
+    right: auto;
+    position: relative;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    margin: 0;
+  }
+}
+
+@media (min-width:1440px) {
+  .c2 {
+    margin: 0 -1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: calc(50% + 6rem);
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:1440px) {
+  .c5 {
+    height: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    margin: 1.5rem 0 -1.5rem -1.5rem;
+    width: calc(50% + 6rem);
+  }
+}
+
+@media (min-width:1440px) {
+  .c5 {
+    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    bottom: calc(-1 * (2rem + 1rem));
+  }
+}
+
+<div
+  className="c0"
+>
+  <a
+    aria-hidden="true"
+    className="c1"
+    href="/home"
+    tabIndex="-1"
+    target="_blank"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3 lazyload"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt=""
+          className="c4 lazyload"
+          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          data-sizes="auto"
+          data-src={null}
+          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+          height="auto"
+          src={null}
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
+        />
+      </div>
+    </div>
+  </a>
+  <div
+    className="c5"
+  >
+    Text body copy description
+  </div>
+  <div
+    className="c6"
+  >
+    <a
+      className="c7"
+      color="red"
+      href="/home"
+      rel={null}
+      target="_self"
+      type="button"
+    >
+      Find out more
+      <span
+        className="c8"
+        type="button"
+      >
+        <svg
+          fill="#FFFFFF"
+          heiht={24}
+          viewBox="0 0 96 96"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M90.871 50.776c-.016.016-.026.036-.043.052l-32 32C58.047 83.609 57.024 84 56 84s-2.047-.391-2.829-1.171a4 4 0 010-5.657L78.343 52H8a4 4 0 010-8h70.343L53.171 18.829a4 4 0 015.657-5.657l32 32c.016.016.027.036.043.052.167.172.321.357.455.557.069.104.118.216.176.325.065.121.138.236.191.364.057.137.09.279.13.42.032.109.074.214.097.327a4.017 4.017 0 010 1.568c-.023.113-.065.217-.097.327-.041.141-.074.283-.13.42-.053.128-.126.243-.191.364-.059.109-.107.221-.176.325a4.035 4.035 0 01-.455.555z"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+`;

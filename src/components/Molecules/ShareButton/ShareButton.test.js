@@ -25,6 +25,21 @@ it('renders correctly', () => {
       width: 100%;
     }
 
+    .c6 {
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
     .c0 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -79,6 +94,7 @@ it('renders correctly', () => {
         >
           <a
             className="c4"
+            data-test="header-esu-icon"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -91,6 +107,11 @@ it('renders correctly', () => {
               className="c5"
               src="mock.asset"
             />
+            <span
+              className="c6"
+            >
+              (opens in new window)
+            </span>
           </a>
         </li>
         <li
@@ -98,6 +119,7 @@ it('renders correctly', () => {
         >
           <a
             className="c4"
+            data-test="header-esu-icon"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -110,6 +132,11 @@ it('renders correctly', () => {
               className="c5"
               src="mock.asset"
             />
+            <span
+              className="c6"
+            >
+              (opens in new window)
+            </span>
           </a>
         </li>
       </ul>

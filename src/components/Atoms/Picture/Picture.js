@@ -6,13 +6,13 @@ import 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
 
 // Transparent pixel png
-const IMAGE_FALLBACK =
-  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
   ${({ objFit, image }) =>
     !objFit && `background-image: url(${image}); background-size: cover;`};
   position: relative;
+  display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
 `;

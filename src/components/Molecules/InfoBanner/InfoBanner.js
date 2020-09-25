@@ -2,41 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import CurrencyFormat from 'react-currency-format';
 import PropTypes from 'prop-types';
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   flex-direction: column;
   position: relative;
-  color: white;
-  padding: 60px 0;
-  background: ${p => (p.background ? p.background : 'transparent')};
-  @media (min-width: 700px) {
+  @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
   }
 `;
 
 const Info = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: ${spacing('l')};
   flex-direction: column;
-  padding: 0 20px;
-  @media (min-width: 700px) {
+  @media ${({ theme }) => theme.breakpoint('small')} {
     width: calc(100% / 3);
   }
-`;
-
-const Label = styled.h3`
-  text-transform: uppercase;
-  font-size: 16px;
-`;
-
-const Desc = styled.p`
-  font-size: 14px;
 `;
 
 /**
@@ -45,55 +33,77 @@ const Desc = styled.p`
 
 const InfoBanner = ({
   title,
-  background,
   theme,
+  themeLink,
   startDate,
   endDate,
   country,
   amount
-}) => {
-  return (
-    <Container background={background}>
-      <Info>
-        <Label>Project Name</Label>
-        <Desc>{title}</Desc>
-      </Info>
-      <Info>
-        <Label>End Date</Label>
-        <Desc>{endDate}</Desc>
-      </Info>
-      <Info>
-        <Label>Funding theme</Label>
-        <Desc>{theme}</Desc>
-      </Info>
-      <Info>
-        <Label>Amount Awarded</Label>
-        <Desc>
-          <CurrencyFormat
-            value={amount}
-            displayType="text"
-            thousandSeparator
-            prefix="£"
-            renderText={value => value}
-          />
-        </Desc>
-      </Info>
-      <Info>
-        <Label>Start Date</Label>
-        <Desc>{startDate}</Desc>
-      </Info>
-      <Info>
-        <Label>Beneficiary Country</Label>
-        <Desc>{country}</Desc>
-      </Info>
-    </Container>
-  );
-};
+}) => (
+  <Container>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Project Name
+      </Text>
+      <Text tag="p" size="sm">
+        {title}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        End Date
+      </Text>
+      <Text tag="p" size="sm">
+        {endDate}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Funding theme
+      </Text>
+      <Text tag="p" size="sm">
+        <Link href={themeLink} target="self" type="standard">
+          {theme}
+        </Link>
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Amount Awarded
+      </Text>
+      <Text tag="p" size="sm">
+        <CurrencyFormat
+          value={amount}
+          displayType="text"
+          thousandSeparator
+          prefix="£"
+          renderText={value => value}
+        />
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Start Date
+      </Text>
+      <Text tag="p" size="sm">
+        {startDate}
+      </Text>
+    </Info>
+    <Info>
+      <Text tag="h3" size="md" uppercase>
+        Beneficiary Country
+      </Text>
+      <Text tag="p" size="sm">
+        {country}
+      </Text>
+    </Info>
+  </Container>
+);
 
 InfoBanner.propTypes = {
   title: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
+  themeLink: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,

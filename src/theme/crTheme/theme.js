@@ -11,5 +11,9 @@ export default {
   linkStyles,
   fontSize,
   breakpoint,
-  fontFamilies
+  fontFamilies,
+  font: {
+    regular: 'Montserrat',
+    bold: 'Anton'
+  }
 };

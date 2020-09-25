@@ -3,13 +3,16 @@
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -31,7 +34,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #6F3AAB;
 }
 
 .c0 iframe {
@@ -64,7 +67,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c0 {
-    height: calc(100vh - 90px);
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -73,6 +75,14 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 @media (min-width:740px) {
   .c5 {
+    min-height: calc(100vh - 5.625rem);
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -84,7 +94,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
 }
 
@@ -104,6 +114,12 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 @media (min-width:740px) {
   .c1 {
     padding-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 img {
+    position: absolute;
   }
 }
 
@@ -154,7 +170,8 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 exports[`renders Single Message with Image correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -162,12 +179,15 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c7 {
   color: #FFFFFF;
   font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -180,21 +200,37 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c8 {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-align: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c8:hover {
-  background-color: #918791;
-  color: #2C0230;
+  background-color: #969598;
+  color: #000000;
 }
 
 .c0 {
@@ -207,7 +243,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #6F3AAB;
 }
 
 .c0 iframe {
@@ -239,8 +275,13 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
   .c0 {
-    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -249,6 +290,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
+    height: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -260,7 +302,7 @@ exports[`renders Single Message with Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
 }
 
@@ -281,6 +323,10 @@ exports[`renders Single Message with Image correctly 1`] = `
   .c1 {
     padding-bottom: 0;
   }
+}
+
+@media (min-width:740px) {
+
 }
 
 <div
@@ -345,14 +391,17 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 exports[`renders Single Message with double image correctly 1`] = `
 .c6 {
-  color: #2C0230;
-  font-size: 2.625rem;
+  color: #000000;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -415,7 +464,6 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -423,7 +471,12 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c5 {
+    height: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -435,7 +488,7 @@ exports[`renders Single Message with double image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
 }
 
@@ -443,6 +496,14 @@ exports[`renders Single Message with double image correctly 1`] = `
   .c5 {
     width: 50%;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:740px) {
@@ -456,6 +517,22 @@ exports[`renders Single Message with double image correctly 1`] = `
   .c1 {
     padding-bottom: 0;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 <div
@@ -527,7 +604,8 @@ exports[`renders Single Message with double image correctly 1`] = `
 exports[`renders Single Message with full width correctly 1`] = `
 .c6 {
   color: #FFFFFF;
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -535,12 +613,15 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c7 {
   color: #FFFFFF;
   font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -553,21 +634,37 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c8 {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  text-align: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: #FFFFFF;
-  color: #2C0230;
+  color: #000000;
 }
 
 .c8:hover {
-  background-color: #918791;
-  color: #2C0230;
+  background-color: #969598;
+  color: #000000;
 }
 
 .c0 {
@@ -580,7 +677,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #6F3AAB;
 }
 
 .c0 iframe {
@@ -612,8 +709,13 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
   .c0 {
-    height: calc(100vh - 90px);
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -622,6 +724,14 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
+    min-height: calc(100vh - 5.625rem);
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -633,7 +743,7 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
 }
 
@@ -660,12 +770,19 @@ exports[`renders Single Message with full width correctly 1`] = `
   .c1 {
     height: auto;
     width: 100%;
+    min-height: 500px;
   }
 }
 
 @media (min-width:740px) {
   .c1 {
     padding-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 img {
+    position: absolute;
   }
 }
 
@@ -732,6 +849,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 exports[`renders Single Message with full width image and no text correctly 1`] = `
 .c3 {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -753,7 +871,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #6F3AAB;
 }
 
 .c0 iframe {
@@ -780,7 +898,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 @media (min-width:740px) {
   .c0 {
-    height: calc(100vh - 90px);
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -788,15 +905,34 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c1 {
     height: auto;
     width: 100%;
+    min-height: 500px;
   }
 }
 
 @media (min-width:740px) {
   .c1 {
     padding-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 img {
+    position: absolute;
   }
 }
 
@@ -836,8 +972,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 exports[`renders Single Message with no Image correctly 1`] = `
 .c2 {
   color: #FFFFFF;
-  font-size: 2.625rem;
+  font-size: 3rem;
+  line-height: 3rem;
   text-transform: inherit;
+  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -851,7 +989,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  background: #C180F9;
+  background: #6F3AAB;
 }
 
 .c0 iframe {
@@ -874,7 +1012,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    height: auto;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -883,6 +1020,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 @media (min-width:740px) {
   .c1 {
+    height: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -894,15 +1032,36 @@ exports[`renders Single Message with no Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 4rem;
   }
 }
 
 @media (min-width:740px) {
   .c1 {
-    width: 80%;
-    padding: calc(8rem - 2rem) 2rem;
+    width: 100%;
+    max-width: 880px;
+    padding: 4rem;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 <div

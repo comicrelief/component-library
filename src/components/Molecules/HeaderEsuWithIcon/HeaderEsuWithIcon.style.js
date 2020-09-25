@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import spacing from '../../../theme/shared/spacing';
-import EmailSignUp from '../EmailSignUp/EmailSignUp';
+import EmailSignUp from '../../Organisms/EmailSignUp/EmailSignUp';
 
 const IconWrapper = styled.div`
   width: 35px;
@@ -21,6 +21,9 @@ const EsuWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  div[aria-modal='true'] {
+    padding: ${spacing('l')};
+  }
 `;
 
 const CloseButton = styled(Icon)`
@@ -39,11 +42,19 @@ const CloseButton = styled(Icon)`
 
 const HeaderESU = styled(EmailSignUp)`
   width: 100%;
+  input {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+  }
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin-top: ${spacing('xl')};
     width: 50%;
+    input {
+      font-size: ${({ theme }) => theme.fontSize('m')};
+    }
   }
 `;
 
-export { IconWrapper, EsuWrapper, CloseButton, HeaderESU };
+export {
+  IconWrapper, EsuWrapper, CloseButton, HeaderESU
+};

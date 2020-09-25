@@ -19,6 +19,21 @@ exports[`renders correctly with Comic Relief links 1`] = `
   width: 100%;
 }
 
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,6 +71,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.facebook.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -66,6 +82,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -73,6 +94,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -83,6 +105,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -90,6 +117,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_blank"
@@ -100,6 +128,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -107,6 +140,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.instagram.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -117,6 +151,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
 </ul>
@@ -141,6 +180,21 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   width: 100%;
 }
 
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -178,6 +232,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.facebook.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -188,6 +243,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -195,6 +255,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -205,6 +266,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -212,6 +278,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_self"
@@ -222,6 +289,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -229,6 +301,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.instagram.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -239,6 +312,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
 </ul>
@@ -263,6 +341,21 @@ exports[`renders correctly with Sport Relief links 1`] = `
   width: 100%;
 }
 
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -300,6 +393,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.facebook.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -310,6 +404,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -317,6 +416,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -327,6 +427,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -334,6 +439,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_blank"
@@ -344,6 +450,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
   <li
@@ -351,6 +462,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
+      data-test="header-esu-icon"
       href="https://www.instagram.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -361,6 +473,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
         className="c3"
         src="mock.asset"
       />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
     </a>
   </li>
 </ul>

@@ -35,15 +35,13 @@ const Pagination = ({
   if (!totalPages) {
     return null;
   }
-  const getItem = (label, ariaLabel, value, disabled) => {
-    return {
-      disabled,
-      selected: currentPage === value,
-      label,
-      value,
-      ariaLabel
-    };
-  };
+  const getItem = (label, ariaLabel, value, disabled) => ({
+    disabled,
+    selected: currentPage === value,
+    label,
+    value,
+    ariaLabel
+  });
   let items = [];
   if (showFirst) {
     items.push(getItem(firstLabel, firstAriaLabel, 1, currentPage === 1));
@@ -64,9 +62,7 @@ const Pagination = ({
     items.push(getItem(moreLabel, moreAriaLabel, -1, true));
   }
   items = items.concat(
-    pages.map(value =>
-      getItem(getPageLabel(value), getPageAriaLabel(value), value, false)
-    )
+    pages.map(value => getItem(getPageLabel(value), getPageAriaLabel(value), value, false))
   );
   if (showMore && pages[pages.length - 1] < totalPages) {
     items.push(getItem(moreLabel, moreAriaLabel, -2, true));

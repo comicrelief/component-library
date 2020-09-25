@@ -7,9 +7,8 @@ import Text from '../Text/Text';
 /**
  * Input radio component
  */
-const StyledInput = styled.input`
-  background-color: ${({ color, theme }) =>
-    color ? theme.color(color) : theme.color('white')};
+const StyledRadioInput = styled.input`
+  background-color: ${({ color, theme }) => (color ? theme.color(color) : theme.color('white'))};
   font-size: ${({ theme }) => theme.fontSize('sm')};
   z-index: 1;
   top: 0;
@@ -58,21 +57,22 @@ const Label = styled.label`
   position: relative;
 `;
 
-const RadioButton = ({ label, name, value, ...rest }) => {
-  return (
-    <Label htmlFor={label.toLowerCase()}>
-      <StyledInput
-        type="radio"
-        {...rest}
-        name={name}
-        value={value}
-        id={value}
-      />
-      <span />
-      <Text weight="bold">{label}</Text>
-    </Label>
-  );
-};
+const RadioButton = React.forwardRef(({
+  label, name, value, ...rest
+}, ref) => (
+  <Label htmlFor={value}>
+    <StyledRadioInput
+      type="radio"
+      {...rest}
+      name={name}
+      value={value}
+      id={value}
+      ref={ref}
+    />
+    <span />
+    <Text weight="bold">{label}</Text>
+  </Label>
+));
 
 RadioButton.propTypes = {
   name: PropTypes.string.isRequired,

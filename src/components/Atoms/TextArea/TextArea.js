@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import alertIcon from './assets/error-alert-icon.png';
+import ErrorText from '../ErrorText/ErrorText';
 
 /**
  * Textarea component
  */
-const StyledInput = styled.textarea`
+const StyledTextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   margin: 10px 0;
@@ -18,8 +18,7 @@ const StyledInput = styled.textarea`
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid;
   border-radius: 0;
-  border-color: ${({ theme, error }) =>
-    !error ? theme.color('black') : theme.color('red')};
+  border-color: ${({ theme, error }) => (!error ? theme.color('black') : theme.color('red'))};
   box-shadow: none;
   appearance: none;
   color: ${({ theme }) => theme.color('black')};
@@ -72,38 +71,20 @@ const Label = styled.label.attrs(({ id }) => ({
   flex-direction: column;
 `;
 
-/**
- * Text error component
- */
-const ErrorText = styled(Text)`
-  color: red;
-  font-weight: ${({ weight }) => weight};
-  :before {
-    position: relative;
-    content: '';
-    display: inline-block;
-    top: 2px;
-    vertical-align: middle;
-    margin-right: 6px;
-    background: url(${alertIcon}) left 0/100% no-repeat;
-    width: 18px;
-    height: 19px;
-    display: inline-block;
-    vertical-align: top;
-    color: ${({ theme }) => theme.color('red')};
-  }
-`;
-
-const TextArea = ({ id, label, errorMsg, ...rest }) => {
-  const error = errorMsg && errorMsg.length > 0;
-  return (
-    <Label>
-      <Text weight="bold">{label}</Text>
-      <StyledInput {...rest} error={error ? 1 : 0} aria-describedby={id} />
-      {error && <ErrorText size="sm">{errorMsg}</ErrorText>}
-    </Label>
-  );
-};
+const TextArea = React.forwardRef(({
+  id, label, errorMsg, ...rest
+}, ref) => (
+  <Label>
+    <Text weight="bold">{label}</Text>
+    <StyledTextArea
+      {...rest}
+      error={!!errorMsg}
+      aria-describedby={id}
+      ref={ref}
+    />
+    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+  </Label>
+));
 
 TextArea.propTypes = {
   name: PropTypes.string.isRequired,

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  color: #E52630;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c1 {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.c1:before {
+  position: relative;
+  content: '';
+  top: 2px;
+  margin-right: 6px;
+  background: url(mock.asset) left 0/100% no-repeat;
+  width: 18px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: top;
+  color: #E52630;
+}
+
+<span
+  className="c0"
+  color="red"
+  size="sm"
+>
+  <span
+    className="c1"
+  >
+    This is an error
+  </span>
+</span>
+`;

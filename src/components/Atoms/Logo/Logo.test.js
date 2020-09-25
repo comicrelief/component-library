@@ -9,36 +9,33 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
       object-fit: cover;
-      width: auto;
+      width: 100%;
       display: block;
       height: auto;
+      margin-right: 1rem;
     }
 
     .c0 {
       display: inline-block;
       z-index: 3;
       width: 50px;
-      height: 50px;
       -webkit-transform: rotate(-14deg);
       -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
     }
 
-    @media (min-width:740px) {
+    @media (min-width:1150px) {
       .c0 {
         width: 60px;
-        height: 60px;
       }
     }
 
     <div
-      aria-label="logo"
       className="c0"
       rotate={1}
     >
       <img
         alt="Comic Relief logo"
-        aria-label="logo"
         className="c1"
         src="mock.asset"
       />

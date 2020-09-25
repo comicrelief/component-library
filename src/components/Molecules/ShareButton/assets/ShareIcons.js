@@ -1,6 +1,6 @@
 /* To move */
-import Facebook from './fb--share.svg';
-import Twitter from './twitter--share.svg';
+import Facebook from './fbShare.svg';
+import Twitter from './twitterShare.svg';
 
 /* To move */
 const ShareIcons = {

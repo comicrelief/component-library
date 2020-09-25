@@ -6,14 +6,17 @@ import PropTypes from 'prop-types';
 export const BaseText = styled.span`
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
+  line-height: ${({ size, theme }) => theme.fontSize(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
-  font-family: ${({ family, theme }) =>
-    family ? theme.fontFamilies(family) : 'inherit'};
-  ${({ size, theme }) =>
-    size === 'super'
-      ? css`
+  ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
+  font-family: ${({ family, theme }) => (family
+    ? theme.fontFamilies(family)
+    : theme.fontFamilies(theme.font.regular))};
+  ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
+  ${({ size, theme }) => (size === 'super'
+    ? css`
           font-size: ${theme.fontSize('xxl')};
           line-height: 3rem;
           @media ${theme.breakpoint('small')} {
@@ -27,20 +30,22 @@ export const BaseText = styled.span`
             margin-bottom: 2rem;
           }
         `
-      : null};
+    : null)};
 `;
 
 /** Text renders different elements based on the `tag` prop
  *  Weight is checked for existence to prevent overriding the tag's css
  */
-const Text = ({ tag, children, height, weight, family, ...rest }) => (
+const Text = ({
+  tag, children, height, weight, family, ...rest
+}) => (
   <BaseText {...rest} as={tag} height={height} weight={weight} family={family}>
     {children}
   </BaseText>
 );
 
 Text.defaultProps = {
-  family: 'Montserrat',
+  family: null,
   tag: 'span',
   weight: undefined,
   height: undefined,
