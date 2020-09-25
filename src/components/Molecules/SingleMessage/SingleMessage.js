@@ -46,6 +46,9 @@ const SingleMessage = ({
 
   const thisRef = useRef(null);
 
+  // Assume true, updated accordingly useEffect
+  const [hasObjectFit, setHasObjectFit] = useState(true);
+
   const isIOS = typeof navigator === 'object'
     ? /iPad|iPhone|iPod/.test(navigator.userAgent)
         && !window.MSStream
@@ -96,6 +99,11 @@ const SingleMessage = ({
     }
   }, [hasVideo, isInitialised, uniqueID, videoID, onPlay]);
 
+  useEffect(() => {
+    if('objectFit' in document.documentElement.style === false) setHasObjectFit(false);
+    else { console.log('objectfit supported');}
+  }, []);
+
   const handlePlay = thisUniqueID => {
     setonPlay(true);
     // Trigger play and update video state
@@ -121,6 +129,8 @@ const SingleMessage = ({
 
     return thisID;
   };
+
+  const objectFitClass = hasObjectFit ? 'objectFit' : 'noObjectFit'
 
   return (
     // Creates namespaced UUIDs for each row
@@ -161,6 +171,7 @@ const SingleMessage = ({
                     hasVideo={hasVideo}
                     fullImage={fullImage}
                     landscapeVideo={landscapeVideo}
+                    className={objectFitClass}
                   >
                     <Picture
                       alt={imageAltText}
@@ -170,6 +181,7 @@ const SingleMessage = ({
                       objectFit="cover"
                       width="100%"
                       height="100%"
+                      className={objectFitClass}
                     />
                   </Image>
                 ) : null}
@@ -183,6 +195,7 @@ const SingleMessage = ({
                       objectFit="cover"
                       width="100%"
                       height="100%"
+                      className={objectFitClass}
                     />
                   </Image>
                 ) : null}

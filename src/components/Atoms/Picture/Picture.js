@@ -13,6 +13,15 @@ const Wrapper = styled.div`
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
+
+  &.noObjectFit img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const Image = styled.img`
@@ -36,6 +45,7 @@ const Picture = ({
   imageLow,
   ...rest
 }) => {
+
   if (!images) {
     return (
       <Wrapper height={height} width={width} {...rest}>
@@ -46,7 +56,7 @@ const Picture = ({
           objectFit={objectFit}
           data-src={image}
           className="lazyload"
-        />
+          />
       </Wrapper>
     );
   }
@@ -65,7 +75,7 @@ const Picture = ({
         data-sizes="auto"
         data-lowsrc={imageLow}
         className="lazyload"
-      />
+        />
     </Wrapper>
   );
 };
