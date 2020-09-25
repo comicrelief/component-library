@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import Header from "./Header";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
+import Header from './Header';
 
-import data from "./data/data";
-import Link from "../../Atoms/Link/Link";
+import data from './data/data';
+import Link from '../../Atoms/Link/Link';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <Header
       navItems={data}

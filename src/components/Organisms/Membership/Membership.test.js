@@ -1,12 +1,12 @@
-import React from "react";
-import "jest-styled-components";
+import React from 'react';
+import 'jest-styled-components';
 
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import Membership from "./Membership";
-import pictures from "../../../styleguide/data/data";
-import data from "./dev-data/data";
+import renderWithTheme from '../../../hoc/shallowWithTheme';
+import Membership from './Membership';
+import pictures from '../../../styleguide/data/data';
+import data from './dev-data/data';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
