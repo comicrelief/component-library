@@ -19,6 +19,7 @@ exports[`renders correctly in minimalist form 1`] = `
 .c4 {
   background-image: url(null);
   background-size: cover;
+  background-position: center;
   position: relative;
   display: block;
   width: 100%;
@@ -196,6 +197,7 @@ exports[`renders correctly with copy 1`] = `
 .c4 {
   background-image: url(null);
   background-size: cover;
+  background-position: center;
   position: relative;
   display: block;
   width: 100%;
@@ -371,6 +373,7 @@ exports[`renders correctly with date 1`] = `
 .c4 {
   background-image: url(null);
   background-size: cover;
+  background-position: center;
   position: relative;
   display: block;
   width: 100%;
@@ -540,6 +543,7 @@ exports[`renders correctly with date and type 1`] = `
 .c4 {
   background-image: url(null);
   background-size: cover;
+  background-position: center;
   position: relative;
   display: block;
   width: 100%;
