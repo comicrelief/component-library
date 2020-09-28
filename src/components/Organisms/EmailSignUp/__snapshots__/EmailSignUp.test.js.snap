@@ -314,14 +314,13 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c10 {
+.c11 {
   font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
   padding: 1rem 1.5rem;
-  font-size: 1.25rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -331,26 +330,26 @@ exports[`renders correctly 1`] = `
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
-  margin-top: 0.5rem;
+  font-size: inherit;
 }
 
-.c10:focus {
+.c11:focus {
   border: 1px solid #666;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c11:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c10:focus::-moz-placeholder {
+.c11:focus::-moz-placeholder {
   color: #666;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c11:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c10:focus::placeholder {
+.c11:focus::placeholder {
   color: #666;
 }
 
@@ -381,6 +380,12 @@ exports[`renders correctly 1`] = `
   width: 1px;
 }
 
+.c10 {
+  margin-top: 0.5rem;
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c4 {
   text-align: left;
 }
@@ -406,18 +411,18 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c11 {
+.c12 {
   margin-top: 1rem;
 }
 
-.c11 input {
+.c12 input {
   text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -428,12 +433,12 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c13 p {
+.c14 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c13 p a {
+.c14 p a {
   font-size: 1rem;
 }
 
@@ -456,7 +461,7 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c12 {
+.c13 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -468,27 +473,27 @@ exports[`renders correctly 1`] = `
   border-radius: 100px;
 }
 
-.c12:active,
-.c12:focus,
-.c12:hover {
+.c13:active,
+.c13:focus,
+.c13:hover {
   background-color: #961D35;
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c11 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c11 input {
+  .c12 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c12 {
+  .c13 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -532,23 +537,28 @@ exports[`renders correctly 1`] = `
       >
         email
       </span>
-      <input
-        aria-label="Email address"
+      <div
         className="c10"
-        id="email"
-        name="email"
-        onChange={[Function]}
-        placeholder="example@youremail.com"
-        type="email"
-        value=""
-      />
+      >
+        
+        <input
+          aria-label="Email address"
+          className="c11"
+          id="email"
+          name="email"
+          onChange={[Function]}
+          placeholder="example@youremail.com"
+          type="email"
+          value=""
+        />
+      </div>
       
     </label>
     <div
-      className="c11"
+      className="c12"
     >
       <input
-        className="c12"
+        className="c13"
         color="teal"
         data-test="subscribe-button"
         onClick={[Function]}
@@ -558,7 +568,7 @@ exports[`renders correctly 1`] = `
     </div>
   </form>
   <div
-    className="c13"
+    className="c14"
   >
     <div
       className="c4"
