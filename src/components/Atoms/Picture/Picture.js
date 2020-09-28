@@ -44,7 +44,7 @@ const Picture = ({
     if ('objectFit' in document.documentElement.style === false) {
       setObjFit(false);
     }
-  }, [document.documentElement.style]);
+  }, [document]);
 
   if (!images) {
     return (
