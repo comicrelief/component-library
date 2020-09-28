@@ -43,7 +43,6 @@
   <p>(This example also ensures there are two decimal places onBlur)</p>
   <Input
     name="price"
-    placeholder=""
     type="number"
     label="Price"
     errorMsg=""
