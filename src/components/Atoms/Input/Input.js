@@ -6,39 +6,44 @@ import Text from '../Text/Text';
 import ErrorText from '../ErrorText/ErrorText';
 import hideVisually from '../../../theme/shared/hideVisually';
 import spacing from '../../../theme/shared/spacing';
+import zIndex from '../../../theme/shared/zIndex';
+
+// This seems to get a decent approximation of the necessary width (without resorting to measuring
+//  the element with JS.)
+const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
 /**
  * Input component
  */
-const InputField = styled.input`
+const InputField = styled.input`${({ theme, error, prefixLength }) => `
   font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
   padding: ${spacing('md')} ${spacing('m')};
-  font-size: ${({ theme }) => theme.fontSize('m')};
-  background-color: ${({ theme }) => theme.color('grey_light')};
+  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
+  background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-color: ${({ theme, error }) => (!error ? theme.color('grey_medium') : theme.color('red'))};
+  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme }) => theme.color('black')};
+  color: ${theme.color('black')};
   border-radius: 0.5rem;
-  margin-top: ${spacing('sm')};
+  font-size: inherit;
 
   :focus {
-    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+    border: 1px solid ${theme.color('grey_for_forms')};
   }
 
   :focus::placeholder {
-    color: ${({ theme }) => theme.color('grey_for_forms')};
+    color: ${theme.color('grey_for_forms')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${theme.breakpoint('small')} {
     max-width: 290px;
   }
-`;
+`}`;
 
 /**
  * Label component
@@ -57,6 +62,28 @@ const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
 `;
 
+const InputWrapper = styled.div`
+  margin-top: ${spacing('sm')};
+  position: relative;
+  font-size: ${({ theme }) => theme.fontSize('m')};
+`;
+
+const Prefix = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  ${zIndex('low')}
+  display: flex;
+  height: 100%;
+  width: ${({ length }) => getPrefixWidth(length)};
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.color('grey_dark')};
+  font-weight: 700;
+  font-size: inherit;
+  margin-left: 2px; // Just doesn't look quite right without this.
+`;
+
 const Input = React.forwardRef(
   (
     {
@@ -68,6 +95,7 @@ const Input = React.forwardRef(
       hasAria,
       className,
       labelProps,
+      prefix,
       ...rest
     },
     ref
@@ -76,14 +104,18 @@ const Input = React.forwardRef(
       <TextLabel showLabel={showLabel} weight="bold">
         {label}
       </TextLabel>
-      <InputField
-        id={id}
-        type={type}
-        {...rest}
-        error={!!errorMsg}
-        aria-describedby={hasAria ? id : undefined}
-        ref={ref}
-      />
+      <InputWrapper>
+        {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
+        <InputField
+          id={id}
+          type={type}
+          {...rest}
+          error={!!errorMsg}
+          aria-describedby={hasAria ? id : undefined}
+          ref={ref}
+          prefixLength={prefix.length}
+        />
+      </InputWrapper>
       {errorMsg && (
         <ErrorText size="sm" data-test="error-message">
           {errorMsg}
@@ -104,7 +136,8 @@ Input.propTypes = {
   /** text, email, number, date, serach, tel, url, password */
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
-  className: PropTypes.string
+  className: PropTypes.string,
+  prefix: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -113,7 +146,8 @@ Input.defaultProps = {
   placeholder: '',
   errorMsg: '',
   labelProps: {},
-  className: ''
+  className: '',
+  prefix: ''
 };
 
 export default Input;
