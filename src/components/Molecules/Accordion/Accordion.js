@@ -15,22 +15,21 @@ const Container = styled.div`
 
 const ChevAnima = keyframes`
  0% { margin-top: 0rem; }
- 50% { margin-top: 0.2rem; }
+ 50% { margin-top: 0.5rem; }
  100% { margin-top: 0rem; }
 `;
 
 const Button = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   background: none;
-  border: 2px solid ${({ theme }) => theme.color('red')};
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.color('red')};
+  border: none;
   transition: bottom 0.1s linear;
   &:focus,
   &:hover {
     outline: none;
-    border: 2px solid ${({ theme }) => theme.color('red_dark')};
     > div {
       animation-name: ${ChevAnima};
       animation-duration: 0.4s;
@@ -45,9 +44,12 @@ const Icon = styled.div`
 `;
 
 const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 const Copy = styled.div`
@@ -78,10 +80,10 @@ const Accordion = ({ children, title }) => {
   return (
     <Container>
       <Header>
-        {title}
         <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
+          {title}
           <Icon>
-            <Chevron direction={isOpen ? 'up' : 'down'} />
+            <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
           </Icon>
         </Button>
       </Header>
