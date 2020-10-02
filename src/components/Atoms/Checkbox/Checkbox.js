@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import checkBoxIcon from './assets/checkbox-white-tick.png';
+import checkBoxIcon from './assets/tick.svg';
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   font-size: ${({ theme }) => theme.fontSize('sm')};
@@ -12,30 +12,28 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   opacity: 0;
   position: absolute;
   left: 0px;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+  border: 1px solid ${({ theme }) => theme.color('grey')};
   + span {
-    margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
     background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('purple')};
+    background-color: ${({ theme }) => theme.color('red')};
+    border-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
   }
   :focus + span {
-    border-color: ${({ theme }) => theme.color('grey_for_forms')};
-    border-width: 3px;
-  }
-  :focus + span {
-    border-color: ${({ theme }) => theme.color('grey_for_forms')};
-    border-width: 3px;
+    border-color: ${({ theme }) => theme.color('red')};
+    border-width: 1px;
   }
 `;
 
