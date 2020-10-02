@@ -9,11 +9,12 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
-  ${({ objFit, image }) => !objFit && `background-image: url(${image}); background-size: cover; background-position: center;`};
-  position: relative;
+  ${({ objFit, nonObjFitImage }) => (objFit === false && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
+  ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
+  transition:none;
 `;
 
 const Image = styled.img`
@@ -23,6 +24,8 @@ const Image = styled.img`
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
+  ${({ objFit }) => objFit === false && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+  transition:none;
 `;
 
 /** Responsive Picture */
@@ -35,10 +38,11 @@ const Picture = ({
   height,
   objectFit,
   imageLow,
+  isBackgroundImage,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
-  const [objFit, setObjFit] = useState(true);
+  const [objFit, setObjFit] = useState(true); // TO-DO: set this debug back to true
 
   useEffect(() => {
     if ('objectFit' in document.documentElement.style === false) {
@@ -46,9 +50,20 @@ const Picture = ({
     }
   }, [document]);
 
+  // Determine which image will be used for the nonObjectFit fallback
+  const nonObjFitImage = image || images.substring(0, images.indexOf('?'));
+
   if (!images) {
     return (
-      <Wrapper height={height} width={width} {...rest} image={image}>
+      <Wrapper
+        height={height}
+        width={width}
+        image={image}
+        images={images}
+        isBackgroundImage={isBackgroundImage}
+        nonObjFitImage={nonObjFitImage}
+        {...rest}
+      >
         <Image
           alt={alt}
           height={height}
@@ -65,26 +80,27 @@ const Picture = ({
     <Wrapper
       height={height}
       width={width}
-      {...rest}
       image={image}
+      images={images}
       objFit={objFit}
       className="lazyload"
+      isBackgroundImage={isBackgroundImage}
+      nonObjFitImage={nonObjFitImage}
+      {...rest}
     >
-      {objFit && (
-        <Image
-          alt={alt}
-          height={height}
-          width={width}
-          objectFit={objectFit}
-          src={image}
-          srcSet={IMAGE_FALLBACK}
-          data-src={image}
-          data-srcset={images}
-          data-sizes="auto"
-          data-lowsrc={imageLow}
-          className="lazyload"
-        />
-      )}
+      <Image
+        alt={alt}
+        height={height}
+        width={width}
+        objectFit={objectFit}
+        src={image}
+        srcSet={IMAGE_FALLBACK}
+        data-src={image}
+        data-srcset={images}
+        data-sizes="auto"
+        data-lowsrc={imageLow}
+        className="lazyload"
+      />
     </Wrapper>
   );
 };
@@ -102,7 +118,8 @@ Picture.propTypes = {
     'scale-down'
   ]),
   width: PropTypes.string,
-  height: PropTypes.string
+  height: PropTypes.string,
+  isBackgroundImage: PropTypes.bool
 };
 
 Picture.defaultProps = {
@@ -112,7 +129,8 @@ Picture.defaultProps = {
   objectFit: 'none',
   width: '100%',
   height: 'auto',
-  alt: ''
+  alt: '',
+  isBackgroundImage: false
 };
 
 export default withTheme(Picture);
