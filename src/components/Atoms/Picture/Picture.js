@@ -9,12 +9,13 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
-  ${({ objFit, nonObjFitImage }) => (objFit === false && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
+  ${({ objFitState, nonObjFitImage }) => (objFitState === false && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
+  position: relative;
   ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
-`;
+  `;
 
 const Image = styled.img`
   width: ${props => (props.width ? props.width : '100%')};
@@ -23,7 +24,7 @@ const Image = styled.img`
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
-  ${({ objFit }) => objFit === false && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+  ${({ objFitState }) => objFitState === false && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 `;
 
 /** Responsive Picture */
@@ -40,12 +41,12 @@ const Picture = ({
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
-  const [objFit, setObjFit] = useState(true); // TO-DO: set this debug back to true
+  const [objFitState, setObjFitState] = useState(true);
   let nonObjFitImage = null;
 
   useEffect(() => {
     if ('objectFit' in document.documentElement.style === false) {
-      setObjFit(false);
+      setObjFitState(false);
     }
   }, [document]);
 
@@ -65,6 +66,7 @@ const Picture = ({
         images={images}
         isBackgroundImage={isBackgroundImage}
         nonObjFitImage={nonObjFitImage}
+        objFitState={objFitState}
         {...rest}
       >
         <Image
@@ -74,6 +76,7 @@ const Picture = ({
           objectFit={objectFit}
           data-src={image}
           className="lazyload"
+          objFitState={objFitState}
         />
       </Wrapper>
     );
@@ -85,10 +88,11 @@ const Picture = ({
       width={width}
       image={image}
       images={images}
-      objFit={objFit}
+      setObjFitState={setObjFitState}
       className="lazyload"
       isBackgroundImage={isBackgroundImage}
       nonObjFitImage={nonObjFitImage}
+      objFitState={objFitState}
       {...rest}
     >
       <Image
@@ -103,6 +107,8 @@ const Picture = ({
         data-sizes="auto"
         data-lowsrc={imageLow}
         className="lazyload"
+        objFitState={objFitState}
+
       />
     </Wrapper>
   );
