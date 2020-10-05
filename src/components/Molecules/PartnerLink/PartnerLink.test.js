@@ -27,6 +27,7 @@ it('renders correctly', () => {
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
     }
 
     .c3 {

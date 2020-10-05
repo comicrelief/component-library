@@ -20,6 +20,7 @@ exports[`renders correctly in minimalist form 1`] = `
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
@@ -194,6 +195,7 @@ exports[`renders correctly with copy 1`] = `
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
@@ -366,6 +368,7 @@ exports[`renders correctly with date 1`] = `
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
@@ -532,6 +535,7 @@ exports[`renders correctly with date and type 1`] = `
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {

@@ -1,10 +1,10 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Picture from './Picture';
-import data from '../../../styleguide/data/data';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Picture from "./Picture";
+import data from "../../../styleguide/data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Picture images={data.images} image={data.image} alt="Test images" />
   ).toJSON();
@@ -14,6 +14,7 @@ it('renders correctly', () => {
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
     }
 
     .c1 {
@@ -44,7 +45,7 @@ it('renders correctly', () => {
   `);
 });
 
-it('renders correctly with custom props', () => {
+it("renders correctly with custom props", () => {
   const tree = renderWithTheme(
     <Picture
       images={data.images}
@@ -61,6 +62,7 @@ it('renders correctly with custom props', () => {
       display: block;
       width: 200px;
       height: 100px;
+      position: relative;
     }
 
     .c1 {

@@ -46,6 +46,7 @@ it('renders article teaser correctly', () => {
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
     }
 
     .c6 {
@@ -297,6 +298,7 @@ it('renders press realese correctly', () => {
       display: block;
       width: 80px;
       height: 80px;
+      position: relative;
     }
 
     .c6 {
