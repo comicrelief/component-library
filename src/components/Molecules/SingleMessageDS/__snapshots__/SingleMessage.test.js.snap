@@ -20,7 +20,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c3 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;

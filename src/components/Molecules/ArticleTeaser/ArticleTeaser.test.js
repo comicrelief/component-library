@@ -1,10 +1,10 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleTeaser from './ArticleTeaser';
-import data from '../../../styleguide/data/data';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ArticleTeaser from "./ArticleTeaser";
+import data from "../../../styleguide/data/data";
 
-it('renders article teaser correctly', () => {
+it("renders article teaser correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -20,7 +20,7 @@ it('renders article teaser correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c7 {
+    .c8 {
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -29,7 +29,7 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -43,13 +43,12 @@ it('renders article teaser correctly', () => {
     }
 
     .c4 {
-      position: relative;
       display: block;
       width: 100%;
       height: 100%;
     }
 
-    .c5 {
+    .c6 {
       width: 100%;
       height: 100%;
       display: block;
@@ -127,7 +126,7 @@ it('renders article teaser correctly', () => {
       border-radius: 1rem 1rem 0 0;
     }
 
-    .c6 {
+    .c7 {
       padding: 2rem;
       height: 100%;
       display: -webkit-box;
@@ -139,13 +138,20 @@ it('renders article teaser correctly', () => {
       flex-direction: column;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
     }
 
-    .c8 {
+    .c9 {
       display: block;
       margin-bottom: 1rem;
+    }
+
+    .c5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
     }
 
     @media (min-width:740px) {
@@ -185,13 +191,13 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c6 {
+      .c7 {
         width: 55%;
       }
     }
 
     @media (min-width:1024px) {
-      .c6 {
+      .c7 {
         width: 100%;
       }
     }
@@ -210,13 +216,13 @@ it('renders article teaser correctly', () => {
           className="c3"
         >
           <div
-            className="c4 lazyload"
+            className="c4 c5"
             height="100%"
             width="100%"
           >
             <img
               alt="Image's description"
-              className="c5 lazyload"
+              className="c6 lazyload"
               data-lowsrc={null}
               data-sizes="auto"
               data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -229,17 +235,17 @@ it('renders article teaser correctly', () => {
           </div>
         </div>
         <div
-          className="c6"
+          className="c7"
         >
           <span
-            className="c7 c8"
+            className="c8 c9"
             color="inherit"
             size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"
@@ -252,7 +258,7 @@ it('renders article teaser correctly', () => {
   `);
 });
 
-it('renders press realese correctly', () => {
+it("renders press realese correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -265,7 +271,7 @@ it('renders press realese correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c7 {
+    .c8 {
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -274,7 +280,7 @@ it('renders press realese correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
+    .c10 {
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -288,13 +294,12 @@ it('renders press realese correctly', () => {
     }
 
     .c4 {
-      position: relative;
       display: block;
       width: 80px;
       height: 80px;
     }
 
-    .c5 {
+    .c6 {
       width: 80px;
       height: 80px;
       display: block;
@@ -377,7 +382,7 @@ it('renders press realese correctly', () => {
       border-radius: 0;
     }
 
-    .c6 {
+    .c7 {
       padding: 2rem;
       height: 100%;
       display: -webkit-box;
@@ -389,13 +394,20 @@ it('renders press realese correctly', () => {
       flex-direction: column;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
     }
 
-    .c8 {
+    .c9 {
       display: block;
       margin-bottom: 1rem;
+    }
+
+    .c5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
     }
 
     @media (min-width:740px) {
@@ -411,7 +423,7 @@ it('renders press realese correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c6 {
+      .c7 {
         width: 100%;
       }
     }
@@ -430,13 +442,13 @@ it('renders press realese correctly', () => {
           className="c3"
         >
           <div
-            className="c4 lazyload"
+            className="c4 c5"
             height="80px"
             width="80px"
           >
             <img
               alt="Image's description"
-              className="c5 lazyload"
+              className="c6 lazyload"
               data-lowsrc="mock.asset"
               data-sizes="auto"
               data-src={null}
@@ -449,17 +461,17 @@ it('renders press realese correctly', () => {
           </div>
         </div>
         <div
-          className="c6"
+          className="c7"
         >
           <span
-            className="c7 c8"
+            className="c8 c9"
             color="inherit"
             size="xs"
           >
              01 July 2019
           </span>
           <h3
-            className="c9 c10"
+            className="c10 c11"
             color="inherit"
             height="2rem"
             size="xl"

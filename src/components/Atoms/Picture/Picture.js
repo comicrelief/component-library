@@ -14,7 +14,6 @@ const Wrapper = styled.div`
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
   ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
-  transition:none;
 `;
 
 const Image = styled.img`
@@ -25,7 +24,6 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objFit }) => objFit === false && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
-  transition:none;
 `;
 
 /** Responsive Picture */
@@ -43,6 +41,7 @@ const Picture = ({
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
   const [objFit, setObjFit] = useState(true); // TO-DO: set this debug back to true
+  let nonObjFitImage = null;
 
   useEffect(() => {
     if ('objectFit' in document.documentElement.style === false) {
@@ -51,7 +50,11 @@ const Picture = ({
   }, [document]);
 
   // Determine which image will be used for the nonObjectFit fallback
-  const nonObjFitImage = image || images.substring(0, images.indexOf('?'));
+  if (image) {
+    nonObjFitImage = image;
+  } else if (images) {
+    nonObjFitImage = images.substring(0, images.indexOf('?'));
+  }
 
   if (!images) {
     return (

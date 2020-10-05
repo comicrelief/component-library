@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import PartnerLink from './PartnerLink';
-import Picture from '../../Atoms/Picture/Picture';
-import data from '../../../styleguide/data/data';
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import PartnerLink from "./PartnerLink";
+import Picture from "../../Atoms/Picture/Picture";
+import data from "../../../styleguide/data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <PartnerLink link="https://www.comicrelief.com">
       <Picture alt="test Image" imageLow={data.imageLow} images={data.images} />
@@ -24,7 +24,6 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      position: relative;
       display: block;
       width: 100%;
       height: auto;

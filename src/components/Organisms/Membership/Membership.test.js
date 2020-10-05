@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Membership from './Membership';
-import pictures from '../../../styleguide/data/data';
-import data from './dev-data/data';
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Membership from "./Membership";
+import pictures from "../../../styleguide/data/data";
+import data from "./dev-data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
@@ -25,7 +25,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c5 {
+    .c6 {
       font-size: 1.5rem;
       line-height: 1.5rem;
       text-transform: inherit;
@@ -33,7 +33,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c6 {
+    .c7 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -41,14 +41,14 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c11 {
+    .c12 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c15 {
+    .c16 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -57,7 +57,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c19 {
+    .c20 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -67,20 +67,19 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      position: relative;
       display: block;
       width: 100%;
       height: 100%;
     }
 
-    .c2 {
+    .c3 {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
     }
 
-    .c16 {
+    .c17 {
       font-weight: normal;
       position: relative;
       box-sizing: border-box;
@@ -100,27 +99,27 @@ it('renders correctly', () => {
       margin-top: 0.5rem;
     }
 
-    .c16:focus {
+    .c17:focus {
       border: 1px solid #666;
     }
 
-    .c16:focus::-webkit-input-placeholder {
+    .c17:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c16:focus::-moz-placeholder {
+    .c17:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c16:focus:-ms-input-placeholder {
+    .c17:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c16:focus::placeholder {
+    .c17:focus::placeholder {
       color: #666;
     }
 
-    .c13 {
+    .c14 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -146,53 +145,70 @@ it('renders correctly', () => {
       min-height: 100vh;
     }
 
-    .c3 {
+    .c2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+    }
+
+    .c2:before {
+      color: #FEE3CC;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0px 4rem 2rem -2rem;
+    }
+
+    .c4 {
       position: relative;
       max-width: 320px;
       text-align: center;
       margin-bottom: 50%;
     }
 
-    .c4 {
+    .c5 {
       padding: 2rem 1rem 0;
       margin-bottom: 2rem;
     }
 
-    .c7 {
+    .c8 {
       background-color: #FFFFFF;
       box-shadow: 0px 1rem 4rem rgba(0,0,0,0.3);
       height: 450px;
     }
 
-    .c8 {
+    .c9 {
       padding: 1rem;
     }
 
-    .c8 h3 {
+    .c9 h3 {
       margin-top: 1rem;
     }
 
-    .c8 input {
+    .c9 input {
       max-width: 100%;
       margin: 0;
     }
 
-    .c9 {
+    .c10 {
       padding: 0;
       margin: 0;
       border: none;
     }
 
-    .c9 >:not(:last-child):not(legend) {
+    .c10 >:not(:last-child):not(legend) {
       margin-bottom: 2rem;
     }
 
-    .c10 {
+    .c11 {
       margin: 0;
       padding: 0;
     }
 
-    .c12 {
+    .c13 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -203,22 +219,22 @@ it('renders correctly', () => {
       justify-content: space-between;
     }
 
-    .c12 label {
+    .c13 label {
       -webkit-flex: 0 0 30%;
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
-    .c12 label input {
+    .c13 label input {
       cursor: pointer;
       padding: 1rem;
     }
 
-    .c12 label:hover input {
+    .c13 label:hover input {
       border-color: #E52630;
     }
 
-    .c18 {
+    .c19 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -229,11 +245,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c20 {
+    .c21 {
       margin-right: auto;
     }
 
-    .c21 {
+    .c22 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -242,7 +258,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c21 span {
+    .c22 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -254,21 +270,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c21 input {
+    .c22 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c21 input:focus {
+    .c22 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c23 {
+    .c24 {
       line-height: 1.5;
     }
 
-    .c22 {
+    .c23 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -280,17 +296,17 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c22:active,
-    .c22:focus,
-    .c22:hover {
+    .c23:active,
+    .c23:focus,
+    .c23:hover {
       background-color: #961D35;
     }
 
-    .c14 {
+    .c15 {
       display: block;
     }
 
-    .c14 input {
+    .c15 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -301,11 +317,11 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c17 {
+    .c18 {
       display: block;
     }
 
-    .c17 input {
+    .c18 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -320,7 +336,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c16 {
+      .c17 {
         max-width: 290px;
       }
     }
@@ -345,24 +361,30 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
+      .c2 {
+        height: 100%;
+      }
 
+      .c2:before {
+        content: none;
+      }
     }
 
     @media (min-width:1024px) {
-      .c3 {
+      .c4 {
         margin: 0 8rem;
         max-width: 420px;
       }
     }
 
     @media (min-width:1024px) {
-      .c7 {
+      .c8 {
         height: 430px;
       }
     }
 
     @media (min-width:1024px) {
-      .c21 {
+      .c22 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -370,7 +392,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c22 {
+      .c23 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -382,13 +404,13 @@ it('renders correctly', () => {
       id="mship-1"
     >
       <div
-        className="c1 lazyload"
+        className="c1 c2"
         height="100%"
         width="100%"
       >
         <img
           alt="Background image"
-          className="c2 lazyload"
+          className="c3 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-src={null}
@@ -400,20 +422,20 @@ it('renders correctly', () => {
         />
       </div>
       <div
-        className="c3"
+        className="c4"
       >
         <div
-          className="c4"
+          className="c5"
         >
           <h2
-            className="c5"
+            className="c6"
             color="inherit"
             size="l"
           >
             Help someone like Jordan see a better tomorrow
           </h2>
           <p
-            className="c6"
+            className="c7"
             color="inherit"
             size="s"
           >
@@ -421,20 +443,20 @@ it('renders correctly', () => {
           </p>
         </div>
         <div
-          className="c7"
+          className="c8"
         >
           <form
-            className="c8"
+            className="c9"
             onSubmit={[Function]}
           >
             <fieldset
-              className="c9"
+              className="c10"
             >
               <legend
-                className="c10"
+                className="c11"
               >
                 <h3
-                  className="c11"
+                  className="c12"
                   color="inherit"
                   size="s"
                 >
@@ -442,14 +464,14 @@ it('renders correctly', () => {
                 </h3>
               </legend>
               <div
-                className="c12"
+                className="c13"
               >
                 <label
-                  className="c13 c14"
+                  className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box1"
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -458,7 +480,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£5"
-                    className="c16"
+                    className="c17"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
@@ -469,11 +491,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  className="c13 c17"
+                  className="c14 c18"
                   htmlFor="mship-1--moneyBuy-box2"
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -482,7 +504,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£10"
-                    className="c16"
+                    className="c17"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
@@ -493,11 +515,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  className="c13 c14"
+                  className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box3"
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -506,7 +528,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£20"
-                    className="c16"
+                    className="c17"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
@@ -518,21 +540,21 @@ it('renders correctly', () => {
                 </label>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <span
-                  className="c19 c20"
+                  className="c20 c21"
                   color="inherit"
                   size="s"
                 >
                   Other amount
                 </span>
                 <label
-                  className="c13 c21"
+                  className="c14 c22"
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
                   <span
-                    className="c15 "
+                    className="c16 "
                     color="inherit"
                     size="s"
                   >
@@ -541,7 +563,7 @@ it('renders correctly', () => {
                   <input
                     aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
-                    className="c16"
+                    className="c17"
                     id="mship-1--MoneyBuy-userInput"
                     max="20000"
                     min="1"
@@ -559,12 +581,12 @@ it('renders correctly', () => {
                 </label>
               </div>
               <input
-                className="c22"
+                className="c23"
                 type="submit"
                 value="Donate"
               />
               <p
-                className="c23"
+                className="c24"
               />
             </fieldset>
           </form>

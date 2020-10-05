@@ -43,7 +43,6 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly with no body 1`] = `
 .c2 {
-  position: relative;
   display: block;
   width: 100%;
   height: 100%;
