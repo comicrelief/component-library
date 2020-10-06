@@ -42,7 +42,6 @@ const Promo = ({
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
   copyFirst: PropTypes.bool,
-  hasOverlay: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -53,7 +52,6 @@ Promo.propTypes = {
 Promo.defaultProps = {
   backgroundColor: 'white',
   copyFirst: false,
-  hasOverlay: false,
   imageSet: null,
   imageLow: null,
   image: null,
