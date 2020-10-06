@@ -13,8 +13,7 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children,
-  hasOverlay
+  children
 }) => {
   const hasImage = imageSet || false;
 
