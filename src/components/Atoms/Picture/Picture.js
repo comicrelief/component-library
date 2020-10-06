@@ -9,7 +9,7 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
-  ${({ objFitState, nonObjFitImage }) => (objFitState === false && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
+  ${({ objFitState, nonObjFitImage }) => (!objFitState && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
   display: block;
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
@@ -23,8 +23,8 @@ const Image = styled.img`
   display: block;
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
-    || (props.objectFit === 'contain' && 'contain')};
-  ${({ objFitState }) => objFitState === false && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+    || (props.objectFit === 'contain' && 'contain')};  
+  ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 `;
 
 /** Responsive Picture */
@@ -45,7 +45,8 @@ const Picture = ({
   let nonObjFitImage = null;
 
   useEffect(() => {
-    if ('objectFit' in document.documentElement.style === false) {
+    // Once document is available, determine if this browser supports object-fit
+    if ('objectFit' in document.documentElement.style !== false) { // TO-DO: SET BACK TO === FALSE!
       setObjFitState(false);
     }
   }, [document]);
@@ -75,7 +76,7 @@ const Picture = ({
           width={width}
           objectFit={objectFit}
           data-src={image}
-          className="lazyload"
+          className={`lazyload ${!objFitState && 'no-object-fit'}`}
           objFitState={objFitState}
         />
       </Wrapper>
@@ -106,9 +107,8 @@ const Picture = ({
         data-srcset={images}
         data-sizes="auto"
         data-lowsrc={imageLow}
-        className="lazyload"
+        className={`lazyload ${!objFitState && 'no-object-fit'}`}
         objFitState={objFitState}
-
       />
     </Wrapper>
   );
