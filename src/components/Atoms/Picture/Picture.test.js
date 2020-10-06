@@ -31,7 +31,7 @@ it('renders correctly', () => {
     >
       <img
         alt="Test images"
-        className="c1 lazyload"
+        className="c1 lazyload false"
         data-lowsrc={null}
         data-sizes="auto"
         data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -59,6 +59,9 @@ it('renders correctly with custom props', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
+      background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
+      background-size: cover;
+      background-position: center;
       display: block;
       width: 200px;
       height: 100px;
@@ -70,6 +73,7 @@ it('renders correctly with custom props', () => {
       height: 100px;
       display: block;
       object-fit: cover;
+      visibility: hidden;
     }
 
     <div
@@ -79,7 +83,7 @@ it('renders correctly with custom props', () => {
     >
       <img
         alt="Test images"
-        className="c1 lazyload"
+        className="c1 lazyload no-object-fit"
         data-lowsrc={null}
         data-sizes="auto"
         data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"

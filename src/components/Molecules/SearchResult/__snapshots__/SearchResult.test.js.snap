@@ -137,7 +137,7 @@ exports[`renders correctly in minimalist form 1`] = `
       >
         <img
           alt="Image's description"
-          className="c5 lazyload"
+          className="c5 lazyload false"
           data-src={null}
           height="auto"
           width="100%"
@@ -203,6 +203,7 @@ exports[`renders correctly with copy 1`] = `
   height: auto;
   display: block;
   object-fit: cover;
+  visibility: hidden;
 }
 
 .c1 {
@@ -312,7 +313,7 @@ exports[`renders correctly with copy 1`] = `
       >
         <img
           alt="Image's description"
-          className="c5 lazyload"
+          className="c5 lazyload no-object-fit"
           data-src={null}
           height="auto"
           width="100%"
@@ -485,7 +486,7 @@ exports[`renders correctly with date 1`] = `
       >
         <img
           alt="Image's description"
-          className="c5 lazyload"
+          className="c5 lazyload false"
           data-src={null}
           height="auto"
           width="100%"
@@ -543,6 +544,7 @@ exports[`renders correctly with date and type 1`] = `
   height: auto;
   display: block;
   object-fit: cover;
+  visibility: hidden;
 }
 
 .c1 {
@@ -652,7 +654,7 @@ exports[`renders correctly with date and type 1`] = `
       >
         <img
           alt="Image's description"
-          className="c5 lazyload"
+          className="c5 lazyload no-object-fit"
           data-src={null}
           height="auto"
           width="100%"
