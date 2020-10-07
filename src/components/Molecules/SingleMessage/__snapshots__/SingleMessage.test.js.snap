@@ -400,9 +400,6 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 .c3 {
-  background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-  background-size: cover;
-  background-position: center;
   display: block;
   width: 100%;
   height: 100%;
@@ -414,7 +411,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   height: 100%;
   display: block;
   object-fit: cover;
-  visibility: hidden;
 }
 
 .c0 {
@@ -556,7 +552,7 @@ exports[`renders Single Message with double image correctly 1`] = `
       >
         <img
           alt=""
-          className="c4 lazyload no-object-fit"
+          className="c4 lazyload false"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -578,7 +574,7 @@ exports[`renders Single Message with double image correctly 1`] = `
       >
         <img
           alt=""
-          className="c4 lazyload no-object-fit"
+          className="c4 lazyload false"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -852,9 +848,6 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 exports[`renders Single Message with full width image and no text correctly 1`] = `
 .c3 {
-  background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-  background-size: cover;
-  background-position: center;
   display: block;
   width: 100%;
   height: 100%;
@@ -866,7 +859,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   height: 100%;
   display: block;
   object-fit: cover;
-  visibility: hidden;
 }
 
 .c0 {
@@ -961,7 +953,7 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
       >
         <img
           alt=""
-          className="c4 lazyload no-object-fit"
+          className="c4 lazyload false"
           data-lowsrc={null}
           data-sizes="auto"
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"

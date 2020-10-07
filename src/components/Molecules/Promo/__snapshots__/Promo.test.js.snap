@@ -259,9 +259,6 @@ exports[`renders Promo with overlay correctly 1`] = `
 }
 
 .c2 {
-  background-image: url(../promo.jpg);
-  background-size: cover;
-  background-position: center;
   display: block;
   width: 100%;
   height: 100%;
@@ -273,7 +270,6 @@ exports[`renders Promo with overlay correctly 1`] = `
   height: 100%;
   display: block;
   object-fit: cover;
-  visibility: hidden;
 }
 
 .c8 {
@@ -432,7 +428,7 @@ exports[`renders Promo with overlay correctly 1`] = `
     >
       <img
         alt=""
-        className="c3 lazyload no-object-fit"
+        className="c3 lazyload false"
         data-lowsrc={null}
         data-sizes="auto"
         data-src="../promo.jpg"

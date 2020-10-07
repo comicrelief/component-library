@@ -295,9 +295,6 @@ it('renders press realese correctly', () => {
     }
 
     .c4 {
-      background-image: url(mock.asset);
-      background-size: cover;
-      background-position: center;
       display: block;
       width: 80px;
       height: 80px;
@@ -309,7 +306,6 @@ it('renders press realese correctly', () => {
       height: 80px;
       display: block;
       object-fit: cover;
-      visibility: hidden;
     }
 
     .c1 {
@@ -454,7 +450,7 @@ it('renders press realese correctly', () => {
           >
             <img
               alt="Image's description"
-              className="c6 lazyload no-object-fit"
+              className="c6 lazyload false"
               data-lowsrc="mock.asset"
               data-sizes="auto"
               data-src="mock.asset"
