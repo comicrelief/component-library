@@ -127,7 +127,7 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c1 img {
-  object-position: left;
+  object-position: center;
 }
 
 @media (min-width:740px) {
@@ -359,18 +359,8 @@ exports[`renders Promo with overlay correctly 1`] = `
   position: absolute;
 }
 
-.c1:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.4);
-}
-
 .c1 img {
-  object-position: left;
+  object-position: center;
 }
 
 @media (min-width:740px) {

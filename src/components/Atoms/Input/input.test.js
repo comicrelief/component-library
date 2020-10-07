@@ -25,14 +25,13 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c2 {
+    .c3 {
       font-weight: normal;
       position: relative;
       box-sizing: border-box;
       width: 100%;
       height: 48px;
       padding: 1rem 1.5rem;
-      font-size: 1.25rem;
       background-color: #F4F3F5;
       border: 1px solid;
       border-color: #E1E2E3;
@@ -42,26 +41,26 @@ it('renders correctly', () => {
       appearance: none;
       color: #000000;
       border-radius: 0.5rem;
-      margin-top: 0.5rem;
+      font-size: inherit;
     }
 
-    .c2:focus {
+    .c3:focus {
       border: 1px solid #666;
     }
 
-    .c2:focus::-webkit-input-placeholder {
+    .c3:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c2:focus::-moz-placeholder {
+    .c3:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c2:focus:-ms-input-placeholder {
+    .c3:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c2:focus::placeholder {
+    .c3:focus::placeholder {
       color: #666;
     }
 
@@ -77,8 +76,14 @@ it('renders correctly', () => {
       color: #5C5C5E;
     }
 
+    .c2 {
+      margin-top: 0.5rem;
+      position: relative;
+      font-size: 1.25rem;
+    }
+
     @media (min-width:740px) {
-      .c2 {
+      .c3 {
         max-width: 290px;
       }
     }
@@ -94,14 +99,19 @@ it('renders correctly', () => {
       >
         Label
       </span>
-      <input
-        aria-describedby="Accessibility info go here"
+      <div
         className="c2"
-        id="Accessibility info go here"
-        name="fullname"
-        placeholder="This is the hint text"
-        type="text"
-      />
+      >
+        
+        <input
+          aria-describedby="Accessibility info go here"
+          className="c3"
+          id="Accessibility info go here"
+          name="fullname"
+          placeholder="This is the hint text"
+          type="text"
+        />
+      </div>
       
     </label>
   `);

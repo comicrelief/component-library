@@ -28,35 +28,32 @@ it('renders correctly', () => {
       opacity: 0;
       position: absolute;
       left: 0px;
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       margin: 0;
-      border: 1px solid #666;
+      border: 1px solid #969598;
     }
 
     .c1 + span {
-      margin-right: 5px;
-      width: 30px;
-      height: 30px;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
       background-color: #FFFFFF;
-      border: 1px solid #666;
+      border: 1px solid #969598;
       float: left;
     }
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #6F3AAB;
+      background-color: #E52630;
+      border-color: #E52630;
       background-size: contain;
     }
 
     .c1:focus + span {
-      border-color: #666;
-      border-width: 3px;
-    }
-
-    .c1:focus + span {
-      border-color: #666;
-      border-width: 3px;
+      border-color: #E52630;
+      border-width: 1px;
     }
 
     .c0 {
@@ -104,35 +101,32 @@ it('renders correctly', () => {
       opacity: 0;
       position: absolute;
       left: 0px;
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       margin: 0;
-      border: 1px solid #666;
+      border: 1px solid #969598;
     }
 
     .c1 + span {
-      margin-right: 5px;
-      width: 30px;
-      height: 30px;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
       background-color: #FFFFFF;
-      border: 1px solid #666;
+      border: 1px solid #969598;
       float: left;
     }
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #6F3AAB;
+      background-color: #E52630;
+      border-color: #E52630;
       background-size: contain;
     }
 
     .c1:focus + span {
-      border-color: #666;
-      border-width: 3px;
-    }
-
-    .c1:focus + span {
-      border-color: #666;
-      border-width: 3px;
+      border-color: #E52630;
+      border-width: 1px;
     }
 
     .c0 {

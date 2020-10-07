@@ -47,7 +47,8 @@ const MarketingPreferences = ({
             <ShowHide show={watchEmail.length > 0}>
               {watchEmail.includes('no') && (
                 <Text tag="p" size="s">
-                  Enter email you wish us to remove from our list
+                  Please provide an email so we can make sure you&apos;re not on our database
+                  already.
                 </Text>
               )}
               <TextInput
@@ -71,7 +72,8 @@ const MarketingPreferences = ({
             <ShowHide show={watchAddress.length > 0}>
               {watchAddress.includes('no') && (
                 <Text tag="p" size="s">
-                  Enter address you wish us to remove from our list
+                  Please provide an address so we can make sure you&apos;re not on our database
+                  already.
                 </Text>
               )}
               <TextInput
@@ -120,7 +122,8 @@ const MarketingPreferences = ({
             <ShowHide show={watchPhone.length > 0}>
               {watchPhone.includes('no') && (
                 <Text tag="p" size="s">
-                  Enter phone number you wish us to remove from our list
+                  Please provide a phone number so we can make sure you&apos;re not on our database
+                  already.
                 </Text>
               )}
               <TextInput
@@ -144,7 +147,8 @@ const MarketingPreferences = ({
             <ShowHide show={watchMobile.length > 0}>
               {watchMobile.includes('no') && (
                 <Text tag="p" size="s">
-                  Enter mobile number you wish us to remove from our list
+                  Please provide a phone number so we can make sure you&apos;re not on our database
+                  already.
                 </Text>
               )}
               <TextInput
