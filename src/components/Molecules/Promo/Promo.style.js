@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
   min-height: calc(100vh - 75px);
   ${media('small')} {
-    min-height: 840px;
+    min-height: calc(100vh - 90px);
   }
 `;
 

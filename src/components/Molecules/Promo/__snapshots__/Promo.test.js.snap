@@ -161,7 +161,7 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:740px) {
   .c4 {
-    min-height: 840px;
+    min-height: calc(100vh - 90px);
   }
 }
 
@@ -401,7 +401,7 @@ exports[`renders Promo with overlay correctly 1`] = `
 
 @media (min-width:740px) {
   .c4 {
-    min-height: 840px;
+    min-height: calc(100vh - 90px);
   }
 }
 
