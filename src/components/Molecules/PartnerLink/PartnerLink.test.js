@@ -133,7 +133,7 @@ it('renders correctly', () => {
       >
         <img
           alt="test Image"
-          className="c3 lazyload false"
+          className="c3 lazyload"
           data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
           data-sizes="auto"
           data-src={null}

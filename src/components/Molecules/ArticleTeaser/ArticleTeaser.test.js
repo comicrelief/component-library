@@ -223,7 +223,7 @@ it('renders article teaser correctly', () => {
           >
             <img
               alt="Image's description"
-              className="c6 lazyload false"
+              className="c6 lazyload"
               data-lowsrc={null}
               data-sizes="auto"
               data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -450,7 +450,7 @@ it('renders press realese correctly', () => {
           >
             <img
               alt="Image's description"
-              className="c6 lazyload false"
+              className="c6 lazyload"
               data-lowsrc="mock.asset"
               data-sizes="auto"
               data-src="mock.asset"

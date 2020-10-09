@@ -76,7 +76,7 @@ const Picture = ({
           width={width}
           objectFit={objectFit}
           data-src={image}
-          className={`lazyload ${!objFitState && 'no-object-fit'}`}
+          className="lazyload"
           objFitState={objFitState}
         />
       </Wrapper>
@@ -107,7 +107,7 @@ const Picture = ({
         data-srcset={images}
         data-sizes="auto"
         data-lowsrc={imageLow}
-        className={`lazyload ${!objFitState && 'no-object-fit'}`}
+        className="lazyload"
         objFitState={objFitState}
       />
     </Wrapper>

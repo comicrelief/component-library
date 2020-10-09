@@ -31,7 +31,7 @@ it('renders correctly', () => {
     >
       <img
         alt="Test images"
-        className="c1 lazyload false"
+        className="c1 lazyload"
         data-lowsrc={null}
         data-sizes="auto"
         data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
@@ -79,7 +79,7 @@ it('renders correctly with custom props', () => {
     >
       <img
         alt="Test images"
-        className="c1 lazyload false"
+        className="c1 lazyload"
         data-lowsrc={null}
         data-sizes="auto"
         data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
