@@ -101,7 +101,7 @@ const Input = React.forwardRef(
     ref
   ) => (
     <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold" >
+      <TextLabel showLabel={showLabel} weight="bold">
         <span dangerouslySetInnerHTML={{ __html: label }} />
       </TextLabel>
       <InputWrapper>
