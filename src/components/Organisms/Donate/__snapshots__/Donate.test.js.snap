@@ -743,16 +743,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c24"
               >
@@ -778,16 +775,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c24"
               >
@@ -813,16 +807,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c24"
               >
@@ -859,16 +850,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c24"
               >
@@ -1491,16 +1479,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c18"
               >
@@ -1526,16 +1511,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c18"
               >
@@ -1561,16 +1543,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c18"
               >
@@ -1607,16 +1586,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c18"
               >
@@ -2112,16 +2088,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
-                size="s"
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                />
-              </span>
+                }
+                size="s"
+              />
               <div
                 className="c18"
               >

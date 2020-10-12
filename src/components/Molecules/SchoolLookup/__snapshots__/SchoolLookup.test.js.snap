@@ -88,16 +88,13 @@ exports[`renders correctly 1`] = `
     <span
       className="c2 "
       color="inherit"
-      size="s"
-    >
-      <span
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Enter the name or postcode of your school or nursery",
-          }
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Enter the name or postcode of your school or nursery",
         }
-      />
-    </span>
+      }
+      size="s"
+    />
     <div
       className="c3"
     >

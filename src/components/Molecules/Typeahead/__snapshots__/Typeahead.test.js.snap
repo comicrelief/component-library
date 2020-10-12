@@ -88,16 +88,13 @@ exports[`renders correctly 1`] = `
     <span
       className="c2 "
       color="inherit"
-      size="s"
-    >
-      <span
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Typeahead test",
-          }
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Typeahead test",
         }
-      />
-    </span>
+      }
+      size="s"
+    />
     <div
       className="c3"
     >

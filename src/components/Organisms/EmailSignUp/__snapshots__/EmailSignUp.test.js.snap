@@ -533,16 +533,13 @@ exports[`renders correctly 1`] = `
       <span
         className="c8 c9"
         color="inherit"
-        size="s"
-      >
-        <span
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "email",
-            }
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "email",
           }
-        />
-      </span>
+        }
+        size="s"
+      />
       <div
         className="c10"
       >
