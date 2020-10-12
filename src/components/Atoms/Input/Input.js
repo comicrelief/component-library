@@ -101,8 +101,8 @@ const Input = React.forwardRef(
     ref
   ) => (
     <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold">
-        {label}
+      <TextLabel showLabel={showLabel} weight="bold" >
+        <span dangerouslySetInnerHTML={{ __html: label }} />
       </TextLabel>
       <InputWrapper>
         {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
@@ -127,7 +127,7 @@ const Input = React.forwardRef(
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
   showLabel: PropTypes.bool,

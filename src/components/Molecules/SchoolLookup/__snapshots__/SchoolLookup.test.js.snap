@@ -90,7 +90,13 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="s"
     >
-      Enter the name or postcode of your school or nursery
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Enter the name or postcode of your school or nursery",
+          }
+        }
+      />
     </span>
     <div
       className="c3"
