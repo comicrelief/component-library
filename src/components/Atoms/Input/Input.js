@@ -101,9 +101,7 @@ const Input = React.forwardRef(
     ref
   ) => (
     <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold">
-        {label}
-      </TextLabel>
+      <TextLabel showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />
       <InputWrapper>
         {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
         <InputField

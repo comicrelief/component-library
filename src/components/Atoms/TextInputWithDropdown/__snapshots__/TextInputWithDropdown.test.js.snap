@@ -88,10 +88,13 @@ exports[`renders correctly with no value and no options 1`] = `
     <span
       className="c2 "
       color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
+        }
+      }
       size="s"
-    >
-      Search for bikes
-    </span>
+    />
     <div
       className="c3"
     >
@@ -201,10 +204,13 @@ exports[`renders correctly with value and no options 1`] = `
     <span
       className="c2 "
       color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
+        }
+      }
       size="s"
-    >
-      Search for bikes
-    </span>
+    />
     <div
       className="c3"
     >
@@ -358,10 +364,13 @@ exports[`renders correctly with value and options 1`] = `
     <span
       className="c2 "
       color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
+        }
+      }
       size="s"
-    >
-      Search for bikes
-    </span>
+    />
     <div
       className="c3"
     >

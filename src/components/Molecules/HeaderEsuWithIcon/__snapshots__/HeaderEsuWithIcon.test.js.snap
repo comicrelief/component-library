@@ -394,10 +394,13 @@ exports[`renders correctly with error message 1`] = `
             <span
               className="c13 c14"
               color="inherit"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "email",
+                }
+              }
               size="s"
-            >
-              email
-            </span>
+            />
             <div
               className="c15"
             >
@@ -900,10 +903,13 @@ exports[`renders correctly with modal open 1`] = `
             <span
               className="c13 c14"
               color="inherit"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "email",
+                }
+              }
               size="s"
-            >
-              email
-            </span>
+            />
             <div
               className="c15"
             >

@@ -479,10 +479,13 @@ it('renders correctly', () => {
                   <span
                     className="c16 "
                     color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
                     size="s"
-                  >
-                    
-                  </span>
+                  />
                   <div
                     className="c17"
                   >
@@ -508,10 +511,13 @@ it('renders correctly', () => {
                   <span
                     className="c16 "
                     color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
                     size="s"
-                  >
-                    
-                  </span>
+                  />
                   <div
                     className="c17"
                   >
@@ -537,10 +543,13 @@ it('renders correctly', () => {
                   <span
                     className="c16 "
                     color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
                     size="s"
-                  >
-                    
-                  </span>
+                  />
                   <div
                     className="c17"
                   >
@@ -577,10 +586,13 @@ it('renders correctly', () => {
                   <span
                     className="c16 "
                     color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "£",
+                      }
+                    }
                     size="s"
-                  >
-                    £
-                  </span>
+                  />
                   <div
                     className="c17"
                   >

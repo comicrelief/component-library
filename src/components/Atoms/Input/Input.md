@@ -39,12 +39,26 @@
 
 
 ```js
+  <h4>Input Label with markup</h4>
+  <Input
+    name="fullname"
+    placeholder=""
+    type="text"
+    label="<b>Markup label <i>italic</i></b>"
+    errorMsg=""
+    id="Accessibility info go here"
+    showLabel={true}
+  />
+```
+
+
+```js
   <h4>Input with prefix</h4>
   <p>(This example also ensures there are two decimal places onBlur)</p>
   <Input
     name="price"
     type="number"
-    label="Price"
+    label="label"
     errorMsg=""
     id="price"
     showLabel={true}

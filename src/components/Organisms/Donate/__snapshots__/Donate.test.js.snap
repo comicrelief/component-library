@@ -743,10 +743,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c24"
               >
@@ -772,10 +775,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c24"
               >
@@ -801,10 +807,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c24"
               >
@@ -841,10 +850,13 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c23 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
+                  }
+                }
                 size="s"
-              >
-                £
-              </span>
+              />
               <div
                 className="c24"
               >
@@ -1467,10 +1479,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c18"
               >
@@ -1496,10 +1511,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c18"
               >
@@ -1525,10 +1543,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
                 size="s"
-              >
-                
-              </span>
+              />
               <div
                 className="c18"
               >
@@ -1565,10 +1586,13 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
+                  }
+                }
                 size="s"
-              >
-                £
-              </span>
+              />
               <div
                 className="c18"
               >
@@ -2064,10 +2088,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               <span
                 className="c17 "
                 color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
+                  }
+                }
                 size="s"
-              >
-                £
-              </span>
+              />
               <div
                 className="c18"
               >

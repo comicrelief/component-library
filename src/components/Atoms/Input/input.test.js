@@ -95,10 +95,13 @@ it('renders correctly', () => {
       <span
         className="c1 "
         color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Label",
+          }
+        }
         size="s"
-      >
-        Label
-      </span>
+      />
       <div
         className="c2"
       >
