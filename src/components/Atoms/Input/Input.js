@@ -127,7 +127,7 @@ const Input = React.forwardRef(
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
   showLabel: PropTypes.bool,
