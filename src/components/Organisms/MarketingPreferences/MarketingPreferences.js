@@ -16,6 +16,17 @@ const ShowHide = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
 `;
 
+// eslint-disable-next-line react/prop-types
+const NoMessage = ({ askingFor }) => {
+  const message = `Please provide ${askingFor} so we can make sure you're not on our database already. Untick the box if you don't want to enter ${askingFor}.`;
+
+  return (
+    <Text tag="p" size="s">
+      {message}
+    </Text>
+  );
+};
+
 const MarketingPreferences = ({
   copyTop,
   copyBottom,
@@ -45,12 +56,7 @@ const MarketingPreferences = ({
         <MaybeDisabled disabled={disableEmailInput}>
           <Body>
             <ShowHide show={watchEmail.length > 0}>
-              {watchEmail.includes('no') && (
-                <Text tag="p" size="s">
-                  Please provide an email so we can make sure you&apos;re not on our database
-                  already.
-                </Text>
-              )}
+              {watchEmail.includes('no') ? <NoMessage askingFor="an email" /> : ''}
               <TextInput
                 placeholder="Email Address"
                 fieldName={prefixName('email')}
@@ -70,12 +76,7 @@ const MarketingPreferences = ({
         <MaybeDisabled disabled={disablePostInputs}>
           <Body>
             <ShowHide show={watchAddress.length > 0}>
-              {watchAddress.includes('no') && (
-                <Text tag="p" size="s">
-                  Please provide an address so we can make sure you&apos;re not on our database
-                  already.
-                </Text>
-              )}
+              {watchAddress.includes('no') ? <NoMessage askingFor="an address" /> : ''}
               <TextInput
                 placeholder="Address Line 1"
                 fieldName={prefixName('address1')}
@@ -120,12 +121,7 @@ const MarketingPreferences = ({
         <MaybeDisabled disabled={disablePhoneInput}>
           <Body>
             <ShowHide show={watchPhone.length > 0}>
-              {watchPhone.includes('no') && (
-                <Text tag="p" size="s">
-                  Please provide a phone number so we can make sure you&apos;re not on our database
-                  already.
-                </Text>
-              )}
+              {watchPhone.includes('no') ? <NoMessage askingFor="a phone number" /> : ''}
               <TextInput
                 placeholder="Phone Number"
                 fieldName={prefixName('phone')}
@@ -145,12 +141,7 @@ const MarketingPreferences = ({
         <MaybeDisabled disabled={disableSMSInput}>
           <Body>
             <ShowHide show={watchMobile.length > 0}>
-              {watchMobile.includes('no') && (
-                <Text tag="p" size="s">
-                  Please provide a phone number so we can make sure you&apos;re not on our database
-                  already.
-                </Text>
-              )}
+              {watchMobile.includes('no') ? <NoMessage askingFor="a mobile number" /> : ''}
               <TextInput
                 placeholder="Mobile Number"
                 fieldName={prefixName('mobile')}
