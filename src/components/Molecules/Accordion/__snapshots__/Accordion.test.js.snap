@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   background: #FFFFFF;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
-  padding: 2rem 4rem;
+  padding: 2rem;
 }
 
 .c2 {
@@ -98,6 +98,12 @@ exports[`renders correctly 1`] = `
   visibility: none;
   -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem 4rem;
+  }
 }
 
 <div

@@ -10,7 +10,10 @@ const Container = styled.div`
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  padding: ${spacing('l')} ${spacing('xl')};
+  padding: ${spacing('l')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: ${spacing('l')} ${spacing('xl')};
+  }
 `;
 
 const ChevAnima = keyframes`
