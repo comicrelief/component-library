@@ -46,7 +46,7 @@ const Picture = ({
 
   useEffect(() => {
     // Once document is available, determine if this browser supports object-fit
-    if ('objectFit' in document.documentElement.style === false) { // TO-DO: SET BACK TO === FALSE!
+    if ('objectFit' in document.documentElement.style === false) {
       setObjFitState(false);
     }
   }, [document]);
