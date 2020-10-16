@@ -242,7 +242,7 @@ exports[`renders correctly with value and options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8 {
+.c9 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -332,12 +332,15 @@ exports[`renders correctly with value and options 1`] = `
 
 .c7 {
   padding: 0.5rem;
+}
+
+.c8 {
   cursor: pointer;
   border-top: 1px solid #F4F3F5;
 }
 
-.c7:hover,
-.c7:focus {
+.c8:hover,
+.c8:focus {
   background-color: #F4F3F5;
 }
 
@@ -399,7 +402,7 @@ exports[`renders correctly with value and options 1`] = `
     >
       <li
         aria-selected={false}
-        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+        className="c7 c8"
         id="option-0"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -407,7 +410,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c8"
+          className="c9"
           color="inherit"
           size="s"
         >
@@ -416,7 +419,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+        className="c7 c8"
         id="option-1"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -424,7 +427,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c8"
+          className="c9"
           color="inherit"
           size="s"
         >
@@ -433,7 +436,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+        className="c7 c8"
         id="option-2"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -441,7 +444,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c8"
+          className="c9"
           color="inherit"
           size="s"
         >
@@ -450,7 +453,7 @@ exports[`renders correctly with value and options 1`] = `
       </li>
       <li
         aria-selected={false}
-        className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+        className="c7 c8"
         id="option-3"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -458,7 +461,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c8"
+          className="c9"
           color="inherit"
           size="s"
         >

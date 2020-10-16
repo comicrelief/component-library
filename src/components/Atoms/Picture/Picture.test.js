@@ -11,21 +11,21 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      position: relative;
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
     }
 
     .c1 {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
       object-fit: none;
     }
 
     <div
-      className="c0"
+      className="c0 lazyload"
       height="auto"
       width="100%"
     >
@@ -59,21 +59,21 @@ it('renders correctly with custom props', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      position: relative;
       display: block;
       width: 200px;
       height: 100px;
+      position: relative;
     }
 
     .c1 {
-      display: block;
       width: 200px;
       height: 100px;
+      display: block;
       object-fit: cover;
     }
 
     <div
-      className="c0"
+      className="c0 lazyload"
       height="100px"
       width="200px"
     >

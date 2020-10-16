@@ -67,16 +67,16 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      position: relative;
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
     }
 
     .c3 {
-      display: block;
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
     }
 

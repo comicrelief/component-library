@@ -81,7 +81,7 @@ it('renders correctly', () => {
       className="c0"
     >
       <span
-        className="c1 "
+        className="c1 Select__LabelText-sc-1atp8e3-2"
         color="inherit"
         size="s"
       >

@@ -158,7 +158,11 @@ const ArticleTeaser = ({
                 ? images
                 : handleCampaignLogo(category)
             }
-          image={image}
+          image={
+            !category && category !== ''
+              ? image
+              : handleCampaignLogo(category)
+          }
           alt={alt}
           objectFit="cover"
           width={category || category === '' ? logoSize : '100%'}

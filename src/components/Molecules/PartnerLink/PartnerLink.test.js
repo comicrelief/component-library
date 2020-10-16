@@ -24,16 +24,16 @@ it('renders correctly', () => {
     }
 
     .c2 {
-      position: relative;
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
     }
 
     .c3 {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
       object-fit: none;
     }
 
@@ -127,7 +127,7 @@ it('renders correctly', () => {
       type="standard"
     >
       <div
-        className="c2"
+        className="c2 lazyload"
         height="auto"
         width="100%"
       >

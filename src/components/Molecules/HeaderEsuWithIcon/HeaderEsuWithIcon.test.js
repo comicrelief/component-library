@@ -19,7 +19,7 @@ const privacyCopy = (
 );
 const successCopy = (
   <RichText
-    markup={'<p>Thanks! Your first email will be with you shortly</p>'}
+    markup="<p>Thanks! Your first email will be with you shortly</p>"
   />
 );
 

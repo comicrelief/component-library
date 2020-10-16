@@ -43,16 +43,16 @@ it('renders article teaser correctly', () => {
     }
 
     .c4 {
-      position: relative;
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
     }
 
     .c6 {
-      display: block;
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
     }
 
@@ -295,16 +295,16 @@ it('renders press realese correctly', () => {
     }
 
     .c4 {
-      position: relative;
       display: block;
       width: 80px;
       height: 80px;
+      position: relative;
     }
 
     .c6 {
-      display: block;
       width: 80px;
       height: 80px;
+      display: block;
       object-fit: cover;
     }
 
@@ -453,10 +453,10 @@ it('renders press realese correctly', () => {
               className="c6 lazyload"
               data-lowsrc="mock.asset"
               data-sizes="auto"
-              data-src={null}
+              data-src="mock.asset"
               data-srcset="mock.asset"
               height="80px"
-              src={null}
+              src="mock.asset"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="80px"
             />

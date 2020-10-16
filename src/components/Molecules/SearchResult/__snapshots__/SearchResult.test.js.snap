@@ -17,16 +17,16 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c4 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -192,16 +192,16 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c4 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -365,16 +365,16 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c4 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -532,16 +532,16 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c4 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c5 {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 

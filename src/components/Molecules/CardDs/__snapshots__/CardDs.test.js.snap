@@ -2,16 +2,16 @@
 
 exports[`renders correctly 1`] = `
 .c3 {
-  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .c4 {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -210,7 +210,7 @@ exports[`renders correctly 1`] = `
       className="c2"
     >
       <div
-        className="c3"
+        className="c3 lazyload"
         height="auto"
         width="100%"
       >
