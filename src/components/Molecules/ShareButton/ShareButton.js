@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import PopUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
 import ShareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
+import ShareTracking from '../../../utils/ShareButton/shareTracking';
 import ShareIcons from './assets/ShareIcons';
 
 import {
@@ -14,6 +15,8 @@ import {
 
 const handleShare = (e, typeOfShare, urlToShare) => {
   e.preventDefault();
+
+  ShareTracking(typeOfShare.toLowerCase());
 
   // Pass the current page's URL and the type of share to our helper function
   const shareUrl = ShareUrlHelper(urlToShare, typeOfShare);
