@@ -1,15 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
-import useStateObject from '../../../utils/useStateObject';
-
-const initialState = {
-  value: '',
-  options: [],
-  errorMsg: ''
-};
 
 // These just felt about right to me but could be changed.
 const DELAY_DURATION = 300;
@@ -31,37 +24,60 @@ const Typeahead = React.forwardRef(
     },
     ref
   ) => {
-    const [state, updateState] = useStateObject(initialState);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const debouncedFetch = useCallback(
-      debounce(async value => {
-        const valueTrimmed = value.trim();
-        let { options, errorMsg } = initialState;
-        if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
-          try {
-            options = await optionFetcher(valueTrimmed);
-            if (options.length === 0) {
-              errorMsg = notFoundMessage;
-            }
-          } catch (err) {
-            errorMsg = fetchErrorHandler(err);
-          }
-          updateState({ options, errorMsg });
-        }
-      }, DELAY_DURATION),
-      []
-    );
+    const [value, setValue] = useState('');
+    const [options, setOptions] = useState([]);
+    const [errorMsg, setErrorMsg] = useState('');
+    const [fetchCount, setFetchCount] = useState(0);
+    const [errorCount, setErrorCount] = useState(0);
 
-    const onChange = e => {
-      const { value } = e.currentTarget;
-      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
-      // (but happy to take advice on this!)
-      const { options, errorMsg } = initialState;
-      updateState({ value, options, errorMsg });
-      debouncedFetch(value);
+    const reset = (resetValue = false) => {
+      setOptions([]);
+      setErrorMsg('');
+      if (resetValue) {
+        setValue('');
+      }
     };
 
-    const { value, options, errorMsg } = state;
+    const fetchOptions = async newValue => {
+      reset();
+
+      const valueTrimmed = newValue.trim();
+
+      if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
+        const newFetchCount = fetchCount + 1;
+        setFetchCount(newFetchCount);
+
+        try {
+          const newOptions = await optionFetcher(valueTrimmed);
+
+          if (newOptions.length > 0) {
+            setOptions(newOptions);
+          } else {
+            // Don't want to update errorCount if there are simply no results.
+            setErrorMsg(notFoundMessage);
+          }
+        } catch (err) {
+          const newErrorCount = errorCount + 1;
+          setErrorCount(newErrorCount);
+
+          const newErrorMessage = fetchErrorHandler(err, newErrorCount, newFetchCount);
+
+          setErrorMsg(newErrorMessage);
+        }
+      }
+    };
+
+    const debouncedFetchOptions = debounce(fetchOptions, DELAY_DURATION);
+
+    const onChange = e => {
+      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
+      // (but happy to take advice on this!)
+      reset();
+
+      setValue(e.currentTarget.value);
+
+      debouncedFetchOptions(e.currentTarget.value);
+    };
 
     return (
       <TextInputWithDropdown
@@ -69,12 +85,15 @@ const Typeahead = React.forwardRef(
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
         onChange={onChange}
-        onSelect={(v, index) => {
-          const selected = options[index];
+        onSelect={(parsedOption, optionIndex) => {
+          // return the original option, not the parsed value
+          const selectedOption = options[optionIndex];
+
           // pass the selected value up to the parent via callback
-          onSelect(selected);
+          onSelect(selectedOption);
+
           // reset
-          updateState(initialState);
+          reset(true);
         }}
         id={id}
         label={label}

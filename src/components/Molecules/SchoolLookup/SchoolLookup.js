@@ -9,7 +9,7 @@ const optionFetcher = async query => {
     'https://lookups.sls.comicrelief.com/schools/lookup',
     {
       params: { query },
-      timeout: 3000
+      timeout: 2000
     }
   );
   return response.data.data.schools;
