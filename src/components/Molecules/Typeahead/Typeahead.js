@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 
@@ -57,7 +57,10 @@ const Typeahead = React.forwardRef(
       }
     };
 
-    const debouncedHandleChange = debounce(handleChange, DELAY_DURATION);
+    // useCallback is needed so that the debounced function is not recreated on each render.
+    // (Dependency array needs to be empty to ensure that this is the case).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const debouncedHandleChange = useCallback(debounce(handleChange, DELAY_DURATION), []);
 
     return (
       <TextInputWithDropdown
