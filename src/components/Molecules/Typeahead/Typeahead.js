@@ -68,7 +68,7 @@ const Typeahead = React.forwardRef(
 
       setValue(e.currentTarget.value);
 
-      debouncedFetchOptions(e.currentTarget.value);
+      return debouncedFetchOptions(e.currentTarget.value);
     };
 
     return (
