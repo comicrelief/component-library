@@ -28,16 +28,14 @@ const Typeahead = React.forwardRef(
     const [options, setOptions] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
 
-    const reset = (resetValue = false) => {
+    const handleChange = async e => {
+      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
+      // (but happy to take advice on this!)
       setOptions([]);
       setErrorMsg('');
-      if (resetValue) {
-        setValue('');
-      }
-    };
 
-    const fetchOptions = async newValue => {
-      reset();
+      const newValue = e.currentTarget.value;
+      setValue(newValue);
 
       const valueTrimmed = newValue.trim();
 
@@ -59,24 +57,14 @@ const Typeahead = React.forwardRef(
       }
     };
 
-    const debouncedFetchOptions = debounce(fetchOptions, DELAY_DURATION);
-
-    const onChange = e => {
-      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
-      // (but happy to take advice on this!)
-      reset();
-
-      setValue(e.currentTarget.value);
-
-      return debouncedFetchOptions(e.currentTarget.value);
-    };
+    const debouncedHandleChange = debounce(handleChange, DELAY_DURATION);
 
     return (
       <TextInputWithDropdown
         value={value}
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
-        onChange={onChange}
+        onChange={debouncedHandleChange}
         onSelect={(parsedOption, optionIndex) => {
           // return the original option, not the parsed value
           const selectedOption = options[optionIndex];
@@ -85,7 +73,9 @@ const Typeahead = React.forwardRef(
           onSelect(selectedOption);
 
           // reset
-          reset(true);
+          setOptions([]);
+          setErrorMsg('');
+          setValue('');
         }}
         id={id}
         label={label}
