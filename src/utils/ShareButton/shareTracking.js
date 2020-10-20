@@ -2,10 +2,10 @@ const shareTracking = channel => {
   if (!window.dataLayer) {
     window.dataLayer = [];
   }
-  
+
   window.dataLayer.push({
-      event: 'btn_social-share',
-      action: channel
+    event: 'btn_social-share',
+    action: channel
   });
 };
 
