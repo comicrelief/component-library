@@ -28,46 +28,50 @@ const Typeahead = React.forwardRef(
     const [options, setOptions] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
 
-    const handleChange = async e => {
-      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
-      // (but happy to take advice on this!)
-      setOptions([]);
-      setErrorMsg('');
+    const fetch = async query => {
+      try {
+        const newOptions = await optionFetcher(query);
 
-      const newValue = e.currentTarget.value;
-      setValue(newValue);
-
-      const valueTrimmed = newValue.trim();
-
-      if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
-        try {
-          const newOptions = await optionFetcher(valueTrimmed);
-
-          if (newOptions.length > 0) {
-            setOptions(newOptions);
-          } else {
-            // Don't want to update errorCount if there are simply no results.
-            setErrorMsg(notFoundMessage);
-          }
-        } catch (err) {
-          const newErrorMessage = fetchErrorHandler(err);
-
-          setErrorMsg(newErrorMessage);
+        if (newOptions.length > 0) {
+          setOptions(newOptions);
+        } else {
+          // Don't want to update errorCount if there are simply no results.
+          setErrorMsg(notFoundMessage);
         }
+      } catch (err) {
+        const newErrorMessage = fetchErrorHandler(err);
+
+        setErrorMsg(newErrorMessage || '');
       }
     };
 
     // useCallback is needed so that the debounced function is not recreated on each render.
     // (Dependency array needs to be empty to ensure that this is the case).
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const debouncedHandleChange = useCallback(debounce(handleChange, DELAY_DURATION), []);
+    const debouncedFetch = useCallback(debounce(fetch, DELAY_DURATION), []);
+
+    const handleChange = e => {
+      const newValue = e.currentTarget.value;
+      setValue(newValue);
+
+      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
+      // (but happy to take advice on this!)
+      setOptions([]);
+      setErrorMsg('');
+
+      const valueTrimmed = newValue.trim();
+
+      if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
+        debouncedFetch(valueTrimmed);
+      }
+    };
 
     return (
       <TextInputWithDropdown
         value={value}
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
-        onChange={debouncedHandleChange}
+        onChange={handleChange}
         onSelect={(parsedOption, optionIndex) => {
           // return the original option, not the parsed value
           const selectedOption = options[optionIndex];

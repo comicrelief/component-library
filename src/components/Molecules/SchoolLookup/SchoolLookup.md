@@ -3,17 +3,14 @@
 ```js
 import SchoolLookup from './SchoolLookup';
 
-// This error count stuff is just an example of how your parent
-//  might handle repeated errors (in case the school lookup api stops working)
-const [errorCount, setErrorCount] = React.useState(0);
+// This is just an example of how a parent component might handle fetch errors within the component.
+const [enterManually, setEnterManually] = React.useState(false);
 
-const fetchErrorHandler = (error, errorCount) => {
-  setErrorCount(prevCount => prevCount + 1);
-
-  return 'Sorry, there was an unexpected error. Please try again';
+const fetchErrorHandler = () => {
+  setEnterManually(true);
 }
 
-errorCount > 1 
+enterManually
   ? 'Sorry, there appears to be a problem. Please enter the school\'s details manually.' 
   : (
     <SchoolLookup onSelect={school => alert(JSON.stringify(school, null, 2))} fetchErrorHandler={fetchErrorHandler} />
