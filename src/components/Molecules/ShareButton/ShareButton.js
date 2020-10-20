@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import PopUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
-import ShareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
-import ShareTracking from '../../../utils/ShareButton/shareTracking';
-import ShareIcons from './assets/ShareIcons';
+import popUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
+import shareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
+import shareTracking from '../../../utils/ShareButton/shareTracking';
+import shareIcons from './assets/shareIcons';
 
 import {
   Wrapper,
@@ -16,13 +16,13 @@ import {
 const handleShare = (e, typeOfShare, urlToShare) => {
   e.preventDefault();
 
-  ShareTracking(typeOfShare.toLowerCase());
+  shareTracking(typeOfShare.toLowerCase());
 
   // Pass the current page's URL and the type of share to our helper function
-  const shareUrl = ShareUrlHelper(urlToShare, typeOfShare);
+  const shareUrl = shareUrlHelper(urlToShare, typeOfShare);
 
   // Use our helper function for pop-up position issues on dual-screen setups
-  PopUpHelper(shareUrl, 550, 420);
+  popUpHelper(shareUrl, 550, 420);
 };
 
 /* Share Button component to handle FB and Twitter sharing */
@@ -44,11 +44,11 @@ const ShareButton = ({
     <Wrapper>
       <Copy>{copy}</Copy>
       <ShareButtonList>
-        {Object.keys(ShareIcons).map(shareType => (
+        {Object.keys(shareIcons).map(shareType => (
           <ShareButtonItem key={`share-button--${shareType}`}>
             <Icon
               onClick={e => handleShare(e, shareType, checkedUrl)}
-              icon={ShareIcons[shareType]}
+              icon={shareIcons[shareType]}
               title={`Share on ${shareType}`}
               brand={campaign}
               target="_blank"
