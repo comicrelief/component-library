@@ -35,7 +35,6 @@ const Typeahead = React.forwardRef(
         if (newOptions.length > 0) {
           setOptions(newOptions);
         } else {
-          // Don't want to update errorCount if there are simply no results.
           setErrorMsg(notFoundMessage);
         }
       } catch (err) {
