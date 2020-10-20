@@ -4,7 +4,7 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import popUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
 import shareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
 import shareTracking from '../../../utils/ShareButton/shareTracking';
-import shareIcons from './assets/shareIcons';
+import ShareIcons from './assets/ShareIcons';
 
 import {
   Wrapper,
@@ -44,11 +44,11 @@ const ShareButton = ({
     <Wrapper>
       <Copy>{copy}</Copy>
       <ShareButtonList>
-        {Object.keys(shareIcons).map(shareType => (
+        {Object.keys(ShareIcons).map(shareType => (
           <ShareButtonItem key={`share-button--${shareType}`}>
             <Icon
               onClick={e => handleShare(e, shareType, checkedUrl)}
-              icon={shareIcons[shareType]}
+              icon={ShareIcons[shareType]}
               title={`Share on ${shareType}`}
               brand={campaign}
               target="_blank"
