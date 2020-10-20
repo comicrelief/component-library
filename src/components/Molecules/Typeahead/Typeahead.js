@@ -28,7 +28,18 @@ const Typeahead = React.forwardRef(
     const [options, setOptions] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
 
-    const fetch = async query => {
+    const handleChange = async query => {
+      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
+      // (but happy to take advice on this!)
+      setOptions([]);
+      setErrorMsg('');
+
+      const queryTrimmed = query.trim();
+
+      if (queryTrimmed.length < MIN_CHARS_FOR_FETCH) {
+        return;
+      }
+
       try {
         const newOptions = await optionFetcher(query);
 
@@ -47,30 +58,19 @@ const Typeahead = React.forwardRef(
     // useCallback is needed so that the debounced function is not recreated on each render.
     // (Dependency array needs to be empty to ensure that this is the case).
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const debouncedFetch = useCallback(debounce(fetch, DELAY_DURATION), []);
-
-    const handleChange = e => {
-      const newValue = e.currentTarget.value;
-      setValue(newValue);
-
-      // Resetting options / errorMsg as soon as the input changes seemed to me to be the nicest UX
-      // (but happy to take advice on this!)
-      setOptions([]);
-      setErrorMsg('');
-
-      const valueTrimmed = newValue.trim();
-
-      if (valueTrimmed.length >= MIN_CHARS_FOR_FETCH) {
-        debouncedFetch(valueTrimmed);
-      }
-    };
+    const debouncedHandleChange = useCallback(debounce(handleChange, DELAY_DURATION), []);
 
     return (
       <TextInputWithDropdown
         value={value}
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
-        onChange={handleChange}
+        onChange={e => {
+          const newValue = e.currentTarget.value;
+          setValue(newValue);
+
+          debouncedHandleChange(newValue);
+        }}
         onSelect={(parsedOption, optionIndex) => {
           // return the original option, not the parsed value
           const selectedOption = options[optionIndex];
