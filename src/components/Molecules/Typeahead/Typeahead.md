@@ -4,20 +4,20 @@
 import axios from 'axios';
 import Typeahead from './Typeahead';
 
-const schoolsLookup = async query => {
+const suggestions = async suggestion => {
   const response = await axios.get(
-    'https://lookups.sls.comicrelief.com/schools/lookup',
-    { params: { query } }
+    'https://api.datamuse.com/sug',
+    { params: { s: suggestion } }
   );
-  return response.data.data.schools.map(school => school.name);
+  return response.data.map(({word}) => word);
 };
 
 <Typeahead
-  optionFetcher={schoolsLookup}
-  onSelect={school => alert(JSON.stringify(school, null, 2))}
+  optionFetcher={suggestions}
+  onSelect={suggestion => alert(JSON.stringify(suggestion, null, 2))}
   id="typeahead-test"
-  label="Typeahead test (school lookup)"
-  name="q"
+  label="Typeahead test (word/phrase suggestions)"
+  name="suggestion"
   placeholder="Start searching..."
   notFoundMessage="Sorry, we couldn't find anything"
 />;
