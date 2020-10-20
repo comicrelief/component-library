@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import PopUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
-import ShareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
+import popUpHelper from '../../../utils/ShareButton/sharePopUpHelper';
+import shareUrlHelper from '../../../utils/ShareButton/shareUrlHelper';
+import shareTracking from '../../../utils/ShareButton/shareTracking';
 import ShareIcons from './assets/ShareIcons';
 
 import {
@@ -15,11 +16,13 @@ import {
 const handleShare = (e, typeOfShare, urlToShare) => {
   e.preventDefault();
 
+  shareTracking(typeOfShare.toLowerCase());
+
   // Pass the current page's URL and the type of share to our helper function
-  const shareUrl = ShareUrlHelper(urlToShare, typeOfShare);
+  const shareUrl = shareUrlHelper(urlToShare, typeOfShare);
 
   // Use our helper function for pop-up position issues on dual-screen setups
-  PopUpHelper(shareUrl, 550, 420);
+  popUpHelper(shareUrl, 550, 420);
 };
 
 /* Share Button component to handle FB and Twitter sharing */
