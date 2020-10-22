@@ -12,7 +12,7 @@ const Container = styled.div`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   padding: ${spacing('l')};
   @media ${({ theme }) => theme.breakpoint('small')} {
-    padding: ${spacing('l')} ${spacing('xl')};
+    padding: ${spacing('l')} ${spacing('lg')};
   }
 `;
 

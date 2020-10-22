@@ -102,7 +102,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem 4rem;
+    padding: 2rem 3rem;
   }
 }
 
