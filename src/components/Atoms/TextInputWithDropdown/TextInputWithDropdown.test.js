@@ -116,7 +116,7 @@ it('renders correctly with no value and no options', () => {
         <div
           className="c3"
         >
-          
+
           <input
             aria-describedby="text-input-with-dropdown"
             autoComplete="off"
@@ -129,7 +129,7 @@ it('renders correctly with no value and no options', () => {
             value=""
           />
         </div>
-        
+
       </label>
     </div>
   `);
@@ -247,7 +247,7 @@ it('renders correctly with value and no options', () => {
         <div
           className="c3"
         >
-          
+
           <input
             aria-describedby="text-input-with-dropdown"
             autoComplete="off"
@@ -260,7 +260,7 @@ it('renders correctly with value and no options', () => {
             value="bikes"
           />
         </div>
-        
+
       </label>
     </div>
   `);
@@ -290,7 +290,7 @@ it('renders correctly with value and options', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c8 {
+    .c9 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -380,12 +380,15 @@ it('renders correctly with value and options', () => {
 
     .c7 {
       padding: 0.5rem;
+    }
+
+    .c8 {
       cursor: pointer;
       border-top: 1px solid #F4F3F5;
     }
 
-    .c7:hover,
-    .c7:focus {
+    .c8:hover,
+    .c8:focus {
       background-color: #F4F3F5;
     }
 
@@ -422,7 +425,7 @@ it('renders correctly with value and options', () => {
         <div
           className="c3"
         >
-          
+
           <input
             aria-describedby="text-input-with-dropdown"
             autoComplete="off"
@@ -435,7 +438,7 @@ it('renders correctly with value and options', () => {
             value="c"
           />
         </div>
-        
+
       </label>
       <div
         className="c5 TextInputWithDropdown__options"
@@ -447,7 +450,7 @@ it('renders correctly with value and options', () => {
         >
           <li
             aria-selected={false}
-            className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+            className="c7 c8"
             id="option-0"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -455,7 +458,7 @@ it('renders correctly with value and options', () => {
             tabIndex="-1"
           >
             <span
-              className="c8"
+              className="c9"
               color="inherit"
               size="s"
             >
@@ -464,7 +467,7 @@ it('renders correctly with value and options', () => {
           </li>
           <li
             aria-selected={false}
-            className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+            className="c7 c8"
             id="option-1"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -472,7 +475,7 @@ it('renders correctly with value and options', () => {
             tabIndex="-1"
           >
             <span
-              className="c8"
+              className="c9"
               color="inherit"
               size="s"
             >
@@ -481,7 +484,7 @@ it('renders correctly with value and options', () => {
           </li>
           <li
             aria-selected={false}
-            className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+            className="c7 c8"
             id="option-2"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -489,7 +492,7 @@ it('renders correctly with value and options', () => {
             tabIndex="-1"
           >
             <span
-              className="c8"
+              className="c9"
               color="inherit"
               size="s"
             >
@@ -498,7 +501,7 @@ it('renders correctly with value and options', () => {
           </li>
           <li
             aria-selected={false}
-            className="TextInputWithDropdownstyle__DropdownItem-sc-1s4bv7m-3 c7"
+            className="c7 c8"
             id="option-3"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -506,7 +509,7 @@ it('renders correctly with value and options', () => {
             tabIndex="-1"
           >
             <span
-              className="c8"
+              className="c9"
               color="inherit"
               size="s"
             >
