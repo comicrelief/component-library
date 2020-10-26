@@ -65,6 +65,14 @@ button {
   font-family: inherit;
 }
 
+h2 {
+  margin-bottom: 2rem;
+}
+
+h3, h4, h5 {
+  margin-bottom: 1rem;
+}
+
 p,
 a,
 button {
