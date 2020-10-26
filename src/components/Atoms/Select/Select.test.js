@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Select from './Select';
+// import renderWithTheme from '../../../hoc/shallowWithTheme';
+// import Select from './Select';
 
 it('renders correctly', () => {
   // const tree = renderWithTheme(
