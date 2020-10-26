@@ -1,11 +1,11 @@
-import React from "react";
-import "jest-styled-components";
+import React from 'react';
+import 'jest-styled-components';
 
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import TextInputWithDropdown from "./TextInputWithDropdown";
-import { Dropdown, Container } from "./TextInputWithDropdown.style";
+import renderWithTheme from '../../../hoc/shallowWithTheme';
+import TextInputWithDropdown from './TextInputWithDropdown';
+import { Dropdown, Container } from './TextInputWithDropdown.style';
 
-it("renders correctly with no value and no options", () => {
+it('renders correctly with no value and no options', () => {
   const renderer = renderWithTheme(
     <TextInputWithDropdown
       value=""
@@ -133,12 +133,10 @@ it("renders correctly with no value and no options", () => {
       </label>
     </div>
   `);
-  expect(() =>
-    renderer.root.findByType(Container).findByType(Dropdown)
-  ).toThrow();
+  expect(() => renderer.root.findByType(Container).findByType(Dropdown)).toThrow();
 });
 
-it("renders correctly with value and no options", () => {
+it('renders correctly with value and no options', () => {
   const renderer = renderWithTheme(
     <TextInputWithDropdown
       value="bikes"
@@ -266,12 +264,10 @@ it("renders correctly with value and no options", () => {
       </label>
     </div>
   `);
-  expect(() =>
-    renderer.root.findByType(Container).findByType(Dropdown)
-  ).toThrow();
+  expect(() => renderer.root.findByType(Container).findByType(Dropdown)).toThrow();
 });
 
-it("renders correctly with value and options", () => {
+it('renders correctly with value and options', () => {
   const renderer = renderWithTheme(
     <TextInputWithDropdown
       value="c"
@@ -280,7 +276,7 @@ it("renders correctly with value and options", () => {
       name="query"
       onChange={() => {}}
       onSelect={() => {}}
-      options={["Canyon", "Cannondale", "Condor", "Cube"]}
+      options={['Canyon', 'Cannondale', 'Condor', 'Cube']}
     />
   );
 
