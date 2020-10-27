@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useFormContext } from 'react-hook-form';
 import Input from '../../Atoms/Input/Input';
 
-const TextInput = ({ fieldName, label, ...rest }) => {
-  const { errors, register } = useFormContext();
-
+const TextInput = ({
+  fieldName, label, errors, ...rest
+}) => {
   const props = {
     id: fieldName,
     name: fieldName,
@@ -17,12 +16,17 @@ const TextInput = ({ fieldName, label, ...rest }) => {
     ...rest
   };
 
-  return <Input {...props} ref={register} />;
+  return <Input {...props} />;
+};
+
+TextInput.defaultProps = {
+  errors: {}
 };
 
 TextInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  errors: PropTypes.objectOf(PropTypes.any) // for now
 };
 
 export default TextInput;

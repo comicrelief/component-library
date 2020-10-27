@@ -1,12 +1,9 @@
 Marketing Preferences DS
 
 ```js
-import { useForm, FormProvider } from 'react-hook-form';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import MarketingPreferencesDS from './MarketingPreferencesDS';
-
-const methods = useForm();
 
 const onSubmit = data => console.log(data);
 
@@ -38,13 +35,10 @@ const copyBottom = (
   </Text>
 );
 
-<FormProvider {...methods}>
-  <form onSubmit={methods.handleSubmit(onSubmit)}>
     <MarketingPreferencesDS
       copyTop={copyTop}
       copyBottom={copyBottom}
     />
-    <input type="submit" />
-  </form>
-</FormProvider>;
+
+
 ```

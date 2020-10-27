@@ -1,5 +1,4 @@
-import React from 'react';
-import { useWatch } from 'react-hook-form';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -38,10 +37,20 @@ const MarketingPreferencesDS = ({
 }) => {
   const prefixName = name => fieldPrefix + name;
 
-  const watchEmail = useWatch({ name: prefixName('permissionEmail'), defaultValue: [] });
-  const watchAddress = useWatch({ name: prefixName('permissionPost'), defaultValue: [] });
-  const watchPhone = useWatch({ name: prefixName('permissionPhone'), defaultValue: [] });
-  const watchMobile = useWatch({ name: prefixName('permissionSMS'), defaultValue: [] });
+  const watchEmail = '';
+  const watchAddress = '';
+  const watchPhone = '';
+  const watchMobile = '';
+
+  const emailRef = useRef(null);
+  const postRef = useRef(null);
+  const phoneRef = useRef(null);
+  const mobileRef = useRef(null);
+
+  function onChange(name, event, value) {
+    const isChecked = event.target.checked;
+    console.log(name, 'onChange - value:', value, ' - isChecked:', isChecked);
+  }
 
   return (
     <>
@@ -51,7 +60,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Email
           </Text>
-          <CheckAnswer name={prefixName('permissionEmail')} />
+          <CheckAnswer name={prefixName('permissionEmail')} ref={emailRef} onChange={onChange} />
         </Head>
         <MaybeDisabled disabled={disableEmailInput}>
           <Body>
@@ -71,7 +80,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Post
           </Text>
-          <CheckAnswer name={prefixName('permissionPost')} />
+          <CheckAnswer name={prefixName('permissionPost')} ref={postRef} onChange={onChange} />
         </Head>
         <MaybeDisabled disabled={disablePostInputs}>
           <Body>
@@ -116,7 +125,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             Phone
           </Text>
-          <CheckAnswer name={prefixName('permissionPhone')} />
+          <CheckAnswer name={prefixName('permissionPhone')} ref={phoneRef} onChange={onChange} />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
           <Body>
@@ -136,7 +145,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400">
             SMS
           </Text>
-          <CheckAnswer name={prefixName('permissionSMS')} />
+          <CheckAnswer name={prefixName('permissionSMS')} ref={mobileRef} onChange={onChange} />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <Body>

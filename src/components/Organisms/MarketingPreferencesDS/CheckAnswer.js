@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useFormContext } from 'react-hook-form';
 
 import {
   CheckContainer,
@@ -8,20 +7,26 @@ import {
   CheckInput
 } from './MarketingPreferencesDS.style';
 
-const CheckAnswer = ({ name }) => {
-  const { register, setValue } = useFormContext();
+const CheckAnswer = ({ name, onChange }) =>
+/*
+  const [newValue, setNewValue] = useState({ [name]: '' });
 
+  useEffect(() => {
+    console.log(newValue);
+  }, [newValue]);
   const onChange = e => {
     if (e.target.checked) {
       if (e.target.value === 'yes') {
-        setValue(name, ['yes']);
+        setNewValue({ [name]: 'yes' });
       } else {
-        setValue(name, ['no']);
+        setNewValue({ [name]: 'no' });
       }
+    } else {
+      setNewValue({ [name]: '' });
     }
-  };
+  }; */
 
-  return (
+  (
     <CheckContainer>
       <CheckLabel htmlFor={`${name}-yes`}>
         <CheckInput
@@ -29,8 +34,7 @@ const CheckAnswer = ({ name }) => {
           name={name}
           id={`${name}-yes`}
           value="yes"
-          ref={register}
-          onChange={onChange}
+          onChange={e => { onChange(name, e, 'yes'); }}
         />
         <span />
         Yes, please
@@ -41,18 +45,16 @@ const CheckAnswer = ({ name }) => {
           id={`${name}-no`}
           name={name}
           value="no"
-          ref={register}
-          onChange={onChange}
+          onChange={e => { onChange(name, e, 'no'); }}
         />
         <span />
         No, thanks
       </CheckLabel>
     </CheckContainer>
   );
-};
-
 CheckAnswer.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default CheckAnswer;
