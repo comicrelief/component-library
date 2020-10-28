@@ -35,10 +35,9 @@ const copyBottom = (
   </Text>
 );
 
-    <MarketingPreferencesDS
-      copyTop={copyTop}
-      copyBottom={copyBottom}
-    />
-
+<MarketingPreferencesDS
+  copyTop={copyTop}
+  copyBottom={copyBottom}
+/>
 
 ```

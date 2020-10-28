@@ -20,7 +20,11 @@ const TextInput = ({
 };
 
 TextInput.defaultProps = {
-  errors: {}
+  errors: {
+    email: {
+      message: 'oh no, an error'
+    }
+  }
 };
 
 TextInput.propTypes = {
