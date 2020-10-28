@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
-  fieldName, label, errors, ...rest
+  fieldName, label, fieldData, ...rest
 }) => {
   const props = {
     id: fieldName,
@@ -11,7 +11,7 @@ const TextInput = ({
     type: 'text',
     label,
     placeholder: label,
-    errorMsg: errors && errors[fieldName] && errors[fieldName].message,
+    errorMsg: fieldData && fieldData[fieldName] && fieldData[fieldName].errorMessage,
     defaultValue: '',
     ...rest
   };
@@ -20,9 +20,42 @@ const TextInput = ({
 };
 
 TextInput.defaultProps = {
-  errors: {
+  fieldData: {
     email: {
-      message: 'oh no, an error'
+      value: '',
+      errorMessage: ''
+    },
+    address1: {
+      value: '',
+      errorMessage: ''
+    },
+    address2: {
+      value: '',
+      errorMessage: ''
+    },
+    address3: {
+      value: '',
+      errorMessage: ''
+    },
+    town: {
+      value: '',
+      errorMessage: ''
+    },
+    postcode: {
+      value: '',
+      errorMessage: ''
+    },
+    country: {
+      value: '',
+      errorMessage: ''
+    },
+    mobile: {
+      value: '',
+      errorMessage: ''
+    },
+    phone: {
+      value: '',
+      errorMessage: ''
     }
   }
 };
@@ -30,7 +63,44 @@ TextInput.defaultProps = {
 TextInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  errors: PropTypes.objectOf(PropTypes.any) // for now
+  fieldData: PropTypes.shape({
+    email: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    adddress1: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    adddress2: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    adddress3: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    town: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    postcode: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    country: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    phone: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    }),
+    mobile: PropTypes.shape({
+      value: PropTypes.string,
+      errorMessage: PropTypes.string
+    })
+  })
 };
 
 export default TextInput;

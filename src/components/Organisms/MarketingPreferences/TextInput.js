@@ -17,6 +17,8 @@ const TextInput = ({ fieldName, label, ...rest }) => {
     ...rest
   };
 
+  console.log('errors', errors);
+
   return <Input {...props} ref={register} />;
 };
 
