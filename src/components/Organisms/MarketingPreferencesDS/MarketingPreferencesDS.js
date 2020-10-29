@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -33,10 +33,12 @@ const MarketingPreferencesDS = ({
   disableEmailInput,
   disablePostInputs,
   disablePhoneInput,
-  disableSMSInput
+  disableSMSInput,
+  submitted,
+  passFormData
 }) => {
   const prefixName = name => fieldPrefix + name;
-
+  const isMounted = useRef(false);
   const [currentValues, setValues] = useState({
     permissionEmail: { value: '', errors: {} },
     permissionPost: { value: '', errors: {} },
@@ -44,10 +46,22 @@ const MarketingPreferencesDS = ({
     permissionSMS: { value: '', errors: {} }
   });
 
+  /* Once the 'submitted' prop has been updated by the form parent,
+  pass the values up to parent via callback */
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+    // If a new submission, call function passed from parent form
+    if (submitted) passFormData(currentValues);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [submitted]);
+
   function onChange(name, event, value) {
-    const newValue = event.target.checked ? value : '';
     // Copy current state so we can use the 'name' key dynamically to update the state
     const updateValues = { ...currentValues };
+    const newValue = event.target.checked ? value : '';
     updateValues[name].value = newValue;
     setValues(updateValues);
 
@@ -55,6 +69,13 @@ const MarketingPreferencesDS = ({
     const nameSuffix = newValue === 'yes' ? 'no' : 'yes';
     document.getElementById(`${name}-${nameSuffix}`).checked = false;
   }
+
+  const fieldData = {
+    email: {
+      value: '',
+      errorMessage: 'error testing'
+    }
+  };
 
   return (
     <>
@@ -74,6 +95,7 @@ const MarketingPreferencesDS = ({
                 placeholder="Email Address"
                 fieldName={prefixName('email')}
                 label="Email Address"
+                fieldData={fieldData}
               />
             </ShowHide>
           </Body>
@@ -188,7 +210,9 @@ MarketingPreferencesDS.propTypes = {
   disableEmailInput: PropTypes.bool,
   disablePostInputs: PropTypes.bool,
   disablePhoneInput: PropTypes.bool,
-  disableSMSInput: PropTypes.bool
+  disableSMSInput: PropTypes.bool,
+  submitted: PropTypes.bool,
+  passFormData: PropTypes.func
 };
 
 MarketingPreferencesDS.defaultProps = {
@@ -198,7 +222,9 @@ MarketingPreferencesDS.defaultProps = {
   disableEmailInput: false,
   disablePostInputs: false,
   disablePhoneInput: false,
-  disableSMSInput: false
+  disableSMSInput: false,
+  submitted: false,
+  passFormData: null
 };
 
 export default MarketingPreferencesDS;

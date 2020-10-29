@@ -3,9 +3,7 @@ Marketing Preferences DS
 ```js
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import MarketingPreferencesDS from './MarketingPreferencesDS';
-
-const onSubmit = data => console.log(data);
+import MarketingPreferencesForm from './MarketingPreferencesForm';
 
 const copyTop = (
   <div>
@@ -35,9 +33,6 @@ const copyBottom = (
   </Text>
 );
 
-<MarketingPreferencesDS
-  copyTop={copyTop}
-  copyBottom={copyBottom}
-/>
+<MarketingPreferencesForm copyBottom={copyBottom} copyTop={copyTop} />
 
 ```
