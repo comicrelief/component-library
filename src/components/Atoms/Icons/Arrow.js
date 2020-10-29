@@ -43,4 +43,3 @@ Arrow.defaultProps = {
 };
 
 export default withTheme(Arrow);
-
