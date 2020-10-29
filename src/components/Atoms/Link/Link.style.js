@@ -60,6 +60,14 @@ export const IconWrapper = styled.span`
 
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
+  ${({ iconFirst }) => iconFirst
+    && css`
+      flex-direction: row-reverse;
+      span[type="button"] {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    `};
 `;
 
 export const HelperText = styled.span`

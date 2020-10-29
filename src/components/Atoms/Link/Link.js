@@ -19,6 +19,7 @@ const Link = ({
   home,
   underline,
   icon,
+  iconFirst,
   ...rest
 }) => {
   /**
@@ -41,6 +42,7 @@ const Link = ({
       href={href}
       target={window}
       type={type}
+      iconFirst={iconFirst}
       underline={underline}
     >
       {children}
@@ -64,6 +66,8 @@ Link.propTypes = {
   /** Link url */
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  /** Icon first*/
+  iconFirst: PropTypes.bool,
   /** Embed icons */
   icon: PropTypes.node
 };
@@ -74,6 +78,7 @@ Link.defaultProps = {
   target: null,
   home: false,
   underline: true,
+  iconFirst: false,
   icon: null
 };
 

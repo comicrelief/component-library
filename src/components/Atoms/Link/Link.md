@@ -34,7 +34,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
 ## Iconography
 
 ```js
-import { External, Download, Favourite, Internal, Chevron} from '../Icons/index';
+import { External, Download, Favourite, Internal, Chevron, BackArrow} from '../Icons/index';
 
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
@@ -128,6 +128,19 @@ import { External, Download, Favourite, Internal, Chevron} from '../Icons/index'
       target="blank"
       type="button"
       icon={<Chevron direction="right" colour="white" />}
+    >
+      Chevron Right
+    </Link>
+  </div>
+
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      iconFirst
+      icon={<BackArrow colour="white" />}
     >
       Chevron Right
     </Link>
