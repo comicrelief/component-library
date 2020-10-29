@@ -66,7 +66,6 @@ Link.propTypes = {
   /** Link url */
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  /** Icon first */
   iconFirst: PropTypes.bool,
   /** Embed icons */
   icon: PropTypes.node
