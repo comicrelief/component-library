@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MarketingPreferencesDS from './MarketingPreferencesDS';
 
+/* This is really to just show the MPs working in the CL;
+* applications will produce their own forms and validation */
 const MarketingPreferencesForm = ({ copyTop, copyBottom }) => {
   const [isSubmitted, setSubmitted] = useState(false);
 
@@ -13,7 +15,7 @@ const MarketingPreferencesForm = ({ copyTop, copyBottom }) => {
 
   function fetchFormData(data) {
     setSubmitted(false);
-    console.log('passFieldValues', data);
+    console.log('checkbox values passed to form', data);
   }
 
   return (

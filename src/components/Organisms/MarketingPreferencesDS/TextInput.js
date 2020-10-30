@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
-  fieldName, label, fieldData, ...rest
+  fieldName, label, fieldData, onTextFieldChange, ...rest
 }) => {
   const props = {
     id: fieldName,
@@ -13,13 +13,17 @@ const TextInput = ({
     placeholder: label,
     errorMsg: fieldData && fieldData[fieldName] && fieldData[fieldName].errorMessage,
     defaultValue: '',
+    onChange: e => onTextFieldChange(e, fieldName),
     ...rest
   };
 
-  return <Input {...props} />;
+  return (
+    <Input {...props} />
+  );
 };
 
 TextInput.defaultProps = {
+  onTextFieldChange: null,
   fieldData: {
     email: {
       value: '',
@@ -61,6 +65,7 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
+  onTextFieldChange: PropTypes.func,
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   fieldData: PropTypes.shape({
