@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
-  fieldName, label, fieldData, onTextFieldChange, ...rest
+  fieldName, label, fieldValuesFromParent, onTextFieldChange, ...rest
 }) => {
   const props = {
     id: fieldName,
@@ -11,8 +11,10 @@ const TextInput = ({
     type: 'text',
     label,
     placeholder: label,
-    errorMsg: fieldData && fieldData[fieldName] && fieldData[fieldName].errorMessage,
     defaultValue: '',
+    errorMsg: fieldValuesFromParent
+      && fieldValuesFromParent[fieldName]
+      && fieldValuesFromParent[fieldName].errorMessage,
     onChange: e => onTextFieldChange(e, fieldName),
     ...rest
   };
@@ -24,88 +26,14 @@ const TextInput = ({
 
 TextInput.defaultProps = {
   onTextFieldChange: null,
-  fieldData: {
-    email: {
-      value: '',
-      errorMessage: ''
-    },
-    address1: {
-      value: '',
-      errorMessage: ''
-    },
-    address2: {
-      value: '',
-      errorMessage: ''
-    },
-    address3: {
-      value: '',
-      errorMessage: ''
-    },
-    town: {
-      value: '',
-      errorMessage: ''
-    },
-    postcode: {
-      value: '',
-      errorMessage: ''
-    },
-    country: {
-      value: '',
-      errorMessage: ''
-    },
-    mobile: {
-      value: '',
-      errorMessage: ''
-    },
-    phone: {
-      value: '',
-      errorMessage: ''
-    }
-  }
+  fieldValuesFromParent: null
 };
 
 TextInput.propTypes = {
   onTextFieldChange: PropTypes.func,
   fieldName: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  fieldData: PropTypes.shape({
-    email: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    adddress1: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    adddress2: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    adddress3: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    town: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    postcode: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    country: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    phone: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    }),
-    mobile: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string
-    })
-  })
+  fieldValuesFromParent: PropTypes.objectOf(PropTypes.shape),
+  label: PropTypes.string.isRequired
 };
 
 export default TextInput;
