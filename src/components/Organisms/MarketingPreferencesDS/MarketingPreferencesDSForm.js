@@ -26,17 +26,16 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
 
   /* Dummy validation update */
   function validateFields() {
-    const updateValues = { ...currValidation };
+    const newValues = { ...currValidation };
 
-    Object.keys(updateValues).forEach(key => {
-      if (updateValues[key].value === 'invalid') {
-        updateValues[key].errorMessage = Math.random().toString(36).substring(7); // dummy error
-      } else {
-        updateValues[key].errorMessage = '';
-      }
+    // Setting up a dummy rule and dummy error msg to test
+    Object.keys(newValues).forEach(key => {
+      const isValid = newValues[key].value.length < 5;
+      const errorMsg = Math.random().toString(36).substring(7);
+      newValues[key].errorMessage = isValid ? '' : errorMsg;
     });
 
-    setCurrValidation(updateValues);
+    setCurrValidation(newValues);
   }
 
   // Updates state with the most recent values, validating as we go
