@@ -26,7 +26,7 @@ const Container = styled.div`
   ${({ position }) => position === 'end' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     ${media('small')} {
-      clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
+      clip-path: polygon(0 0,100% 0,100% 85%,0% 100.7%);
       border-radius: 0 0 0 3rem;
     }
   `}

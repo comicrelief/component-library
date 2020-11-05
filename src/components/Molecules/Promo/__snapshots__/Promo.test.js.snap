@@ -385,8 +385,8 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
-    clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 100.7%);
+    clip-path: polygon(0 0,100% 0,100% 85%,0% 100.7%);
     border-radius: 0 0 0 3rem;
   }
 }
