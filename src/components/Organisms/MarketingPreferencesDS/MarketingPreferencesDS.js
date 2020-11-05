@@ -205,8 +205,8 @@ MarketingPreferencesDS.propTypes = {
   disablePostInputs: PropTypes.bool,
   disablePhoneInput: PropTypes.bool,
   disableSMSInput: PropTypes.bool,
-  fieldValuesFromParent: PropTypes.objectOf(PropTypes.shape),
-  passFieldValues: PropTypes.func
+  fieldValuesFromParent: PropTypes.objectOf(PropTypes.shape).isRequired,
+  passFieldValues: PropTypes.func.isRequired
 };
 
 MarketingPreferencesDS.defaultProps = {
@@ -216,9 +216,7 @@ MarketingPreferencesDS.defaultProps = {
   disableEmailInput: false,
   disablePostInputs: false,
   disablePhoneInput: false,
-  disableSMSInput: false,
-  passFieldValues: null,
-  fieldValuesFromParent: null
+  disableSMSInput: false
 };
 
 export default MarketingPreferencesDS;
