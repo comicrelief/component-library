@@ -5,24 +5,15 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
+import NoMessage from './NoMessage';
+
 import {
   CopyWrapper, Head, Body, Field
 } from './MarketingPreferencesDS.style';
 
-// inputs should remain in the dom whether or not they are displayed,
-//  otherwise you get unpredictable behaviour from react-hook-form APIs.
 const ShowHide = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
 `;
-
-// eslint-disable-next-line react/prop-types
-const NoMessage = ({ askingFor }) => {
-  const message = `Please provide ${askingFor} so we can make sure you're not on our database already. Untick the box if you don't want to enter ${askingFor}.`;
-
-  return (
-    <Text tag="p" size="s">{message}</Text>
-  );
-};
 
 const MarketingPreferencesDS = ({
   copyTop,
@@ -37,23 +28,23 @@ const MarketingPreferencesDS = ({
 }) => {
   const prefixName = name => fieldPrefix + name;
 
-  /* Updates local state with current checkbox value */
+  /* Updates parent form state with current checkbox value */
   function onCheckboxChange(fieldName, event, value) {
-    const updateValues = { ...fieldValuesFromParent };
+    const updatedValues = { ...fieldValuesFromParent };
     const newValue = event.target.checked ? value : '';
-    updateValues[fieldName].value = newValue;
+    updatedValues[fieldName].value = newValue;
     // Determine which checkbox to untick based on new value
     const nameSuffix = newValue === 'yes' ? 'no' : 'yes';
     document.getElementById(`${fieldName}-${nameSuffix}`).checked = false;
-    passFieldValues(updateValues); // pass updated stuff to parent form state
+    passFieldValues(updatedValues);
   }
 
-  /* Updates local state with current textfield input value */
+  /* Updates parent form state with current textfield input value */
   function onTextFieldChange(e, fieldName) {
-    const updateValues = { ...fieldValuesFromParent };
+    const updatedValues = { ...fieldValuesFromParent };
     const newValue = e.target.value;
-    updateValues[fieldName].value = newValue;
-    passFieldValues(updateValues); // pass updated stuff to parent form state
+    updatedValues[fieldName].value = newValue;
+    passFieldValues(updatedValues);
   }
 
   return (
@@ -76,6 +67,7 @@ const MarketingPreferencesDS = ({
                 label="Email Address"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
             </ShowHide>
           </Body>
@@ -98,6 +90,7 @@ const MarketingPreferencesDS = ({
                 label="Address Line 1"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
               <TextInput
                 placeholder="Address Line 2"
@@ -119,6 +112,7 @@ const MarketingPreferencesDS = ({
                 label="Town/City"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
               <TextInput
                 placeholder="Postcode"
@@ -126,6 +120,7 @@ const MarketingPreferencesDS = ({
                 label="Postcode"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
               <TextInput
                 placeholder="Country"
@@ -133,6 +128,7 @@ const MarketingPreferencesDS = ({
                 label="Country"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
             </ShowHide>
           </Body>
@@ -156,6 +152,7 @@ const MarketingPreferencesDS = ({
                 label="Phone Number"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
             </ShowHide>
           </Body>
@@ -180,6 +177,7 @@ const MarketingPreferencesDS = ({
                 label="Mobile Number"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                isRequired
               />
             </ShowHide>
           </Body>
@@ -191,9 +189,7 @@ const MarketingPreferencesDS = ({
 };
 
 const MaybeDisabled = ({ children, disabled }) => {
-  if (disabled) {
-    return null;
-  }
+  if (disabled) return null;
   return children;
 };
 

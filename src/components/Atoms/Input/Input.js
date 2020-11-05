@@ -60,6 +60,22 @@ const Label = styled.label`
  */
 const TextLabel = styled(Text)`
   visibility: ${({ showLabel }) => !showLabel && hideVisually};
+  position: relative;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    max-width: 290px;
+  }
+
+  ${({ isRequired }) => !isRequired && `
+  :after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: 'Optional';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19.5px;
+  }`}
 `;
 
 const InputWrapper = styled.div`
@@ -96,12 +112,13 @@ const Input = React.forwardRef(
       className,
       labelProps,
       prefix,
+      isRequired,
       ...rest
     },
     ref
   ) => (
     <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />
+      <TextLabel showLabel={showLabel} weight="bold" isRequired={isRequired} dangerouslySetInnerHTML={{ __html: label }} />
       <InputWrapper>
         {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
         <InputField
@@ -112,6 +129,7 @@ const Input = React.forwardRef(
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
           prefixLength={prefix.length}
+          required={isRequired}
         />
       </InputWrapper>
       {errorMsg && (
@@ -135,7 +153,8 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
-  prefix: PropTypes.string
+  prefix: PropTypes.string,
+  isRequired: PropTypes.bool
 };
 
 Input.defaultProps = {
@@ -145,7 +164,8 @@ Input.defaultProps = {
   errorMsg: '',
   labelProps: {},
   className: '',
-  prefix: ''
+  prefix: '',
+  isRequired: false
 };
 
 export default Input;

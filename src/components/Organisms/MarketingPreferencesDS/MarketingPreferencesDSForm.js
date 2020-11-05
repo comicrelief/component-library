@@ -31,7 +31,7 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
     // Setting up a dummy rule and dummy error msg to test
     Object.keys(newValues).forEach(key => {
       const isInvalid = newValues[key].value.length === 0; // fake a validation rule
-      const errorMsg = Math.random().toString(36).substring(7); // fake an error
+      const errorMsg = 'This field is empty'; // fake an error
       newValues[key].errorMessage = isInvalid ? errorMsg : '';
     });
 
