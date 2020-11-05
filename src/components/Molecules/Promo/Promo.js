@@ -13,12 +13,13 @@ const Promo = ({
   imageSet,
   image,
   imageAltText,
-  children
+  children,
+  position
 }) => {
   const hasImage = imageSet || false;
 
   return (
-    <Container backgroundColor={backgroundColor}>
+    <Container backgroundColor={backgroundColor} position={position}>
       {hasImage && (
       <Media imageRight={copyFirst}>
         <Picture
@@ -33,7 +34,7 @@ const Promo = ({
       </Media>
       )}
       <Wrapper copyFirst={copyFirst}>
-        <Copy>{children}</Copy>
+        <Copy position={position}>{children}</Copy>
       </Wrapper>
     </Container>
   );
@@ -46,7 +47,8 @@ Promo.propTypes = {
   imageSet: PropTypes.string,
   image: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  position: PropTypes.oneOf(['top', 'lower', 'end']),
 };
 
 Promo.defaultProps = {
@@ -56,7 +58,8 @@ Promo.defaultProps = {
   imageLow: null,
   image: null,
   imageAltText: '',
-  children: null
+  children: null,
+  position: 'lower'
 };
 
 export default Promo;

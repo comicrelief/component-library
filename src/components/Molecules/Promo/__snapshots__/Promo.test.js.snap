@@ -88,8 +88,6 @@ exports[`renders Promo correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
-  clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
 }
 
 .c4 {
@@ -149,13 +147,6 @@ exports[`renders Promo correctly 1`] = `
 @media (min-width:740px) {
   .c8 {
     width: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
-    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
   }
 }
 
@@ -240,7 +231,7 @@ exports[`renders Promo correctly 1`] = `
 </div>
 `;
 
-exports[`renders Promo with overlay correctly 1`] = `
+exports[`renders Promo correctly end position 1`] = `
 .c6 {
   color: #FFFFFF;
   font-size: 5rem;
@@ -328,8 +319,8 @@ exports[`renders Promo with overlay correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
-  clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+  -webkit-clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
 }
 
 .c4 {
@@ -358,6 +349,8 @@ exports[`renders Promo with overlay correctly 1`] = `
   width: 90%;
   padding: 1.5rem 1.5rem 4rem;
   z-index: 1;
+  padding: 4rem 1.5rem;
+  margin-top: 4rem;
 }
 
 .c1 {
@@ -394,8 +387,8 @@ exports[`renders Promo with overlay correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
-    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    -webkit-clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+    clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
   }
 }
 
@@ -416,6 +409,13 @@ exports[`renders Promo with overlay correctly 1`] = `
   .c5 {
     width: 50%;
     padding: 8rem 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 6rem 1.5rem;
+    margin-top: 6rem;
   }
 }
 
