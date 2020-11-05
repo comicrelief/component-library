@@ -54,10 +54,10 @@ const Copy = styled.div`
     padding: ${spacing('xxl')} ${spacing('m')};
   }
   ${({ position }) => position === 'end' && css`
-    padding: 4rem 1.5rem;
-    margin-top: 4rem;
+    padding: ${spacing('xl')} ${spacing('m')};
+    margin-top: ${spacing('xl')};
     ${media('small')} {
-      padding: 6rem 1.5rem;
+      padding: 6rem ${spacing('m')};
       margin-top: 6rem;
     }
   `}
