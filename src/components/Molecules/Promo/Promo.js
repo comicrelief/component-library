@@ -48,7 +48,7 @@ Promo.propTypes = {
   image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  position: PropTypes.oneOf(['top', 'lower', 'end'])
+  position: PropTypes.oneOf(['top', 'lower', 'end', 'none'])
 };
 
 Promo.defaultProps = {
@@ -59,7 +59,7 @@ Promo.defaultProps = {
   image: null,
   imageAltText: '',
   children: null,
-  position: 'lower'
+  position: 'none'
 };
 
 export default Promo;

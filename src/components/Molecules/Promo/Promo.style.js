@@ -17,10 +17,17 @@ const Container = styled.div`
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
   `}
-  ${({ position }) => position === 'end' && css`
+  ${({ position }) => position === 'lower' && css`
     clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
     ${media('small')} {
       clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+    }
+  `}
+  ${({ position }) => position === 'end' && css`
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    ${media('small')} {
+      clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
+      border-radius: 0 0 0 3rem;
     }
   `}
 `;
@@ -53,7 +60,7 @@ const Copy = styled.div`
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
   }
-  ${({ position }) => position === 'end' && css`
+  ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
     margin-top: ${spacing('xl')};
     ${media('small')} {
