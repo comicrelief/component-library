@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import MarketingPreferencesDS from './MarketingPreferencesDS';
 
-/* This is component purely exists to show the Marketing Preferences
+/* This component exists purely  to show the Marketing Preferences
   component working in the Component Library; applications are to
   provide their own form and validation
 */
 const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
   // Dummy validation state
   const [currValidation, setCurrValidation] = useState({
+    email: { value: '', errorMessage: '' },
     address1: { value: '', errorMessage: '' },
     address2: { value: '', errorMessage: '' },
     address3: { value: '', errorMessage: '' },
     town: { value: '', errorMessage: '' },
     postcode: { value: '', errorMessage: '' },
     country: { value: '', errorMessage: '' },
-    mobile: { value: '', errorMessage: '' },
     phone: { value: '', errorMessage: '' },
-    email: { value: '', errorMessage: '' },
+    mobile: { value: '', errorMessage: '' },
     permissionEmail: { value: '', errorMessage: '' },
     permissionPost: { value: '', errorMessage: '' },
     permissionPhone: { value: '', errorMessage: '' },
@@ -39,7 +39,7 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
   }
 
   // Updates state with the most recent values
-  function validateFormData(data) {
+  function updateFormData(data) {
     setCurrValidation(data);
   }
 
@@ -54,7 +54,7 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
         copyTop={copyTop}
         copyBottom={copyBottom}
         fieldValuesFromParent={currValidation}
-        passFieldValues={validateFormData}
+        passFieldValues={updateFormData}
       />
       <input type="submit" />
       <button type="button" onClick={validateFields}>

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { isEqual } from 'lodash';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
@@ -28,6 +29,19 @@ const MarketingPreferencesDS = ({
 }) => {
   const prefixName = name => fieldPrefix + name;
 
+  // Store refs to access 'required' attribute dynamically
+  const allRefs = {
+    email: useRef(null),
+    address1: useRef(null),
+    address2: useRef(null),
+    address3: useRef(null),
+    town: useRef(null),
+    country: useRef(null),
+    postcode: useRef(null),
+    phone: useRef(null),
+    mobile: useRef(null)
+  };
+
   /* Updates parent form state with current checkbox value */
   function onCheckboxChange(fieldName, event, value) {
     const updatedValues = { ...fieldValuesFromParent };
@@ -44,8 +58,25 @@ const MarketingPreferencesDS = ({
     const updatedValues = { ...fieldValuesFromParent };
     const newValue = e.target.value;
     updatedValues[fieldName].value = newValue;
+    // To allow appropriate validation to be apl purely in the parent form
+    // updatedValues[fieldName].isRequired = e.target.getAttribute('required') !== null;
     passFieldValues(updatedValues);
   }
+
+  /** Passes 'required' attribute value to parent form on mount,
+    * ensuring appropriate validation can be used on that field
+    * without requiring duplication in form code
+    * */
+  useEffect(() => {
+    const updatedValues = { ...fieldValuesFromParent };
+
+    Object.keys(allRefs).forEach(key => {
+      updatedValues[key].required = allRefs[key].current.required;
+    });
+
+    if (!isEqual(updatedValues, fieldValuesFromParent)) passFieldValues(updatedValues);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -68,6 +99,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.email}
               />
             </ShowHide>
           </Body>
@@ -91,6 +123,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.address1}
               />
               <TextInput
                 placeholder="Address Line 2"
@@ -98,6 +131,7 @@ const MarketingPreferencesDS = ({
                 label="Address Line 2"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                ref={allRefs.address2}
               />
               <TextInput
                 placeholder="Address Line 3"
@@ -105,6 +139,7 @@ const MarketingPreferencesDS = ({
                 label="Address Line 3"
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
+                ref={allRefs.address3}
               />
               <TextInput
                 placeholder="Town/City"
@@ -113,6 +148,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.town}
               />
               <TextInput
                 placeholder="Postcode"
@@ -121,6 +157,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.postcode}
               />
               <TextInput
                 placeholder="Country"
@@ -129,6 +166,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.country}
               />
             </ShowHide>
           </Body>
@@ -153,6 +191,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.phone}
               />
             </ShowHide>
           </Body>
@@ -178,6 +217,7 @@ const MarketingPreferencesDS = ({
                 onTextFieldChange={onTextFieldChange}
                 fieldValuesFromParent={fieldValuesFromParent}
                 isRequired
+                ref={allRefs.mobile}
               />
             </ShowHide>
           </Body>

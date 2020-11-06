@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
 
-const TextInput = ({
+const TextInput = React.forwardRef(({
   fieldName, label, fieldValuesFromParent, onTextFieldChange, isRequired, ...rest
-}) => {
+}, ref) => {
   const props = {
     id: fieldName,
     name: fieldName,
@@ -21,9 +21,9 @@ const TextInput = ({
   };
 
   return (
-    <Input {...props} />
+    <Input {...props} ref={ref} />
   );
-};
+});
 
 TextInput.defaultProps = {
   onTextFieldChange: null,
