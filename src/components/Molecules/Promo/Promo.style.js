@@ -11,7 +11,7 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   flex-direction: row;
-  ${({ position }) => position === 'top' && css`
+  ${({ position }) => position === 'upper' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     ${media('small')} {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);

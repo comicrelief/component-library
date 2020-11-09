@@ -48,7 +48,7 @@ Promo.propTypes = {
   image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  position: PropTypes.oneOf(['top', 'lower', 'end', 'none'])
+  position: PropTypes.oneOf(['upper', 'lower', 'end', 'none'])
 };
 
 Promo.defaultProps = {

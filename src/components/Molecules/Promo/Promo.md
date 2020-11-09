@@ -7,7 +7,7 @@ import Link from '../../Atoms/Link/Link';
 
 <div>
 <Text tag="h2" size="xl" color="black">
-  Top
+  Promo Upper
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -17,7 +17,7 @@ import Link from '../../Atoms/Link/Link';
   imageAltText=""
   copyFirst={true}
   hasOverlay={true}
-  position="top"
+  position="upper"
 >
   <Text
     tag="h1"
@@ -43,7 +43,7 @@ import Link from '../../Atoms/Link/Link';
 </Promo>
 <br />
 <Text tag="h2" size="xl" color="black">
-  End
+  Promo End
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -79,7 +79,7 @@ import Link from '../../Atoms/Link/Link';
 </Promo>
 <br />
 <Text tag="h2" size="xl" color="black">
-  Lower
+  Promo Lower
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -115,7 +115,7 @@ import Link from '../../Atoms/Link/Link';
 </Promo>
 <br />
 <Text tag="h2" size="xl" color="black">
-  None
+  Promo None
 </Text>
 <Promo
   backgroundColor="blue_dark"
