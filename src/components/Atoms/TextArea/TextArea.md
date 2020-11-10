@@ -6,10 +6,9 @@
   name="description"
   placeholder="This is text area"
   label="Label"
-  rows="5"
-  cols="5"
+  rows="4"
   errorMsg=""
-  id="Please leave your comment here"
+  id="textarea-test"
 />
 
 <h4>Long copy/Message field</h4>
@@ -17,9 +16,8 @@
   name="description"
   placeholder="This is text area"
   label="Label"
-  rows="5"
-  cols="5"
+  rows="6"
   errorMsg="This is an error message"
-  id="Please leave your comment here"
+  id="textarea-test-2"
 />
 ```
