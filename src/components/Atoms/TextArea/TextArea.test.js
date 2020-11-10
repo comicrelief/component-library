@@ -30,7 +30,6 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       margin: 10px 0;
-      min-height: 65px;
       padding: 6px 12px;
       font-size: 1.25rem;
       background-color: #FFFFFF;
@@ -90,16 +89,9 @@ it('renders correctly', () => {
       flex-direction: column;
     }
 
-    @media (min-width:740px) {
-      .c2 {
-        max-width: 100%;
-        height: 96px;
-      }
-    }
-
     <label
       className="c0"
-      htmlFor="undefined"
+      htmlFor="Please leave your comment here"
     >
       <span
         className="c1"
