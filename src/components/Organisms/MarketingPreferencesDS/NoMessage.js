@@ -6,7 +6,7 @@ const NoMessage = ({ askingFor }) => {
   const message = `Please provide ${askingFor} so we can make sure you're not on our database already. Untick the box if you don't want to enter ${askingFor}.`;
 
   return (
-    <Text tag="p" size="s">{message}</Text>
+    <Text tag="p" size="s" color="grey_dark">{message}</Text>
   );
 };
 

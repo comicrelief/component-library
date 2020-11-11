@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import { isEqual } from 'lodash';
 import Text from '../../Atoms/Text/Text';
@@ -9,12 +8,8 @@ import CheckAnswer from './CheckAnswer';
 import NoMessage from './NoMessage';
 
 import {
-  CopyWrapper, Head, Body, Field
+  CopyWrapper, Head, Body, Field, ShowHide
 } from './MarketingPreferencesDS.style';
-
-const ShowHide = styled.div`
-  display: ${({ show }) => (show ? 'block' : 'none')};
-`;
 
 const MarketingPreferencesDS = ({
   copyTop,
@@ -58,14 +53,12 @@ const MarketingPreferencesDS = ({
     const updatedValues = { ...fieldValuesFromParent };
     const newValue = e.target.value;
     updatedValues[fieldName].value = newValue;
-    // To allow appropriate validation to be apl purely in the parent form
-    // updatedValues[fieldName].isRequired = e.target.getAttribute('required') !== null;
     passFieldValues(updatedValues);
   }
 
-  /** Passes 'required' attribute value to parent form on mount,
-    * ensuring appropriate validation can be used on that field
-    * without requiring duplication in form code
+  /** Passes 'required' attribute value to parent form validation state  on mount,
+    * ensuring appropriate validation can be used on that field without requiring
+    * duplication in form code
     * */
   useEffect(() => {
     const updatedValues = { ...fieldValuesFromParent };
@@ -78,26 +71,29 @@ const MarketingPreferencesDS = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const fieldVals = fieldValuesFromParent; // In the interest of brevity
+
   return (
     <>
-      <Field>
-        {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
+      {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
+      {/* Email field */}
+      <Field className={`field-email field-${fieldVals.permissionEmail.value}`}>
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400">
-            Email
+          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
+            Email Me
           </Text>
           <CheckAnswer name={prefixName('permissionEmail')} onChange={onCheckboxChange} />
         </Head>
         <MaybeDisabled disabled={disableEmailInput}>
           <Body>
-            <ShowHide show={fieldValuesFromParent.permissionEmail.value !== ''}>
-              {fieldValuesFromParent.permissionEmail.value === 'no' && <NoMessage askingFor="an email" /> }
+            <ShowHide show={fieldVals.permissionEmail.value !== ''}>
+              {fieldVals.permissionEmail.value === 'no' && <NoMessage askingFor="an email" /> }
               <TextInput
-                placeholder="Email Address"
+                placeholder=""
                 fieldName={prefixName('email')}
-                label="Email Address"
+                label="Please enter your email address"
                 onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
+                fieldValuesFromParent={fieldVals}
                 isRequired
                 ref={allRefs.email}
               />
@@ -105,117 +101,25 @@ const MarketingPreferencesDS = ({
           </Body>
         </MaybeDisabled>
       </Field>
-      <Field>
-        <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400">
-            Post
-          </Text>
-          <CheckAnswer name={prefixName('permissionPost')} onChange={onCheckboxChange} />
-        </Head>
-        <MaybeDisabled disabled={disablePostInputs}>
-          <Body>
-            <ShowHide show={fieldValuesFromParent.permissionPost.value !== ''}>
-              {fieldValuesFromParent.permissionPost.value === 'no' ? <NoMessage askingFor="an address" /> : ''}
-              <TextInput
-                placeholder="Address Line 1"
-                fieldName={prefixName('address1')}
-                label="Address Line 1"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                isRequired
-                ref={allRefs.address1}
-              />
-              <TextInput
-                placeholder="Address Line 2"
-                fieldName={prefixName('address2')}
-                label="Address Line 2"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                ref={allRefs.address2}
-              />
-              <TextInput
-                placeholder="Address Line 3"
-                fieldName={prefixName('address3')}
-                label="Address Line 3"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                ref={allRefs.address3}
-              />
-              <TextInput
-                placeholder="Town/City"
-                fieldName={prefixName('town')}
-                label="Town/City"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                isRequired
-                ref={allRefs.town}
-              />
-              <TextInput
-                placeholder="Postcode"
-                fieldName={prefixName('postcode')}
-                label="Postcode"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                isRequired
-                ref={allRefs.postcode}
-              />
-              <TextInput
-                placeholder="Country"
-                fieldName={prefixName('country')}
-                label="Country"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                isRequired
-                ref={allRefs.country}
-              />
-            </ShowHide>
-          </Body>
-        </MaybeDisabled>
-      </Field>
-      <Field>
-        <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400">
-            Phone
-          </Text>
-          <CheckAnswer name={prefixName('permissionPhone')} onChange={onCheckboxChange} />
-        </Head>
-        <MaybeDisabled disabled={disablePhoneInput}>
-          <Body>
-            <ShowHide show={fieldValuesFromParent.permissionPhone.value !== ''}>
-              {fieldValuesFromParent.permissionPhone.value === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
 
-              <TextInput
-                placeholder="Phone Number"
-                fieldName={prefixName('phone')}
-                label="Phone Number"
-                onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
-                isRequired
-                ref={allRefs.phone}
-              />
-            </ShowHide>
-          </Body>
-        </MaybeDisabled>
-      </Field>
-      <Field>
+      {/* Text field */}
+      <Field className={`field-sms field-${fieldVals.permissionSMS.value}`}>
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400">
-            SMS
+          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
+            Text me
           </Text>
           <CheckAnswer name={prefixName('permissionSMS')} onChange={onCheckboxChange} />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <Body>
-
-            <ShowHide show={fieldValuesFromParent.permissionSMS.value !== ''}>
-              {fieldValuesFromParent.permissionSMS.value === 'no' ? <NoMessage askingFor="a mobile number" /> : ''}
-
+            <ShowHide show={fieldVals.permissionSMS.value !== ''}>
+              {fieldVals.permissionSMS.value === 'no' ? <NoMessage askingFor="a mobile number" /> : ''}
               <TextInput
-                placeholder="Mobile Number"
+                placeholder=""
                 fieldName={prefixName('mobile')}
-                label="Mobile Number"
+                label="Please enter your mobile no."
                 onTextFieldChange={onTextFieldChange}
-                fieldValuesFromParent={fieldValuesFromParent}
+                fieldValuesFromParent={fieldVals}
                 isRequired
                 ref={allRefs.mobile}
               />
@@ -223,6 +127,102 @@ const MarketingPreferencesDS = ({
           </Body>
         </MaybeDisabled>
       </Field>
+
+      {/* Phone field */}
+      <Field className={`field-phone field-${fieldVals.permissionPhone.value}`}>
+        <Head>
+          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
+            Phone me
+          </Text>
+          <CheckAnswer name={prefixName('permissionPhone')} onChange={onCheckboxChange} />
+        </Head>
+        <MaybeDisabled disabled={disablePhoneInput}>
+          <Body>
+            <ShowHide show={fieldVals.permissionPhone.value !== ''}>
+              {fieldVals.permissionPhone.value === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('phone')}
+                label="Please enter your phone no."
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                isRequired
+                ref={allRefs.phone}
+              />
+            </ShowHide>
+          </Body>
+        </MaybeDisabled>
+      </Field>
+
+      {/* Post field */}
+      <Field className={`field-post field-${fieldVals.permissionPost.value}`}>
+        <Head>
+          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
+            Send me post
+          </Text>
+          <CheckAnswer name={prefixName('permissionPost')} onChange={onCheckboxChange} />
+        </Head>
+        <MaybeDisabled disabled={disablePostInputs}>
+          <Body>
+            <ShowHide show={fieldVals.permissionPost.value !== ''}>
+              {fieldVals.permissionPost.value === 'no' ? <NoMessage askingFor="an address" /> : ''}
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('address1')}
+                label="Address Line 1"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                isRequired
+                ref={allRefs.address1}
+              />
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('address2')}
+                label="Address Line 2"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                ref={allRefs.address2}
+              />
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('address3')}
+                label="Address Line 3"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                ref={allRefs.address3}
+              />
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('town')}
+                label="Town/City"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                isRequired
+                ref={allRefs.town}
+              />
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('postcode')}
+                label="Postcode"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                isRequired
+                ref={allRefs.postcode}
+              />
+              <TextInput
+                placeholder=""
+                fieldName={prefixName('country')}
+                label="Country"
+                onTextFieldChange={onTextFieldChange}
+                fieldValuesFromParent={fieldVals}
+                isRequired
+                ref={allRefs.country}
+              />
+            </ShowHide>
+          </Body>
+        </MaybeDisabled>
+      </Field>
+
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>
   );

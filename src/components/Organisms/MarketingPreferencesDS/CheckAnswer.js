@@ -18,7 +18,7 @@ const CheckAnswer = ({ name, onChange }) => (
         onChange={e => { onChange(name, e, 'yes'); }}
       />
       <span />
-      Yes, please
+      Yes please
     </CheckLabel>
     <CheckLabel htmlFor={`${name}-no`}>
       <CheckInput
@@ -29,7 +29,7 @@ const CheckAnswer = ({ name, onChange }) => (
         onChange={e => { onChange(name, e, 'no'); }}
       />
       <span />
-      No, thanks
+      No thanks
     </CheckLabel>
   </CheckContainer>
 );

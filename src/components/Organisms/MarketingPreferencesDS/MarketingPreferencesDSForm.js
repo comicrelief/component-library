@@ -38,7 +38,7 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
     setCurrValidation(newValues);
   }
 
-  // Updates state with the most recent values
+  /* Updates state with the most recent values */
   function updateFormData(data) {
     setCurrValidation(data);
   }

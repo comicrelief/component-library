@@ -2,7 +2,12 @@ import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
-import checkBoxIcon from './assets/checkbox-white-tick.png';
+import checkBoxIcon from './assets/CR_Tick.svg';
+
+import EmailIcon from './assets/CR_@.svg';
+import PostIcon from './assets/CR_Mail.svg';
+import PhoneIcon from './assets/CR_Phone.svg';
+import SMSIcon from './assets/CR_SMS.svg';
 
 const CopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
@@ -24,10 +29,52 @@ const Body = styled.div`
 `;
 
 const Field = styled.div`
-  border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
-  margin-bottom: ${spacing('l')};
+  position: relative;
+
   label {
     margin-bottom: ${spacing('md')};
+    width: 48%;
+    padding: 12px 16px;
+    border: 1px solid ${({ theme }) => theme.color('grey')};;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: ${({ theme }) => theme.color('grey_dark')};
+  }
+
+  &.field-yes label[for$="yes"], 
+  &.field-no label[for$="no"] {
+    background: ${({ theme }) => theme.color('grey_medium')};
+  }
+
+  h3 {
+    position: relative;
+    padding-left: 35px;
+    // color: ${({ theme }) => theme.color('grey_dark')};
+
+    &:before {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      content: '';
+    }
+  }
+
+  &.field-email h3:before {
+    background: url(${EmailIcon}) top left/contain no-repeat;
+  }
+
+  &.field-sms h3:before {
+    background: url(${SMSIcon}) top left/contain no-repeat;
+  }
+
+  &.field-phone h3:before {
+    background: url(${PhoneIcon}) top left/contain no-repeat;
+  }
+
+  &.field-post h3:before {
+    background: url(${PostIcon}) top left/contain no-repeat;
   }
 `;
 
@@ -35,13 +82,13 @@ const CheckContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${spacing('l')};
+  margin-bottom: ${spacing('md')};
   font-size: ${({ theme }) => theme.fontSize('md')};
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   ${media('small')} {
     width: 50%;
     justify-content: flex-end;
-    margin-bottom: ${spacing('m')};
+    margin-bottom: ${spacing('sm')};
   }
 `;
 
@@ -65,16 +112,17 @@ const CheckInput = styled.input`
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
-    margin-right: 5px;
+    margin-right: 15px;
     width: 30px;
     height: 30px;
-    background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+    background-color: ${({ theme }) => theme.color('grey_light')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
+    border-radius: 8px;
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('purple')};
+    background-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
   }
   :focus + span {
@@ -87,6 +135,15 @@ const CheckInput = styled.input`
   }
 `;
 
+const ShowHide = styled.div`
+  display: ${({ show }) => (show ? 'block' : 'none')};
+  label {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+`;
+
 export {
   CopyWrapper,
   Head,
@@ -94,5 +151,6 @@ export {
   Field,
   CheckLabel,
   CheckInput,
-  CheckContainer
+  CheckContainer,
+  ShowHide
 };
