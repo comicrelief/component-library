@@ -6,21 +6,22 @@ import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
 import NoMessage from './NoMessage';
+import { defaultCopyTop, defaultCopyBottom } from './DefaultCopy';
 
 import {
   CopyWrapper, Head, Body, Field, ShowHide
 } from './MarketingPreferencesDS.style';
 
 const MarketingPreferencesDS = ({
-  copyTop,
-  copyBottom,
   fieldPrefix,
   disableEmailInput,
   disablePostInputs,
   disablePhoneInput,
   disableSMSInput,
   passFieldValues,
-  fieldValuesFromParent
+  fieldValuesFromParent,
+  copyTop,
+  copyBottom
 }) => {
   const prefixName = name => fieldPrefix + name;
 
@@ -246,8 +247,8 @@ MarketingPreferencesDS.propTypes = {
 };
 
 MarketingPreferencesDS.defaultProps = {
-  copyTop: null,
-  copyBottom: null,
+  copyTop: defaultCopyTop,
+  copyBottom: defaultCopyBottom,
   fieldPrefix: '',
   disableEmailInput: false,
   disablePostInputs: false,

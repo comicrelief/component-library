@@ -131,7 +131,11 @@ const CheckInput = styled.input`
 const ShowHide = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
   margin-bottom: ${spacing('lg')};
+  width: 100%;
 
+  ${media('small')} {
+    max-width: 290px;
+  }
 
   label {
     width: 100%;

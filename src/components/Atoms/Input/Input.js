@@ -67,7 +67,7 @@ const TextLabel = styled(Text)`
     max-width: 290px;
   }
 
-  ${({ isRequired }) => !isRequired && `
+  ${({ isRequired }) => isRequired === false && `
   :after {
     position: absolute;
     top: 0;
@@ -155,7 +155,10 @@ Input.propTypes = {
   labelProps: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
   prefix: PropTypes.string,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool
+  ])
 };
 
 Input.defaultProps = {
@@ -166,7 +169,7 @@ Input.defaultProps = {
   labelProps: {},
   className: '',
   prefix: '',
-  isRequired: false
+  isRequired: null
 };
 
 export default Input;

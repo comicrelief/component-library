@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import MarketingPreferencesDS from './MarketingPreferencesDS';
 
 /* This component exists purely  to show the Marketing Preferences
   component working in the Component Library; applications are to
   provide their own form and validation
 */
-const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
+const MarketingPreferencesDSForm = () => {
   // Dummy validation state
   const [currValidation, setCurrValidation] = useState({
     email: { value: '', errorMessage: '' },
@@ -51,10 +50,10 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
   return (
     <form onSubmit={e => formSubmit(e)}>
       <MarketingPreferencesDS
-        copyTop={copyTop}
-        copyBottom={copyBottom}
         fieldValuesFromParent={currValidation}
         passFieldValues={updateFormData}
+        // copyTop={} Overridable
+        // copyBottom={} Overridable
       />
       <input type="submit" />
       <button type="button" onClick={validateFields}>
@@ -62,16 +61,6 @@ const MarketingPreferencesDSForm = ({ copyTop, copyBottom }) => {
       </button>
     </form>
   );
-};
-
-MarketingPreferencesDSForm.propTypes = {
-  copyTop: PropTypes.node,
-  copyBottom: PropTypes.node
-};
-
-MarketingPreferencesDSForm.defaultProps = {
-  copyTop: null,
-  copyBottom: null
 };
 
 export default MarketingPreferencesDSForm;
