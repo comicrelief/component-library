@@ -7,7 +7,14 @@ import alertIcon from '../Input/assets/error-alert-icon.png';
 
 const ErrorIcon = styled.span`
   display: inline-block;
-  margin-top: ${spacing('sm')};
+  padding: ${spacing('m')} ${spacing('md')} ${spacing('md')};
+  width: 100%;
+  z-index: 1;
+  margin-top: -10px;
+  background-color: ${({ theme }) => theme.color('error_pink')};
+  border-radius: ${spacing('sm')};
+  font-weight: normal;
+
   :before {
     position: relative;
     content: '';

@@ -77,7 +77,7 @@ const MarketingPreferencesDS = ({
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
       {/* Email field */}
-      <Field className={`field-email field-${fieldVals.permissionEmail.value}`}>
+      <Field className={`field-email ${fieldVals.permissionEmail.value && `field-${fieldVals.permissionEmail.value}`}`}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me

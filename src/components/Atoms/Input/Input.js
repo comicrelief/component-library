@@ -28,9 +28,10 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => `
   border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${theme.color('black')};
-  border-radius: 0.5rem;
+  color: ${theme.color('black')}; 
+  border-radius: ${spacing('sm')};
   font-size: inherit;
+  z-index: 2;
 
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};

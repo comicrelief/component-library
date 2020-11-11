@@ -10,6 +10,7 @@ const colors = {
   deep_violet_dark: '#2C0230',
   deep_violet: '#2C0230' /** Will be removed  */,
   deep_violet_light: '#3e1c43',
+  error_pink: '#ffcece',
   green: '#49D267',
   green_dark: '#1B651D',
   green_light: '#F4F2F4',

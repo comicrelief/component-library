@@ -17,19 +17,16 @@ const Head = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  ${media('small')} {
-    flex-direction: row;
-  }
 `;
 
 const Body = styled.div`
-  ${media('small')} {
-    width: 50%;
-  }
+
 `;
 
 const Field = styled.div`
   position: relative;
+  margin-bottom: ${spacing('md')};
+
 
   label {
     margin-bottom: ${spacing('md')};
@@ -49,7 +46,7 @@ const Field = styled.div`
   h3 {
     position: relative;
     padding-left: 35px;
-    // color: ${({ theme }) => theme.color('grey_dark')};
+    margin-bottom: ${spacing('md')};
 
     &:before {
       position: absolute;
@@ -86,8 +83,7 @@ const CheckContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSize('md')};
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   ${media('small')} {
-    width: 50%;
-    justify-content: flex-end;
+    width: 380px;
     margin-bottom: ${spacing('sm')};
   }
 `;
@@ -95,9 +91,6 @@ const CheckContainer = styled.div`
 const CheckLabel = styled.label`
   display: flex;
   align-items: center;
-  ${media('small')} {
-    margin-left: ${spacing('l')};
-  }
 `;
 
 const CheckInput = styled.input`
@@ -137,6 +130,9 @@ const CheckInput = styled.input`
 
 const ShowHide = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
+  margin-bottom: ${spacing('lg')};
+
+
   label {
     width: 100%;
     border: none;
