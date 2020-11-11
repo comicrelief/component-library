@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import TextInput from './TextInput';
 import CheckAnswer from './CheckAnswer';
 import NoMessage from './NoMessage';
-import { defaultCopyTop, defaultCopyBottom } from './DefaultCopy';
+import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 
 import {
   CopyWrapper, Head, Body, Field, ShowHide

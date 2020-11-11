@@ -23,6 +23,7 @@
   "dependencies": {
     "@babel/cli": "^7.10.4",
     "axios": "^0.19.2",
+    "formik": "^2.2.4",
     "jest-styled-components": "^7.0.2",
     "lazysizes": "^5.1.0",
     "lodash": "^4.17.11",
@@ -36,7 +37,8 @@
     "react-test-renderer": "^16.8.6",
     "react-uid": "^2.2.0",
     "styled-components": "^5.1.1",
-    "youtube-player": "^5.5.2"
+    "youtube-player": "^5.5.2",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "test": "yarn run jest",

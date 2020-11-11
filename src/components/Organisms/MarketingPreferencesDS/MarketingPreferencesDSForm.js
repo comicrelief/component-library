@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MarketingPreferencesDS from './MarketingPreferencesDS';
+import MarketingPreferencesDS from './_MarketingPreferencesDS';
 
 /* This component exists purely  to show the Marketing Preferences
   component working in the Component Library; applications are to
