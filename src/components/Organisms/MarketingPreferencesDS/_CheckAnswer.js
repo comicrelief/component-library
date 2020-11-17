@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Field } from 'formik';
 
 import {
   CheckContainer,
@@ -10,23 +11,25 @@ import {
 const CheckAnswer = ({ name, onChange }) => (
   <CheckContainer>
     <CheckLabel htmlFor={`${name}-yes`}>
-      <CheckInput
+      <Field
         type="checkbox"
         name={name}
         id={`${name}-yes`}
         value="yes"
-        onChange={e => { onChange(name, e, 'yes'); }}
+        onChange={onChange}
+        as={CheckInput}
       />
       <span />
       Yes please
     </CheckLabel>
     <CheckLabel htmlFor={`${name}-no`}>
-      <CheckInput
+      <Field
         type="checkbox"
         id={`${name}-no`}
         name={name}
         value="no"
-        onChange={e => { onChange(name, e, 'no'); }}
+        onChange={onChange}
+        as={CheckInput}
       />
       <span />
       No thanks

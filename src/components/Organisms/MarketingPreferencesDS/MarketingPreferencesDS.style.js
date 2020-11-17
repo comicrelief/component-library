@@ -19,16 +19,13 @@ const Head = styled.div`
   flex-direction: column;
 `;
 
-const Body = styled.div`
-
-`;
-
-const Field = styled.div`
+const FormField = styled.div`
   position: relative;
   margin-bottom: ${spacing('md')};
 
 
   label {
+    position: relative;
     margin-bottom: ${spacing('md')};
     width: 48%;
     padding: 12px 16px;
@@ -99,7 +96,7 @@ const CheckInput = styled.input`
   box-sizing: border-box;
   opacity: 0;
   position: absolute;
-  left: 0px;
+  left: 12px;
   width: 30px;
   height: 30px;
   margin: 0;
@@ -147,8 +144,7 @@ const ShowHide = styled.div`
 export {
   CopyWrapper,
   Head,
-  Body,
-  Field,
+  FormField,
   CheckLabel,
   CheckInput,
   CheckContainer,
