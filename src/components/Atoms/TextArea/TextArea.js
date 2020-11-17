@@ -81,15 +81,17 @@ const TextArea = React.forwardRef(({
 
 TextArea.propTypes = {
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  errorMsg: PropTypes.string.isRequired,
-  rows: PropTypes.number
+  rows: PropTypes.number,
+  placeholder: PropTypes.string,
+  errorMsg: PropTypes.string
 };
 
 TextArea.defaultProps = {
-  rows: 4
+  rows: 4,
+  placeholder: '',
+  errorMsg: undefined
 };
 
 export default TextArea;
