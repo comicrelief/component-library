@@ -105,7 +105,7 @@ const MainNav = ({ navItems }) => {
                     aria-haspopup={hasPopUp}
                     onKeyUp={keyPressed(group.title)}
                   >
-                    <Text>{thisFirstChild.title}</Text>
+                    {thisFirstChild.title}
                   </NavLink>
                 ) : (
                   <NavLink
