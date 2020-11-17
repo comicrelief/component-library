@@ -163,7 +163,7 @@ const NavMenu = styled.ul`
  */
 const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.breakpoint('nav')} {
-    padding: 10px 5px;
+    padding: 10px 0;
     height: auto;
     :focus + ${SubNavMenu} {
       display: flex;
@@ -179,11 +179,31 @@ const NavItem = styled.li`
   position: relative;
   font-weight: 700;
   :hover {
+    li {
+      span {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+  li {
+    span {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    :hover {
+      span {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+  :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   @media ${({ theme }) => theme.breakpoint('nav')} {
     margin: 0 4px;
-    padding: 25px 0;
+    padding: 25px 5px;
 
     :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
       visibility: visible;
@@ -194,11 +214,9 @@ const NavItem = styled.li`
     :hover {
       background-color: transparent;
       ${zIndex('high')};
-      ${NavLink} {
-        span {
-          border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-          padding-bottom: 2px;
-        }
+      span {
+        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
+        padding-bottom: 2px;
       }
       ${SubNavMenu} {
         display: flex;
