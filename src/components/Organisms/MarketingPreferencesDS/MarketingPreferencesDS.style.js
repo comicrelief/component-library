@@ -23,7 +23,6 @@ const FormField = styled.div`
   position: relative;
   margin-bottom: ${spacing('md')};
 
-
   label {
     position: relative;
     margin-bottom: ${spacing('md')};
@@ -35,10 +34,11 @@ const FormField = styled.div`
     color: ${({ theme }) => theme.color('grey_dark')};
   }
 
-  &.field-yes label[for$="yes"], 
-  &.field-no label[for$="no"] {
-    background: ${({ theme }) => theme.color('grey_medium')};
-  }
+  ${({ userSelection, theme }) => userSelection && `
+    label[for$="${userSelection}"] {
+      background: ${theme.color('grey_medium')};
+    }
+  `}
 
   h3 {
     position: relative;

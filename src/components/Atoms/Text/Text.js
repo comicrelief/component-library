@@ -51,7 +51,8 @@ Text.defaultProps = {
   height: undefined,
   uppercase: false,
   size: 's',
-  color: 'inherit'
+  color: 'inherit',
+  children: undefined
 };
 
 Text.propTypes = {
@@ -73,7 +74,7 @@ Text.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string
-  ]).isRequired
+  ])
 };
 
 export default Text;

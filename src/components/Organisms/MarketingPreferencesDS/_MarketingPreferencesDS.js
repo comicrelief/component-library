@@ -1,6 +1,6 @@
 import React, {
-  // useEffect,
-  useRef
+// useEffect,
+// useRef
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -29,7 +29,7 @@ const MarketingPreferencesDS = ({
   const prefixName = name => fieldPrefix + name;
 
   // Store refs to access 'required' attribute dynamically
-  const allRefs = {
+  /*   const allRefs = {
     email: useRef(null),
     address1: useRef(null),
     address2: useRef(null),
@@ -39,7 +39,7 @@ const MarketingPreferencesDS = ({
     postcode: useRef(null),
     phone: useRef(null),
     mobile: useRef(null)
-  };
+  }; */
 
   /** Passes 'required' attribute value to parent form validation state  on mount,
     * ensuring appropriate validation can be used on that field without requiring
@@ -71,7 +71,7 @@ const MarketingPreferencesDS = ({
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
       {/* Email field */}
-      <FormField className={`field-email ${formValues.permissionEmail && `field-${formValues.permissionEmail}`}`}>
+      <FormField className="field-email" userSelection={formValues.permissionEmail}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
@@ -89,7 +89,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('email')}
               label="Please enter your email address"
               isRequired
-              ref={allRefs.email}
+              // ref={allRefs.email}
               handleInputChange={handleInputChange}
             />
           </ShowHide>
@@ -97,7 +97,7 @@ const MarketingPreferencesDS = ({
       </FormField>
 
       {/* Text field */}
-      <FormField className={`field-sms ${formValues.permissionSMS && `field-${formValues.permissionSMS}`}`}>
+      <FormField className="field-sms" userSelection={formValues.permissionSMS}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Text me
@@ -116,7 +116,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('mobile')}
               label="Please enter your mobile no."
               isRequired
-              ref={allRefs.mobile}
+              // ref={allRefs.mobile}
               handleInputChange={handleInputChange}
             />
           </ShowHide>
@@ -124,7 +124,7 @@ const MarketingPreferencesDS = ({
       </FormField>
 
       {/* Phone field */}
-      <FormField className={`field-sms ${formValues.permissionPhone && `field-${formValues.permissionPhone}`}`}>
+      <FormField className="field-sms" userSelection={formValues.permissionPhone}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Phone me
@@ -142,7 +142,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('phone')}
               label="Please enter your phone no."
               isRequired
-              ref={allRefs.phone}
+              // ref={allRefs.phone}
               handleInputChange={handleInputChange}
             />
           </ShowHide>
@@ -150,7 +150,7 @@ const MarketingPreferencesDS = ({
       </FormField>
 
       {/* Post field */}
-      <FormField className={`field-post ${formValues.permissionPost && `field-${formValues.permissionPost}`}`}>
+      <FormField className="field-post" userSelection={formValues.permissionPost}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Send me post
@@ -168,21 +168,21 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('address1')}
               label="Address Line 1"
               isRequired
-              ref={allRefs.address1}
+              // ref={allRefs.address1}
               handleInputChange={handleInputChange}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address2')}
               label="Address Line 2"
-              ref={allRefs.address2}
+              // ref={allRefs.address2}
               handleInputChange={handleInputChange}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address3')}
               label="Address Line 3"
-              ref={allRefs.address3}
+              // ref={allRefs.address3}
               handleInputChange={handleInputChange}
             />
             <TextInput
@@ -190,7 +190,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('town')}
               label="Town/City"
               isRequired
-              ref={allRefs.town}
+              // ref={allRefs.town}
               handleInputChange={handleInputChange}
             />
             <TextInput
@@ -198,7 +198,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('postcode')}
               label="Postcode"
               isRequired
-              ref={allRefs.postcode}
+              // ref={allRefs.postcode}
               handleInputChange={handleInputChange}
             />
             <TextInput
@@ -206,7 +206,7 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('country')}
               label="Country"
               isRequired
-              ref={allRefs.country}
+              // ref={allRefs.country}
               handleInputChange={handleInputChange}
             />
           </ShowHide>
