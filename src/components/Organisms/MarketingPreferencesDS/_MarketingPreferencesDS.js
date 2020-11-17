@@ -1,15 +1,10 @@
-import React, {
-// useEffect,
-// useRef
-} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
-
 import {
   CopyWrapper, Head, FormField, ShowHide
 } from './MarketingPreferencesDS.style';
@@ -24,37 +19,10 @@ const MarketingPreferencesDS = ({
   copyBottom,
   handleInputChange,
   handleCheckChange,
-  formValues
+  formValues,
+  validation
 }) => {
   const prefixName = name => fieldPrefix + name;
-
-  // Store refs to access 'required' attribute dynamically
-  /*   const allRefs = {
-    email: useRef(null),
-    address1: useRef(null),
-    address2: useRef(null),
-    address3: useRef(null),
-    town: useRef(null),
-    country: useRef(null),
-    postcode: useRef(null),
-    phone: useRef(null),
-    mobile: useRef(null)
-  }; */
-
-  /** Passes 'required' attribute value to parent form validation state  on mount,
-    * ensuring appropriate validation can be used on that field without requiring
-    * duplication in form code
-    * */
-  /*   useEffect(() => {
-    const updatedValues = { ...fieldValuesFromParent };
-
-    Object.keys(allRefs).forEach(key => {
-      updatedValues[key].required = allRefs[key].current.required;
-    });
-
-    if (!isEqual(updatedValues, fieldValuesFromParent)) passFieldValues(updatedValues);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); */
 
   /** Uses Formik's 'setFieldValue' function (passed down as 'handleCheckChange' prop)
     *  to allow us to override the native checkbox functionality to act as a toggle
@@ -89,8 +57,9 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('email')}
               label="Please enter your email address"
               isRequired
-              // ref={allRefs.email}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.email && validation.touched.email)
+                && validation.errors.email}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -116,8 +85,9 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('mobile')}
               label="Please enter your mobile no."
               isRequired
-              // ref={allRefs.mobile}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.mobile && validation.touched.mobile)
+                && validation.errors.mobile}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -142,8 +112,9 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('phone')}
               label="Please enter your phone no."
               isRequired
-              // ref={allRefs.phone}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.phone && validation.touched.phone)
+                && validation.errors.phone}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -168,46 +139,52 @@ const MarketingPreferencesDS = ({
               fieldName={prefixName('address1')}
               label="Address Line 1"
               isRequired
-              // ref={allRefs.address1}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.address1 && validation.touched.address1)
+                && validation.errors.address1}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address2')}
               label="Address Line 2"
-              // ref={allRefs.address2}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.address2 && validation.touched.address2)
+                && validation.errors.address2}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address3')}
               label="Address Line 3"
-              // ref={allRefs.address3}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.address3 && validation.touched.address3)
+                && validation.errors.address3}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('town')}
               label="Town/City"
               isRequired
-              // ref={allRefs.town}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.town && validation.touched.town)
+                && validation.errors.town}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('postcode')}
               label="Postcode"
               isRequired
-              // ref={allRefs.postcode}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.postcode && validation.touched.postcode)
+                && validation.errors.postcode}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('country')}
               label="Country"
               isRequired
-              // ref={allRefs.country}
               handleInputChange={handleInputChange}
+              errorMessage={(validation.errors.country && validation.touched.country)
+                && validation.errors.country}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -233,7 +210,8 @@ MarketingPreferencesDS.propTypes = {
   disableSMSInput: PropTypes.bool,
   handleInputChange: PropTypes.func.isRequired,
   handleCheckChange: PropTypes.func.isRequired,
-  formValues: PropTypes.objectOf(PropTypes.shape).isRequired
+  formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
+  validation: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 MarketingPreferencesDS.defaultProps = {

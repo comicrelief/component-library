@@ -1,45 +1,25 @@
-import // { useState },
-React
-  from 'react';
+import React from 'react';
 import { Formik } from 'formik';
+import * as Yup from 'yup';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
+
+const validationObj = Yup.object({
+  email: Yup.string().required('This field is required').email('Please enter a valid email address').max(50, 'Too long'),
+  mobile: Yup.string().required('This field is required').max(11),
+  phone: Yup.string().required('This field is required').max(11),
+  address1: Yup.string().required('This field is required').max(50, 'Too long'),
+  address2: Yup.string().max(50, 'Too long'),
+  address3: Yup.string().max(50, 'Too long'),
+  town: Yup.string().required('This field is required').max(50, 'Too long'),
+  country: Yup.string().required('This field is required').max(50, 'Too long'),
+  postcode: Yup.string().required('This field is required').max(50, 'Too long')
+});
 
 /* This component exists purely  to show the Marketing Preferences
   component working in the Component Library; applications are to
   provide their own form and validation
 */
 const MarketingPreferencesDSForm = () => {
-  const dummyErrorState = {
-    email: 'a dummy error msg'
-  };
-
-  // Dummy validation state
-  /*   const [currValidation, setCurrValidation] = useState({
-    permissionEmail: { value: '', errorMessage: '' },
-    permissionPost: { value: '', errorMessage: '' },
-    permissionPhone: { value: '', errorMessage: '' },
-    permissionSMS: { value: '', errorMessage: '' }
-  }); */
-
-  /* Dummy validation update */
-  /*   function validateFields() {
-    const newValues = { ...currValidation };
-
-    // Setting up a dummy rule and dummy error msg to test
-    Object.keys(newValues).forEach(key => {
-      const isInvalid = newValues[key].value.length === 0; // fake a validation rule
-      const errorMsg = 'This field is empty'; // fake an error
-      newValues[key].errorMessage = isInvalid ? errorMsg : '';
-    });
-
-    setCurrValidation(newValues);
-  } */
-
-  /* Updates state with the most recent values */
-  /*   function updateFormData(data) {
-    setCurrValidation(data);
-  } */
-
   function formSubmit() {
     console.log('formSubmit');
   }
@@ -47,7 +27,7 @@ const MarketingPreferencesDSForm = () => {
   return (
     <>
       <Formik
-        validator={() => ({})}
+        validationSchema={validationObj}
         onSubmit={formSubmit}
         initialValues={{
           email: '',
@@ -66,19 +46,15 @@ const MarketingPreferencesDSForm = () => {
         }}
       >
         {({
-          // handleSubmit,
-          handleChange,
-          setFieldValue,
-          values
+          handleChange, setFieldValue, values, errors, touched
         }) => (
 
           <form onSubmit={e => formSubmit(e)}>
-
             <MarketingPreferencesDS
               formValues={values}
-              errorState={dummyErrorState}
               handleInputChange={handleChange}
               handleCheckChange={setFieldValue}
+              validation={{ errors, touched }}
             />
             <input type="submit" />
 
