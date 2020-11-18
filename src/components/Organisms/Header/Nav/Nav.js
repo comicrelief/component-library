@@ -37,6 +37,7 @@ const MainNav = ({ navItems }) => {
     // Check if navLink element has more than one subNav item
     const checkSubnav = group && group.length > 1;
     if (checkSubnav) {
+      console.log(group);
       event.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
