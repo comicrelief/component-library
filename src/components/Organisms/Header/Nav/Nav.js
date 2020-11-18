@@ -33,14 +33,14 @@ const MainNav = ({ navItems }) => {
     setIsExpandable(!isExpandable);
   };
 
-  const toggleSubMenu = (item, group) => event => {
+  const toggleSubMenu = (e, item, group) => {
     // Check if navLink element has more than one subNav item
     const checkSubnav = group && group.length > 1;
-    console.log(group);
-    event.preventDefault();
-    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
-    // if (checkSubnav) {
-    // }
+    
+    if (checkSubnav) {
+      e.preventDefault();
+      setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+    }
   };
 
   // Handle tab key on menu nav
@@ -90,7 +90,6 @@ const MainNav = ({ navItems }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
-            console.log(hasSubMenu);
 
             return (
               <NavItem
@@ -117,7 +116,7 @@ const MainNav = ({ navItems }) => {
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup={hasPopUp}
-                    onClick={toggleSubMenu(group.id, group.links)}
+                    onClick={e => toggleSubMenu(e, group.id, group.links)}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
