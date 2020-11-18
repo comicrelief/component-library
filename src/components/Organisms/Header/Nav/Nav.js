@@ -33,11 +33,10 @@ const MainNav = ({ navItems }) => {
     setIsExpandable(!isExpandable);
   };
 
-  const toggleSubMenu = (e, item, group) => {
-    // Check if navLink element has more than one subNav item
-    const checkSubnav = group && group.length > 1;
-    
-    if (checkSubnav) {
+  const toggleSubMenu = (e, item, hasPopUp) => {
+    // Check if navLink element has more than one subNav item    
+    if (hasPopUp) {
+      console.log('haspopop');
       e.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
@@ -116,7 +115,7 @@ const MainNav = ({ navItems }) => {
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup={hasPopUp}
-                    onClick={e => toggleSubMenu(e, group.id, group.links)}
+                    onClick={e => toggleSubMenu(e, group.id, hasPopUp)}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
