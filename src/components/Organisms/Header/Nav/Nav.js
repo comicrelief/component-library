@@ -33,7 +33,7 @@ const MainNav = ({ navItems }) => {
   };
 
   const toggleSubMenu = (e, item) => {
-    // Check if navLink element has more than one subNav item    
+    // Check if navLink element has more than one subNav item
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
   };
@@ -53,9 +53,6 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    const isTouchDevice = (typeof window !== 'undefined' && 'ontouchstart' in window)
-      || window.navigator.msMaxTouchPoints > 0;
-
     const width = typeof window !== 'undefined' ? window.innerWidth : null;
     // Detect window screen size
     setIsMobile(width < sizes.nav);
