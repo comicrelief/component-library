@@ -110,19 +110,17 @@ const MainNav = ({ navItems }) => {
                     </NavLink>
                   </Text>
                 ) : (
-                  <Text>
-                    <NavLink
-                      href={thisUrl}
-                      inline
-                      aria-expanded={!!isSubMenuOpen[group.id]}
-                      aria-haspopup={hasPopUp}
-                      onClick={toggleSubMenu(group.id, group.links)}
-                      onKeyUp={keyPressed(group.title)}
-                      role="button"
-                    >
-                      {thisFirstChild.title}
-                    </NavLink>
-                  </Text>
+                  <NavLink
+                    href={thisUrl}
+                    inline
+                    aria-expanded={!!isSubMenuOpen[group.id]}
+                    aria-haspopup={hasPopUp}
+                    onClick={toggleSubMenu(group.id, group.links)}
+                    onKeyUp={keyPressed(group.title)}
+                    role="button"
+                  >
+                    {thisFirstChild.title}
+                  </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {hasSubMenu && (
