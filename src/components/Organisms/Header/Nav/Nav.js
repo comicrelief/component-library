@@ -33,13 +33,10 @@ const MainNav = ({ navItems }) => {
     setIsExpandable(!isExpandable);
   };
 
-  const toggleSubMenu = (e, item, hasPopUp) => {
+  const toggleSubMenu = (e, item) => {
     // Check if navLink element has more than one subNav item    
-    if (hasPopUp) {
-      console.log('haspopop');
-      e.preventDefault();
-      setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
-    }
+    e.preventDefault();
+    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
   };
 
   // Handle tab key on menu nav
@@ -115,7 +112,7 @@ const MainNav = ({ navItems }) => {
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup={hasPopUp}
-                    onClick={e => toggleSubMenu(e, group.id, hasPopUp)}
+                    onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
