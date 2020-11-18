@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media, container } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
@@ -11,10 +11,26 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   flex-direction: row;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  ${media('small')} {
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  }
+  ${({ position }) => position === 'upper' && css`
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    ${media('small')} {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+  `}
+  ${({ position }) => position === 'lower' && css`
+    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+    ${media('small')} {
+      clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
+    }
+  `}
+  ${({ position }) => position === 'end' && css`
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 101%);
+    border-radius: 0 0 0 2rem;
+    ${media('small')} {
+      clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
+      border-radius: 0 0 0 4rem;
+    }
+  `}
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +61,14 @@ const Copy = styled.div`
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
   }
+  ${({ position }) => position === 'lower' && css`
+    padding: ${spacing('xl')} ${spacing('m')};
+    margin-top: ${spacing('xl')};
+    ${media('small')} {
+      padding: 6rem ${spacing('m')};
+      margin-top: 6rem;
+    }
+  `}
 `;
 
 const Media = styled.div`

@@ -98,27 +98,31 @@ const MainNav = ({ navItems }) => {
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
                 {!isMobile ? (
-                  <NavLink
-                    href={thisUrl}
-                    inline
-                    rel={relNoopener}
-                    aria-haspopup={hasPopUp}
-                    onKeyUp={keyPressed(group.title)}
-                  >
-                    <Text>{thisFirstChild.title}</Text>
-                  </NavLink>
+                  <Text>
+                    <NavLink
+                      href={thisUrl}
+                      inline
+                      rel={relNoopener}
+                      aria-haspopup={hasPopUp}
+                      onKeyUp={keyPressed(group.title)}
+                    >
+                      {thisFirstChild.title}
+                    </NavLink>
+                  </Text>
                 ) : (
-                  <NavLink
-                    href={thisUrl}
-                    inline
-                    aria-expanded={!!isSubMenuOpen[group.id]}
-                    aria-haspopup={hasPopUp}
-                    onClick={toggleSubMenu(group.id, group.links)}
-                    onKeyUp={keyPressed(group.title)}
-                    role="button"
-                  >
-                    <Text>{thisFirstChild.title}</Text>
-                  </NavLink>
+                  <Text>
+                    <NavLink
+                      href={thisUrl}
+                      inline
+                      aria-expanded={!!isSubMenuOpen[group.id]}
+                      aria-haspopup={hasPopUp}
+                      onClick={toggleSubMenu(group.id, group.links)}
+                      onKeyUp={keyPressed(group.title)}
+                      role="button"
+                    >
+                      {thisFirstChild.title}
+                    </NavLink>
+                  </Text>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {hasSubMenu && (

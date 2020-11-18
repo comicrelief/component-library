@@ -12,7 +12,6 @@ const StyledTextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   margin: 10px 0;
-  min-height: 65px;
   padding: 6px 12px;
   font-size: ${({ theme }) => theme.fontSize('m')};
   background-color: ${({ theme }) => theme.color('white')};
@@ -54,30 +53,24 @@ const StyledTextArea = styled.textarea`
     opacity: 1;
     overflow: visible;
   } /* IE 10+ */
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    max-width: 100%;
-    height: 96px;
-  }
 `;
 
 /**
  * Label component
  */
-const Label = styled.label.attrs(({ id }) => ({
-  htmlFor: `${id}`
-}))`
+const Label = styled.label`
   display: flex;
   flex-direction: column;
 `;
 
 const TextArea = React.forwardRef(({
-  id, label, errorMsg, ...rest
+  id, label, errorMsg, rows, ...rest
 }, ref) => (
-  <Label>
+  <Label htmlFor={id}>
     <Text weight="bold">{label}</Text>
     <StyledTextArea
       {...rest}
+      rows={rows}
       error={!!errorMsg}
       aria-describedby={id}
       ref={ref}
@@ -91,7 +84,12 @@ TextArea.propTypes = {
   placeholder: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  errorMsg: PropTypes.string.isRequired
+  errorMsg: PropTypes.string.isRequired,
+  rows: PropTypes.number
+};
+
+TextArea.defaultProps = {
+  rows: 4
 };
 
 export default TextArea;

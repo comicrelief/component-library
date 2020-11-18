@@ -15,7 +15,6 @@ it('renders Promo correctly', () => {
       image={data.promoImage}
       imageAltText=""
       copyFirst={false}
-      hasOverlay={false}
     >
       <Text
         tag="h1"
@@ -42,7 +41,7 @@ it('renders Promo correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders Promo with overlay correctly', () => {
+it('renders Promo correctly end position', () => {
   const tree = renderWithTheme(
     <Promo
       backgroundColor="blue_dark"
@@ -50,7 +49,7 @@ it('renders Promo with overlay correctly', () => {
       image={data.promoImage}
       imageAltText=""
       copyFirst={false}
-      hasOverlay
+      position="end"
     >
       <Text
         tag="h1"
