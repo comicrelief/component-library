@@ -34,6 +34,7 @@ const MainNav = ({ navItems }) => {
   };
 
   const toggleSubMenu = (e, item) => {
+    console.log('clicickcklslsls')
     // Check if navLink element has more than one subNav item    
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
@@ -108,7 +109,7 @@ const MainNav = ({ navItems }) => {
                   </Text>
                 ) : (
                   <NavLink
-                    href={thisUrl}
+                    href={hasPopUp ? '#' : thisUrl}
                     inline
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup={hasPopUp}
