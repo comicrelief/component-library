@@ -34,7 +34,6 @@ const MainNav = ({ navItems }) => {
   };
 
   const toggleSubMenu = (e, item) => {
-    console.log('clicickcklslsls')
     // Check if navLink element has more than one subNav item    
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
