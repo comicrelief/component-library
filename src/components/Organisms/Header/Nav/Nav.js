@@ -89,6 +89,7 @@ const MainNav = ({ navItems }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
+            console.log(hasPopUp);
 
             return (
               <NavItem
@@ -119,7 +120,7 @@ const MainNav = ({ navItems }) => {
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
-                    {thisFirstChild.title}
+                    {thisFirstChild.title} test
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
