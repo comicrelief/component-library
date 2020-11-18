@@ -36,7 +36,7 @@ const MainNav = ({ navItems }) => {
   const toggleSubMenu = (item, group) => event => {
     // Check if navLink element has more than one subNav item
     const checkSubnav = group && group.length > 1;
-    if ((isMobile || isTouch) && checkSubnav) {
+    if (checkSubnav) {
       event.preventDefault();
       setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
     }
@@ -89,7 +89,7 @@ const MainNav = ({ navItems }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
-            console.log(hasPopUp);
+            console.log(hasSubMenu);
 
             return (
               <NavItem
@@ -120,7 +120,7 @@ const MainNav = ({ navItems }) => {
                     onKeyUp={keyPressed(group.title)}
                     role="button"
                   >
-                    {thisFirstChild.title} test
+                    {thisFirstChild.title}
                   </NavLink>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
