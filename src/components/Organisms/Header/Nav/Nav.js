@@ -26,7 +26,6 @@ const MainNav = ({ navItems }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
@@ -61,7 +60,6 @@ const MainNav = ({ navItems }) => {
     // Detect window screen size
     setIsMobile(width < sizes.nav);
     // Detect if it is a touch device
-    setIsTouch(isTouchDevice);
     window.addEventListener('onkeyup', setIsKeyPressed);
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
