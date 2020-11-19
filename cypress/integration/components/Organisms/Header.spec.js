@@ -53,7 +53,7 @@ describe('Header component', () => {
                 .should('exist');
 
             //fundraising
-            cy.viewport('macbook-15');
+            // cy.viewport('macbook-15');
             cy.get('@container')
                 .find('nav > ul > li:nth-child(1) a')
                 .should('have.attr', 'href', 'https://www.comicrelief.com/fundraising/pay-in-your-money');
