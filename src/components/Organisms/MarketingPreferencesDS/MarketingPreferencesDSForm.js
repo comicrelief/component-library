@@ -4,28 +4,24 @@ import * as yup from 'yup';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 
 const validationObj = yup.object({
-  // 'Required' attr needs to be set on checkbox status
 
-  // permissionEmail
+  /* 'Required' attributes needs to be set on checkbox status to ensure validation makes sense */
   email: yup.string().max(50, 'Too long').email('Please enter a valid email address')
     .when('permissionEmail', {
       is: val => val.length > 0,
       then: yup.string().required('This field is required')
     }),
 
-  // permissionSMS
   mobile: yup.string().max(11, 'Too long').when('permissionSMS', {
     is: val => val.length > 0,
     then: yup.string().required('This field is required')
   }),
 
-  // permissionPhone
   phone: yup.string().max(11, 'Too long').when('permissionPhone', {
     is: val => val.length > 0,
     then: yup.string().required('This field is required')
   }),
 
-  // permissionPost
   address1: yup.string().max(11, 'Too long').when('permissionPost', {
     is: val => val.length > 0,
     then: yup.string().required('This field is required')
@@ -46,7 +42,7 @@ const validationObj = yup.object({
     then: yup.string().required('This field is required')
   }),
 
-  // Non-required fields
+  /*  Non-required fields */
   address2: yup.string().max(50, 'Too long'),
   address3: yup.string().max(50, 'Too long')
 });
