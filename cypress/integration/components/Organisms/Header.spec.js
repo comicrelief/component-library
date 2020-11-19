@@ -104,6 +104,7 @@ describe('Header component', () => {
 
             //fundraising
             cy.viewport('iphone-6');
+            cy.reload();
             cy.get('@container')
                 .find('nav > ul > li:nth-child(1) a')
                 .should('have.attr', 'href', '#');
