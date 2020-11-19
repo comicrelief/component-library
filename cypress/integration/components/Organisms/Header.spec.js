@@ -55,7 +55,7 @@ describe('Header component', () => {
             //fundraising
             cy.viewport(1280, 720);
             cy.get('@container')
-                .find('nav > ul > li:nth-child(1) > a')
+                .find('nav > ul > li:nth-child(1) a')
                 .should('have.attr', 'href', 'https://www.comicrelief.com/fundraising/pay-in-your-money');
 
 
@@ -104,7 +104,7 @@ describe('Header component', () => {
             //fundraising
             cy.viewport(1280, 720);
             cy.get('@container')
-                .find('nav > ul > li:nth-child(1) > a')
+                .find('nav > ul > li:nth-child(1) a')
                 .should('have.attr', 'href', 'https://www.comicrelief.com/fundraising/pay-in-your-money');
 
             //Donate
