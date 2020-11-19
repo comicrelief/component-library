@@ -33,7 +33,6 @@ const MainNav = ({ navItems }) => {
   };
 
   const toggleSubMenu = (e, item) => {
-    // Check if navLink element has more than one subNav item
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
   };
@@ -54,10 +53,9 @@ const MainNav = ({ navItems }) => {
 
   useEffect(() => {
     const width = window.innerWidth;
-    // Detect window screen size
     setIsMobile(width < sizes.nav);
-    // Detect if it is a touch device
     window.addEventListener('onkeyup', setIsKeyPressed);
+
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
     };
