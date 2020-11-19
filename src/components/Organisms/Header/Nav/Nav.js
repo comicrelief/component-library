@@ -26,20 +26,15 @@ const MainNav = ({ navItems }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
   };
 
-  const toggleSubMenu = (item, group) => event => {
-    // Check if navLink element has more than one subNav item
-    const checkSubnav = group && group.length > 1;
-    if ((isMobile || isTouch) && checkSubnav) {
-      event.preventDefault();
-      setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
-    }
+  const toggleSubMenu = (e, item) => {
+    e.preventDefault();
+    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
   };
 
   // Handle tab key on menu nav
@@ -57,15 +52,10 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    const isTouchDevice = (typeof window !== 'undefined' && 'ontouchstart' in window)
-      || window.navigator.msMaxTouchPoints > 0;
-
-    const width = typeof window !== 'undefined' ? window.innerWidth : null;
-    // Detect window screen size
+    const width = window.innerWidth;
     setIsMobile(width < sizes.nav);
-    // Detect if it is a touch device
-    setIsTouch(isTouchDevice);
     window.addEventListener('onkeyup', setIsKeyPressed);
+
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
     };
@@ -97,7 +87,19 @@ const MainNav = ({ navItems }) => {
                 index={index}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
-                {!isMobile ? (
+                {isMobile ? (
+                  <NavLink
+                    href={hasPopUp ? '#' : thisUrl}
+                    inline
+                    aria-expanded={!!isSubMenuOpen[group.id]}
+                    aria-haspopup={hasPopUp}
+                    onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                    onKeyUp={keyPressed(group.title)}
+                    role="button"
+                  >
+                    {thisFirstChild.title}
+                  </NavLink>
+                ) : (
                   <Text>
                     <NavLink
                       href={thisUrl}
@@ -105,20 +107,6 @@ const MainNav = ({ navItems }) => {
                       rel={relNoopener}
                       aria-haspopup={hasPopUp}
                       onKeyUp={keyPressed(group.title)}
-                    >
-                      {thisFirstChild.title}
-                    </NavLink>
-                  </Text>
-                ) : (
-                  <Text>
-                    <NavLink
-                      href={thisUrl}
-                      inline
-                      aria-expanded={!!isSubMenuOpen[group.id]}
-                      aria-haspopup={hasPopUp}
-                      onClick={toggleSubMenu(group.id, group.links)}
-                      onKeyUp={keyPressed(group.title)}
-                      role="button"
                     >
                       {thisFirstChild.title}
                     </NavLink>
