@@ -6,23 +6,21 @@ import Input from '../../Atoms/Input/Input';
 const TextInput = ({
   fieldName, label, handleInputChange,
   isRequired, errorMessage, ...rest
-}, ref) => {
-  const errorMsg = errorMessage;
-
+}) => {
   const props = {
     id: fieldName,
     name: fieldName,
     type: 'text',
     label,
     placeholder: label,
-    errorMsg,
+    errorMsg: errorMessage,
     onChange: handleInputChange,
     isRequired,
     ...rest
   };
 
   return (
-    <Field {...props} ref={ref} as={Input} />
+    <Field {...props} as={Input} />
   );
 };
 

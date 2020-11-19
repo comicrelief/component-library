@@ -1,18 +1,54 @@
 import React from 'react';
 import { Formik } from 'formik';
-import * as Yup from 'yup';
+import * as yup from 'yup';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 
-const validationObj = Yup.object({
-  email: Yup.string().required('This field is required').email('Please enter a valid email address').max(50, 'Too long'),
-  mobile: Yup.string().required('This field is required').max(11),
-  phone: Yup.string().required('This field is required').max(11),
-  address1: Yup.string().required('This field is required').max(50, 'Too long'),
-  address2: Yup.string().max(50, 'Too long'),
-  address3: Yup.string().max(50, 'Too long'),
-  town: Yup.string().required('This field is required').max(50, 'Too long'),
-  country: Yup.string().required('This field is required').max(50, 'Too long'),
-  postcode: Yup.string().required('This field is required').max(50, 'Too long')
+const validationObj = yup.object({
+  // 'Required' attr needs to be set on checkbox status
+
+  // permissionEmail
+  email: yup.string().max(50, 'Too long').email('Please enter a valid email address')
+    .when('permissionEmail', {
+      is: val => val.length > 0,
+      then: yup.string().required('This field is required')
+    }),
+
+  // permissionSMS
+  mobile: yup.string().max(11, 'Too long').when('permissionSMS', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  // permissionPhone
+  phone: yup.string().max(11, 'Too long').when('permissionPhone', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  // permissionPost
+  address1: yup.string().max(11, 'Too long').when('permissionPost', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  town: yup.string().max(59, 'Too long').when('permissionPost', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  postcode: yup.string().max(50, 'Too long').when('permissionPost', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  country: yup.string().max(50, 'Too long').when('permissionPost', {
+    is: val => val.length > 0,
+    then: yup.string().required('This field is required')
+  }),
+
+  // Non-required fields
+  address2: yup.string().max(50, 'Too long'),
+  address3: yup.string().max(50, 'Too long')
 });
 
 /* This component exists purely  to show the Marketing Preferences
@@ -46,21 +82,34 @@ const MarketingPreferencesDSForm = () => {
         }}
       >
         {({
-          handleChange, setFieldValue, values, errors, touched
+          handleChange, setFieldValue, setFieldTouched, validateField,
+          setFieldError,
+          values, errors, touched
         }) => (
 
           <form onSubmit={e => formSubmit(e)}>
+            <button type="button" onClick={() => { console.clear(); console.log('values', values); }}>
+              Print values
+            </button>
+
+            <button type="button" onClick={() => console.log('erorrs', errors)}>
+              Print errors
+            </button>
+
+            <button type="button" onClick={() => console.log('touched', touched)}>
+              Print touched
+            </button>
+
             <MarketingPreferencesDS
               formValues={values}
               handleInputChange={handleChange}
               handleCheckChange={setFieldValue}
+              handleErrorReset={setFieldError}
+              handleTouchedReset={setFieldTouched}
+              reValidateField={validateField}
               validation={{ errors, touched }}
             />
             <input type="submit" />
-
-            <button type="button" onClick={() => console.log(values)}>
-              Print values
-            </button>
           </form>
         )}
       </Formik>

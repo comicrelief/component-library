@@ -19,6 +19,9 @@ const MarketingPreferencesDS = ({
   copyBottom,
   handleInputChange,
   handleCheckChange,
+  // handleErrorReset,
+  // reValidateField,
+  handleTouchedReset,
   formValues,
   validation
 }) => {
@@ -29,10 +32,16 @@ const MarketingPreferencesDS = ({
     */
   function handleCheckboxChange(e) {
     const thisName = e.target.name;
-    const thisValue = e.target.value;
-    const currValue = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
-    const newValue = thisValue !== currValue ? [thisValue] : []; // Toggle the value
-    handleCheckChange(thisName, newValue); // Update Formik with the value
+    const thisVal = e.target.value;
+    const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
+    const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
+    handleCheckChange(thisName, newVal); // Update Formik with the value
+
+    // If a 'not seleted' choice, reset the value and 'touched' state in Formik
+    if (newVal.length === 0) {
+      handleCheckChange('email', ''); // TO-DO: make this generic and not just for email lol
+      handleTouchedReset('email', false); // TO-DO: ditto
+    }
   }
 
   return (
@@ -58,8 +67,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your email address"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.email && validation.touched.email)
-                && validation.errors.email}
+              errorMessage={validation.errors.email && validation.touched.email ? validation.errors.email : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -86,8 +94,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.mobile && validation.touched.mobile)
-                && validation.errors.mobile}
+              errorMessage={validation.errors.mobile && validation.touched.mobile ? validation.errors.mobile : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -113,8 +120,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.phone && validation.touched.phone)
-                && validation.errors.phone}
+              errorMessage={validation.errors.phone && validation.touched.phone ? validation.errors.phone : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -140,24 +146,21 @@ const MarketingPreferencesDS = ({
               label="Address Line 1"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.address1 && validation.touched.address1)
-                && validation.errors.address1}
+              errorMessage={validation.errors.address1 && validation.touched.address1 ? validation.errors.address1 : ''}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address2')}
               label="Address Line 2"
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.address2 && validation.touched.address2)
-                && validation.errors.address2}
+              errorMessage={validation.errors.address2 && validation.touched.address2 ? validation.errors.address2 : ''}
             />
             <TextInput
               placeholder=""
               fieldName={prefixName('address3')}
               label="Address Line 3"
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.address3 && validation.touched.address3)
-                && validation.errors.address3}
+              errorMessage={validation.errors.address3 && validation.touched.address3 ? validation.errors.address3 : ''}
             />
             <TextInput
               placeholder=""
@@ -165,8 +168,7 @@ const MarketingPreferencesDS = ({
               label="Town/City"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.town && validation.touched.town)
-                && validation.errors.town}
+              errorMessage={validation.errors.town && validation.touched.town ? validation.errors.town : ''}
             />
             <TextInput
               placeholder=""
@@ -174,8 +176,7 @@ const MarketingPreferencesDS = ({
               label="Postcode"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.postcode && validation.touched.postcode)
-                && validation.errors.postcode}
+              errorMessage={validation.errors.postcode && validation.touched.postcode ? validation.errors.postcode : ''}
             />
             <TextInput
               placeholder=""
@@ -183,8 +184,7 @@ const MarketingPreferencesDS = ({
               label="Country"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={(validation.errors.country && validation.touched.country)
-                && validation.errors.country}
+              errorMessage={validation.errors.country && validation.touched.country ? validation.errors.country : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -210,6 +210,9 @@ MarketingPreferencesDS.propTypes = {
   disableSMSInput: PropTypes.bool,
   handleInputChange: PropTypes.func.isRequired,
   handleCheckChange: PropTypes.func.isRequired,
+  // handleErrorReset: PropTypes.func.isRequired,
+  handleTouchedReset: PropTypes.func.isRequired,
+  // reValidateField: PropTypes.func.isRequired,
   formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
   validation: PropTypes.objectOf(PropTypes.shape).isRequired
 };
