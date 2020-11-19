@@ -53,7 +53,7 @@ const MainNav = ({ navItems }) => {
   };
 
   useEffect(() => {
-    const width = typeof window !== 'undefined' ? window.innerWidth : null;
+    const width = window.innerWidth;
     // Detect window screen size
     setIsMobile(width < sizes.nav);
     // Detect if it is a touch device
@@ -89,19 +89,7 @@ const MainNav = ({ navItems }) => {
                 index={index}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
-                {!isMobile ? (
-                  <Text>
-                    <NavLink
-                      href={thisUrl}
-                      inline
-                      rel={relNoopener}
-                      aria-haspopup={hasPopUp}
-                      onKeyUp={keyPressed(group.title)}
-                    >
-                      {thisFirstChild.title}
-                    </NavLink>
-                  </Text>
-                ) : (
+                {isMobile ? (
                   <NavLink
                     href={hasPopUp ? '#' : thisUrl}
                     inline
@@ -113,6 +101,18 @@ const MainNav = ({ navItems }) => {
                   >
                     {thisFirstChild.title}
                   </NavLink>
+                ) : (
+                  <Text>
+                    <NavLink
+                      href={thisUrl}
+                      inline
+                      rel={relNoopener}
+                      aria-haspopup={hasPopUp}
+                      onKeyUp={keyPressed(group.title)}
+                    >
+                      {thisFirstChild.title}
+                    </NavLink>
+                  </Text>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {hasSubMenu && (
