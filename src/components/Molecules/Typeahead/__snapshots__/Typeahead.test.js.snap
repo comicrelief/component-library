@@ -10,45 +10,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4 {
-  font-weight: normal;
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: 1rem 1.5rem;
-  background-color: #F4F3F5;
-  border: 1px solid;
-  border-color: #E1E2E3;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #000000;
-  border-radius: 0.5rem;
-  font-size: inherit;
-}
-
-.c4:focus {
-  border: 1px solid #666;
-}
-
-.c4:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c4:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c4:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c4:focus::placeholder {
-  color: #666;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,7 +18,6 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: bold;
   color: #5C5C5E;
 }
 
@@ -71,12 +31,6 @@ exports[`renders correctly 1`] = `
   position: relative;
 }
 
-@media (min-width:740px) {
-  .c4 {
-    max-width: 290px;
-  }
-}
-
 <div
   className="c0 TextInputWithDropdown"
   onKeyDown={[Function]}
@@ -86,7 +40,7 @@ exports[`renders correctly 1`] = `
     htmlFor="typeahead-test"
   >
     <span
-      className="c2 "
+      className="c2 Input__LabelText-bcqy1o-2"
       color="inherit"
       dangerouslySetInnerHTML={
         Object {
@@ -102,7 +56,7 @@ exports[`renders correctly 1`] = `
       <input
         aria-describedby="typeahead-test"
         autoComplete="off"
-        className="c4"
+        className=""
         id="typeahead-test"
         name="q"
         onChange={[Function]}

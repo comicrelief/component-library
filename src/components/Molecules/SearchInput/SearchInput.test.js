@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import SearchInput from './SearchInput';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import SearchInput from "./SearchInput";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
@@ -24,45 +24,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9 {
-      font-weight: normal;
-      position: relative;
-      box-sizing: border-box;
-      width: 100%;
-      height: 48px;
-      padding: 1rem 1.5rem;
-      background-color: #F4F3F5;
-      border: 1px solid;
-      border-color: #E1E2E3;
-      box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      color: #000000;
-      border-radius: 0.5rem;
-      font-size: inherit;
-    }
-
-    .c9:focus {
-      border: 1px solid #666;
-    }
-
-    .c9:focus::-webkit-input-placeholder {
-      color: #666;
-    }
-
-    .c9:focus::-moz-placeholder {
-      color: #666;
-    }
-
-    .c9:focus:-ms-input-placeholder {
-      color: #666;
-    }
-
-    .c9:focus::placeholder {
-      color: #666;
-    }
-
     .c4 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -71,12 +32,11 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      font-weight: bold;
       color: #5C5C5E;
     }
 
     .c7 {
-      visibility: border:0;
+      border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
       -webkit-clip-path: inset(50%);
@@ -133,12 +93,6 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c9 {
-        max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
       .c5 input {
         height: 100px;
         font-size: 3rem;
@@ -178,7 +132,7 @@ it('renders correctly', () => {
                 
                 <input
                   aria-describedby="search"
-                  className="c9"
+                  className=""
                   id="search"
                   name="search"
                   onChange={[Function]}

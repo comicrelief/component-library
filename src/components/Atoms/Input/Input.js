@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Text from '../Text/Text';
 import ErrorText from '../ErrorText/ErrorText';
@@ -12,8 +12,7 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS.)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
-const InputField = styled.input`${({ theme, error, prefixLength }) => `
-  font-weight: normal;
+const InputField = styled.input`${({ theme, error, prefixLength }) => css(`
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -40,7 +39,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => `
   @media ${theme.breakpoint('small')} {
     max-width: 290px;
   }
-`}`;
+`)}`;
 
 const Label = styled.label`
   display: flex;

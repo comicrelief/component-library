@@ -5,8 +5,7 @@
     placeholder="This is the hint text"
     type="text"
     label="Label"
-    errorMsg=""
-    id="Accessibility information go here"
+    id="input-example-1"
     showLabel={true}
   />
 ```
@@ -19,7 +18,7 @@
     type="text"
     label="Label"
     errorMsg="This is an error message"
-    id="Accessibility info"
+    id="input-example-2"
     showLabel={false}
   />
 ```
@@ -32,7 +31,7 @@
     type="text"
     label="Label"
     errorMsg=""
-    id="Accessibility info go here"
+    id="input-example-3"
     showLabel={true}
   />
 ```
@@ -46,7 +45,7 @@
     type="text"
     label="<b>Markup label <i>italic</i></b>"
     errorMsg=""
-    id="Accessibility info go here"
+    id="input-example-4"
     showLabel={true}
   />
 ```

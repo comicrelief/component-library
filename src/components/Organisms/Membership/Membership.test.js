@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Membership from './Membership';
-import pictures from '../../../styleguide/data/data';
-import data from './dev-data/data';
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Membership from "./Membership";
+import pictures from "../../../styleguide/data/data";
+import data from "./dev-data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
@@ -57,7 +57,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c21 {
+    .c20 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -80,45 +80,6 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c18 {
-      font-weight: normal;
-      position: relative;
-      box-sizing: border-box;
-      width: 100%;
-      height: 48px;
-      padding: 1rem 1.5rem;
-      background-color: #F4F3F5;
-      border: 1px solid;
-      border-color: #E1E2E3;
-      box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      color: #000000;
-      border-radius: 0.5rem;
-      font-size: inherit;
-    }
-
-    .c18:focus {
-      border: 1px solid #666;
-    }
-
-    .c18:focus::-webkit-input-placeholder {
-      color: #666;
-    }
-
-    .c18:focus::-moz-placeholder {
-      color: #666;
-    }
-
-    .c18:focus:-ms-input-placeholder {
-      color: #666;
-    }
-
-    .c18:focus::placeholder {
-      color: #666;
-    }
-
     .c14 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -127,7 +88,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      font-weight: bold;
       color: #5C5C5E;
     }
 
@@ -240,7 +200,7 @@ it('renders correctly', () => {
       border-color: #E52630;
     }
 
-    .c20 {
+    .c19 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -251,11 +211,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c22 {
+    .c21 {
       margin-right: auto;
     }
 
-    .c23 {
+    .c22 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -264,7 +224,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c23 span {
+    .c22 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -276,21 +236,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c23 input {
+    .c22 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c23 input:focus {
+    .c22 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c25 {
+    .c24 {
       line-height: 1.5;
     }
 
-    .c24 {
+    .c23 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -302,9 +262,9 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c24:active,
-    .c24:focus,
-    .c24:hover {
+    .c23:active,
+    .c23:focus,
+    .c23:hover {
       background-color: #961D35;
     }
 
@@ -323,11 +283,11 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c19 {
+    .c18 {
       display: block;
     }
 
-    .c19 input {
+    .c18 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -339,12 +299,6 @@ it('renders correctly', () => {
       border-color: #E52630;
       background-color: #E52630;
       color: #FFFFFF;
-    }
-
-    @media (min-width:740px) {
-      .c18 {
-        max-width: 290px;
-      }
     }
 
     @media (min-width:1024px) {
@@ -390,7 +344,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c23 {
+      .c22 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -398,7 +352,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c24 {
+      .c23 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -477,7 +431,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box1"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -493,7 +447,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box1"
                       aria-label="£5"
-                      className="c18"
+                      className=""
                       id="mship-1--moneyBuy-box1"
                       name="mship-1--moneyBuy1"
                       onClick={[Function]}
@@ -505,11 +459,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  className="c14 c19"
+                  className="c14 c18"
                   htmlFor="mship-1--moneyBuy-box2"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -525,7 +479,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box2"
                       aria-label="£10"
-                      className="c18"
+                      className=""
                       id="mship-1--moneyBuy-box2"
                       name="mship-1--moneyBuy2"
                       onClick={[Function]}
@@ -541,7 +495,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box3"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -557,7 +511,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box3"
                       aria-label="£20"
-                      className="c18"
+                      className=""
                       id="mship-1--moneyBuy-box3"
                       name="mship-1--moneyBuy3"
                       onClick={[Function]}
@@ -570,21 +524,21 @@ it('renders correctly', () => {
                 </label>
               </div>
               <div
-                className="c20"
+                className="c19"
               >
                 <span
-                  className="c21 c22"
+                  className="c20 c21"
                   color="inherit"
                   size="s"
                 >
                   Other amount
                 </span>
                 <label
-                  className="c14 c23"
+                  className="c14 c22"
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -600,7 +554,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--MoneyBuy-userInput"
                       aria-label="Input a different amount"
-                      className="c18"
+                      className=""
                       id="mship-1--MoneyBuy-userInput"
                       max="20000"
                       min="1"
@@ -619,12 +573,12 @@ it('renders correctly', () => {
                 </label>
               </div>
               <input
-                className="c24"
+                className="c23"
                 type="submit"
                 value="Donate"
               />
               <p
-                className="c25"
+                className="c24"
               />
             </fieldset>
           </form>
