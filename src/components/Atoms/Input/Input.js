@@ -12,7 +12,7 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS.)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
-const InputField = styled.input`${({ theme, error, prefixLength }) => css(`
+const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -39,7 +39,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css(`
   @media ${theme.breakpoint('small')} {
     max-width: 290px;
   }
-`)}`;
+`}`;
 
 const Label = styled.label`
   display: flex;
