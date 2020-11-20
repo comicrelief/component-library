@@ -4,13 +4,14 @@ import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
+import returnAssociatedFields from './_HelperFunctions';
+
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
   CopyWrapper, Head, FormField, ShowHide
 } from './MarketingPreferencesDS.style';
 
 const MarketingPreferencesDS = ({
-  fieldPrefix,
   disableEmailInput,
   disablePostInputs,
   disablePhoneInput,
@@ -19,16 +20,13 @@ const MarketingPreferencesDS = ({
   copyBottom,
   handleInputChange,
   handleCheckChange,
-  // handleErrorReset,
-  // reValidateField,
   handleTouchedReset,
   formValues,
-  validation
+  validation,
+  fieldPrefix
 }) => {
-  const prefixName = name => fieldPrefix + name;
-
   /** Uses Formik's 'setFieldValue' function (passed down as 'handleCheckChange' prop)
-    *  to allow us to override the native checkbox functionality to act as a toggle
+    *  to allow us to override the native checkbox functionality to allow yes/no/none interaction
     */
   function handleCheckboxChange(e) {
     const thisName = e.target.name;
@@ -37,154 +35,167 @@ const MarketingPreferencesDS = ({
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
     handleCheckChange(thisName, newVal); // Update Formik with the value
 
-    // If a 'not seleted' choice, reset the value and 'touched' state in Formik
+    /* If a 'not seleted' choice, reset the value and 'touched'
+    state in Formik for all fields associated with this checkbox */
     if (newVal.length === 0) {
-      handleCheckChange('email', ''); // TO-DO: make this generic and not just for email lol
-      handleTouchedReset('email', false); // TO-DO: ditto
+      const theseFields = returnAssociatedFields(thisName, fieldPrefix); // Generic helper function
+      theseFields.forEach(fieldName => {
+        handleCheckChange(fieldPrefix + fieldName, '');
+        handleTouchedReset(fieldPrefix + fieldName, false);
+      });
     }
   }
+
+  // In the interest of brevity:
+  const permissionEmail = `${fieldPrefix}permissionEmail`;
+  const permissionPost = `${fieldPrefix}permissionPost`;
+  const permissionSMS = `${fieldPrefix}permissionSMS`;
+  const permissionPhone = `${fieldPrefix}permissionPhone`;
+  const { errors, touched } = validation;
 
   return (
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
       {/* Email field */}
-      <FormField className="field-email" userSelection={formValues.permissionEmail}>
+      <FormField className="field-email" userSelection={formValues[permissionEmail]}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer
-            name={prefixName('permissionEmail')}
-            onChange={e => handleCheckboxChange(e)}
-          />
+          <CheckAnswer name={permissionEmail} onChange={e => handleCheckboxChange(e)} />
         </Head>
+
         <MaybeDisabled disabled={disableEmailInput}>
-          <ShowHide show={formValues.permissionEmail[0] !== undefined}>
-            {formValues.permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
+          <ShowHide show={formValues[permissionEmail][0] !== undefined}>
+            {formValues[permissionEmail][0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
-              fieldName={prefixName('email')}
+              fieldName={`${fieldPrefix}email`}
               label="Please enter your email address"
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.email && validation.touched.email ? validation.errors.email : ''}
+              isRequired={formValues[permissionEmail][0] !== undefined}
+              errorMessage={errors[`${fieldPrefix}email`] && touched[`${fieldPrefix}email`] ? errors[`${fieldPrefix}email`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
       </FormField>
 
       {/* Text field */}
-      <FormField className="field-sms" userSelection={formValues.permissionSMS}>
+      <FormField className="field-sms" userSelection={formValues[permissionSMS]}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Text me
           </Text>
           <CheckAnswer
-            name={prefixName('permissionSMS')}
+            name={permissionSMS}
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
-          <ShowHide show={formValues.permissionSMS[0] !== undefined}>
-            {formValues.permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
-
+          <ShowHide show={formValues[permissionSMS][0] !== undefined}>
+            {formValues[permissionSMS][0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
-              fieldName={prefixName('mobile')}
+              fieldName={`${fieldPrefix}mobile`}
               label="Please enter your mobile no."
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.mobile && validation.touched.mobile ? validation.errors.mobile : ''}
+              isRequired={formValues[permissionSMS][0] !== undefined}
+              errorMessage={errors[`${fieldPrefix}mobile`] && touched[`${fieldPrefix}mobile`] ? errors[`${fieldPrefix}mobile`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
       </FormField>
 
       {/* Phone field */}
-      <FormField className="field-sms" userSelection={formValues.permissionPhone}>
+      <FormField className="field-sms" userSelection={formValues[permissionPhone]}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Phone me
           </Text>
           <CheckAnswer
-            name={prefixName('permissionPhone')}
+            name={permissionPhone}
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
-          <ShowHide show={formValues.permissionPhone[0] !== undefined}>
-            {formValues.permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
+          <ShowHide show={formValues[permissionPhone][0] !== undefined}>
+            {formValues[permissionPhone][0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
-              fieldName={prefixName('phone')}
+              fieldName={`${fieldPrefix}phone`}
               label="Please enter your phone no."
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.phone && validation.touched.phone ? validation.errors.phone : ''}
+              isRequired={formValues[permissionPhone][0] !== undefined}
+
+              errorMessage={errors[`${fieldPrefix}phone`] && touched[`${fieldPrefix}phone`] ? errors[`${fieldPrefix}phone`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
       </FormField>
 
       {/* Post field */}
-      <FormField className="field-post" userSelection={formValues.permissionPost}>
+      <FormField className="field-post" userSelection={formValues[permissionPost]}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Send me post
           </Text>
           <CheckAnswer
-            name={prefixName('permissionPost')}
+            name={permissionPost}
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disablePostInputs}>
-          <ShowHide show={formValues.permissionPost[0] !== undefined}>
-            {formValues.permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
+          <ShowHide show={formValues[permissionPost][0] !== undefined}>
+            {formValues[permissionPost][0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
-              fieldName={prefixName('address1')}
+              fieldName={`${fieldPrefix}address1`}
               label="Address Line 1"
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.address1 && validation.touched.address1 ? validation.errors.address1 : ''}
+              isRequired={formValues[permissionPost][0] !== undefined}
+              errorMessage={errors[`${fieldPrefix}address1`] && touched[`${fieldPrefix}address1`]
+                ? errors[`${fieldPrefix}address1`] : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={prefixName('address2')}
+              fieldName={`${fieldPrefix}address2`}
               label="Address Line 2"
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.address2 && validation.touched.address2 ? validation.errors.address2 : ''}
+              errorMessage={errors[`${fieldPrefix}address2`] && touched[`${fieldPrefix}address2`]
+                ? errors[`${fieldPrefix}address2`] : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={prefixName('address3')}
+              fieldName={`${fieldPrefix}address3`}
               label="Address Line 3"
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.address3 && validation.touched.address3 ? validation.errors.address3 : ''}
+              errorMessage={errors[`${fieldPrefix}address3`] && touched[`${fieldPrefix}address3`]
+                ? errors[`${fieldPrefix}address3`] : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={prefixName('town')}
+              fieldName={`${fieldPrefix}town`}
               label="Town/City"
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.town && validation.touched.town ? validation.errors.town : ''}
+              isRequired={formValues[permissionPost][0] !== undefined}
+              errorMessage={errors[`${fieldPrefix}town`] && touched[`${fieldPrefix}town`]
+                ? errors[`${fieldPrefix}town`] : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={prefixName('postcode')}
+              fieldName={`${fieldPrefix}postcode`}
               label="Postcode"
-              isRequired
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.postcode && validation.touched.postcode ? validation.errors.postcode : ''}
+              isRequired={formValues[permissionPost][0] !== undefined}
+              errorMessage={errors[`${fieldPrefix}postcode`] && touched[`${fieldPrefix}postcode`] ? errors[`${fieldPrefix}postcode`] : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={prefixName('country')}
+              fieldName={`${fieldPrefix}country`}
               label="Country"
-              isRequired
+              isRequired={formValues[permissionPost][0] !== undefined}
               handleInputChange={handleInputChange}
-              errorMessage={validation.errors.country && validation.touched.country ? validation.errors.country : ''}
+              errorMessage={errors[`${fieldPrefix}country`] && touched[`${fieldPrefix}country`] ? errors[`${fieldPrefix}country`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -210,9 +221,7 @@ MarketingPreferencesDS.propTypes = {
   disableSMSInput: PropTypes.bool,
   handleInputChange: PropTypes.func.isRequired,
   handleCheckChange: PropTypes.func.isRequired,
-  // handleErrorReset: PropTypes.func.isRequired,
   handleTouchedReset: PropTypes.func.isRequired,
-  // reValidateField: PropTypes.func.isRequired,
   formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
   validation: PropTypes.objectOf(PropTypes.shape).isRequired
 };
