@@ -24,6 +24,44 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
+    .c9 {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      padding: 1rem 1.5rem;
+      background-color: #F4F3F5;
+      border: 1px solid;
+      border-color: #E1E2E3;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: #000000;
+      border-radius: 0.5rem;
+      font-size: inherit;
+    }
+
+    .c9:focus {
+      border: 1px solid #666;
+    }
+
+    .c9:focus::-webkit-input-placeholder {
+      color: #666;
+    }
+
+    .c9:focus::-moz-placeholder {
+      color: #666;
+    }
+
+    .c9:focus:-ms-input-placeholder {
+      color: #666;
+    }
+
+    .c9:focus::placeholder {
+      color: #666;
+    }
+
     .c4 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -93,6 +131,12 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c9 {
+        max-width: 290px;
+      }
+    }
+
+    @media (min-width:740px) {
       .c5 input {
         height: 100px;
         font-size: 3rem;
@@ -132,7 +176,7 @@ it('renders correctly', () => {
                 
                 <input
                   aria-describedby="search"
-                  className=""
+                  className="c9"
                   id="search"
                   name="search"
                   onChange={[Function]}

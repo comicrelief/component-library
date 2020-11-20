@@ -57,7 +57,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c20 {
+    .c21 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -78,6 +78,44 @@ it('renders correctly', () => {
       height: 100%;
       display: block;
       object-fit: cover;
+    }
+
+    .c18 {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      padding: 1rem 1.5rem;
+      background-color: #F4F3F5;
+      border: 1px solid;
+      border-color: #E1E2E3;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: #000000;
+      border-radius: 0.5rem;
+      font-size: inherit;
+    }
+
+    .c18:focus {
+      border: 1px solid #666;
+    }
+
+    .c18:focus::-webkit-input-placeholder {
+      color: #666;
+    }
+
+    .c18:focus::-moz-placeholder {
+      color: #666;
+    }
+
+    .c18:focus:-ms-input-placeholder {
+      color: #666;
+    }
+
+    .c18:focus::placeholder {
+      color: #666;
     }
 
     .c14 {
@@ -200,7 +238,7 @@ it('renders correctly', () => {
       border-color: #E52630;
     }
 
-    .c19 {
+    .c20 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -211,11 +249,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c21 {
+    .c22 {
       margin-right: auto;
     }
 
-    .c22 {
+    .c23 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -224,7 +262,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c22 span {
+    .c23 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -236,21 +274,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c22 input {
+    .c23 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c22 input:focus {
+    .c23 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c24 {
+    .c25 {
       line-height: 1.5;
     }
 
-    .c23 {
+    .c24 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -262,9 +300,9 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c23:active,
-    .c23:focus,
-    .c23:hover {
+    .c24:active,
+    .c24:focus,
+    .c24:hover {
       background-color: #961D35;
     }
 
@@ -283,11 +321,11 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c18 {
+    .c19 {
       display: block;
     }
 
-    .c18 input {
+    .c19 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -299,6 +337,12 @@ it('renders correctly', () => {
       border-color: #E52630;
       background-color: #E52630;
       color: #FFFFFF;
+    }
+
+    @media (min-width:740px) {
+      .c18 {
+        max-width: 290px;
+      }
     }
 
     @media (min-width:1024px) {
@@ -344,7 +388,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c22 {
+      .c23 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -352,7 +396,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c23 {
+      .c24 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -447,7 +491,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box1"
                       aria-label="£5"
-                      className=""
+                      className="c18"
                       id="mship-1--moneyBuy-box1"
                       name="mship-1--moneyBuy1"
                       onClick={[Function]}
@@ -459,7 +503,7 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  className="c14 c18"
+                  className="c14 c19"
                   htmlFor="mship-1--moneyBuy-box2"
                 >
                   <span
@@ -479,7 +523,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box2"
                       aria-label="£10"
-                      className=""
+                      className="c18"
                       id="mship-1--moneyBuy-box2"
                       name="mship-1--moneyBuy2"
                       onClick={[Function]}
@@ -511,7 +555,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--moneyBuy-box3"
                       aria-label="£20"
-                      className=""
+                      className="c18"
                       id="mship-1--moneyBuy-box3"
                       name="mship-1--moneyBuy3"
                       onClick={[Function]}
@@ -524,17 +568,17 @@ it('renders correctly', () => {
                 </label>
               </div>
               <div
-                className="c19"
+                className="c20"
               >
                 <span
-                  className="c20 c21"
+                  className="c21 c22"
                   color="inherit"
                   size="s"
                 >
                   Other amount
                 </span>
                 <label
-                  className="c14 c22"
+                  className="c14 c23"
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
                   <span
@@ -554,7 +598,7 @@ it('renders correctly', () => {
                     <input
                       aria-describedby="mship-1--MoneyBuy-userInput"
                       aria-label="Input a different amount"
-                      className=""
+                      className="c18"
                       id="mship-1--MoneyBuy-userInput"
                       max="20000"
                       min="1"
@@ -573,12 +617,12 @@ it('renders correctly', () => {
                 </label>
               </div>
               <input
-                className="c23"
+                className="c24"
                 type="submit"
                 value="Donate"
               />
               <p
-                className="c24"
+                className="c25"
               />
             </fieldset>
           </form>

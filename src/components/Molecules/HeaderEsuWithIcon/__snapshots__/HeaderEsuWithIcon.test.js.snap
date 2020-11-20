@@ -22,7 +22,7 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c16 {
+.c17 {
   color: #E52630;
   text-transform: inherit;
   font-weight: bold;
@@ -30,12 +30,12 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c17 {
+.c18 {
   display: inline-block;
   margin-top: 0.5rem;
 }
 
-.c17:before {
+.c18:before {
   position: relative;
   content: '';
   top: 2px;
@@ -46,6 +46,44 @@ exports[`renders correctly with error message 1`] = `
   display: inline-block;
   vertical-align: top;
   color: #E52630;
+}
+
+.c16 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E52630;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+}
+
+.c16:focus {
+  border: 1px solid #666;
+}
+
+.c16:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c16:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c16:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c16:focus::placeholder {
+  color: #666;
 }
 
 .c11 {
@@ -102,7 +140,7 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
 }
 
-.c22 {
+.c23 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -138,18 +176,18 @@ exports[`renders correctly with error message 1`] = `
   margin-bottom: 1rem;
 }
 
-.c18 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c18 input {
+.c19 input {
   text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,12 +198,12 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c20 p {
+.c21 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c20 p a {
+.c21 p a {
   font-size: 1rem;
 }
 
@@ -188,7 +226,7 @@ exports[`renders correctly with error message 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c19 {
+.c20 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -200,9 +238,9 @@ exports[`renders correctly with error message 1`] = `
   border-radius: 100px;
 }
 
-.c19:active,
-.c19:focus,
-.c19:hover {
+.c20:active,
+.c20:focus,
+.c20:hover {
   background-color: #961D35;
 }
 
@@ -239,7 +277,7 @@ exports[`renders correctly with error message 1`] = `
   padding: 2rem;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   top: 0;
   right: 0;
@@ -257,14 +295,20 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c18 input {
+  .c16 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c19 {
+  .c20 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -272,7 +316,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c21 {
+  .c22 {
     margin: 4rem 0 0;
     right: 25%;
   }
@@ -362,7 +406,7 @@ exports[`renders correctly with error message 1`] = `
               
               <input
                 aria-label="Email address"
-                className=""
+                className="c16"
                 id="email"
                 name="email"
                 onChange={[Function]}
@@ -372,23 +416,23 @@ exports[`renders correctly with error message 1`] = `
               />
             </div>
             <span
-              className="c16"
+              className="c17"
               color="red"
               data-test="error-message"
               size="sm"
             >
               <span
-                className="c17"
+                className="c18"
               >
                 invalid email
               </span>
             </span>
           </label>
           <div
-            className="c18"
+            className="c19"
           >
             <input
-              className="c19"
+              className="c20"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
@@ -398,7 +442,7 @@ exports[`renders correctly with error message 1`] = `
           </div>
         </form>
         <div
-          className="c20"
+          className="c21"
         >
           <div
             className="c9"
@@ -411,7 +455,7 @@ exports[`renders correctly with error message 1`] = `
         </div>
       </div>
       <a
-        className="c1 c21"
+        className="c1 c22"
         data-test="header-esu-icon"
         href="#"
         onClick={[Function]}
@@ -427,7 +471,7 @@ exports[`renders correctly with error message 1`] = `
           src="mock.asset"
         />
         <span
-          className="c22"
+          className="c23"
         >
           (opens in new window)
         </span>
@@ -511,6 +555,44 @@ exports[`renders correctly with modal open 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c16 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+}
+
+.c16:focus {
+  border: 1px solid #666;
+}
+
+.c16:focus::-webkit-input-placeholder {
+  color: #666;
+}
+
+.c16:focus::-moz-placeholder {
+  color: #666;
+}
+
+.c16:focus:-ms-input-placeholder {
+  color: #666;
+}
+
+.c16:focus::placeholder {
+  color: #666;
+}
+
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -565,7 +647,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 100%;
 }
 
-.c20 {
+.c21 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -601,18 +683,18 @@ exports[`renders correctly with modal open 1`] = `
   margin-bottom: 1rem;
 }
 
-.c16 {
+.c17 {
   margin-top: 1rem;
 }
 
-.c16 input {
+.c17 input {
   text-align: center;
   border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -623,12 +705,12 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c18 p {
+.c19 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c18 p a {
+.c19 p a {
   font-size: 1rem;
 }
 
@@ -651,7 +733,7 @@ exports[`renders correctly with modal open 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c17 {
+.c18 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -663,9 +745,9 @@ exports[`renders correctly with modal open 1`] = `
   border-radius: 100px;
 }
 
-.c17:active,
-.c17:focus,
-.c17:hover {
+.c18:active,
+.c18:focus,
+.c18:hover {
   background-color: #961D35;
 }
 
@@ -702,7 +784,7 @@ exports[`renders correctly with modal open 1`] = `
   padding: 2rem;
 }
 
-.c19 {
+.c20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -720,14 +802,20 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c16 input {
+  .c16 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c17 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c17 {
+  .c18 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -735,7 +823,7 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c20 {
     margin: 4rem 0 0;
     right: 25%;
   }
@@ -825,7 +913,7 @@ exports[`renders correctly with modal open 1`] = `
               
               <input
                 aria-label="Email address"
-                className=""
+                className="c16"
                 id="email"
                 name="email"
                 onChange={[Function]}
@@ -837,10 +925,10 @@ exports[`renders correctly with modal open 1`] = `
             
           </label>
           <div
-            className="c16"
+            className="c17"
           >
             <input
-              className="c17"
+              className="c18"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
@@ -850,7 +938,7 @@ exports[`renders correctly with modal open 1`] = `
           </div>
         </form>
         <div
-          className="c18"
+          className="c19"
         >
           <div
             className="c9"
@@ -863,7 +951,7 @@ exports[`renders correctly with modal open 1`] = `
         </div>
       </div>
       <a
-        className="c1 c19"
+        className="c1 c20"
         data-test="header-esu-icon"
         href="#"
         onClick={[Function]}
@@ -879,7 +967,7 @@ exports[`renders correctly with modal open 1`] = `
           src="mock.asset"
         />
         <span
-          className="c20"
+          className="c21"
         >
           (opens in new window)
         </span>
