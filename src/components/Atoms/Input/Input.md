@@ -1,3 +1,5 @@
+
+
 ```js
 <h4>Input required with label and hint</h4>
   <Input
@@ -5,7 +7,7 @@
     placeholder="This is the hint text"
     type="text"
     label="Label"
-    id="input-example-1"
+    id="input-example"
     showLabel={true}
   />
 ```
@@ -36,7 +38,6 @@
   />
 ```
 
-
 ```js
   <h4>Input Label with markup</h4>
   <Input
@@ -50,6 +51,27 @@
   />
 ```
 
+```js
+import styled from 'styled-components';
+import Text from '../../Atoms/Text/Text';
+
+const ItalicText = styled(Text).attrs({weight: 'normal'})`
+  font-style: italic
+`;
+
+<>
+  <h4>Input label as React element</h4>
+  <Input
+    name="email"
+    placeholder=""
+    type="text"
+    label={<>Email <ItalicText>(please check it's correct)</ItalicText></>}
+    errorMsg=""
+    id="input-example-5"
+    showLabel={true}
+  />
+</>
+```
 
 ```js
   <h4>Input with prefix</h4>
