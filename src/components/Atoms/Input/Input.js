@@ -12,9 +12,6 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS.)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
-/**
- * Input component
- */
 const InputField = styled.input`${({ theme, error, prefixLength }) => `
   font-weight: normal;
   position: relative;
@@ -45,22 +42,13 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => `
   }
 `}`;
 
-/**
- * Label component
- */
 const Label = styled.label`
   display: flex;
   flex-direction: column;
-  font-weight: bold;
   color: ${({ theme }) => theme.color('grey_label')};
 `;
 
-/**
- * Label text component
- */
-const TextLabel = styled(Text)`
-  visibility: ${({ showLabel }) => !showLabel && hideVisually};
-`;
+const LabelText = styled(Text)`${({ showLabel }) => (showLabel ? '' : hideVisually)}`;
 
 const InputWrapper = styled.div`
   margin-top: ${spacing('sm')};
@@ -100,10 +88,11 @@ const Input = React.forwardRef(
     },
     ref
   ) => (
+    // We need className here so that `styled(Input)` will work.
     <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />
+      <LabelText showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />
       <InputWrapper>
-        {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
+        {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}
           type={type}
@@ -114,11 +103,7 @@ const Input = React.forwardRef(
           prefixLength={prefix.length}
         />
       </InputWrapper>
-      {errorMsg && (
-        <ErrorText size="sm" data-test="error-message">
-          {errorMsg}
-        </ErrorText>
-      )}
+      {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
     </Label>
   )
 );
@@ -128,10 +113,12 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
+  // This prop allows us to _visually_ hide the label if we want (even if we
+  //  don't want to display a label, it should be present for screen readers).
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  /** text, email, number, date, serach, tel, url, password */
+  /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
