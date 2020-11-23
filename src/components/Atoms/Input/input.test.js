@@ -56,26 +56,11 @@ it('renders correctly', () => {
       color: #000000;
       border-radius: 0.5rem;
       font-size: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c4:focus {
       border: 1px solid #666;
-    }
-
-    .c4:focus::-webkit-input-placeholder {
-      color: #666;
-    }
-
-    .c4:focus::-moz-placeholder {
-      color: #666;
-    }
-
-    .c4:focus:-ms-input-placeholder {
-      color: #666;
-    }
-
-    .c4:focus::placeholder {
-      color: #666;
     }
 
     .c3 {

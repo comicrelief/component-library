@@ -100,26 +100,11 @@ exports[`Monthly donation renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c26:focus {
   border: 1px solid #666;
-}
-
-.c26:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c26:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c26:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c26:focus::placeholder {
-  color: #666;
 }
 
 .c25 {
@@ -998,26 +983,11 @@ exports[`Single donation renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c20:focus {
   border: 1px solid #666;
-}
-
-.c20:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c20:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c20:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c20:focus::placeholder {
-  color: #666;
 }
 
 .c19 {
@@ -1739,26 +1709,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c20:focus {
   border: 1px solid #666;
-}
-
-.c20:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c20:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c20:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c20:focus::placeholder {
-  color: #666;
 }
 
 .c19 {

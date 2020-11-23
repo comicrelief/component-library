@@ -45,17 +45,19 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       margin: 0 0 10px 0;
-      padding: 6px 12px;
+      padding: 1rem 1.5rem;
       font-size: 1.25rem;
-      background-color: #FFFFFF;
+      background-color: #F4F3F5;
       border: 1px solid;
-      border-radius: 0;
-      border-color: #000000;
+      border-radius: 0.5rem;
+      border-color: #E1E2E3;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
       color: #000000;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      resize: vertical;
     }
 
     .c3:focus {
@@ -63,35 +65,19 @@ it('renders correctly', () => {
     }
 
     .c3:focus::-webkit-input-placeholder {
-      color: transparent;
-      color: $color;
-      font-size: $font-size;
-      opacity: 1;
-      overflow: visible;
-    }
-
-    .c3:focus:-moz-placeholder {
-      color: transparent;
-      color: $color;
-      font-size: $font-size;
-      opacity: 1;
-      overflow: visible;
+      visibility: hidden;
     }
 
     .c3:focus::-moz-placeholder {
-      color: transparent;
-      color: $color;
-      font-size: $font-size;
-      opacity: 1;
-      overflow: visible;
+      visibility: hidden;
     }
 
     .c3:focus:-ms-input-placeholder {
-      color: transparent;
-      color: $color;
-      font-size: $font-size;
-      opacity: 1;
-      overflow: visible;
+      visibility: hidden;
+    }
+
+    .c3:focus::placeholder {
+      visibility: hidden;
     }
 
     <label

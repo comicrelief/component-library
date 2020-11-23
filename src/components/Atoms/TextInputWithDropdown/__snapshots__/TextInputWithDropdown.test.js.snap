@@ -41,26 +41,11 @@ exports[`renders correctly with no value and no options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c5:focus {
   border: 1px solid #666;
-}
-
-.c5:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c5:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::placeholder {
-  color: #666;
 }
 
 .c4 {
@@ -158,26 +143,11 @@ exports[`renders correctly with value and no options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c5:focus {
   border: 1px solid #666;
-}
-
-.c5:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c5:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::placeholder {
-  color: #666;
 }
 
 .c4 {
@@ -283,26 +253,11 @@ exports[`renders correctly with value and options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c5:focus {
   border: 1px solid #666;
-}
-
-.c5:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c5:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c5:focus::placeholder {
-  color: #666;
 }
 
 .c4 {

@@ -89,26 +89,11 @@ exports[`renders correctly with error message 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c16:focus {
   border: 1px solid #666;
-}
-
-.c16:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c16:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c16:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c16:focus::placeholder {
-  color: #666;
 }
 
 .c15 {
@@ -594,26 +579,11 @@ exports[`renders correctly with modal open 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c16:focus {
   border: 1px solid #666;
-}
-
-.c16:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c16:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c16:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c16:focus::placeholder {
-  color: #666;
 }
 
 .c15 {

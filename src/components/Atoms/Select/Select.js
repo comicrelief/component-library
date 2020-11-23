@@ -12,12 +12,13 @@ const StyledSelect = styled.select`
   font-size: ${({ theme }) => theme.fontSize('m')};
   display: block;
   box-sizing: border-box;
-  padding: 0.8rem ${spacing('m')};
+  padding: 0 ${spacing('m')};
   padding-right: ${spacing('xl')};
   margin: 0;
   position: relative;
   height: 48px;
   font-weight: 400;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   background: ${({ theme }) => theme.color('grey_light')} url(${dropDownIcon})
     calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
