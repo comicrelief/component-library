@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import FieldWrapper from '../FieldWrapper/FieldWrapper';
+import Label from '../Label/Label';
+import ErrorText from '../ErrorText/ErrorText';
 
 /**
  * Textarea component
@@ -57,7 +58,7 @@ const StyledTextArea = styled.textarea`
 const TextArea = React.forwardRef(({
   id, label, hideLabel, errorMsg, rows, className, ...rest
 }, ref) => (
-  <FieldWrapper
+  <Label
     htmlFor={id}
     label={label}
     hideLabel={hideLabel}
@@ -71,7 +72,8 @@ const TextArea = React.forwardRef(({
       aria-describedby={id}
       ref={ref}
     />
-  </FieldWrapper>
+    {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+  </Label>
 ));
 
 TextArea.propTypes = {

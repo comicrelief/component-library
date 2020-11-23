@@ -29,24 +29,6 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18 {
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.c18:before {
-  position: relative;
-  content: '';
-  top: 2px;
-  margin-right: 6px;
-  background: url(mock.asset) left 0/100% no-repeat;
-  width: 18px;
-  height: 19px;
-  display: inline-block;
-  vertical-align: top;
-  color: #E52630;
-}
-
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,6 +53,24 @@ exports[`renders correctly with error message 1`] = `
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.c18 {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.c18:before {
+  position: relative;
+  content: '';
+  top: 2px;
+  margin-right: 6px;
+  background: url(mock.asset) left 0/100% no-repeat;
+  width: 18px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: top;
+  color: #E52630;
 }
 
 .c16 {
@@ -412,19 +412,19 @@ exports[`renders correctly with error message 1`] = `
                 type="email"
                 value=""
               />
-            </div>
-            <span
-              className="c17"
-              color="red"
-              data-test="error-message"
-              size="sm"
-            >
               <span
-                className="c18"
+                className="c17"
+                color="red"
+                data-test="error-message"
+                size="sm"
               >
-                invalid email
+                <span
+                  className="c18"
+                >
+                  invalid email
+                </span>
               </span>
-            </span>
+            </div>
           </label>
           <div
             className="c19"
@@ -917,8 +917,8 @@ exports[`renders correctly with modal open 1`] = `
                 type="email"
                 value=""
               />
+              
             </div>
-            
           </label>
           <div
             className="c17"

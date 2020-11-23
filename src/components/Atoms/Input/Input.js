@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import FieldWrapper from '../FieldWrapper/FieldWrapper';
+import Label from '../Label/Label';
+import ErrorText from '../ErrorText/ErrorText';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -76,7 +77,7 @@ const Input = React.forwardRef(
     },
     ref
   ) => (
-    <FieldWrapper
+    <Label
       className={className}
       htmlFor={id}
       label={label}
@@ -95,8 +96,9 @@ const Input = React.forwardRef(
           ref={ref}
           prefixLength={prefix.length}
         />
+        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
       </InputWrapper>
-    </FieldWrapper>
+    </Label>
   )
 );
 

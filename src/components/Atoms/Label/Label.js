@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import ErrorText from '../ErrorText/ErrorText';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
-const Label = styled.label`
+const LabelElement = styled.label`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color('grey_label')};
@@ -26,44 +25,37 @@ const LabelText = ({ label, hideLabel, ...rest }) => {
 };
 
 /**
- * A wrapper that provides consistent label and error message styling for
- *  different types of field/form control (e.g. input, textarea, select)
- *
- * @param children - Should contain a field/form control of some kind.
+ * @param children
  * @param label
- * @param hideLabel - Visually hide the label (without removing it from the document)
- * @param errorMsg
+ * @param hideLabel - Visually hide the label text (without removing it from the document)
  * @param rest
  * @returns {JSX.Element}
  * @constructor
  */
-const FieldWrapper = ({
+const Label = ({
   children,
   label,
   hideLabel,
-  errorMsg,
   ...rest
 }) => (
-  <Label {...rest}>
+  <LabelElement {...rest}>
     <LabelText label={label} hideLabel={hideLabel} />
     {children}
-    {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
-  </Label>
+  </LabelElement>
 );
 
-FieldWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
+Label.propTypes = {
   label: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node
   ]).isRequired,
-  errorMsg: PropTypes.string,
-  hideLabel: PropTypes.bool
+  hideLabel: PropTypes.bool,
+  children: PropTypes.node
 };
 
-FieldWrapper.defaultProps = {
-  errorMsg: undefined,
-  hideLabel: false
+Label.defaultProps = {
+  hideLabel: false,
+  children: null
 };
 
-export default FieldWrapper;
+export default Label;

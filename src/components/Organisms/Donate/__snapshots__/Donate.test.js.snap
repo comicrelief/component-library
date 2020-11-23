@@ -771,8 +771,8 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 10"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c21 c22"
@@ -803,8 +803,8 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 20"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c21 c22"
@@ -835,8 +835,8 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 30"
                 />
+                
               </div>
-              
             </label>
           </div>
           <div
@@ -882,8 +882,8 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="number"
                   value=" "
                 />
+                
               </div>
-              
             </label>
           </div>
           <input
@@ -1513,8 +1513,8 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 10"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c15 c21"
@@ -1545,8 +1545,8 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 20"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c15 c16"
@@ -1577,8 +1577,8 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 30"
                 />
+                
               </div>
-              
             </label>
           </div>
           <div
@@ -1624,8 +1624,8 @@ exports[`Single donation renders correctly 1`] = `
                   type="number"
                   value={20}
                 />
+                
               </div>
-              
             </label>
           </div>
           <input
@@ -2132,8 +2132,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   type="number"
                   value=" "
                 />
+                
               </div>
-              
             </label>
           </div>
           <input

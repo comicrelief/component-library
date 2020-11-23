@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import FieldWrapper from '../FieldWrapper/FieldWrapper';
+import Label from '../Label/Label';
+import ErrorText from '../ErrorText/ErrorText';
 import dropDownIcon from './assets/drop-down-dark-purple.svg';
 import spacing from '../../../theme/shared/spacing';
 
@@ -54,7 +55,7 @@ const Select = React.forwardRef(
     const [value, setValue] = useState('');
 
     return (
-      <FieldWrapper label={label} hideLabel={hideLabel} errorMsg={errorMsg} className={className}>
+      <Label label={label} hideLabel={hideLabel} errorMsg={errorMsg} className={className}>
         <StyledSelect
           onChange={e => {
             setValue(e.currentTarget.value);
@@ -78,7 +79,8 @@ const Select = React.forwardRef(
             </option>
           ))}
         </StyledSelect>
-      </FieldWrapper>
+        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+      </Label>
     );
   }
 );

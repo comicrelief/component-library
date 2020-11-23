@@ -115,8 +115,8 @@ it('renders correctly', () => {
           placeholder="This is the hint text"
           type="text"
         />
+        
       </div>
-      
     </label>
   `);
 });

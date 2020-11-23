@@ -1,7 +1,7 @@
 ```js
-<FieldWrapper label="Wrapping a basic text input">
+<Label label="Wrapping a basic text input">
   <input type="text" name="field-wrapper-test" style={{maxWidth: '300px'}} />
-</FieldWrapper>
+</Label>
 ```
 
 ```js
@@ -13,16 +13,9 @@ const StyledInput = styled.input`
   height: 2.5rem;
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: none;
 `;
 
-<FieldWrapper label="Wrapping a styled input">
+<Label label="Wrapping a styled input">
   <StyledInput type="text" name="field-wrapper-test-1" />
-</FieldWrapper>
-```
-
-```js
-<FieldWrapper label="With error message" errorMsg="This is an error">
-  <input type="text" name="field-wrapper-test-2" style={{maxWidth: '300px'}} />
-</FieldWrapper>
+</Label>
 ```

@@ -111,8 +111,8 @@ exports[`renders correctly 1`] = `
         type="text"
         value=""
       />
+      
     </div>
-    
   </label>
 </div>
 `;

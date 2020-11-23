@@ -183,8 +183,8 @@ it('renders correctly', () => {
                   type="text"
                   value=""
                 />
+                
               </div>
-              
             </label>
           </div>
         </div>
