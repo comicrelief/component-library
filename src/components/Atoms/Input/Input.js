@@ -26,13 +26,10 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   color: ${theme.color('black')};
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: ${theme.fontFamilies(theme.font.regular)};
 
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
-  }
-
-  :focus::placeholder {
-    color: ${theme.color('grey_for_forms')};
   }
 
   @media ${theme.breakpoint('small')} {

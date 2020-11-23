@@ -1,59 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+import spacing from '../../../theme/shared/spacing';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 
-/**
- * Textarea component
- */
-const StyledTextArea = styled.textarea`
+const StyledTextArea = styled.textarea`${({ theme, error }) => css`
   box-sizing: border-box;
   width: 100%;
   margin: 0 0 10px 0;
-  padding: 6px 12px;
-  font-size: ${({ theme }) => theme.fontSize('m')};
-  background-color: ${({ theme }) => theme.color('white')};
+  padding: ${spacing('md')} ${spacing('m')};
+  font-size: ${theme.fontSize('m')};
+  background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-radius: 0;
-  border-color: ${({ theme, error }) => (!error ? theme.color('black') : theme.color('red'))};
+  border-radius: 0.5rem;
+  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme }) => theme.color('black')};
+  color: ${theme.color('black')};
+  font-family: ${theme.fontFamilies(theme.font.regular)};
 
-  :focus {
-    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+  &:focus {
+    border: 1px solid ${theme.color('grey_for_forms')};
+
+    &::placeholder {
+      visibility: hidden;
+    }
   }
-  :focus::-webkit-input-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  }
-  :focus:-moz-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* FF 4-18 */
-  :focus::-moz-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* FF 19+ */
-  :focus:-ms-input-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* IE 10+ */
-`;
+`}`;
 
 const TextArea = React.forwardRef(({
   id, label, hideLabel, errorMsg, rows, className, ...rest
