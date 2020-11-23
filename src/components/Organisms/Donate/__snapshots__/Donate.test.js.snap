@@ -41,7 +41,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c27 {
+.c28 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -69,7 +69,22 @@ exports[`Monthly donation renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c25 {
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c24 {
+  margin-bottom: 0.5rem;
+}
+
+.c26 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -87,39 +102,27 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: inherit;
 }
 
-.c25:focus {
+.c26:focus {
   border: 1px solid #666;
 }
 
-.c25:focus::-webkit-input-placeholder {
+.c26:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c25:focus::-moz-placeholder {
+.c26:focus::-moz-placeholder {
   color: #666;
 }
 
-.c25:focus:-ms-input-placeholder {
+.c26:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c25:focus::placeholder {
+.c26:focus::placeholder {
   color: #666;
 }
 
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c24 {
-  margin-top: 0.5rem;
+.c25 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -275,7 +278,7 @@ exports[`Monthly donation renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,11 +293,11 @@ exports[`Monthly donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c28 {
+.c29 {
   margin-right: 0.5rem;
 }
 
-.c29 {
+.c30 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -310,7 +313,7 @@ exports[`Monthly donation renders correctly 1`] = `
   display: block;
 }
 
-.c29 span {
+.c30 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -323,7 +326,7 @@ exports[`Monthly donation renders correctly 1`] = `
   z-index: 1;
 }
 
-.c29 input {
+.c30 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -331,12 +334,12 @@ exports[`Monthly donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c29 input:focus {
+.c30 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c30 {
+.c31 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -355,9 +358,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c30:active,
-.c30:focus,
-.c30:hover {
+.c31:active,
+.c31:focus,
+.c31:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -518,7 +521,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c25 {
+  .c26 {
     max-width: 290px;
   }
 }
@@ -605,7 +608,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -613,7 +616,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c30 {
+  .c31 {
     padding: 1rem 2rem;
   }
 }
@@ -744,7 +747,7 @@ exports[`Monthly donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c23 Input__LabelText-bcqy1o-2"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -754,13 +757,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c24"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
                   aria-label="£10"
-                  className="c25"
+                  className="c26"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
@@ -768,15 +771,15 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 10"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c21 c22"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c23 Input__LabelText-bcqy1o-2"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -786,13 +789,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c24"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
                   aria-label="£20"
-                  className="c25"
+                  className="c26"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
@@ -800,15 +803,15 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 20"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c21 c22"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c23 Input__LabelText-bcqy1o-2"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -818,13 +821,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c24"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box3"
                   aria-label="£30"
-                  className="c25"
+                  className="c26"
                   id="mship-1--moneyBuy-box3"
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
@@ -832,26 +835,26 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="button"
                   value="£ 30"
                 />
+                
               </div>
-              
             </label>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <span
-              className="c27 c28"
+              className="c28 c29"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c21 c29"
+              className="c21 c30"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c23 Input__LabelText-bcqy1o-2"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -861,13 +864,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c24"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c25"
+                  className="c26"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -879,12 +882,12 @@ exports[`Monthly donation renders correctly 1`] = `
                   type="number"
                   value=" "
                 />
+                
               </div>
-              
             </label>
           </div>
           <input
-            className="c30"
+            className="c31"
             type="submit"
             value="Donate once"
           />
@@ -936,7 +939,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c22 {
+.c23 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -964,7 +967,22 @@ exports[`Single donation renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c19 {
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c20 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -982,39 +1000,27 @@ exports[`Single donation renders correctly 1`] = `
   font-size: inherit;
 }
 
-.c19:focus {
+.c20:focus {
   border: 1px solid #666;
 }
 
-.c19:focus::-webkit-input-placeholder {
+.c20:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c19:focus::-moz-placeholder {
+.c20:focus::-moz-placeholder {
   color: #666;
 }
 
-.c19:focus:-ms-input-placeholder {
+.c20:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c19:focus::placeholder {
+.c20:focus::placeholder {
   color: #666;
 }
 
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c18 {
-  margin-top: 0.5rem;
+.c19 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -1045,11 +1051,11 @@ exports[`Single donation renders correctly 1`] = `
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
-.c20 {
+.c21 {
   display: block;
 }
 
-.c20 input {
+.c21 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -1064,17 +1070,17 @@ exports[`Single donation renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c20 input:focus {
+.c21 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c20 input:active:focus {
+.c21 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
-.c20 input:focus {
+.c21 input:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
@@ -1203,7 +1209,7 @@ exports[`Single donation renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1218,11 +1224,11 @@ exports[`Single donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c23 {
+.c24 {
   margin-right: 0.5rem;
 }
 
-.c24 {
+.c25 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -1238,7 +1244,7 @@ exports[`Single donation renders correctly 1`] = `
   display: block;
 }
 
-.c24 span {
+.c25 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -1251,7 +1257,7 @@ exports[`Single donation renders correctly 1`] = `
   z-index: 1;
 }
 
-.c24 input {
+.c25 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -1259,17 +1265,17 @@ exports[`Single donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c24 input:focus {
+.c25 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c26 {
+.c27 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c25 {
+.c26 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -1288,15 +1294,15 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c25:active,
-.c25:focus,
-.c25:hover {
+.c26:active,
+.c26:focus,
+.c26:hover {
   outline: none;
   background-color: #961D35;
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c20 {
     max-width: 290px;
   }
 }
@@ -1309,7 +1315,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 input {
+  .c21 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -1390,7 +1396,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c24 {
+  .c25 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -1398,7 +1404,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c25 {
+  .c26 {
     padding: 1rem 2rem;
   }
 }
@@ -1483,7 +1489,7 @@ exports[`Single donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c17 Input__LabelText-bcqy1o-2"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1493,13 +1499,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c18"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
                   aria-label="£10"
-                  className="c19"
+                  className="c20"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
@@ -1507,15 +1513,15 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 10"
                 />
+                
               </div>
-              
             </label>
             <label
-              className="c15 c20"
+              className="c15 c21"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c17 Input__LabelText-bcqy1o-2"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1525,13 +1531,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c18"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
                   aria-label="£20"
-                  className="c19"
+                  className="c20"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
@@ -1539,15 +1545,15 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 20"
                 />
+                
               </div>
-              
             </label>
             <label
               className="c15 c16"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c17 Input__LabelText-bcqy1o-2"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1557,13 +1563,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c18"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box3"
                   aria-label="£30"
-                  className="c19"
+                  className="c20"
                   id="mship-1--moneyBuy-box3"
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
@@ -1571,26 +1577,26 @@ exports[`Single donation renders correctly 1`] = `
                   type="button"
                   value="£ 30"
                 />
+                
               </div>
-              
             </label>
           </div>
           <div
-            className="c21"
+            className="c22"
           >
             <span
-              className="c22 c23"
+              className="c23 c24"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c15 c24"
+              className="c15 c25"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c17 Input__LabelText-bcqy1o-2"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1600,13 +1606,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c18"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c19"
+                  className="c20"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -1618,17 +1624,17 @@ exports[`Single donation renders correctly 1`] = `
                   type="number"
                   value={20}
                 />
+                
               </div>
-              
             </label>
           </div>
           <input
-            className="c25"
+            className="c26"
             type="submit"
             value="Donate once"
           />
           <p
-            className="c26"
+            className="c27"
           >
             <strong>
               £20.00 
@@ -1702,7 +1708,22 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c19 {
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c20 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1720,39 +1741,27 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: inherit;
 }
 
-.c19:focus {
+.c20:focus {
   border: 1px solid #666;
 }
 
-.c19:focus::-webkit-input-placeholder {
+.c20:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c19:focus::-moz-placeholder {
+.c20:focus::-moz-placeholder {
   color: #666;
 }
 
-.c19:focus:-ms-input-placeholder {
+.c20:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c19:focus::placeholder {
+.c20:focus::placeholder {
   color: #666;
 }
 
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c18 {
-  margin-top: 0.5rem;
+.c19 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -1913,7 +1922,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   border: 2px solid #969598;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -1932,15 +1941,15 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c20:active,
-.c20:focus,
-.c20:hover {
+.c21:active,
+.c21:focus,
+.c21:hover {
   outline: none;
   background-color: #961D35;
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c20 {
     max-width: 290px;
   }
 }
@@ -2014,7 +2023,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     padding: 1rem 2rem;
   }
 }
@@ -2095,7 +2104,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c17 Input__LabelText-bcqy1o-2"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -2105,13 +2114,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c18"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c19"
+                  className="c20"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -2123,12 +2132,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   type="number"
                   value=" "
                 />
+                
               </div>
-              
             </label>
           </div>
           <input
-            className="c20"
+            className="c21"
             type="submit"
             value="Donate"
           />

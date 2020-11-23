@@ -19,9 +19,34 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
-      font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    .c4 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      color: #5C5C5E;
+    }
+
+    .c7 {
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
 
     .c9 {
@@ -62,34 +87,7 @@ it('renders correctly', () => {
       color: #666;
     }
 
-    .c4 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      color: #5C5C5E;
-    }
-
-    .c7 {
-      border: 0;
-      -webkit-clip: rect(0 0 0 0);
-      clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(50%);
-      clip-path: inset(50%);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-
     .c8 {
-      margin-top: 0.5rem;
       position: relative;
       font-size: 1.25rem;
     }
@@ -185,8 +183,8 @@ it('renders correctly', () => {
                   type="text"
                   value=""
                 />
+                
               </div>
-              
             </label>
           </div>
         </div>

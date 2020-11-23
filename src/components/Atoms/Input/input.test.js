@@ -25,7 +25,22 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c3 {
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      color: #5C5C5E;
+    }
+
+    .c2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .c4 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -43,45 +58,33 @@ it('renders correctly', () => {
       font-size: inherit;
     }
 
-    .c3:focus {
+    .c4:focus {
       border: 1px solid #666;
     }
 
-    .c3:focus::-webkit-input-placeholder {
+    .c4:focus::-webkit-input-placeholder {
       color: #666;
     }
 
-    .c3:focus::-moz-placeholder {
+    .c4:focus::-moz-placeholder {
       color: #666;
     }
 
-    .c3:focus:-ms-input-placeholder {
+    .c4:focus:-ms-input-placeholder {
       color: #666;
     }
 
-    .c3:focus::placeholder {
+    .c4:focus::placeholder {
       color: #666;
     }
 
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      color: #5C5C5E;
-    }
-
-    .c2 {
-      margin-top: 0.5rem;
+    .c3 {
       position: relative;
       font-size: 1.25rem;
     }
 
     @media (min-width:740px) {
-      .c3 {
+      .c4 {
         max-width: 290px;
       }
     }
@@ -91,7 +94,7 @@ it('renders correctly', () => {
       htmlFor="Accessibility info go here"
     >
       <span
-        className="c1 Input__LabelText-bcqy1o-2"
+        className="c1 c2"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {
@@ -101,19 +104,19 @@ it('renders correctly', () => {
         size="s"
       />
       <div
-        className="c2"
+        className="c3"
       >
         
         <input
           aria-describedby="Accessibility info go here"
-          className="c3"
+          className="c4"
           id="Accessibility info go here"
           name="fullname"
           placeholder="This is the hint text"
           type="text"
         />
+        
       </div>
-      
     </label>
   `);
 });

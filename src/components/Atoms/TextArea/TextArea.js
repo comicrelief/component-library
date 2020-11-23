@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Text from '../Text/Text';
+import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 
 /**
@@ -11,7 +11,7 @@ import ErrorText from '../ErrorText/ErrorText';
 const StyledTextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
-  margin: 10px 0;
+  margin: 0 0 10px 0;
   padding: 6px 12px;
   font-size: ${({ theme }) => theme.fontSize('m')};
   background-color: ${({ theme }) => theme.color('white')};
@@ -55,19 +55,16 @@ const StyledTextArea = styled.textarea`
   } /* IE 10+ */
 `;
 
-/**
- * Label component
- */
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-`;
-
 const TextArea = React.forwardRef(({
-  id, label, errorMsg, rows, ...rest
+  id, label, hideLabel, errorMsg, rows, className, ...rest
 }, ref) => (
-  <Label htmlFor={id}>
-    <Text weight="bold">{label}</Text>
+  <Label
+    htmlFor={id}
+    label={label}
+    hideLabel={hideLabel}
+    errorMsg={errorMsg}
+    className={className}
+  >
     <StyledTextArea
       {...rest}
       rows={rows}
@@ -75,23 +72,32 @@ const TextArea = React.forwardRef(({
       aria-describedby={id}
       ref={ref}
     />
-    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+    {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
   </Label>
 ));
 
 TextArea.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
   rows: PropTypes.number,
   placeholder: PropTypes.string,
-  errorMsg: PropTypes.string
+  errorMsg: PropTypes.string,
+  hideLabel: PropTypes.bool,
+  // className is needed so that styled(`TextArea`) will work
+  // (as `rest` is not spread on the outermost component)
+  className: PropTypes.string
 };
 
 TextArea.defaultProps = {
   rows: 4,
   placeholder: '',
-  errorMsg: undefined
+  errorMsg: undefined,
+  hideLabel: false,
+  className: ''
 };
 
 export default TextArea;

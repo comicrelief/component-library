@@ -26,10 +26,25 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      color: #5C5C5E;
+    }
+
     .c2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .c3 {
       box-sizing: border-box;
       width: 100%;
-      margin: 10px 0;
+      margin: 0 0 10px 0;
       padding: 6px 12px;
       font-size: 1.25rem;
       background-color: #FFFFFF;
@@ -43,11 +58,11 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c2:focus {
+    .c3:focus {
       border: 1px solid #666;
     }
 
-    .c2:focus::-webkit-input-placeholder {
+    .c3:focus::-webkit-input-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -55,7 +70,7 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c2:focus:-moz-placeholder {
+    .c3:focus:-moz-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -63,7 +78,7 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c2:focus::-moz-placeholder {
+    .c3:focus::-moz-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
@@ -71,22 +86,12 @@ it('renders correctly', () => {
       overflow: visible;
     }
 
-    .c2:focus:-ms-input-placeholder {
+    .c3:focus:-ms-input-placeholder {
       color: transparent;
       color: $color;
       font-size: $font-size;
       opacity: 1;
       overflow: visible;
-    }
-
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
     }
 
     <label
@@ -94,15 +99,18 @@ it('renders correctly', () => {
       htmlFor="Please leave your comment here"
     >
       <span
-        className="c1"
+        className="c1 c2"
         color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Label",
+          }
+        }
         size="s"
-      >
-        Label
-      </span>
+      />
       <textarea
         aria-describedby="Please leave your comment here"
-        className="c2"
+        className="c3"
         cols="5"
         name="description"
         placeholder="This is text area"

@@ -17,7 +17,6 @@ exports[`renders correctly with error message 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -28,6 +27,32 @@ exports[`renders correctly with error message 1`] = `
   font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c14 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .c18 {
@@ -86,34 +111,7 @@ exports[`renders correctly with error message 1`] = `
   color: #666;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c14 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c15 {
-  margin-top: 0.5rem;
   position: relative;
   font-size: 1.25rem;
 }
@@ -414,19 +412,19 @@ exports[`renders correctly with error message 1`] = `
                 type="email"
                 value=""
               />
-            </div>
-            <span
-              className="c17"
-              color="red"
-              data-test="error-message"
-              size="sm"
-            >
               <span
-                className="c18"
+                className="c17"
+                color="red"
+                data-test="error-message"
+                size="sm"
               >
-                invalid email
+                <span
+                  className="c18"
+                >
+                  invalid email
+                </span>
               </span>
-            </span>
+            </div>
           </label>
           <div
             className="c19"
@@ -550,9 +548,34 @@ exports[`renders correctly with modal open 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c14 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .c16 {
@@ -593,34 +616,7 @@ exports[`renders correctly with modal open 1`] = `
   color: #666;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c14 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c15 {
-  margin-top: 0.5rem;
   position: relative;
   font-size: 1.25rem;
 }
@@ -921,8 +917,8 @@ exports[`renders correctly with modal open 1`] = `
                 type="email"
                 value=""
               />
+              
             </div>
-            
           </label>
           <div
             className="c17"
