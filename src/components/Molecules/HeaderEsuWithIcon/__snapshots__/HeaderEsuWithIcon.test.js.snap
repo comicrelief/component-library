@@ -397,19 +397,19 @@ exports[`renders correctly with error message 1`] = `
                 type="email"
                 value=""
               />
-              <span
-                className="c17"
-                color="red"
-                data-test="error-message"
-                size="sm"
-              >
-                <span
-                  className="c18"
-                >
-                  invalid email
-                </span>
-              </span>
             </div>
+            <span
+              className="c17"
+              color="red"
+              data-test="error-message"
+              size="sm"
+            >
+              <span
+                className="c18"
+              >
+                invalid email
+              </span>
+            </span>
           </label>
           <div
             className="c19"
@@ -887,8 +887,8 @@ exports[`renders correctly with modal open 1`] = `
                 type="email"
                 value=""
               />
-              
             </div>
+            
           </label>
           <div
             className="c17"

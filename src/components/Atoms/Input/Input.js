@@ -93,8 +93,8 @@ const Input = React.forwardRef(
           ref={ref}
           prefixLength={prefix.length}
         />
-        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
       </InputWrapper>
+      {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
     </Label>
   )
 );

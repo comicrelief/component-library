@@ -487,8 +487,8 @@ it('renders correctly', () => {
                       type="button"
                       value="£ 5"
                     />
-                    
                   </div>
+                  
                 </label>
                 <label
                   className="c14 c20"
@@ -519,8 +519,8 @@ it('renders correctly', () => {
                       type="button"
                       value="£ 10"
                     />
-                    
                   </div>
+                  
                 </label>
                 <label
                   className="c14 c15"
@@ -551,8 +551,8 @@ it('renders correctly', () => {
                       type="button"
                       value="£ 20"
                     />
-                    
                   </div>
+                  
                 </label>
               </div>
               <div
@@ -600,8 +600,8 @@ it('renders correctly', () => {
                       type="number"
                       value=""
                     />
-                    
                   </div>
+                  
                 </label>
               </div>
               <input

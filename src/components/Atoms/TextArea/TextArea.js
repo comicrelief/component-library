@@ -9,7 +9,7 @@ import ErrorText from '../ErrorText/ErrorText';
 const StyledTextArea = styled.textarea`${({ theme, error }) => css`
   box-sizing: border-box;
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: ${spacing('md')} ${spacing('m')};
   font-size: ${theme.fontSize('m')};
   background-color: ${theme.color('grey_light')};
