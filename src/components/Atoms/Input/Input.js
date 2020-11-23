@@ -89,7 +89,9 @@ const Input = React.forwardRef(
   ) => (
     // We need className here so that `styled(Input)` will work.
     <Label htmlFor={id} className={className} {...labelProps}>
-      <LabelText showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />
+      {React.isValidElement(label)
+        ? <LabelText showLabel={showLabel} weight="bold">{label}</LabelText>
+        : <LabelText showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />}
       <InputWrapper>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
@@ -109,7 +111,10 @@ const Input = React.forwardRef(
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
   // This prop allows us to _visually_ hide the label if we want (even if we
