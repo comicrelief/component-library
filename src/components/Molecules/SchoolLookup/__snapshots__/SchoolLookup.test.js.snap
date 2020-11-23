@@ -10,7 +10,22 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c3 {
+  margin-bottom: 0.5rem;
+}
+
+.c5 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -28,39 +43,27 @@ exports[`renders correctly 1`] = `
   font-size: inherit;
 }
 
-.c4:focus {
+.c5:focus {
   border: 1px solid #666;
 }
 
-.c4:focus::-webkit-input-placeholder {
+.c5:focus::-webkit-input-placeholder {
   color: #666;
 }
 
-.c4:focus::-moz-placeholder {
+.c5:focus::-moz-placeholder {
   color: #666;
 }
 
-.c4:focus:-ms-input-placeholder {
+.c5:focus:-ms-input-placeholder {
   color: #666;
 }
 
-.c4:focus::placeholder {
+.c5:focus::placeholder {
   color: #666;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-}
-
-.c3 {
-  margin-top: 0.5rem;
+.c4 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -70,7 +73,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c5 {
     max-width: 290px;
   }
 }
@@ -84,7 +87,7 @@ exports[`renders correctly 1`] = `
     htmlFor="school-lookup"
   >
     <span
-      className="c2 Input__LabelText-bcqy1o-2"
+      className="c2 c3"
       color="inherit"
       dangerouslySetInnerHTML={
         Object {
@@ -94,13 +97,13 @@ exports[`renders correctly 1`] = `
       size="s"
     />
     <div
-      className="c3"
+      className="c4"
     >
       
       <input
         aria-describedby="school-lookup"
         autoComplete="off"
-        className="c4"
+        className="c5"
         id="school-lookup"
         name="school-lookup"
         onChange={[Function]}

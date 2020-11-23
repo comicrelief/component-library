@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import Text from '../Text/Text';
-import ErrorText from '../ErrorText/ErrorText';
-import hideVisually from '../../../theme/shared/hideVisually';
+import FieldWrapper from '../FieldWrapper/FieldWrapper';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -41,16 +39,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   }
 `}`;
 
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  color: ${({ theme }) => theme.color('grey_label')};
-`;
-
-const LabelText = styled(Text)`${({ showLabel }) => (showLabel ? '' : hideVisually)}`;
-
 const InputWrapper = styled.div`
-  margin-top: ${spacing('sm')};
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
 `;
@@ -87,11 +76,14 @@ const Input = React.forwardRef(
     },
     ref
   ) => (
-    // We need className here so that `styled(Input)` will work.
-    <Label htmlFor={id} className={className} {...labelProps}>
-      {React.isValidElement(label)
-        ? <LabelText showLabel={showLabel} weight="bold">{label}</LabelText>
-        : <LabelText showLabel={showLabel} weight="bold" dangerouslySetInnerHTML={{ __html: label }} />}
+    <FieldWrapper
+      className={className}
+      htmlFor={id}
+      label={label}
+      hideLabel={!showLabel}
+      errorMsg={errorMsg}
+      {...labelProps}
+    >
       <InputWrapper>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
@@ -104,8 +96,7 @@ const Input = React.forwardRef(
           prefixLength={prefix.length}
         />
       </InputWrapper>
-      {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
-    </Label>
+    </FieldWrapper>
   )
 );
 
@@ -119,12 +110,15 @@ Input.propTypes = {
   errorMsg: PropTypes.string,
   // This prop allows us to _visually_ hide the label if we want (even if we
   //  don't want to display a label, it should be present for screen readers).
+  // todo: convert this to 'hideLabel' to make it consistent with other components
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
+  // className is needed so that styled(`Input`) will work
+  // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
   prefix: PropTypes.string
 };
