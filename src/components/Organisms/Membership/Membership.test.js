@@ -81,7 +81,6 @@ it('renders correctly', () => {
     }
 
     .c18 {
-      font-weight: normal;
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -127,7 +126,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      font-weight: bold;
       color: #5C5C5E;
     }
 
@@ -477,7 +475,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box1"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -509,7 +507,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box2"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -541,7 +539,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box3"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -584,7 +582,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
                   <span
-                    className="c16 "
+                    className="c16 Input__LabelText-bcqy1o-2"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {

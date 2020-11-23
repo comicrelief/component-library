@@ -70,7 +70,6 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c25 {
-  font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -116,7 +115,6 @@ exports[`Monthly donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: bold;
   color: #5C5C5E;
 }
 
@@ -746,7 +744,7 @@ exports[`Monthly donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c23 "
+                className="c23 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -778,7 +776,7 @@ exports[`Monthly donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c23 "
+                className="c23 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -810,7 +808,7 @@ exports[`Monthly donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c23 "
+                className="c23 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -853,7 +851,7 @@ exports[`Monthly donation renders correctly 1`] = `
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c23 "
+                className="c23 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -967,7 +965,6 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c19 {
-  font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1013,7 +1010,6 @@ exports[`Single donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: bold;
   color: #5C5C5E;
 }
 
@@ -1487,7 +1483,7 @@ exports[`Single donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c17 "
+                className="c17 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1519,7 +1515,7 @@ exports[`Single donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c17 "
+                className="c17 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1551,7 +1547,7 @@ exports[`Single donation renders correctly 1`] = `
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c17 "
+                className="c17 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1594,7 +1590,7 @@ exports[`Single donation renders correctly 1`] = `
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c17 "
+                className="c17 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1707,7 +1703,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c19 {
-  font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1753,7 +1748,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: bold;
   color: #5C5C5E;
 }
 
@@ -2101,7 +2095,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c17 "
+                className="c17 Input__LabelText-bcqy1o-2"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {

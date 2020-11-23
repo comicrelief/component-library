@@ -26,7 +26,6 @@ it('renders correctly', () => {
     }
 
     .c3 {
-      font-weight: normal;
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -72,7 +71,6 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      font-weight: bold;
       color: #5C5C5E;
     }
 
@@ -93,7 +91,7 @@ it('renders correctly', () => {
       htmlFor="Accessibility info go here"
     >
       <span
-        className="c1 "
+        className="c1 Input__LabelText-bcqy1o-2"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {

@@ -25,7 +25,6 @@ it('renders correctly', () => {
     }
 
     .c9 {
-      font-weight: normal;
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -71,12 +70,11 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      font-weight: bold;
       color: #5C5C5E;
     }
 
     .c7 {
-      visibility: border:0;
+      border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
       -webkit-clip-path: inset(50%);
