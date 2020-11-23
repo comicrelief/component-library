@@ -536,8 +536,8 @@ exports[`renders correctly 1`] = `
           type="email"
           value=""
         />
-        
       </div>
+      
     </label>
     <div
       className="c12"

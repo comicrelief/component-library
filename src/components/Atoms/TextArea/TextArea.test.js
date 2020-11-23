@@ -44,7 +44,7 @@ it('renders correctly', () => {
     .c3 {
       box-sizing: border-box;
       width: 100%;
-      margin: 0 0 10px 0;
+      margin: 0;
       padding: 1rem 1.5rem;
       font-size: 1.25rem;
       background-color: #F4F3F5;

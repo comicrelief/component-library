@@ -96,8 +96,8 @@ exports[`renders correctly with no value and no options 1`] = `
         type="text"
         value=""
       />
-      
     </div>
+    
   </label>
 </div>
 `;
@@ -198,8 +198,8 @@ exports[`renders correctly with value and no options 1`] = `
         type="text"
         value="bikes"
       />
-      
     </div>
+    
   </label>
 </div>
 `;
@@ -347,8 +347,8 @@ exports[`renders correctly with value and options 1`] = `
         type="text"
         value="c"
       />
-      
     </div>
+    
   </label>
   <div
     className="c6 TextInputWithDropdown__options"
