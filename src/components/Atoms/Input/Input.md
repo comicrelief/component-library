@@ -1,5 +1,3 @@
-
-
 ```js
 <h4>Input required with label and hint</h4>
   <Input
@@ -7,7 +5,7 @@
     placeholder="This is the hint text"
     type="text"
     label="Label"
-    id="input-example"
+    id="input-example-1"
     showLabel={true}
   />
 ```
