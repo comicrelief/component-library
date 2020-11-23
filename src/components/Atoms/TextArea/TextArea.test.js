@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import TextArea from './TextArea';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import TextArea from "./TextArea";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <TextArea
       name="description"
@@ -57,6 +57,7 @@ it('renders correctly', () => {
       appearance: none;
       color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      resize: vertical;
     }
 
     .c3:focus {

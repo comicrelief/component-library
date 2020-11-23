@@ -20,6 +20,7 @@ const StyledTextArea = styled.textarea`${({ theme, error }) => css`
   appearance: none;
   color: ${theme.color('black')};
   font-family: ${theme.fontFamilies(theme.font.regular)};
+  resize: vertical;
 
   &:focus {
     border: 1px solid ${theme.color('grey_for_forms')};
