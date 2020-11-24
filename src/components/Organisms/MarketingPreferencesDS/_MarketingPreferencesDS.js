@@ -51,7 +51,10 @@ const MarketingPreferencesDS = ({
   const permissionPost = `${fieldPrefix}permissionPost`;
   const permissionSMS = `${fieldPrefix}permissionSMS`;
   const permissionPhone = `${fieldPrefix}permissionPhone`;
-  const { errors, touched } = validation;
+  const {
+    // touched,
+    errors
+  } = validation;
 
   return (
     <>
@@ -74,7 +77,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your email address"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionEmail][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}email`] && touched[`${fieldPrefix}email`] ? errors[`${fieldPrefix}email`] : ''}
+              errorMessage={errors[`${fieldPrefix}email`] ? errors[`${fieldPrefix}email`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -100,7 +103,10 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionSMS][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}mobile`] && touched[`${fieldPrefix}mobile`] ? errors[`${fieldPrefix}mobile`] : ''}
+              // errorMessage={errors[`${fieldPrefix}mobile`] && touched[`${fieldPrefix}mobile`]
+              // ? errors[`${fieldPrefix}mobile`] : ''}
+              errorMessage={errors[`${fieldPrefix}mobile`] ? errors[`${fieldPrefix}mobile`] : ''}
+
             />
           </ShowHide>
         </MaybeDisabled>
@@ -126,8 +132,9 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPhone][0] !== undefined}
-
-              errorMessage={errors[`${fieldPrefix}phone`] && touched[`${fieldPrefix}phone`] ? errors[`${fieldPrefix}phone`] : ''}
+              // errorMessage={errors[`${fieldPrefix}phone`] && touched[`${fieldPrefix}phone`]
+              //  ? errors[`${fieldPrefix}phone`] : ''}
+              errorMessage={errors[`${fieldPrefix}phone`] ? errors[`${fieldPrefix}phone`] : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -153,24 +160,27 @@ const MarketingPreferencesDS = ({
               label="Address Line 1"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}address1`] && touched[`${fieldPrefix}address1`]
-                ? errors[`${fieldPrefix}address1`] : ''}
+              errorMessage={errors[`${fieldPrefix}address1`] ? errors[`${fieldPrefix}address1`] : ''}
+              // errorMessage={errors[`${fieldPrefix}address1`] && touched[`${fieldPrefix}address1`]
+              //   ? errors[`${fieldPrefix}address1`] : ''}
             />
             <TextInput
               placeholder=""
               fieldName={`${fieldPrefix}address2`}
               label="Address Line 2"
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}address2`] && touched[`${fieldPrefix}address2`]
-                ? errors[`${fieldPrefix}address2`] : ''}
+              errorMessage={errors[`${fieldPrefix}address2`] ? errors[`${fieldPrefix}address2`] : ''}
+              // errorMessage={errors[`${fieldPrefix}address2`] && touched[`${fieldPrefix}address2`]
+              //   ? errors[`${fieldPrefix}address2`] : ''}
             />
             <TextInput
               placeholder=""
               fieldName={`${fieldPrefix}address3`}
               label="Address Line 3"
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}address3`] && touched[`${fieldPrefix}address3`]
-                ? errors[`${fieldPrefix}address3`] : ''}
+              errorMessage={errors[`${fieldPrefix}address3`] ? errors[`${fieldPrefix}address3`] : ''}
+              // errorMessage={errors[`${fieldPrefix}address3`] && touched[`${fieldPrefix}address3`]
+              //   ? errors[`${fieldPrefix}address3`] : ''}
             />
             <TextInput
               placeholder=""
@@ -178,8 +188,9 @@ const MarketingPreferencesDS = ({
               label="Town/City"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}town`] && touched[`${fieldPrefix}town`]
-                ? errors[`${fieldPrefix}town`] : ''}
+              errorMessage={errors[`${fieldPrefix}town`] ? errors[`${fieldPrefix}town`] : ''}
+              // errorMessage={errors[`${fieldPrefix}town`] && touched[`${fieldPrefix}town`]
+              //   ? errors[`${fieldPrefix}town`] : ''}
             />
             <TextInput
               placeholder=""
@@ -187,7 +198,9 @@ const MarketingPreferencesDS = ({
               label="Postcode"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}postcode`] && touched[`${fieldPrefix}postcode`] ? errors[`${fieldPrefix}postcode`] : ''}
+              errorMessage={errors[`${fieldPrefix}postcode`] ? errors[`${fieldPrefix}postcode`] : ''}
+              // errorMessage={errors[`${fieldPrefix}postcode`] && touched[`${fieldPrefix}postcode`]
+              // ? errors[`${fieldPrefix}postcode`] : ''}
             />
             <TextInput
               placeholder=""
@@ -195,7 +208,10 @@ const MarketingPreferencesDS = ({
               label="Country"
               isRequired={formValues[permissionPost][0] !== undefined}
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}country`] && touched[`${fieldPrefix}country`] ? errors[`${fieldPrefix}country`] : ''}
+              errorMessage={errors[`${fieldPrefix}country`] ? errors[`${fieldPrefix}country`] : ''}
+              // errorMessage={errors[`${fieldPrefix}country`] && touched[`${fieldPrefix}country`]
+              // ? errors[`${fieldPrefix}country`] : ''}
+
             />
           </ShowHide>
         </MaybeDisabled>

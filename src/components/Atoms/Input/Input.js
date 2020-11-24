@@ -150,7 +150,7 @@ Input.propTypes = {
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  /** text, email, number, date, serach, tel, url, password */
+  /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,

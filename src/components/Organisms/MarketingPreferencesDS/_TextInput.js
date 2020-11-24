@@ -16,6 +16,8 @@ const TextInput = ({
     errorMsg: errorMessage,
     onChange: handleInputChange,
     isRequired,
+    'aria-required': isRequired,
+    labelProps: { className: errorMessage ? 'error-message' : '' },
     ...rest
   };
 
