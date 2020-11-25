@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
 
@@ -6,14 +6,9 @@ import spacing from '../../../theme/shared/spacing';
 import { Chevron } from '../../Atoms/Icons/index';
 
 const Container = styled.div`
-  position: relative;
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  padding: ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    padding: ${spacing('l')} ${spacing('lg')};
-  }
 `;
 
 const ChevAnima = keyframes`
@@ -30,13 +25,21 @@ const Button = styled.button`
   background: none;
   border: none;
   transition: bottom 0.1s linear;
+  cursor: pointer;
+  
   &:focus,
   &:hover {
+    color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
     > div {
       animation-name: ${ChevAnima};
       animation-duration: 0.4s;
     }
+  }
+  
+  padding: ${spacing('l')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: ${spacing('l')} ${spacing('lg')};
   }
 `;
 
@@ -46,58 +49,58 @@ const Icon = styled.div`
   align-content: center;
 `;
 
-const Header = styled.div`
-  button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-`;
-
 const Copy = styled.div`
   overflow: hidden;
+  height: 0; 
   visibility: none;
   transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
+  padding: 0 ${spacing('l')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: 0 ${spacing('lg')};
+  }
+
   ${({ isOpen }) => (isOpen && css`
+    height: auto;
     visibility: visible;
-    margin-top: ${spacing('l')};
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
+    padding: 0 ${spacing('l')} ${spacing('l')};
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      padding: 0 ${spacing('lg')} ${spacing('l')};
+    }
   `)}
 `;
 
-const Accordion = ({ children, title }) => {
-  const [height, setHeight] = useState('auto');
+const Accordion = ({
+  children, title, ...rest
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const stageCanvasRef = useRef(null);
+
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    if (stageCanvasRef.current) {
-      setHeight(stageCanvasRef.current.getBoundingClientRect().height);
-    }
-  }, [height]);
-
   return (
-    <Container>
-      <Header>
-        <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
-          {title}
-          <Icon>
-            <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
-          </Icon>
-        </Button>
-      </Header>
-      <Copy style={{ height: isOpen ? 'auto' : '0' }} ref={stageCanvasRef} isOpen={isOpen}>{children}</Copy>
+    <Container {...rest}>
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
+        {title}
+        <Icon>
+          <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
+        </Icon>
+      </Button>
+      <Copy isOpen={isOpen}>
+        {children}
+      </Copy>
     </Container>
   );
 };
 
 Accordion.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.node.isRequired
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired
 };
 
 export default Accordion;
