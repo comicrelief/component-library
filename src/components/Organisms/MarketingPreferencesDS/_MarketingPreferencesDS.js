@@ -33,6 +33,7 @@ const MarketingPreferencesDS = ({
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
+    console.log('newVal', newVal);
     handleCheckChange(thisName, newVal); // Update Formik with the value
 
     /* If a 'not seleted' choice, reset the value and 'touched'
@@ -76,7 +77,7 @@ const MarketingPreferencesDS = ({
               fieldName={`${fieldPrefix}email`}
               label="Please enter your email address"
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionEmail][0] !== undefined}
+              isRequired={formValues[permissionEmail][0] !== undefined} // TO-DO: reflect prop optns
               errorMessage={errors[`${fieldPrefix}email`] ? errors[`${fieldPrefix}email`] : ''}
             />
           </ShowHide>
@@ -103,8 +104,6 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionSMS][0] !== undefined}
-              // errorMessage={errors[`${fieldPrefix}mobile`] && touched[`${fieldPrefix}mobile`]
-              // ? errors[`${fieldPrefix}mobile`] : ''}
               errorMessage={errors[`${fieldPrefix}mobile`] ? errors[`${fieldPrefix}mobile`] : ''}
 
             />
@@ -132,8 +131,6 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPhone][0] !== undefined}
-              // errorMessage={errors[`${fieldPrefix}phone`] && touched[`${fieldPrefix}phone`]
-              //  ? errors[`${fieldPrefix}phone`] : ''}
               errorMessage={errors[`${fieldPrefix}phone`] ? errors[`${fieldPrefix}phone`] : ''}
             />
           </ShowHide>
@@ -161,8 +158,6 @@ const MarketingPreferencesDS = ({
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
               errorMessage={errors[`${fieldPrefix}address1`] ? errors[`${fieldPrefix}address1`] : ''}
-              // errorMessage={errors[`${fieldPrefix}address1`] && touched[`${fieldPrefix}address1`]
-              //   ? errors[`${fieldPrefix}address1`] : ''}
             />
             <TextInput
               placeholder=""
@@ -170,8 +165,6 @@ const MarketingPreferencesDS = ({
               label="Address Line 2"
               handleInputChange={handleInputChange}
               errorMessage={errors[`${fieldPrefix}address2`] ? errors[`${fieldPrefix}address2`] : ''}
-              // errorMessage={errors[`${fieldPrefix}address2`] && touched[`${fieldPrefix}address2`]
-              //   ? errors[`${fieldPrefix}address2`] : ''}
             />
             <TextInput
               placeholder=""
@@ -179,8 +172,6 @@ const MarketingPreferencesDS = ({
               label="Address Line 3"
               handleInputChange={handleInputChange}
               errorMessage={errors[`${fieldPrefix}address3`] ? errors[`${fieldPrefix}address3`] : ''}
-              // errorMessage={errors[`${fieldPrefix}address3`] && touched[`${fieldPrefix}address3`]
-              //   ? errors[`${fieldPrefix}address3`] : ''}
             />
             <TextInput
               placeholder=""
@@ -189,8 +180,6 @@ const MarketingPreferencesDS = ({
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
               errorMessage={errors[`${fieldPrefix}town`] ? errors[`${fieldPrefix}town`] : ''}
-              // errorMessage={errors[`${fieldPrefix}town`] && touched[`${fieldPrefix}town`]
-              //   ? errors[`${fieldPrefix}town`] : ''}
             />
             <TextInput
               placeholder=""
@@ -199,8 +188,6 @@ const MarketingPreferencesDS = ({
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
               errorMessage={errors[`${fieldPrefix}postcode`] ? errors[`${fieldPrefix}postcode`] : ''}
-              // errorMessage={errors[`${fieldPrefix}postcode`] && touched[`${fieldPrefix}postcode`]
-              // ? errors[`${fieldPrefix}postcode`] : ''}
             />
             <TextInput
               placeholder=""
@@ -209,9 +196,6 @@ const MarketingPreferencesDS = ({
               isRequired={formValues[permissionPost][0] !== undefined}
               handleInputChange={handleInputChange}
               errorMessage={errors[`${fieldPrefix}country`] ? errors[`${fieldPrefix}country`] : ''}
-              // errorMessage={errors[`${fieldPrefix}country`] && touched[`${fieldPrefix}country`]
-              // ? errors[`${fieldPrefix}country`] : ''}
-
             />
           </ShowHide>
         </MaybeDisabled>
