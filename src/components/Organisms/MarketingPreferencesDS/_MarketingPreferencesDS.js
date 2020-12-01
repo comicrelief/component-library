@@ -4,7 +4,7 @@ import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
-import returnAssociatedFields from './_HelperFunctions';
+import associatedFields from './_HelperFunctions';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
@@ -22,8 +22,7 @@ const MarketingPreferencesDS = ({
   handleCheckChange,
   handleTouchedReset,
   formValues,
-  validation,
-  fieldPrefix
+  validation
 }) => {
   /** Uses Formik's 'setFieldValue' function (passed down as 'handleCheckChange' prop)
     *  to allow us to override the native checkbox functionality to allow yes/no/none interaction
@@ -33,25 +32,24 @@ const MarketingPreferencesDS = ({
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
-    console.log('newVal', newVal);
     handleCheckChange(thisName, newVal); // Update Formik with the value
 
     /* If a 'not seleted' choice, reset the value and 'touched'
     state in Formik for all fields associated with this checkbox */
     if (newVal.length === 0) {
-      const theseFields = returnAssociatedFields(thisName, fieldPrefix); // Generic helper function
+      const theseFields = associatedFields[thisName];
       theseFields.forEach(fieldName => {
-        handleCheckChange(fieldPrefix + fieldName, '');
-        handleTouchedReset(fieldPrefix + fieldName, false);
+        handleCheckChange(fieldName, '');
+        handleTouchedReset(fieldName, false);
       });
     }
   }
 
   // In the interest of brevity:
-  const permissionEmail = `${fieldPrefix}permissionEmail`;
-  const permissionPost = `${fieldPrefix}permissionPost`;
-  const permissionSMS = `${fieldPrefix}permissionSMS`;
-  const permissionPhone = `${fieldPrefix}permissionPhone`;
+  const permissionEmail = 'mp_permissionEmail';
+  const permissionPost = 'mp_permissionPost';
+  const permissionSMS = 'mp_permissionSMS';
+  const permissionPhone = 'mp_permissionPhone';
   const {
     // touched,
     errors
@@ -74,11 +72,11 @@ const MarketingPreferencesDS = ({
             {formValues[permissionEmail][0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}email`}
+              fieldName="mp_email"
               label="Please enter your email address"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionEmail][0] !== undefined} // TO-DO: reflect prop optns
-              errorMessage={errors[`${fieldPrefix}email`] ? errors[`${fieldPrefix}email`] : ''}
+              errorMessage={errors.mp_email ? errors.mp_email : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -100,11 +98,11 @@ const MarketingPreferencesDS = ({
             {formValues[permissionSMS][0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}mobile`}
+              fieldName="mp_mobile"
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionSMS][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}mobile`] ? errors[`${fieldPrefix}mobile`] : ''}
+              errorMessage={errors.mp_mobile ? errors.mp_mobile : ''}
 
             />
           </ShowHide>
@@ -127,11 +125,11 @@ const MarketingPreferencesDS = ({
             {formValues[permissionPhone][0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}phone`}
+              fieldName="mp_phone"
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPhone][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}phone`] ? errors[`${fieldPrefix}phone`] : ''}
+              errorMessage={errors.mp_phone ? errors.mp_phone : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -153,49 +151,49 @@ const MarketingPreferencesDS = ({
             {formValues[permissionPost][0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}address1`}
+              fieldName="mp_address1"
               label="Address Line 1"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}address1`] ? errors[`${fieldPrefix}address1`] : ''}
+              errorMessage={errors.mp_address1 ? errors.mp_address1 : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}address2`}
+              fieldName="mp_address2"
               label="Address Line 2"
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}address2`] ? errors[`${fieldPrefix}address2`] : ''}
+              errorMessage={errors.mp_address2 ? errors.mp_address2 : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}address3`}
+              fieldName="mp_address3"
               label="Address Line 3"
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}address3`] ? errors[`${fieldPrefix}address3`] : ''}
+              errorMessage={errors.mp_address3 ? errors.mp_address3 : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}town`}
+              fieldName="mp_town"
               label="Town/City"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}town`] ? errors[`${fieldPrefix}town`] : ''}
+              errorMessage={errors.mp_town ? errors.mp_town : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}postcode`}
+              fieldName="mp_postcode"
               label="Postcode"
               handleInputChange={handleInputChange}
               isRequired={formValues[permissionPost][0] !== undefined}
-              errorMessage={errors[`${fieldPrefix}postcode`] ? errors[`${fieldPrefix}postcode`] : ''}
+              errorMessage={errors.mp_postcode ? errors.mp_postcode : ''}
             />
             <TextInput
               placeholder=""
-              fieldName={`${fieldPrefix}country`}
+              fieldName="mp_country"
               label="Country"
               isRequired={formValues[permissionPost][0] !== undefined}
               handleInputChange={handleInputChange}
-              errorMessage={errors[`${fieldPrefix}country`] ? errors[`${fieldPrefix}country`] : ''}
+              errorMessage={errors.mp_country ? errors.mp_country : ''}
             />
           </ShowHide>
         </MaybeDisabled>
@@ -214,7 +212,6 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferencesDS.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  fieldPrefix: PropTypes.string,
   disableEmailInput: PropTypes.bool,
   disablePostInputs: PropTypes.bool,
   disablePhoneInput: PropTypes.bool,
@@ -229,7 +226,6 @@ MarketingPreferencesDS.propTypes = {
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
   copyBottom: defaultCopyBottom,
-  fieldPrefix: '',
   disableEmailInput: false,
   disablePostInputs: false,
   disablePhoneInput: false,

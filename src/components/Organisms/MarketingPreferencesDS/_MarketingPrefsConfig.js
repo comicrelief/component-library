@@ -1,86 +1,79 @@
 import * as yup from 'yup';
 
-const prefix = 'testprefix-';
-
-// Faking a prop value; "are required fields required?" .. doesn't affect optional fields
-const fakeOptions = {
-  [`${prefix}permissionEmail`]: {
-    yes: true, // sets associated field/s to required
-    no: false // sets associated field/s to not required
-  },
-  [`${prefix}permissionPost`]: {
-    yes: true,
-    no: false
-  },
-  [`${prefix}permissionPhone`]: {
-    yes: true,
-    no: false
-  },
-  [`${prefix}permissionSMS`]: {
-    yes: true,
-    no: false
-  }
-};
-
 const initialValues = {
-  [`${prefix}email`]: '',
-  [`${prefix}mobile`]: '',
-  [`${prefix}phone`]: '',
-  [`${prefix}address1`]: '',
-  [`${prefix}address2`]: '',
-  [`${prefix}address3`]: '',
-  [`${prefix}town`]: '',
-  [`${prefix}country`]: '',
-  [`${prefix}postcode`]: '',
-  [`${prefix}permissionEmail`]: [],
-  [`${prefix}permissionPost`]: [],
-  [`${prefix}permissionPhone`]: [],
-  [`${prefix}permissionSMS`]: []
+  mp_email: '',
+  mp_mobile: '',
+  mp_phone: '',
+  mp_address1: '',
+  mp_address2: '',
+  mp_address3: '',
+  mp_town: '',
+  mp_country: '',
+  mp_postcode: '',
+  mp_permissionEmail: [],
+  mp_permissionPost: [],
+  mp_permissionPhone: [],
+  mp_permissionSMS: []
 };
 
-const validationSchema = yup.object({
-  /* 'Required' attributes needs to be set on checkbox status to ensure validation makes sense */
-  [`${prefix}email`]: yup.string().max(50, 'Too long').email('Please enter a valid email address')
-    .when(`${prefix}permissionEmail`, {
-      is: val => (fakeOptions[`${prefix}permissionEmail`][val]),
+const buildValidationSchema = overrideOptions => {
+  const defaultOptions = {
+    mp_permissionEmail: { yes: true, no: false },
+    mp_permissionPost: { yes: true, no: false },
+    mp_permissionPhone: { yes: true, no: false },
+    mp_permissionSMS: { yes: true, no: false }
+  };
+
+  // Override with any custom options
+  const updatedOptions = {
+    ...defaultOptions,
+    ...overrideOptions
+  };
+
+  const validationSchema = yup.object({
+    /* 'Required' attributes needs to be set on checkbox status to ensure validation makes sense */
+    mp_email: yup.string().max(50, 'Too long').email('Please enter a valid email address')
+      .when('mp_permissionEmail', {
+        is: val => (updatedOptions.mp_permissionEmail[val]),
+        then: yup.string().required('Please enter your mobile number')
+      }),
+
+    mp_mobile: yup.string().max(11, 'Too long').when('mp_permissionSMS', {
+      is: val => (updatedOptions.mp_permissionSMS[val]),
       then: yup.string().required('Please enter your mobile number')
     }),
 
-  // TO-DO / PROBLEM: we need to be able to set 'required' based on a prop too
+    mp_phone: yup.string().max(11, 'Too long').when('mp_permissionPhone', {
+      is: val => (updatedOptions.mp_permissionPhone[val]),
+      then: yup.string().required('Please enter your phone number')
+    }),
 
-  [`${prefix}mobile`]: yup.string().max(11, 'Too long').when(`${prefix}permissionSMS`, {
-    is: val => (fakeOptions[`${prefix}permissionSMS`][val]),
-    then: yup.string().required('Please enter your mobile number')
-  }),
+    mp_address1: yup.string().max(11, 'Too long').when('mp_permissionPost', {
+      is: val => (updatedOptions.mp_permissionPost[val]),
+      then: yup.string().required('This field is required')
+    }),
 
-  [`${prefix}phone`]: yup.string().max(11, 'Too long').when(`${prefix}permissionPhone`, {
-    is: val => (fakeOptions[`${prefix}permissionPhone`][val]),
-    then: yup.string().required('Please enter your phone number')
-  }),
+    mp_town: yup.string().max(50, 'Too long').when('mp_permissionPost', {
+      is: val => (updatedOptions.mp_permissionPost[val]),
+      then: yup.string().required('This field is required')
+    }),
 
-  [`${prefix}address1`]: yup.string().max(11, 'Too long').when(`${prefix}permissionPost`, {
-    is: val => (fakeOptions[`${prefix}permissionPost`][val]),
-    then: yup.string().required('This field is required')
-  }),
+    mp_postcode: yup.string().max(50, 'Too long').when('mp_permissionPost', {
+      is: val => (updatedOptions.mp_permissionPost[val]),
+      then: yup.string().required('This field is required')
+    }),
 
-  [`${prefix}town`]: yup.string().max(50, 'Too long').when(`${prefix}permissionPost`, {
-    is: val => (fakeOptions[`${prefix}permissionPost`][val]),
-    then: yup.string().required('This field is required')
-  }),
+    mp_country: yup.string().max(50, 'Too long').when('mp_permissionPost', {
+      is: val => (updatedOptions.mp_permissionPost[val]),
+      then: yup.string().required('This field is required')
+    }),
 
-  [`${prefix}postcode`]: yup.string().max(50, 'Too long').when(`${prefix}permissionPost`, {
-    is: val => (fakeOptions[`${prefix}permissionPost`][val]),
-    then: yup.string().required('This field is required')
-  }),
+    /*  Non-required fields */
+    mp_address2: yup.string().max(50, 'Too long'),
+    mp_address3: yup.string().max(50, 'Too long')
+  });
 
-  [`${prefix}country`]: yup.string().max(50, 'Too long').when(`${prefix}permissionPost`, {
-    is: val => (fakeOptions[`${prefix}permissionPost`][val]),
-    then: yup.string().required('This field is required')
-  }),
+  return validationSchema;
+};
 
-  /*  Non-required fields */
-  [`${prefix}address2`]: yup.string().max(50, 'Too long'),
-  [`${prefix}address3`]: yup.string().max(50, 'Too long')
-});
-
-export { prefix, initialValues, validationSchema };
+export { initialValues, buildValidationSchema };

@@ -1,13 +1,8 @@
 const associatedFields = {
-  permissionSMS: ['mobile'],
-  permissionPhone: ['phone'],
-  permissionEmail: ['email'],
-  permissionPost: ['address1', 'address2', 'address3', 'town', 'postcode', 'country']
+  mp_permissionSMS: ['mp_mobile'],
+  mp_permissionPhone: ['mp_phone'],
+  mp_permissionEmail: ['mp_email'],
+  mp_permissionPost: ['mp_address1', 'mp_address2', 'mp_address3', 'mp_town', 'mp_postcode', 'mp_country']
 };
 
-const returnAssociatedFields = (checkBoxName, fieldPrefix) => {
-  const genericKey = checkBoxName.replace(fieldPrefix, '');
-  return associatedFields[genericKey];
-};
-
-export default returnAssociatedFields;
+export default associatedFields;
