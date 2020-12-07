@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
+import { Wrapper, Digits } from './Countdown.style';
 
 
-const Countdown = ({endDate, color, endMessage}) => {
+const Countdown = ({endDate, color, endMessage, introMessage}) => {
   const [countdownEnd, setCountdownEnd] = useState(false);
-  const [countdownTime, setCountdownTime] = useState("");
+  const [countdownTime, setCountdownTime] = useState({});
   
   const countDownDate = new Date(endDate).getTime();
   // Keep number with two digits
@@ -23,7 +24,12 @@ const Countdown = ({endDate, color, endMessage}) => {
       const minutes = formatNumber(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
       const seconds = formatNumber(Math.floor((distance % (1000 * 60)) / 1000));
   
-      setCountdownTime(`${days}:${hours}:${minutes} ${seconds}`);
+      setCountdownTime({
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      });
   
       if (distance < 0) {
         setCountdownEnd(true);
@@ -31,31 +37,71 @@ const Countdown = ({endDate, color, endMessage}) => {
     }, 1000);
     return () => clearInterval(interval);
   }, [countDownDate]);
+
+  const CountDownClock = (
+    <>
+      {introMessage && introMessage}
+      <Wrapper>
+        <Digits>
+          <Text color={color} family="Anton" size="xl">
+            {countdownTime.days}
+          </Text>
+          <Text color={color} size="xs" uppercase>
+            days
+          </Text>
+        </Digits>
+        <Text color={color} family="Anton" size="xl">
+          :
+        </Text>
+        <Digits>
+          <Text color={color} family="Anton" size="xl">
+            {countdownTime.hours}
+          </Text>
+          <Text color={color} size="xs" uppercase>
+            hours
+          </Text>
+        </Digits>
+        <Text color={color} family="Anton" size="xl">
+          :
+        </Text>
+        <Digits>
+          <Text color={color} family="Anton" size="xl">
+            {countdownTime.minutes}
+          </Text>
+          <Text color={color} size="xs" uppercase>
+            minutes
+          </Text>
+        </Digits>
+        <Digits>
+          <Text color={color} family="Anton" size="xl">
+            {countdownTime.seconds}
+          </Text>
+          <Text color={color} size="xs" uppercase>
+            seconds
+          </Text>
+        </Digits>
+      </Wrapper>
+    </>
+  );
   
-  if (endMessage.length < 1) {
-    return !countdownEnd ? (
-      <Text color={color}>
-        {countdownTime}
-      </Text>
-    ) : null;
+  if (endMessage == null) {
+    return !countdownEnd ? CountDownClock : null;
   }
 
-  return (
-    <Text color={color}>
-      {countdownEnd ? endMessage : countdownTime}
-    </Text>
-  )
+  return countdownEnd ? endMessage : CountDownClock;
 };
 
 Countdown.protoTypes = {
   endDate: PropTypes.string.isRequired,
   color: PropTypes.string,
-  endMessage: PropTypes.string
+  endMessage: PropTypes.node,
+  introMessage: PropTypes.node
 }
 
 Countdown.defaultProps = {
   color: "black",
-  endMessage: ""
+  endMessage: null,
+  introMessage: null
 }
 
 export default Countdown;
