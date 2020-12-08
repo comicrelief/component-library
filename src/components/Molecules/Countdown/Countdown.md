@@ -1,4 +1,4 @@
-Limit is 99 days
+Limit is 365 days
 
 ```js
 import Text from '../../Atoms/Text/Text';

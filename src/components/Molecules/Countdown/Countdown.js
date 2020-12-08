@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import Text from '../../Atoms/Text/Text';
 import { Wrapper, Digits } from './Countdown.style';
 
@@ -15,19 +16,16 @@ const Countdown = ({
   });
 
   const countDownDate = new Date(endDate).getTime();
-  // Keep number with two digits
-  const formatNumber = number => (`0${number}`).slice(-2);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const timeRemaining = countDownDate - now;
+      const now = moment();
+      const timeRemaining = moment(countDownDate - now);
 
-      const days = formatNumber(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
-      const hours = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60 * 24))
-      / (1000 * 60 * 60)));
-      const minutes = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60))/ (1000 * 60)));
-      const seconds = formatNumber(Math.floor((timeRemaining % (1000 * 60)) / 1000));
+      const days = timeRemaining.format('DDD');
+      const hours = timeRemaining.format('HH');
+      const minutes = timeRemaining.format('mm');
+      const seconds = timeRemaining.format('ss');
 
       setCountdownTime({
         days,
