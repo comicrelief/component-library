@@ -15,7 +15,8 @@ const Countdown = ({
     seconds: '00'
   });
 
-  const countDownDate = new Date(endDate).getTime();
+  const countDownDate = moment(endDate);
+  countDownDate.diff(moment(), 'seconds');
 
   useEffect(() => {
     const interval = setInterval(() => {
