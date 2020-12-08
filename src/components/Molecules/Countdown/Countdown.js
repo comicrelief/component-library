@@ -90,7 +90,7 @@ const Countdown = ({
   );
 };
 
-Countdown.protoTypes = {
+Countdown.propTypes = {
   endDate: PropTypes.string.isRequired,
   color: PropTypes.string,
   endMessage: PropTypes.node,
