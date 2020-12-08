@@ -24,8 +24,9 @@ const Countdown = ({
       const timeRemaining = countDownDate - now;
 
       const days = formatNumber(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
-      const hours = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      const minutes = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60)));
+      const hours = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60 * 24))
+      / (1000 * 60 * 60)));
+      const minutes = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60))/ (1000 * 60)));
       const seconds = formatNumber(Math.floor((timeRemaining % (1000 * 60)) / 1000));
 
       setCountdownTime({
@@ -42,7 +43,9 @@ const Countdown = ({
     return () => clearInterval(interval);
   }, [countDownDate]);
 
-  return countdownHasEnded ? endMessage : (
+  if (countdownHasEnded) return endMessage;
+
+  return (
     <>
       {introMessage}
       <Wrapper>
