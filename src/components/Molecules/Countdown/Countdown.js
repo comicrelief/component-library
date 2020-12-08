@@ -6,8 +6,13 @@ import { Wrapper, Digits } from './Countdown.style';
 const Countdown = ({
   endDate, color, endMessage, introMessage
 }) => {
-  const [countdownEnd, setCountdownEnd] = useState(false);
-  const [countdownTime, setCountdownTime] = useState({});
+  const [countdownHasEnded, setCountdownHasEnded] = useState(false);
+  const [countdownTime, setCountdownTime] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+  });
 
   const countDownDate = new Date(endDate).getTime();
   // Keep number with two digits
@@ -16,12 +21,12 @@ const Countdown = ({
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+      const timeRemaining = countDownDate - now;
 
-      const days = formatNumber(Math.floor(distance / (1000 * 60 * 60 * 24)));
-      const hours = formatNumber(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      const minutes = formatNumber(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-      const seconds = formatNumber(Math.floor((distance % (1000 * 60)) / 1000));
+      const days = formatNumber(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
+      const hours = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+      const minutes = formatNumber(Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60)));
+      const seconds = formatNumber(Math.floor((timeRemaining % (1000 * 60)) / 1000));
 
       setCountdownTime({
         days,
@@ -30,16 +35,16 @@ const Countdown = ({
         seconds
       });
 
-      if (distance < 0) {
-        setCountdownEnd(true);
+      if (timeRemaining < 0) {
+        setCountdownHasEnded(true);
       }
     }, 1000);
     return () => clearInterval(interval);
   }, [countDownDate]);
 
-  const CountDownClock = (
+  return countdownHasEnded ? endMessage : (
     <>
-      {introMessage && introMessage}
+      {introMessage}
       <Wrapper>
         <Digits>
           <Text color={color} family="Anton" size="xl">
@@ -82,12 +87,6 @@ const Countdown = ({
       </Wrapper>
     </>
   );
-
-  if (endMessage == null) {
-    return !countdownEnd ? CountDownClock : null;
-  }
-
-  return countdownEnd ? endMessage : CountDownClock;
 };
 
 Countdown.protoTypes = {
