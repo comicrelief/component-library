@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
@@ -8,7 +9,7 @@ import associatedFields from './_HelperFunctions';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  CopyWrapper, Head, FormField, ShowHide
+  CopyWrapper, Head, FormField, ShowHideInputWrapper
 } from './MarketingPreferencesDS.style';
 
 const MarketingPreferencesDS = ({
@@ -44,117 +45,121 @@ const MarketingPreferencesDS = ({
       });
     }
   }
-
-  // In the interest of brevity:
-  const permissionEmail = 'mp_permissionEmail';
-  const permissionPost = 'mp_permissionPost';
-  const permissionSMS = 'mp_permissionSMS';
-  const permissionPhone = 'mp_permissionPhone';
   const {
     // touched,
-    errors
+    errors,
+    options
   } = validation;
+
+  console.log('errors', errors);
 
   return (
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
-      {/* Email field */}
-      <FormField className="field-email" userSelection={formValues[permissionEmail]}>
+
+      {/* Render Email checkboxes and input if not removed in config */}
+      {!options.mp_permissionEmail.disableOption && (
+      <FormField className="field-email" userSelection={formValues.mp_permissionEmail}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer name={permissionEmail} onChange={e => handleCheckboxChange(e)} />
+          <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e)} />
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
-          <ShowHide show={formValues[permissionEmail][0] !== undefined}>
-            {formValues[permissionEmail][0] === 'no' && <NoMessage askingFor="an email" /> }
+          <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined}>
+            {formValues.mp_permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionEmail][0] !== undefined} // TO-DO: reflect prop optns
+              isRequired={formValues.mp_permissionEmail[0] !== undefined}// TO-DO:reflect prop optns
               errorMessage={errors.mp_email ? errors.mp_email : ''}
             />
-          </ShowHide>
+          </ShowHideInputWrapper>
         </MaybeDisabled>
       </FormField>
+      )}
 
-      {/* Text field */}
-      <FormField className="field-sms" userSelection={formValues[permissionSMS]}>
+      {/* Render SMS checkboxes and inputs if not removed in config */}
+      {!options.mp_permissionSMS.disableOption && (
+      <FormField className="field-sms" userSelection={formValues.mp_permissionSMS}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Text me
           </Text>
           <CheckAnswer
-            name={permissionSMS}
+            name="mp_permissionSMS"
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
-          <ShowHide show={formValues[permissionSMS][0] !== undefined}>
-            {formValues[permissionSMS][0] === 'no' && <NoMessage askingFor="a mobile number" />}
+          <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined}>
+            {formValues.mp_permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionSMS][0] !== undefined}
+              isRequired={formValues.mp_permissionSMS[0] !== undefined}
               errorMessage={errors.mp_mobile ? errors.mp_mobile : ''}
-
             />
-          </ShowHide>
+          </ShowHideInputWrapper>
         </MaybeDisabled>
       </FormField>
+      )}
 
-      {/* Phone field */}
-      <FormField className="field-sms" userSelection={formValues[permissionPhone]}>
+      {/* Render Phone checkboxes and input if not removed in config */}
+      {!options.mp_permissionPhone.disableOption && (
+      <FormField className="field-phone" userSelection={formValues.mp_permissionPhone}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Phone me
           </Text>
           <CheckAnswer
-            name={permissionPhone}
+            name="mp_permissionPhone"
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
-          <ShowHide show={formValues[permissionPhone][0] !== undefined}>
-            {formValues[permissionPhone][0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
+          <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined}>
+            {formValues.mp_permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionPhone][0] !== undefined}
+              isRequired={formValues.mp_permissionPhone[0] !== undefined}
               errorMessage={errors.mp_phone ? errors.mp_phone : ''}
             />
-          </ShowHide>
+          </ShowHideInputWrapper>
         </MaybeDisabled>
       </FormField>
+      )}
 
-      {/* Post field */}
-      <FormField className="field-post" userSelection={formValues[permissionPost]}>
+      {/* Render Post checkboxes and inputs if not removed in config */}
+      {!options.mp_permissionPost.disableOption && (
+      <FormField className="field-post" userSelection={formValues.mp_permissionPost}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Send me post
           </Text>
           <CheckAnswer
-            name={permissionPost}
+            name="mp_permissionPost"
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
         <MaybeDisabled disabled={disablePostInputs}>
-          <ShowHide show={formValues[permissionPost][0] !== undefined}>
-            {formValues[permissionPost][0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
+          <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined}>
+            {formValues.mp_permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionPost][0] !== undefined}
+              isRequired={formValues.mp_permissionPost[0] !== undefined}
               errorMessage={errors.mp_address1 ? errors.mp_address1 : ''}
             />
             <TextInput
@@ -176,7 +181,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_town"
               label="Town/City"
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionPost][0] !== undefined}
+              isRequired={formValues.mp_permissionPost[0] !== undefined}
               errorMessage={errors.mp_town ? errors.mp_town : ''}
             />
             <TextInput
@@ -184,20 +189,21 @@ const MarketingPreferencesDS = ({
               fieldName="mp_postcode"
               label="Postcode"
               handleInputChange={handleInputChange}
-              isRequired={formValues[permissionPost][0] !== undefined}
+              isRequired={formValues.mp_permissionPost[0] !== undefined}
               errorMessage={errors.mp_postcode ? errors.mp_postcode : ''}
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              isRequired={formValues[permissionPost][0] !== undefined}
+              isRequired={formValues.mp_permissionPost[0] !== undefined}
               handleInputChange={handleInputChange}
               errorMessage={errors.mp_country ? errors.mp_country : ''}
             />
-          </ShowHide>
+          </ShowHideInputWrapper>
         </MaybeDisabled>
       </FormField>
+      )}
 
       {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
     </>

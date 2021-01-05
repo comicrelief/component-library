@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Formik } from 'formik';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
@@ -5,18 +6,25 @@ import {
   initialValues, buildValidationSchema
 } from './_MarketingPrefsConfig';
 
-// Define the schema based on the default config...
-let thisValidationSchema = buildValidationSchema();
+// Define the schema based on the default config
+let validation = buildValidationSchema();
 
-// Alternatively, we can define it with some custom overrides:
+// Or, alternatively, define it with some custom overrides:
 const schemaOverrides = {
   mp_permissionEmail: {
-    yes: true,
-    no: true
+    no: false // Sets associated input field 'required' attr to false when 'No' choice selecteds
+  },
+  mp_permissionPhone: {
+    disableOption: true // Completely removes this option from render and validation
   }
 };
 
-thisValidationSchema = buildValidationSchema(schemaOverrides);
+validation = buildValidationSchema(schemaOverrides);
+
+const {
+  validationSchema,
+  options
+} = validation;
 
 /* This component exists purely to show the Marketing Preferences
   component working in the Component Library; applications are to
@@ -30,7 +38,7 @@ const MarketingPreferencesDSForm = () => {
   return (
     <>
       <Formik
-        validationSchema={thisValidationSchema}
+        validationSchema={validationSchema}
         validateOnChange
         validateOnBlur
         initialValues={initialValues}
@@ -38,7 +46,7 @@ const MarketingPreferencesDSForm = () => {
       >
         {({
           handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched
-          // validateForm, setFieldTouched,
+          // validateForm, setFieldTouched, dirty,
           // handleSubmit, isSubmitting, isValidating
 
         }) => (
@@ -48,14 +56,14 @@ const MarketingPreferencesDSForm = () => {
             onSubmit={e => customSubmitHandler(e, { errors, touched, values })}
           >
 
-            <button type="submit" disabled={!isValid}>S U B M I T </button>
+            <button type="submit" disabled={!(isValid)}>S U B M I T </button>
 
             <MarketingPreferencesDS
               formValues={values}
               handleInputChange={handleChange}
               handleCheckChange={setFieldValue}
               handleTouchedReset={setFieldTouched}
-              validation={{ errors, touched }}
+              validation={{ errors, touched, options }} // Pass form state and config
             />
           </form>
         )}

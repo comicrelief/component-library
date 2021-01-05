@@ -125,7 +125,7 @@ const CheckInput = styled.input`
   }
 `;
 
-const ShowHide = styled.div`
+const ShowHideInputWrapper = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
   margin-bottom: ${spacing('lg')};
   width: 100%;
@@ -148,5 +148,5 @@ export {
   CheckLabel,
   CheckInput,
   CheckContainer,
-  ShowHide
+  ShowHideInputWrapper
 };
