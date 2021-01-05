@@ -22,8 +22,8 @@ let initialValues = setInitialValues();
 
 // ...or override with any value the user has already supplied in the journey
 const initialValueOverrides = {
-  mp_email: 'william_gates@microsoft.com', // Pre-fills the email field
-  mp_permissionEmail: ['yes'] // Pre-selects the 'Yes' checkbox for the Email option
+  mp_email: 'william_gates@microsoft' // Pre-fills the email field -- DEBUGGING: using a non-valid input to test on-mount validation
+  // mp_permissionEmail: ['yes'] // Pre-selects the 'Yes' checkbox for the Email option
 };
 
 initialValues = setInitialValues(initialValueOverrides);
@@ -48,6 +48,7 @@ const MarketingPreferencesDSForm = () => {
         validationSchema={validationSchema}
         validateOnChange
         validateOnBlur
+        validateOnMount
         initialValues={initialValues}
         validate={values => { console.log('Validate:', values); }}
       >
