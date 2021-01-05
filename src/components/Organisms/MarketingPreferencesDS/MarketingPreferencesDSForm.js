@@ -3,23 +3,30 @@ import React from 'react';
 import { Formik } from 'formik';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 import {
-  initialValues, buildValidationSchema
+  setInitialValues, buildValidationSchema
 } from './_MarketingPrefsConfig';
 
-// Define the schema based on the default config
+// Define the form schema based on the default config...
 let validation = buildValidationSchema();
 
-// Or, alternatively, define it with some custom overrides:
+// ...or define it with some custom overrides:
 const schemaOverrides = {
-  mp_permissionEmail: {
-    no: false // Sets associated input field 'required' attr to false when 'No' choice selecteds
-  },
-  mp_permissionPhone: {
-    disableOption: true // Completely removes this option from render and validation
-  }
+  mp_permissionEmail: { no: false }, // Sets associated input field 'required' attr to false when 'No' choice selecteds
+  mp_permissionPhone: { disableOption: true } // Completely removes this option from render and validation
 };
 
 validation = buildValidationSchema(schemaOverrides);
+
+// Define the initial form values based on the default config...
+let initialValues = setInitialValues();
+
+// ...or override with any value the user has already supplied in the journey
+const initialValueOverrides = {
+  mp_email: 'william_gates@microsoft.com', // Pre-fills the email field
+  mp_permissionEmail: ['yes'] // Pre-selects the 'Yes' checkbox for the Email option
+};
+
+initialValues = setInitialValues(initialValueOverrides);
 
 const {
   validationSchema,
@@ -68,7 +75,6 @@ const MarketingPreferencesDSForm = () => {
           </form>
         )}
       </Formik>
-
     </>
   );
 };

@@ -51,8 +51,6 @@ const MarketingPreferencesDS = ({
     options
   } = validation;
 
-  console.log('errors', errors);
-
   return (
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}

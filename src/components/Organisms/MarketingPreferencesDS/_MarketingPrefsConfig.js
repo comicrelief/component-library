@@ -2,20 +2,26 @@
 import * as yup from 'yup';
 import { merge } from 'lodash';
 
-const initialValues = {
-  mp_email: '',
-  mp_mobile: '',
-  mp_phone: '',
-  mp_address1: '',
-  mp_address2: '',
-  mp_address3: '',
-  mp_town: '',
-  mp_country: '',
-  mp_postcode: '',
-  mp_permissionEmail: [],
-  mp_permissionPost: [],
-  mp_permissionPhone: [],
-  mp_permissionSMS: []
+const setInitialValues = overrideValues => {
+  const defaultValues = {
+    mp_email: '',
+    mp_mobile: '',
+    mp_phone: '',
+    mp_address1: '',
+    mp_address2: '',
+    mp_address3: '',
+    mp_town: '',
+    mp_country: '',
+    mp_postcode: '',
+    mp_permissionEmail: [],
+    mp_permissionPost: [],
+    mp_permissionPhone: [],
+    mp_permissionSMS: []
+  };
+
+  // Override with any custom options supplied
+  const updatedValues = merge(defaultValues, overrideValues);
+  return updatedValues;
 };
 
 const buildValidationSchema = overrideOptions => {
@@ -112,4 +118,4 @@ const buildValidationSchema = overrideOptions => {
   };
 };
 
-export { initialValues, buildValidationSchema };
+export { setInitialValues, buildValidationSchema };
