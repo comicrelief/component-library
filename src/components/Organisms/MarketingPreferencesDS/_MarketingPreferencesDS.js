@@ -26,13 +26,14 @@ const MarketingPreferencesDS = ({
   validation
 }) => {
   /** Uses Formik's 'setFieldValue' function (passed down as 'handleCheckChange' prop)
-    *  to allow us to override the native checkbox functionality to allow yes/no/none interaction
+    *  to allow us to override the native checkbox functionality to allow Yes/No/None interaction
     */
   function handleCheckboxChange(e) {
     const thisName = e.target.name;
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
+
     handleCheckChange(thisName, newVal); // Update Formik with the value
 
     /* If a 'not seleted' choice, reset the value and 'touched'
@@ -51,6 +52,8 @@ const MarketingPreferencesDS = ({
     options
   } = validation;
 
+  const isAddressErroring = errors.mp_address1 || errors.mp_address2 || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+
   return (
     <>
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
@@ -66,7 +69,7 @@ const MarketingPreferencesDS = ({
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined}>
+          <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined || errors.mp_email}>
             {formValues.mp_permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
@@ -94,7 +97,7 @@ const MarketingPreferencesDS = ({
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined}>
+          <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined || errors.mp_mobile}>
             {formValues.mp_permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
@@ -122,7 +125,7 @@ const MarketingPreferencesDS = ({
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined}>
+          <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined || errors.mp_phone}>
             {formValues.mp_permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
@@ -150,7 +153,7 @@ const MarketingPreferencesDS = ({
           />
         </Head>
         <MaybeDisabled disabled={disablePostInputs}>
-          <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined}>
+          <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined || isAddressErroring}>
             {formValues.mp_permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""

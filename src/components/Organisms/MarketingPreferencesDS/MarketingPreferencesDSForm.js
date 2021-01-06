@@ -11,7 +11,7 @@ let validation = buildValidationSchema();
 
 // ...or define it with some custom overrides:
 const schemaOverrides = {
-  mp_permissionEmail: { no: false }, // Sets associated input field 'required' attr to false when 'No' choice selecteds
+  // mp_permissionEmail: { no: false }, // Sets associated input field 'required' attr to false when 'No' choice selecteds
   mp_permissionPhone: { disableOption: true } // Completely removes this option from render and validation
 };
 
@@ -20,10 +20,14 @@ validation = buildValidationSchema(schemaOverrides);
 // Define the initial form values based on the default config...
 let initialValues = setInitialValues();
 
-// ...or override with any value the user has already supplied in the journey
+// ...or override with any (validated) value the user has already supplied in the journey
 const initialValueOverrides = {
-  mp_email: 'william_gates@microsoft' // Pre-fills the email field -- DEBUGGING: using a non-valid input to test on-mount validation
-  // mp_permissionEmail: ['yes'] // Pre-selects the 'Yes' checkbox for the Email option
+  mp_address1: '10 King Road',
+  mp_town: 'London',
+  mp_country: 'UK',
+  mp_email: 'a.partridge@radio-norwich.com',
+  mp_permissionPost: ['yes'],
+  mp_permissionEmail: ['yes']
 };
 
 initialValues = setInitialValues(initialValueOverrides);
@@ -41,6 +45,12 @@ const MarketingPreferencesDSForm = () => {
     e.preventDefault();
     console.log('customSubmitHandler', formValues);
   }
+
+  // Customised wrapper function
+  const customSetFieldValue = (name, value, setFieldValue) => {
+    setFieldValue(name, value);
+    // Force validation to remove any old errors?
+  };
 
   return (
     <>
@@ -69,7 +79,7 @@ const MarketingPreferencesDSForm = () => {
             <MarketingPreferencesDS
               formValues={values}
               handleInputChange={handleChange}
-              handleCheckChange={setFieldValue}
+              handleCheckChange={(name, value) => customSetFieldValue(name, value, setFieldValue)}
               handleTouchedReset={setFieldTouched}
               validation={{ errors, touched, options }} // Pass form state and config
             />
