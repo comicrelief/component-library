@@ -21,6 +21,7 @@ exports[`Monthly donation renders correctly 1`] = `
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
 }
 
 .c19 {
@@ -506,6 +507,12 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
   .c26 {
     max-width: 290px;
   }
@@ -904,6 +911,7 @@ exports[`Single donation renders correctly 1`] = `
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
 }
 
 .c13 {
@@ -1269,6 +1277,12 @@ exports[`Single donation renders correctly 1`] = `
 .c26:hover {
   outline: none;
   background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -1639,6 +1653,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
 }
 
 .c13 {
@@ -1901,6 +1916,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c21:hover {
   outline: none;
   background-color: #961D35;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width:740px) {

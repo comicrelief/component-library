@@ -31,6 +31,14 @@ export const BaseText = styled.span`
           }
         `
     : null)};
+  ${({ size, theme }) => (size === 'm'
+    ? css`
+      font-size: ${theme.fontSize('s')};
+      @media ${theme.breakpoint('small')} {
+        font-size: ${theme.fontSize('m')};
+      }
+    `
+    : null)};
 `;
 
 /** Text renders different elements based on the `tag` prop
