@@ -11,8 +11,9 @@ let validation = buildValidationSchema();
 
 // ...or define it with some custom overrides:
 const schemaOverrides = {
-  mp_permissionEmail: { no: false }, // Sets associated input field 'required' attribute to false when 'No' choice selecteds
-  mp_permissionPost: { disableOption: true } // Completely removes this option from render and validation
+  // mp_permissionEmail: { hideInput: true } // Hides associated input field(s) for when values are passed from elsewhere (overrides all validation)
+  // mp_permissionEmail: { no: false }, // Sets associated input field 'required' attribute to false when 'No' choice selecteds
+  // mp_permissionPost: { disableOption: true } // Completely removes this option from render and validation
 };
 
 validation = buildValidationSchema(schemaOverrides);
@@ -22,11 +23,11 @@ let initialValues = setInitialValues();
 
 // ...or override with any (validated) value the user has already supplied in the journey
 const initialValueOverrides = {
-  mp_address1: '10 King Road',
-  mp_town: 'London',
-  mp_postcode: 'SE1 7TP',
-  mp_country: 'UK',
-  mp_email: 'a.partridge@radio-norwich.com'
+  // mp_address1: '10 King Road',
+  // mp_town: 'London',
+  // mp_postcode: 'SE1 7TP',
+  // mp_country: 'UK',
+  // mp_email: 'a.partridge@radio-norwich.com',
   // mp_permissionPost: ['yes'],  // We can also pre-select options if required
 };
 
@@ -60,13 +61,11 @@ const MarketingPreferencesDSForm = () => {
         validateOnBlur
         validateOnMount
         initialValues={initialValues}
-        validate={values => { console.log('Validate:', values); }}
+        validate={values => { console.log('Validate callback:', values); }}
       >
         {({
           handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched
-          // validateForm, setFieldTouched, dirty,
-          // handleSubmit, isSubmitting, isValidating
-
+          // validateForm, setFieldTouched, dirty, handleSubmit, isSubmitting, isValidating
         }) => (
 
           <form

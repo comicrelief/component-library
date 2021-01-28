@@ -13,10 +13,6 @@ import {
 } from './MarketingPreferencesDS.style';
 
 const MarketingPreferencesDS = ({
-  disableEmailInput,
-  disablePostInputs,
-  disablePhoneInput,
-  disableSMSInput,
   copyTop,
   copyBottom,
   handleInputChange,
@@ -68,7 +64,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e)} />
         </Head>
 
-        <MaybeDisabled disabled={disableEmailInput}>
+        <MaybeDisabled disabled={options.mp_permissionEmail.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined || errors.mp_email}>
             {formValues.mp_permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
@@ -96,7 +92,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={disableSMSInput}>
+        <MaybeDisabled disabled={options.mp_permissionSMS.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined || errors.mp_mobile}>
             {formValues.mp_permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
@@ -124,7 +120,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={disablePhoneInput}>
+        <MaybeDisabled disabled={options.mp_permissionPhone.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined || errors.mp_phone}>
             {formValues.mp_permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
@@ -152,7 +148,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={disablePostInputs}>
+        <MaybeDisabled disabled={options.mp_permissionPhone.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined || isAddressErroring}>
             {formValues.mp_permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
@@ -219,10 +215,6 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferencesDS.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  disableEmailInput: PropTypes.bool,
-  disablePostInputs: PropTypes.bool,
-  disablePhoneInput: PropTypes.bool,
-  disableSMSInput: PropTypes.bool,
   handleInputChange: PropTypes.func.isRequired,
   handleCheckChange: PropTypes.func.isRequired,
   handleTouchedReset: PropTypes.func.isRequired,
@@ -232,11 +224,7 @@ MarketingPreferencesDS.propTypes = {
 
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom,
-  disableEmailInput: false,
-  disablePostInputs: false,
-  disablePhoneInput: false,
-  disableSMSInput: false
+  copyBottom: defaultCopyBottom
 };
 
 export default MarketingPreferencesDS;
