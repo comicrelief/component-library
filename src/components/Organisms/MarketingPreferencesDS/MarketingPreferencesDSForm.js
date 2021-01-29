@@ -1,27 +1,25 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Formik } from 'formik';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 import {
   setInitialValues, buildValidationSchema
 } from './_MarketingPrefsConfig';
 
-// Define the form schema based on the default config...
+// Define the form schema based on the default config:
 let validation = buildValidationSchema();
 
-// ...or define it with some custom overrides:
+// OR we can define it with some custom overrides:
 const schemaOverrides = {
   // mp_permissionEmail: { hideInput: true } // Hides associated input field(s) for when values are passed from elsewhere (overrides all validation)
   // mp_permissionEmail: { no: false }, // Sets associated input field 'required' attribute to false when 'No' choice selecteds
   // mp_permissionPost: { disableOption: true } // Completely removes this option from render and validation
 };
 
-validation = buildValidationSchema(schemaOverrides);
-
-// Define the initial form values based on the default config...
+// Define the initial form values based on the default config:
 let initialValues = setInitialValues();
 
-// ...or override with any (validated) value the user has already supplied in the journey
+// OR, override with any (validated) value the user has previous supplied in the journey
 const initialValueOverrides = {
   // mp_address1: '10 King Road',
   // mp_town: 'London',
@@ -31,37 +29,60 @@ const initialValueOverrides = {
   // mp_permissionPost: ['yes'],  // We can also pre-select options if required
 };
 
+// Used as Formik props
+validation = buildValidationSchema(schemaOverrides);
 initialValues = setInitialValues(initialValueOverrides);
 
 const {
   validationSchema,
-  options
+  validationOptions
 } = validation;
 
 /* This component exists purely to show the Marketing Preferences
   component working in the Component Library; applications are to
   provide their own form and validation based on these */
 const MarketingPreferencesDSForm = () => {
+  const [fieldOverrides, setFieldOverrides] = useState({});
+  const fieldOverridesRef = useRef({});
+
   function customSubmitHandler(e, formValues) {
     e.preventDefault();
     console.log('customSubmitHandler', formValues);
   }
 
-  // Customised wrapper function
-  const customSetFieldValue = (name, value, setFieldValue) => {
-    setFieldValue(name, value);
-    // Force validation to remove any old errors?
-  };
+  // Practical example of how to overwrite MP fields with other fields on the same page
+  function setFieldOverride(e) {
+    const updatedOverrides = fieldOverrides; // Cache current overrides
+    let mappedField = '';
+
+    // Map project field names to MP field names
+    switch (e.target.id) {
+      case 'existing_email_field':
+        mappedField = 'mp_email';
+        break;
+      case 'existing_mobile_field':
+        mappedField = 'mp_mobile';
+        break;
+      default:
+    }
+
+    if (e.target.value) {
+      updatedOverrides[mappedField] = e.target.value;
+    } else {
+      delete updatedOverrides[mappedField];
+    }
+
+    setFieldOverrides(updatedOverrides); // Update our example 'FieldOverrides' state, which is being passed via prop to the MP component
+  }
 
   return (
     <>
       <Formik
+        initialValues={initialValues}
         validationSchema={validationSchema}
         validateOnChange
         validateOnBlur
         validateOnMount
-        initialValues={initialValues}
-        validate={values => { console.log('Validate callback:', values); }}
       >
         {({
           handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched
@@ -73,14 +94,19 @@ const MarketingPreferencesDSForm = () => {
             onSubmit={e => customSubmitHandler(e, { errors, touched, values })}
           >
 
+            <input name="existing_email_field" id="existing_email_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+
+            <input name="existing_mobile_field" id="existing_mobile_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+
             <button type="submit" disabled={!(isValid)}>S U B M I T </button>
 
             <MarketingPreferencesDS
               formValues={values}
               handleInputChange={handleChange}
-              handleCheckChange={(name, value) => customSetFieldValue(name, value, setFieldValue)}
               handleTouchedReset={setFieldTouched}
-              validation={{ errors, touched, options }} // Pass form state and config
+              validation={{ errors, touched, validationOptions }}
+              setFieldValue={setFieldValue}
+              inputFieldOverrides={fieldOverridesRef.current}
             />
           </form>
         )}

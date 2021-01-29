@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
@@ -16,37 +16,41 @@ const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
   handleInputChange,
-  handleCheckChange,
   handleTouchedReset,
   formValues,
-  validation
+  validation,
+  setFieldValue,
+  inputFieldOverrides
 }) => {
-  /** Uses Formik's 'setFieldValue' function (passed down as 'handleCheckChange' prop)
-    *  to allow us to override the native checkbox functionality to allow Yes/No/None interaction
-    */
+  const { errors, validationOptions } = validation;
+  const inputOverrideRef = useRef('');
+  inputOverrideRef.current = inputFieldOverrides;
+
+  /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
+   * override the native checkbox functionality to allow Yes/No/None interaction */
   function handleCheckboxChange(e) {
     const thisName = e.target.name;
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
 
-    handleCheckChange(thisName, newVal); // Update Formik with the value
+    setFieldValue(thisName, newVal); // Update Formik with the value
 
     /* If a 'not seleted' choice, reset the value and 'touched'
     state in Formik for all fields associated with this checkbox */
     if (newVal.length === 0) {
       const theseFields = associatedFields[thisName];
       theseFields.forEach(fieldName => {
-        handleCheckChange(fieldName, '');
+        setFieldValue(fieldName, '');
         handleTouchedReset(fieldName, false);
       });
     }
   }
-  const {
-    // touched,
-    errors,
-    options
-  } = validation;
+
+  useEffect(() => () => {
+    console.log('CURRENT??!:', inputOverrideRef.current);
+    setFieldValue('mp_email', inputOverrideRef.current);
+  }, [inputFieldOverrides, setFieldValue]);
 
   const isAddressErroring = errors.mp_address1 || errors.mp_address2 || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 
@@ -55,7 +59,7 @@ const MarketingPreferencesDS = ({
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
-      {!options.mp_permissionEmail.disableOption && (
+      {!validationOptions.mp_permissionEmail.disableOption && (
       <FormField className="field-email" userSelection={formValues.mp_permissionEmail}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -64,7 +68,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e)} />
         </Head>
 
-        <MaybeDisabled disabled={options.mp_permissionEmail.hideInput}>
+        <MaybeDisabled disabled={validationOptions.mp_permissionEmail.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined || errors.mp_email}>
             {formValues.mp_permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
@@ -81,7 +85,7 @@ const MarketingPreferencesDS = ({
       )}
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
-      {!options.mp_permissionSMS.disableOption && (
+      {!validationOptions.mp_permissionSMS.disableOption && (
       <FormField className="field-sms" userSelection={formValues.mp_permissionSMS}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -92,7 +96,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={options.mp_permissionSMS.hideInput}>
+        <MaybeDisabled disabled={validationOptions.mp_permissionSMS.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined || errors.mp_mobile}>
             {formValues.mp_permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
@@ -109,7 +113,7 @@ const MarketingPreferencesDS = ({
       )}
 
       {/* Render Phone checkboxes and input if not removed in config */}
-      {!options.mp_permissionPhone.disableOption && (
+      {!validationOptions.mp_permissionPhone.disableOption && (
       <FormField className="field-phone" userSelection={formValues.mp_permissionPhone}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -120,7 +124,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={options.mp_permissionPhone.hideInput}>
+        <MaybeDisabled disabled={validationOptions.mp_permissionPhone.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined || errors.mp_phone}>
             {formValues.mp_permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
@@ -137,7 +141,7 @@ const MarketingPreferencesDS = ({
       )}
 
       {/* Render Post checkboxes and inputs if not removed in config */}
-      {!options.mp_permissionPost.disableOption && (
+      {!validationOptions.mp_permissionPost.disableOption && (
       <FormField className="field-post" userSelection={formValues.mp_permissionPost}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -148,7 +152,7 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={options.mp_permissionPhone.hideInput}>
+        <MaybeDisabled disabled={validationOptions.mp_permissionPhone.hideInput}>
           <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined || isAddressErroring}>
             {formValues.mp_permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
@@ -216,15 +220,27 @@ MarketingPreferencesDS.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
   handleInputChange: PropTypes.func.isRequired,
-  handleCheckChange: PropTypes.func.isRequired,
   handleTouchedReset: PropTypes.func.isRequired,
+  setFieldValue: PropTypes.func.isRequired,
   formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
-  validation: PropTypes.objectOf(PropTypes.shape).isRequired
+  validation: PropTypes.objectOf(PropTypes.shape).isRequired,
+  inputFieldOverrides: PropTypes.shape({
+    mp_email: PropTypes.string,
+    mp_mobile: PropTypes.string,
+    mp_phone: PropTypes.string,
+    mp_address1: PropTypes.string,
+    mp_address2: PropTypes.string,
+    mp_address3: PropTypes.string,
+    mp_town: PropTypes.string,
+    mp_country: PropTypes.string,
+    mp_postcode: PropTypes.string
+  })
 };
 
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom
+  copyBottom: defaultCopyBottom,
+  inputFieldOverrides: null
 };
 
 export default MarketingPreferencesDS;

@@ -44,74 +44,74 @@ const buildValidationSchema = overrideOptions => {
   };
 
   // Override with any custom options supplied
-  const options = merge(defaultOptions, overrideOptions);
+  const validationOptions = merge(defaultOptions, overrideOptions);
 
   const validationSchema = yup.object({
 
     mp_email: yup.string().when('mp_permissionEmail', {
       // Only add in validation once the field's being user-updated
-      is: () => (!(options.mp_permissionEmail.disableOption || options.mp_permissionEmail.hideInput)),
+      is: () => (!(validationOptions.mp_permissionEmail.disableOption || validationOptions.mp_permissionEmail.hideInput)),
       then: yup.string().max(50, 'Please enter a maximum of 50 characters').email('Please enter a valid email address')
       // Set the 'required' attribute based on the associated config
         .when('mp_permissionEmail', {
-          is: val => (options.mp_permissionEmail[val]),
+          is: val => (validationOptions.mp_permissionEmail[val]),
           then: yup.string().required('Please enter your email address')
         })
     }),
 
     // TO-DO: proper valid phone number check
     mp_mobile: yup.string().when('mp_permissionSMS', {
-      is: () => (!(options.mp_permissionSMS.disableOption || options.mp_permissionSMS.hideInput)),
+      is: () => (!(validationOptions.mp_permissionSMS.disableOption || validationOptions.mp_permissionSMS.hideInput)),
       then: yup.string().max(12, 'Please enter a maximum of 12 characters')
         .when('mp_permissionSMS', {
-          is: val => (options.mp_permissionSMS[val]),
+          is: val => (validationOptions.mp_permissionSMS[val]),
           then: yup.string().required('Please enter your mobile number')
         })
     }),
 
     // TO-DO: valid phone number check
     mp_phone: yup.string().when('mp_permissionPhone', {
-      is: () => (!(options.mp_permissionPhone.disableOption || options.mp_permissionPhone.hideInput)),
+      is: () => (!(validationOptions.mp_permissionPhone.disableOption || validationOptions.mp_permissionPhone.hideInput)),
       then: yup.string().max(12, 'Please enter a maximum of 12 characters')
         .when('mp_permissionPhone', {
-          is: val => (options.mp_permissionPhone[val]),
+          is: val => (validationOptions.mp_permissionPhone[val]),
           then: yup.string().required('Please enter your phone number')
         })
     }),
 
     mp_address1: yup.string().when('mp_permissionPost', {
-      is: () => (!(options.mp_permissionPost.disableOption || options.mp_permissionPost.hideInput)),
+      is: () => (!(validationOptions.mp_permissionPost.disableOption || validationOptions.mp_permissionPost.hideInput)),
       then: yup.string().max(50, 'Please enter a maximum of 50 characters')
         .when('mp_permissionPost', {
-          is: val => (options.mp_permissionPost[val]),
+          is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter the first line of your address')
         })
     }),
 
     mp_town: yup.string().when('mp_permissionPost', {
-      is: () => (!(options.mp_permissionPost.disableOption || options.mp_permissionPost.hideInput)),
+      is: () => (!(validationOptions.mp_permissionPost.disableOption || validationOptions.mp_permissionPost.hideInput)),
       then: yup.string().max(50, 'Please enter a maximum of 50 characters')
         .when('mp_permissionPost', {
-          is: val => (options.mp_permissionPost[val]),
+          is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your town')
         })
     }),
 
     // TO-DO: valid postcode check
     mp_postcode: yup.string().when('mp_permissionPost', {
-      is: () => (!(options.mp_permissionPost.disableOption || options.mp_permissionPost.hideInput)),
+      is: () => (!(validationOptions.mp_permissionPost.disableOption || validationOptions.mp_permissionPost.hideInput)),
       then: yup.string().max(8, 'Please enter a maximum of 8 characters')
         .when('mp_permissionPost', {
-          is: val => (options.mp_permissionPost[val]),
+          is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your postcode')
         })
     }),
 
     mp_country: yup.string().when('mp_permissionPost', {
-      is: () => (!(options.mp_permissionPost.disableOption || options.mp_permissionPost.hideInput)),
+      is: () => (!(validationOptions.mp_permissionPost.disableOption || validationOptions.mp_permissionPost.hideInput)),
       then: yup.string().max(20, 'Please enter a maximum of 20 characters')
         .when('mp_permissionPost', {
-          is: val => (options.mp_permissionPost[val]),
+          is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your country')
         })
     }),
@@ -123,7 +123,7 @@ const buildValidationSchema = overrideOptions => {
 
   return {
     validationSchema,
-    options
+    validationOptions
   };
 };
 
