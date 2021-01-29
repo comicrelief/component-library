@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
@@ -23,8 +23,6 @@ const MarketingPreferencesDS = ({
   inputFieldOverrides
 }) => {
   const { errors, validationOptions } = validation;
-  const inputOverrideRef = useRef('');
-  inputOverrideRef.current = inputFieldOverrides;
 
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
    * override the native checkbox functionality to allow Yes/No/None interaction */
@@ -48,9 +46,9 @@ const MarketingPreferencesDS = ({
   }
 
   useEffect(() => () => {
-    console.log('CURRENT??!:', inputOverrideRef.current);
-    setFieldValue('mp_email', inputOverrideRef.current);
-  }, [inputFieldOverrides, setFieldValue]);
+    console.log('inputFieldOverrides', inputFieldOverrides);
+    setFieldValue('mp_email', inputFieldOverrides.mp_email);
+  }, [inputFieldOverrides.mp_email, setFieldValue]); // can't fucking compare objects!
 
   const isAddressErroring = errors.mp_address1 || errors.mp_address2 || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 

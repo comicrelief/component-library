@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 import {
@@ -43,7 +43,7 @@ const {
   provide their own form and validation based on these */
 const MarketingPreferencesDSForm = () => {
   const [fieldOverrides, setFieldOverrides] = useState({});
-  const fieldOverridesRef = useRef({});
+  const [, forceUpdate] = useState(0);
 
   function customSubmitHandler(e, formValues) {
     e.preventDefault();
@@ -71,12 +71,13 @@ const MarketingPreferencesDSForm = () => {
     } else {
       delete updatedOverrides[mappedField];
     }
-
+    console.log('setting', updatedOverrides);
+    forceUpdate(n => !n);
     setFieldOverrides(updatedOverrides); // Update our example 'FieldOverrides' state, which is being passed via prop to the MP component
   }
 
   return (
-    <>
+    <div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -106,12 +107,12 @@ const MarketingPreferencesDSForm = () => {
               handleTouchedReset={setFieldTouched}
               validation={{ errors, touched, validationOptions }}
               setFieldValue={setFieldValue}
-              inputFieldOverrides={fieldOverridesRef.current}
+              inputFieldOverrides={fieldOverrides}
             />
           </form>
         )}
       </Formik>
-    </>
+    </div>
   );
 };
 export default MarketingPreferencesDSForm;
