@@ -6,7 +6,6 @@ import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
 import associatedFields from './_HelperFunctions';
-
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
   CopyWrapper, Head, FormField, ShowHideInputWrapper
@@ -45,10 +44,10 @@ const MarketingPreferencesDS = ({
     }
   }
 
-  useEffect(() => () => {
-    console.log('inputFieldOverrides', inputFieldOverrides);
-    setFieldValue('mp_email', inputFieldOverrides.mp_email);
-  }, [inputFieldOverrides.mp_email, setFieldValue]); // can't fucking compare objects!
+  useEffect(() => {
+    // Iterate over the new props and set the fields accordingly
+    Object.keys(inputFieldOverrides).map(key => setFieldValue(key, inputFieldOverrides[key]));
+  }, [JSON.stringify(inputFieldOverrides)]); // fun little hack to trick useEffect into comparing objects
 
   const isAddressErroring = errors.mp_address1 || errors.mp_address2 || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 

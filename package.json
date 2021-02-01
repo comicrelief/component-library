@@ -37,6 +37,7 @@
     "react-test-renderer": "^16.8.6",
     "react-uid": "^2.2.0",
     "styled-components": "^5.1.1",
+    "use-deep-compare-effect": "^1.6.1",
     "youtube-player": "^5.5.2",
     "yup": "^0.29.3"
   },

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Formik } from 'formik';
+
 import MarketingPreferencesDS from './_MarketingPreferencesDS';
 import {
   setInitialValues, buildValidationSchema
@@ -71,9 +72,9 @@ const MarketingPreferencesDSForm = () => {
     } else {
       delete updatedOverrides[mappedField];
     }
-    console.log('setting', updatedOverrides);
-    forceUpdate(n => !n);
-    setFieldOverrides(updatedOverrides); // Update our example 'FieldOverrides' state, which is being passed via prop to the MP component
+
+    forceUpdate(n => !n); // TO-DO: find a better way of addressing this?
+    setFieldOverrides(updatedOverrides); // Update our example 'fieldOverrides' state, which is being passed via prop to the MP component
   }
 
   return (
