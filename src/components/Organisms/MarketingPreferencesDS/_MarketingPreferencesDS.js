@@ -23,6 +23,17 @@ const MarketingPreferencesDS = ({
 }) => {
   const { errors, validationOptions } = validation;
 
+  const isAddressErroring = errors.mp_address1 || errors.mp_address2
+  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+
+  // A lightweight workaround for useEffect lack of deep comparison w/objects
+  const jsonInputFieldOverrides = JSON.stringify(inputFieldOverrides);
+
+  useEffect(() => {
+    // Iterate over the new props and set the fields accordingly
+    Object.keys(inputFieldOverrides).map(key => setFieldValue(key, inputFieldOverrides[key]));
+  }, [jsonInputFieldOverrides, inputFieldOverrides, setFieldValue]);
+
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
    * override the native checkbox functionality to allow Yes/No/None interaction */
   function handleCheckboxChange(e) {
@@ -43,13 +54,6 @@ const MarketingPreferencesDS = ({
       });
     }
   }
-
-  useEffect(() => {
-    // Iterate over the new props and set the fields accordingly
-    Object.keys(inputFieldOverrides).map(key => setFieldValue(key, inputFieldOverrides[key]));
-  }, [JSON.stringify(inputFieldOverrides)]); // fun little hack to trick useEffect into comparing objects
-
-  const isAddressErroring = errors.mp_address1 || errors.mp_address2 || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 
   return (
     <>
