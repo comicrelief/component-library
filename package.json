@@ -39,7 +39,8 @@
     "styled-components": "^5.1.1",
     "use-deep-compare-effect": "^1.6.1",
     "youtube-player": "^5.5.2",
-    "yup": "^0.29.3"
+    "yup": "^0.32.1",
+    "yup-phone": "^1.2.19"
   },
   "scripts": {
     "test": "yarn run jest",

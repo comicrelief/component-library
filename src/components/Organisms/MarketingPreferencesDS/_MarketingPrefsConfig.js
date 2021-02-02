@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import * as yup from 'yup';
+import 'yup-phone';
 import { merge } from 'lodash';
 
 const setInitialValues = overrideValues => {
@@ -59,10 +60,9 @@ const buildValidationSchema = overrideOptions => {
         })
     }),
 
-    // TO-DO: proper valid phone number check
     mp_mobile: yup.string().when('mp_permissionSMS', {
       is: () => (!(validationOptions.mp_permissionSMS.disableOption || validationOptions.mp_permissionSMS.hideInput)),
-      then: yup.string().max(12, 'Please enter a maximum of 12 characters')
+      then: yup.string().phone('GB', false, 'Please enter a valid mobile number') // WHY DOES THIS VALIDATE ON MOUNT?
         .when('mp_permissionSMS', {
           is: val => (validationOptions.mp_permissionSMS[val]),
           then: yup.string().required('Please enter your mobile number')
@@ -72,7 +72,7 @@ const buildValidationSchema = overrideOptions => {
     // TO-DO: valid phone number check
     mp_phone: yup.string().when('mp_permissionPhone', {
       is: () => (!(validationOptions.mp_permissionPhone.disableOption || validationOptions.mp_permissionPhone.hideInput)),
-      then: yup.string().max(12, 'Please enter a maximum of 12 characters')
+      then: yup.string().phone('GB', false, 'Please enter a valid phone number') // WHY DOES THIS VALIDATE ON MOUNT?
         .when('mp_permissionPhone', {
           is: val => (validationOptions.mp_permissionPhone[val]),
           then: yup.string().required('Please enter your phone number')
