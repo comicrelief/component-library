@@ -79,6 +79,7 @@ const MarketingPreferencesDS = ({
               handleInputChange={handleInputChange}
               isRequired={formValues.mp_permissionEmail[0] !== undefined}// TO-DO:reflect prop optns
               errorMessage={errors.mp_email ? errors.mp_email : ''}
+              type="email"
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>

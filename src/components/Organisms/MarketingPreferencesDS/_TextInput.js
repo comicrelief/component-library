@@ -5,12 +5,12 @@ import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
   fieldName, label, handleInputChange,
-  isRequired, errorMessage, ...rest
+  isRequired, errorMessage, fieldType, ...rest
 }) => {
   const props = {
     id: fieldName,
     name: fieldName,
-    type: 'text',
+    type: fieldType,
     label,
     placeholder: label,
     errorMsg: errorMessage,
@@ -28,7 +28,8 @@ const TextInput = ({
 
 TextInput.defaultProps = {
   isRequired: false,
-  errorMessage: ''
+  errorMessage: '',
+  fieldType: 'text'
 };
 
 TextInput.propTypes = {
@@ -36,7 +37,8 @@ TextInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   isRequired: PropTypes.bool,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  fieldType: PropTypes.string
 };
 
 export default TextInput;
