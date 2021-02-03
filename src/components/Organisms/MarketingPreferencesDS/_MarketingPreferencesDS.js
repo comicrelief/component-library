@@ -31,7 +31,9 @@ const MarketingPreferencesDS = ({
 
   useEffect(() => {
     // Iterate over the new props and set the fields accordingly
-    Object.keys(inputFieldOverrides).map(key => setFieldValue(key, inputFieldOverrides[key]));
+    if (inputFieldOverrides) {
+      Object.keys(inputFieldOverrides).map(key => setFieldValue(key, inputFieldOverrides[key]));
+    }
   }, [jsonInputFieldOverrides, inputFieldOverrides, setFieldValue]);
 
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
@@ -39,7 +41,7 @@ const MarketingPreferencesDS = ({
   function handleCheckboxChange(e) {
     const thisName = e.target.name;
     const thisVal = e.target.value;
-    const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox vals as arrays
+    const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox values as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
 
     setFieldValue(thisName, newVal); // Update Formik with the value
@@ -54,6 +56,19 @@ const MarketingPreferencesDS = ({
       });
     }
   }
+
+  // Check the currently-ticked associated checkbox against the config to update the field's required attribute
+  const emailFieldRequired = (validationOptions.mp_permissionEmail.yes && formValues.mp_permissionEmail[0] === 'yes')
+  || (validationOptions.mp_permissionEmail.no && formValues.mp_permissionEmail[0] === 'no');
+
+  const addressFieldRequired = (validationOptions.mp_permissionPost.yes && formValues.mp_permissionPost[0] === 'yes')
+  || (validationOptions.mp_permissionPost.no && formValues.mp_permissionPost[0] === 'no');
+
+  const mobileFieldRequired = (validationOptions.mp_permissionSMS.yes && formValues.mp_permissionSMS[0] === 'yes')
+  || (validationOptions.mp_permissionSMS.no && formValues.mp_permissionSMS[0] === 'no');
+
+  const phoneFieldRequired = (validationOptions.mp_permissionPhone.yes && formValues.mp_permissionPhone[0] === 'yes')
+  || (validationOptions.mp_permissionPhone.no && formValues.mp_permissionPhone[0] === 'no');
 
   return (
     <>
@@ -77,7 +92,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_email"
               label="Please enter your email address"
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionEmail[0] !== undefined}// TO-DO:reflect prop optns
+              isRequired={emailFieldRequired}
               errorMessage={errors.mp_email ? errors.mp_email : ''}
               type="email"
             />
@@ -106,7 +121,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_mobile"
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionSMS[0] !== undefined}
+              isRequired={mobileFieldRequired}
               errorMessage={errors.mp_mobile ? errors.mp_mobile : ''}
             />
           </ShowHideInputWrapper>
@@ -134,7 +149,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_phone"
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionPhone[0] !== undefined}
+              isRequired={phoneFieldRequired}
               errorMessage={errors.mp_phone ? errors.mp_phone : ''}
             />
           </ShowHideInputWrapper>
@@ -162,7 +177,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_address1"
               label="Address Line 1"
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionPost[0] !== undefined}
+              isRequired={addressFieldRequired}
               errorMessage={errors.mp_address1 ? errors.mp_address1 : ''}
             />
             <TextInput
@@ -184,7 +199,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_town"
               label="Town/City"
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionPost[0] !== undefined}
+              isRequired={addressFieldRequired}
               errorMessage={errors.mp_town ? errors.mp_town : ''}
             />
             <TextInput
@@ -192,14 +207,14 @@ const MarketingPreferencesDS = ({
               fieldName="mp_postcode"
               label="Postcode"
               handleInputChange={handleInputChange}
-              isRequired={formValues.mp_permissionPost[0] !== undefined}
+              isRequired={addressFieldRequired}
               errorMessage={errors.mp_postcode ? errors.mp_postcode : ''}
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              isRequired={formValues.mp_permissionPost[0] !== undefined}
+              isRequired={addressFieldRequired}
               handleInputChange={handleInputChange}
               errorMessage={errors.mp_country ? errors.mp_country : ''}
             />

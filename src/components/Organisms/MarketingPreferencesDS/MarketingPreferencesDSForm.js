@@ -67,11 +67,7 @@ const MarketingPreferencesDSForm = () => {
       default:
     }
 
-    if (e.target.value) {
-      updatedOverrides[mappedField] = e.target.value;
-    } else {
-      delete updatedOverrides[mappedField];
-    }
+    updatedOverrides[mappedField] = e.target.value;
 
     forceUpdate(n => !n); // TO-DO: find a better way of addressing this?
     setFieldOverrides(updatedOverrides); // Update our example 'fieldOverrides' state, which is being passed via prop to the MP component
@@ -83,8 +79,8 @@ const MarketingPreferencesDSForm = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         validateOnChange
-        validateOnBlur
-        validateOnMount
+        validateOnBlur={false}
+        validateOnMount={false}
       >
         {({
           handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched
@@ -95,10 +91,20 @@ const MarketingPreferencesDSForm = () => {
             noValidate
             onSubmit={e => customSubmitHandler(e, { errors, touched, values })}
           >
+            <label htmlFor="existing_email_field">
+              Represents an existing Email field in the journey
+              <input name="existing_email_field" id="existing_email_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+            </label>
 
-            <input name="existing_email_field" id="existing_email_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+            <label htmlFor="existing_mobile_field">
+              Represents an existing Mobile field in the journey
+              <input name="existing_mobile_field" id="existing_mobile_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+            </label>
 
-            <input name="existing_mobile_field" id="existing_mobile_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
+            <label htmlFor="touchedtest">
+              touchedtest
+              <input name="touchedtest" id="touchedtest" style={{ display: 'block' }} />
+            </label>
 
             <button type="submit" disabled={!(isValid)}>S U B M I T </button>
 
@@ -108,7 +114,7 @@ const MarketingPreferencesDSForm = () => {
               handleTouchedReset={setFieldTouched}
               validation={{ errors, touched, validationOptions }}
               setFieldValue={setFieldValue}
-              inputFieldOverrides={fieldOverrides}
+              // inputFieldOverrides={fieldOverrides}
             />
           </form>
         )}
