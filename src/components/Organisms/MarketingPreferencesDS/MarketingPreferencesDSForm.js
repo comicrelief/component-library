@@ -79,8 +79,8 @@ const MarketingPreferencesDSForm = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         validateOnChange
-        validateOnBlur={false}
-        validateOnMount={false}
+        validateOnBlur
+        validateOnMount
       >
         {({
           handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched

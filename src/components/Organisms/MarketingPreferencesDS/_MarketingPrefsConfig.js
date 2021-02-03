@@ -27,11 +27,11 @@ const setInitialValues = overrideValues => {
 
 const buildValidationSchema = overrideOptions => {
   const defaultOptions = {
-    // 'Yes' and 'no' sets the 'required' attr of the input associated with each checkbox group,
+    // 'Yes' and 'No' sets the 'required' attr of the input associated with each checkbox group,
     // alose allows the option to keep the input field/s hidden (if populated by parent form)
     // plus a 'disable' option to remove it from both validation and rendering entirely
     mp_permissionEmail: {
-      yes: true, no: false, disableOption: false, hideInput: false
+      yes: true, no: true, disableOption: false, hideInput: false
     },
     mp_permissionSMS: {
       yes: true, no: true, disableOption: false, hideInput: false
@@ -50,9 +50,10 @@ const buildValidationSchema = overrideOptions => {
   const validationSchema = yup.object({
 
     mp_email: yup.string().when('mp_permissionEmail', {
-      // Only add in validation once the field's being user-updated
-      is: () => (!(validationOptions.mp_permissionEmail.disableOption || validationOptions.mp_permissionEmail.hideInput)),
+      // is: val => (!(validationOptions.mp_permissionEmail.disableOption || validationOptions.mp_permissionEmail.hideInput) && val[0] === 'yes'),
+      is: val => (!(validationOptions.mp_permissionEmail.disableOption || validationOptions.mp_permissionEmail.hideInput) && val[0] !== null),
       then: yup.string().email('Please enter a valid email address')
+
       // Set the 'required' attribute based on the associated config
         .when('mp_permissionEmail', {
           is: val => (validationOptions.mp_permissionEmail[val]),
@@ -61,7 +62,8 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_mobile: yup.string().when('mp_permissionSMS', {
-      is: () => (!(validationOptions.mp_permissionSMS.disableOption || validationOptions.mp_permissionSMS.hideInput)),
+      // yup-phone is too keen to validate all the time (regardless of Formik settings), so checking for a checkbox value here too
+      is: val => (!(validationOptions.mp_permissionSMS.disableOption || validationOptions.mp_permissionSMS.hideInput) && val[0] !== undefined),
       then: yup.string().phone('GB', false, 'Please enter a valid mobile number')
         .when('mp_permissionSMS', {
           is: val => (validationOptions.mp_permissionSMS[val]),
@@ -70,7 +72,8 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_phone: yup.string().when('mp_permissionPhone', {
-      is: () => (!(validationOptions.mp_permissionPhone.disableOption || validationOptions.mp_permissionPhone.hideInput)),
+      // yup-phone is too keen to validate all the time (regardless of Formik settings), so checking for a checkbox value here too
+      is: val => (!(validationOptions.mp_permissionPhone.disableOption || validationOptions.mp_permissionPhone.hideInput) && val[0] !== undefined),
       then: yup.string().phone('GB', false, 'Please enter a valid phone number')
         .when('mp_permissionPhone', {
           is: val => (validationOptions.mp_permissionPhone[val]),
