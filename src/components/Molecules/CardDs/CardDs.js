@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
-import { External, Internal } from '../../Atoms/Icons/index';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -92,6 +91,7 @@ const CTA = styled.div`
 `;
 
 const CardDs = ({
+  icon,
   backgroundColor,
   imageLow,
   images,
@@ -139,13 +139,6 @@ const CardDs = ({
     return null;
   };
 
-  const icon = () => {
-    if (target === 'blank') {
-      return <External colour="white" />;
-    }
-    return <Internal colour="white" />;
-  };
-
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
   return (
@@ -166,7 +159,7 @@ const CardDs = ({
             href={link}
             target={target}
             type="button"
-            icon={icon()}
+            icon={icon}
           >
             {linkLabel}
           </Link>
@@ -187,7 +180,8 @@ CardDs.propTypes = {
   link: PropTypes.string,
   linkLabel: PropTypes.string,
   target: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  icon: PropTypes.node
 };
 
 CardDs.defaultProps = {
@@ -200,7 +194,8 @@ CardDs.defaultProps = {
   target: null,
   imageAltText: '',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  icon: null
 };
 
 export default CardDs;
