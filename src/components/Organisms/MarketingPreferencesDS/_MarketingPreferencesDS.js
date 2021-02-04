@@ -58,17 +58,27 @@ const MarketingPreferencesDS = ({
   }
 
   // Check the currently-ticked associated checkbox against the config to update the field's required attribute
-  const emailFieldRequired = (validationOptions.mp_permissionEmail.yes && formValues.mp_permissionEmail[0] === 'yes')
-  || (validationOptions.mp_permissionEmail.no && formValues.mp_permissionEmail[0] === 'no');
+  // const emailFieldRequired = (validationOptions.mp_permissionEmail.yes && emailChoice === 'yes')
+  // || (validationOptions.mp_permissionEmail.no && emailChoice === 'no');
 
-  const addressFieldRequired = (validationOptions.mp_permissionPost.yes && formValues.mp_permissionPost[0] === 'yes')
-  || (validationOptions.mp_permissionPost.no && formValues.mp_permissionPost[0] === 'no');
+  // For brevity
+  const emailChoice = formValues.mp_permissionEmail[0];
+  const smsChoice = formValues.mp_permissionSMS[0];
+  const phoneChoice = formValues.mp_permissionPhone[0];
+  const postChoice = formValues.mp_permissionPost[0];
 
-  const mobileFieldRequired = (validationOptions.mp_permissionSMS.yes && formValues.mp_permissionSMS[0] === 'yes')
-  || (validationOptions.mp_permissionSMS.no && formValues.mp_permissionSMS[0] === 'no');
+  // If the field is not required for each No/Yes choice, hide it
+  const hideEmailInput = (validationOptions.mp_permissionEmail.yes === false && emailChoice === 'yes')
+  || (validationOptions.mp_permissionEmail.no === false && emailChoice === 'no');
 
-  const phoneFieldRequired = (validationOptions.mp_permissionPhone.yes && formValues.mp_permissionPhone[0] === 'yes')
-  || (validationOptions.mp_permissionPhone.no && formValues.mp_permissionPhone[0] === 'no');
+  const hideSMSInput = (validationOptions.mp_permissionSMS.yes === false && smsChoice === 'yes')
+  || (validationOptions.mp_permissionSMS.no === false && smsChoice === 'no');
+
+  const hidePhoneInput = (validationOptions.mp_permissionPhone.yes === false && phoneChoice === 'yes')
+  || (validationOptions.mp_permissionPhone.no === false && phoneChoice === 'no');
+
+  const hidePostInput = (validationOptions.mp_permissionPost.yes === false && postChoice === 'yes')
+  || (validationOptions.mp_permissionPost.no === false && postChoice === 'no');
 
   return (
     <>
@@ -76,7 +86,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!validationOptions.mp_permissionEmail.disableOption && (
-      <FormField className="field-email" userSelection={formValues.mp_permissionEmail}>
+      <FormField className="field-email" userSelection={emailChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
@@ -84,15 +94,15 @@ const MarketingPreferencesDS = ({
           <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e)} />
         </Head>
 
-        <MaybeDisabled disabled={validationOptions.mp_permissionEmail.hideInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionEmail[0] !== undefined || errors.mp_email}>
-            {formValues.mp_permissionEmail[0] === 'no' && <NoMessage askingFor="an email" /> }
+        <MaybeDisabled disabled={hideEmailInput}>
+          <ShowHideInputWrapper show={emailChoice !== undefined || errors.mp_email}>
+            {emailChoice === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
               handleInputChange={handleInputChange}
-              isRequired={emailFieldRequired}
+              isRequired
               errorMessage={errors.mp_email ? errors.mp_email : ''}
               type="email"
             />
@@ -103,7 +113,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!validationOptions.mp_permissionSMS.disableOption && (
-      <FormField className="field-sms" userSelection={formValues.mp_permissionSMS}>
+      <FormField className="field-sms" userSelection={smsChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Text me
@@ -113,15 +123,15 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={validationOptions.mp_permissionSMS.hideInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionSMS[0] !== undefined || errors.mp_mobile}>
-            {formValues.mp_permissionSMS[0] === 'no' && <NoMessage askingFor="a mobile number" />}
+        <MaybeDisabled disabled={hideSMSInput}>
+          <ShowHideInputWrapper show={smsChoice !== undefined || errors.mp_mobile}>
+            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
-              isRequired={mobileFieldRequired}
+              isRequired
               errorMessage={errors.mp_mobile ? errors.mp_mobile : ''}
             />
           </ShowHideInputWrapper>
@@ -131,7 +141,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!validationOptions.mp_permissionPhone.disableOption && (
-      <FormField className="field-phone" userSelection={formValues.mp_permissionPhone}>
+      <FormField className="field-phone" userSelection={phoneChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Phone me
@@ -141,15 +151,15 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={validationOptions.mp_permissionPhone.hideInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionPhone[0] !== undefined || errors.mp_phone}>
-            {formValues.mp_permissionPhone[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
+        <MaybeDisabled disabled={hidePhoneInput}>
+          <ShowHideInputWrapper show={phoneChoice !== undefined || errors.mp_phone}>
+            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
-              isRequired={phoneFieldRequired}
+              isRequired
               errorMessage={errors.mp_phone ? errors.mp_phone : ''}
             />
           </ShowHideInputWrapper>
@@ -159,7 +169,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!validationOptions.mp_permissionPost.disableOption && (
-      <FormField className="field-post" userSelection={formValues.mp_permissionPost}>
+      <FormField className="field-post" userSelection={postChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Send me post
@@ -169,15 +179,15 @@ const MarketingPreferencesDS = ({
             onChange={e => handleCheckboxChange(e)}
           />
         </Head>
-        <MaybeDisabled disabled={validationOptions.mp_permissionPhone.hideInput}>
-          <ShowHideInputWrapper show={formValues.mp_permissionPost[0] !== undefined || isAddressErroring}>
-            {formValues.mp_permissionPost[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
+        <MaybeDisabled disabled={hidePostInput}>
+          <ShowHideInputWrapper show={postChoice !== undefined || isAddressErroring}>
+            {postChoice === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
               handleInputChange={handleInputChange}
-              isRequired={addressFieldRequired}
+              isRequired
               errorMessage={errors.mp_address1 ? errors.mp_address1 : ''}
             />
             <TextInput
@@ -186,6 +196,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 2"
               handleInputChange={handleInputChange}
               errorMessage={errors.mp_address2 ? errors.mp_address2 : ''}
+              isRequired={false}
             />
             <TextInput
               placeholder=""
@@ -193,13 +204,14 @@ const MarketingPreferencesDS = ({
               label="Address Line 3"
               handleInputChange={handleInputChange}
               errorMessage={errors.mp_address3 ? errors.mp_address3 : ''}
+              isRequired={false}
             />
             <TextInput
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
               handleInputChange={handleInputChange}
-              isRequired={addressFieldRequired}
+              isRequired
               errorMessage={errors.mp_town ? errors.mp_town : ''}
             />
             <TextInput
@@ -207,14 +219,14 @@ const MarketingPreferencesDS = ({
               fieldName="mp_postcode"
               label="Postcode"
               handleInputChange={handleInputChange}
-              isRequired={addressFieldRequired}
+              isRequired
               errorMessage={errors.mp_postcode ? errors.mp_postcode : ''}
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              isRequired={addressFieldRequired}
+              isRequired
               handleInputChange={handleInputChange}
               errorMessage={errors.mp_country ? errors.mp_country : ''}
             />
@@ -228,6 +240,7 @@ const MarketingPreferencesDS = ({
   );
 };
 
+// removes from DOM completely
 const MaybeDisabled = ({ children, disabled }) => {
   if (disabled) return null;
   return children;

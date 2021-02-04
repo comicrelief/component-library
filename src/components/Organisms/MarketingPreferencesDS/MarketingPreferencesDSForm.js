@@ -114,7 +114,7 @@ const MarketingPreferencesDSForm = () => {
               handleTouchedReset={setFieldTouched}
               validation={{ errors, touched, validationOptions }}
               setFieldValue={setFieldValue}
-              // inputFieldOverrides={fieldOverrides}
+              inputFieldOverrides={fieldOverrides}
             />
           </form>
         )}
