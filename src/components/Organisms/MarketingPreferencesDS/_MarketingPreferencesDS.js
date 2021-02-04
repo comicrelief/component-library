@@ -23,6 +23,28 @@ const MarketingPreferencesDS = ({
 }) => {
   const { errors, validationOptions } = validation;
 
+  // For brevity
+  const emailChoice = formValues.mp_permissionEmail[0];
+  const smsChoice = formValues.mp_permissionSMS[0];
+  const phoneChoice = formValues.mp_permissionPhone[0];
+  const postChoice = formValues.mp_permissionPost[0];
+
+  // If the field is not required for each No/Yes choice, hide it
+  const hideEmailInput = (validationOptions.mp_permissionEmail.yes === false && emailChoice === 'yes')
+  || (validationOptions.mp_permissionEmail.no === false && emailChoice === 'no');
+
+  const hideSMSInput = (validationOptions.mp_permissionSMS.yes === false && smsChoice === 'yes')
+  || (validationOptions.mp_permissionSMS.no === false && smsChoice === 'no');
+
+  console.log('hideSMSInput', hideSMSInput);
+
+  const hidePhoneInput = (validationOptions.mp_permissionPhone.yes === false && phoneChoice === 'yes')
+  || (validationOptions.mp_permissionPhone.no === false && phoneChoice === 'no');
+
+  const hidePostInput = (validationOptions.mp_permissionPost.yes === false && postChoice === 'yes')
+  || (validationOptions.mp_permissionPost.no === false && postChoice === 'no');
+
+  // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = errors.mp_address1 || errors.mp_address2
   || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 
@@ -57,28 +79,7 @@ const MarketingPreferencesDS = ({
     }
   }
 
-  // Check the currently-ticked associated checkbox against the config to update the field's required attribute
-  // const emailFieldRequired = (validationOptions.mp_permissionEmail.yes && emailChoice === 'yes')
-  // || (validationOptions.mp_permissionEmail.no && emailChoice === 'no');
-
-  // For brevity
-  const emailChoice = formValues.mp_permissionEmail[0];
-  const smsChoice = formValues.mp_permissionSMS[0];
-  const phoneChoice = formValues.mp_permissionPhone[0];
-  const postChoice = formValues.mp_permissionPost[0];
-
-  // If the field is not required for each No/Yes choice, hide it
-  const hideEmailInput = (validationOptions.mp_permissionEmail.yes === false && emailChoice === 'yes')
-  || (validationOptions.mp_permissionEmail.no === false && emailChoice === 'no');
-
-  const hideSMSInput = (validationOptions.mp_permissionSMS.yes === false && smsChoice === 'yes')
-  || (validationOptions.mp_permissionSMS.no === false && smsChoice === 'no');
-
-  const hidePhoneInput = (validationOptions.mp_permissionPhone.yes === false && phoneChoice === 'yes')
-  || (validationOptions.mp_permissionPhone.no === false && phoneChoice === 'no');
-
-  const hidePostInput = (validationOptions.mp_permissionPost.yes === false && postChoice === 'yes')
-  || (validationOptions.mp_permissionPost.no === false && postChoice === 'no');
+  console.log('show?:', errors);
 
   return (
     <>
