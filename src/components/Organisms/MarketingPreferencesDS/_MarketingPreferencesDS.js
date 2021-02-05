@@ -23,7 +23,8 @@ const MarketingPreferencesDS = ({
   formValues,
   validation,
   setFieldValue,
-  inputFieldOverrides
+  inputFieldOverrides,
+  validateField
 }) => {
   const { errors, validationOptions } = validation;
 
@@ -60,25 +61,30 @@ const MarketingPreferencesDS = ({
     }
   }, [jsonInputFieldOverrides, inputFieldOverrides, setFieldValue]);
 
+  function resetFields(thisName) {
+    const theseFields = associatedFields[thisName];
+    theseFields.forEach(fieldName => {
+      handleTouchedReset(fieldName, false);
+      setFieldValue(fieldName, '');
+      validateField(fieldName);
+    });
+  }
+
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
    * override the native checkbox functionality to allow Yes/No/None interaction */
-  function handleCheckboxChange(e) {
+  async function handleCheckboxChange(e) {
     const thisName = e.target.name;
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox values as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
 
-    setFieldValue(thisName, newVal); // Update Formik with the value
-
     /* If a 'not seleted' choice, reset the value and 'touched'
-    state in Formik for all fields associated with this checkbox */
+    state in Formik for all fields associated with this checkbox and revalidate 'em */
     if (newVal.length === 0) {
-      const theseFields = associatedFields[thisName];
-      theseFields.forEach(fieldName => {
-        setFieldValue(fieldName, '');
-        handleTouchedReset(fieldName, false);
-      });
+      await resetFields(thisName);
     }
+
+    setFieldValue(thisName, newVal); // Update Formik with the value of the checkbox
   }
 
   return (
@@ -255,6 +261,7 @@ MarketingPreferencesDS.propTypes = {
   setFieldValue: PropTypes.func.isRequired,
   formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
   validation: PropTypes.objectOf(PropTypes.shape).isRequired,
+  validateField: PropTypes.func.isRequired,
   inputFieldOverrides: PropTypes.shape({
     mp_email: PropTypes.string,
     mp_mobile: PropTypes.string,

@@ -80,7 +80,7 @@ const MarketingPreferencesDSForm = () => {
         validateOnMount
       >
         {({
-          handleChange, setFieldValue, setFieldTouched, isValid, values, errors, touched
+          handleChange, setFieldValue, setFieldTouched, validateField, isValid, values, errors, touched
           // validateForm, setFieldTouched, dirty, handleSubmit, isSubmitting, isValidating
         }) => (
 
@@ -112,6 +112,7 @@ const MarketingPreferencesDSForm = () => {
               validation={{ errors, touched, validationOptions }}
               setFieldValue={setFieldValue}
               inputFieldOverrides={fieldOverrides}
+              validateField={validateField}
             />
           </form>
         )}

@@ -62,7 +62,7 @@ const buildValidationSchema = overrideOptions => {
       then: yup.string().email('Please enter a valid email address')
       // Set the 'required' attribute based on the associated config
         .when('mp_permissionEmail', {
-          is: val => (validationOptions.mp_permissionEmail[val]),
+          is: val => (validationOptions.mp_permissionEmail[val] && val[0] !== null),
           then: yup.string().required('Please enter your email address')
         })
     }),
