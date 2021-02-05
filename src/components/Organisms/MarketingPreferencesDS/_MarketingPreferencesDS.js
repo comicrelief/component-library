@@ -36,8 +36,6 @@ const MarketingPreferencesDS = ({
   const hideSMSInput = (validationOptions.mp_permissionSMS.yes === false && smsChoice === 'yes')
   || (validationOptions.mp_permissionSMS.no === false && smsChoice === 'no');
 
-  console.log('hideSMSInput', hideSMSInput);
-
   const hidePhoneInput = (validationOptions.mp_permissionPhone.yes === false && phoneChoice === 'yes')
   || (validationOptions.mp_permissionPhone.no === false && phoneChoice === 'no');
 
@@ -78,8 +76,6 @@ const MarketingPreferencesDS = ({
       });
     }
   }
-
-  console.log('show?:', errors);
 
   return (
     <>
