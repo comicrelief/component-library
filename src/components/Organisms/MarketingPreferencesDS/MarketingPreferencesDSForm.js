@@ -2,10 +2,7 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
 
-import MarketingPreferencesDS from './_MarketingPreferencesDS';
-import {
-  setInitialValues, buildValidationSchema
-} from './_MarketingPrefsConfig';
+import { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './_MarketingPreferencesDS';
 
 // Define the form schema based on the default config:
 let validation = buildValidationSchema();

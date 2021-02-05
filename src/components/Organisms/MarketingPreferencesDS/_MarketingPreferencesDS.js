@@ -11,6 +11,10 @@ import {
   CopyWrapper, Head, FormField, ShowHideInputWrapper
 } from './MarketingPreferencesDS.style';
 
+import {
+  setInitialValues, buildValidationSchema
+} from './_MarketingPrefsConfig';
+
 const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
@@ -270,4 +274,4 @@ MarketingPreferencesDS.defaultProps = {
   inputFieldOverrides: null
 };
 
-export default MarketingPreferencesDS;
+export { MarketingPreferencesDS, setInitialValues, buildValidationSchema };
