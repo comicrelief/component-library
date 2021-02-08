@@ -61,13 +61,10 @@ const MarketingPreferencesDS = ({
     }
   }, [jsonInputFieldOverrides, inputFieldOverrides, setFieldValue]);
 
-  function resetFields(thisName) {
-    const theseFields = associatedFields[thisName];
-    theseFields.forEach(fieldName => {
-      handleTouchedReset(fieldName, false);
-      setFieldValue(fieldName, '');
-      validateField(fieldName);
-    });
+  async function resetFields(fieldName) {
+    await setFieldValue(fieldName, '')
+      .then(() => { validateField(fieldName); });
+    handleTouchedReset(fieldName, false);
   }
 
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
@@ -81,10 +78,14 @@ const MarketingPreferencesDS = ({
     /* If a 'not seleted' choice, reset the value and 'touched'
     state in Formik for all fields associated with this checkbox and revalidate 'em */
     if (newVal.length === 0) {
-      await resetFields(thisName);
+      const theseFields = associatedFields[thisName];
+      theseFields.forEach(fieldName => {
+        resetFields(fieldName);
+      });
     }
 
-    setFieldValue(thisName, newVal); // Update Formik with the value of the checkbox
+    // Update Formik with the value of the checkbox
+    setFieldValue(thisName, newVal);
   }
 
   return (

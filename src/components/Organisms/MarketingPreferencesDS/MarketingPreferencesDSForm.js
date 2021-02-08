@@ -81,7 +81,6 @@ const MarketingPreferencesDSForm = () => {
       >
         {({
           handleChange, setFieldValue, setFieldTouched, validateField, isValid, values, errors, touched
-          // validateForm, setFieldTouched, dirty, handleSubmit, isSubmitting, isValidating
         }) => (
 
           <form
