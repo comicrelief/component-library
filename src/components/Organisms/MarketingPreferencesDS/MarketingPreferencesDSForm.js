@@ -41,6 +41,7 @@ const {
   provide their own form and validation based on these */
 const MarketingPreferencesDSForm = () => {
   const [fieldOverrides, setFieldOverrides] = useState({});
+  const [, forceUpdate] = useState(0);
 
   function customSubmitHandler(e, formValues) {
     e.preventDefault();
@@ -65,6 +66,7 @@ const MarketingPreferencesDSForm = () => {
 
     updatedOverrides[mappedField] = e.target.value;
 
+    forceUpdate(n => !n); // TO-DO: find a better way of addressing this?
     setFieldOverrides(updatedOverrides); // Update our example 'fieldOverrides' state, which is being passed via prop to the MP component
   }
 
