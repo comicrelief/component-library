@@ -84,8 +84,8 @@ const MarketingPreferencesDS = ({
       });
     }
 
-    // Update Formik with the value of the checkbox
-    setFieldValue(thisName, newVal);
+    // Update Formik with the value of the checkbox but don't validate field yet
+    setFieldValue(thisName, newVal, false);
   }
 
   return (

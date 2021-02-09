@@ -41,7 +41,6 @@ const {
   provide their own form and validation based on these */
 const MarketingPreferencesDSForm = () => {
   const [fieldOverrides, setFieldOverrides] = useState({});
-  const [, forceUpdate] = useState(0);
 
   function customSubmitHandler(e, formValues) {
     e.preventDefault();
@@ -66,7 +65,6 @@ const MarketingPreferencesDSForm = () => {
 
     updatedOverrides[mappedField] = e.target.value;
 
-    forceUpdate(n => !n); // TO-DO: find a better way of addressing this?
     setFieldOverrides(updatedOverrides); // Update our example 'fieldOverrides' state, which is being passed via prop to the MP component
   }
 
@@ -95,11 +93,6 @@ const MarketingPreferencesDSForm = () => {
             <label htmlFor="existing_mobile_field">
               Represents an existing Mobile field in the journey
               <input name="existing_mobile_field" id="existing_mobile_field" onChange={e => { setFieldOverride(e); }} style={{ display: 'block' }} />
-            </label>
-
-            <label htmlFor="touchedtest">
-              touchedtest
-              <input name="touchedtest" id="touchedtest" style={{ display: 'block' }} />
             </label>
 
             <button type="submit" disabled={!(isValid)}>S U B M I T </button>

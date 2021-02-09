@@ -96,9 +96,10 @@ const CheckInput = styled.input`
   box-sizing: border-box;
   opacity: 0;
   position: absolute;
-  left: 12px;
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top:0;
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
