@@ -18,6 +18,7 @@ const CheckAnswer = ({ name, onChange }) => (
         value="yes"
         onChange={onChange}
         as={CheckInput}
+        // onBlur={e => e.preventDefault()}
       />
       <span />
       Yes please
@@ -30,6 +31,7 @@ const CheckAnswer = ({ name, onChange }) => (
         value="no"
         onChange={onChange}
         as={CheckInput}
+        // onBlur={e => e.preventDefault()}
       />
       <span />
       No thanks

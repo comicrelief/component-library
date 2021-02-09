@@ -26,7 +26,7 @@ const MarketingPreferencesDS = ({
   inputFieldOverrides,
   validateField
 }) => {
-  const { errors, validationOptions } = validation;
+  const { errors, validationOptions, touched } = validation;
 
   // For brevity
   const emailChoice = formValues.mp_permissionEmail[0];
@@ -87,7 +87,7 @@ const MarketingPreferencesDS = ({
     }
 
     // Update Formik with the value of the checkbox
-    setFieldValue(thisName, newVal, reValidate);
+    setFieldValue(thisName, newVal);
   }
 
   return (
@@ -113,7 +113,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your email address"
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_email ? errors.mp_email : ''}
+              errorMessage={errors.mp_email && touched.mp_email ? errors.mp_email : ''}
               type="email"
             />
           </ShowHideInputWrapper>
@@ -131,6 +131,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer
             name="mp_permissionSMS"
             onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionSMS)}
+
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -142,7 +143,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_mobile ? errors.mp_mobile : ''}
+              errorMessage={errors.mp_mobile && touched.mp_mobile ? errors.mp_mobile : ''}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -159,6 +160,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer
             name="mp_permissionPhone"
             onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionPhone)}
+
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -170,7 +172,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_phone ? errors.mp_phone : ''}
+              errorMessage={errors.mp_phone && touched.mp_phone ? errors.mp_phone : ''}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -187,6 +189,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer
             name="mp_permissionPost"
             onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionPost)}
+
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
@@ -198,14 +201,14 @@ const MarketingPreferencesDS = ({
               label="Address Line 1"
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_address1 ? errors.mp_address1 : ''}
+              errorMessage={errors.mp_address1 && touched.mp_address1 ? errors.mp_address1 : ''}
             />
             <TextInput
               placeholder=""
               fieldName="mp_address2"
               label="Address Line 2"
               handleInputChange={handleInputChange}
-              errorMessage={errors.mp_address2 ? errors.mp_address2 : ''}
+              errorMessage={errors.mp_address2 && touched.mp_address2 ? errors.mp_address2 : ''}
               isRequired={false}
             />
             <TextInput
@@ -213,7 +216,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_address3"
               label="Address Line 3"
               handleInputChange={handleInputChange}
-              errorMessage={errors.mp_address3 ? errors.mp_address3 : ''}
+              errorMessage={errors.mp_address3 && touched.mp_address3 ? errors.mp_address3 : ''}
               isRequired={false}
             />
             <TextInput
@@ -222,7 +225,7 @@ const MarketingPreferencesDS = ({
               label="Town/City"
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_town ? errors.mp_town : ''}
+              errorMessage={errors.mp_town && touched.mp_town ? errors.mp_town : ''}
             />
             <TextInput
               placeholder=""
@@ -230,7 +233,7 @@ const MarketingPreferencesDS = ({
               label="Postcode"
               handleInputChange={handleInputChange}
               isRequired
-              errorMessage={errors.mp_postcode ? errors.mp_postcode : ''}
+              errorMessage={errors.mp_postcode && touched.mp_postcode ? errors.mp_postcode : ''}
             />
             <TextInput
               placeholder=""
@@ -238,7 +241,7 @@ const MarketingPreferencesDS = ({
               label="Country"
               isRequired
               handleInputChange={handleInputChange}
-              errorMessage={errors.mp_country ? errors.mp_country : ''}
+              errorMessage={errors.mp_country && touched.mp_country ? errors.mp_country : ''}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
