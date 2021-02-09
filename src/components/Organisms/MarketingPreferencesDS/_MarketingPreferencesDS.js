@@ -69,23 +69,25 @@ const MarketingPreferencesDS = ({
 
   /* Uses Formik's 'setFieldValue' function passed as prop to allow us to
    * override the native checkbox functionality to allow Yes/No/None interaction */
-  async function handleCheckboxChange(e) {
+  async function handleCheckboxChange(e, options) {
     const thisName = e.target.name;
     const thisVal = e.target.value;
     const currVal = formValues[thisName][0]; // As Formik stores grouped checkbox values as arrays
     const newVal = thisVal !== currVal ? [thisVal] : []; // Toggle the value
 
-    /* If a 'not seleted' choice, reset the value and 'touched'
-    state in Formik for all fields associated with this checkbox and revalidate 'em */
-    if (newVal.length === 0) {
+    /* If the click represents either a 'none selected' or a 'not required' option (set in config),
+    reset the value and 'touched' state in Formik for all fields associated with this checkbox, and revalidate 'em */
+    const reValidate = !options[newVal];
+
+    if (reValidate) {
       const theseFields = associatedFields[thisName];
       theseFields.forEach(fieldName => {
         resetFields(fieldName);
       });
     }
 
-    // Update Formik with the value of the checkbox but don't validate field yet
-    setFieldValue(thisName, newVal, false);
+    // Update Formik with the value of the checkbox
+    setFieldValue(thisName, newVal, reValidate);
   }
 
   return (
@@ -99,7 +101,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e)} />
+          <CheckAnswer name="mp_permissionEmail" onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionEmail)} />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -128,7 +130,7 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionSMS"
-            onChange={e => handleCheckboxChange(e)}
+            onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionSMS)}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -156,7 +158,7 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPhone"
-            onChange={e => handleCheckboxChange(e)}
+            onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionPhone)}
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -184,7 +186,7 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPost"
-            onChange={e => handleCheckboxChange(e)}
+            onChange={e => handleCheckboxChange(e, validationOptions.mp_permissionPost)}
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
