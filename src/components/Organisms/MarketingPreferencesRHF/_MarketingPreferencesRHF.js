@@ -1,12 +1,11 @@
-/* eslint-disable max-len */
-import React, { useEffect } from 'react';
+/* eslint-disable camelcase */ // sorry but wtf does it matter
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch, useFormContext } from 'react-hook-form';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
-import associatedFields from './_HelperFunctions';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
@@ -23,7 +22,7 @@ const MarketingPreferencesRHF = ({
   // inputFieldOverrides,
   validationOptions
 }) => {
-  const { errors, register } = useFormContext();
+  const { errors } = useFormContext();
 
   // For brevity
   const emailChoice = useWatch({ name: 'mp_permissionEmail', defaultValue: [] });
@@ -31,18 +30,22 @@ const MarketingPreferencesRHF = ({
   const phoneChoice = useWatch({ name: 'mp_permissionPhone', defaultValue: [] });
   const smsChoice = useWatch({ name: 'mp_permissionSMS', defaultValue: [] });
 
+  const {
+    mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
+  } = validationOptions;
+
   // If the field is not required for each No/Yes choice, hide it
-  const hideEmailInput = (validationOptions.mp_permissionEmail.yes === false && emailChoice.includes('yes'))
-  || (validationOptions.mp_permissionEmail.no === false && emailChoice.includes('no'));
+  const hideEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
+  || (mp_permissionEmail.no === false && emailChoice.includes('no'));
 
-  const hideSMSInput = (validationOptions.mp_permissionSMS.yes === false && smsChoice.includes('yes'))
-  || (validationOptions.mp_permissionSMS.no === false && postChoice.includes('no'));
+  const hideSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'))
+  || (mp_permissionSMS.no === false && smsChoice.includes('no'));
 
-  const hidePhoneInput = (validationOptions.mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
-  || (validationOptions.mp_permissionPhone.no === false && phoneChoice.includes('no'));
+  const hidePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
+  || (mp_permissionPhone.no === false && phoneChoice.includes('no'));
 
-  const hidePostInput = (validationOptions.mp_permissionPost.yes === false && postChoice.includes('yes'))
-  || (validationOptions.mp_permissionPost.no === false && postChoice.includes('no'));
+  const hidePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'))
+  || (mp_permissionPost.no === false && postChoice.includes('no'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = errors.mp_address1 || errors.mp_address2
@@ -53,13 +56,13 @@ const MarketingPreferencesRHF = ({
       {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
-      {!validationOptions.mp_permissionEmail.disableOption && (
+      {!mp_permissionEmail.disableOption && (
       <FormField className="field-email" userSelection={emailChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer name="mp_permissionEmail" />
+          <CheckAnswer validationOptions={validationOptions} name="mp_permissionEmail" />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -69,7 +72,8 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
-              isRequired
+              // To prevent validation issues ('required' fields not being filled), have it reflect the config
+              isRequired={mp_permissionEmail[emailChoice]}
               type="email"
             />
           </ShowHideInputWrapper>
@@ -78,7 +82,7 @@ const MarketingPreferencesRHF = ({
       )}
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
-      {!validationOptions.mp_permissionSMS.disableOption && (
+      {!mp_permissionSMS.disableOption && (
       <FormField className="field-sms" userSelection={smsChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -86,6 +90,7 @@ const MarketingPreferencesRHF = ({
           </Text>
           <CheckAnswer
             name="mp_permissionSMS"
+            validationOptions={validationOptions}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -95,7 +100,7 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
-              isRequired
+              isRequired={mp_permissionSMS[smsChoice]}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -103,7 +108,7 @@ const MarketingPreferencesRHF = ({
       )}
 
       {/* Render Phone checkboxes and input if not removed in config */}
-      {!validationOptions.mp_permissionPhone.disableOption && (
+      {!mp_permissionPhone.disableOption && (
       <FormField className="field-phone" userSelection={phoneChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -111,6 +116,7 @@ const MarketingPreferencesRHF = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPhone"
+            validationOptions={validationOptions}
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -120,7 +126,7 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
-              isRequired
+              isRequired={mp_permissionPhone[phoneChoice]}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -128,7 +134,7 @@ const MarketingPreferencesRHF = ({
       )}
 
       {/* Render Post checkboxes and inputs if not removed in config */}
-      {!validationOptions.mp_permissionPost.disableOption && (
+      {!mp_permissionPost.disableOption && (
       <FormField className="field-post" userSelection={postChoice}>
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
@@ -136,6 +142,7 @@ const MarketingPreferencesRHF = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPost"
+            validationOptions={validationOptions}
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
@@ -145,7 +152,7 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
-              isRequired
+              isRequired={mp_permissionPost[postChoice]}
             />
             <TextInput
               placeholder=""
@@ -163,19 +170,19 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
-              isRequired
+              isRequired={mp_permissionPost[postChoice]}
             />
             <TextInput
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
-              isRequired
+              isRequired={mp_permissionPost[postChoice]}
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              isRequired
+              isRequired={mp_permissionPost[postChoice]}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -196,12 +203,7 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferencesRHF.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  // handleInputChange: PropTypes.func.isRequired,
-  // handleTouchedReset: PropTypes.func.isRequired,
-  // setFieldValue: PropTypes.func.isRequired,
-  // formValues: PropTypes.objectOf(PropTypes.shape).isRequired,
   validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
-  // validateField: PropTypes.func.isRequired,
   inputFieldOverrides: PropTypes.shape({
     mp_email: PropTypes.string,
     mp_mobile: PropTypes.string,

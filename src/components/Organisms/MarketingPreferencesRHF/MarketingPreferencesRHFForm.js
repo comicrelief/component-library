@@ -1,20 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
-/// import { Formik } from 'formik';
-
-// in progress stuff
-import * as yup from 'yup';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import {
   MarketingPreferencesRHF,
-  // setInitialValues,
+  setInitialValues,
   buildValidationSchema
 } from './_MarketingPreferencesRHF';
 
 const validation = buildValidationSchema();
-// const initialValues = setInitialValues(); // don't think we need this now
+const initialValues = setInitialValues();
 
 const {
   validationSchema,
@@ -25,34 +21,39 @@ const {
   component working in the Component Library; applications are to
   provide their own form and validation based on these */
 const MarketingPreferencesRHFForm = () => {
-  function customSubmitHandler(e, formValues) {
-    e.preventDefault();
-    console.log('customSubmitHandler', formValues);
+  function customSubmitHandler() {
+    console.log('customSubmitHandler');
   }
 
   const formMethods = useForm({
-    mode: 'onTouched',
+    mode: 'onChange',
+    defaultValues: initialValues,
+
     resolver: yupResolver(validationSchema)
+    // reValidateMode: 'onChange',
+    // validationSchema: undefined, // Note: will be deprecated in the next major version with validationResolver
+    // validationResolver: undefined,
+    // validationContext: undefined,
+    // validateCriteriaMode: "firstErrorDetected",
+    // submitFocusError: true,
+    // nativeValidation: false, // Note: version 3 only
   });
 
-  const {
-    handleSubmit, errors, register
-  } = formMethods;
+  const { handleSubmit, formState } = formMethods;
 
   return (
     <>
-      {/* ReactHookForm based solution: */}
       <FormProvider {...formMethods}>
 
         <form onSubmit={handleSubmit(customSubmitHandler)}>
 
-          {/* <input type="submit" /> */}
+          <input type="submit" disabled={!formState.isValid} />
 
           <MarketingPreferencesRHF
+            validationOptions={validationOptions}
             // formValues={values}
             // handleInputChange={handleChange}
             // handleTouchedReset={setFieldTouched}
-            validationOptions={validationOptions} // still needed for Yup config stuff
             // setFieldValue={setFieldValue}
             // inputFieldOverrides={fieldOverrides}
             // validateField={validateField}
