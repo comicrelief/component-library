@@ -2,6 +2,11 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
 
+// in progress stuff
+import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
 import { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './_MarketingPreferencesDS';
 
 // Define the form schema based on the default config:
@@ -70,8 +75,47 @@ const MarketingPreferencesDSForm = () => {
     setFieldOverrides(updatedOverrides); // Update our example 'fieldOverrides' state, which is being passed via prop to the MP component
   }
 
+  /* START: react hook form stuff */
+  const reactHookFormSchema = yup.object().shape({
+    first_name: yup.string().required('This field is required'),
+    last_name: yup.string().required('This field is required')
+  });
+
+  const {
+    handleSubmit, errors, register
+  } = useForm({
+    mode: 'onTouched',
+    resolver: yupResolver(reactHookFormSchema)
+  });
+
+  const mySubmit = data => {
+    console.log('mySubmit', data, errors);
+  };
+  /* END: react hook form stuff */
+
   return (
-    <div>
+    <>
+      {/* ReactHookForm based solution: */}
+      <form onSubmit={handleSubmit(mySubmit)}>
+        <input
+          name="first_name"
+          type="text"
+          style={{ display: 'block' }}
+          ref={register}
+        />
+        {errors.first_name && <p>{errors.first_name.message}</p>}
+
+        <input
+          name="last_name"
+          type="text"
+          style={{ display: 'block' }}
+          ref={register}
+        />
+        {errors.last_name && <p>{errors.last_name.message}</p>}
+
+        <input type="submit" />
+      </form>
+
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -111,7 +155,7 @@ const MarketingPreferencesDSForm = () => {
           </form>
         )}
       </Formik>
-    </div>
+    </>
   );
 };
 export default MarketingPreferencesDSForm;
