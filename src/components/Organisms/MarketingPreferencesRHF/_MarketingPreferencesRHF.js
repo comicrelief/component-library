@@ -72,7 +72,7 @@ const MarketingPreferencesRHF = ({
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
-              // To prevent validation issues ('required' fields not being filled), have it reflect the config
+              // Dynamically update the field attr based on config for current choice
               isRequired={mp_permissionEmail[emailChoice]}
               type="email"
             />
