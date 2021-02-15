@@ -115,6 +115,7 @@ const Input = React.forwardRef(
       label={label}
       hideLabel={!showLabel}
       errorMsg={errorMsg}
+      isRequired={isRequired}
       {...labelProps}
     >
       <InputWrapper>
