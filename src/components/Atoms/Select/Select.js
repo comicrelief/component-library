@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Text from '../Text/Text';
+import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
-import hideVisually from '../../../theme/shared/hideVisually';
 import dropDownIcon from './assets/drop-down-dark-purple.svg';
 import spacing from '../../../theme/shared/spacing';
 
@@ -13,12 +12,13 @@ const StyledSelect = styled.select`
   font-size: ${({ theme }) => theme.fontSize('m')};
   display: block;
   box-sizing: border-box;
-  padding: 0.8rem ${spacing('m')};
+  padding: 0 ${spacing('m')};
   padding-right: ${spacing('xl')};
   margin: 0;
   position: relative;
   height: 48px;
   font-weight: 400;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   background: ${({ theme }) => theme.color('grey_light')} url(${dropDownIcon})
     calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
@@ -27,7 +27,6 @@ const StyledSelect = styled.select`
   appearance: none;
   color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};
   border-radius: 0.5rem;
-  margin-top: ${spacing('sm')};
   cursor: pointer;
   :focus {
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
@@ -36,17 +35,6 @@ const StyledSelect = styled.select`
   @media ${({ theme }) => theme.breakpoint('small')} {
     max-width: 290px;
   }
-`;
-
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  color: ${({ theme }) => theme.color('grey_label')};
-`;
-
-const LabelText = styled(Text)`
-  ${({ hideLabel }) => hideLabel && hideVisually}
 `;
 
 const Select = React.forwardRef(
@@ -60,6 +48,7 @@ const Select = React.forwardRef(
       defaultValue,
       onChange,
       greyDescription,
+      className,
       ...rest
     },
     ref
@@ -67,10 +56,7 @@ const Select = React.forwardRef(
     const [value, setValue] = useState('');
 
     return (
-      <Label>
-        <LabelText hideLabel={hideLabel} weight="bold">
-          {label}
-        </LabelText>
+      <Label label={label} hideLabel={hideLabel} errorMsg={errorMsg} className={className}>
         <StyledSelect
           onChange={e => {
             setValue(e.currentTarget.value);
@@ -94,7 +80,7 @@ const Select = React.forwardRef(
             </option>
           ))}
         </StyledSelect>
-        {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
       </Label>
     );
   }
@@ -113,7 +99,10 @@ Select.propTypes = {
   description: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   onChange: PropTypes.func,
-  greyDescription: PropTypes.bool
+  greyDescription: PropTypes.bool,
+  // className is needed so that styled(`Select`) will work
+  // (as `rest` is not spread on the outermost component)
+  className: PropTypes.string
 };
 
 Select.defaultProps = {
@@ -122,7 +111,8 @@ Select.defaultProps = {
   onChange: null,
   /** If true, the 'description' option, which is initially selected but disabled, will be grey
    *   - like a text input's placeholder */
-  greyDescription: false
+  greyDescription: false,
+  className: ''
 };
 
 export default Select;

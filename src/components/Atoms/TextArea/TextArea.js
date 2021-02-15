@@ -1,73 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import Text from '../Text/Text';
+import spacing from '../../../theme/shared/spacing';
+import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 
-/**
- * Textarea component
- */
-const StyledTextArea = styled.textarea`
+const StyledTextArea = styled.textarea`${({ theme, error }) => css`
   box-sizing: border-box;
   width: 100%;
-  margin: 10px 0;
-  padding: 6px 12px;
-  font-size: ${({ theme }) => theme.fontSize('m')};
-  background-color: ${({ theme }) => theme.color('white')};
+  margin: 0;
+  padding: ${spacing('md')} ${spacing('m')};
+  font-size: ${theme.fontSize('m')};
+  background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-radius: 0;
-  border-color: ${({ theme, error }) => (!error ? theme.color('black') : theme.color('red'))};
+  border-radius: 0.5rem;
+  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme }) => theme.color('black')};
+  color: ${theme.color('black')};
+  font-family: ${theme.fontFamilies(theme.font.regular)};
+  resize: vertical;
 
-  :focus {
-    border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
-  }
-  :focus::-webkit-input-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  }
-  :focus:-moz-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* FF 4-18 */
-  :focus::-moz-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* FF 19+ */
-  :focus:-ms-input-placeholder {
-    color: transparent;
-    color: $color;
-    font-size: $font-size;
-    opacity: 1;
-    overflow: visible;
-  } /* IE 10+ */
-`;
+  &:focus {
+    border: 1px solid ${theme.color('grey_for_forms')};
 
-/**
- * Label component
- */
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-`;
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
+`}`;
 
 const TextArea = React.forwardRef(({
-  id, label, errorMsg, rows, ...rest
+  id, label, hideLabel, errorMsg, rows, className, ...rest
 }, ref) => (
-  <Label htmlFor={id}>
-    <Text weight="bold">{label}</Text>
+  <Label
+    htmlFor={id}
+    label={label}
+    hideLabel={hideLabel}
+    errorMsg={errorMsg}
+    className={className}
+  >
     <StyledTextArea
       {...rest}
       rows={rows}
@@ -75,21 +48,32 @@ const TextArea = React.forwardRef(({
       aria-describedby={id}
       ref={ref}
     />
-    {errorMsg && <ErrorText size="sm">{errorMsg}</ErrorText>}
+    {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
   </Label>
 ));
 
 TextArea.propTypes = {
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  errorMsg: PropTypes.string.isRequired,
-  rows: PropTypes.number
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
+  rows: PropTypes.number,
+  placeholder: PropTypes.string,
+  errorMsg: PropTypes.string,
+  hideLabel: PropTypes.bool,
+  // className is needed so that styled(`TextArea`) will work
+  // (as `rest` is not spread on the outermost component)
+  className: PropTypes.string
 };
 
 TextArea.defaultProps = {
-  rows: 4
+  rows: 4,
+  placeholder: '',
+  errorMsg: undefined,
+  hideLabel: false,
+  className: ''
 };
 
 export default TextArea;

@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import Text from '../Text/Text';
+import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
-import hideVisually from '../../../theme/shared/hideVisually';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -12,11 +11,7 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS.)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
-/**
- * Input component
- */
-const InputField = styled.input`${({ theme, error, prefixLength }) => `
-  font-weight: normal;
+const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -32,13 +27,10 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => `
   border-radius: ${spacing('sm')};
   font-size: inherit;
   z-index: 2;
+  font-family: ${theme.fontFamilies(theme.font.regular)};
 
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
-  }
-
-  :focus::placeholder {
-    color: ${theme.color('grey_for_forms')};
   }
 
   @media ${theme.breakpoint('small')} {
@@ -80,7 +72,6 @@ const TextLabel = styled(Text)`
 `;
 
 const InputWrapper = styled.div`
-  margin-top: ${spacing('sm')};
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
 `;
@@ -118,10 +109,16 @@ const Input = React.forwardRef(
     },
     ref
   ) => (
-    <Label htmlFor={id} className={className} {...labelProps}>
-      <TextLabel showLabel={showLabel} weight="bold" isRequired={isRequired} dangerouslySetInnerHTML={{ __html: label }} />
+    <Label
+      className={className}
+      htmlFor={id}
+      label={label}
+      hideLabel={!showLabel}
+      errorMsg={errorMsg}
+      {...labelProps}
+    >
       <InputWrapper>
-        {prefix ? <Prefix length={prefix.length}>{prefix}</Prefix> : ''}
+        {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}
           type={type}
@@ -133,26 +130,30 @@ const Input = React.forwardRef(
           required={isRequired}
         />
       </InputWrapper>
-      {errorMsg && (
-        <ErrorText size="sm" data-test="error-message">
-          {errorMsg}
-        </ErrorText>
-      )}
+      {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
     </Label>
   )
 );
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
+  // This prop allows us to _visually_ hide the label if we want (even if we
+  //  don't want to display a label, it should be present for screen readers).
+  // todo: convert this to 'hideLabel' to make it consistent with other components
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
   labelProps: PropTypes.objectOf(PropTypes.any),
+  // className is needed so that styled(`Input`) will work
+  // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
   prefix: PropTypes.string,
   isRequired: PropTypes.oneOfType([

@@ -6,6 +6,8 @@
 const data = require('../../../styleguide/data/data').default;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
+import { Internal } from '../../Atoms/Icons/index';
+
 <div
   style={{
     display: 'flex',
@@ -23,6 +25,7 @@ import Link from '../../Atoms/Link/Link';
     imageAltText="Happy man going to work"
     backgroundColor="white"
     height="auto"
+    icon={<Internal colour="white" />}
   >
     <Text tag="h3" color="purple" size="xl">
       Title
@@ -38,6 +41,8 @@ import Link from '../../Atoms/Link/Link';
 const data = require('../../../styleguide/data/data').default;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
+import { Download } from '../../Atoms/Icons/index';
+
 <div
   style={{
     display: 'flex',
@@ -52,6 +57,7 @@ import Link from '../../Atoms/Link/Link';
     linkLabel="find out more"
     backgroundColor="white"
     height="auto"
+    icon={<Download colour="white" />}
   >
     <Text tag="h3" color="purple" size="xl">
       Title

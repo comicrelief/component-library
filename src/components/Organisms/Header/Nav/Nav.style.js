@@ -162,6 +162,7 @@ const NavMenu = styled.ul`
  * Menu item link
  */
 const NavLink = styled(NavLinkClass)`
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.breakpoint('nav')} {
     padding: 10px 0;
     height: auto;

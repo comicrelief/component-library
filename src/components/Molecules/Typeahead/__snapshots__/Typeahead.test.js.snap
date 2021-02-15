@@ -10,8 +10,22 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4 {
-  font-weight: normal;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c3 {
+  margin-bottom: 0.5rem;
+}
+
+.c5 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -27,42 +41,14 @@ exports[`renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4:focus {
+.c5:focus {
   border: 1px solid #666;
 }
 
-.c4:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c4:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c4:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c4:focus::placeholder {
-  color: #666;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: bold;
-  color: #5C5C5E;
-}
-
-.c3 {
-  margin-top: 0.5rem;
+.c4 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -72,7 +58,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c5 {
     max-width: 290px;
   }
 }
@@ -86,7 +72,7 @@ exports[`renders correctly 1`] = `
     htmlFor="typeahead-test"
   >
     <span
-      className="c2 "
+      className="c2 c3"
       color="inherit"
       dangerouslySetInnerHTML={
         Object {
@@ -96,13 +82,13 @@ exports[`renders correctly 1`] = `
       size="s"
     />
     <div
-      className="c3"
+      className="c4"
     >
       
       <input
         aria-describedby="typeahead-test"
         autoComplete="off"
-        className="c4"
+        className="c5"
         id="typeahead-test"
         name="q"
         onChange={[Function]}

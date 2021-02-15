@@ -10,17 +10,33 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
 .c2 {
+  margin-bottom: 0.5rem;
+}
+
+.c3 {
   width: 100%;
   font-size: 1.25rem;
   display: block;
   box-sizing: border-box;
-  padding: 0.8rem 1.5rem;
+  padding: 0 1.5rem;
   padding-right: 4rem;
   margin: 0;
   position: relative;
   height: 48px;
   font-weight: 400;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -30,28 +46,15 @@ exports[`renders correctly 1`] = `
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
-  margin-top: 0.5rem;
   cursor: pointer;
 }
 
-.c2:focus {
+.c3:focus {
   border: 1px solid #666;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: bold;
-  color: #5C5C5E;
-}
-
 @media (min-width:740px) {
-  .c2 {
+  .c3 {
     max-width: 290px;
   }
 }
@@ -60,14 +63,17 @@ exports[`renders correctly 1`] = `
   className="c0"
 >
   <span
-    className="c1 Select__LabelText-sc-1atp8e3-2"
+    className="c1 c2"
     color="inherit"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Label",
+      }
+    }
     size="s"
-  >
-    Label
-  </span>
+  />
   <select
-    className="c2"
+    className="c3"
     defaultValue=""
     onChange={[Function]}
   >

@@ -5,8 +5,7 @@
     placeholder="This is the hint text"
     type="text"
     label="Label"
-    errorMsg=""
-    id="Accessibility information go here"
+    id="input-example-1"
     showLabel={true}
   />
 ```
@@ -19,7 +18,7 @@
     type="text"
     label="Label"
     errorMsg="This is an error message"
-    id="Accessibility info"
+    id="input-example-2"
     showLabel={false}
   />
 ```
@@ -32,11 +31,10 @@
     type="text"
     label="Label"
     errorMsg=""
-    id="Accessibility info go here"
+    id="input-example-3"
     showLabel={true}
   />
 ```
-
 
 ```js
   <h4>Input Label with markup</h4>
@@ -46,11 +44,32 @@
     type="text"
     label="<b>Markup label <i>italic</i></b>"
     errorMsg=""
-    id="Accessibility info go here"
+    id="input-example-4"
     showLabel={true}
   />
 ```
 
+```js
+import styled from 'styled-components';
+import Text from '../../Atoms/Text/Text';
+
+const ItalicText = styled(Text).attrs({weight: 'normal'})`
+  font-style: italic
+`;
+
+<>
+  <h4>Input label as React element</h4>
+  <Input
+    name="email"
+    placeholder=""
+    type="text"
+    label={<>Email <ItalicText>(please check it's correct)</ItalicText></>}
+    errorMsg=""
+    id="input-example-5"
+    showLabel={true}
+  />
+</>
+```
 
 ```js
   <h4>Input with prefix</h4>

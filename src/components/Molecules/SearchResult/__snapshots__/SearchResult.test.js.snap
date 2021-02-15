@@ -189,6 +189,7 @@ exports[`renders correctly with copy 1`] = `
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
 }
 
 .c4 {
@@ -270,6 +271,12 @@ exports[`renders correctly with copy 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width:740px) {

@@ -28,6 +28,7 @@
     "jest-styled-components": "^7.0.2",
     "lazysizes": "^5.1.0",
     "lodash": "^4.17.11",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-currency-format": "^1.0.0",

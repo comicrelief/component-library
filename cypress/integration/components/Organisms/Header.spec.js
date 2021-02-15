@@ -53,9 +53,10 @@ describe('Header component', () => {
                 .should('exist');
 
             //fundraising
-            cy.viewport(1280, 720);
+            cy.viewport('macbook-15');
+            cy.reload();
             cy.get('@container')
-                .find('nav > ul > li:nth-child(1) > a')
+                .find('nav > ul > li:nth-child(1) a')
                 .should('have.attr', 'href', 'https://www.comicrelief.com/fundraising/pay-in-your-money');
 
 
@@ -102,10 +103,11 @@ describe('Header component', () => {
                 .should('exist');
 
             //fundraising
-            cy.viewport(1280, 720);
+            cy.viewport('iphone-6');
+            cy.reload();
             cy.get('@container')
-                .find('nav > ul > li:nth-child(1) > a')
-                .should('have.attr', 'href', 'https://www.comicrelief.com/fundraising/pay-in-your-money');
+                .find('nav > ul > li:nth-child(1) a')
+                .should('have.attr', 'href', '#');
 
             //Donate
             cy.get('@container')

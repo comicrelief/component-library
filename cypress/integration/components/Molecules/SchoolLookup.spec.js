@@ -1,6 +1,6 @@
 describe('School Lookup component', () => {
   before(() => {
-        // go to school lookup component
+    // go to school lookup component
     cy.visit('/#schoollookup');
   });
 
@@ -73,52 +73,6 @@ describe('School Lookup component', () => {
         .find('button')
         .contains('View Code')
         .as('viewCodeBtn');
-    });
-
-    it('should verify schools lookup functionality', () => {
-      // Check if the API is up and running before running the tests.
-      cy.request({
-        url: 'https://lookups.sls.comicrelief.com/schools/lookup?query=NW5',
-        failOnStatusCode: false
-      })
-        .then(response => {
-          if (response.status >= 400) {
-            cy.get('@container')
-              .find('#school-lookup')
-              .type('se1 7tp')
-              .get('@container')
-              .find('[data-test="error-message"]')
-              .contains('Sorry, there was an unexpected error. Please try again');
-          } else {
-            // verify error message for non school postcode
-            cy.get('@container')
-              .find('#school-lookup')
-              .type('se1 7tp')
-              .get('@container')
-              .find('[data-test="error-message"]')
-              .contains('Sorry, we can\'t find this school');
-            // enter non-school name should give an error message
-            cy.get('@container')
-              .find('#school-lookup')
-              .clear()
-              .type('Comic Relief')
-              .get('@container')
-              .find('[data-test="error-message"]')
-              .contains('Sorry, we can\'t find this school');
-
-            // enter valid school name should show in the list
-            cy.get('@container')
-              .find('#school-lookup')
-              .clear()
-              .type('Alexandra')
-              .get('@container')
-              .find('ul > li:nth-child(2) span')
-              .contains('Alexandra Community Primary School, LL12 7AZ')
-              .get('@container')
-              .find('#school-lookup')
-              .clear();
-          }
-        });
     });
   });
 });

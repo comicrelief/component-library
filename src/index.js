@@ -29,6 +29,7 @@ export { default as Pagination } from './components/Atoms/Pagination/Pagination'
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
+export { default as Label } from './components/Atoms/Label/Label';
 
 /* Molecules */
 
@@ -55,6 +56,7 @@ export { default as SchoolLookup } from './components/Molecules/SchoolLookup/Sch
 export { default as SingleMessageDs } from './components/Molecules/SingleMessageDS/SingleMessageDs';
 export { default as Promo } from './components/Molecules/Promo/Promo';
 export { default as Accordion } from './components/Molecules/Accordion/Accordion';
+export { default as Countdown } from './components/Molecules/Countdown/Countdown';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';

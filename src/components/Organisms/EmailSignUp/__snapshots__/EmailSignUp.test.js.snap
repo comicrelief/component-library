@@ -17,7 +17,6 @@ exports[`renders ESU School correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -29,34 +28,7 @@ exports[`renders ESU School correctly 1`] = `
   font-weight: 400;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c7 {
-  width: 100%;
-  font-size: 1.25rem;
-  display: block;
-  box-sizing: border-box;
-  padding: 0.8rem 1.5rem;
-  padding-right: 4rem;
-  margin: 0;
-  position: relative;
-  height: 48px;
-  font-weight: 400;
-  background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
-  border: 1px solid;
-  border-color: #E1E2E3;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #000000;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-}
-
-.c7:focus {
-  border: 1px solid #666;
+  font-size: 1rem;
 }
 
 .c4 {
@@ -67,7 +39,6 @@ exports[`renders ESU School correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: bold;
   color: #5C5C5E;
 }
 
@@ -84,6 +55,34 @@ exports[`renders ESU School correctly 1`] = `
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.c7 {
+  width: 100%;
+  font-size: 1.25rem;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  padding-right: 4rem;
+  margin: 0;
+  position: relative;
+  height: 48px;
+  font-weight: 400;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.c7:focus {
+  border: 1px solid #666;
 }
 
 .c12 {
@@ -168,6 +167,12 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
 
 }
 
@@ -212,10 +217,13 @@ exports[`renders ESU School correctly 1`] = `
       <span
         className="c5 c6"
         color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Please choose an option",
+          }
+        }
         size="s"
-      >
-        Please choose an option
-      </span>
+      />
       <select
         className="c7"
         defaultValue=""
@@ -309,13 +317,37 @@ exports[`renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+}
+
+.c9 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .c11 {
-  font-weight: normal;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -331,57 +363,14 @@ exports[`renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c11:focus {
   border: 1px solid #666;
 }
 
-.c11:focus::-webkit-input-placeholder {
-  color: #666;
-}
-
-.c11:focus::-moz-placeholder {
-  color: #666;
-}
-
-.c11:focus:-ms-input-placeholder {
-  color: #666;
-}
-
-.c11:focus::placeholder {
-  color: #666;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: bold;
-  color: #5C5C5E;
-}
-
-.c9 {
-  visibility: border:0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c10 {
-  margin-top: 0.5rem;
   position: relative;
   font-size: 1.25rem;
 }
