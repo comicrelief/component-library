@@ -34,7 +34,7 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
 ## Iconography
 
 ```js
-import { External, Download, Favourite, Internal, Chevron, Arrow} from '../Icons/index';
+import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from '../Icons/index';
 
 <div>
   <div style={{ display: 'block', marginBottom: '10px' }}>
@@ -142,7 +142,19 @@ import { External, Download, Favourite, Internal, Chevron, Arrow} from '../Icons
       iconFirst
       icon={<Arrow direction="left" colour="white" />}
     >
-      Chevron Right
+      Arrow Left
+    </Link>
+  </div>
+
+  <div style={{ display: 'block', marginBottom: '10px' }}>
+    <Link
+      color="red"
+      href="#anchor"
+      target="blank"
+      type="button"
+      icon={<AtSign />}
+    >
+      At Sign
     </Link>
   </div>
 </div>;
