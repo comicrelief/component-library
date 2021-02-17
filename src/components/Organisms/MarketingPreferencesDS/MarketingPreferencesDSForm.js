@@ -4,10 +4,10 @@ import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import {
-  MarketingPreferencesRHF,
+  MarketingPreferencesDS,
   setInitialValues,
   buildValidationSchema
-} from './_MarketingPreferencesRHF';
+} from './_MarketingPreferencesDS';
 
 const validation = buildValidationSchema();
 const initialValues = setInitialValues();
@@ -20,7 +20,7 @@ const {
 /* This component exists purely to show the Marketing Preferences
   component working in the Component Library; applications are to
   provide their own form and validation based on these */
-const MarketingPreferencesRHFForm = () => {
+const MarketingPreferencesDSForm = () => {
   function customSubmitHandler() {
     console.log('customSubmitHandler');
   }
@@ -41,14 +41,8 @@ const MarketingPreferencesRHFForm = () => {
 
           <input type="submit" disabled={!formState.isValid} />
 
-          <MarketingPreferencesRHF
+          <MarketingPreferencesDS
             validationOptions={validationOptions}
-            inputFieldOverrides={{ mp_email: 'pooass' }}
-            // formValues={values}
-            // handleInputChange={handleChange}
-            // handleTouchedReset={setFieldTouched}
-            // setFieldValue={setFieldValue}
-            // validateField={validateField}
           />
 
         </form>
@@ -57,4 +51,4 @@ const MarketingPreferencesRHFForm = () => {
     </>
   );
 };
-export default MarketingPreferencesRHFForm;
+export default MarketingPreferencesDSForm;

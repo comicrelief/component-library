@@ -63,4 +63,4 @@ export { default as Membership } from './components/Organisms/Membership/Members
 export { default as MarketingPreferences } from './components/Organisms/MarketingPreferences/MarketingPreferences';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
 export { default as Chip } from './components/Molecules/Chip/Chip';
-export { MarketingPreferencesRHF, setInitialValues, buildValidationSchema } from './components/Organisms/MarketingPreferencesRHF/_MarketingPreferencesRHF';
+export { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';

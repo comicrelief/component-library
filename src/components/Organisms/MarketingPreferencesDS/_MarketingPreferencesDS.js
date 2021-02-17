@@ -10,13 +10,13 @@ import NoMessage from './_NoMessage';
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
   CopyWrapper, Head, FormField, ShowHideInputWrapper
-} from './MarketingPreferencesRHF.style';
+} from './MarketingPreferencesDS.style';
 
 import {
   setInitialValues, buildValidationSchema
 } from './_MarketingPrefsConfig';
 
-const MarketingPreferencesRHF = ({
+const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
   validationOptions
@@ -199,15 +199,15 @@ const MaybeDisabled = ({ children, disabled }) => {
   return children;
 };
 
-MarketingPreferencesRHF.propTypes = {
+MarketingPreferencesDS.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
   validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
-MarketingPreferencesRHF.defaultProps = {
+MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
   copyBottom: defaultCopyBottom
 };
 
-export { MarketingPreferencesRHF, setInitialValues, buildValidationSchema };
+export { MarketingPreferencesDS, setInitialValues, buildValidationSchema };

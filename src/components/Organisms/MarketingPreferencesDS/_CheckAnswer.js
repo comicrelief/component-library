@@ -8,7 +8,7 @@ import {
   CheckContainer,
   CheckLabel,
   CheckInput
-} from './MarketingPreferencesRHF.style';
+} from './MarketingPreferencesDS.style';
 
 const CheckAnswer = ({ name, validationOptions }) => {
   const {
