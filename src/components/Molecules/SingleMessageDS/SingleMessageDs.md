@@ -139,7 +139,7 @@ const Title = styled(Text)`
 </div>;
 ```
 
-## Using the linkIcon prop
+## Using the linkIcon prop (to display download icon)
 
 ```js
 const data = require('../../../styleguide/data/data').default;
