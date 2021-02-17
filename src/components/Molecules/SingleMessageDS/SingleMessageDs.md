@@ -138,3 +138,28 @@ const Title = styled(Text)`
     </SingleMessageDs>
 </div>;
 ```
+
+## Using the linkIcon prop
+
+```js
+const data = require('../../../styleguide/data/data').default;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
+import Download from '../../Atoms/Icons/Download';
+
+<div>
+    <SingleMessageDs
+      link="https://assets.ctfassets.net/zsfivwzfgl3t/EsIEuI1teYkbLB7peOtqP/b43a905cffd89115d642fe5a84ff020a/RND21_fundraise_moneybuys_poster.pdf"
+      linkLabel='Download this'
+      linkIcon={<Download />}
+      imageLow={data.image}
+      images={data.images}
+    >
+      <Text tag='p'>
+        Some text and stuff.
+      </Text>
+    </SingleMessageDs>
+</div>;
+```

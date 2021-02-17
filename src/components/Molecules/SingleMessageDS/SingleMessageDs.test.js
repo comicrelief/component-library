@@ -3,6 +3,7 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import SingleMessageDs from './SingleMessageDs';
 import Text from '../../Atoms/Text/Text';
+import Download from '../../Atoms/Icons/Download';
 import data from '../../../styleguide/data/data';
 
 it('renders correctly', () => {
@@ -21,6 +22,7 @@ it('renders correctly', () => {
       title="Heading Line 1 Heading Line 2"
       height="auto"
       imageLeft
+      linkIcon={<Download />}
     >
       <Text tag="p">
         Whatever you’ve got planned, the Sport Relief shop has everything you need
