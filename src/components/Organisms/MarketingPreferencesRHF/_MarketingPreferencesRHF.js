@@ -19,7 +19,6 @@ import {
 const MarketingPreferencesRHF = ({
   copyTop,
   copyBottom,
-  // inputFieldOverrides,
   validationOptions
 }) => {
   const { errors } = useFormContext();
@@ -203,24 +202,12 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferencesRHF.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
-  inputFieldOverrides: PropTypes.shape({
-    mp_email: PropTypes.string,
-    mp_mobile: PropTypes.string,
-    mp_phone: PropTypes.string,
-    mp_address1: PropTypes.string,
-    mp_address2: PropTypes.string,
-    mp_address3: PropTypes.string,
-    mp_town: PropTypes.string,
-    mp_country: PropTypes.string,
-    mp_postcode: PropTypes.string
-  })
+  validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 MarketingPreferencesRHF.defaultProps = {
   copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom,
-  inputFieldOverrides: null
+  copyBottom: defaultCopyBottom
 };
 
 export { MarketingPreferencesRHF, setInitialValues, buildValidationSchema };

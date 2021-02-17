@@ -38,39 +38,6 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   }
 `}`;
 
-/**
- * Label component
- */
-// const Label = styled.label`
-//   display: flex;
-//   flex-direction: column;
-//   font-weight: bold;
-//   color: ${({ theme }) => theme.color('grey_label')};
-// `;
-
-// /**
-//  * Label text component
-//  */
-// const TextLabel = styled(Text)`
-//   visibility: ${({ showLabel }) => !showLabel && hideVisually};
-//   position: relative;
-
-//   @media ${({ theme }) => theme.breakpoint('small')} {
-//     max-width: 290px;
-//   }
-
-//   ${({ isRequired }) => isRequired === false && `
-//   :after {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     content: 'Optional';
-//     font-weight: 400;
-//     font-size: 15px;
-//     line-height: 19.5px;
-//   }`}
-// `;
-
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};

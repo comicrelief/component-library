@@ -28,15 +28,7 @@ const MarketingPreferencesRHFForm = () => {
   const formMethods = useForm({
     mode: 'onChange',
     defaultValues: initialValues,
-
     resolver: yupResolver(validationSchema)
-    // reValidateMode: 'onChange',
-    // validationSchema: undefined, // Note: will be deprecated in the next major version with validationResolver
-    // validationResolver: undefined,
-    // validationContext: undefined,
-    // validateCriteriaMode: "firstErrorDetected",
-    // submitFocusError: true,
-    // nativeValidation: false, // Note: version 3 only
   });
 
   const { handleSubmit, formState } = formMethods;
@@ -51,11 +43,11 @@ const MarketingPreferencesRHFForm = () => {
 
           <MarketingPreferencesRHF
             validationOptions={validationOptions}
+            inputFieldOverrides={{ mp_email: 'pooass' }}
             // formValues={values}
             // handleInputChange={handleChange}
             // handleTouchedReset={setFieldTouched}
             // setFieldValue={setFieldValue}
-            // inputFieldOverrides={fieldOverrides}
             // validateField={validateField}
           />
 
