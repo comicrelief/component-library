@@ -28,7 +28,7 @@ const setInitialValues = overrideValues => {
 const buildValidationSchema = overrideOptions => {
   const defaultOptions = {
     mp_permissionEmail: {
-      // As per Formik's validation demands, sets the fields 'required' attribute for each checkbox option (yes & no),
+      // As per react-hook-form's validation requirements, sets the fields 'required' attribute for each checkbox option (yes & no),
       // also stopping it being rendered and included in the validation:
       yes: true,
       no: false,
@@ -68,7 +68,7 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_mobile: yup.string()
-    // Set 'required' Formik state based on config, show error if true
+      // Set 'required' rule based on config, show error if true
       .when('mp_permissionSMS', {
         is: val => (validationOptions.mp_permissionSMS[val]),
         then: yup.string().required('Please enter your mobile number')
@@ -81,12 +81,12 @@ const buildValidationSchema = overrideOptions => {
       }),
 
     mp_phone: yup.string()
-      // Set 'required' Formik state based on config, show error if true
+      // Set 'required' rule based on config, show error if true
       .when('mp_permissionPhone', {
         is: val => (validationOptions.mp_permissionPhone[val]),
         then: yup.string().required('Please enter your phone number')
       })
-      // yup-phone is too keen to validate all the time (regardless of Formik settings), so ensure checkbox checked and 'required' config
+      // yup-phone is too keen to validate all the time (regardless of react-hook-form settings), so ensure checkbox checked and 'required' config
       .when('mp_permissionPhone', {
         is: val => (!(validationOptions.mp_permissionPhone.disableOption)
           && val[0] !== undefined && validationOptions.mp_permissionPhone[val]),
@@ -111,10 +111,9 @@ const buildValidationSchema = overrideOptions => {
         })
     }),
 
-    // TO-DO: valid postcode check
     mp_postcode: yup.string().when('mp_permissionPost', {
       is: () => (!(validationOptions.mp_permissionPost.disableOption)),
-      then: yup.string().max(8, 'Please enter a maximum of 8 characters')
+      then: yup.string().matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
         .when('mp_permissionPost', {
           is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your postcode')
