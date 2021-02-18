@@ -29,25 +29,26 @@ const buildValidationSchema = overrideOptions => {
   const defaultOptions = {
     mp_permissionEmail: {
       // As per react-hook-form's validation requirements, sets the fields 'required' attribute for each checkbox option (yes & no),
-      // also stopping it being rendered and included in the validation:
+      // also stopping it being rendered and included in the validation.
+      // As the ERP currently needs values to provide an opt-out, will set these to all default to 'required' if option is chosen.
       yes: true,
-      no: false,
+      no: true,
       // Allows us to remove the option completely (checkboxes, input fields; the lot) from both render AND validation:
       disableOption: false
     },
     mp_permissionSMS: {
       yes: true,
-      no: false,
-      disableOption: false
-    },
-    mp_permissionPost: {
-      yes: true,
-      no: false,
+      no: true,
       disableOption: false
     },
     mp_permissionPhone: {
       yes: true,
-      no: false,
+      no: true,
+      disableOption: false
+    },
+    mp_permissionPost: {
+      yes: true,
+      no: true,
       disableOption: false
     }
   };
@@ -112,8 +113,9 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_postcode: yup.string().when('mp_permissionPost', {
-      is: () => (!(validationOptions.mp_permissionPost.disableOption)),
+      is: val => (!(validationOptions.mp_permissionPost.disableOption) && val[0] !== undefined && validationOptions.mp_permissionPost[val]),
       then: yup.string().matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
+      // then: yup.string().max(8, 'Please enter a maximum of 8 characters')
         .when('mp_permissionPost', {
           is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your postcode')

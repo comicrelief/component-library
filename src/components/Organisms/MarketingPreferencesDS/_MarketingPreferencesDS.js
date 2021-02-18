@@ -66,7 +66,7 @@ const MarketingPreferencesDS = ({
 
         <MaybeDisabled disabled={hideEmailInput}>
           <ShowHideInputWrapper show={emailChoice.length || errors.mp_email}>
-            {emailChoice === 'no' && <NoMessage askingFor="an email" /> }
+            {emailChoice[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
               fieldName="mp_email"
@@ -94,7 +94,7 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
           <ShowHideInputWrapper show={smsChoice.length || errors.mp_mobile}>
-            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" />}
+            {smsChoice[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
               fieldName="mp_mobile"
@@ -120,7 +120,7 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
           <ShowHideInputWrapper show={phoneChoice.length || errors.mp_phone}>
-            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
+            {phoneChoice[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_phone"
@@ -146,7 +146,7 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
           <ShowHideInputWrapper show={postChoice.length || isAddressErroring}>
-            {postChoice === 'no' ? <NoMessage askingFor="an address" /> : ''}
+            {postChoice[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_address1"
