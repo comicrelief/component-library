@@ -9,7 +9,11 @@ import PostIcon from './assets/CR_Mail.svg';
 import PhoneIcon from './assets/CR_Phone.svg';
 import SMSIcon from './assets/CR_SMS.svg';
 
-const CopyWrapper = styled.div`
+const TopCopyWrapper = styled.div`
+  margin: ${spacing('l')} 0;
+`;
+
+const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
 `;
 
@@ -143,7 +147,8 @@ const ShowHideInputWrapper = styled.div`
 `;
 
 export {
-  CopyWrapper,
+  TopCopyWrapper,
+  BottomCopyWrapper,
   Head,
   FormField,
   CheckLabel,

@@ -9,7 +9,7 @@ import NoMessage from './_NoMessage';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  CopyWrapper, Head, FormField, ShowHideInputWrapper
+  TopCopyWrapper, BottomCopyWrapper, Head, FormField, ShowHideInputWrapper
 } from './MarketingPreferencesDS.style';
 
 import {
@@ -52,7 +52,7 @@ const MarketingPreferencesDS = ({
 
   return (
     <>
-      {copyTop && <CopyWrapper>{copyTop}</CopyWrapper>}
+      {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
@@ -188,7 +188,7 @@ const MarketingPreferencesDS = ({
       </FormField>
       )}
 
-      {copyBottom && <CopyWrapper>{copyBottom}</CopyWrapper>}
+      {copyBottom && <BottomCopyWrapper>{copyBottom}</BottomCopyWrapper>}
     </>
   );
 };
