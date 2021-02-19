@@ -10,17 +10,22 @@ const TextInput = ({
   const { errors, register } = useFormContext();
 
   const props = {
-    id: fieldName,
     name: fieldName,
     type: fieldType,
     label,
     placeholder: label,
-    errorMsg: errors && errors[fieldName] && errors[fieldName].message,
+    errorMsg: errors && errors[fieldName]
+      && errors[fieldName].message,
     isRequired,
     'aria-required': isRequired,
-    labelProps: { className: errors && errors[fieldName] && errors[fieldName].message ? 'error-message' : '' },
+    labelProps: {
+      className: errors && errors[fieldName]
+      && errors[fieldName].message ? 'error-message' : ''
+    },
     ...rest
   };
+
+  console.log('Input: errors', errors);
 
   return <Input {...props} ref={register} />;
 };

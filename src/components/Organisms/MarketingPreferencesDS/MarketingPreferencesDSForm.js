@@ -13,8 +13,8 @@ const validation = buildValidationSchema();
 const initialValues = setInitialValues();
 
 const {
-  validationSchema,
-  validationOptions
+  mpValidationSchema,
+  mpValidationOptions
 } = validation;
 
 /* This component exists purely to show the Marketing Preferences
@@ -28,25 +28,19 @@ const MarketingPreferencesDSForm = () => {
   const formMethods = useForm({
     mode: 'onChange',
     defaultValues: initialValues,
-    resolver: yupResolver(validationSchema)
+    resolver: yupResolver(mpValidationSchema)
   });
 
-  const { handleSubmit, formState } = formMethods;
-
-  console.log('formState', formState);
+  const { handleSubmit } = formMethods;
 
   return (
     <>
       <FormProvider {...formMethods}>
-
         <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
-
           <input type="submit" />
-
           <MarketingPreferencesDS
-            validationOptions={validationOptions}
+            validationOptions={mpValidationOptions}
           />
-
         </form>
       </FormProvider>
 

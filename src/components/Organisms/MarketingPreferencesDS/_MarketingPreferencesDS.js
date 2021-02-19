@@ -28,10 +28,11 @@ const MarketingPreferencesDS = ({
   const postChoice = useWatch({ name: 'mp_permissionPost', defaultValue: [] });
   const phoneChoice = useWatch({ name: 'mp_permissionPhone', defaultValue: [] });
   const smsChoice = useWatch({ name: 'mp_permissionSMS', defaultValue: [] });
+  const mpValidationOptions = validationOptions;
 
   const {
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
-  } = validationOptions;
+  } = mpValidationOptions;
 
   // If the field is not required for each No/Yes choice, hide it
   const hideEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
@@ -61,7 +62,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer validationOptions={validationOptions} name="mp_permissionEmail" />
+          <CheckAnswer validationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -74,6 +75,7 @@ const MarketingPreferencesDS = ({
               // Dynamically update the field attr based on config for current choice
               isRequired={mp_permissionEmail[emailChoice]}
               type="email"
+              id="mp_email"
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -89,7 +91,8 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionSMS"
-            validationOptions={validationOptions}
+            id="mp_permissionSMS"
+            validationOptions={mpValidationOptions}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -100,6 +103,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_mobile"
               label="Please enter your mobile no."
               isRequired={mp_permissionSMS[smsChoice]}
+              id="mp_mobile"
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -115,7 +119,8 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPhone"
-            validationOptions={validationOptions}
+            validationOptions={mpValidationOptions}
+            id="mp_permissionPhone"
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -126,6 +131,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_phone"
               label="Please enter your phone no."
               isRequired={mp_permissionPhone[phoneChoice]}
+              id="mp_phone"
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -141,7 +147,8 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPost"
-            validationOptions={validationOptions}
+            validationOptions={mpValidationOptions}
+            id="mp_permissionPost"
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
@@ -152,36 +159,43 @@ const MarketingPreferencesDS = ({
               fieldName="mp_address1"
               label="Address Line 1"
               isRequired={mp_permissionPost[postChoice]}
+              id="mp_address1"
             />
             <TextInput
               placeholder=""
               fieldName="mp_address2"
               label="Address Line 2"
               isRequired={false}
+              id="mp_address2"
+
             />
             <TextInput
               placeholder=""
               fieldName="mp_address3"
               label="Address Line 3"
               isRequired={false}
+              id="mp_address3"
             />
             <TextInput
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
               isRequired={mp_permissionPost[postChoice]}
+              id="mp_town"
             />
             <TextInput
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
               isRequired={mp_permissionPost[postChoice]}
+              id="mp_postcode"
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
               isRequired={mp_permissionPost[postChoice]}
+              id="mp_country"
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -210,4 +224,6 @@ MarketingPreferencesDS.defaultProps = {
   copyBottom: defaultCopyBottom
 };
 
-export { MarketingPreferencesDS, setInitialValues, buildValidationSchema };
+export {
+  MarketingPreferencesDS, setInitialValues, buildValidationSchema
+};
