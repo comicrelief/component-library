@@ -115,7 +115,6 @@ const buildValidationSchema = overrideOptions => {
     mp_postcode: yup.string().when('mp_permissionPost', {
       is: val => (!(validationOptions.mp_permissionPost.disableOption) && val[0] !== undefined && validationOptions.mp_permissionPost[val]),
       then: yup.string().matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
-      // then: yup.string().max(8, 'Please enter a maximum of 8 characters')
         .when('mp_permissionPost', {
           is: val => (validationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your postcode')

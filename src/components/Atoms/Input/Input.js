@@ -8,7 +8,7 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
-//  the element with JS.)
+//  the element with JS)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
 const InputField = styled.input`${({ theme, error, prefixLength }) => css`

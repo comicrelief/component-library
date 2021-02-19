@@ -33,13 +33,15 @@ const MarketingPreferencesDSForm = () => {
 
   const { handleSubmit, formState } = formMethods;
 
+  console.log('formState', formState);
+
   return (
     <>
       <FormProvider {...formMethods}>
 
-        <form onSubmit={handleSubmit(customSubmitHandler)}>
+        <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
 
-          <input type="submit" disabled={!formState.isValid} />
+          <input type="submit" />
 
           <MarketingPreferencesDS
             validationOptions={validationOptions}

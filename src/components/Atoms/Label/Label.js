@@ -12,7 +12,7 @@ const LabelElement = styled.label`
   color: ${({ theme }) => theme.color('grey_label')}; 
 `;
 const VisibleText = styled(Text).attrs({ weight: 'bold' })`
-  margin-bottom: ${spacing('sm')}
+  margin-bottom: ${spacing('sm')};
 
   ${({ isRequired }) => isRequired === false && `
   :after {
