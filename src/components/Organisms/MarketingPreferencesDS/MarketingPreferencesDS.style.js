@@ -80,12 +80,10 @@ const CheckContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${spacing('md')};
   font-size: ${({ theme }) => theme.fontSize('md')};
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   ${media('small')} {
     width: 380px;
-    margin-bottom: ${spacing('sm')};
   }
 `;
 
