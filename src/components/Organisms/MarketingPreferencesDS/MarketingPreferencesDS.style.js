@@ -10,7 +10,7 @@ import PhoneIcon from './assets/CR_Phone.svg';
 import SMSIcon from './assets/CR_SMS.svg';
 
 const CopyWrapper = styled.div`
-  margin: ${spacing('l')} 0;
+  margin: ${spacing('md')} 0;
 `;
 
 const Head = styled.div`
