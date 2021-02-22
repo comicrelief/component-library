@@ -25,8 +25,6 @@ const TextInput = ({
     ...rest
   };
 
-  console.log('Input: errors', errors);
-
   return <Input {...props} ref={register} />;
 };
 
