@@ -9,13 +9,13 @@ import {
   buildValidationSchema
 } from './_MarketingPreferencesDS';
 
-const validation = buildValidationSchema();
+const mpValidation = buildValidationSchema();
 const initialValues = setInitialValues();
 
 const {
   mpValidationSchema,
   mpValidationOptions
-} = validation;
+} = mpValidation;
 
 /* This component exists purely to show the Marketing Preferences
   component working in the Component Library; applications are to

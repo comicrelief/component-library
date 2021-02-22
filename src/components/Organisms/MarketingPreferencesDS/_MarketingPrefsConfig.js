@@ -57,45 +57,35 @@ const buildValidationSchema = overrideOptions => {
   const mpValidationOptions = merge(defaultOptions, overrideOptions);
 
   const mpValidationSchema = yup.object({
-
-    // ONLY THIS SUPER SIMPLE STUFF WORKS WITH NESTED OBJS!
-    // marketing_prefs: yup.object({
-    //   mp_email: yup.string().required('Please enter your first naeeme')
-    // , )}
-
     mp_email: yup.string().when('mp_permissionEmail', {
-      is: val => (!(mpValidationOptions.mp_permissionEmail.disableOption || mpValidationOptions.mp_permissionEmail.hideInput) && val[0] !== null),
+      is: () => (!(mpValidationOptions.mp_permissionEmail.disableOption || mpValidationOptions.mp_permissionEmail.hideInput)),
       then: yup.string().email('Please enter a valid email address')
-        // Set the 'required' attribute based on the associated config
+      // Set the 'required' attribute based on the associated config
         .when('mp_permissionEmail', {
-          is: val => (mpValidationOptions.mp_permissionEmail[val] && val[0] !== null),
+          is: val => (mpValidationOptions.mp_permissionEmail[val]),
           then: yup.string().required('Please enter your email address')
         })
     }),
 
     mp_mobile: yup.string()
-    // Set 'required' rule based on config, show error if true
+      // Set 'required' rule based on config, show error if true
       .when('mp_permissionSMS', {
         is: val => (mpValidationOptions.mp_permissionSMS[val]),
         then: yup.string().required('Please enter your mobile number')
       })
-      // yup-phone is too keen to validate all the time (regardless of Formik settings), so ensure checkbox checked and 'required' config
       .when('mp_permissionSMS', {
-        is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption)
-                    && val[0] !== undefined && mpValidationOptions.mp_permissionSMS[val]),
+        is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption) && mpValidationOptions.mp_permissionSMS[val]),
         then: yup.string().phone('GB', false, 'Please enter a valid mobile number')
       }),
 
     mp_phone: yup.string()
-    // Set 'required' rule based on config, show error if true
+      // Set 'required' rule based on config, show error if true
       .when('mp_permissionPhone', {
         is: val => (mpValidationOptions.mp_permissionPhone[val]),
         then: yup.string().required('Please enter your phone number')
       })
-    // yup-phone is too keen to validate all the time (regardless of react-hook-form settings), so ensure checkbox checked and 'required' config
       .when('mp_permissionPhone', {
-        is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption)
-            && val[0] !== undefined && mpValidationOptions.mp_permissionPhone[val]),
+        is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption) && mpValidationOptions.mp_permissionPhone[val]),
         then: yup.string().phone('GB', false, 'Please enter a valid phone number')
       }),
 
@@ -138,7 +128,6 @@ const buildValidationSchema = overrideOptions => {
     /*  Non-required fields */
     mp_address2: yup.string().max(50, 'Please enter a maximum of 50 characters'),
     mp_address3: yup.string().max(50, 'Please enter a maximum of 50 characters')
-
   });
 
   return {
