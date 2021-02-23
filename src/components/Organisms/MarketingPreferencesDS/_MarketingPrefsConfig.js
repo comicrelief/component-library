@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import * as yup from 'yup';
 import 'yup-phone';
 import { merge } from 'lodash';
@@ -22,18 +21,22 @@ const setInitialValues = overrideValues => {
 
   // Override with any custom options supplied
   const updatedValues = merge(defaultValues, overrideValues);
+
   return updatedValues;
 };
 
 const buildValidationSchema = overrideOptions => {
   const defaultOptions = {
     mp_permissionEmail: {
-      // As per react-hook-form's validation requirements, sets the fields 'required' attribute for each checkbox option (yes & no),
-      // also stopping it being rendered and included in the validation.
-      // As the ERP currently needs values to provide an opt-out, will set these to all default to 'required' if option is chosen.
+      /**
+        * As per react-hook-form's validation requirements, sets the fields' required attribute
+        * for each checkbox option (Yes & No), a non-required field isn't rendered or included
+        * in the validation. As ERP *currently* needs values to formalise a user's opt-out,
+        * we'll set all fields to 'required' by default (once the option is chosen).
+        */
       yes: true,
       no: true,
-      // Allows us to remove the option completely (checkboxes, input fields; the lot) from both render AND validation:
+      // Allows complete removal of the option (checkboxes & fields) from both render & validation.
       disableOption: false
     },
     mp_permissionSMS: {
@@ -58,9 +61,10 @@ const buildValidationSchema = overrideOptions => {
 
   const mpValidationSchema = yup.object({
     mp_email: yup.string().when('mp_permissionEmail', {
-      is: () => (!(mpValidationOptions.mp_permissionEmail.disableOption || mpValidationOptions.mp_permissionEmail.hideInput)),
+      is: () => (!(mpValidationOptions.mp_permissionEmail.disableOption
+        || mpValidationOptions.mp_permissionEmail.hideInput)),
       then: yup.string().email('Please enter a valid email address')
-      // Set the 'required' attribute based on the associated config
+      // Uses the config options to determine if 'required' validation is needed
         .when('mp_permissionEmail', {
           is: val => (mpValidationOptions.mp_permissionEmail[val]),
           then: yup.string().required('Please enter your email address')
@@ -68,24 +72,24 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_mobile: yup.string()
-      // Set 'required' rule based on config, show error if true
       .when('mp_permissionSMS', {
         is: val => (mpValidationOptions.mp_permissionSMS[val]),
         then: yup.string().required('Please enter your mobile number')
       })
       .when('mp_permissionSMS', {
-        is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption) && mpValidationOptions.mp_permissionSMS[val]),
+        is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption)
+        && mpValidationOptions.mp_permissionSMS[val]),
         then: yup.string().phone('GB', false, 'Please enter a valid mobile number')
       }),
 
     mp_phone: yup.string()
-      // Set 'required' rule based on config, show error if true
       .when('mp_permissionPhone', {
         is: val => (mpValidationOptions.mp_permissionPhone[val]),
         then: yup.string().required('Please enter your phone number')
       })
       .when('mp_permissionPhone', {
-        is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption) && mpValidationOptions.mp_permissionPhone[val]),
+        is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption)
+        && mpValidationOptions.mp_permissionPhone[val]),
         then: yup.string().phone('GB', false, 'Please enter a valid phone number')
       }),
 
@@ -108,7 +112,8 @@ const buildValidationSchema = overrideOptions => {
     }),
 
     mp_postcode: yup.string().when('mp_permissionPost', {
-      is: val => (!(mpValidationOptions.mp_permissionPost.disableOption) && val[0] !== undefined && mpValidationOptions.mp_permissionPost[val]),
+      is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
+      && mpValidationOptions.mp_permissionPost[val]),
       then: yup.string().matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
         .when('mp_permissionPost', {
           is: val => (mpValidationOptions.mp_permissionPost[val]),
@@ -118,7 +123,7 @@ const buildValidationSchema = overrideOptions => {
 
     mp_country: yup.string().when('mp_permissionPost', {
       is: () => (!(mpValidationOptions.mp_permissionPost.disableOption)),
-      then: yup.string().max(20, 'Please enter a maximum of 20 characters')
+      then: yup.string().max(50, 'Please enter a maximum of 50 characters')
         .when('mp_permissionPost', {
           is: val => (mpValidationOptions.mp_permissionPost[val]),
           then: yup.string().required('Please enter your country')

@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -17,9 +16,11 @@ const {
   mpValidationOptions
 } = mpValidation;
 
-/* This component exists purely to show the Marketing Preferences
-  component working in the Component Library; applications are to
-  provide their own form and validation based on these */
+/*
+* This component exists purely to show the Marketing Preferences component functioning
+* within the Component Library; applications are to provide their own react-hook-form form
+* and validation, based on these
+*/
 const MarketingPreferencesDSForm = () => {
   function customSubmitHandler() {
     // eslint-disable-next-line no-console
@@ -27,7 +28,8 @@ const MarketingPreferencesDSForm = () => {
   }
 
   const formMethods = useForm({
-    mode: 'onChange',
+    mode: 'onBlur',
+    reValidateMode: 'onBlur',
     defaultValues: initialValues,
     resolver: yupResolver(mpValidationSchema)
   });

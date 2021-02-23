@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */ // sorry but wtf does it matter
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch, useFormContext } from 'react-hook-form';
