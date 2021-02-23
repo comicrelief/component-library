@@ -33,6 +33,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
+      width: 100%;
     }
 
     .c7 {
@@ -116,6 +117,12 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c4 {
+        max-width: 290px;
+      }
+    }
+
+    @media (min-width:740px) {
       .c9 {
         max-width: 290px;
       }
@@ -166,6 +173,7 @@ it('renders correctly', () => {
                   name="search"
                   onChange={[Function]}
                   placeholder=""
+                  required={false}
                   role="searchbox"
                   type="text"
                   value=""

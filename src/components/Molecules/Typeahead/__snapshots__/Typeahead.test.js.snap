@@ -20,6 +20,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c3 {
@@ -60,6 +61,12 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c1 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
     max-width: 290px;
   }
@@ -95,6 +102,7 @@ exports[`renders correctly 1`] = `
         name="q"
         onChange={[Function]}
         placeholder="Type to start searching..."
+        required={false}
         type="text"
         value=""
       />

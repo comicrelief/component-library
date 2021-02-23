@@ -39,6 +39,7 @@ exports[`renders correctly with error message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c14 {
@@ -70,8 +71,8 @@ exports[`renders correctly with error message 1`] = `
 .c18:before {
   position: relative;
   content: '';
-  top: 2px;
-  margin-right: 6px;
+  top: 1px;
+  margin-right: 3px;
   background: url(mock.asset) left 0/100% no-repeat;
   width: 18px;
   height: 19px;
@@ -286,6 +287,12 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
+  .c11 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c18 {
     max-width: 290px;
   }
@@ -408,6 +415,7 @@ exports[`renders correctly with error message 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={false}
                 type="email"
                 value=""
               />
@@ -561,6 +569,7 @@ exports[`renders correctly with modal open 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c14 {
@@ -784,6 +793,12 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
+  .c11 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c16 {
     max-width: 290px;
   }
@@ -900,6 +915,7 @@ exports[`renders correctly with modal open 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={false}
                 type="email"
                 value=""
               />

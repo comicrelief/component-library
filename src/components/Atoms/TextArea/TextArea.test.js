@@ -36,6 +36,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
+      width: 100%;
     }
 
     .c2 {
@@ -79,6 +80,12 @@ it('renders correctly', () => {
 
     .c3:focus::placeholder {
       visibility: hidden;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        max-width: 290px;
+      }
     }
 
     <label

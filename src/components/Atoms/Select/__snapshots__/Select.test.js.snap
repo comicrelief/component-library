@@ -20,6 +20,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c2 {
@@ -52,6 +53,12 @@ exports[`renders correctly 1`] = `
 
 .c3:focus {
   border: 1px solid #666;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    max-width: 290px;
+  }
 }
 
 @media (min-width:740px) {

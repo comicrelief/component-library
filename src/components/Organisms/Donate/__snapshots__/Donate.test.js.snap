@@ -80,6 +80,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c24 {
@@ -515,6 +516,12 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c21 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c26 {
     max-width: 290px;
   }
@@ -762,6 +769,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 10"
                 />
@@ -794,6 +802,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 20"
                 />
@@ -826,6 +835,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 30"
                 />
@@ -872,6 +882,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={false}
                   step="0.01"
                   type="number"
                   value=" "
@@ -972,6 +983,7 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c18 {
@@ -1290,6 +1302,12 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c15 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c20 {
     max-width: 290px;
   }
@@ -1498,6 +1516,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 10"
                 />
@@ -1530,6 +1549,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 20"
                 />
@@ -1562,6 +1582,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
+                  required={false}
                   type="button"
                   value="£ 30"
                 />
@@ -1608,6 +1629,7 @@ exports[`Single donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={false}
                   step="0.01"
                   type="number"
                   value={20}
@@ -1707,6 +1729,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c18 {
@@ -1931,6 +1954,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c15 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c20 {
     max-width: 290px;
   }
@@ -2110,6 +2139,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={false}
                   step="0.01"
                   type="number"
                   value=" "

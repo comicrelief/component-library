@@ -35,6 +35,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
+      width: 100%;
     }
 
     .c2 {
@@ -71,6 +72,12 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c0 {
+        max-width: 290px;
+      }
+    }
+
+    @media (min-width:740px) {
       .c4 {
         max-width: 290px;
       }
@@ -100,6 +107,7 @@ it('renders correctly', () => {
           id="Accessibility info go here"
           name="fullname"
           placeholder="This is the hint text"
+          required={false}
           type="text"
         />
       </div>

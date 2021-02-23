@@ -41,6 +41,7 @@ exports[`renders ESU School correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c6 {
@@ -170,6 +171,12 @@ exports[`renders ESU School correctly 1`] = `
 @media (min-width:740px) {
   .c8 {
     font-size: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    max-width: 290px;
   }
 }
 
@@ -332,6 +339,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c9 {
@@ -472,6 +480,12 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c6 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c11 {
     max-width: 290px;
   }
@@ -543,6 +557,7 @@ exports[`renders correctly 1`] = `
           name="email"
           onChange={[Function]}
           placeholder="example@youremail.com"
+          required={false}
           type="email"
           value=""
         />
