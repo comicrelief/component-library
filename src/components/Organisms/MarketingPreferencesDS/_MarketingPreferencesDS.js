@@ -56,12 +56,12 @@ const MarketingPreferencesDS = ({
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
-      <FormField className="field-email" userSelection={emailChoice}>
+      <FormField className="field-email">
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" />
+          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice} />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -83,7 +83,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
-      <FormField className="field-sms" userSelection={smsChoice}>
+      <FormField className="field-sms">
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Text me
@@ -92,6 +92,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
+            userSelection={smsChoice}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -111,7 +112,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
-      <FormField className="field-phone" userSelection={phoneChoice}>
+      <FormField className="field-phone">
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Phone me
@@ -120,6 +121,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
+            userSelection={phoneChoice}
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -139,7 +141,7 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
-      <FormField className="field-post" userSelection={postChoice}>
+      <FormField className="field-post">
         <Head>
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Send me post
@@ -148,6 +150,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
+            userSelection={postChoice}
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
@@ -23,7 +23,7 @@ const Head = styled.div`
   flex-direction: column;
 `;
 
-const FormField = styled.div`
+const FormField = styled.div`${({ theme }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
 
@@ -31,25 +31,16 @@ const FormField = styled.div`
     position: relative;
     margin-bottom: ${spacing('md')};
     width: 48%;
-    padding: 12px;
-    border: 1px solid ${({ theme }) => theme.color('grey')};;
+    padding: 10px;
+    border: 1px solid ${theme.color('grey')};
     box-sizing: border-box;
     border-radius: 8px;
-    color: ${({ theme }) => theme.color('grey_dark')};
-    font-size: 12px; // TO-DO MOVE THESE STYLES TO CHECKBOX SPECIFIC CONTEXT
-    position: relative;
+    color: ${theme.color('grey_dark')};
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      font-size: 16px;
+    @media ${theme.breakpoint('small')} {
       padding: 12px 16px;
     }
   }
-
-  ${({ userSelection, theme }) => userSelection && `
-    label[for$="${userSelection}"] {
-      background: ${theme.color('grey_medium')};
-    }
-  `}
 
   h3 {
     position: relative;
@@ -81,22 +72,52 @@ const FormField = styled.div`
   &.field-post h3:before {
     background: url(${PostIcon}) top left/contain no-repeat;
   }
-`;
+  `}`;
 
-const CheckContainer = styled.div`
+const CheckContainer = styled.div`${({ theme }) => css`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: ${({ theme }) => theme.fontSize('md')};
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  font-size: ${theme.fontSize('md')};
+  font-family: ${theme.fontFamilies(theme.font.regular)};
+
   ${media('small')} {
     width: 380px;
   }
-`;
+  `}`;
 
-const CheckLabel = styled.label`
+const CheckLabel = styled.label`${({ theme, userSelection }) => css`
   display: flex;
   align-items: center;
+  font-size: ${theme.fontSize('xs')};
+  padding: 10px;
+
+  @media ${theme.breakpoint('small')} {
+    font-size: ${theme.fontSize('s')};
+    padding: 12px 16px;
+  }
+  
+  &:hover,
+  &:focus {
+    border: 2px solid ${theme.color('grey')};
+    padding: 9px;
+    @media ${theme.breakpoint('small')} {
+      padding: 11px 15px;
+    }
+  }
+
+  ${userSelection && `
+    &[for$="${userSelection}"] {
+      background: ${theme.color('grey_medium')};
+      padding: 9px;
+      border: 2px solid ${theme.color('grey')};
+
+      @media ${theme.breakpoint('small')} {
+        padding: 11px 15px;
+      }
+    }
+  `}
+`}
 `;
 
 const CheckInput = styled.input`
@@ -130,8 +151,8 @@ const CheckInput = styled.input`
     background-size: contain;
   }
   :focus + span {
-    border-color: ${({ theme }) => theme.color('grey_for_forms')};
-    border-width: 3px;
+    // border-color: ${({ theme }) => theme.color('grey_for_forms')};
+    // border-width: 3px;
   }
 `;
 

@@ -9,7 +9,7 @@ import {
   CheckInput
 } from './MarketingPreferencesDS.style';
 
-const CheckAnswer = ({ name, mpValidationOptions }) => {
+const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
   const {
     register, setValue, clearErrors
   } = useFormContext();
@@ -40,7 +40,7 @@ const CheckAnswer = ({ name, mpValidationOptions }) => {
 
   return (
     <CheckContainer>
-      <CheckLabel htmlFor={`${name}-yes`}>
+      <CheckLabel htmlFor={`${name}-yes`} userSelection={userSelection}>
         <CheckInput
           type="checkbox"
           name={name}
@@ -52,7 +52,7 @@ const CheckAnswer = ({ name, mpValidationOptions }) => {
         <span />
         Yes, please
       </CheckLabel>
-      <CheckLabel htmlFor={`${name}-no`}>
+      <CheckLabel htmlFor={`${name}-no`} userSelection={userSelection}>
         <CheckInput
           type="checkbox"
           id={`${name}-no`}
@@ -65,15 +65,19 @@ const CheckAnswer = ({ name, mpValidationOptions }) => {
         No, thanks
       </CheckLabel>
     </CheckContainer>
-
   );
+};
+
+CheckAnswer.defaultProps = {
+  userSelection: null
 };
 
 CheckAnswer.propTypes = {
   name: PropTypes.string.isRequired,
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
-  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
+  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
+  userSelection: PropTypes.string
 };
 
 export default CheckAnswer;

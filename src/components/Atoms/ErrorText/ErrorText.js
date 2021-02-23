@@ -31,7 +31,6 @@ const ErrorIcon = styled.span`
   @media ${({ theme }) => theme.breakpoint('small')} {
     max-width: 290px;
   }
-
 `;
 
 const ErrorText = ({ children, ...rest }) => (
