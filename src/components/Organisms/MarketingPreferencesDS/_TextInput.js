@@ -18,10 +18,6 @@ const TextInput = ({
       && errors[fieldName].message,
     isRequired,
     'aria-required': isRequired,
-    labelProps: {
-      className: errors && errors[fieldName]
-      && errors[fieldName].message ? 'error-message' : ''
-    },
     ...rest
   };
 

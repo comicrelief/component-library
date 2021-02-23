@@ -37,7 +37,7 @@ const MarketingPreferencesDSForm = () => {
         <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
           <input type="submit" />
           <MarketingPreferencesDS
-            validationOptions={mpValidationOptions}
+            mpValidationOptions={mpValidationOptions}
           />
         </form>
       </FormProvider>

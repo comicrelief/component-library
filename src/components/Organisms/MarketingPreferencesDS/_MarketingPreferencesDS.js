@@ -19,7 +19,7 @@ import {
 const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
-  validationOptions
+  mpValidationOptions
 }) => {
   const { errors } = useFormContext();
 
@@ -28,7 +28,6 @@ const MarketingPreferencesDS = ({
   const postChoice = useWatch({ name: 'mp_permissionPost', defaultValue: [] });
   const phoneChoice = useWatch({ name: 'mp_permissionPhone', defaultValue: [] });
   const smsChoice = useWatch({ name: 'mp_permissionSMS', defaultValue: [] });
-  const mpValidationOptions = validationOptions;
 
   const {
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
@@ -62,7 +61,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer validationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" />
+          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -92,7 +91,7 @@ const MarketingPreferencesDS = ({
           <CheckAnswer
             name="mp_permissionSMS"
             id="mp_permissionSMS"
-            validationOptions={mpValidationOptions}
+            mpValidationOptions={mpValidationOptions}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -119,7 +118,7 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPhone"
-            validationOptions={mpValidationOptions}
+            mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
           />
         </Head>
@@ -147,7 +146,7 @@ const MarketingPreferencesDS = ({
           </Text>
           <CheckAnswer
             name="mp_permissionPost"
-            validationOptions={mpValidationOptions}
+            mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
           />
         </Head>
@@ -216,7 +215,9 @@ const MaybeDisabled = ({ children, disabled }) => {
 MarketingPreferencesDS.propTypes = {
   copyTop: PropTypes.node,
   copyBottom: PropTypes.node,
-  validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
+  /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
+  in the parent to set-up the validation, but also required here for additional functionality */
+  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 MarketingPreferencesDS.defaultProps = {

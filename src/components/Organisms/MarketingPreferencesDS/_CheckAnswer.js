@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-import associatedFields from './_HelperFunctions';
+import AssociatedFields from './_AssociatedFields';
 
 import {
   CheckContainer,
@@ -9,7 +9,7 @@ import {
   CheckInput
 } from './MarketingPreferencesDS.style';
 
-const CheckAnswer = ({ name, validationOptions }) => {
+const CheckAnswer = ({ name, mpValidationOptions }) => {
   const {
     register, setValue, clearErrors
   } = useFormContext();
@@ -27,10 +27,10 @@ const CheckAnswer = ({ name, validationOptions }) => {
 
     /* If the click represents either a 'none selected' or a 'not required' option
       (set in config), reset the value and error for all fields associated with this checkbox */
-    const reValidate = !validationOptions[name][newVal];
+    const reValidate = !mpValidationOptions[name][newVal];
 
     if (reValidate) {
-      const theseFields = associatedFields[name];
+      const theseFields = AssociatedFields[name];
       theseFields.forEach(fieldName => {
         setValue(fieldName, '');
         clearErrors(fieldName);
@@ -71,7 +71,9 @@ const CheckAnswer = ({ name, validationOptions }) => {
 
 CheckAnswer.propTypes = {
   name: PropTypes.string.isRequired,
-  validationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
+  /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
+  in the parent to set-up the validation, but also required here for additional functionality */
+  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 
 export default CheckAnswer;

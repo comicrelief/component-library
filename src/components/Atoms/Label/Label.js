@@ -9,7 +9,8 @@ import hideVisually from '../../../theme/shared/hideVisually';
 const LabelElement = styled.label`
   display: flex;
   flex-direction: column;
-  color: ${({ theme }) => theme.color('grey_label')}; 
+  color: ${({ theme }) => theme.color('grey_label')};
+  position: relative;
 `;
 const VisibleText = styled(Text).attrs({ weight: 'bold' })`
   margin-bottom: ${spacing('sm')};

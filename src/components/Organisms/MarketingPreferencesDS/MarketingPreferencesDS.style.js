@@ -36,7 +36,8 @@ const FormField = styled.div`
     box-sizing: border-box;
     border-radius: 8px;
     color: ${({ theme }) => theme.color('grey_dark')};
-    font-size: 12px;
+    font-size: 12px; // TO-DO MOVE THESE STYLES TO CHECKBOX SPECIFIC CONTEXT
+    position: relative;
 
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: 16px;
