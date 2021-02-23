@@ -95,6 +95,16 @@ it("renders correctly", () => {
       margin-bottom: 0.5rem;
     }
 
+    .c17:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: 'Optional';
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19.5px;
+    }
+
     .c19 {
       position: relative;
       box-sizing: border-box;
@@ -485,7 +495,7 @@ it("renders correctly", () => {
                       name="mship-1--moneyBuy1"
                       onClick={[Function]}
                       placeholder=""
-                      required={null}
+                      required={true}
                       type="button"
                       value="£ 5"
                     />
@@ -518,7 +528,7 @@ it("renders correctly", () => {
                       name="mship-1--moneyBuy2"
                       onClick={[Function]}
                       placeholder=""
-                      required={null}
+                      required={true}
                       type="button"
                       value="£ 10"
                     />
@@ -551,7 +561,7 @@ it("renders correctly", () => {
                       name="mship-1--moneyBuy3"
                       onClick={[Function]}
                       placeholder=""
-                      required={null}
+                      required={true}
                       type="button"
                       value="£ 20"
                     />
@@ -600,7 +610,7 @@ it("renders correctly", () => {
                       onKeyPress={[Function]}
                       pattern="[^[0-9]+([,.][0-9]+)?$]"
                       placeholder="0.00"
-                      required={null}
+                      required={true}
                       step="0.01"
                       type="number"
                       value=""

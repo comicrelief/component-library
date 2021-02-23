@@ -25,6 +25,16 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
+.c3:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: 'Optional';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.5px;
+}
+
 .c5 {
   position: relative;
   box-sizing: border-box;
@@ -94,7 +104,7 @@ exports[`renders correctly 1`] = `
         name="school-lookup"
         onChange={[Function]}
         placeholder="Type to start search"
-        required={null}
+        required={true}
         type="text"
         value=""
       />

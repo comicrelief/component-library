@@ -541,7 +541,7 @@ exports[`renders correctly 1`] = `
           name="email"
           onChange={[Function]}
           placeholder="example@youremail.com"
-          required={null}
+          required={true}
           type="email"
           value=""
         />

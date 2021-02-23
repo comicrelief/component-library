@@ -40,6 +40,16 @@ it("renders correctly", () => {
       margin-bottom: 0.5rem;
     }
 
+    .c2:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: 'Optional';
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19.5px;
+    }
+
     .c4 {
       position: relative;
       box-sizing: border-box;
@@ -99,7 +109,7 @@ it("renders correctly", () => {
           id="Accessibility info go here"
           name="fullname"
           placeholder="This is the hint text"
-          required={null}
+          required={true}
           type="text"
         />
       </div>
