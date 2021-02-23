@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import alertIcon from '../Input/assets/error-alert-icon.png';
+import alertIcon from '../Input/assets/CR_Error--red.svg';
 
 const ErrorIcon = styled.span`
   display: inline-block;
@@ -18,8 +18,8 @@ const ErrorIcon = styled.span`
   :before {
     position: relative;
     content: '';
-    top: 2px;
-    margin-right: 6px;
+    top: 1px;
+    margin-right: 3px;
     background: url(${alertIcon}) left 0/100% no-repeat;
     width: 18px;
     height: 19px;
