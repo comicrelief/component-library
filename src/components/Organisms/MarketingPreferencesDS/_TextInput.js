@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-import Input from '../../Atoms/Input/Input';
+import { MarketingPrefsInput } from './MarketingPreferencesDS.style';
 
 const TextInput = ({
   fieldName, label,
@@ -21,7 +21,7 @@ const TextInput = ({
     ...rest
   };
 
-  return <Input {...props} ref={register} />;
+  return <MarketingPrefsInput {...props} ref={register} />;
 };
 
 TextInput.defaultProps = {

@@ -71,6 +71,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c21 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,16 +84,6 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c24 {
   margin-bottom: 0.5rem;
-}
-
-.c24:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: 'Optional';
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19.5px;
 }
 
 .c26 {
@@ -771,7 +762,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 10"
                 />
@@ -804,7 +794,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 20"
                 />
@@ -837,7 +826,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 30"
                 />
@@ -884,7 +872,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
-                  required={true}
                   step="0.01"
                   type="number"
                   value=" "
@@ -976,6 +963,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c15 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -988,16 +976,6 @@ exports[`Single donation renders correctly 1`] = `
 
 .c18 {
   margin-bottom: 0.5rem;
-}
-
-.c18:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: 'Optional';
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19.5px;
 }
 
 .c20 {
@@ -1520,7 +1498,6 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 10"
                 />
@@ -1553,7 +1530,6 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 20"
                 />
@@ -1586,7 +1562,6 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
-                  required={true}
                   type="button"
                   value="£ 30"
                 />
@@ -1633,7 +1608,6 @@ exports[`Single donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
-                  required={true}
                   step="0.01"
                   type="number"
                   value={20}
@@ -1724,6 +1698,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c15 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1736,16 +1711,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c18 {
   margin-bottom: 0.5rem;
-}
-
-.c18:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: 'Optional';
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19.5px;
 }
 
 .c20 {
@@ -2145,7 +2110,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
-                  required={true}
                   step="0.01"
                   type="number"
                   value=" "

@@ -30,6 +30,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 .c11 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,9 +62,9 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
   z-index: 1;
   margin-top: -10px;
-  background-color: #ffcece;
+  background-color: #FAE1E2;
   border-radius: 0.5rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .c18:before {
@@ -285,6 +286,12 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
+  .c18 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c16 {
     max-width: 290px;
   }
@@ -401,7 +408,6 @@ exports[`renders correctly with error message 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
-                required={true}
                 type="email"
                 value=""
               />
@@ -546,6 +552,7 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 .c11 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -893,7 +900,6 @@ exports[`renders correctly with modal open 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
-                required={true}
                 type="email"
                 value=""
               />

@@ -32,6 +32,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c4 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -322,6 +323,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -541,7 +543,6 @@ exports[`renders correctly 1`] = `
           name="email"
           onChange={[Function]}
           placeholder="example@youremail.com"
-          required={true}
           type="email"
           value=""
         />

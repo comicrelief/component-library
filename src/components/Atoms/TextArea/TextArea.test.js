@@ -27,6 +27,7 @@ it('renders correctly', () => {
     }
 
     .c0 {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -39,16 +40,6 @@ it('renders correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
-    }
-
-    .c2:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: 'Optional';
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 19.5px;
     }
 
     .c3 {

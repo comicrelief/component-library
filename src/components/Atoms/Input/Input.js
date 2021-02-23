@@ -71,7 +71,6 @@ const Input = React.forwardRef(
       className,
       labelProps,
       prefix,
-      isRequired,
       ...rest
     },
     ref
@@ -82,7 +81,6 @@ const Input = React.forwardRef(
       label={label}
       hideLabel={!showLabel}
       errorMsg={errorMsg}
-      isRequired={isRequired}
       {...labelProps}
     >
       <InputWrapper>
@@ -95,7 +93,6 @@ const Input = React.forwardRef(
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
           prefixLength={prefix.length}
-          required={isRequired}
         />
       </InputWrapper>
       {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
@@ -123,11 +120,7 @@ Input.propTypes = {
   // className is needed so that styled(`Input`) will work
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
-  prefix: PropTypes.string,
-  isRequired: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool
-  ])
+  prefix: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -137,8 +130,7 @@ Input.defaultProps = {
   errorMsg: '',
   labelProps: {},
   className: '',
-  prefix: '',
-  isRequired: false
+  prefix: ''
 };
 
 export default Input;

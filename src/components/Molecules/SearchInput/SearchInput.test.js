@@ -24,6 +24,7 @@ it('renders correctly', () => {
     }
 
     .c4 {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -165,7 +166,6 @@ it('renders correctly', () => {
                   name="search"
                   onChange={[Function]}
                   placeholder=""
-                  required={true}
                   role="searchbox"
                   type="text"
                   value=""
