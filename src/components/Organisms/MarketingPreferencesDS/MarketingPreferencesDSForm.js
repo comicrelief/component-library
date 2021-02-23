@@ -16,11 +16,6 @@ const {
   mpValidationOptions
 } = mpValidation;
 
-/*
-* This component exists purely to show the Marketing Preferences component functioning
-* within the Component Library; applications are to provide their own react-hook-form form
-* and validation, based on these
-*/
 const MarketingPreferencesDSForm = () => {
   function customSubmitHandler() {
     // eslint-disable-next-line no-console

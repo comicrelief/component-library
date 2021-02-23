@@ -98,8 +98,8 @@ const CheckInput = styled.input`
   box-sizing: border-box;
   opacity: 0;
   position: absolute;
-  //width: 100%;
-  //height: 100%;
+  width: 100%;
+  height: 100%;
   left: 0;
   top:0;
   margin: 0;
@@ -117,10 +117,6 @@ const CheckInput = styled.input`
     background: url(${checkBoxIcon}) no-repeat center;
     background-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
-  }
-  :focus + span {
-    border-color: ${({ theme }) => theme.color('grey_for_forms')};
-    border-width: 3px;
   }
   :focus + span {
     border-color: ${({ theme }) => theme.color('grey_for_forms')};
