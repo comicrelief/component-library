@@ -22,6 +22,7 @@ const {
   provide their own form and validation based on these */
 const MarketingPreferencesDSForm = () => {
   function customSubmitHandler() {
+    // eslint-disable-next-line no-console
     console.log('customSubmitHandler');
   }
 
