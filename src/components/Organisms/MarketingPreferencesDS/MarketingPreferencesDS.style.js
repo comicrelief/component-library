@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
-import checkBoxIcon from './assets/optimised/CR_Tick.svg';
+import checkBoxIcon from './assets/CR_Tick.svg';
 
-import EmailIcon from './assets/optimised/CR_@.svg';
-import PostIcon from './assets/optimised/CR_Mail.svg';
-import PhoneIcon from './assets/optimised/CR_Phone.svg';
-import SMSIcon from './assets/optimised/CR_SMS.svg';
+import EmailIcon from './assets/CR_@.svg';
+import PostIcon from './assets/CR_Mail.svg';
+import PhoneIcon from './assets/CR_Phone.svg';
+import SMSIcon from './assets/CR_SMS.svg';
 
 const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
