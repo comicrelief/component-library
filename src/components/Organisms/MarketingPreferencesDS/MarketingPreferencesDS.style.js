@@ -31,11 +31,17 @@ const FormField = styled.div`
     position: relative;
     margin-bottom: ${spacing('md')};
     width: 48%;
-    padding: 12px 16px;
+    padding: 12px;
     border: 1px solid ${({ theme }) => theme.color('grey')};;
     box-sizing: border-box;
     border-radius: 8px;
     color: ${({ theme }) => theme.color('grey_dark')};
+    font-size: 12px;
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      font-size: 16px;
+      padding: 12px 16px;
+    }
   }
 
   ${({ userSelection, theme }) => userSelection && `
@@ -105,13 +111,17 @@ const CheckInput = styled.input`
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
-    margin-right: 15px;
+    margin-right: 10px;
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('grey_light')};
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     border-radius: 8px;
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      margin-right: 15px;
+    }
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;

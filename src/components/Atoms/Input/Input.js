@@ -95,7 +95,7 @@ const Input = React.forwardRef(
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
           prefixLength={prefix.length}
-          required
+          required={isRequired}
         />
       </InputWrapper>
       {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}

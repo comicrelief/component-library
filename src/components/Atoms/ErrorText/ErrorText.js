@@ -13,7 +13,7 @@ const ErrorIcon = styled.span`
   margin-top: -10px;
   background-color: ${({ theme }) => theme.color('error_pink')};
   border-radius: ${spacing('sm')};
-  font-weight: normal;
+  font-weight: bold;
 
   :before {
     position: relative;
