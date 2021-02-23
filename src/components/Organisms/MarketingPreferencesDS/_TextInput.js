@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-import { MarketingPrefsInput } from './MarketingPreferencesDS.style';
+import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
   fieldName, label,
-  isRequired, fieldType, ...rest
+  optional, fieldType, ...rest
 }) => {
   const { errors, register } = useFormContext();
 
@@ -16,23 +16,23 @@ const TextInput = ({
     placeholder: label,
     errorMsg: errors && errors[fieldName]
       && errors[fieldName].message,
-    isRequired,
-    'aria-required': isRequired,
+    optional,
+    'aria-required': !optional,
     ...rest
   };
 
-  return <MarketingPrefsInput {...props} ref={register} />;
+  return <Input {...props} ref={register} />;
 };
 
 TextInput.defaultProps = {
-  isRequired: false,
+  optional: null,
   fieldType: 'text'
 };
 
 TextInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  isRequired: PropTypes.bool,
+  optional: PropTypes.bool,
   fieldType: PropTypes.string
 };
 

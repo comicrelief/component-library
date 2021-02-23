@@ -11,6 +11,21 @@ const LabelElement = styled.label`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color('grey_label')};
+  width: 100%;
+  
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    max-width: 290px;
+  }
+  
+  ${({ optional, theme }) => optional === true && `
+  :after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: 'Optional';
+    font-family: ${theme.fontFamilies(theme.font.regular)};
+    font-size: ${theme.fontSize('s')};
+  }`}
 `;
 const VisibleText = styled(Text).attrs({ weight: 'bold' })`
   margin-bottom: ${spacing('sm')};
@@ -39,12 +54,14 @@ const Label = ({
   children,
   label,
   hideLabel,
+  optional,
   ...rest
 }) => (
-  <LabelElement {...rest}>
+  <LabelElement {...rest} optional={optional}>
     <LabelText label={label} hideLabel={hideLabel} />
     {children}
   </LabelElement>
+
 );
 
 Label.propTypes = {
@@ -53,12 +70,14 @@ Label.propTypes = {
     PropTypes.node
   ]).isRequired,
   hideLabel: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  optional: PropTypes.bool
 };
 
 Label.defaultProps = {
   hideLabel: false,
-  children: null
+  children: null,
+  optional: null
 };
 
 LabelText.propTypes = {

@@ -72,7 +72,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_email"
               label="Please enter your email address"
               // Dynamically update the field attr based on config for current choice
-              isRequired={mp_permissionEmail[emailChoice]}
+              optional={!mp_permissionEmail[emailChoice]}
               type="email"
               id="mp_email"
             />
@@ -101,7 +101,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
-              isRequired={mp_permissionSMS[smsChoice]}
+              optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
             />
           </ShowHideInputWrapper>
@@ -129,7 +129,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
-              isRequired={mp_permissionPhone[phoneChoice]}
+              optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
             />
           </ShowHideInputWrapper>
@@ -157,14 +157,14 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
-              isRequired={mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_address1"
             />
             <TextInput
               placeholder=""
               fieldName="mp_address2"
               label="Address Line 2"
-              isRequired={false}
+              optional
               id="mp_address2"
 
             />
@@ -172,28 +172,28 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_address3"
               label="Address Line 3"
-              isRequired={false}
+              optional
               id="mp_address3"
             />
             <TextInput
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
-              isRequired={mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_town"
             />
             <TextInput
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
-              isRequired={mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_postcode"
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              isRequired={mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_country"
             />
           </ShowHideInputWrapper>

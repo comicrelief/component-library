@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 import checkBoxIcon from './assets/CR_Tick.svg';
-import Input from '../../Atoms/Input/Input';
 
 import EmailIcon from './assets/CR_@.svg';
 import PostIcon from './assets/CR_Mail.svg';
@@ -152,22 +151,6 @@ const ShowHideInputWrapper = styled.div`
   }
 `;
 
-const MarketingPrefsInput = styled(Input)`
-  position: relative;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-
-  ${({ isRequired }) => isRequired === false && `
-  :after {
-    position: absolute;
-    content: 'Optional';
-    top: 0;
-    right: 0;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 19.5px;
-  }`}
-`;
-
 export {
   TopCopyWrapper,
   BottomCopyWrapper,
@@ -176,6 +159,5 @@ export {
   CheckLabel,
   CheckInput,
   CheckContainer,
-  ShowHideInputWrapper,
-  MarketingPrefsInput
+  ShowHideInputWrapper
 };
