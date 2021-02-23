@@ -41,6 +41,7 @@ exports[`renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -93,6 +94,7 @@ exports[`renders correctly 1`] = `
         name="q"
         onChange={[Function]}
         placeholder="Type to start searching..."
+        required={null}
         type="text"
         value=""
       />

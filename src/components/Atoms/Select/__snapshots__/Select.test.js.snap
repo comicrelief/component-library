@@ -25,6 +25,16 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
+.c2:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: 'Optional';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.5px;
+}
+
 .c3 {
   width: 100%;
   font-size: 1.25rem;

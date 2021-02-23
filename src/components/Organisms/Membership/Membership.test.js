@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Membership from './Membership';
-import pictures from '../../../styleguide/data/data';
-import data from './dev-data/data';
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Membership from "./Membership";
+import pictures from "../../../styleguide/data/data";
+import data from "./dev-data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
@@ -111,6 +111,7 @@ it('renders correctly', () => {
       color: #000000;
       border-radius: 0.5rem;
       font-size: inherit;
+      z-index: 2;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -484,6 +485,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy1"
                       onClick={[Function]}
                       placeholder=""
+                      required={null}
                       type="button"
                       value="£ 5"
                     />
@@ -516,6 +518,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy2"
                       onClick={[Function]}
                       placeholder=""
+                      required={null}
                       type="button"
                       value="£ 10"
                     />
@@ -548,6 +551,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy3"
                       onClick={[Function]}
                       placeholder=""
+                      required={null}
                       type="button"
                       value="£ 20"
                     />
@@ -596,6 +600,7 @@ it('renders correctly', () => {
                       onKeyPress={[Function]}
                       pattern="[^[0-9]+([,.][0-9]+)?$]"
                       placeholder="0.00"
+                      required={null}
                       step="0.01"
                       type="number"
                       value=""

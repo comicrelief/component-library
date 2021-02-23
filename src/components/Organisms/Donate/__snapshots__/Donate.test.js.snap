@@ -101,6 +101,7 @@ exports[`Monthly donation renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -760,6 +761,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 10"
                 />
@@ -792,6 +794,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 20"
                 />
@@ -824,6 +827,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 30"
                 />
@@ -870,6 +874,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={null}
                   step="0.01"
                   type="number"
                   value=" "
@@ -991,6 +996,7 @@ exports[`Single donation renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -1494,6 +1500,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 10"
                 />
@@ -1526,6 +1533,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 20"
                 />
@@ -1558,6 +1566,7 @@ exports[`Single donation renders correctly 1`] = `
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
+                  required={null}
                   type="button"
                   value="£ 30"
                 />
@@ -1604,6 +1613,7 @@ exports[`Single donation renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={null}
                   step="0.01"
                   type="number"
                   value={20}
@@ -1724,6 +1734,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -2104,6 +2115,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   onChange={[Function]}
                   pattern="[^[0-9]+([,.][0-9]+)?$]"
                   placeholder="0.00"
+                  required={null}
                   step="0.01"
                   type="number"
                   value=" "

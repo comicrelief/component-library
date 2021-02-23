@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Input from './Input';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Input from "./Input";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Input
       name="fullname"
@@ -56,6 +56,7 @@ it('renders correctly', () => {
       color: #000000;
       border-radius: 0.5rem;
       font-size: inherit;
+      z-index: 2;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -98,6 +99,7 @@ it('renders correctly', () => {
           id="Accessibility info go here"
           name="fullname"
           placeholder="This is the hint text"
+          required={null}
           type="text"
         />
       </div>

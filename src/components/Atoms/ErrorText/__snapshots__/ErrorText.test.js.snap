@@ -10,7 +10,13 @@ exports[`renders correctly 1`] = `
 
 .c1 {
   display: inline-block;
-  margin-top: 0.5rem;
+  padding: 1.5rem 1rem 1rem;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10px;
+  background-color: #ffcece;
+  border-radius: 0.5rem;
+  font-weight: normal;
 }
 
 .c1:before {

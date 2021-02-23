@@ -57,7 +57,13 @@ exports[`renders correctly with error message 1`] = `
 
 .c18 {
   display: inline-block;
-  margin-top: 0.5rem;
+  padding: 1.5rem 1rem 1rem;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10px;
+  background-color: #ffcece;
+  border-radius: 0.5rem;
+  font-weight: normal;
 }
 
 .c18:before {
@@ -89,6 +95,7 @@ exports[`renders correctly with error message 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -394,6 +401,7 @@ exports[`renders correctly with error message 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={null}
                 type="email"
                 value=""
               />
@@ -579,6 +587,7 @@ exports[`renders correctly with modal open 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -884,6 +893,7 @@ exports[`renders correctly with modal open 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={null}
                 type="email"
                 value=""
               />

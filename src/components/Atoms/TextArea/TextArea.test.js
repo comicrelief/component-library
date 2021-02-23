@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import TextArea from './TextArea';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import TextArea from "./TextArea";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <TextArea
       name="description"
@@ -39,6 +39,16 @@ it('renders correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
+    }
+
+    .c2:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: 'Optional';
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19.5px;
     }
 
     .c3 {
