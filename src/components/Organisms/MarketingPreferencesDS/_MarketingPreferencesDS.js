@@ -19,7 +19,8 @@ import {
 const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
-  mpValidationOptions
+  mpValidationOptions,
+  id
 }) => {
   const { errors } = useFormContext();
 
@@ -50,8 +51,10 @@ const MarketingPreferencesDS = ({
   const isAddressErroring = errors.mp_address1 || errors.mp_address2
   || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
 
+  const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
+
   return (
-    <>
+    <div id={customId}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
@@ -205,7 +208,7 @@ const MarketingPreferencesDS = ({
       )}
 
       {copyBottom && <BottomCopyWrapper>{copyBottom}</BottomCopyWrapper>}
-    </>
+    </div>
   );
 };
 
@@ -220,12 +223,14 @@ MarketingPreferencesDS.propTypes = {
   copyBottom: PropTypes.node,
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
-  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired
+  mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
+  id: PropTypes.string
 };
 
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom
+  copyBottom: defaultCopyBottom,
+  id: null
 };
 
 export {
