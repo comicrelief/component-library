@@ -18,6 +18,7 @@ import {
  parameters into the functions: */
 const mpValidation = buildValidationSchema();
 const initialValues = setInitialValues();
+
 const { mpValidationSchema, mpValidationOptions } = mpValidation;
 
 // Or customise and override the config to suit the destination app's requirements:
@@ -39,7 +40,7 @@ const {
 const MarketingPreferencesDSForm = () => {
   function customSubmitHandler() {
     // eslint-disable-next-line no-console
-    console.log('customSubmitHandler');
+    console.log('Successful submission');
   }
 
   // For our default instance:
@@ -62,7 +63,7 @@ const MarketingPreferencesDSForm = () => {
 
   return (
     <>
-      <Text>Our default instance:</Text>
+      <Text tag="p" weight="bold">Our default instance:</Text>
       <FormProvider {...formMethods}>
         <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS
@@ -75,7 +76,7 @@ const MarketingPreferencesDSForm = () => {
 
       <Text tag="h3" size="xl">- - - - - - - - - - - - </Text>
 
-      <Text>Our customised instance:</Text>
+      <Text tag="p" weight="bold">Our customised instance:</Text>
       <FormProvider {...formMethodsCustom}>
         <form onSubmit={handleSubmitCustom(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS
