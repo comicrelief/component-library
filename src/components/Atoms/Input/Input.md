@@ -47,7 +47,7 @@
     errorMsg=""
     id="input-example-4"
     showLabel={true}
-    optional={false}
+    optional={false} // can stil be overriden with standard 'required' attribute
   />
 ```
 
