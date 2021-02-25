@@ -60,7 +60,6 @@ export { default as Countdown } from './components/Molecules/Countdown/Countdown
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
-export { default as MarketingPreferences } from './components/Organisms/MarketingPreferences/MarketingPreferences';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
 export { default as Chip } from './components/Molecules/Chip/Chip';
 export { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
