@@ -23,6 +23,7 @@ const SingleMessageDs = ({
   linkLabel,
   ctaBgColor,
   target,
+  linkIcon,
   ...rest
 }) => {
   const Media = (
@@ -60,12 +61,7 @@ const SingleMessageDs = ({
     return null;
   };
 
-  const icon = () => {
-    if (target === 'blank') {
-      return <External colour="white" />;
-    }
-    return <Internal colour="white" />;
-  };
+  const icon = linkIcon || (target === 'blank' ? <External /> : <Internal />);
 
   const external = target === 'blank' ? 'noopener noreferrer' : null;
 
@@ -90,7 +86,7 @@ const SingleMessageDs = ({
             href={link}
             target={target}
             type="button"
-            icon={icon()}
+            icon={icon}
           >
             {linkLabel}
           </Link>
@@ -115,7 +111,8 @@ SingleMessageDs.propTypes = {
   linkLabel: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   target: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  linkIcon: PropTypes.node
 };
 
 SingleMessageDs.defaultProps = {
@@ -129,7 +126,8 @@ SingleMessageDs.defaultProps = {
   target: null,
   imageAltText: '',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  linkIcon: null
 };
 
 export default SingleMessageDs;
