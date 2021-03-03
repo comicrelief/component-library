@@ -32,10 +32,6 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
   }
-
-  @media ${theme.breakpoint('small')} {
-    max-width: 290px;
-  }
 `}`;
 
 const InputWrapper = styled.div`

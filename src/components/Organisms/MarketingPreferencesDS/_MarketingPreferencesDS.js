@@ -64,7 +64,7 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice} />
+          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice[0]} />
         </Head>
 
         <MaybeDisabled disabled={hideEmailInput}>
@@ -75,7 +75,7 @@ const MarketingPreferencesDS = ({
               fieldName="mp_email"
               label="Please enter your email address"
               // Dynamically update the field attr based on config for current choice
-              optional={!mp_permissionEmail[emailChoice]}
+              optional={!mp_permissionEmail[emailChoice[0]]}
               type="email"
               id="mp_email"
             />
@@ -95,7 +95,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
-            userSelection={smsChoice}
+            userSelection={smsChoice[0]}
           />
         </Head>
         <MaybeDisabled disabled={hideSMSInput}>
@@ -105,7 +105,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
-              optional={!mp_permissionSMS[smsChoice]}
+              optional={!mp_permissionSMS[smsChoice[0]]}
               id="mp_mobile"
             />
           </ShowHideInputWrapper>
@@ -124,7 +124,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
-            userSelection={phoneChoice}
+            userSelection={phoneChoice[0]}
           />
         </Head>
         <MaybeDisabled disabled={hidePhoneInput}>
@@ -134,7 +134,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
-              optional={!mp_permissionPhone[phoneChoice]}
+              optional={!mp_permissionPhone[phoneChoice[0]]}
               id="mp_phone"
             />
           </ShowHideInputWrapper>
@@ -153,7 +153,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
-            userSelection={postChoice}
+            userSelection={postChoice[0]}
           />
         </Head>
         <MaybeDisabled disabled={hidePostInput}>
@@ -163,7 +163,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
-              optional={!mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice[0]]}
               id="mp_address1"
             />
             <TextInput
@@ -185,21 +185,21 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
-              optional={!mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice[0]]}
               id="mp_town"
             />
             <TextInput
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
-              optional={!mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice[0]]}
               id="mp_postcode"
             />
             <TextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              optional={!mp_permissionPost[postChoice]}
+              optional={!mp_permissionPost[postChoice[0]]}
               id="mp_country"
             />
           </ShowHideInputWrapper>
