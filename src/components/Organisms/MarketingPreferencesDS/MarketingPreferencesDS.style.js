@@ -150,10 +150,6 @@ const CheckInput = styled.input`
     background-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
   }
-  :focus + span {
-    // border-color: ${({ theme }) => theme.color('grey_for_forms')};
-    // border-width: 3px;
-  }
 `;
 
 const ShowHideInputWrapper = styled.div`
