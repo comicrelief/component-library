@@ -46,7 +46,6 @@ const MarketingPreferencesDSForm = () => {
   // For our default instance:
   const formMethods = useForm({
     mode: 'onBlur',
-    reValidateMode: 'onBlur',
     defaultValues: initialValues,
     resolver: yupResolver(mpValidationSchema)
   });
@@ -55,7 +54,6 @@ const MarketingPreferencesDSForm = () => {
   // For our customised-instance:
   const formMethodsCustom = useForm({
     mode: 'onBlur',
-    reValidateMode: 'onBlur',
     defaultValues: initialValuesCustom,
     resolver: yupResolver(mpValidationSchemaCustom)
   });

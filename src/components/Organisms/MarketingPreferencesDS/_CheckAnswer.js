@@ -26,13 +26,12 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
     setValue(name, [newVal]);
 
     /* If the click represents either a 'none selected' or a 'not required' option
-      (set in config), reset the value and error for all fields associated with this checkbox */
+      (set in config), reset errors for all fields associated with this checkbox */
     const reValidate = !mpValidationOptions[name][newVal];
 
     if (reValidate) {
       const theseFields = AssociatedFields[name];
       theseFields.forEach(fieldName => {
-        setValue(fieldName, '');
         clearErrors(fieldName);
       });
     }
