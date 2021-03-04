@@ -287,18 +287,6 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c11 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
-  .c18 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
   .c16 {
     max-width: 290px;
   }
@@ -790,12 +778,6 @@ exports[`renders correctly with modal open 1`] = `
 
 .c5 input {
   font-size: 1rem;
-}
-
-@media (min-width:740px) {
-  .c11 {
-    max-width: 290px;
-  }
 }
 
 @media (min-width:740px) {

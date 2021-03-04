@@ -516,12 +516,6 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c21 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
   .c26 {
     max-width: 290px;
   }
@@ -1302,12 +1296,6 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
   .c20 {
     max-width: 290px;
   }
@@ -1950,12 +1938,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 @media (min-width:740px) {
   .c8 {
     font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c15 {
-    max-width: 290px;
   }
 }
 

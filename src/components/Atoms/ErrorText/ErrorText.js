@@ -27,10 +27,6 @@ const ErrorIcon = styled.span`
     vertical-align: top;
     color: ${({ theme }) => theme.color('red')};
   }
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    max-width: 290px;
-  }
 `;
 
 const ErrorText = ({ children, ...rest }) => (

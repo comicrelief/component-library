@@ -61,12 +61,6 @@ exports[`renders correctly with no value and no options 1`] = `
 }
 
 @media (min-width:740px) {
-  .c1 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
   .c5 {
     max-width: 290px;
   }
@@ -170,12 +164,6 @@ exports[`renders correctly with value and no options 1`] = `
 
 .c0 {
   position: relative;
-}
-
-@media (min-width:740px) {
-  .c1 {
-    max-width: 290px;
-  }
 }
 
 @media (min-width:740px) {
@@ -323,12 +311,6 @@ exports[`renders correctly with value and options 1`] = `
 .c9:hover,
 .c9:focus {
   background-color: #F4F3F5;
-}
-
-@media (min-width:740px) {
-  .c1 {
-    max-width: 290px;
-  }
 }
 
 @media (min-width:740px) {

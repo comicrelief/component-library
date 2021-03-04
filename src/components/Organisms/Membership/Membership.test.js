@@ -331,12 +331,6 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c14 {
-        max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
       .c19 {
         max-width: 290px;
       }

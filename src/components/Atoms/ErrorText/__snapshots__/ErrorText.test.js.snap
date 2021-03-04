@@ -32,12 +32,6 @@ exports[`renders correctly 1`] = `
   color: #E52630;
 }
 
-@media (min-width:740px) {
-  .c1 {
-    max-width: 290px;
-  }
-}
-
 <span
   className="c0"
   color="red"

@@ -175,12 +175,6 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c4 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
 
 }
 
@@ -477,12 +471,6 @@ exports[`renders correctly 1`] = `
 .c13:focus,
 .c13:hover {
   background-color: #961D35;
-}
-
-@media (min-width:740px) {
-  .c6 {
-    max-width: 290px;
-  }
 }
 
 @media (min-width:740px) {

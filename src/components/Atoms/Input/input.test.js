@@ -72,12 +72,6 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c0 {
-        max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
       .c4 {
         max-width: 290px;
       }

@@ -13,10 +13,6 @@ const LabelElement = styled.label`
   color: ${({ theme }) => theme.color('grey_label')};
   width: 100%;
   
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    max-width: 290px;
-  }
-  
   ${({ optional, theme }) => optional === true && `
   :after {
     position: absolute;
