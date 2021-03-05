@@ -22,8 +22,11 @@ const initialValues = setInitialValues();
 const { mpValidationSchema, mpValidationOptions } = mpValidation;
 
 // Or customise and override the config to suit the destination app's requirements:
-const initalValueOverrides = { mp_email: 'user@website.com' }; // Potentially provided earlier in the journey
+const initalValueOverrides = {
+  mp_email: 'user@website.com' // Potentially provided earlier in the journey
+};
 const validationOverrides = {
+  mp_permissionEmail: { hideInput: true }, // As we're passing a value above, hide the user input
   mp_permissionSMS: { disableOption: true }, // Remove this option entirely
   mp_permissionPost: { no: false } // Make Post fields non-req (so not shown) when 'No' selected
 };

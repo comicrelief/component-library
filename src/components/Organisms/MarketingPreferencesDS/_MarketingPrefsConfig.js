@@ -36,22 +36,28 @@ const buildValidationSchema = overrideOptions => {
         */
       yes: true,
       no: true,
+      // Hide the input from user interaction, but keep it in the DOM so we can pass values to it
+      hideInput: false,
       // Allows complete removal of the option (checkboxes & fields) from both render & validation.
       disableOption: false
+
     },
     mp_permissionSMS: {
       yes: true,
       no: true,
+      hideInput: false,
       disableOption: false
     },
     mp_permissionPhone: {
       yes: true,
       no: true,
+      hideInput: false,
       disableOption: false
     },
     mp_permissionPost: {
       yes: true,
       no: true,
+      hideInput: false,
       disableOption: false
     }
   };

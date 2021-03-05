@@ -377,12 +377,9 @@ describe('MarketingPreferencesDSForm component', () => {
     });
 
     it('Check Customised example with invalid values', () => {
-      // Fill email field with an invalid value
+      // Select opt-in for email, with the valid value already having being set via config
       cy.get('@customised')
         .find('#mp_permissionEmail-yes').click();
-      cy.get('@customised')
-        .find('#mp_email')
-        .type('@an-invalid@email.com');
 
       // Fill Phone field with an invalid value
       cy.get('@customised')
@@ -423,12 +420,6 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised-submit').click();
 
       // Check for all expected 'invalid' errors:
-      // Email
-      cy.get('@customised')
-        .find('.field-email span[data-test=error-message] span')
-        .should('exist')
-        .contains('Please enter a valid email address');
-
       // Phone
       cy.get('@customised')
         .find('.field-phone span[data-test=error-message] span')
@@ -461,11 +452,6 @@ describe('MarketingPreferencesDSForm component', () => {
     });
 
     it('check Customised example with empty values', () => {
-      // Clear email field
-      cy.get('@customised')
-        .find('#mp_email')
-        .clear();
-
       // Clear Phone field
       cy.get('@customised')
         .find(' #mp_phone')
@@ -505,12 +491,6 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised-submit').click();
 
       // Check for all expected errors:
-      // Email
-      cy.get('@customised')
-        .find('.field-email span[data-test=error-message] span')
-        .should('exist')
-        .contains('Please enter your email address');
-
       // Phone
       cy.get('@customised')
         .find('.field-phone span[data-test=error-message] span')
@@ -553,11 +533,6 @@ describe('MarketingPreferencesDSForm component', () => {
     });
 
     it('Check Customised example with valid values', () => {
-      // Fill email field with an valid value
-      cy.get('@customised')
-        .find(' #mp_email')
-        .type('a-valid@email.com');
-
       // Fill Phone field with a valid value
       cy.get('@customised')
         .find(' #mp_phone')
@@ -593,11 +568,6 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised-submit').click();
 
       // Check that all errors have been remove:
-      // Email
-      cy.get('@customised')
-        .find('.field-email span[data-test=error-message] span')
-        .should('not.exist');
-
       // Phone
       cy.get('@customised')
         .find('.field-phone span[data-test=error-message] span')

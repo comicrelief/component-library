@@ -34,22 +34,29 @@ const MarketingPreferencesDS = ({
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
-  // If the field is not required for each No/Yes choice, hide it
-  const hideEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
+  // If the field is not required for each No/Yes choice, remove it from the DOM entirely
+  const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
   || (mp_permissionEmail.no === false && emailChoice.includes('no'));
 
-  const hideSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'))
+  const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'))
   || (mp_permissionSMS.no === false && smsChoice.includes('no'));
 
-  const hidePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
+  const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
   || (mp_permissionPhone.no === false && phoneChoice.includes('no'));
 
-  const hidePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'))
+  const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'))
   || (mp_permissionPost.no === false && postChoice.includes('no'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = errors.mp_address1 || errors.mp_address2
   || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+
+  /* Only show the field if config hasn't hidden it (to pass in parent values)
+    or if a choice has been made */
+  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
+  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice.length || errors.mp_mobile);
+  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice.length || errors.mp_phone);
+  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring);
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
@@ -67,8 +74,9 @@ const MarketingPreferencesDS = ({
           <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice[0]} />
         </Head>
 
-        <MaybeDisabled disabled={hideEmailInput}>
-          <ShowHideInputWrapper show={emailChoice.length || errors.mp_email}>
+        <MaybeDisabled disabled={disableEmailInput}>
+          {/* DEBUG */}
+          <ShowHideInputWrapper show={showEmailField}>
             {emailChoice[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
               placeholder=""
@@ -98,8 +106,8 @@ const MarketingPreferencesDS = ({
             userSelection={smsChoice[0]}
           />
         </Head>
-        <MaybeDisabled disabled={hideSMSInput}>
-          <ShowHideInputWrapper show={smsChoice.length || errors.mp_mobile}>
+        <MaybeDisabled disabled={disableSMSInput}>
+          <ShowHideInputWrapper show={showSMSField}>
             {smsChoice[0] === 'no' && <NoMessage askingFor="a mobile number" />}
             <TextInput
               placeholder=""
@@ -127,8 +135,8 @@ const MarketingPreferencesDS = ({
             userSelection={phoneChoice[0]}
           />
         </Head>
-        <MaybeDisabled disabled={hidePhoneInput}>
-          <ShowHideInputWrapper show={phoneChoice.length || errors.mp_phone}>
+        <MaybeDisabled disabled={disablePhoneInput}>
+          <ShowHideInputWrapper show={showPhoneField}>
             {phoneChoice[0] === 'no' ? <NoMessage askingFor="a phone number" /> : ''}
             <TextInput
               placeholder=""
@@ -156,8 +164,8 @@ const MarketingPreferencesDS = ({
             userSelection={postChoice[0]}
           />
         </Head>
-        <MaybeDisabled disabled={hidePostInput}>
-          <ShowHideInputWrapper show={postChoice.length || isAddressErroring}>
+        <MaybeDisabled disabled={disablePostInput}>
+          <ShowHideInputWrapper show={showPostFields}>
             {postChoice[0] === 'no' ? <NoMessage askingFor="an address" /> : ''}
             <TextInput
               placeholder=""
