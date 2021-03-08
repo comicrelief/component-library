@@ -75,7 +75,7 @@ const MarketingPreferencesDSForm = () => {
         </form>
       </FormProvider>
 
-      <Text tag="h3" size="xl">- - - - - - - - - - - - </Text>
+      <Text tag="h3" size="xl">- - - - - - - - - - - - - </Text>
 
       <Text tag="p" weight="bold">Our customised instance:</Text>
       <FormProvider {...formMethodsCustom}>
