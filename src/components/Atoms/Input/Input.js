@@ -8,7 +8,7 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
-//  the element with JS.)
+//  the element with JS)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
 const InputField = styled.input`${({ theme, error, prefixLength }) => css`
@@ -23,9 +23,10 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${theme.color('black')};
-  border-radius: 0.5rem;
+  color: ${theme.color('black')}; 
+  border-radius: ${spacing('sm')};
   font-size: inherit;
+  z-index: 2;
   font-family: ${theme.fontFamilies(theme.font.regular)};
 
   :focus {
@@ -70,6 +71,7 @@ const Input = React.forwardRef(
       className,
       labelProps,
       prefix,
+      optional,
       ...rest
     },
     ref
@@ -80,6 +82,7 @@ const Input = React.forwardRef(
       label={label}
       hideLabel={!showLabel}
       errorMsg={errorMsg}
+      optional={optional}
       {...labelProps}
     >
       <InputWrapper>
@@ -87,11 +90,12 @@ const Input = React.forwardRef(
         <InputField
           id={id}
           type={type}
-          {...rest}
           error={!!errorMsg}
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
           prefixLength={prefix.length}
+          required={optional === false}
+          {...rest}
         />
       </InputWrapper>
       {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
@@ -119,7 +123,8 @@ Input.propTypes = {
   // className is needed so that styled(`Input`) will work
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
-  prefix: PropTypes.string
+  prefix: PropTypes.string,
+  optional: PropTypes.bool
 };
 
 Input.defaultProps = {
@@ -129,7 +134,8 @@ Input.defaultProps = {
   errorMsg: '',
   labelProps: {},
   className: '',
-  prefix: ''
+  prefix: '',
+  optional: null
 };
 
 export default Input;

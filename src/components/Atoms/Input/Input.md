@@ -33,8 +33,24 @@
     errorMsg=""
     id="input-example-3"
     showLabel={true}
+    optional={true}
   />
 ```
+
+```js
+  <h4>Simple input (required)</h4>
+  <Input
+    name="fullname"
+    placeholder=""
+    type="text"
+    label="Label"
+    errorMsg=""
+    id="input-example-4"
+    showLabel={true}
+    optional={false} // can stil be overriden with standard 'required' attribute
+  />
+```
+
 
 ```js
   <h4>Input Label with markup</h4>
@@ -44,7 +60,7 @@
     type="text"
     label="<b>Markup label <i>italic</i></b>"
     errorMsg=""
-    id="input-example-4"
+    id="input-example-5"
     showLabel={true}
   />
 ```
@@ -65,7 +81,7 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
     type="text"
     label={<>Email <ItalicText>(please check it's correct)</ItalicText></>}
     errorMsg=""
-    id="input-example-5"
+    id="input-example-6"
     showLabel={true}
   />
 </>

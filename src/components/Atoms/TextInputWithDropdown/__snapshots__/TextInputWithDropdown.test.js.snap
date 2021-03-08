@@ -11,6 +11,7 @@ exports[`renders correctly with no value and no options 1`] = `
 }
 
 .c1 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,6 +20,7 @@ exports[`renders correctly with no value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c3 {
@@ -41,6 +43,7 @@ exports[`renders correctly with no value and no options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -93,6 +96,7 @@ exports[`renders correctly with no value and no options 1`] = `
         name="query"
         onChange={[Function]}
         placeholder=""
+        required={false}
         type="text"
         value=""
       />
@@ -113,6 +117,7 @@ exports[`renders correctly with value and no options 1`] = `
 }
 
 .c1 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,6 +126,7 @@ exports[`renders correctly with value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c3 {
@@ -143,6 +149,7 @@ exports[`renders correctly with value and no options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -195,6 +202,7 @@ exports[`renders correctly with value and no options 1`] = `
         name="query"
         onChange={[Function]}
         placeholder=""
+        required={false}
         type="text"
         value="bikes"
       />
@@ -223,6 +231,7 @@ exports[`renders correctly with value and options 1`] = `
 }
 
 .c1 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,6 +240,7 @@ exports[`renders correctly with value and options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c3 {
@@ -253,6 +263,7 @@ exports[`renders correctly with value and options 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -344,6 +355,7 @@ exports[`renders correctly with value and options 1`] = `
         name="query"
         onChange={[Function]}
         placeholder=""
+        required={false}
         type="text"
         value="c"
       />

@@ -32,6 +32,7 @@ exports[`renders ESU School correctly 1`] = `
 }
 
 .c4 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,6 +41,7 @@ exports[`renders ESU School correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c6 {
@@ -322,6 +324,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -330,6 +333,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c9 {
@@ -363,6 +367,7 @@ exports[`renders correctly 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -540,6 +545,7 @@ exports[`renders correctly 1`] = `
           name="email"
           onChange={[Function]}
           placeholder="example@youremail.com"
+          required={false}
           type="email"
           value=""
         />

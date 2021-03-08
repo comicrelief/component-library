@@ -30,6 +30,7 @@ exports[`renders correctly with error message 1`] = `
 }
 
 .c11 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,6 +39,7 @@ exports[`renders correctly with error message 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c14 {
@@ -57,14 +59,20 @@ exports[`renders correctly with error message 1`] = `
 
 .c18 {
   display: inline-block;
-  margin-top: 0.5rem;
+  padding: 1.5rem 1rem 1rem;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10px;
+  background-color: #FAE1E2;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 .c18:before {
   position: relative;
   content: '';
-  top: 2px;
-  margin-right: 6px;
+  top: 1px;
+  margin-right: 3px;
   background: url(mock.asset) left 0/100% no-repeat;
   width: 18px;
   height: 19px;
@@ -89,6 +97,7 @@ exports[`renders correctly with error message 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -394,6 +403,7 @@ exports[`renders correctly with error message 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={false}
                 type="email"
                 value=""
               />
@@ -538,6 +548,7 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 .c11 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -546,6 +557,7 @@ exports[`renders correctly with modal open 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
+  width: 100%;
 }
 
 .c14 {
@@ -579,6 +591,7 @@ exports[`renders correctly with modal open 1`] = `
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
+  z-index: 2;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -884,6 +897,7 @@ exports[`renders correctly with modal open 1`] = `
                 name="email"
                 onChange={[Function]}
                 placeholder="example@youremail.com"
+                required={false}
                 type="email"
                 value=""
               />

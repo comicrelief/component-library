@@ -18,7 +18,8 @@ module.exports = {
     '**/*.test.{js,jsx,ts,tsx}',
     '**/*.spec.{js,jsx,ts,tsx}',
     '**/*.d.ts',
-    '**/*.style.{js,jsx,ts,tsx}'
+    '**/*.style.{js,jsx,ts,tsx}',
+    '**/_*.{js,jsx,ts,tsx}' // don't add any underscore-prefixed (partial) components to the styleguide itself
   ],
   // styleguideComponents: {
   //     StyleGuideRenderer: path.join(

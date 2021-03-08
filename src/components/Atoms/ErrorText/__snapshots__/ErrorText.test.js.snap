@@ -10,14 +10,20 @@ exports[`renders correctly 1`] = `
 
 .c1 {
   display: inline-block;
-  margin-top: 0.5rem;
+  padding: 1.5rem 1rem 1rem;
+  width: 100%;
+  z-index: 1;
+  margin-top: -10px;
+  background-color: #FAE1E2;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 .c1:before {
   position: relative;
   content: '';
-  top: 2px;
-  margin-right: 6px;
+  top: 1px;
+  margin-right: 3px;
   background: url(mock.asset) left 0/100% no-repeat;
   width: 18px;
   height: 19px;

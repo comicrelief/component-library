@@ -81,6 +81,7 @@ it('renders correctly', () => {
     }
 
     .c14 {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -89,6 +90,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
+      width: 100%;
     }
 
     .c17 {
@@ -111,6 +113,7 @@ it('renders correctly', () => {
       color: #000000;
       border-radius: 0.5rem;
       font-size: inherit;
+      z-index: 2;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -484,6 +487,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy1"
                       onClick={[Function]}
                       placeholder=""
+                      required={false}
                       type="button"
                       value="£ 5"
                     />
@@ -516,6 +520,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy2"
                       onClick={[Function]}
                       placeholder=""
+                      required={false}
                       type="button"
                       value="£ 10"
                     />
@@ -548,6 +553,7 @@ it('renders correctly', () => {
                       name="mship-1--moneyBuy3"
                       onClick={[Function]}
                       placeholder=""
+                      required={false}
                       type="button"
                       value="£ 20"
                     />
@@ -596,6 +602,7 @@ it('renders correctly', () => {
                       onKeyPress={[Function]}
                       pattern="[^[0-9]+([,.][0-9]+)?$]"
                       placeholder="0.00"
+                      required={false}
                       step="0.01"
                       type="number"
                       value=""

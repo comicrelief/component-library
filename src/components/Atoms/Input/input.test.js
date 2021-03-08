@@ -26,6 +26,7 @@ it('renders correctly', () => {
     }
 
     .c0 {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -34,6 +35,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
+      width: 100%;
     }
 
     .c2 {
@@ -56,6 +58,7 @@ it('renders correctly', () => {
       color: #000000;
       border-radius: 0.5rem;
       font-size: inherit;
+      z-index: 2;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -98,6 +101,7 @@ it('renders correctly', () => {
           id="Accessibility info go here"
           name="fullname"
           placeholder="This is the hint text"
+          required={false}
           type="text"
         />
       </div>
