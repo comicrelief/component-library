@@ -312,7 +312,7 @@ exports[`Monthly donation renders correctly 1`] = `
   left: 0px;
   font-weight: 500;
   padding: 0px 15px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .c30 input {
@@ -1242,7 +1242,7 @@ exports[`Single donation renders correctly 1`] = `
   left: 0px;
   font-weight: 500;
   padding: 0px 15px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .c25 input {
@@ -1893,7 +1893,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   left: 0px;
   font-weight: 500;
   padding: 0px 15px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .c16 input {
