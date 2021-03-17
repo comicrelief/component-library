@@ -174,7 +174,7 @@ const AmountField = styled(Input)`
     left: 0px;
     font-weight: 500;
     padding: 0px 15px;
-    ${zIndex('low')};
+    ${zIndex('high')};
   }
 
   input {
