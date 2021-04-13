@@ -15,7 +15,7 @@
       "\\.(css|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js"
     }
   },
-  "module": "index.js",
+  "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/comicrelief/component-library.git"
@@ -45,6 +45,8 @@
     "test": "yarn run jest",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
+    "postinstall": "yarn run build",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "cy:run": "export NODE_ENV=development; cypress run --headless --browser chrome",
     "cy:open": "export NODE_ENV=development; cypress open",
     "feature-test": "run-p --race styleguide cy:run",
