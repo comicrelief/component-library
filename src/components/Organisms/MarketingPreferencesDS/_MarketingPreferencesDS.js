@@ -51,17 +51,17 @@ const MarketingPreferencesDS = ({
   // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = () => {
     if (_.isEmpty(errors)) {
-      return errors.mp_address1 || errors.mp_address2
-      || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+      return null;
     }
-    return null;
+    return errors.mp_address1 || errors.mp_address2
+    || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
   };
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
   const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
   const showSMSField = !mp_permissionSMS.hideInput && (smsChoice.length || errors.mp_mobile);
   const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice.length || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring);
+  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring());
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
