@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch, useFormContext } from 'react-hook-form';
+import _ from 'lodash';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
@@ -48,9 +49,13 @@ const MarketingPreferencesDS = ({
   || (mp_permissionPost.no === false && postChoice.includes('no'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
-  const isAddressErroring = errors.mp_address1 || errors.mp_address2
-  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
-
+  const isAddressErroring = () => {
+    if (_.isEmpty(errors)) {
+      return errors.mp_address1 || errors.mp_address2
+      || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+    }
+    return null;
+  };
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
   const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
