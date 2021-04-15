@@ -7,7 +7,7 @@ const TextInput = ({
   fieldName, label,
   optional, fieldType, ...rest
 }) => {
-  const { errors, register: {} } = useFormContext();
+  const { errors, register = {} } = useFormContext();
 
   const props = {
     name: fieldName,
