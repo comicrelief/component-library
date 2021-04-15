@@ -77,7 +77,13 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer control mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice[0]} />
+          <CheckAnswer
+            mpValidationOptions={mpValidationOptions}
+            name="mp_permissionEmail"
+            id="mp_permissionEmail"
+            userSelection={emailChoice[0]}
+            {...register("mp_permissionEmail")}
+          />
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
@@ -85,7 +91,6 @@ const MarketingPreferencesDS = ({
           <ShowHideInputWrapper show={showEmailField}>
             {emailChoice[0] === 'no' && <NoMessage askingFor="an email" /> }
             <TextInput
-              control
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
@@ -93,6 +98,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionEmail[emailChoice[0]]}
               type="email"
               id="mp_email"
+              {...register("mp_email")}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
