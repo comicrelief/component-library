@@ -13,7 +13,6 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
   const {
     register = {}, setValue, clearErrors
   } = useFormContext();
-  console.log('formcontext', useFormContext);
 
   const onChange = e => {
     let newVal;
