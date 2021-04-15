@@ -18,12 +18,13 @@ import {
 } from './_MarketingPrefsConfig';
 
 const MarketingPreferencesDS = ({
+  control,
   copyTop,
   copyBottom,
   mpValidationOptions,
   id
 }) => {
-  const { errors = {}, control } = useFormContext() || {};
+  const { errors = {} } = useFormContext() || {};
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
@@ -237,7 +238,8 @@ MarketingPreferencesDS.propTypes = {
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
-  id: PropTypes.string
+  id: PropTypes.string,
+  control: PropTypes.func.isRequired
 };
 
 MarketingPreferencesDS.defaultProps = {
