@@ -23,7 +23,7 @@ const MarketingPreferencesDS = ({
   mpValidationOptions,
   id
 }) => {
-  const { errors = {} } = useFormContext() || {};
+  const { errors = {}, control } = useFormContext() || {};
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
