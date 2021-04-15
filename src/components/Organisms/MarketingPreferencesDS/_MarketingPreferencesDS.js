@@ -26,10 +26,10 @@ const MarketingPreferencesDS = ({
   const { errors = {} } = useFormContext() || {};
 
   // For brevity
-  const emailChoice = useWatch({ name: 'mp_permissionEmail', defaultValue: [] });
-  const postChoice = useWatch({ name: 'mp_permissionPost', defaultValue: [] });
-  const phoneChoice = useWatch({ name: 'mp_permissionPhone', defaultValue: [] });
-  const smsChoice = useWatch({ name: 'mp_permissionSMS', defaultValue: [] });
+  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
+  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: [] });
+  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: [] });
+  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: [] });
 
   const {
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
