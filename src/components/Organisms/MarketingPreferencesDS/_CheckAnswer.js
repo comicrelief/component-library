@@ -45,7 +45,7 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
           name={name}
           id={`${name}-yes`}
           value="yes"
-          ref={register}
+          {...register(name)}
           onChange={onChange}
         />
         <span />
@@ -57,7 +57,7 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
           id={`${name}-no`}
           name={name}
           value="no"
-          ref={register}
+          {...register(name)}
           onChange={onChange}
         />
         <span />
