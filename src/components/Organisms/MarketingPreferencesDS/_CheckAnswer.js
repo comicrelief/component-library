@@ -11,7 +11,7 @@ import {
 
 const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
   const {
-    setValue, clearErrors
+    register = {}, setValue, clearErrors
   } = useFormContext();
 
   const onChange = e => {
@@ -45,6 +45,7 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
           name={name}
           id={`${name}-yes`}
           value="yes"
+          ref={register}
           onChange={onChange}
         />
         <span />
@@ -56,6 +57,7 @@ const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
           id={`${name}-no`}
           name={name}
           value="no"
+          ref={register}
           onChange={onChange}
         />
         <span />

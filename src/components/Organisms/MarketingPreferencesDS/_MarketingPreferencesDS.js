@@ -82,7 +82,6 @@ const MarketingPreferencesDS = ({
             name="mp_permissionEmail"
             id="mp_permissionEmail"
             userSelection={emailChoice[0]}
-            {...register("mp_permissionEmail")}
           />
         </Head>
 
@@ -98,7 +97,6 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionEmail[emailChoice[0]]}
               type="email"
               id="mp_email"
-              {...register("mp_email")}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
