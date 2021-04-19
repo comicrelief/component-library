@@ -174,7 +174,6 @@ exports[`renders correctly with error message 1`] = `
 
 .c19 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
@@ -668,7 +667,6 @@ exports[`renders correctly with modal open 1`] = `
 
 .c17 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }

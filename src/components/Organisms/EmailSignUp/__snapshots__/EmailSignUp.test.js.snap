@@ -110,7 +110,6 @@ exports[`renders ESU School correctly 1`] = `
 
 .c9 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
@@ -411,7 +410,6 @@ exports[`renders correctly 1`] = `
 
 .c12 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
