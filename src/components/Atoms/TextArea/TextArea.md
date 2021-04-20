@@ -6,7 +6,7 @@
   name="description"
   placeholder="This is a placeholder"
   label="Label"
-  rows="4"
+  rows={4}
   id="textarea-test"
 />
 
@@ -14,7 +14,7 @@
 <TextArea
   name="description"
   label="Label"
-  rows="6"
+  rows={6}
   errorMsg="This is an error message"
   id="textarea-test-2"
 />

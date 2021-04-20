@@ -1,16 +1,15 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import TextArea from './TextArea';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import TextArea from "./TextArea";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <TextArea
       name="description"
       placeholder="This is text area"
       label="Label"
-      rows="5"
-      cols="5"
+      rows={5}
       errorMsg=""
       id="Please leave your comment here"
     />
@@ -99,10 +98,9 @@ it('renders correctly', () => {
       <textarea
         aria-describedby="Please leave your comment here"
         className="c3"
-        cols="5"
         name="description"
         placeholder="This is text area"
-        rows="5"
+        rows={5}
       />
       
     </label>
