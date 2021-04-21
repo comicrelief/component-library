@@ -18,14 +18,13 @@ import {
 } from './_MarketingPrefsConfig';
 
 const MarketingPreferencesDS = ({
-  control,
   copyTop,
   copyBottom,
   mpValidationOptions,
   id,
   formContext
 }) => {
-  const { errors } = formContext;
+  const { errors, control } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
@@ -257,14 +256,14 @@ MarketingPreferencesDS.propTypes = {
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
   id: PropTypes.string,
-  control: PropTypes.func.isRequired,
-  formContext: PropTypes.shape.isRequired
+  formContext: PropTypes.shape()
 };
 
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
   copyBottom: defaultCopyBottom,
-  id: null
+  id: null,
+  formContext: null
 };
 
 export {

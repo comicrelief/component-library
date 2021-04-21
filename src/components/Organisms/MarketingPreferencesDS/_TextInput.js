@@ -25,7 +25,8 @@ const TextInput = ({
 
 TextInput.defaultProps = {
   optional: null,
-  fieldType: 'text'
+  fieldType: 'text',
+  formContext: null
 };
 
 TextInput.propTypes = {
@@ -33,7 +34,7 @@ TextInput.propTypes = {
   label: PropTypes.string.isRequired,
   optional: PropTypes.bool,
   fieldType: PropTypes.string,
-  formContext: PropTypes.shape.isRequired
+  formContext: PropTypes.shape()
 };
 
 export default TextInput;
