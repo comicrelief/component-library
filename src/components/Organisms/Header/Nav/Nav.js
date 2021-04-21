@@ -79,7 +79,6 @@ const MainNav = ({ navItems }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
-
             return (
               <NavItem
                 role="none"
@@ -91,6 +90,7 @@ const MainNav = ({ navItems }) => {
                   <NavLink
                     href={hasPopUp ? '#' : thisUrl}
                     inline
+                    rel={relNoopener}
                     aria-expanded={!!isSubMenuOpen[group.id]}
                     aria-haspopup={hasPopUp}
                     onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
