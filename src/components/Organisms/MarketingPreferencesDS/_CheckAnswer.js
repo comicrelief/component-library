@@ -9,10 +9,10 @@ import {
   CheckInput
 } from './MarketingPreferencesDS.style';
 
-const CheckAnswer = ({ name, mpValidationOptions, userSelection }) => {
-  const {
-    register = {}, setValue, clearErrors
-  } = useFormContext();
+const CheckAnswer = ({
+  name, mpValidationOptions, userSelection, register
+}) => {
+  const { setValue, clearErrors } = useFormContext();
 
   const onChange = e => {
     let newVal;
@@ -76,7 +76,8 @@ CheckAnswer.propTypes = {
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
-  userSelection: PropTypes.string
+  userSelection: PropTypes.string,
+  register: PropTypes.func.isRequired
 };
 
 export default CheckAnswer;

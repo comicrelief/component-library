@@ -22,7 +22,8 @@ const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
   mpValidationOptions,
-  id
+  id,
+  register
 }) => {
   const { errors = {} } = useFormContext() || {};
 
@@ -82,6 +83,7 @@ const MarketingPreferencesDS = ({
             name="mp_permissionEmail"
             id="mp_permissionEmail"
             userSelection={emailChoice[0]}
+            register={register}
           />
         </Head>
 
@@ -97,6 +99,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionEmail[emailChoice[0]]}
               type="email"
               id="mp_email"
+              register={register}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -126,6 +129,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               optional={!mp_permissionSMS[smsChoice[0]]}
               id="mp_mobile"
+              register={register}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -144,6 +148,7 @@ const MarketingPreferencesDS = ({
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
             userSelection={phoneChoice[0]}
+            register={register}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
@@ -155,6 +160,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               optional={!mp_permissionPhone[phoneChoice[0]]}
               id="mp_phone"
+              register={register}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -173,6 +179,7 @@ const MarketingPreferencesDS = ({
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
             userSelection={postChoice[0]}
+            register={register}
           />
         </Head>
         <MaybeDisabled disabled={disablePostInput}>
@@ -184,6 +191,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 1"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_address1"
+              register={register}
             />
             <TextInput
               placeholder=""
@@ -191,7 +199,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 2"
               optional
               id="mp_address2"
-
+              register={register}
             />
             <TextInput
               placeholder=""
@@ -199,6 +207,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 3"
               optional
               id="mp_address3"
+              register={register}
             />
             <TextInput
               placeholder=""
@@ -206,6 +215,7 @@ const MarketingPreferencesDS = ({
               label="Town/City"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_town"
+              register={register}
             />
             <TextInput
               placeholder=""
@@ -213,6 +223,7 @@ const MarketingPreferencesDS = ({
               label="Postcode"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_postcode"
+              register={register}
             />
             <TextInput
               placeholder=""
@@ -220,6 +231,7 @@ const MarketingPreferencesDS = ({
               label="Country"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_country"
+              register={register}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -244,7 +256,8 @@ MarketingPreferencesDS.propTypes = {
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
   id: PropTypes.string,
-  control: PropTypes.func.isRequired
+  control: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired
 };
 
 MarketingPreferencesDS.defaultProps = {
