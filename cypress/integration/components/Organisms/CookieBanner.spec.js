@@ -56,7 +56,7 @@ describe('Cookie Banner component', () => {
                 .contains('our use of cookies');
             cy.get('@container')
                 .find('p:nth-child(2) > a:nth-child(1)')
-                .should('have', 'button', 'Accept')
+                .contains('Accept')
                 .click();
             cy.get('@container')
                 .find('p:nth-child(2) > a:nth-child(2)')

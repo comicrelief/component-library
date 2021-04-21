@@ -58,7 +58,7 @@ describe('Email Sign Up component', () => {
             cy.get('[data-test="subscribe-button"]')
                 .click();
             cy.get('[data-test="error-message"]')
-                .should('have', 'invalid email!');
+                .should('contain', 'invalid email!');
             cy.get('@container')
                 .find('input[id="email"]')
                 .type('test@comicrelief.com');
@@ -108,7 +108,7 @@ describe('Email Sign Up component', () => {
             cy.get('[data-test="subscribe-button-school"]')
                 .click();
             cy.get('[data-test="error-message"]')
-                .should('have', 'invalid email!');
+                .should('contain', 'invalid email!');
             cy.get('@container')
                 .find('input[id="email"]')
                 .type('test@comicrelief.com');
