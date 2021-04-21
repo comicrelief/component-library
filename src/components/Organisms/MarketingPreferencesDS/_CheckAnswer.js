@@ -67,7 +67,8 @@ const CheckAnswer = ({
 };
 
 CheckAnswer.defaultProps = {
-  userSelection: null
+  userSelection: null,
+  formContext: null
 };
 
 CheckAnswer.propTypes = {
@@ -76,7 +77,7 @@ CheckAnswer.propTypes = {
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
   userSelection: PropTypes.string,
-  formContext: PropTypes.shape.isRequired
+  formContext: PropTypes.shape()
 };
 
 export default CheckAnswer;

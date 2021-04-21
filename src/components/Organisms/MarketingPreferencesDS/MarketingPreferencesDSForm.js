@@ -52,7 +52,7 @@ const MarketingPreferencesDSForm = () => {
     defaultValues: initialValues,
     resolver: yupResolver(mpValidationSchema)
   });
-  const { handleSubmit, control } = formMethods;
+  const { handleSubmit } = formMethods;
 
   // For our customised-instance:
   const formMethodsCustom = useForm({
@@ -68,7 +68,6 @@ const MarketingPreferencesDSForm = () => {
       <FormProvider {...formMethods}>
         <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS
-            control={control}
             mpValidationOptions={mpValidationOptions}
             id="default"
             formContext={formMethods}
@@ -83,7 +82,6 @@ const MarketingPreferencesDSForm = () => {
       <FormProvider {...formMethodsCustom}>
         <form onSubmit={handleSubmitCustom(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS
-            control={control}
             mpValidationOptions={mpValidationOptionsCustom}
             id="custom"
             formContext={formMethodsCustom}
