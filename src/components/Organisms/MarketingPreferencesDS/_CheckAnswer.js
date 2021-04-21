@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useFormContext } from 'react-hook-form';
 import AssociatedFields from './_AssociatedFields';
 
 import {
@@ -10,9 +9,9 @@ import {
 } from './MarketingPreferencesDS.style';
 
 const CheckAnswer = ({
-  name, mpValidationOptions, userSelection, register
+  name, mpValidationOptions, userSelection, formContext
 }) => {
-  const { setValue, clearErrors } = useFormContext();
+  const { setValue, clearErrors, register } = formContext;
 
   const onChange = e => {
     let newVal;
@@ -77,7 +76,7 @@ CheckAnswer.propTypes = {
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
   userSelection: PropTypes.string,
-  register: PropTypes.func.isRequired
+  formContext: PropTypes.shape.isRequired
 };
 
 export default CheckAnswer;
