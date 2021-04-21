@@ -39,6 +39,7 @@ const PrivacyCopyWrapper = styled.div`
     line-height: ${({ theme }) => theme.fontSize('xl')};
     a {
       font-size: ${({ theme }) => theme.fontSize('s')};
+      color: ${({ theme }) => theme.color('white')};
     }
   }
 `;
