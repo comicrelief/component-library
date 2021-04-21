@@ -5,9 +5,9 @@ import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
   fieldName, label,
-  optional, fieldType, ...rest
+  optional, fieldType, register, ...rest
 }) => {
-  const { errors, register = {} } = useFormContext();
+  const { errors } = useFormContext();
 
   const props = {
     name: fieldName,
@@ -33,7 +33,8 @@ TextInput.propTypes = {
   fieldName: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   optional: PropTypes.bool,
-  fieldType: PropTypes.string
+  fieldType: PropTypes.string,
+  register: PropTypes.func.isRequired
 };
 
 export default TextInput;
