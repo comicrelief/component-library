@@ -1,7 +1,8 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useWatch, useFormContext } from 'react-hook-form';
+import { useWatch } from 'react-hook-form';
+import _ from 'lodash';
 import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
@@ -20,15 +21,16 @@ const MarketingPreferencesDS = ({
   copyTop,
   copyBottom,
   mpValidationOptions,
-  id
+  id,
+  formContext
 }) => {
-  const { errors } = useFormContext();
+  const { errors, control } = formContext;
 
   // For brevity
-  const emailChoice = useWatch({ name: 'mp_permissionEmail', defaultValue: [] });
-  const postChoice = useWatch({ name: 'mp_permissionPost', defaultValue: [] });
-  const phoneChoice = useWatch({ name: 'mp_permissionPhone', defaultValue: [] });
-  const smsChoice = useWatch({ name: 'mp_permissionSMS', defaultValue: [] });
+  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
+  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: [] });
+  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: [] });
+  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: [] });
 
   const {
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
@@ -48,15 +50,19 @@ const MarketingPreferencesDS = ({
   || (mp_permissionPost.no === false && postChoice.includes('no'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
-  const isAddressErroring = errors.mp_address1 || errors.mp_address2
-  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
-
+  const isAddressErroring = () => {
+    if (_.isEmpty(errors)) {
+      return null;
+    }
+    return errors.mp_address1 || errors.mp_address2
+    || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
+  };
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
   const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
   const showSMSField = !mp_permissionSMS.hideInput && (smsChoice.length || errors.mp_mobile);
   const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice.length || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring);
+  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring());
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
@@ -71,7 +77,13 @@ const MarketingPreferencesDS = ({
           <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
             Email Me
           </Text>
-          <CheckAnswer mpValidationOptions={mpValidationOptions} name="mp_permissionEmail" id="mp_permissionEmail" userSelection={emailChoice[0]} />
+          <CheckAnswer
+            mpValidationOptions={mpValidationOptions}
+            name="mp_permissionEmail"
+            id="mp_permissionEmail"
+            userSelection={emailChoice[0]}
+            formContext={formContext}
+          />
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
@@ -86,6 +98,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionEmail[emailChoice[0]]}
               type="email"
               id="mp_email"
+              formContext={formContext}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -104,6 +117,7 @@ const MarketingPreferencesDS = ({
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
             userSelection={smsChoice[0]}
+            formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
@@ -115,6 +129,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your mobile no."
               optional={!mp_permissionSMS[smsChoice[0]]}
               id="mp_mobile"
+              formContext={formContext}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -133,6 +148,7 @@ const MarketingPreferencesDS = ({
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
             userSelection={phoneChoice[0]}
+            formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
@@ -144,6 +160,7 @@ const MarketingPreferencesDS = ({
               label="Please enter your phone no."
               optional={!mp_permissionPhone[phoneChoice[0]]}
               id="mp_phone"
+              formContext={formContext}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -162,6 +179,7 @@ const MarketingPreferencesDS = ({
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
             userSelection={postChoice[0]}
+            formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disablePostInput}>
@@ -173,6 +191,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 1"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_address1"
+              formContext={formContext}
             />
             <TextInput
               placeholder=""
@@ -180,7 +199,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 2"
               optional
               id="mp_address2"
-
+              formContext={formContext}
             />
             <TextInput
               placeholder=""
@@ -188,6 +207,7 @@ const MarketingPreferencesDS = ({
               label="Address Line 3"
               optional
               id="mp_address3"
+              formContext={formContext}
             />
             <TextInput
               placeholder=""
@@ -195,6 +215,7 @@ const MarketingPreferencesDS = ({
               label="Town/City"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_town"
+              formContext={formContext}
             />
             <TextInput
               placeholder=""
@@ -202,6 +223,7 @@ const MarketingPreferencesDS = ({
               label="Postcode"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_postcode"
+              formContext={formContext}
             />
             <TextInput
               placeholder=""
@@ -209,6 +231,7 @@ const MarketingPreferencesDS = ({
               label="Country"
               optional={!mp_permissionPost[postChoice[0]]}
               id="mp_country"
+              formContext={formContext}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -232,13 +255,15 @@ MarketingPreferencesDS.propTypes = {
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
-  id: PropTypes.string
+  id: PropTypes.string,
+  formContext: PropTypes.shape()
 };
 
 MarketingPreferencesDS.defaultProps = {
   copyTop: defaultCopyTop,
   copyBottom: defaultCopyBottom,
-  id: null
+  id: null,
+  formContext: null
 };
 
 export {

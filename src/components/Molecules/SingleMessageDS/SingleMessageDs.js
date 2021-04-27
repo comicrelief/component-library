@@ -63,7 +63,7 @@ const SingleMessageDs = ({
 
   const icon = linkIcon || (target === 'blank' ? <External /> : <Internal />);
 
-  const external = target === 'blank' ? 'noopener noreferrer' : null;
+  const external = target === 'blank' ? 'noopener' : null;
 
   return (
     <Container {...rest} imageLeft={imageLeft}>

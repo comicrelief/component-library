@@ -75,7 +75,7 @@ const EmailSignUp = ({
             value={value}
             onChange={event => setValue(event.target.value)}
           />
-          <ButtonWrapper backgroundColor={backgroundColor}>
+          <ButtonWrapper>
             <Button
               as="input"
               type="submit"
@@ -90,7 +90,7 @@ const EmailSignUp = ({
       {next && (
         <>
           {schoolsSelect}
-          <ButtonWrapper backgroundColor={backgroundColor}>
+          <ButtonWrapper>
             <Button
               as="input"
               type="submit"
@@ -122,7 +122,7 @@ const EmailSignUp = ({
         value={value}
         onChange={event => setValue(event.target.value)}
       />
-      <ButtonWrapper backgroundColor={backgroundColor}>
+      <ButtonWrapper>
         <Button
           as="input"
           data-test="subscribe-button"

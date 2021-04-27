@@ -139,7 +139,7 @@ const CardDs = ({
     return null;
   };
 
-  const external = target === 'blank' ? 'noopener noreferrer' : null;
+  const external = target === 'blank' ? 'noopener' : null;
 
   return (
     <Container {...rest}>

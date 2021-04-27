@@ -70,6 +70,7 @@ const MarketingPreferencesDSForm = () => {
           <MarketingPreferencesDS
             mpValidationOptions={mpValidationOptions}
             id="default"
+            formContext={formMethods}
           />
           <input type="submit" />
         </form>
@@ -83,6 +84,7 @@ const MarketingPreferencesDSForm = () => {
           <MarketingPreferencesDS
             mpValidationOptions={mpValidationOptionsCustom}
             id="custom"
+            formContext={formMethodsCustom}
           />
           <input type="submit" />
         </form>

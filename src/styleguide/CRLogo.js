@@ -9,7 +9,7 @@ const Image = styled.img`
 `;
 export function LogoRenderer() {
   return (
-    <a href="/" title="Go to homepage" rel="noopener noreferrer">
+    <a href="/" title="Go to homepage">
       <Image src={Logo} alt="Comic Relief Pattern Library Logo" />
     </a>
   );

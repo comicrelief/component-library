@@ -55,11 +55,12 @@ export { default as SingleMessageDs } from './components/Molecules/SingleMessage
 export { default as Promo } from './components/Molecules/Promo/Promo';
 export { default as Accordion } from './components/Molecules/Accordion/Accordion';
 export { default as Countdown } from './components/Molecules/Countdown/Countdown';
+export { default as Banner } from './components/Molecules/Banner/Banner';
+export { default as Chip } from './components/Molecules/Chip/Chip';
+export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
-export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
-export { default as Chip } from './components/Molecules/Chip/Chip';
 export { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';

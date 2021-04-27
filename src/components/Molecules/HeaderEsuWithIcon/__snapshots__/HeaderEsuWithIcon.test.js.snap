@@ -174,7 +174,6 @@ exports[`renders correctly with error message 1`] = `
 
 .c19 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
@@ -197,6 +196,7 @@ exports[`renders correctly with error message 1`] = `
 
 .c21 p a {
   font-size: 1rem;
+  color: #FFFFFF;
 }
 
 .c10 {
@@ -668,7 +668,6 @@ exports[`renders correctly with modal open 1`] = `
 
 .c17 input {
   text-align: center;
-  border-color: #2C0230;
   width: 100%;
   font-size: 1rem;
 }
@@ -691,6 +690,7 @@ exports[`renders correctly with modal open 1`] = `
 
 .c19 p a {
   font-size: 1rem;
+  color: #FFFFFF;
 }
 
 .c10 {
@@ -1046,6 +1046,7 @@ exports[`renders correctly with success message 1`] = `
 
 .c10 p a {
   font-size: 1rem;
+  color: #FFFFFF;
 }
 
 .c7 {
