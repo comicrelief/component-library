@@ -42,6 +42,9 @@
     "yup": "^0.32.9",
     "yup-phone": "^1.2.19"
   },
+  "resolutions": {
+    "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
+  },
   "scripts": {
     "test": "yarn run jest",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
