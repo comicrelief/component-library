@@ -8,12 +8,15 @@ const FooterWrapper = styled.footer.attrs(() => ({
   text-align: center;
   line-height: initial;
   background: #000;
-  padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
   position: relative;
+  margin-top: -1rem;
+`;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: ${spacing('xl')} ${spacing('l')} ${spacing('xl')};
-  }
+const Angle = styled.div`
+  clip-path: polygon(0 0,100% 0,100% 30%,0 105%);
+  border-radius: 0 0 0 4rem;
+  background: white;
+  height: 100px;
 `;
 
 const InnerWrapper = styled.div`
@@ -22,6 +25,10 @@ const InnerWrapper = styled.div`
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: ${spacing('xl')} ${spacing('l')} ${spacing('xl')};
+  }
 `;
 
 const FooterBranding = styled.div`
@@ -62,6 +69,7 @@ const SocialIconWrapper = styled.div``;
 
 export {
   FooterWrapper,
+  Angle,
   InnerWrapper,
   FooterCopyright,
   FooterBranding,

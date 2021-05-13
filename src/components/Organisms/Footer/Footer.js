@@ -4,6 +4,7 @@ import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
+import Curve from '../../Atoms/Icons/Curve';
 
 import {
   FooterWrapper,
@@ -20,24 +21,27 @@ const Footer = ({
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
-    <FooterWrapper navItems {...rest}>
-      <InnerWrapper>
-        <SocialIconWrapper>
-          <SocialIcons campaign={campaignName} />
-        </SocialIconWrapper>
-        <FooterNav navItems={navItems} />
-        <FooterBranding>
-          <Brand href="/" title={`Go to ${campaign} homepage`}>
-            <Logo sizeSm="70px" sizeMd="70px" rotate campaign={campaign} />
-          </Brand>
-        </FooterBranding>
-        <FooterCopyright>
-          <Text tag="p" color="white">
-            {footerCopy}
-          </Text>
-        </FooterCopyright>
-      </InnerWrapper>
-    </FooterWrapper>
+    <div>
+      <Curve />
+      <FooterWrapper navItems {...rest}>
+        <InnerWrapper>
+          <SocialIconWrapper>
+            <SocialIcons campaign={campaignName} />
+          </SocialIconWrapper>
+          <FooterNav navItems={navItems} />
+          <FooterBranding>
+            <Brand href="/" title={`Go to ${campaign} homepage`}>
+              <Logo sizeSm="70px" sizeMd="70px" rotate campaign={campaign} />
+            </Brand>
+          </FooterBranding>
+          <FooterCopyright>
+            <Text tag="p" color="white">
+              {footerCopy}
+            </Text>
+          </FooterCopyright>
+        </InnerWrapper>
+      </FooterWrapper>
+    </div>
   );
 };
 
