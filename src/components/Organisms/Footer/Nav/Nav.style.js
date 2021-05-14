@@ -11,7 +11,6 @@ const NavLinkClass = styled(Link)`
   &:hover,
   &:focus {
     border-bottom: none;
-    font-weight: 500;
   }
 `;
 
@@ -112,11 +111,6 @@ const SubNavLink = styled(NavLinkClass)`
   padding: 14px 21px;
   height: auto;
   position: relative;
-
-  &:hover,
-  &:focus {
-    font-weight: 700;
-  }
 `;
 
 /**
@@ -165,11 +159,6 @@ const NavItem = styled.li`
     font-size: 19px;
     line-height: 40px;
     font-weight: 800;
-
-    &:focus,
-    &:hover {
-      font-weight: 800;
-    }
 
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: 20px;
