@@ -41,15 +41,15 @@ exports[`renders correctly with Comic Relief links 1`] = `
   display: flex;
   list-style-type: none;
   margin: 0 auto 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c1 {
@@ -60,6 +60,10 @@ exports[`renders correctly with Comic Relief links 1`] = `
 @media (min-width:740px) {
   .c0 {
     margin-bottom: 4rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 
@@ -202,15 +206,15 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   display: flex;
   list-style-type: none;
   margin: 0 auto 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c1 {
@@ -221,6 +225,10 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 @media (min-width:740px) {
   .c0 {
     margin-bottom: 4rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 
@@ -363,15 +371,15 @@ exports[`renders correctly with Sport Relief links 1`] = `
   display: flex;
   list-style-type: none;
   margin: 0 auto 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c1 {
@@ -382,6 +390,10 @@ exports[`renders correctly with Sport Relief links 1`] = `
 @media (min-width:740px) {
   .c0 {
     margin-bottom: 4rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 

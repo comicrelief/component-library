@@ -10,13 +10,20 @@ const FooterWrapper = styled.footer.attrs(() => ({
   background: #000;
   position: relative;
   margin-top: -1rem;
+  padding: 2rem;
 `;
 
 const Angle = styled.div`
-  clip-path: polygon(0 0,100% 0,100% 30%,0 105%);
-  border-radius: 0 0 0 4rem;
-  background: white;
-  height: 100px;
+  width: 100%;
+  display: block;
+  clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
+  height: 80px;
+  background: black;
+  margin-bottom: 1rem;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
+    height: 160px;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -25,17 +32,20 @@ const InnerWrapper = styled.div`
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
+  padding: 0 ${spacing('md')} ${spacing('l')};
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: ${spacing('xl')} ${spacing('l')} ${spacing('xl')};
+    padding: 0 ${spacing('l')} ${spacing('xl')};
   }
 `;
 
 const FooterBranding = styled.div`
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 0 25px;
+  position: absolute;
+  right: 2rem;
+  top: -2rem;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    right: 4rem;
+    top: -5rem;
+  }
 `;
 
 const FooterCopyright = styled.div`
