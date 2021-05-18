@@ -30,11 +30,19 @@ const InnerWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${spacing('md')} ${spacing('l')};
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: 0 ${spacing('l')} ${spacing('xl')};
+    padding: 0 ${spacing('md')} ${spacing('xl')};
+  }
+`;
+
+const BrandingWrapper = styled.div`
+  width: 100%;
+  position: relative;
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    max-width: 1200px;
   }
 `;
 
@@ -84,5 +92,6 @@ export {
   FooterCopyright,
   FooterBranding,
   SocialIconWrapper,
-  Brand
+  Brand,
+  BrandingWrapper
 };

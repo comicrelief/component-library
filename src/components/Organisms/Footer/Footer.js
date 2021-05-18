@@ -12,7 +12,8 @@ import {
   FooterCopyright,
   SocialIconWrapper,
   Brand,
-  Angle
+  Angle,
+  BrandingWrapper
 } from './Footer.style';
 
 const Footer = ({
@@ -25,11 +26,13 @@ const Footer = ({
       <Angle />
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
-          <FooterBranding>
-            <Brand href="/" title={`Go to ${campaign} homepage`}>
-              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-            </Brand>
-          </FooterBranding>
+          <BrandingWrapper>
+            <FooterBranding>
+              <Brand href="/" title={`Go to ${campaign} homepage`}>
+                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+              </Brand>
+            </FooterBranding>
+          </BrandingWrapper>
           <FooterNav navItems={navItems} />
           <SocialIconWrapper>
             <SocialIcons campaign={campaignName} />
