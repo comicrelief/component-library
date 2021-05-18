@@ -112,8 +112,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c21 {
-  width: 68px;
-  padding: 10px;
+  width: 48px;
+  margin-right: 1.5rem;
 }
 
 .c15 {
@@ -235,7 +235,7 @@ exports[`renders correctly 1`] = `
 .c11 {
   position: relative;
   font-weight: 700;
-  margin: 0 1.5% 45px;
+  margin: 0 0 45px;
 }
 
 .c11 a {
@@ -376,7 +376,7 @@ exports[`renders correctly 1`] = `
   .c14 {
     height: auto;
     margin-top: 12px;
-    padding: 0 2%;
+    padding: 0;
   }
 
   .c14 a {
@@ -408,7 +408,7 @@ exports[`renders correctly 1`] = `
   .c19 {
     height: auto;
     margin-top: 12px;
-    padding: 0 2%;
+    padding: 0;
     -webkit-flex: 0 0 44%;
     -ms-flex: 0 0 44%;
     flex: 0 0 44%;
@@ -452,6 +452,10 @@ exports[`renders correctly 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
@@ -463,7 +467,7 @@ exports[`renders correctly 1`] = `
   }
 
   .c11 > span {
-    padding: 0 2%;
+    padding: 0;
   }
 }
 

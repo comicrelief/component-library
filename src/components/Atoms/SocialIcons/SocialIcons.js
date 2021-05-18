@@ -21,8 +21,8 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  width: 68px;
-  padding: 10px;
+  width: 48px;
+  margin-right: ${spacing('m')};
 `;
 
 /** Social media icons with customizable style linked to campaign social media accounts */

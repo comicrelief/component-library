@@ -53,8 +53,8 @@ exports[`renders correctly with Comic Relief links 1`] = `
 }
 
 .c1 {
-  width: 68px;
-  padding: 10px;
+  width: 48px;
+  margin-right: 1.5rem;
 }
 
 @media (min-width:740px) {
@@ -218,8 +218,8 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 }
 
 .c1 {
-  width: 68px;
-  padding: 10px;
+  width: 48px;
+  margin-right: 1.5rem;
 }
 
 @media (min-width:740px) {
@@ -383,8 +383,8 @@ exports[`renders correctly with Sport Relief links 1`] = `
 }
 
 .c1 {
-  width: 68px;
-  padding: 10px;
+  width: 48px;
+  margin-right: 1.5rem;
 }
 
 @media (min-width:740px) {
