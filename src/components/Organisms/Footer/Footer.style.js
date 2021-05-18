@@ -17,12 +17,12 @@ const Angle = styled.div`
   width: 100%;
   display: block;
   clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-  height: 80px;
+  height: 50px;
   background: black;
   margin-bottom: 1rem;
   @media ${({ theme }) => theme.breakpoint('medium')} {
     clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-    height: 160px;
+    height: 95px;
   }
 `;
 

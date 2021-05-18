@@ -126,7 +126,6 @@ exports[`renders correctly 1`] = `
 .c15:hover,
 .c15:focus {
   border-bottom: none;
-  font-weight: 500;
 }
 
 .c8 {
@@ -226,11 +225,6 @@ exports[`renders correctly 1`] = `
   position: relative;
 }
 
-.c16:hover,
-.c16:focus {
-  font-weight: 700;
-}
-
 .c10 {
   background-color: inherit;
   list-style: none outside;
@@ -252,11 +246,6 @@ exports[`renders correctly 1`] = `
   background-color: inherit;
   font-size: 19px;
   line-height: 40px;
-  font-weight: 800;
-}
-
-.c11 a:focus,
-.c11 a:hover {
   font-weight: 800;
 }
 
@@ -294,7 +283,7 @@ exports[`renders correctly 1`] = `
   display: block;
   -webkit-clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
   clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-  height: 80px;
+  height: 50px;
   background: black;
   margin-bottom: 1rem;
 }
@@ -500,7 +489,7 @@ exports[`renders correctly 1`] = `
   .c0 {
     -webkit-clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
     clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-    height: 160px;
+    height: 95px;
   }
 }
 
