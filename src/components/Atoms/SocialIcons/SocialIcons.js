@@ -21,7 +21,7 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  width: 80px;
+  width: 68px;
   padding: 10px;
 `;
 
