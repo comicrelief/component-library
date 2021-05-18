@@ -27,7 +27,7 @@ const Footer = ({
         <InnerWrapper>
           <FooterBranding>
             <Brand href="/" title={`Go to ${campaign} homepage`}>
-              <Logo sizeSm="360px" sizeMd="48px" rotate={false} campaign={campaign} />
+              <Logo sizeSm="36px" sizeMd="48px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
           <FooterNav navItems={navItems} />

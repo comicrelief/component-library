@@ -18,7 +18,7 @@ const Angle = styled.div`
   display: block;
   clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
   height: 50px;
-  background: black;
+  background: #222;
   margin-bottom: 1rem;
   @media ${({ theme }) => theme.breakpoint('medium')} {
     clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);

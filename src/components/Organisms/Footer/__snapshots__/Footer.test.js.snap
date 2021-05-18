@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
 .c6 {
   display: inline-block;
   z-index: 3;
-  width: 360px;
+  width: 36px;
   -webkit-transform: inherit;
   -ms-transform: inherit;
   transform: inherit;
@@ -284,7 +284,7 @@ exports[`renders correctly 1`] = `
   -webkit-clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
   clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
   height: 50px;
-  background: black;
+  background: #222;
   margin-bottom: 1rem;
 }
 
