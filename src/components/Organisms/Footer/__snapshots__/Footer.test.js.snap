@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
 .c6 {
   display: inline-block;
   z-index: 3;
-  width: 40px;
+  width: 360px;
   -webkit-transform: inherit;
   -ms-transform: inherit;
   transform: inherit;
@@ -272,7 +272,7 @@ exports[`renders correctly 1`] = `
 .c1 {
   text-align: center;
   line-height: initial;
-  background: #000;
+  background: #222;
   position: relative;
   margin-top: -1rem;
   padding: 2rem;
@@ -328,7 +328,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1150px) {
   .c6 {
-    width: 70px;
+    width: 48px;
   }
 }
 
@@ -502,7 +502,7 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c3 {
     right: 4rem;
-    top: -5rem;
+    top: -4rem;
   }
 }
 

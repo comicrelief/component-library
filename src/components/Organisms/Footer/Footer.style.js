@@ -7,7 +7,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: center;
   line-height: initial;
-  background: #000;
+  background: #222;
   position: relative;
   margin-top: -1rem;
   padding: 2rem;
@@ -44,7 +44,7 @@ const FooterBranding = styled.div`
   top: -2rem;
   @media ${({ theme }) => theme.breakpoint('medium')} {
     right: 4rem;
-    top: -5rem;
+    top: -4rem;
   }
 `;
 
