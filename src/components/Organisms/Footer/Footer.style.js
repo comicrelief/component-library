@@ -27,6 +27,7 @@ const Angle = styled.div`
 `;
 
 const InnerWrapper = styled.div`
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -38,21 +39,12 @@ const InnerWrapper = styled.div`
   }
 `;
 
-const BrandingWrapper = styled.div`
-  width: 100%;
-  position: relative;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    max-width: 1200px;
-  }
-`;
-
 const FooterBranding = styled.div`
   position: absolute;
-  right: 2rem;
+  right: 0;
   top: -2rem;
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    right: 4rem;
-    top: -4rem;
+    top: -5rem;
   }
 `;
 
@@ -83,7 +75,9 @@ const Brand = styled(Link)`
   }
 `;
 
-const SocialIconWrapper = styled.div``;
+const SocialIconWrapper = styled.div`
+  margin-top: 4rem;
+`;
 
 export {
   FooterWrapper,
@@ -92,6 +86,5 @@ export {
   FooterCopyright,
   FooterBranding,
   SocialIconWrapper,
-  Brand,
-  BrandingWrapper
+  Brand
 };

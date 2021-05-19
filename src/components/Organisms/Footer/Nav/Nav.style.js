@@ -78,7 +78,7 @@ const SubNavItem = styled.li`
     margin-top: 12px;
     padding: 0;
 
-    ${({ column }) => (column === true ? 'flex: 0 0 44%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
 
     a {
       background-color: inherit;
@@ -100,7 +100,7 @@ const SubNavItem = styled.li`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    ${({ column }) => (column === true ? 'flex: 0 0 46%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
   }
 `;
 
@@ -125,7 +125,7 @@ const NavMenu = styled.ul`
   @media ${({ theme }) => theme.breakpoint('small')} {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
   }
 `;
 
@@ -140,11 +140,16 @@ const NavLink = styled(NavLinkClass)``;
 const NavItem = styled.li`
   position: relative;
   font-weight: 700;
-  margin: 0 0 45px;
+  margin: 0;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    /* Minus 9% to remove 3 x 1.5% margins from previous rule */
     flex: 0 0 30%;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    /* Minus 9% to remove 3 x 1.5% margins from previous rule */
+    flex: 0 0 calc(25% - 1rem);
+    margin-right: 1rem;
 
     > span {
       padding: 0;
