@@ -328,7 +328,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c20 {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 @media (min-width:1150px) {
@@ -478,6 +478,7 @@ exports[`renders correctly 1`] = `
     -ms-flex: 0 0 calc(25% - 1rem);
     flex: 0 0 calc(25% - 1rem);
     margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
   .c11 > span {

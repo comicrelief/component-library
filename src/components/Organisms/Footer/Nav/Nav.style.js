@@ -150,6 +150,7 @@ const NavItem = styled.li`
     /* Minus 9% to remove 3 x 1.5% margins from previous rule */
     flex: 0 0 calc(25% - 1rem);
     margin-right: 1rem;
+    margin-bottom: 1rem;
 
     > span {
       padding: 0;

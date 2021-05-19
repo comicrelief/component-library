@@ -76,7 +76,7 @@ const Brand = styled(Link)`
 `;
 
 const SocialIconWrapper = styled.div`
-  margin-top: 4rem;
+  margin-top: 3rem;
 `;
 
 export {
