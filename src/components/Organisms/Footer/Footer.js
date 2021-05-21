@@ -35,7 +35,7 @@ const Footer = ({
             <SocialIcons campaign={campaignName} />
           </SocialIconWrapper>
           <FooterCopyright>
-            <Text tag="p" color="white">
+            <Text tag="p" color="grey">
               {footerCopy}
             </Text>
           </FooterCopyright>

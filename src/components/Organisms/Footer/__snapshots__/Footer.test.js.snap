@@ -27,6 +27,15 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
+.c27 {
+  color: #969598;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c7 {
   object-fit: cover;
   width: 100%;
@@ -1216,8 +1225,8 @@ exports[`renders correctly 1`] = `
         className="c26"
       >
         <p
-          className="c17"
-          color="white"
+          className="c27"
+          color="grey"
           size="s"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
