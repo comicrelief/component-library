@@ -284,8 +284,7 @@ exports[`renders correctly 1`] = `
   line-height: initial;
   background: #222;
   position: relative;
-  margin-top: -1rem;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .c1 {
@@ -513,6 +512,12 @@ exports[`renders correctly 1`] = `
 
   .c15 a:after {
     content: none;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem;
   }
 }
 

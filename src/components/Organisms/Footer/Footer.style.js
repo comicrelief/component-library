@@ -9,8 +9,10 @@ const FooterWrapper = styled.footer.attrs(() => ({
   line-height: initial;
   background: #222;
   position: relative;
-  margin-top: -1rem;
-  padding: 2rem;
+  padding: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: ${spacing('l')};
+  }
 `;
 
 const Angle = styled.div`
