@@ -53,7 +53,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
 }
 
 .c1 {
-  width: 48px;
+  width: 32px;
   margin-right: 1.5rem;
 }
 
@@ -64,6 +64,12 @@ exports[`renders correctly with Comic Relief links 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
   }
 }
 
@@ -218,7 +224,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 }
 
 .c1 {
-  width: 48px;
+  width: 32px;
   margin-right: 1.5rem;
 }
 
@@ -229,6 +235,12 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
   }
 }
 
@@ -383,7 +395,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
 }
 
 .c1 {
-  width: 48px;
+  width: 32px;
   margin-right: 1.5rem;
 }
 
@@ -394,6 +406,12 @@ exports[`renders correctly with Sport Relief links 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
   }
 }
 

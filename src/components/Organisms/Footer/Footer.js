@@ -11,8 +11,7 @@ import {
   FooterBranding,
   FooterCopyright,
   SocialIconWrapper,
-  Brand,
-  Angle
+  Brand
 } from './Footer.style';
 
 const Footer = ({
@@ -22,7 +21,6 @@ const Footer = ({
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
     <div>
-      <Angle />
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
           <FooterBranding>

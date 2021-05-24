@@ -21,8 +21,11 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  width: 48px;
+  width: 32px;
   margin-right: ${spacing('m')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 48px;
+  }
 `;
 
 /** Social media icons with customizable style linked to campaign social media accounts */

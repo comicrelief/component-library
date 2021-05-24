@@ -141,9 +141,11 @@ const NavItem = styled.li`
   position: relative;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 1rem;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex: 0 0 30%;
+    margin: 0;
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {

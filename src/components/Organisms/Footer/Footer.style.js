@@ -40,12 +40,8 @@ const InnerWrapper = styled.div`
 `;
 
 const FooterBranding = styled.div`
-  position: absolute;
-  right: 0;
-  top: -2rem;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    top: -5rem;
-  }
+  display: flex;
+  margin-bottom: 1rem;
 `;
 
 const FooterCopyright = styled.div`
