@@ -41,7 +41,9 @@ const InnerWrapper = styled.div`
 
 const FooterBranding = styled.div`
   display: flex;
-  margin-bottom: 1rem;
+  margin: ${spacing('lg')} 0;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const FooterCopyright = styled.div`
@@ -49,6 +51,7 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+  margin-top: ${spacing('lg')};
 
   p {
     font-size: 15px;
@@ -64,16 +67,13 @@ const FooterCopyright = styled.div`
 
 const Brand = styled(Link)`
   color: transparent;
-  margin-right: auto;
   border: 0;
   :hover {
     border: 0;
   }
 `;
 
-const SocialIconWrapper = styled.div`
-  margin-top: 3rem;
-`;
+const SocialIconWrapper = styled.div``;
 
 export {
   FooterWrapper,

@@ -9,13 +9,12 @@ import spacing from '../../../theme/shared/spacing';
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
-  margin: 0 auto ${spacing('l')};
+  margin: 0 auto;
   justify-content: center;
   padding: 0;
   align-items: center;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-bottom: ${spacing('xl')};
     justify-content: start;
   }
 `;

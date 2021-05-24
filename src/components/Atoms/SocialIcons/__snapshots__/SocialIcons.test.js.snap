@@ -40,7 +40,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -59,7 +59,6 @@ exports[`renders correctly with Comic Relief links 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    margin-bottom: 4rem;
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -211,7 +210,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -230,7 +229,6 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    margin-bottom: 4rem;
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -382,7 +380,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -401,7 +399,6 @@ exports[`renders correctly with Sport Relief links 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    margin-bottom: 4rem;
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
