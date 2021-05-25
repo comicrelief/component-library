@@ -11,7 +11,6 @@ const NavLinkClass = styled(Link)`
   &:hover,
   &:focus {
     border-bottom: none;
-    font-weight: 500;
   }
 `;
 
@@ -77,9 +76,9 @@ const SubNavItem = styled.li`
   @media ${({ theme }) => theme.breakpoint('small')} {
     height: auto;
     margin-top: 12px;
-    padding: 0 2%;
+    padding: 0;
 
-    ${({ column }) => (column === true ? 'flex: 0 0 44%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
 
     a {
       background-color: inherit;
@@ -101,7 +100,7 @@ const SubNavItem = styled.li`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    ${({ column }) => (column === true ? 'flex: 0 0 46%;' : null)};
+    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
   }
 `;
 
@@ -112,11 +111,6 @@ const SubNavLink = styled(NavLinkClass)`
   padding: 14px 21px;
   height: auto;
   position: relative;
-
-  &:hover,
-  &:focus {
-    font-weight: 700;
-  }
 `;
 
 /**
@@ -131,6 +125,7 @@ const NavMenu = styled.ul`
   @media ${({ theme }) => theme.breakpoint('small')} {
     display: flex;
     flex-wrap: wrap;
+    justify-content: start;
   }
 `;
 
@@ -145,14 +140,22 @@ const NavLink = styled(NavLinkClass)``;
 const NavItem = styled.li`
   position: relative;
   font-weight: 700;
-  margin: 0 1.5% 45px;
+  margin: 0;
+  margin-bottom: 1rem;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    /* Minus 9% to remove 3 x 1.5% margins from previous rule */
     flex: 0 0 30%;
+    margin: 0;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    /* Minus 9% to remove 3 x 1.5% margins from previous rule */
+    flex: 0 0 calc(25% - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 
     > span {
-      padding: 0 2%;
+      padding: 0;
     }
   }
 
@@ -165,11 +168,6 @@ const NavItem = styled.li`
     font-size: 19px;
     line-height: 40px;
     font-weight: 800;
-
-    &:focus,
-    &:hover {
-      font-weight: 800;
-    }
 
     @media ${({ theme }) => theme.breakpoint('small')} {
       font-size: 20px;

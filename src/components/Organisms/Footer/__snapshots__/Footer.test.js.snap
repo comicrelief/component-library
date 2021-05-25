@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c8 {
+.c13 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c11 {
+.c16 {
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c17 {
+.c21 {
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
@@ -27,7 +27,16 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c23 {
+.c25 {
+  color: #969598;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c11 {
   object-fit: cover;
   width: 100%;
   display: block;
@@ -35,16 +44,16 @@ exports[`renders correctly 1`] = `
   margin-right: 1rem;
 }
 
-.c22 {
+.c10 {
   display: inline-block;
   z-index: 3;
-  width: 70px;
-  -webkit-transform: rotate(-14deg);
-  -ms-transform: rotate(-14deg);
-  transform: rotate(-14deg);
+  width: 48px;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
 }
 
-.c14 {
+.c8 {
   position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -55,12 +64,12 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
 }
 
-.c14:hover {
+.c8:hover {
   color: #000000;
   border-bottom: 2px solid #000000;
 }
 
-.c4 {
+.c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
@@ -69,16 +78,16 @@ exports[`renders correctly 1`] = `
   transition: opacity 0.2s;
 }
 
-.c4:hover,
-.c4:focus {
+.c5:hover,
+.c5:focus {
   opacity: 0.6;
 }
 
-.c5 {
+.c6 {
   width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -93,49 +102,48 @@ exports[`renders correctly 1`] = `
   width: 1px;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
-.c3 {
-  width: 80px;
-  padding: 10px;
+.c4 {
+  width: 32px;
+  margin-right: 1.5rem;
 }
 
-.c15 {
+.c19 {
   border: 0;
   height: 46px;
   width: 100%;
   background-color: #2C0230;
 }
 
-.c15:hover,
-.c15:focus {
+.c19:hover,
+.c19:focus {
   border-bottom: none;
-  font-weight: 500;
 }
 
-.c7 {
+.c12 {
   display: block;
   width: 100%;
   text-align: left;
 }
 
-.c7 > h2 {
+.c12 > h2 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -150,7 +158,7 @@ exports[`renders correctly 1`] = `
   width: 1px;
 }
 
-.c12 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,84 +175,80 @@ exports[`renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c12 > li a {
+.c17 > li a {
   display: none;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
 }
 
-.c12 > li a:after {
+.c17 > li a:after {
+  content: none;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
+  max-height: 0px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c22 > li a {
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.c22 > li a:after {
   content: none;
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
-  max-height: 0px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  list-style: none outside;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c18 > li a {
-  display: none;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.c18 > li a:after {
-  content: none;
-}
-
-.c13 {
   height: 40px;
   width: 100%;
   background-color: inherit;
   padding: 8px 0;
 }
 
-.c19 {
+.c23 {
   height: 40px;
   width: 100%;
   background-color: inherit;
   padding: 8px 0;
 }
 
-.c16 {
+.c20 {
   padding: 14px 21px;
   height: auto;
   position: relative;
 }
 
-.c16:hover,
-.c16:focus {
-  font-weight: 700;
-}
-
-.c9 {
+.c14 {
   background-color: inherit;
   list-style: none outside;
   padding: 0;
   margin: 0;
 }
 
-.c10 {
+.c15 {
   position: relative;
   font-weight: 700;
-  margin: 0 1.5% 45px;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
-.c10 a {
+.c15 a {
   width: auto;
   padding: 0;
   height: auto;
@@ -255,12 +259,7 @@ exports[`renders correctly 1`] = `
   font-weight: 800;
 }
 
-.c10 a:focus,
-.c10 a:hover {
-  font-weight: 800;
-}
-
-.c10 a:after {
+.c15 a:after {
   content: '\\2303';
   position: absolute;
   font-family: Arial;
@@ -283,24 +282,35 @@ exports[`renders correctly 1`] = `
 .c0 {
   text-align: center;
   line-height: initial;
-  background: #000;
-  padding: 4rem 1rem 2rem;
+  background: #222;
   position: relative;
+  padding: 1rem 0;
 }
 
 .c1 {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem 2rem;
 }
 
-.c20 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 0 25px;
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0 5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c24 {
@@ -308,6 +318,7 @@ exports[`renders correctly 1`] = `
   width: 100%;
   height: 100%;
   text-align: left;
+  margin-top: 3rem;
 }
 
 .c24 p {
@@ -316,42 +327,50 @@ exports[`renders correctly 1`] = `
   margin-bottom: 5px;
 }
 
-.c21 {
+.c9 {
   color: transparent;
-  margin-right: auto;
   border: 0;
 }
 
-.c21:hover {
+.c9:hover {
   border: 0;
 }
 
 @media (min-width:1150px) {
-  .c22 {
-    width: 70px;
+  .c10 {
+    width: 72px;
   }
 }
 
 @media (min-width:740px) {
-  .c2 {
-    margin-bottom: 4rem;
+  .c3 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c4 {
+    width: 48px;
+  }
+}
+
+@media (min-width:740px) {
+  .c17 {
     max-height: none;
     height: auto;
   }
 
-  .c12 > li a {
+  .c17 > li a {
     display: inline;
     line-height: 24px;
   }
 }
 
 @media (min-width:740px) {
-  .c18 {
+  .c22 {
     max-height: none;
     height: auto;
     -webkit-flex-direction: row;
@@ -362,35 +381,35 @@ exports[`renders correctly 1`] = `
     flex-wrap: wrap;
   }
 
-  .c18 > li a {
+  .c22 > li a {
     display: inline;
     line-height: 24px;
   }
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c18 {
     height: auto;
     margin-top: 12px;
-    padding: 0 2%;
+    padding: 0;
   }
 
-  .c13 a {
+  .c18 a {
     background-color: inherit;
     height: auto;
   }
 
-  .c13 a:after {
+  .c18 a:after {
     content: none !important;
   }
 
-  .c13 a:hover,
-  .c13 a:focus {
+  .c18 a:hover,
+  .c18 a:focus {
     border-bottom: 2px solid #fff;
   }
 
-  .c13 a:hover span,
-  .c13 a:focus span {
+  .c18 a:hover span,
+  .c18 a:focus span {
     border-bottom: 0;
     padding-bottom: 2px;
   }
@@ -401,46 +420,46 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c23 {
     height: auto;
     margin-top: 12px;
-    padding: 0 2%;
-    -webkit-flex: 0 0 44%;
-    -ms-flex: 0 0 44%;
-    flex: 0 0 44%;
+    padding: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 
-  .c19 a {
+  .c23 a {
     background-color: inherit;
     height: auto;
   }
 
-  .c19 a:after {
+  .c23 a:after {
     content: none !important;
   }
 
-  .c19 a:hover,
-  .c19 a:focus {
+  .c23 a:hover,
+  .c23 a:focus {
     border-bottom: 2px solid #fff;
   }
 
-  .c19 a:hover span,
-  .c19 a:focus span {
+  .c23 a:hover span,
+  .c23 a:focus span {
     border-bottom: 0;
     padding-bottom: 2px;
   }
 }
 
 @media (min-width:1024px) {
-  .c19 {
-    -webkit-flex: 0 0 46%;
-    -ms-flex: 0 0 46%;
-    flex: 0 0 46%;
+  .c23 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 }
 
 @media (min-width:740px) {
-  .c9 {
+  .c14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -448,42 +467,63 @@ exports[`renders correctly 1`] = `
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c15 {
     -webkit-flex: 0 0 30%;
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
+    margin: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    -webkit-flex: 0 0 calc(25% - 1rem);
+    -ms-flex: 0 0 calc(25% - 1rem);
+    flex: 0 0 calc(25% - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .c10 > span {
-    padding: 0 2%;
+  .c15 > span {
+    padding: 0;
   }
 }
 
 @media (min-width:740px) {
-  .c10 a {
+  .c15 a {
     font-size: 20px;
     line-height: 40px;
   }
 }
 
 @media (min-width:740px) {
-  .c10 a {
+  .c15 a {
     cursor: default;
     display: inline;
   }
 
-  .c10 a:after {
+  .c15 a:after {
     content: none;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:740px) {
   .c0 {
-    padding: 4rem 2rem 4rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 0 1rem 4rem;
   }
 }
 
@@ -494,694 +534,696 @@ exports[`renders correctly 1`] = `
   }
 }
 
-<footer
-  className="c0"
-  role="banner"
->
-  <div
-    className="c1"
+<div>
+  <footer
+    className="c0"
+    role="banner"
   >
     <div
-      className="Footerstyle__SocialIconWrapper-sc-167xaf5-5"
+      className="c1"
     >
-      <ul
+      <div
         className="c2"
       >
-        <li
-          className="c3"
-        >
-          <a
-            className="c4"
-            data-test="header-esu-icon"
-            href="https://www.facebook.com/comicrelief"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Check out our Facebook page"
-          >
-            <img
-              alt="facebook"
-              className="c5"
-              src="mock.asset"
-            />
-            <span
-              className="c6"
-            >
-              (opens in new window)
-            </span>
-          </a>
-        </li>
-        <li
-          className="c3"
-        >
-          <a
-            className="c4"
-            data-test="header-esu-icon"
-            href="https://twitter.com/comicrelief"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Check out our Twitter account"
-          >
-            <img
-              alt="twitter"
-              className="c5"
-              src="mock.asset"
-            />
-            <span
-              className="c6"
-            >
-              (opens in new window)
-            </span>
-          </a>
-        </li>
-        <li
-          className="c3"
-        >
-          <a
-            className="c4"
-            data-test="header-esu-icon"
-            href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Check out our YouTube channel"
-          >
-            <img
-              alt="youtube"
-              className="c5"
-              src="mock.asset"
-            />
-            <span
-              className="c6"
-            >
-              (opens in new window)
-            </span>
-          </a>
-        </li>
-        <li
-          className="c3"
-        >
-          <a
-            className="c4"
-            data-test="header-esu-icon"
-            href="https://www.instagram.com/comicrelief"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Check out our Instagram account"
-          >
-            <img
-              alt="instagram"
-              className="c5"
-              src="mock.asset"
-            />
-            <span
-              className="c6"
-            >
-              (opens in new window)
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <nav
-      aria-label="main-menu"
-      className="c7"
-      role="navigation"
-    >
-      <h2
-        className="c8"
-        color="inherit"
-        id="footer-menu"
-        size="s"
-      >
-        Footer navigation
-      </h2>
-      <ul
-        className="c9"
-        role="menubar"
-      >
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            Hear from us
-          </span>
-          <ul
-            aria-label="Hear from us"
-            className="c12"
-            role="list"
-          >
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/#"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Get the newsletter
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/update-your-preferences"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  How we contact you
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            Get in touch
-          </span>
-          <ul
-            aria-label="Get in touch"
-            className="c18"
-            role="list"
-          >
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="/contact-us"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Contact us
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://giftaid.comicrelief.com/update"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Your Gift Aid
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/frequently-asked-questions"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  FAQs
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Red Nose Day 2019 FAQs
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            About us
-          </span>
-          <ul
-            aria-label="About us"
-            className="c18"
-            role="list"
-          >
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/about-comic-relief"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Mission
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/about-comic-relief/history"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Our history
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/about-comic-relief/finances"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Finances
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/working-with-us"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Partners
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Meet the team
-                </span>
-              </a>
-            </li>
-            <li
-              className="c19"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.sportrelief.com/"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Sport Relief
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            Careers
-          </span>
-          <ul
-            aria-label="Careers"
-            className="c12"
-            role="list"
-          >
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/careers"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Working at Comic Relief
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://app.beapplied.com/org/comic-relief"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Open roles
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            News
-          </span>
-          <ul
-            aria-label="News"
-            className="c12"
-            role="list"
-          >
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/news"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  News
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.comicrelief.com/press-releases"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Press area
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li
-          className="c10"
-          role="none"
-        >
-          <span
-            className="c11"
-            color="white"
-            size="s"
-          >
-            Legal
-          </span>
-          <ul
-            aria-label="Legal"
-            className="c12"
-            role="list"
-          >
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="/homepage"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Link comp with both URL and Ref
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="/this-is-a-test"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Link comp with only Ref
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.yahoo.com"
-                role="menuitem"
-                target="_blank"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Link comp with only URL
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://www.sportrelief.com"
-                role="menuitem"
-                target="_self"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Test whitelisted external link
-                </span>
-              </a>
-            </li>
-            <li
-              className="c13"
-            >
-              <a
-                className="c14 c15 c16"
-                color="red"
-                href="https://bing.com"
-                role="menuitem"
-                target="_blank"
-                type="standard"
-              >
-                <span
-                  className="c17"
-                  color="white"
-                  size="s"
-                >
-                  Test non-whitelisted external link
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <div
-      className="c20"
-    >
-      <a
-        className="c14 c21"
-        color="red"
-        href="/"
-        target="_self"
-        title="Go to Comic Relief homepage"
-        type="standard"
-      >
         <div
-          className="c22"
-          rotate={1}
+          className="Footerstyle__SocialIconWrapper-sc-167xaf5-6"
         >
-          <img
-            alt="Comic Relief logo"
-            className="c23"
-            src="mock.asset"
-          />
+          <ul
+            className="c3"
+          >
+            <li
+              className="c4"
+            >
+              <a
+                className="c5"
+                data-test="header-esu-icon"
+                href="https://www.facebook.com/comicrelief"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Facebook page"
+              >
+                <img
+                  alt="facebook"
+                  className="c6"
+                  src="mock.asset"
+                />
+                <span
+                  className="c7"
+                >
+                  (opens in new window)
+                </span>
+              </a>
+            </li>
+            <li
+              className="c4"
+            >
+              <a
+                className="c5"
+                data-test="header-esu-icon"
+                href="https://twitter.com/comicrelief"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Twitter account"
+              >
+                <img
+                  alt="twitter"
+                  className="c6"
+                  src="mock.asset"
+                />
+                <span
+                  className="c7"
+                >
+                  (opens in new window)
+                </span>
+              </a>
+            </li>
+            <li
+              className="c4"
+            >
+              <a
+                className="c5"
+                data-test="header-esu-icon"
+                href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our YouTube channel"
+              >
+                <img
+                  alt="youtube"
+                  className="c6"
+                  src="mock.asset"
+                />
+                <span
+                  className="c7"
+                >
+                  (opens in new window)
+                </span>
+              </a>
+            </li>
+            <li
+              className="c4"
+            >
+              <a
+                className="c5"
+                data-test="header-esu-icon"
+                href="https://www.instagram.com/comicrelief"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Instagram account"
+              >
+                <img
+                  alt="instagram"
+                  className="c6"
+                  src="mock.asset"
+                />
+                <span
+                  className="c7"
+                >
+                  (opens in new window)
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
-      </a>
-    </div>
-    <div
-      className="c24"
-    >
-      <p
-        className="c17"
-        color="white"
-        size="s"
+        <a
+          className="c8 c9"
+          color="red"
+          href="/"
+          target="_self"
+          title="Go to Comic Relief homepage"
+          type="standard"
+        >
+          <div
+            className="c10"
+            rotate={0}
+          >
+            <img
+              alt="Comic Relief logo"
+              className="c11"
+              src="mock.asset"
+            />
+          </div>
+        </a>
+      </div>
+      <nav
+        aria-label="main-menu"
+        className="c12"
+        role="navigation"
       >
-        Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
-      </p>
+        <h2
+          className="c13"
+          color="inherit"
+          id="footer-menu"
+          size="s"
+        >
+          Footer navigation
+        </h2>
+        <ul
+          className="c14"
+          role="menubar"
+        >
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              Hear from us
+            </span>
+            <ul
+              aria-label="Hear from us"
+              className="c17"
+              role="list"
+            >
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/#"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Get the newsletter
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/update-your-preferences"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    How we contact you
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              Get in touch
+            </span>
+            <ul
+              aria-label="Get in touch"
+              className="c22"
+              role="list"
+            >
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="/contact-us"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Contact us
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://giftaid.comicrelief.com/update"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Your Gift Aid
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/frequently-asked-questions"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    FAQs
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Red Nose Day 2019 FAQs
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              About us
+            </span>
+            <ul
+              aria-label="About us"
+              className="c22"
+              role="list"
+            >
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/about-comic-relief"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Mission
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/about-comic-relief/history"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Our history
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/about-comic-relief/finances"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Finances
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/working-with-us"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Partners
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Meet the team
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.sportrelief.com/"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Sport Relief
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              Careers
+            </span>
+            <ul
+              aria-label="Careers"
+              className="c17"
+              role="list"
+            >
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/careers"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Working at Comic Relief
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://app.beapplied.com/org/comic-relief"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Open roles
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              News
+            </span>
+            <ul
+              aria-label="News"
+              className="c17"
+              role="list"
+            >
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/news"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    News
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.comicrelief.com/press-releases"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Press area
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            role="none"
+          >
+            <span
+              className="c16"
+              color="white"
+              size="s"
+            >
+              Legal
+            </span>
+            <ul
+              aria-label="Legal"
+              className="c17"
+              role="list"
+            >
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="/homepage"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Link comp with both URL and Ref
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="/this-is-a-test"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Link comp with only Ref
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.yahoo.com"
+                  role="menuitem"
+                  target="_blank"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Link comp with only URL
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://www.sportrelief.com"
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Test whitelisted external link
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+              >
+                <a
+                  className="c8 c19 c20"
+                  color="red"
+                  href="https://bing.com"
+                  role="menuitem"
+                  target="_blank"
+                  type="standard"
+                >
+                  <span
+                    className="c21"
+                    color="white"
+                    size="s"
+                  >
+                    Test non-whitelisted external link
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div
+        className="c24"
+      >
+        <p
+          className="c25"
+          color="grey"
+          size="s"
+        >
+          Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 1st Floor, 89 Albert Embankment, London, SE1 7TP.
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
 `;

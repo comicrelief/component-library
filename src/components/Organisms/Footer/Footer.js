@@ -20,24 +20,26 @@ const Footer = ({
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
   return (
-    <FooterWrapper navItems {...rest}>
-      <InnerWrapper>
-        <SocialIconWrapper>
-          <SocialIcons campaign={campaignName} />
-        </SocialIconWrapper>
-        <FooterNav navItems={navItems} />
-        <FooterBranding>
-          <Brand href="/" title={`Go to ${campaign} homepage`}>
-            <Logo sizeSm="70px" sizeMd="70px" rotate campaign={campaign} />
-          </Brand>
-        </FooterBranding>
-        <FooterCopyright>
-          <Text tag="p" color="white">
-            {footerCopy}
-          </Text>
-        </FooterCopyright>
-      </InnerWrapper>
-    </FooterWrapper>
+    <div>
+      <FooterWrapper navItems {...rest}>
+        <InnerWrapper>
+          <FooterBranding>
+            <SocialIconWrapper>
+              <SocialIcons campaign={campaignName} />
+            </SocialIconWrapper>
+            <Brand href="/" title={`Go to ${campaign} homepage`}>
+              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+            </Brand>
+          </FooterBranding>
+          <FooterNav navItems={navItems} />
+          <FooterCopyright>
+            <Text tag="p" color="grey">
+              {footerCopy}
+            </Text>
+          </FooterCopyright>
+        </InnerWrapper>
+      </FooterWrapper>
+    </div>
   );
 };
 

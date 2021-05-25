@@ -7,28 +7,45 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: center;
   line-height: initial;
-  background: #000;
-  padding: ${spacing('xl')} ${spacing('md')} ${spacing('l')};
+  background: #222;
   position: relative;
+  padding: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: ${spacing('l')};
+  }
+`;
 
+const Angle = styled.div`
+  width: 100%;
+  display: block;
+  clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
+  height: 50px;
+  background: #222;
+  margin-bottom: 1rem;
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: ${spacing('xl')} ${spacing('l')} ${spacing('xl')};
+    clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
+    height: 95px;
   }
 `;
 
 const InnerWrapper = styled.div`
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 ${spacing('md')} ${spacing('l')};
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 0 ${spacing('md')} ${spacing('xl')};
+  }
 `;
 
 const FooterBranding = styled.div`
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 0 25px;
+  display: flex;
+  margin: ${spacing('lg')} 0 5rem;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const FooterCopyright = styled.div`
@@ -36,6 +53,7 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+  margin-top: ${spacing('lg')};
 
   p {
     font-size: 15px;
@@ -51,7 +69,6 @@ const FooterCopyright = styled.div`
 
 const Brand = styled(Link)`
   color: transparent;
-  margin-right: auto;
   border: 0;
   :hover {
     border: 0;
@@ -62,6 +79,7 @@ const SocialIconWrapper = styled.div``;
 
 export {
   FooterWrapper,
+  Angle,
   InnerWrapper,
   FooterCopyright,
   FooterBranding,

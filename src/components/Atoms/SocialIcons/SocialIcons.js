@@ -9,21 +9,22 @@ import spacing from '../../../theme/shared/spacing';
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
-
-  margin: 0 auto ${spacing('l')};
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin-bottom: ${spacing('xl')};
-  }
-
+  margin: 0 auto;
+  justify-content: center;
   padding: 0;
   align-items: center;
-  justify-content: center;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    justify-content: start;
+  }
 `;
 
 const StyledItem = styled.li`
-  width: 80px;
-  padding: 10px;
+  width: 32px;
+  margin-right: ${spacing('m')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: 48px;
+  }
 `;
 
 /** Social media icons with customizable style linked to campaign social media accounts */
