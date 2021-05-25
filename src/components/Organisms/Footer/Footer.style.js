@@ -43,7 +43,7 @@ const InnerWrapper = styled.div`
 
 const FooterBranding = styled.div`
   display: flex;
-  margin: ${spacing('lg')} 0;
+  margin: ${spacing('lg')} 0 ${spacing('xl')};
   justify-content: space-between;
   align-items: center;
 `;
