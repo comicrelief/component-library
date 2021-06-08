@@ -33,7 +33,6 @@ const Image = styled.div`
 
 const MediaLink = styled.a`
   height: 240px;
-
   ${({ imageLeft }) => (imageLeft
     ? `margin-right: ${spacing('m')}`
     : `margin-left: ${spacing('m')}`)};
@@ -45,6 +44,17 @@ const MediaLink = styled.a`
     flex-shrink: 0;
     flex-basis: 50%;
   }
+`;
+
+const PlayHolder = styled.div`
+  position: relative;
+`;
+
+const PlayImage = styled.img`
+  position: absolute;
+  margin: auto;
+  ${zIndex('medium')};
+  inset: 0;
 `;
 
 const CTA = styled.div`
@@ -107,5 +117,5 @@ const Copy = styled.div`
 `;
 
 export {
-  Container, Copy, CTA, MediaLink, Image, Subtitle
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage
 };

@@ -5,8 +5,10 @@ import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import {
-  Container, Copy, CTA, MediaLink, Image, Subtitle
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage
 } from './SingleMessageDs.style';
+
+import playImage from './assets/play.png';
 
 const SingleMessageDs = ({
   backgroundColor,
@@ -24,6 +26,7 @@ const SingleMessageDs = ({
   ctaBgColor,
   target,
   linkIcon,
+  hasVideo,
   ...rest
 }) => {
   const Media = (
@@ -40,7 +43,7 @@ const SingleMessageDs = ({
     </Image>
   );
 
-  const hasMedia = () => {
+  const hasLink = () => {
     if (imageLow && link) {
       return (
         <MediaLink
@@ -51,7 +54,12 @@ const SingleMessageDs = ({
           target={target}
           {...rest}
         >
-          {Media}
+          {hasVideo ? (
+            <PlayHolder>
+              <PlayImage src={playImage} alt="" />
+              {Media}
+            </PlayHolder>
+          ) : Media}
         </MediaLink>
       );
     }
@@ -67,7 +75,7 @@ const SingleMessageDs = ({
 
   return (
     <Container {...rest} imageLeft={imageLeft}>
-      {hasMedia()}
+      {hasLink()}
       <Copy
         hasImage={imageLow}
         hasLink={link}
@@ -112,7 +120,8 @@ SingleMessageDs.propTypes = {
   subtitle: PropTypes.string.isRequired,
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
-  linkIcon: PropTypes.node
+  linkIcon: PropTypes.node,
+  hasVideo: PropTypes.bool
 };
 
 SingleMessageDs.defaultProps = {
@@ -127,7 +136,8 @@ SingleMessageDs.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  linkIcon: null
+  linkIcon: null,
+  hasVideo: false
 };
 
 export default SingleMessageDs;

@@ -34,6 +34,7 @@ const Title = styled(Text)`
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       height='100%'
+      hasVideo={true}
     >
       <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
         Heading Line 1 Heading Line 2
