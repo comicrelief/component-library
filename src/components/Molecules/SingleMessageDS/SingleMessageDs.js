@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import Modal from 'react-modal';
 import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
@@ -29,6 +29,11 @@ const SingleMessageDs = ({
   hasVideo,
   ...rest
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   const Media = (
     <Image>
       <Picture
@@ -50,9 +55,10 @@ const SingleMessageDs = ({
           imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
-          href={link}
+          href="#"
           target={target}
           {...rest}
+          onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
           {hasVideo ? (
             <PlayHolder>
@@ -72,6 +78,32 @@ const SingleMessageDs = ({
   const icon = linkIcon || (target === 'blank' ? <External /> : <Internal />);
 
   const external = target === 'blank' ? 'noopener' : null;
+  const embedId = 'l3S59EfTfP0';
+  const videoStyle = {
+    overlay: {
+      position: 'fixed',
+      inset: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      zIndex: 5
+    },
+    content: {
+      position: 'absolute',
+      top: '40px',
+      left: '40px',
+      right: '40px',
+      bottom: '40px',
+      background: '#000',
+      overflow: 'auto',
+      WebkitOverflowScrolling: 'touch',
+      outline: 'none',
+      width: '853px',
+      height: '480px',
+      margin: 'auto',
+      borderRadius: '0',
+      border: '0',
+      padding: '0'
+    }
+  };
 
   return (
     <Container {...rest} imageLeft={imageLeft}>
@@ -101,6 +133,24 @@ const SingleMessageDs = ({
         </CTA>
         )}
       </Copy>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        parentSelector={() => document.querySelector('body')}
+        style={videoStyle}
+      >
+        <button type="button" onClick={closeModal}>close</button>
+        <iframe
+          width="853"
+          height="480"
+          src={`https://www.youtube.com/embed/${embedId}?&autoplay=1`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        />
+      </Modal>
     </Container>
   );
 };
