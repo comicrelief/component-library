@@ -57,6 +57,45 @@ const PlayImage = styled.img`
   inset: 0;
 `;
 
+const CloseButton = styled.button`
+  position: absolute;
+  z-index: 2;
+  top: -45px;
+  right: 0px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  :before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+    transform: rotate(45deg);
+  }
+  :after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+    transform: rotate(-45deg);
+  }
+`;
+
 const CTA = styled.div`
   position: absolute;
   bottom: -${spacing('m')};
@@ -117,5 +156,5 @@ const Copy = styled.div`
 `;
 
 export {
-  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage, CloseButton
 };

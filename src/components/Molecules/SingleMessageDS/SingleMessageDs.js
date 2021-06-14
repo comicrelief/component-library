@@ -5,7 +5,7 @@ import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import {
-  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage, CloseButton
 } from './SingleMessageDs.style';
 
 import playImage from './assets/play.png';
@@ -93,7 +93,6 @@ const SingleMessageDs = ({
       right: '40px',
       bottom: '40px',
       background: '#000',
-      overflow: 'auto',
       WebkitOverflowScrolling: 'touch',
       outline: 'none',
       width: '853px',
@@ -101,7 +100,8 @@ const SingleMessageDs = ({
       margin: 'auto',
       borderRadius: '0',
       border: '0',
-      padding: '0'
+      padding: '0',
+      overflow: 'visible'
     }
   };
 
@@ -140,7 +140,7 @@ const SingleMessageDs = ({
         parentSelector={() => document.querySelector('body')}
         style={videoStyle}
       >
-        <button type="button" onClick={closeModal}>close</button>
+        <CloseButton type="button" onClick={closeModal} aria-label="Close the modal by clicking here" />
         <iframe
           width="853"
           height="480"
