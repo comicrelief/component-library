@@ -26,7 +26,7 @@ const SingleMessageDs = ({
   ctaBgColor,
   target,
   linkIcon,
-  hasVideo,
+  youTubeId,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +60,7 @@ const SingleMessageDs = ({
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
-          {hasVideo ? (
+          {youTubeId ? (
             <PlayHolder>
               <PlayImage src={playImage} alt="" />
               {Media}
@@ -78,7 +78,6 @@ const SingleMessageDs = ({
   const icon = linkIcon || (target === 'blank' ? <External /> : <Internal />);
 
   const external = target === 'blank' ? 'noopener' : null;
-  const embedId = 'l3S59EfTfP0';
   const videoStyle = {
     overlay: {
       position: 'fixed',
@@ -101,7 +100,8 @@ const SingleMessageDs = ({
       borderRadius: '0',
       border: '0',
       padding: '0',
-      overflow: 'visible'
+      overflow: 'visible',
+      cursor: 'pointer'
     }
   };
 
@@ -144,7 +144,7 @@ const SingleMessageDs = ({
         <iframe
           width="853"
           height="480"
-          src={`https://www.youtube.com/embed/${embedId}?&autoplay=1`}
+          src={`https://www.youtube.com/embed/${youTubeId}?&autoplay=1`}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
           allowFullScreen
@@ -171,7 +171,7 @@ SingleMessageDs.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
   linkIcon: PropTypes.node,
-  hasVideo: PropTypes.bool
+  youTubeId: PropTypes.string
 };
 
 SingleMessageDs.defaultProps = {
@@ -187,7 +187,7 @@ SingleMessageDs.defaultProps = {
   width: '100%',
   height: '100%',
   linkIcon: null,
-  hasVideo: false
+  youTubeId: null
 };
 
 export default SingleMessageDs;
