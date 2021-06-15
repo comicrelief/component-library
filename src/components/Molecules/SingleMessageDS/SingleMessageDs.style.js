@@ -32,7 +32,6 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  height: 240px;
   ${({ imageLeft }) => (imageLeft
     ? `margin-right: ${spacing('m')}`
     : `margin-left: ${spacing('m')}`)};

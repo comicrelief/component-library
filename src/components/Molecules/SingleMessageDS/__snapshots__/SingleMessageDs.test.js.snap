@@ -113,7 +113,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  height: 240px;
   margin-right: 1.5rem;
 }
 
