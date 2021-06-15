@@ -87,14 +87,15 @@ const SingleMessageDs = ({
     },
     content: {
       position: 'absolute',
-      top: '40px',
-      left: '40px',
-      right: '40px',
-      bottom: '40px',
+      top: '0',
+      left: '0',
+      right: '0',
+      bottom: '0',
       background: '#000',
       WebkitOverflowScrolling: 'touch',
       outline: 'none',
-      width: '853px',
+      width: '100%',
+      maxWidth: '854px',
       height: '480px',
       margin: 'auto',
       borderRadius: '0',
@@ -142,8 +143,8 @@ const SingleMessageDs = ({
       >
         <CloseButton type="button" onClick={closeModal} aria-label="Close the modal by clicking here" />
         <iframe
-          width="853"
-          height="480"
+          width="100%"
+          height="100%"
           src={`https://www.youtube.com/embed/${youTubeId}?&autoplay=1`}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
