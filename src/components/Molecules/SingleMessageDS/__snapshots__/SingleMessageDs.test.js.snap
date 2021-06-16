@@ -233,7 +233,7 @@ exports[`renders correctly 1`] = `
   <a
     aria-hidden="true"
     className="c1"
-    href="#"
+    href="/home"
     onClick={[Function]}
     tabIndex="-1"
     target="_blank"

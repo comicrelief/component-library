@@ -55,7 +55,7 @@ const SingleMessageDs = ({
           imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
-          href="#"
+          href={youTubeId ? '#' : link}
           target={target}
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
