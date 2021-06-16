@@ -172,6 +172,12 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c2 {
+    height: 448px;
+  }
+}
+
+@media (min-width:740px) {
   .c1 {
     margin: 0;
     height: 448px;
