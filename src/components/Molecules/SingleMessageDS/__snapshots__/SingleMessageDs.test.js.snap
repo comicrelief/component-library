@@ -113,7 +113,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  height: 240px;
   margin-right: 1.5rem;
 }
 
@@ -169,6 +168,12 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    height: 448px;
   }
 }
 
@@ -229,6 +234,7 @@ exports[`renders correctly 1`] = `
     aria-hidden="true"
     className="c1"
     href="/home"
+    onClick={[Function]}
     tabIndex="-1"
     target="_blank"
     title="Heading Line 1 Heading Line 2"

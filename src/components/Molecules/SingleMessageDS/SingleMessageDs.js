@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import Modal from 'react-modal';
 import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import { External, Internal } from '../../Atoms/Icons/index';
 import {
-  Container, Copy, CTA, MediaLink, Image, Subtitle
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage, CloseButton
 } from './SingleMessageDs.style';
+
+import playImage from './assets/play.png';
 
 const SingleMessageDs = ({
   backgroundColor,
@@ -24,8 +26,14 @@ const SingleMessageDs = ({
   ctaBgColor,
   target,
   linkIcon,
+  youTubeId,
   ...rest
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   const Media = (
     <Image>
       <Picture
@@ -40,18 +48,24 @@ const SingleMessageDs = ({
     </Image>
   );
 
-  const hasMedia = () => {
+  const hasLink = () => {
     if (imageLow && link) {
       return (
         <MediaLink
           imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
-          href={link}
+          href={youTubeId ? '#' : link}
           target={target}
           {...rest}
+          onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
-          {Media}
+          {youTubeId ? (
+            <PlayHolder>
+              <PlayImage src={playImage} alt="" />
+              {Media}
+            </PlayHolder>
+          ) : Media}
         </MediaLink>
       );
     }
@@ -64,10 +78,40 @@ const SingleMessageDs = ({
   const icon = linkIcon || (target === 'blank' ? <External /> : <Internal />);
 
   const external = target === 'blank' ? 'noopener' : null;
+  const videoStyle = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      zIndex: 5
+    },
+    content: {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      right: '0',
+      bottom: '0',
+      background: '#000',
+      WebkitOverflowScrolling: 'touch',
+      outline: 'none',
+      width: '100%',
+      maxWidth: '854px',
+      height: '480px',
+      margin: 'auto',
+      borderRadius: '0',
+      border: '0',
+      padding: '0',
+      overflow: 'visible',
+      cursor: 'pointer'
+    }
+  };
 
   return (
     <Container {...rest} imageLeft={imageLeft}>
-      {hasMedia()}
+      {hasLink()}
       <Copy
         hasImage={imageLow}
         hasLink={link}
@@ -93,6 +137,24 @@ const SingleMessageDs = ({
         </CTA>
         )}
       </Copy>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        parentSelector={() => document.querySelector('body')}
+        style={videoStyle}
+      >
+        <CloseButton type="button" onClick={closeModal} aria-label="Close the modal by clicking here" />
+        <iframe
+          width="100%"
+          height="100%"
+          src={`https://www.youtube.com/embed/${youTubeId}?&autoplay=1&enablejsapi=1`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        />
+      </Modal>
     </Container>
   );
 };
@@ -112,7 +174,8 @@ SingleMessageDs.propTypes = {
   subtitle: PropTypes.string.isRequired,
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
-  linkIcon: PropTypes.node
+  linkIcon: PropTypes.node,
+  youTubeId: PropTypes.string
 };
 
 SingleMessageDs.defaultProps = {
@@ -127,7 +190,8 @@ SingleMessageDs.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  linkIcon: null
+  linkIcon: null,
+  youTubeId: null
 };
 
 export default SingleMessageDs;

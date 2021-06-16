@@ -24,7 +24,9 @@ const Subtitle = styled(Text)`
 
 const Image = styled.div`
   height: 100%;
-
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    height: 448px;
+  }
   img {
     border-radius: 1rem;
     ${boxShadow};
@@ -32,8 +34,6 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  height: 240px;
-
   ${({ imageLeft }) => (imageLeft
     ? `margin-right: ${spacing('m')}`
     : `margin-left: ${spacing('m')}`)};
@@ -44,6 +44,56 @@ const MediaLink = styled.a`
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50%;
+  }
+`;
+
+const PlayHolder = styled.div`
+  position: relative;
+`;
+
+const PlayImage = styled.img`
+  position: absolute;
+  margin: auto;
+  ${zIndex('medium')};
+  inset: 0;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  z-index: 2;
+  top: -45px;
+  right: 0px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  :before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+    transform: rotate(45deg);
+  }
+  :after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+    transform: rotate(-45deg);
   }
 `;
 
@@ -107,5 +157,5 @@ const Copy = styled.div`
 `;
 
 export {
-  Container, Copy, CTA, MediaLink, Image, Subtitle
+  Container, Copy, CTA, MediaLink, Image, Subtitle, PlayHolder, PlayImage, CloseButton
 };
