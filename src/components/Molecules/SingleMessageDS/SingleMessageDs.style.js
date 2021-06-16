@@ -55,7 +55,10 @@ const PlayImage = styled.img`
   position: absolute;
   margin: auto;
   ${zIndex('medium')};
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `;
 
 const CloseButton = styled.button`
