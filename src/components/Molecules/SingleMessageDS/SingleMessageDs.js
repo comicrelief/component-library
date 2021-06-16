@@ -148,7 +148,7 @@ const SingleMessageDs = ({
         <iframe
           width="100%"
           height="100%"
-          src={`https://www.youtube.com/embed/${youTubeId}?&autoplay=1`}
+          src={`https://www.youtube.com/embed/${youTubeId}?&autoplay=1&enablejsapi=1`}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
           allowFullScreen

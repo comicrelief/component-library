@@ -24,7 +24,9 @@ const Subtitle = styled(Text)`
 
 const Image = styled.div`
   height: 100%;
-
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    height: 448px;
+  }
   img {
     border-radius: 1rem;
     ${boxShadow};
