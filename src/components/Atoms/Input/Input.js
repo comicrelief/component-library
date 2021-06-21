@@ -47,7 +47,7 @@ const Prefix = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  ${zIndex('low')}
+  ${zIndex('high')}
   display: flex;
   height: 100%;
   width: ${({ length }) => getPrefixWidth(length)};
