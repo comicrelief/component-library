@@ -10,7 +10,9 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  flex-direction: row;
+  ${media('small')} {
+    flex-direction: row;
+  }
   ${({ position }) => position === 'upper' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     ${media('small')} {
@@ -43,14 +45,13 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
-  min-height: calc(100vh - 75px);
   ${media('small')} {
     min-height: calc(100vh - 90px);
   }
 `;
 
 const Copy = styled.div`
-  width: 90%;
+  width: 100%;
   padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
   ${zIndex('low')};
   ${media('small')} {
@@ -63,7 +64,6 @@ const Copy = styled.div`
   }
   ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
-    margin-top: ${spacing('xl')};
     ${media('small')} {
       padding: 6rem ${spacing('m')};
       margin-top: 6rem;
@@ -73,10 +73,13 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: auto;
   img {
     object-position: center;
+  }
+  ${media('small')} {
+    height: 100%;
+    position: absolute;
   }
 `;
 
