@@ -80,7 +80,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
-          size="25px"
+          size="35px"
         />
       </div> 
 

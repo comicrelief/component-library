@@ -10,7 +10,6 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   transition: opacity 0.2s;
-  width: ${({ size }) => size};
 
   &:hover,
   &:focus {
@@ -20,6 +19,7 @@ const StyledLink = styled.a`
 
 const StyledImage = styled.img`
   width: 100%;
+  width: ${({ size }) => size};
 `;
 
 const HelperText = styled.span`
@@ -34,11 +34,10 @@ const Icon = ({
     target={`_${target}`}
     {...restProps}
     title={title}
-    size={size}
     rel="noopener noreferrer"
     data-test="header-esu-icon"
   >
-    <StyledImage src={icon} alt={brand} />
+    <StyledImage size={size} src={icon} alt={brand} />
     {title !== 'Sign up for emails' && (
       <HelperText>(opens in new window)</HelperText>
     )}

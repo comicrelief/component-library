@@ -67,7 +67,6 @@ const MetaIcons = styled.div`
       img {
         padding: 5px;
         height: inherit;
-        width: inherit;
       }
     }
   }
