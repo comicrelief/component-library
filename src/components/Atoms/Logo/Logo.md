@@ -1,7 +1,7 @@
 # Comic Relief Logo
 
 ```js
-<Logo rotate={false} sizeSm="50px" sizeMd="60px" />
+<Logo rotate sizeSm="50px" sizeMd="60px" />
 ```
 
 # Sport Relief Logo
