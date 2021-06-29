@@ -1,19 +1,34 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ShareButton from './ShareButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ShareButton from "./ShareButton";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+    .c7 {
+      color: #000000;
+      text-transform: inherit;
+      line-height: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
     .c4 {
       -webkit-text-decoration: none;
       text-decoration: none;
       cursor: pointer;
-      display: block;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-transition: opacity 0.2s;
       transition: opacity 0.2s;
+      width: auto;
     }
 
     .c4:hover,
@@ -99,6 +114,7 @@ it('renders correctly', () => {
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
+            size="auto"
             target="__blank"
             title="Share on Facebook"
           >
@@ -112,6 +128,13 @@ it('renders correctly', () => {
             >
               (opens in new window)
             </span>
+            <span
+              className="c7"
+              color="black"
+              size="md"
+            >
+              Share on Facebook
+            </span>
           </a>
         </li>
         <li
@@ -124,6 +147,7 @@ it('renders correctly', () => {
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
+            size="auto"
             target="__blank"
             title="Share on Twitter"
           >
@@ -136,6 +160,13 @@ it('renders correctly', () => {
               className="c6"
             >
               (opens in new window)
+            </span>
+            <span
+              className="c7"
+              color="black"
+              size="md"
+            >
+              Share on Twitter
             </span>
           </a>
         </li>

@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with error message 1`] = `
-.c6 {
+.c3 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c7 {
   font-size: 3rem;
   line-height: 3rem;
   text-transform: uppercase;
@@ -13,7 +20,7 @@ exports[`renders correctly with error message 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c13 {
+.c14 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -21,7 +28,7 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c17 {
+.c18 {
   color: #E52630;
   text-transform: inherit;
   font-weight: bold;
@@ -29,7 +36,7 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -42,7 +49,7 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -57,7 +64,7 @@ exports[`renders correctly with error message 1`] = `
   width: 1px;
 }
 
-.c18 {
+.c19 {
   display: inline-block;
   padding: 1.5rem 1rem 1rem;
   width: 100%;
@@ -68,7 +75,7 @@ exports[`renders correctly with error message 1`] = `
   font-weight: bold;
 }
 
-.c18:before {
+.c19:before {
   position: relative;
   content: '';
   top: 1px;
@@ -81,7 +88,7 @@ exports[`renders correctly with error message 1`] = `
   color: #E52630;
 }
 
-.c16 {
+.c17 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -101,16 +108,16 @@ exports[`renders correctly with error message 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c16:focus {
+.c17:focus {
   border: 1px solid #666;
 }
 
-.c15 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c9 {
+.c10 {
   text-align: left;
 }
 
@@ -118,9 +125,17 @@ exports[`renders correctly with error message 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c1:hover,
@@ -132,7 +147,7 @@ exports[`renders correctly with error message 1`] = `
   width: 100%;
 }
 
-.c23 {
+.c24 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -147,7 +162,7 @@ exports[`renders correctly with error message 1`] = `
   width: 1px;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,7 +175,7 @@ exports[`renders correctly with error message 1`] = `
   background-color: #2C0230;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,17 +183,17 @@ exports[`renders correctly with error message 1`] = `
   margin-bottom: 1rem;
 }
 
-.c19 {
+.c20 {
   margin-top: 1rem;
 }
 
-.c19 input {
+.c20 input {
   text-align: center;
   width: 100%;
   font-size: 1rem;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -189,17 +204,17 @@ exports[`renders correctly with error message 1`] = `
   margin-top: 1rem;
 }
 
-.c21 p {
+.c22 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c21 p a {
+.c22 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,15 +225,15 @@ exports[`renders correctly with error message 1`] = `
   margin: 1rem 0;
 }
 
-.c12 {
+.c13 {
   width: 100%;
 }
 
-.c7 {
+.c8 {
   margin-bottom: 1.5rem;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -230,9 +245,9 @@ exports[`renders correctly with error message 1`] = `
   border-radius: 100px;
 }
 
-.c20:active,
-.c20:focus,
-.c20:hover {
+.c21:active,
+.c21:focus,
+.c21:hover {
   background-color: #961D35;
 }
 
@@ -242,7 +257,7 @@ exports[`renders correctly with error message 1`] = `
   display: inline-block;
 }
 
-.c3 {
+.c4 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -265,11 +280,11 @@ exports[`renders correctly with error message 1`] = `
   align-items: flex-start;
 }
 
-.c3 div[aria-modal='true'] {
+.c4 div[aria-modal='true'] {
   padding: 2rem;
 }
 
-.c22 {
+.c23 {
   position: absolute;
   top: 0;
   right: 0;
@@ -278,29 +293,29 @@ exports[`renders correctly with error message 1`] = `
   margin-left: 0;
 }
 
-.c5 {
+.c6 {
   width: 100%;
 }
 
-.c5 input {
+.c6 input {
   font-size: 1rem;
 }
 
 @media (min-width:740px) {
-  .c16 {
+  .c17 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c19 input {
+  .c20 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -308,19 +323,19 @@ exports[`renders correctly with error message 1`] = `
 }
 
 @media (min-width:740px) {
-  .c22 {
+  .c23 {
     margin: 4rem 0 0;
     right: 25%;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c6 {
     margin-top: 4rem;
     width: 50%;
   }
 
-  .c5 input {
+  .c6 input {
     font-size: 1.25rem;
   }
 }
@@ -338,6 +353,7 @@ exports[`renders correctly with error message 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
+      size="auto"
       tabIndex="0"
       target="_self"
       title="Sign up for emails"
@@ -347,26 +363,33 @@ exports[`renders correctly with error message 1`] = `
         className="c2"
         src="mock.asset"
       />
+      <span
+        className="c3"
+        color="black"
+        size="md"
+      >
+        Sign up for emails
+      </span>
     </a>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-modal="true"
-        className="c4 c5"
+        className="c5 c6"
       >
         <h2
-          className="c6 c7"
+          className="c7 c8"
           color="inherit"
           size="xxl"
         >
           Stay in the know!
         </h2>
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Get regular email updates and info on what we're up to!</p>",
@@ -375,15 +398,15 @@ exports[`renders correctly with error message 1`] = `
           />
         </div>
         <form
-          className="c10"
+          className="c11"
           onSubmit={[Function]}
         >
           <label
-            className="c11 c12"
+            className="c12 c13"
             htmlFor="email"
           >
             <span
-              className="c13 c14"
+              className="c14 c15"
               color="inherit"
               dangerouslySetInnerHTML={
                 Object {
@@ -393,12 +416,12 @@ exports[`renders correctly with error message 1`] = `
               size="s"
             />
             <div
-              className="c15"
+              className="c16"
             >
               
               <input
                 aria-label="Email address"
-                className="c16"
+                className="c17"
                 id="email"
                 name="email"
                 onChange={[Function]}
@@ -409,23 +432,23 @@ exports[`renders correctly with error message 1`] = `
               />
             </div>
             <span
-              className="c17"
+              className="c18"
               color="red"
               data-test="error-message"
               size="sm"
             >
               <span
-                className="c18"
+                className="c19"
               >
                 invalid email
               </span>
             </span>
           </label>
           <div
-            className="c19"
+            className="c20"
           >
             <input
-              className="c20"
+              className="c21"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
@@ -435,10 +458,10 @@ exports[`renders correctly with error message 1`] = `
           </div>
         </form>
         <div
-          className="c21"
+          className="c22"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Our <a class=\\"link link--white inline\\" href=\\"/privacy-notice\\">Privacy Policy</a> describes how we handle and protect your information.<br><br>If you are under 18, please make sure you have your parents’ permission before providing us with any personal details.</p>",
@@ -448,12 +471,13 @@ exports[`renders correctly with error message 1`] = `
         </div>
       </div>
       <a
-        className="c1 c22"
+        className="c1 c23"
         data-test="header-esu-icon"
         href="#"
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
+        size="auto"
         tabIndex="0"
         target="_self"
         title="Close email sign-up"
@@ -464,9 +488,16 @@ exports[`renders correctly with error message 1`] = `
           src="mock.asset"
         />
         <span
-          className="c23"
+          className="c24"
         >
           (opens in new window)
+        </span>
+        <span
+          className="c3"
+          color="black"
+          size="md"
+        >
+          Close email sign-up
         </span>
       </a>
     </div>
@@ -475,13 +506,28 @@ exports[`renders correctly with error message 1`] = `
 `;
 
 exports[`renders correctly with modal closed 1`] = `
+.c3 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c1:hover,
@@ -512,6 +558,7 @@ exports[`renders correctly with modal closed 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
+      size="auto"
       tabIndex="0"
       target="_self"
       title="Sign up for emails"
@@ -521,13 +568,27 @@ exports[`renders correctly with modal closed 1`] = `
         className="c2"
         src="mock.asset"
       />
+      <span
+        className="c3"
+        color="black"
+        size="md"
+      >
+        Sign up for emails
+      </span>
     </a>
   </div>
 </div>
 `;
 
 exports[`renders correctly with modal open 1`] = `
-.c6 {
+.c3 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c7 {
   font-size: 3rem;
   line-height: 3rem;
   text-transform: uppercase;
@@ -539,7 +600,7 @@ exports[`renders correctly with modal open 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c13 {
+.c14 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -547,7 +608,7 @@ exports[`renders correctly with modal open 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -560,7 +621,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -575,7 +636,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 1px;
 }
 
-.c16 {
+.c17 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -595,16 +656,16 @@ exports[`renders correctly with modal open 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c16:focus {
+.c17:focus {
   border: 1px solid #666;
 }
 
-.c15 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c9 {
+.c10 {
   text-align: left;
 }
 
@@ -612,9 +673,17 @@ exports[`renders correctly with modal open 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c1:hover,
@@ -626,7 +695,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 100%;
 }
 
-.c21 {
+.c22 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -641,7 +710,7 @@ exports[`renders correctly with modal open 1`] = `
   width: 1px;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -654,7 +723,7 @@ exports[`renders correctly with modal open 1`] = `
   background-color: #2C0230;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,17 +731,17 @@ exports[`renders correctly with modal open 1`] = `
   margin-bottom: 1rem;
 }
 
-.c17 {
+.c18 {
   margin-top: 1rem;
 }
 
-.c17 input {
+.c18 input {
   text-align: center;
   width: 100%;
   font-size: 1rem;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -683,17 +752,17 @@ exports[`renders correctly with modal open 1`] = `
   margin-top: 1rem;
 }
 
-.c19 p {
+.c20 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c19 p a {
+.c20 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -704,15 +773,15 @@ exports[`renders correctly with modal open 1`] = `
   margin: 1rem 0;
 }
 
-.c12 {
+.c13 {
   width: 100%;
 }
 
-.c7 {
+.c8 {
   margin-bottom: 1.5rem;
 }
 
-.c18 {
+.c19 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -724,9 +793,9 @@ exports[`renders correctly with modal open 1`] = `
   border-radius: 100px;
 }
 
-.c18:active,
-.c18:focus,
-.c18:hover {
+.c19:active,
+.c19:focus,
+.c19:hover {
   background-color: #961D35;
 }
 
@@ -736,7 +805,7 @@ exports[`renders correctly with modal open 1`] = `
   display: inline-block;
 }
 
-.c3 {
+.c4 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -759,11 +828,11 @@ exports[`renders correctly with modal open 1`] = `
   align-items: flex-start;
 }
 
-.c3 div[aria-modal='true'] {
+.c4 div[aria-modal='true'] {
   padding: 2rem;
 }
 
-.c20 {
+.c21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -772,29 +841,29 @@ exports[`renders correctly with modal open 1`] = `
   margin-left: 0;
 }
 
-.c5 {
+.c6 {
   width: 100%;
 }
 
-.c5 input {
+.c6 input {
   font-size: 1rem;
 }
 
 @media (min-width:740px) {
-  .c16 {
+  .c17 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c17 input {
+  .c18 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c18 {
+  .c19 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -802,19 +871,19 @@ exports[`renders correctly with modal open 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     margin: 4rem 0 0;
     right: 25%;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c6 {
     margin-top: 4rem;
     width: 50%;
   }
 
-  .c5 input {
+  .c6 input {
     font-size: 1.25rem;
   }
 }
@@ -832,6 +901,7 @@ exports[`renders correctly with modal open 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
+      size="auto"
       tabIndex="0"
       target="_self"
       title="Sign up for emails"
@@ -841,26 +911,33 @@ exports[`renders correctly with modal open 1`] = `
         className="c2"
         src="mock.asset"
       />
+      <span
+        className="c3"
+        color="black"
+        size="md"
+      >
+        Sign up for emails
+      </span>
     </a>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-modal="true"
-        className="c4 c5"
+        className="c5 c6"
       >
         <h2
-          className="c6 c7"
+          className="c7 c8"
           color="inherit"
           size="xxl"
         >
           Stay in the know!
         </h2>
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Get regular email updates and info on what we're up to!</p>",
@@ -869,15 +946,15 @@ exports[`renders correctly with modal open 1`] = `
           />
         </div>
         <form
-          className="c10"
+          className="c11"
           onSubmit={[Function]}
         >
           <label
-            className="c11 c12"
+            className="c12 c13"
             htmlFor="email"
           >
             <span
-              className="c13 c14"
+              className="c14 c15"
               color="inherit"
               dangerouslySetInnerHTML={
                 Object {
@@ -887,12 +964,12 @@ exports[`renders correctly with modal open 1`] = `
               size="s"
             />
             <div
-              className="c15"
+              className="c16"
             >
               
               <input
                 aria-label="Email address"
-                className="c16"
+                className="c17"
                 id="email"
                 name="email"
                 onChange={[Function]}
@@ -905,10 +982,10 @@ exports[`renders correctly with modal open 1`] = `
             
           </label>
           <div
-            className="c17"
+            className="c18"
           >
             <input
-              className="c18"
+              className="c19"
               color="red"
               data-test="subscribe-button"
               onClick={[Function]}
@@ -918,10 +995,10 @@ exports[`renders correctly with modal open 1`] = `
           </div>
         </form>
         <div
-          className="c19"
+          className="c20"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Our <a class=\\"link link--white inline\\" href=\\"/privacy-notice\\">Privacy Policy</a> describes how we handle and protect your information.<br><br>If you are under 18, please make sure you have your parents’ permission before providing us with any personal details.</p>",
@@ -931,12 +1008,13 @@ exports[`renders correctly with modal open 1`] = `
         </div>
       </div>
       <a
-        className="c1 c20"
+        className="c1 c21"
         data-test="header-esu-icon"
         href="#"
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
+        size="auto"
         tabIndex="0"
         target="_self"
         title="Close email sign-up"
@@ -947,9 +1025,16 @@ exports[`renders correctly with modal open 1`] = `
           src="mock.asset"
         />
         <span
-          className="c21"
+          className="c22"
         >
           (opens in new window)
+        </span>
+        <span
+          className="c3"
+          color="black"
+          size="md"
+        >
+          Close email sign-up
         </span>
       </a>
     </div>
@@ -958,7 +1043,14 @@ exports[`renders correctly with modal open 1`] = `
 `;
 
 exports[`renders correctly with success message 1`] = `
-.c6 {
+.c3 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c7 {
   font-size: 3rem;
   line-height: 3rem;
   text-transform: uppercase;
@@ -970,7 +1062,7 @@ exports[`renders correctly with success message 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c9 {
+.c10 {
   text-align: left;
 }
 
@@ -978,9 +1070,17 @@ exports[`renders correctly with success message 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c1:hover,
@@ -992,7 +1092,7 @@ exports[`renders correctly with success message 1`] = `
   width: 100%;
 }
 
-.c12 {
+.c13 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -1007,7 +1107,7 @@ exports[`renders correctly with success message 1`] = `
   width: 1px;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1020,7 +1120,7 @@ exports[`renders correctly with success message 1`] = `
   background-color: #2C0230;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1028,7 +1128,7 @@ exports[`renders correctly with success message 1`] = `
   margin-bottom: 1rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1039,17 +1139,17 @@ exports[`renders correctly with success message 1`] = `
   margin-top: 1rem;
 }
 
-.c10 p {
+.c11 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c10 p a {
+.c11 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
 
-.c7 {
+.c8 {
   margin-bottom: 1.5rem;
 }
 
@@ -1059,7 +1159,7 @@ exports[`renders correctly with success message 1`] = `
   display: inline-block;
 }
 
-.c3 {
+.c4 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1082,11 +1182,11 @@ exports[`renders correctly with success message 1`] = `
   align-items: flex-start;
 }
 
-.c3 div[aria-modal='true'] {
+.c4 div[aria-modal='true'] {
   padding: 2rem;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1095,28 +1195,28 @@ exports[`renders correctly with success message 1`] = `
   margin-left: 0;
 }
 
-.c5 {
+.c6 {
   width: 100%;
 }
 
-.c5 input {
+.c6 input {
   font-size: 1rem;
 }
 
 @media (min-width:740px) {
-  .c11 {
+  .c12 {
     margin: 4rem 0 0;
     right: 25%;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c6 {
     margin-top: 4rem;
     width: 50%;
   }
 
-  .c5 input {
+  .c6 input {
     font-size: 1.25rem;
   }
 }
@@ -1134,6 +1234,7 @@ exports[`renders correctly with success message 1`] = `
       onClick={[Function]}
       rel="noopener noreferrer"
       role="button"
+      size="auto"
       tabIndex="0"
       target="_self"
       title="Sign up for emails"
@@ -1143,26 +1244,33 @@ exports[`renders correctly with success message 1`] = `
         className="c2"
         src="mock.asset"
       />
+      <span
+        className="c3"
+        color="black"
+        size="md"
+      >
+        Sign up for emails
+      </span>
     </a>
     <div
-      className="c3"
+      className="c4"
     >
       <div
         aria-modal="true"
-        className="c4 c5"
+        className="c5 c6"
       >
         <h2
-          className="c6 c7"
+          className="c7 c8"
           color="inherit"
           size="xxl"
         >
           Stay in the know!
         </h2>
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Thanks! Your first email will be with you shortly</p>",
@@ -1171,10 +1279,10 @@ exports[`renders correctly with success message 1`] = `
           />
         </div>
         <div
-          className="c10"
+          className="c11"
         >
           <div
-            className="c9"
+            className="c10"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<p>Our <a class=\\"link link--white inline\\" href=\\"/privacy-notice\\">Privacy Policy</a> describes how we handle and protect your information.<br><br>If you are under 18, please make sure you have your parents’ permission before providing us with any personal details.</p>",
@@ -1184,12 +1292,13 @@ exports[`renders correctly with success message 1`] = `
         </div>
       </div>
       <a
-        className="c1 c11"
+        className="c1 c12"
         data-test="header-esu-icon"
         href="#"
         onClick={[Function]}
         rel="noopener noreferrer"
         role="button"
+        size="auto"
         tabIndex="0"
         target="_self"
         title="Close email sign-up"
@@ -1200,9 +1309,16 @@ exports[`renders correctly with success message 1`] = `
           src="mock.asset"
         />
         <span
-          className="c12"
+          className="c13"
         >
           (opens in new window)
+        </span>
+        <span
+          className="c3"
+          color="black"
+          size="md"
+        >
+          Close email sign-up
         </span>
       </a>
     </div>

@@ -1,13 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with Comic Relief links 1`] = `
+.c5 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c2:hover,
@@ -83,6 +98,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.facebook.com/comicrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Facebook page"
     >
@@ -96,6 +112,13 @@ exports[`renders correctly with Comic Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Facebook page
+      </span>
     </a>
   </li>
   <li
@@ -106,6 +129,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://twitter.com/comicrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Twitter account"
     >
@@ -119,6 +143,13 @@ exports[`renders correctly with Comic Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Twitter account
+      </span>
     </a>
   </li>
   <li
@@ -129,6 +160,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our YouTube channel"
     >
@@ -142,6 +174,13 @@ exports[`renders correctly with Comic Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our YouTube channel
+      </span>
     </a>
   </li>
   <li
@@ -152,6 +191,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.instagram.com/comicrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Instagram account"
     >
@@ -165,19 +205,41 @@ exports[`renders correctly with Comic Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Instagram account
+      </span>
     </a>
   </li>
 </ul>
 `;
 
 exports[`renders correctly with Red Nose Day links and self target 1`] = `
+.c5 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c2:hover,
@@ -253,6 +315,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       data-test="header-esu-icon"
       href="https://www.facebook.com/rednoseday"
       rel="noopener noreferrer"
+      size="auto"
       target="_self"
       title="Check out our Facebook page"
     >
@@ -266,6 +329,13 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Facebook page
+      </span>
     </a>
   </li>
   <li
@@ -276,6 +346,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       data-test="header-esu-icon"
       href="https://twitter.com/rednoseday"
       rel="noopener noreferrer"
+      size="auto"
       target="_self"
       title="Check out our Twitter account"
     >
@@ -289,6 +360,13 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Twitter account
+      </span>
     </a>
   </li>
   <li
@@ -299,6 +377,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
+      size="auto"
       target="_self"
       title="Check out our YouTube channel"
     >
@@ -312,6 +391,13 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our YouTube channel
+      </span>
     </a>
   </li>
   <li
@@ -322,6 +408,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       data-test="header-esu-icon"
       href="https://www.instagram.com/rednoseday"
       rel="noopener noreferrer"
+      size="auto"
       target="_self"
       title="Check out our Instagram account"
     >
@@ -335,19 +422,41 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Instagram account
+      </span>
     </a>
   </li>
 </ul>
 `;
 
 exports[`renders correctly with Sport Relief links 1`] = `
+.c5 {
+  color: #000000;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  width: auto;
 }
 
 .c2:hover,
@@ -423,6 +532,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.facebook.com/sportrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Facebook page"
     >
@@ -436,6 +546,13 @@ exports[`renders correctly with Sport Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Facebook page
+      </span>
     </a>
   </li>
   <li
@@ -446,6 +563,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://twitter.com/sportrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Twitter account"
     >
@@ -459,6 +577,13 @@ exports[`renders correctly with Sport Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Twitter account
+      </span>
     </a>
   </li>
   <li
@@ -469,6 +594,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our YouTube channel"
     >
@@ -482,6 +608,13 @@ exports[`renders correctly with Sport Relief links 1`] = `
       >
         (opens in new window)
       </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our YouTube channel
+      </span>
     </a>
   </li>
   <li
@@ -492,6 +625,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
       data-test="header-esu-icon"
       href="https://www.instagram.com/sportrelief"
       rel="noopener noreferrer"
+      size="auto"
       target="_blank"
       title="Check out our Instagram account"
     >
@@ -504,6 +638,13 @@ exports[`renders correctly with Sport Relief links 1`] = `
         className="c4"
       >
         (opens in new window)
+      </span>
+      <span
+        className="c5"
+        color="black"
+        size="md"
+      >
+        Check out our Instagram account
       </span>
     </a>
   </li>

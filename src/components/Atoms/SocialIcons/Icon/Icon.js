@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import Text from '../../Text/Text';
 
 const StyledLink = styled.a`
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
   transition: opacity 0.2s;
+  width: ${({ size }) => size};
 
   &:hover,
   &:focus {
@@ -24,13 +27,14 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, ...restProps
+  href, target, icon, brand, title, size, ...restProps
 }) => (
   <StyledLink
     href={href}
     target={`_${target}`}
     {...restProps}
     title={title}
+    size={size}
     rel="noopener noreferrer"
     data-test="header-esu-icon"
   >
@@ -38,6 +42,9 @@ const Icon = ({
     {title !== 'Sign up for emails' && (
       <HelperText>(opens in new window)</HelperText>
     )}
+    <Text size="md" color="black">
+      {title}
+    </Text>
   </StyledLink>
 );
 
@@ -46,7 +53,12 @@ Icon.propTypes = {
   href: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  size: PropTypes.string
+};
+
+Icon.defaultProps = {
+  size: 'auto'
 };
 
 export default Icon;
