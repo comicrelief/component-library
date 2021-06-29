@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import spacing from '../../../../theme/shared/spacing';
 import Text from '../../Text/Text';
 
 const StyledLink = styled.a`
@@ -20,6 +21,7 @@ const StyledLink = styled.a`
 const StyledImage = styled.img`
   width: 100%;
   width: ${({ size }) => size};
+  margin-right: ${spacing('sm')};
 `;
 
 const HelperText = styled.span`

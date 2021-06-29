@@ -54,23 +54,6 @@ const MetaIcons = styled.div`
   display: flex;
   align-items: center;
 
-  > div {
-    height: 35px;
-    width: auto;
-    display: inline-block;
-
-    > a {
-      height: inherit;
-      width: inherit;
-      margin-left: ${({ theme }) => theme.fontSize('xxs')};
-
-      img {
-        padding: 5px;
-        height: inherit;
-      }
-    }
-  }
-
   @media ${({ theme }) => theme.breakpoint('nav')} {
     position: relative;
     display: flex;
