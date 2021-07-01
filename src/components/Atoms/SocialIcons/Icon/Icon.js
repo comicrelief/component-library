@@ -29,7 +29,7 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, size, ...restProps
+  href, target, icon, brand, title, size, hideLabel, ...restProps
 }) => (
   <StyledLink
     href={href}
@@ -38,14 +38,17 @@ const Icon = ({
     title={title}
     rel="noopener noreferrer"
     data-test="header-esu-icon"
+    hideLabel={hideLabel}
   >
     <StyledImage size={size} src={icon} alt={brand} />
     {title !== 'Sign up for emails' && (
       <HelperText>(opens in new window)</HelperText>
     )}
-    <Text size="md" color="black">
-      {title}
-    </Text>
+    {hideLabel ? (
+      <Text size="md" color="black">
+        {title}
+      </Text>
+    ) : null}
   </StyledLink>
 );
 
@@ -55,10 +58,12 @@ Icon.propTypes = {
   target: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  hideLabel: PropTypes.bool,
   size: PropTypes.string
 };
 
 Icon.defaultProps = {
+  hideLabel: true,
   size: 'auto'
 };
 
