@@ -44,7 +44,7 @@ const Icon = ({
     {title !== 'Sign up for emails' && (
       <HelperText>(opens in new window)</HelperText>
     )}
-    {hideLabel ? (
+    {!hideLabel ? (
       <Text size="md" color="black">
         {title}
       </Text>
