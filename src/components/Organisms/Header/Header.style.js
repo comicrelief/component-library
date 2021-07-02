@@ -46,6 +46,9 @@ const Brand = styled.div`
       border: 0;
     }
   }
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    margin-right: auto;
+  }
 `;
 
 const MetaIcons = styled.div`
