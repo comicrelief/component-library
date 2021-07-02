@@ -7,13 +7,6 @@ it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c7 {
-      color: #000000;
-      text-transform: inherit;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
     .c4 {
       -webkit-text-decoration: none;
       text-decoration: none;
@@ -28,7 +21,6 @@ it("renders correctly", () => {
       align-items: center;
       -webkit-transition: opacity 0.2s;
       transition: opacity 0.2s;
-      width: auto;
     }
 
     .c4:hover,
@@ -38,6 +30,8 @@ it("renders correctly", () => {
 
     .c5 {
       width: 100%;
+      width: auto;
+      margin-right: 0.5rem;
     }
 
     .c6 {
@@ -114,26 +108,19 @@ it("renders correctly", () => {
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
-            size="auto"
             target="__blank"
             title="Share on Facebook"
           >
             <img
               alt="comicrelief"
               className="c5"
+              size="auto"
               src="mock.asset"
             />
             <span
               className="c6"
             >
               (opens in new window)
-            </span>
-            <span
-              className="c7"
-              color="black"
-              size="md"
-            >
-              Share on Facebook
             </span>
           </a>
         </li>
@@ -147,26 +134,19 @@ it("renders correctly", () => {
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
-            size="auto"
             target="__blank"
             title="Share on Twitter"
           >
             <img
               alt="comicrelief"
               className="c5"
+              size="auto"
               src="mock.asset"
             />
             <span
               className="c6"
             >
               (opens in new window)
-            </span>
-            <span
-              className="c7"
-              color="black"
-              size="md"
-            >
-              Share on Twitter
             </span>
           </a>
         </li>

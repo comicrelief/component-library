@@ -46,6 +46,7 @@ const Nav = styled.nav`
     margin: 0 10px;
     width: auto;
     height: 100%;
+    margin-right: auto;
   }
   > h2 {
     ${hideVisually};

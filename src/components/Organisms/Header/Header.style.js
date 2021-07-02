@@ -32,7 +32,6 @@ const InnerWrapper = styled.div`
 
 const Brand = styled.div`
   ${zIndex('high')};
-  margin-right: auto;
   display: flex;
   align-items: center;
   a {
