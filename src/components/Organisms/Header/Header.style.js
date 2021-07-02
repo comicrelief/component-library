@@ -32,9 +32,9 @@ const InnerWrapper = styled.div`
 
 const Brand = styled.div`
   ${zIndex('high')};
-  margin-right: auto;
   display: flex;
   align-items: center;
+  margin-right: auto;
   a {
     border: 0;
     color: transparent;
@@ -47,30 +47,15 @@ const Brand = styled.div`
       border: 0;
     }
   }
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    margin-right: 0;
+  }
 `;
 
 const MetaIcons = styled.div`
   width: auto;
   display: flex;
   align-items: center;
-
-  > div {
-    height: 35px;
-    width: auto;
-    display: inline-block;
-
-    > a {
-      height: inherit;
-      width: inherit;
-      margin-left: ${({ theme }) => theme.fontSize('xxs')};
-
-      img {
-        padding: 5px;
-        height: inherit;
-        width: inherit;
-      }
-    }
-  }
 
   @media ${({ theme }) => theme.breakpoint('nav')} {
     position: relative;

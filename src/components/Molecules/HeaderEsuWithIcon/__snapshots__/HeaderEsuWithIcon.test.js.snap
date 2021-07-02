@@ -118,7 +118,14 @@ exports[`renders correctly with error message 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -130,6 +137,8 @@ exports[`renders correctly with error message 1`] = `
 
 .c2 {
   width: 100%;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .c23 {
@@ -345,6 +354,7 @@ exports[`renders correctly with error message 1`] = `
       <img
         alt="Sign up for emails"
         className="c2"
+        size="auto"
         src="mock.asset"
       />
     </a>
@@ -461,6 +471,7 @@ exports[`renders correctly with error message 1`] = `
         <img
           alt="Close email sign-up"
           className="c2"
+          size="auto"
           src="mock.asset"
         />
         <span
@@ -479,7 +490,14 @@ exports[`renders correctly with modal closed 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -491,6 +509,8 @@ exports[`renders correctly with modal closed 1`] = `
 
 .c2 {
   width: 100%;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .c0 {
@@ -519,6 +539,7 @@ exports[`renders correctly with modal closed 1`] = `
       <img
         alt="Sign up for emails"
         className="c2"
+        size="auto"
         src="mock.asset"
       />
     </a>
@@ -612,7 +633,14 @@ exports[`renders correctly with modal open 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -624,6 +652,8 @@ exports[`renders correctly with modal open 1`] = `
 
 .c2 {
   width: 100%;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .c21 {
@@ -839,6 +869,7 @@ exports[`renders correctly with modal open 1`] = `
       <img
         alt="Sign up for emails"
         className="c2"
+        size="auto"
         src="mock.asset"
       />
     </a>
@@ -944,6 +975,7 @@ exports[`renders correctly with modal open 1`] = `
         <img
           alt="Close email sign-up"
           className="c2"
+          size="auto"
           src="mock.asset"
         />
         <span
@@ -978,7 +1010,14 @@ exports[`renders correctly with success message 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -990,6 +1029,8 @@ exports[`renders correctly with success message 1`] = `
 
 .c2 {
   width: 100%;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .c12 {
@@ -1141,6 +1182,7 @@ exports[`renders correctly with success message 1`] = `
       <img
         alt="Sign up for emails"
         className="c2"
+        size="auto"
         src="mock.asset"
       />
     </a>
@@ -1197,6 +1239,7 @@ exports[`renders correctly with success message 1`] = `
         <img
           alt="Close email sign-up"
           className="c2"
+          size="auto"
           src="mock.asset"
         />
         <span

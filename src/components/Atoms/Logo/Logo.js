@@ -47,7 +47,7 @@ const themeSwitcher = theme => {
 const Logo = ({
   rotate, sizeSm, sizeMd, campaign
 }) => (
-  <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
+  <LogoWrapper rotate={rotate} sizeSm={sizeSm} sizeMd={sizeMd}>
     <Image
       src={themeSwitcher(campaign)}
       alt={
