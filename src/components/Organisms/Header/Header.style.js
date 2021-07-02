@@ -34,6 +34,7 @@ const Brand = styled.div`
   ${zIndex('high')};
   display: flex;
   align-items: center;
+  margin-right: auto;
   a {
     border: 0;
     color: transparent;
@@ -47,7 +48,7 @@ const Brand = styled.div`
     }
   }
   @media ${({ theme }) => theme.breakpoint('nav')} {
-    margin-right: auto;
+    margin-right: 0;
   }
 `;
 
