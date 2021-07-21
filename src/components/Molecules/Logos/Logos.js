@@ -8,7 +8,7 @@ const Logos = ({ campaign }) => {
     return (
       <>
         <a href="/" title="Go to Comic Relief homepage">
-          <Logo rotate sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
+          <Logo sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
         </a>
         <a href="/sportrelief/" title="Go to Sport Relief homepage">
           <Logo sizeSm="100px" sizeMd="120px" campaign="Sport Relief Gameon" />
@@ -21,7 +21,7 @@ const Logos = ({ campaign }) => {
     return (
       <>
         <a href="/" title="Go to Comic Relief homepage">
-          <Logo rotate sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
+          <Logo sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
         </a>
         <a href="/big-night-in" title="Big night in homepage">
           <Logo
