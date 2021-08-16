@@ -55,17 +55,29 @@ const SingleMessageDs = ({
           imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
-          href={youTubeId ? '#' : link}
+          href={link}
+          target={target}
+          {...rest}
+        >
+          {Media}
+        </MediaLink>
+      );
+    }
+    if (imageLow && youTubeId) {
+      return (
+        <MediaLink
+          imageLeft={imageLeft}
+          aria-hidden="true"
+          tabIndex="-1"
+          href={youTubeId}
           target={target}
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
-          {youTubeId ? (
-            <PlayHolder>
-              <PlayImage src={playImage} alt="" />
-              {Media}
-            </PlayHolder>
-          ) : Media}
+          <PlayHolder>
+            <PlayImage src={playImage} alt="" />
+            {Media}
+          </PlayHolder>
         </MediaLink>
       );
     }
