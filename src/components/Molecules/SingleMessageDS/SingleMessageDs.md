@@ -156,7 +156,34 @@ import Download from '../../Atoms/Icons/Download';
       linkLabel='Download this'
       linkIcon={<Download />}
       imageLow={data.image}
+      imageLeft={true}
       images={data.images}
+    >
+      <Text tag='p'>
+        Whatever you’ve got planned, the Sport Relief shop has everything you need
+        to get you looking your best while you’re raising some cash. Also
+        available in Sainsbury’s stores and online and in selected Argos stores.
+      </Text>
+    </SingleMessageDs>
+</div>;
+```
+
+## Video with no CTA
+
+```js
+const data = require('../../../styleguide/data/data').default;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
+import Download from '../../Atoms/Icons/Download';
+
+<div>
+    <SingleMessageDs
+      imageLow={data.image}
+      images={data.images}
+      youTubeId="faz0JeBB41M"
+      imageLeft={true}
     >
       <Text tag='p'>
         Some text and stuff.
