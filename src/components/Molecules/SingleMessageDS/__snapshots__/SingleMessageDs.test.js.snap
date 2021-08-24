@@ -234,7 +234,6 @@ exports[`renders correctly 1`] = `
     aria-hidden="true"
     className="c1"
     href="/home"
-    onClick={[Function]}
     tabIndex="-1"
     target="_blank"
     title="Heading Line 1 Heading Line 2"
