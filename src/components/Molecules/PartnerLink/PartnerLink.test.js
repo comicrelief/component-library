@@ -53,21 +53,6 @@ it('renders correctly', () => {
       border-bottom: 2px solid #000000;
     }
 
-    .c7 {
-      border: 0;
-      -webkit-clip: rect(0 0 0 0);
-      clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(50%);
-      clip-path: inset(50%);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-
     .c6 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
@@ -138,7 +123,7 @@ it('renders correctly', () => {
       className="c0 c1"
       color="red"
       href="https://www.comicrelief.com"
-      target="_blank"
+      target="_self"
       type="standard"
     >
       <div
@@ -165,11 +150,6 @@ it('renders correctly', () => {
         size="xxs"
       >
         Find out more
-      </span>
-      <span
-        className="c7"
-      >
-        (opens in new window)
       </span>
     </a>
   `);
