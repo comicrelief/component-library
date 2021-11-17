@@ -5,7 +5,7 @@ import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
-import InternalLinkHelper from '../../../../utils/internalLinkHelper';
+import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import whiteListed from '../../../../utils/whiteListed';
 
 import {

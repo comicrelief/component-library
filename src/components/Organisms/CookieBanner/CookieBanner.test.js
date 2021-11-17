@@ -44,7 +44,7 @@ it('renders correctly', () => {
       border-bottom: 2px solid #FFFFFF;
     }
 
-    .c5 {
+    .c6 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -73,9 +73,24 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c5:hover {
+    .c6:hover {
       background-color: #969598;
       color: #000000;
+    }
+
+    .c5 {
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
 
     .c0 {
@@ -101,7 +116,7 @@ it('renders correctly', () => {
       margin-bottom: 0.5rem;
     }
 
-    .c6 {
+    .c7 {
       padding: 0.5rem 1rem;
       display: block;
       margin-bottom: 10px;
@@ -114,7 +129,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c5 {
+      .c6 {
         width: auto;
       }
     }
@@ -131,7 +146,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c6 {
+      .c7 {
         margin: 0 0.25rem 0 0;
         display: inline-block;
       }
@@ -150,10 +165,15 @@ it('renders correctly', () => {
           className="c3 c4"
           color="red"
           href="https://www.comicrelief.com/cookies-policy"
-          target="_self"
+          target="_blank"
           type="standard_white"
         >
           our use of cookies
+          <span
+            className="c5"
+          >
+            (opens in new window)
+          </span>
         </a>
         . We also use optional cookies for marketing purposes:
       </p>
@@ -163,7 +183,7 @@ it('renders correctly', () => {
         size="s"
       >
         <a
-          className="c5 c6"
+          className="c6 c7"
           color="white"
           href="/comic"
           onClick={[Function]}

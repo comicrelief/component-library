@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c25 {
+.c26 {
   color: #969598;
   font-size: 1rem;
   line-height: 1rem;
@@ -67,6 +67,21 @@ exports[`renders correctly 1`] = `
 .c8:hover {
   color: #000000;
   border-bottom: 2px solid #000000;
+}
+
+.c22 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .c5 {
@@ -186,7 +201,7 @@ exports[`renders correctly 1`] = `
   content: none;
 }
 
-.c22 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,14 +218,14 @@ exports[`renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c22 > li a {
+.c23 > li a {
   display: none;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
 }
 
-.c22 > li a:after {
+.c23 > li a:after {
   content: none;
 }
 
@@ -221,7 +236,7 @@ exports[`renders correctly 1`] = `
   padding: 8px 0;
 }
 
-.c23 {
+.c24 {
   height: 40px;
   width: 100%;
   background-color: inherit;
@@ -313,7 +328,7 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c24 {
+.c25 {
   display: block;
   width: 100%;
   height: 100%;
@@ -321,7 +336,7 @@ exports[`renders correctly 1`] = `
   margin-top: 3rem;
 }
 
-.c24 p {
+.c25 p {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 5px;
@@ -370,7 +385,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c22 {
+  .c23 {
     max-height: none;
     height: auto;
     -webkit-flex-direction: row;
@@ -381,7 +396,7 @@ exports[`renders correctly 1`] = `
     flex-wrap: wrap;
   }
 
-  .c22 > li a {
+  .c23 > li a {
     display: inline;
     line-height: 24px;
   }
@@ -420,7 +435,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c23 {
+  .c24 {
     height: auto;
     margin-top: 12px;
     padding: 0;
@@ -429,29 +444,29 @@ exports[`renders correctly 1`] = `
     flex: 0 0 100%;
   }
 
-  .c23 a {
+  .c24 a {
     background-color: inherit;
     height: auto;
   }
 
-  .c23 a:after {
+  .c24 a:after {
     content: none !important;
   }
 
-  .c23 a:hover,
-  .c23 a:focus {
+  .c24 a:hover,
+  .c24 a:focus {
     border-bottom: 2px solid #fff;
   }
 
-  .c23 a:hover span,
-  .c23 a:focus span {
+  .c24 a:hover span,
+  .c24 a:focus span {
     border-bottom: 0;
     padding-bottom: 2px;
   }
 }
 
 @media (min-width:1024px) {
-  .c23 {
+  .c24 {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -528,7 +543,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c24 p {
+  .c25 p {
     font-size: 16px;
     line-height: 27px;
   }
@@ -706,7 +721,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.comicrelief.com/#"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -715,6 +730,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Get the newsletter
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -726,7 +746,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.comicrelief.com/update-your-preferences"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -735,6 +755,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     How we contact you
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -753,11 +778,11 @@ exports[`renders correctly 1`] = `
             </span>
             <ul
               aria-label="Get in touch"
-              className="c22"
+              className="c23"
               role="list"
             >
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
@@ -777,14 +802,14 @@ exports[`renders correctly 1`] = `
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://giftaid.comicrelief.com/update"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -794,17 +819,22 @@ exports[`renders correctly 1`] = `
                   >
                     Your Gift Aid
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/frequently-asked-questions"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -814,17 +844,22 @@ exports[`renders correctly 1`] = `
                   >
                     FAQs
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -833,6 +868,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Red Nose Day 2019 FAQs
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -851,18 +891,18 @@ exports[`renders correctly 1`] = `
             </span>
             <ul
               aria-label="About us"
-              className="c22"
+              className="c23"
               role="list"
             >
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/about-comic-relief"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -872,17 +912,22 @@ exports[`renders correctly 1`] = `
                   >
                     Mission
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/about-comic-relief/history"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -892,17 +937,22 @@ exports[`renders correctly 1`] = `
                   >
                     Our history
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/about-comic-relief/finances"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -912,17 +962,22 @@ exports[`renders correctly 1`] = `
                   >
                     Finances
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/working-with-us"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -932,17 +987,22 @@ exports[`renders correctly 1`] = `
                   >
                     Partners
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -952,17 +1012,22 @@ exports[`renders correctly 1`] = `
                   >
                     Meet the team
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
-                className="c23"
+                className="c24"
               >
                 <a
                   className="c8 c19 c20"
                   color="red"
                   href="https://www.sportrelief.com/"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -971,6 +1036,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Sport Relief
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1000,7 +1070,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.comicrelief.com/careers"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -1009,6 +1079,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Working at Comic Relief
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1020,7 +1095,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://app.beapplied.com/org/comic-relief"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -1029,6 +1104,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Open roles
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1058,7 +1138,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.comicrelief.com/news"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -1067,6 +1147,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     News
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1078,7 +1163,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.comicrelief.com/press-releases"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -1087,6 +1172,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Press area
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1166,6 +1256,11 @@ exports[`renders correctly 1`] = `
                   >
                     Link comp with only URL
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
               <li
@@ -1176,7 +1271,7 @@ exports[`renders correctly 1`] = `
                   color="red"
                   href="https://www.sportrelief.com"
                   role="menuitem"
-                  target="_self"
+                  target="_blank"
                   type="standard"
                 >
                   <span
@@ -1185,6 +1280,11 @@ exports[`renders correctly 1`] = `
                     size="s"
                   >
                     Test whitelisted external link
+                  </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
                   </span>
                 </a>
               </li>
@@ -1206,6 +1306,11 @@ exports[`renders correctly 1`] = `
                   >
                     Test non-whitelisted external link
                   </span>
+                  <span
+                    className="c22"
+                  >
+                    (opens in new window)
+                  </span>
                 </a>
               </li>
             </ul>
@@ -1213,10 +1318,10 @@ exports[`renders correctly 1`] = `
         </ul>
       </nav>
       <div
-        className="c24"
+        className="c25"
       >
         <p
-          className="c25"
+          className="c26"
           color="grey"
           size="s"
         >

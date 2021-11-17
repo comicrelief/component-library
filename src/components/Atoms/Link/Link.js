@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
 import whiteListed from '../../../utils/whiteListed';
-
-const domainRegEx = new RegExp(
-  '(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]'
-);
+import { domainRegEx, getDomain } from '../../../utils/internalLinkHelper';
 
 let window = '';
 
@@ -27,9 +24,20 @@ const Link = ({
    * this is an internal link OR on our whitelist before making it a '_self' link
    */
   if (target === null) {
+    // Use our helper function to determine the raw domains to compare
+    const currentDomain = getDomain(document.location.host);
+    const linkDomain = getDomain(href);
+
+    /**
+     * If the link has no domain supplied (likely '/' or '#')
+     * OR has the same domain as the current page, don't open
+     * in a new tab
+     */
+    const isNewTab = linkDomain !== '' && (currentDomain !== linkDomain);
+
     const isExternalLink = domainRegEx.test(href);
     const isWhiteListed = whiteListed(href);
-    window = !isExternalLink || isWhiteListed ? '_self' : '_blank';
+    window = isNewTab && (isExternalLink || !isWhiteListed) ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
@@ -46,7 +54,7 @@ const Link = ({
       underline={underline}
     >
       {children}
-      {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
+      {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
       {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
     </StyledLink>
   );
