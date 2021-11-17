@@ -28,5 +28,5 @@ const getDomain = url => {
 };
 
 export {
-  InternalLinkHelper, domainRegEx, getDomain
+  InternalLinkHelper, getDomain
 };

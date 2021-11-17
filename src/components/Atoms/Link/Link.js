@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
 import whiteListed from '../../../utils/whiteListed';
-import { domainRegEx, getDomain } from '../../../utils/internalLinkHelper';
+import { getDomain } from '../../../utils/internalLinkHelper';
 
 let window = '';
 
@@ -33,11 +33,10 @@ const Link = ({
      * OR has the same domain as the current page, don't open
      * in a new tab
      */
-    const isNewTab = linkDomain !== '' && (currentDomain !== linkDomain);
+    const isExternalLink = linkDomain !== '' && (currentDomain !== linkDomain);
 
-    const isExternalLink = domainRegEx.test(href);
     const isWhiteListed = whiteListed(href);
-    window = isNewTab && (isExternalLink || !isWhiteListed) ? '_blank' : '_self';
+    window = isExternalLink && !isWhiteListed ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
