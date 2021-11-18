@@ -15,7 +15,7 @@ import {
 
 const allPlayers = {};
 
-/** Single Message is our main component usually to build landing pages */
+/* Single Message is our main component usually to build landing pages */
 const SingleMessage = ({
   backgroundColor,
   copyFirst,
