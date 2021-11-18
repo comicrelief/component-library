@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
-import InternalLinkHelper from '../../../../utils/internalLinkHelper';
+import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 
 import {
   Nav,
