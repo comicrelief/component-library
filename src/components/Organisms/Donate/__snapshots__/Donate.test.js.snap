@@ -685,7 +685,7 @@ exports[`Monthly donation renders correctly 1`] = `
             errormsg=""
             id="give-once"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Give once"
           />
@@ -701,7 +701,7 @@ exports[`Monthly donation renders correctly 1`] = `
             errormsg=""
             id="give-monthly"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Give monthly"
           />
