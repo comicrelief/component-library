@@ -96,6 +96,7 @@ const [success, setSuccess] = React.useState(false);
         privacyCopy={privacyCopy}
         errorMsg=""
         subscribe={() => setSuccess(!success)}
+        validate={() => console.log('Phoney validate function')}
       />
     </>
   }
