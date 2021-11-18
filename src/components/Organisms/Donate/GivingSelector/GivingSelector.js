@@ -91,7 +91,7 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         label=""
         errormsg=""
         checked={givingType === 'single'}
-        onClick={() => {
+        onChange={() => {
           changeGivingType('single');
         }}
       />
@@ -106,7 +106,7 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         label=""
         errormsg=""
         checked={givingType === 'monthly'}
-        onClick={() => {
+        onChange={() => {
           changeGivingType('monthly');
         }}
       />
