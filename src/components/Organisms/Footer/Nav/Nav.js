@@ -16,7 +16,7 @@ import {
   SubNavLink
 } from './Nav.style';
 
-const FooterNav = ({ navItems }) => {
+const FooterNav = ({ navItems, ...rest }) => {
   const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -78,6 +78,7 @@ const FooterNav = ({ navItems }) => {
                 aria-haspopup="true"
                 role="button"
                 onClick={toggleSubMenu(group.id)}
+                {...rest}
               >
                 <Text color="white">{group.title}</Text>
               </NavLink>
@@ -103,7 +104,7 @@ const FooterNav = ({ navItems }) => {
                         group.links.length % 2 === 0 && group.links.length > 2
                       }
                     >
-                      <SubNavLink href={thisUrl} inline role="menuitem">
+                      <SubNavLink href={thisUrl} inline role="menuitem" {...rest}>
                         <Text color="white">{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>

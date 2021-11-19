@@ -28,15 +28,18 @@ const Link = ({
     const currentDomain = getDomain(document.location.host);
     const linkDomain = getDomain(href);
 
+    // Additional check for applications that need more control
+    const isWhiteListOverriden = rest.overrideWhiteList === true;
+
     /**
      * If the link has no domain supplied (likely '/' or '#')
      * OR has the same domain as the current page, don't open
      * in a new tab
      */
     const isExternalLink = linkDomain !== '' && (currentDomain !== linkDomain);
-
     const isWhiteListed = whiteListed(href);
-    window = isExternalLink && !isWhiteListed ? '_blank' : '_self';
+
+    window = isExternalLink && (isWhiteListOverriden || !isWhiteListed) ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
