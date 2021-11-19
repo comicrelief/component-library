@@ -29,7 +29,7 @@ const Link = ({
     const linkDomain = getDomain(href);
 
     // Additional check for applications that need more control
-    const isWhiteListOverriden = rest.overrideWhiteList === true;
+    const isWhiteListOverridden = rest.overrideWhiteList === true;
 
     /**
      * If the link has no domain supplied (likely '/' or '#')
@@ -39,7 +39,7 @@ const Link = ({
     const isExternalLink = linkDomain !== '' && (currentDomain !== linkDomain);
     const isWhiteListed = whiteListed(href);
 
-    window = isExternalLink && (isWhiteListOverriden || !isWhiteListed) ? '_blank' : '_self';
+    window = isExternalLink && (isWhiteListOverridden || !isWhiteListed) ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
