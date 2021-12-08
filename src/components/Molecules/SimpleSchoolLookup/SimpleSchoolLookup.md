@@ -4,6 +4,6 @@ import SimpleSchoolLookup from './SimpleSchoolLookup'
 
 const hello = 'test';
 
-hello
+<SimpleSchoolLookup onSelect={data => console.log(data)}/>
 
 ```
