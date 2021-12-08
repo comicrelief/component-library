@@ -58,6 +58,7 @@ export { default as Countdown } from './components/Molecules/Countdown/Countdown
 export { default as Banner } from './components/Molecules/Banner/Banner';
 export { default as Chip } from './components/Molecules/Chip/Chip';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
+export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
