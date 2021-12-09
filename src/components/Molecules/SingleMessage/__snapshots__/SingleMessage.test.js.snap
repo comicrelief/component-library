@@ -897,6 +897,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1008,6 +1012,10 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 2rem;
   margin: auto;
   padding: 1rem;
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:740px) {
