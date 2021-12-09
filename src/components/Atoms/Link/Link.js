@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
@@ -19,13 +19,14 @@ const Link = ({
   iconFirst,
   ...rest
 }) => {
+  const [documentHost, setDocumentHost] = useState('');
   /**
    * If we haven't specifically set the target via props, check if
    * this is an internal link OR on our whitelist before making it a '_self' link
    */
   if (target === null) {
     // Use our helper function to determine the raw domains to compare
-    const currentDomain = getDomain(document.location.host);
+    const currentDomain = getDomain(documentHost);
     const linkDomain = getDomain(href);
 
     // Additional check for applications that need more control
@@ -44,6 +45,10 @@ const Link = ({
     window = target === 'blank' ? '_blank' : '_self';
   }
   const hasIcon = icon !== null;
+
+  useEffect(() => {
+    setDocumentHost(document.location.host);
+  }, []);
 
   return (
     <StyledLink
