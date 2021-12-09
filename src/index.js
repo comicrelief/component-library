@@ -29,6 +29,7 @@ export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIco
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 export { default as Label } from './components/Atoms/Label/Label';
+export { default as ButtonWithState } from './components/Atoms/ButtonWithState/ButtonWithState';
 
 /* Molecules */
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
