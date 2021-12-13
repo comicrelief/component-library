@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
 import whiteListed from '../../../utils/whiteListed';
-
-const domainRegEx = new RegExp(
-  '(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]'
-);
+import { getDomain } from '../../../utils/internalLinkHelper';
 
 let window = '';
 
@@ -22,18 +19,36 @@ const Link = ({
   iconFirst,
   ...rest
 }) => {
+  const [documentHost, setDocumentHost] = useState('');
   /**
    * If we haven't specifically set the target via props, check if
    * this is an internal link OR on our whitelist before making it a '_self' link
    */
   if (target === null) {
-    const isExternalLink = domainRegEx.test(href);
+    // Use our helper function to determine the raw domains to compare
+    const currentDomain = getDomain(documentHost);
+    const linkDomain = getDomain(href);
+
+    // Additional check for applications that need more control
+    const isWhiteListOverridden = rest.overrideWhiteList === true;
+
+    /**
+     * If the link has no domain supplied (likely '/' or '#')
+     * OR has the same domain as the current page, don't open
+     * in a new tab
+     */
+    const isExternalLink = linkDomain !== '' && (currentDomain !== linkDomain);
     const isWhiteListed = whiteListed(href);
-    window = !isExternalLink || isWhiteListed ? '_self' : '_blank';
+
+    window = isExternalLink && (isWhiteListOverridden || !isWhiteListed) ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }
   const hasIcon = icon !== null;
+
+  useEffect(() => {
+    setDocumentHost(document.location.host);
+  }, []);
 
   return (
     <StyledLink
@@ -46,7 +61,7 @@ const Link = ({
       underline={underline}
     >
       {children}
-      {target === 'blank' && <HelperText>(opens in new window)</HelperText>}
+      {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
       {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
     </StyledLink>
   );

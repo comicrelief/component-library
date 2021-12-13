@@ -29,6 +29,7 @@ export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIco
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 export { default as Label } from './components/Atoms/Label/Label';
+export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
 
 /* Molecules */
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
@@ -58,6 +59,8 @@ export { default as Countdown } from './components/Molecules/Countdown/Countdown
 export { default as Banner } from './components/Molecules/Banner/Banner';
 export { default as Chip } from './components/Molecules/Chip/Chip';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
+export { default as Lookup } from './components/Molecules/Lookup/Lookup';
+export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 
 /* Organisms */
 export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';

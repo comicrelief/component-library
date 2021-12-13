@@ -31,7 +31,7 @@ const Footer = ({
               <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
-          <FooterNav navItems={navItems} />
+          <FooterNav navItems={navItems} {...rest} />
           <FooterCopyright>
             <Text tag="p" color="grey">
               {footerCopy}
@@ -46,13 +46,15 @@ const Footer = ({
 Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   footerCopy: PropTypes.string,
-  campaign: PropTypes.string
+  campaign: PropTypes.string,
+  overrideWhiteList: PropTypes.bool
 };
 
 Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
-  campaign: 'Comic Relief'
+  campaign: 'Comic Relief',
+  overrideWhiteList: false
 };
 
 export default Footer;
