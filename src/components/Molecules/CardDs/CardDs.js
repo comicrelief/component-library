@@ -29,7 +29,6 @@ const Image = styled.div`
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin: 0;
-    ${({ hasLink }) => !hasLink && `width: calc(50% - ${spacing('xl')})`};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
