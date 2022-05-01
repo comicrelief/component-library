@@ -1,4 +1,3 @@
-// placeholder to setup branch so can pull into local dev CR contentful repo
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -8,6 +7,7 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
+  border: 3px solid green;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -29,6 +29,7 @@ const Image = styled.div`
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin: 0;
+    ${({ hasLink }) => !hasLink && `width: calc(50% - ${spacing('xl')})`};
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
