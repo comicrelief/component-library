@@ -24,7 +24,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  border: 3px solid green;
+  border: 3px solid red;
   height: auto;
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
