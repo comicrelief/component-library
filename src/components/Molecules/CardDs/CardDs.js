@@ -7,7 +7,6 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  border: 3px solid green;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -25,6 +24,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
+  border: 3px solid green;
   height: auto;
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('small')} {
