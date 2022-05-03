@@ -7,15 +7,15 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
+  border: 3px solid red;
   display: flex;
   position: relative;
   flex-direction: column;
   height: 100%;
-  width: calc(100% - ${spacing('m')});
+  width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
-    width: 100%;
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
