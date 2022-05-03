@@ -76,7 +76,8 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: yarn styleguide
-          command: yarn cy:run
+          # short delay to avoid connection errors in the first test suite
+          command: sleep 5 && yarn cy:run
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
