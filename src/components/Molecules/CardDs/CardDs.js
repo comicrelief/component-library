@@ -7,7 +7,6 @@ import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  border: 3px solid red;
   display: flex;
   position: relative;
   flex-direction: column;
