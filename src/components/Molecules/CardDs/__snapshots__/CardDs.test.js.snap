@@ -76,7 +76,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  border: 3px solid blue;
   height: auto;
   margin: 0 -1.5rem 0 1.5rem;
 }
@@ -144,12 +143,6 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    margin: 0;
   }
 }
 
