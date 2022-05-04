@@ -1,0 +1,17 @@
+name: PR
+
+on: [pull_request]
+
+jobs:
+  # https://github.com/amannn/action-semantic-pull-request#example-config
+  check-semantic-pr:
+    name: Semantic pull request
+    runs-on: ubuntu-latest
+    steps:
+      # Please look up the latest version from
+      # https://github.com/amannn/action-semantic-pull-request/releases
+      - uses: amannn/action-semantic-pull-request@v4.4.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          validateSingleCommit: true
