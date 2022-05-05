@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Logo from './Logo';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Logo from "./Logo";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -32,7 +32,7 @@ it('renders correctly', () => {
 
     <div
       className="c0"
-      rotate={1}
+      rotate={true}
     >
       <img
         alt="Comic Relief logo"

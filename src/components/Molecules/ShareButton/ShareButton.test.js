@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ShareButton from './ShareButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ShareButton from "./ShareButton";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -11,7 +11,14 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       cursor: pointer;
-      display: block;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-transition: opacity 0.2s;
       transition: opacity 0.2s;
     }
@@ -23,6 +30,8 @@ it('renders correctly', () => {
 
     .c5 {
       width: 100%;
+      width: auto;
+      margin-right: 0.5rem;
     }
 
     .c6 {
@@ -105,6 +114,7 @@ it('renders correctly', () => {
             <img
               alt="comicrelief"
               className="c5"
+              size="auto"
               src="mock.asset"
             />
             <span
@@ -130,6 +140,7 @@ it('renders correctly', () => {
             <img
               alt="comicrelief"
               className="c5"
+              size="auto"
               src="mock.asset"
             />
             <span

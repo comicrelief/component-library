@@ -42,7 +42,7 @@ import Link from '../../Atoms/Link/Link';
 import data from './data/data';
 import Link from '../../Atoms/Link/Link';
 import HeaderEsuWithIcon from '../../Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
-import searchIcon from './assets/icon--search.svg';
+import searchIcon from './assets/search.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import RichText from '../../Atoms/RichText/RichText';
 
@@ -71,10 +71,6 @@ const [success, setSuccess] = React.useState(false);
   rotate="true"
   metaIcons={
     <>
-      <Link color="green" type="button" href="/donation">
-        Donate
-      </Link>
-
       <div>
         <Icon
           icon={searchIcon}
@@ -84,19 +80,13 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          size="35px"
         />
-      </div>
+      </div> 
 
-      <HeaderEsuWithIcon
-        title={title}
-        topCopy={topCopy}
-        privacyCopy={privacyCopy}
-        successCopy={successCopy}
-        isSuccess={success}
-        privacyCopy={privacyCopy}
-        errorMsg=""
-        subscribe={() => setSuccess(!success)}
-      />
+      <Link color="green" type="button" href="/donation">
+        Donate
+      </Link>
     </>
   }
 />;

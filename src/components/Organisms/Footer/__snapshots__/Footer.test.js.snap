@@ -88,7 +88,14 @@ exports[`renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -100,6 +107,8 @@ exports[`renders correctly 1`] = `
 
 .c6 {
   width: 100%;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .c7 {
@@ -580,6 +589,7 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="facebook"
                   className="c6"
+                  size="auto"
                   src="mock.asset"
                 />
                 <span
@@ -603,6 +613,7 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="twitter"
                   className="c6"
+                  size="auto"
                   src="mock.asset"
                 />
                 <span
@@ -626,6 +637,7 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="youtube"
                   className="c6"
+                  size="auto"
                   src="mock.asset"
                 />
                 <span
@@ -649,6 +661,7 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="instagram"
                   className="c6"
+                  size="auto"
                   src="mock.asset"
                 />
                 <span
@@ -670,7 +683,7 @@ exports[`renders correctly 1`] = `
         >
           <div
             className="c10"
-            rotate={0}
+            rotate={false}
           >
             <img
               alt="Comic Relief logo"
