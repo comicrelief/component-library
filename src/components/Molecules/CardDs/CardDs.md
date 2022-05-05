@@ -2,7 +2,7 @@
 ## Image and CTA are clickable and links user through to full content
 
 
-### CardDs: Image & Text & Link
+### CardDs:  Image& Text & Link
 ```js
 const data = require('../../../styleguide/data/data').default;
 import Text from '../../Atoms/Text/Text';
@@ -69,7 +69,7 @@ import { Download } from '../../Atoms/Icons/index';
 ```
 
 
-### CardDs: Image & Text
+### CardDs: Image & Text, No Link
 ```js
 const data = require('../../../styleguide/data/data').default;
 import Text from '../../Atoms/Text/Text';
