@@ -11,7 +11,7 @@ const colors = {
   cwg22_orange: '#FB6326',
   cwg22_purple: '#7B3ED3',
   cwg22_red: '#E62731',
-  cwg22_yellow: '#F8E928'
+  cwg22_yellow: '#F8E928',
   deep_violet_dark: '#2C0230',
   deep_violet: '#2C0230' /** Will be removed  */,
   deep_violet_light: '#3e1c43',
@@ -44,7 +44,7 @@ const colors = {
   white: '#FFFFFF',
   yellow: '#FFE400',
   yellow_dark: '#665700',
-  yellow_light: '#FEFD5A',
+  yellow_light: '#FEFD5A'
 };
 
 export default colorName => {
