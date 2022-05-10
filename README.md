@@ -42,7 +42,7 @@ To test:
 ```
 $ yarn test
 ```
-_Test will run through all Jest tests and watch for any changes on snapshots._
+_Test will run through all Jest tests, and watch for any changes on snapshots._
 
 To update snapshots with desired changes brought in through your work:
 ```
