@@ -40,11 +40,11 @@ const colors = {
   yellow: '#FFE400',
   yellow_dark: '#665700',
   yellow_light: '#FEFD5A',
-  CWG22_blue: '#204794',
-  CWG22_red: '#E62731',
-  CWG22_orange: '#FB6326',
-  CWG22_yellow: '#F8E928',
-  CWG22_purple: '#7B3ED3'
+  cwg22_blue: '#204794',
+  cwg22_orange: '#FB6326',
+  cwg22_purple: '#7B3ED3',
+  cwg22_red: '#E62731',
+  cwg22_yellow: '#F8E928'
 };
 
 export default colorName => {
