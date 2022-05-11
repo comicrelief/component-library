@@ -4,8 +4,8 @@ import styled, { css } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 
 const NoMessageWrapper = styled.div`${({ theme }) => css`
-  padding: 15px;
   background-color: ${theme.color('red')};
+  padding: 15px;
   margin-bottom: 15px;
 `}`;
 
