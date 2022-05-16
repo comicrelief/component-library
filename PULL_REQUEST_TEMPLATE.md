@@ -6,7 +6,7 @@ e.g.
 `fix: update broken link in New-Form component.`
 
 
-## PR description
+## PR comment/description
 ### What is it doing?
 Tell us what it is doing from a technical perspective.
 
