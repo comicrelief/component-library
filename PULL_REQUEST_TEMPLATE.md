@@ -1,14 +1,24 @@
-### !!! Pull Request Titles must follow Conventional Commits:
+
+## PR Titles
+### To pass testing pipeline, these need to follow Conventional Commits spec:
 https://www.conventionalcommits.org/en/v1.0.0/
+e.g.
+`fix: update broken link in New-Form component.`
+
+
+## PR description
+### What is it doing?
+Tell us what it is doing from a technical perspective.
 
 ### Why is this required?
-When no link is present in the CardsDs component, the styling of the image goes astray.
-
-
-### What is it doing?
-
+Tell us why this is requred from a business/product perspective.
 
 ### link to Jira ticket:
+Add a link to the Jira ticket.
 
 
-### ! make sure to squash merge
+# Important:
+### !!! make sure to squash merge
+
+## Commits 
+### Currently not essential to pass through testing pipeline, but probably good to follow Conventional Commits specs anyway. These commit messages will be squash merged in the end.
