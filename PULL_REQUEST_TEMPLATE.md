@@ -1,8 +1,14 @@
-Type: patch
+### !!! Pull Request Titles must follow Conventional Commits:
+https://www.conventionalcommits.org/en/v1.0.0/
 
-Fixes #
+### Why is this required?
+When no link is present in the CardsDs component, the styling of the image goes astray.
 
-## Changes proposed in this PR
 
-- Briefly describe the changes in this PR
-- Do you have some test asserting this behavior?
+### What is it doing?
+
+
+### link to Jira ticket:
+
+
+### ! make sure to squash merge
