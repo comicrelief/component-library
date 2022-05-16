@@ -57,7 +57,6 @@ const MarketingPreferencesDS = ({
     return errors.mp_address1 || errors.mp_address2
     || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
   };
-
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
   const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
