@@ -19,6 +19,12 @@ const CheckAnswer = ({
       newVal = e.target.value === 'yes' ? e.target.value : 'no';
     } else {
       newVal = '';
+
+      // To ensure we're not letting invalid values get passed, reset any associated fields:
+      const theseFields = AssociatedFields[name];
+      theseFields.forEach(fieldName => {
+        setValue(fieldName, '');
+      });
     }
 
     // Update the checkbox field itself
