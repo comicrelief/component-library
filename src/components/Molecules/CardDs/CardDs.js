@@ -143,7 +143,7 @@ const CardDs = ({
         </MediaWrapper>
       );
     }
-    return null
+    return null;
   };
 
   const external = target === 'blank' ? 'noopener' : null;
