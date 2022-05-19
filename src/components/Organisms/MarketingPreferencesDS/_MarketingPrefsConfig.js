@@ -79,7 +79,7 @@ const buildValidationSchema = overrideOptions => {
         is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption)
         && mpValidationOptions.mp_permissionSMS[val]),
         then: yup.string().required('Please enter your mobile number')
-          .matches(phoneRegex, 'Please enter a valid mobile number')
+          .matches(phoneRegex, 'Please enter a valid UK mobile number')
       }),
 
     mp_phone: yup.string()
@@ -87,7 +87,7 @@ const buildValidationSchema = overrideOptions => {
         is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption)
         && mpValidationOptions.mp_permissionPhone[val]),
         then: yup.string().required('Please enter your phone number')
-          .matches(phoneRegex, 'Please enter a valid phone number')
+          .matches(phoneRegex, 'Please enter a valid UK phone number')
       }),
 
     mp_address1: yup.string()
