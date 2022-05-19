@@ -1,5 +1,4 @@
 import * as yup from 'yup';
-import 'yup-phone';
 import { merge } from 'lodash';
 
 const setInitialValues = overrideValues => {
@@ -77,14 +76,17 @@ const buildValidationSchema = overrideOptions => {
       .when('mp_permissionSMS', {
         is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption)
         && mpValidationOptions.mp_permissionSMS[val]),
-        then: yup.string().required('Please enter your mobile number').phone('GB', false, 'Please enter a valid mobile number')
+        then: yup.string().required('Please enter your mobile number')
+          .matches(/^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/, 'Please enter a valid mobile number')
       }),
 
     mp_phone: yup.string()
       .when('mp_permissionPhone', {
         is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption)
         && mpValidationOptions.mp_permissionPhone[val]),
-        then: yup.string().required('Please enter your phone number').phone('GB', false, 'Please enter a valid phone number')
+        then: yup.string().required('Please enter your phone number')
+          .matches(/^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/, 'Please enter a valid phone number')
+
       }),
 
     mp_address1: yup.string()

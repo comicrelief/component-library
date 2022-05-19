@@ -1979,10 +1979,6 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/google-libphonenumber@^7.4.19":
-  version "7.4.21"
-  resolved "https://registry.yarnpkg.com/@types/google-libphonenumber/-/google-libphonenumber-7.4.21.tgz#db5293874ffa91cbbc4bc6bd1b065615e8e615ba"
-
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -2133,10 +2129,6 @@
   resolved "https://registry.yarnpkg.com/@types/yauzl/-/yauzl-2.9.2.tgz#c48e5d56aff1444409e39fa164b0b4d4552a7b7a"
   dependencies:
     "@types/node" "*"
-
-"@types/yup@^0.29.3":
-  version "0.29.13"
-  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.13.tgz#21b137ba60841307a3c8a1050d3bf4e63ad561e9"
 
 "@typescript-eslint/eslint-plugin@^4.5.0":
   version "4.29.3"
@@ -3985,10 +3977,6 @@ core-js-pure@^3.16.0:
   version "3.16.3"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.16.3.tgz#41ccb9b6027535f8dd51a0af004c1c7f0a8c9ca7"
 
-core-js@3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.8.1.tgz#f51523668ac8a294d1285c3b9db44025fda66d47"
-
 core-js@^2.4.0:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
@@ -4058,7 +4046,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-env@^7.0.2, cross-env@^7.0.3:
+cross-env@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
   dependencies:
@@ -5964,10 +5952,6 @@ glogg@^1.0.2:
   resolved "https://registry.yarnpkg.com/glogg/-/glogg-1.0.2.tgz#2d7dd702beda22eb3bffadf880696da6d846313f"
   dependencies:
     sparkles "^1.0.0"
-
-google-libphonenumber@^3.2.10:
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/google-libphonenumber/-/google-libphonenumber-3.2.22.tgz#04d1df75324d4210c1bbfba0c238a0b08c594d22"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.3, graceful-fs@^4.2.4, graceful-fs@^4.2.8:
   version "4.2.8"
@@ -12558,6 +12542,11 @@ validate-npm-package-name@^3.0.0, validate-npm-package-name@~3.0.0:
   dependencies:
     builtins "^1.0.3"
 
+validator@^13.7.0:
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
+  integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
+
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -13190,19 +13179,7 @@ youtube-player@^5.5.2:
     load-script "^1.0.0"
     sister "^3.0.0"
 
-yup-phone@^1.2.19:
-  version "1.2.19"
-  resolved "https://registry.yarnpkg.com/yup-phone/-/yup-phone-1.2.19.tgz#2811e8a145d881b842a12c63a951d6fed060fed0"
-  dependencies:
-    "@types/google-libphonenumber" "^7.4.19"
-    "@types/yup" "^0.29.3"
-    core-js "3.8.1"
-    cross-env "^7.0.2"
-    google-libphonenumber "^3.2.10"
-    npm-run-all "^4.1.5"
-    yup "^0.32.1"
-
-yup@^0.32.1, yup@^0.32.9:
+yup@^0.32.9:
   version "0.32.9"
   resolved "https://registry.yarnpkg.com/yup/-/yup-0.32.9.tgz#9367bec6b1b0e39211ecbca598702e106019d872"
   dependencies:
