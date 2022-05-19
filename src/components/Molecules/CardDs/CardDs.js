@@ -42,6 +42,17 @@ const MediaLink = styled.a`
   }
 `;
 
+const MediaWrapper = styled.div`
+  width: 100%;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    width: calc(50% + 6rem);
+  }
+  @media ${({ theme }) => theme.breakpoint('large')} {
+    width: 100%;
+  }
+  border: 3px solid blue;
+`;
+
 const Copy = styled.div`
   padding: ${spacing('l')};
   ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('xl')}`};
@@ -126,9 +137,13 @@ const CardDs = ({
       );
     }
     if (imageLow) {
-      return Media;
+      return (
+        <MediaWrapper>
+          {Media}
+        </MediaWrapper>
+      );
     }
-    return null;
+    return null
   };
 
   const external = target === 'blank' ? 'noopener' : null;
