@@ -154,13 +154,13 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@default')
         .find('.field-sms span[data-test=error-message] span')
         .should('exist')
-        .contains('Please enter a valid mobile number');
+        .contains('Please enter a valid UK mobile number');
 
       // Phone
       cy.get('@default')
         .find('.field-phone span[data-test=error-message] span')
         .should('exist')
-        .contains('Please enter a valid phone number');
+        .contains('Please enter a valid UK phone number');
 
       // Address1
       cy.get('@default')
@@ -424,7 +424,7 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised')
         .find('.field-phone span[data-test=error-message] span')
         .should('exist')
-        .contains('Please enter a valid phone number');
+        .contains('Please enter a valid UK phone number');
 
       // Address1
       cy.get('@customised')
