@@ -176,4 +176,47 @@ describe('CardDs component', () => {
         .should('not.exist');
     });
   });
+
+  describe('CardDs image, text, no link', () => {
+    beforeEach(() => {
+      cy.get('[data-testid="CardDs-example-6"]')
+        .as('container')
+        .find('[data-preview="CardDs"]')
+        .as('preview');
+
+      cy.get('@container')
+        .find('button')
+        .contains('View Code')
+        .as('viewCodeBtn');
+    });
+
+    it('renders cardDs image and CTA preview', () => {
+      cy.get('@container')
+        .find('h3')
+        .should('exist')
+        .contains('Title');
+      cy.get('@container')
+        .find('p')
+        .should('exist')
+        .contains('Text body copy description');
+      cy.get('@container')
+        .find('img')
+        .should('exist');
+    });
+
+    it('has view code button', () => {
+      cy.get('@viewCodeBtn').should('exist');
+    });
+
+    it('shows code on click', () => {
+      cy.get('@viewCodeBtn').click();
+      cy.get('@container')
+        .find('textarea')
+        .should('exist');
+    });
+
+    it('closes code on click', () => {
+      cy.get('@viewCodeBtn').click();
+    });
+  });
 });
