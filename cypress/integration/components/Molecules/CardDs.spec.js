@@ -179,7 +179,8 @@ describe('CardDs component', () => {
 
   describe('CardDs image, text, no link', () => {
     beforeEach(() => {
-      cy.get('[data-testid="CardDs-example-6"]')
+      // Here
+      cy.get('[data-testid="CardDs-example-7"]')
         .as('container')
         .find('[data-preview="CardDs"]')
         .as('preview');
