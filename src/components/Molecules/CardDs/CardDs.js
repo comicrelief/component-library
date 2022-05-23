@@ -50,7 +50,7 @@ const MediaWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('large')} {
     width: 100%;
   }
-  border: 3px solid blue;
+  border: 3px solid yellow;
 `;
 
 const Copy = styled.div`
