@@ -11,11 +11,10 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  width: calc(100% - ${spacing('m')});
+  width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.breakpoint('small')} {
     flex-direction: row;
-    width: 100%;
   }
 
   @media ${({ theme }) => theme.breakpoint('large')} {
@@ -26,14 +25,7 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    margin: 0;
-    ${({ hasLink }) => !hasLink && `width: calc(50% - ${spacing('xl')})`};
-  }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
-    margin: 0 -${spacing('m')} 0 ${spacing('m')};
-  }
   img {
     border-radius: 1rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
