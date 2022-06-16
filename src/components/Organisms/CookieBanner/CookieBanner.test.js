@@ -1,18 +1,18 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import CookieBanner from './CookieBanner';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import CookieBanner from "./CookieBanner";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <CookieBanner
-      acceptCookie={e => {
+      acceptCookie={(e) => {
         e.preventDefault();
-        return 'User accept';
+        return "User accept";
       }}
-      denyCookie={e => {
+      denyCookie={(e) => {
         e.preventDefault();
-        return 'User does not accept cookies';
+        return "User does not accept cookies";
       }}
       cookiePolicyUrl="https://www.comicrelief.com/cookies-policy"
     />
@@ -138,48 +138,48 @@ it('renders correctly', () => {
     }
 
     <div
-      className='c0'
+      className="c0"
     >
       <p
-        className='c1 c2'
-        color='white'
-        size='s'
+        className="c1 c2"
+        color="white"
+        size="s"
       >
         Hi! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
-          className='c3 c4'
-          color='red'
-          href='https://www.comicrelief.com/cookies-policy'
-          target='_self'
-          type='standard_white'
+          className="c3 c4"
+          color="red"
+          href="https://www.comicrelief.com/cookies-policy"
+          target="_self"
+          type="standard_white"
         >
           our use of cookies
         </a>
         . We also use optional cookies for marketing purposes:
       </p>
       <p
-        className='c1 c2'
-        color='white'
-        size='s'
+        className="c1 c2"
+        color="white"
+        size="s"
       >
         <a
-          className='c5 c6'
-          color='white'
-          href='/comic'
+          className="c5 c6"
+          color="white"
+          href="/comic"
           onClick={[Function]}
-          target='_self'
-          type='button'
+          target="_self"
+          type="button"
         >
           Accept
         </a>
         Or click
         <a
-          className='c3 c4'
-          color='red'
-          href=''
+          className="c3 c4"
+          color="red"
+          href=""
           onClick={[Function]}
-          target='_self'
-          type='standard_white'
+          target="_self"
+          type="standard_white"
         >
           here
         </a>
