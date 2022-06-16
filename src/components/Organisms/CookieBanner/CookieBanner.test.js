@@ -1,18 +1,18 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import CookieBanner from './CookieBanner';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import CookieBanner from "./CookieBanner";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <CookieBanner
-      acceptCookie={e => {
+      acceptCookie={(e) => {
         e.preventDefault();
-        return 'User accept';
+        return "User accept";
       }}
-      denyCookie={e => {
+      denyCookie={(e) => {
         e.preventDefault();
-        return 'User does not accept cookies';
+        return "User does not accept cookies";
       }}
       cookiePolicyUrl="https://www.comicrelief.com/cookies-policy"
     />
@@ -145,7 +145,7 @@ it('renders correctly', () => {
         color="white"
         size="s"
       >
-        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
+        Hi! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
           className="c3 c4"
           color="red"
