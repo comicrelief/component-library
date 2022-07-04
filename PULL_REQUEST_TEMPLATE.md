@@ -1,4 +1,3 @@
-
 ### PR Titles
 #### To pass testing pipeline, these need to follow Conventional Commits spec:
 https://www.conventionalcommits.org/en/v1.0.0/
@@ -21,6 +20,3 @@ Add a link to the Jira ticket.
 
 ## Important:
 #### !!! make sure to squash merge
-
-### Note on Commits: 
-#### Currently not essential to pass through testing pipeline, but probably good to follow Conventional Commits specs anyway. These commit messages will be squash merged in the end.
