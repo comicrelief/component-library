@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js');
-    return `import { ${name} } from '@comic-relief/component-library';`;
+    return `import { ${name} } from '@comicrelief/component-library';`;
   },
   assetsDir: 'src/styleguide/assets/',
   styleguideComponents: {
