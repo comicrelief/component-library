@@ -17,6 +17,24 @@ Tell us why this is required from a business/product perspective.
 #### link to Jira ticket:
 Add a link to the Jira ticket.
 
+#### Why not check it off:
+
+<input type="checkbox">
+<label>I have filled in the above sections</label>
+<br>
+
+<input type="checkbox">
+<label>My PR title follows the Conventional Commit spec</label>
+<br>
+
+<input type="checkbox">
+<label>I have added tests to cover new or changed behaviour</label>
+<br>
+
+<input type="checkbox">
+<label>I have updated any relevant documentation</label>
+<br>
 
 ## Important:
 #### !!! make sure to squash merge
+
