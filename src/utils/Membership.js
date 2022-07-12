@@ -58,11 +58,11 @@ const handleDonateSubmission = (
   }
   const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
 
-  console.log('UPDATE 3');
+  console.log('UPDATE 5');
 
-  // window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+  const forwardingURL = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 
-  window.location.href = `${donateLink}`;
+  window.location.replace(forwardingURL);
 };
 
 export {
