@@ -58,7 +58,7 @@ const handleDonateSubmission = (
   }
   const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
 
-  console.log('UPDATE 5');
+  console.log('UPDATE 6', currentpageUrl, 'affiliateValue', affiliateValue);
 
   const forwardingURL = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
 
