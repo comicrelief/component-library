@@ -25,7 +25,8 @@ const Subtitle = styled(Text)`
 const Image = styled.div`
   height: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 448px;
+    min-height: 448px;
+    height: auto;
   }
   img {
     border-radius: 1rem;
@@ -40,7 +41,8 @@ const MediaLink = styled.a`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin: 0;
-    height: 448px;
+    min-height: 448px;
+    height: auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50%;
@@ -134,7 +136,8 @@ const Copy = styled.div`
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 448px;
+    min-height: 448px;
+    height: auto;
     width: calc(50% + 1.5rem);
     flex-grow: 0;
     flex-shrink: 0;
