@@ -25,8 +25,7 @@ const Subtitle = styled(Text)`
 const Image = styled.div`
   height: 100%;
   @media ${({ theme }) => theme.breakpoint('small')} {
-    min-height: 448px;
-    height: auto;
+    height: 448px;
   }
   img {
     border-radius: 1rem;
@@ -41,8 +40,7 @@ const MediaLink = styled.a`
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin: 0;
-    min-height: 448px;
-    height: auto;
+    height: 448px;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50%;
