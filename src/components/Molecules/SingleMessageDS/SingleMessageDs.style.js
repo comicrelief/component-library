@@ -132,7 +132,6 @@ const Copy = styled.div`
     : `margin: -${spacing('m')} ${spacing('m')} ${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
   )};
 
-
   @media ${({ theme }) => theme.breakpoint('small')} {
     min-height: 448px;
     height: auto;
