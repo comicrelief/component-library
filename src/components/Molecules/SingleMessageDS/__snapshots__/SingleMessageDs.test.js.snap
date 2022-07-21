@@ -200,7 +200,8 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    height: 448px;
+    min-height: 448px;
+    height: auto;
     width: calc(50% + 1.5rem);
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
