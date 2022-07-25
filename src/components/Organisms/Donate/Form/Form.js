@@ -43,7 +43,9 @@ const Signup = ({
     // Check the 2nd moneybuy exists before using it;
     // 'philantrophy' carts have been set up to use a single moneybuy.
     // See ENG-1685 for more details
-    const thisAmount = givingData.moneybuys[1].value || givingData.moneybuys[0].value;
+    const thisAmount = givingData.moneybuys[1]
+      ? givingData.moneybuys[1].value
+      : givingData.moneybuys[0].value;
 
     setAmountDonate(parseFloat(thisAmount));
   }, [givingType, singleGiving, regularGiving]);
