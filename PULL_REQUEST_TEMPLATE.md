@@ -2,9 +2,9 @@
 #### To pass testing pipeline, these need to follow Conventional Commits spec:
 https://www.conventionalcommits.org/en/v1.0.0/
 e.g.
-`feat: create NewForm component.`
+`feat: create NewForm component`
 or
-`fix: update broken link in NewForm component.`
+`fix: update broken link in NewForm component`
 
 
 ### PR description
