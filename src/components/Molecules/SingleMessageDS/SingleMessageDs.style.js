@@ -134,7 +134,8 @@ const Copy = styled.div`
 
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    height: 448px;
+    min-height: 448px;
+    height: auto;
     width: calc(50% + 1.5rem);
     flex-grow: 0;
     flex-shrink: 0;
