@@ -17,7 +17,6 @@ const Logos = ({ campaign }) => {
     );
   }
 
-
   if (campaign === 'Sport Relief') {
     return (
       <a href="/sportrelief" title="Sport Relief in homepage">

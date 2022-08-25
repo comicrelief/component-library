@@ -36,8 +36,6 @@ const themeSwitcher = theme => {
       return srLogo;
     case 'Sport Relief Gameon':
       return srLogoGameOn;
-    case 'Big Night In':
-      return bigNiht;
     default:
       return crLogo;
   }
