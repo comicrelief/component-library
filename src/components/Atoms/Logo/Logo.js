@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import zIndex from '../../../theme/shared/zIndex';
 import spacing from '../../../theme/shared/spacing';
-import crLogo from './assets/cr-logo.svg';
+import crLogo from './assets/CRlogo-140px.png';
 import srLogo from './assets/sr-logo.svg';
 import srLogoGameOn from './assets/sr-gameon-logo.svg';
 
