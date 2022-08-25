@@ -28,7 +28,7 @@ const Logos = ({ campaign }) => {
 
   return (
     <a href="/" title="Go to Comic Relief homepage">
-      <Logo rotate campaign="Comic Relief" />
+      <Logo rotate={false} campaign="Comic Relief" />
     </a>
   );
 };
