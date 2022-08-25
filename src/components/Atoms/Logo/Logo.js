@@ -7,7 +7,6 @@ import spacing from '../../../theme/shared/spacing';
 import crLogo from './assets/cr-logo.svg';
 import srLogo from './assets/sr-logo.svg';
 import srLogoGameOn from './assets/sr-gameon-logo.svg';
-import bigNiht from './assets/big-night-logo.png';
 
 const Image = styled.img`
   object-fit: cover;
