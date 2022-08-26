@@ -78,6 +78,7 @@ exports[`renders correctly 1`] = `
     className="c3"
     defaultValue=""
     onChange={[Function]}
+    required={true}
   >
     <option
       disabled={true}
