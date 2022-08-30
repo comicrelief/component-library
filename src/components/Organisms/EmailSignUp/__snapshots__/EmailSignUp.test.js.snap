@@ -231,6 +231,7 @@ exports[`renders ESU School correctly 1`] = `
         defaultValue=""
         onChange={[Function]}
         placeholder="Please choose an option"
+        required={true}
         value=""
       >
         <option

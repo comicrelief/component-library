@@ -49,6 +49,7 @@ const Select = React.forwardRef(
       onChange,
       greyDescription,
       className,
+      optional,
       ...rest
     },
     ref
@@ -56,7 +57,13 @@ const Select = React.forwardRef(
     const [value, setValue] = useState('');
 
     return (
-      <Label label={label} hideLabel={hideLabel} errorMsg={errorMsg} className={className}>
+      <Label
+        label={label}
+        hideLabel={hideLabel}
+        errorMsg={errorMsg}
+        className={className}
+        optional={optional}
+      >
         <StyledSelect
           onChange={e => {
             setValue(e.currentTarget.value);
@@ -67,6 +74,7 @@ const Select = React.forwardRef(
           {...rest}
           error={errorMsg}
           defaultValue={defaultValue}
+          required={optional === false}
           hasValue={!!value}
           greyDescription={greyDescription}
           ref={ref}
@@ -102,7 +110,8 @@ Select.propTypes = {
   greyDescription: PropTypes.bool,
   // className is needed so that styled(`Select`) will work
   // (as `rest` is not spread on the outermost component)
-  className: PropTypes.string
+  className: PropTypes.string,
+  optional: PropTypes.bool
 };
 
 Select.defaultProps = {
@@ -112,7 +121,8 @@ Select.defaultProps = {
   /** If true, the 'description' option, which is initially selected but disabled, will be grey
    *   - like a text input's placeholder */
   greyDescription: false,
-  className: ''
+  className: '',
+  optional: false
 };
 
 export default Select;
