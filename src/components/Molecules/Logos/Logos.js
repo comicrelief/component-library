@@ -17,24 +17,6 @@ const Logos = ({ campaign }) => {
     );
   }
 
-  if (campaign === 'Big Night In') {
-    return (
-      <>
-        <a href="/" title="Go to Comic Relief homepage">
-          <Logo rotate sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
-        </a>
-        <a href="/big-night-in" title="Big night in homepage">
-          <Logo
-            rotate={false}
-            sizeSm="100px"
-            sizeMd="200px"
-            campaign="Big Night In"
-          />
-        </a>
-      </>
-    );
-  }
-
   if (campaign === 'Sport Relief') {
     return (
       <a href="/sportrelief" title="Sport Relief in homepage">
@@ -45,7 +27,7 @@ const Logos = ({ campaign }) => {
 
   return (
     <a href="/" title="Go to Comic Relief homepage">
-      <Logo rotate campaign="Comic Relief" />
+      <Logo rotate={false} campaign="Comic Relief" />
     </a>
   );
 };
