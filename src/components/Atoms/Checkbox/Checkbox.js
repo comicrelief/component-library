@@ -24,6 +24,7 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     background-color: ${({ theme }) => theme.color('white')};
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
+    flex-shrink: 0;
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
