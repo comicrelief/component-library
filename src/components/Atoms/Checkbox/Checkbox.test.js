@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Checkbox from './Checkbox';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Checkbox from "./Checkbox";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <>
       <Checkbox name="sport" value="Tenis" label="Tenis" />
@@ -13,7 +13,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     Array [
-    .c2 {
+      .c2 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -42,6 +42,8 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
       flex-shrink: 0;
     }
 
@@ -116,6 +118,9 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1:checked + span {
@@ -142,22 +147,24 @@ it('renders correctly', () => {
       margin-bottom: 8px;
     }
 
-    <label className="c0">
-      <input
-        className="c1"
-        name="sport"
-        type="checkbox"
-        value="Handball"
-      />
-      <span />
-      <span
-        className="c2"
-        color="inherit"
-        size="s"
+    <label
+        className="c0"
       >
-        Handball
-      </span>
-    </label>,
+        <input
+          className="c1"
+          name="sport"
+          type="checkbox"
+          value="Handball"
+        />
+        <span />
+        <span
+          className="c2"
+          color="inherit"
+          size="s"
+        >
+          Handball
+        </span>
+      </label>,
     ]
   `);
 });
