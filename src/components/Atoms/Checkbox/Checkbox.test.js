@@ -42,6 +42,9 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1:checked + span {
@@ -115,6 +118,9 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1:checked + span {
