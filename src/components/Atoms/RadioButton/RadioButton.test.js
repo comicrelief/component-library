@@ -32,6 +32,9 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1 + span {
@@ -116,6 +119,9 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1 + span {
