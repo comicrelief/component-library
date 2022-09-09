@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import RadioButton from './RadioButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import RadioButton from "./RadioButton";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <>
       <RadioButton id="male" name="gender" value="male" label="Male" />
@@ -32,6 +32,9 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1 + span {
@@ -116,6 +119,9 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
     }
 
     .c1 + span {
