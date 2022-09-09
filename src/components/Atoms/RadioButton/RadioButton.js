@@ -18,6 +18,7 @@ const StyledRadioInput = styled.input`
   opacity: 0;
   left: 0;
   right: 0;
+  flex-shrink: 0;
   + span {
     left: 2px;
     border-radius: 30px;
