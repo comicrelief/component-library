@@ -21,7 +21,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 12px;
+  padding: 0;
   cursor: pointer;
   max-width: ${container.large};
 

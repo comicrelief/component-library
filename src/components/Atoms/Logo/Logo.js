@@ -25,6 +25,7 @@ const LogoWrapper = styled.div`
   ${zIndex('high')}
   width: ${props => props.sizeSm};
   transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
+  vertical-align: bottom; // height fix
   @media ${({ theme }) => theme.breakpoint('nav')} {
     width: ${props => props.sizeMd};
   }
@@ -66,8 +67,8 @@ Logo.propTypes = {
 
 Logo.defaultProps = {
   rotate: false,
-  sizeSm: '50px',
-  sizeMd: '60px',
+  sizeSm: '75px',
+  sizeMd: '75px',
   campaign: 'Comic Relief'
 };
 
