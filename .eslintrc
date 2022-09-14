@@ -35,5 +35,6 @@
   },
   "globals": {
     "window": true
-  }
+  },
+  "ignorePatterns": ["**/*.test.js"]
 }
