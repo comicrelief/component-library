@@ -67,7 +67,7 @@ Logo.propTypes = {
 
 Logo.defaultProps = {
   rotate: false,
-  sizeSm: '75px',
+  sizeSm: '51px',
   sizeMd: '75px',
   campaign: 'Comic Relief'
 };
