@@ -18,7 +18,7 @@ it("renders correctly", () => {
     .c0 {
       display: inline-block;
       z-index: 3;
-      width: 75px;
+      width: 51px;
       -webkit-transform: rotate(-14deg);
       -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
@@ -27,7 +27,7 @@ it("renders correctly", () => {
 
     @media (min-width:1150px) {
       .c0 {
-        width: 75px;
+        width: 70px;
       }
     }
 
