@@ -179,6 +179,12 @@ const Signup = ({
               aria-label="Input a different amount"
             />
           </FormFieldset>
+          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
+            <Copy as="p">
+              <strong>{`£${amountDonate.toFixed(2)} `}</strong>
+              {moneyBuyCopy}
+            </Copy>
+          )}
           {noMoneyBuys ? (
             <Button type="submit" as="input" value="Donate" />
           ) : (
@@ -193,12 +199,6 @@ const Signup = ({
               Please enter an amount between £1 and £20000 and up to 2 decimal
               places
             </Error>
-          )}
-          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
-            <Copy as="p">
-              <strong>{`£${amountDonate.toFixed(2)} `}</strong>
-              {moneyBuyCopy}
-            </Copy>
           )}
         </OuterFieldset>
       </Form>
