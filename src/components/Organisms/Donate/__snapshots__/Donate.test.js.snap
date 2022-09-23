@@ -693,7 +693,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c12"
             htmlFor="give-once"
           >
-            Give once
+            Single
           </label>
           <input
             aria-label="Give monthly"
@@ -709,7 +709,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c13"
             htmlFor="give-monthly"
           >
-            Give monthly
+            Monthly
           </label>
           <span
             className="c14 c15"
@@ -888,7 +888,7 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             className="c31"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
@@ -1637,7 +1637,7 @@ exports[`Single donation renders correctly 1`] = `
           <input
             className="c27"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
