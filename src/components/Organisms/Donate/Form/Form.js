@@ -191,7 +191,7 @@ const Signup = ({
             <Button
               type="submit"
               as="input"
-              value={givingType === 'single' ? 'Donate once' : 'Donate monthly'}
+              value="Donate now"
             />
           )}
           {errorMsg && (
