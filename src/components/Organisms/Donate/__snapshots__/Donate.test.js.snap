@@ -693,7 +693,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c12"
             htmlFor="give-once"
           >
-            Single
+            Give once
           </label>
           <input
             aria-label="Give monthly"
@@ -709,7 +709,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c13"
             htmlFor="give-monthly"
           >
-            Monthly
+            Give monthly
           </label>
           <span
             className="c14 c15"
@@ -888,7 +888,7 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             className="c31"
             type="submit"
-            value="Donate now"
+            value="Donate once"
           />
         </fieldset>
       </form>
@@ -1258,12 +1258,12 @@ exports[`Single donation renders correctly 1`] = `
   border: 2px solid #969598;
 }
 
-.c26 {
+.c27 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c27 {
+.c26 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -1282,9 +1282,9 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c27:active,
-.c27:focus,
-.c27:hover {
+.c26:active,
+.c26:focus,
+.c26:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1398,7 +1398,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c27 {
+  .c26 {
     padding: 1rem 2rem;
   }
 }
@@ -1626,19 +1626,19 @@ exports[`Single donation renders correctly 1`] = `
               
             </label>
           </div>
-          <p
+          <input
             className="c26"
+            type="submit"
+            value="Donate once"
+          />
+          <p
+            className="c27"
           >
             <strong>
               £20.00 
             </strong>
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
-          <input
-            className="c27"
-            type="submit"
-            value="Donate now"
-          />
         </fieldset>
       </form>
     </div>

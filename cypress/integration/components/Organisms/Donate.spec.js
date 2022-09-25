@@ -50,7 +50,7 @@ describe('Donate component', () => {
             //monthly
             cy.get('@container')
                 .find('label[for="give-once"]')
-                .contains('single');
+                .contains('Give once');
             cy.get('@container')
                 .find('label[for="give-monthly"]')
                 .contains('Give monthly')
@@ -115,7 +115,7 @@ describe('Donate component', () => {
         it('renders donate form align left preview', () => {
             cy.get('@container')
                 .find('label[for="give-once"]')
-                .contains('single');
+                .contains('Give once');
             cy.get('@container')
                 .find('label[for="give-monthly"]')
                 .contains('Give monthly');
@@ -139,7 +139,7 @@ describe('Donate component', () => {
                 .should('contain','Please enter an amount between £1 and £20000 and up to 2 decimal places');
             cy.get('@container')
                 .find('form > fieldset > input')
-                .contains('single');
+                .contains('Donate once');
             cy.get('@container')
                 .find('h2')
                 .should('exist');
@@ -200,7 +200,7 @@ describe('Donate component', () => {
                 .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
             cy.get('@container')
                 .find('form > fieldset > input')
-                .contains('single');
+                .contains('Donate once');
             cy.get('@container')
                 .find('h2')
                 .should('exist');

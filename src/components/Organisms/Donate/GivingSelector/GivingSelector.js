@@ -95,7 +95,9 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
           changeGivingType('single');
         }}
       />
-      <Label active={givingType === 'single'} htmlFor="give-once">Single</Label>
+      <Label active={givingType === 'single'} htmlFor="give-once">
+        Give once
+      </Label>
       <input
         aria-label="Give monthly"
         id="give-monthly"
@@ -108,7 +110,9 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
           changeGivingType('monthly');
         }}
       />
-      <Label active={givingType === 'monthly'} htmlFor="give-monthly">Monthly</Label>
+      <Label active={givingType === 'monthly'} htmlFor="give-monthly">
+        Give monthly
+      </Label>
       <Switch />
     </MoneyBox>
   </Wrapper>
