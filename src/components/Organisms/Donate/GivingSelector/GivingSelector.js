@@ -84,9 +84,9 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
   <Wrapper>
     <MoneyBox>
       <input
-        aria-label="Give once"
+        aria-label="Single"
         id="give-once"
-        value="Give once"
+        value="Single"
         type="radio"
         label=""
         errormsg=""
@@ -96,12 +96,12 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         }}
       />
       <Label active={givingType === 'single'} htmlFor="give-once">
-        Give once
+        Single
       </Label>
       <input
-        aria-label="Give monthly"
+        aria-label="Monthly"
         id="give-monthly"
-        value="Give monthly"
+        value="Monthly"
         type="radio"
         label=""
         errormsg=""
@@ -111,7 +111,7 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         }}
       />
       <Label active={givingType === 'monthly'} htmlFor="give-monthly">
-        Give monthly
+        Monthly
       </Label>
       <Switch />
     </MoneyBox>

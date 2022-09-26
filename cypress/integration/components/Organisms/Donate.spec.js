@@ -50,10 +50,10 @@ describe('Donate component', () => {
             //monthly
             cy.get('@container')
                 .find('label[for="give-once"]')
-                .contains('Give once');
+                .contains('Single');
             cy.get('@container')
                 .find('label[for="give-monthly"]')
-                .contains('Give monthly')
+                .contains('Monthly')
                 .click();
             cy.get('@container')
                 .find('#mship-1--moneyBuy-box2')

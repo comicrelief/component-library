@@ -680,36 +680,36 @@ exports[`Monthly donation renders correctly 1`] = `
           className="c11"
         >
           <input
-            aria-label="Give once"
+            aria-label="Single"
             checked={true}
             errormsg=""
             id="give-once"
             label=""
             onClick={[Function]}
             type="radio"
-            value="Give once"
+            value="Single"
           />
           <label
             className="c12"
             htmlFor="give-once"
           >
-            Give once
+            Single
           </label>
           <input
-            aria-label="Give monthly"
+            aria-label="Monthly"
             checked={false}
             errormsg=""
             id="give-monthly"
             label=""
             onClick={[Function]}
             type="radio"
-            value="Give monthly"
+            value="Monthly"
           />
           <label
             className="c13"
             htmlFor="give-monthly"
           >
-            Give monthly
+            Monthly
           </label>
           <span
             className="c14 c15"
@@ -888,7 +888,7 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             className="c31"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
@@ -1637,7 +1637,7 @@ exports[`Single donation renders correctly 1`] = `
           <input
             className="c27"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
