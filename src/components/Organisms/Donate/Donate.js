@@ -46,19 +46,23 @@ const Donate = ({
     <Wrapper formAlignRight={formAlignRight}>
       <Header formAlignRight={formAlignRight}>
         <HeaderInner>
-          <Text
-            tag="h2"
-            color="white"
-            size="big"
-            family="Anton"
-            weight="normal"
-            uppercase
-          >
-            {title}
-          </Text>
-          <Text tag="p" color="white" size="m">
-            {subtitle}
-          </Text>
+          {subtitle && (
+            <>
+              <Text
+                tag="h2"
+                color="white"
+                size="big"
+                family="Anton"
+                weight="normal"
+                uppercase
+              >
+                {title}
+              </Text>
+              <Text tag="p" color="white" size="m">
+                {subtitle}
+              </Text>
+            </>
+          )}
         </HeaderInner>
       </Header>
 
@@ -83,7 +87,7 @@ Donate.propTypes = {
   donateLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   otherDescription: PropTypes.string,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   formAlignRight: PropTypes.bool,
   imageLow: PropTypes.string,
   image: PropTypes.string,
@@ -104,6 +108,7 @@ Donate.defaultProps = {
   mbshipID: null,
   otherDescription:
     'will help us fund amazing projects in the UK and around the world.',
+  subtitle: '',
   noMoneyBuys: false
 };
 
