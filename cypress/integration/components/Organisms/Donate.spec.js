@@ -139,7 +139,7 @@ describe('Donate component', () => {
         .should('contain', 'Please enter an amount between £1 and £20000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
-        .contains('Single');
+        .contains('Donate now');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -200,7 +200,7 @@ describe('Donate component', () => {
         .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
-        .contains('Single');
+        .contains('Donate now');
       cy.get('@container')
         .find('h2')
         .should('exist');
