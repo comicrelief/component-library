@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Logo from './Logo';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Logo from "./Logo";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -18,15 +18,16 @@ it('renders correctly', () => {
     .c0 {
       display: inline-block;
       z-index: 3;
-      width: 50px;
+      width: 51px;
       -webkit-transform: rotate(-14deg);
       -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
+      vertical-align: bottom;
     }
 
     @media (min-width:1150px) {
       .c0 {
-        width: 60px;
+        width: 70px;
       }
     }
 
