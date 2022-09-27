@@ -89,3 +89,93 @@ const pictures = require('../../../styleguide/data/data').default;
   otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
+
+## Form align right - no subtitle
+
+```js
+import data from './dev-data/data';
+const pictures = require('../../../styleguide/data/data').default;
+
+<Donate
+  alt="Background image"
+  backgroundColor="blue_dark"
+  formAlignRight={true}
+  imageLow={pictures.imageLow}
+  images={pictures.images}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle=""
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+/>;
+```
+
+## Form align left - no subtitle
+
+```js
+import data from './dev-data/data';
+const pictures = require('../../../styleguide/data/data').default;
+
+<Donate
+  backgroundColor="blue_dark"
+  formAlignRight={false}
+  imageLow={pictures.imageLow}
+  images={pictures.images}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle=""
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+/>;
+```
+
+## Single Giving - no subtitle
+
+```js
+import data from './dev-data/data-single';
+const pictures = require('../../../styleguide/data/data').default;
+
+<Donate
+  backgroundColor="blue_dark"
+  formAlignRight={false}
+  imageLow={pictures.imageLow}
+  images={pictures.images}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle=""
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+/>;
+```
+
+## Single Giving "No Money Buys"
+
+```js
+import data from './dev-data/data-single';
+const pictures = require('../../../styleguide/data/data').default;
+
+<Donate
+  backgroundColor="blue_dark"
+  formAlignRight={false}
+  imageLow={pictures.imageLow}
+  images={pictures.images}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  noMoneyBuys
+  subtitle=""
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+/>;
+```
