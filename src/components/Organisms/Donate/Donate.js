@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Form from './Form/Form';
 import {
+  MobImage,
   BgImage,
   Container,
   Header,
@@ -29,6 +30,19 @@ const Donate = ({
   noMoneyBuys
 }) => (
   <Container backgroundColor={backgroundColor} id={mbshipID}>
+    {images ? (
+      <MobImage
+        backgroundColor={backgroundColor}
+        image={image}
+        images={images}
+        imageLow={imageLow}
+        objectFit="cover"
+        width="100%"
+        height="100%"
+        alt={alt}
+      />
+    ) : null}
+
     {images ? (
       <BgImage
         backgroundColor={backgroundColor}
