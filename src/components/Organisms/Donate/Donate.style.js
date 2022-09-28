@@ -11,9 +11,11 @@ const Container = styled.div`
   background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: auto;
   ${media('medium')} {
+    flex-direction: row;
     align-items: center;
     justify-content: inherit;
   }
@@ -21,7 +23,7 @@ const Container = styled.div`
 
 const MobImage = styled(Picture)`
   border: 1px solid red;
-  height: 300px;
+  height: 400px;
   ${media('medium')} {
     display: none;
   }
