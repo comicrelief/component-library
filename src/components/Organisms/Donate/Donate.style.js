@@ -23,7 +23,7 @@ const Container = styled.div`
 
 const MobImage = styled(Picture)`
   border: 1px solid red;
-  height: 400px;
+  height: calc(70px + 35vw);
   ${media('medium')} {
     display: none;
   }
