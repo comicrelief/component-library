@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  ${media('mediumPlus')} {
+  ${media('medium')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   ${media('small')} {
     padding: ${spacing('xl')} ${spacing('md')};
   }
-  ${media('mediumPlus')} {
+  ${media('medium')} {
     display: flex;
     padding: ${spacing('xl')} 0;
   }
@@ -57,7 +57,7 @@ const Header = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('mediumPlus')} {
+  ${media('medium')} {
     width: 50%;
     padding: ${spacing('xl')};
     align-items: center;
@@ -72,7 +72,7 @@ const HeaderInner = styled.div`
 const FormWrapper = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('mediumPlus')} {
+  ${media('medium')} {
     width: 50%;
   }
 `;
