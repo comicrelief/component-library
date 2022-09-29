@@ -203,3 +203,23 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
   otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
+
+## Single Giving "No Money Buys", no background image
+
+```js
+import data from './dev-data/data-single';
+
+<Donate
+  backgroundColor="blue_dark"
+  formAlignRight={false}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  noMoneyBuys
+  subtitle=""
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+/>;
+```
