@@ -30,7 +30,8 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 ```js
 import data from './dev-data/data';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
@@ -54,7 +55,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
@@ -78,7 +80,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
@@ -103,7 +106,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   alt="Background image"
@@ -128,7 +132,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
@@ -152,7 +157,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
@@ -176,7 +182,8 @@ const desktopPictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const desktopPictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   backgroundColor="blue_dark"
