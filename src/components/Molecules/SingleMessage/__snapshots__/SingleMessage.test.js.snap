@@ -1015,10 +1015,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1052,29 +1048,9 @@ exports[`renders Single Message with no Image correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
 <div
   className="c0"
-  id="single-msg__2"
+  id="single-msg__1"
 >
   <div
     className="c1"
