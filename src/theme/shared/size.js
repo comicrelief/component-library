@@ -1,6 +1,7 @@
 const screen = {
   small: '740px',
   medium: '1024px',
+  mediumPlus: '1250px',
   large: '1440px'
 };
 

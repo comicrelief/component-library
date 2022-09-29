@@ -22,24 +22,17 @@ const Container = styled.div`
 `;
 
 const MobImage = styled(Picture)`
-  border: 1px solid red;
   height: calc(70px + 35vw);
-  ${media('medium')} {
-    display: none;
-  }
 `;
 
 const BgImage = styled(Picture)`
-  display: none;
-  ${media('medium')} {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    opacity: 0.4;
-  }
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.4;
 `;
 
 const Wrapper = styled.div`

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
+import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Form from './Form/Form';
 import {
@@ -28,70 +30,74 @@ const Donate = ({
   imageLow,
   mbshipID,
   noMoneyBuys
-}) => (
-  <Container backgroundColor={backgroundColor} id={mbshipID}>
-    {images ? (
-      <MobImage
-        backgroundColor={backgroundColor}
-        image={image}
-        images={images}
-        imageLow={imageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={alt}
-      />
-    ) : null}
+}) => {
+  const isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
-    {images ? (
-      <BgImage
-        backgroundColor={backgroundColor}
-        image={image}
-        images={images}
-        imageLow={imageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={alt}
-        isBackgroundImage
-      />
-    ) : null}
+  return (
+    <Container backgroundColor={backgroundColor} id={mbshipID}>
+      {!isDesktop && images ? (
+        <MobImage
+          backgroundColor={backgroundColor}
+          image={image}
+          images={images}
+          imageLow={imageLow}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          alt={alt}
+        />
+      ) : null}
 
-    <Wrapper formAlignRight={formAlignRight}>
-      <Header formAlignRight={formAlignRight}>
-        <HeaderInner>
-          {subtitle && (
-            <>
-              <Text
-                tag="h2"
-                color="white"
-                size="big"
-                family="Anton"
-                weight="normal"
-                uppercase
-              >
-                {title}
-              </Text>
-              <Text tag="p" color="white" size="m">
-                {subtitle}
-              </Text>
-            </>
-          )}
-        </HeaderInner>
-      </Header>
+      {isDesktop && images ? (
+        <BgImage
+          backgroundColor={backgroundColor}
+          image={image}
+          images={images}
+          imageLow={imageLow}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          alt={alt}
+          isBackgroundImage
+        />
+      ) : null}
 
-      <Form
-        data={data}
-        otherDescription={otherDescription}
-        cartID={cartID}
-        clientID={clientID}
-        mbshipID={mbshipID}
-        donateLink={donateLink}
-        noMoneyBuys={noMoneyBuys}
-      />
-    </Wrapper>
-  </Container>
-);
+      <Wrapper formAlignRight={formAlignRight}>
+        <Header formAlignRight={formAlignRight}>
+          <HeaderInner>
+            {subtitle && (
+              <>
+                <Text
+                  tag="h2"
+                  color="white"
+                  size="big"
+                  family="Anton"
+                  weight="normal"
+                  uppercase
+                >
+                  {title}
+                </Text>
+                <Text tag="p" color="white" size="m">
+                  {subtitle}
+                </Text>
+              </>
+            )}
+          </HeaderInner>
+        </Header>
+
+        <Form
+          data={data}
+          otherDescription={otherDescription}
+          cartID={cartID}
+          clientID={clientID}
+          mbshipID={mbshipID}
+          donateLink={donateLink}
+          noMoneyBuys={noMoneyBuys}
+        />
+      </Wrapper>
+    </Container>
+  );
+};
 
 Donate.propTypes = {
   alt: PropTypes.string,
