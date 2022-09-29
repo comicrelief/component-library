@@ -4,14 +4,17 @@
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 
 <Donate
   alt="Background image"
   backgroundColor="blue_dark"
   formAlignRight={true}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -27,13 +30,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -49,13 +54,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -71,13 +78,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -94,14 +103,16 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   alt="Background image"
   backgroundColor="blue_dark"
   formAlignRight={true}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -117,13 +128,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -139,13 +152,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -161,13 +176,15 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data-single';
-const pictures = require('../../../styleguide/data/data').default;
+const desktopPictures = require('../../../styleguide/data/data').default;
 
 <Donate
   backgroundColor="blue_dark"
   formAlignRight={false}
-  imageLow={pictures.imageLow}
-  images={pictures.images}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"

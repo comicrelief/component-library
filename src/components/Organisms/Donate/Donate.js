@@ -28,6 +28,9 @@ const Donate = ({
   images,
   image,
   imageLow,
+  mobileImages,
+  mobileImage,
+  mobileImageLow,
   mbshipID,
   noMoneyBuys
 }) => {
@@ -35,12 +38,12 @@ const Donate = ({
 
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
-      {!isDesktop && images ? (
+      {!isDesktop && mobileImages ? (
         <MobImage
           backgroundColor={backgroundColor}
-          image={image}
-          images={images}
-          imageLow={imageLow}
+          image={mobileImage}
+          images={mobileImages}
+          imageLow={mobileImageLow}
           objectFit="cover"
           width="100%"
           height="100%"
@@ -112,6 +115,9 @@ Donate.propTypes = {
   imageLow: PropTypes.string,
   image: PropTypes.string,
   images: PropTypes.string,
+  mobileImageLow: PropTypes.string,
+  mobileImage: PropTypes.string,
+  mobileImages: PropTypes.string,
   backgroundColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool
@@ -124,6 +130,9 @@ Donate.defaultProps = {
   imageLow: null,
   image: null,
   images: null,
+  mobileImageLow: null,
+  mobileImage: null,
+  mobileImages: null,
   backgroundColor: null,
   mbshipID: null,
   otherDescription:
