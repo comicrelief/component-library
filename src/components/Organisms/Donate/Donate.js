@@ -31,7 +31,7 @@ const Donate = ({
   mbshipID,
   noMoneyBuys
 }) => {
-  const isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
+  const isDesktop = useMediaQuery({ query: `(min-width: ${screen.mediumPlus})` });
 
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
