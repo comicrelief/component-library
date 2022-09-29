@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Monthly donation renders correctly 1`] = `
-.c9 {
+.c7 {
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -14,7 +14,7 @@ exports[`Monthly donation renders correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c10 {
+.c8 {
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -24,7 +24,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c21 {
+.c19 {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -33,7 +33,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c25 {
+.c23 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -42,7 +42,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c30 {
+.c28 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -58,18 +58,6 @@ exports[`Monthly donation renders correctly 1`] = `
   position: relative;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 100%;
-}
-
 .c3 {
   width: 100%;
   height: 100%;
@@ -77,7 +65,7 @@ exports[`Monthly donation renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c23 {
+.c21 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -90,11 +78,11 @@ exports[`Monthly donation renders correctly 1`] = `
   width: 100%;
 }
 
-.c26 {
+.c24 {
   margin-bottom: 0.5rem;
 }
 
-.c28 {
+.c26 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -114,20 +102,20 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c28:focus {
+.c26:focus {
   border: 1px solid #666;
 }
 
-.c27 {
+.c25 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c24 {
+.c22 {
   display: block;
 }
 
-.c24 input {
+.c22 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -139,13 +127,13 @@ exports[`Monthly donation renders correctly 1`] = `
   height: auto;
 }
 
-.c24 input:focus {
+.c22 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c24 input:active:focus {
+.c22 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
@@ -167,15 +155,10 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c2 {
-  border: 1px solid red;
   height: calc(70px + 35vw);
 }
 
-.c5 {
-  display: none;
-}
-
-.c6 {
+.c4 {
   position: relative;
   text-align: center;
   padding: 2rem 1rem;
@@ -193,7 +176,7 @@ exports[`Monthly donation renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.c7 {
+.c5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,17 +185,17 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8 {
+.c6 {
   position: relative;
   text-align: left;
 }
 
-.c11 {
+.c9 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18 {
+.c16 {
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
@@ -221,37 +204,37 @@ exports[`Monthly donation renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c18 h3 {
+.c16 h3 {
   margin-top: 1rem;
 }
 
-.c18 input {
+.c16 input {
   max-width: 100%;
   margin: 0;
 }
 
-.c18 input[type='submit'] {
+.c16 input[type='submit'] {
   margin: 2rem 0;
 }
 
-.c19 {
+.c17 {
   padding: 0 1rem 1rem;
   margin: 0;
   border: none;
 }
 
-.c19 input[type='submit'] {
+.c17 input[type='submit'] {
   margin-bottom: 0;
 }
 
-.c20 {
+.c18 {
   margin: 0;
   padding: 2rem 0.5rem;
   display: block;
   width: 100%;
 }
 
-.c22 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,18 +249,18 @@ exports[`Monthly donation renders correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.c22 label {
+.c20 label {
   -webkit-flex: 0 0 30%;
   -ms-flex: 0 0 30%;
   flex: 0 0 30%;
   margin-bottom: 0.5rem;
 }
 
-.c22 label input {
+.c20 label input {
   cursor: pointer;
 }
 
-.c29 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -292,11 +275,11 @@ exports[`Monthly donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c31 {
+.c29 {
   margin-right: 0.5rem;
 }
 
-.c32 {
+.c30 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -312,7 +295,7 @@ exports[`Monthly donation renders correctly 1`] = `
   display: block;
 }
 
-.c32 span {
+.c30 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -325,7 +308,7 @@ exports[`Monthly donation renders correctly 1`] = `
   z-index: 3;
 }
 
-.c32 input {
+.c30 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -333,12 +316,12 @@ exports[`Monthly donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c32 input:focus {
+.c30 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c33 {
+.c31 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -357,14 +340,14 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c33:active,
-.c33:focus,
-.c33:hover {
+.c31:active,
+.c31:focus,
+.c31:hover {
   outline: none;
   background-color: #961D35;
 }
 
-.c17 {
+.c15 {
   width: 50%;
   height: 48px;
   border-radius: 2rem;
@@ -378,7 +361,7 @@ exports[`Monthly donation renders correctly 1`] = `
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
-.c12 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -386,7 +369,7 @@ exports[`Monthly donation renders correctly 1`] = `
   margin: 1rem 0;
 }
 
-.c13 {
+.c11 {
   width: 100%;
   padding: 2px;
   position: relative;
@@ -402,11 +385,11 @@ exports[`Monthly donation renders correctly 1`] = `
   background: #BECCF9;
 }
 
-.c13 #give-monthly:checked ~ .c16 {
+.c11 #give-monthly:checked ~ .c14 {
   left: calc(50% - 2px);
 }
 
-.c13 input {
+.c11 input {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -421,11 +404,11 @@ exports[`Monthly donation renders correctly 1`] = `
   width: 1px;
 }
 
-.c13 input:focus:not(:checked) + label {
+.c11 input:focus:not(:checked) + label {
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c14 {
+.c12 {
   font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: bold;
@@ -452,27 +435,27 @@ exports[`Monthly donation renders correctly 1`] = `
   cursor: default;
 }
 
-.c14:active:focus {
+.c12:active:focus {
   box-shadow: none;
 }
 
-.c14:focus {
+.c12:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c14[for='give-once'] {
+.c12[for='give-once'] {
   border-radius: 2rem;
   color: #FFFFFF;
 }
 
-.c14[for='give-monthly'] {
+.c12[for='give-monthly'] {
   border-radius: 2rem;
   color: #FFFFFF;
 }
 
-.c15 {
+.c13 {
   font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: bold;
@@ -499,46 +482,46 @@ exports[`Monthly donation renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c15:active:focus {
+.c13:active:focus {
   box-shadow: none;
 }
 
-.c15:focus {
+.c13:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c15[for='give-once'] {
+.c13[for='give-once'] {
   border-radius: 2rem;
   color: #000000;
 }
 
-.c15[for='give-monthly'] {
+.c13[for='give-monthly'] {
   border-radius: 2rem;
   color: #000000;
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:740px) {
-  .c28 {
+  .c26 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c24 input {
+  .c22 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:1175px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -554,32 +537,14 @@ exports[`Monthly donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (min-width:1024px) {
-  .c5 {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    opacity: 0.4;
-  }
-}
-
 @media (min-width:740px) {
-  .c6 {
+  .c4 {
     padding: 4rem 1rem;
   }
 }
 
-@media (min-width:1024px) {
-  .c6 {
+@media (min-width:1175px) {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -588,8 +553,8 @@ exports[`Monthly donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c7 {
+@media (min-width:1175px) {
+  .c5 {
     width: 50%;
     padding: 4rem;
     -webkit-align-items: center;
@@ -599,14 +564,14 @@ exports[`Monthly donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c11 {
+@media (min-width:1175px) {
+  .c9 {
     width: 50%;
   }
 }
 
 @media (min-width:740px) {
-  .c18 {
+  .c16 {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
@@ -614,13 +579,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c17 {
     padding: 0 2rem 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c22 {
+  .c20 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -628,13 +593,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c22 label {
+  .c20 label {
     margin-bottom: 0;
   }
 }
 
 @media (min-width:740px) {
-  .c32 {
+  .c30 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -642,13 +607,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c33 {
+  .c31 {
     padding: 1rem 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c11 {
     width: 450px;
     margin: 0 auto;
   }
@@ -677,41 +642,23 @@ exports[`Monthly donation renders correctly 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
-    height="100%"
-    width="100%"
-  >
-    <img
-      alt="Background image"
-      className="c3 lazyload"
-      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
-      data-sizes="auto"
-      data-src={null}
-      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-      height="100%"
-      src={null}
-      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-      width="100%"
-    />
-  </div>
-  <div
-    className="c6"
+    className="c4"
   >
     <div
-      className="c7"
+      className="c5"
     >
       <div
-        className="c8"
+        className="c6"
       >
         <h2
-          className="c9"
+          className="c7"
           color="white"
           size="big"
         >
           Donate Now
         </h2>
         <p
-          className="c10"
+          className="c8"
           color="white"
           size="m"
         >
@@ -720,13 +667,13 @@ exports[`Monthly donation renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c11"
+      className="c9"
     >
       <div
-        className="c12"
+        className="c10"
       >
         <div
-          className="c13"
+          className="c11"
         >
           <input
             aria-label="Single"
@@ -739,7 +686,7 @@ exports[`Monthly donation renders correctly 1`] = `
             value="Single"
           />
           <label
-            className="c14"
+            className="c12"
             htmlFor="give-once"
           >
             Single
@@ -755,28 +702,28 @@ exports[`Monthly donation renders correctly 1`] = `
             value="Monthly"
           />
           <label
-            className="c15"
+            className="c13"
             htmlFor="give-monthly"
           >
             Monthly
           </label>
           <span
-            className="c16 c17"
+            className="c14 c15"
           />
         </div>
       </div>
       <form
-        className="c18"
+        className="c16"
         onSubmit={[Function]}
       >
         <fieldset
-          className="c19"
+          className="c17"
         >
           <legend
-            className="c20"
+            className="c18"
           >
             <span
-              className="c21"
+              className="c19"
               color="inherit"
               size="l"
             >
@@ -784,14 +731,14 @@ exports[`Monthly donation renders correctly 1`] = `
             </span>
           </legend>
           <div
-            className="c22"
+            className="c20"
           >
             <label
-              className="c23 c24"
+              className="c21 c22"
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c25 c26"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -801,13 +748,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c27"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
                   aria-label="£10"
-                  className="c28"
+                  className="c26"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
@@ -820,11 +767,11 @@ exports[`Monthly donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c23 c24"
+              className="c21 c22"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c25 c26"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -834,13 +781,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c27"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
                   aria-label="£20"
-                  className="c28"
+                  className="c26"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
@@ -853,11 +800,11 @@ exports[`Monthly donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c23 c24"
+              className="c21 c22"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c25 c26"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -867,13 +814,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c27"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box3"
                   aria-label="£30"
-                  className="c28"
+                  className="c26"
                   id="mship-1--moneyBuy-box3"
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
@@ -887,21 +834,21 @@ exports[`Monthly donation renders correctly 1`] = `
             </label>
           </div>
           <div
-            className="c29"
+            className="c27"
           >
             <span
-              className="c30 c31"
+              className="c28 c29"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c23 c32"
+              className="c21 c30"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c25 c26"
+                className="c23 c24"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -911,13 +858,13 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c27"
+                className="c25"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c28"
+                  className="c26"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -935,7 +882,7 @@ exports[`Monthly donation renders correctly 1`] = `
             </label>
           </div>
           <input
-            className="c33"
+            className="c31"
             type="submit"
             value="Donate once"
           />
@@ -947,7 +894,7 @@ exports[`Monthly donation renders correctly 1`] = `
 `;
 
 exports[`Single donation renders correctly 1`] = `
-.c9 {
+.c7 {
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -960,7 +907,7 @@ exports[`Single donation renders correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c10 {
+.c8 {
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -970,7 +917,7 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c15 {
+.c13 {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -979,7 +926,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c19 {
+.c17 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -988,7 +935,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c25 {
+.c23 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -1004,18 +951,6 @@ exports[`Single donation renders correctly 1`] = `
   position: relative;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 100%;
-}
-
 .c3 {
   width: 100%;
   height: 100%;
@@ -1023,7 +958,7 @@ exports[`Single donation renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c17 {
+.c15 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1036,11 +971,11 @@ exports[`Single donation renders correctly 1`] = `
   width: 100%;
 }
 
-.c20 {
+.c18 {
   margin-bottom: 0.5rem;
 }
 
-.c22 {
+.c20 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1060,20 +995,20 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c22:focus {
+.c20:focus {
   border: 1px solid #666;
 }
 
-.c21 {
+.c19 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c18 {
+.c16 {
   display: block;
 }
 
-.c18 input {
+.c16 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -1085,21 +1020,21 @@ exports[`Single donation renders correctly 1`] = `
   height: auto;
 }
 
-.c18 input:focus {
+.c16 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c18 input:active:focus {
+.c16 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
-.c23 {
+.c21 {
   display: block;
 }
 
-.c23 input {
+.c21 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -1114,17 +1049,17 @@ exports[`Single donation renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c23 input:focus {
+.c21 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c23 input:active:focus {
+.c21 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
-.c23 input:focus {
+.c21 input:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
@@ -1146,15 +1081,10 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c2 {
-  border: 1px solid red;
   height: calc(70px + 35vw);
 }
 
-.c5 {
-  display: none;
-}
-
-.c6 {
+.c4 {
   position: relative;
   text-align: center;
   padding: 2rem 1rem;
@@ -1172,7 +1102,7 @@ exports[`Single donation renders correctly 1`] = `
   flex-direction: row;
 }
 
-.c7 {
+.c5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1181,17 +1111,17 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8 {
+.c6 {
   position: relative;
   text-align: left;
 }
 
-.c11 {
+.c9 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c12 {
+.c10 {
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
@@ -1200,37 +1130,37 @@ exports[`Single donation renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c12 h3 {
+.c10 h3 {
   margin-top: 1rem;
 }
 
-.c12 input {
+.c10 input {
   max-width: 100%;
   margin: 0;
 }
 
-.c12 input[type='submit'] {
+.c10 input[type='submit'] {
   margin: 2rem 0;
 }
 
-.c13 {
+.c11 {
   padding: 0 1rem 1rem;
   margin: 0;
   border: none;
 }
 
-.c13 input[type='submit'] {
+.c11 input[type='submit'] {
   margin-bottom: 0;
 }
 
-.c14 {
+.c12 {
   margin: 0;
   padding: 2rem 0.5rem;
   display: block;
   width: 100%;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1245,18 +1175,18 @@ exports[`Single donation renders correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.c16 label {
+.c14 label {
   -webkit-flex: 0 0 30%;
   -ms-flex: 0 0 30%;
   flex: 0 0 30%;
   margin-bottom: 0.5rem;
 }
 
-.c16 label input {
+.c14 label input {
   cursor: pointer;
 }
 
-.c24 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1271,11 +1201,11 @@ exports[`Single donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c26 {
+.c24 {
   margin-right: 0.5rem;
 }
 
-.c27 {
+.c25 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -1291,7 +1221,7 @@ exports[`Single donation renders correctly 1`] = `
   display: block;
 }
 
-.c27 span {
+.c25 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -1304,7 +1234,7 @@ exports[`Single donation renders correctly 1`] = `
   z-index: 3;
 }
 
-.c27 input {
+.c25 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -1312,17 +1242,17 @@ exports[`Single donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c27 input:focus {
+.c25 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c28 {
+.c26 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c29 {
+.c27 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -1341,40 +1271,40 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c29:active,
-.c29:focus,
-.c29:hover {
+.c27:active,
+.c27:focus,
+.c27:hover {
   outline: none;
   background-color: #961D35;
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:740px) {
-  .c22 {
+  .c20 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c18 input {
+  .c16 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
 }
 
 @media (min-width:740px) {
-  .c23 input {
+  .c21 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:1175px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1390,32 +1320,14 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (min-width:1024px) {
-  .c5 {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    opacity: 0.4;
-  }
-}
-
 @media (min-width:740px) {
-  .c6 {
+  .c4 {
     padding: 4rem 1rem;
   }
 }
 
-@media (min-width:1024px) {
-  .c6 {
+@media (min-width:1175px) {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1424,8 +1336,8 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c7 {
+@media (min-width:1175px) {
+  .c5 {
     width: 50%;
     padding: 4rem;
     -webkit-align-items: center;
@@ -1435,14 +1347,14 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c11 {
+@media (min-width:1175px) {
+  .c9 {
     width: 50%;
   }
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c10 {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
@@ -1450,13 +1362,13 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c11 {
     padding: 0 2rem 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c16 {
+  .c14 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1464,13 +1376,13 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c16 label {
+  .c14 label {
     margin-bottom: 0;
   }
 }
 
 @media (min-width:740px) {
-  .c27 {
+  .c25 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -1478,7 +1390,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c29 {
+  .c27 {
     padding: 1rem 2rem;
   }
 }
@@ -1510,41 +1422,23 @@ exports[`Single donation renders correctly 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
-    height="100%"
-    width="100%"
-  >
-    <img
-      alt=""
-      className="c3 lazyload"
-      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
-      data-sizes="auto"
-      data-src={null}
-      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-      height="100%"
-      src={null}
-      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-      width="100%"
-    />
-  </div>
-  <div
-    className="c6"
+    className="c4"
   >
     <div
-      className="c7"
+      className="c5"
     >
       <div
-        className="c8"
+        className="c6"
       >
         <h2
-          className="c9"
+          className="c7"
           color="white"
           size="big"
         >
           Donate Now
         </h2>
         <p
-          className="c10"
+          className="c8"
           color="white"
           size="m"
         >
@@ -1553,20 +1447,20 @@ exports[`Single donation renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c11"
+      className="c9"
     >
       <form
-        className="c12"
+        className="c10"
         onSubmit={[Function]}
       >
         <fieldset
-          className="c13"
+          className="c11"
         >
           <legend
-            className="c14"
+            className="c12"
           >
             <span
-              className="c15"
+              className="c13"
               color="inherit"
               size="l"
             >
@@ -1574,14 +1468,14 @@ exports[`Single donation renders correctly 1`] = `
             </span>
           </legend>
           <div
-            className="c16"
+            className="c14"
           >
             <label
-              className="c17 c18"
+              className="c15 c16"
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c19 c20"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1591,13 +1485,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c21"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
                   aria-label="£10"
-                  className="c22"
+                  className="c20"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
@@ -1610,11 +1504,11 @@ exports[`Single donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c17 c23"
+              className="c15 c21"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c19 c20"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1624,13 +1518,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c21"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
                   aria-label="£20"
-                  className="c22"
+                  className="c20"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
                   onClick={[Function]}
@@ -1643,11 +1537,11 @@ exports[`Single donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c17 c18"
+              className="c15 c16"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c19 c20"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1657,13 +1551,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c21"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box3"
                   aria-label="£30"
-                  className="c22"
+                  className="c20"
                   id="mship-1--moneyBuy-box3"
                   name="mship-1--moneyBuy3"
                   onClick={[Function]}
@@ -1677,21 +1571,21 @@ exports[`Single donation renders correctly 1`] = `
             </label>
           </div>
           <div
-            className="c24"
+            className="c22"
           >
             <span
-              className="c25 c26"
+              className="c23 c24"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c17 c27"
+              className="c15 c25"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c19 c20"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1701,13 +1595,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c21"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c22"
+                  className="c20"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -1725,7 +1619,7 @@ exports[`Single donation renders correctly 1`] = `
             </label>
           </div>
           <p
-            className="c28"
+            className="c26"
           >
             <strong>
               £20.00 
@@ -1733,7 +1627,7 @@ exports[`Single donation renders correctly 1`] = `
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
           <input
-            className="c29"
+            className="c27"
             type="submit"
             value="Donate once"
           />
@@ -1745,7 +1639,7 @@ exports[`Single donation renders correctly 1`] = `
 `;
 
 exports[`Single donation with no Money Buys renders correctly 1`] = `
-.c9 {
+.c7 {
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -1758,7 +1652,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c10 {
+.c8 {
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -1768,7 +1662,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c15 {
+.c13 {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -1777,7 +1671,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c19 {
+.c17 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -1793,18 +1687,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   position: relative;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 100%;
-}
-
 .c3 {
   width: 100%;
   height: 100%;
@@ -1812,7 +1694,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c17 {
+.c15 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1825,11 +1707,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   width: 100%;
 }
 
-.c20 {
+.c18 {
   margin-bottom: 0.5rem;
 }
 
-.c22 {
+.c20 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1849,11 +1731,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c22:focus {
+.c20:focus {
   border: 1px solid #666;
 }
 
-.c21 {
+.c19 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -1876,15 +1758,10 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c2 {
-  border: 1px solid red;
   height: calc(70px + 35vw);
 }
 
-.c5 {
-  display: none;
-}
-
-.c6 {
+.c4 {
   position: relative;
   text-align: center;
   padding: 2rem 1rem;
@@ -1902,7 +1779,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   flex-direction: row;
 }
 
-.c7 {
+.c5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1911,17 +1788,17 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8 {
+.c6 {
   position: relative;
   text-align: left;
 }
 
-.c11 {
+.c9 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c12 {
+.c10 {
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
@@ -1930,37 +1807,37 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c12 h3 {
+.c10 h3 {
   margin-top: 1rem;
 }
 
-.c12 input {
+.c10 input {
   max-width: 100%;
   margin: 0;
 }
 
-.c12 input[type='submit'] {
+.c10 input[type='submit'] {
   margin: 2rem 0;
 }
 
-.c13 {
+.c11 {
   padding: 0 1rem 1rem;
   margin: 0;
   border: none;
 }
 
-.c13 input[type='submit'] {
+.c11 input[type='submit'] {
   margin-bottom: 0;
 }
 
-.c14 {
+.c12 {
   margin: 0;
   padding: 2rem 0.5rem;
   display: block;
   width: 100%;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1975,7 +1852,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   justify-content: center;
 }
 
-.c18 {
+.c16 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -1991,7 +1868,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   display: block;
 }
 
-.c18 span {
+.c16 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -2004,7 +1881,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   z-index: 3;
 }
 
-.c18 input {
+.c16 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -2012,12 +1889,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c18 input:focus {
+.c16 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c23 {
+.c21 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -2036,26 +1913,26 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c23:active,
-.c23:focus,
-.c23:hover {
+.c21:active,
+.c21:focus,
+.c21:hover {
   outline: none;
   background-color: #961D35;
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
   }
 }
 
 @media (min-width:740px) {
-  .c22 {
+  .c20 {
     max-width: 290px;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:1175px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -2071,32 +1948,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (min-width:1024px) {
-  .c5 {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    opacity: 0.4;
-  }
-}
-
 @media (min-width:740px) {
-  .c6 {
+  .c4 {
     padding: 4rem 1rem;
   }
 }
 
-@media (min-width:1024px) {
-  .c6 {
+@media (min-width:1175px) {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2105,8 +1964,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c7 {
+@media (min-width:1175px) {
+  .c5 {
     width: 50%;
     padding: 4rem;
     -webkit-align-items: center;
@@ -2116,14 +1975,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c11 {
+@media (min-width:1175px) {
+  .c9 {
     width: 50%;
   }
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c10 {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
@@ -2131,13 +1990,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c11 {
     padding: 0 2rem 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c18 {
+  .c16 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -2145,7 +2004,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c23 {
+  .c21 {
     padding: 1rem 2rem;
   }
 }
@@ -2173,41 +2032,23 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
-    height="100%"
-    width="100%"
-  >
-    <img
-      alt=""
-      className="c3 lazyload"
-      data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
-      data-sizes="auto"
-      data-src={null}
-      data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-      height="100%"
-      src={null}
-      srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-      width="100%"
-    />
-  </div>
-  <div
-    className="c6"
+    className="c4"
   >
     <div
-      className="c7"
+      className="c5"
     >
       <div
-        className="c8"
+        className="c6"
       >
         <h2
-          className="c9"
+          className="c7"
           color="white"
           size="big"
         >
           Donate Now
         </h2>
         <p
-          className="c10"
+          className="c8"
           color="white"
           size="m"
         >
@@ -2216,20 +2057,20 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c11"
+      className="c9"
     >
       <form
-        className="c12"
+        className="c10"
         onSubmit={[Function]}
       >
         <fieldset
-          className="c13"
+          className="c11"
         >
           <legend
-            className="c14"
+            className="c12"
           >
             <span
-              className="c15"
+              className="c13"
               color="inherit"
               size="l"
             >
@@ -2237,14 +2078,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             </span>
           </legend>
           <div
-            className="c16"
+            className="c14"
           >
             <label
-              className="c17 c18"
+              className="c15 c16"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c19 c20"
+                className="c17 c18"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -2254,13 +2095,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c21"
+                className="c19"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c22"
+                  className="c20"
                   id="mship-1--MoneyBuy-userInput"
                   max="20000"
                   min="1"
@@ -2278,7 +2119,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             </label>
           </div>
           <input
-            className="c23"
+            className="c21"
             type="submit"
             value="Donate"
           />
