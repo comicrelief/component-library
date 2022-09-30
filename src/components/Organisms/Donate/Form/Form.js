@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBox from '../MoneyBox/MoneyBox';
 import {
@@ -121,6 +122,10 @@ const Signup = ({
           changeGivingType={data => setGivingType(data)}
         />
       )}
+
+      {givingType !== 'single'
+        && <PopUpComponent />
+      }
 
       <Form
         onSubmit={e => submitDonation(

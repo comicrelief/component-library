@@ -21,6 +21,11 @@ const Container = styled.div`
   }
 `;
 
+const PopUp = styled.div`
+  background: green;
+  height: 100px;
+`;
+
 const MobImage = styled(Picture)`
   height: calc(70px + 35vw);
 `;
@@ -234,6 +239,7 @@ export {
   Button,
   Copy,
   Container,
+  PopUp,
   Error,
   FormFieldset,
   FormWrapper,
