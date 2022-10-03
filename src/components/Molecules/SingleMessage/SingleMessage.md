@@ -1,7 +1,7 @@
 Single Message
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
@@ -29,7 +29,7 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
@@ -59,7 +59,7 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage no copy
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
@@ -91,7 +91,7 @@ Single Message vertical height 100%
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple_dark"
@@ -112,7 +112,7 @@ Single Message double image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="yellow"
@@ -135,7 +135,7 @@ Single Message with 16:9 video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"
@@ -154,7 +154,7 @@ const data = require('../../../styleguide/data/data').default;
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"
@@ -175,7 +175,7 @@ Single Message with portrait video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"
@@ -195,7 +195,7 @@ Single Message with portrait video, 100VH
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"
@@ -216,7 +216,7 @@ Single Message with landscape video, 100VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"
@@ -239,7 +239,7 @@ Single Message with landscape video, 50VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SingleMessage
   backgroundColor="purple"

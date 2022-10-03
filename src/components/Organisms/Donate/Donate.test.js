@@ -5,7 +5,7 @@ import Donate from './Donate';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 
-const pictures = require('../../../styleguide/data/data').default;
+const pictures = require('../../../styleguide/data/data').desktopImages;
 
 it('Monthly donation renders correctly', () => {
   const tree = renderWithTheme(

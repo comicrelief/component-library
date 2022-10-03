@@ -4,7 +4,7 @@
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const pictures = require('../../../styleguide/data/data').desktopImages;
 
 <Membership
   alt="Background image"
@@ -26,7 +26,7 @@ const pictures = require('../../../styleguide/data/data').default;
 
 ```js
 import data from './dev-data/data';
-const pictures = require('../../../styleguide/data/data').default;
+const pictures = require('../../../styleguide/data/data').desktopImages;
 
 <Membership
   backgroundColor="orange_light"

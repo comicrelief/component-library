@@ -4,7 +4,7 @@
 
 ### CardDs:  Image, Text & Link
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Internal } from '../../Atoms/Icons/index';
@@ -39,7 +39,7 @@ import { Internal } from '../../Atoms/Icons/index';
 
 ### CardDs: Text & Link
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Download } from '../../Atoms/Icons/index';
@@ -70,7 +70,7 @@ import { Download } from '../../Atoms/Icons/index';
 
 ### CardDs: Text only
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 <div
@@ -92,7 +92,7 @@ import Link from '../../Atoms/Link/Link';
 
 ### CardDs: Image & Text, No Link
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Internal } from '../../Atoms/Icons/index';

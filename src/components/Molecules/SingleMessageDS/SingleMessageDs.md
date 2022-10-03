@@ -3,7 +3,7 @@
 ## Image align left and CTA are clickable and links user through to full conten
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
@@ -51,7 +51,7 @@ const Title = styled(Text)`
 ## Image align right  and CTA are clickable and links user through to full content
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
@@ -98,7 +98,7 @@ const Title = styled(Text)`
 ## Image align with non CTA
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
@@ -143,7 +143,7 @@ const Title = styled(Text)`
 ## Using the linkIcon prop (to display download icon)
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
@@ -171,7 +171,7 @@ import Download from '../../Atoms/Icons/Download';
 ## Video with no CTA
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';

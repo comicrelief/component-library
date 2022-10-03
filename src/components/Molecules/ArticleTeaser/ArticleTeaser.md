@@ -1,7 +1,7 @@
 ### Article teaser
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 <div style={{ display: 'flex', background: '#E1E2E3' }}>
   <div style={{ margin: '1rem', width: '300px' }}>
     <ArticleTeaser
@@ -31,7 +31,7 @@ const data = require('../../../styleguide/data/data').default;
 ### Article teaser: Press release
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 <ArticleTeaser
   href="/test"
   category=""

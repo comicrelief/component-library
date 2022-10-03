@@ -1,7 +1,7 @@
 ### Minimalist
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SearchResult
   href="/test"
@@ -15,7 +15,7 @@ const data = require('../../../styleguide/data/data').default;
 ### With copy
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SearchResult
   href="/test"
@@ -30,7 +30,7 @@ const data = require('../../../styleguide/data/data').default;
 ### With date
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SearchResult
   href="/test"
@@ -45,7 +45,7 @@ const data = require('../../../styleguide/data/data').default;
 ### With date and type
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 
 <SearchResult
   href="/test"

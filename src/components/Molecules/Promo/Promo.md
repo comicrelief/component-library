@@ -1,7 +1,7 @@
 Promo
 
 ```js
-const data = require('../../../styleguide/data/data').default;
+const data = require('../../../styleguide/data/data').desktopImages;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
