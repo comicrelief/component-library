@@ -3,7 +3,7 @@ import "jest-styled-components";
 
 import renderWithTheme from "../../../hoc/shallowWithTheme";
 import Membership from "./Membership";
-import { desktopImages } from "../../../styleguide/data/data";
+import { defaultData } from "../../../styleguide/data/data";
 import data from "./dev-data/data";
 
 it("renders correctly", () => {
@@ -12,8 +12,8 @@ it("renders correctly", () => {
       alt="Background image"
       backgroundColor="orange_light"
       formAligntRight={false}
-      imageLow={desktopImages.pictures.imageLow}
-      images={desktopImages.pictures.images}
+      imageLow={defaultData.pictures.imageLow}
+      images={defaultData.pictures.images}
       data={data}
       mbshipID="mship-1"
       donateLink="https://donation.comicrelief.com/"

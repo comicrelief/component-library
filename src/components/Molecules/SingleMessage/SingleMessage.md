@@ -1,13 +1,13 @@
 Single Message
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
 >
@@ -28,13 +28,13 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   fullImage={true}
@@ -57,13 +57,13 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage no copy
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   fullImage={true}
@@ -88,12 +88,12 @@ Single Message vertical height 100%
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple_dark"
-  imageLow={desktopImages.imageLow}
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageLow={defaultData.imageLow}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   vhFull
 >
@@ -108,15 +108,15 @@ Single Message double image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="yellow"
-  imageLow={desktopImages.imageLow}
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageLow={defaultData.imageLow}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
-  imageSet2={desktopImages.images}
-  image2={desktopImages.image}
+  imageSet2={defaultData.images}
+  image2={defaultData.image}
   imageAltText2=""
 >
   <Text tag="p" color="black" size="xxl">
@@ -130,11 +130,11 @@ Single Message with 16:9 video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
@@ -148,11 +148,11 @@ const desktopImages = require('../../../styleguide/data/data').desktopImages;
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   videoID="WUgvvPRH7Oc"
@@ -168,11 +168,11 @@ Single Message with portrait video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="FoMlSB6ftQg"
@@ -187,11 +187,11 @@ Single Message with portrait video, 100VH
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="fwCQRMlKBnA"
@@ -207,11 +207,11 @@ Single Message with landscape video, 100VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
@@ -229,11 +229,11 @@ Single Message with landscape video, 50VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={desktopImages.images}
-  image={desktopImages.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"

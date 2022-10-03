@@ -3,11 +3,11 @@
 ## Flexible container only (‘invisible’ to user)
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 <div style={{ display: 'flex', background: '#E1E2E3' }}>
   <div style={{ width: '50%', margin: '1rem' }}>
-    <Box imageLow={desktopImages.image} images={desktopImages.images} height="auto">
+    <Box imageLow={defaultData.image} images={defaultData.images} height="auto">
       <Text tag="h3" family="Anton" color="black" size="xl" uppercase>
         Title
       </Text>
@@ -15,7 +15,7 @@ import Link from '../../Atoms/Link/Link';
     </Box>
   </div>
   <div style={{ width: '50%', margin: '1rem' }}>
-    <Box imageLow={desktopImages.image} images={desktopImages.images} height="auto">
+    <Box imageLow={defaultData.image} images={defaultData.images} height="auto">
       <Text tag="h3" family="Anton" color="black" size="xl" uppercase>
         Title
       </Text>
@@ -28,6 +28,6 @@ import Link from '../../Atoms/Link/Link';
 ### Box no body
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
-<Box imageLow={desktopImages.image} images={desktopImages.image} />;
+const defaultData = require('../../../styleguide/data/data').defaultData;
+<Box imageLow={defaultData.image} images={defaultData.image} />;
 ```

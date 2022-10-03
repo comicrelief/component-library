@@ -5,7 +5,7 @@
 ```js
 import data from './dev-data/data';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
@@ -31,7 +31,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
@@ -56,7 +56,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data-single';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
@@ -81,7 +81,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data-single';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
@@ -107,7 +107,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
@@ -133,7 +133,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
@@ -158,7 +158,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data-single';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
@@ -183,7 +183,7 @@ const desktopPictures = require('../../../styleguide/data/data').desktopImages;
 ```js
 import data from './dev-data/data-single';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
-const desktopPictures = require('../../../styleguide/data/data').desktopImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"

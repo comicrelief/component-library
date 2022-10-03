@@ -5,13 +5,13 @@ import Promo from './Promo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-const desktopImages = require('../../../styleguide/data/data').desktopImages;
+const defaultData = require('../../../styleguide/data/data').defaultData;
 it('renders Promo correctly', () => {
   const tree = renderWithTheme(
     <Promo
       backgroundColor="blue_dark"
-      imageSet={desktopImages.promoImage}
-      image={desktopImages.promoImage}
+      imageSet={defaultData.promoImage}
+      image={defaultData.promoImage}
       imageAltText=""
       copyFirst={false}
     >
@@ -44,8 +44,8 @@ it('renders Promo correctly end position', () => {
   const tree = renderWithTheme(
     <Promo
       backgroundColor="blue_dark"
-      imageSet={desktopImages.promoImage}
-      image={desktopImages.promoImage}
+      imageSet={defaultData.promoImage}
+      image={defaultData.promoImage}
       imageAltText=""
       copyFirst={false}
       position="end"

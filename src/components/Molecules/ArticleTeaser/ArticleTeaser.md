@@ -1,12 +1,12 @@
 ### Article teaser
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;<div style={{ display: 'flex', background: '#E1E2E3' }}>
+const defaultData = require('../../../styleguide/data/data').defaultData;<div style={{ display: 'flex', background: '#E1E2E3' }}>
   <div style={{ margin: '1rem', width: '300px' }}>
     <ArticleTeaser
       href="/test"
-      images={desktopImages.images}
-      imageLow={desktopImages.imageLow}
+      images={defaultData.images}
+      imageLow={defaultData.imageLow}
       date=" 01 July 2019"
       title="News article"
       alt="Image's description"
@@ -16,8 +16,8 @@ const desktopImages = require('../../../styleguide/data/data').desktopImages;<di
   <div style={{ margin: '1rem', width: '300px' }}>
     <ArticleTeaser
       href="/test"
-      images={desktopImages.images}
-      imageLow={desktopImages.imageLow}
+      images={defaultData.images}
+      imageLow={defaultData.imageLow}
       date=" 01 July 2019"
       title="News article News article"
       alt="Image's description"
@@ -30,7 +30,7 @@ const desktopImages = require('../../../styleguide/data/data').desktopImages;<di
 ### Article teaser: Press release
 
 ```js
-const desktopImages = require('../../../styleguide/data/data').desktopImages;<ArticleTeaser
+const defaultData = require('../../../styleguide/data/data').defaultData;<ArticleTeaser
   href="/test"
   category=""
   date=" 01 July 2019"
