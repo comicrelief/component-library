@@ -31,6 +31,7 @@ const Signup = ({
   cartID,
   mbshipID,
   noMoneyBuys,
+  PopUpText,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -124,7 +125,7 @@ const Signup = ({
       )}
 
       {givingType !== 'single'
-        && <PopUpComponent />
+        && <PopUpComponent PopUpText={PopUpText} />
       }
 
       <Form
@@ -218,11 +219,13 @@ Signup.propTypes = {
   otherDescription: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
-  data: PropTypes.objectOf(PropTypes.shape)
+  data: PropTypes.objectOf(PropTypes.shape),
+  PopUpText: PropTypes.string
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {}
+  data: {},
+  PopUpText: ''
 };
 export default Signup;

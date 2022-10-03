@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
+import PropTypes from 'prop-types';
 
 const StyledPopUp = styled.div`
   display: ${props => props.isPop ? "grid" : "none"};
@@ -24,7 +25,7 @@ const Cross = styled.div`
   justify-self: end;
 `;
 
-const PopUpComponent = () => {
+const PopUpComponent = ({ PopUpText }) => {
   const [isPop, setIsPop] = useState(true);
 
   return (
@@ -32,11 +33,17 @@ const PopUpComponent = () => {
       <Cross onClick={() => setIsPop(false)}>
         <Text weight="bold" size="m">x</Text>
       </Cross>
-      <Text>
-        We appreciate all of the donations we recieve. You can make a bigger impact by donating a smaller amount every month, to help people live free from poverty, violence and discrimination both in the UK and around the world.
-      </Text>
+      <Text>{ PopUpText }</Text>
     </StyledPopUp>
   )
+};
+
+PopUpComponent.propTypes = {
+  PopUpText: PropTypes.string
+};
+
+PopUpComponent.defaultProps = {
+  PopUpText: "We appreciate all of the donations we recieve. You can make a bigger impact by donating a smaller amount every month, to help people live free from poverty, violence and discrimination both in the UK and around the world."
 };
 
 export default PopUpComponent;
