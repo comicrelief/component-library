@@ -3,7 +3,6 @@ import 'jest-styled-components';
 
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import Membership from './Membership';
-import pictures from '../../../styleguide/data/data';
 import { desktopImages } from '../../../styleguide/data/data';
 import data from './dev-data/data';
 
