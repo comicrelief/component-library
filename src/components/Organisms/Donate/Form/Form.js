@@ -220,12 +220,12 @@ Signup.propTypes = {
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  PopUpText: PropTypes.string
+  PopUpText: PropTypes.string.isRequired
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {},
-  PopUpText: ''
+  data: {}
 };
+
 export default Signup;

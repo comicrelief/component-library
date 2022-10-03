@@ -25,6 +25,8 @@ const Cross = styled.div`
   justify-self: end;
 `;
 
+const PopUpTextDefault = "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact."
+
 const PopUpComponent = ({ PopUpText }) => {
   const [isPop, setIsPop] = useState(true);
 
@@ -39,11 +41,7 @@ const PopUpComponent = ({ PopUpText }) => {
 };
 
 PopUpComponent.propTypes = {
-  PopUpText: PropTypes.string
-};
-
-PopUpComponent.defaultProps = {
-  PopUpText: "We appreciate all of the donations we recieve. You can make a bigger impact by donating a smaller amount every month, to help people live free from poverty, violence and discrimination both in the UK and around the world."
+  PopUpText: PropTypes.string.isRequired
 };
 
 export default PopUpComponent;
