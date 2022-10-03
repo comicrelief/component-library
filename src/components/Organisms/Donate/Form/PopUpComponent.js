@@ -25,8 +25,6 @@ const Cross = styled.div`
   justify-self: end;
 `;
 
-const PopUpTextDefault = "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact."
-
 const PopUpComponent = ({ PopUpText }) => {
   const [isPop, setIsPop] = useState(true);
 
