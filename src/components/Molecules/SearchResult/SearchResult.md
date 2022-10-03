@@ -1,12 +1,11 @@
 ### Minimalist
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={desktopImages.imageLow}
+  images={desktopImages.images}
   title="News article"
   alt="Image's description"
 />;
@@ -15,12 +14,11 @@ const data = require('../../../styleguide/data/data').desktopImages;
 ### With copy
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={desktopImages.imageLow}
+  images={desktopImages.images}
   title="News article"
   copy="News article copy"
   alt="Image's description"
@@ -30,12 +28,11 @@ const data = require('../../../styleguide/data/data').desktopImages;
 ### With date
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={desktopImages.imageLow}
+  images={desktopImages.images}
   date="01 July 2019"
   title="News article"
   alt="Image's description"
@@ -45,12 +42,11 @@ const data = require('../../../styleguide/data/data').desktopImages;
 ### With date and type
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={desktopImages.imageLow}
+  images={desktopImages.images}
   date="01 July 2019"
   type="article"
   title="News article"

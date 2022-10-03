@@ -1,13 +1,12 @@
 # Card
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <Card
-  imageLow={data.image}
-  images={data.images}
+  imageLow={desktopImages.image}
+  images={desktopImages.images}
   backgroundColor="yellow"
   height="auto"
 >
@@ -21,7 +20,6 @@ import Link from '../../Atoms/Link/Link';
 ### Card no body
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
-<Card imageLow={data.image} images={data.image} />;
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
+<Card imageLow={desktopImages.image} images={desktopImages.image} />;
 ```

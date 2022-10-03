@@ -4,8 +4,7 @@
 
 ### CardDs:  Image, Text & Link
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Internal } from '../../Atoms/Icons/index';
 
@@ -21,8 +20,8 @@ import { Internal } from '../../Atoms/Icons/index';
     target="_blank"
     link="/home"
     linkLabel="find out more"
-    imageLow={data.image}
-    images={data.images}
+    imageLow={desktopImages.image}
+    images={desktopImages.images}
     imageAltText="Happy man going to work"
     backgroundColor="white"
     height="auto"
@@ -39,8 +38,7 @@ import { Internal } from '../../Atoms/Icons/index';
 
 ### CardDs: Text & Link
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Download } from '../../Atoms/Icons/index';
 
@@ -70,8 +68,7 @@ import { Download } from '../../Atoms/Icons/index';
 
 ### CardDs: Text only
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 <div
   style={{
@@ -92,8 +89,7 @@ import Link from '../../Atoms/Link/Link';
 
 ### CardDs: Image & Text, No Link
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Internal } from '../../Atoms/Icons/index';
 
@@ -107,8 +103,8 @@ import { Internal } from '../../Atoms/Icons/index';
 >
   <CardDs
     target="_blank"
-    imageLow={data.image}
-    images={data.images}
+    imageLow={desktopImages.image}
+    images={desktopImages.images}
     imageAltText="Happy man going to work"
     backgroundColor="white"
     height="auto"

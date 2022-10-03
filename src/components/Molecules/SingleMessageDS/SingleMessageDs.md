@@ -3,8 +3,7 @@
 ## Image align left and CTA are clickable and links user through to full conten
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
@@ -29,8 +28,8 @@ const Title = styled(Text)`
       link='/home'
       linkLabel='Check out'
       backgroundColor='white'
-      imageLow={data.image}
-      images={data.images}
+      imageLow={desktopImages.image}
+      images={desktopImages.images}
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       height='100%'
@@ -51,8 +50,7 @@ const Title = styled(Text)`
 ## Image align right  and CTA are clickable and links user through to full content
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
@@ -77,8 +75,8 @@ const Title = styled(Text)`
       ctaBgColor="blue_dark"
       backgroundColor='white'
       imageLeft={false}
-      imageLow={data.image}
-      images={data.images}
+      imageLow={desktopImages.image}
+      images={desktopImages.images}
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       height='100%'
@@ -98,8 +96,7 @@ const Title = styled(Text)`
 ## Image align with non CTA
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
@@ -122,8 +119,8 @@ const Title = styled(Text)`
       ctaBgColor="blue_dark"
       backgroundColor='white'
       imageLeft={true}
-      imageLow={data.image}
-      images={data.images}
+      imageLow={desktopImages.image}
+      images={desktopImages.images}
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       height='100%'
@@ -143,8 +140,7 @@ const Title = styled(Text)`
 ## Using the linkIcon prop (to display download icon)
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
@@ -155,9 +151,9 @@ import Download from '../../Atoms/Icons/Download';
       link="https://assets.ctfassets.net/zsfivwzfgl3t/EsIEuI1teYkbLB7peOtqP/b43a905cffd89115d642fe5a84ff020a/RND21_fundraise_moneybuys_poster.pdf"
       linkLabel='Download this'
       linkIcon={<Download />}
-      imageLow={data.image}
+      imageLow={desktopImages.image}
       imageLeft={true}
-      images={data.images}
+      images={desktopImages.images}
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
@@ -171,8 +167,7 @@ import Download from '../../Atoms/Icons/Download';
 ## Video with no CTA
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-import Text from '../../Atoms/Text/Text';
+const desktopImages = require('../../../styleguide/data/data').desktopImages;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
@@ -180,8 +175,8 @@ import Download from '../../Atoms/Icons/Download';
 
 <div>
     <SingleMessageDs
-      imageLow={data.image}
-      images={data.images}
+      imageLow={desktopImages.image}
+      images={desktopImages.images}
       youTubeId="faz0JeBB41M"
       imageLeft={true}
     >

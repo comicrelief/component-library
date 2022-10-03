@@ -3,19 +3,17 @@ Picture has depenciy of <a href="https://github.com/aFarkas/lazysizes#readme" st
 Picture
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-
-<Picture alt="test Image" imageLow={data.imageLow} images={data.images} />;
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
+<Picture alt="test Image" imageLow={desktopImages.imageLow} images={desktopImages.images} />;
 ```
 
 Custom Size.
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-<Picture
+const desktopImages = require('../../../styleguide/data/data').desktopImages;<Picture
   alt="test Image"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={desktopImages.imageLow}
+  images={desktopImages.images}
   objectFit="cover"
   width="300px"
   height="200px"
@@ -25,6 +23,5 @@ const data = require('../../../styleguide/data/data').desktopImages;
 Single image
 
 ```js
-const data = require('../../../styleguide/data/data').desktopImages;
-<Picture alt="test Image" image={data.image} objectFit="cover" />;
+const desktopImages = require('../../../styleguide/data/data').desktopImages;<Picture alt="test Image" image={desktopImages.image} objectFit="cover" />;
 ```

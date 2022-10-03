@@ -2,13 +2,13 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import SearchResult from './SearchResult';
-import data from '../../../styleguide/data/data';
+import { desktopImages } from '../../../styleguide/data/data';
 
 it('renders correctly in minimalist form', () => {
   const tree = renderWithTheme(
     <SearchResult
       href="/test"
-      image={data.image}
+      image={desktopImages.image}
       title="News article"
       alt="Image's description"
     />
@@ -21,7 +21,7 @@ it('renders correctly with copy', () => {
   const tree = renderWithTheme(
     <SearchResult
       href="/test"
-      image={data.image}
+      image={desktopImages.image}
       title="News article"
       copy="News article copy"
       alt="Image's description"
@@ -35,7 +35,7 @@ it('renders correctly with date', () => {
   const tree = renderWithTheme(
     <SearchResult
       href="/test"
-      image={data.image}
+      image={desktopImages.image}
       date="01 July 2019"
       title="News article"
       alt="Image's description"
@@ -49,7 +49,7 @@ it('renders correctly with date and type', () => {
   const tree = renderWithTheme(
     <SearchResult
       href="/test"
-      image={data.image}
+      image={desktopImages.image}
       date="01 July 2019"
       type="article"
       title="News article"

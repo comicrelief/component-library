@@ -2,14 +2,13 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
-import data from '../../../styleguide/data/data';
-
+import { desktopImages } from '../../../styleguide/data/data';
 it('renders article teaser correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
-      images={data.images}
-      image={data.image}
+      images={desktopImages.images}
+      image={desktopImages.image}
       date=" 01 July 2019"
       title="News article"
       copy="News article copy"

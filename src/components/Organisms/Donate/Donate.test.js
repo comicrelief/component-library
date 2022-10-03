@@ -5,7 +5,7 @@ import Donate from './Donate';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 
-const pictures = require('../../../styleguide/data/data').desktopImages;
+const desktopImages = require('../../../styleguide/data/data').desktopImages;
 
 it('Monthly donation renders correctly', () => {
   const tree = renderWithTheme(
@@ -13,8 +13,8 @@ it('Monthly donation renders correctly', () => {
       alt="Background image"
       backgroundColor="blue_dark"
       formAlignRight
-      imageLow={pictures.imageLow}
-      images={pictures.images}
+      imageLow={desktopImages.pictures.imageLow}
+      images={desktopImages.pictures.images}
       data={data}
       mbshipID="mship-1"
       donateLink="https://donation.comicrelief.com/"
@@ -34,8 +34,8 @@ it('Single donation renders correctly', () => {
     <Donate
       backgroundColor="blue_dark"
       formAlignRight={false}
-      imageLow={pictures.imageLow}
-      images={pictures.images}
+      imageLow={desktopImages.pictures.imageLow}
+      images={desktopImages.pictures.images}
       data={singleData}
       mbshipID="mship-1"
       donateLink="https://donation.comicrelief.com/"
@@ -55,8 +55,8 @@ it('Single donation with no Money Buys renders correctly', () => {
     <Donate
       backgroundColor="blue_dark"
       formAlignRight={false}
-      imageLow={pictures.imageLow}
-      images={pictures.images}
+      imageLow={desktopImages.pictures.imageLow}
+      images={desktopImages.pictures.images}
       data={singleData}
       mbshipID="mship-1"
       donateLink="https://donation.comicrelief.com/"
