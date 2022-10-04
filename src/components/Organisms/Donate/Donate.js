@@ -136,7 +136,7 @@ Donate.defaultProps = {
   mobileImageLow: null,
   mobileImage: null,
   mobileImages: null,
-  backgroundColor: null,
+  backgroundColor: 'blue_dark',
   mbshipID: null,
   otherDescription:
     'will help us fund amazing projects in the UK and around the world.',
