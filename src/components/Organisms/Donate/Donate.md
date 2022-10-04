@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right
+## Form align right, with red backgound on desktop view
 
 ```js
 import data from './dev-data/data';
