@@ -19,8 +19,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: inherit;
   }
-
-  background-color: ${({ theme, backgroundColor }) => (backgroundColor === 'transparent' ? theme.color('blue_dark') : theme.color(backgroundColor))};
+  background-color: ${({ theme, backgroundColor }) => (backgroundColor === 'red' ? theme.color('blue_dark') : theme.color(backgroundColor))};
 
   ${media('medium')} {
     background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
