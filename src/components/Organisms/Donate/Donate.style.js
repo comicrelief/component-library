@@ -14,13 +14,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
+  background-color: ${({ theme }) => theme.color('blue_dark')};
   ${media('medium')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
-  }
-  background-color: ${({ theme }) => theme.color('blue_dark')};
-  ${media('medium')} {
     background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   }
 `;
