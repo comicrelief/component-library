@@ -916,7 +916,7 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             className="c32"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
@@ -1693,7 +1693,7 @@ exports[`Single donation renders correctly 1`] = `
           <input
             className="c28"
             type="submit"
-            value="Donate once"
+            value="Donate now"
           />
         </fieldset>
       </form>
