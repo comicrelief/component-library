@@ -4,14 +4,14 @@
 
 ```js
 import data from './dev-data/data';
-const { defaultData } = require('../../../styleguide/data/data');
+const defaultData = require('../../../styleguide/data/data').defaultData;
 
 <Membership
   alt="Background image"
   backgroundColor="orange_light"
   formAligntRight={true}
-  imageLow={defaultData.pictures.imageLow}
-  images={defaultData.pictures.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
@@ -26,13 +26,13 @@ const { defaultData } = require('../../../styleguide/data/data');
 
 ```js
 import data from './dev-data/data';
-const { defaultData } = require('../../../styleguide/data/data');
+const defaultData = require('../../../styleguide/data/data').defaultData;
 
 <Membership
   backgroundColor="orange_light"
   formAligntRight={false}
-  imageLow={defaultData.pictures.imageLow}
-  images={defaultData.pictures.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   data={data}
   mbshipID="mship-1"
   donateLink="https://donation.comicrelief.com/"
