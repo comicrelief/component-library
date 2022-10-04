@@ -24,16 +24,6 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c15 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
 .c16 {
   font-size: 1rem;
   line-height: 1rem;
@@ -121,11 +111,26 @@ exports[`Monthly donation renders correctly 1`] = `
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   border-radius: 8px;
-  padding: 0 1rem 1.5rem;
+}
+
+.c15 {
+  margin: 0 32px 32px;
 }
 
 .c14 {
   justify-self: end;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 17px 17px 0;
+  width: 20px;
+}
+
+.c14:active,
+.c14:focus,
+.c14:hover {
+  outline: none;
+  border: 1px solid #969598;
 }
 
 .c23 {
@@ -522,12 +527,6 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
   .c27 {
     max-width: 290px;
   }
@@ -724,25 +723,27 @@ exports[`Monthly donation renders correctly 1`] = `
       <div
         className="c13"
       >
-        <div
+        <button
+          aria-label="Close"
           className="c14"
           onClick={[Function]}
         >
+          <img
+            alt="Close cross icon"
+            src="mock.asset"
+          />
+        </button>
+        <div
+          className="c15"
+        >
           <span
-            className="c15"
+            className="c16"
             color="inherit"
-            size="m"
+            size="s"
           >
-            x
+            Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
           </span>
         </div>
-        <span
-          className="c16"
-          color="inherit"
-          size="s"
-        >
-          Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
-        </span>
       </div>
       <form
         className="c17"
@@ -949,16 +950,6 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c9 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
 .c10 {
   font-size: 1rem;
   line-height: 1rem;
@@ -1046,11 +1037,26 @@ exports[`Single donation renders correctly 1`] = `
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   border-radius: 8px;
-  padding: 0 1rem 1.5rem;
+}
+
+.c9 {
+  margin: 0 32px 32px;
 }
 
 .c8 {
   justify-self: end;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 17px 17px 0;
+  width: 20px;
+}
+
+.c8:active,
+.c8:focus,
+.c8:hover {
+  outline: none;
+  border: 1px solid #969598;
 }
 
 .c17 {
@@ -1330,12 +1336,6 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c9 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
   .c21 {
     max-width: 290px;
   }
@@ -1493,25 +1493,27 @@ exports[`Single donation renders correctly 1`] = `
       <div
         className="c7"
       >
-        <div
+        <button
+          aria-label="Close"
           className="c8"
           onClick={[Function]}
         >
+          <img
+            alt="Close cross icon"
+            src="mock.asset"
+          />
+        </button>
+        <div
+          className="c9"
+        >
           <span
-            className="c9"
+            className="c10"
             color="inherit"
-            size="m"
+            size="s"
           >
-            x
+            Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
           </span>
         </div>
-        <span
-          className="c10"
-          color="inherit"
-          size="s"
-        >
-          Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
-        </span>
       </div>
       <form
         className="c11"
@@ -1726,16 +1728,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c9 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
 .c10 {
   font-size: 1rem;
   line-height: 1rem;
@@ -1814,11 +1806,26 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   border-radius: 8px;
-  padding: 0 1rem 1.5rem;
+}
+
+.c9 {
+  margin: 0 32px 32px;
 }
 
 .c8 {
   justify-self: end;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 17px 17px 0;
+  width: 20px;
+}
+
+.c8:active,
+.c8:focus,
+.c8:hover {
+  outline: none;
+  border: 1px solid #969598;
 }
 
 .c0 {
@@ -2004,12 +2011,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c9 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
   .c21 {
     max-width: 290px;
   }
@@ -2135,25 +2136,27 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
       <div
         className="c7"
       >
-        <div
+        <button
+          aria-label="Close"
           className="c8"
           onClick={[Function]}
         >
+          <img
+            alt="Close cross icon"
+            src="mock.asset"
+          />
+        </button>
+        <div
+          className="c9"
+        >
           <span
-            className="c9"
+            className="c10"
             color="inherit"
-            size="m"
+            size="s"
           >
-            x
+            Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
           </span>
         </div>
-        <span
-          className="c10"
-          color="inherit"
-          size="s"
-        >
-          Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
-        </span>
       </div>
       <form
         className="c11"
