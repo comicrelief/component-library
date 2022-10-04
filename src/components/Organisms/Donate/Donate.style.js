@@ -33,7 +33,6 @@ const PopUp = styled.div`
 `;
 
 const MobImage = styled(Picture)`
-  height: calc(70px + 35vw);
 `;
 
 const BgImage = styled(Picture)`
