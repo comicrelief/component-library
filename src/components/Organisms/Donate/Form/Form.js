@@ -124,7 +124,7 @@ const Signup = ({
         />
       )}
 
-      {givingType === 'single'
+      {(givingType === 'single' && showGivingSelector)
         && <PopUpComponent PopUpText={PopUpText} />
       }
 
