@@ -5,6 +5,7 @@ import Text from '../../../Atoms/Text/Text';
 import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
 import PropTypes from 'prop-types';
+import CloseCross from '../assets/close.svg';
 
 const StyledPopUp = styled.div`
   display: ${props => props.isPop ? "grid" : "none"};
@@ -21,8 +22,17 @@ const StyledPopUp = styled.div`
   }
 `;
 
-const Cross = styled.div`
+const Button = styled.button`
   justify-self: end;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  :active,
+  :focus,
+  :hover {
+    outline: none;
+    border: 1px solid ${({ theme }) => theme.color('grey')};
+  }
 `;
 
 const PopUpComponent = ({ PopUpText }) => {
@@ -30,9 +40,9 @@ const PopUpComponent = ({ PopUpText }) => {
 
   return (
     <StyledPopUp isPop={isPop}>
-      <Cross onClick={() => setIsPop(false)}>
-        <Text weight="bold" size="m">x</Text>
-      </Cross>
+      <Button onClick={() => setIsPop(false)} aria-label="Close">
+        <img src={CloseCross} alt="Close cross icon"/>
+      </Button>
       <Text>{ PopUpText }</Text>
     </StyledPopUp>
   )
