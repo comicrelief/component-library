@@ -31,6 +31,7 @@ const Donate = ({
   mobileImages,
   mobileImage,
   mobileImageLow,
+  mobileAlt,
   mbshipID,
   noMoneyBuys,
   PopUpText
@@ -48,7 +49,7 @@ const Donate = ({
           objectFit="cover"
           width="100%"
           height="100%"
-          alt={alt}
+          alt={mobileAlt}
         />
       ) : null}
 
@@ -120,6 +121,7 @@ Donate.propTypes = {
   mobileImageLow: PropTypes.string,
   mobileImage: PropTypes.string,
   mobileImages: PropTypes.string,
+  mobileAlt: PropTypes.string,
   backgroundColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
@@ -136,6 +138,7 @@ Donate.defaultProps = {
   mobileImageLow: null,
   mobileImage: null,
   mobileImages: null,
+  mobileAlt: '',
   backgroundColor: 'blue_dark',
   mbshipID: null,
   otherDescription:
