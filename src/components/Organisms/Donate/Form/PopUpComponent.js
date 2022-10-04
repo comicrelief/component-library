@@ -13,13 +13,16 @@ const StyledPopUp = styled.div`
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding: 0 ${spacing('md')} ${spacing('m')};
 
   ${media('small')} {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
   }
+`;
+
+const TextWrapper = styled.div`
+  margin: 0 32px 32px;
 `;
 
 const Button = styled.button`
@@ -33,6 +36,9 @@ const Button = styled.button`
     outline: none;
     border: 1px solid ${({ theme }) => theme.color('grey')};
   }
+  margin: 17px 17px 0;
+  /* This sets the size of the svg close.svg icon */
+  width: 20px;
 `;
 
 const PopUpComponent = ({ PopUpText }) => {
@@ -43,7 +49,9 @@ const PopUpComponent = ({ PopUpText }) => {
       <Button onClick={() => setIsPop(false)} aria-label="Close">
         <img src={CloseCross} alt="Close cross icon"/>
       </Button>
-      <Text>{ PopUpText }</Text>
+      <TextWrapper>
+        <Text>{ PopUpText }</Text>
+      </TextWrapper>
     </StyledPopUp>
   )
 };
