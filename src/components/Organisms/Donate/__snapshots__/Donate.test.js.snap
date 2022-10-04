@@ -160,7 +160,6 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c0 {
-  background-color: #274084;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -174,6 +173,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   height: auto;
+  background-color: #274084;
 }
 
 .c1 {
@@ -560,6 +560,12 @@ exports[`Monthly donation renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    background-color: #274084;
   }
 }
 
@@ -1119,7 +1125,6 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c0 {
-  background-color: #274084;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1133,6 +1138,7 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   height: auto;
+  background-color: #274084;
 }
 
 .c1 {
@@ -1376,6 +1382,12 @@ exports[`Single donation renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    background-color: #274084;
   }
 }
 
@@ -1829,7 +1841,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c0 {
-  background-color: #274084;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1843,6 +1854,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   height: auto;
+  background-color: #274084;
 }
 
 .c1 {
@@ -2037,6 +2049,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    background-color: #274084;
   }
 }
 
