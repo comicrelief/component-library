@@ -1,9 +1,8 @@
 # Partner Link
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-import Picture from '../../Atoms/Picture/Picture';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Picture from '../../Atoms/Picture/Picture';
 <PartnerLink link="https://www.comicrelief.com">
-  <Picture alt="test Image" imageLow={data.imageLow} images={data.images} />
+  <Picture alt="test Image" imageLow={defaultData.imageLow} images={defaultData.images} />
 </PartnerLink>;
 ```

@@ -1,14 +1,13 @@
 Single Message
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
 >
@@ -29,14 +28,13 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   fullImage={true}
@@ -59,14 +57,13 @@ import Link from '../../Atoms/Link/Link';
 Single Message fullImage no copy
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <SingleMessage
   backgroundColor="purple_dark"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   fullImage={true}
@@ -91,13 +88,12 @@ Single Message vertical height 100%
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple_dark"
-  imageLow={data.imageLow}
-  imageSet={data.images}
-  image={data.image}
+  imageLow={defaultData.imageLow}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   vhFull
 >
@@ -112,16 +108,15 @@ Single Message double image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="yellow"
-  imageLow={data.imageLow}
-  imageSet={data.images}
-  image={data.image}
+  imageLow={defaultData.imageLow}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
-  imageSet2={data.images}
-  image2={data.image}
+  imageSet2={defaultData.images}
+  image2={defaultData.image}
   imageAltText2=""
 >
   <Text tag="p" color="black" size="xxl">
@@ -135,12 +130,11 @@ Single Message with 16:9 video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
@@ -154,12 +148,11 @@ const data = require('../../../styleguide/data/data').default;
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={false}
   videoID="WUgvvPRH7Oc"
@@ -175,12 +168,11 @@ Single Message with portrait video
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="FoMlSB6ftQg"
@@ -195,12 +187,11 @@ Single Message with portrait video, 100VH
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="fwCQRMlKBnA"
@@ -216,12 +207,11 @@ Single Message with landscape video, 100VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"
@@ -239,12 +229,11 @@ Single Message with landscape video, 50VH, fullwidth image
 
 ```js
 import Text from '../../Atoms/Text/Text';
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SingleMessage
   backgroundColor="purple"
-  imageSet={data.images}
-  image={data.image}
+  imageSet={defaultData.images}
+  image={defaultData.image}
   imageAltText=""
   copyFirst={true}
   videoID="WUgvvPRH7Oc"

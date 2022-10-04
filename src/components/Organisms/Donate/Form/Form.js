@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBox from '../MoneyBox/MoneyBox';
 import {
@@ -30,6 +31,7 @@ const Signup = ({
   cartID,
   mbshipID,
   noMoneyBuys,
+  PopUpText,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -122,6 +124,10 @@ const Signup = ({
         />
       )}
 
+      {(givingType === 'single' && showGivingSelector)
+        && <PopUpComponent PopUpText={PopUpText} />
+      }
+
       <Form
         onSubmit={e => submitDonation(
           e,
@@ -213,11 +219,13 @@ Signup.propTypes = {
   otherDescription: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
-  data: PropTypes.objectOf(PropTypes.shape)
+  data: PropTypes.objectOf(PropTypes.shape),
+  PopUpText: PropTypes.string.isRequired
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
   data: {}
 };
+
 export default Signup;

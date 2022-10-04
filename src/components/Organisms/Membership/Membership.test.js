@@ -1,19 +1,19 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Membership from './Membership';
-import pictures from '../../../styleguide/data/data';
-import data from './dev-data/data';
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Membership from "./Membership";
+import { defaultData } from "../../../styleguide/data/data";
+import data from "./dev-data/data";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
       backgroundColor="orange_light"
       formAligntRight={false}
-      imageLow={pictures.imageLow}
-      images={pictures.images}
+      imageLow={defaultData.pictures.imageLow}
+      images={defaultData.pictures.images}
       data={data}
       mbshipID="mship-1"
       donateLink="https://donation.comicrelief.com/"
@@ -406,13 +406,8 @@ it('renders correctly', () => {
         <img
           alt="Background image"
           className="c3 lazyload"
-          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100"
-          data-sizes="auto"
           data-src={null}
-          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
-          src={null}
-          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
       </div>

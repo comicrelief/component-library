@@ -1,12 +1,11 @@
 ### Minimalist
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   title="News article"
   alt="Image's description"
 />;
@@ -15,12 +14,11 @@ const data = require('../../../styleguide/data/data').default;
 ### With copy
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   title="News article"
   copy="News article copy"
   alt="Image's description"
@@ -30,12 +28,11 @@ const data = require('../../../styleguide/data/data').default;
 ### With date
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   date="01 July 2019"
   title="News article"
   alt="Image's description"
@@ -45,12 +42,11 @@ const data = require('../../../styleguide/data/data').default;
 ### With date and type
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-
+const defaultData = require('../../../styleguide/data/data').defaultData;
 <SearchResult
   href="/test"
-  imageLow={data.imageLow}
-  images={data.images}
+  imageLow={defaultData.imageLow}
+  images={defaultData.images}
   date="01 July 2019"
   type="article"
   title="News article"

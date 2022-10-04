@@ -1,8 +1,7 @@
 Promo
 
 ```js
-const data = require('../../../styleguide/data/data').default;
-import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <div>
@@ -11,9 +10,9 @@ import Link from '../../Atoms/Link/Link';
 </Text>
 <Promo
   backgroundColor="blue_dark"
-  imageSet={data.promoImage}
-  image={data.promoImage}
-  imageLow={data.promoImage}
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
   imageAltText=""
   copyFirst={true}
   hasOverlay={true}
@@ -47,9 +46,9 @@ import Link from '../../Atoms/Link/Link';
 </Text>
 <Promo
   backgroundColor="blue_dark"
-  imageSet={data.promoImage}
-  image={data.promoImage}
-  imageLow={data.promoImage}
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
   imageAltText=""
   copyFirst={true}
   hasOverlay={true}
@@ -83,9 +82,9 @@ import Link from '../../Atoms/Link/Link';
 </Text>
 <Promo
   backgroundColor="blue_dark"
-  imageSet={data.promoImage}
-  image={data.promoImage}
-  imageLow={data.promoImage}
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
   imageAltText=""
   copyFirst={true}
   hasOverlay={true}
@@ -119,9 +118,9 @@ import Link from '../../Atoms/Link/Link';
 </Text>
 <Promo
   backgroundColor="blue_dark"
-  imageSet={data.promoImage}
-  image={data.promoImage}
-  imageLow={data.promoImage}
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
   imageAltText=""
   copyFirst={true}
   hasOverlay={true}

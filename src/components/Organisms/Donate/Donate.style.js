@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import styled, { css } from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
@@ -8,18 +9,30 @@ import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: auto;
+  background-color: ${({ theme }) => theme.color('blue_dark')};
   ${media('medium')} {
+    flex-direction: row;
     align-items: center;
     justify-content: inherit;
+    background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   }
 `;
 
+const PopUp = styled.div`
+  background: green;
+  height: 100px;
+`;
+
+const MobImage = styled(Picture)`
+`;
+
 const BgImage = styled(Picture)`
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -223,9 +236,11 @@ const Button = styled.button`
 
 export {
   BgImage,
+  MobImage,
   Button,
   Copy,
   Container,
+  PopUp,
   Error,
   FormFieldset,
   FormWrapper,

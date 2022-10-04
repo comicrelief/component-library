@@ -4,8 +4,7 @@ import renderWithTheme from '../../../hoc/shallowWithTheme';
 import SingleMessageDs from './SingleMessageDs';
 import Text from '../../Atoms/Text/Text';
 import Download from '../../Atoms/Icons/Download';
-import data from '../../../styleguide/data/data';
-
+import { defaultData } from '../../../styleguide/data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SingleMessageDs
@@ -15,8 +14,8 @@ it('renders correctly', () => {
       ctaBgColor="blue_dark"
       backgroundColor="white"
       imageDirection="right"
-      imageLow={data.image}
-      images={data.images}
+      imageLow={defaultData.image}
+      images={defaultData.images}
       imageAltText="Happy man going to work"
       subtitle="Subtitle"
       title="Heading Line 1 Heading Line 2"
