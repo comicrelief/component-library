@@ -9,7 +9,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="blue_dark"
+  backgroundColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

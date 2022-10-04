@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import styled, { css } from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
@@ -8,7 +9,6 @@ import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,12 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
+  }
+
+  background-color: ${({ theme, backgroundColor }) => (backgroundColor === 'transparent' ? theme.color('blue_dark') : theme.color(backgroundColor))};
+
+  ${media('medium')} {
+    background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   }
 `;
 
