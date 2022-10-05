@@ -742,7 +742,7 @@ exports[`Monthly donation renders correctly 1`] = `
             color="inherit"
             size="s"
           >
-            Will you help us deliver long-term impact by converting your single donation into a monthly gift?
+            Help us deliver long-term impact by converting your single donation into a monthly gift.
           </span>
         </div>
       </div>
