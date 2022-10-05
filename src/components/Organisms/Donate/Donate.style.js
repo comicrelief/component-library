@@ -35,7 +35,7 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  ${({ backgroundColor }) => backgroundColor !== 'Transparent' && `
+  ${({ backgroundColor }) => backgroundColor !== 'transparent' && `
     opacity: 0.4;
   `}
 `;

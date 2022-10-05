@@ -45,7 +45,6 @@ const colors = {
   yellow: '#FFE400',
   yellow_dark: '#665700',
   yellow_light: '#FEFD5A',
-  Transparent: 'transparent',
   transparent: 'transparent'
 };
 
