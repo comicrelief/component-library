@@ -32,6 +32,7 @@ const Signup = ({
   mbshipID,
   noMoneyBuys,
   PopUpText,
+  chooseAmountText,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -142,7 +143,7 @@ const Signup = ({
         <OuterFieldset>
           <Legend>
             <Text tag="span" size="l" weight="bold">
-              {`${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
+              {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
           {!noMoneyBuys && (
@@ -220,7 +221,8 @@ Signup.propTypes = {
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  PopUpText: PropTypes.string.isRequired
+  PopUpText: PropTypes.string.isRequired,
+  chooseAmountText: PropTypes.string.isRequired
 };
 
 Signup.defaultProps = {

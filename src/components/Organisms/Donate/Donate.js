@@ -34,7 +34,8 @@ const Donate = ({
   mobileAlt,
   mbshipID,
   noMoneyBuys,
-  PopUpText
+  PopUpText,
+  chooseAmountText
 }) => {
   const isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -99,6 +100,7 @@ const Donate = ({
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
+          chooseAmountText={chooseAmountText}
         />
       </Wrapper>
     </Container>
@@ -125,7 +127,8 @@ Donate.propTypes = {
   backgroundColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
-  PopUpText: PropTypes.string
+  PopUpText: PropTypes.string,
+  chooseAmountText: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -145,7 +148,8 @@ Donate.defaultProps = {
     'will help us fund amazing projects in the UK and around the world.',
   subtitle: '',
   noMoneyBuys: false,
-  PopUpText: "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact."
+  PopUpText: "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.",
+  chooseAmountText: ''
 };
 
 export default Donate;
