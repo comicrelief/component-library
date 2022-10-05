@@ -66,6 +66,7 @@ it('Single donation with no Money Buys renders correctly', () => {
       noMoneyBuys
       subtitle="Please help us fund life-changing projects in the UK and around the world."
       otherDescription="will help us fund amazing projects in the UK and around the world."
+      chooseAmountText="Overridden via the 'choose amount text' props"
     />
   ).toJSON();
 
