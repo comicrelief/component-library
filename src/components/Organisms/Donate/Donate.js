@@ -148,7 +148,7 @@ Donate.defaultProps = {
     'will help us fund amazing projects in the UK and around the world.',
   subtitle: '',
   noMoneyBuys: false,
-  PopUpText: "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.",
+  PopUpText: 'Will you help us deliver long-term impact by converting your single donation into a monthly gift?',
   chooseAmountText: ''
 };
 

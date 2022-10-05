@@ -44,7 +44,8 @@ const colors = {
   white: '#FFFFFF',
   yellow: '#FFE400',
   yellow_dark: '#665700',
-  yellow_light: '#FEFD5A'
+  yellow_light: '#FEFD5A',
+  transparent: '#333333'
 };
 
 export default colorName => {

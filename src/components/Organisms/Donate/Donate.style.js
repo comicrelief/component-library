@@ -38,7 +38,10 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  opacity: 0.4;
+  // check the real value produced by the CMS
+  ${({ backgroundColor }) => (backgroundColor !== 'transparent' && backgroundColor !== 'Transparent') && `
+    opacity: 0.4;
+  `}
 `;
 
 const Wrapper = styled.div`
