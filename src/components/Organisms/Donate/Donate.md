@@ -111,7 +111,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="transparent"
+  backgroundColor="Transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -136,7 +136,7 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="transparent"
+  backgroundColor="Transparent"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

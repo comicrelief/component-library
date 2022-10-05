@@ -28,9 +28,6 @@ const PopUp = styled.div`
   height: 100px;
 `;
 
-const MobImage = styled(Picture)`
-`;
-
 const BgImage = styled(Picture)`
   display: block;
   position: absolute;
@@ -38,8 +35,7 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  // check the real value produced by the CMS
-  ${({ backgroundColor }) => (backgroundColor !== 'transparent' && backgroundColor !== 'Transparent') && `
+  ${({ backgroundColor }) => backgroundColor !== 'Transparent' && `
     opacity: 0.4;
   `}
 `;
@@ -239,7 +235,6 @@ const Button = styled.button`
 
 export {
   BgImage,
-  MobImage,
   Button,
   Copy,
   Container,
