@@ -204,7 +204,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Single Giving "No Money Buys", no background image
+## Single Giving "No Money Buys", no background image, overriding 'choose amount' text
 
 ```js
 import data from './dev-data/data-single';
@@ -221,5 +221,6 @@ import data from './dev-data/data-single';
   noMoneyBuys
   subtitle=""
   otherDescription="will help us fund amazing projects in the UK and around the world."
+  chooseAmountText="Overridden via the 'choose amount text' props"
 />;
 ```
