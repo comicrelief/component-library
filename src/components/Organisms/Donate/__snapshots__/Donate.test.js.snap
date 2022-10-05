@@ -2042,7 +2042,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               color="inherit"
               size="l"
             >
-              Enter an amount to give
+              Overridden via the 'choose amount text' props
             </span>
           </legend>
           <div
