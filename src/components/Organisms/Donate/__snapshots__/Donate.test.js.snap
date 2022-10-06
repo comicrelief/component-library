@@ -107,7 +107,6 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c13 {
   display: grid;
-  gap: 0.5rem;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   border-radius: 8px;
@@ -122,8 +121,11 @@ exports[`Monthly donation renders correctly 1`] = `
   background: transparent;
   border: 0;
   cursor: pointer;
-  margin: 17px 17px 0;
-  width: 20px;
+  border: 1px solid #FFFFFF;
+  margin: 8px;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
 }
 
 .c14:active,
@@ -131,6 +133,12 @@ exports[`Monthly donation renders correctly 1`] = `
 .c14:hover {
   outline: none;
   border: 1px solid #969598;
+}
+
+.c14 img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
 }
 
 .c23 {
@@ -742,7 +750,7 @@ exports[`Monthly donation renders correctly 1`] = `
             color="inherit"
             size="s"
           >
-            Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.
+            Help us deliver long-term impact by converting your single donation into a monthly gift.
           </span>
         </div>
       </div>

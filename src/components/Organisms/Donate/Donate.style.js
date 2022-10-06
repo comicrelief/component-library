@@ -28,9 +28,6 @@ const PopUp = styled.div`
   height: 100px;
 `;
 
-const MobImage = styled(Picture)`
-`;
-
 const BgImage = styled(Picture)`
   display: block;
   position: absolute;
@@ -38,7 +35,9 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  opacity: 0.4;
+  ${({ backgroundColor }) => backgroundColor !== 'transparent' && `
+    opacity: 0.4;
+  `}
 `;
 
 const Wrapper = styled.div`
@@ -236,7 +235,6 @@ const Button = styled.button`
 
 export {
   BgImage,
-  MobImage,
   Button,
   Copy,
   Container,

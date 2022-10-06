@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
 import {
-  MobImage,
   BgImage,
   Container,
   Header,
@@ -42,7 +42,7 @@ const Donate = ({
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
       {!isDesktop && mobileImages ? (
-        <MobImage
+        <Picture
           backgroundColor={backgroundColor}
           image={mobileImage}
           images={mobileImages}
@@ -148,7 +148,7 @@ Donate.defaultProps = {
     'will help us fund amazing projects in the UK and around the world.',
   subtitle: '',
   noMoneyBuys: false,
-  PopUpText: "Will you become one of our valued monthly supporters by converting your single donation into a smaller, monthly donation? By giving monthly, you'll help us deliver long-term impact.",
+  PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText: ''
 };
 

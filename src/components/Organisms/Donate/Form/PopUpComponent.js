@@ -9,7 +9,6 @@ import CloseCross from '../assets/close.svg';
 
 const StyledPopUp = styled.div`
   display: ${props => props.isPop ? "grid" : "none"};
-  gap: ${spacing('sm')};
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -30,15 +29,23 @@ const Button = styled.button`
   background: transparent;
   border: 0;
   cursor: pointer;
+  border: 1px solid ${({ theme }) => theme.color('white')};
   :active,
   :focus,
   :hover {
     outline: none;
     border: 1px solid ${({ theme }) => theme.color('grey')};
   }
-  margin: 17px 17px 0;
-  /* This sets the size of the svg close.svg icon */
-  width: 20px;
+  margin: 8px;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+
+  img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
 `;
 
 const PopUpComponent = ({ PopUpText }) => {
