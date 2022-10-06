@@ -1,10 +1,23 @@
 /* eslint-disable */ 
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import { media } from '../../../../theme/shared/size';
 import PropTypes from 'prop-types';
 import CloseCross from '../assets/close.svg';
+
+const fadeClose = keyframes`
+  0% {
+    opacity: 1;
+    max-height: 350px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+    display: none;
+    margin-top: -16px;
+  }
+`;
 
 const StyledPopUp = styled.div`
   display: grid;
@@ -12,10 +25,7 @@ const StyledPopUp = styled.div`
   max-height: 350px;
   opacity: 1;
   ${props => props.isClosed && css`
-    opacity: 0;
-    max-height: 0px;
-    transition: all .6s ease-out;
-    margin-top: -20px;
+    animation: 0.6s ${fadeClose} ease forwards;
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
