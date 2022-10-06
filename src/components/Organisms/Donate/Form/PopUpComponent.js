@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import CloseCross from '../assets/close.svg';
 
 const StyledPopUp = styled.div`
-  display: ${props => props.isPop ? "grid" : "none"};
+  display: ${props => props.isPopUp ? "grid" : "none"};
   background-color: ${({ theme }) => theme.color('blue_light')};
   /* blue_royal */
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
@@ -48,11 +48,11 @@ const Button = styled.button`
 `;
 
 const PopUpComponent = ({ PopUpText }) => {
-  const [isPop, setIsPop] = useState(true);
+  const [isPopUp, setIsPopUp] = useState(true);
 
   return (
-    <StyledPopUp isPop={isPop}>
-      <Button onClick={() => setIsPop(false)} aria-label="Close">
+    <StyledPopUp isPopUp={isPopUp}>
+      <Button onClick={() => setIsPopUp(false)} aria-label="Close">
         <img src={CloseCross} alt="Close cross icon"/>
       </Button>
       <TextWrapper>
