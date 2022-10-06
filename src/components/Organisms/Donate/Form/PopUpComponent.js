@@ -1,13 +1,16 @@
 /* eslint-disable */ 
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import { media } from '../../../../theme/shared/size';
 import PropTypes from 'prop-types';
 import CloseCross from '../assets/close.svg';
 
 const StyledPopUp = styled.div`
-  display: ${props => props.isClosed ? "none" : "grid"};
+  display: grid;
+  ${props => props.isClosed && css`
+    display: none;
+  `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
