@@ -8,8 +8,14 @@ import CloseCross from '../assets/close.svg';
 
 const StyledPopUp = styled.div`
   display: grid;
+  /* overflow: hidden; */
+  height: 100px;
+  /* opacity: 1; */
+  transition: height .6s linear;
   ${props => props.isClosed && css`
-    display: none;
+    height: 0;
+    /* opacity: 0; */
+    transition: all .6s ease-in;
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
