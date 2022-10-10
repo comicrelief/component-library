@@ -116,18 +116,19 @@ const Signup = ({
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
 
+  const [popOpen, setPopOpen] = useState(false);
+
   return (
     <FormWrapper>
       {showGivingSelector && (
         <GivingSelector
           givingType={givingType}
           changeGivingType={data => setGivingType(data)}
+          setPopOpen={setPopOpen}
         />
       )}
 
-      {(givingType === 'single' && showGivingSelector)
-        && <PopUpComponent PopUpText={PopUpText} />
-      }
+      { popOpen && <PopUpComponent PopUpText={PopUpText} /> }
 
       <Form
         onSubmit={e => submitDonation(
