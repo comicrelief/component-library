@@ -29,7 +29,7 @@ const StyledPopUp = styled.div`
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: 10px;
 
   ${media('small')} {
     width: 450px;
@@ -47,16 +47,16 @@ const Button = styled.button`
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+
   :active,
   :focus,
   :hover {
     outline: none;
     border: 1px solid ${({ theme }) => theme.color('grey')};
   }
-  margin: 8px;
-  width: 35px;
-  height: 35px;
-  padding: 5px;
 
   img {
     width: 15px;
