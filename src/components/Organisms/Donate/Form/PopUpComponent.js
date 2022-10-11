@@ -19,11 +19,25 @@ const fadeClose = keyframes`
   }
 `;
 
+const fadeOpen = keyframes`
+  0% {
+    opacity: 0;
+    max-height: 0px;
+    display: none;
+    margin-top: -16px;
+  }
+  100% {
+    opacity: 1;
+    max-height: 350px;
+  }
+`;
+
 const StyledPopUp = styled.div`
   display: grid;
   overflow: hidden;
   max-height: 350px;
   opacity: 1;
+  animation: 0.4s ${fadeOpen} ease;
   ${props => props.isClosed && css`
     animation: 0.6s ${fadeClose} ease forwards;
   `}
@@ -50,7 +64,6 @@ const Button = styled.button`
   width: 30px;
   height: 30px;
   margin: 3px;
-
   :active,
   :focus,
   :hover {
