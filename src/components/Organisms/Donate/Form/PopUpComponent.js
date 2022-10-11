@@ -1,17 +1,35 @@
 /* eslint-disable */ 
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
-import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
 import PropTypes from 'prop-types';
 import CloseCross from '../assets/close.svg';
 
+const fadeClose = keyframes`
+  0% {
+    opacity: 1;
+    max-height: 350px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+    display: none;
+    margin-top: -16px;
+  }
+`;
+
 const StyledPopUp = styled.div`
-  display: ${props => props.isPop ? "grid" : "none"};
-  background-color: ${({ theme }) => theme.color('white')};
+  display: grid;
+  overflow: hidden;
+  max-height: 350px;
+  opacity: 1;
+  ${props => props.isClosed && css`
+    animation: 0.6s ${fadeClose} ease forwards;
+  `}
+  background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: 10px;
 
   ${media('small')} {
     width: 450px;
@@ -26,20 +44,19 @@ const TextWrapper = styled.div`
 
 const Button = styled.button`
   justify-self: end;
-  background: transparent;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.color('white')};
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+
   :active,
   :focus,
   :hover {
     outline: none;
     border: 1px solid ${({ theme }) => theme.color('grey')};
   }
-  margin: 8px;
-  width: 35px;
-  height: 35px;
-  padding: 5px;
 
   img {
     width: 15px;
@@ -49,11 +66,11 @@ const Button = styled.button`
 `;
 
 const PopUpComponent = ({ PopUpText }) => {
-  const [isPop, setIsPop] = useState(true);
+  const [isClosed, setIsClosed] = useState(false);
 
   return (
-    <StyledPopUp isPop={isPop}>
-      <Button onClick={() => setIsPop(false)} aria-label="Close">
+    <StyledPopUp isClosed={isClosed}>
+      <Button onClick={() => setIsClosed(true)} aria-label="Close">
         <img src={CloseCross} alt="Close cross icon"/>
       </Button>
       <TextWrapper>

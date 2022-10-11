@@ -68,7 +68,7 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight}>
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
             {subtitle && (

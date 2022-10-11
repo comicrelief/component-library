@@ -80,7 +80,7 @@ const Label = styled.label`
   }
 `;
 
-const GivingSelector = ({ givingType, changeGivingType }) => (
+const GivingSelector = ({ givingType, changeGivingType, setPopOpen }) => (
   <Wrapper>
     <MoneyBox>
       <input
@@ -93,6 +93,7 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         checked={givingType === 'single'}
         onClick={() => {
           changeGivingType('single');
+          setPopOpen(true);
         }}
       />
       <Label active={givingType === 'single'} htmlFor="give-once">
@@ -108,6 +109,7 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
         checked={givingType === 'monthly'}
         onClick={() => {
           changeGivingType('monthly');
+          setPopOpen(false);
         }}
       />
       <Label active={givingType === 'monthly'} htmlFor="give-monthly">
@@ -120,7 +122,8 @@ const GivingSelector = ({ givingType, changeGivingType }) => (
 
 GivingSelector.propTypes = {
   givingType: PropTypes.string.isRequired,
-  changeGivingType: PropTypes.func.isRequired
+  changeGivingType: PropTypes.func.isRequired,
+  setPopOpen: PropTypes.bool.isRequired
 };
 
 export default GivingSelector;
