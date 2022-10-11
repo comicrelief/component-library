@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import 'lazysizes';
@@ -25,6 +25,11 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};  
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+
+  ${props => (props.objectFit === 'contain' && props.focalPointX && props.focalPointY) && css`
+    object-position: ${props.focalPointX} ${props.focalPointY};
+  `}
+  
 `;
 
 /** Responsive Picture */
@@ -128,7 +133,9 @@ Picture.propTypes = {
   ]),
   width: PropTypes.string,
   height: PropTypes.string,
-  isBackgroundImage: PropTypes.bool
+  isBackgroundImage: PropTypes.bool,
+  focalPointX: PropTypes.string,
+  focalPointY: PropTypes.string
 };
 
 Picture.defaultProps = {
@@ -139,7 +146,9 @@ Picture.defaultProps = {
   width: '100%',
   height: 'auto',
   alt: '',
-  isBackgroundImage: false
+  isBackgroundImage: false,
+  focalPointX: '',
+  focalPointY: ''
 };
 
 export default withTheme(Picture);

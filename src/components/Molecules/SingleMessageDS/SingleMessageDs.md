@@ -186,3 +186,53 @@ import Download from '../../Atoms/Icons/Download';
     </SingleMessageDs>
 </div>;
 ```
+
+## FocalPoint stuff
+
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
+
+const Title = styled(Text)`
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('m')};
+  }
+`;
+<div
+    style={{
+      display: 'flex',
+      padding: '4rem 0',
+      background: '#E1E2E3',
+      justifyContent: 'space-around',
+    }}>
+    <SingleMessageDs
+      imageLeft={true}
+      link='/home'
+      linkLabel='Check out'
+      backgroundColor='white'
+      imageLow={defaultData.image}
+      images={defaultData.images}
+      imageAltText='Happy man going to work'
+      subtitle="Subtitle"
+      height='100%'
+      youTubeId='faz0JeBB41M'
+      focalPointX='50%'
+      focalPointY='50%'
+
+    >
+      <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
+        Heading Line 1 Heading Line 2
+      </Title>
+      <Text tag='p'>
+        Whatever you’ve got planned, the Sport Relief shop has everything you need
+        to get you looking your best while you’re raising some cash. Also
+        available in Sainsbury’s stores and online and in selected Argos stores.
+      </Text>
+    </SingleMessageDs>
+</div>;
+```
