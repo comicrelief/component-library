@@ -198,11 +198,11 @@ import spacing from '../../../theme/shared/spacing';
 
 // These will come directly via the CMS query in the proper CRcom 
 // context; I've just hardcoded the actual size values from the example
-// image and focal point that focuses on the subject's face
+// image and focal point that focuses on the subject.
 const exampleFocalPoint = {
     rawImageWidth: 2000,
     rawImageHeight: 945,
-    focalPointX: 1450, // middle of dog and woman
+    focalPointX: 1450,
     focalPointY: 350
 };
 
