@@ -1,11 +1,15 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Picture from './Picture';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders correctly', () => {
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Picture from "./Picture";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders correctly", () => {
   const tree = renderWithTheme(
-    <Picture images={defaultData.images} image={defaultData.image} alt="Test images" />
+    <Picture
+      images={defaultData.images}
+      image={defaultData.image}
+      alt="Test images"
+    />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -44,7 +48,7 @@ it('renders correctly', () => {
   `);
 });
 
-it('renders correctly with custom props', () => {
+it("renders correctly with custom props", () => {
   const tree = renderWithTheme(
     <Picture
       images={defaultData.images}
@@ -69,6 +73,7 @@ it('renders correctly with custom props', () => {
       height: 100px;
       display: block;
       object-fit: cover;
+      object-position: NaN% NaN%;
     }
 
     <div

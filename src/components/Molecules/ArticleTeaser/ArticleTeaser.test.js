@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleTeaser from './ArticleTeaser';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders article teaser correctly', () => {
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ArticleTeaser from "./ArticleTeaser";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders article teaser correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -53,6 +53,7 @@ it('renders article teaser correctly', () => {
       height: 100%;
       display: block;
       object-fit: cover;
+      object-position: NaN% NaN%;
     }
 
     .c1 {
@@ -258,7 +259,7 @@ it('renders article teaser correctly', () => {
   `);
 });
 
-it('renders press realese correctly', () => {
+it("renders press realese correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -305,6 +306,7 @@ it('renders press realese correctly', () => {
       height: 80px;
       display: block;
       object-fit: cover;
+      object-position: NaN% NaN%;
     }
 
     .c1 {
