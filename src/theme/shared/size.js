@@ -1,7 +1,13 @@
+const screenPixelValues = {
+  small: 740,
+  medium: 1024,
+  large: 1440
+};
+
 const screen = {
-  small: '740px',
-  medium: '1024px',
-  large: '1440px'
+  small: `${screenPixelValues.small}px`,
+  medium: `${screenPixelValues.medium}px`,
+  large: `${screenPixelValues.large}px`
 };
 
 const media = size => {
@@ -17,4 +23,6 @@ const container = {
   large: '1440px'
 };
 
-export { media, screen, container };
+export {
+  media, screen, container, screenPixelValues
+};

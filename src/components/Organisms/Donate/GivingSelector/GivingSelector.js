@@ -123,7 +123,7 @@ const GivingSelector = ({ givingType, changeGivingType, setPopOpen }) => (
 GivingSelector.propTypes = {
   givingType: PropTypes.string.isRequired,
   changeGivingType: PropTypes.func.isRequired,
-  setPopOpen: PropTypes.bool.isRequired
+  setPopOpen: PropTypes.func.isRequired
 };
 
 export default GivingSelector;
