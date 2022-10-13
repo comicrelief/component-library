@@ -190,10 +190,21 @@ import Download from '../../Atoms/Icons/Download';
 ## FocalPoint stuff
 
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+const focalPointImages = require('../../../styleguide/data/data').focalPointImages;
+import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+
+// These will come directly via the CMS query in the proper CRcom 
+// context; I've just hardcoded the actual size values from the example
+// image and focal point that focuses on the subject's face
+const exampleFocalPoint = {
+    rawImageWidth: 2000,
+    rawImageHeight: 945,
+    focalPointX: 1450, // middle of dog and woman
+    focalPointY: 350
+};
 
 const Title = styled(Text)`
   letter-spacing: 0.03em;
@@ -215,15 +226,13 @@ const Title = styled(Text)`
       link='/home'
       linkLabel='Check out'
       backgroundColor='white'
-      imageLow={defaultData.image}
-      images={defaultData.images}
+      imageLow={focalPointImages.image}
+      images={focalPointImages.images}
       imageAltText='Happy man going to work'
       subtitle="Subtitle"
       height='100%'
       youTubeId='faz0JeBB41M'
-      focalPointX='50%'
-      focalPointY='50%'
-
+      focalPoint={exampleFocalPoint}
     >
       <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
         Heading Line 1 Heading Line 2

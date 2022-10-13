@@ -141,6 +141,8 @@ const Copy = styled.div`
     flex-shrink: 0;
     flex-basis: calc(50% + 1.5rem);
     padding: ${spacing('l')};
+    // DEBUG
+    opacity: 0;
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 

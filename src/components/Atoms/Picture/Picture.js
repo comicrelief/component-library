@@ -1,36 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import styled, { css, withTheme } from 'styled-components';
+import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-
+import focalPointCalc from '../../../utils/focalPointCalc';
 import 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
+import { Wrapper, Image } from './Picture.style';
 
 // Transparent pixel png
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-
-const Wrapper = styled.div`
-  ${({ objFitState, nonObjFitImage }) => (!objFitState && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
-  display: block;
-  width: ${props => (props.width ? props.width : '100%')};
-  height: ${props => (props.height ? props.height : '100%')};
-  position: relative;
-  ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
-  `;
-
-const Image = styled.img`
-  width: ${props => (props.width ? props.width : '100%')};
-  height: ${props => (props.height ? props.height : 'auto')};
-  display: block;
-  object-fit: ${props => (props.objectFit === 'none' && 'none')
-    || (props.objectFit === 'cover' && 'cover')
-    || (props.objectFit === 'contain' && 'contain')};  
-  ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
-
-  ${props => (props.objectFit === 'contain' && props.focalPointX && props.focalPointY) && css`
-    object-position: ${props.focalPointX} ${props.focalPointY};
-  `}
-  
-`;
 
 /** Responsive Picture */
 
@@ -43,6 +20,7 @@ const Picture = ({
   objectFit,
   imageLow,
   isBackgroundImage,
+  focalPoint,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -62,6 +40,8 @@ const Picture = ({
   } else if (images) {
     nonObjFitImage = images.substring(0, images.indexOf('?'));
   }
+
+  const calculatedFocalPoints = focalPointCalc(focalPoint);
 
   if (!images) {
     return (
@@ -83,6 +63,8 @@ const Picture = ({
           data-src={image}
           className="lazyload"
           objFitState={objFitState}
+          focalPointX={calculatedFocalPoints.x}
+          focalPointY={calculatedFocalPoints.y}
         />
       </Wrapper>
     );
@@ -114,6 +96,8 @@ const Picture = ({
         data-lowsrc={imageLow}
         className="lazyload"
         objFitState={objFitState}
+        focalPointXPos={calculatedFocalPoints.x}
+        focalPointYPos={calculatedFocalPoints.y}
       />
     </Wrapper>
   );
@@ -134,8 +118,12 @@ Picture.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   isBackgroundImage: PropTypes.bool,
-  focalPointX: PropTypes.string,
-  focalPointY: PropTypes.string
+  focalPoint: PropTypes.shape({
+    focalPointX: PropTypes.number,
+    focalPointY: PropTypes.number,
+    rawImageWidth: PropTypes.number,
+    rawImageHeight: PropTypes.number
+  })
 };
 
 Picture.defaultProps = {
@@ -147,8 +135,12 @@ Picture.defaultProps = {
   height: 'auto',
   alt: '',
   isBackgroundImage: false,
-  focalPointX: '',
-  focalPointY: ''
+  focalPoint: {
+    focalPointX: null,
+    focalPointY: null,
+    rawImageWidth: null,
+    rawImageHeigh: null
+  }
 };
 
 export default withTheme(Picture);

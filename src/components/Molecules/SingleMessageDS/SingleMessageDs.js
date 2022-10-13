@@ -27,13 +27,11 @@ const SingleMessageDs = ({
   target,
   linkIcon,
   youTubeId,
-  focalPointX,
-  focalPointY,
+  focalPoint,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   const Media = (
@@ -46,8 +44,7 @@ const SingleMessageDs = ({
         objectFit="cover"
         width={width}
         height={height}
-        focalPointX={focalPointX}
-        focalPointY={focalPointY}
+        focalPoint={focalPoint}
       />
     </Image>
   );
@@ -192,8 +189,12 @@ SingleMessageDs.propTypes = {
   children: PropTypes.node.isRequired,
   linkIcon: PropTypes.node,
   youTubeId: PropTypes.string,
-  focalPointX: PropTypes.string,
-  focalPointY: PropTypes.string
+  focalPoint: PropTypes.shape({
+    focalPointX: PropTypes.number,
+    focalPointY: PropTypes.number,
+    rawImageWidth: PropTypes.number,
+    rawImageHeight: PropTypes.number
+  })
 };
 
 SingleMessageDs.defaultProps = {
@@ -210,8 +211,12 @@ SingleMessageDs.defaultProps = {
   height: '100%',
   linkIcon: null,
   youTubeId: null,
-  focalPointX: '',
-  focalPointY: ','
+  focalPoint: {
+    focalPointX: null,
+    focalPointY: null,
+    rawImageWidth: null,
+    rawImageHeigh: null
+  }
 };
 
 export default SingleMessageDs;
