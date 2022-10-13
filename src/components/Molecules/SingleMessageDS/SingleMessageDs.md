@@ -187,7 +187,7 @@ import Download from '../../Atoms/Icons/Download';
 </div>;
 ```
 
-## FocalPoint stuff
+## FocalPoint example 1
 
 ```js
 const focalPointImages = require('../../../styleguide/data/data').focalPointImages;
@@ -228,7 +228,66 @@ const Title = styled(Text)`
       backgroundColor='white'
       imageLow={focalPointImages.image}
       images={focalPointImages.images}
-      imageAltText='Happy man going to work'
+      imageAltText='A woman and her hairy child'
+      subtitle="Subtitle"
+      height='100%'
+      youTubeId='faz0JeBB41M'
+      focalPoint={exampleFocalPoint}
+    >
+      <Title tag="h4" color="grey_dark" size="xl" family="Anton" weight="normal">
+        Heading Line 1 Heading Line 2
+      </Title>
+      <Text tag='p'>
+        Whatever you’ve got planned, the Sport Relief shop has everything you need
+        to get you looking your best while you’re raising some cash. Also
+        available in Sainsbury’s stores and online and in selected Argos stores.
+      </Text>
+    </SingleMessageDs>
+</div>;
+```
+
+## FocalPoint example 2
+
+```js
+const focalPointImagesTwo = require('../../../styleguide/data/data').focalPointImagesTwo;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
+
+// These will come directly via the CMS query in the proper CRcom 
+// context; I've just hardcoded the actual size values from the example
+// image and focal point that focuses on the subject.
+const exampleFocalPoint = {
+    rawImageWidth: 1872,
+    rawImageHeight: 686,
+    focalPointX: 440, // Tall skyscraper on the left
+    focalPointY: 240
+};
+
+const Title = styled(Text)`
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: ${spacing('md')} 0;
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-bottom: ${spacing('m')};
+  }
+`;
+<div
+    style={{
+      display: 'flex',
+      padding: '4rem 0',
+      background: '#E1E2E3',
+      justifyContent: 'space-around',
+    }}>
+    <SingleMessageDs
+      imageLeft={true}
+      link='/home'
+      linkLabel='Check out'
+      backgroundColor='white'
+      imageLow={focalPointImagesTwo.image}
+      images={focalPointImagesTwo.images}
+      imageAltText='Panoramic'
       subtitle="Subtitle"
       height='100%'
       youTubeId='faz0JeBB41M'
