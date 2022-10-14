@@ -1,8 +1,7 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import PropTypes from 'prop-types';
-
-import { screenPixelValues } from '../../../theme/shared/size';
+import { useMediaQuery } from 'react-responsive';
+import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
@@ -35,11 +34,18 @@ const Donate = ({
   mbshipID,
   noMoneyBuys,
   PopUpText,
-  chooseAmountText
-}) => (
-  <Container backgroundColor={backgroundColor} id={mbshipID}>
-    {mobileImages && (
-    <MediaQuery maxWidth={screenPixelValues.medium - 1}>
+  chooseAmountText,
+  isDesktopOverride
+}) => {
+  // Can't assign this conditionally due to Hook rules..
+  let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
+
+  // ... but we can just do this, allowing the parent to control that if IT re-renders
+  if (isDesktopOverride) isDesktop = isDesktopOverride;
+
+  return (
+    <Container backgroundColor={backgroundColor} id={mbshipID}>
+      {(!isDesktop && mobileImages) && (
       <Picture
         backgroundColor={backgroundColor}
         image={mobileImage}
@@ -50,11 +56,9 @@ const Donate = ({
         height="100%"
         alt={mobileAlt}
       />
-    </MediaQuery>
-    )}
+      )}
 
-    {images && (
-    <MediaQuery minWidth={screenPixelValues.medium}>
+      {(isDesktop && images) && (
       <BgImage
         backgroundColor={backgroundColor}
         image={image}
@@ -66,46 +70,46 @@ const Donate = ({
         alt={alt}
         isBackgroundImage
       />
-    </MediaQuery>
-    )}
+      )}
 
-    <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-      <Header formAlignRight={formAlignRight}>
-        <HeaderInner>
-          {subtitle && (
-          <>
-            <Text
-              tag="h2"
-              color="white"
-              size="big"
-              family="Anton"
-              weight="normal"
-              uppercase
-            >
-              {title}
-            </Text>
-            <Text tag="p" color="white" size="m">
-              {subtitle}
-            </Text>
-          </>
-          )}
-        </HeaderInner>
-      </Header>
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
+        <Header formAlignRight={formAlignRight}>
+          <HeaderInner>
+            {subtitle && (
+            <>
+              <Text
+                tag="h2"
+                color="white"
+                size="big"
+                family="Anton"
+                weight="normal"
+                uppercase
+              >
+                {title}
+              </Text>
+              <Text tag="p" color="white" size="m">
+                {subtitle}
+              </Text>
+            </>
+            )}
+          </HeaderInner>
+        </Header>
 
-      <Form
-        data={data}
-        otherDescription={otherDescription}
-        cartID={cartID}
-        clientID={clientID}
-        mbshipID={mbshipID}
-        donateLink={donateLink}
-        noMoneyBuys={noMoneyBuys}
-        PopUpText={PopUpText}
-        chooseAmountText={chooseAmountText}
-      />
-    </Wrapper>
-  </Container>
-);
+        <Form
+          data={data}
+          otherDescription={otherDescription}
+          cartID={cartID}
+          clientID={clientID}
+          mbshipID={mbshipID}
+          donateLink={donateLink}
+          noMoneyBuys={noMoneyBuys}
+          PopUpText={PopUpText}
+          chooseAmountText={chooseAmountText}
+        />
+      </Wrapper>
+    </Container>
+  );
+};
 
 Donate.propTypes = {
   alt: PropTypes.string,
@@ -128,7 +132,8 @@ Donate.propTypes = {
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
-  chooseAmountText: PropTypes.string
+  chooseAmountText: PropTypes.string,
+  isDesktopOverride: PropTypes.bool
 };
 
 Donate.defaultProps = {
@@ -149,7 +154,8 @@ Donate.defaultProps = {
   subtitle: '',
   noMoneyBuys: false,
   PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
-  chooseAmountText: ''
+  chooseAmountText: '',
+  isDesktopOverride: null
 };
 
 export default Donate;

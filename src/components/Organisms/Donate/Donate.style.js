@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import styled, { css } from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
