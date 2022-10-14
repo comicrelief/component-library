@@ -35,9 +35,14 @@ const Donate = ({
   mbshipID,
   noMoneyBuys,
   PopUpText,
-  chooseAmountText
+  chooseAmountText,
+  isDesktopOverride
 }) => {
-  const isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
+  // Can't assign this conditionally due to Hook rules..
+  let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
+
+  // ... but we can just do this, allowing the parent to control that if IT re-renders
+  if (isDesktopOverride !== null) isDesktop = isDesktopOverride;
 
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
@@ -128,7 +133,8 @@ Donate.propTypes = {
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
-  chooseAmountText: PropTypes.string
+  chooseAmountText: PropTypes.string,
+  isDesktopOverride: PropTypes.bool
 };
 
 Donate.defaultProps = {
@@ -149,7 +155,8 @@ Donate.defaultProps = {
   subtitle: '',
   noMoneyBuys: false,
   PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
-  chooseAmountText: ''
+  chooseAmountText: '',
+  isDesktopOverride: null
 };
 
 export default Donate;
