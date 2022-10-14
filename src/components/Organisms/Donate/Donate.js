@@ -1,8 +1,8 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
-import { screenPixelValues } from '../../../theme/shared/size';
+import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
@@ -36,76 +36,76 @@ const Donate = ({
   noMoneyBuys,
   PopUpText,
   chooseAmountText
-}) => (
-  <Container backgroundColor={backgroundColor} id={mbshipID}>
-    {mobileImages && (
-    <MediaQuery maxWidth={screenPixelValues.medium - 1}>
-      <Picture
-        backgroundColor={backgroundColor}
-        image={mobileImage}
-        images={mobileImages}
-        imageLow={mobileImageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={mobileAlt}
-      />
-    </MediaQuery>
-    )}
+}) => {
+  const isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
-    {images && (
-    <MediaQuery minWidth={screenPixelValues.medium}>
-      <BgImage
-        backgroundColor={backgroundColor}
-        image={image}
-        images={images}
-        imageLow={imageLow}
-        objectFit="cover"
-        width="100%"
-        height="100%"
-        alt={alt}
-        isBackgroundImage
-      />
-    </MediaQuery>
-    )}
+  return (
+    <Container backgroundColor={backgroundColor} id={mbshipID}>
+      {!isDesktop && mobileImages ? (
+        <Picture
+          backgroundColor={backgroundColor}
+          image={mobileImage}
+          images={mobileImages}
+          imageLow={mobileImageLow}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          alt={mobileAlt}
+        />
+      ) : null}
 
-    <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-      <Header formAlignRight={formAlignRight}>
-        <HeaderInner>
-          {subtitle && (
-          <>
-            <Text
-              tag="h2"
-              color="white"
-              size="big"
-              family="Anton"
-              weight="normal"
-              uppercase
-            >
-              {title}
-            </Text>
-            <Text tag="p" color="white" size="m">
-              {subtitle}
-            </Text>
-          </>
-          )}
-        </HeaderInner>
-      </Header>
+      {isDesktop && images ? (
+        <BgImage
+          backgroundColor={backgroundColor}
+          image={image}
+          images={images}
+          imageLow={imageLow}
+          objectFit="cover"
+          width="100%"
+          height="100%"
+          alt={alt}
+          isBackgroundImage
+        />
+      ) : null}
 
-      <Form
-        data={data}
-        otherDescription={otherDescription}
-        cartID={cartID}
-        clientID={clientID}
-        mbshipID={mbshipID}
-        donateLink={donateLink}
-        noMoneyBuys={noMoneyBuys}
-        PopUpText={PopUpText}
-        chooseAmountText={chooseAmountText}
-      />
-    </Wrapper>
-  </Container>
-);
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
+        <Header formAlignRight={formAlignRight}>
+          <HeaderInner>
+            {subtitle && (
+              <>
+                <Text
+                  tag="h2"
+                  color="white"
+                  size="big"
+                  family="Anton"
+                  weight="normal"
+                  uppercase
+                >
+                  {title}
+                </Text>
+                <Text tag="p" color="white" size="m">
+                  {subtitle}
+                </Text>
+              </>
+            )}
+          </HeaderInner>
+        </Header>
+
+        <Form
+          data={data}
+          otherDescription={otherDescription}
+          cartID={cartID}
+          clientID={clientID}
+          mbshipID={mbshipID}
+          donateLink={donateLink}
+          noMoneyBuys={noMoneyBuys}
+          PopUpText={PopUpText}
+          chooseAmountText={chooseAmountText}
+        />
+      </Wrapper>
+    </Container>
+  );
+};
 
 Donate.propTypes = {
   alt: PropTypes.string,
