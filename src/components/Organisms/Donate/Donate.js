@@ -41,7 +41,7 @@ const Donate = ({
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
   // ... but we can just do this, allowing the parent to control that if IT re-renders
-  if (isDesktopOverride) isDesktop = isDesktopOverride;
+  if (isDesktopOverride !== null) isDesktop = isDesktopOverride;
 
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
