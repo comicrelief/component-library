@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
@@ -38,11 +38,18 @@ const Donate = ({
   chooseAmountText,
   isDesktopOverride
 }) => {
-  // Can't assign this conditionally due to Hook rules..
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
-  // ... but we can just do this, allowing the parent to control that if IT re-renders
-  if (isDesktopOverride !== null) isDesktop = isDesktopOverride;
+  // To let us store any updated override, and force a re-render
+  const [overrideValue, setOverrideValue] = useState(null);
+
+  // Store the updated override value
+  React.useEffect(() => {
+    setOverrideValue(isDesktopOverride);
+  }, [isDesktopOverride]);
+
+  // If a boolean value has been passed, let it replace our 'internal' value
+  isDesktop = overrideValue !== null ? overrideValue : isDesktop;
 
   return (
     <Container backgroundColor={backgroundColor} id={mbshipID}>
