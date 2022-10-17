@@ -145,7 +145,7 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -153,13 +153,13 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c4 {
     min-height: calc(100vh - 90px);
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c5 {
     width: 70%;
     padding: 4rem 1.5rem;
@@ -173,7 +173,7 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c1 {
     height: 100%;
     position: absolute;
@@ -389,7 +389,7 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -397,7 +397,7 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c0 {
     -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
     clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
@@ -405,13 +405,13 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c4 {
     min-height: calc(100vh - 90px);
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c5 {
     width: 70%;
     padding: 4rem 1.5rem;
@@ -425,7 +425,7 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c1 {
     height: 100%;
     position: absolute;
