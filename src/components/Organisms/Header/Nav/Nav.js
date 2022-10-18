@@ -7,6 +7,7 @@ import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import whiteListed from '../../../../utils/whiteListed';
+import ChevronDown from './chevron-down.svg';
 
 import {
   Nav,
@@ -16,7 +17,8 @@ import {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  SubNavLinkUnderline
+  SubNavLinkUnderline,
+  ChevronWrapper
 } from './Nav.style';
 
 const MainNav = ({ navItems }) => {
@@ -109,6 +111,13 @@ const MainNav = ({ navItems }) => {
                       onKeyUp={keyPressed(group.title)}
                     >
                       {thisFirstChild.title}
+                      {hasSubMenu
+                        && (
+                        <ChevronWrapper>
+                          <img src={ChevronDown} alt="chevron down icon" />
+                        </ChevronWrapper>
+                        )
+                      }
                     </NavLink>
                   </Text>
                 )}

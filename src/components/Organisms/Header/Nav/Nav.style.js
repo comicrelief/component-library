@@ -162,6 +162,8 @@ const NavMenu = styled.ul`
  * Menu item link
  */
 const NavLink = styled(NavLinkClass)`
+  display: flex;
+  gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.breakpoint('nav')} {
     padding: 10px 0;
@@ -227,6 +229,11 @@ const NavItem = styled.li`
   }
 `;
 
+const ChevronWrapper = styled.div`
+  width: 12px;
+  padding-top: 2px;
+`;
+
 export {
   Nav,
   NavMenu,
@@ -235,5 +242,6 @@ export {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  SubNavLinkUnderline
+  SubNavLinkUnderline,
+  ChevronWrapper
 };
