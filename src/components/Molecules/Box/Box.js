@@ -21,6 +21,10 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   flex-basis: calc(100% / 3);
+  img {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
 `;
 
 const Copy = styled.div`
