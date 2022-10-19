@@ -7,7 +7,7 @@ import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import whiteListed from '../../../../utils/whiteListed';
-import ChevronDown from './chevron-down.svg';
+import chevronDown from './chevron-down.svg';
 
 import {
   Nav,
@@ -114,7 +114,7 @@ const MainNav = ({ navItems }) => {
                       {hasSubMenu
                         && (
                         <ChevronWrapper>
-                          <img src={ChevronDown} alt="chevron down icon" />
+                          <img src={chevronDown} alt="chevron down icon" />
                         </ChevronWrapper>
                         )
                       }
