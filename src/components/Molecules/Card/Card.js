@@ -9,6 +9,8 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
