@@ -100,6 +100,13 @@ const MainNav = ({ navItems }) => {
                     role="button"
                   >
                     {thisFirstChild.title}
+                    {hasSubMenu
+                      && (
+                      <ChevronWrapper>
+                        <img src={chevronDown} alt="chevron down icon" />
+                      </ChevronWrapper>
+                      )
+                    }
                   </NavLink>
                 ) : (
                   <Text>
