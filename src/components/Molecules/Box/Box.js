@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
@@ -21,10 +21,12 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   flex-basis: calc(100% / 3);
-  img {
-    border-radius: 1rem;
-    overflow: hidden;
-  }
+  ${props => props.roundedCorners && css`
+    img {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  `}
 `;
 
 const Copy = styled.div`
@@ -64,6 +66,7 @@ const Box = ({
           image={image}
           width={width}
           height="auto"
+          roundedCorners={roundedCorners}
         />
       </Image>
     ) : null}
