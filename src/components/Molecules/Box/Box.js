@@ -51,6 +51,7 @@ const Box = ({
   height,
   width,
   children,
+  roundedCorners,
   ...rest
 }) => (
   <Container {...rest}>
@@ -77,7 +78,8 @@ Box.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  roundedCorners: PropTypes.bool
 };
 
 Box.defaultProps = {
@@ -87,7 +89,8 @@ Box.defaultProps = {
   image: null,
   imageAltText: '',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  roundedCorners: true
 };
 
 export default Box;
