@@ -34,11 +34,6 @@ exports[`renders correctly 1`] = `
   flex-basis: calc(100% / 3);
 }
 
-.c1 img {
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
 .c4 {
   padding: 2rem;
   display: -webkit-box;
