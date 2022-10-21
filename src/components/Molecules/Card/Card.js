@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
@@ -9,10 +9,8 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  ${props => props.roundedCorners && css`
-    border-radius: 1rem;
-    overflow: hidden;
-  `}
+  border-radius: ${props => (props.squareCorners ? '0' : '1rem')};
+  overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
@@ -35,10 +33,10 @@ const Card = ({
   height,
   width,
   children,
-  roundedCorners,
+  squareCorners,
   ...rest
 }) => (
-  <Container backgroundColor={backgroundColor} roundedCorners={roundedCorners} {...rest}>
+  <Container backgroundColor={backgroundColor} squareCorners={squareCorners} {...rest}>
     {imageLow ? (
       <Image>
         <Picture
@@ -65,7 +63,7 @@ Card.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  roundedCorners: PropTypes.bool
+  squareCorners: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -77,7 +75,7 @@ Card.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  roundedCorners: true
+  squareCorners: false
 };
 
 export default Card;
