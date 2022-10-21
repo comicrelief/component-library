@@ -56,7 +56,7 @@ const Box = ({
 }) => (
   <Container {...rest}>
     {imageLow ? (
-      <Image>
+      <Image squareCorners={squareCorners}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -64,7 +64,6 @@ const Box = ({
           image={image}
           width={width}
           height="auto"
-          squareCorners={squareCorners}
         />
       </Image>
     ) : null}
