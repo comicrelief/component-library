@@ -64,6 +64,7 @@ const Box = ({
           image={image}
           width={width}
           height="auto"
+          squareCorners={squareCorners}
         />
       </Image>
     ) : null}
