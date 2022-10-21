@@ -11,6 +11,8 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
   background: #FFE400;
 }
 
@@ -66,6 +68,8 @@ exports[`renders correctly with no body 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
   background: #FFE400;
 }
 

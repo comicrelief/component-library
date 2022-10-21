@@ -21,6 +21,10 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   flex-basis: calc(100% / 3);
+  img {
+    border-radius: ${props => (props.squareCorners ? '0' : '1rem')};
+    overflow: hidden;
+  }
 `;
 
 const Copy = styled.div`
@@ -47,6 +51,7 @@ const Box = ({
   height,
   width,
   children,
+  squareCorners,
   ...rest
 }) => (
   <Container {...rest}>
@@ -59,6 +64,7 @@ const Box = ({
           image={image}
           width={width}
           height="auto"
+          squareCorners={squareCorners}
         />
       </Image>
     ) : null}
@@ -73,7 +79,8 @@ Box.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  squareCorners: PropTypes.bool
 };
 
 Box.defaultProps = {
@@ -83,7 +90,8 @@ Box.defaultProps = {
   image: null,
   imageAltText: '',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  squareCorners: false
 };
 
 export default Box;
