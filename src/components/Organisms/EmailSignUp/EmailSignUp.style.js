@@ -52,6 +52,9 @@ const Form = styled.form`
 
 const InputField = styled(Input)`
   width: 100%;
+  span {
+    color: ${({ theme }) => theme.color('white')};
+  }
 `;
 
 const Title = styled(Text)`

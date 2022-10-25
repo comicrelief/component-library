@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Select from '../../Atoms/Select/Select';
@@ -30,15 +30,29 @@ const EmailSignUp = ({
   backgroundColor,
   ...rest
 }) => {
-  const [value, setValue] = useState('');
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [age, setAge] = useState('');
-  const [next, setNext] = useState(false);
+  const [schoolsStep2, setSchoolsStep2] = useState(false);
 
   const handleSubmit = e => {
     // Just stopping weird things happening for now when the user submits with the enter key
     // rather than the Submit button
     e.preventDefault();
   };
+
+  const handleSubscribe = useCallback(
+    data => {
+      validate(data);
+      if (isSchools && !schoolsStep2) {
+        setSchoolsStep2(true);
+      } else {
+        subscribe(data);
+      }
+    },
+    [isSchools, schoolsStep2, subscribe, validate]
+  );
 
   const schoolsSelect = (
     <>
@@ -58,80 +72,83 @@ const EmailSignUp = ({
     </>
   );
 
-  const subscriptionSchoolsForm = (
+  const subscriptionForm = (
     <Form onSubmit={e => handleSubmit(e)}>
-      {!next && (
+      {(!isSchools || (isSchools && !schoolsStep2)) && (
         <>
+          <InputField
+            aria-label="First Name"
+            name="first-name"
+            id="first-name"
+            hasAria={false}
+            type="text"
+            errorMsg={errorMsg}
+            label="First Name"
+            placeholder="Lenny"
+            value={firstName}
+            onChange={event => setFirstName(event.target.value)}
+          />
+          <InputField
+            aria-label="Last Name"
+            name="last-name"
+            id="last-name"
+            hasAria={false}
+            type="text"
+            errorMsg={errorMsg}
+            label="Last Name"
+            placeholder="Henry"
+            value={lastName}
+            onChange={event => setLastName(event.target.value)}
+          />
           <InputField
             aria-label="Email address"
             name="email"
             id="email"
             hasAria={false}
-            showLabel={false}
             type="email"
             errorMsg={errorMsg}
-            label="email"
-            placeholder="example@youremail.com"
-            value={value}
-            onChange={event => setValue(event.target.value)}
+            label="Email Address"
+            placeholder="lenny@comicrelief.com"
+            value={email}
+            onChange={event => setEmail(event.target.value)}
           />
           <ButtonWrapper>
             <Button
               as="input"
               type="submit"
-              data-test="subscribe-button-school"
+              data-test={
+                isSchools ? 'subscribe-button-school' : 'subscribe-button'
+              }
               color={buttonColor}
-              onClick={() => validate({ email: value }) && setNext(true)}
+              onClick={() => handleSubscribe({ email, firstName, lastName })}
               value=" Subscribe"
             />
           </ButtonWrapper>
         </>
       )}
-      {next && (
+      {schoolsStep2 && (
         <>
           {schoolsSelect}
           <ButtonWrapper>
             <Button
               as="input"
               type="submit"
-              data-test="subscribe-button-school"
+              data-test={
+                isSchools ? 'subscribe-button-school' : 'subscribe-button'
+              }
               color={buttonColor}
-              onClick={() => validate({ email: value, age })
-                && subscribe({ email: `${value}`, age: `${age}` })
+              onClick={() => handleSubscribe({
+                email,
+                age,
+                firstName,
+                lastName
+              })
               }
               value=" Subscribe"
             />
           </ButtonWrapper>
         </>
       )}
-    </Form>
-  );
-
-  const subscriptionForm = (
-    <Form onSubmit={e => handleSubmit(e)}>
-      <InputField
-        aria-label="Email address"
-        name="email"
-        id="email"
-        hasAria={false}
-        showLabel={false}
-        type="email"
-        errorMsg={errorMsg}
-        label="email"
-        placeholder="example@youremail.com"
-        value={value}
-        onChange={event => setValue(event.target.value)}
-      />
-      <ButtonWrapper>
-        <Button
-          as="input"
-          data-test="subscribe-button"
-          type="submit"
-          color={buttonColor}
-          onClick={() => validate({ email: value }) && subscribe(value)}
-          value=" Subscribe"
-        />
-      </ButtonWrapper>
     </Form>
   );
 
@@ -144,31 +161,23 @@ const EmailSignUp = ({
       <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
-      {(!next || isSuccess) && (
+      {(!setSchoolsStep2 || isSuccess) && (
         <TopCopyWrapper>{isSuccess ? successCopy : topCopy}</TopCopyWrapper>
       )}
-      {!isSuccess && (isSchools ? subscriptionSchoolsForm : subscriptionForm)}
+      {!isSuccess && subscriptionForm}
       {privacyContainer}
     </ESUWrapper>
   );
 };
 
 EmailSignUp.propTypes = {
-  /** title */
   title: PropTypes.string.isRequired,
-  /** top copy */
   topCopy: PropTypes.node.isRequired,
-  /** displayed copy when subscription is successful */
   successCopy: PropTypes.node.isRequired,
-  /** boolean if true display successCopy */
   isSuccess: PropTypes.bool.isRequired,
-  /** boolean if true display schools dropdown */
   isSchools: PropTypes.bool,
-  /** email error message */
   errorMsg: PropTypes.string.isRequired,
-  /** privacy copy */
   privacyCopy: PropTypes.node.isRequired,
-  /** privacy copy */
   schoolsCopy: PropTypes.node,
   selectItems: PropTypes.PropTypes.arrayOf(
     PropTypes.shape({
@@ -176,13 +185,9 @@ EmailSignUp.propTypes = {
       displayValue: PropTypes.string.isRequired
     })
   ),
-  /** subscription function */
   subscribe: PropTypes.func.isRequired,
-  /** validation function */
   validate: PropTypes.func.isRequired,
-  /** background color */
   backgroundColor: PropTypes.string,
-  /** button color */
   buttonColor: PropTypes.string
 };
 
