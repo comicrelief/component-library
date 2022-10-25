@@ -9,7 +9,7 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   height: 100%;
-  border-radius: ${props => (props.squareCorners ? '0' : '1rem')};
+  border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
@@ -33,10 +33,10 @@ const Card = ({
   height,
   width,
   children,
-  squareCorners,
+  squaredCorners,
   ...rest
 }) => (
-  <Container backgroundColor={backgroundColor} squareCorners={squareCorners} {...rest}>
+  <Container backgroundColor={backgroundColor} squaredCorners={squaredCorners} {...rest}>
     {imageLow ? (
       <Image>
         <Picture
@@ -63,7 +63,7 @@ Card.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  squareCorners: PropTypes.bool
+  squaredCorners: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -75,7 +75,7 @@ Card.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  squareCorners: false
+  squaredCorners: false
 };
 
 export default Card;
