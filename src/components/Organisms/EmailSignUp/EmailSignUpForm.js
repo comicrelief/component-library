@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import Text from '../../Atoms/Text/Text';
 
 import { EmailSignUp, buildEsuValidationSchema, FIELDS } from './_EmailSignUp';
 
@@ -28,9 +27,6 @@ const EmailSignUpForm = () => {
 
   return (
     <>
-      <Text tag="p" weight="bold">
-        Our default instance:
-      </Text>
       <FormProvider {...formMethods}>
         <form onSubmit={handleSubmit(handleSubscribe)} noValidate>
           <EmailSignUp

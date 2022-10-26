@@ -9,7 +9,8 @@ import {
   PrivacyCopyWrapper,
   InputField,
   ButtonWrapper,
-  Title
+  Title,
+  NameWrapper
 } from './EmailSignUp.style';
 import { Button } from '../Membership/Membership.style';
 import Text from '../../Atoms/Text/Text';
@@ -35,22 +36,24 @@ const EmailSignUp = ({
       <Text>{topCopy}</Text>
     </TopCopyWrapper>
     <FormInner>
-      <InputField
-        fieldName={FIELDS.FIRST_NAME}
-        id="first-name"
-        type="text"
-        label="First Name"
-        placeholder="Lenny"
-        formContext={formContext}
-      />
-      <InputField
-        fieldName={FIELDS.LAST_NAME}
-        id="last-name"
-        type="text"
-        label="Last Name"
-        placeholder="Henry"
-        formContext={formContext}
-      />
+      <NameWrapper>
+        <InputField
+          fieldName={FIELDS.FIRST_NAME}
+          id="first-name"
+          type="text"
+          label="First Name"
+          placeholder="Lenny"
+          formContext={formContext}
+        />
+        <InputField
+          fieldName={FIELDS.LAST_NAME}
+          id="last-name"
+          type="text"
+          label="Last Name"
+          placeholder="Henry"
+          formContext={formContext}
+        />
+      </NameWrapper>
       <InputField
         fieldName={FIELDS.EMAIL}
         id="email"

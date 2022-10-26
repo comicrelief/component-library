@@ -35,6 +35,7 @@ const PrivacyCopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${spacing('md')};
+
   p {
     font-size: ${({ theme }) => theme.fontSize('s')};
     line-height: ${({ theme }) => theme.fontSize('xl')};
@@ -51,8 +52,21 @@ const FormInner = styled.div`
   margin: ${spacing('md')} 0;
 `;
 
+const NameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    justify-content: start;
+    flex-direction: row;
+    gap: ${spacing('md')};
+  }
+`;
+
 const InputField = styled(TextInput)`
   width: 100%;
+  max-width: 290px;
   margin-bottom: ${spacing('md')};
 
   & > span:first-child {
@@ -71,5 +85,6 @@ export {
   ButtonWrapper,
   FormInner,
   InputField,
+  NameWrapper,
   Title
 };
