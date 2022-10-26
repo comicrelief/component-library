@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import Input from '../../Atoms/Input/Input';
+import TextInput from './_TextInput';
 import Text from '../../Atoms/Text/Text';
 
 const ESUWrapper = styled.div`
@@ -10,6 +10,7 @@ const ESUWrapper = styled.div`
   font-size: ${({ theme }) => theme.fontSize('s')};
   color: ${({ theme }) => theme.color('white')};
   background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  padding: ${spacing('m')};
 `;
 
 const TopCopyWrapper = styled.div`
@@ -44,15 +45,17 @@ const PrivacyCopyWrapper = styled.div`
   }
 `;
 
-const Form = styled.form`
+const FormInner = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${spacing('md')} 0;
 `;
 
-const InputField = styled(Input)`
+const InputField = styled(TextInput)`
   width: 100%;
-  span {
+  margin-bottom: ${spacing('md')};
+
+  & > span:first-child {
     color: ${({ theme }) => theme.color('white')};
   }
 `;
@@ -66,7 +69,7 @@ export {
   TopCopyWrapper,
   PrivacyCopyWrapper,
   ButtonWrapper,
-  Form,
+  FormInner,
   InputField,
   Title
 };
