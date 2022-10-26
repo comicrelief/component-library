@@ -271,6 +271,9 @@ exports[`renders correctly 1`] = `
       size="s"
     >
       Subtitle
+      <p>
+        non
+      </p>
     </span>
     <p
       className="c8"
