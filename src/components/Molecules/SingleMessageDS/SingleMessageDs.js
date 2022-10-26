@@ -27,6 +27,7 @@ const SingleMessageDs = ({
   target,
   linkIcon,
   youTubeId,
+  myShortTextField,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,6 +133,7 @@ const SingleMessageDs = ({
       >
         <Subtitle color={ctaBgColor} size="s" weight="bold" family="Montserrat">
           {subtitle}
+          <p>{myShortTextField}</p>
         </Subtitle>
         {children}
         {link && (
@@ -187,7 +189,8 @@ SingleMessageDs.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
   linkIcon: PropTypes.node,
-  youTubeId: PropTypes.string
+  youTubeId: PropTypes.string,
+  myShortTextField: PropTypes.string
 };
 
 SingleMessageDs.defaultProps = {
@@ -203,7 +206,8 @@ SingleMessageDs.defaultProps = {
   width: '100%',
   height: '100%',
   linkIcon: null,
-  youTubeId: null
+  youTubeId: null,
+  myShortTextField: 'non'
 };
 
 export default SingleMessageDs;
