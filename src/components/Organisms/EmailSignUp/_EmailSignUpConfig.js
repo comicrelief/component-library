@@ -3,8 +3,7 @@ import * as yup from 'yup';
 const FIELDS = {
   FIRST_NAME: 'firstName',
   LAST_NAME: 'lastName',
-  EMAIL: 'email',
-  AGE: 'age'
+  EMAIL: 'email'
 };
 
 const validationSchema = yup.object({
