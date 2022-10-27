@@ -1,4 +1,4 @@
-EmailSignUp
+# Email SignUp Form
 
 
 ```js

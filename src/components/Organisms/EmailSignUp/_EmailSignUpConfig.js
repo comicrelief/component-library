@@ -7,7 +7,7 @@ const FIELDS = {
   AGE: 'age'
 };
 
-const buildEsuValidationSchema = isSchools => yup.object({
+const validationSchema = yup.object({
   [FIELDS.FIRST_NAME]: yup
     .string()
     .required('Please enter your first name')
@@ -28,10 +28,7 @@ const buildEsuValidationSchema = isSchools => yup.object({
     .string()
     .required('Please enter your email address')
     .email('Please enter a valid email address')
-    .max(100, 'Your email address must be between 1 and 100 characters long'),
-  [FIELDS.AGE]: isSchools
-    ? yup.string().required('Please make a selection.')
-    : yup.string().notRequired()
+    .max(100, 'Your email address must be between 1 and 100 characters long')
 });
 
-export { FIELDS, buildEsuValidationSchema };
+export { FIELDS, validationSchema };
