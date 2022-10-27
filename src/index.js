@@ -47,7 +47,6 @@ export { default as SearchResult } from './components/Molecules/SearchResult/Sea
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';
 export { default as VideoBanner } from './components/Molecules/VideoBanner/VideoBanner';
-export { default as HeaderEsuWithIcon } from './components/Molecules/HeaderEsuWithIcon/_HeaderEsuWithIcon';
 export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
