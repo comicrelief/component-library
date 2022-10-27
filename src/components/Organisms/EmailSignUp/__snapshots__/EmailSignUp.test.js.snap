@@ -1,308 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders ESU School correctly 1`] = `
-.c1 {
-  font-size: 3rem;
-  line-height: 3rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
-}
-
-.c5 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c8 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  font-weight: 400;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-  width: 100%;
-}
-
-.c6 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.c7 {
-  width: 100%;
-  font-size: 1.25rem;
-  display: block;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  padding-right: 4rem;
-  margin: 0;
-  position: relative;
-  height: 48px;
-  font-weight: 400;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
-  border: 1px solid;
-  border-color: #E1E2E3;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #000000;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.c7:focus {
-  border: 1px solid #666;
-}
-
-.c12 {
-  text-align: left;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 1rem;
-  color: #FFFFFF;
-  background-color: #2C0230;
-}
-
-.c9 {
-  margin-top: 1rem;
-}
-
-.c9 input {
-  text-align: center;
-  width: 100%;
-  font-size: 1rem;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-
-.c11 p {
-  font-size: 1rem;
-  line-height: 2rem;
-}
-
-.c11 p a {
-  font-size: 1rem;
-  color: #FFFFFF;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 1rem 0;
-}
-
-.c2 {
-  margin-bottom: 1.5rem;
-}
-
-.c10 {
-  width: 100%;
-  color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 1rem 0.5rem;
-  background: #4ECDBE;
-  border: none;
-  border-radius: 100px;
-}
-
-.c10:active,
-.c10:focus,
-.c10:hover {
-  background-color: #961D35;
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-  .c7 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
-  .c9 input {
-    font-size: 1.25rem;
-    max-width: 180px;
-  }
-}
-
-@media (min-width:1024px) {
-  .c10 {
-    width: auto;
-    padding: 1rem 2rem;
-    margin: 0 auto 2rem;
-  }
-}
-
-<div
-  className="c0"
->
-  <h2
-    className="c1 c2"
-    color="inherit"
-    size="xxl"
-  >
-    sign up letter
-  </h2>
-  <form
-    className="c3"
-    onSubmit={[Function]}
-  >
-    <label
-      className="c4"
-    >
-      <span
-        className="c5 c6"
-        color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Please choose an option",
-          }
-        }
-        size="s"
-      />
-      <select
-        className="c7"
-        defaultValue=""
-        onChange={[Function]}
-        placeholder="Please choose an option"
-        required={true}
-        value=""
-      >
-        <option
-          disabled={true}
-          value=""
-        >
-          Please choose an option
-        </option>
-        <option
-          value=""
-        >
-          -- Select age group --
-        </option>
-        <option
-          value="Option one"
-        >
-          The first option
-        </option>
-        <option
-          value="Option two"
-        >
-          The second option
-        </option>
-        <option
-          value="Option three"
-        >
-          The third option
-        </option>
-        <option
-          value="Option four"
-        >
-          The fourth option
-        </option>
-      </select>
-      
-    </label>
-    <p
-      className="c8"
-      color="inherit"
-      size="m"
-    >
-      Now please select your teaching group so you get the right updates.
-    </p>
-    <div
-      className="c9"
-    >
-      <input
-        className="c10"
-        color="teal"
-        data-test="subscribe-button-school"
-        onClick={[Function]}
-        type="submit"
-        value=" Subscribe"
-      />
-    </div>
-  </form>
-  <div
-    className="c11"
-  >
-    <div
-      className="c12"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
 exports[`renders correctly 1`] = `
 .c1 {
   font-size: 3rem;
@@ -316,7 +13,7 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-.c8 {
+.c4 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -324,7 +21,62 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c6 {
+.c10 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c15 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:hover {
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c15 (min-width:1024px) {
+  width: auto;
+  padding: 1rem 2rem;
+  margin: 0 auto 2rem;
+}
+
+.c8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -337,22 +89,11 @@ exports[`renders correctly 1`] = `
   width: 100%;
 }
 
-.c9 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+.c11 {
+  margin-bottom: 0.5rem;
 }
 
-.c11 {
+.c13 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -372,17 +113,22 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c11:focus {
+.c13:focus {
   border: 1px solid #666;
 }
 
-.c10 {
+.c12 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c4 {
+.c5 {
   text-align: left;
+}
+
+.c16:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
 }
 
 .c0 {
@@ -396,6 +142,7 @@ exports[`renders correctly 1`] = `
   font-size: 1rem;
   color: #FFFFFF;
   background-color: #2C0230;
+  padding: 1.5rem;
 }
 
 .c3 {
@@ -406,17 +153,17 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c12 {
+.c14 {
   margin-top: 1rem;
 }
 
-.c12 input {
+.c14 input {
   text-align: center;
   width: 100%;
   font-size: 1rem;
 }
 
-.c14 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,17 +174,17 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c14 p {
+.c17 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c14 p a {
+.c17 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -449,134 +196,234 @@ exports[`renders correctly 1`] = `
 }
 
 .c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.c9 {
   width: 100%;
+  max-width: 290px;
+  margin-bottom: 1rem;
+}
+
+.c9 > span:first-child {
+  color: #FFFFFF;
 }
 
 .c2 {
   margin-bottom: 1.5rem;
 }
 
-.c13 {
-  width: 100%;
-  color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 1rem 0.5rem;
-  background: #4ECDBE;
-  border: none;
-  border-radius: 100px;
-}
-
-.c13:active,
-.c13:focus,
-.c13:hover {
-  background-color: #961D35;
+@media (min-width:740px) {
+  .c15 {
+    width: auto;
+  }
 }
 
 @media (min-width:740px) {
-  .c11 {
+  .c13 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c12 input {
+  .c14 input {
     font-size: 1.25rem;
     max-width: 180px;
   }
 }
 
 @media (min-width:1024px) {
-  .c13 {
-    width: auto;
-    padding: 1rem 2rem;
-    margin: 0 auto 2rem;
+  .c7 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 
-<div
-  className="c0"
+<form
+  noValidate={true}
+  onSubmit={[Function]}
 >
-  <h2
-    className="c1 c2"
-    color="inherit"
-    size="xxl"
-  >
-    sign up letter
-  </h2>
   <div
-    className="c3"
+    className="c0"
   >
+    <h2
+      className="c1 c2"
+      color="inherit"
+      size="xxl"
+    >
+      sign up letter
+    </h2>
     <div
-      className="c4"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-        }
-      }
-    />
-  </div>
-  <form
-    className="c5"
-    onSubmit={[Function]}
-  >
-    <label
-      className="c6 c7"
-      htmlFor="email"
+      className="c3"
     >
       <span
-        className="c8 c9"
+        className="c4"
         color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "email",
-          }
-        }
         size="s"
-      />
-      <div
-        className="c10"
       >
-        
-        <input
-          aria-label="Email address"
-          className="c11"
-          id="email"
-          name="email"
-          onChange={[Function]}
-          placeholder="example@youremail.com"
-          required={false}
-          type="email"
-          value=""
+        <div
+          className="c5"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+            }
+          }
         />
-      </div>
-      
-    </label>
-    <div
-      className="c12"
-    >
-      <input
-        className="c13"
-        color="teal"
-        data-test="subscribe-button"
-        onClick={[Function]}
-        type="submit"
-        value=" Subscribe"
-      />
+      </span>
     </div>
-  </form>
-  <div
-    className="c14"
-  >
     <div
-      className="c4"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-        }
-      }
-    />
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <label
+          className="c8 c9"
+          htmlFor="first-name"
+        >
+          <span
+            className="c10 c11"
+            color="inherit"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "First Name",
+              }
+            }
+            size="s"
+          />
+          <div
+            className="c12"
+          >
+            
+            <input
+              aria-describedby="first-name"
+              aria-required={true}
+              className="c13"
+              id="first-name"
+              name="firstName"
+              placeholder="Enter your first name"
+              required={false}
+              type="text"
+            />
+          </div>
+          
+        </label>
+        <label
+          className="c8 c9"
+          htmlFor="last-name"
+        >
+          <span
+            className="c10 c11"
+            color="inherit"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Last Name",
+              }
+            }
+            size="s"
+          />
+          <div
+            className="c12"
+          >
+            
+            <input
+              aria-describedby="last-name"
+              aria-required={true}
+              className="c13"
+              id="last-name"
+              name="lastName"
+              placeholder="Enter your last name"
+              required={false}
+              type="text"
+            />
+          </div>
+          
+        </label>
+      </div>
+      <label
+        className="c8 c9"
+        htmlFor="email"
+      >
+        <span
+          className="c10 c11"
+          color="inherit"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Email Address",
+            }
+          }
+          size="s"
+        />
+        <div
+          className="c12"
+        >
+          
+          <input
+            aria-describedby="email"
+            aria-required={true}
+            className="c13"
+            id="email"
+            name="email"
+            placeholder="example@youremail.com"
+            required={false}
+            type="email"
+          />
+        </div>
+        
+      </label>
+      <div
+        className="c14"
+      >
+        <button
+          className="c15 c16"
+          data-test="subscribe-button"
+          disabled={false}
+          type="submit"
+        >
+          <span
+            className="c4"
+            color="inherit"
+            size="s"
+          >
+            Subscribe
+          </span>
+          <div
+            className="ButtonWithStates__LoaderContainer-sc-7gb81g-1"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="c17"
+    >
+      <span
+        className="c4"
+        color="inherit"
+        size="s"
+      >
+        <div
+          className="c5"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
+            }
+          }
+        />
+      </span>
+    </div>
   </div>
-</div>
+</form>
 `;

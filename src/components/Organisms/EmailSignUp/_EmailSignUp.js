@@ -16,6 +16,7 @@ import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 import Text from '../../Atoms/Text/Text';
 import { validationSchema, FIELDS } from './_EmailSignUpConfig';
 import ErrorText from '../../Atoms/ErrorText/ErrorText';
+import Confetti from './_Confetti';
 
 const EmailSignUp = ({
   title,
@@ -43,9 +44,12 @@ const EmailSignUp = ({
         </TopCopyWrapper>
       ) : (
         isSubmitSuccessful && (
-          <TopCopyWrapper>
-            <Text>{successCopy}</Text>
-          </TopCopyWrapper>
+          <>
+            <Confetti trigger={isSubmitSuccessful} />
+            <TopCopyWrapper>
+              <Text>{successCopy}</Text>
+            </TopCopyWrapper>
+          </>
         )
       )}
       {!isSubmitSuccessful && (

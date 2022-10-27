@@ -9,7 +9,7 @@ const EmailSignUpForm = () => {
     mode: 'onBlur',
     resolver: yupResolver(validationSchema)
   });
-  const { handleSubmit, trigger, setError } = formMethods;
+  const { handleSubmit, trigger } = formMethods;
 
   async function handleSubscribe(data) {
     const valid = await trigger([
@@ -19,7 +19,7 @@ const EmailSignUpForm = () => {
     ]);
     if (valid) {
       console.log(data);
-      setError('formError', { message: 'Issue, innit', type: 'custom ' });
+      // setError('formError', { message: 'Issue, innit', type: 'custom ' });
     }
   }
 
@@ -37,5 +37,4 @@ const EmailSignUpForm = () => {
     </FormProvider>
   );
 };
-
 export default EmailSignUpForm;
