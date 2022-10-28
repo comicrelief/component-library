@@ -1,18 +1,18 @@
-import React from 'react';
-import { useForm, FormProvider } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import RichText from '../../Atoms/RichText/RichText';
+import React from "react";
+import { useForm, FormProvider } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import RichText from "../../Atoms/RichText/RichText";
 import {
   EmailSignUp,
   buildEsuValidationSchema,
-  ESU_FIELDS
-} from './_EmailSignUp';
+  ESU_FIELDS,
+} from "./_EmailSignUp";
 
 const EmailSignUpForm = () => {
   const validationSchema = buildEsuValidationSchema({});
   const formMethods = useForm({
-    mode: 'onBlur',
-    resolver: yupResolver(validationSchema)
+    mode: "onBlur",
+    resolver: yupResolver(validationSchema),
   });
   const { handleSubmit, trigger } = formMethods;
 
@@ -20,13 +20,13 @@ const EmailSignUpForm = () => {
     const valid = await trigger([
       ESU_FIELDS.EMAIL,
       ESU_FIELDS.FIRST_NAME,
-      ESU_FIELDS.LAST_NAME
+      ESU_FIELDS.LAST_NAME,
     ]);
     if (valid) {
       console.log(data);
     }
   }
-  const title = 'Stay in the know!';
+  const title = "Stay in the know!";
   const topCopy = (
     <RichText
       markup={"<p>Get regular email updates and info on what we're up to!</p>"}
@@ -51,6 +51,7 @@ const EmailSignUpForm = () => {
           topCopy={topCopy}
           successCopy={successCopy}
           privacyCopy={privacyCopy}
+          formContext={formMethods}
         />
       </form>
     </FormProvider>
