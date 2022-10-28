@@ -22,7 +22,8 @@ const EmailSignUp = ({
   topCopy,
   successCopy,
   privacyCopy,
-  backgroundColor,
+  backgroundColour,
+  buttonColour,
   formContext,
   ...rest
 }) => {
@@ -37,7 +38,7 @@ const EmailSignUp = ({
   } = formContext;
 
   return (
-    <ESUWrapper backgroundColor={backgroundColor} {...rest}>
+    <ESUWrapper backgroundColour={backgroundColour} {...rest}>
       <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
@@ -83,7 +84,7 @@ const EmailSignUp = ({
             placeholder="example@youremail.com"
             formContext={formContext}
           />
-          <ButtonWrapper>
+          <ButtonWrapper buttonColour={buttonColour}>
             <ButtonWithStates
               type="submit"
               disabled={!isValid || isSubmitting}
@@ -121,12 +122,14 @@ EmailSignUp.propTypes = {
   topCopy: PropTypes.node.isRequired,
   successCopy: PropTypes.node.isRequired,
   privacyCopy: PropTypes.node.isRequired,
-  backgroundColor: PropTypes.string,
+  backgroundColour: PropTypes.string,
+  buttonColour: PropTypes.string,
   formContext: PropTypes.shape().isRequired
 };
 
 EmailSignUp.defaultProps = {
-  backgroundColor: 'deep_violet_dark'
+  backgroundColour: 'deep_violet_dark',
+  buttonColour: 'blue_light'
 };
 
 export { EmailSignUp, buildEsuValidationSchema, ESU_FIELDS };

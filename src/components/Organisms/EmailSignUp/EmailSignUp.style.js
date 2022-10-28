@@ -9,7 +9,7 @@ const ESUWrapper = styled.div`
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
   color: ${({ theme }) => theme.color('white')};
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
   padding: ${spacing('m')};
 `;
 
@@ -20,14 +20,8 @@ const TopCopyWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   margin-top: ${spacing('md')};
-  input {
-    text-align: center;
-    width: 100%;
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      font-size: ${({ theme }) => theme.fontSize('m')};
-      max-width: 180px;
-    }
+  button {
+    background-color: ${({ theme, buttonColour }) => theme.color(buttonColour)};
   }
 `;
 
