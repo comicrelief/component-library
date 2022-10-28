@@ -2,9 +2,14 @@ import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import RichText from '../../Atoms/RichText/RichText';
-import { EmailSignUp, validationSchema, FIELDS } from './_EmailSignUp';
+import {
+  EmailSignUp,
+  buildEsuValidationSchema,
+  ESU_FIELDS
+} from './_EmailSignUp';
 
 const EmailSignUpForm = () => {
+  const validationSchema = buildEsuValidationSchema({});
   const formMethods = useForm({
     mode: 'onBlur',
     resolver: yupResolver(validationSchema)
@@ -13,13 +18,12 @@ const EmailSignUpForm = () => {
 
   async function handleSubscribe(data) {
     const valid = await trigger([
-      FIELDS.EMAIL,
-      FIELDS.FIRST_NAME,
-      FIELDS.LAST_NAME
+      ESU_FIELDS.EMAIL,
+      ESU_FIELDS.FIRST_NAME,
+      ESU_FIELDS.LAST_NAME
     ]);
     if (valid) {
       console.log(data);
-      // setError('formError', { message: 'Issue, innit', type: 'custom ' });
     }
   }
   const title = 'Stay in the know!';

@@ -14,7 +14,7 @@ import {
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
 import Text from '../../Atoms/Text/Text';
-import { validationSchema, FIELDS } from './_EmailSignUpConfig';
+import { buildEsuValidationSchema, ESU_FIELDS } from './_EmailSignUpConfig';
 import ErrorText from '../../Atoms/ErrorText/ErrorText';
 import Confetti from './_Confetti';
 
@@ -29,7 +29,11 @@ const EmailSignUp = ({
   const formContext = useFormContext();
   const {
     formState: {
-      isValid, isSubmitting, isSubmitted, isSubmitSuccessful
+      isValid,
+      isSubmitting,
+      isSubmitted,
+      isSubmitSuccessful,
+      errors
     }
   } = formContext;
 
@@ -56,7 +60,7 @@ const EmailSignUp = ({
         <FormInner>
           <NameWrapper>
             <InputField
-              fieldName={FIELDS.FIRST_NAME}
+              fieldName={ESU_FIELDS.FIRST_NAME}
               id="first-name"
               type="text"
               label="First Name"
@@ -64,7 +68,7 @@ const EmailSignUp = ({
               formContext={formContext}
             />
             <InputField
-              fieldName={FIELDS.LAST_NAME}
+              fieldName={ESU_FIELDS.LAST_NAME}
               id="last-name"
               type="text"
               label="Last Name"
@@ -73,7 +77,7 @@ const EmailSignUp = ({
             />
           </NameWrapper>
           <InputField
-            fieldName={FIELDS.EMAIL}
+            fieldName={ESU_FIELDS.EMAIL}
             id="email"
             type="email"
             label="Email Address"
@@ -94,10 +98,13 @@ const EmailSignUp = ({
         </FormInner>
       )}
       {isSubmitted && !isSubmitSuccessful && (
-        <ErrorText>
-          Sorry, there was a problem submitting the form. Please try again.
-        </ErrorText>
+        <>
+          {Object.values(errors).map(error => (
+            <ErrorText>{error.message}</ErrorText>
+          ))}
+        </>
       )}
+
       <PrivacyCopyWrapper>
         <Text>{privacyCopy}</Text>
       </PrivacyCopyWrapper>
@@ -117,4 +124,4 @@ EmailSignUp.defaultProps = {
   backgroundColor: 'deep_violet_dark'
 };
 
-export { EmailSignUp, validationSchema, FIELDS };
+export { EmailSignUp, buildEsuValidationSchema, ESU_FIELDS };
