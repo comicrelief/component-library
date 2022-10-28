@@ -28,7 +28,6 @@ const DummyForm = () => {
           topCopy={<RichText markup={top} />}
           successCopy={<RichText markup={success} />}
           privacyCopy={<RichText markup={privacy} />}
-          formContext={formMethods}
         />
       </form>
     </FormProvider>

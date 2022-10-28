@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
 import {
   ESUWrapper,
   TopCopyWrapper,
@@ -23,9 +24,9 @@ const EmailSignUp = ({
   successCopy,
   privacyCopy,
   backgroundColor,
-  formContext,
   ...rest
 }) => {
+  const formContext = useFormContext();
   const {
     formState: {
       isValid,
@@ -121,8 +122,7 @@ EmailSignUp.propTypes = {
   topCopy: PropTypes.node.isRequired,
   successCopy: PropTypes.node.isRequired,
   privacyCopy: PropTypes.node.isRequired,
-  backgroundColor: PropTypes.string,
-  formContext: PropTypes.shape().isRequired
+  backgroundColor: PropTypes.string
 };
 
 EmailSignUp.defaultProps = {
