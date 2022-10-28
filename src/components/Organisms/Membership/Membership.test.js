@@ -126,6 +126,39 @@ it("renders correctly", () => {
       font-size: 1.25rem;
     }
 
+    .c15 {
+      display: block;
+    }
+
+    .c15 input {
+      border: 2px solid #E1E2E3;
+      font-size: 1.5rem;
+      font-weight: 800;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
+      height: auto;
+    }
+
+    .c20 {
+      display: block;
+    }
+
+    .c20 input {
+      border: 2px solid #E1E2E3;
+      font-size: 1.5rem;
+      font-weight: 800;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
+      height: auto;
+      border-color: #E52630;
+      background-color: #E52630;
+      color: #FFFFFF;
+    }
+
     .c0 {
       background-color: #FEE3CC;
       position: relative;
@@ -295,39 +328,6 @@ it("renders correctly", () => {
     .c25:focus,
     .c25:hover {
       background-color: #961D35;
-    }
-
-    .c15 {
-      display: block;
-    }
-
-    .c15 input {
-      border: 2px solid #E1E2E3;
-      font-size: 1.5rem;
-      font-weight: 800;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
-      letter-spacing: -2px;
-      height: auto;
-    }
-
-    .c20 {
-      display: block;
-    }
-
-    .c20 input {
-      border: 2px solid #E1E2E3;
-      font-size: 1.5rem;
-      font-weight: 800;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
-      letter-spacing: -2px;
-      height: auto;
-      border-color: #E52630;
-      background-color: #E52630;
-      color: #FFFFFF;
     }
 
     @media (min-width:740px) {
