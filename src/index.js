@@ -63,8 +63,8 @@ export { default as SimpleSchoolLookup } from './components/Molecules/SimpleScho
 /* Organisms */
 export {
   EmailSignUp,
-  validationSchema as esuValidationSchema,
-  FIELDS as ESU_FIELDS
+  buildEsuValidationSchema,
+  ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
