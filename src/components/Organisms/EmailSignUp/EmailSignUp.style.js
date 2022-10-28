@@ -66,11 +66,14 @@ const NameWrapper = styled.div`
 
 const InputField = styled(TextInput)`
   width: 100%;
-  max-width: 290px;
   margin-bottom: ${spacing('md')};
 
   & > span:first-child {
     color: ${({ theme }) => theme.color('white')};
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    max-width: 290px;
   }
 `;
 
