@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
 
+// TODO: This is a copy paste of the RHF friendly `TextInput` from Marketing Prefs.
+// Perhaps it would be worthwhile refactoring this into a new `Atom` as a seperate PR.
 const TextInput = ({
   fieldName,
   label,
