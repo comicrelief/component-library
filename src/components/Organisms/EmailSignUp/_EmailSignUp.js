@@ -129,7 +129,7 @@ EmailSignUp.propTypes = {
 
 EmailSignUp.defaultProps = {
   backgroundColour: 'deep_violet_dark',
-  buttonColour: 'blue_light'
+  buttonColour: 'red'
 };
 
 export { EmailSignUp, buildEsuValidationSchema, ESU_FIELDS };
