@@ -208,7 +208,6 @@ exports[`renders correctly 1`] = `
 
 .c9 {
   width: 100%;
-  max-width: 290px;
   margin-bottom: 1rem;
 }
 
@@ -249,6 +248,12 @@ exports[`renders correctly 1`] = `
     -ms-flex-direction: row;
     flex-direction: row;
     gap: 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    max-width: 290px;
   }
 }
 
