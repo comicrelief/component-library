@@ -22,7 +22,7 @@ const Image = styled.div`
   height: auto;
   flex-basis: calc(100% / 3);
   img {
-    border-radius: ${props => (props.squareCorners ? '0' : '1rem')};
+    border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
     overflow: hidden;
   }
 `;
@@ -51,12 +51,12 @@ const Box = ({
   height,
   width,
   children,
-  squareCorners,
+  squaredCorners,
   ...rest
 }) => (
   <Container {...rest}>
     {imageLow ? (
-      <Image squareCorners={squareCorners}>
+      <Image squaredCorners={squaredCorners}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -64,7 +64,7 @@ const Box = ({
           image={image}
           width={width}
           height="auto"
-          squareCorners={squareCorners}
+          squaredCorners={squaredCorners}
         />
       </Image>
     ) : null}
@@ -80,7 +80,7 @@ Box.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  squareCorners: PropTypes.bool
+  squaredCorners: PropTypes.bool
 };
 
 Box.defaultProps = {
@@ -91,7 +91,7 @@ Box.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  squareCorners: false
+  squaredCorners: false
 };
 
 export default Box;
