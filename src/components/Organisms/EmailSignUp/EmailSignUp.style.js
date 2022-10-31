@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import Input from '../../Atoms/Input/Input';
+import TextInput from './_TextInput';
 import Text from '../../Atoms/Text/Text';
 
 const ESUWrapper = styled.div`
@@ -9,7 +9,8 @@ const ESUWrapper = styled.div`
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
   color: ${({ theme }) => theme.color('white')};
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
+  padding: ${spacing('m')};
 `;
 
 const TopCopyWrapper = styled.div`
@@ -19,14 +20,8 @@ const TopCopyWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   margin-top: ${spacing('md')};
-  input {
-    text-align: center;
-    width: 100%;
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      font-size: ${({ theme }) => theme.fontSize('m')};
-      max-width: 180px;
-    }
+  button {
+    background-color: ${({ theme, buttonColour }) => theme.color(buttonColour)};
   }
 `;
 
@@ -34,6 +29,7 @@ const PrivacyCopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${spacing('md')};
+
   p {
     font-size: ${({ theme }) => theme.fontSize('s')};
     line-height: ${({ theme }) => theme.fontSize('xl')};
@@ -44,14 +40,37 @@ const PrivacyCopyWrapper = styled.div`
   }
 `;
 
-const Form = styled.form`
+const FormInner = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${spacing('md')} 0;
 `;
 
-const InputField = styled(Input)`
+const NameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    justify-content: start;
+    flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
+    gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
+)}; 
+
+  }
+`;
+
+const InputField = styled(TextInput)`
   width: 100%;
+  margin-bottom: ${spacing('md')};
+
+  & > span:first-child {
+    color: ${({ theme }) => theme.color('white')};
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    max-width: 290px;
+  }
 `;
 
 const Title = styled(Text)`
@@ -63,7 +82,8 @@ export {
   TopCopyWrapper,
   PrivacyCopyWrapper,
   ButtonWrapper,
-  Form,
+  FormInner,
   InputField,
+  NameWrapper,
   Title
 };

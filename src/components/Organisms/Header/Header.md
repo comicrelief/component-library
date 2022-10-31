@@ -36,12 +36,11 @@ import Link from '../../Atoms/Link/Link';
 />;
 ```
 
-# Comic Relief header with Search and ESU
+# Comic Relief header with Search
 
 ```js
 import data from './data/data';
 import Link from '../../Atoms/Link/Link';
-import HeaderEsuWithIcon from '../../Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
 import searchIcon from './assets/icon--search.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import RichText from '../../Atoms/RichText/RichText';
@@ -86,17 +85,6 @@ const [success, setSuccess] = React.useState(false);
           tabIndex="0"
         />
       </div>
-
-      <HeaderEsuWithIcon
-        title={title}
-        topCopy={topCopy}
-        privacyCopy={privacyCopy}
-        successCopy={successCopy}
-        isSuccess={success}
-        privacyCopy={privacyCopy}
-        errorMsg=""
-        subscribe={() => setSuccess(!success)}
-      />
     </>
   }
 />;
