@@ -52,6 +52,7 @@ const EmailSignUpForm = () => {
           successCopy={successCopy}
           privacyCopy={privacyCopy}
           formContext={formMethods}
+          columnLayout
         />
       </form>
     </FormProvider>

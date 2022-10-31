@@ -25,6 +25,7 @@ const EmailSignUp = ({
   backgroundColour,
   buttonColour,
   formContext,
+  columnLayout,
   ...rest
 }) => {
   const {
@@ -58,7 +59,7 @@ const EmailSignUp = ({
       )}
       {!isSubmitSuccessful && (
         <FormInner>
-          <NameWrapper>
+          <NameWrapper columnLayout={columnLayout}>
             <InputField
               fieldName={ESU_FIELDS.FIRST_NAME}
               id="first-name"
@@ -124,12 +125,14 @@ EmailSignUp.propTypes = {
   privacyCopy: PropTypes.node.isRequired,
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
-  formContext: PropTypes.shape().isRequired
+  formContext: PropTypes.shape().isRequired,
+  columnLayout: PropTypes.bool
 };
 
 EmailSignUp.defaultProps = {
   backgroundColour: 'deep_violet_dark',
-  buttonColour: 'red'
+  buttonColour: 'red',
+  columnLayout: false
 };
 
 export { EmailSignUp, buildEsuValidationSchema, ESU_FIELDS };
