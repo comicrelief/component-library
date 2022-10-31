@@ -367,7 +367,7 @@ exports[`Monthly donation renders correctly 1`] = `
   background: #BECCF9;
 }
 
-.c8 #give-monthly:checked ~ .c11 {
+.c8 .give-monthly:checked ~ .c11 {
   left: calc(50% - 2px);
 }
 
@@ -415,6 +415,8 @@ exports[`Monthly donation renders correctly 1`] = `
   transition: color 0.15s ease-out;
   z-index: 2;
   cursor: default;
+  border-radius: 2rem;
+  color: #FFFFFF;
 }
 
 .c9:active:focus {
@@ -425,16 +427,6 @@ exports[`Monthly donation renders correctly 1`] = `
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
-}
-
-.c9[for='give-once'] {
-  border-radius: 2rem;
-  color: #FFFFFF;
-}
-
-.c9[for='give-monthly'] {
-  border-radius: 2rem;
-  color: #FFFFFF;
 }
 
 .c10 {
@@ -462,6 +454,8 @@ exports[`Monthly donation renders correctly 1`] = `
   transition: color 0.15s ease-out;
   z-index: 2;
   cursor: pointer;
+  border-radius: 2rem;
+  color: #000000;
 }
 
 .c10:active:focus {
@@ -472,16 +466,6 @@ exports[`Monthly donation renders correctly 1`] = `
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
-}
-
-.c10[for='give-once'] {
-  border-radius: 2rem;
-  color: #000000;
-}
-
-.c10[for='give-monthly'] {
-  border-radius: 2rem;
-  color: #000000;
 }
 
 @media (min-width:740px) {
@@ -644,8 +628,9 @@ exports[`Monthly donation renders correctly 1`] = `
           <input
             aria-label="Single"
             checked={true}
+            className="give-once"
             errormsg=""
-            id="give-once"
+            id="give-once--mship-1"
             label=""
             onClick={[Function]}
             type="radio"
@@ -653,15 +638,16 @@ exports[`Monthly donation renders correctly 1`] = `
           />
           <label
             className="c9"
-            htmlFor="give-once"
+            htmlFor="give-once--mship-1"
           >
             Single
           </label>
           <input
             aria-label="Monthly"
             checked={false}
+            className="give-monthly"
             errormsg=""
-            id="give-monthly"
+            id="give-monthly--mship-1"
             label=""
             onClick={[Function]}
             type="radio"
@@ -669,7 +655,7 @@ exports[`Monthly donation renders correctly 1`] = `
           />
           <label
             className="c10"
-            htmlFor="give-monthly"
+            htmlFor="give-monthly--mship-1"
           >
             Monthly
           </label>

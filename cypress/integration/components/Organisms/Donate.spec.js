@@ -49,10 +49,10 @@ describe('Donate component', () => {
     it('renders donate form align right preview', () => {
       // monthly
       cy.get('@container')
-        .find('label[for="give-once"]')
+        .find('label[for="give-once--mship-1"]')
         .contains('Single');
       cy.get('@container')
-        .find('label[for="give-monthly"]')
+        .find('label[for="give-monthly--mship-1"]')
         .contains('Monthly')
         .click();
       cy.get('@container')
@@ -114,17 +114,17 @@ describe('Donate component', () => {
 
     it('renders donate form align left preview', () => {
       cy.get('@container')
-        .find('label[for="give-once"]')
+        .find('label[for="give-once--mship-2"]')
         .contains('Single');
       cy.get('@container')
-        .find('label[for="give-monthly"]')
+        .find('label[for="give-monthly--mship-2"]')
         .contains('Monthly');
       cy.get('@container')
-        .find('#mship-1--moneyBuy-box2')
+        .find('#mship-2--moneyBuy-box2')
         .should('exist')
         .click();
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-2--MoneyBuy-userInput"]')
         .should('have.value', '20')
         .clear()
         .type(' ');
@@ -132,7 +132,7 @@ describe('Donate component', () => {
         .find('p:nth-child(5)')
         .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-2--MoneyBuy-userInput"]')
         .type('10.999');
       cy.get('@container')
         .find('p:nth-child(5)')
@@ -179,11 +179,11 @@ describe('Donate component', () => {
         .find('label[for="give-once"]')
         .should('not.exist');
       cy.get('@container')
-        .find('#mship-1--moneyBuy-box3')
+        .find('#mship-3--moneyBuy-box3')
         .should('exist')
         .click();
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-3--MoneyBuy-userInput"]')
         .should('have.value', '30')
         .clear()
         .type('10.99')
@@ -193,7 +193,7 @@ describe('Donate component', () => {
         .find('p:nth-child(5)')
         .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-3--MoneyBuy-userInput"]')
         .type('10.999');
       cy.get('@container')
         .find('p:nth-child(5)')
@@ -240,10 +240,10 @@ describe('Donate component', () => {
         .find('label[for="give-once"]')
         .should('not.exist');
       cy.get('@container')
-        .find('#mship-1--moneyBuy-box1')
+        .find('#mship-4--moneyBuy-box1')
         .should('not.exist');
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-4--MoneyBuy-userInput"]')
         .should('exist')
         .clear()
         .type('5')
@@ -252,7 +252,7 @@ describe('Donate component', () => {
         .find('p:nth-child(4)')
         .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
       cy.get('@container')
-        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .find('[id="mship-4--MoneyBuy-userInput"]')
         .type('10.999')
         .clear()
         .type('5')
