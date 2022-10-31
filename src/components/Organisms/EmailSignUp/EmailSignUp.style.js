@@ -54,7 +54,9 @@ const NameWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     justify-content: start;
     flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
-    gap: ${spacing('md')};
+    gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
+)}; 
+
   }
 `;
 
