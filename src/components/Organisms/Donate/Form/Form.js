@@ -195,7 +195,7 @@ const Signup = ({
           )}
 
           {errorMsg && (
-          <Error tag="p">
+          <Error className="error--amount" tag="p">
             Please enter an amount between £1 and £25000 and up to 2 decimal
             places
           </Error>
