@@ -6,13 +6,14 @@ import * as yup from 'yup';
  *
  * Exposes an enum to consumer of the component, to accurately access the underlying field names.
  * can be used in conjunction with RHF or buildEsuValidationSchema
- * to customise form validation or behaviour
+ * to customise form validation or behaviour, as the fields are handled within the CL
+ * we just make this read-only to prevent any external changes of this object.
  */
-const ESU_FIELDS = {
+const ESU_FIELDS = Object.freeze({
   FIRST_NAME: 'firstName',
   LAST_NAME: 'lastName',
   EMAIL: 'email'
-};
+});
 
 /**
  * buildEsuValidationSchema
