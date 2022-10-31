@@ -170,7 +170,7 @@ const Signup = ({
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel
               {...rest}
-              max="20000"
+              max="25000"
               min="1"
               value={userInput}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
@@ -183,8 +183,8 @@ const Signup = ({
           </FormFieldset>
           <Button as="input" type="submit" value="Donate" />
           {errorMsg && (
-            <Error tag="p">
-              Please enter a number between 1 and 20000, and up to 2 decimal
+            <Error tag="p" className="error--amount">
+              Please enter a number between 1 and 25000, and up to 2 decimal
               places
             </Error>
           )}

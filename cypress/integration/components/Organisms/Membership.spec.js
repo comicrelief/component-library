@@ -52,9 +52,9 @@ describe('Membership component', () => {
         .should('exist');
       cy.get('@container')
         .find('input[id="mship-1--MoneyBuy-userInput"]')
-        .type('20001');
+        .type('25001');
       cy.get('@container')
-        .find('p')
+        .find('p.error--amount')
         .contains('Please enter a number between 1 and 25000, and up to 2 decimal places');
       cy.get('@container')
         .find('input[id="mship-1--MoneyBuy-userInput"]')
@@ -100,7 +100,7 @@ describe('Membership component', () => {
         .find('input[id="mship-1--MoneyBuy-userInput"]')
         .type('25001');
       cy.get('@container')
-        .find('p')
+        .find('p.error--amount')
         .contains('Please enter a number between 1 and 25000, and up to 2 decimal places');
       cy.get('@container')
         .find('input[id="mship-1--MoneyBuy-userInput"]')
