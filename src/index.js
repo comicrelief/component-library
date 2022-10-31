@@ -1,4 +1,3 @@
-/* eslint-disable */
 /* Theme */
 export { default as crTheme } from './theme/crTheme/theme';
 export { default as srTheme } from './theme/srTheme/theme';
@@ -48,7 +47,6 @@ export { default as SearchResult } from './components/Molecules/SearchResult/Sea
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';
 export { default as VideoBanner } from './components/Molecules/VideoBanner/VideoBanner';
-export { default as HeaderEsuWithIcon } from './components/Molecules/HeaderEsuWithIcon/HeaderEsuWithIcon';
 export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
@@ -63,7 +61,15 @@ export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 
 /* Organisms */
-export { default as EmailSignUp } from './components/Organisms/EmailSignUp/EmailSignUp';
+export {
+  EmailSignUp,
+  buildEsuValidationSchema,
+  ESU_FIELDS
+} from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
-export { MarketingPreferencesDS, setInitialValues, buildValidationSchema } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
+export {
+  MarketingPreferencesDS,
+  setInitialValues,
+  buildValidationSchema
+} from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
