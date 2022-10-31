@@ -249,7 +249,7 @@ describe('Donate component', () => {
         .type('5')
         .clear();
       cy.get('@container')
-        .find('p:nth-child(4)')
+        .find('p.error--amount')
         .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('[id="mship-1--MoneyBuy-userInput"]')
