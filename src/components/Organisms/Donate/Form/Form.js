@@ -179,7 +179,7 @@ const Signup = ({
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel
               {...rest}
-              max="20000"
+              max="25000"
               min="1"
               value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
@@ -194,6 +194,14 @@ const Signup = ({
               {moneyBuyCopy}
             </Copy>
           )}
+
+          {errorMsg && (
+          <Error className="error--amount" tag="p">
+            Please enter an amount between £1 and £25000 and up to 2 decimal
+            places
+          </Error>
+          )}
+
           {noMoneyBuys ? (
             <Button type="submit" as="input" value="Donate" />
           ) : (
@@ -203,12 +211,7 @@ const Signup = ({
               value={givingType === 'single' ? 'Donate now' : 'Donate monthly'}
             />
           )}
-          {errorMsg && (
-            <Error tag="p">
-              Please enter an amount between £1 and £20000 and up to 2 decimal
-              places
-            </Error>
-          )}
+
         </OuterFieldset>
       </Form>
     </FormWrapper>

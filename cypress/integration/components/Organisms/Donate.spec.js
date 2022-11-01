@@ -67,14 +67,14 @@ describe('Donate component', () => {
         .clear()
         .type(' ');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('[id="mship-1--MoneyBuy-userInput"]')
         .type('15.999');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
         .contains('Donate monthly');
@@ -129,14 +129,14 @@ describe('Donate component', () => {
         .clear()
         .type(' ');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('[id="mship-2--MoneyBuy-userInput"]')
         .type('10.999');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .should('contain', 'Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .should('contain', 'Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
         .contains('Donate now');
@@ -190,14 +190,14 @@ describe('Donate component', () => {
         .clear()
         .type(' ');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('[id="mship-3--MoneyBuy-userInput"]')
         .type('10.999');
       cy.get('@container')
-        .find('p:nth-child(5)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
         .contains('Donate now');
@@ -249,14 +249,14 @@ describe('Donate component', () => {
         .type('5')
         .clear();
       cy.get('@container')
-        .find('p:nth-child(4)')
-        .contains('Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .find('p.error--amount')
+        .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
         .find('[id="mship-4--MoneyBuy-userInput"]')
         .type('10.999')
         .clear()
         .type('5')
-        .should('not.have', 'Please enter an amount between £1 and £20000 and up to 2 decimal places');
+        .should('not.have', 'Please enter an amount between £1 and £250000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
         .contains('Donate');

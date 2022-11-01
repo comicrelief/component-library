@@ -23,6 +23,7 @@ const EmailSignUpForm = () => {
       ESU_FIELDS.LAST_NAME
     ]);
     if (valid) {
+      // eslint-disable-next-line no-console
       console.log(data);
     }
   }
