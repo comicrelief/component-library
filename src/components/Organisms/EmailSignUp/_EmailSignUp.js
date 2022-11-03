@@ -100,11 +100,8 @@ const EmailSignUp = ({
       )}
       {isSubmitted && !isSubmitSuccessful && (
         <>
-          {/*
-            Field errors will prevent submission,
-            so theoretically the first error should set in the submission callback
-            with with RHF's `setError` method.
-          */}
+          {/* This error can be set as part of the submit callback using RHF's `setError` function.
+          e.g. setError('formError', { message: 'Some error message'}) */}
           {errors.formError !== undefined && (
             <ErrorText>{errors.formError.message}</ErrorText>
           )}
