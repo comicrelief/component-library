@@ -100,14 +100,11 @@ const EmailSignUp = ({
       )}
       {isSubmitted && !isSubmitSuccessful && (
         <>
-          {/*
-            Field errors will prevent submission,
-            so theoretically this should just be a single error set in the submission callback
-            with with RHF's `setError` method, but will neatly display multiple errors.
-          */}
-          {Object.values(errors).map(error => (
-            <ErrorText>{error.message}</ErrorText>
-          ))}
+          {/* This error can be set as part of the submit callback using RHF's `setError` function.
+          e.g. setError('formError', { message: 'Some error message'}) */}
+          {errors.formError !== undefined && (
+            <ErrorText>{errors.formError.message}</ErrorText>
+          )}
         </>
       )}
 

@@ -14,7 +14,7 @@ const EmailSignUpForm = () => {
     mode: 'onBlur',
     resolver: yupResolver(validationSchema)
   });
-  const { handleSubmit, trigger } = formMethods;
+  const { handleSubmit, trigger, setError } = formMethods;
 
   async function handleSubscribe(data) {
     const valid = await trigger([
@@ -25,6 +25,8 @@ const EmailSignUpForm = () => {
     if (valid) {
       // eslint-disable-next-line no-console
       console.log(data);
+    } else {
+      setError('formError', { message: 'Error' });
     }
   }
   const title = 'Stay in the know!';
