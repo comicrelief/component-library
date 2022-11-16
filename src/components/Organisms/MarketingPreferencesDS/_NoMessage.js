@@ -10,7 +10,7 @@ const NoMessageWrapper = styled.div`${({ theme }) => css`
 `}`;
 
 const NoMessage = ({ askingFor, optInType }) => {
-  const message = `This will remove the supplied ${askingFor} from any *previous* ${optInType} opt-in from our database; otherwise, you can leave this unchecked.`;
+  const message = `This will remove the supplied ${askingFor} from any *previous* ${optInType} opt-in from our database.`;
 
   return (
     <NoMessageWrapper>
