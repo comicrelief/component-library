@@ -1,0 +1,3 @@
+```js
+<Confetti trigger={true} />
+```
