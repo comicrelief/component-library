@@ -1,3 +1,6 @@
 ```js
-<Confetti trigger={true} />
+<Confetti trigger={true}/>
+```
+```js
+<button>confetti please</button>
 ```
