@@ -1,6 +1,7 @@
+# Confetti
+
 ```js
-<Confetti trigger={true}/>
-```
-```js
-<button>confetti please</button>
+import TriggerConfetti from './_TriggerConfetti';
+
+<TriggerConfetti />
 ```
