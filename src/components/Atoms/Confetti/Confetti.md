@@ -1,7 +1,15 @@
 # Confetti
 
 ```js
-import TriggerConfetti from './_TriggerConfetti';
+import React, { useState } from 'react';
+import Confetti from './Confetti';
 
-<TriggerConfetti />
+const [isConfetti, setIsConfetti] = useState(false);
+
+const handleConfettiTrigger = () => setIsConfetti(!isConfetti);
+
+<>
+  <Confetti trigger={isConfetti} />
+  <button type="button" onClick={handleConfettiTrigger}>trigger confetti</button>
+</>
 ```
