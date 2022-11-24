@@ -15,7 +15,7 @@ import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 import Text from '../../Atoms/Text/Text';
 import { buildEsuValidationSchema, ESU_FIELDS } from './_EmailSignUpConfig';
 import ErrorText from '../../Atoms/ErrorText/ErrorText';
-import Confetti from './_Confetti';
+import Confetti from '../../Atoms/Confetti/Confetti';
 
 const EmailSignUp = ({
   title,

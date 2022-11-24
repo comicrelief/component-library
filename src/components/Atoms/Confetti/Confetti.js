@@ -30,7 +30,7 @@ function getAnimationSettings(originXA, originXB) {
     }
   };
 }
-// TODO: Refactor this into an atom
+
 export default function Confetti({ trigger, duration }) {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
