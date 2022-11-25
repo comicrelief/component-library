@@ -29,6 +29,7 @@ export { default as TextInputWithDropdown } from './components/Atoms/TextInputWi
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 export { default as Label } from './components/Atoms/Label/Label';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
+export { default as Confetti } from './components/Atoms/Confetti/Confetti';
 
 /* Molecules */
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
