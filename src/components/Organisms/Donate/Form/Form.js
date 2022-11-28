@@ -39,6 +39,8 @@ const Signup = ({
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(' ');
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
+  // Require the true/false/null state here, since null will represent the popup NEVER being shown
+  const [popOpen, setPopOpen] = useState(null);
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -104,7 +106,8 @@ const Signup = ({
         cartId,
         mbshipId,
         donateURL,
-        givingType
+        givingType,
+        popOpen
       );
     } else {
       setErrorMsg(true);
@@ -115,8 +118,6 @@ const Signup = ({
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
-
-  const [popOpen, setPopOpen] = useState(false);
 
   return (
     <FormWrapper>
@@ -129,7 +130,7 @@ const Signup = ({
         />
       )}
 
-      { popOpen && <PopUpComponent PopUpText={PopUpText} /> }
+      { popOpen && <PopUpComponent PopUpText={PopUpText} setPopOpen={setPopOpen} /> }
 
       <Form
         onSubmit={e => submitDonation(

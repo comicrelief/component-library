@@ -42,8 +42,10 @@ const handleDonateSubmission = (
   cartID,
   mbshipID,
   donateLink,
-  givingType = 'monthly'
+  givingType = 'monthly',
+  popOpen
 ) => {
+  console.log('popOpen', popOpen);
   let currentpageUrl = window.location.href;
   const affiliateValue = getUrlParameter(currentpageUrl);
   const reg = /[#?|[\]\\]/g;
@@ -56,7 +58,7 @@ const handleDonateSubmission = (
   }
   const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
 
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}&popUpShowing=${popOpen}`;
 };
 
 export {
