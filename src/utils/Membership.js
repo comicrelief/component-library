@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 // this function prevent keyboard characters like  e, + , - to be passed on the input
 const onKeyPress = event => {
   const keyCode = event.keyCode || event.which;
@@ -56,7 +58,12 @@ const handleDonateSubmission = (
   }
   const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
 
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+
+  const forwardingURL = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}`;
+
+  console.log('UPDATE 7', currentpageUrl, 'affiliateValue', affiliateValue, 'forwardingURL', forwardingURL);
+
+  window.location.replace(forwardingURL);
 };
 
 export {
