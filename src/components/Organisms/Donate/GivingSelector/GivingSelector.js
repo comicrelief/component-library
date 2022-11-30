@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -9,8 +8,6 @@ import {
 const GivingSelector = ({
   givingType, changeGivingType, setPopOpen, mbshipID
 }) => {
-  const isCurrentGivingTypeSingle = givingType === 'single';
-
   // Only updates giving type and popup status values where appropriate
   const handleGivingTypeChange = (thisButtonType, currentGivingType) => {
     if (currentGivingType !== thisButtonType) {
