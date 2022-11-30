@@ -45,7 +45,6 @@ const handleDonateSubmission = (
   givingType = 'monthly',
   popOpen
 ) => {
-  console.log('popOpen', popOpen);
   let currentpageUrl = window.location.href;
   const affiliateValue = getUrlParameter(currentpageUrl);
   const reg = /[#?|[\]\\]/g;
