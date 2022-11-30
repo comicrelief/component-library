@@ -12,7 +12,7 @@ const GivingSelector = ({
   const handleGivingTypeChange = (thisButtonType, currentGivingType) => {
     if (currentGivingType !== thisButtonType) {
       changeGivingType(thisButtonType);
-      setPopOpen(thisButtonType === 'single');
+      if (thisButtonType === 'single') setPopOpen(true);
     }
   };
 
