@@ -39,7 +39,8 @@ const Signup = ({
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(' ');
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
-  // Require the true/false/null state here, since null will represent the popup NEVER being shown
+  // This inital 'null' value will represent the popup NEVER being shown;
+  // 'true' if it's currently shown on submission, 'false' if it's been closed
   const [popOpen, setPopOpen] = useState(null);
 
   useEffect(() => {
