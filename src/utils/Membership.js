@@ -58,7 +58,7 @@ const handleDonateSubmission = (
   }
   const givingTypeUrl = givingType === 'single' ? 'single' : 'monthly';
 
-  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}&popUpOpen=${popOpen}&&popUpShown=${popUpShown}`;
+  window.location.href = `${donateLink}?clientOverride=${clientID}&amount=${amount}&currency=GBP&givingType=${givingTypeUrl}&cartId=${cartID}&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${mbshipID}&popUpOpen=${popOpen}&popUpShown=${popUpShown}`;
 };
 
 export {
