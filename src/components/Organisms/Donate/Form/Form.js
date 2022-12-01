@@ -39,9 +39,9 @@ const Signup = ({
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(' ');
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
-  // This inital 'null' value will represent the popup NEVER being shown;
-  // 'true' if it's currently shown on submission, 'false' if it's been closed
-  const [popOpen, setPopOpen] = useState(null);
+  const [popOpen, setPopOpen] = useState(false);
+  // In order to keep track of whether the user has ever been shown the popup
+  const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -91,6 +91,12 @@ const Signup = ({
     otherDescription
   ]);
 
+  // Updates our flag that differentiates between the popup
+  // being *currently* open and it *ever* having been shown to user
+  useEffect(() => {
+    if (popOpen && !popUpShown)setPopUpShown(true);
+  }, [popOpen, popUpShown]);
+
   const submitDonation = (
     event,
     amount,
@@ -108,7 +114,8 @@ const Signup = ({
         mbshipId,
         donateURL,
         givingType,
-        popOpen
+        popOpen,
+        popUpShown
       );
     } else {
       setErrorMsg(true);

@@ -8,11 +8,11 @@ import {
 const GivingSelector = ({
   givingType, changeGivingType, setPopOpen, mbshipID
 }) => {
-  // Only updates giving type and popup status values where appropriate
+  // Only updates giving type and popup status when appropriate
   const handleGivingTypeChange = (thisButtonType, currentGivingType) => {
     if (currentGivingType !== thisButtonType) {
       changeGivingType(thisButtonType);
-      if (thisButtonType === 'single') setPopOpen(true);
+      setPopOpen(thisButtonType === 'single');
     }
   };
 
