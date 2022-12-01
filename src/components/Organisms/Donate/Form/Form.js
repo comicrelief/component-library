@@ -94,7 +94,7 @@ const Signup = ({
   // Updates our flag that differentiates between the popup
   // being *currently* open and it *ever* having been shown to user
   useEffect(() => {
-    if (popOpen && !popUpShown)setPopUpShown(true);
+    if (popOpen && !popUpShown) setPopUpShown(true);
   }, [popOpen, popUpShown]);
 
   const submitDonation = (
