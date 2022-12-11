@@ -5,7 +5,7 @@ import instagram from '../assets/instagram.svg';
 
 export default {
   facebook,
+  instagram,
   twitter,
-  youtube,
-  instagram
+  youtube
 };
