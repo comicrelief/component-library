@@ -596,6 +596,29 @@ exports[`renders correctly 1`] = `
               <a
                 className="c5"
                 data-test="header-esu-icon"
+                href="https://www.instagram.com/comicrelief"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Instagram account"
+              >
+                <img
+                  alt="instagram"
+                  className="c6"
+                  src="mock.asset"
+                />
+                <span
+                  className="c7"
+                >
+                  (opens in new window)
+                </span>
+              </a>
+            </li>
+            <li
+              className="c4"
+            >
+              <a
+                className="c5"
+                data-test="header-esu-icon"
                 href="https://twitter.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -626,29 +649,6 @@ exports[`renders correctly 1`] = `
               >
                 <img
                   alt="youtube"
-                  className="c6"
-                  src="mock.asset"
-                />
-                <span
-                  className="c7"
-                >
-                  (opens in new window)
-                </span>
-              </a>
-            </li>
-            <li
-              className="c4"
-            >
-              <a
-                className="c5"
-                data-test="header-esu-icon"
-                href="https://www.instagram.com/comicrelief"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Check out our Instagram account"
-              >
-                <img
-                  alt="instagram"
                   className="c6"
                   src="mock.asset"
                 />
