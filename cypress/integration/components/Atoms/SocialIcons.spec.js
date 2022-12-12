@@ -52,14 +52,14 @@ describe('SocialIcons component', () => {
         .first()
         .should('have.attr', 'href', 'https://www.facebook.com/comicrelief');
       cy.get('@container')
+        .find('li:nth-child(4) > a')
+        .should('have.attr', 'href', 'https://www.instagram.com/comicrelief');
+      cy.get('@container')
         .find('li:nth-child(2) > a')
         .should('have.attr', 'href', 'https://twitter.com/comicrelief');
       cy.get('@container')
         .find('li:nth-child(3) > a')
         .should('have.attr', 'href', 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw');
-      cy.get('@container')
-        .find('li:nth-child(4) > a')
-        .should('have.attr', 'href', 'https://www.instagram.com/comicrelief');
     });
 
     it('has view code button', () => {
@@ -100,14 +100,14 @@ describe('SocialIcons component', () => {
         .first()
         .should('have.attr', 'href', 'https://www.facebook.com/rednoseday');
       cy.get('@container')
+        .find('li:nth-child(4) > a')
+        .should('have.attr', 'href', 'https://www.instagram.com/rednoseday');
+      cy.get('@container')
         .find('li:nth-child(2) > a')
         .should('have.attr', 'href', 'https://twitter.com/rednoseday');
       cy.get('@container')
         .find('li:nth-child(3) > a')
         .should('have.attr', 'href', 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw');
-      cy.get('@container')
-        .find('li:nth-child(4) > a')
-        .should('have.attr', 'href', 'https://www.instagram.com/rednoseday');
     });
 
     it('has view code button', () => {
