@@ -52,13 +52,13 @@ describe('SocialIcons component', () => {
         .first()
         .should('have.attr', 'href', 'https://www.facebook.com/comicrelief');
       cy.get('@container')
-        .find('li:nth-child(4) > a')
+        .find('li:nth-child(2) > a')
         .should('have.attr', 'href', 'https://www.instagram.com/comicrelief');
       cy.get('@container')
-        .find('li:nth-child(2) > a')
+        .find('li:nth-child(3) > a')
         .should('have.attr', 'href', 'https://twitter.com/comicrelief');
       cy.get('@container')
-        .find('li:nth-child(3) > a')
+        .find('li:nth-child(4) > a')
         .should('have.attr', 'href', 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw');
     });
 
@@ -100,13 +100,13 @@ describe('SocialIcons component', () => {
         .first()
         .should('have.attr', 'href', 'https://www.facebook.com/rednoseday');
       cy.get('@container')
-        .find('li:nth-child(4) > a')
+        .find('li:nth-child(2) > a')
         .should('have.attr', 'href', 'https://www.instagram.com/rednoseday');
       cy.get('@container')
-        .find('li:nth-child(2) > a')
+        .find('li:nth-child(3) > a')
         .should('have.attr', 'href', 'https://twitter.com/rednoseday');
       cy.get('@container')
-        .find('li:nth-child(3) > a')
+        .find('li:nth-child(4) > a')
         .should('have.attr', 'href', 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw');
     });
 
@@ -148,13 +148,13 @@ describe('SocialIcons component', () => {
         .first()
         .should('have.attr', 'href', 'https://www.facebook.com/sportrelief');
       cy.get('@container')
-        .find('li:nth-child(4) > a')
+        .find('li:nth-child(2) > a')
         .should('have.attr', 'href', 'https://www.instagram.com/sportrelief');
       cy.get('@container')
-        .find('li:nth-child(2) > a')
+        .find('li:nth-child(3) > a')
         .should('have.attr', 'href', 'https://twitter.com/sportrelief');
       cy.get('@container')
-        .find('li:nth-child(3) > a')
+        .find('li:nth-child(4) > a')
         .should('have.attr', 'href', 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw');
     });
 
