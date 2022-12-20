@@ -91,8 +91,6 @@ const Signup = ({
     moneyBuyCustomMessage
   ]);
 
-  console.log(moneyBuyCustomMessage);
-
   const submitDonation = (
     event,
     amount,
