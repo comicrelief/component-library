@@ -87,7 +87,8 @@ const Signup = ({
     regularGiving,
     givingType,
     amountDonate,
-    otherDescription
+    otherDescription,
+    moneyBuyCustomMessage
   ]);
 
   const submitDonation = (
