@@ -78,6 +78,8 @@ const Signup = ({
       if (errorMsg) setErrorMsg(false);
       setMoneyBuyCopy(moneyBuyNewDescription);
     }
+    const moneyBuyCustomMessage = true;
+    if (moneyBuyCustomMessage) setMoneyBuyCopy('test custom text');
   }, [
     errorMsg,
     moneyBuyCopy,
