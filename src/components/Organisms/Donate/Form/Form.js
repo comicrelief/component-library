@@ -33,6 +33,7 @@ const Signup = ({
   noMoneyBuys,
   PopUpText,
   chooseAmountText,
+  moneyBuyCustomMessage,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -78,8 +79,7 @@ const Signup = ({
       if (errorMsg) setErrorMsg(false);
       setMoneyBuyCopy(moneyBuyNewDescription);
     }
-    const moneyBuyCustomMessage = true;
-    if (moneyBuyCustomMessage) setMoneyBuyCopy('test custom text');
+    if (moneyBuyCustomMessage) setMoneyBuyCopy(moneyBuyCustomMessage);
   }, [
     errorMsg,
     moneyBuyCopy,
@@ -229,12 +229,14 @@ Signup.propTypes = {
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   PopUpText: PropTypes.string.isRequired,
-  chooseAmountText: PropTypes.string.isRequired
+  chooseAmountText: PropTypes.string.isRequired,
+  moneyBuyCustomMessage: PropTypes.string
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {}
+  data: {},
+  moneyBuyCustomMessage: ''
 };
 
 export default Signup;
