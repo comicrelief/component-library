@@ -36,7 +36,8 @@ const Donate = ({
   noMoneyBuys,
   PopUpText,
   chooseAmountText,
-  isDesktopOverride
+  isDesktopOverride,
+  moneyBuyCustomMessage
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -113,6 +114,7 @@ const Donate = ({
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
           chooseAmountText={chooseAmountText}
+          moneyBuyCustomMessage={moneyBuyCustomMessage}
         />
       </Wrapper>
     </Container>
@@ -141,7 +143,8 @@ Donate.propTypes = {
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
-  isDesktopOverride: PropTypes.bool
+  isDesktopOverride: PropTypes.bool,
+  moneyBuyCustomMessage: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -163,7 +166,8 @@ Donate.defaultProps = {
   noMoneyBuys: false,
   PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText: '',
-  isDesktopOverride: null
+  isDesktopOverride: null,
+  moneyBuyCustomMessage: ''
 };
 
 export default Donate;
