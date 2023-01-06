@@ -114,7 +114,6 @@ const Signup = ({
         mbshipId,
         donateURL,
         givingType,
-        popOpen,
         popUpShown
       );
     } else {
