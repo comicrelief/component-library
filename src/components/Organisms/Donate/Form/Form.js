@@ -40,6 +40,9 @@ const Signup = ({
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(' ');
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
+  const [popOpen, setPopOpen] = useState(false);
+  // In order to keep track of whether the user has ever been shown the popup
+  const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -91,6 +94,12 @@ const Signup = ({
     moneyBuyCustomMessage
   ]);
 
+  // Updates our flag that differentiates between the popup
+  // being *currently* open and it *ever* having been shown to user
+  useEffect(() => {
+    if (popOpen && !popUpShown) setPopUpShown(true);
+  }, [popOpen, popUpShown]);
+
   const submitDonation = (
     event,
     amount,
@@ -107,7 +116,8 @@ const Signup = ({
         cartId,
         mbshipId,
         donateURL,
-        givingType
+        givingType,
+        popUpShown
       );
     } else {
       setErrorMsg(true);
@@ -118,8 +128,6 @@ const Signup = ({
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
-
-  const [popOpen, setPopOpen] = useState(false);
 
   return (
     <FormWrapper>
@@ -132,7 +140,7 @@ const Signup = ({
         />
       )}
 
-      { popOpen && <PopUpComponent PopUpText={PopUpText} /> }
+      { popOpen && <PopUpComponent PopUpText={PopUpText} setPopOpen={setPopOpen} /> }
 
       <Form
         onSubmit={e => submitDonation(

@@ -1,10 +1,11 @@
-/* eslint-disable */ 
 import React, { useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
+import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import { media } from '../../../../theme/shared/size';
-import PropTypes from 'prop-types';
 import CloseCross from '../assets/close.svg';
+
+const closeDuration = 0.6;
 
 const fadeClose = keyframes`
   0% {
@@ -39,7 +40,7 @@ const StyledPopUp = styled.div`
   opacity: 1;
   animation: 0.4s ${fadeOpen} ease;
   ${props => props.isClosed && css`
-    animation: 0.6s ${fadeClose} ease forwards;
+    animation: ${closeDuration}s ${fadeClose} ease forwards;
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
@@ -78,23 +79,33 @@ const Button = styled.button`
   }
 `;
 
-const PopUpComponent = ({ PopUpText }) => {
+const PopUpComponent = ({ PopUpText, setPopOpen }) => {
   const [isClosed, setIsClosed] = useState(false);
+
+  // Only update centralised state - which renders
+  // this component - once the closing animation is complete
+  const handleCloser = () => {
+    setIsClosed(true);
+    setTimeout(() => {
+      setPopOpen(false);
+    }, closeDuration * 1000);
+  };
 
   return (
     <StyledPopUp isClosed={isClosed}>
-      <Button onClick={() => setIsClosed(true)} aria-label="Close">
-        <img src={CloseCross} alt="Close cross icon"/>
+      <Button onClick={() => handleCloser()} aria-label="Close">
+        <img src={CloseCross} alt="Close cross icon" />
       </Button>
       <TextWrapper>
         <Text>{ PopUpText }</Text>
       </TextWrapper>
     </StyledPopUp>
-  )
+  );
 };
 
 PopUpComponent.propTypes = {
-  PopUpText: PropTypes.string.isRequired
+  PopUpText: PropTypes.string.isRequired,
+  setPopOpen: PropTypes.func.isRequired
 };
 
 export default PopUpComponent;
