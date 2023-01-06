@@ -251,3 +251,31 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   isDesktopOverride={false}
 />;
 ```
+
+## Adding a custom value / field for the "other amount" accompanying money buy message
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  backgroundColor="red"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-10"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  otherDescription="will help us fund amazing projects in the UK and around the world."
+  isDesktopOverride={false}
+  moneyBuyCustomMessage="will help provide food to families struggling with the cost of living crisis"
+/>;
+```
