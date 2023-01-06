@@ -104,6 +104,29 @@ exports[`renders correctly with Comic Relief links 1`] = `
     <a
       className="c2"
       data-test="header-esu-icon"
+      href="https://www.instagram.com/comicrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -134,29 +157,6 @@ exports[`renders correctly with Comic Relief links 1`] = `
     >
       <img
         alt="youtube"
-        className="c3"
-        src="mock.asset"
-      />
-      <span
-        className="c4"
-      >
-        (opens in new window)
-      </span>
-    </a>
-  </li>
-  <li
-    className="c1"
-  >
-    <a
-      className="c2"
-      data-test="header-esu-icon"
-      href="https://www.instagram.com/comicrelief"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Check out our Instagram account"
-    >
-      <img
-        alt="instagram"
         className="c3"
         src="mock.asset"
       />
@@ -274,6 +274,29 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     <a
       className="c2"
       data-test="header-esu-icon"
+      href="https://www.instagram.com/rednoseday"
+      rel="noopener noreferrer"
+      target="_self"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -304,29 +327,6 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     >
       <img
         alt="youtube"
-        className="c3"
-        src="mock.asset"
-      />
-      <span
-        className="c4"
-      >
-        (opens in new window)
-      </span>
-    </a>
-  </li>
-  <li
-    className="c1"
-  >
-    <a
-      className="c2"
-      data-test="header-esu-icon"
-      href="https://www.instagram.com/rednoseday"
-      rel="noopener noreferrer"
-      target="_self"
-      title="Check out our Instagram account"
-    >
-      <img
-        alt="instagram"
         className="c3"
         src="mock.asset"
       />
@@ -444,6 +444,29 @@ exports[`renders correctly with Sport Relief links 1`] = `
     <a
       className="c2"
       data-test="header-esu-icon"
+      href="https://www.instagram.com/sportrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
       href="https://twitter.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -474,29 +497,6 @@ exports[`renders correctly with Sport Relief links 1`] = `
     >
       <img
         alt="youtube"
-        className="c3"
-        src="mock.asset"
-      />
-      <span
-        className="c4"
-      >
-        (opens in new window)
-      </span>
-    </a>
-  </li>
-  <li
-    className="c1"
-  >
-    <a
-      className="c2"
-      data-test="header-esu-icon"
-      href="https://www.instagram.com/sportrelief"
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Check out our Instagram account"
-    >
-      <img
-        alt="instagram"
         className="c3"
         src="mock.asset"
       />
