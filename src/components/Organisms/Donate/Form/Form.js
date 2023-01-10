@@ -43,6 +43,7 @@ const Signup = ({
   const [popOpen, setPopOpen] = useState(false);
   // In order to keep track of whether the user has ever been shown the popup
   const [popUpShown, setPopUpShown] = useState(false);
+  const [showCustomMessage, setShowCustomMessage] = useState(false);
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -82,7 +83,7 @@ const Signup = ({
       if (errorMsg) setErrorMsg(false);
       setMoneyBuyCopy(moneyBuyNewDescription);
     }
-    if (moneyBuyCustomMessage) setMoneyBuyCopy(moneyBuyCustomMessage);
+    if (moneyBuyCustomMessage && showCustomMessage) setMoneyBuyCopy(moneyBuyCustomMessage);
   }, [
     errorMsg,
     moneyBuyCopy,
@@ -195,7 +196,10 @@ const Signup = ({
               value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
               placeholder="0.00"
-              onChange={e => setAmountDonate(parseFloat(e.target.value))}
+              onChange={e => {
+                setAmountDonate(parseFloat(e.target.value));
+                setShowCustomMessage(true);
+              }}
               aria-label="Input a different amount"
             />
           </FormFieldset>
