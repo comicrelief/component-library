@@ -167,7 +167,10 @@ const Signup = ({
                   isSelected={amountDonate === value}
                   amount={value}
                   description={`£${value}`}
-                  setOtherAmount={() => setAmountDonate(parseFloat(value))}
+                  setOtherAmount={() => {
+                    setAmountDonate(parseFloat(value));
+                    setShowCustomMessage(false);
+                  }}
                   key={value}
                   name={`${mbshipID}--moneyBuy${index + 1}`}
                   id={`${mbshipID}--moneyBuy-box${index + 1}`}
