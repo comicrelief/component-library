@@ -92,7 +92,8 @@ const Signup = ({
     givingType,
     amountDonate,
     otherDescription,
-    moneyBuyCustomMessage
+    moneyBuyCustomMessage,
+    showCustomMessage
   ]);
 
   // Updates our flag that differentiates between the popup
