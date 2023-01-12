@@ -23,7 +23,7 @@ const Donate = ({
   data,
   title,
   subtitle,
-  otherDescription,
+  otherAmountText,
   formAlignRight,
   images,
   image,
@@ -105,7 +105,7 @@ const Donate = ({
 
         <Form
           data={data}
-          otherDescription={otherDescription}
+          otherAmountText={otherAmountText}
           cartID={cartID}
           clientID={clientID}
           mbshipID={mbshipID}
@@ -126,7 +126,7 @@ Donate.propTypes = {
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  otherDescription: PropTypes.string,
+  otherAmountText: PropTypes.string,
   subtitle: PropTypes.string,
   formAlignRight: PropTypes.bool,
   imageLow: PropTypes.string,
@@ -157,7 +157,7 @@ Donate.defaultProps = {
   mobileAlt: '',
   backgroundColor: 'blue_dark',
   mbshipID: null,
-  otherDescription:
+  otherAmountText:
     'will help us fund amazing projects in the UK and around the world.',
   subtitle: '',
   noMoneyBuys: false,

@@ -22,11 +22,10 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
-## Form align left
+## Form align left, with custom message after choosing an "Other amount" to donate.
 
 ```js
 import data from './dev-data/data';
@@ -47,7 +46,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
+  otherAmountText="Overridden via the 'Other amount text' prop"
 />;
 ```
 
@@ -72,7 +71,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -98,7 +96,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   noMoneyBuys
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -124,7 +121,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle=""
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -149,7 +145,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle=""
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -174,7 +169,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle=""
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -200,7 +194,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   noMoneyBuys
   subtitle=""
-  otherDescription="will help us fund amazing projects in the UK and around the world."
 />;
 ```
 
@@ -220,8 +213,7 @@ import data from './dev-data/data-single';
   title="Donate Now"
   noMoneyBuys
   subtitle=""
-  otherDescription="will help us fund amazing projects in the UK and around the world."
-  chooseAmountText="Overridden via the 'choose amount text' props"
+  chooseAmountText="Overridden via the 'choose amount text' prop"
 />;
 ```
 
@@ -247,7 +239,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  otherDescription="will help us fund amazing projects in the UK and around the world."
   isDesktopOverride={false}
 />;
 ```
