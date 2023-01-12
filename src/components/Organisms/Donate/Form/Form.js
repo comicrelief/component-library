@@ -26,7 +26,7 @@ import GivingSelector from '../GivingSelector/GivingSelector';
 const Signup = ({
   data: { singleGiving, regularGiving },
   donateLink,
-  otherDescription,
+  otherAmountText,
   clientID,
   cartID,
   mbshipID,
@@ -59,7 +59,7 @@ const Signup = ({
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-    let moneyBuyNewDescription = otherDescription;
+    let moneyBuyNewDescription = otherAmountText;
 
     givingData.moneybuys.map((moneyBuy, index) => {
       if (moneyBuy.value === amountDonate) {
@@ -88,7 +88,7 @@ const Signup = ({
     regularGiving,
     givingType,
     amountDonate,
-    otherDescription
+    otherAmountText
   ]);
 
   // Updates our flag that differentiates between the popup
@@ -230,7 +230,7 @@ Signup.propTypes = {
   clientID: PropTypes.string.isRequired,
   cartID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
-  otherDescription: PropTypes.string.isRequired,
+  otherAmountText: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
