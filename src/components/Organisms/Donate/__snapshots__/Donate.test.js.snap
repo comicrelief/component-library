@@ -500,7 +500,6 @@ exports[`Monthly donation renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
-    background-color: #274084;
   }
 }
 
@@ -1251,7 +1250,6 @@ exports[`Single donation renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
-    background-color: #274084;
   }
 }
 
@@ -1845,7 +1843,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     -webkit-justify-content: inherit;
     -ms-flex-pack: inherit;
     justify-content: inherit;
-    background-color: #274084;
   }
 }
 
