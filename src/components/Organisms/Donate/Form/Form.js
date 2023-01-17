@@ -33,6 +33,7 @@ const Signup = ({
   noMoneyBuys,
   PopUpText,
   chooseAmountText,
+  buttonColor,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -211,12 +212,13 @@ const Signup = ({
           )}
 
           {noMoneyBuys ? (
-            <Button type="submit" as="input" value="Donate" />
+            <Button type="submit" as="input" value="Donate" buttonColor={buttonColor} />
           ) : (
             <Button
               type="submit"
               as="input"
               value={givingType === 'single' ? 'Donate now' : 'Donate monthly'}
+              buttonColor={buttonColor}
             />
           )}
 
@@ -235,7 +237,8 @@ Signup.propTypes = {
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   PopUpText: PropTypes.string.isRequired,
-  chooseAmountText: PropTypes.string.isRequired
+  chooseAmountText: PropTypes.string.isRequired,
+  buttonColor: PropTypes.string.isRequired
 };
 
 Signup.defaultProps = {

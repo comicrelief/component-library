@@ -19,6 +19,7 @@ const Donate = ({
   cartID,
   clientID,
   backgroundColor,
+  buttonColor,
   donateLink,
   data,
   title,
@@ -113,6 +114,7 @@ const Donate = ({
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
           chooseAmountText={chooseAmountText}
+          buttonColor={buttonColor}
         />
       </Wrapper>
     </Container>
@@ -137,6 +139,7 @@ Donate.propTypes = {
   mobileImages: PropTypes.string,
   mobileAlt: PropTypes.string,
   backgroundColor: PropTypes.string,
+  buttonColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
@@ -156,6 +159,7 @@ Donate.defaultProps = {
   mobileImages: null,
   mobileAlt: '',
   backgroundColor: 'blue_dark',
+  buttonColor: 'red',
   mbshipID: null,
   otherAmountText:
     'will help us fund amazing projects in the UK and around the world.',
