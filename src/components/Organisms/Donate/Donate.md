@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red backgound on desktop view
+## Form align right, with red desktop overlay and purple mobile background colour
 
 ```js
 import data from './dev-data/data';
@@ -9,7 +9,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="red"
+  backgroundColor="deep_violet_dark"
   overlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
