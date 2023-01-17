@@ -19,6 +19,7 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
+    background-color: ${({ theme, overlayColor }) => theme.color(overlayColor)};
   }
 `;
 

@@ -10,6 +10,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   backgroundColor="red"
+  overlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -34,6 +35,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -59,6 +61,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -83,6 +86,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -109,6 +113,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   backgroundColor="transparent"
+  overlayColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

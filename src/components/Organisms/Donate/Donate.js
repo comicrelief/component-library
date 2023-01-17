@@ -18,6 +18,7 @@ const Donate = ({
   alt,
   cartID,
   clientID,
+  overlayColor,
   backgroundColor,
   buttonColor,
   textColor,
@@ -56,6 +57,7 @@ const Donate = ({
   return (
     <Container
       backgroundColor={backgroundColor}
+      overlayColor={overlayColor}
       id={mbshipID}
       key={overrideValue}
     >
@@ -74,7 +76,7 @@ const Donate = ({
 
       {isDesktop && images ? (
         <BgImage
-          backgroundColor={backgroundColor}
+          backgroundColor={overlayColor}
           image={image}
           images={images}
           imageLow={imageLow}
@@ -144,6 +146,7 @@ Donate.propTypes = {
   mobileImages: PropTypes.string,
   mobileAlt: PropTypes.string,
   backgroundColor: PropTypes.string,
+  overlayColor: PropTypes.string,
   buttonColor: PropTypes.string,
   textColor: PropTypes.string,
   mbshipID: PropTypes.string,
@@ -164,6 +167,7 @@ Donate.defaultProps = {
   mobileImage: null,
   mobileImages: null,
   mobileAlt: '',
+  overlayColor: 'transparent',
   backgroundColor: 'blue_dark',
   buttonColor: 'red',
   textColor: 'white',
