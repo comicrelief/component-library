@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red backgound on desktop view
+## Form align right, with red desktop overlay and purple mobile background colour
 
 ```js
 import data from './dev-data/data';
@@ -9,7 +9,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="red"
+  backgroundColor="deep_violet_dark"
+  overlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -34,6 +35,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -59,6 +61,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -83,6 +86,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   backgroundColor="blue_dark"
+  overlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -109,6 +113,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   backgroundColor="transparent"
+  overlayColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -197,12 +202,13 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Single Giving "No Money Buys", no background image, overriding 'choose amount' text
+## Single Giving "No Money Buys", no background image, blue background; overriding 'choose amount' text
 
 ```js
 import data from './dev-data/data-single';
 
 <Donate
+  overlayColor="blue_dark"
   backgroundColor="blue_dark"
   formAlignRight={false}
   data={data}
@@ -217,7 +223,7 @@ import data from './dev-data/data-single';
 />;
 ```
 
-## Forcing mobile layout via isDesktop override; needed to pass parent prop for external media queries
+## Forcing mobile layout via isDesktop override; needed to pass parent prop for external media queries, red background
 
 ```js
 import data from './dev-data/data';
@@ -227,6 +233,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   backgroundColor="red"
+  overlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

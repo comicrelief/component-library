@@ -18,7 +18,10 @@ const Donate = ({
   alt,
   cartID,
   clientID,
+  overlayColor,
   backgroundColor,
+  buttonColor,
+  textColor,
   donateLink,
   data,
   title,
@@ -52,7 +55,12 @@ const Donate = ({
   isDesktop = overrideValue !== null ? overrideValue : isDesktop;
 
   return (
-    <Container backgroundColor={backgroundColor} id={mbshipID} key={overrideValue}>
+    <Container
+      backgroundColor={backgroundColor}
+      overlayColor={overlayColor}
+      id={mbshipID}
+      key={overrideValue}
+    >
       {!isDesktop && mobileImages ? (
         <Picture
           backgroundColor={backgroundColor}
@@ -68,7 +76,7 @@ const Donate = ({
 
       {isDesktop && images ? (
         <BgImage
-          backgroundColor={backgroundColor}
+          backgroundColor={overlayColor}
           image={image}
           images={images}
           imageLow={imageLow}
@@ -87,7 +95,7 @@ const Donate = ({
               <>
                 <Text
                   tag="h2"
-                  color="white"
+                  color={textColor}
                   size="big"
                   family="Anton"
                   weight="normal"
@@ -95,7 +103,7 @@ const Donate = ({
                 >
                   {title}
                 </Text>
-                <Text tag="p" color="white" size="m">
+                <Text tag="p" color={textColor} size="m">
                   {subtitle}
                 </Text>
               </>
@@ -113,6 +121,7 @@ const Donate = ({
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
           chooseAmountText={chooseAmountText}
+          buttonColor={buttonColor}
         />
       </Wrapper>
     </Container>
@@ -137,6 +146,9 @@ Donate.propTypes = {
   mobileImages: PropTypes.string,
   mobileAlt: PropTypes.string,
   backgroundColor: PropTypes.string,
+  overlayColor: PropTypes.string,
+  buttonColor: PropTypes.string,
+  textColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
@@ -155,7 +167,10 @@ Donate.defaultProps = {
   mobileImage: null,
   mobileImages: null,
   mobileAlt: '',
+  overlayColor: 'transparent',
   backgroundColor: 'blue_dark',
+  buttonColor: 'red',
+  textColor: 'white',
   mbshipID: null,
   otherAmountText:
     'will help us fund amazing projects in the UK and around the world.',
