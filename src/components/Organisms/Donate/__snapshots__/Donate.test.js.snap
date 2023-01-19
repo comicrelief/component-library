@@ -835,6 +835,7 @@ exports[`Monthly donation renders correctly 1`] = `
           </div>
           <input
             className="c28"
+            color="red"
             type="submit"
             value="Donate now"
           />
@@ -1546,6 +1547,7 @@ exports[`Single donation renders correctly 1`] = `
           </p>
           <input
             className="c24"
+            color="red"
             type="submit"
             value="Donate now"
           />
@@ -2004,6 +2006,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           </div>
           <input
             className="c18"
+            color="red"
             type="submit"
             value="Donate"
           />

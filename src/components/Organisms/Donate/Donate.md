@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red desktop overlay and purple mobile background colour
+## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button
 
 ```js
 import data from './dev-data/data';
@@ -9,8 +9,9 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="deep_violet_dark"
-  overlayColor="red"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+	submitButtonColor="blue_dark"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -34,8 +35,8 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="blue_dark"
-  overlayColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -60,8 +61,8 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="blue_dark"
-  overlayColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -85,8 +86,8 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="blue_dark"
-  overlayColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -112,8 +113,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="transparent"
-  overlayColor="transparent"
+  mobileBackgroundColor="transparent"
+  desktopOverlayColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -137,7 +138,7 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="transparent"
+  mobileBackgroundColor="transparent"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -161,7 +162,7 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -185,7 +186,7 @@ const mobilePictures = require('../../../styleguide/data/data').mobileImages;
 const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
-  backgroundColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -208,8 +209,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 import data from './dev-data/data-single';
 
 <Donate
-  overlayColor="blue_dark"
-  backgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
+  mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   data={data}
   mbshipID="mship-9"
@@ -232,8 +233,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   alt="Background image"
-  backgroundColor="red"
-  overlayColor="red"
+  mobileBackgroundColor="red"
+  desktopOverlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

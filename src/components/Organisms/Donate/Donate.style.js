@@ -14,12 +14,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background-color: ${({ theme, mobileBackgroundColor }) => theme.color(mobileBackgroundColor)};
   ${media('medium')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
-    background-color: ${({ theme, overlayColor }) => theme.color(overlayColor)};
+    background-color: ${({ theme, desktopOverlayColor }) => theme.color(desktopOverlayColor)};
   }
 `;
 
@@ -215,7 +215,7 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   min-height: 48px;
-  background: ${({ theme, buttonColor }) => theme.color(buttonColor)};
+  background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
   border-radius: 2rem;
   border: none;
