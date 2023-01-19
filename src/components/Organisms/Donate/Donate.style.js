@@ -215,7 +215,7 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   min-height: 48px;
-  background: ${({ theme, buttonColor }) => theme.color(buttonColor)};
+  background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
   border-radius: 2rem;
   border: none;
