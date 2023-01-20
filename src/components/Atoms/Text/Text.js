@@ -92,7 +92,7 @@ Text.defaultProps = {
   size: 's',
   color: 'inherit',
   children: undefined,
-  textAlign: 'center'
+  textAlign: 'left'
 };
 
 export default Text;
