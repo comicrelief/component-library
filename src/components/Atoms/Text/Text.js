@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 /** Text component */
 export const BaseText = styled.span`
-  text-align: ${({ textAlign }) => (textAlign || 'left')};
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   line-height: ${({ size, theme }) => theme.fontSize(size)};
@@ -46,7 +45,7 @@ export const BaseText = styled.span`
  *  Weight is checked for existence to prevent overriding the tag's css
  */
 const Text = ({
-  tag, children, height, weight, family, textAlign, ...rest
+  tag, children, height, weight, family, ...rest
 }) => (
   <BaseText
     {...rest}
@@ -54,7 +53,6 @@ const Text = ({
     height={height}
     weight={weight}
     family={family}
-    textAlign={textAlign}
   >
     {children}
   </BaseText>
@@ -79,8 +77,7 @@ Text.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string
-  ]),
-  textAlign: PropTypes.string
+  ])
 };
 
 Text.defaultProps = {
@@ -91,8 +88,7 @@ Text.defaultProps = {
   uppercase: false,
   size: 's',
   color: 'inherit',
-  children: undefined,
-  textAlign: 'left'
+  children: undefined
 };
 
 export default Text;
