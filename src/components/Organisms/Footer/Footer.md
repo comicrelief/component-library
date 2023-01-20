@@ -13,7 +13,7 @@ import footerCopy from './data/footerCopy';
     
     <p>Adding a corporate tag to the top of the footer</p>
     <Footer 
-      additionalLegalLine="MR. MEN ™; LITTLE MISS ™; © 2022 THOIP (a SANRIO Company). All rights reserved." 
+      additionalLegalLine="MR. MEN ™ LITTLE MISS ™ © 2022 THOIP (a SANRIO Company). All rights reserved." 
       navItems={data} 
       footerCopy={footerCopy.copy} 
       campaign="Comic Relief" 
