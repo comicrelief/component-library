@@ -15,14 +15,16 @@ import {
 } from './Footer.style';
 
 const Footer = ({
-  navItems, footerCopy, campaign, ...rest
+  navItems, footerCopy, campaign, corporateSponsorTag, ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
+
   return (
     <div>
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
+          <Text tag="p" color="white">{corporateSponsorTag}</Text>
           <FooterBranding>
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
@@ -47,14 +49,16 @@ Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   footerCopy: PropTypes.string,
   campaign: PropTypes.string,
-  overrideWhiteList: PropTypes.bool
+  overrideWhiteList: PropTypes.bool,
+  corporateSponsorTag: PropTypes.string
 };
 
 Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
   campaign: 'Comic Relief',
-  overrideWhiteList: false
+  overrideWhiteList: false,
+  corporateSponsorTag: ''
 };
 
 export default Footer;
