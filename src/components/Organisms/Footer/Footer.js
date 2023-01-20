@@ -15,7 +15,7 @@ import {
 } from './Footer.style';
 
 const Footer = ({
-  navItems, footerCopy, campaign, corporateSponsorTag, ...rest
+  navItems, footerCopy, campaign, additionalLegalLine, ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
@@ -24,7 +24,7 @@ const Footer = ({
     <div>
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
-          <Text style={{ textAlign: 'left' }} align="left" tag="p" color="white">MR. MEN &#8482; LITTLE MISS &#8482; © 2022 THOIP (a SANRIO Company). All rights reserved.</Text>
+          <Text style={{ textAlign: 'left' }} align="left" tag="p" color="white">{additionalLegalLine}</Text>
           <FooterBranding>
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
@@ -50,7 +50,7 @@ Footer.propTypes = {
   footerCopy: PropTypes.string,
   campaign: PropTypes.string,
   overrideWhiteList: PropTypes.bool,
-  corporateSponsorTag: PropTypes.string
+  additionalLegalLine: PropTypes.string
 };
 
 Footer.defaultProps = {
@@ -58,7 +58,7 @@ Footer.defaultProps = {
   footerCopy: '',
   campaign: 'Comic Relief',
   overrideWhiteList: false,
-  corporateSponsorTag: ''
+  additionalLegalLine: ''
 };
 
 export default Footer;
