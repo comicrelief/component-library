@@ -2,13 +2,11 @@
 
 exports[`renders correctly 1`] = `
 .c2 {
-  text-align: left;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c3 {
-  text-align: left;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;

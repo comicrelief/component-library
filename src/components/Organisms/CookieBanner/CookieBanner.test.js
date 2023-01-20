@@ -20,7 +20,6 @@ it("renders correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      text-align: left;
       color: #FFFFFF;
       font-size: 1rem;
       line-height: 1rem;

@@ -2,7 +2,6 @@
 
 exports[`renders heavy heading correctly 1`] = `
 .c0 {
-  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -21,7 +20,6 @@ exports[`renders heavy heading correctly 1`] = `
 
 exports[`renders high heading correctly 1`] = `
 .c0 {
-  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -41,7 +39,6 @@ exports[`renders high heading correctly 1`] = `
 
 exports[`renders large heading correctly 1`] = `
 .c0 {
-  text-align: left;
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -59,7 +56,6 @@ exports[`renders large heading correctly 1`] = `
 
 exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
-  text-align: left;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: inherit;
@@ -82,7 +78,6 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
-  text-align: left;
   color: #FFE400;
   font-size: 2rem;
   line-height: 2rem;

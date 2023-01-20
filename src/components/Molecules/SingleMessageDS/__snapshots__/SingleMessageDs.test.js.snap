@@ -2,7 +2,6 @@
 
 exports[`renders correctly 1`] = `
 .c6 {
-  text-align: left;
   color: #274084;
   font-size: 1rem;
   line-height: 1rem;
@@ -13,7 +12,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c8 {
-  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
