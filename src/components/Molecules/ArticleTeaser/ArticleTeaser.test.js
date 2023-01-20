@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleTeaser from './ArticleTeaser';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders article teaser correctly', () => {
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ArticleTeaser from "./ArticleTeaser";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders article teaser correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -20,6 +20,7 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
+      text-align: center;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -29,6 +30,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
+      text-align: center;
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -258,7 +260,7 @@ it('renders article teaser correctly', () => {
   `);
 });
 
-it('renders press realese correctly', () => {
+it("renders press realese correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -272,6 +274,7 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
+      text-align: center;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -281,6 +284,7 @@ it('renders press realese correctly', () => {
     }
 
     .c10 {
+      text-align: center;
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;

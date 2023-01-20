@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import TextArea from './TextArea';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import TextArea from "./TextArea";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <TextArea
       name="description"
@@ -17,6 +17,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      text-align: center;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;

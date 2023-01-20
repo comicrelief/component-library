@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import RadioButton from './RadioButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import RadioButton from "./RadioButton";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <>
       <RadioButton id="male" name="gender" value="male" label="Male" />
@@ -14,6 +14,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
+      text-align: center;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -101,6 +102,7 @@ it('renders correctly', () => {
         </span>
       </label>,
       .c2 {
+      text-align: center;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;

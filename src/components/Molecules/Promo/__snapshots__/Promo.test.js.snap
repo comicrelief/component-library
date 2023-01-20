@@ -2,6 +2,7 @@
 
 exports[`renders Promo correctly 1`] = `
 .c6 {
+  text-align: center;
   color: #FFFFFF;
   font-size: 5rem;
   line-height: 5rem;
@@ -17,6 +18,7 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c7 {
+  text-align: center;
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
@@ -243,6 +245,7 @@ exports[`renders Promo correctly 1`] = `
 
 exports[`renders Promo correctly end position 1`] = `
 .c6 {
+  text-align: center;
   color: #FFFFFF;
   font-size: 5rem;
   line-height: 5rem;
@@ -258,6 +261,7 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 .c7 {
+  text-align: center;
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;

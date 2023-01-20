@@ -2,6 +2,7 @@
 
 exports[`renders correctly 1`] = `
 .c0 {
+  text-align: center;
   color: #E52630;
   text-transform: inherit;
   line-height: normal;

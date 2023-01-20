@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Input from './Input';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Input from "./Input";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Input
       name="fullname"
@@ -17,6 +17,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
+      text-align: center;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;

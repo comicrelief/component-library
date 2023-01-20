@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import SearchInput from './SearchInput';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import SearchInput from "./SearchInput";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
@@ -16,6 +16,7 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
+      text-align: center;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;

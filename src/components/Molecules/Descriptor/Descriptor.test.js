@@ -1,11 +1,11 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Descriptor from './Descriptor';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Descriptor from "./Descriptor";
 
-it('renders article teaser correctly', () => {
-  const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
-  const categories = ['How we fund', 'Social Tech', 'Sport for Change'];
+it("renders article teaser correctly", () => {
+  const tags = ["tag1", "tag2", "tag3", "tag4"];
+  const categories = ["How we fund", "Social Tech", "Sport for Change"];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
@@ -25,6 +25,7 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
+      text-align: center;
       color: #222222;
       font-size: 1rem;
       line-height: 1rem;
@@ -35,6 +36,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c7 {
+      text-align: center;
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -48,6 +50,7 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
+      text-align: center;
       color: #222222;
       font-size: 0.75rem;
       line-height: 0.75rem;

@@ -1,19 +1,24 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import PartnerLink from './PartnerLink';
-import Picture from '../../Atoms/Picture/Picture';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders correctly', () => {
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import PartnerLink from "./PartnerLink";
+import Picture from "../../Atoms/Picture/Picture";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <PartnerLink link="https://www.comicrelief.com">
-      <Picture alt="test Image" imageLow={defaultData.imageLow} images={defaultData.images} />
+      <Picture
+        alt="test Image"
+        imageLow={defaultData.imageLow}
+        images={defaultData.images}
+      />
     </PartnerLink>
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
+      text-align: center;
       color: #FFFFFF;
       font-size: 0.6875rem;
       line-height: 0.6875rem;
