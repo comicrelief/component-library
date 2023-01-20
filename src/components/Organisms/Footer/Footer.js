@@ -24,7 +24,7 @@ const Footer = ({
     <div>
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
-          <Text tag="p" color="white">{corporateSponsorTag}</Text>
+          <Text style={{ textAlign: 'left' }} align="left" tag="p" color="white">MR. MEN &#8482; LITTLE MISS &#8482; © 2022 THOIP (a SANRIO Company). All rights reserved.</Text>
           <FooterBranding>
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
