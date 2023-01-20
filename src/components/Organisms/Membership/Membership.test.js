@@ -26,7 +26,7 @@ it("renders correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      text-align: center;
+      text-align: left;
       font-size: 1.5rem;
       line-height: 1.5rem;
       text-transform: inherit;
@@ -35,7 +35,7 @@ it("renders correctly", () => {
     }
 
     .c7 {
-      text-align: center;
+      text-align: left;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -44,7 +44,7 @@ it("renders correctly", () => {
     }
 
     .c12 {
-      text-align: center;
+      text-align: left;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -52,7 +52,7 @@ it("renders correctly", () => {
     }
 
     .c16 {
-      text-align: center;
+      text-align: left;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -62,7 +62,7 @@ it("renders correctly", () => {
     }
 
     .c22 {
-      text-align: center;
+      text-align: left;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;

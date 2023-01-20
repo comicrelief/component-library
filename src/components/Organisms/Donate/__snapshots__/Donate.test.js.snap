@@ -2,7 +2,7 @@
 
 exports[`Monthly donation renders correctly 1`] = `
 .c4 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -16,7 +16,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c5 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -27,7 +27,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c16 {
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -37,7 +37,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c20 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -47,7 +47,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c25 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -852,7 +852,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 exports[`Single donation renders correctly 1`] = `
 .c4 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -866,7 +866,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c5 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -877,7 +877,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c10 {
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -887,7 +887,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c14 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -897,7 +897,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c20 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -1568,7 +1568,7 @@ exports[`Single donation renders correctly 1`] = `
 
 exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c4 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
@@ -1582,7 +1582,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c5 {
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -1593,7 +1593,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c10 {
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -1603,7 +1603,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c14 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;

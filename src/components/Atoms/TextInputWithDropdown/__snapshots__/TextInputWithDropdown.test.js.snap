@@ -2,7 +2,7 @@
 
 exports[`renders correctly with no value and no options 1`] = `
 .c2 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -109,7 +109,7 @@ exports[`renders correctly with no value and no options 1`] = `
 
 exports[`renders correctly with value and no options 1`] = `
 .c2 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -216,7 +216,7 @@ exports[`renders correctly with value and no options 1`] = `
 
 exports[`renders correctly with value and options 1`] = `
 .c2 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -226,7 +226,7 @@ exports[`renders correctly with value and options 1`] = `
 }
 
 .c10 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;

@@ -2,7 +2,7 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  text-align: center;
+  text-align: left;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-transform: uppercase;
@@ -11,7 +11,7 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c8 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
@@ -171,7 +171,7 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  text-align: center;
+  text-align: left;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-transform: uppercase;
@@ -180,7 +180,7 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c8 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
@@ -188,7 +188,7 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c10 {
-  text-align: center;
+  text-align: left;
   font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: inherit;
@@ -362,7 +362,7 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  text-align: center;
+  text-align: left;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-transform: uppercase;
@@ -371,7 +371,7 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c8 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
@@ -531,7 +531,7 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  text-align: center;
+  text-align: left;
   font-size: 0.75rem;
   line-height: 0.75rem;
   text-transform: uppercase;
@@ -540,7 +540,7 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c8 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: uppercase;

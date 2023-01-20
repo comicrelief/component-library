@@ -20,7 +20,7 @@ it("renders article teaser correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      text-align: center;
+      text-align: left;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -30,7 +30,7 @@ it("renders article teaser correctly", () => {
     }
 
     .c10 {
-      text-align: center;
+      text-align: left;
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;
@@ -274,7 +274,7 @@ it("renders press realese correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      text-align: center;
+      text-align: left;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
@@ -284,7 +284,7 @@ it("renders press realese correctly", () => {
     }
 
     .c10 {
-      text-align: center;
+      text-align: left;
       font-size: 2rem;
       line-height: 2rem;
       text-transform: uppercase;

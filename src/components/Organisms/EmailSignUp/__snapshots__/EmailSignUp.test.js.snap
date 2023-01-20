@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 .c1 {
-  text-align: center;
+  text-align: left;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: uppercase;
@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c4 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -24,7 +24,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c10 {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;

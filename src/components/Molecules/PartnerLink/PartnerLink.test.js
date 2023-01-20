@@ -18,7 +18,7 @@ it("renders correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
-      text-align: center;
+      text-align: left;
       color: #FFFFFF;
       font-size: 0.6875rem;
       line-height: 0.6875rem;
