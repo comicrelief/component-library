@@ -24,7 +24,9 @@ const Footer = ({
     <div>
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
-          <Text style={{ textAlign: 'left' }} align="left" tag="p" color="white">{additionalLegalLine}</Text>
+          {additionalLegalLine
+            && <Text textAlign="left" tag="p" color="white">{additionalLegalLine}</Text>
+          }
           <FooterBranding>
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
