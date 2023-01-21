@@ -1,11 +1,11 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import Descriptor from "./Descriptor";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../hoc/shallowWithTheme';
+import Descriptor from './Descriptor';
 
-it("renders article teaser correctly", () => {
-  const tags = ["tag1", "tag2", "tag3", "tag4"];
-  const categories = ["How we fund", "Social Tech", "Sport for Change"];
+it('renders article teaser correctly', () => {
+  const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
+  const categories = ['How we fund', 'Social Tech', 'Sport for Change'];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
