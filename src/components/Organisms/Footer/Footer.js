@@ -8,6 +8,7 @@ import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import {
   FooterWrapper,
   InnerWrapper,
+  FooterLegalLine,
   FooterBranding,
   FooterCopyright,
   SocialIconWrapper,
@@ -25,7 +26,7 @@ const Footer = ({
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
           {additionalLegalLine
-            && <Text style={{ textAlign: 'left' }} tag="p" color="white">{additionalLegalLine}</Text>
+            && <FooterLegalLine tag="p" color="grey">{additionalLegalLine}</FooterLegalLine>
           }
           <FooterBranding>
             <SocialIconWrapper>
