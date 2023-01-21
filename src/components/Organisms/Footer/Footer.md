@@ -16,7 +16,7 @@ import footerCopy from './data/footerCopy';
       overrideWhiteList 
     />
     
-    <p>Adding a corporate tag to the top of the footer</p>
+    <p>Adding a additionalLegalLine to the top of the footer</p>
     <Footer 
       additionalLegalLine="MR. MEN ™ LITTLE MISS ™ © 2022 THOIP (a SANRIO Company). All rights reserved." 
       navItems={data} 
