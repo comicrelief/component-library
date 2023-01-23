@@ -44,6 +44,7 @@ const InnerWrapper = styled.div`
 
 const FooterLegalLine = styled(Text)`
   text-align: left;
+  margin-top: 1rem;
 `;
 
 const FooterBranding = styled.div`
