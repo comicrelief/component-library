@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
+import Text from '../../Atoms/Text/Text';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -39,6 +40,11 @@ const InnerWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 0 ${spacing('md')} ${spacing('xl')};
   }
+`;
+
+const FooterLegalLine = styled(Text)`
+  text-align: left;
+  margin-top: 1rem;
 `;
 
 const FooterBranding = styled.div`
@@ -81,6 +87,7 @@ export {
   FooterWrapper,
   Angle,
   InnerWrapper,
+  FooterLegalLine,
   FooterCopyright,
   FooterBranding,
   SocialIconWrapper,

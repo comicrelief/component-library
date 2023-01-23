@@ -8,6 +8,7 @@ import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import {
   FooterWrapper,
   InnerWrapper,
+  FooterLegalLine,
   FooterBranding,
   FooterCopyright,
   SocialIconWrapper,
@@ -15,14 +16,18 @@ import {
 } from './Footer.style';
 
 const Footer = ({
-  navItems, footerCopy, campaign, ...rest
+  navItems, footerCopy, campaign, additionalLegalLine, ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
+
   return (
     <div>
       <FooterWrapper navItems {...rest}>
         <InnerWrapper>
+          {additionalLegalLine
+            && <FooterLegalLine tag="p" color="grey">{additionalLegalLine}</FooterLegalLine>
+          }
           <FooterBranding>
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
@@ -47,14 +52,16 @@ Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   footerCopy: PropTypes.string,
   campaign: PropTypes.string,
-  overrideWhiteList: PropTypes.bool
+  overrideWhiteList: PropTypes.bool,
+  additionalLegalLine: PropTypes.string
 };
 
 Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
   campaign: 'Comic Relief',
-  overrideWhiteList: false
+  overrideWhiteList: false,
+  additionalLegalLine: ''
 };
 
 export default Footer;

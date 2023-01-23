@@ -558,11 +558,12 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
+      
       <div
         className="c2"
       >
         <div
-          className="Footerstyle__SocialIconWrapper-sc-167xaf5-6"
+          className="Footerstyle__SocialIconWrapper-sc-167xaf5-7"
         >
           <ul
             className="c3"

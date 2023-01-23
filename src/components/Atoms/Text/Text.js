@@ -47,21 +47,16 @@ export const BaseText = styled.span`
 const Text = ({
   tag, children, height, weight, family, ...rest
 }) => (
-  <BaseText {...rest} as={tag} height={height} weight={weight} family={family}>
+  <BaseText
+    {...rest}
+    as={tag}
+    height={height}
+    weight={weight}
+    family={family}
+  >
     {children}
   </BaseText>
 );
-
-Text.defaultProps = {
-  family: null,
-  tag: 'span',
-  weight: undefined,
-  height: undefined,
-  uppercase: false,
-  size: 's',
-  color: 'inherit',
-  children: undefined
-};
 
 Text.propTypes = {
   /** Font family */
@@ -83,6 +78,17 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.string
   ])
+};
+
+Text.defaultProps = {
+  family: null,
+  tag: 'span',
+  weight: undefined,
+  height: undefined,
+  uppercase: false,
+  size: 's',
+  color: 'inherit',
+  children: undefined
 };
 
 export default Text;
