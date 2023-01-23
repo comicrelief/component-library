@@ -38,6 +38,12 @@ const colors = {
   purple_light: '#DFC6F6',
   red: '#E52630',
   red_dark: '#890B11',
+
+  rnd23_teal: '#3EB1AA',
+  rnd23_yellow: '#FFE300',
+  rnd23_pink: '#EDB4D3',
+  rnd23_black: '#2B3737',
+
   teal: '#4ECDBE',
   teal_dark: '#13767C',
   teal_light: '#86E4E9',
