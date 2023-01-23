@@ -18,9 +18,9 @@ const Donate = ({
   alt,
   cartID,
   clientID,
-  overlayColor,
-  backgroundColor,
-  buttonColor,
+  desktopOverlayColor,
+  mobileBackgroundColor,
+  submitButtonColor,
   textColor,
   donateLink,
   data,
@@ -56,14 +56,14 @@ const Donate = ({
 
   return (
     <Container
-      backgroundColor={backgroundColor}
-      overlayColor={overlayColor}
+      mobileBackgroundColor={mobileBackgroundColor}
+      desktopOverlayColor={desktopOverlayColor}
       id={mbshipID}
       key={overrideValue}
     >
       {!isDesktop && mobileImages ? (
         <Picture
-          backgroundColor={backgroundColor}
+          backgroundColor={mobileBackgroundColor}
           image={mobileImage}
           images={mobileImages}
           imageLow={mobileImageLow}
@@ -76,7 +76,7 @@ const Donate = ({
 
       {isDesktop && images ? (
         <BgImage
-          backgroundColor={overlayColor}
+          backgroundColor={desktopOverlayColor}
           image={image}
           images={images}
           imageLow={imageLow}
@@ -121,7 +121,7 @@ const Donate = ({
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
           chooseAmountText={chooseAmountText}
-          buttonColor={buttonColor}
+          submitButtonColor={submitButtonColor}
         />
       </Wrapper>
     </Container>
@@ -145,9 +145,9 @@ Donate.propTypes = {
   mobileImage: PropTypes.string,
   mobileImages: PropTypes.string,
   mobileAlt: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  overlayColor: PropTypes.string,
-  buttonColor: PropTypes.string,
+  mobileBackgroundColor: PropTypes.string,
+  desktopOverlayColor: PropTypes.string,
+  submitButtonColor: PropTypes.string,
   textColor: PropTypes.string,
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
@@ -167,9 +167,9 @@ Donate.defaultProps = {
   mobileImage: null,
   mobileImages: null,
   mobileAlt: '',
-  overlayColor: 'transparent',
-  backgroundColor: 'blue_dark',
-  buttonColor: 'red',
+  desktopOverlayColor: 'transparent',
+  mobileBackgroundColor: 'blue_dark',
+  submitButtonColor: 'red',
   textColor: 'white',
   mbshipID: null,
   otherAmountText:
