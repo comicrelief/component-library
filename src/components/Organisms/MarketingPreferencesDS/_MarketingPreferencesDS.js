@@ -27,27 +27,23 @@ const MarketingPreferencesDS = ({
   const { errors, control } = formContext;
 
   // For brevity
-  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
-  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: [] });
-  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: [] });
-  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: [] });
+  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: '' });
+  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: '' });
+  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: '' });
+  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: '' });
 
   const {
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
   // If the field is not required for each No/Yes choice, remove it from the DOM entirely
-  const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
-  || (mp_permissionEmail.no === false && emailChoice.includes('no'));
+  const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'));
 
-  const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'))
-  || (mp_permissionSMS.no === false && smsChoice.includes('no'));
+  const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'));
 
-  const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
-  || (mp_permissionPhone.no === false && phoneChoice.includes('no'));
+  const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'));
 
-  const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'))
-  || (mp_permissionPost.no === false && postChoice.includes('no'));
+  const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = () => {
@@ -81,20 +77,20 @@ const MarketingPreferencesDS = ({
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
             id="mp_permissionEmail"
-            userSelection={emailChoice[0]}
+            userSelection={emailChoice}
             formContext={formContext}
           />
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
-            {emailChoice[0] === 'no' && <NoMessage askingFor="an email" optInType="email" /> }
+            {emailChoice === 'no' && <NoMessage askingFor="an email" optInType="email" /> }
             <TextInput
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
               // Dynamically update the field attr based on config for current choice
-              optional={!mp_permissionEmail[emailChoice[0]]}
+              optional={!mp_permissionEmail[emailChoice]}
               type="email"
               id="mp_email"
               formContext={formContext}
@@ -115,18 +111,18 @@ const MarketingPreferencesDS = ({
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
-            userSelection={smsChoice[0]}
+            userSelection={smsChoice}
             formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
-            {smsChoice[0] === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
+            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
             <TextInput
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
-              optional={!mp_permissionSMS[smsChoice[0]]}
+              optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
               formContext={formContext}
             />
@@ -146,18 +142,18 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
-            userSelection={phoneChoice[0]}
+            userSelection={phoneChoice}
             formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
-            {phoneChoice[0] === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
+            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
-              optional={!mp_permissionPhone[phoneChoice[0]]}
+              optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
               formContext={formContext}
             />
@@ -177,18 +173,18 @@ const MarketingPreferencesDS = ({
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
-            userSelection={postChoice[0]}
+            userSelection={postChoice}
             formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disablePostInput}>
           <ShowHideInputWrapper show={showPostFields}>
-            {postChoice[0] === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
+            {postChoice === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
             <TextInput
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
-              optional={!mp_permissionPost[postChoice[0]]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_address1"
               formContext={formContext}
             />
@@ -212,7 +208,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
-              optional={!mp_permissionPost[postChoice[0]]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_town"
               formContext={formContext}
             />
@@ -220,7 +216,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
-              optional={!mp_permissionPost[postChoice[0]]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_postcode"
               formContext={formContext}
             />
@@ -228,7 +224,7 @@ const MarketingPreferencesDS = ({
               placeholder=""
               fieldName="mp_country"
               label="Country"
-              optional={!mp_permissionPost[postChoice[0]]}
+              optional={!mp_permissionPost[postChoice]}
               id="mp_country"
               formContext={formContext}
             />
