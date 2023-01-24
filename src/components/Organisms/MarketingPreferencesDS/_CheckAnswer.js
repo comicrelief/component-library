@@ -21,7 +21,7 @@ const CheckAnswer = ({
       newVal = '';
 
       // To ensure we're not letting invalid values get passed, reset any associated fields:
-      const theseFields = AssociatedFields[name];
+      const theseFields = AssociatedFields[name].fieldNames;
       theseFields.forEach(fieldName => {
         setValue(fieldName, '');
       });
@@ -35,7 +35,7 @@ const CheckAnswer = ({
     const reValidate = !mpValidationOptions[name][newVal];
 
     if (reValidate) {
-      const theseFields = AssociatedFields[name];
+      const theseFields = AssociatedFields[name].fieldNames;
       theseFields.forEach(fieldName => {
         clearErrors(fieldName);
       });
@@ -54,7 +54,7 @@ const CheckAnswer = ({
           onChange={onChange}
         />
         <span />
-        Yes, please
+        { AssociatedFields[name].label }
       </CheckLabel>
     </CheckContainer>
   );

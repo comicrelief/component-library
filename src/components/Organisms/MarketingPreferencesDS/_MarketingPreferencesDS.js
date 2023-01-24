@@ -3,14 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
-import Text from '../../Atoms/Text/Text';
+// import Text from '../../Atoms/Text/Text';
 import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  TopCopyWrapper, BottomCopyWrapper, Head, FormField, ShowHideInputWrapper
+  TopCopyWrapper, BottomCopyWrapper, Head, FormField, ShowHideInputWrapper, ExtraInfo
 } from './MarketingPreferencesDS.style';
 
 import {
@@ -70,9 +70,6 @@ const MarketingPreferencesDS = ({
       {!mp_permissionEmail.disableOption && (
       <FormField className="field-email">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Email Me
-          </Text>
           <CheckAnswer
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
@@ -85,10 +82,17 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
             {emailChoice === 'no' && <NoMessage askingFor="an email" optInType="email" /> }
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>email</b>
+              {' '}
+              you:
+            </ExtraInfo>
             <TextInput
               placeholder=""
               fieldName="mp_email"
-              label="Please enter your email address"
+              label="Please enter <b>your</b> email addressss"
               // Dynamically update the field attr based on config for current choice
               optional={!mp_permissionEmail[emailChoice]}
               type="email"
@@ -104,9 +108,6 @@ const MarketingPreferencesDS = ({
       {!mp_permissionSMS.disableOption && (
       <FormField className="field-sms">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Text me
-          </Text>
           <CheckAnswer
             name="mp_permissionSMS"
             id="mp_permissionSMS"
@@ -118,6 +119,13 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
             {smsChoice === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>text</b>
+              {' '}
+              you on:
+            </ExtraInfo>
             <TextInput
               placeholder=""
               fieldName="mp_mobile"
@@ -135,9 +143,6 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPhone.disableOption && (
       <FormField className="field-phone">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Phone me
-          </Text>
           <CheckAnswer
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
@@ -149,6 +154,13 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
             {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>email</b>
+              {' '}
+              you:
+            </ExtraInfo>
             <TextInput
               placeholder=""
               fieldName="mp_phone"
@@ -166,9 +178,6 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPost.disableOption && (
       <FormField className="field-post">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Send me post
-          </Text>
           <CheckAnswer
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
@@ -180,6 +189,13 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disablePostInput}>
           <ShowHideInputWrapper show={showPostFields}>
             {postChoice === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>email</b>
+              {' '}
+              you:
+            </ExtraInfo>
             <TextInput
               placeholder=""
               fieldName="mp_address1"
