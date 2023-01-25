@@ -3,14 +3,22 @@ import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 import checkBoxIcon from './assets/CR_Tick.svg';
+import TextInput from './_TextInput';
 
-// import EmailIcon from './assets/CR_@.svg';
-// import PostIcon from './assets/CR_Mail.svg';
-// import PhoneIcon from './assets/CR_Phone.svg';
-// import SMSIcon from './assets/CR_SMS.svg';
+const OuterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media('medium')} {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+`;
 
 const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
+  display: flex;
+  width: 100%;
 `;
 
 const BottomCopyWrapper = styled.div`
@@ -26,6 +34,13 @@ const Head = styled.div`
 const FormField = styled.div`${({ theme }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  ${media('medium')} {
+    width: 50%;
+  }
   
   // Hide the labels for the non-multi fieldsets
   &.field-phone,
@@ -69,10 +84,6 @@ const CheckContainer = styled.div`${({ theme }) => css`
   justify-content: space-between;
   font-size: ${theme.fontSize('md')};
   font-family: ${theme.fontFamilies(theme.font.regular)};
-
-  ${media('medium')} {
-    width: 50%;
-  }
   `}`;
 
 const CheckLabel = styled.label`${({ theme, userSelection }) => css`
@@ -146,10 +157,6 @@ const ShowHideInputWrapper = styled.div`
   margin-bottom: ${spacing('lg')};
   width: 100%;
 
-  ${media('small')} {
-    max-width: 290px;
-  }
-
   label {
     width: 100%;
     border: none;
@@ -177,6 +184,14 @@ const ExtraInfo = styled.span`
   }
 `;
 
+const MPTextInput = styled(TextInput)`
+  input {
+    ${media('small')} {
+      max-width: none;
+    }
+  }
+`;
+
 export {
   TopCopyWrapper,
   BottomCopyWrapper,
@@ -186,5 +201,7 @@ export {
   CheckInput,
   CheckContainer,
   ShowHideInputWrapper,
-  ExtraInfo
+  ExtraInfo,
+  OuterWrapper,
+  MPTextInput
 };

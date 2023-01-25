@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
 // import Text from '../../Atoms/Text/Text';
-import TextInput from './_TextInput';
+// import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
 import NoMessage from './_NoMessage';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  TopCopyWrapper, BottomCopyWrapper, Head, FormField, ShowHideInputWrapper, ExtraInfo
+  TopCopyWrapper, BottomCopyWrapper, Head, FormField,
+  ShowHideInputWrapper, ExtraInfo, OuterWrapper, MPTextInput
 } from './MarketingPreferencesDS.style';
 
 import {
@@ -63,7 +64,7 @@ const MarketingPreferencesDS = ({
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   return (
-    <div id={customId}>
+    <OuterWrapper id={customId}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
@@ -89,7 +90,7 @@ const MarketingPreferencesDS = ({
               {' '}
               you:
             </ExtraInfo>
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_email"
               label="Please enter <b>your</b> email addressss"
@@ -126,7 +127,7 @@ const MarketingPreferencesDS = ({
               {' '}
               you on:
             </ExtraInfo>
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
@@ -161,7 +162,7 @@ const MarketingPreferencesDS = ({
               {' '}
               you:
             </ExtraInfo>
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
@@ -196,7 +197,7 @@ const MarketingPreferencesDS = ({
               {' '}
               you:
             </ExtraInfo>
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_address1"
               label="Address Line 1"
@@ -204,7 +205,7 @@ const MarketingPreferencesDS = ({
               id="mp_address1"
               formContext={formContext}
             />
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_address2"
               label="Address Line 2"
@@ -212,7 +213,7 @@ const MarketingPreferencesDS = ({
               id="mp_address2"
               formContext={formContext}
             />
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_address3"
               label="Address Line 3"
@@ -220,7 +221,7 @@ const MarketingPreferencesDS = ({
               id="mp_address3"
               formContext={formContext}
             />
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_town"
               label="Town/City"
@@ -228,7 +229,7 @@ const MarketingPreferencesDS = ({
               id="mp_town"
               formContext={formContext}
             />
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_postcode"
               label="Postcode"
@@ -236,7 +237,7 @@ const MarketingPreferencesDS = ({
               id="mp_postcode"
               formContext={formContext}
             />
-            <TextInput
+            <MPTextInput
               placeholder=""
               fieldName="mp_country"
               label="Country"
@@ -250,7 +251,7 @@ const MarketingPreferencesDS = ({
       )}
 
       {copyBottom && <BottomCopyWrapper>{copyBottom}</BottomCopyWrapper>}
-    </div>
+    </OuterWrapper>
   );
 };
 
