@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
-import checkBoxIcon from './assets/CR_Tick.svg';
+import checkBoxIcon from './assets/CR_Tick_black.svg';
 import TextInput from './_TextInput';
 
 const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('medium')} {
+  ${media('small')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -19,6 +19,10 @@ const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
   display: flex;
   width: 100%;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: 10px;
+  }
 `;
 
 const BottomCopyWrapper = styled.div`
@@ -38,7 +42,7 @@ const FormField = styled.div`${({ theme }) => css`
   display: flex;
   flex-direction: column;
 
-  ${media('medium')} {
+  @media ${theme.breakpoint('small')} {
     width: 50%;
     padding: 10px;
   }
@@ -48,8 +52,6 @@ const FormField = styled.div`${({ theme }) => css`
     margin-bottom: ${spacing('md')};
     width: 100%;
     color: ${theme.color('grey_dark')};
-    @media ${theme.breakpoint('small')} {
-    }
   }
 
   h3 {
@@ -121,7 +123,7 @@ const CheckInput = styled.input`
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('grey_light')};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('black')};
     float: left;
     border-radius: 8px;
 
@@ -131,15 +133,16 @@ const CheckInput = styled.input`
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('red')};
+    background-color: ${({ theme }) => theme.color('grey_light')};
     background-size: contain;
   }
 `;
 
 const ShowHideInputWrapper = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
-  margin-bottom: ${spacing('lg')};
+  margin-bottom: ${spacing('md')};
   width: 100%;
+
 
   label {
     width: 100%;
@@ -173,6 +176,7 @@ const ExtraInfo = styled.span`
 
 const MPTextInput = styled(TextInput)`
   input {
+    border: 1px solid  ${({ theme }) => theme.color('black')};;
     ${media('small')} {
       max-width: none;
     }
