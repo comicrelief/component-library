@@ -40,6 +40,7 @@ const FormField = styled.div`${({ theme }) => css`
 
   ${media('medium')} {
     width: 50%;
+    padding: 10px;
   }
   
   // Hide the labels for the non-multi fieldsets
@@ -55,11 +56,9 @@ const FormField = styled.div`${({ theme }) => css`
     position: relative;
     margin-bottom: ${spacing('md')};
     width: 100%;
-    padding: 10px;
     color: ${theme.color('grey_dark')};
 
     @media ${theme.breakpoint('small')} {
-      padding: 12px 16px;
     }
   }
 
@@ -90,30 +89,25 @@ const CheckLabel = styled.label`${({ theme, userSelection }) => css`
   display: flex;
   align-items: center;
   font-size: ${theme.fontSize('xs')};
-  padding: 10px;
 
   @media ${theme.breakpoint('small')} {
     font-size: ${theme.fontSize('s')};
-    padding: 12px 16px;
   }
   
   &:hover,
   &:focus {
-    // border: 2px solid ${theme.color('grey')};
-    // padding: 9px;
+
     @media ${theme.breakpoint('small')} {
-      padding: 11px 15px;
+
     }
   }
 
   ${userSelection && `
     &[for$="${userSelection}"] {
-      // background: ${theme.color('grey_medium')};
-      // padding: 9px;
-      // border: 2px solid ${theme.color('grey')};
+
 
       @media ${theme.breakpoint('small')} {
-        padding: 11px 15px;
+
       }
     }
   `}
