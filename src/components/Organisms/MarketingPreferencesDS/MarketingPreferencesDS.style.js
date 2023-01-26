@@ -42,22 +42,12 @@ const FormField = styled.div`${({ theme }) => css`
     width: 50%;
     padding: 10px;
   }
-  
-  // Hide the labels for the non-multi fieldsets
-  &.field-phone,
-  &.field-sms,
-  &.field-email {
-    span + label > span {
-      display: none;
-    }
-  }
 
   label {
     position: relative;
     margin-bottom: ${spacing('md')};
     width: 100%;
     color: ${theme.color('grey_dark')};
-
     @media ${theme.breakpoint('small')} {
     }
   }
@@ -155,11 +145,6 @@ const ShowHideInputWrapper = styled.div`
     width: 100%;
     border: none;
     padding: 0;
-    
-    // NAH WRONG PLACE
-    span {
-      font-weight: normal;
-    }
   }
 `;
 
@@ -175,6 +160,14 @@ const ExtraInfo = styled.span`
 
   + label {
     margin-top: 20px;
+
+    // 
+    &[for="mp_email"],
+    &[for="mp_mobile"],
+    &[for="mp_phone"] {
+      > span:first-child {
+        display: none;
+      }
   }
 `;
 

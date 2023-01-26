@@ -191,11 +191,11 @@ const MarketingPreferencesDS = ({
           <ShowHideInputWrapper show={showPostFields}>
             {postChoice === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
             <ExtraInfo>
-              Please confirm the email address we will use to
+              Please confirm the address we will use to
               {' '}
-              <b>email</b>
+              <b>post</b>
               {' '}
-              you:
+              to you:
             </ExtraInfo>
             <MPTextInput
               placeholder=""
