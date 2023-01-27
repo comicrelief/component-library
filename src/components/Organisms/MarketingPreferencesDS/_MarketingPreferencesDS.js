@@ -105,76 +105,6 @@ const MarketingPreferencesDS = ({
       </FormField>
       )}
 
-      {/* Render SMS checkboxes and inputs if not removed in config */}
-      {!mp_permissionSMS.disableOption && (
-      <FormField className="field-sms">
-        <Head>
-          <CheckAnswer
-            name="mp_permissionSMS"
-            id="mp_permissionSMS"
-            mpValidationOptions={mpValidationOptions}
-            userSelection={smsChoice}
-            formContext={formContext}
-          />
-        </Head>
-        <MaybeDisabled disabled={disableSMSInput}>
-          <ShowHideInputWrapper show={showSMSField}>
-            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
-            <ExtraInfo>
-              Please confirm the email address we will use to
-              {' '}
-              <b>text</b>
-              {' '}
-              you on:
-            </ExtraInfo>
-            <MPTextInput
-              placeholder=""
-              fieldName="mp_mobile"
-              label="Please enter your mobile no."
-              optional={!mp_permissionSMS[smsChoice]}
-              id="mp_mobile"
-              formContext={formContext}
-            />
-          </ShowHideInputWrapper>
-        </MaybeDisabled>
-      </FormField>
-      )}
-
-      {/* Render Phone checkboxes and input if not removed in config */}
-      {!mp_permissionPhone.disableOption && (
-      <FormField className="field-phone">
-        <Head>
-          <CheckAnswer
-            name="mp_permissionPhone"
-            mpValidationOptions={mpValidationOptions}
-            id="mp_permissionPhone"
-            userSelection={phoneChoice}
-            formContext={formContext}
-          />
-        </Head>
-        <MaybeDisabled disabled={disablePhoneInput}>
-          <ShowHideInputWrapper show={showPhoneField}>
-            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
-            <ExtraInfo>
-              Please confirm the email address we will use to
-              {' '}
-              <b>email</b>
-              {' '}
-              you:
-            </ExtraInfo>
-            <MPTextInput
-              placeholder=""
-              fieldName="mp_phone"
-              label="Please enter your phone no."
-              optional={!mp_permissionPhone[phoneChoice]}
-              id="mp_phone"
-              formContext={formContext}
-            />
-          </ShowHideInputWrapper>
-        </MaybeDisabled>
-      </FormField>
-      )}
-
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
       <FormField className="field-post">
@@ -243,6 +173,76 @@ const MarketingPreferencesDS = ({
               label="Country"
               optional={!mp_permissionPost[postChoice]}
               id="mp_country"
+              formContext={formContext}
+            />
+          </ShowHideInputWrapper>
+        </MaybeDisabled>
+      </FormField>
+      )}
+
+      {/* Render SMS checkboxes and inputs if not removed in config */}
+      {!mp_permissionSMS.disableOption && (
+      <FormField className="field-sms">
+        <Head>
+          <CheckAnswer
+            name="mp_permissionSMS"
+            id="mp_permissionSMS"
+            mpValidationOptions={mpValidationOptions}
+            userSelection={smsChoice}
+            formContext={formContext}
+          />
+        </Head>
+        <MaybeDisabled disabled={disableSMSInput}>
+          <ShowHideInputWrapper show={showSMSField}>
+            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>text</b>
+              {' '}
+              you on:
+            </ExtraInfo>
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_mobile"
+              label="Please enter your mobile no."
+              optional={!mp_permissionSMS[smsChoice]}
+              id="mp_mobile"
+              formContext={formContext}
+            />
+          </ShowHideInputWrapper>
+        </MaybeDisabled>
+      </FormField>
+      )}
+
+      {/* Render Phone checkboxes and input if not removed in config */}
+      {!mp_permissionPhone.disableOption && (
+      <FormField className="field-phone">
+        <Head>
+          <CheckAnswer
+            name="mp_permissionPhone"
+            mpValidationOptions={mpValidationOptions}
+            id="mp_permissionPhone"
+            userSelection={phoneChoice}
+            formContext={formContext}
+          />
+        </Head>
+        <MaybeDisabled disabled={disablePhoneInput}>
+          <ShowHideInputWrapper show={showPhoneField}>
+            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              {' '}
+              <b>email</b>
+              {' '}
+              you:
+            </ExtraInfo>
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_phone"
+              label="Please enter your phone no."
+              optional={!mp_permissionPhone[phoneChoice]}
+              id="mp_phone"
               formContext={formContext}
             />
           </ShowHideInputWrapper>

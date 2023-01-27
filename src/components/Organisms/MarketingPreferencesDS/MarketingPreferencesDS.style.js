@@ -9,7 +9,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('small')} {
+  ${media('medium')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -140,9 +140,8 @@ const CheckInput = styled.input`
 
 const ShowHideInputWrapper = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
-  margin-bottom: ${spacing('md')};
+  // margin-bottom: ${spacing('md')};
   width: 100%;
-
 
   label {
     width: 100%;
