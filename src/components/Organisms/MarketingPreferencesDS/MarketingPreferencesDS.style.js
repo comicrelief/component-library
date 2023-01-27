@@ -9,7 +9,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('medium')} {
+  ${media('small')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
