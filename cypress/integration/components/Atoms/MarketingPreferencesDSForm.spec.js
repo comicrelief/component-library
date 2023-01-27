@@ -28,7 +28,7 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@default')
         .should('exist')
         .find('h3')
-        .contains('How can we contact you?');
+        .contains('Stay up to date with Comic Relief?');
     });
 
     it('should render correct Default example options', () => {
@@ -53,7 +53,7 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised')
         .should('exist')
         .find('h3')
-        .contains('How can we contact you?');
+        .contains('Stay up to date with Comic Relief?');
     });
 
     it('should render correct Customised example options', () => {
