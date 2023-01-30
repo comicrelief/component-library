@@ -12,10 +12,10 @@ const setInitialValues = overrideValues => {
     mp_town: '',
     mp_country: '',
     mp_postcode: '',
-    mp_permissionEmail: [],
-    mp_permissionPost: [],
-    mp_permissionPhone: [],
-    mp_permissionSMS: []
+    mp_permissionEmail: false,
+    mp_permissionPost: false,
+    mp_permissionPhone: false,
+    mp_permissionSMS: false
   };
 
   // Override with any custom options supplied
@@ -29,12 +29,12 @@ const buildValidationSchema = overrideOptions => {
     mp_permissionEmail: {
       /**
         * As per react-hook-form's validation requirements, sets the fields' required attribute
-        * for each checkbox option (Yes & No), a non-required field isn't rendered or included
-        * in the validation. As the backend *currently* needs values to formalise a user's opt-out,
-        * we'll set all fields to 'required' by default (once the option is chosen).
+        * for each checkbox option (now only 'Yes' as of 2023), a non-required field isn't rendered
+        * or included in the validation. As the backend *currently* needs values to formalise
+        * a user's opt-out, we'll set all fields to 'required' by default
+        * (once the option is chosen).
         */
       yes: true,
-      no: true,
       // Hide the input from user interaction, but keep it in the DOM so we can pass values to it
       hideInput: false,
       // Allows complete removal of the option (checkboxes & fields) from both render & validation.
@@ -43,19 +43,16 @@ const buildValidationSchema = overrideOptions => {
     },
     mp_permissionSMS: {
       yes: true,
-      no: true,
       hideInput: false,
       disableOption: false
     },
     mp_permissionPhone: {
       yes: true,
-      no: true,
       hideInput: false,
       disableOption: false
     },
     mp_permissionPost: {
       yes: true,
-      no: true,
       hideInput: false,
       disableOption: false
     }

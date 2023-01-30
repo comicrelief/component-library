@@ -5,35 +5,35 @@ import Link from '../../Atoms/Link/Link';
 const defaultCopyTop = (
   <div>
     <Text tag="h3" size="xl" family="Anton" uppercase weight="400" color="grey_dark">
-      How can we contact you?
+      Stay up to date with Comic Relief?
     </Text>
     <Text tag="p" size="md" color="grey_dark">
-      We’d love to stay in touch and provide you with fundraising tips,
-      news updates and more goodies.
+      We’d like to send you updates on the work we’re funding and how
+      your support makes a difference in the UK and around the world.
     </Text>
     <Text tag="p" size="md" color="grey_dark">
-      Please select your preferred contact options below.
+      Please tick the relevant boxes below if you would like to hear from us.
     </Text>
   </div>
 );
 
 const defaultCopyBottom = (
   <Text tag="p" color="grey_dark">
-    You can update your communication preferences at any time at
+    Update your preferences at any time by visiting our
     {' '}
     <Link
       type="standard"
       href="https://www.comicrelief.com/update-your-preferences"
     >
-      update your preferences
+      preferences centre
     </Link>
-    . Your details will be kept safe, check out our
+    . Your details will be kept safe, see our
     {' '}
     <Link type="standard" href="https://www.comicrelief.com/privacy-policy">
       privacy policy
     </Link>
     {' '}
-    for more details.
+    for more information.
   </Text>
 );
 

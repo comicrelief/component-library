@@ -2,15 +2,27 @@ import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
-import checkBoxIcon from './assets/CR_Tick.svg';
+import checkBoxIcon from './assets/CR_Tick_black.svg';
+import TextInput from './_TextInput';
 
-import EmailIcon from './assets/CR_@.svg';
-import PostIcon from './assets/CR_Mail.svg';
-import PhoneIcon from './assets/CR_Phone.svg';
-import SMSIcon from './assets/CR_SMS.svg';
+const OuterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media('small')} {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+`;
 
 const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
+  display: flex;
+  width: 100%;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: 10px;
+  }
 `;
 
 const BottomCopyWrapper = styled.div`
@@ -26,25 +38,24 @@ const Head = styled.div`
 const FormField = styled.div`${({ theme }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media ${theme.breakpoint('small')} {
+    width: 50%;
+    padding: 10px;
+  }
 
   label {
     position: relative;
     margin-bottom: ${spacing('md')};
-    width: 48%;
-    padding: 10px;
-    border: 1px solid ${theme.color('grey')};
-    box-sizing: border-box;
-    border-radius: 8px;
+    width: 100%;
     color: ${theme.color('grey_dark')};
-
-    @media ${theme.breakpoint('small')} {
-      padding: 12px 16px;
-    }
   }
 
   h3 {
     position: relative;
-    padding-left: 35px;
     margin-bottom: ${spacing('md')};
 
     &:before {
@@ -56,23 +67,7 @@ const FormField = styled.div`${({ theme }) => css`
       content: '';
     }
   }
-
-  &.field-email h3:before {
-    background: url(${EmailIcon}) top left/contain no-repeat;
-  }
-
-  &.field-sms h3:before {
-    background: url(${SMSIcon}) top left/contain no-repeat;
-  }
-
-  &.field-phone h3:before {
-    background: url(${PhoneIcon}) top left/contain no-repeat;
-  }
-
-  &.field-post h3:before {
-    background: url(${PostIcon}) top left/contain no-repeat;
-  }
-  `}`;
+`}`;
 
 const CheckContainer = styled.div`${({ theme }) => css`
   width: 100%;
@@ -80,45 +75,17 @@ const CheckContainer = styled.div`${({ theme }) => css`
   justify-content: space-between;
   font-size: ${theme.fontSize('md')};
   font-family: ${theme.fontFamilies(theme.font.regular)};
+`}`;
 
-  ${media('small')} {
-    width: 380px;
-  }
-  `}`;
-
-const CheckLabel = styled.label`${({ theme, userSelection }) => css`
+const CheckLabel = styled.label`${({ theme }) => css`
   display: flex;
   align-items: center;
   font-size: ${theme.fontSize('xs')};
-  padding: 10px;
 
   @media ${theme.breakpoint('small')} {
     font-size: ${theme.fontSize('s')};
-    padding: 12px 16px;
   }
-  
-  &:hover,
-  &:focus {
-    border: 2px solid ${theme.color('grey')};
-    padding: 9px;
-    @media ${theme.breakpoint('small')} {
-      padding: 11px 15px;
-    }
-  }
-
-  ${userSelection && `
-    &[for$="${userSelection}"] {
-      background: ${theme.color('grey_medium')};
-      padding: 9px;
-      border: 2px solid ${theme.color('grey')};
-
-      @media ${theme.breakpoint('small')} {
-        padding: 11px 15px;
-      }
-    }
-  `}
-`}
-`;
+`}`;
 
 const CheckInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize('sm')};
@@ -137,7 +104,7 @@ const CheckInput = styled.input`
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('grey_light')};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('black')};
     float: left;
     border-radius: 8px;
 
@@ -147,24 +114,61 @@ const CheckInput = styled.input`
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('red')};
+    background-color: ${({ theme }) => theme.color('grey_light')};
     background-size: contain;
   }
 `;
 
 const ShowHideInputWrapper = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
-  margin-bottom: ${spacing('lg')};
   width: 100%;
-
-  ${media('small')} {
-    max-width: 290px;
-  }
 
   label {
     width: 100%;
     border: none;
     padding: 0;
+  }
+`;
+
+const ExtraInfo = styled.span`
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  text-transform: inherit;
+  font-weight: normal;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  margin-bottom: 0.5rem;
+
+  + label {
+    margin-top: 20px;
+
+    // Visually hide the actual field label for the
+    // non-multifield options, as we have the
+    // more chatty 'extra info' language
+    &[for="mp_email"],
+    &[for="mp_mobile"],
+    &[for="mp_phone"] {
+      > span:first-child {
+        position: absolute;
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+        word-wrap: normal;
+      }
+  }
+`;
+
+const MPTextInput = styled(TextInput)`
+  input {
+    border: 1px solid  ${({ theme }) => theme.color('black')};;
+    ${media('small')} {
+      max-width: none;
+    }
   }
 `;
 
@@ -176,5 +180,8 @@ export {
   CheckLabel,
   CheckInput,
   CheckContainer,
-  ShowHideInputWrapper
+  ShowHideInputWrapper,
+  ExtraInfo,
+  OuterWrapper,
+  MPTextInput
 };
