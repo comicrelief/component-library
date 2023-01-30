@@ -1,12 +1,8 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
-// import Text from '../../Atoms/Text/Text';
-// import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
-import NoMessage from './_NoMessage';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
@@ -34,6 +30,7 @@ const MarketingPreferencesDS = ({
   const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: '' });
 
   const {
+    // eslint-disable-next-line camelcase
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
@@ -82,7 +79,6 @@ const MarketingPreferencesDS = ({
 
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
-            {emailChoice === 'no' && <NoMessage askingFor="an email" optInType="email" /> }
             <ExtraInfo>
               Please confirm the email address we will use to
               {' '}
@@ -119,7 +115,6 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={disablePostInput}>
           <ShowHideInputWrapper show={showPostFields}>
-            {postChoice === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
             <ExtraInfo>
               Please confirm the address we will use to
               {' '}
@@ -194,7 +189,6 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
-            {smsChoice === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
             <ExtraInfo>
               Please confirm the email address we will use to
               {' '}
@@ -229,7 +223,6 @@ const MarketingPreferencesDS = ({
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
-            {phoneChoice === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
             <ExtraInfo>
               Please confirm the email address we will use to
               {' '}
