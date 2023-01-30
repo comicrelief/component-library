@@ -24,10 +24,10 @@ const MarketingPreferencesDS = ({
   const { errors, control } = formContext;
 
   // For brevity
-  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: '' });
-  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: '' });
-  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: '' });
-  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: '' });
+  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
+  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: null });
+  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: null });
+  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
   const {
     // eslint-disable-next-line camelcase
@@ -53,10 +53,10 @@ const MarketingPreferencesDS = ({
   };
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
-  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
-  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice.length || errors.mp_mobile);
-  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice.length || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring());
+  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice || errors.mp_email);
+  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice || errors.mp_mobile);
+  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice || errors.mp_phone);
+  const showPostFields = !mp_permissionPost.hideInput && (postChoice || isAddressErroring());
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
