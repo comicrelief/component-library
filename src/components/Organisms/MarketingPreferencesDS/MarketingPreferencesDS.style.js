@@ -67,7 +67,7 @@ const FormField = styled.div`${({ theme }) => css`
       content: '';
     }
   }
-  `}`;
+`}`;
 
 const CheckContainer = styled.div`${({ theme }) => css`
   width: 100%;
@@ -75,9 +75,9 @@ const CheckContainer = styled.div`${({ theme }) => css`
   justify-content: space-between;
   font-size: ${theme.fontSize('md')};
   font-family: ${theme.fontFamilies(theme.font.regular)};
-  `}`;
+`}`;
 
-const CheckLabel = styled.label`${({ theme, userSelection }) => css`
+const CheckLabel = styled.label`${({ theme }) => css`
   display: flex;
   align-items: center;
   font-size: ${theme.fontSize('xs')};
@@ -85,26 +85,7 @@ const CheckLabel = styled.label`${({ theme, userSelection }) => css`
   @media ${theme.breakpoint('small')} {
     font-size: ${theme.fontSize('s')};
   }
-  
-  &:hover,
-  &:focus {
-
-    @media ${theme.breakpoint('small')} {
-
-    }
-  }
-
-  ${userSelection && `
-    &[for$="${userSelection}"] {
-
-
-      @media ${theme.breakpoint('small')} {
-
-      }
-    }
-  `}
-`}
-`;
+`}`;
 
 const CheckInput = styled.input`
   font-size: ${({ theme }) => theme.fontSize('sm')};
