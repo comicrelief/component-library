@@ -93,7 +93,7 @@ const MarketingPreferencesDS = ({
             <MPTextInput
               placeholder=""
               fieldName="mp_email"
-              label="Please enter <b>your</b> email addressss"
+              label="Please enter your email address"
               // Dynamically update the field attr based on config for current choice
               optional={!mp_permissionEmail[emailChoice]}
               type="email"

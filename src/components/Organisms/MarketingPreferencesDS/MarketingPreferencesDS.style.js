@@ -140,7 +140,6 @@ const CheckInput = styled.input`
 
 const ShowHideInputWrapper = styled.div`
   display: ${({ show }) => (show ? 'block' : 'none')};
-  // margin-bottom: ${spacing('md')};
   width: 100%;
 
   label {
@@ -163,12 +162,22 @@ const ExtraInfo = styled.span`
   + label {
     margin-top: 20px;
 
-    // 
+    // Visually hide the actual field label for the
+    // non-multifield options, as we have the
+    // more chatty 'extra info' language
     &[for="mp_email"],
     &[for="mp_mobile"],
     &[for="mp_phone"] {
       > span:first-child {
-        display: none;
+        position: absolute;
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+        word-wrap: normal;
       }
   }
 `;
