@@ -81,9 +81,7 @@ const MarketingPreferencesDS = ({
           <ShowHideInputWrapper show={showEmailField}>
             <ExtraInfo>
               Please confirm the email address we will use to
-              {' '}
-              <b>email</b>
-              {' '}
+              <b> email </b>
               you:
             </ExtraInfo>
             <MPTextInput
@@ -117,9 +115,7 @@ const MarketingPreferencesDS = ({
           <ShowHideInputWrapper show={showPostFields}>
             <ExtraInfo>
               Please confirm the address we will use to
-              {' '}
-              <b>post</b>
-              {' '}
+              <b> post </b>
               to you:
             </ExtraInfo>
             <MPTextInput
@@ -190,10 +186,8 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
             <ExtraInfo>
-              Please confirm the email address we will use to
-              {' '}
-              <b>text</b>
-              {' '}
+              Please confirm the mobile number we will use to
+              <b> text </b>
               you on:
             </ExtraInfo>
             <MPTextInput
@@ -224,11 +218,9 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
             <ExtraInfo>
-              Please confirm the email address we will use to
-              {' '}
-              <b>email</b>
-              {' '}
-              you:
+              Please confirm the telephone number we will use to
+              <b> phone </b>
+              you on:
             </ExtraInfo>
             <MPTextInput
               placeholder=""
