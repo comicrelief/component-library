@@ -27,8 +27,8 @@ const Image = styled.div`
   margin: 0 -${spacing('m')} 0 ${spacing('m')};
 
   img {
-    border-radius: 1rem;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: ${spacing('md')};
+    box-shadow: 0 0 ${spacing('md')} rgba(0, 0, 0, 0.15);
   }
 `;
 
@@ -47,8 +47,8 @@ const Copy = styled.div`
   ${({ hasLink }) => hasLink && `padding-bottom: ${spacing('xl')}`};
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: ${spacing('md')};
+  box-shadow: 0 0 ${spacing('md')} rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   width: 100%;
   @media ${({ theme }) => theme.breakpoint('large')} {
