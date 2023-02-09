@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
 
 .c2 img {
   border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
 }
 
 .c1 {
@@ -100,7 +100,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
   background: #FFFFFF;
   width: 100%;
   z-index: 1;
