@@ -20,11 +20,14 @@ const CheckAnswer = ({
     } else {
       newVal = '';
 
-      // To ensure we're not letting invalid values get passed, reset any associated fields:
-      const theseFields = AssociatedFields[name].fieldNames;
-      theseFields.forEach(fieldName => {
-        setValue(fieldName, '');
-      });
+      // To ensure we're not letting invalid values get passed, reset any associated fields
+      // but only when it's not a hidden "passed values behind the scenes" field:
+      if (!mpValidationOptions[name].hideInput) {
+        const theseFields = AssociatedFields[name].fieldNames;
+        theseFields.forEach(fieldName => {
+          setValue(fieldName, '');
+        });
+      }
     }
 
     // Update the checkbox field itself
