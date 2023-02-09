@@ -1,16 +1,13 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
-import Text from '../../Atoms/Text/Text';
-import TextInput from './_TextInput';
 import CheckAnswer from './_CheckAnswer';
-import NoMessage from './_NoMessage';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  TopCopyWrapper, BottomCopyWrapper, Head, FormField, ShowHideInputWrapper
+  TopCopyWrapper, BottomCopyWrapper, Head, FormField,
+  ShowHideInputWrapper, ExtraInfo, OuterWrapper, MPTextInput
 } from './MarketingPreferencesDS.style';
 
 import {
@@ -27,27 +24,24 @@ const MarketingPreferencesDS = ({
   const { errors, control } = formContext;
 
   // For brevity
-  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: [] });
-  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: [] });
-  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: [] });
-  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: [] });
+  const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
+  const postChoice = useWatch({ control, name: 'mp_permissionPost', defaultValue: null });
+  const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: null });
+  const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
   const {
+    // eslint-disable-next-line camelcase
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
   // If the field is not required for each No/Yes choice, remove it from the DOM entirely
-  const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'))
-  || (mp_permissionEmail.no === false && emailChoice.includes('no'));
+  const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'));
 
-  const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'))
-  || (mp_permissionSMS.no === false && smsChoice.includes('no'));
+  const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'));
 
-  const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'))
-  || (mp_permissionPhone.no === false && phoneChoice.includes('no'));
+  const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'));
 
-  const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'))
-  || (mp_permissionPost.no === false && postChoice.includes('no'));
+  const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
   const isAddressErroring = () => {
@@ -59,44 +53,117 @@ const MarketingPreferencesDS = ({
   };
   /* Only show the field if config hasn't hidden it (to pass in parent values)
     or if a choice has been made */
-  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice.length || errors.mp_email);
-  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice.length || errors.mp_mobile);
-  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice.length || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice.length || isAddressErroring());
+  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice || errors.mp_email);
+  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice || errors.mp_mobile);
+  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice || errors.mp_phone);
+  const showPostFields = !mp_permissionPost.hideInput && (postChoice || isAddressErroring());
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   return (
-    <div id={customId}>
+    <OuterWrapper id={customId}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
       <FormField className="field-email">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Email Me
-          </Text>
           <CheckAnswer
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
             id="mp_permissionEmail"
-            userSelection={emailChoice[0]}
+            userSelection={emailChoice}
             formContext={formContext}
           />
         </Head>
 
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
-            {emailChoice[0] === 'no' && <NoMessage askingFor="an email" optInType="email" /> }
-            <TextInput
+            <ExtraInfo>
+              Please confirm the email address we will use to
+              <b> email </b>
+              you:
+            </ExtraInfo>
+            <MPTextInput
               placeholder=""
               fieldName="mp_email"
               label="Please enter your email address"
               // Dynamically update the field attr based on config for current choice
-              optional={!mp_permissionEmail[emailChoice[0]]}
+              optional={!mp_permissionEmail[emailChoice]}
               type="email"
               id="mp_email"
+              formContext={formContext}
+            />
+          </ShowHideInputWrapper>
+        </MaybeDisabled>
+      </FormField>
+      )}
+
+      {/* Render Post checkboxes and inputs if not removed in config */}
+      {!mp_permissionPost.disableOption && (
+      <FormField className="field-post">
+        <Head>
+          <CheckAnswer
+            name="mp_permissionPost"
+            mpValidationOptions={mpValidationOptions}
+            id="mp_permissionPost"
+            userSelection={postChoice}
+            formContext={formContext}
+          />
+        </Head>
+        <MaybeDisabled disabled={disablePostInput}>
+          <ShowHideInputWrapper show={showPostFields}>
+            <ExtraInfo>
+              Please confirm the address we will use to
+              <b> post </b>
+              to you:
+            </ExtraInfo>
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_address1"
+              label="Address Line 1"
+              optional={!mp_permissionPost[postChoice]}
+              id="mp_address1"
+              formContext={formContext}
+            />
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_address2"
+              label="Address Line 2"
+              optional
+              id="mp_address2"
+              formContext={formContext}
+            />
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_address3"
+              label="Address Line 3"
+              optional
+              id="mp_address3"
+              formContext={formContext}
+            />
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_town"
+              label="Town/City"
+              optional={!mp_permissionPost[postChoice]}
+              id="mp_town"
+              formContext={formContext}
+            />
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_postcode"
+              label="Postcode"
+              optional={!mp_permissionPost[postChoice]}
+              id="mp_postcode"
+              formContext={formContext}
+            />
+            <MPTextInput
+              placeholder=""
+              fieldName="mp_country"
+              label="Country"
+              optional={!mp_permissionPost[postChoice]}
+              id="mp_country"
               formContext={formContext}
             />
           </ShowHideInputWrapper>
@@ -108,25 +175,26 @@ const MarketingPreferencesDS = ({
       {!mp_permissionSMS.disableOption && (
       <FormField className="field-sms">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Text me
-          </Text>
           <CheckAnswer
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
-            userSelection={smsChoice[0]}
+            userSelection={smsChoice}
             formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
-            {smsChoice[0] === 'no' && <NoMessage askingFor="a mobile number" optInType="SMS" />}
-            <TextInput
+            <ExtraInfo>
+              Please confirm the mobile number we will use to
+              <b> text </b>
+              you on:
+            </ExtraInfo>
+            <MPTextInput
               placeholder=""
               fieldName="mp_mobile"
               label="Please enter your mobile no."
-              optional={!mp_permissionSMS[smsChoice[0]]}
+              optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
               formContext={formContext}
             />
@@ -139,25 +207,26 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPhone.disableOption && (
       <FormField className="field-phone">
         <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Phone me
-          </Text>
           <CheckAnswer
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
-            userSelection={phoneChoice[0]}
+            userSelection={phoneChoice}
             formContext={formContext}
           />
         </Head>
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
-            {phoneChoice[0] === 'no' ? <NoMessage askingFor="a phone number" optInType="phone" /> : ''}
-            <TextInput
+            <ExtraInfo>
+              Please confirm the telephone number we will use to
+              <b> phone </b>
+              you on:
+            </ExtraInfo>
+            <MPTextInput
               placeholder=""
               fieldName="mp_phone"
               label="Please enter your phone no."
-              optional={!mp_permissionPhone[phoneChoice[0]]}
+              optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
               formContext={formContext}
             />
@@ -166,79 +235,8 @@ const MarketingPreferencesDS = ({
       </FormField>
       )}
 
-      {/* Render Post checkboxes and inputs if not removed in config */}
-      {!mp_permissionPost.disableOption && (
-      <FormField className="field-post">
-        <Head>
-          <Text tag="h3" size="l" family="Anton" uppercase weight="400" color="grey_dark">
-            Send me post
-          </Text>
-          <CheckAnswer
-            name="mp_permissionPost"
-            mpValidationOptions={mpValidationOptions}
-            id="mp_permissionPost"
-            userSelection={postChoice[0]}
-            formContext={formContext}
-          />
-        </Head>
-        <MaybeDisabled disabled={disablePostInput}>
-          <ShowHideInputWrapper show={showPostFields}>
-            {postChoice[0] === 'no' ? <NoMessage askingFor="an address" optInType="postal" /> : ''}
-            <TextInput
-              placeholder=""
-              fieldName="mp_address1"
-              label="Address Line 1"
-              optional={!mp_permissionPost[postChoice[0]]}
-              id="mp_address1"
-              formContext={formContext}
-            />
-            <TextInput
-              placeholder=""
-              fieldName="mp_address2"
-              label="Address Line 2"
-              optional
-              id="mp_address2"
-              formContext={formContext}
-            />
-            <TextInput
-              placeholder=""
-              fieldName="mp_address3"
-              label="Address Line 3"
-              optional
-              id="mp_address3"
-              formContext={formContext}
-            />
-            <TextInput
-              placeholder=""
-              fieldName="mp_town"
-              label="Town/City"
-              optional={!mp_permissionPost[postChoice[0]]}
-              id="mp_town"
-              formContext={formContext}
-            />
-            <TextInput
-              placeholder=""
-              fieldName="mp_postcode"
-              label="Postcode"
-              optional={!mp_permissionPost[postChoice[0]]}
-              id="mp_postcode"
-              formContext={formContext}
-            />
-            <TextInput
-              placeholder=""
-              fieldName="mp_country"
-              label="Country"
-              optional={!mp_permissionPost[postChoice[0]]}
-              id="mp_country"
-              formContext={formContext}
-            />
-          </ShowHideInputWrapper>
-        </MaybeDisabled>
-      </FormField>
-      )}
-
       {copyBottom && <BottomCopyWrapper>{copyBottom}</BottomCopyWrapper>}
-    </div>
+    </OuterWrapper>
   );
 };
 

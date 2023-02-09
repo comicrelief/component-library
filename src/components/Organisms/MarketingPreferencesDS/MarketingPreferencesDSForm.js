@@ -41,9 +41,9 @@ const {
 } = mpValidationCustom;
 
 const MarketingPreferencesDSForm = () => {
-  function customSubmitHandler() {
+  function customSubmitHandler(formData) {
     // eslint-disable-next-line no-console
-    console.log('Successful submission');
+    console.log('Successful submission', formData);
   }
 
   // For our default instance:
