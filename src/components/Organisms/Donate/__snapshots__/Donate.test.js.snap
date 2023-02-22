@@ -827,7 +827,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value="NaN"
+                  value=" "
                 />
               </div>
               
@@ -1998,7 +1998,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value="NaN"
+                  value=" "
                 />
               </div>
               

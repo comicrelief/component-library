@@ -6,6 +6,7 @@ const onKeyPress = event => {
 };
 
 const amountFormatter = amount => {
+  if (!amount) return ' ';
   // Determine how many places to fix the number to before passing
   const decPoint = (!Number.isInteger(amount)) ? 2 : 0;
   return parseFloat(amount).toFixed(decPoint);
