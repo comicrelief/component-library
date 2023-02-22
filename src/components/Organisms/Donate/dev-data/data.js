@@ -5,7 +5,7 @@ export default {
       {
         description:
           'a pregnant woman in Uganda to have access to a birth kit so she can have a clean, safe delivery.',
-        value: 10
+        value: 10.10
       },
       {
         description:

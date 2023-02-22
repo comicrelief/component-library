@@ -44,6 +44,13 @@ const Signup = ({
   // In order to keep track of whether the user has ever been shown the popup
   const [popUpShown, setPopUpShown] = useState(false);
 
+  // Helper function
+  const amountFormatter = amount => {
+    // Determine how many places to fix the number to before passing
+    const decPoint = (!Number.isInteger(amount)) ? 2 : 0;
+    return parseFloat(amount).toFixed(decPoint);
+  };
+
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
@@ -54,7 +61,9 @@ const Signup = ({
       ? givingData.moneybuys[1].value
       : givingData.moneybuys[0].value;
 
-    setAmountDonate(parseFloat(thisAmount));
+    const formattedValue = amountFormatter(thisAmount);
+
+    setAmountDonate(formattedValue);
   }, [givingType, singleGiving, regularGiving]);
 
   useEffect(() => {
@@ -159,17 +168,21 @@ const Signup = ({
           </Legend>
           {!noMoneyBuys && (
             <MoneyBuys>
-              {givingData.moneybuys.map(({ value }, index) => (
-                <MoneyBox
-                  isSelected={amountDonate === value}
-                  amount={value}
-                  description={`£${value}`}
-                  setOtherAmount={() => setAmountDonate(parseFloat(value))}
-                  key={value}
-                  name={`${mbshipID}--moneyBuy${index + 1}`}
-                  id={`${mbshipID}--moneyBuy-box${index + 1}`}
-                />
-              ))}
+              {givingData.moneybuys.map(({ value }, index) => {
+                const formattedValue = amountFormatter(value);
+
+                return (
+                  <MoneyBox
+                    isSelected={amountDonate === formattedValue}
+                    amount={formattedValue}
+                    description={`£${formattedValue}`}
+                    setOtherAmount={() => setAmountDonate(formattedValue)}
+                    key={formattedValue}
+                    name={`${mbshipID}--moneyBuy${index + 1}`}
+                    id={`${mbshipID}--moneyBuy-box${index + 1}`}
+                  />
+                );
+              })}
             </MoneyBuys>
           )}
           <FormFieldset>
@@ -199,7 +212,7 @@ const Signup = ({
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
             <Copy as="p">
-              <strong>{`£${amountDonate.toFixed(2)} `}</strong>
+              <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
           )}
