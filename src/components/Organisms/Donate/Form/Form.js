@@ -6,7 +6,8 @@ import Text from '../../../Atoms/Text/Text';
 import MoneyBox from '../MoneyBox/MoneyBox';
 import {
   handleDonateSubmission,
-  isAmountValid
+  isAmountValid,
+  amountFormatter
 } from '../../../../utils/Membership';
 import {
   Button,
@@ -190,7 +191,7 @@ const Signup = ({
               {...rest}
               max="25000"
               min="1"
-              value={amountDonate}
+              value={amountFormatter(amountDonate)}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
               placeholder="0.00"
               onChange={e => setAmountDonate(parseFloat(e.target.value))}

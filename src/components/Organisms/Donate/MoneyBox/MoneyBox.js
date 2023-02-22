@@ -6,6 +6,10 @@ import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
 
+import {
+  amountFormatter
+} from '../../../../utils/Membership';
+
 const MoneyBox = styled(Input)`
   display: block;
   input {
@@ -50,23 +54,27 @@ const MoneyBuy = ({
   currency,
   description,
   ...rest
-}) => (
-  <MoneyBox
-    {...rest}
-    aria-label={description}
-    value={`${currency} ${amount}`}
-    type="button"
-    label=""
-    errorMsg=""
-    onClick={setOtherAmount}
-  />
-);
+}) => {
+  // Set decimal points accordingly
+  const formattedAmount = amountFormatter(amount);
+  return (
+    <MoneyBox
+      {...rest}
+      aria-label={description}
+      value={`${currency} ${formattedAmount}`}
+      type="button"
+      label=""
+      errorMsg=""
+      onClick={setOtherAmount}
+    />
+  );
+};
 
 MoneyBuy.propTypes = {
   amount: PropTypes.number,
   currency: PropTypes.string,
   description: PropTypes.string,
-  // Function already set does'nt need to be passed as props
+  // Function already set doesn't need to be passed as props
   setOtherAmount: PropTypes.func.isRequired
 };
 
