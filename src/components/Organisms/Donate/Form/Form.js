@@ -164,7 +164,7 @@ const Signup = ({
                 <MoneyBox
                   isSelected={amountDonate === value}
                   amount={value}
-                  description={`£${value}`}
+                  description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(parseFloat(value))}
                   key={value}
                   name={`${mbshipID}--moneyBuy${index + 1}`}

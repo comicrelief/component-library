@@ -705,7 +705,7 @@ exports[`Monthly donation renders correctly 1`] = `
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
-                  aria-label="£10.1"
+                  aria-label="£10.10"
                   className="c23"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
