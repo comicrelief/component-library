@@ -6,7 +6,7 @@ import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
 
-const MoneyBox = styled(Input)`
+const MoneyBuyButton = styled(Input)`
   display: block;
   input {
     border: none;
@@ -51,7 +51,7 @@ const MoneyBuy = ({
   description,
   ...rest
 }) => (
-  <MoneyBox
+  <MoneyBuyButton
     {...rest}
     aria-label={description}
     value={`${currency} ${amount}`}
@@ -63,10 +63,10 @@ const MoneyBuy = ({
 );
 
 MoneyBuy.propTypes = {
-  amount: PropTypes.number,
+  amount: PropTypes.string,
   currency: PropTypes.string,
   description: PropTypes.string,
-  // Function already set does'nt need to be passed as props
+  // Function already set doesn't need to be passed as props
   setOtherAmount: PropTypes.func.isRequired
 };
 

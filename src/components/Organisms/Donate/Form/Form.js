@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
-import MoneyBox from '../MoneyBox/MoneyBox';
+import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
-  isAmountValid
+  isAmountValid,
+  amountFormatter
 } from '../../../../utils/Membership';
 import {
   Button,
@@ -38,7 +39,7 @@ const Signup = ({
 }) => {
   const [givingType, setGivingType] = useState('single');
   const [errorMsg, setErrorMsg] = useState(false);
-  const [amountDonate, setAmountDonate] = useState(' ');
+  const [amountDonate, setAmountDonate] = useState(null);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
   const [popOpen, setPopOpen] = useState(false);
   // In order to keep track of whether the user has ever been shown the popup
@@ -160,10 +161,10 @@ const Signup = ({
           {!noMoneyBuys && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
-                <MoneyBox
+                <MoneyBuy
                   isSelected={amountDonate === value}
-                  amount={value}
-                  description={`£${value}`}
+                  amount={amountFormatter(value)}
+                  description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(parseFloat(value))}
                   key={value}
                   name={`${mbshipID}--moneyBuy${index + 1}`}
@@ -190,7 +191,7 @@ const Signup = ({
               {...rest}
               max="25000"
               min="1"
-              value={amountDonate}
+              value={amountFormatter(amountDonate)}
               pattern="[^[0-9]+([,.][0-9]+)?$]"
               placeholder="0.00"
               onChange={e => setAmountDonate(parseFloat(e.target.value))}

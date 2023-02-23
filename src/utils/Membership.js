@@ -5,6 +5,13 @@ const onKeyPress = event => {
   if (/\+|-|e/.test(keyValue)) event.preventDefault();
 };
 
+const amountFormatter = amount => {
+  if (!amount) return ' ';
+  // Determine how many places to fix the number to before passing
+  const decPoint = (!Number.isInteger(amount)) ? 2 : 0;
+  return parseFloat(amount).toFixed(decPoint);
+};
+
 const isAmountValid = input => {
   const reg = /^\s*(?=.*[1-9])\d*(?:\.\d{1,2})?\s*$/g;
   const isValid = input * 1 >= 1 && input * 1 <= 25000 && reg.test(input);
@@ -64,5 +71,6 @@ export {
   onKeyPress,
   isAmountValid,
   isInputMatchBoxValue,
-  handleDonateSubmission
+  handleDonateSubmission,
+  amountFormatter
 };
