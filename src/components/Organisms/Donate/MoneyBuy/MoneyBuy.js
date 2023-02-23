@@ -63,7 +63,7 @@ const MoneyBuy = ({
 );
 
 MoneyBuy.propTypes = {
-  amount: PropTypes.number,
+  amount: PropTypes.string,
   currency: PropTypes.string,
   description: PropTypes.string,
   // Function already set doesn't need to be passed as props
