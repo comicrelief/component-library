@@ -6,7 +6,7 @@ import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
 import { media } from '../../../../theme/shared/size';
 
-const MoneyBox = styled(Input)`
+const MoneyBuyButton = styled(Input)`
   display: block;
   input {
     border: none;
@@ -51,7 +51,7 @@ const MoneyBuy = ({
   description,
   ...rest
 }) => (
-  <MoneyBox
+  <MoneyBuyButton
     {...rest}
     aria-label={description}
     value={`${currency} ${amount}`}
