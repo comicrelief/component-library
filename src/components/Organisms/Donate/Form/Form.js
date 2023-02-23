@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
-import MoneyBox from '../MoneyBox/MoneyBox';
+import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
   isAmountValid,
@@ -161,9 +161,9 @@ const Signup = ({
           {!noMoneyBuys && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
-                <MoneyBox
+                <MoneyBuy
                   isSelected={amountDonate === value}
-                  amount={value}
+                  amount={amountFormatter(value)}
                   description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(parseFloat(value))}
                   key={value}
