@@ -27,7 +27,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Form align left, with custom message after choosing an "Other amount" to donate; high value cart
+## Form align left, with custom message after choosing an "Other amount" to donate, high value cart.
 ```js
 import data from './dev-data/data-high-value';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
