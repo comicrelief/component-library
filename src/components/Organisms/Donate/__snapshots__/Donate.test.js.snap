@@ -240,6 +240,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c17 label input {
   cursor: pointer;
+  padding: 1.5rem 0.5rem;
 }
 
 .c24 {
@@ -1119,6 +1120,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c11 label input {
   cursor: pointer;
+  padding: 1.5rem 0.5rem;
 }
 
 .c19 {
