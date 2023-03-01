@@ -152,6 +152,7 @@ const MoneyBuys = styled.div`
     }
     input {
       cursor: pointer;
+      padding: ${spacing('m')}  ${spacing('sm')};
     }
   }
 `;

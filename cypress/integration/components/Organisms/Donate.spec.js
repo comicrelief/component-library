@@ -125,7 +125,7 @@ describe('Donate component', () => {
         .click();
       cy.get('@container')
         .find('[id="mship-2--MoneyBuy-userInput"]')
-        .should('have.value', '20')
+        .should('have.value', '8888')
         .clear()
         .type(' ');
       cy.get('@container')
