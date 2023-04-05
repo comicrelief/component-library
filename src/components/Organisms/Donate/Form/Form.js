@@ -218,7 +218,11 @@ const Signup = ({
             <Button
               type="submit"
               as="input"
-              value={givingType === 'single' ? 'Donate now' : 'Donate monthly'}
+              value={
+                givingType === 'single'
+                  ? `Donate £${amountFormatter(amountDonate)} now`
+                  : `Donate £${amountFormatter(amountDonate)} monthly`
+              }
               color={submitButtonColor}
             />
           )}
