@@ -838,7 +838,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c28"
             color="red"
             type="submit"
-            value="Donate now"
+            value="Donate £  now"
           />
         </fieldset>
       </form>
@@ -1551,7 +1551,7 @@ exports[`Single donation renders correctly 1`] = `
             className="c24"
             color="red"
             type="submit"
-            value="Donate now"
+            value="Donate £20 now"
           />
         </fieldset>
       </form>
