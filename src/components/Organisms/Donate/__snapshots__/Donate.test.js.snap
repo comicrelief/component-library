@@ -2010,7 +2010,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             className="c18"
             color="red"
             type="submit"
-            value="Donate"
+            value="Donate £ "
           />
         </fieldset>
       </form>
