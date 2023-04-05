@@ -259,7 +259,7 @@ describe('Donate component', () => {
         .should('not.have', 'Please enter an amount between £1 and £250000 and up to 2 decimal places');
       cy.get('@container')
         .find('form > fieldset > input')
-        .contains('Donate');
+        .contains('Donate £10.999');
       cy.get('@container')
         .find('h2')
         .should('exist');

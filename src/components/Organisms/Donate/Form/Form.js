@@ -213,7 +213,12 @@ const Signup = ({
           )}
 
           {noMoneyBuys ? (
-            <Button type="submit" as="input" value="Donate" color={submitButtonColor} />
+            <Button
+              type="submit"
+              as="input"
+              value={`Donate £${amountFormatter(amountDonate)}`}
+              color={submitButtonColor}
+            />
           ) : (
             <Button
               type="submit"
