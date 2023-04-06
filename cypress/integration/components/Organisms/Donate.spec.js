@@ -80,7 +80,7 @@ describe('Donate component', () => {
         .clear()
         .type('16');
       cy.get('@container')
-        .find('form > fieldset > input')
+        .find('form > fieldset > button')
         .contains('Donate £16 monthly');
       cy.get('@container')
         .find('h2')
@@ -146,7 +146,7 @@ describe('Donate component', () => {
         .clear()
         .type('179');
       cy.get('@container')
-        .find('form > fieldset > input')
+        .find('form > fieldset > button')
         .contains('Donate £179 now');
       cy.get('@container')
         .find('h2')
@@ -211,7 +211,7 @@ describe('Donate component', () => {
         .clear()
         .type('898');
       cy.get('@container')
-        .find('form > fieldset > input')
+        .find('form > fieldset > button')
         .contains('Donate £898 now');
       cy.get('@container')
         .find('h2')
@@ -270,7 +270,7 @@ describe('Donate component', () => {
         .type('5')
         .should('not.have', 'Please enter an amount between £1 and £250000 and up to 2 decimal places');
       cy.get('@container')
-        .find('form > fieldset > input')
+        .find('form > fieldset > button')
         .contains('Donate');
       cy.get('@container')
         .find('h2')
