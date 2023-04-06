@@ -215,21 +215,19 @@ const Signup = ({
           {noMoneyBuys ? (
             <Button
               type="submit"
-              as="input"
-              value={`Donate £${amountFormatter(amountDonate)}`}
               color={submitButtonColor}
-            />
+            >
+              {`Donate £${amountFormatter(amountDonate)}`}
+            </Button>
           ) : (
             <Button
               type="submit"
-              as="input"
-              value={
-                givingType === 'single'
-                  ? `Donate £${amountFormatter(amountDonate)} now`
-                  : `Donate £${amountFormatter(amountDonate)} monthly`
-              }
               color={submitButtonColor}
-            />
+            >
+              { givingType === 'single'
+                ? `Donate £${amountFormatter(amountDonate)} now`
+                : `Donate £${amountFormatter(amountDonate)} monthly` }
+            </Button>
           )}
 
         </OuterFieldset>
