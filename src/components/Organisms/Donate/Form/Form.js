@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import useClickOutside from '../../../../utils/useClickOutside';
 import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
@@ -128,6 +129,16 @@ const Signup = ({
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
 
+  // Create ref for amount input and call function to listen for outside click
+  const amountRef = useRef(null);
+  useClickOutside(
+    amountRef,
+    setAmountDonate,
+    givingType,
+    singleGiving,
+    regularGiving
+  );
+
   return (
     <FormWrapper>
       {showGivingSelector && (
@@ -196,6 +207,7 @@ const Signup = ({
               placeholder="0.00"
               onChange={e => setAmountDonate(parseFloat(e.target.value))}
               aria-label="Input a different amount"
+              ref={amountRef}
             />
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
@@ -228,6 +240,7 @@ const Signup = ({
                 ? `Donate £${amountFormatter(amountDonate)} now`
                 : `Donate £${amountFormatter(amountDonate)} monthly` }
             </Button>
+
           )}
 
         </OuterFieldset>
