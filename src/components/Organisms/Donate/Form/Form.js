@@ -134,7 +134,6 @@ const Signup = ({
   // Function to reset money buy after leaving input empty and clicking outside
   useClickOutside(
     amountRef,
-    amountDonate,
     setAmountDonate,
     givingType,
     singleGiving,

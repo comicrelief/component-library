@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 
 export default function useClickOutside(
   amountRef,
-  amountDonate,
   setAmountDonate,
   givingType,
   singleGiving,
