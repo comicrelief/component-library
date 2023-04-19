@@ -62,7 +62,7 @@ const MetaIcons = styled.div`
     > a {
       height: inherit;
       width: inherit;
-      margin-left: ${({ theme }) => theme.fontSize('xxs')};
+      margin-left: 0.5rem;
 
       img {
         padding: 5px;
