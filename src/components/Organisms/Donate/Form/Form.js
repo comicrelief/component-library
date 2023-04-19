@@ -142,7 +142,7 @@ const Signup = ({
   );
 
   // Create function to conditionally render button text
-  const renderButtonText= () => {
+  const renderButtonText = () => {
     if (errorMsg) {
       return 'Donate';
     }
@@ -150,7 +150,7 @@ const Signup = ({
       return `Donate £${amountFormatter(amountDonate)} now`;
     }
     return `Donate £${amountFormatter(amountDonate)} monthly`;
-  }
+  };
 
   return (
     <FormWrapper>
