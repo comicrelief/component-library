@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+// Create function to reset money buy after leaving input empty and clicking outside
 export default function useClickOutside(
   amountRef,
   setAmountDonate,

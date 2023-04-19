@@ -129,9 +129,9 @@ const Signup = ({
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
 
-  // Create ref for amount input and call function to listen for outside click
+  // Create ref for amount input
   const amountRef = useRef(null);
-  // Function to reset money buy after leaving input empty and clicking outside
+  // Call function to reset money buy after leaving input empty and clicking outside
   useClickOutside(
     amountRef,
     setAmountDonate,
@@ -141,7 +141,8 @@ const Signup = ({
     regularGiving
   );
 
-  function renderButtonText() {
+  // Create function to conditionally render button text
+  const renderButtonText= () => {
     if (errorMsg) {
       return 'Donate';
     }
