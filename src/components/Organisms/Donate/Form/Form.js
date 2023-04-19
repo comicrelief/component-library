@@ -131,6 +131,7 @@ const Signup = ({
 
   // Create ref for amount input and call function to listen for outside click
   const amountRef = useRef(null);
+  // Function to reset money buy after leaving input empty and clicking outside
   useClickOutside(
     amountRef,
     amountDonate,
@@ -140,6 +141,16 @@ const Signup = ({
     errorMsg,
     regularGiving
   );
+
+  function renderButtonText() {
+    if (errorMsg) {
+      return 'Donate';
+    }
+    if (givingType === 'single') {
+      return `Donate £${amountFormatter(amountDonate)} now`;
+    }
+    return `Donate £${amountFormatter(amountDonate)} monthly`;
+  }
 
   return (
     <FormWrapper>
@@ -231,16 +242,16 @@ const Signup = ({
               type="submit"
               color={submitButtonColor}
             >
-              {`Donate £${amountFormatter(amountDonate)}`}
+              {errorMsg
+                ? 'Donate'
+                : `Donate £${amountFormatter(amountDonate)}`}
             </Button>
           ) : (
             <Button
               type="submit"
               color={submitButtonColor}
             >
-              { givingType === 'single'
-                ? `Donate £${amountFormatter(amountDonate)} now`
-                : `Donate £${amountFormatter(amountDonate)} monthly` }
+              {renderButtonText()}
             </Button>
 
           )}
