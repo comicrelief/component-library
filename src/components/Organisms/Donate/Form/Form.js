@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState, useRef, useEffect, useCallback
+} from 'react';
 import PropTypes from 'prop-types';
 
-import useClickOutside from './useClickOutside';
 import PopUpComponent from './PopUpComponent';
 import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
@@ -131,15 +132,33 @@ const Signup = ({
 
   // Create ref for amount input
   const amountRef = useRef(null);
-  // Call function to reset money buy after leaving input empty and clicking outside
-  useClickOutside(
-    amountRef,
-    setAmountDonate,
-    givingType,
-    singleGiving,
-    errorMsg,
-    regularGiving
-  );
+
+  const handleClickOutside = useCallback(event => {
+    if (!errorMsg) {
+      return;
+    }
+
+    if (amountRef.current && !amountRef.current.contains(event.target)) {
+      // Check the 2nd moneybuy exists before using it;
+      // 'philantrophy' carts have been set up to use a single moneybuy.
+      // See ENG-1685 for more details
+      const thisAmount = givingData.moneybuys[1]
+        ? givingData.moneybuys[1].value
+        : givingData.moneybuys[0].value;
+
+      setAmountDonate(parseFloat(thisAmount));
+    }
+  }, [errorMsg]);
+
+  // Listen for click outside custom amount input if there is no value entered.
+  useEffect(() => {
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [errorMsg, handleClickOutside]);
 
   // Create function to conditionally render button text
   const renderButtonText = () => {
