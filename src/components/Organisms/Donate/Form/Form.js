@@ -1,5 +1,5 @@
 import React, {
-  useState, useRef, useEffect
+  useState, useRef, useEffect, useCallback
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -133,32 +133,32 @@ const Signup = ({
   // Create ref for amount input
   const amountRef = useRef(null);
 
+  const handleClickOutside = useCallback(event => {
+    if (!errorMsg) {
+      return;
+    }
+
+    if (amountRef.current && !amountRef.current.contains(event.target)) {
+      // Check the 2nd moneybuy exists before using it;
+      // 'philantrophy' carts have been set up to use a single moneybuy.
+      // See ENG-1685 for more details
+      const thisAmount = givingData.moneybuys[1]
+        ? givingData.moneybuys[1].value
+        : givingData.moneybuys[0].value;
+
+      setAmountDonate(parseFloat(thisAmount));
+    }
+  }, [errorMsg, givingData.moneybuys]);
+
   // Listen for click outside custom amount input if there is no value entered.
   useEffect(() => {
-    const handleClickOutside = event => {
-      if (!errorMsg) {
-        return;
-      }
-
-      if (amountRef.current && !amountRef.current.contains(event.target)) {
-        // Check the 2nd moneybuy exists before using it;
-        // 'philantrophy' carts have been set up to use a single moneybuy.
-        // See ENG-1685 for more details
-        const thisAmount = givingData.moneybuys[1]
-          ? givingData.moneybuys[1].value
-          : givingData.moneybuys[0].value;
-
-        setAmountDonate(parseFloat(thisAmount));
-      }
-    };
-
     // Bind the event listener
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [errorMsg, givingData.moneybuys]);
+  }, [errorMsg, handleClickOutside]);
 
   // Create function to conditionally render button text
   const renderButtonText = () => {
