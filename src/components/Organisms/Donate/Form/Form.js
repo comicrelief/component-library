@@ -41,7 +41,7 @@ const Signup = ({
 }) => {
   const [givingType, setGivingType] = useState('single');
   const [errorMsg, setErrorMsg] = useState(false);
-  const [amountDonate, setAmountDonate] = useState(null);
+  const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
   const [popOpen, setPopOpen] = useState(false);
   // In order to keep track of whether the user has ever been shown the popup
