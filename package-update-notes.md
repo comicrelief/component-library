@@ -38,3 +38,8 @@ styled-components         5.3.1   5.3.10  5.3.10  dependencies           https:/
 youtube-player            5.5.2   5.6.0   5.6.0   dependencies           https://github.com/gajus/youtube-player#readme                    
 yup                       0.32.9  0.32.11 1.1.1   dependencies           https://github.com/jquense/yup                                    
 
+## log of package updates:
+- @babel/cli: 7.14.8 - 7.21.0 => no breaking changes in changelog
+    - [X] checked Component Library local server still working
+    - [X] check styleguide:build is ok
+
