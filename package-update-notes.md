@@ -5,8 +5,12 @@
 ### output:
 Package                   Current Wanted  Latest  Package Type           URL                                                               
 @babel/cli                7.14.8  7.21.0  7.21.0  dependencies           https://babel.dev/docs/en/next/babel-cli                          
-@hookform/resolvers       1.3.7   1.3.8   3.1.0   dependencies           https://react-hook-form.com                                       
+
 axios                     0.21.1  0.21.4  1.3.6   dependencies           https://axios-http.com                                            
+
+
+
+@hookform/resolvers       1.3.7   1.3.8   3.1.0   dependencies           https://react-hook-form.com                                       
 cypress                   8.3.0   8.7.0   12.10.0 devDependencies        https://github.com/cypress-io/cypress                             
 ejs                       3.1.6   3.1.6   3.1.9   resolutionDependencies https://github.com/mde/ejs                                        
 eslint                    7.32.0  7.32.0  8.39.0  devDependencies        https://eslint.org                                                
@@ -43,3 +47,6 @@ yup                       0.32.9  0.32.11 1.1.1   dependencies           https:/
     - [X] checked Component Library local server still working
     - [X] check styleguide:build is ok
 
+- axios 1.3.7 - 3.1.0 => some "Deprecated" in 1.0
+    - [X] checked Component Library local server still working
+    - [X] check styleguide:build is ok
