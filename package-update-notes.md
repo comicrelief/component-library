@@ -8,7 +8,8 @@ Package                   Current Wanted  Latest  Package Type           URL
 
 axios                     0.21.1  0.21.4  1.3.6   dependencies           https://axios-http.com                                            
 ejs                       3.1.6   3.1.6   3.1.9   resolutionDependencies https://github.com/mde/ejs                                        
-
+jest                      26.6.3  26.6.3  29.5.0  devDependencies        https://jestjs.io/                                                
+jest-styled-components    7.0.5   7.1.1   7.1.1   dependencies           https://github.com/styled-components/jest-styled-components#readme
 
 
 
@@ -22,7 +23,6 @@ eslint-plugin-jsx-a11y    6.4.1   6.7.1   6.7.1   devDependencies        https:/
 eslint-plugin-react       7.24.0  7.32.2  7.32.2  devDependencies        https://github.com/jsx-eslint/eslint-plugin-react                 
 eslint-plugin-react-hooks 4.2.0   4.6.0   4.6.0   devDependencies        https://reactjs.org/                                              
 husky                     7.0.2   7.0.4   8.0.3   devDependencies        https://typicode.github.io/husky                                  
-jest                      26.6.3  26.6.3  29.5.0  devDependencies        https://jestjs.io/                                                
 jest-styled-components    7.0.5   7.1.1   7.1.1   dependencies           https://github.com/styled-components/jest-styled-components#readme
 moment                    2.29.1  2.29.4  2.29.4  dependencies           https://momentjs.com                                              
 prettier                  2.3.2   2.8.8   2.8.8   devDependencies        https://prettier.io                                               
@@ -57,4 +57,12 @@ yup                       0.32.9  0.32.11 1.1.1   dependencies           https:/
 
 - ejs 3.1.6 - 3.1.9 => no breaking changes in changelog
     - [X] checked Component Library local server still working
+    - [X] check styleguide:build is ok
+
+- jest 26.6.3 - 29.5.0 => Drop support for Node v10 and v15 and target first LTS 16.13.0 (#12220)
+    - [X] checked Component Library on local server
+    - [X] check styleguide:build is ok
+
+- jest-styled-components 7.0.5 - 7.1.1
+    - [X] checked Component Library on local server
     - [X] check styleguide:build is ok
