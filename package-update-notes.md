@@ -64,5 +64,7 @@ yup                       0.32.9  0.32.11 1.1.1   dependencies           https:/
     - [X] check styleguide:build is ok
 
 - jest-styled-components 7.0.5 - 7.1.1
-    - [X] checked Component Library on local server
-    - [X] check styleguide:build is ok
+    - [X] yarn styleguide:build
+    - [X] yarn styleguide
+    - [X] yarn cy:run
+    - [X] yarn test (jest)
