@@ -38,9 +38,9 @@ const StyledPopUp = styled.div`
   overflow: hidden;
   max-height: 350px;
   opacity: 1;
-  animation: 0.4s ${fadeOpen} ease;
+  animation: 0.4s ${props => props.fadeOpen} ease;
   ${props => props.isClosed && css`
-    animation: ${closeDuration}s ${fadeClose} ease forwards;
+    animation: ${closeDuration}s ${props.fadeClose} ease forwards;
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
@@ -92,7 +92,7 @@ const PopUpComponent = ({ PopUpText, setPopOpen }) => {
   };
 
   return (
-    <StyledPopUp isClosed={isClosed}>
+    <StyledPopUp isClosed={isClosed} fadeOpen={fadeOpen} fadeClose={fadeClose}>
       <Button onClick={() => handleCloser()} aria-label="Close">
         <img src={CloseCross} alt="Close cross icon" />
       </Button>
