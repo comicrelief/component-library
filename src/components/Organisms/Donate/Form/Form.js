@@ -132,9 +132,15 @@ const Signup = ({
 
   // Create ref for amount input
   const amountRef = useRef(null);
+  // Create ref for amount button
+  const buttonRef = useRef(null);
 
   const handleClickOutside = useCallback(event => {
     if (!errorMsg) {
+      return;
+    }
+
+    if (buttonRef.current && event.target === buttonRef.current) {
       return;
     }
 
@@ -269,6 +275,7 @@ const Signup = ({
             <Button
               type="submit"
               color={submitButtonColor}
+              ref={buttonRef}
             >
               {renderButtonText()}
             </Button>
