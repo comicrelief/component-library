@@ -39,7 +39,7 @@ const SingleMessage = ({
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [onPlay, setonPlay] = useState(false);
+  const [onPlay, setOnPlay] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
   const [uniqueID, setUniqueID] = useState(null);
   const [hasParentID, setHasParentID] = useState(false);
@@ -97,7 +97,7 @@ const SingleMessage = ({
   }, [hasVideo, isInitialised, uniqueID, videoID, onPlay]);
 
   const handlePlay = thisUniqueID => {
-    setonPlay(true);
+    setOnPlay(true);
     // Trigger play and update video state
     const thisVideoID = `${thisUniqueID}__video`;
 

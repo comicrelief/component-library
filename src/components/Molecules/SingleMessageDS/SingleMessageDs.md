@@ -154,6 +154,7 @@ import Download from '../../Atoms/Icons/Download';
       imageLow={defaultData.image}
       imageLeft={true}
       images={defaultData.images}
+      subtitle="subTitle"
     >
       <Text tag='p'>
         Whatever you’ve got planned, the Sport Relief shop has everything you need
@@ -179,6 +180,7 @@ import Download from '../../Atoms/Icons/Download';
       images={defaultData.images}
       youTubeId="faz0JeBB41M"
       imageLeft={true}
+      subtitle="subTitle"
     >
       <Text tag='p'>
         Some text and stuff.

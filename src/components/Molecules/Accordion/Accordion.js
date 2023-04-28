@@ -11,7 +11,7 @@ const Container = styled.div`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 `;
 
-const ChevAnima = keyframes`
+const ChevronKeyframes = keyframes`
  0% { margin-top: 0rem; }
  50% { margin-top: 0.5rem; }
  100% { margin-top: 0rem; }
@@ -32,7 +32,7 @@ const Button = styled.button`
     color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
     > div {
-      animation-name: ${ChevAnima};
+      animation-name: ${props => props.ChevronKeyframes};
       animation-duration: 0.4s;
     }
   }
@@ -82,7 +82,7 @@ const Accordion = ({
 
   return (
     <Container {...rest}>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'}>
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes}>
         {title}
         <Icon>
           <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
