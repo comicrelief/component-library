@@ -131,16 +131,16 @@ const Signup = ({
     }
   };
 
-  // Update the local state if the prop has changed
+  // Update the local state if the prop has been set and changed
   useEffect(() => {
-    setAmountDonate(parseFloat(otherAmountValue));
+    if (otherAmountValue) {
+      setAmountDonate(parseFloat(otherAmountValue));
+    }
   }, [otherAmountValue, setAmountDonate]);
 
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
-
-  console.log('amountDonate', amountDonate);
 
   return (
     <FormWrapper>
@@ -254,13 +254,12 @@ Signup.propTypes = {
   PopUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string.isRequired,
   submitButtonColor: PropTypes.string.isRequired,
-  otherAmountValue: PropTypes.number
+  otherAmountValue: PropTypes.number.isRequired
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {},
-  otherAmountValue: null
+  data: {}
 };
 
 export default Signup;

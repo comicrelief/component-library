@@ -889,19 +889,11 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c19 {
+.c20 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   font-weight: 500;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c22 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -978,6 +970,39 @@ exports[`Single donation renders correctly 1`] = `
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
+.c18 {
+  display: block;
+}
+
+.c18 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
+  background-color: #0565D1;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  color: #FFFFFF;
+}
+
+.c18 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c18 input:active:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c18 input:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
 .c0 {
   position: relative;
   display: -webkit-box;
@@ -1030,13 +1055,6 @@ exports[`Single donation renders correctly 1`] = `
 .c6 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c23 {
-  color: #E52630;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 2rem;
 }
 
 .c7 {
@@ -1105,7 +1123,7 @@ exports[`Single donation renders correctly 1`] = `
   padding: 1.5rem 0.5rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1120,11 +1138,11 @@ exports[`Single donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c20 {
+.c21 {
   margin-right: 0.5rem;
 }
 
-.c21 {
+.c22 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -1140,7 +1158,7 @@ exports[`Single donation renders correctly 1`] = `
   display: block;
 }
 
-.c21 span {
+.c22 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -1153,7 +1171,7 @@ exports[`Single donation renders correctly 1`] = `
   z-index: 3;
 }
 
-.c21 input {
+.c22 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -1161,9 +1179,14 @@ exports[`Single donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c21 input:focus {
+.c22 input:focus {
   outline: none;
   border: 2px solid #969598;
+}
+
+.c23 {
+  line-height: 1.5;
+  margin-top: 2rem;
 }
 
 .c24 {
@@ -1206,6 +1229,13 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c13 input {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c18 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -1290,7 +1320,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -1395,7 +1425,7 @@ exports[`Single donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c12 c13"
+              className="c12 c18"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
@@ -1462,17 +1492,17 @@ exports[`Single donation renders correctly 1`] = `
             </label>
           </div>
           <div
-            className="c18"
+            className="c19"
           >
             <span
-              className="c19 c20"
+              className="c20 c21"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c12 c21"
+              className="c12 c22"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -1503,18 +1533,19 @@ exports[`Single donation renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value=" "
+                  value="20"
                 />
               </div>
               
             </label>
           </div>
           <p
-            className="c22 c23 error--amount"
-            color="inherit"
-            size="s"
+            className="c23"
           >
-            Please enter an amount between £1 and £25000 and up to 2 decimal places
+            <strong>
+              £20.00 
+            </strong>
+            a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
           <input
             className="c24"
