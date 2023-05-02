@@ -72,3 +72,26 @@ it('Single donation with no Money Buys renders correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('"Single Giving, No Money Buys, with overridden manual input value" renders correctly', () => {
+  const tree = renderWithTheme(
+    <Donate
+      mobileBackgroundColor="blue_dark"
+      desktopOverlayColor="blue_dark"
+      formAlignRight={false}
+      imageLow={defaultData.pictures.imageLow}
+      images={defaultData.pictures.images}
+      data={data}
+      mbshipID="mship-4"
+      donateLink="https://donation.comicrelief.com/"
+      clientID="donate"
+      cartID="default-comicrelief"
+      title="Donate Now"
+      noMoneyBuys
+      subtitle="Please help us fund life-changing projects in the UK and around the world."
+      otherAmountValue={345.67}
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
