@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
@@ -39,7 +39,8 @@ const Donate = ({
   noMoneyBuys,
   PopUpText,
   chooseAmountText,
-  isDesktopOverride
+  isDesktopOverride,
+  otherAmountValue
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -47,7 +48,7 @@ const Donate = ({
   const [overrideValue, setOverrideValue] = useState(null);
 
   // Store the updated override value
-  React.useEffect(() => {
+  useEffect(() => {
     setOverrideValue(isDesktopOverride);
   }, [isDesktopOverride]);
 
@@ -122,6 +123,7 @@ const Donate = ({
           PopUpText={PopUpText}
           chooseAmountText={chooseAmountText}
           submitButtonColor={submitButtonColor}
+          otherAmountValue={otherAmountValue}
         />
       </Wrapper>
     </Container>
@@ -153,7 +155,8 @@ Donate.propTypes = {
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
-  isDesktopOverride: PropTypes.bool
+  isDesktopOverride: PropTypes.bool,
+  otherAmountValue: PropTypes.number
 };
 
 Donate.defaultProps = {
@@ -178,7 +181,8 @@ Donate.defaultProps = {
   noMoneyBuys: false,
   PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText: '',
-  isDesktopOverride: null
+  isDesktopOverride: null,
+  otherAmountValue: null
 };
 
 export default Donate;

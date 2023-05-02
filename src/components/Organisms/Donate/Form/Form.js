@@ -35,6 +35,7 @@ const Signup = ({
   PopUpText,
   chooseAmountText,
   submitButtonColor,
+  otherAmountValue,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -46,17 +47,23 @@ const Signup = ({
   const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
-    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+    // If a specific 'other amount' has been passed down, use it,
+    // otherwise assign based on the associated moneybuys:
+    if (otherAmountValue) {
+      setAmountDonate(parseFloat(otherAmountValue));
+    } else {
+      const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-    // Check the 2nd moneybuy exists before using it;
-    // 'philantrophy' carts have been set up to use a single moneybuy.
-    // See ENG-1685 for more details
-    const thisAmount = givingData.moneybuys[1]
-      ? givingData.moneybuys[1].value
-      : givingData.moneybuys[0].value;
+      // Check the 2nd moneybuy exists before using it;
+      // 'philantrophy' carts have been set up to use a single moneybuy.
+      // See ENG-1685 for more details
+      const thisAmount = givingData.moneybuys[1]
+        ? givingData.moneybuys[1].value
+        : givingData.moneybuys[0].value;
 
-    setAmountDonate(parseFloat(thisAmount));
-  }, [givingType, singleGiving, regularGiving]);
+      setAmountDonate(parseFloat(thisAmount));
+    }
+  }, [givingType, singleGiving, regularGiving, otherAmountValue]);
 
   useEffect(() => {
     const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -124,9 +131,16 @@ const Signup = ({
     }
   };
 
+  // Update the local state if the prop has changed
+  useEffect(() => {
+    setAmountDonate(parseFloat(otherAmountValue));
+  }, [otherAmountValue, setAmountDonate]);
+
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
+
+  console.log('amountDonate', amountDonate);
 
   return (
     <FormWrapper>
@@ -239,12 +253,14 @@ Signup.propTypes = {
   data: PropTypes.objectOf(PropTypes.shape),
   PopUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string.isRequired,
-  submitButtonColor: PropTypes.string.isRequired
+  submitButtonColor: PropTypes.string.isRequired,
+  otherAmountValue: PropTypes.number
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {}
+  data: {},
+  otherAmountValue: null
 };
 
 export default Signup;
