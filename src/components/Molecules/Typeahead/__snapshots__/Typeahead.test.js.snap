@@ -92,6 +92,7 @@ exports[`renders correctly 1`] = `
         aria-describedby="typeahead-test"
         autoComplete="off"
         className="c5"
+        defaultValue=""
         id="typeahead-test"
         name="q"
         onChange={[Function]}

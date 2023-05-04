@@ -61,6 +61,7 @@ const Typeahead = React.forwardRef(
 
     return (
       <TextInputWithDropdown
+        defaultValue=""
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
         onChange={e => {
@@ -77,7 +78,6 @@ const Typeahead = React.forwardRef(
           // reset
           setOptions([]);
           setErrorMsg('');
-          // setValue('');
         }}
         id={id}
         label={label}
