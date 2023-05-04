@@ -103,6 +103,102 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
+## Single Giving "No Money Buys" with overridden manual input value
+
+```js
+import data from './dev-data/data-single';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+import { useState } from 'react';
+
+// Simulating default state of a parent componenet
+const [amountDonate, setAmountDonate] = useState(123.45);
+
+// Simulating state update of a parent componenet
+setTimeout(()=>{
+  setAmountDonate(567.89);
+}, 3000);
+
+<Donate
+  mobileBackgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
+  formAlignRight={false}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-4"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  noMoneyBuys
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  otherAmountValue={amountDonate}
+/>;
+```
+
+## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button, with overridden manual input value
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+import { useState } from 'react';
+
+// Simulating default state of a parent componenet
+const [amountDonate, setAmountDonate] = useState(111.22);
+
+// Simulating state update of a parent componenet
+setTimeout(()=>{
+  setAmountDonate(333.44);
+}, 3000);
+
+<Donate
+  alt="Background image"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  otherAmountValue={amountDonate}
+/>;
+```
+
+## Form align left, with custom message after choosing an "Other amount" to donate, high value cart.
+```js
+import data from './dev-data/data-high-value';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  mobileBackgroundColor="blue_dark"
+  desktopOverlayColor="blue_dark"
+  formAlignRight={false}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-2"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  otherAmountText="Overridden via the 'Other amount text' prop"
+/>;
+```
+
+
 ## Form align right - no subtitle
 
 ```js
