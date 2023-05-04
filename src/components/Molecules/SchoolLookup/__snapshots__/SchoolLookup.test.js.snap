@@ -92,13 +92,13 @@ exports[`renders correctly 1`] = `
         aria-describedby="school-lookup"
         autoComplete="off"
         className="c5"
+        defaultValue=""
         id="school-lookup"
         name="school-lookup"
         onChange={[Function]}
         placeholder="Type to start search"
         required={false}
         type="text"
-        value=""
       />
     </div>
     
