@@ -637,12 +637,13 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               
             </label>
           </div>
-          <input
+          <button
             className="c24"
             color="red"
             type="submit"
-            value="Donate"
-          />
+          >
+            Donate £345.67
+          </button>
         </fieldset>
       </form>
     </div>
