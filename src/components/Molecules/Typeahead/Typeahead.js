@@ -24,7 +24,6 @@ const Typeahead = React.forwardRef(
     },
     ref
   ) => {
-    const [value, setValue] = useState('');
     const [options, setOptions] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
 
@@ -62,13 +61,11 @@ const Typeahead = React.forwardRef(
 
     return (
       <TextInputWithDropdown
-        value={value}
+        defaultValue=""
         options={optionParser ? options.map(optionParser) : options}
         errorMsg={errorMsg}
         onChange={e => {
           const newValue = e.currentTarget.value;
-          setValue(newValue);
-
           debouncedHandleChange(newValue);
         }}
         onSelect={(parsedOption, optionIndex) => {
@@ -81,7 +78,6 @@ const Typeahead = React.forwardRef(
           // reset
           setOptions([]);
           setErrorMsg('');
-          setValue('');
         }}
         id={id}
         label={label}
