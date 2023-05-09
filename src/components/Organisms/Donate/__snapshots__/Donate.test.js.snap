@@ -637,12 +637,13 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               
             </label>
           </div>
-          <input
+          <button
             className="c24"
             color="red"
             type="submit"
-            value="Donate"
-          />
+          >
+            Donate £345.67
+          </button>
         </fieldset>
       </form>
     </div>
@@ -955,6 +956,11 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c28 {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.c29 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -973,9 +979,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c28:active,
-.c28:focus,
-.c28:hover {
+.c29:active,
+.c29:focus,
+.c29:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1225,7 +1231,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c28 {
+  .c29 {
     padding: 1rem 2rem;
   }
 }
@@ -1478,18 +1484,26 @@ exports[`Monthly donation renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value=" "
+                  value="10"
                 />
               </div>
               
             </label>
           </div>
-          <input
+          <p
             className="c28"
+          >
+            <strong>
+              £10.00 
+            </strong>
+          </p>
+          <button
+            className="c29"
             color="red"
             type="submit"
-            value="Donate now"
-          />
+          >
+            Donate £10 now
+          </button>
         </fieldset>
       </form>
     </div>
@@ -1594,32 +1608,6 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1.25rem;
 }
 
-.c13 {
-  display: block;
-}
-
-.c13 input {
-  border: none;
-  background-color: #BECCF9;
-  color: #000000;
-  font-size: 1.5rem;
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
-  border-radius: 10px;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  height: auto;
-}
-
-.c13 input:focus {
-  border: none;
-  outline: none;
-  box-shadow: inset 0 0 0 4px #0565D1;
-}
-
-.c13 input:active:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
-}
-
 .c18 {
   display: block;
 }
@@ -1650,6 +1638,32 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c18 input:focus {
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.c13 {
+  display: block;
+}
+
+.c13 input {
+  border: none;
+  background-color: #BECCF9;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  height: auto;
+}
+
+.c13 input:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 4px #0565D1;
+}
+
+.c13 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
@@ -1878,14 +1892,14 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 input {
+  .c18 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
 }
 
 @media (min-width:740px) {
-  .c18 input {
+  .c13 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -2197,12 +2211,13 @@ exports[`Single donation renders correctly 1`] = `
             </strong>
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
-          <input
+          <button
             className="c24"
             color="red"
             type="submit"
-            value="Donate now"
-          />
+          >
+            Donate £20 now
+          </button>
         </fieldset>
       </form>
     </div>
@@ -2650,18 +2665,19 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value=" "
+                  value="10"
                 />
               </div>
               
             </label>
           </div>
-          <input
+          <button
             className="c18"
             color="red"
             type="submit"
-            value="Donate"
-          />
+          >
+            Donate £10
+          </button>
         </fieldset>
       </form>
     </div>

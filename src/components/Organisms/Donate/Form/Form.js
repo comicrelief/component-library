@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useRef, useEffect, useCallback
+} from 'react';
 import PropTypes from 'prop-types';
 
 import PopUpComponent from './PopUpComponent';
@@ -40,7 +42,7 @@ const Signup = ({
 }) => {
   const [givingType, setGivingType] = useState('single');
   const [errorMsg, setErrorMsg] = useState(false);
-  const [amountDonate, setAmountDonate] = useState(null);
+  const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
   const [popOpen, setPopOpen] = useState(false);
   // In order to keep track of whether the user has ever been shown the popup
@@ -142,6 +144,53 @@ const Signup = ({
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
   const showGivingSelector = singleGiving !== null && regularGiving !== null;
 
+  // Create ref for amount input
+  const amountRef = useRef(null);
+  // Create ref for amount button
+  const buttonRef = useRef(null);
+
+  const handleClickOutside = useCallback(event => {
+    if (!errorMsg) {
+      return;
+    }
+
+    if (buttonRef.current && event.target === buttonRef.current) {
+      return;
+    }
+
+    if (amountRef.current && !amountRef.current.contains(event.target)) {
+      // Check the 2nd moneybuy exists before using it;
+      // 'philantrophy' carts have been set up to use a single moneybuy.
+      // See ENG-1685 for more details
+      const thisAmount = givingData.moneybuys[1]
+        ? givingData.moneybuys[1].value
+        : givingData.moneybuys[0].value;
+
+      setAmountDonate(parseFloat(thisAmount));
+    }
+  }, [errorMsg, givingData.moneybuys]);
+
+  // Listen for click outside custom amount input if there is no value entered.
+  useEffect(() => {
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [errorMsg, handleClickOutside]);
+
+  // Create function to conditionally render button text
+  const renderButtonText = () => {
+    if (errorMsg) {
+      return 'Donate';
+    }
+    if (givingType === 'single') {
+      return `Donate £${amountFormatter(amountDonate)} now`;
+    }
+    return `Donate £${amountFormatter(amountDonate)} monthly`;
+  };
+
   return (
     <FormWrapper>
       {showGivingSelector && (
@@ -210,6 +259,7 @@ const Signup = ({
               placeholder="0.00"
               onChange={e => setAmountDonate(parseFloat(e.target.value))}
               aria-label="Input a different amount"
+              ref={amountRef}
             />
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
@@ -227,14 +277,23 @@ const Signup = ({
           )}
 
           {noMoneyBuys ? (
-            <Button type="submit" as="input" value="Donate" color={submitButtonColor} />
+            <Button
+              type="submit"
+              color={submitButtonColor}
+            >
+              {errorMsg
+                ? 'Donate'
+                : `Donate £${amountFormatter(amountDonate)}`}
+            </Button>
           ) : (
             <Button
               type="submit"
-              as="input"
-              value={givingType === 'single' ? 'Donate now' : 'Donate monthly'}
               color={submitButtonColor}
-            />
+              ref={buttonRef}
+            >
+              {renderButtonText()}
+            </Button>
+
           )}
 
         </OuterFieldset>

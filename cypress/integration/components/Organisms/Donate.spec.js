@@ -76,8 +76,12 @@ describe('Donate component', () => {
         .find('p.error--amount')
         .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
-        .find('form > fieldset > input')
-        .contains('Donate monthly');
+        .find('[id="mship-1--MoneyBuy-userInput"]')
+        .clear()
+        .type('16');
+      cy.get('@container')
+        .find('form > fieldset > button')
+        .contains('Donate £16 monthly');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -138,8 +142,12 @@ describe('Donate component', () => {
         .find('p.error--amount')
         .should('contain', 'Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
-        .find('form > fieldset > input')
-        .contains('Donate now');
+        .find('[id="mship-2--MoneyBuy-userInput"]')
+        .clear()
+        .type('179');
+      cy.get('@container')
+        .find('form > fieldset > button')
+        .contains('Donate £179 now');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -199,8 +207,12 @@ describe('Donate component', () => {
         .find('p.error--amount')
         .contains('Please enter an amount between £1 and £25000 and up to 2 decimal places');
       cy.get('@container')
-        .find('form > fieldset > input')
-        .contains('Donate now');
+        .find('[id="mship-3--MoneyBuy-userInput"]')
+        .clear()
+        .type('898');
+      cy.get('@container')
+        .find('form > fieldset > button')
+        .contains('Donate £898 now');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -258,7 +270,7 @@ describe('Donate component', () => {
         .type('5')
         .should('not.have', 'Please enter an amount between £1 and £250000 and up to 2 decimal places');
       cy.get('@container')
-        .find('form > fieldset > input')
+        .find('form > fieldset > button')
         .contains('Donate');
       cy.get('@container')
         .find('h2')
