@@ -4429,7 +4429,7 @@ dayjs@^1.10.4:
   version "1.10.6"
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.10.6.tgz"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.6, debug@^2.6.9:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
   dependencies:
@@ -4446,6 +4446,13 @@ debug@^3.1.0, debug@^3.1.1, debug@^3.2.6, debug@^3.2.7:
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz"
   dependencies:
     ms "^2.1.1"
+
+debug@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+  dependencies:
+    ms "2.1.2"
 
 debuglog@^1.0.1:
   version "1.0.1"
@@ -13279,11 +13286,12 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
 
-youtube-player@^5.5.2:
-  version "5.5.2"
-  resolved "https://registry.npmjs.org/youtube-player/-/youtube-player-5.5.2.tgz"
+youtube-player@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.6.0.tgz#71699ca093d8ae65e87091898cf812b354e261ea"
+  integrity sha512-x95fBbxV7eZ1ZsFtMLMcSGX0Jb/GPPj69RsooyEDVa9bzvvNZ4d5VjnBVBYoY85008VefkLvtaV+b+l38R/LMQ==
   dependencies:
-    debug "^2.6.6"
+    debug "^4.3.4"
     load-script "^1.0.0"
     sister "^3.0.0"
 
