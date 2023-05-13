@@ -10333,9 +10333,10 @@ react-canvas-confetti@^1.3.0:
     "@types/canvas-confetti" "1.4.2"
     canvas-confetti "1.5.1"
 
-react-currency-format@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/react-currency-format/-/react-currency-format-1.0.0.tgz"
+react-currency-format@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-currency-format/-/react-currency-format-1.1.0.tgz#efef7f18045fc09a987de270b144f5eec8801dab"
+  integrity sha512-WWrEOIp/3GbDSk1wlhFXaBc7IHGT3IwL306DHbGP3GVr4YFa0iS5hHPbKjHa0haruGL4Ly+WG4/5jBHpUtgqZg==
   dependencies:
     prop-types "^15.6.0"
 
