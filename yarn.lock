@@ -6301,10 +6301,6 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.npmjs.org/husky/-/husky-7.0.2.tgz"
-
 hyphenate-style-name@^1.0.0, hyphenate-style-name@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz"
