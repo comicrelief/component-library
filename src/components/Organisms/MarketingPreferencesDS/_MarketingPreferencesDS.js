@@ -264,11 +264,13 @@ MarketingPreferencesDS.defaultProps = {
 };
 
 MaybeDisabled.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  disabled: PropTypes.bool
 };
 
 MaybeDisabled.defaultProps = {
-  children: null
+  children: null,
+  disabled: false
 };
 
 export {
