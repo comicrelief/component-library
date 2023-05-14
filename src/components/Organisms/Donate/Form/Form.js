@@ -318,7 +318,8 @@ Signup.propTypes = {
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {}
+  data: {},
+  otherAmountValue: null
 };
 
 export default Signup;
