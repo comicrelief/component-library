@@ -313,7 +313,7 @@ Signup.propTypes = {
   PopUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string.isRequired,
   submitButtonColor: PropTypes.string.isRequired,
-  otherAmountValue: PropTypes.number.isRequired
+  otherAmountValue: PropTypes.number
 };
 
 Signup.defaultProps = {
