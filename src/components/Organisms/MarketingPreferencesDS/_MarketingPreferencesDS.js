@@ -263,6 +263,14 @@ MarketingPreferencesDS.defaultProps = {
   formContext: null
 };
 
+MaybeDisabled.propTypes = {
+  children: PropTypes.node
+};
+
+MaybeDisabled.defaultProps = {
+  children: null
+};
+
 export {
   MarketingPreferencesDS, setInitialValues, buildValidationSchema
 };
