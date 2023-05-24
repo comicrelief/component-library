@@ -255,7 +255,7 @@ const Signup = ({
               max="25000"
               min="1"
               value={amountFormatter(amountDonate)}
-              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
               onChange={e => setAmountDonate(parseFloat(e.target.value))}
               aria-label="Input a different amount"
