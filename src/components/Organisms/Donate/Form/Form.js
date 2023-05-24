@@ -52,7 +52,7 @@ const Signup = ({
     // If a specific 'other amount' has been passed down, use it,
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
-      setAmountDonate(parseFloat(otherAmountValue));
+      setAmountDonate(otherAmountValue);
     } else {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
@@ -228,7 +228,7 @@ const Signup = ({
                   isSelected={amountDonate === value}
                   amount={amountFormatter(value)}
                   description={`£${amountFormatter(value)}`}
-                  setOtherAmount={() => setAmountDonate(parseFloat(value))}
+                  setOtherAmount={() => setAmountDonate(value)}
                   key={value}
                   name={`${mbshipID}--moneyBuy${index + 1}`}
                   id={`${mbshipID}--moneyBuy-box${index + 1}`}
@@ -254,17 +254,17 @@ const Signup = ({
               {...rest}
               max="25000"
               min="1"
-              value={amountFormatter(amountDonate)}
+              value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
-              onChange={e => setAmountDonate(parseFloat(e.target.value))}
+              onChange={e => setAmountDonate(e.target.value)}
               aria-label="Input a different amount"
               ref={amountRef}
             />
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
             <Copy as="p">
-              <strong>{`£${amountDonate.toFixed(2)} `}</strong>
+              <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
           )}
