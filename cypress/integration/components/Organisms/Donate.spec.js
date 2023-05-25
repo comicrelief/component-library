@@ -81,7 +81,7 @@ describe('Donate component', () => {
         .type('16');
       cy.get('@container')
         .find('form > fieldset > button')
-        .contains('Donate £16 monthly');
+        .contains('Donate £16.00 monthly');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -147,7 +147,7 @@ describe('Donate component', () => {
         .type('179');
       cy.get('@container')
         .find('form > fieldset > button')
-        .contains('Donate £179 now');
+        .contains('Donate £179.00 now');
       cy.get('@container')
         .find('h2')
         .should('exist');
@@ -212,7 +212,7 @@ describe('Donate component', () => {
         .type('898');
       cy.get('@container')
         .find('form > fieldset > button')
-        .contains('Donate £898 now');
+        .contains('Donate £898.00 now');
       cy.get('@container')
         .find('h2')
         .should('exist');
