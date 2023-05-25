@@ -178,7 +178,7 @@ const Options = ({
 };
 
 TextInputWithDropdown.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
@@ -191,6 +191,7 @@ TextInputWithDropdown.propTypes = {
 
 TextInputWithDropdown.defaultProps = {
   dropdownInstruction: null,
+  value: '',
   className: ''
 };
 
