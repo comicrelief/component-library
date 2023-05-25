@@ -52,7 +52,7 @@ const Signup = ({
     // If a specific 'other amount' has been passed down, use it,
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
-      setAmountDonate(otherAmountValue);
+      setAmountDonate(parseFloat(otherAmountValue));
     } else {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
