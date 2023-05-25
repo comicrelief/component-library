@@ -631,7 +631,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                   required={false}
                   step="0.01"
                   type="number"
-                  value="345.67"
+                  value={345.67}
                 />
               </div>
               
@@ -1362,7 +1362,7 @@ exports[`Monthly donation renders correctly 1`] = `
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
-                  aria-label="£10.10"
+                  aria-label="£12"
                   className="c23"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
@@ -1370,7 +1370,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   placeholder=""
                   required={false}
                   type="button"
-                  value="£ 10.10"
+                  value="£ 12"
                 />
               </div>
               
@@ -1484,7 +1484,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value="10"
+                  value={10}
                 />
               </div>
               
@@ -1494,7 +1494,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="c28"
           >
             <strong>
-              £10.00 
+              £10 
             </strong>
           </p>
           <button
@@ -2197,7 +2197,7 @@ exports[`Single donation renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value="20"
+                  value={20}
                 />
               </div>
               
@@ -2207,7 +2207,7 @@ exports[`Single donation renders correctly 1`] = `
             className="c23"
           >
             <strong>
-              £20.00 
+              £20 
             </strong>
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
@@ -2665,7 +2665,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   required={false}
                   step="0.01"
                   type="number"
-                  value="10"
+                  value={10}
                 />
               </div>
               

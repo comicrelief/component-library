@@ -563,7 +563,7 @@ exports[`renders correctly 1`] = `
         className="c2"
       >
         <div
-          className="Footerstyle__SocialIconWrapper-sc-167xaf5-7"
+          className=""
         >
           <ul
             className="c3"
