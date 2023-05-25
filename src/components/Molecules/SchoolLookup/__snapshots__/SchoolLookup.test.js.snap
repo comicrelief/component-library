@@ -99,7 +99,6 @@ exports[`renders correctly 1`] = `
         placeholder="Type to start search"
         required={false}
         type="text"
-        value=""
       />
     </div>
     
