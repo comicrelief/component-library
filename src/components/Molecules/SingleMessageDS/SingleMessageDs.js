@@ -71,6 +71,7 @@ const SingleMessageDs = ({
           tabIndex="-1"
           href={youTubeId}
           target={target}
+          data-cta-copy={linkLabel}
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
