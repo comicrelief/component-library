@@ -29,7 +29,6 @@ const KEY_CODE_ESCAPE = 27;
 const TextInputWithDropdown = React.forwardRef(
   (
     {
-      value,
       options,
       onChange,
       onSelect,
@@ -76,7 +75,6 @@ const TextInputWithDropdown = React.forwardRef(
     };
 
     const inputProps = {
-      value,
       onChange,
       id,
       name,
@@ -178,7 +176,6 @@ const Options = ({
 };
 
 TextInputWithDropdown.propTypes = {
-  value: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
