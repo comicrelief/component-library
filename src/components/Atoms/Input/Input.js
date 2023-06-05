@@ -23,7 +23,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
-  color: ${theme.color('black')}; 
+  color: ${theme.color('black')};
   border-radius: ${spacing('sm')};
   font-size: inherit;
   z-index: 2;
@@ -119,7 +119,7 @@ Input.propTypes = {
   id: PropTypes.string.isRequired,
   /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
-  labelProps: PropTypes.objectOf(PropTypes.any),
+  labelProps: PropTypes.objectOf(PropTypes.string),
   // className is needed so that styled(`Input`) will work
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
