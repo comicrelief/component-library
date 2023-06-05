@@ -22,14 +22,13 @@ const KEY_CODE_ESCAPE = 27;
  * This component deals with the visual aspect of a text input with typeahead-style functionality
  *
  * API querying and state management (aside from that related to keyboard usage/accessibility) are
- *  handled by the parent component (via the value, options, onChange and onSelect props)
+ *  handled by the parent component (options, onChange and onSelect props)
  *
  * See the Typeahead and SchoolLookup molecules for the full implementation
  */
 const TextInputWithDropdown = React.forwardRef(
   (
     {
-      value,
       options,
       onChange,
       onSelect,
@@ -76,7 +75,6 @@ const TextInputWithDropdown = React.forwardRef(
     };
 
     const inputProps = {
-      value,
       onChange,
       id,
       name,
@@ -178,7 +176,6 @@ const Options = ({
 };
 
 TextInputWithDropdown.propTypes = {
-  value: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,

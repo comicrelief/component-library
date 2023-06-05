@@ -26,7 +26,6 @@ const GivingSelector = ({
           value="Single"
           type="radio"
           label=""
-          errormsg=""
           checked={givingType === 'single'}
           onClick={() => handleGivingTypeChange('single', givingType)}
         />
@@ -40,7 +39,6 @@ const GivingSelector = ({
           value="Monthly"
           type="radio"
           label=""
-          errormsg=""
           checked={givingType === 'monthly'}
           onClick={() => handleGivingTypeChange('monthly', givingType)}
         />
