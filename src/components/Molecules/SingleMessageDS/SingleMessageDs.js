@@ -31,7 +31,6 @@ const SingleMessageDs = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   const Media = (
@@ -57,6 +56,7 @@ const SingleMessageDs = ({
           tabIndex="-1"
           href={link}
           target={target}
+          data-cta-copy={linkLabel}
           {...rest}
         >
           {Media}
@@ -71,6 +71,7 @@ const SingleMessageDs = ({
           tabIndex="-1"
           href={youTubeId}
           target={target}
+          data-cta-copy={linkLabel}
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
