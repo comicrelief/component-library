@@ -92,9 +92,9 @@ const Donate = ({
       <Wrapper formAlignRight={formAlignRight} aria-live="polite">
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
-            {subtitle && (
+            {Boolean(subtitle) && (
               <>
-                {title && (
+                {Boolean(title) && (
                 <Text
                   tag="h2"
                   color={textColor}
