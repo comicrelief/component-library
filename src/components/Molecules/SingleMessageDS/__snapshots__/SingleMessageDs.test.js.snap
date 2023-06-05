@@ -234,6 +234,7 @@ exports[`renders correctly 1`] = `
   <a
     aria-hidden="true"
     className="c1"
+    data-cta-copy="Check out the shop"
     href="/home"
     tabIndex="-1"
     target="_blank"
