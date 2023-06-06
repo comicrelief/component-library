@@ -25,6 +25,14 @@ const Logos = ({ campaign }) => {
     );
   }
 
+  if (campaign === 'Pride') {
+    return (
+      <a href="/" title="Go to Comic Relief homepage">
+        <Logo rotate={false} campaign="Pride" />
+      </a>
+    );
+  }
+
   return (
     <a href="/" title="Go to Comic Relief homepage">
       <Logo rotate={false} campaign="Comic Relief" />

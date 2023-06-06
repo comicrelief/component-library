@@ -36,6 +36,25 @@ import Link from '../../Atoms/Link/Link';
 />;
 ```
 
+# Pride header
+
+```js
+import data from './data/data';
+import Link from '../../Atoms/Link/Link';
+
+<Header
+  navItems={data}
+  campaign="Pride"
+  metaIcons={
+    <>
+      <Link color="green" type="button" href="/donation">
+        Donate
+      </Link>
+    </>
+  }
+/>;
+```
+
 # Comic Relief header with Search
 
 ```js
