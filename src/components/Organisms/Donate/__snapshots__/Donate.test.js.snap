@@ -628,7 +628,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                   placeholder="0.00"
                   required={false}
                   step="0.01"
-                  type="number"
+                  type="string"
                   value={345.67}
                 />
               </div>
@@ -1358,7 +1358,7 @@ exports[`Monthly donation renders correctly 1`] = `
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
-                  aria-label="£12"
+                  aria-label="£12.10"
                   className="c23"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
@@ -1366,7 +1366,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   placeholder=""
                   required={false}
                   type="button"
-                  value="£ 12"
+                  value="£ 12.10"
                 />
               </div>
               
@@ -1391,7 +1391,7 @@ exports[`Monthly donation renders correctly 1`] = `
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
-                  aria-label="£20"
+                  aria-label="£20.00"
                   className="c23"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
@@ -1424,7 +1424,7 @@ exports[`Monthly donation renders correctly 1`] = `
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box3"
-                  aria-label="£30"
+                  aria-label="£30.00"
                   className="c23"
                   id="mship-1--moneyBuy-box3"
                   name="mship-1--moneyBuy3"
@@ -1479,7 +1479,7 @@ exports[`Monthly donation renders correctly 1`] = `
                   placeholder="0.00"
                   required={false}
                   step="0.01"
-                  type="number"
+                  type="string"
                   value={10}
                 />
               </div>
@@ -2192,7 +2192,7 @@ exports[`Single donation renders correctly 1`] = `
                   placeholder="0.00"
                   required={false}
                   step="0.01"
-                  type="number"
+                  type="string"
                   value={20}
                 />
               </div>
@@ -2660,7 +2660,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   placeholder="0.00"
                   required={false}
                   step="0.01"
-                  type="number"
+                  type="string"
                   value={10}
                 />
               </div>

@@ -52,7 +52,7 @@ const Signup = ({
     // If a specific 'other amount' has been passed down, use it,
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
-      setAmountDonate(parseFloat(otherAmountValue));
+      setAmountDonate(otherAmountValue);
     } else {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
@@ -63,7 +63,7 @@ const Signup = ({
         ? givingData.moneybuys[1].value
         : givingData.moneybuys[0].value;
 
-      setAmountDonate(parseFloat(thisAmount));
+      setAmountDonate(thisAmount);
     }
   }, [givingType, singleGiving, regularGiving, otherAmountValue]);
 
@@ -81,7 +81,7 @@ const Signup = ({
         index === 1
         && amountDonate === ' '
         && (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(parseFloat(moneyBuy.value)))
+        setAmountDonate(moneyBuy.value))
       );
     });
 
@@ -136,7 +136,7 @@ const Signup = ({
   // Update the local state if the prop has been set and changed
   useEffect(() => {
     if (otherAmountValue) {
-      setAmountDonate(parseFloat(otherAmountValue));
+      setAmountDonate(otherAmountValue);
     }
   }, [otherAmountValue, setAmountDonate]);
 
@@ -166,7 +166,7 @@ const Signup = ({
         ? givingData.moneybuys[1].value
         : givingData.moneybuys[0].value;
 
-      setAmountDonate(parseFloat(thisAmount));
+      setAmountDonate(thisAmount);
     }
   }, [errorMsg, givingData.moneybuys]);
 
@@ -186,9 +186,9 @@ const Signup = ({
       return 'Donate';
     }
     if (givingType === 'single') {
-      return `Donate £${amountFormatter(amountDonate)} now`;
+      return `Donate £${amountDonate} now`;
     }
-    return `Donate £${amountFormatter(amountDonate)} monthly`;
+    return `Donate £${amountDonate} monthly`;
   };
 
   return (
@@ -226,7 +226,7 @@ const Signup = ({
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
                   isSelected={amountDonate === value}
-                  amount={amountFormatter(value)}
+                  amount={value.toString()}
                   description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(value)}
                   key={value}
@@ -245,7 +245,7 @@ const Signup = ({
             <AmountField
               step="0.01"
               name="membership_amount"
-              type="number"
+              type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
               label="£"
               errorMsg=""
@@ -264,7 +264,7 @@ const Signup = ({
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
             <Copy as="p">
-              <strong>{`£${amountFormatter(amountDonate)} `}</strong>
+              <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
           )}
@@ -283,7 +283,7 @@ const Signup = ({
             >
               {errorMsg
                 ? 'Donate'
-                : `Donate £${amountFormatter(amountDonate)}`}
+                : `Donate £${amountDonate}`}
             </Button>
           ) : (
             <Button
