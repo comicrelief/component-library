@@ -397,7 +397,7 @@ exports[`renders correctly 1`] = `
             Subscribe
           </span>
           <div
-            className=""
+            className="ButtonWithStates__LoaderContainer-sc-7gb81g-1"
           />
         </button>
       </div>
