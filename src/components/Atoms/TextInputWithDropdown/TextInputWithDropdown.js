@@ -22,7 +22,7 @@ const KEY_CODE_ESCAPE = 27;
  * This component deals with the visual aspect of a text input with typeahead-style functionality
  *
  * API querying and state management (aside from that related to keyboard usage/accessibility) are
- *  handled by the parent component (via the value, options, onChange and onSelect props)
+ *  handled by the parent component (options, onChange and onSelect props)
  *
  * See the Typeahead and SchoolLookup molecules for the full implementation
  */

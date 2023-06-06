@@ -92,8 +92,9 @@ const Donate = ({
       <Wrapper formAlignRight={formAlignRight} aria-live="polite">
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
-            {subtitle && (
+            {Boolean(subtitle) && (
               <>
+                {Boolean(title) && (
                 <Text
                   tag="h2"
                   color={textColor}
@@ -104,6 +105,8 @@ const Donate = ({
                 >
                   {title}
                 </Text>
+                )}
+
                 <Text tag="p" color={textColor} size="m">
                   {subtitle}
                 </Text>
@@ -136,7 +139,7 @@ Donate.propTypes = {
   data: PropTypes.objectOf(PropTypes.shape),
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   otherAmountText: PropTypes.string,
   subtitle: PropTypes.string,
   formAlignRight: PropTypes.bool,
@@ -182,7 +185,8 @@ Donate.defaultProps = {
   PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText: '',
   isDesktopOverride: null,
-  otherAmountValue: null
+  otherAmountValue: null,
+  title: null
 };
 
 export default Donate;
