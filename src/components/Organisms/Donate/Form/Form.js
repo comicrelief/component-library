@@ -79,7 +79,7 @@ const Signup = ({
 
       return (
         index === 1
-        && amountDonate === ' '
+        && amountDonate === undefined
         && (setMoneyBuyCopy(moneyBuy.description),
         setAmountDonate(moneyBuy.value))
       );
