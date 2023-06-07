@@ -31,7 +31,6 @@ const MarketingPreferencesDS = ({
   const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
   const {
-    // eslint-disable-next-line camelcase
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
