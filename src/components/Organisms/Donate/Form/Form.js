@@ -257,7 +257,7 @@ const Signup = ({
               value={amountDonate}
               pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
-              onChange={e => setAmountDonate(e.target.value)}
+              onChange={e => setAmountDonate(e.target.value.trim())}
               aria-label="Input a different amount"
               ref={amountRef}
             />
