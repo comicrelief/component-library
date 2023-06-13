@@ -52,7 +52,7 @@ const Signup = ({
     // If a specific 'other amount' has been passed down, use it,
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
-      setAmountDonate(parseFloat(otherAmountValue));
+      setAmountDonate(otherAmountValue);
     } else {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
@@ -63,7 +63,7 @@ const Signup = ({
         ? givingData.moneybuys[1].value
         : givingData.moneybuys[0].value;
 
-      setAmountDonate(parseFloat(thisAmount));
+      setAmountDonate(thisAmount);
     }
   }, [givingType, singleGiving, regularGiving, otherAmountValue]);
 
@@ -79,9 +79,9 @@ const Signup = ({
 
       return (
         index === 1
-        && amountDonate === ' '
+        && amountDonate === undefined
         && (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(parseFloat(moneyBuy.value)))
+        setAmountDonate(moneyBuy.value))
       );
     });
 
@@ -136,7 +136,7 @@ const Signup = ({
   // Update the local state if the prop has been set and changed
   useEffect(() => {
     if (otherAmountValue) {
-      setAmountDonate(parseFloat(otherAmountValue));
+      setAmountDonate(otherAmountValue);
     }
   }, [otherAmountValue, setAmountDonate]);
 
@@ -166,7 +166,7 @@ const Signup = ({
         ? givingData.moneybuys[1].value
         : givingData.moneybuys[0].value;
 
-      setAmountDonate(parseFloat(thisAmount));
+      setAmountDonate(thisAmount);
     }
   }, [errorMsg, givingData.moneybuys]);
 
@@ -186,9 +186,9 @@ const Signup = ({
       return 'Donate';
     }
     if (givingType === 'single') {
-      return `Donate £${amountFormatter(amountDonate)} now`;
+      return `Donate £${amountDonate} now`;
     }
-    return `Donate £${amountFormatter(amountDonate)} monthly`;
+    return `Donate £${amountDonate} monthly`;
   };
 
   return (
@@ -226,9 +226,9 @@ const Signup = ({
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
                   isSelected={amountDonate === value}
-                  amount={amountFormatter(value)}
+                  amount={value.toString()}
                   description={`£${amountFormatter(value)}`}
-                  setOtherAmount={() => setAmountDonate(parseFloat(value))}
+                  setOtherAmount={() => setAmountDonate(value)}
                   key={value}
                   name={`${mbshipID}--moneyBuy${index + 1}`}
                   id={`${mbshipID}--moneyBuy-box${index + 1}`}
@@ -245,7 +245,7 @@ const Signup = ({
             <AmountField
               step="0.01"
               name="membership_amount"
-              type="number"
+              type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
               label="£"
               errorMsg=""
@@ -254,17 +254,17 @@ const Signup = ({
               {...rest}
               max="25000"
               min="1"
-              value={amountFormatter(amountDonate)}
-              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              value={amountDonate}
+              pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
-              onChange={e => setAmountDonate(parseFloat(e.target.value))}
+              onChange={e => setAmountDonate(e.target.value.trim())}
               aria-label="Input a different amount"
               ref={amountRef}
             />
           </FormFieldset>
           {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
             <Copy as="p">
-              <strong>{`£${amountDonate.toFixed(2)} `}</strong>
+              <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
           )}
@@ -283,7 +283,7 @@ const Signup = ({
             >
               {errorMsg
                 ? 'Donate'
-                : `Donate £${amountFormatter(amountDonate)}`}
+                : `Donate £${amountDonate}`}
             </Button>
           ) : (
             <Button
@@ -318,8 +318,8 @@ Signup.propTypes = {
 
 Signup.defaultProps = {
   noMoneyBuys: false,
-  data: {},
-  otherAmountValue: null
+  otherAmountValue: null,
+  data: {}
 };
 
 export default Signup;

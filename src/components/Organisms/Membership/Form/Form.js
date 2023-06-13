@@ -173,7 +173,7 @@ const Signup = ({
               max="25000"
               min="1"
               value={userInput}
-              pattern="[^[0-9]+([,.][0-9]+)?$]"
+              pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
               onChange={e => handleChange(e.target.value, otherDescription)}
               onClick={e => hightlightInput(e.target.value, otherDescription)}
