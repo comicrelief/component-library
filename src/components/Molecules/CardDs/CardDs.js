@@ -153,6 +153,7 @@ const CardDs = ({
             target={target}
             type="button"
             icon={icon}
+            data-cta-copy={linkLabel}
           >
             {linkLabel}
           </Link>

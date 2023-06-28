@@ -228,6 +228,7 @@ exports[`renders correctly 1`] = `
     <a
       className="c7"
       color="red"
+      data-cta-copy="Find out more"
       href="/home"
       rel={null}
       target="_self"
