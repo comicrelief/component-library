@@ -119,7 +119,7 @@ const CardDs = ({
           tabIndex="-1"
           href={link}
           target={target}
-          data-cta-copy={linkLabel}
+          data-image-cta-copy={linkLabel}
           {...rest}
         >
           {Media}
@@ -153,7 +153,7 @@ const CardDs = ({
             target={target}
             type="button"
             icon={icon}
-            data-cta-copy={linkLabel}
+            data-button-cta-copy={linkLabel}
           >
             {linkLabel}
           </Link>

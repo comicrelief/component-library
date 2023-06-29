@@ -56,7 +56,7 @@ const SingleMessageDs = ({
           tabIndex="-1"
           href={link}
           target={target}
-          data-cta-copy={linkLabel}
+          data-image-cta-copy={linkLabel}
           {...rest}
         >
           {Media}
@@ -71,7 +71,7 @@ const SingleMessageDs = ({
           tabIndex="-1"
           href={youTubeId}
           target={target}
-          data-cta-copy={linkLabel}
+          data-image-cta-copy={linkLabel}
           {...rest}
           onClick={e => { setIsOpen(true); e.preventDefault(); }}
         >
@@ -144,7 +144,7 @@ const SingleMessageDs = ({
             target={target}
             type="button"
             icon={icon}
-            data-cta-copy={linkLabel}
+            data-button-cta-copy={linkLabel}
           >
             {linkLabel}
           </Link>
