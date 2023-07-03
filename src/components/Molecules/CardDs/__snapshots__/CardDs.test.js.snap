@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
   <a
     aria-hidden="true"
     className="c1"
-    data-cta-copy="Find out more"
+    data-image-cta-copy="Find out more"
     href="/home"
     tabIndex="-1"
     target="_blank"
@@ -228,6 +228,7 @@ exports[`renders correctly 1`] = `
     <a
       className="c7"
       color="red"
+      data-button-cta-copy="Find out more"
       href="/home"
       rel={null}
       target="_self"
