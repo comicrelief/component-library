@@ -65,7 +65,6 @@ const SubNavMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 400px;
   background-color: ${({ theme }) => theme.color('deep_violet_dark')};
 
   @media ${({ theme }) => theme.breakpoint('nav')} {
