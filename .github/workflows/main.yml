@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16.20.0
 
       - name: Restore packages cache
         uses: actions/cache@v3
@@ -37,7 +37,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16.20.0
 
       - name: Restore packages cache
         uses: actions/cache@v3
@@ -69,7 +69,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16.20.0
 
       # see https://github.com/marketplace/actions/cypress-io
       - name: Run Cypress tests
@@ -110,7 +110,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16.20.0
 
       - name: Restore packages cache
         uses: actions/cache@v3
