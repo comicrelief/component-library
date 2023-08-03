@@ -5,13 +5,12 @@
 <Select
   label="Label"
   description="Please choose an option"
+  // note: the default value must be one of the options values ie. 'Option two'
+  defaultValue="Option four"
   errorMsg=""
   options={[
     { value: 'Option one', displayValue: 'The first option' },
-    {
-      value: 'Option two',
-      displayValue: 'The second option'
-    },
+    { value: 'Option two', displayValue: 'The second option' },
     { value: 'Option three', displayValue: 'The third option' },
     { value: 'Option four', displayValue: 'The fourth option' }
   ]}
