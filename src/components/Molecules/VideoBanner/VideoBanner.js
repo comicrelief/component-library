@@ -14,20 +14,20 @@ const VideoBanner = ({
 }) => {
   const videoEl = useRef(null);
 
-  const onPlay = () => {
+  const triggerPlay = () => {
     videoEl.current.play();
   };
 
   useEffect(() => {
-    // Only trigger play where appropriate:
+    // Trigger onload autoplay based on prop:
     if (autoPlay) {
-      onPlay();
+      triggerPlay();
     }
 
-    // Only attach event listener where appropriate:
+    // And attach event listener based on prop:
     if (!loop && showPosterAfterPlaying) {
       videoEl.current.addEventListener('ended', () => {
-        // Reloads video, showing poster
+        // Reloads video, which re-shows poster
         videoEl.current.load();
       });
     }
@@ -48,21 +48,21 @@ const VideoBanner = ({
 };
 
 VideoBanner.defaultProps = {
+  showPosterAfterPlaying: true,
   showUserControls: true,
   autoPlay: false,
   loop: false,
-  muted: true,
-  showPosterAfterPlaying: true
+  muted: true
 };
 
 VideoBanner.propTypes = {
+  showPosterAfterPlaying: PropTypes.bool,
   video: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   showUserControls: PropTypes.bool,
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
-  muted: PropTypes.bool,
-  showPosterAfterPlaying: PropTypes.bool
+  muted: PropTypes.bool
 };
 
 export default VideoBanner;
