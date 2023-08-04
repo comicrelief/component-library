@@ -50,7 +50,7 @@ const VideoBanner = ({
 VideoBanner.defaultProps = {
   showPosterAfterPlaying: true,
   showUserControls: true,
-  autoPlay: false,
+  autoPlay: true,
   loop: false,
   muted: true
 };
