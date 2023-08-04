@@ -10,7 +10,7 @@ const Video = styled.video.attrs(() => ({
 `;
 
 const VideoBanner = ({
-  video, poster, showUserControls, autoPlay, loop, muted, showPosterAfterPlaying
+  video, poster, controls, autoPlay, loop, muted, showPosterAfterPlaying
 }) => {
   const videoEl = useRef(null);
 
@@ -38,7 +38,7 @@ const VideoBanner = ({
       poster={poster}
       src={video}
       ref={videoEl}
-      controls={showUserControls}
+      controls={controls}
       loop={loop}
       muted={muted}
     >
@@ -49,7 +49,7 @@ const VideoBanner = ({
 
 VideoBanner.defaultProps = {
   showPosterAfterPlaying: true,
-  showUserControls: true,
+  controls: false,
   autoPlay: true,
   loop: false,
   muted: true
@@ -59,7 +59,7 @@ VideoBanner.propTypes = {
   showPosterAfterPlaying: PropTypes.bool,
   video: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  showUserControls: PropTypes.bool,
+  controls: PropTypes.bool,
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
   muted: PropTypes.bool

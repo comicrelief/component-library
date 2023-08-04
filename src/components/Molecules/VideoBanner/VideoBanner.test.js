@@ -21,7 +21,7 @@ it("renders correctly", () => {
 
     <video
       className="c0"
-      controls={true}
+      controls={false}
       loop={false}
       muted={true}
       playsInline={true}
