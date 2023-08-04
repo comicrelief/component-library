@@ -5,7 +5,7 @@
 <Select
   label="Label"
   description="Please choose an option"
-  // note: the default value must be one of the options values ie. 'Option two'
+  // note: defaultValue is just using the built-in React defaultValue prop. It adds the HTML prop "selected" to one of the options elements. This is why defaultValue must be set to one of the existing options values:
   defaultValue="Option four"
   errorMsg=""
   options={[
