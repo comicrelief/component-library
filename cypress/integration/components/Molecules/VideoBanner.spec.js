@@ -35,7 +35,7 @@ describe('Video Banner component', () => {
 
     describe('Video Banner section', () => {
         beforeEach(() => {
-            cy.get('[data-testid="VideoBanner-example-0"]')
+            cy.get('[data-testid="VideoBanner-example-1"]')
                 .as('container')
                 .find('[data-preview="VideoBanner"]')
                 .as('preview');
