@@ -24,11 +24,10 @@ const VideoBanner = ({
   useEffect(() => {
     // Trigger onload autoplay based on prop:
     if (autoPlay) {
-      triggerPlay();
-
       // As it's a Chrome requirement to mute any autoplay videos,
       // update accordingly; see https://developer.chrome.com/blog/autoplay/
       setIsMuted(true);
+      triggerPlay();
     }
 
     // And attach event listener based on prop:
