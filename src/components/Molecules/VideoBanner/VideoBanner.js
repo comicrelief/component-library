@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -12,6 +12,9 @@ const Video = styled.video.attrs(() => ({
 const VideoBanner = ({
   video, poster, controls, autoPlay, loop, muted, showPosterAfterPlaying
 }) => {
+  // Use the prop as our default
+  const [isMuted, setIsMuted] = useState(muted);
+
   const videoEl = useRef(null);
 
   const triggerPlay = () => {
@@ -22,6 +25,10 @@ const VideoBanner = ({
     // Trigger onload autoplay based on prop:
     if (autoPlay) {
       triggerPlay();
+
+      // As it's a Chrome requirement to mute any autoplay videos,
+      // update accordingly; see https://developer.chrome.com/blog/autoplay/
+      setIsMuted(true);
     }
 
     // And attach event listener based on prop:
@@ -40,7 +47,7 @@ const VideoBanner = ({
       ref={videoEl}
       controls={controls}
       loop={loop}
-      muted={muted}
+      muted={isMuted}
     >
       Your browser does not support video.
     </Video>
