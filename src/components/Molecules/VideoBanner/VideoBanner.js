@@ -38,7 +38,7 @@ const VideoBanner = ({
         videoEl.current.load();
       });
     }
-  });
+  }, [autoPlay, loop, showPosterAfterPlaying]);
 
   return (
     <Video
