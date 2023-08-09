@@ -1,12 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Stuff } from './PostcodeLookup.style';
+// import PropTypes from 'prop-types';
 
-const PostcodeLookup = () => {
-  return (
-    <h1>PostcodeLookup</h1>
-  );
-};
+const PostcodeLookup = () => <h1>PostcodeLookup</h1>;
 
 PostcodeLookup.propTypes = {
 };
