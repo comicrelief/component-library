@@ -1,5 +1,7 @@
 # Postcode Lookup
 
+<!-- <PostcodeLookup onSelect={addressSelect} data-test="postcode-lookup" /> -->
+
 ```js
-<PostcodeLookup>Postcode Lookup</PostcodeLookup>;
+<PostcodeLookup data-test="postcode-lookup" />
 ```
