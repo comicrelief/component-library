@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { isValid } from 'postcode';
+import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
-  return isValid(trimmed) && postcode.toNormalised(trimmed);
+  return isValid(trimmed) && toNormalised(trimmed);
 };
 
 const getAddresses = postcode => axios.get(
