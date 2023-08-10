@@ -33,9 +33,9 @@ describe('Video Banner component', () => {
     });
   });
 
-  describe('Video Banner section', () => {
+  describe('VideoBanner-example-1: Default Video Banner', () => {
     beforeEach(() => {
-      cy.get('[data-testid="VideoBanner-example-0"]')
+      cy.get('[data-testid="VideoBanner-example-1"]')
         .as('container')
         .find('[data-preview="VideoBanner"]')
         .as('preview');
@@ -61,6 +61,76 @@ describe('Video Banner component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
+    });
+
+    it('closes code on click', () => {
+      cy.get('@viewCodeBtn').click();
+    });
+  });
+
+  describe('VideoBanner-example-3: Looping Video Banner With Controls', () => {
+    beforeEach(() => {
+      cy.get('[data-testid="VideoBanner-example-3"]')
+        .as('container')
+        .find('[data-preview="VideoBanner"]')
+        .as('preview');
+
+      cy.get('@container')
+        .find('button')
+        .contains('View Code')
+        .as('viewCodeBtn');
+    });
+
+    it('renders looping Video Banner With Controls preview', () => {
+      cy.get('@container')
+        .find('video')
+        .should('exist');
+    });
+
+    it('has view code button', () => {
+      cy.get('@viewCodeBtn').should('exist');
+    });
+
+    it('shows code on click', () => {
+      cy.get('@viewCodeBtn').click();
+      cy.get('@container')
+        .find('textarea')
+        .should('exist');
+    });
+
+    it('closes code on click', () => {
+      cy.get('@viewCodeBtn').click();
+    });
+  });
+
+  describe('VideoBanner-example-5: Non-autoplay Video Banner', () => {
+    beforeEach(() => {
+      cy.get('[data-testid="VideoBanner-example-5"]')
+          .as('container')
+          .find('[data-preview="VideoBanner"]')
+          .as('preview');
+
+      cy.get('@container')
+          .find('button')
+          .contains('View Code')
+          .as('viewCodeBtn');
+    });
+
+    it('renders Non-autoplay Video Banner preview', () => {
+      cy.get('@container')
+          .find('video')
+          .should('exist');
+    });
+
+    it('has view code button', () => {
+      cy.get('@viewCodeBtn').should('exist');
+    });
+
+    it('shows code on click', () => {
+      cy.get('@viewCodeBtn').click();
+      cy.get('@container')
+          .find('textarea')
+          .should('exist');
     });
 
     it('closes code on click', () => {
