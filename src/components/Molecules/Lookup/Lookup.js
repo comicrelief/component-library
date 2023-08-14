@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
+import LookupWrapper from './Lookup.style';
 
 const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
   color: ${theme.color('grey_dark')};
@@ -11,7 +12,7 @@ const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
   background-color: ${theme.color('white')};
   padding-left: ${spacing('lg')};
   padding-right: ${spacing('lg')};
-  
+
   &:hover {
     color: ${theme.color('grey_dark')};
     background-color: ${theme.color('white')};
@@ -83,7 +84,7 @@ const Lookup = ({
   }, [query, setOptions, setErrorMessage, noResultsMessage, lookupHandler]);
 
   return (
-    <div {...rest}>
+    <LookupWrapper {...rest}>
       <TextInputWithDropdown
         css={{ marginBottom: spacing('md') }}
         name={name}
@@ -124,7 +125,7 @@ const Lookup = ({
       >
         {buttonText}
       </StyledButton>
-    </div>
+    </LookupWrapper>
   );
 };
 

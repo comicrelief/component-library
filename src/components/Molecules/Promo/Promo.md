@@ -1,7 +1,8 @@
 Promo
 
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;
+import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <div>

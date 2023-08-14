@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
+import ManualAddress from './ManualAddress';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -49,17 +50,21 @@ const addressFetcher = async postcode => {
  * @constructor
  */
 const PostcodeLookup = ({ onSelect, ...rest }) => (
-  <Lookup
-    name="postcode_lookup"
-    label="Find address by postcode"
-    placeholder="Enter postcode..."
-    buttonText="Find address"
-    noResultsMessage="Sorry, could not find any addresses for that postcode"
-    mapOptionToString={addressToString}
-    lookupHandler={addressFetcher}
-    onSelect={onSelect}
-    {...rest}
-  />
+  <>
+    <Lookup
+      name="postcode_lookup"
+      label="Find address by postcode"
+      placeholder="Enter postcode..."
+      buttonText="Find address"
+      noResultsMessage="Sorry, could not find any addresses for that postcode"
+      mapOptionToString={addressToString}
+      lookupHandler={addressFetcher}
+      onSelect={onSelect}
+      {...rest}
+      className="test"
+    />
+    <ManualAddress />
+  </>
 );
 
 PostcodeLookup.propTypes = {
