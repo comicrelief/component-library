@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
@@ -49,26 +49,30 @@ const addressFetcher = async postcode => {
  * @returns {JSX.Element}
  * @constructor
  */
-const PostcodeLookup = ({ onSelect, ...rest }) => (
-  <>
-    <Lookup
-      name="postcode_lookup"
-      label="Find address by postcode"
-      placeholder="Enter postcode..."
-      buttonText="Find address"
-      noResultsMessage="Sorry, could not find any addresses for that postcode"
-      mapOptionToString={addressToString}
-      lookupHandler={addressFetcher}
-      onSelect={onSelect}
-      {...rest}
-      className="test"
-    />
-    <ManualAddress />
-  </>
-);
+export default function PostcodeLookup({ onSelect, ...rest }) {
+  const [showAddressInputs, setShowAddressInputs] = useState(false);
+
+  return (
+    <>
+      <Lookup
+        name="postcode_lookup"
+        label="Find address by postcode"
+        placeholder="Enter postcode..."
+        buttonText="Find address"
+        noResultsMessage="Sorry, could not find any addresses for that postcode"
+        mapOptionToString={addressToString}
+        lookupHandler={addressFetcher}
+        onSelect={onSelect}
+        {...rest}
+      />
+      <ManualAddress
+        showAddressInputs={showAddressInputs}
+        setShowAddressInputs={setShowAddressInputs}
+      />
+    </>
+  );
+}
 
 PostcodeLookup.propTypes = {
   onSelect: PropTypes.func.isRequired
 };
-
-export default PostcodeLookup;
