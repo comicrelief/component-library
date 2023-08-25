@@ -1,36 +1,18 @@
 # Postcode Lookup
-
-<!-- <PostcodeLookup onSelect={addressSelect} data-test="postcode-lookup" /> -->
+The parent component must provide an `onSelect` prop in order to receive the selected address.
 
 ```js
-<PostcodeLookup data-test="postcode-lookup" />
+const addressSelect = (address) => {
+    setValue(FIELDS.LINE1, address.Line1, { shouldValidate: true });
+    setValue(FIELDS.LINE2, address.Line2, { shouldValidate: true });
+    setValue(FIELDS.LINE3, address.Line3, { shouldValidate: true });
+    setValue(FIELDS.TOWN, address.posttown, { shouldValidate: true });
+    setValue(FIELDS.POSTCODE, address.postcode, { shouldValidate: true });
+    // Keep track of the last address that was selected; when the form is submitted, we will use the
+    // address ID if the address hasn't been changed.
+    setSelectedAddress(address);
+    setSelectedSchool(null);
+};
+
+<PostcodeLookup onSelect={addressSelect} data-test="postcode-lookup" />
 ```
-<!-- {!showAddressInputs && ( -->
-<!--   <> -->
-<!--     {line1 && town && postcode && ( -->
-<!--       <div css={{ margin: `${spacing('l')} 0` }}> -->
-<!--         {/* The school lookup returns a name value, the postcode one doesn't */} -->
-<!--         {useSchoolLookup && <Text tag="p" size="m">{orgName}</Text>} -->
-<!--         <Text tag="p" size="m">{line1}</Text> -->
-<!--         {line2 && <Text tag="p" size="m">{line2}</Text>} -->
-<!--         {line3 && <Text tag="p" size="m">{line3}</Text>} -->
-<!--         <Text tag="p" size="m">{town}</Text> -->
-<!--         <Text tag="p" size="m">{postcode}</Text> -->
-<!--       </div> -->
-<!--     )} -->
-<!--     <Grid columns={2} mobileColumns={1}> -->
-<!--       <ButtonAsLink onClick={() => setShowAddressInputs(true)}> -->
-<!--         {(line1 && town && postcode) -->
-<!--           ? 'Edit address' -->
-<!--           : 'Or enter address manually'} -->
-<!--       </ButtonAsLink> -->
-<!--     </Grid> -->
-<!--     {getError(FIELDS.LINE1) && ( -->
-<!--       <ErrorText weight="bold"> -->
-<!--         {isSchool -->
-<!--           ? 'Please find your organisation or enter the details manually' -->
-<!--           : 'Please find your address or enter the details manually'} -->
-<!--       </ErrorText> -->
-<!--     )} -->
-<!--   </> -->
-<!-- )} -->

@@ -17,6 +17,7 @@ export { default as Logo } from './components/Atoms/Logo/Logo';
 export { default as Picture } from './components/Atoms/Picture/Picture';
 export { default as Link } from './components/Atoms/Link/Link';
 export { default as Button } from './components/Atoms/Button/Button';
+export { default as ButtonAsLink } from './components/Atoms/ButtonAsLink/ButtonAsLink';
 export { default as RadioButton } from './components/Atoms/RadioButton/RadioButton';
 export { default as Checkbox } from './components/Atoms/Checkbox/Checkbox';
 export { default as Input } from './components/Atoms/Input/Input';

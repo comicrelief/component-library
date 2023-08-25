@@ -34,7 +34,8 @@
     "browser": true
   },
   "globals": {
-    "window": true
+    "window": true,
+    "Sentry": true
   },
   "ignorePatterns": ["**/*.test.js"]
 }

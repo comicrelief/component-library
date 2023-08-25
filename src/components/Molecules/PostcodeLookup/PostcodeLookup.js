@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
-import ManualAddress from './ManualAddress';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -30,49 +29,29 @@ const addressFetcher = async postcode => {
   try {
     return await getAddresses(valid);
   } catch (error) {
-    // eslint-disable-next-line
     if (typeof Sentry !== 'undefined') {
-      // eslint-disable-next-line
       Sentry.captureException(error);
     }
     throw new Error('Sorry, something unexpected went wrong. Please try again or enter your address manually');
   }
 };
 
-/**
- * A simple postcode lookup component
- *
- * The parent component must provide an `onSelect` prop in order to receive the selected address.
- *
- * @param onSelect
- * @param rest
- * @returns {JSX.Element}
- * @constructor
- */
-export default function PostcodeLookup({ onSelect, ...rest }) {
-  const [showAddressInputs, setShowAddressInputs] = useState(false);
-
-  return (
-    <>
-      <Lookup
-        name="postcode_lookup"
-        label="Find address by postcode"
-        placeholder="Enter postcode..."
-        buttonText="Find address"
-        noResultsMessage="Sorry, could not find any addresses for that postcode"
-        mapOptionToString={addressToString}
-        lookupHandler={addressFetcher}
-        onSelect={onSelect}
-        {...rest}
-      />
-      <ManualAddress
-        showAddressInputs={showAddressInputs}
-        setShowAddressInputs={setShowAddressInputs}
-      />
-    </>
-  );
-}
+const PostcodeLookup = ({ onSelect, ...rest }) => (
+  <Lookup
+    name="postcode_lookup"
+    label="Find address by postcode"
+    placeholder="Enter postcode..."
+    buttonText="Find address"
+    noResultsMessage="Sorry, could not find any addresses for that postcode"
+    mapOptionToString={addressToString}
+    lookupHandler={addressFetcher}
+    onSelect={onSelect}
+    {...rest}
+  />
+);
 
 PostcodeLookup.propTypes = {
   onSelect: PropTypes.func.isRequired
 };
+
+export default PostcodeLookup;
