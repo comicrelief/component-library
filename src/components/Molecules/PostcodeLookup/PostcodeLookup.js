@@ -52,7 +52,7 @@ const PostcodeLookup = ({ onSelect, ...rest }) => {
         {...rest}
       />
       {!showAddressInputs && (
-        <div>address inputs??</div>
+        <div>address inputs</div>
       )}
     </>
   );
