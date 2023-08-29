@@ -36,19 +36,27 @@ const addressFetcher = async postcode => {
   }
 };
 
-const PostcodeLookup = ({ onSelect, ...rest }) => (
-  <Lookup
-    name="postcode_lookup"
-    label="Find address by postcode"
-    placeholder="Enter postcode..."
-    buttonText="Find address"
-    noResultsMessage="Sorry, could not find any addresses for that postcode"
-    mapOptionToString={addressToString}
-    lookupHandler={addressFetcher}
-    onSelect={onSelect}
-    {...rest}
-  />
-);
+const PostcodeLookup = ({ onSelect, ...rest }) => {
+  const showAddressInputs = false;
+  return (
+    <>
+      <Lookup
+        name="postcode_lookup"
+        label="Find address by postcode"
+        placeholder="Enter postcode..."
+        buttonText="Find address"
+        noResultsMessage="Sorry, could not find any addresses for that postcode"
+        mapOptionToString={addressToString}
+        lookupHandler={addressFetcher}
+        onSelect={onSelect}
+        {...rest}
+      />
+      {!showAddressInputs && (
+        <div>address inputs??</div>
+      )}
+    </>
+  );
+};
 
 PostcodeLookup.propTypes = {
   onSelect: PropTypes.func.isRequired
