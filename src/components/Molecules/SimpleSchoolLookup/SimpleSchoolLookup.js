@@ -41,14 +41,14 @@ const schoolToString = school => `${school.name}, ${school.post_code}`;
  * @returns {JSX.Element}
  * @constructor
  */
-const SimpleSchoolLookup = ({ onSelect, ...rest }) => (
+const SimpleSchoolLookup = ({ onSelect, noResultsMessage, ...rest }) => (
   <Lookup
     name="school_lookup"
     label="Enter the name or postcode of your organisation"
     placeholder="Enter name or postcode..."
     buttonText="Find school"
     dropdownInstruction="Please select an organisation from the list below"
-    noResultsMessage="Sorry, could not find anything matching your search"
+    noResultsMessage={noResultsMessage}
     lookupHandler={schoolFetcher}
     mapOptionToString={schoolToString}
     onSelect={onSelect}
@@ -56,8 +56,13 @@ const SimpleSchoolLookup = ({ onSelect, ...rest }) => (
   />
 );
 
+SimpleSchoolLookup.defaultProps = {
+  noResultsMessage: 'Sorry, we could not find anything matching your search; please use the manual entry option.'
+};
+
 SimpleSchoolLookup.propTypes = {
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  noResultsMessage: PropTypes.string
 };
 
 export default SimpleSchoolLookup;
