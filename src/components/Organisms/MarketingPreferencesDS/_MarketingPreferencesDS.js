@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
@@ -30,7 +31,6 @@ const MarketingPreferencesDS = ({
   const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
   const {
-    // eslint-disable-next-line camelcase
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
   } = mpValidationOptions;
 
