@@ -4,7 +4,8 @@ const whiteList = [
   'https://www.comicrelief.com',
   'https://www.sportrelief.com',
   'https://app.beapplied.com/org/comic-relief',
-  'stories.comicrelief.com'
+  'stories.comicrelief.com',
+  'https://form.typeform.com'
 ];
 
 const whiteListed = url => {
