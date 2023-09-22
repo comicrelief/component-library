@@ -151,14 +151,14 @@ export default {
       id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
       links: [
         {
-          title: 'Test whitelisted external link',
+          title: 'Test allowListed external link',
           url: 'https://www.sportrelief.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Test non-whitelisted external link',
+          title: 'Test non-allowListed external link',
           url: 'https://bing.com',
           internal: {
             type: 'ContentfulComponentLink'

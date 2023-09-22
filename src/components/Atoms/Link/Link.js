@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
-import whiteListed from '../../../utils/whiteListed';
+import allowListed from '../../../utils/allowListed';
 import { getDomain } from '../../../utils/internalLinkHelper';
 
 let window = '';
@@ -22,7 +22,7 @@ const Link = ({
   const [documentHost, setDocumentHost] = useState('');
   /**
    * If we haven't specifically set the target via props, check if
-   * this is an internal link OR on our whitelist before making it a '_self' link
+   * this is an internal link OR on our allowList before making it a '_self' link
    */
   if (target === null) {
     // Use our helper function to determine the raw domains to compare
@@ -30,7 +30,7 @@ const Link = ({
     const linkDomain = getDomain(href);
 
     // Additional check for applications that need more control
-    const isWhiteListOverridden = rest.overrideWhiteList === true;
+    const isallowListOverridden = rest.overrideallowList === true;
 
     /**
      * If the link has no domain supplied (likely '/' or '#')
@@ -38,9 +38,9 @@ const Link = ({
      * in a new tab
      */
     const isExternalLink = linkDomain !== '' && (currentDomain !== linkDomain);
-    const isWhiteListed = whiteListed(href);
+    const isallowListed = allowListed(href);
 
-    window = isExternalLink && (isWhiteListOverridden || !isWhiteListed) ? '_blank' : '_self';
+    window = isExternalLink && (isallowListOverridden || !isallowListed) ? '_blank' : '_self';
   } else {
     window = target === 'blank' ? '_blank' : '_self';
   }

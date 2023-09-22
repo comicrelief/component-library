@@ -52,7 +52,7 @@ Footer.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   footerCopy: PropTypes.string,
   campaign: PropTypes.string,
-  overrideWhiteList: PropTypes.bool,
+  overrideallowList: PropTypes.bool,
   additionalLegalLine: PropTypes.string
 };
 
@@ -60,7 +60,7 @@ Footer.defaultProps = {
   navItems: {},
   footerCopy: '',
   campaign: 'Comic Relief',
-  overrideWhiteList: false,
+  overrideallowList: false,
   additionalLegalLine: ''
 };
 
