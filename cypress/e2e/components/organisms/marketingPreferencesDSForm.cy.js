@@ -96,21 +96,21 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@default')
         .find('#mp_permissionEmail-yes').click();
       cy.get('@default')
-        .find(' #mp_email')
+        .find('#mp_email')
         .type('@an-invalid@email.com');
 
       // Fill SMS field with an invalid value
       cy.get('@default')
         .find('#mp_permissionSMS-yes').click();
       cy.get('@default')
-        .find(' #mp_mobile')
+        .find('#mp_mobile')
         .type('07777');
 
       // Fill Phone field with an invalid value
       cy.get('@default')
         .find('#mp_permissionPhone-yes').click();
       cy.get('@default')
-        .find(' #mp_phone')
+        .find('#mp_phone')
         .type('0208');
 
       // Fill Post fields with invalid values
@@ -118,11 +118,11 @@ describe('MarketingPreferencesDSForm component', () => {
         .find('#mp_permissionPost-yes').click();
       // Address 1
       cy.get('@default')
-        .find(' #mp_address1')
+        .find('#mp_address1')
         .type('@');
       // Address 2
       cy.get('@default')
-        .find(' #mp_address2')
+        .find('#mp_address2')
         .type('@');
       // Address 3
       cy.get('@default')
@@ -189,50 +189,21 @@ describe('MarketingPreferencesDSForm component', () => {
     });
 
     it('check Default example with empty values', () => {
-      // Clear email field
+      // Show email field
       cy.get('@default')
-        .find('#mp_email')
-        .clear();
+        .find('#mp_permissionEmail-yes').click();
 
-      // Clear SMS field
+      // Show SMS field
       cy.get('@default')
-        .find('#mp_mobile')
-        .clear();
+        .find('#mp_permissionSMS-yes').click();
 
-      // Clear Phone field
+      // Show Phone field
       cy.get('@default')
-        .find(' #mp_phone')
-        .clear();
+        .find('#mp_permissionPhone-yes').click();
 
-      // Clear Post fields
-      // Address 1
+      // Show Post fields
       cy.get('@default')
-        .find(' #mp_address1')
-        .clear();
-      // Address 2
-      cy.get('@default')
-        .find(' #mp_address2')
-        .clear();
-
-      // Address 3
-      cy.get('@default')
-        .find('#mp_address3')
-        .clear();
-
-      // Town
-      cy.get('@default')
-        .find('#mp_town')
-        .clear();
-
-      // Postcode
-      cy.get('@default')
-        .find('#mp_postcode')
-        .clear();
-
-      // Country
-      cy.get('@default')
-        .find('#mp_country')
-        .clear();
+        .find('#mp_permissionPost-yes').click();
 
       // Submit
       cy.get('@default-submit').click();
@@ -294,27 +265,35 @@ describe('MarketingPreferencesDSForm component', () => {
     it('Check Default example with valid values', () => {
       // Fill email field with an valid value
       cy.get('@default')
-        .find(' #mp_email')
+      .find('#mp_permissionEmail-yes').click();
+      cy.get('@default')
+      .find('#mp_email')
         .type('a-valid@email.com');
 
       // Fill SMS field with a valid value
       cy.get('@default')
-        .find(' #mp_mobile')
+      .find('#mp_permissionSMS-yes').click();
+      cy.get('@default')
+      .find('#mp_mobile')
         .type('07777 123123');
 
       // Fill Phone field with a valid value
       cy.get('@default')
-        .find(' #mp_phone')
+      .find('#mp_permissionPhone-yes').click();
+      cy.get('@default')
+      .find('#mp_phone')
         .type('020 7820 2000');
 
       // Fill Post fields with valid values
       // Address 1
       cy.get('@default')
-        .find(' #mp_address1')
+        .find('#mp_permissionPost-yes').click();
+      cy.get('@default')
+      .find('#mp_address1')
         .type('10 King Road');
       // Address 2
       cy.get('@default')
-        .find(' #mp_address2')
+        .find('#mp_address2')
         .type('Some Area');
       // Address 3
       cy.get('@default')
@@ -386,7 +365,7 @@ describe('MarketingPreferencesDSForm component', () => {
       cy.get('@customised')
         .find('#mp_permissionPhone-yes').click();
       cy.get('@customised')
-        .find(' #mp_phone')
+        .find('#mp_phone')
         .type('0208');
 
       // Fill Post fields with invalid values
@@ -394,11 +373,11 @@ describe('MarketingPreferencesDSForm component', () => {
         .find('#mp_permissionPost-yes').click();
       // Address 1
       cy.get('@customised')
-        .find(' #mp_address1')
+        .find('#mp_address1')
         .type('@');
       // Address 2
       cy.get('@customised')
-        .find(' #mp_address2')
+        .find('#mp_address2')
         .type('@');
       // Address 3
       cy.get('@customised')
@@ -455,17 +434,21 @@ describe('MarketingPreferencesDSForm component', () => {
     it('check Customised example with empty values', () => {
       // Clear Phone field
       cy.get('@customised')
-        .find(' #mp_phone')
+        .find('#mp_permissionPhone-yes').click();
+      cy.get('@customised')
+        .find('#mp_phone')
         .clear();
 
       // Clear Post fields
       // Address 1
       cy.get('@customised')
-        .find(' #mp_address1')
+        .find('#mp_permissionPost-yes').click();
+      cy.get('@customised')
+        .find('#mp_address1')
         .clear();
       // Address 2
       cy.get('@customised')
-        .find(' #mp_address2')
+        .find('#mp_address2')
         .clear();
 
       // Address 3
@@ -536,17 +519,21 @@ describe('MarketingPreferencesDSForm component', () => {
     it('Check Customised example with valid values', () => {
       // Fill Phone field with a valid value
       cy.get('@customised')
-        .find(' #mp_phone')
+        .find('#mp_permissionPhone-yes').click();
+      cy.get('@customised')
+      .find('#mp_phone')
         .type('020 7820 2000');
 
       // Fill Post fields with valid values
       // Address 1
       cy.get('@customised')
-        .find(' #mp_address1')
+        .find('#mp_permissionPost-yes').click();
+      cy.get('@customised')
+      .find('#mp_address1')
         .type('10 King Road');
       // Address 2
       cy.get('@customised')
-        .find(' #mp_address2')
+        .find('#mp_address2')
         .type('Some Area');
       // Address 3
       cy.get('@customised')
