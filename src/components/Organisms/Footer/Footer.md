@@ -8,12 +8,12 @@ import footerCopy from './data/footerCopy';
     <p>Standard footer</p>
     <Footer navItems={data} footerCopy={footerCopy.copy} campaign="Comic Relief"  />
 
-    <p>Overrides whitelist functionality for external usage</p>
+    <p>Overrides allowList functionality for external usage</p>
     <Footer 
       navItems={data} 
       footerCopy={footerCopy.copy} 
       campaign="Comic Relief" 
-      overrideWhiteList 
+      overrideallowList 
     />
     
     <p>Adding a additionalLegalLine to the top of the footer</p>

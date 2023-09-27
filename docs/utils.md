@@ -5,13 +5,13 @@ _Hide Visually_
 how to use in your styled component
 `export const Component = styled.span'${hideVisually};';`
 
-_whiteListed_
+_allowListed_
 
-`import { whiteListed } from '@comicrelief/component-library';`
+`import { allowListed } from '@comicrelief/component-library';`
 
-`whiteListed(url)`
+`allowListed(url)`
 
-Check if a url is whiteListed. Used to check links and change link target.
+Check if a url is allowListed. Used to check links and change link target.
 
 _Z Index_
 

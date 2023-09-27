@@ -6,7 +6,7 @@ import BurgerMenu from '../Burger/BurgerMenu';
 import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
-import whiteListed from '../../../../utils/whiteListed';
+import allowListed from '../../../../utils/allowListed';
 import chevronDown from './chevron-down.svg';
 
 import {
@@ -77,7 +77,7 @@ const MainNav = ({ navItems }) => {
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
-            const relNoopener = !whiteListed(thisUrl) && 'noopener';
+            const relNoopener = !allowListed(thisUrl) && 'noopener';
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
