@@ -6,6 +6,7 @@ describe('ArticleTeaser component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#articleteaser');
       cy.get('[data-testid="ArticleTeaser-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('ArticleTeaser component', () => {
 
   describe('Article Teaser section', () => {
     beforeEach(() => {
+      cy.visit('/#articleteaser');
       cy.get('[data-testid="ArticleTeaser-example-1"]')
         .as('container')
         .find('[data-preview="ArticleTeaser"]')

@@ -7,6 +7,7 @@ describe('Countdown component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#countdown');
       cy.get('[data-testid="Countdown-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Countdown component', () => {
 
   describe('Countdown section', () => {
     beforeEach(() => {
+      cy.visit('/#countdown');
       cy.get('[data-testid="Countdown-examples"]')
         .find('p')
         .contains('Limit is 365 days');

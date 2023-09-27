@@ -6,6 +6,7 @@ describe('Video Banner component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#videobanner');
       cy.get('[data-testid="VideoBanner-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Video Banner component', () => {
 
   describe('VideoBanner-example-1: Default Video Banner', () => {
     beforeEach(() => {
+      cy.visit('/#videobanner');
       cy.get('[data-testid="VideoBanner-example-1"]')
         .as('container')
         .find('[data-preview="VideoBanner"]')
@@ -66,6 +68,7 @@ describe('Video Banner component', () => {
 
   describe('VideoBanner-example-3: Looping Video Banner With Controls', () => {
     beforeEach(() => {
+      cy.visit('/#videobanner');
       cy.get('[data-testid="VideoBanner-example-3"]')
         .as('container')
         .find('[data-preview="VideoBanner"]')
@@ -97,6 +100,7 @@ describe('Video Banner component', () => {
 
   describe('VideoBanner-example-5: Non-autoplay Video Banner', () => {
     beforeEach(() => {
+      cy.visit('/#videobanner');
       cy.get('[data-testid="VideoBanner-example-5"]')
           .as('container')
           .find('[data-preview="VideoBanner"]')

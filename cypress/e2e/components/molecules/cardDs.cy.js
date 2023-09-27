@@ -7,6 +7,7 @@ describe('CardDs component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#cardds');
       cy.get('[data-testid="CardDs-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('CardDs component', () => {
 
   describe('CardDs image and CTA section', () => {
     beforeEach(() => {
+      cy.visit('/#cardds');
       cy.get('[data-testid="CardDs-example-1"]')
         .as('container')
         .find('[data-preview="CardDs"]')
@@ -79,6 +81,7 @@ describe('CardDs component', () => {
 
   describe('CardDs no Image with link section', () => {
     beforeEach(() => {
+      cy.visit('/#cardds');
       cy.get('[data-testid="CardDs-example-3"]')
         .as('container')
         .find('[data-preview="CardDs"]')
@@ -122,6 +125,7 @@ describe('CardDs component', () => {
 
   describe('CardDs no image no link section', () => {
     beforeEach(() => {
+      cy.visit('/#cardds');
       cy.get('[data-testid="CardDs-example-5"]')
         .as('container')
         .find('[data-preview="CardDs"]')
@@ -154,7 +158,7 @@ describe('CardDs component', () => {
 
   describe('CardDs image, text, no link', () => {
     beforeEach(() => {
-      // Here
+      cy.visit('/#cardds');
       cy.get('[data-testid="CardDs-example-7"]')
         .as('container')
         .find('[data-preview="CardDs"]')

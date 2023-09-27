@@ -6,6 +6,7 @@ describe('Membership component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#membership');
       cy.get('[data-testid="Membership-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Membership component', () => {
 
   describe('Membership form align right section', () => {
     beforeEach(() => {
+      cy.visit('/#membership');
       cy.get('[data-testid="Membership-example-1"]')
         .as('container')
         .find('[data-preview="Membership"]')
@@ -77,6 +79,7 @@ describe('Membership component', () => {
 
   describe('Membership form align left section', () => {
     beforeEach(() => {
+      cy.visit('/#membership');
       cy.get('[data-testid="Membership-example-3"]')
         .as('container')
         .find('[data-preview="Membership"]')

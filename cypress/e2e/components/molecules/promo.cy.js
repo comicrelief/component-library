@@ -6,6 +6,7 @@ describe('Promo component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#promo');
       cy.get('[data-testid="Promo-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Promo component', () => {
 
   describe('Promo section', () => {
     beforeEach(() => {
+      cy.visit('/#promo');
       cy.get('[data-testid="Promo-example-1"]')
         .as('container')
         .find('[data-preview="Promo"]')

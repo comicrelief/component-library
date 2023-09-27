@@ -7,6 +7,7 @@ describe('Chip component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#chip');
       cy.get('[data-testid="Chip-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Chip component', () => {
 
   describe('Chip section', () => {
     beforeEach(() => {
+      cy.visit('/#chip');
       cy.get('[data-testid="Chip-example-1"]')
         .as('container')
         .find('[data-preview="Chip"]')

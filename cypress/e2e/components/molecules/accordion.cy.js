@@ -6,6 +6,7 @@ describe('Accordion component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#accordion');
       cy.get('[data-testid="Accordion-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Accordion component', () => {
 
   describe('Accordion section', () => {
     beforeEach(() => {
+      cy.visit('/#accordion');
       cy.get('[data-testid="Accordion-example-1"]')
         .as('container')
         .find('[data-preview="Accordion"]')

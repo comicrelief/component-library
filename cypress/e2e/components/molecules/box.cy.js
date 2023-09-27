@@ -6,6 +6,7 @@ describe('Box component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#box');
       cy.get('[data-testid="Box-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Box component', () => {
 
   describe('Box example 1 section', () => {
     beforeEach(() => {
+      cy.visit('/#box');
       cy.get('[data-testid="Box-example-1"]')
         .as('container')
         .find('[data-preview="Box"]')
@@ -71,6 +73,7 @@ describe('Box component', () => {
 
   describe('Box example 3 section', () => {
     beforeEach(() => {
+      cy.visit('/#box');
       cy.get('[data-testid="Box-example-3"]')
         .as('container')
         .find('[data-preview="Box"]')

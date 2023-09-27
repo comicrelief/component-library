@@ -6,6 +6,7 @@ describe('Donate component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#donate');
       cy.get('[data-testid="Donate-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Donate component', () => {
 
   describe('Donate Form align right section', () => {
     beforeEach(() => {
+      cy.visit('/#donate');
       cy.get('[data-testid="Donate-example-1"]')
         .as('container')
         .find('[data-preview="Donate"]')
@@ -101,6 +103,7 @@ describe('Donate component', () => {
 
   describe('Donate Form align left section', () => {
     beforeEach(() => {
+      cy.visit('/#donate');
       cy.get('[data-testid="Donate-example-3"]')
         .as('container')
         .find('[data-preview="Donate"]')
@@ -163,6 +166,7 @@ describe('Donate component', () => {
 
   describe('Single Giving section', () => {
     beforeEach(() => {
+      cy.visit('/#donate');
       cy.get('[data-testid="Donate-example-5"]')
         .as('container')
         .find('[data-preview="Donate"]')
@@ -224,6 +228,7 @@ describe('Donate component', () => {
 
   describe('Single Giving "No Money Buys" section', () => {
     beforeEach(() => {
+      cy.visit('/#donate');
       cy.get('[data-testid="Donate-example-7"]')
         .as('container')
         .find('[data-preview="Donate"]')

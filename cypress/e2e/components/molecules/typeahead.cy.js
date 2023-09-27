@@ -6,6 +6,7 @@ describe('Typeahead component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#typeahead');
       cy.get('[data-testid="Typeahead-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Typeahead component', () => {
 
   describe('view code section', () => {
     beforeEach(() => {
+      cy.visit('/#typeahead');
       cy.get('[data-testid="Typeahead-example-1"]')
         .as('container')
         .find('[data-preview="Typeahead"]')
@@ -60,6 +62,7 @@ describe('Typeahead component', () => {
 
   describe('Typeahead functionality', () => {
     beforeEach(() => {
+      cy.visit('/#typeahead');
       cy.get('[data-testid="Typeahead-example-1"]')
         .as('container')
         .find('[data-preview="Typeahead"]')

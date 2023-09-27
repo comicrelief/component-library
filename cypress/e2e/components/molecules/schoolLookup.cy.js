@@ -6,6 +6,7 @@ describe('School Lookup component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#schoollookup');
       cy.get('[data-testid="SchoolLookup-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('School Lookup component', () => {
 
   describe('view code section', () => {
     beforeEach(() => {
+      cy.visit('/#schoollookup');
       cy.get('[data-testid="SchoolLookup-example-1"]')
         .as('container')
         .find('[data-preview="SchoolLookup"]')
@@ -60,6 +62,7 @@ describe('School Lookup component', () => {
 
   describe('School lookup functionality', () => {
     beforeEach(() => {
+      cy.visit('/#schoollookup');
       cy.get('[data-testid="SchoolLookup-example-1"]')
         .as('container')
         .find('[data-preview="SchoolLookup"]')

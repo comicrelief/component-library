@@ -6,6 +6,7 @@ describe('Footer component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#footer');
       cy.get('[data-testid="Footer-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Footer component', () => {
 
   describe('Footer section', () => {
     beforeEach(() => {
+      cy.visit('/#footer');
       cy.get('[data-testid="Footer-example-1"]')
         .as('container')
         .find('[data-preview="Footer"]')

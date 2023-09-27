@@ -7,6 +7,7 @@ describe('Card component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#card');
       cy.get('[data-testid="Card-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Card component', () => {
 
   describe('Card example 1 section', () => {
     beforeEach(() => {
+      cy.visit('/#card');
       cy.get('[data-testid="Card-example-1"]')
         .as('container')
         .find('[data-preview="Card"]')
@@ -72,6 +74,7 @@ describe('Card component', () => {
 
   describe('Card no body section', () => {
     beforeEach(() => {
+      cy.visit('/#card');
       cy.get('[data-testid="Card-example-3"]')
         .as('container')
         .find('[data-preview="Card"]')

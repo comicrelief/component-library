@@ -6,6 +6,7 @@ describe('SimpleSchoolLookup component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#simpleschoollookup');
       cy.get('[data-testid="SimpleSchoolLookup-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('SimpleSchoolLookup component', () => {
 
   describe('view code section', () => {
     beforeEach(() => {
+      cy.visit('/#simpleschoollookup');
       cy.get('[data-testid="SimpleSchoolLookup-examples"]')
         .as('container');
 
@@ -58,6 +60,7 @@ describe('SimpleSchoolLookup component', () => {
 
   describe('Simple School lookup functionality', () => {
     beforeEach(() => {
+      cy.visit('/#simpleschoollookup');
       cy.get('[data-testid="SimpleSchoolLookup-example-0"]')
         .as('container')
         .find('[data-preview="SimpleSchoolLookup"]')

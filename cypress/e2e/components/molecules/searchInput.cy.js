@@ -6,6 +6,7 @@ describe('Search Input component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#searchinput');
       cy.get('[data-testid="SearchInput-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Search Input component', () => {
 
   describe('Search Input section', () => {
     beforeEach(() => {
+      cy.visit('/#searchinput');
       cy.get('[data-testid="SearchInput-example-1"]')
         .as('container')
         .find('[data-preview="SearchInput"]')

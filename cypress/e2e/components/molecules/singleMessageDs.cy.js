@@ -6,6 +6,7 @@ describe('Single Message Ds component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Single Message Ds component', () => {
 
   describe('SingleMessageDs-example-1: Image align left and CTA are clickable', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-example-1"]')
         .as('container')
         .find('[data-preview="SingleMessageDs"]')
@@ -76,6 +78,7 @@ describe('Single Message Ds component', () => {
 
   describe('SingleMessageDs-example-3: Image align right and CTA are clickable', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-example-3"]')
         .as('container')
         .find('[data-preview="SingleMessageDs"]')
@@ -116,6 +119,7 @@ describe('Single Message Ds component', () => {
 
   describe('SingleMessageDs-example-5: SingleMessageDs-example-5', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-example-5"]')
         .as('container')
         .find('[data-preview="SingleMessageDs"]')
@@ -154,6 +158,7 @@ describe('Single Message Ds component', () => {
 
   describe('SingleMessageDs-example-7: Using the linkIcon prop', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-example-7"]')
         .as('container')
         .find('[data-preview="SingleMessageDs"]')
@@ -191,6 +196,7 @@ describe('Single Message Ds component', () => {
 
   describe('SingleMessageDs-example-9: Video with no CTA', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessageds');
       cy.get('[data-testid="SingleMessageDs-example-9"]')
         .as('container')
         .find('[data-preview="SingleMessageDs"]')

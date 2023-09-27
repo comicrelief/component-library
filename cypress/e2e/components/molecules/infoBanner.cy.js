@@ -6,6 +6,7 @@ describe('infobanner component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#infobanner');
       cy.get('[data-testid="InfoBanner-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('infobanner component', () => {
 
   describe('Infobanner section', () => {
     beforeEach(() => {
+      cy.visit('/#infobanner');
       cy.get('[data-testid="InfoBanner-example-1"]')
         .as('container')
         .find('[data-preview="InfoBanner"]')

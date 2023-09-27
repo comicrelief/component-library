@@ -6,6 +6,7 @@ describe('Search Result component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#searchresult');
       cy.get('[data-testid="SearchResult-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Search Result component', () => {
 
   describe('Search Result Minimalist section', () => {
     beforeEach(() => {
+      cy.visit('/#searchresult');
       cy.get('[data-testid="SearchResult-example-1"]')
         .as('container')
         .find('[data-preview="SearchResult"]')
@@ -69,6 +71,7 @@ describe('Search Result component', () => {
 
   describe('Search Result with copy section', () => {
     beforeEach(() => {
+      cy.visit('/#searchresult');
       cy.get('[data-testid="SearchResult-example-3"]')
         .as('container')
         .find('[data-preview="SearchResult"]')
@@ -106,6 +109,7 @@ describe('Search Result component', () => {
 
   describe('Search Result with date section', () => {
     beforeEach(() => {
+      cy.visit('/#searchresult');
       cy.get('[data-testid="SearchResult-example-5"]')
         .as('container')
         .find('[data-preview="SearchResult"]')
@@ -146,6 +150,7 @@ describe('Search Result component', () => {
 
   describe('Search Result with date and type section', () => {
     beforeEach(() => {
+      cy.visit('/#searchresult');
       cy.get('[data-testid="SearchResult-example-5"]')
         .as('container')
         .find('[data-preview="SearchResult"]')

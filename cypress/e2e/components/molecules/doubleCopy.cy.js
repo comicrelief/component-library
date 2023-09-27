@@ -6,6 +6,7 @@ describe('DoubleCopy component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#doublecopy');
       cy.get('[data-testid="DoubleCopy-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('DoubleCopy component', () => {
 
   describe('DoubleCopy section', () => {
     beforeEach(() => {
+      cy.visit('/#doublecopy');
       cy.get('[data-testid="DoubleCopy-example-1"]')
         .as('container')
         .find('[data-preview="DoubleCopy"]')

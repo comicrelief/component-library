@@ -4,6 +4,7 @@ describe('MarketingPreferencesDSForm component', () => {
   });
 
   beforeEach(() => {
+    cy.visit('/#!/MarketingPreferencesDSForm/1');
     cy.window().then(win => {
       cy.spy(win.console, 'log').as('consoleLog');
     });

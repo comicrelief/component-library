@@ -6,6 +6,7 @@ describe('Single Message component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Single Message component', () => {
 
   describe('Single message section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-1"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -75,6 +77,7 @@ describe('Single Message component', () => {
 
   describe('Single Message fullImage section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-3"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -115,6 +118,7 @@ describe('Single Message component', () => {
 
   describe('Single Message fullImage no copy section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-5"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -152,6 +156,7 @@ describe('Single Message component', () => {
 
   describe('Single Message fullImage no image section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-7"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -189,6 +194,7 @@ describe('Single Message component', () => {
 
   describe('Single Message vertical height 100% section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-9"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -226,6 +232,7 @@ describe('Single Message component', () => {
 
   describe('Single Message double image section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-11"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -267,6 +274,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with 16:9 video section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-13"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -306,6 +314,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with 16:9 video left section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-14"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -345,6 +354,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with portrait video section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-16"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -384,6 +394,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with portrait video, 100VH section', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-18"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -419,6 +430,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with landscape video, 100VH, fullwidth image', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-20"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')
@@ -454,6 +466,7 @@ describe('Single Message component', () => {
 
   describe('Single Message with landscape video, 50VH, fullwidth image', () => {
     beforeEach(() => {
+      cy.visit('/#singlemessage');
       cy.get('[data-testid="SingleMessage-example-22"]')
         .as('container')
         .find('[data-preview="SingleMessage"]')

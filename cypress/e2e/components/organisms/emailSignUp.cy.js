@@ -7,6 +7,7 @@ describe('Email Sign Up component', () => {
 
   describe('Email Sign Up section', () => {
     beforeEach(() => {
+      cy.visit('/#emailsignupform');
       cy.get('[data-testid="EmailSignUpForm-example-1"]')
         .as('container')
         .find('[data-preview="EmailSignUpForm"]')

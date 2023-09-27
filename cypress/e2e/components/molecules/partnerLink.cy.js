@@ -6,6 +6,7 @@ describe('PartnerLink component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#partnerlink');
       cy.get('[data-testid="PartnerLink-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('PartnerLink component', () => {
 
   describe('Partnerlink section', () => {
     beforeEach(() => {
+      cy.visit('/#partnerlink');
       cy.get('[data-testid="PartnerLink-example-1"]')
         .as('container')
         .find('[data-preview="PartnerLink"]')

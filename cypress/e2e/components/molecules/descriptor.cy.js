@@ -7,6 +7,7 @@ describe('Descriptor component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#descriptor');
       cy.get('[data-testid="Descriptor-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Descriptor component', () => {
 
   describe('Descriptor section: Descriptor-example-1', () => {
     beforeEach(() => {
+      cy.visit('/#descriptor');
       cy.get('[data-testid="Descriptor-examples"]')
         .find('h3')
         .contains('Descriptor Component');
@@ -86,6 +88,7 @@ describe('Descriptor component', () => {
 
   describe('Descriptor section: Descriptor-example-2', () => {
     beforeEach(() => {
+      cy.visit('/#descriptor');
       cy.get('[data-testid="Descriptor-examples"]')
         .find('h3')
         .contains('Descriptor Component');

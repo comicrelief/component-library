@@ -6,6 +6,7 @@ describe('Cookie Banner component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#cookiebanner');
       cy.get('[data-testid="CookieBanner-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Cookie Banner component', () => {
 
   describe('Cookie Banner section', () => {
     beforeEach(() => {
+      cy.visit('/#cookiebanner');
       cy.get('[data-testid="CookieBanner-example-1"]')
         .as('container')
         .find('[data-preview="CookieBanner"]')

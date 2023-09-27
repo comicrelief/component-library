@@ -6,6 +6,7 @@ describe('Header component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#header');
       cy.get('[data-testid="Header-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Header component', () => {
 
   describe('CR Header section', () => {
     beforeEach(() => {
+      cy.visit('/#header');
       cy.get('[data-testid="Header-example-1"]')
         .as('container')
         .find('[data-preview="Header"]')
@@ -80,6 +82,7 @@ describe('Header component', () => {
 
   describe('CR Header with search and ESU section', () => {
     beforeEach(() => {
+      cy.visit('/#header');
       cy.get('[data-testid="Header-example-7"]')
         .as('container')
         .find('[data-preview="Header"]')

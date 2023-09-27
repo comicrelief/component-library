@@ -6,6 +6,7 @@ describe('Share Button component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#sharebutton');
       cy.get('[data-testid="ShareButton-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Share Button component', () => {
 
   describe('Share Button section', () => {
     beforeEach(() => {
+      cy.visit('/#sharebutton');
       cy.get('[data-testid="ShareButton-example-0"]')
         .as('container')
         .find('[data-preview="ShareButton"]')
