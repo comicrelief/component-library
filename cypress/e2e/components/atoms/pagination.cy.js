@@ -6,6 +6,7 @@ describe('Pagination component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#pagination');
       cy.get('[data-testid="Pagination-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Pagination component', () => {
 
   describe('Pagination minimalist section', () => {
     beforeEach(() => {
+      cy.visit('/#pagination');
       cy.get('[data-testid="Pagination-example-1"]')
         .as('container')
         .find('[data-preview="Pagination"]')
@@ -67,6 +69,7 @@ describe('Pagination component', () => {
 
   describe('Pagination full size section', () => {
     beforeEach(() => {
+      cy.visit('/#pagination');
       cy.get('[data-testid="Pagination-example-3"]')
         .as('container')
         .find('[data-preview="Pagination"]')
@@ -106,6 +109,7 @@ describe('Pagination component', () => {
 
   describe('Pagination custom style section', () => {
     beforeEach(() => {
+      cy.visit('/#pagination');
       cy.get('[data-testid="Pagination-example-5"]')
         .as('container')
         .find('[data-preview="Pagination"]')
@@ -146,6 +150,7 @@ describe('Pagination component', () => {
 
   describe('Pagination custom labels section', () => {
     beforeEach(() => {
+      cy.visit('/#pagination');
       cy.get('[data-testid="Pagination-example-7"]')
         .as('container')
         .find('[data-preview="Pagination"]')

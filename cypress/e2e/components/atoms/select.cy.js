@@ -6,6 +6,7 @@ describe('SelectField component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#selectfield');
       cy.get('[data-testid="Select-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('SelectField component', () => {
 
   describe('Select Field section', () => {
     beforeEach(() => {
+      cy.visit('/#selectfield');
       cy.get('[data-testid="Select-example-1"]')
         .as('container')
         .find('[data-preview="Select"]')

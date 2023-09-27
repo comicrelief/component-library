@@ -6,6 +6,7 @@ describe('Logo component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#logo');
       cy.get('[data-testid="Logo-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Logo component', () => {
 
   describe('CR logo section', () => {
     beforeEach(() => {
+      cy.visit('/#logo');
       cy.get('[data-testid="Logo-example-1"]')
         .as('container')
         .find('[data-preview="Logo"]')
@@ -66,6 +68,7 @@ describe('Logo component', () => {
 
   describe('SR logo section', () => {
     beforeEach(() => {
+      cy.visit('/#logo');
       cy.get('[data-testid="Logo-example-3"]')
         .as('container')
         .find('[data-preview="Logo"]')
@@ -97,6 +100,7 @@ describe('Logo component', () => {
 
   describe('SR game on logo section', () => {
     beforeEach(() => {
+      cy.visit('/#logo');
       cy.get('[data-testid="Logo-example-5"]')
         .as('container')
         .find('[data-preview="Logo"]')

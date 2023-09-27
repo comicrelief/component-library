@@ -7,6 +7,7 @@ describe('Picture component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#picture');
       cy.get('[data-testid="Picture-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Picture component', () => {
 
   describe('Picture section', () => {
     beforeEach(() => {
+      cy.visit('/#picture');
       cy.get('[data-testid="Picture-example-1"]')
         .as('container')
         .find('[data-preview="Picture"]')
@@ -66,6 +68,7 @@ describe('Picture component', () => {
 
   describe('custom size picture section', () => {
     beforeEach(() => {
+      cy.visit('/#picture');
       cy.get('[data-testid="Picture-example-3"]')
         .as('container')
         .find('[data-preview="Picture"]')
@@ -96,6 +99,7 @@ describe('Picture component', () => {
 
   describe('Single image section', () => {
     beforeEach(() => {
+      cy.visit('/#picture');
       cy.get('[data-testid="Picture-example-5"]')
         .as('container')
         .find('[data-preview="Picture"]')

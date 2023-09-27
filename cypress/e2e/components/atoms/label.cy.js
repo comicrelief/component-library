@@ -6,6 +6,7 @@ describe('Label component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#label');
       cy.get('[data-testid="Label-container"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -26,6 +27,7 @@ describe('Label component', () => {
 
   describe('Wrapping a basic text input: Label-example-0', () => {
     beforeEach(() => {
+      cy.visit('/#label');
       cy.get('[data-testid="Label-example-0"')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -58,6 +60,7 @@ describe('Label component', () => {
 
   describe('Wrapping a styled input: Label-example-1', () => {
     beforeEach(() => {
+      cy.visit('/#label');
       cy.get('[data-testid="Label-example-1"]')
         .as('container')
         .find('[class^=rsg--preview]')

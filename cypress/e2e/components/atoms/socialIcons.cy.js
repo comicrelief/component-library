@@ -6,6 +6,7 @@ describe('SocialIcons component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#socialicons');
       cy.get('[data-testid="SocialIcons-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('SocialIcons component', () => {
 
   describe('Comic Relief social icons section', () => {
     beforeEach(() => {
+      cy.visit('/#socialicons');
       cy.get('[data-testid="SocialIcons-example-1"]')
         .as('container')
         .find('[data-preview="SocialIcons"]')
@@ -76,6 +78,7 @@ describe('SocialIcons component', () => {
 
   describe('Red Nose Day social icons section', () => {
     beforeEach(() => {
+      cy.visit('/#socialicons');
       cy.get('[data-testid="SocialIcons-example-3"]')
         .as('container')
         .find('[data-preview="SocialIcons"]')
@@ -117,6 +120,7 @@ describe('SocialIcons component', () => {
 
   describe('Sport Relief social icons section', () => {
     beforeEach(() => {
+      cy.visit('/#socialicons');
       cy.get('[data-testid="SocialIcons-example-5"]')
         .as('container')
         .find('[data-preview="SocialIcons"]')

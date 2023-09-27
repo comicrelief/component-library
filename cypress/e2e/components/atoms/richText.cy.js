@@ -7,6 +7,7 @@ describe('RichText component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#richtext');
       cy.get('[data-testid="RichText-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('RichText component', () => {
 
   describe('Rich text section', () => {
     beforeEach(() => {
+      cy.visit('/#richtext');
       cy.get('[data-testid="RichText-example-1"]')
         .as('container')
         .find('[data-preview="RichText"]')

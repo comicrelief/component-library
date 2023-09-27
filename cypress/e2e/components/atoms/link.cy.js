@@ -6,6 +6,7 @@ describe('Link component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#link');
       cy.get('[data-testid="Link-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Link component', () => {
 
   describe('Link standard preview section', () => {
     beforeEach(() => {
+      cy.visit('/#link');
       cy.get('[data-testid="Link-example-0"]')
         .as('container')
         .find('[data-preview="Link"]')
@@ -78,6 +80,7 @@ describe('Link component', () => {
 
   describe('Iconography section', () => {
     beforeEach(() => {
+      cy.visit('/#link');
       cy.get('[data-testid="Link-example-2"]')
         .as('container')
         .find('[data-preview="Link"]')
@@ -131,6 +134,7 @@ describe('Link component', () => {
 
   describe('Link as button section', () => {
     beforeEach(() => {
+      cy.visit('/#link');
       cy.get('[data-testid="Link-example-3"]')
         .as('container')
         .find('[data-preview="Link"]')

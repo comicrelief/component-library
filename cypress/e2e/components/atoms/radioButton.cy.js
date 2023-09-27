@@ -7,6 +7,7 @@ describe('Radio Button component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#radiobutton');
       cy.get('[data-testid="RadioButton-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -36,6 +37,7 @@ describe('Radio Button component', () => {
 
   describe('Radio button section', () => {
     beforeEach(() => {
+      cy.visit('/#radiobutton');
       cy.get('[data-testid="RadioButton-example-1"]')
         .as('container')
         .find('[data-preview="RadioButton"]')

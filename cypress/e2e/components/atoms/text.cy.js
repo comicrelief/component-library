@@ -6,6 +6,7 @@ describe('Text component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#text');
       cy.get('[data-testid="Text-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Text component', () => {
 
   describe('Text section', () => {
     beforeEach(() => {
+      cy.visit('/#text');
       cy.get('[data-testid="Text-example-0"]')
         .as('container')
         .find('[data-preview="Text"]')
@@ -98,6 +100,7 @@ describe('Text component', () => {
 
   describe('Text section', () => {
     beforeEach(() => {
+      cy.visit('/#text');
       cy.get('[data-testid="Text-example-2"]')
         .as('container')
         .find('[data-preview="Text"]')

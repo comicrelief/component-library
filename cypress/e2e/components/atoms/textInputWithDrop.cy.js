@@ -6,6 +6,7 @@ describe('Text Input With Dropdown component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#textinputwithdropdown');
       cy.get('[data-testid="TextInputWithDropdown-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Text Input With Dropdown component', () => {
 
   describe('TextInputWithDropdown section', () => {
     beforeEach(() => {
+      cy.visit('/#textinputwithdropdown');
       cy.get('[data-testid="TextInputWithDropdown-examples"]')
         .as('container')
         .find('[data-preview="TextInputWithDropdown"]')

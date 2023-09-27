@@ -6,6 +6,7 @@ describe('TextArea component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#textarea');
       cy.get('[data-testid="TextArea-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('TextArea component', () => {
 
   describe('Text Area section', () => {
     beforeEach(() => {
+      cy.visit('/#textarea');
       cy.get('[data-testid="TextArea-example-1"]')
         .as('container')
         .find('[data-preview="TextArea"]')
