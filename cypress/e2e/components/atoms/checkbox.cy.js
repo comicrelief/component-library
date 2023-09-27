@@ -6,6 +6,7 @@ describe('Checkbox component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#checkbox');
       cy.get('[data-testid="Checkbox-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Checkbox component', () => {
 
   describe('Checkbox section', () => {
     beforeEach(() => {
+      cy.visit('/#checkbox');
       cy.get('[data-preview="Checkbox"]')
         .as('preview');
     });

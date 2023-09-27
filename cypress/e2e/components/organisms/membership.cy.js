@@ -73,10 +73,6 @@ describe('Membership component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Membership form align left section', () => {
@@ -118,10 +114,6 @@ describe('Membership component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

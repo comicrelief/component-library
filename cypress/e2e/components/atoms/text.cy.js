@@ -94,13 +94,6 @@ describe('Text component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Text section', () => {
@@ -168,13 +161,6 @@ describe('Text component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

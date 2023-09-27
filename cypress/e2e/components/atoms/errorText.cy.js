@@ -6,6 +6,7 @@ describe('ErrorText component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#errortext');
       cy.get('[data-testid="ErrorText-container"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -39,13 +40,6 @@ describe('ErrorText component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

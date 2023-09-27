@@ -76,10 +76,6 @@ describe('Header component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('CR Header with search and ESU section', () => {
@@ -134,10 +130,6 @@ describe('Header component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

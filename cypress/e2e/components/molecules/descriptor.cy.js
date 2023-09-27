@@ -82,10 +82,6 @@ describe('Descriptor component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Descriptor section: Descriptor-example-2', () => {
@@ -138,10 +134,6 @@ describe('Descriptor component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

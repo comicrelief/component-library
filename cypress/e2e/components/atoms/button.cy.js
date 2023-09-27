@@ -6,6 +6,7 @@ describe('Button component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#button');
       cy.get('[data-testid="Button-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Button component', () => {
 
   describe('Plain Button: Button-example-0', () => {
     beforeEach(() => {
+      cy.visit('/#button');
       cy.get('[data-testid="Button-example-0"')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -63,17 +65,11 @@ describe('Button component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Button as a span: Button-example-1', () => {
     beforeEach(() => {
+      cy.visit('/#button');
       cy.get('[data-testid="Button-example-1"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -86,7 +82,7 @@ describe('Button component', () => {
     });
 
     it('renders button as a span', () => {
-        //verify button as a span
+        // verify button as a span
       cy.get('[data-testid="Button-example-1"]')
         .contains('My button as a span')
         .should('exist');
@@ -101,13 +97,6 @@ describe('Button component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

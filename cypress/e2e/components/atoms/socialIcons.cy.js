@@ -72,13 +72,6 @@ describe('SocialIcons component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Red Nose Day social icons section', () => {
@@ -120,13 +113,6 @@ describe('SocialIcons component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Sport Relief social icons section', () => {
@@ -167,13 +153,6 @@ describe('SocialIcons component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

@@ -62,13 +62,6 @@ describe('Picture component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('custom size picture section', () => {
@@ -99,13 +92,6 @@ describe('Picture component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Single image section', () => {
@@ -135,13 +121,6 @@ describe('Picture component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

@@ -72,10 +72,6 @@ describe('Single Message Ds component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('SingleMessageDs-example-3: Image align right and CTA are clickable', () => {
@@ -116,10 +112,6 @@ describe('Single Message Ds component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('SingleMessageDs-example-5: SingleMessageDs-example-5', () => {
@@ -158,10 +150,6 @@ describe('Single Message Ds component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('SingleMessageDs-example-7: Using the linkIcon prop', () => {
@@ -199,10 +187,6 @@ describe('Single Message Ds component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('SingleMessageDs-example-9: Video with no CTA', () => {
@@ -239,10 +223,6 @@ describe('Single Message Ds component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

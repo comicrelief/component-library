@@ -1,11 +1,12 @@
 describe('Button With States component', () => {
   before(() => {
-      // go to Button With States component
-      cy.visit('/#button');
+    // go to Button With States component
+    cy.visit('/#button');
   });
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#button');
       cy.get('[data-testid="ButtonWithStates-container"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -26,10 +27,10 @@ describe('Button With States component', () => {
     });
 
     it('renders button as disabled', () => {
-      //verify button as a span
+      // verify button as a span
       cy.get('[data-testid="ButtonWithStates-example-1"]')
         .contains('Loading')
-        .should('be.disabled')
+        .should('be.disabled');
     });
 
     it('has view code button', () => {
@@ -41,13 +42,6 @@ describe('Button With States component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

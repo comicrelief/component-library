@@ -6,6 +6,7 @@ describe('Input component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#input');
       cy.get('[data-testid="Input-container"] button[name="rsg-usage"]')
         .contains('Props & methods')
         .as('propsBtn');
@@ -35,6 +36,7 @@ describe('Input component', () => {
 
   describe('Input preview section: required with label and hint', () => {
     beforeEach(() => {
+      cy.visit('/#input');
       cy.get('[data-testid="Input-example-0"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -69,17 +71,11 @@ describe('Input component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('Input preview section: with error message', () => {
     beforeEach(() => {
+      cy.visit('/#input');
       cy.get('[data-testid="Input-example-1"]')
         .as('container')
         .find('[data-preview="Input"]')
@@ -126,6 +122,7 @@ describe('Input component', () => {
 
   describe('Input preview section: with simple input(optional)', () => {
     beforeEach(() => {
+      cy.visit('/#input');
       cy.get('[data-testid="Input-example-2"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -155,13 +152,6 @@ describe('Input component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

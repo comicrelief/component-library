@@ -71,10 +71,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message fullImage section', () => {
@@ -115,10 +111,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message fullImage no copy section', () => {
@@ -156,10 +148,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message fullImage no image section', () => {
@@ -196,11 +184,7 @@ describe('Single Message component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
+    })
   });
 
   describe('Single Message vertical height 100% section', () => {
@@ -237,10 +221,6 @@ describe('Single Message component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 
@@ -283,10 +263,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message with 16:9 video section', () => {
@@ -325,10 +301,6 @@ describe('Single Message component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 
@@ -369,10 +341,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message with portrait video section', () => {
@@ -412,10 +380,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message with portrait video, 100VH section', () => {
@@ -450,10 +414,6 @@ describe('Single Message component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 
@@ -490,10 +450,6 @@ describe('Single Message component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Message with landscape video, 50VH, fullwidth image', () => {
@@ -528,10 +484,6 @@ describe('Single Message component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

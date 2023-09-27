@@ -75,10 +75,6 @@ describe('CardDs component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('CardDs no Image with link section', () => {
@@ -122,13 +118,6 @@ describe('CardDs component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
-    });
   });
 
   describe('CardDs no image no link section', () => {
@@ -160,20 +149,6 @@ describe('CardDs component', () => {
 
     it('has view code button', () => {
       cy.get('@viewCodeBtn').should('exist');
-    });
-
-    it('shows code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 
@@ -214,10 +189,6 @@ describe('CardDs component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

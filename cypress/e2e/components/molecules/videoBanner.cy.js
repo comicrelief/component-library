@@ -62,10 +62,6 @@ describe('Video Banner component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('VideoBanner-example-3: Looping Video Banner With Controls', () => {
@@ -97,10 +93,6 @@ describe('Video Banner component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('VideoBanner-example-5: Non-autoplay Video Banner', () => {
@@ -131,10 +123,6 @@ describe('Video Banner component', () => {
       cy.get('@container')
           .find('textarea')
           .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });

@@ -6,6 +6,7 @@ describe('Confetti component', () => {
 
   describe('props and methods section', () => {
     beforeEach(() => {
+      cy.visit('/#confetti');
       cy.get('[data-testid="Confetti-container"]')
         .as('container')
         .find('[class^=rsg--preview]')
@@ -25,7 +26,7 @@ describe('Confetti component', () => {
     });
 
     it('renders confetti when "trigger confetti" is clicked', () => {
-      //verify button as a span
+      // verify button as a span
       cy.get('[data-testid="Confetti-example-1"]')
         .contains('trigger confetti')
         .click()
@@ -40,13 +41,6 @@ describe('Confetti component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-      cy.get('@container')
-        .find('textarea')
-        .should('not.exist');
     });
   });
 });

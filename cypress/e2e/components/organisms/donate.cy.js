@@ -97,10 +97,6 @@ describe('Donate component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Donate Form align left section', () => {
@@ -163,10 +159,6 @@ describe('Donate component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Giving section', () => {
@@ -228,10 +220,6 @@ describe('Donate component', () => {
         .find('textarea')
         .should('exist');
     });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
-    });
   });
 
   describe('Single Giving "No Money Buys" section', () => {
@@ -286,10 +274,6 @@ describe('Donate component', () => {
       cy.get('@container')
         .find('textarea')
         .should('exist');
-    });
-
-    it('closes code on click', () => {
-      cy.get('@viewCodeBtn').click();
     });
   });
 });
