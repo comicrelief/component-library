@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, Wrapper, Copy, Media, Video
+  Container, Wrapper, Copy, Media, Video, PlayButton, PlayButtonWrapper
 } from './Promo.style';
 
 const Promo = ({
@@ -23,23 +23,33 @@ const Promo = ({
 }) => {
   // Use the prop as our default
   const [isMuted, setIsMuted] = useState(muted);
-
+  const [isPlaying, setIsPlaying] = useState(true); // use prop here
   const videoEl = useRef(null);
 
-  const triggerPlay = () => {
-    videoEl.current.play();
+  const togglePlay = () => {
+    if (isPlaying) videoEl.current.pause();
+    else videoEl.current.play();
+    setIsPlaying(!isPlaying);
   };
+
+  // const triggerPlay = () => {
+  //   videoEl.current.play();
+  //   // setIsPlaying(true);
+  //   console.log('triggerPlay');
+  // };
+
   let hasImage = imageSet || false;
   hasImage = false; // DEBUG
   const hasVideo = video;
+  console.log('hasVideo?', hasVideo);
 
   useEffect(() => {
     // Trigger onload autoplay based on prop:
-    if (autoPlay) {
+    if (autoPlay && hasVideo) {
       // As it's a Chrome requirement to mute any autoplay videos,
       // update accordingly; see https://developer.chrome.com/blog/autoplay/
       setIsMuted(true);
-      triggerPlay();
+      togglePlay();
     }
 
     // And attach event listener based on prop:
@@ -76,10 +86,14 @@ const Promo = ({
           muted={isMuted}
           // poster={poster}
           ref={videoEl}
-          // controls={controls}
+          // controls
         >
           Your browser does not support video.
         </Video>
+        <PlayButtonWrapper>
+          <PlayButton onClick={() => { togglePlay(); }}>PLAY ME</PlayButton>
+        </PlayButtonWrapper>
+
       </Media>
       )}
       <Wrapper copyFirst={copyFirst}>
@@ -117,7 +131,7 @@ Promo.defaultProps = {
   autoPlay: true,
   loop: false,
   muted: true,
-  video: null,
+  video: false,
   showPosterAfterPlaying: true
 };
 

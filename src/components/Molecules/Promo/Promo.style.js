@@ -91,6 +91,34 @@ const Video = styled.video.attrs(() => ({
   object-fit: cover;
 `;
 
+const PlayButton = styled.button`
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+`;
+
+const PlayButtonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:hover {
+    button {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+`;
+
 export {
-  Container, Wrapper, Copy, Media, Video
+  Container, Wrapper, Copy, Media, Video, PlayButton, PlayButtonWrapper
 };
