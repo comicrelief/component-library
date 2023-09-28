@@ -160,7 +160,7 @@ const src =
 
 <div>
 <Text tag="h2" size="xl" color="black">
-  Promo Upper w/Video
+  Promo Upper w/Video (autoplay by default)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -200,7 +200,7 @@ const src =
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo End w/Video
+  Promo End w/Video (autoplay disabled)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -213,6 +213,7 @@ const src =
   position="end"
   video={src}
   loop
+  autoPlay={false}
 >
   <Text
     tag="h1"

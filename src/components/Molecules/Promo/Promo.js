@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
@@ -18,13 +19,15 @@ const Promo = ({
   autoPlay,
   loop,
   muted,
-  video,
-  showPosterAfterPlaying
+  showPosterAfterPlaying,
+  video
 }) => {
   // Use the prop as our default
   const [isMuted, setIsMuted] = useState(muted);
-  const [isPlaying, setIsPlaying] = useState(true); // use prop here
+  const [isPlaying, setIsPlaying] = useState(null); // To be updated via useEffect on load
   const videoEl = useRef(null);
+
+  console.log('showPosterAfterPlaying', showPosterAfterPlaying);
 
   const togglePlay = () => {
     if (isPlaying) videoEl.current.pause();
@@ -32,20 +35,14 @@ const Promo = ({
     setIsPlaying(!isPlaying);
   };
 
-  // const triggerPlay = () => {
-  //   videoEl.current.play();
-  //   // setIsPlaying(true);
-  //   console.log('triggerPlay');
-  // };
-
   let hasImage = imageSet || false;
   hasImage = false; // DEBUG
   const hasVideo = video;
-  console.log('hasVideo?', hasVideo);
 
+  // On load:
   useEffect(() => {
     // Trigger onload autoplay based on prop:
-    if (autoPlay && hasVideo) {
+    if (autoPlay && hasVideo && !isPlaying) {
       // As it's a Chrome requirement to mute any autoplay videos,
       // update accordingly; see https://developer.chrome.com/blog/autoplay/
       setIsMuted(true);
@@ -59,7 +56,7 @@ const Promo = ({
     //     videoEl.current.load();
     //   });
     // }
-  }, [autoPlay, loop, showPosterAfterPlaying]);
+  }, []);
 
   console.log(autoPlay, loop, muted, hasVideo);
 
@@ -78,15 +75,14 @@ const Promo = ({
         />
       </Media>
       )}
-      {(!hasImage && hasVideo) && (
+      {(hasVideo && !hasImage) && (
       <Media imageRight={copyFirst}>
         <Video
+          ref={videoEl}
           src={video}
           loop={loop}
           muted={isMuted}
           // poster={poster}
-          ref={videoEl}
-          // controls
         >
           Your browser does not support video.
         </Video>
