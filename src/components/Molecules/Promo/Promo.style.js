@@ -83,6 +83,14 @@ const Media = styled.div`
   }
 `;
 
+const Video = styled.video.attrs(() => ({
+  playsInline: true
+}))`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export {
-  Container, Wrapper, Copy, Media
+  Container, Wrapper, Copy, Media, Video
 };
