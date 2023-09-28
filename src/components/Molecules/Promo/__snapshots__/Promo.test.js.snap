@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Promo correctly 1`] = `
-.c6 {
+.c3 {
   color: #FFFFFF;
   font-size: 5rem;
   line-height: 5rem;
@@ -16,7 +16,7 @@ exports[`renders Promo correctly 1`] = `
   line-height: 3rem;
 }
 
-.c7 {
+.c4 {
   color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
@@ -25,21 +25,7 @@ exports[`renders Promo correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c8 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -68,7 +54,7 @@ exports[`renders Promo correctly 1`] = `
   color: #000000;
 }
 
-.c8:hover {
+.c5:hover {
   background-color: #969598;
   color: #000000;
 }
@@ -87,7 +73,7 @@ exports[`renders Promo correctly 1`] = `
   background: #274084;
 }
 
-.c4 {
+.c1 {
   width: 100%;
   max-width: 1200px;
   height: 100%;
@@ -108,23 +94,14 @@ exports[`renders Promo correctly 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c2 {
   width: 100%;
   padding: 1.5rem 1.5rem 4rem;
   z-index: 1;
 }
 
-.c1 {
-  width: 100%;
-  height: auto;
-}
-
-.c1 img {
-  object-position: center;
-}
-
 @media (min-width:740px) {
-  .c6 {
+  .c3 {
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 2rem;
@@ -132,7 +109,7 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c6 {
+  .c3 {
     font-size: 5rem;
     line-height: 5rem;
     margin-bottom: 2rem;
@@ -140,7 +117,7 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c8 {
+  .c5 {
     width: auto;
   }
 }
@@ -154,29 +131,22 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c1 {
     min-height: calc(100vh - 90px);
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c2 {
     width: 70%;
     padding: 4rem 1.5rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c2 {
     width: 50%;
     padding: 8rem 1.5rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    height: 100%;
-    position: absolute;
   }
 }
 
@@ -187,39 +157,17 @@ exports[`renders Promo correctly 1`] = `
     className="c1"
   >
     <div
-      className="c2 lazyload"
-      height="100%"
-      width="100%"
-    >
-      <img
-        alt=""
-        className="c3 lazyload"
-        data-lowsrc={null}
-        data-sizes="auto"
-        data-src="../promo.jpg"
-        data-srcset="../promo.jpg"
-        height="100%"
-        src="../promo.jpg"
-        srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="100%"
-      />
-    </div>
-  </div>
-  <div
-    className="c4"
-  >
-    <div
-      className="c5"
+      className="c2"
     >
       <h1
-        className="c6"
+        className="c3"
         color="white"
         size="super"
       >
         Curabitur pretium tincidunt lacus
       </h1>
       <p
-        className="c7"
+        className="c4"
         color="white"
         size="s"
       >
@@ -227,7 +175,7 @@ exports[`renders Promo correctly 1`] = `
       </p>
       <span>
         <a
-          className="c8"
+          className="c5"
           color="white"
           href="/"
           target="_self"
