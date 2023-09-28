@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
+import ButtonAsLink from '../../Atoms/ButtonAsLink/ButtonAsLink';
+import StyledButtonWrapper from './PostcodeLookup.style';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -36,8 +38,12 @@ const addressFetcher = async postcode => {
   }
 };
 
-const PostcodeLookup = ({ onSelect, ...rest }) => {
-  const showAddressInputs = false;
+export default function PostcodeLookup({ onSelect, ...rest }) {
+  const [showAddressInputs, setShowAddressInputs] = useState(false);
+  const line1 = false;
+  const town = true;
+  const postcode = true;
+
   return (
     <>
       <Lookup
@@ -51,15 +57,20 @@ const PostcodeLookup = ({ onSelect, ...rest }) => {
         onSelect={onSelect}
         {...rest}
       />
-      {!showAddressInputs && (
+      {showAddressInputs && (
         <div>address inputs</div>
       )}
+      <StyledButtonWrapper>
+        <ButtonAsLink onClick={() => setShowAddressInputs(true)}>
+          {(line1 && town && postcode)
+            ? 'Edit address'
+            : 'Or enter address manually'}
+        </ButtonAsLink>
+      </StyledButtonWrapper>
     </>
   );
-};
+}
 
 PostcodeLookup.propTypes = {
   onSelect: PropTypes.func.isRequired
 };
-
-export default PostcodeLookup;

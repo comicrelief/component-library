@@ -1,9 +1,8 @@
 import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
 
-import Link from '../../Atoms/Link/Link';
-
-const Item = styled(Link)`
-  /* blah blah */
+const StyledButtonWrapper = styled.div`
+  margin-top: ${spacing('md')};
 `;
 
-export { Item };
+export default StyledButtonWrapper;
