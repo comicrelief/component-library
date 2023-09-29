@@ -8,7 +8,7 @@ import {
 } from './Promo.style';
 
 const Promo = ({
-  copyFirst,
+  copyLeft,
   backgroundColor,
   imageLow,
   imageSet,
@@ -19,15 +19,13 @@ const Promo = ({
   autoPlay,
   loop,
   muted,
+  poster,
   showPosterAfterPlaying,
   video
 }) => {
-  // Use the prop as our default
-  const [isMuted, setIsMuted] = useState(muted);
-  const [isPlaying, setIsPlaying] = useState(null); // To be updated via useEffect on load
+  // To be updated via useEffect on load:
+  const [isPlaying, setIsPlaying] = useState(null);
   const videoEl = useRef(null);
-
-  console.log('showPosterAfterPlaying', showPosterAfterPlaying);
 
   const togglePlay = () => {
     if (isPlaying) videoEl.current.pause();
@@ -35,9 +33,9 @@ const Promo = ({
     setIsPlaying(!isPlaying);
   };
 
-  let hasImage = imageSet || false;
-  hasImage = false; // DEBUG
-  const hasVideo = video;
+  const hasVideo = video || false;
+  // Video Promo will override and ignore any 'non-Video' images
+  const hasImage = (imageSet && !hasVideo) || false;
 
   // On load:
   useEffect(() => {
@@ -45,17 +43,21 @@ const Promo = ({
     if (autoPlay && hasVideo && !isPlaying) {
       // As it's a Chrome requirement to mute any autoplay videos,
       // update accordingly; see https://developer.chrome.com/blog/autoplay/
-      setIsMuted(true);
+      // Need to suss out if this is still needed, given that this component
+      // is ALWAYS muted?
+      // setIsMuted(true);
       togglePlay();
     }
 
-    // And attach event listener based on prop:
-    // if (!loop && showPosterAfterPlaying) {
-    //   videoEl.current.addEventListener('ended', () => {
-    //     // Reloads video, which re-shows poster
-    //     videoEl.current.load();
-    //   });
-    // }
+    // If this is a non-looping video, add a listener to update our local state
+    // once the video's ended, to let the user retrigger it manually:
+    if (!loop) {
+      videoEl.current.addEventListener('ended', () => {
+        setIsPlaying(false);
+        // Reload the video to show the poster image:
+        if (showPosterAfterPlaying) videoEl.current.load();
+      });
+    }
   }, []);
 
   console.log(autoPlay, loop, muted, hasVideo);
@@ -63,7 +65,7 @@ const Promo = ({
   return (
     <Container backgroundColor={backgroundColor} position={position}>
       {(hasImage && !hasVideo) && (
-      <Media imageRight={copyFirst}>
+      <Media imageRight={copyLeft}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -76,23 +78,23 @@ const Promo = ({
       </Media>
       )}
       {(hasVideo && !hasImage) && (
-      <Media imageRight={copyFirst}>
+      <Media imageRight={copyLeft}>
         <Video
           ref={videoEl}
           src={video}
           loop={loop}
-          muted={isMuted}
-          // poster={poster}
+          muted
+          poster={poster}
         >
           Your browser does not support video.
         </Video>
         <PlayButtonWrapper>
-          <PlayButton onClick={() => { togglePlay(); }}>PLAY ME</PlayButton>
+          <PlayButton copyLeft={copyLeft} onClick={() => { togglePlay(); }}>PLAY ME</PlayButton>
         </PlayButtonWrapper>
 
       </Media>
       )}
-      <Wrapper copyFirst={copyFirst}>
+      <Wrapper copyLeft={copyLeft}>
         <Copy position={position}>{children}</Copy>
       </Wrapper>
     </Container>
@@ -101,7 +103,7 @@ const Promo = ({
 
 Promo.propTypes = {
   backgroundColor: PropTypes.string,
-  copyFirst: PropTypes.bool,
+  copyLeft: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,
   image: PropTypes.string,
@@ -112,12 +114,13 @@ Promo.propTypes = {
   loop: PropTypes.bool,
   muted: PropTypes.bool,
   video: PropTypes.string,
+  poster: PropTypes.string.isRequired,
   showPosterAfterPlaying: PropTypes.bool
 };
 
 Promo.defaultProps = {
   backgroundColor: 'white',
-  copyFirst: false,
+  copyLeft: false,
   imageSet: null,
   imageLow: null,
   image: null,
@@ -125,7 +128,7 @@ Promo.defaultProps = {
   children: null,
   position: 'none',
   autoPlay: true,
-  loop: false,
+  loop: true,
   muted: true,
   video: false,
   showPosterAfterPlaying: true

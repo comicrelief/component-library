@@ -44,7 +44,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
+
+  ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
   ${media('medium')} {
     min-height: calc(100vh - 90px);
   }
@@ -58,10 +59,21 @@ const Copy = styled.div`
     width: 70%;
     padding: ${spacing('xl')} ${spacing('m')};
   }
+
+  // lol wtf is there 2 different medium media queries??
   ${media('medium')} {
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
-  }
+
+    // ACCESSIBILITY IMPROVEMENT:  
+    // background-clip: content-box;
+    background-color: rgba(0,0,0,0.75);
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.75);
+    // filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.75));
+      }
+
+  
   ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
     ${media('medium')} {
@@ -92,6 +104,9 @@ const Video = styled.video.attrs(() => ({
 `;
 
 const PlayButton = styled.button`
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
   width: 50px;
   height: 50px;
   background-color: red;
@@ -99,9 +114,12 @@ const PlayButton = styled.button`
   position: absolute;
   top: 25px;
   right: 25px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s, visibility 0.2s;
+
+  // Reposition button accordingly:
+  ${({ copyLeft }) => copyLeft === false && css`
+    right: auto;
+    left: 25px;
+  `}
 `;
 
 const PlayButtonWrapper = styled.div`

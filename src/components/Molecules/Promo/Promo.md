@@ -14,7 +14,7 @@ import Link from '../../Atoms/Link/Link';
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="upper"
 >
@@ -50,7 +50,7 @@ import Link from '../../Atoms/Link/Link';
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="end"
 >
@@ -86,7 +86,7 @@ import Link from '../../Atoms/Link/Link';
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="lower"
 >
@@ -122,7 +122,7 @@ import Link from '../../Atoms/Link/Link';
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
 >
   <Text
@@ -155,8 +155,10 @@ Promo w/Video
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
+import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
 const src =
   'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
+
 
 <div>
 <Text tag="h2" size="xl" color="black">
@@ -168,11 +170,11 @@ const src =
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="upper"
   video={src}
-  loop
+  poster={poster}
 >
   <Text
     tag="h1"
@@ -208,12 +210,12 @@ const src =
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="end"
   video={src}
-  loop
   autoPlay={false}
+  poster={poster}
 >
   <Text
     tag="h1"
@@ -249,11 +251,11 @@ const src =
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={true}
   hasOverlay={true}
   position="lower"
   video={src}
-  loop
+  poster={poster}
 >
   <Text
     tag="h1"
@@ -280,7 +282,7 @@ const src =
 
 <br />
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video
+  Promo None w/Video (no loop)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -288,10 +290,11 @@ const src =
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
-  copyFirst={true}
+  copyLeft={false}
   hasOverlay={true}
   video={src}
-  loop
+  loop={false}
+  poster={poster}
 >
   <Text
     tag="h1"
