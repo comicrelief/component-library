@@ -18,7 +18,6 @@ const Promo = ({
   position,
   autoPlay,
   loop,
-  muted,
   poster,
   showPosterAfterPlaying,
   video
@@ -60,7 +59,7 @@ const Promo = ({
     }
   }, []);
 
-  console.log(autoPlay, loop, muted, hasVideo);
+  console.log('hasvidep', hasVideo);
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -95,7 +94,7 @@ const Promo = ({
       </Media>
       )}
       <Wrapper copyLeft={copyLeft}>
-        <Copy position={position}>{children}</Copy>
+        <Copy position={position} hasVideo={hasVideo}>{children}</Copy>
       </Wrapper>
     </Container>
   );
@@ -112,7 +111,6 @@ Promo.propTypes = {
   position: PropTypes.oneOf(['upper', 'lower', 'end', 'none']),
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
-  muted: PropTypes.bool,
   video: PropTypes.string,
   poster: PropTypes.string.isRequired,
   showPosterAfterPlaying: PropTypes.bool
@@ -129,7 +127,6 @@ Promo.defaultProps = {
   position: 'none',
   autoPlay: true,
   loop: true,
-  muted: true,
   video: false,
   showPosterAfterPlaying: true
 };
