@@ -2,10 +2,10 @@ import React from 'react';
 import 'jest-styled-components';
 
 import renderWithTheme from '../../../hoc/shallowWithTheme';
-import SchoolLookup from './SchoolLookup';
+import PostcodeLookup from './PostcodeLookup';
 
 it('renders correctly', () => {
-  const renderer = renderWithTheme(<SchoolLookup onSelect={() => {}} />);
+  const renderer = renderWithTheme(<PostcodeLookup onSelect={() => {}} />);
 
   expect(renderer.toJSON()).toMatchSnapshot();
 });
