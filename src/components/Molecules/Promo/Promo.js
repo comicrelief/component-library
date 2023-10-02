@@ -53,23 +53,26 @@ const Promo = ({
 
   // On load:
   useEffect(() => {
+    if (hasVideo) {
     // Add an event listener to EVERY video
-    videoEl.current.addEventListener('timeupdate', updateTime);
-    // Trigger on-load autoplay if apppropriate
-    if (autoPlay && hasVideo && !isPlaying) {
-      togglePlay();
+      videoEl.current.addEventListener('timeupdate', updateTime);
+      // Trigger on-load autoplay if apppropriate
+      if (autoPlay && hasVideo && !isPlaying) {
+        togglePlay();
+      }
+
+      // If this is a non-looping video, add a listener to update our local state
+      // once the video's ended, to let the user retrigger it manually:
+      if (!loop) {
+        videoEl.current.addEventListener('ended', () => {
+          setIsPlaying(false);
+          setVideoProgress(0); // good or bad?
+          // Reload the video to show the poster image:
+          if (showPosterAfterPlaying) videoEl.current.load();
+        });
+      }
     }
 
-    // If this is a non-looping video, add a listener to update our local state
-    // once the video's ended, to let the user retrigger it manually:
-    if (!loop) {
-      videoEl.current.addEventListener('ended', () => {
-        setIsPlaying(false);
-        setVideoProgress(0); // good or bad?
-        // Reload the video to show the poster image:
-        if (showPosterAfterPlaying) videoEl.current.load();
-      });
-    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
