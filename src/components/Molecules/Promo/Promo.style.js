@@ -125,17 +125,6 @@ const PlayButton = styled.button`
     right: auto;
     left: 15px;
   `}
-
-  // ${media('medium')} {
-  //   top: 40px;
-  //   right: 40px;
-
-  //   // Re-align button accordingly
-  //   ${({ copyLeft }) => !copyLeft && css`
-  //     right: auto;
-  //     left: 40px;
-  //   `}
-  // }
 `;
 
 const PlayButtonWrapper = styled.div`

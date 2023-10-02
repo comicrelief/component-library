@@ -10,7 +10,7 @@ const ProgressRingSVG = styled.svg`
 `;
 
 const ProgressRingCircle = styled.circle`
-    transition: stroke-dashoffset 0.35s;
+    transition: stroke-dashoffset 0.5s;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke-dashoffset: ${({ strokeDashOffsetStyle }) => strokeDashOffsetStyle};

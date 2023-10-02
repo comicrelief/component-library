@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
@@ -28,8 +26,6 @@ const Promo = ({
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(null);
   const [videoProgress, setVideoProgress] = useState(0);
-  const [degreesLeft, setDegreesLeft] = useState(0);
-
   const videoEl = useRef(null);
 
   const togglePlay = () => {
@@ -44,15 +40,22 @@ const Promo = ({
 
   const updateTime = () => {
     if (videoEl.current.duration) {
-      setVideoProgress(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100));
-      // setDegreesLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 360));
+      // Calculate the percentage of the video played:
+      const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
+      // setVideoProgress(percentage);
+
+      const nearest = 25;
+      const roundedPercentage = (percentage + nearest / 2) - ((percentage + nearest / 2) % nearest);
+      console.log('roundedPercentage', roundedPercentage);
+      setVideoProgress(roundedPercentage);
     }
   };
 
   // On load:
   useEffect(() => {
-    videoEl.current.addEventListener('timeupdate', updateTime, true);
-    // Trigger onload autoplay based on prop:
+    // Add an event listener to EVERY video
+    videoEl.current.addEventListener('timeupdate', updateTime);
+    // Trigger on-load autoplay if apppropriate
     if (autoPlay && hasVideo && !isPlaying) {
       togglePlay();
     }
@@ -62,10 +65,12 @@ const Promo = ({
     if (!loop) {
       videoEl.current.addEventListener('ended', () => {
         setIsPlaying(false);
+        setVideoProgress(0); // good or bad?
         // Reload the video to show the poster image:
         if (showPosterAfterPlaying) videoEl.current.load();
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -136,7 +141,7 @@ Promo.defaultProps = {
   imageAltText: '',
   children: null,
   position: 'none',
-  autoPlay: true,
+  autoPlay: false, // debug
   loop: false, // DEBUG
   video: false,
   showPosterAfterPlaying: true
