@@ -7,6 +7,8 @@ import {
   Container, Wrapper, Copy, Media, Video, PlayButton, PlayButtonWrapper
 } from './Promo.style';
 
+import ProgressCircle from './ProgressCircle';
+
 const Promo = ({
   copyLeft,
   backgroundColor,
@@ -25,6 +27,8 @@ const Promo = ({
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(null);
   const [percentLeft, setPercentLeft] = useState(0);
+  const [degreesLeft, setDegreesLeft] = useState(0);
+
   const videoEl = useRef(null);
 
   const togglePlay = () => {
@@ -40,6 +44,7 @@ const Promo = ({
   const updateTime = () => {
     if (videoEl.current.duration) {
       setPercentLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100));
+      setDegreesLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 360));
     }
   };
 
@@ -48,11 +53,6 @@ const Promo = ({
     videoEl.current.addEventListener('timeupdate', updateTime, true);
     // Trigger onload autoplay based on prop:
     if (autoPlay && hasVideo && !isPlaying) {
-      // As it's a Chrome requirement to mute any autoplay videos,
-      // update accordingly; see https://developer.chrome.com/blog/autoplay/
-      // Need to suss out if this is still needed, given that this component
-      // is ALWAYS muted?
-      // setIsMuted(true);
       togglePlay();
     }
 
@@ -94,9 +94,9 @@ const Promo = ({
           Your browser does not support video.
         </Video>
         <PlayButtonWrapper>
+          <ProgressCircle degreesLeft={degreesLeft} />
           <PlayButton
             copyLeft={copyLeft}
-            percentLeft={percentLeft}
             onClick={() => { togglePlay(); }}
           >
             {percentLeft}
