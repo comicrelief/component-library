@@ -17,13 +17,12 @@ const optionFetcher = async query => {
 
 const optionParser = school => `${school.name}, ${school.post_code}`;
 
-const SchoolLookup = React.forwardRef(
+const PostcodeLookup = React.forwardRef(
   (
     {
       label,
       placeholder,
       notFoundMessage,
-      dropdownInstruction,
       onSelect,
       ...rest
     },
@@ -38,7 +37,6 @@ const SchoolLookup = React.forwardRef(
       label,
       placeholder,
       notFoundMessage,
-      dropdownInstruction,
       ...rest
     };
 
@@ -46,20 +44,18 @@ const SchoolLookup = React.forwardRef(
   }
 );
 
-SchoolLookup.propTypes = {
+PostcodeLookup.propTypes = {
   /** This function is used to provide data to the parent component when a selection is made. */
   onSelect: PropTypes.func.isRequired,
   label: PropTypes.string,
   placeholder: PropTypes.string,
-  dropdownInstruction: PropTypes.string,
   notFoundMessage: PropTypes.string
 };
 
-SchoolLookup.defaultProps = {
-  label: 'Enter the name or postcode of your school or nursery',
-  placeholder: 'Type to start search',
-  dropdownInstruction: 'Please select a school from the list below',
-  notFoundMessage: "Sorry, we can't find this school"
+PostcodeLookup.defaultProps = {
+  label: 'Find address by postcode',
+  placeholder: 'Enter postcode...',
+  notFoundMessage: "Sorry, we can't find this address"
 };
 
-export default SchoolLookup;
+export default PostcodeLookup;
