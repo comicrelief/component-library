@@ -67,7 +67,6 @@ const Copy = styled.div`
     padding: ${spacing('xxl')} ${spacing('m')};
 
     ${({ hasVideo }) => hasVideo !== false && css`
-      // ACCESSIBILITY IMPROVEMENT:  
       background-color: rgba(0,0,0,0.75);
       overflow: hidden;
       box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.75);
@@ -110,17 +109,33 @@ const PlayButton = styled.button`
   width: 50px;
   height: 50px;
   background-color: red;
-  display: block;
+  display: flex;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  margin: 0;
 
-  ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
+  // Re-align button accordingly
+  ${({ copyLeft }) => !copyLeft && css`
+    right: auto;
+    left: 15px;
+  `}
 
-  // Reposition button accordingly:
-  // ${({ percentLeft }) => percentLeft && css`
-  //   right: ${percentLeft}px; // lol
-  // `}
+  // ${media('medium')} {
+  //   top: 40px;
+  //   right: 40px;
+
+  //   // Re-align button accordingly
+  //   ${({ copyLeft }) => !copyLeft && css`
+  //     right: auto;
+  //     left: 40px;
+  //   `}
+  // }
 `;
 
 const PlayButtonWrapper = styled.div`
@@ -132,8 +147,8 @@ const PlayButtonWrapper = styled.div`
 
   &:hover {
     button {
-      visibility: visible;
-      opacity: 1;
+      // visibility: visible; // debug
+      // opacity: 1; // debug
     }
   }
 

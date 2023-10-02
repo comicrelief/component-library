@@ -2,40 +2,39 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  ProgressBar, ProgressBarSvg, ProgresBarSvgCircle
+  ProgressRingWrapper, ProgressRingSVG, ProgressRingCircle
 } from './ProgressCircle.style';
 
-const ProgressCircle = ({ percentLeft, degreesLeft }) => {
-  // Somewhere to store our updated and mapped numbers
-  const [thisOffset, setThisOffset] = useState(percentLeft);
+const ProgressCircle = ({ thisStroke, thisRadius, thisProgress }) => {
+  const initNormRadius = thisRadius - thisStroke * 2;
+  const thisCircumference = initNormRadius * 2 * Math.PI;
+  const [thisDashOffset, setThisDashOffset] = useState(initNormRadius * 2 * Math.PI);
 
-  // Remap on update:
   useEffect(() => {
-    console.log('percentLeft', typeof percentLeft, percentLeft);
-    const updated = 440 - (440 * percentLeft) / 100;
-    console.log('updated', updated);
-    // setThisOffset(440 - (440 * percentLeft) / 100);
-    setThisOffset(percentLeft);
-  }, [percentLeft]);
+    const offset = thisCircumference - ((thisProgress / 100) * thisCircumference);
+    setThisDashOffset(offset);
+  }, [thisProgress, thisCircumference]);
 
   return (
-    <ProgressBar degreesLeft={degreesLeft}>
-      <ProgressBarSvg class="progressbar__svg">
-        <ProgresBarSvgCircle cx="80" cy="80" r="70" thisOffset={thisOffset}> </ProgresBarSvgCircle>
-      </ProgressBarSvg>
-    </ProgressBar>
+    <ProgressRingWrapper thisProgress={thisProgress}>
+      <ProgressRingSVG height={thisRadius * 2} width={thisRadius * 2}>
+        <ProgressRingCircle
+          strokeDasharray={`${thisCircumference} ${thisCircumference}`}
+          strokeDashOffsetStyle={thisDashOffset}
+          strokeWidth={`${thisStroke}`}
+          r={`${initNormRadius}`}
+          cx={`${thisRadius}`}
+          cy={`${thisRadius}`}
+        />
+      </ProgressRingSVG>
+    </ProgressRingWrapper>
   );
 };
 
 ProgressCircle.propTypes = {
-  percentLeft: PropTypes.number,
-  degreesLeft: PropTypes.number
-};
-
-ProgressCircle.defaultProps = {
-  percentLeft: 0,
-  degreesLeft: 0
-
+  thisStroke: PropTypes.number.isRequired,
+  thisRadius: PropTypes.number.isRequired,
+  thisProgress: PropTypes.number.isRequired
 };
 
 export default ProgressCircle;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -26,7 +27,7 @@ const Promo = ({
 }) => {
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(null);
-  const [percentLeft, setPercentLeft] = useState(0);
+  const [videoProgress, setVideoProgress] = useState(0);
   const [degreesLeft, setDegreesLeft] = useState(0);
 
   const videoEl = useRef(null);
@@ -43,8 +44,8 @@ const Promo = ({
 
   const updateTime = () => {
     if (videoEl.current.duration) {
-      setPercentLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100));
-      setDegreesLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 360));
+      setVideoProgress(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100));
+      // setDegreesLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 360));
     }
   };
 
@@ -94,16 +95,13 @@ const Promo = ({
           Your browser does not support video.
         </Video>
         <PlayButtonWrapper>
-          <ProgressCircle degreesLeft={degreesLeft} />
           <PlayButton
             copyLeft={copyLeft}
             onClick={() => { togglePlay(); }}
           >
-            {percentLeft}
-            %
+            <ProgressCircle thisStroke={4} thisRadius={25} thisProgress={videoProgress} />
           </PlayButton>
         </PlayButtonWrapper>
-
       </Media>
       )}
       <Wrapper copyLeft={copyLeft}>

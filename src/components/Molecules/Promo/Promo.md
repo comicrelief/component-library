@@ -256,6 +256,7 @@ const src =
   position="lower"
   video={src}
   poster={poster}
+  autoPlay={false}
 >
   <Text
     tag="h1"
@@ -295,6 +296,7 @@ const src =
   video={src}
   loop={false}
   poster={poster}
+  autoPlay={false}
 >
   <Text
     tag="h1"
