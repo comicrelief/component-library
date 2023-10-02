@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
+import StyledWrapper from './PostcodeLookup.style';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -10,7 +11,7 @@ const validatePostcode = postcode => {
 };
 
 const getAddresses = postcode => axios.get(
-  `${process.env.GATSBY_LOOKUP_SERVICE_BASE_URL}/postcode/lookup`,
+  'https://lookups-staging.sls.comicrelief.com/postcode/lookup',
   {
     timeout: 10000,
     params: { query: postcode }
@@ -47,17 +48,19 @@ const addressFetcher = async postcode => {
  * @constructor
  */
 const PostcodeLookup = ({ onSelect, ...rest }) => (
-  <Lookup
-    name="postcode_lookup"
-    label="Find address by postcode"
-    placeholder="Enter postcode..."
-    buttonText="Find address"
-    noResultsMessage="Sorry, could not find any addresses for that postcode"
-    mapOptionToString={addressToString}
-    lookupHandler={addressFetcher}
-    onSelect={onSelect}
-    {...rest}
-  />
+  <StyledWrapper>
+    <Lookup
+      name="postcode_lookup"
+      label="Find address by postcode"
+      placeholder="Enter postcode..."
+      buttonText="Find address"
+      noResultsMessage="Sorry, could not find any addresses for that postcode"
+      mapOptionToString={addressToString}
+      lookupHandler={addressFetcher}
+      onSelect={onSelect}
+      {...rest}
+    />
+  </StyledWrapper>
 );
 
 PostcodeLookup.propTypes = {
