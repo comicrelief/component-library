@@ -24,6 +24,7 @@ const Promo = ({
 }) => {
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(null);
+  const [percentLeft, setPercentLeft] = useState(0);
   const videoEl = useRef(null);
 
   const togglePlay = () => {
@@ -36,8 +37,15 @@ const Promo = ({
   // Video Promo will override and ignore any 'non-Video' images
   const hasImage = (imageSet && !hasVideo) || false;
 
+  const updateTime = () => {
+    if (videoEl.current.duration) {
+      setPercentLeft(Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100));
+    }
+  };
+
   // On load:
   useEffect(() => {
+    videoEl.current.addEventListener('timeupdate', updateTime, true);
     // Trigger onload autoplay based on prop:
     if (autoPlay && hasVideo && !isPlaying) {
       // As it's a Chrome requirement to mute any autoplay videos,
@@ -58,8 +66,6 @@ const Promo = ({
       });
     }
   }, []);
-
-  console.log('hasvidep', hasVideo);
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -88,7 +94,14 @@ const Promo = ({
           Your browser does not support video.
         </Video>
         <PlayButtonWrapper>
-          <PlayButton copyLeft={copyLeft} onClick={() => { togglePlay(); }}>PLAY ME</PlayButton>
+          <PlayButton
+            copyLeft={copyLeft}
+            percentLeft={percentLeft}
+            onClick={() => { togglePlay(); }}
+          >
+            {percentLeft}
+            %
+          </PlayButton>
         </PlayButtonWrapper>
 
       </Media>
@@ -126,7 +139,7 @@ Promo.defaultProps = {
   children: null,
   position: 'none',
   autoPlay: true,
-  loop: true,
+  loop: false, // DEBUG
   video: false,
   showPosterAfterPlaying: true
 };
