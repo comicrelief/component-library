@@ -1,33 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProgressCircle from './ProgressRing';
+import ProgressRing from './ProgressRing';
 import { PlayButtonWrapper, PlayButton, Icon } from './PromoVideoButton.style';
 
 const PromoVideoButton = ({
-  videoProgress, copyLeft, togglePlay, isPlaying
+  videoProgress, togglePlay, ...rest
 }) => (
   <PlayButtonWrapper>
     <PlayButton
-      copyLeft={copyLeft}
       onClick={() => { togglePlay(); }}
-      isPlaying={isPlaying}
+      {...rest}
     >
-      <Icon isPlaying={isPlaying} />
-      <ProgressCircle
-        thisStroke={4}
-        thisRadius={25}
+      <Icon {...rest} />
+      <ProgressRing
         videoProgress={videoProgress}
-        isPlaying={isPlaying}
+        {...rest}
       />
     </PlayButton>
   </PlayButtonWrapper>
 );
 
 PromoVideoButton.propTypes = {
-  copyLeft: PropTypes.bool.isRequired,
   videoProgress: PropTypes.number.isRequired,
-  togglePlay: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+  togglePlay: PropTypes.func.isRequired
 };
 
 export default PromoVideoButton;

@@ -6,10 +6,10 @@ const PlayButton = styled.button`
   // visibility: hidden; // debug
   // opacity: 0; // debug
   transition: opacity 0.2s, visibility 0.2s;
+
   width: 50px;
   height: 50px;
   background: none;
-  display: flex;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -19,8 +19,13 @@ const PlayButton = styled.button`
   border: 0;
   padding: 0;
   margin: 0;
+  border-radius: 50%;
+  background: black;
 
-  // Re-align button accordingly
+  ${({ whiteButton }) => whiteButton && css`
+    background: ${({ theme }) => theme.color('white')};
+  `}
+
   ${({ copyLeft }) => !copyLeft && css`
     right: auto;
     left: 10px;
@@ -46,10 +51,11 @@ const ProgressRingWrapper = styled.span`
     position: absolute;
     width: 100%;
     height: 100%;
+    display: flex;
 `;
 
 const ProgressRingSVG = styled.svg`
-//
+ //
 `;
 
 const ProgressRingCircle = styled.circle`
@@ -61,6 +67,10 @@ const ProgressRingCircle = styled.circle`
     stroke: white; // need to changed based on Promo settings
     fill: transparent;
 
+    ${({ whiteButton }) => whiteButton && css`
+      stroke: ${({ theme }) => theme.color('black')};
+    `}
+
     ${({ isPlaying }) => !isPlaying && css`
       // transition: stroke-dashoffset 0.1s;
   `}
@@ -69,12 +79,16 @@ const ProgressRingCircle = styled.circle`
 const Icon = styled.span`
   height: 40px;
   width: 40px;
-  background-color: white; // need to changed based on Promo settings
   -webkit-mask-image: url(${playIcon});
   mask-image: url(${playIcon});
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 25px;
+  background-color: white; // need to changed based on Promo settings
+  
+  ${({ whiteButton }) => whiteButton && css`
+    background-color: ${({ theme }) => theme.color('black')};
+  `}
 
   ${({ isPlaying }) => isPlaying && css`
     -webkit-mask-image: url(${pauseIcon});

@@ -6,8 +6,10 @@ import {
 } from './PromoVideoButton.style';
 
 const ProgressRing = ({
-  thisStroke, thisRadius, videoProgress, isPlaying
+  videoProgress, ...rest
 }) => {
+  const thisStroke = 4;
+  const thisRadius = 28;
   const initNormRadius = thisRadius - thisStroke * 2;
   const thisCircumference = initNormRadius * 2 * Math.PI;
   const [thisDashOffset, setThisDashOffset] = useState(initNormRadius * 2 * Math.PI);
@@ -27,7 +29,7 @@ const ProgressRing = ({
           r={`${initNormRadius}`}
           cx={`${thisRadius}`}
           cy={`${thisRadius}`}
-          isPlaying={isPlaying}
+          {...rest}
         />
       </ProgressRingSVG>
     </ProgressRingWrapper>
@@ -35,10 +37,7 @@ const ProgressRing = ({
 };
 
 ProgressRing.propTypes = {
-  thisStroke: PropTypes.number.isRequired,
-  thisRadius: PropTypes.number.isRequired,
-  videoProgress: PropTypes.number.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+  videoProgress: PropTypes.number.isRequired
 };
 
 export default ProgressRing;

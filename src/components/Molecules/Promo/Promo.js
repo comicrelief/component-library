@@ -23,7 +23,7 @@ const Promo = ({
   video
 }) => {
   // To be updated via useEffect on load:
-  const [isPlaying, setIsPlaying] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [videoProgress, setVideoProgress] = useState(0);
   const videoEl = useRef(null);
 
@@ -72,6 +72,8 @@ const Promo = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const whiteButtonDebug = true; // to-do: suss out how this relates in context
+
   return (
     <Container backgroundColor={backgroundColor} position={position}>
       {(hasImage && !hasVideo) && (
@@ -103,6 +105,7 @@ const Promo = ({
           videoProgress={videoProgress}
           togglePlay={togglePlay}
           isPlaying={isPlaying}
+          whiteButton={whiteButtonDebug}
         />
       </Media>
       )}
