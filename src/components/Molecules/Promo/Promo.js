@@ -44,9 +44,8 @@ const Promo = ({
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
       // setVideoProgress(percentage);
 
-      const nearest = 25;
+      const nearest = 1;
       const roundedPercentage = (percentage + nearest / 2) - ((percentage + nearest / 2) % nearest);
-      console.log('roundedPercentage', roundedPercentage);
       setVideoProgress(roundedPercentage);
     }
   };
