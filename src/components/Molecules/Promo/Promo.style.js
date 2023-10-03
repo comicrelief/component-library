@@ -140,12 +140,6 @@ const PlayButtonWrapper = styled.div`
       // opacity: 1; // debug
     }
   }
-
-  // Reposition button accordingly:
-  // ${({ percentLeft }) => percentLeft && css`
-  //   top: ${percentLeft}px; // lol
-  // `}
-
 `;
 
 export {

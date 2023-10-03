@@ -156,10 +156,9 @@ Promo w/Video
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
-const shortVideoSrc =
-  'https://videos.ctfassets.net/zsfivwzfgl3t/6E6MTXiKrqCNviLx6uW9L9/54554151bc846a9946c5cae17533ec64/6-second-video.mp4';
-const longVideoSrc =
-  'https://videos.ctfassets.net/zsfivwzfgl3t/5ZHe4jVngF1uAVeSXEQdNI/8ac0c9ab100e610adb8f3bff6a113e14/15-second-video.mp4';
+const src =
+  'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
+
 
 <div>
 <Text tag="h2" size="xl" color="black">
@@ -174,7 +173,7 @@ const longVideoSrc =
   copyLeft={true}
   hasOverlay={true}
   position="upper"
-  video={shortVideoSrc}
+  video={src}
   poster={poster}
 >
   <Text
@@ -214,7 +213,7 @@ const longVideoSrc =
   copyLeft={true}
   hasOverlay={true}
   position="end"
-  video={shortVideoSrc}
+  video={src}
   autoPlay={false}
   poster={poster}
 >
@@ -255,7 +254,7 @@ const longVideoSrc =
   copyLeft={true}
   hasOverlay={true}
   position="lower"
-  video={shortVideoSrc}
+  video={src}
   poster={poster}
   autoPlay={false}
 >
@@ -294,7 +293,7 @@ const longVideoSrc =
   imageAltText=""
   copyLeft={false}
   hasOverlay={true}
-  video={shortVideoSrc}
+  video={src}
   loop={false}
   poster={poster}
   autoPlay={false}
