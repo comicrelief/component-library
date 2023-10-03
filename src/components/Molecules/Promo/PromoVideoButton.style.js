@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
 import playWhite from './assets/Play--white.svg';
 import pauseWhite from './assets/Pause--white.svg';
