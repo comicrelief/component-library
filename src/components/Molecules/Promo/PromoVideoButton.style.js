@@ -33,6 +33,16 @@ const PlayButton = styled.button`
     right: auto;
     left: 10px;
   `}
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    top: 20px;
+    right: 20px;
+
+      ${({ copyLeft }) => !copyLeft && css`
+      right: auto;
+      left: 20px;
+    `}
+  }
 `;
 
 const PlayButtonWrapper = styled.div`
