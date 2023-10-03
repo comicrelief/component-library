@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
-import playIcon from './assets/Play.svg';
-import pauseIcon from './assets/Pause.svg';
+import playWhite from './assets/Play--white.svg';
+import pauseWhite from './assets/Pause--white.svg';
+import playBlack from './assets/Play--black.svg';
+import pauseBlack from './assets/Pause--black.svg';
 
 const PlayButton = styled.button`
   // visibility: hidden; // debug
@@ -70,31 +73,30 @@ const ProgressRingCircle = styled.circle`
     ${({ whiteButton }) => whiteButton && css`
       stroke: ${({ theme }) => theme.color('black')};
     `}
-
-    ${({ isPlaying }) => !isPlaying && css`
-      // transition: stroke-dashoffset 0.1s;
-  `}
 `;
 
 const Icon = styled.span`
-  height: 40px;
-  width: 40px;
-  -webkit-mask-image: url(${playIcon});
-  mask-image: url(${playIcon});
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 25px;
-  background-color: white; // need to changed based on Promo settings
-  
-  ${({ whiteButton }) => whiteButton && css`
-    background-color: ${({ theme }) => theme.color('black')};
+  height: 50px;
+  width: 50px;
+  background: no-repeat center/50% url(${playWhite}) transparent;
+
+  ${({ whiteButton, isPlaying }) => (!whiteButton && !isPlaying) && css`
+    background-image: url(${playWhite});
   `}
 
-  ${({ isPlaying }) => isPlaying && css`
-    -webkit-mask-image: url(${pauseIcon});
-    mask-image: url(${pauseIcon});
-    mask-repeat: no-repeat;
+  ${({ whiteButton, isPlaying }) => (!whiteButton && isPlaying) && css`
+    background-image: url(${pauseWhite});
   `}
+
+  ${({ whiteButton, isPlaying }) => (whiteButton && !isPlaying) && css`
+    background-image: url(${playBlack});
+  `}
+
+  ${({ whiteButton, isPlaying }) => (whiteButton && isPlaying) && css`
+    background-image: url(${pauseBlack});
+  `}
+
+
 `;
 
 export {
