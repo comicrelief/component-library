@@ -142,8 +142,8 @@ Promo.defaultProps = {
   imageAltText: '',
   children: null,
   position: 'none',
-  autoPlay: false, // debug
-  loop: false, // DEBUG
+  autoPlay: true,
+  loop: true,
   video: false,
   showPosterAfterPlaying: true
 };

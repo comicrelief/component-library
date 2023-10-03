@@ -162,7 +162,7 @@ const src =
 
 <div>
 <Text tag="h2" size="xl" color="black">
-  Promo Upper w/Video (autoplay by default)
+  Promo Upper w/Video (autoplay and loop)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -175,6 +175,8 @@ const src =
   position="upper"
   video={src}
   poster={poster}
+  loop={true}
+  autoplay={true}
 >
   <Text
     tag="h1"
@@ -202,7 +204,7 @@ const src =
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo End w/Video (autoplay disabled)
+  Promo End w/Video (loop only)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -214,8 +216,9 @@ const src =
   hasOverlay={true}
   position="end"
   video={src}
-  autoPlay={false}
   poster={poster}
+  loop={true}
+  autoPlay={false}
 >
   <Text
     tag="h1"
@@ -243,7 +246,7 @@ const src =
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo Lower w/Video
+  Promo Lower w/Video (autoplay only)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -256,7 +259,8 @@ const src =
   position="lower"
   video={src}
   poster={poster}
-  autoPlay={false}
+  loop={false}
+  autoPlay={true}
 >
   <Text
     tag="h1"
@@ -283,7 +287,7 @@ const src =
 
 <br />
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop)
+  Promo None w/Video (no loop or autoplay)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -294,8 +298,8 @@ const src =
   copyLeft={false}
   hasOverlay={true}
   video={src}
-  loop={false}
   poster={poster}
+  loop={false}
   autoPlay={false}
 >
   <Text

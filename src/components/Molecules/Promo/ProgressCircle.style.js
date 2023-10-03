@@ -7,6 +7,7 @@ const ProgressRingWrapper = styled.span`
 `;
 
 const ProgressRingSVG = styled.svg`
+  //
 `;
 
 const ProgressRingCircle = styled.circle`
