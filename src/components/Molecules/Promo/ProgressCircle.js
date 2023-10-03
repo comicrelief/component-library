@@ -5,18 +5,18 @@ import {
   ProgressRingWrapper, ProgressRingSVG, ProgressRingCircle
 } from './ProgressCircle.style';
 
-const ProgressCircle = ({ thisStroke, thisRadius, thisProgress }) => {
+const ProgressCircle = ({ thisStroke, thisRadius, videoProgress }) => {
   const initNormRadius = thisRadius - thisStroke * 2;
   const thisCircumference = initNormRadius * 2 * Math.PI;
   const [thisDashOffset, setThisDashOffset] = useState(initNormRadius * 2 * Math.PI);
 
   useEffect(() => {
-    const offset = thisCircumference - ((thisProgress / 100) * thisCircumference);
+    const offset = thisCircumference - ((videoProgress / 100) * thisCircumference);
     setThisDashOffset(offset);
-  }, [thisProgress, thisCircumference]);
+  }, [videoProgress, thisCircumference]);
 
   return (
-    <ProgressRingWrapper thisProgress={thisProgress}>
+    <ProgressRingWrapper videoProgress={videoProgress}>
       <ProgressRingSVG height={thisRadius * 2} width={thisRadius * 2}>
         <ProgressRingCircle
           strokeDasharray={`${thisCircumference} ${thisCircumference}`}
@@ -34,7 +34,7 @@ const ProgressCircle = ({ thisStroke, thisRadius, thisProgress }) => {
 ProgressCircle.propTypes = {
   thisStroke: PropTypes.number.isRequired,
   thisRadius: PropTypes.number.isRequired,
-  thisProgress: PropTypes.number.isRequired
+  videoProgress: PropTypes.number.isRequired
 };
 
 export default ProgressCircle;

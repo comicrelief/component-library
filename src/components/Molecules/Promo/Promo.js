@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import PromoVideoButton from './PromoVideoButton';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, Wrapper, Copy, Media, Video, PlayButton, PlayButtonWrapper
+  Container, Wrapper, Copy, Media, Video
 } from './Promo.style';
-
-import ProgressCircle from './ProgressCircle';
 
 const Promo = ({
   copyLeft,
@@ -100,14 +99,11 @@ const Promo = ({
         >
           Your browser does not support video.
         </Video>
-        <PlayButtonWrapper>
-          <PlayButton
-            copyLeft={copyLeft}
-            onClick={() => { togglePlay(); }}
-          >
-            <ProgressCircle thisStroke={4} thisRadius={25} thisProgress={videoProgress} />
-          </PlayButton>
-        </PlayButtonWrapper>
+        <PromoVideoButton
+          copyLeft={copyLeft}
+          videoProgress={videoProgress}
+          togglePlay={togglePlay}
+        />
       </Media>
       )}
       <Wrapper copyLeft={copyLeft}>
