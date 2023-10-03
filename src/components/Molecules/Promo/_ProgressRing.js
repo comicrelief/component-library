@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {
   ProgressRingWrapper, ProgressRingSVG, ProgressRingCircle
-} from './PromoVideoButton.style';
+} from './_PromoVideoButton.style';
 
 const ProgressRing = ({
   videoProgress, ...rest

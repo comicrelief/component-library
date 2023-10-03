@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProgressRing from './ProgressRing';
-import { PlayButtonWrapper, PlayButton, Icon } from './PromoVideoButton.style';
+import ProgressRing from './_ProgressRing';
+import { PlayButtonWrapper, PlayButton, Icon } from './_PromoVideoButton.style';
 
 const PromoVideoButton = ({
   videoProgress, togglePlay, ...rest
