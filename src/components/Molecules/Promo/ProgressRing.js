@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 import {
   ProgressRingWrapper, ProgressRingSVG, ProgressRingCircle
-} from './ProgressCircle.style';
+} from './PromoVideoButton.style';
 
-const ProgressCircle = ({ thisStroke, thisRadius, videoProgress }) => {
+const ProgressRing = ({
+  thisStroke, thisRadius, videoProgress, isPlaying
+}) => {
   const initNormRadius = thisRadius - thisStroke * 2;
   const thisCircumference = initNormRadius * 2 * Math.PI;
   const [thisDashOffset, setThisDashOffset] = useState(initNormRadius * 2 * Math.PI);
@@ -25,16 +27,18 @@ const ProgressCircle = ({ thisStroke, thisRadius, videoProgress }) => {
           r={`${initNormRadius}`}
           cx={`${thisRadius}`}
           cy={`${thisRadius}`}
+          isPlaying={isPlaying}
         />
       </ProgressRingSVG>
     </ProgressRingWrapper>
   );
 };
 
-ProgressCircle.propTypes = {
+ProgressRing.propTypes = {
   thisStroke: PropTypes.number.isRequired,
   thisRadius: PropTypes.number.isRequired,
-  videoProgress: PropTypes.number.isRequired
+  videoProgress: PropTypes.number.isRequired,
+  isPlaying: PropTypes.bool.isRequired
 };
 
-export default ProgressCircle;
+export default ProgressRing;

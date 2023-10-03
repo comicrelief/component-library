@@ -41,8 +41,7 @@ const Promo = ({
     if (videoEl.current.duration) {
       // Calculate the percentage of the video played:
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
-      // Rounding
-      const nearest = 1;
+      const nearest = 1; // As a means of smoothing the data a bit, still playing around with it
       const roundedPercentage = (percentage + nearest / 2) - ((percentage + nearest / 2) % nearest);
       setVideoProgress(roundedPercentage);
     }
@@ -103,6 +102,7 @@ const Promo = ({
           copyLeft={copyLeft}
           videoProgress={videoProgress}
           togglePlay={togglePlay}
+          isPlaying={isPlaying}
         />
       </Media>
       )}
