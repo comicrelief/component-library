@@ -156,11 +156,11 @@ Promo w/Video
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
+import mobilePoster from '../../../styleguide/assets/mobileVideoPosterImage.png';
 const src =
   'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
-let mobileVideoSrc = 'https://www.w3schools.com/tags/movie.mp4';
-mobileVideoSrc = 'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
+let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 
 <div>
 <Text tag="h2" size="xl" color="black">
@@ -328,7 +328,7 @@ mobileVideoSrc = 'https://www.comicrelief.com/sites/default/files/downloads/Crea
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, 'light video', albeit with same file for now)
+  Promo None w/Video (no loop or autoplay, 'light video' setting, different videos and posters for mobile and desktop)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -339,8 +339,49 @@ mobileVideoSrc = 'https://www.comicrelief.com/sites/default/files/downloads/Crea
   copyLeft={true}
   hasOverlay={true}
   video={src}
-  mobileVideo={mobileVideoSrc}
+  mobileVideoSrc={mobileVideoSrc}
   poster={poster}
+  mobilePoster={mobilePoster}
+  loop={false}
+  autoPlay={false}
+  lightVideo={true}
+>
+  <Text
+    tag="h1"
+    color="black"
+    size="super"
+    family="Anton"
+    uppercase
+    weight="normal"
+  >
+    Curabitur pretium tincidunt lacus
+  </Text>
+  <Text tag="p" color="black">
+    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
+    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+  </Text>
+  <span>
+    <Link href="/" type="button" color="black">
+      <Text>
+        Show me this
+      </Text>
+    </Link>
+  </span>
+</Promo>
+
+<Text tag="h2" size="xl" color="black">
+  Promo None w/Video (no loop or autoplay, 'light video' setting, mobile-only video and poster)
+</Text>
+<Promo
+  backgroundColor="blue_light"
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
+  imageAltText=""
+  copyLeft={true}
+  hasOverlay={true}
+  mobileVideoSrc={mobileVideoSrc}
+  mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
   lightVideo={true}

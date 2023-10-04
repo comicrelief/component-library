@@ -21,9 +21,10 @@ const Promo = ({
   autoPlay,
   loop,
   poster,
+  mobilePoster,
   showPosterAfterPlaying,
   video,
-  mobileVideo,
+  mobileVideoSrc,
   lightVideo
 }) => {
   // To be updated via useEffect on load:
@@ -32,6 +33,8 @@ const Promo = ({
   const [isDesktop, setIsDesktop] = useState(null);
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
+  const [thisPoster, setThisPoster] = useState(null);
+
   const [videoProgress, setVideoProgress] = useState(0);
   const videoEl = useRef(null);
 
@@ -41,7 +44,7 @@ const Promo = ({
     setIsPlaying(!isPlaying);
   };
 
-  const hasVideo = (video || mobileVideo) || false;
+  const hasVideo = (video || mobileVideoSrc) || false;
   // Video Promo will override and ignore any 'non-Video' images
   const hasImage = (imageSet && !hasVideo) || false;
 
@@ -64,14 +67,16 @@ const Promo = ({
 
       // If we've got both desktop AND mobile videos,
       // let the breakpoint define which video src to use:
-      if (video && mobileVideo) {
-        setThisVideoSrc(desktopView ? video : mobileVideo);
+      if (video && mobileVideoSrc) {
+        setThisVideoSrc(desktopView ? video : mobileVideoSrc);
+        setThisPoster(desktopView ? poster : mobilePoster);
       } else {
         // Else, pick whatever we do actually have
-        setThisVideoSrc(video || mobileVideo);
+        setThisVideoSrc(video || mobileVideoSrc);
+        setThisPoster(poster || mobilePoster);
       }
     }
-  }, [hasVideo, video, mobileVideo]);
+  }, [hasVideo, video, mobileVideoSrc]);
 
   // Only loads once the initial screensize check is complete
   useEffect(() => {
@@ -103,7 +108,8 @@ const Promo = ({
         setTimeout(() => { setIsRestarting(false); }, 100);
       });
     }
-  }, [thisVideoSrc, hasVideo, autoPlay, isPlaying, loop, showPosterAfterPlaying, togglePlay]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thisVideoSrc]);
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -125,7 +131,7 @@ const Promo = ({
         <Video
           ref={videoEl}
           src={thisVideoSrc}
-          poster={poster}
+          poster={thisPoster}
           muted
         >
           Your browser does not support video.
@@ -161,8 +167,9 @@ Promo.propTypes = {
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
   video: PropTypes.string,
-  mobileVideo: PropTypes.string,
+  mobileVideoSrc: PropTypes.string,
   poster: PropTypes.string,
+  mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
   lightVideo: PropTypes.bool
 };
@@ -179,8 +186,9 @@ Promo.defaultProps = {
   autoPlay: true,
   loop: true,
   poster: null,
+  mobilePoster: null,
   video: null,
-  mobileVideo: null,
+  mobileVideoSrc: null,
   showPosterAfterPlaying: true,
   lightVideo: false
 };
