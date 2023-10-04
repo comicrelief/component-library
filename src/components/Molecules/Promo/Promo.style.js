@@ -69,11 +69,11 @@ const Copy = styled.div`
     ${({ hasVideo }) => hasVideo !== false && css`
       background-color: rgba(0,0,0,0.75);
       overflow: hidden;
-      box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
     `}
     ${({ hasVideo, lightVideo }) => (hasVideo !== false && lightVideo) && css`
     background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 100px 100px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 100px 75px rgba(255, 255, 255, 0.75);
   `}
   }
 
