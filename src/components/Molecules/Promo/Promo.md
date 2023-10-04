@@ -324,5 +324,45 @@ const src =
     </Link>
   </span>
 </Promo>
+
+<Text tag="h2" size="xl" color="black">
+  Promo None w/Video (no loop or autoplay, DARK text albeit the same video)
+</Text>
+<Promo
+  backgroundColor="blue_dark"
+  imageSet={defaultData.promoImage}
+  image={defaultData.promoImage}
+  imageLow={defaultData.promoImage}
+  imageAltText=""
+  copyLeft={true}
+  hasOverlay={true}
+  video={src}
+  poster={poster}
+  loop={false}
+  autoPlay={false}
+>
+  <Text
+    tag="h1"
+    color="black"
+    size="super"
+    family="Anton"
+    uppercase
+    weight="normal"
+  >
+    Curabitur pretium tincidunt lacus
+  </Text>
+  <Text tag="p" color="black">
+    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
+    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+  </Text>
+  <span>
+    <Link href="/" type="button" color="black">
+      <Text>
+        Show me this
+      </Text>
+    </Link>
+  </span>
+</Promo>
+
 </div>
 ```

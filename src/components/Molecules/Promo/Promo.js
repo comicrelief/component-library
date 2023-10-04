@@ -72,7 +72,7 @@ const Promo = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const whiteButtonDebug = true; // to-do: suss out how this relates in context
+  const lightVideo = false; // to-do: suss out how this relates in context
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -105,7 +105,7 @@ const Promo = ({
           videoProgress={videoProgress}
           togglePlay={togglePlay}
           isPlaying={isPlaying}
-          whiteButton={whiteButtonDebug}
+          lightVideo={lightVideo}
         />
       </Media>
       )}
@@ -145,6 +145,7 @@ Promo.defaultProps = {
   loop: true,
   video: false,
   showPosterAfterPlaying: true
+
 };
 
 export default Promo;
