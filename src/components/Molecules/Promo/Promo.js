@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import PromoVideoButton from './_PromoVideoButton';
@@ -25,6 +26,8 @@ const Promo = ({
 }) => {
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isRestarting, setIsRestarting] = useState(false);
+
   const [videoProgress, setVideoProgress] = useState(0);
   const videoEl = useRef(null);
 
@@ -42,7 +45,7 @@ const Promo = ({
     if (videoEl.current.duration) {
       // Calculate the percentage of the video played:
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
-      const nearest = 1; // As a means of smoothing the data a bit, still playing around with it
+      const nearest = 25; // As a means of smoothing the data a bit, still playing around with it
       const roundedPercentage = (percentage + nearest / 2) - ((percentage + nearest / 2) % nearest);
       setVideoProgress(roundedPercentage);
     }
@@ -58,16 +61,30 @@ const Promo = ({
         togglePlay();
       }
 
+      videoEl.current.addEventListener('ended', () => {
       // If this is a non-looping video, add a listener to update our local state
       // once the video's ended, to let the user retrigger it manually:
-      if (!loop) {
-        videoEl.current.addEventListener('ended', () => {
+        if (!loop) {
           setIsPlaying(false);
-          setVideoProgress(0); // good or bad?
+          setVideoProgress(0);
           // Reload the video to show the poster image:
           if (showPosterAfterPlaying) videoEl.current.load();
-        });
-      }
+        } else {
+          // Rather than using the Video 'loop' property, we retrigger
+          // it in *code* as there's no 'restarted' to hook into:
+
+          // Used purely to cancel the CSS animation:
+          setIsRestarting(true);
+
+          // Retrigger playback
+          togglePlay();
+
+          // Grace period to allow the animation to reset
+          setTimeout(() => {
+            setIsRestarting(false);
+          }, 100);
+        }
+      });
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -95,9 +112,8 @@ const Promo = ({
         <Video
           ref={videoEl}
           src={video}
-          loop={loop}
-          muted
           poster={poster}
+          muted
         >
           Your browser does not support video.
         </Video>
@@ -107,6 +123,7 @@ const Promo = ({
           togglePlay={togglePlay}
           isPlaying={isPlaying}
           lightVideo={lightVideo}
+          isRestarting={isRestarting}
         />
       </Media>
       )}

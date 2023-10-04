@@ -73,7 +73,8 @@ const ProgressRingSVG = styled.svg`
 
 const ProgressRingCircle = styled.circle`
     z-index: 100;
-    transition: stroke-dashoffset 0s;
+    transition: stroke-dashoffset 0.5s;
+
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke-dashoffset: ${({ strokeDashOffsetStyle }) => strokeDashOffsetStyle};
@@ -83,6 +84,11 @@ const ProgressRingCircle = styled.circle`
     // DARK VIDEO, WHITE BUTTON SO STROKE IS BLACK:
     ${({ lightVideo }) => !lightVideo && css`
       stroke: ${({ theme }) => theme.color('black')};
+    `}
+
+    // Cancel the animation
+    ${({ isRestarting }) => (isRestarting) && css`
+     transition: none;
     `}
 `;
 

@@ -4,7 +4,7 @@ import ProgressRing from './_ProgressRing';
 import { PlayButtonWrapper, PlayButton, Icon } from './_PromoVideoButton.style';
 
 const PromoVideoButton = ({
-  videoProgress, togglePlay, ...rest
+  togglePlay, ...rest
 }) => (
   <PlayButtonWrapper>
     <PlayButton
@@ -13,7 +13,6 @@ const PromoVideoButton = ({
     >
       <Icon {...rest} />
       <ProgressRing
-        videoProgress={videoProgress}
         {...rest}
       />
     </PlayButton>
@@ -21,7 +20,6 @@ const PromoVideoButton = ({
 );
 
 PromoVideoButton.propTypes = {
-  videoProgress: PropTypes.number.isRequired,
   togglePlay: PropTypes.func.isRequired
 };
 
