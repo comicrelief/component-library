@@ -62,8 +62,11 @@ const Promo = ({
       }
 
       videoEl.current.addEventListener('ended', () => {
-      // If this is a non-looping video, add a listener to update our local state
-      // once the video's ended, to let the user retrigger it manually:
+        // Used purely to halt the CSS animation:
+        setIsRestarting(true);
+
+        // If this is a non-looping video, add a listener to update our local state
+        // once the video's ended, to let the user retrigger it manually:
         if (!loop) {
           setIsPlaying(false);
           setVideoProgress(0);
@@ -72,18 +75,11 @@ const Promo = ({
         } else {
           // Rather than using the Video 'loop' property, we retrigger
           // it in *code* as there's no 'restarted' to hook into:
-
-          // Used purely to cancel the CSS animation:
-          setIsRestarting(true);
-
-          // Retrigger playback
           togglePlay();
-
-          // Grace period to allow the animation to reset
-          setTimeout(() => {
-            setIsRestarting(false);
-          }, 100);
         }
+
+        // Grace period to allow the animation to reset
+        setTimeout(() => { setIsRestarting(false); }, 100);
       });
     }
 
