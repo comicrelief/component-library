@@ -20,7 +20,8 @@ const Promo = ({
   loop,
   poster,
   showPosterAfterPlaying,
-  video
+  video,
+  lightVideo
 }) => {
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(false);
@@ -72,7 +73,7 @@ const Promo = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const lightVideo = false; // to-do: suss out how this relates in context
+  // const lightVideo = false; // to-do: suss out how this relates in context
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -110,7 +111,9 @@ const Promo = ({
       </Media>
       )}
       <Wrapper copyLeft={copyLeft}>
-        <Copy position={position} hasVideo={hasVideo}>{children}</Copy>
+        <Copy position={position} hasVideo={hasVideo} lightVideo={lightVideo}>
+          {children}
+        </Copy>
       </Wrapper>
     </Container>
   );
@@ -129,7 +132,8 @@ Promo.propTypes = {
   loop: PropTypes.bool,
   video: PropTypes.string,
   poster: PropTypes.string.isRequired,
-  showPosterAfterPlaying: PropTypes.bool
+  showPosterAfterPlaying: PropTypes.bool,
+  lightVideo: PropTypes.bool
 };
 
 Promo.defaultProps = {
@@ -144,8 +148,8 @@ Promo.defaultProps = {
   autoPlay: true,
   loop: true,
   video: false,
-  showPosterAfterPlaying: true
-
+  showPosterAfterPlaying: true,
+  lightVideo: false
 };
 
 export default Promo;

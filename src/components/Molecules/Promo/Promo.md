@@ -326,10 +326,10 @@ const src =
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, DARK text albeit the same video)
+  Promo None w/Video (no loop or autoplay, 'light video', albeit with same file for now)
 </Text>
 <Promo
-  backgroundColor="blue_dark"
+  backgroundColor="blue_light"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -340,6 +340,7 @@ const src =
   poster={poster}
   loop={false}
   autoPlay={false}
+  lightVideo={true}
 >
   <Text
     tag="h1"
