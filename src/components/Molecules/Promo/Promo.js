@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import PromoVideoButton from './_PromoVideoButton';
 import Picture from '../../Atoms/Picture/Picture';
+import { sizes } from '../../../theme/shared/breakpoint';
 
 import {
   Container, Wrapper, Copy, Media, Video
@@ -22,12 +23,15 @@ const Promo = ({
   poster,
   showPosterAfterPlaying,
   video,
+  mobileVideo,
   lightVideo
 }) => {
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
-
+  const [isDesktop, setIsDesktop] = useState(null);
+  // Store the appropriate prop in state, dependent on the breakpoint
+  const [thisVideoSrc, setThisVideoSrc] = useState(null);
   const [videoProgress, setVideoProgress] = useState(0);
   const videoEl = useRef(null);
 
@@ -37,7 +41,7 @@ const Promo = ({
     setIsPlaying(!isPlaying);
   };
 
-  const hasVideo = video || false;
+  const hasVideo = (video || mobileVideo) || false;
   // Video Promo will override and ignore any 'non-Video' images
   const hasImage = (imageSet && !hasVideo) || false;
 
@@ -51,10 +55,27 @@ const Promo = ({
     }
   };
 
-  // On load:
+  // Runs on initial load:
   useEffect(() => {
     if (hasVideo) {
-    // Add an event listener to EVERY video
+      // Checks size on load ONLY; don't want to mess about with listeners:
+      const desktopView = window.innerWidth >= sizes.nav;
+      setIsDesktop(desktopView);
+
+      // If we've got both desktop AND mobile videos,
+      // let the breakpoint define which video src to use:
+      if (video && mobileVideo) {
+        setThisVideoSrc(desktopView ? video : mobileVideo);
+      } else {
+        // Else, pick whatever we do actually have
+        setThisVideoSrc(video || mobileVideo);
+      }
+    }
+  }, [hasVideo, video, mobileVideo]);
+
+  // Only loads once the initial screensize check is complete
+  useEffect(() => {
+    if (hasVideo && thisVideoSrc !== null) {
       videoEl.current.addEventListener('timeupdate', updateTime);
       // Trigger on-load autoplay if apppropriate
       if (autoPlay && hasVideo && !isPlaying) {
@@ -82,11 +103,7 @@ const Promo = ({
         setTimeout(() => { setIsRestarting(false); }, 100);
       });
     }
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // const lightVideo = false; // to-do: suss out how this relates in context
+  }, [thisVideoSrc, hasVideo, autoPlay, isPlaying, loop, showPosterAfterPlaying, togglePlay]);
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -103,11 +120,11 @@ const Promo = ({
         />
       </Media>
       )}
-      {(hasVideo && !hasImage) && (
+      {(hasVideo && thisVideoSrc) && (
       <Media imageRight={copyLeft}>
         <Video
           ref={videoEl}
-          src={video}
+          src={thisVideoSrc}
           poster={poster}
           muted
         >
@@ -144,7 +161,8 @@ Promo.propTypes = {
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
   video: PropTypes.string,
-  poster: PropTypes.string.isRequired,
+  mobileVideo: PropTypes.string,
+  poster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
   lightVideo: PropTypes.bool
 };
@@ -160,7 +178,9 @@ Promo.defaultProps = {
   position: 'none',
   autoPlay: true,
   loop: true,
-  video: false,
+  poster: null,
+  video: null,
+  mobileVideo: null,
   showPosterAfterPlaying: true,
   lightVideo: false
 };

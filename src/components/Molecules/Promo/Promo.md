@@ -159,6 +159,8 @@ import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
 const src =
   'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
+let mobileVideoSrc = 'https://www.w3schools.com/tags/movie.mp4';
+mobileVideoSrc = 'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
 <div>
 <Text tag="h2" size="xl" color="black">
@@ -337,6 +339,7 @@ const src =
   copyLeft={true}
   hasOverlay={true}
   video={src}
+  mobileVideo={mobileVideoSrc}
   poster={poster}
   loop={false}
   autoPlay={false}
