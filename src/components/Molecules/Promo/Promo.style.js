@@ -73,7 +73,7 @@ const Copy = styled.div`
     `}
     ${({ hasVideo, lightVideo }) => (hasVideo !== false && lightVideo) && css`
     background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 100px 75px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
   `}
   }
 
