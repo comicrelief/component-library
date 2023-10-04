@@ -161,7 +161,6 @@ exports[`renders correctly 1`] = `
     >
       <label
         className="c3 TextInputWithDropdown__input"
-        htmlFor="postcode_lookup"
       >
         <span
           className="c4 c5"
@@ -178,11 +177,8 @@ exports[`renders correctly 1`] = `
         >
           
           <input
-            aria-describedby="postcode_lookup"
             autoComplete="off"
             className="c7"
-            id="postcode_lookup"
-            name="postcode_lookup"
             onChange={[Function]}
             onKeyPress={[Function]}
             placeholder="Enter postcode..."

@@ -48,15 +48,14 @@ const addressFetcher = async postcode => {
  * @constructor
  */
 const PostcodeLookup = ({
-  onSelect, name, label, ...rest
+  onSelect, label, placeholder, buttonText, noResultsMessage, ...rest
 }) => (
   <StyledWrapper>
     <Lookup
-      name={name}
       label={label}
-      placeholder="Enter postcode..."
-      buttonText="Find address"
-      noResultsMessage="Sorry, could not find any addresses for that postcode"
+      placeholder={placeholder}
+      buttonText={buttonText}
+      noResultsMessage={noResultsMessage}
       mapOptionToString={addressToString}
       lookupHandler={addressFetcher}
       onSelect={onSelect}
@@ -67,13 +66,17 @@ const PostcodeLookup = ({
 
 PostcodeLookup.propTypes = {
   onSelect: PropTypes.func.isRequired,
-  name: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  buttonText: PropTypes.string,
+  noResultsMessage: PropTypes.string
 };
 
 PostcodeLookup.defaultProps = {
-  name: 'postcode_lookup',
-  label: 'Find address by postcode'
+  label: 'Find address by postcode',
+  placeholder: 'Enter postcode...',
+  buttonText: 'Find address',
+  noResultsMessage: 'Sorry, could not find any addresses for that postcode'
 };
 
 export default PostcodeLookup;
