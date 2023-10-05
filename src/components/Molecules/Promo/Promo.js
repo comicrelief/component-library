@@ -4,7 +4,6 @@ import PromoVideo from './_PromoVideo';
 import { sizes } from '../../../theme/shared/breakpoint';
 
 import Picture from '../../Atoms/Picture/Picture';
-// import { sizes } from '../../../theme/shared/breakpoint';
 
 import {
   Container, Wrapper, Copy, Media
@@ -82,31 +81,7 @@ const Promo = ({
             showPosterAfterPlaying={showPosterAfterPlaying}
             autoPlay={autoPlay}
             loop={loop}
-            // ref={videoEl}
-            // isRestarting={isRestarting}
-            // thisPoster={thisPoster}
-            // videoProgress={videoProgress}
-            // thisVideoSrc={thisVideoSrc}
-            // lightVideo={lightVideo}
-            // isPlaying={isPlaying}
-            // togglePlay={togglePlay}
           />
-          {/* <Video
-            ref={videoEl}
-            src={thisVideoSrc}
-            poster={thisPoster}
-            muted
-          >
-            Your browser does not support video.
-          </Video>
-          <PromoVideoButton
-            copyLeft={copyLeft}
-            videoProgress={videoProgress}
-            togglePlay={togglePlay}
-            isPlaying={isPlaying}
-            lightVideo={lightVideo}
-            isRestarting={isRestarting}
-          /> */}
         </>
         )}
       </Media>

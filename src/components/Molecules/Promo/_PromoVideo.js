@@ -90,7 +90,7 @@ const PromoVideo = ({
     </>
   );
 };
-
+// to-do: these aren't all required, update accordingly
 PromoVideo.propTypes = {
   copyLeft: PropTypes.bool.isRequired,
   lightVideo: PropTypes.bool.isRequired,
