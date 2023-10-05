@@ -12,7 +12,6 @@ const PromoVideo = ({
   loop,
   showPosterAfterPlaying
 }) => {
-  // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
   const [videoProgress, setVideoProgress] = useState(0);
