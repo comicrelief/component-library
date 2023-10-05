@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import PromoVideoButton from './_PromoVideoButton';
@@ -30,7 +29,6 @@ const Promo = ({
   // To be updated via useEffect on load:
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(null);
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
   const [thisPoster, setThisPoster] = useState(null);
@@ -62,14 +60,13 @@ const Promo = ({
   useEffect(() => {
     if (hasVideo) {
       // Checks size on load ONLY; don't want to mess about with listeners:
-      const desktopView = window.innerWidth >= sizes.nav;
-      setIsDesktop(desktopView);
+      const isDesktop = window.innerWidth >= sizes.nav; // 1024+ px
 
-      // If we've got both desktop AND mobile videos,
-      // let the breakpoint define which video src to use:
+      // If we've got both desktop AND mobile videos, let
+      // the breakpoint define which video src to use:
       if (video && mobileVideoSrc) {
-        setThisVideoSrc(desktopView ? video : mobileVideoSrc);
-        setThisPoster(desktopView ? poster : mobilePoster);
+        setThisVideoSrc(isDesktop ? video : mobileVideoSrc);
+        setThisPoster(isDesktop ? poster : mobilePoster);
       } else {
         // Else, pick whatever we do actually have
         setThisVideoSrc(video || mobileVideoSrc);
