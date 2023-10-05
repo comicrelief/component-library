@@ -157,7 +157,7 @@ const defaultData = require('../../../styleguide/data/data').defaultData;import 
 import Link from '../../Atoms/Link/Link';
 import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
 import mobilePoster from '../../../styleguide/assets/mobileVideoPosterImage.png';
-const src =
+const videoSrc =
   'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 
 let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
@@ -175,7 +175,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   copyLeft={true}
   hasOverlay={true}
   position="upper"
-  video={src}
+  videoSrc={videoSrc}
   poster={poster}
   loop={true}
   autoplay={true}
@@ -217,7 +217,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   copyLeft={true}
   hasOverlay={true}
   position="end"
-  video={src}
+  videoSrc={videoSrc}
   poster={poster}
   loop={true}
   autoPlay={false}
@@ -259,7 +259,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   copyLeft={true}
   hasOverlay={true}
   position="lower"
-  video={src}
+  videoSrc={videoSrc}
   poster={poster}
   loop={false}
   autoPlay={true}
@@ -299,7 +299,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageAltText=""
   copyLeft={false}
   hasOverlay={true}
-  video={src}
+  videoSrc={videoSrc}
   poster={poster}
   loop={false}
   autoPlay={false}
@@ -338,7 +338,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageAltText=""
   copyLeft={true}
   hasOverlay={true}
-  video={src}
+  videoSrc={videoSrc}
   mobileVideoSrc={mobileVideoSrc}
   poster={poster}
   mobilePoster={mobilePoster}

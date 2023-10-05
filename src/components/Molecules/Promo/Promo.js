@@ -23,16 +23,19 @@ const Promo = ({
   poster,
   mobilePoster,
   showPosterAfterPlaying,
-  video,
+  videoSrc,
   mobileVideoSrc,
   lightVideo
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
   const [thisPoster, setThisPoster] = useState(null);
-  const hasVideo = (video || mobileVideoSrc) || false;
-  // Video Promo will override and ignore any 'non-Video' images
-  const hasImage = (imageSet && !hasVideo) || false;
+
+  // Let either field define this, just in case
+  const hasVideo = Boolean(videoSrc || mobileVideoSrc);
+  // A 'video-y' Promo will override and ignore any 'non-Video' images;
+  // none of these fields are required so we have to handle them accordingly:
+  const hasImage = Boolean(imageSet && !hasVideo);
 
   // Runs on initial load:
   useEffect(() => {
@@ -42,20 +45,20 @@ const Promo = ({
       let currentPoster; let currentSrc;
 
       // If we've got both desktop AND mobile videos, let
-      // the breakpoint define which video src to use:
-      if (video && mobileVideoSrc) {
-        currentSrc = isDesktop ? video : mobileVideoSrc;
+      // the *current* screen width define which video src to use:
+      if (videoSrc && mobileVideoSrc) {
+        currentSrc = isDesktop ? videoSrc : mobileVideoSrc;
         currentPoster = isDesktop ? poster : mobilePoster;
       } else {
         // Else, pick whatever we DO actually have:
-        currentSrc = video || mobileVideoSrc;
+        currentSrc = videoSrc || mobileVideoSrc;
         currentPoster = poster || mobilePoster;
       }
 
       setThisVideoSrc(currentSrc);
       setThisPoster(currentPoster);
     }
-  }, [hasVideo, video, mobileVideoSrc, mobilePoster, poster]);
+  }, [hasVideo, videoSrc, mobileVideoSrc, mobilePoster, poster]);
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
@@ -106,7 +109,7 @@ Promo.propTypes = {
   position: PropTypes.oneOf(['upper', 'lower', 'end', 'none']),
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
-  video: PropTypes.string,
+  videoSrc: PropTypes.string,
   mobileVideoSrc: PropTypes.string,
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
@@ -127,7 +130,7 @@ Promo.defaultProps = {
   loop: true,
   poster: null,
   mobilePoster: null,
-  video: null,
+  videoSrc: null,
   mobileVideoSrc: null,
   showPosterAfterPlaying: true,
   lightVideo: false
