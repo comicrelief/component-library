@@ -44,8 +44,8 @@ const Promo = ({
       const isDesktop = window.innerWidth >= sizes.nav; // 1024+ px
       let currentPoster; let currentSrc;
 
-      // If we've got both desktop AND mobile videos, let
-      // the *current* screen width define which video src to use:
+      // If we've got both desktop AND mobile videos, let the
+      // *current* screen width define which video src to use:
       if (videoSrc && mobileVideoSrc) {
         currentSrc = isDesktop ? videoSrc : mobileVideoSrc;
         currentPoster = isDesktop ? poster : mobilePoster;
@@ -74,6 +74,8 @@ const Promo = ({
           height="100%"
         />
         )}
+        {/* If no poster image is supplied, it'll gracefully
+        fall back to the first frame, so only checking for a src here */}
         {(hasVideo && thisVideoSrc) && (
         <>
           <PromoVideo
