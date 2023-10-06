@@ -56,48 +56,6 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
-  cypress:
-    name: Cypress test
-    needs:
-      - lint
-      - unit-test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-
-      # see https://github.com/marketplace/actions/cypress-io
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn styleguide
-          command: yarn cy:run
-          wait-on: http://localhost:6060
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
-
-      # NOTE: screenshots will be generated only if the tests failed
-      # thus we store screenshots only on failures
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      # Test run video was always captured, so this action uses "always()" condition
-      - name: Upload videos
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
-
   publish:
     name: Publish package to npm
     if: github.ref == 'refs/heads/master'
@@ -156,7 +114,7 @@ jobs:
         run: yarn playwright install --with-deps chromium
 
       - name: Run end-to-end tests
-        run: yarn test:playwright:ci
+        run: yarn test:e2e:ci
         continue-on-error: false
         env:
           NODE_OPTIONS: --max_old_space_size=4096
