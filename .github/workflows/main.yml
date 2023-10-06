@@ -52,7 +52,7 @@ jobs:
         run: yarn build
 
       - name: Run unit tests
-        run: yarn test --maxWorkers=2
+        run: yarn test:unit --maxWorkers=2
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 

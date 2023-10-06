@@ -51,7 +51,7 @@
     "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
   },
   "scripts": {
-    "test": "yarn run jest",
+    "test:unit": "yarn run jest",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
