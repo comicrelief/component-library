@@ -129,3 +129,43 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISHING_TOKEN }}
+
+  playwright:
+    name: Playwright test
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Restore packages cache
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      - name: Install playwright browsers
+        run: yarn playwright install --with-deps chromium
+
+      - name: Run end-to-end tests
+        run: yarn test:e2e:ci
+        continue-on-error: false
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+
+      # Test run video was always captured, so this action uses "always()" condition
+      - name: Upload videos
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 3

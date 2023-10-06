@@ -5,9 +5,6 @@
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
 # production
 /build
 /dist
@@ -30,3 +27,10 @@ yarn-error.log*
 /cypress/videos
 /cypress/screenshots
 /cypress/**/__diff_output__
+
+# testing
+/coverage
+/tests_output
+/test-results/
+/playwright-report/
+/playwright/.cache/
