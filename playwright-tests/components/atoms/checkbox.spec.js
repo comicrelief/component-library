@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('checkbox', () => {
-  test('Checkbox component', async ({ page }) => {
+  test('checkbox component', async ({ page }) => {
 
     await page.goto('/#checkbox');
 
