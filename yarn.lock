@@ -7,14 +7,14 @@
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.2.0.tgz#e1a84fca468f4b337816fcb7f0964beb620ba855"
   integrity sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==
 
-"@babel/cli@^7.21.5":
-  version "7.21.5"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.21.5.tgz#a685a5b50b785f2edfbf6e042c1265c653547d9d"
-  integrity sha512-TOKytQ9uQW9c4np8F+P7ZfPINy5Kv+pizDIUwSVH8X5zHgYHV4AA8HE5LA450xXeu4jEfmUckTYvv1I4S26M/g==
+"@babel/cli@^7.23.0":
+  version "7.23.0"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.23.0.tgz#1d7f37c44d4117c67df46749e0c86e11a58cc64b"
+  integrity sha512-17E1oSkGk2IwNILM4jtfAvgjt+ohmpfBky8aLerUfYZhiPNg7ca+CRCxZn8QDxwNhV/upsc2VHBCqGFIR+iBfA==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.17"
     commander "^4.0.1"
-    convert-source-map "^1.1.0"
+    convert-source-map "^2.0.0"
     fs-readdir-recursive "^1.1.0"
     glob "^7.2.0"
     make-dir "^2.1.0"
@@ -4065,11 +4065,16 @@ convert-source-map@^0.3.3:
   version "0.3.5"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-0.3.5.tgz"
 
-convert-source-map@^1.1.0, convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
+convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.8.0.tgz"
   dependencies:
     safe-buffer "~5.1.1"
+
+convert-source-map@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
+  integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
 cookie-signature@1.0.6:
   version "1.0.6"
