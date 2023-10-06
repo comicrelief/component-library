@@ -33,4 +33,4 @@ yarn-error.log*
 /tests_output
 /test-results/
 /playwright-report/
-/playwright/.cache/
+/playwright-tests/.cache/

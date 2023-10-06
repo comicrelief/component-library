@@ -156,7 +156,7 @@ jobs:
         run: yarn playwright install --with-deps chromium
 
       - name: Run end-to-end tests
-        run: yarn test:e2e:ci
+        run: yarn test:playwright:ci
         continue-on-error: false
         env:
           NODE_OPTIONS: --max_old_space_size=4096
