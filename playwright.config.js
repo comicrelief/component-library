@@ -11,7 +11,7 @@ require('dotenv').config();
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './playwright',
+  testDir: './playwright-tests',
   /* Fail the build on CI if you accidentally left test
   .only in the source code. */
   forbidOnly: !!process.env.CI,
