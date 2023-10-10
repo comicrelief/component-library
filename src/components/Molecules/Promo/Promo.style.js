@@ -44,7 +44,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  ${({ copyFirst }) => !copyFirst && 'justify-content: flex-end'};
+
+  ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
   ${media('medium')} {
     min-height: calc(100vh - 90px);
   }
@@ -54,6 +55,7 @@ const Copy = styled.div`
   width: 100%;
   padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
   ${zIndex('low')};
+
   ${media('medium')} {
     width: 70%;
     padding: ${spacing('xl')} ${spacing('m')};
@@ -61,7 +63,18 @@ const Copy = styled.div`
   ${media('medium')} {
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
+
+    ${({ hasVideo }) => hasVideo !== false && css`
+      background-color: rgba(0,0,0,0.75);
+      overflow: hidden;
+      box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
+    `}
+    ${({ hasVideo, lightColouredVideo }) => (hasVideo !== false && lightColouredVideo) && css`
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
+  `}
   }
+
   ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
     ${media('medium')} {
@@ -83,6 +96,14 @@ const Media = styled.div`
   }
 `;
 
+const Video = styled.video.attrs(() => ({
+  playsInline: true
+}))`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export {
-  Container, Wrapper, Copy, Media
+  Container, Wrapper, Copy, Media, Video
 };
