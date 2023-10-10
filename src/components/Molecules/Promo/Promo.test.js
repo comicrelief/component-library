@@ -13,7 +13,7 @@ it('renders Promo correctly', () => {
       imageSet={defaultData.promoImage}
       image={defaultData.promoImage}
       imageAltText=""
-      copyFirst={false}
+      copyLeft={false}
     >
       <Text
         tag="h1"
@@ -47,7 +47,7 @@ it('renders Promo correctly end position', () => {
       imageSet={defaultData.promoImage}
       image={defaultData.promoImage}
       imageAltText=""
-      copyFirst={false}
+      copyLeft={false}
       position="end"
     >
       <Text
