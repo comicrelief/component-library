@@ -99,7 +99,7 @@ jobs:
   publish:
     name: Publish package to npm
     if: github.ref == 'refs/heads/master'
-    needs: cypress
+    needs: playwright
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
