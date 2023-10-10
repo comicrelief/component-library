@@ -27,7 +27,9 @@ const PromoVideo = ({
     if (videoEl.current.duration) {
       // Calculate the percentage of the video played:
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
-      const nearest = 25; // As a means of smoothing the data a bit, still playing around with it
+      // Because a completely smooth animation is impossible with the 250ms-ish frequency of
+      // the 'timeupdate' event, we're electing to just update the ring every 25%.
+      const nearest = 25;
       const roundedPercentage = (percentage + nearest / 2) - ((percentage + nearest / 2) % nearest);
       setVideoProgress(roundedPercentage);
     }
@@ -64,7 +66,7 @@ const PromoVideo = ({
         setTimeout(() => { setIsRestarting(false); }, 100);
       });
     }
-    // Certainly don't want this running for each of these, sorry LINT
+    // CERTAINLY don't want this re-running for EACH of these variable updates, sorry Lint...
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [thisVideoSrc]);
 
@@ -89,7 +91,7 @@ const PromoVideo = ({
     </>
   );
 };
-// to-do: these aren't all required, update accordingly
+
 PromoVideo.propTypes = {
   copyLeft: PropTypes.bool.isRequired,
   lightColouredVideo: PropTypes.bool.isRequired,

@@ -60,8 +60,6 @@ const Copy = styled.div`
     width: 70%;
     padding: ${spacing('xl')} ${spacing('m')};
   }
-
-  // lol wtf is there 2 different medium media queries??
   ${media('medium')} {
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
