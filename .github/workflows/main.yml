@@ -56,38 +56,6 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
-  publish:
-    name: Publish package to npm
-    if: github.ref == 'refs/heads/master'
-    needs: cypress
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-
-      - name: Restore packages cache
-        uses: actions/cache@v3
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile --ignore-scripts
-
-      - name: Build
-        run: yarn build
-
-      - name: Release
-        run: yarn semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISHING_TOKEN }}
-
   playwright:
     name: Playwright test
     timeout-minutes: 10
@@ -127,3 +95,35 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 3
+
+  publish:
+    name: Publish package to npm
+    if: github.ref == 'refs/heads/master'
+    needs: cypress
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Restore packages cache
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      - name: Build
+        run: yarn build
+
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISHING_TOKEN }}
