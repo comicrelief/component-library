@@ -4,7 +4,7 @@ import { Video } from './Promo.style';
 import PromoVideoButton from './_PromoVideoButton';
 
 const PromoVideo = ({
-  lightVideo,
+  lightColouredVideo,
   copyLeft,
   thisVideoSrc,
   thisPoster,
@@ -83,7 +83,7 @@ const PromoVideo = ({
         videoProgress={videoProgress}
         togglePlay={togglePlay}
         isPlaying={isPlaying}
-        lightVideo={lightVideo}
+        lightColouredVideo={lightColouredVideo}
         isRestarting={isRestarting}
       />
     </>
@@ -92,7 +92,7 @@ const PromoVideo = ({
 // to-do: these aren't all required, update accordingly
 PromoVideo.propTypes = {
   copyLeft: PropTypes.bool.isRequired,
-  lightVideo: PropTypes.bool.isRequired,
+  lightColouredVideo: PropTypes.bool.isRequired,
   thisVideoSrc: PropTypes.string.isRequired,
   thisPoster: PropTypes.string.isRequired,
   autoPlay: PropTypes.bool.isRequired,

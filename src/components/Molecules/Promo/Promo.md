@@ -328,7 +328,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, 'light video' setting, different videos and posters for mobile and desktop)
+  Promo None w/Video (no loop or autoplay, 'light-coloured video' setting, different videos and posters for mobile and desktop)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -344,7 +344,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  lightVideo={true}
+  lightColouredVideo={true}
 >
   <Text
     tag="h1"
@@ -370,7 +370,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, 'light video' setting, mobile-only video and poster)
+  Promo None w/Video (no loop or autoplay, 'light-coloured video' setting, mobile-only video and poster)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -384,7 +384,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  lightVideo={true}
+  lightColouredVideo={true}
 >
   <Text
     tag="h1"

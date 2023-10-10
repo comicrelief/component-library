@@ -71,7 +71,7 @@ const Copy = styled.div`
       overflow: hidden;
       box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
     `}
-    ${({ hasVideo, lightVideo }) => (hasVideo !== false && lightVideo) && css`
+    ${({ hasVideo, lightColouredVideo }) => (hasVideo !== false && lightColouredVideo) && css`
     background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
   `}

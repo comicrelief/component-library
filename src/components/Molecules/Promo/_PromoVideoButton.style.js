@@ -31,8 +31,8 @@ const PlayButton = styled.button`
     outline-width: medium;
   }
 
-  // Non-light video:
-  ${({ lightVideo }) => !lightVideo && css`
+  // Non-light coloured video:
+  ${({ lightColouredVideo }) => !lightColouredVideo && css`
     background: ${({ theme }) => theme.color('white')};
   `}
 
@@ -81,8 +81,8 @@ const ProgressRingCircle = styled.circle`
     stroke: white; // need to changed based on Promo settings
     fill: transparent;
 
-    // Non-light video, white button, black stroke
-    ${({ lightVideo }) => !lightVideo && css`
+    // Non-light coloured video, white button, black stroke
+    ${({ lightColouredVideo }) => !lightColouredVideo && css`
       stroke: ${({ theme }) => theme.color('black')};
     `}
 
@@ -97,21 +97,21 @@ const Icon = styled.span`
   width: 50px;
   background: no-repeat center/50% url(${playWhite}) transparent;
 
-  // Light video, black button, white icons
-  ${({ lightVideo, isPlaying }) => (lightVideo && !isPlaying) && css`
+  // Light-coloured video, black button, white icons
+  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && !isPlaying) && css`
     background-image: url(${playWhite});
   `}
 
-  ${({ lightVideo, isPlaying }) => (lightVideo && isPlaying) && css`
+  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && isPlaying) && css`
     background-image: url(${pauseWhite});
   `}
 
-  // Non-light video, white button, black icons
-  ${({ lightVideo, isPlaying }) => (!lightVideo && !isPlaying) && css`
+  // Non-light coloured video, white button, black icons
+  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && !isPlaying) && css`
     background-image: url(${playBlack});
   `}
 
-  ${({ lightVideo, isPlaying }) => (!lightVideo && isPlaying) && css`
+  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && isPlaying) && css`
     background-image: url(${pauseBlack});
   `}
 `;

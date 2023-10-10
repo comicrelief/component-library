@@ -25,7 +25,7 @@ const Promo = ({
   showPosterAfterPlaying,
   videoSrc,
   mobileVideoSrc,
-  lightVideo
+  lightColouredVideo
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -80,7 +80,7 @@ const Promo = ({
         <>
           <PromoVideo
             copyLeft={copyLeft}
-            lightVideo={lightVideo}
+            lightColouredVideo={lightColouredVideo}
             thisVideoSrc={thisVideoSrc}
             thisPoster={thisPoster}
             showPosterAfterPlaying={showPosterAfterPlaying}
@@ -92,7 +92,7 @@ const Promo = ({
       </Media>
 
       <Wrapper copyLeft={copyLeft}>
-        <Copy position={position} hasVideo={hasVideo} lightVideo={lightVideo}>
+        <Copy position={position} hasVideo={hasVideo} lightColouredVideo={lightColouredVideo}>
           {children}
         </Copy>
       </Wrapper>
@@ -116,7 +116,7 @@ Promo.propTypes = {
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
-  lightVideo: PropTypes.bool
+  lightColouredVideo: PropTypes.bool
 };
 
 Promo.defaultProps = {
@@ -135,7 +135,7 @@ Promo.defaultProps = {
   videoSrc: null,
   mobileVideoSrc: null,
   showPosterAfterPlaying: true,
-  lightVideo: false
+  lightColouredVideo: false
 };
 
 export default Promo;
