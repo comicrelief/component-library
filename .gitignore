@@ -24,13 +24,9 @@ yarn-error.log*
 .idea
 .vscode
 
-/cypress/videos
-/cypress/screenshots
-/cypress/**/__diff_output__
-
 # testing
 /coverage
 /tests_output
 /test-results/
 /playwright-report/
-/e2e/.cache/
+/playwright/.cache/
