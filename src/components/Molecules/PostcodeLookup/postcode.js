@@ -3,9 +3,6 @@ import axios from 'axios';
 
 const endpoint = 'https://lookups-staging.sls.comicrelief.com/postcode/lookup/bs56hq';
 
-export const fetchPostcode = function () {
-  return axios
-    .get(endpoint)
-    .then(response => response.data);
-};
+export const fetchPostcode = () => axios.get(endpoint).then(response => response.data);
 
+export default fetchPostcode;
