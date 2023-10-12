@@ -4,6 +4,18 @@ import pauseWhite from './assets/Pause--white.svg';
 import playBlack from './assets/Play--black.svg';
 import pauseBlack from './assets/Pause--black.svg';
 
+const PlayButtonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:after {
+    // Preload all button icons
+    content: url(${playWhite}) url(${pauseWhite}) url(${playBlack}) url(${pauseBlack}) none;
+  }
+`;
+
 const PlayButton = styled.button`
   display: flex;
   width: 50px;
@@ -50,14 +62,6 @@ const PlayButton = styled.button`
       left: 20px;
     `}
   }
-`;
-
-const PlayButtonWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
 
 const ProgressRingWrapper = styled.span`
