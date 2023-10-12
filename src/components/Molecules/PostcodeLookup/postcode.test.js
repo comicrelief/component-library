@@ -3,7 +3,7 @@ import { fetchPostcode } from "./postcode.js";
 
 jest.mock("axios");
 
-const albumData = {
+const postCodeData = {
   userId: 1,
   id: 2,
   title: "sunt qui excepturi placeat culpa",
@@ -12,10 +12,9 @@ const albumData = {
 
 test("mock axios get function", async () => {
     expect.assertions(1);
-    const album = albumData;
-    const payload = { data: album };
+    const payload = { data: postCodeData };
     // Now mock axios get method
     axios.get = jest.fn().mockResolvedValue(payload);
-    await expect(fetchPostcode()).resolves.toEqual(album);
+    await expect(fetchPostcode()).resolves.toEqual(postCodeData);
   });
 
