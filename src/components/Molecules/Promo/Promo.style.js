@@ -64,14 +64,15 @@ const Copy = styled.div`
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
 
-    ${({ hasVideo }) => hasVideo !== false && css`
+    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient === 'black') && css`
       background-color: rgba(0,0,0,0.75);
       overflow: hidden;
       box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
     `}
-    ${({ hasVideo, lightColouredVideo }) => (hasVideo !== false && lightColouredVideo) && css`
-    background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
+
+    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient === 'white') && css`
+      background-color: rgba(255, 255, 255, 0.75);
+      box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
   `}
   }
 

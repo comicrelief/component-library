@@ -4,6 +4,18 @@ import pauseWhite from './assets/Pause--white.svg';
 import playBlack from './assets/Play--black.svg';
 import pauseBlack from './assets/Pause--black.svg';
 
+const PlayButtonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:after {
+    // Preload all button icons
+    content: url(${playWhite}) url(${pauseWhite}) url(${playBlack}) url(${pauseBlack}) none;
+  }
+`;
+
 const PlayButton = styled.button`
   display: flex;
   width: 50px;
@@ -17,8 +29,8 @@ const PlayButton = styled.button`
   padding: 0;
   margin: 0;
   border-radius: 50%;
-  background: ${({ theme }) => theme.color('black')};
-  opacity: 0.75;
+  background: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
   transition: opacity 0.2s;
 
   &:hover,
@@ -31,9 +43,8 @@ const PlayButton = styled.button`
     outline-width: medium;
   }
 
-  // Non-light coloured video:
-  ${({ lightColouredVideo }) => !lightColouredVideo && css`
-    background: ${({ theme }) => theme.color('white')};
+  ${({ blackPlayButton }) => blackPlayButton && css`
+    background: ${({ theme }) => theme.color('black')};
   `}
 
   ${({ copyLeft }) => !copyLeft && css`
@@ -50,14 +61,6 @@ const PlayButton = styled.button`
       left: 20px;
     `}
   }
-`;
-
-const PlayButtonWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
 
 const ProgressRingWrapper = styled.span`
@@ -81,8 +84,8 @@ const ProgressRingCircle = styled.circle`
     stroke: white; // need to changed based on Promo settings
     fill: transparent;
 
-    // Non-light coloured video, white button, black stroke
-    ${({ lightColouredVideo }) => !lightColouredVideo && css`
+    // White button, black stroke
+    ${({ blackPlayButton }) => !blackPlayButton && css`
       stroke: ${({ theme }) => theme.color('black')};
     `}
 
@@ -97,21 +100,21 @@ const Icon = styled.span`
   width: 50px;
   background: no-repeat center/50% url(${playWhite}) transparent;
 
-  // Light-coloured video, black button, white icons
-  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && !isPlaying) && css`
+  // Black button, white icons
+  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && !isPlaying) && css`
     background-image: url(${playWhite});
   `}
 
-  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && isPlaying) && css`
+  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && isPlaying) && css`
     background-image: url(${pauseWhite});
   `}
 
-  // Non-light coloured video, white button, black icons
-  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && !isPlaying) && css`
+  // White button, black icons
+  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && !isPlaying) && css`
     background-image: url(${playBlack});
   `}
 
-  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && isPlaying) && css`
+  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && isPlaying) && css`
     background-image: url(${pauseBlack});
   `}
 `;

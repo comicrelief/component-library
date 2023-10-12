@@ -15,7 +15,6 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="upper"
 >
   <Text
@@ -51,7 +50,6 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="end"
 >
   <Text
@@ -87,7 +85,6 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="lower"
 >
   <Text
@@ -123,7 +120,6 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
 >
   <Text
     tag="h1"
@@ -164,7 +160,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 
 <div>
 <Text tag="h2" size="xl" color="black">
-  Promo Upper w/Video (autoplay and loop)
+  Promo Upper w/Video (autoplay and loop, black text gradient overlay)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -173,12 +169,12 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="upper"
   videoSrc={videoSrc}
   poster={poster}
   loop={true}
   autoplay={true}
+  behindTextGradient='black'
 >
   <Text
     tag="h1"
@@ -206,7 +202,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo End w/Video (loop only)
+  Promo End w/Video (loop only, no text gradient overlay)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -215,7 +211,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="end"
   videoSrc={videoSrc}
   poster={poster}
@@ -248,7 +243,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo Lower w/Video (autoplay only)
+  Promo Lower w/Video (autoplay only, white text gradient overlay)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -257,16 +252,16 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   position="lower"
   videoSrc={videoSrc}
   poster={poster}
   loop={false}
   autoPlay={true}
+  behindTextGradient='white'
 >
   <Text
     tag="h1"
-    color="white"
+    color="black"
     size="super"
     family="Anton"
     uppercase
@@ -274,12 +269,12 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   >
     Curabitur pretium tincidunt lacus
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
     turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
   </Text>
   <span>
-    <Link href="/" type="button" color="white">
+    <Link href="/" type="button" color="black">
       <Text>
         Show me this
       </Text>
@@ -289,7 +284,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 
 <br />
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay)
+  Promo None w/Video (no loop or autoplay, no text gradient overlay)
 </Text>
 <Promo
   backgroundColor="blue_dark"
@@ -298,7 +293,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={false}
-  hasOverlay={true}
   videoSrc={videoSrc}
   poster={poster}
   loop={false}
@@ -328,7 +322,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, 'light-coloured video' setting, different videos and posters for mobile and desktop)
+  Promo None w/Video (no loop or autoplay, white text gradient overlay, different videos and posters for mobile and desktop)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -337,14 +331,13 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   videoSrc={videoSrc}
   mobileVideoSrc={mobileVideoSrc}
   poster={poster}
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  lightColouredVideo={true}
+  behindTextGradient='white'
 >
   <Text
     tag="h1"
@@ -370,7 +363,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, 'light-coloured video' setting, mobile-only video and poster)
+  Promo None w/Video (no loop or autoplay, white text gradient overlay, mobile-only video and poster)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -379,12 +372,11 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  hasOverlay={true}
   mobileVideoSrc={mobileVideoSrc}
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  lightColouredVideo={true}
+  behindTextGradient='white'
 >
   <Text
     tag="h1"
