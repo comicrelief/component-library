@@ -363,7 +363,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 </Promo>
 
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, white text gradient overlay, mobile-only video and poster)
+  Promo None w/Video (no loop or autoplay, white text gradient overlay, mobile-only video and poster, black play button)
 </Text>
 <Promo
   backgroundColor="blue_light"
@@ -377,6 +377,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   loop={false}
   autoPlay={false}
   behindTextGradient='white'
+  blackPlayButton={true}
 >
   <Text
     tag="h1"
