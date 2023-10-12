@@ -29,8 +29,8 @@ const PlayButton = styled.button`
   padding: 0;
   margin: 0;
   border-radius: 50%;
-  background: ${({ theme }) => theme.color('black')};
-  opacity: 0.75;
+  background: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
   transition: opacity 0.2s;
 
   &:hover,
@@ -43,9 +43,8 @@ const PlayButton = styled.button`
     outline-width: medium;
   }
 
-  // Non-light coloured video:
-  ${({ lightColouredVideo }) => !lightColouredVideo && css`
-    background: ${({ theme }) => theme.color('white')};
+  ${({ blackPlayButton }) => blackPlayButton && css`
+    background: ${({ theme }) => theme.color('black')};
   `}
 
   ${({ copyLeft }) => !copyLeft && css`
@@ -85,8 +84,8 @@ const ProgressRingCircle = styled.circle`
     stroke: white; // need to changed based on Promo settings
     fill: transparent;
 
-    // Non-light coloured video, white button, black stroke
-    ${({ lightColouredVideo }) => !lightColouredVideo && css`
+    // White button, black stroke
+    ${({ blackPlayButton }) => !blackPlayButton && css`
       stroke: ${({ theme }) => theme.color('black')};
     `}
 
@@ -101,21 +100,21 @@ const Icon = styled.span`
   width: 50px;
   background: no-repeat center/50% url(${playWhite}) transparent;
 
-  // Light-coloured video, black button, white icons
-  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && !isPlaying) && css`
+  // Black button, white icons
+  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && !isPlaying) && css`
     background-image: url(${playWhite});
   `}
 
-  ${({ lightColouredVideo, isPlaying }) => (lightColouredVideo && isPlaying) && css`
+  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && isPlaying) && css`
     background-image: url(${pauseWhite});
   `}
 
-  // Non-light coloured video, white button, black icons
-  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && !isPlaying) && css`
+  // White button, black icons
+  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && !isPlaying) && css`
     background-image: url(${playBlack});
   `}
 
-  ${({ lightColouredVideo, isPlaying }) => (!lightColouredVideo && isPlaying) && css`
+  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && isPlaying) && css`
     background-image: url(${pauseBlack});
   `}
 `;
