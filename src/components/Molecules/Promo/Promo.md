@@ -387,19 +387,8 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
     uppercase
     weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    One-Line Special
   </Text>
-  <Text tag="p" color="black">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
-  </Text>
-  <span>
-    <Link href="/" type="button" color="black">
-      <Text>
-        Show me this
-      </Text>
-    </Link>
-  </span>
 </Promo>
 
 </div>

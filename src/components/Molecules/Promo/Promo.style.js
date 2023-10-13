@@ -57,23 +57,15 @@ const Copy = styled.div`
   ${zIndex('low')};
 
   ${media('medium')} {
-    width: 70%;
-    padding: ${spacing('xl')} ${spacing('m')};
-  }
-  ${media('medium')} {
     width: 50%;
     padding: ${spacing('xxl')} ${spacing('m')};
 
-    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient === 'black') && css`
-      background-color: rgba(0,0,0,0.75);
+    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
+      padding: 20% ${spacing('m')};
       overflow: hidden;
-      box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
-    `}
-
-    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient === 'white') && css`
-      background-color: rgba(255, 255, 255, 0.75);
-      box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
-  `}
+      background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      box-shadow: 0px 0px 85px 100px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+    `};
   }
 
   ${({ position }) => position === 'lower' && css`
