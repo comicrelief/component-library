@@ -6,7 +6,7 @@ import { sizes } from '../../../theme/shared/breakpoint';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, Wrapper, Copy, Media
+  Container, Wrapper, Copy, Media, Gradient
 } from './Promo.style';
 
 const Promo = ({
@@ -94,9 +94,11 @@ const Promo = ({
       </Media>
 
       <Wrapper copyLeft={copyLeft}>
-        <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
-          {children}
-        </Copy>
+        <Gradient hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
+          <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
+            {children}
+          </Copy>
+        </Gradient>
       </Wrapper>
     </Container>
   );

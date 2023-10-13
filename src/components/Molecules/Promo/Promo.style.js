@@ -57,15 +57,8 @@ const Copy = styled.div`
   ${zIndex('low')};
 
   ${media('medium')} {
-    width: 50%;
+    width: 100%;
     padding: ${spacing('xxl')} ${spacing('m')};
-
-    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
-      padding: 20% ${spacing('m')};
-      overflow: hidden;
-      background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-      box-shadow: 0px 0px 85px 100px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-    `};
   }
 
   ${({ position }) => position === 'lower' && css`
@@ -97,6 +90,27 @@ const Video = styled.video.attrs(() => ({
   object-fit: cover;
 `;
 
+const Gradient = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  ${media('medium')} {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
+    overflow: hidden;
+    background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+    box-shadow: 0px 0px 50px 50px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+    box-shadow: 0px 0px 75px 75px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+   `};
+  }
+
+`;
+
 export {
-  Container, Wrapper, Copy, Media, Video
+  Container, Wrapper, Copy, Media, Video, Gradient
 };
