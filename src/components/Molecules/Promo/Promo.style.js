@@ -95,6 +95,7 @@ const Gradient = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+
   ${media('medium')} {
     width: 50%;
     position: absolute;
@@ -102,13 +103,11 @@ const Gradient = styled.div`
     left: 0;
 
     ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
-    overflow: hidden;
-    background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-    box-shadow: 0px 0px 50px 50px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-    box-shadow: 0px 0px 75px 75px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      overflow: hidden;
+      background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      box-shadow: 0px 0px 75px 75px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
    `};
   }
-
 `;
 
 export {
