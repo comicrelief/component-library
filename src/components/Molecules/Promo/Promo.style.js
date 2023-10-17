@@ -44,6 +44,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: relative;
 
   ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
   ${media('medium')} {
