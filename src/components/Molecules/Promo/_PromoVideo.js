@@ -4,13 +4,14 @@ import { Video } from './Promo.style';
 import PromoVideoButton from './_PromoVideoButton';
 
 const PromoVideo = ({
-  lightColouredVideo,
+  behindTextGradient,
   copyLeft,
   thisVideoSrc,
   thisPoster,
   autoPlay,
   loop,
-  showPosterAfterPlaying
+  showPosterAfterPlaying,
+  blackPlayButton
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
@@ -85,7 +86,8 @@ const PromoVideo = ({
         videoProgress={videoProgress}
         togglePlay={togglePlay}
         isPlaying={isPlaying}
-        lightColouredVideo={lightColouredVideo}
+        behindTextGradient={behindTextGradient}
+        blackPlayButton={blackPlayButton}
         isRestarting={isRestarting}
       />
     </>
@@ -94,7 +96,8 @@ const PromoVideo = ({
 
 PromoVideo.propTypes = {
   copyLeft: PropTypes.bool.isRequired,
-  lightColouredVideo: PropTypes.bool.isRequired,
+  behindTextGradient: PropTypes.oneOf(['black', 'white', 'none']).isRequired,
+  blackPlayButton: PropTypes.bool.isRequired,
   thisVideoSrc: PropTypes.string.isRequired,
   thisPoster: PropTypes.string.isRequired,
   autoPlay: PropTypes.bool.isRequired,
