@@ -193,6 +193,8 @@ exports[`renders Promo correctly 1`] = `
     position: absolute;
     top: 0;
     left: 0;
+    left: auto;
+    right: 0;
   }
 }
 
@@ -465,6 +467,8 @@ exports[`renders Promo correctly end position 1`] = `
     position: absolute;
     top: 0;
     left: 0;
+    left: auto;
+    right: 0;
   }
 }
 

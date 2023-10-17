@@ -246,7 +246,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   Promo Lower w/Video (autoplay only, white text gradient overlay)
 </Text>
 <Promo
-  backgroundColor="blue_dark"
+  backgroundColor="blue_light"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -284,7 +284,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 
 <br />
 <Text tag="h2" size="xl" color="black">
-  Promo None w/Video (no loop or autoplay, no text gradient overlay)
+  Promo None w/Video (no loop or autoplay, no text gradient overlay, copy right aligned)
 </Text>
 <Promo
   backgroundColor="blue_dark"

@@ -10,9 +10,11 @@ const PlayButtonWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   &:after {
+    content: "";
     // Preload all button icons
-    content: url(${playWhite}) url(${pauseWhite}) url(${playBlack}) url(${pauseBlack}) none;
+    background-image: url(${playWhite}), url(${pauseWhite}), url(${playBlack}), url(${pauseBlack}), none;
   }
 `;
 

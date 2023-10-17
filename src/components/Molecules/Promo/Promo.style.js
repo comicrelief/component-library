@@ -103,6 +103,11 @@ const Gradient = styled.div`
     top: 0;
     left: 0;
 
+    ${({ copyLeft }) => (!copyLeft) && css`
+      left: auto;
+      right: 0;
+    `};
+
     ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
       overflow: hidden;
       background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
