@@ -25,7 +25,7 @@ const PromoVideo = ({
   };
 
   const updateTime = () => {
-    if (videoEl.current.duration) {
+    if (videoEl.current && videoEl.current.duration) {
       // Calculate the percentage of the video played:
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
       // Because a completely smooth animation is impossible with the 250ms-ish frequency of
