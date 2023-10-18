@@ -1,27 +1,46 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import Text from '../../Atoms/Text/Text';
 
-// import Logos from '../../Molecules/Logos/Logos';
-// import MainNav from './Nav/Nav';
-// import {
-//   Brand, HeaderWrapper, InnerWrapper, MetaIcons
-// } from './Header.style';
+import {
+  OuterWrapper, Copy, CurrentAmountCopy
+} from './ImpactSlider.style';
 
 const ImpactSlider = ({
-  campaign
-}) => (
-  <div>
-    hello there
-    {campaign}
-  </div>
-);
+  copy, heading
+}) => {
+  const [currentAmount, setCurrentAmount] = useState(15);
 
-ImpactSlider.propTypes = {
-  campaign: PropTypes.string
+  const updateAmount = () => {
+    console.log('updateAmount');
+    setCurrentAmount(Math.random() * 10);
+  };
+
+  return (
+
+    <OuterWrapper>
+
+      <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
+
+      <Copy markup={copy} />
+
+      <CurrentAmountCopy>
+        A donation of
+        {' '}
+        £
+        {currentAmount}
+        {' '}
+        could help pay for:
+      </CurrentAmountCopy>
+      <button type="button" onClick={updateAmount}>Update amount</button>
+    </OuterWrapper>
+  );
 };
 
-ImpactSlider.defaultProps = {
-  campaign: 'Comic Relief'
+ImpactSlider.propTypes = {
+  heading: PropTypes.string.isRequired,
+  copy: PropTypes.string.isRequired
 };
 
 export default ImpactSlider;
