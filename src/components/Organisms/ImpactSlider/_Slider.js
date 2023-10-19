@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import styled, { css } from 'styled-components';
@@ -6,7 +7,29 @@ import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 
 const StyledRangerSlider = styled(RangeSlider)`
-    background: red;
+    background: white;
+    height: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+    .range-slider__range {
+        // background: white;
+        height: 14px;
+        border-radius: 10px;
+        background-color: red;
+
+    }
+
+    .range-slider__thumb {
+        // I dont think we should be doing this
+        // transition:left 0.1s linear;
+        background-color: red;
+    }
+
+    // Hide 'range' slider, as per example
+    .range-slider__thumb[data-lower] {
+        width: 0;
+    }
 `;
 
 const SliderWrapper = styled.div`x
@@ -24,127 +47,8 @@ const SliderLabel = styled.label`
     width: 1px;
 `;
 
-const SliderInput = styled.input`
-    border: 1px solid white; 
-    /* required for proper track sizing in FF */
-    //${({ width }) => width && css` width:  ${width}; `};
-    width: 100%;
+const testBoo = true;
 
-    -webkit-appearance: none; 
-    
-    &::-webkit-slider-runnable-track {
-        // ${({ width }) => width && css` width:  ${width}; `};
-        width: 100%;
-        height: 5px;
-        background: #ddd;
-        border: none;
-        border-radius: 3px;
-    }
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        border: none;
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        background: goldenrod;
-        margin-top: -4px;
-    }
-    
-
-    &:focus {
-        outline: none;
-        &::-webkit-slider-runnable-track {
-            background: #ccc;
-        }
-
-        &::-moz-range-track {
-            background: #ccc;
-        }
-
-        &::-ms-fill-lower {
-            background: #888;
-        }
-
-        &::-ms-fill-upper {
-            background: #ccc;
-        }
-
-        &::-webkit-slider-thumb {
-            
-        }
-    }
-
-    &::-moz-range-track {
-        // ${({ width }) => width && css` width:  ${width}; `};
-        width: 100%; // seems like this works fine?
-
-        height: 5px;
-        background: #ddd;
-        border: none;
-        border-radius: 3px;
-    }
-
-    &::-moz-range-thumb {
-        border: none;
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        background: goldenrod;
-    }
-
-    &::-moz-focusring{
-        outline: 1px solid white;
-        outline-offset: -1px;
-    }
-
-    // &::focus::-moz-range-track {
-    //     background: #ccc;
-    // }
-
-    // IE styles
-    &::-ms-track {
-        // ${({ width }) => width && css` width:  ${width}; `};
-        width: 100%;
-
-        height: 5px;
-        
-        /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-        background: transparent;
-        
-        /*leave room for the larger thumb to overflow with a transparent border */
-        border-color: transparent;
-        border-width: 6px 0;
-    
-        /*remove default tick marks*/
-        color: transparent;
-    }
-
-    &::-ms-fill-lower {
-        background: #777;
-        border-radius: 10px;
-    }
-
-    &::-ms-fill-upper {
-        background: #ddd;
-        border-radius: 10px;
-    }
-
-    &::-ms-thumb {
-        border: none;
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        background: goldenrod;
-    }
-
-    // &:focus::-ms-fill-lower {
-    //     background: #888;
-    // }
-
-    // &:focus::-ms-fill-upper {
-    //     background: #ccc;
-    // }
-`;
 const Slider = ({
   width, min, max, currentAmount, handleChange, steps
 }) => {
@@ -155,18 +59,19 @@ const Slider = ({
       <SliderLabel htmlFor="ImpactSlider">
         Slider label to be hidden
       </SliderLabel>
-      <SliderInput
-        type="range"
+      <StyledRangerSlider
         id="ImpactSlider"
         name="ImpactSlider"
         min={min}
         max={max}
         width={width}
-        value={currentAmount}
-        onChange={handleChange}
+        value={[0, currentAmount]}
+        onInput={handleChange}
         step={steps}
+        thumbsDisabled={[true, false]}
+        rangeSlideDisabled={testBoo}
       />
-      <StyledRangerSlider />
+
     </SliderWrapper>
 
   );

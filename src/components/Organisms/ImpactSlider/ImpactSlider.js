@@ -11,29 +11,23 @@ import {
 const thisMin = 0;
 const thisMax = 100;
 // Does this need to be dynamic?
-const steps = 10;
+const steps = 1;
 
 const ImpactSlider = ({
   copy, heading
 }) => {
   const [currentAmount, setCurrentAmount] = useState(0);
-  // May not need this:
-  const [currentWidth, setCurrentWidth] = useState('10px');
 
-  const handleChange = e => {
-    if (e.target.value) {
-      setCurrentAmount(parseInt(e.target.value, 10));
+  const handleChange = thisValue => {
+    if (thisValue) {
+      // Return the value of the 'thumb' we care about:
+      setCurrentAmount(thisValue[1]);
     }
   };
 
   const handleSubmit = () => {
     console.log('Submit is happening', currentAmount);
   };
-
-  useEffect(() => {
-    // May not need this... or rather the real calc involved
-    setCurrentWidth('50%');
-  }, []);
 
   return (
 
@@ -52,7 +46,7 @@ const ImpactSlider = ({
         could help pay for:
       </CurrentAmountCopy>
       <Slider
-        width={currentWidth}
+        width="100%"
         currentAmount={currentAmount}
         min={thisMin}
         max={thisMax}
