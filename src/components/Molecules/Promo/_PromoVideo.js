@@ -19,9 +19,11 @@ const PromoVideo = ({
   const videoEl = useRef(null);
 
   const togglePlay = () => {
-    if (isPlaying) videoEl.current.pause();
-    else videoEl.current.play();
-    setIsPlaying(!isPlaying);
+    if (videoEl.current) {
+      if (isPlaying) videoEl.current.pause();
+      else videoEl.current.play();
+      setIsPlaying(!isPlaying);
+    }
   };
 
   const updateTime = () => {
