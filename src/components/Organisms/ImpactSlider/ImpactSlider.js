@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
+import Slider from './_Slider';
 
 import {
   OuterWrapper, Copy, CurrentAmountCopy
