@@ -15,8 +15,13 @@ const Copy = styled(RichText)`
 
 const CurrentAmountCopy = styled.p`
   font-weight: bold;
+  margin-top: 20px;
+`;
+
+const SubmitButton = styled.button`
+  margin-top: 20px;
 `;
 
 export {
-  OuterWrapper, Copy, CurrentAmountCopy
+  OuterWrapper, Copy, CurrentAmountCopy, SubmitButton
 };

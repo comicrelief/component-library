@@ -5,18 +5,35 @@ import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
 
 import {
-  OuterWrapper, Copy, CurrentAmountCopy
+  OuterWrapper, Copy, CurrentAmountCopy, SubmitButton
 } from './ImpactSlider.style';
+
+const thisMin = 0;
+const thisMax = 100;
+// Does this need to be dynamic?
+const steps = 10;
 
 const ImpactSlider = ({
   copy, heading
 }) => {
-  const [currentAmount, setCurrentAmount] = useState(15);
+  const [currentAmount, setCurrentAmount] = useState(0);
+  // May not need this:
+  const [currentWidth, setCurrentWidth] = useState('10px');
 
-  const updateAmount = () => {
-    console.log('updateAmount');
-    setCurrentAmount(Math.random() * 10);
+  const handleChange = e => {
+    if (e.target.value) {
+      setCurrentAmount(parseInt(e.target.value, 10));
+    }
   };
+
+  const handleSubmit = () => {
+    console.log('Submit is happening', currentAmount);
+  };
+
+  useEffect(() => {
+    // May not need this... or rather the real calc involved
+    setCurrentWidth('50%');
+  }, []);
 
   return (
 
@@ -34,7 +51,20 @@ const ImpactSlider = ({
         {' '}
         could help pay for:
       </CurrentAmountCopy>
-      <button type="button" onClick={updateAmount}>Update amount</button>
+      <Slider
+        width={currentWidth}
+        currentAmount={currentAmount}
+        min={thisMin}
+        max={thisMax}
+        handleChange={handleChange}
+        steps={steps}
+      />
+      <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
+        Donate £
+        {currentAmount}
+        {' '}
+        this INSTANT
+      </SubmitButton>
     </OuterWrapper>
   );
 };
