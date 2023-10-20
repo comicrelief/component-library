@@ -3,8 +3,14 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+// Why doesn't ESLInt see these as valid imports??
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
+
+const thumbSize = 30;
+const thumbDotSize = thumbSize / 3;
+const sizeMultiplier = 1.5;
+const animationSpeed = 0.3;
 
 const StyledRangerSlider = styled(RangeSlider)`
     background: white;
@@ -13,17 +19,47 @@ const StyledRangerSlider = styled(RangeSlider)`
     border: 1px solid black;
 
     .range-slider__range {
-        // background: white;
         height: 14px;
         border-radius: 10px;
         background-color: red;
-
+        z-index: 2;
     }
 
     .range-slider__thumb {
-        // I dont think we should be doing this
-        // transition:left 0.1s linear;
         background-color: red;
+        transition-property: width, height;
+        transition-timing-function: cubic-bezier(1, 0, 0, 1.4);
+        transition-duration: ${animationSpeed}s;
+        width: ${thumbSize}px;
+        height: ${thumbSize}px;
+
+        &:after {
+          content: "";
+          background-color: white;
+          border-radius: 50%;
+          width: ${thumbDotSize}px;
+          height: ${thumbDotSize}px;
+          position: absolute;
+          top: ${thumbDotSize}px;
+          left: ${thumbDotSize}px;
+
+          transition-property: width, height, left, top;
+          transition-timing-function: inherit;
+          transition-duration: inherit;
+        }
+
+        &:hover {
+          width: ${thumbSize * sizeMultiplier}px;
+          height: ${thumbSize * sizeMultiplier}px;
+
+          &:after {
+            width: ${thumbDotSize * sizeMultiplier}px;
+            height: ${thumbDotSize * sizeMultiplier}px;
+            top: ${thumbDotSize * sizeMultiplier}px;
+            left: ${thumbDotSize * sizeMultiplier}px;
+          }
+  
+        }
     }
 
     // Hide 'range' slider, as per example
@@ -32,7 +68,7 @@ const StyledRangerSlider = styled(RangeSlider)`
     }
 `;
 
-const SliderWrapper = styled.div`x
+const SliderWrapper = styled.div`
     width: 100%;
 `;
 
@@ -46,8 +82,6 @@ const SliderLabel = styled.label`
     position: absolute;
     width: 1px;
 `;
-
-const testBoo = true;
 
 const Slider = ({
   width, min, max, currentAmount, handleChange, steps
@@ -69,7 +103,7 @@ const Slider = ({
         onInput={handleChange}
         step={steps}
         thumbsDisabled={[true, false]}
-        rangeSlideDisabled={testBoo}
+        rangeSlideDisabled
       />
 
     </SliderWrapper>
