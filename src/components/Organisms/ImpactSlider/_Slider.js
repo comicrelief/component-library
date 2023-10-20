@@ -27,22 +27,21 @@ const StyledRangerSlider = styled(RangeSlider)`
 
     .range-slider__thumb {
         background-color: red;
+        width: ${thumbSize}px;
+        height: ${thumbSize}px;
         transition-property: width, height;
         transition-timing-function: cubic-bezier(1, 0, 0, 1.4);
         transition-duration: ${animationSpeed}s;
-        width: ${thumbSize}px;
-        height: ${thumbSize}px;
 
         &:after {
           content: "";
-          background-color: white;
-          border-radius: 50%;
           width: ${thumbDotSize}px;
           height: ${thumbDotSize}px;
           position: absolute;
           top: ${thumbDotSize}px;
           left: ${thumbDotSize}px;
-
+          background-color: white;
+          border-radius: 50%;
           transition-property: width, height, left, top;
           transition-timing-function: inherit;
           transition-duration: inherit;
@@ -58,7 +57,6 @@ const StyledRangerSlider = styled(RangeSlider)`
             top: ${thumbDotSize * sizeMultiplier}px;
             left: ${thumbDotSize * sizeMultiplier}px;
           }
-  
         }
     }
 
