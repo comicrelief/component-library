@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
 
+import handleSubmission from './_utils';
+
 import {
   OuterWrapper, Copy, CurrentAmountCopy, SubmitButton
 } from './ImpactSlider.style';
@@ -14,7 +16,7 @@ const thisMax = 100;
 const steps = 1;
 
 const ImpactSlider = ({
-  copy, heading
+  copy, heading, clientID, donateLink, rowID
 }) => {
   const [currentAmount, setCurrentAmount] = useState(0);
 
@@ -26,17 +28,14 @@ const ImpactSlider = ({
   };
 
   const handleSubmit = () => {
-    console.log('Submit is happening', currentAmount);
+    handleSubmission(currentAmount, donateLink, clientID, rowID);
   };
 
   return (
 
     <OuterWrapper>
-
       <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
-
       <Copy markup={copy} />
-
       <CurrentAmountCopy>
         A donation of
         {' '}
@@ -65,7 +64,10 @@ const ImpactSlider = ({
 
 ImpactSlider.propTypes = {
   heading: PropTypes.string.isRequired,
-  copy: PropTypes.string.isRequired
+  copy: PropTypes.string.isRequired,
+  clientID: PropTypes.string.isRequired,
+  donateLink: PropTypes.string.isRequired,
+  rowID: PropTypes.string.isRequired
 };
 
 export default ImpactSlider;

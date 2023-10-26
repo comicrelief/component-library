@@ -9,13 +9,13 @@ import 'react-range-slider-input/dist/style.css';
 
 const thumbSize = 30;
 const thumbDotSize = thumbSize / 3;
-const sizeMultiplier = 1.5;
-const animationSpeed = 0.3;
+const sizeMultiplier = 1.25;
+const animationSpeed = 0.2;
 
 const StyledRangerSlider = styled(RangeSlider)`
     background: white;
     height: 16px;
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1px solid black;
 
     .range-slider__range {
