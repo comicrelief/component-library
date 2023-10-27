@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
+import Moneybuys from './_Moneybuys';
 
 import handleSubmission from './_utils';
 
@@ -16,7 +17,7 @@ const thisMax = 100;
 const steps = 1;
 
 const ImpactSlider = ({
-  copy, heading, clientID, donateLink, rowID
+  copy, heading, clientID, donateLink, rowID, items
 }) => {
   const [currentAmount, setCurrentAmount] = useState(0);
 
@@ -52,12 +53,14 @@ const ImpactSlider = ({
         handleChange={handleChange}
         steps={steps}
       />
+      <Moneybuys items={items} />
       <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
         Donate £
         {currentAmount}
         {' '}
         this INSTANT
       </SubmitButton>
+
     </OuterWrapper>
   );
 };
@@ -67,7 +70,14 @@ ImpactSlider.propTypes = {
   copy: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
-  rowID: PropTypes.string.isRequired
+  rowID: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      amount: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      copy: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 export default ImpactSlider;

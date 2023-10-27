@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import RangeSlider from 'react-range-slider-input';
 
 const thumbSize = 30;
-const outlineSize = thumbSize / 2;
+const outlineSize = thumbSize / 2.5;
 const sizeMultiplier = 1.5;
 const animationSpeed = 0.15;
 
@@ -39,12 +39,12 @@ const StyledRangerSlider = styled(RangeSlider)`
             &:after {
                 width: ${thumbSize * sizeMultiplier}px;
                 height: ${thumbSize * sizeMultiplier}px;
-                border-width: ${outlineSize / sizeMultiplier}px;
+                border-width: ${outlineSize}px;
             }
         }
     }
 
-    // Hide 'range' slider, as per example
+    // Hide other slider thumb, as per example from the docs
     .range-slider__thumb[data-lower] {
         width: 0;
     }

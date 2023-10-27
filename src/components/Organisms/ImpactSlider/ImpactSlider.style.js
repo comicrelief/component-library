@@ -5,7 +5,7 @@ const OuterWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  background-color: yellow;
+  background-color: ${props => props.theme.color('grey_extra_light')};
   padding: 30px 100px;
 `;
 
