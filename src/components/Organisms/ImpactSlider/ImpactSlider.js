@@ -33,7 +33,6 @@ const ImpactSlider = ({
   };
 
   return (
-
     <OuterWrapper>
       <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
       <Copy markup={copy} />

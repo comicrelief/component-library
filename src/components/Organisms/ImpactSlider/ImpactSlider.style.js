@@ -6,7 +6,11 @@ const OuterWrapper = styled.div`
   margin: 0 auto;
   max-width: 1200px;
   background-color: ${props => props.theme.color('grey_extra_light')};
-  padding: 30px 100px;
+  padding: 10px;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    padding: 30px 60px;
+  }
 `;
 
 const Copy = styled(RichText)`
