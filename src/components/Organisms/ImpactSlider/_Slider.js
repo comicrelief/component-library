@@ -10,7 +10,7 @@ import {
 } from './Slider.style';
 
 const Slider = ({
-  width, min, max, currentAmount, handleChange, steps
+  min, max, currentAmount, handleChange, steps
 }) => {
   console.log('Dont make me restructre my code WHILE I AM WORKING ON IT, ESLINT');
 
@@ -24,7 +24,7 @@ const Slider = ({
         name="ImpactSlider"
         min={min}
         max={max}
-        width={width}
+        width="100%"
         value={[0, currentAmount]}
         onInput={handleChange}
         step={steps}
@@ -37,7 +37,6 @@ const Slider = ({
 };
 
 Slider.propTypes = {
-  width: PropTypes.string.isRequired,
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   steps: PropTypes.number.isRequired,

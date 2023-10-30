@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
@@ -11,15 +10,10 @@ import {
   OuterWrapper, Copy, CurrentAmountCopy, SubmitButton
 } from './ImpactSlider.style';
 
-const thisMin = 0;
-const thisMax = 100;
-// Does this need to be dynamic?
-const steps = 1;
-
 const ImpactSlider = ({
-  copy, heading, clientID, donateLink, rowID, items
+  copy, heading, clientID, donateLink, rowID, items, step, max
 }) => {
-  const [currentAmount, setCurrentAmount] = useState(0);
+  const [currentAmount, setCurrentAmount] = useState(step);
 
   const handleChange = thisValue => {
     if (thisValue) {
@@ -45,14 +39,13 @@ const ImpactSlider = ({
         could help pay for:
       </CurrentAmountCopy>
       <Slider
-        width="100%"
         currentAmount={currentAmount}
-        min={thisMin}
-        max={thisMax}
+        min={step}
+        max={max}
         handleChange={handleChange}
-        steps={steps}
+        steps={step}
       />
-      <Moneybuys items={items} />
+      <Moneybuys items={items} currentAmount={currentAmount} />
       <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
         Donate £
         {currentAmount}
@@ -70,9 +63,11 @@ ImpactSlider.propTypes = {
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   rowID: PropTypes.string.isRequired,
+  step: PropTypes.number.isRequired,
+  max: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      amount: PropTypes.number.isRequired,
+      itemPerPound: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       copy: PropTypes.string.isRequired
     })

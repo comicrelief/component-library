@@ -24,6 +24,8 @@ const CurrentAmountCopy = styled.p`
 
 const SubmitButton = styled.button`
   margin-top: 20px;
+  width: 100%;
+  background-color: red;
 `;
 
 export {
