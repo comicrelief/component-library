@@ -51,7 +51,7 @@ const ImpactSlider = ({
           Donate £
           {currentAmount}
           {' '}
-          this INSTANT
+          now
         </SubmitButton>
       </InnerWrapper>
     </OuterWrapper>
