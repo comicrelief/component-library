@@ -6,7 +6,7 @@ const fakeItems = [
   { itemPerPound: 25, description: 'An item that costs £25', imageURL: iconImageURL },
   { itemPerPound: 50, description: 'An item that costs £50', imageURL: iconImageURL },
   { itemPerPound: 75, description: 'An item that costs £75', imageURL: iconImageURL },
-  { itemPerPound: 100, description: 'An item that costs £100', imageURL: iconImageURL },
+  { itemPerPound: 100, description: 'An item with more text that costs £100', imageURL: iconImageURL },
 ];
 
 <ImpactSlider

@@ -10,12 +10,12 @@ const StyledRangerSlider = styled(RangeSlider)`
     background: white;
     height: 16px;
     border-radius: 16px;
-    border: 1px solid black;
+    border: 1px solid ${props => props.theme.color('black')};
 
     .range-slider__range {
         height: 14px;
         border-radius: 10px;
-        background-color: red;
+        background-color: ${props => props.theme.color('red')};
         z-index: 2;
     }
 
@@ -30,7 +30,7 @@ const StyledRangerSlider = styled(RangeSlider)`
             top: 50%;
             left: 50%;
             border-radius: 50%;
-            border: ${outlineSize}px solid red;
+            border: ${outlineSize}px solid ${props => props.theme.color('red')};
             transition-property: width, height, border-width;
             transition-duration: ${animationSpeed}s;
         }
@@ -52,6 +52,7 @@ const StyledRangerSlider = styled(RangeSlider)`
 
 const SliderWrapper = styled.div`
     width: 100%;
+    margin-top: 25px;
 `;
 
 const SliderLabel = styled.label`

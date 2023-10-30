@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
-import Moneybuys from './_Moneybuys';
-
+import Moneybuys from './_ImpactMoneybuys';
 import handleSubmission from './_utils';
 
 import {
-  OuterWrapper, Copy, CurrentAmountCopy, SubmitButton
+  OuterWrapper, InnerWrapper, Copy, CurrentAmountCopy, SubmitButton
 } from './ImpactSlider.style';
 
 const ImpactSlider = ({
   copy, heading, clientID, donateLink, rowID, items, step, max
 }) => {
+  // Use the lowest possible amount as our default:
   const [currentAmount, setCurrentAmount] = useState(step);
 
   const handleChange = thisValue => {
@@ -28,31 +28,32 @@ const ImpactSlider = ({
 
   return (
     <OuterWrapper>
-      <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
-      <Copy markup={copy} />
-      <CurrentAmountCopy>
-        A donation of
-        {' '}
-        £
-        {currentAmount}
-        {' '}
-        could help pay for:
-      </CurrentAmountCopy>
-      <Slider
-        currentAmount={currentAmount}
-        min={step}
-        max={max}
-        handleChange={handleChange}
-        steps={step}
-      />
-      <Moneybuys items={items} currentAmount={currentAmount} />
-      <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
-        Donate £
-        {currentAmount}
-        {' '}
-        this INSTANT
-      </SubmitButton>
-
+      <InnerWrapper>
+        <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
+        <Copy markup={copy} />
+        <CurrentAmountCopy tag="p" size="s">
+          A donation of
+          {' '}
+          £
+          {currentAmount}
+          {' '}
+          could help pay for:
+        </CurrentAmountCopy>
+        <Slider
+          currentAmount={currentAmount}
+          min={step} // Use the lowest possible amount as our 'floor':
+          max={max}
+          handleChange={handleChange}
+          steps={step}
+        />
+        <Moneybuys items={items} currentAmount={currentAmount} />
+        <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
+          Donate £
+          {currentAmount}
+          {' '}
+          this INSTANT
+        </SubmitButton>
+      </InnerWrapper>
     </OuterWrapper>
   );
 };
