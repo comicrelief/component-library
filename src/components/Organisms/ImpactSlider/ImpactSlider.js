@@ -70,7 +70,7 @@ ImpactSlider.propTypes = {
   max: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      itemsPerPound: PropTypes.number.isRequired,
+      poundsPerItem: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       imageURL: PropTypes.string.isRequired
     })

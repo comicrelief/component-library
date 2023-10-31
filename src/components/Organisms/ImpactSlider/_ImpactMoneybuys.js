@@ -8,7 +8,7 @@ import {
 const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
   <MoneybuyWrapper>
     {items.map((item, index) => {
-      const roundedPerPound = Math.floor(item.itemsPerPound);
+      const roundedPerPound = Math.floor(item.poundsPerItem);
       const thisAmount = Math.floor(currentAmount / roundedPerPound);
       const isInactive = !(opacityAnimation || currentAmount >= roundedPerPound);
 
@@ -35,7 +35,7 @@ Moneybuys.defaultProps = {
 Moneybuys.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      itemsPerPound: PropTypes.number.isRequired,
+      poundsPerItem: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       imageURL: PropTypes.string.isRequired
     })

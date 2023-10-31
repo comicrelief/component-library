@@ -5,15 +5,15 @@ const impactSliderMoneybuyIcons = require('../../../styleguide/data/data').impac
 import Text from '../../Atoms/Text/Text';
 
 const testItems = [
-  { itemsPerPound: 1, description: 'Fresh water pumps', imageURL: impactSliderMoneybuyIcons.item1 },
-  { itemsPerPound: 5, description: 'Food Sachets', imageURL: impactSliderMoneybuyIcons.item2 },
-  { itemsPerPound: 10, description: 'Midwife birthing kits', imageURL: impactSliderMoneybuyIcons.item3 },
-  { itemsPerPound: 15, description: 'School in a bag kit', imageURL: impactSliderMoneybuyIcons.item4 },
+  { poundsPerItem: 1, description: 'Fresh water pumps', imageURL: impactSliderMoneybuyIcons.item1 },
+  { poundsPerItem: 10, description: 'Food Sachets', imageURL: impactSliderMoneybuyIcons.item2 },
+  { poundsPerItem: 15, description: 'Midwife birthing kits', imageURL: impactSliderMoneybuyIcons.item3 },
+  { poundsPerItem: 20, description: 'School in a bag kit', imageURL: impactSliderMoneybuyIcons.item4 },
 ];
 
 <ImpactSlider
   heading="Your donations will change lives"
-  donateLink="https://donation-staging.spa.comicrelief.com/"
+  donateLink="https://donation-staging.spa.comicrelief.com"
   rowID="to-come-from-the-cms"
   cartID="to-also-come-from-the-cms"
   items={testItems}
