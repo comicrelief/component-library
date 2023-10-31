@@ -7,7 +7,7 @@ import {
 } from './Slider.style';
 
 const Slider = ({
-  min, max, currentAmount, handleChange, steps
+  min, max, currentAmount, handleChange, steps, offset
 }) => (
   <SliderWrapper>
     <SliderLabel htmlFor="ImpactSlider">
@@ -19,7 +19,7 @@ const Slider = ({
       min={min}
       max={max}
       width="100%"
-      value={[0, currentAmount]}
+      value={[0, offset || currentAmount]}
       onInput={handleChange}
       step={steps}
       thumbsDisabled={[true, false]}
@@ -32,6 +32,7 @@ Slider.propTypes = {
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   steps: PropTypes.number.isRequired,
+  offset: PropTypes.number.isRequired,
   currentAmount: PropTypes.number.isRequired,
   handleChange: PropTypes.func.isRequired
 };
