@@ -33,4 +33,13 @@ const impactSliderMoneybuyIcons = {
   item4: 'https://images.ctfassets.net/zsfivwzfgl3t/PPIJtSArW4wYy1CXvRGk9/c9de72766db42a0e158889a140c90445/ImpactSliderMoneybuy4.png'
 };
 
-export { defaultData, mobileImages, impactSliderMoneybuyIcons };
+const testImpactSliderItems = [
+  { poundsPerItem: 1, description: 'Fresh water pumps', imageURL: impactSliderMoneybuyIcons.item1 },
+  { poundsPerItem: 10, description: 'Food Sachets', imageURL: impactSliderMoneybuyIcons.item2 },
+  { poundsPerItem: 15, description: 'Midwife birthing kits', imageURL: impactSliderMoneybuyIcons.item3 },
+  { poundsPerItem: 20, description: 'School in a bag kit', imageURL: impactSliderMoneybuyIcons.item4 }
+];
+
+export {
+  defaultData, mobileImages, impactSliderMoneybuyIcons, testImpactSliderItems
+};
