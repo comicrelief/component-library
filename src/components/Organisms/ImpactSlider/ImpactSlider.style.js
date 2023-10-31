@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import RichText from '../../Atoms/RichText/RichText';
 import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 
@@ -24,7 +23,7 @@ const InnerWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const Copy = styled(RichText)`
+const Copy = styled.div`
   position: relative;
 `;
 
@@ -36,6 +35,7 @@ const CurrentAmountCopy = styled(Text)`
 const SubmitButton = styled(Button)`
   margin-top: 32px;
   width: 100%;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     margin-top: 40px;

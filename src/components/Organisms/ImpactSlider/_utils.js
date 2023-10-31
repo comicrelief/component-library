@@ -8,7 +8,7 @@ const getUrlParameter = name => {
   return param;
 };
 
-const handleSubmission = (amount, donateLink, clientID, rowID) => {
+const handleSubmission = (amount, donateLink, cartID, rowID) => {
   let currentpageUrl = window.location.href;
 
   const affiliateValue = getUrlParameter(currentpageUrl);
@@ -24,7 +24,7 @@ const handleSubmission = (amount, donateLink, clientID, rowID) => {
   //
   // - I guess we still need rowID for the back-browsing scroll stuff?
   // - TO-DO: add in said scroll stuff
-  const forwardingUrl = `${donateLink}?amount=${amount}&clientOverride=${clientID}&currency=GBP&givingType=single&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${rowID}`;
+  const forwardingUrl = `${donateLink}?cartID=${cartID}&amount=${amount}&clientOverride=donate&currency=GBP&givingType=single&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${rowID}`;
   console.log(forwardingUrl);
 
   // window.location.href = forwardingUrl;

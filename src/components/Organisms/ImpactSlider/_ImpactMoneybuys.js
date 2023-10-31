@@ -8,13 +8,13 @@ import {
 const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
   <MoneybuyWrapper>
     {items.map((item, index) => {
-      const roundedPerPound = Math.floor(item.itemPerPound);
+      const roundedPerPound = Math.floor(item.itemsPerPound);
       const thisAmount = Math.floor(currentAmount / roundedPerPound);
       const isInactive = !(opacityAnimation || currentAmount >= roundedPerPound);
 
       return (
         <>
-          <Moneybuy isInactive={isInactive}>
+          <Moneybuy isInactive={isInactive} key={roundedPerPound}>
             <MoneybuyImage imageURL={item.imageURL} />
             <MoneybuyAmount tag="p" family="Anton" uppercase weight="normal" size="xl">{thisAmount}</MoneybuyAmount>
             <MoneybuyDescription tag="p" size="sm">{item.description}</MoneybuyDescription>
@@ -35,9 +35,9 @@ Moneybuys.defaultProps = {
 Moneybuys.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      itemPerPound: PropTypes.number.isRequired,
+      itemsPerPound: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
-      imageURL: PropTypes.number.isRequired
+      imageURL: PropTypes.string.isRequired
     })
   ).isRequired,
   currentAmount: PropTypes.number.isRequired,

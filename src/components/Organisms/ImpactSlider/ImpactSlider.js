@@ -10,7 +10,7 @@ import {
 } from './ImpactSlider.style';
 
 const ImpactSlider = ({
-  copy, heading, clientID, donateLink, rowID, items, step, max
+  heading, cartID, donateLink, rowID, items, step, max, children
 }) => {
   // Use the lowest possible amount as our default:
   const [currentAmount, setCurrentAmount] = useState(step);
@@ -23,14 +23,16 @@ const ImpactSlider = ({
   };
 
   const handleSubmit = () => {
-    handleSubmission(currentAmount, donateLink, clientID, rowID);
+    handleSubmission(currentAmount, donateLink, cartID, rowID);
   };
 
   return (
     <OuterWrapper>
       <InnerWrapper>
         <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
-        <Copy markup={copy} />
+        <Copy>
+          {children}
+        </Copy>
         <CurrentAmountCopy tag="p" size="s">
           A donation of
           {' '}
@@ -60,17 +62,17 @@ const ImpactSlider = ({
 
 ImpactSlider.propTypes = {
   heading: PropTypes.string.isRequired,
-  copy: PropTypes.string.isRequired,
-  clientID: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  cartID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   rowID: PropTypes.string.isRequired,
   step: PropTypes.number.isRequired,
-  max: PropTypes.string.isRequired,
+  max: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      itemPerPound: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      copy: PropTypes.string.isRequired
+      itemsPerPound: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+      imageURL: PropTypes.string.isRequired
     })
   ).isRequired
 };
