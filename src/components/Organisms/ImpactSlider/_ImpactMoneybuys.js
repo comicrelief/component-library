@@ -10,7 +10,7 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
     {items.map((item, index) => {
       const roundedPerPound = Math.floor(item.poundsPerItem);
       const thisAmount = Math.floor(currentAmount / roundedPerPound);
-      const isInactive = !(opacityAnimation || currentAmount >= roundedPerPound);
+      const isInactive = !(!opacityAnimation || currentAmount >= roundedPerPound);
 
       return (
         <Fragment key={roundedPerPound}>
@@ -28,10 +28,6 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
   </MoneybuyWrapper>
 );
 
-Moneybuys.defaultProps = {
-  opacityAnimation: false
-};
-
 Moneybuys.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -41,7 +37,7 @@ Moneybuys.propTypes = {
     })
   ).isRequired,
   currentAmount: PropTypes.number.isRequired,
-  opacityAnimation: PropTypes.bool
+  opacityAnimation: PropTypes.bool.isRequired
 };
 
 export default Moneybuys;

@@ -10,7 +10,7 @@ import {
 } from './ImpactSlider.style';
 
 const ImpactSlider = ({
-  heading, cartID, donateLink, rowID, items, step, max, children
+  heading, cartID, donateLink, rowID, items, step, max, opacityAnimation, children
 }) => {
   // Use the lowest possible amount as our default:
   const [currentAmount, setCurrentAmount] = useState(step);
@@ -43,12 +43,16 @@ const ImpactSlider = ({
         </CurrentAmountCopy>
         <Slider
           currentAmount={currentAmount}
-          min={step} // Use the lowest possible amount as our 'floor':
+          min={step}
           max={max}
           handleChange={handleChange}
           steps={step}
         />
-        <Moneybuys items={items} currentAmount={currentAmount} />
+        <Moneybuys
+          items={items}
+          currentAmount={currentAmount}
+          opacityAnimation={opacityAnimation}
+        />
         <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
           Donate £
           {currentAmount}
@@ -60,6 +64,10 @@ const ImpactSlider = ({
   );
 };
 
+ImpactSlider.defaultProps = {
+  opacityAnimation: false
+};
+
 ImpactSlider.propTypes = {
   heading: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
@@ -68,6 +76,7 @@ ImpactSlider.propTypes = {
   rowID: PropTypes.string.isRequired,
   step: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
+  opacityAnimation: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       poundsPerItem: PropTypes.number.isRequired,
