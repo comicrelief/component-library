@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,8 +13,8 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
       const isInactive = !(opacityAnimation || currentAmount >= roundedPerPound);
 
       return (
-        <>
-          <Moneybuy isInactive={isInactive} key={roundedPerPound}>
+        <Fragment key={roundedPerPound}>
+          <Moneybuy isInactive={isInactive}>
             <MoneybuyImage imageURL={item.imageURL} />
             <MoneybuyAmount tag="p" family="Anton" uppercase weight="normal" size="xl">{thisAmount}</MoneybuyAmount>
             <MoneybuyDescription tag="p" size="sm">{item.description}</MoneybuyDescription>
@@ -22,7 +22,7 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
           { index < (items.length - 1) && (
             <OrLabel tag="span">Or</OrLabel>
           )}
-        </>
+        </Fragment>
       );
     })}
   </MoneybuyWrapper>
