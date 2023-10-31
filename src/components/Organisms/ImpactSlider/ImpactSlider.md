@@ -1,7 +1,7 @@
 # Impact Slider
 
 ```js
-const { impactSliderMoneybuyIcons, testImpactSliderItems} = require('../../../styleguide/data/data');
+const { testImpactSliderItems} = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
 
 <ImpactSlider
