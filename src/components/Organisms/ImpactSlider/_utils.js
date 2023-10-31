@@ -25,7 +25,6 @@ const handleSubmission = (amount, donateLink, cartID, rowID) => {
   // - I guess we still need rowID for the back-browsing scroll stuff?
   // - TO-DO: add in said scroll stuff
   const forwardingUrl = `${donateLink}/?cartID=${cartID}&amount=${amount}&clientOverride=donate&currency=GBP&givingType=single&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${rowID}`;
-  console.log(forwardingUrl);
 
   window.location.href = forwardingUrl;
 };
