@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Impact Slider correctly 1`] = `
+.c2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c4 {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+.c12 {
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c18 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18:hover {
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c18 (min-width:1024px) {
+  width: auto;
+  padding: 1rem 2rem;
+  margin: 0 auto 2rem;
+}
+
+.c7 {
+  margin-top: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  display: inherit;
+  width: 100%;
+  padding: 8px 20px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  opacity: 1;
+}
+
+.c14 {
+  display: inherit;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.c9 {
+  background: center / 65% no-repeat url("https://images.ctfassets.net/zsfivwzfgl3t/28sKInxW6EsmvOTahWdm8E/3fb8e1488f95bac6a3087b133ae7ce9f/ImpactSliderMoneybuy1.png"),#f0f0f0;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.c15 {
+  background: center / 65% no-repeat url("https://images.ctfassets.net/zsfivwzfgl3t/lzxmQMII5PElb4G40vFfk/988486dedd9e45e7cf78cda6f6d0aeaf/ImpactSliderMoneybuy2.png"),#f0f0f0;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.c16 {
+  background: center / 65% no-repeat url("https://images.ctfassets.net/zsfivwzfgl3t/53ZeFXhjdpGpAvRRL4v2kI/d70d1cbf3b46bc28703fabb4ec60fef6/ImpactSliderMoneybuy3.png"),#f0f0f0;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.c17 {
+  background: center / 65% no-repeat url("https://images.ctfassets.net/zsfivwzfgl3t/PPIJtSArW4wYy1CXvRGk9/c9de72766db42a0e158889a140c90445/ImpactSliderMoneybuy4.png"),#f0f0f0;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.c11 {
+  text-align: center;
+  margin: 0 10px;
+  width: 25%;
+}
+
+.c13 {
+  text-align: left;
+  width: 50%;
+}
+
+.c0 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #f0f0f0;
+  padding: 32px 16px;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c6 {
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.c19 {
+  margin: 32px auto 0;
+  width: 100%;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  display: block;
+}
+
+@media (min-width:740px) {
+  .c18 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    width: 70%;
+    padding: 8px 40px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    padding: 20px 14px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 18%;
+    max-height: none;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    width: 0;
+    height: 0;
+    padding: 30%;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    width: 0;
+    height: 0;
+    padding: 30%;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    width: 0;
+    height: 0;
+    padding: 30%;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    width: 0;
+    height: 0;
+    padding: 30%;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c11 {
+    margin: 8px 15px 2px;
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c13 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 50px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding: 64px 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 p {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 20px;
+    line-height: 24.38px;
+    margin: 24px 0 38px;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 {
+    width: 70%;
+    margin: 40px auto 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c19 {
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h1
+      className="c2"
+      color="inherit"
+      size="xl"
+    >
+      Your donations will change lives
+    </h1>
+    <div
+      className="c3"
+    >
+      <p
+        className="c4"
+        color="black"
+        size="s"
+      >
+        Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
+      </p>
+    </div>
+    <p
+      className="c5 c6"
+      color="inherit"
+      size="s"
+    >
+      A donation of
+       
+      £
+      5
+       
+      could help pay for:
+    </p>
+    <div
+      className="c7"
+    >
+      <div
+        className="c8"
+      >
+        <span
+          className="c9"
+        />
+        <p
+          className="c10 c11"
+          color="inherit"
+          size="xl"
+        >
+          5
+        </p>
+        <p
+          className="c12 c13"
+          color="inherit"
+          size="sm"
+        >
+          Fresh water pumps
+        </p>
+      </div>
+      <span
+        className="c5 c14"
+        color="inherit"
+        size="s"
+      >
+        Or
+      </span>
+      <div
+        className="c8"
+      >
+        <span
+          className="c15"
+        />
+        <p
+          className="c10 c11"
+          color="inherit"
+          size="xl"
+        >
+          0
+        </p>
+        <p
+          className="c12 c13"
+          color="inherit"
+          size="sm"
+        >
+          Food Sachets
+        </p>
+      </div>
+      <span
+        className="c5 c14"
+        color="inherit"
+        size="s"
+      >
+        Or
+      </span>
+      <div
+        className="c8"
+      >
+        <span
+          className="c16"
+        />
+        <p
+          className="c10 c11"
+          color="inherit"
+          size="xl"
+        >
+          0
+        </p>
+        <p
+          className="c12 c13"
+          color="inherit"
+          size="sm"
+        >
+          Midwife birthing kits
+        </p>
+      </div>
+      <span
+        className="c5 c14"
+        color="inherit"
+        size="s"
+      >
+        Or
+      </span>
+      <div
+        className="c8"
+      >
+        <span
+          className="c17"
+        />
+        <p
+          className="c10 c11"
+          color="inherit"
+          size="xl"
+        >
+          0
+        </p>
+        <p
+          className="c12 c13"
+          color="inherit"
+          size="sm"
+        >
+          School in a bag kit
+        </p>
+      </div>
+    </div>
+    <button
+      className="c18 c19"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      Donate £
+      5
+       
+      now
+    </button>
+  </div>
+</div>
+`;
