@@ -41,13 +41,13 @@ const ImpactSlider = ({
           {' '}
           could help pay for:
         </CurrentAmountCopy>
-        {/* <Slider
+        <Slider
           currentAmount={currentAmount}
           min={step}
           max={max}
           handleChange={handleChange}
           steps={step}
-        /> */}
+        />
         <Moneybuys
           items={items}
           currentAmount={currentAmount}
