@@ -1,12 +1,13 @@
 # Impact Slider
 
 ```js
-const iconImageURL = require('../../../styleguide/data/data').iconImageURL;
+const impactSliderMoneybuyIcons = require('../../../styleguide/data/data').impactSliderMoneybuyIcons;
+
 const fakeItems = [
-  { itemPerPound: 25, description: 'An item that costs £25', imageURL: iconImageURL },
-  { itemPerPound: 50, description: 'An item that costs £50', imageURL: iconImageURL },
-  { itemPerPound: 75, description: 'An item that costs £75', imageURL: iconImageURL },
-  { itemPerPound: 100, description: 'An item with more text that costs £100', imageURL: iconImageURL },
+  { itemPerPound: 1, description: 'Fresh water pumps', imageURL: impactSliderMoneybuyIcons.item1 },
+  { itemPerPound: 5, description: 'Food Sachets', imageURL: impactSliderMoneybuyIcons.item2 },
+  { itemPerPound: 10, description: 'Midwife birthing kits', imageURL: impactSliderMoneybuyIcons.item3 },
+  { itemPerPound: 15, description: 'School in a bag kit', imageURL: impactSliderMoneybuyIcons.item4 },
 ];
 
 <ImpactSlider

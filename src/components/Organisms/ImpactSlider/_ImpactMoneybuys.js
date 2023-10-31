@@ -20,7 +20,7 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
             <MoneybuyDescription tag="p" size="sm">{item.description}</MoneybuyDescription>
           </Moneybuy>
           { index < (items.length - 1) && (
-            <OrLabel>Or</OrLabel>
+            <OrLabel tag="span">Or</OrLabel>
           )}
         </>
       );

@@ -8,10 +8,13 @@ const OuterWrapper = styled.div`
   margin: 0 auto;
   max-width: 100%;
   background-color: ${props => props.theme.color('grey_extra_light')};
-  padding: 10px;
+  padding: 32px 16px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
-    padding: 30px 60px;
+    padding: 50px;
+  }
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 64px 0;
   }
 `;
 
@@ -27,12 +30,16 @@ const Copy = styled(RichText)`
 
 const CurrentAmountCopy = styled(Text)`
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 16px;
 `;
 
 const SubmitButton = styled(Button)`
-  margin-top: 20px;
+  margin-top: 32px;
   width: 100%;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin-top: 40px;
+  }
 `;
 
 export {

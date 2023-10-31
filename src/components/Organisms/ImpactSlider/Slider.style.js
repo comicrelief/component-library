@@ -3,8 +3,7 @@ import RangeSlider from 'react-range-slider-input';
 
 const thumbSize = 30;
 const outlineSize = thumbSize / 2.5;
-const sizeMultiplier = 1.5;
-const animationSpeed = 0.15;
+const sizeMultiplier = 1.4;
 
 const StyledRangerSlider = styled(RangeSlider)`
     background: white;
@@ -32,7 +31,7 @@ const StyledRangerSlider = styled(RangeSlider)`
             border-radius: 50%;
             border: ${outlineSize}px solid ${props => props.theme.color('red')};
             transition-property: width, height, border-width;
-            transition-duration: ${animationSpeed}s;
+            transition-duration: 0.15s;
         }
 
         &:hover {

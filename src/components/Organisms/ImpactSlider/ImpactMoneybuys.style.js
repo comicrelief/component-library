@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 
 const MoneybuyWrapper = styled.div`
-    margin-top: 30px;
+    margin-top: 32px;
     width: 100%;
     display: flex;
     align-content: space-between;
@@ -51,42 +51,43 @@ const Moneybuy = styled.div`
 const OrLabel = styled(Text)`
     display: inherit;
     align-items: center;
-    margin: 10px 0;
+    margin: 8px 0;
+    font-size: 14px;
 `;
 
 const MoneybuyImage = styled.span`
-    background: center / contain no-repeat url("${props => props.imageURL}"), 
+    background: center / 65% no-repeat url("${props => props.imageURL}"), 
     ${props => props.theme.color('grey_extra_light')};
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
         width: 0;
         height: 0;
-        padding: 26%;
+        padding: 30%;
         border-radius: 100%;
       }
 `;
 
 const MoneybuyAmount = styled(Text)`
     text-align: center;
-    margin: 0 25px;
-    width: 10%;
+    margin: 0 10px;
+    width: 25%;
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
-        margin: 10px 15px 5px;
+        margin: 8px 15px 2px;
         width: auto;
     }
 `;
 
 const MoneybuyDescription = styled(Text)`
-    text-align: center;
-    max-width: 50%;
+    text-align: left;
+    width: 50%;
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
-        max-width: none;
-
+        width: 100%;
+        text-align: center;
     }
 `;
 
