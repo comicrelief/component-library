@@ -20,7 +20,7 @@ import Text from '../../Atoms/Text/Text';
   </ImpactSlider>
 ```
 
-# Impact Slider (w/o opacity animation)
+# Impact Slider (w/o opacity animation, w/default value)
 ```js
 const { testImpactSliderItems} = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
@@ -33,7 +33,7 @@ import Text from '../../Atoms/Text/Text';
   items={testImpactSliderItems}
   step={5}
   max={100}
-  offset={0}
+  defaultSliderValue={45}
   >
     <Text tag="p" color="black">
       Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
