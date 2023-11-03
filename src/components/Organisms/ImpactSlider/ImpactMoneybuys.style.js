@@ -23,7 +23,7 @@ const Moneybuy = styled.div`
     height: auto;
     background-color: white;
     border-radius: 10px;
-    border: 1px solid ${props => props.theme.color('black')};;
+    border: 1px solid ${props => props.theme.color('black')};
     position: relative;
     flex-direction: row;
     align-items: center;
