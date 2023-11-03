@@ -6,7 +6,7 @@ const OuterWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 100%;
-  background-color: ${props => props.theme.color('grey_extra_light')};
+  background-color: ${props => props.theme.color(`${props.backgroundColour}`)};
   padding: 32px 16px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {

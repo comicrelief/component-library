@@ -34,6 +34,7 @@ import Text from '../../Atoms/Text/Text';
   step={5}
   max={100}
   defaultSliderValue={45}
+  backgroundColour="white"
   >
     <Text tag="p" color="black">
       Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
