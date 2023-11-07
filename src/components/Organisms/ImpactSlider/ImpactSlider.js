@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import Slider from './_Slider';
@@ -10,7 +10,7 @@ import {
 } from './ImpactSlider.style';
 
 const ImpactSlider = ({
-  heading, cartID, donateLink, rowID, items, step, max,
+  heading, cartID, donateLink, rowID, items, step, max, updatedAmount,
   backgroundColour, opacityAnimation, children, defaultSliderValue
 }) => {
   // Use the lowest possible amount as our default:
@@ -26,6 +26,10 @@ const ImpactSlider = ({
   const handleSubmit = () => {
     handleSubmission(currentAmount, donateLink, cartID, rowID);
   };
+
+  useEffect(() => {
+    console.log('Useeffect, updatedAmount:', updatedAmount);
+  }, [updatedAmount]);
 
   return (
     <OuterWrapper backgroundColour={backgroundColour} id={rowID}>
@@ -68,7 +72,8 @@ const ImpactSlider = ({
 ImpactSlider.defaultProps = {
   opacityAnimation: false,
   defaultSliderValue: null,
-  backgroundColour: 'grey_extra_light'
+  backgroundColour: 'grey_extra_light',
+  updatedAmount: null
 };
 
 ImpactSlider.propTypes = {
@@ -82,6 +87,7 @@ ImpactSlider.propTypes = {
   defaultSliderValue: PropTypes.number,
   opacityAnimation: PropTypes.bool,
   backgroundColour: PropTypes.string,
+  updatedAmount: PropTypes.number,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       poundsPerItem: PropTypes.number.isRequired,
