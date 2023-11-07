@@ -7,7 +7,7 @@ import Text from '../../Atoms/Text/Text';
 <ImpactSlider
   heading="Your donations will change lives"
   donateLink="https://donation-staging.spa.comicrelief.com"
-  rowID="to-come-from-the-cms"
+  rowID="c7ba23a5-0594-5da4-a14b-8ea87f41db43"
   cartID="to-also-come-from-the-cms"
   items={testImpactSliderItems}
   step={5}
@@ -28,7 +28,7 @@ import Text from '../../Atoms/Text/Text';
 <ImpactSlider
   heading="Your donations will change lives"
   donateLink="https://donation-staging.spa.comicrelief.com"
-  rowID="to-come-from-the-cms"
+  rowID="d7ba23a5-0594-5da4-a14b-8ea87f41db43"
   cartID="to-also-come-from-the-cms"
   items={testImpactSliderItems}
   step={5}
