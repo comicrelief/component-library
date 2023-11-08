@@ -37,6 +37,7 @@
     "react-hook-form": "^6.3.0",
     "react-modal": "^3.16.1",
     "react-responsive": "^9.0.2",
+    "react-range-slider-input": "^3.0.7",
     "react-scripts": "4.0.3",
     "react-spinners": "^0.11.0",
     "react-styleguidist": "^11.1.7",

@@ -74,3 +74,4 @@ export {
   setInitialValues,
   buildValidationSchema
 } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
+export { default as ImpactSlider } from './components/Organisms/ImpactSlider/ImpactSlider';

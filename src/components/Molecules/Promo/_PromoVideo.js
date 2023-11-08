@@ -4,13 +4,14 @@ import { Video } from './Promo.style';
 import PromoVideoButton from './_PromoVideoButton';
 
 const PromoVideo = ({
-  lightColouredVideo,
+  behindTextGradient,
   copyLeft,
   thisVideoSrc,
   thisPoster,
   autoPlay,
   loop,
-  showPosterAfterPlaying
+  showPosterAfterPlaying,
+  blackPlayButton
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
@@ -18,13 +19,15 @@ const PromoVideo = ({
   const videoEl = useRef(null);
 
   const togglePlay = () => {
-    if (isPlaying) videoEl.current.pause();
-    else videoEl.current.play();
-    setIsPlaying(!isPlaying);
+    if (videoEl.current) {
+      if (isPlaying) videoEl.current.pause();
+      else videoEl.current.play();
+      setIsPlaying(!isPlaying);
+    }
   };
 
   const updateTime = () => {
-    if (videoEl.current.duration) {
+    if (videoEl.current && videoEl.current.duration) {
       // Calculate the percentage of the video played:
       const percentage = Math.round((videoEl.current.currentTime / videoEl.current.duration) * 100);
       // Because a completely smooth animation is impossible with the 250ms-ish frequency of
@@ -85,7 +88,8 @@ const PromoVideo = ({
         videoProgress={videoProgress}
         togglePlay={togglePlay}
         isPlaying={isPlaying}
-        lightColouredVideo={lightColouredVideo}
+        behindTextGradient={behindTextGradient}
+        blackPlayButton={blackPlayButton}
         isRestarting={isRestarting}
       />
     </>
@@ -94,7 +98,8 @@ const PromoVideo = ({
 
 PromoVideo.propTypes = {
   copyLeft: PropTypes.bool.isRequired,
-  lightColouredVideo: PropTypes.bool.isRequired,
+  behindTextGradient: PropTypes.oneOf(['black', 'white', 'none']).isRequired,
+  blackPlayButton: PropTypes.bool.isRequired,
   thisVideoSrc: PropTypes.string.isRequired,
   thisPoster: PropTypes.string.isRequired,
   autoPlay: PropTypes.bool.isRequired,

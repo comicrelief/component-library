@@ -6,7 +6,7 @@ import { sizes } from '../../../theme/shared/breakpoint';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, Wrapper, Copy, Media
+  Container, Wrapper, Copy, Media, Gradient
 } from './Promo.style';
 
 const Promo = ({
@@ -25,7 +25,8 @@ const Promo = ({
   showPosterAfterPlaying,
   videoSrc,
   mobileVideoSrc,
-  lightColouredVideo
+  behindTextGradient,
+  blackPlayButton
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -80,7 +81,8 @@ const Promo = ({
         <>
           <PromoVideo
             copyLeft={copyLeft}
-            lightColouredVideo={lightColouredVideo}
+            behindTextGradient={behindTextGradient}
+            blackPlayButton={blackPlayButton}
             thisVideoSrc={thisVideoSrc}
             thisPoster={thisPoster}
             showPosterAfterPlaying={showPosterAfterPlaying}
@@ -92,9 +94,11 @@ const Promo = ({
       </Media>
 
       <Wrapper copyLeft={copyLeft}>
-        <Copy position={position} hasVideo={hasVideo} lightColouredVideo={lightColouredVideo}>
-          {children}
-        </Copy>
+        <Gradient hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft}>
+          <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
+            {children}
+          </Copy>
+        </Gradient>
       </Wrapper>
     </Container>
   );
@@ -116,7 +120,8 @@ Promo.propTypes = {
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
-  lightColouredVideo: PropTypes.bool
+  behindTextGradient: PropTypes.oneOf(['black', 'white', 'none']),
+  blackPlayButton: PropTypes.bool
 };
 
 Promo.defaultProps = {
@@ -135,7 +140,8 @@ Promo.defaultProps = {
   videoSrc: null,
   mobileVideoSrc: null,
   showPosterAfterPlaying: true,
-  lightColouredVideo: false
+  behindTextGradient: 'none',
+  blackPlayButton: false
 };
 
 export default Promo;

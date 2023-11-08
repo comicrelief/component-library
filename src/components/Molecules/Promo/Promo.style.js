@@ -44,6 +44,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: relative;
 
   ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
   ${media('medium')} {
@@ -57,22 +58,8 @@ const Copy = styled.div`
   ${zIndex('low')};
 
   ${media('medium')} {
-    width: 70%;
-    padding: ${spacing('xl')} ${spacing('m')};
-  }
-  ${media('medium')} {
-    width: 50%;
+    width: 100%;
     padding: ${spacing('xxl')} ${spacing('m')};
-
-    ${({ hasVideo }) => hasVideo !== false && css`
-      background-color: rgba(0,0,0,0.75);
-      overflow: hidden;
-      box-shadow: 0px 0px 75px 100px rgba(0, 0, 0, 0.75);
-    `}
-    ${({ hasVideo, lightColouredVideo }) => (hasVideo !== false && lightColouredVideo) && css`
-    background-color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 75px 100px rgba(255, 255, 255, 0.75);
-  `}
   }
 
   ${({ position }) => position === 'lower' && css`
@@ -104,6 +91,31 @@ const Video = styled.video.attrs(() => ({
   object-fit: cover;
 `;
 
+const Gradient = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  ${media('medium')} {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ${({ copyLeft }) => (!copyLeft) && css`
+      left: auto;
+      right: 0;
+    `};
+
+    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
+      overflow: hidden;
+      background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      box-shadow: 0px 0px 50px 60px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+   `};
+  }
+`;
+
 export {
-  Container, Wrapper, Copy, Media, Video
+  Container, Wrapper, Copy, Media, Video, Gradient
 };
