@@ -20,11 +20,7 @@ const handleSubmission = (amount, donateLink, cartID, rowID) => {
     currentpageUrl = currentpageUrl.substring(0, currentpageUrl.indexOf(thisMatch));
   }
 
-  // - Q: do we need client IDs? A: 99% of examples just use 'donate' (or 'test' for staging)
-  //
-  // - I guess we still need rowID for the back-browsing scroll stuff?
-  // - TO-DO: add in said scroll stuff
-  const forwardingUrl = `${donateLink}/?cartID=${cartID}&amount=${amount}&clientOverride=donate&currency=GBP&givingType=single&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${rowID}`;
+  const forwardingUrl = `${donateLink}/?cartId=${cartID}&amount=${amount}&clientOverride=donate&currency=GBP&givingType=single&affiliate=${affiliateValue}&siteurl=${currentpageUrl}&rowID=${rowID}`;
 
   window.location.href = forwardingUrl;
 };
