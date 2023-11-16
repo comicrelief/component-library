@@ -9,6 +9,7 @@ const Logos = ({ campaign }) => {
       <>
         <a href="/" title="Go to Comic Relief homepage">
           <Logo rotate sizeSm="50px" sizeMd="60px" campaign="Comic Relief" />
+          Lint test
         </a>
         <a href="/sportrelief/" title="Go to Sport Relief homepage">
           <Logo sizeSm="100px" sizeMd="120px" campaign="Sport Relief Gameon" />
