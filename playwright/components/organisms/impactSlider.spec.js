@@ -145,7 +145,7 @@ test.describe('impact slider component - 1', () => {
     await page.close();
   });
 
-  test('impact slider - moving the slider to £80 and then back to £45', async ({ page }) => {
+  test('impact slider - moving the slider to £80 and then back to £50', async ({ page }) => {
     await page.goto('/#impactslider');
 
     // Ensure that the slider and its handle are visible
@@ -196,16 +196,16 @@ test.describe('impact slider component - 1', () => {
     // donate now button should have the amount as £80
     await expect(page.locator('[data-testid="ImpactSlider-example-1"] button[type="submit"]')).toContainText('Donate £80 now');
 
-    // add a short wait for the slider to move back from £80 to £45
+    // add a short wait for the slider to move back from £80 to £50
     await page.waitForTimeout(5000);
 
-    // drag the slider to the left to decrease the amount to £45
+    // drag the slider to the left to decrease the amount to £50
     if (slider) {
       // Get the bounding box of the slider
       sliderBound = await slider.boundingBox();
 
       // Get the target position for the mouse move to a donation of £80
-      const targetPosition45 = sliderBound.width * (45 / 100);
+      const targetPosition45 = sliderBound.width * (50 / 100);
 
       // Perform mouse actions to simulate dragging the slider handle to 80
       await page.mouse.move(sliderBound.x, sliderBound.y + sliderBound.height / 2);
@@ -218,6 +218,8 @@ test.describe('impact slider component - 1', () => {
 
       await page.mouse.down();
 
+      await page.waitForTimeout(2000);
+
       // Update targetAmountBeforeMoving after the first slider move
       targetAmountBeforeMoving = parseFloat(await moneyBuyElement.innerText());
       console.log('Slider decreased to amount: ', targetAmountBeforeMoving);
@@ -225,15 +227,15 @@ test.describe('impact slider component - 1', () => {
 
     await page.waitForTimeout(2000);
 
-    // Validate that the slider is at £45
-    await expect(page.locator('[data-testid="ImpactSlider-example-1"] > [data-preview="ImpactSlider"] > div > div > div > p')).toContainText('A donation of £45 could help pay for:');
-    await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-1"] [data-testid="moneybuy-amount"]')).toContainText('45');
-    await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-2"] [data-testid="moneybuy-amount"]')).toContainText('4');
+    // Validate that the slider is at £50
+    await expect(page.locator('[data-testid="ImpactSlider-example-1"] > [data-preview="ImpactSlider"] > div > div > div > p')).toContainText('A donation of £50 could help pay for:');
+    await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-1"] [data-testid="moneybuy-amount"]')).toContainText('50');
+    await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-2"] [data-testid="moneybuy-amount"]')).toContainText('5');
     await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-3"] [data-testid="moneybuy-amount"]')).toContainText('3');
     await expect(page.locator('[data-testid="ImpactSlider-example-1"] [data-testid="impact-slider--moneybuy-4"] [data-testid="moneybuy-amount"]')).toContainText('2');
 
-    // donate now button should have the amount as £45
-    await expect(page.locator('[data-testid="ImpactSlider-example-1"] button[type="submit"]')).toContainText('Donate £45 now');
+    // donate now button should have the amount as £50
+    await expect(page.locator('[data-testid="ImpactSlider-example-1"] button[type="submit"]')).toContainText('Donate £50 now');
 
     await page.close();
   });
