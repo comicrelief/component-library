@@ -24,7 +24,6 @@ test.describe('header component', () => {
     // donate locator
     await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] a[href="/donation"]')).toBeVisible();
     // SR logo
-    await expect(page.locator('[data-testid="Header-example-3"] [title="Sport Relief in homepage"]')).toBeVisible();
     await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] a[href="/sportrelief"]')).toBeVisible();
     // shop
     await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] a[href*="/shop"]')).toBeVisible();

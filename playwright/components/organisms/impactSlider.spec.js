@@ -239,7 +239,6 @@ test.describe('impact slider component - 1', () => {
   });
 });
 
-
 test.describe('impact slider component - 2', () => {
   test('impact slider - sliding to £45', async ({ page }) => {
 
