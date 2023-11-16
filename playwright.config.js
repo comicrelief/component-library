@@ -15,8 +15,7 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test
   .only in the source code. */
   forbidOnly: !!process.env.CI,
-  // TODO: uncomment below retries once all tests are have been added
-  // retries: 2,
+  retries: 2,
   workers: 2,
   timeout: 60 * 1000,
   expect: {

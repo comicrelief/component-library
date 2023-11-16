@@ -196,6 +196,9 @@ test.describe('impact slider component - 1', () => {
     // donate now button should have the amount as £80
     await expect(page.locator('[data-testid="ImpactSlider-example-1"] button[type="submit"]')).toContainText('Donate £80 now');
 
+    // add a short wait for the slider to move back from £80 to £45
+    await page.waitForTimeout(5000);
+
     // drag the slider to the left to decrease the amount to £45
     if (slider) {
       // Get the bounding box of the slider

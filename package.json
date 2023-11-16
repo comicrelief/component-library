@@ -58,6 +58,7 @@
     "postinstall": "yarn run build",
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "test:e2e": "playwright test --project=chromium",
+    "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "cy:run": "export NODE_ENV=development; cypress run --headless --browser chrome",
