@@ -52,15 +52,13 @@ jobs:
         run: yarn build
 
       - name: Run unit tests
-        run: yarn test --maxWorkers=2
+        run: yarn test:unit --maxWorkers=2
         env:
           NODE_OPTIONS: --max_old_space_size=4096
 
-  cypress:
-    name: Cypress test
-    needs:
-      - lint
-      - unit-test
+  playwright:
+    name: Playwright test
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -71,37 +69,37 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      # see https://github.com/marketplace/actions/cypress-io
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
+      - name: Restore packages cache
+        uses: actions/cache@v3
         with:
-          start: yarn styleguide
-          command: yarn cy:run
-          wait-on: http://localhost:6060
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      - name: Install playwright browsers
+        run: yarn playwright install --with-deps chromium
+
+      - name: Run end-to-end tests
+        run: yarn test:e2e:ci
+        continue-on-error: false
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-
-      # NOTE: screenshots will be generated only if the tests failed
-      # thus we store screenshots only on failures
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
 
       # Test run video was always captured, so this action uses "always()" condition
       - name: Upload videos
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: cypress-videos
-          path: cypress/videos
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 3
 
   publish:
     name: Publish package to npm
     if: github.ref == 'refs/heads/master'
-    needs: cypress
+    needs: playwright
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -227,7 +227,7 @@ it("renders correctly", () => {
       border: none;
     }
 
-    .c10 >:not(:last-child):not(legend) {
+    .c10 > :not(:last-child):not(legend) {
       margin-bottom: 2rem;
     }
 
