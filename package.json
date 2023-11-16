@@ -61,9 +61,6 @@
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
-    "cy:run": "export NODE_ENV=development; cypress run --headless --browser chrome",
-    "cy:open": "export NODE_ENV=development; cypress open",
-    "feature-test": "run-p --race styleguide cy:run",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
