@@ -10,7 +10,7 @@ import Text from '../../Atoms/Text/Text';
   rowID="c7ba23a5-0594-5da4-a14b-8ea87f41db43"
   cartID="to-also-come-from-the-cms"
   items={testImpactSliderItems}
-  step={5}
+  step={1}
   max={100}
   opacityAnimation={true}
   >
@@ -31,7 +31,7 @@ import Text from '../../Atoms/Text/Text';
   rowID="d7ba23a5-0594-5da4-a14b-8ea87f41db43"
   cartID="to-also-come-from-the-cms"
   items={testImpactSliderItems}
-  step={5}
+  step={1}
   max={100}
   defaultSliderValue={45}
   backgroundColour="white"
