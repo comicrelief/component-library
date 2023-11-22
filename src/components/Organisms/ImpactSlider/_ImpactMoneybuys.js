@@ -8,12 +8,11 @@ import {
 const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
   <MoneybuyWrapper>
     {items.map((item, index) => {
-      const roundedPerPound = Math.floor(item.poundsPerItem);
-      const thisAmount = Math.floor(currentAmount / roundedPerPound);
-      const isInactive = !(!opacityAnimation || currentAmount >= roundedPerPound);
+      const thisAmount = Math.floor(currentAmount / item.poundsPerItem);
+      const isInactive = !(!opacityAnimation || currentAmount >= item.poundsPerItem);
 
       return (
-        <Fragment key={roundedPerPound}>
+        <Fragment key={item.poundsPerItem}>
           <Moneybuy isInactive={isInactive} data-testid={`impact-slider--moneybuy-${index + 1}`}>
             <MoneybuyImage imageURL={item.imageURL} />
             <MoneybuyAmount tag="p" family="Anton" uppercase weight="normal" size="xl" data-testid="moneybuy-amount">{thisAmount}</MoneybuyAmount>
