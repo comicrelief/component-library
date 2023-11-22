@@ -28,7 +28,7 @@ const mobileImages = {
 
 const testImpactSliderItems = [
   {
-    poundsPerItem: 0.25,
+    poundsPerItem: 1,
     description: 'Fresh water pumps',
     imageURL: 'https://images.ctfassets.net/zsfivwzfgl3t/28sKInxW6EsmvOTahWdm8E/3fb8e1488f95bac6a3087b133ae7ce9f/ImpactSliderMoneybuy1.png'
   },
