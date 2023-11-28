@@ -38,6 +38,8 @@ const Signup = ({
   chooseAmountText,
   submitButtonColor,
   otherAmountValue,
+  additionalSingleCopy,
+  additionalMonthlyCopy,
   ...rest
 }) => {
   const [givingType, setGivingType] = useState('single');
@@ -191,6 +193,10 @@ const Signup = ({
     return `Donate £${amountDonate} monthly`;
   };
 
+  const showAdditionalSingleCopy = givingType === 'single' && additionalSingleCopy;
+  const showAdditionalMonthlyCopy = givingType === 'monthly' && additionalMonthlyCopy;
+  const additionalCopy = showAdditionalSingleCopy || showAdditionalMonthlyCopy;
+
   return (
     <FormWrapper>
       {showGivingSelector && (
@@ -276,6 +282,14 @@ const Signup = ({
           </Error>
           )}
 
+          {additionalCopy && (
+          <p className="additional-copy">
+            <strong>
+              {additionalCopy}
+            </strong>
+          </p>
+          )}
+
           {noMoneyBuys ? (
             <Button
               type="submit"
@@ -313,13 +327,17 @@ Signup.propTypes = {
   PopUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string.isRequired,
   submitButtonColor: PropTypes.string.isRequired,
-  otherAmountValue: PropTypes.number
+  otherAmountValue: PropTypes.number,
+  additionalSingleCopy: PropTypes.string,
+  additionalMonthlyCopy: PropTypes.string
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
   otherAmountValue: null,
-  data: {}
+  data: {},
+  additionalSingleCopy: null,
+  additionalMonthlyCopy: null
 };
 
 export default Signup;

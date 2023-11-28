@@ -40,7 +40,9 @@ const Donate = ({
   PopUpText,
   chooseAmountText,
   isDesktopOverride,
-  otherAmountValue
+  otherAmountValue,
+  additionalSingleCopy,
+  additionalMonthlyCopy
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -127,6 +129,8 @@ const Donate = ({
           chooseAmountText={chooseAmountText}
           submitButtonColor={submitButtonColor}
           otherAmountValue={otherAmountValue}
+          additionalSingleCopy={additionalSingleCopy}
+          additionalMonthlyCopy={additionalMonthlyCopy}
         />
       </Wrapper>
     </Container>
@@ -159,7 +163,9 @@ Donate.propTypes = {
   PopUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
   isDesktopOverride: PropTypes.bool,
-  otherAmountValue: PropTypes.number
+  otherAmountValue: PropTypes.number,
+  additionalSingleCopy: PropTypes.string,
+  additionalMonthlyCopy: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -186,7 +192,9 @@ Donate.defaultProps = {
   chooseAmountText: '',
   isDesktopOverride: null,
   otherAmountValue: null,
-  title: null
+  title: null,
+  additionalSingleCopy: null,
+  additionalMonthlyCopy: null
 };
 
 export default Donate;
