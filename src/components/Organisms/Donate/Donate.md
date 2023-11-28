@@ -355,7 +355,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Additional copy for both giving types
+## Additional copy for BOTH giving types
 
 ```js
 import data from './dev-data/data';
