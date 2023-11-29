@@ -56,7 +56,7 @@ const Signup = ({
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
       setAmountDonate(otherAmountValue);
-    } else {
+    } else if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
       // Check the 2nd moneybuy exists before using it;
@@ -71,29 +71,31 @@ const Signup = ({
   }, [givingType, singleGiving, regularGiving, otherAmountValue]);
 
   useEffect(() => {
-    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+    if (givingType) {
+      const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-    let moneyBuyNewDescription = otherAmountText;
+      let moneyBuyNewDescription = otherAmountText;
 
-    givingData.moneybuys.map((moneyBuy, index) => {
-      if (moneyBuy.value === amountDonate) {
-        moneyBuyNewDescription = moneyBuy.description;
+      givingData.moneybuys.map((moneyBuy, index) => {
+        if (moneyBuy.value === amountDonate) {
+          moneyBuyNewDescription = moneyBuy.description;
+        }
+
+        return (
+          index === 1
+          && amountDonate === undefined
+          && (setMoneyBuyCopy(moneyBuy.description),
+          setAmountDonate(moneyBuy.value))
+        );
+      });
+
+      if (!isAmountValid(amountDonate)) {
+        if (moneyBuyCopy) setMoneyBuyCopy(false);
+        if (!errorMsg) setErrorMsg(true);
+      } else {
+        if (errorMsg) setErrorMsg(false);
+        setMoneyBuyCopy(moneyBuyNewDescription);
       }
-
-      return (
-        index === 1
-        && amountDonate === undefined
-        && (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(moneyBuy.value))
-      );
-    });
-
-    if (!isAmountValid(amountDonate)) {
-      if (moneyBuyCopy) setMoneyBuyCopy(false);
-      if (!errorMsg) setErrorMsg(true);
-    } else {
-      if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(moneyBuyNewDescription);
     }
   }, [
     errorMsg,
@@ -120,7 +122,7 @@ const Signup = ({
       // Else, use whatever's available
       setGivingType(singleGiving !== null ? 'single' : 'monthly');
     }
-  }, [singleGiving, defaultGivingType]);
+  }, []);
 
   const submitDonation = (
     event,
@@ -182,7 +184,7 @@ const Signup = ({
 
       setAmountDonate(thisAmount);
     }
-  }, [errorMsg, givingData.moneybuys]);
+  }, [errorMsg, givingData]);
 
   // Listen for click outside custom amount input if there is no value entered.
   useEffect(() => {
@@ -239,7 +241,7 @@ const Signup = ({
               {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
-          {!noMoneyBuys && (
+          {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
