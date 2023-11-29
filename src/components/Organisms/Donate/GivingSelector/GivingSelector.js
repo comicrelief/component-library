@@ -51,8 +51,12 @@ const GivingSelector = ({
   );
 };
 
+GivingSelector.defaultProps = {
+  givingType: null
+};
+
 GivingSelector.propTypes = {
-  givingType: PropTypes.string.isRequired,
+  givingType: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   setPopOpen: PropTypes.func.isRequired,
   mbshipID: PropTypes.string.isRequired

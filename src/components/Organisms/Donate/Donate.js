@@ -42,7 +42,8 @@ const Donate = ({
   isDesktopOverride,
   otherAmountValue,
   additionalSingleCopy,
-  additionalMonthlyCopy
+  additionalMonthlyCopy,
+  defaultGivingType
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -131,6 +132,7 @@ const Donate = ({
           otherAmountValue={otherAmountValue}
           additionalSingleCopy={additionalSingleCopy}
           additionalMonthlyCopy={additionalMonthlyCopy}
+          defaultGivingType={defaultGivingType}
         />
       </Wrapper>
     </Container>
@@ -165,7 +167,8 @@ Donate.propTypes = {
   isDesktopOverride: PropTypes.bool,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
-  additionalMonthlyCopy: PropTypes.string
+  additionalMonthlyCopy: PropTypes.string,
+  defaultGivingType: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -194,7 +197,8 @@ Donate.defaultProps = {
   otherAmountValue: null,
   title: null,
   additionalSingleCopy: null,
-  additionalMonthlyCopy: null
+  additionalMonthlyCopy: null,
+  defaultGivingType: null
 };
 
 export default Donate;

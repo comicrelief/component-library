@@ -40,9 +40,10 @@ const Signup = ({
   otherAmountValue,
   additionalSingleCopy,
   additionalMonthlyCopy,
+  defaultGivingType,
   ...rest
 }) => {
-  const [givingType, setGivingType] = useState('single');
+  const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -55,7 +56,7 @@ const Signup = ({
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
       setAmountDonate(otherAmountValue);
-    } else {
+    } else if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
       // Check the 2nd moneybuy exists before using it;
@@ -70,29 +71,31 @@ const Signup = ({
   }, [givingType, singleGiving, regularGiving, otherAmountValue]);
 
   useEffect(() => {
-    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+    if (givingType) {
+      const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-    let moneyBuyNewDescription = otherAmountText;
+      let moneyBuyNewDescription = otherAmountText;
 
-    givingData.moneybuys.map((moneyBuy, index) => {
-      if (moneyBuy.value === amountDonate) {
-        moneyBuyNewDescription = moneyBuy.description;
+      givingData.moneybuys.map((moneyBuy, index) => {
+        if (moneyBuy.value === amountDonate) {
+          moneyBuyNewDescription = moneyBuy.description;
+        }
+
+        return (
+          index === 1
+          && amountDonate === undefined
+          && (setMoneyBuyCopy(moneyBuy.description),
+          setAmountDonate(moneyBuy.value))
+        );
+      });
+
+      if (!isAmountValid(amountDonate)) {
+        if (moneyBuyCopy) setMoneyBuyCopy(false);
+        if (!errorMsg) setErrorMsg(true);
+      } else {
+        if (errorMsg) setErrorMsg(false);
+        setMoneyBuyCopy(moneyBuyNewDescription);
       }
-
-      return (
-        index === 1
-        && amountDonate === undefined
-        && (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(moneyBuy.value))
-      );
-    });
-
-    if (!isAmountValid(amountDonate)) {
-      if (moneyBuyCopy) setMoneyBuyCopy(false);
-      if (!errorMsg) setErrorMsg(true);
-    } else {
-      if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(moneyBuyNewDescription);
     }
   }, [
     errorMsg,
@@ -109,6 +112,18 @@ const Signup = ({
   useEffect(() => {
     if (popOpen && !popUpShown) setPopUpShown(true);
   }, [popOpen, popUpShown]);
+
+  // On load, determine what should actually be the default giving type
+  useEffect(() => {
+    // Use any explicit setting
+    if (defaultGivingType) {
+      setGivingType(defaultGivingType);
+    } else {
+      // Else, use whatever's available
+      setGivingType(singleGiving !== null ? 'single' : 'monthly');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const submitDonation = (
     event,
@@ -170,7 +185,7 @@ const Signup = ({
 
       setAmountDonate(thisAmount);
     }
-  }, [errorMsg, givingData.moneybuys]);
+  }, [errorMsg, givingData]);
 
   // Listen for click outside custom amount input if there is no value entered.
   useEffect(() => {
@@ -227,7 +242,7 @@ const Signup = ({
               {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
-          {!noMoneyBuys && (
+          {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
@@ -329,7 +344,8 @@ Signup.propTypes = {
   submitButtonColor: PropTypes.string.isRequired,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
-  additionalMonthlyCopy: PropTypes.string
+  additionalMonthlyCopy: PropTypes.string,
+  defaultGivingType: PropTypes.string
 };
 
 Signup.defaultProps = {
@@ -337,7 +353,8 @@ Signup.defaultProps = {
   otherAmountValue: null,
   data: {},
   additionalSingleCopy: null,
-  additionalMonthlyCopy: null
+  additionalMonthlyCopy: null,
+  defaultGivingType: null
 };
 
 export default Signup;
