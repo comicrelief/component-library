@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`"Single Giving, No Money Buys, with overridden manual input value" renders correctly 1`] = `
+.c16 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c20 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
 .c4 {
   color: #FFFFFF;
   font-size: 4rem;
@@ -22,24 +40,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 1rem;
-}
-
-.c16 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c20 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c18 {
@@ -415,6 +415,14 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   }
 }
 
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
 @media (min-width:1024px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -477,6 +485,14 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   .c14 {
     padding: 0 2rem 2rem;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:740px) {
@@ -673,7 +689,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c16 {
+.c15 {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-transform: inherit;
@@ -682,7 +698,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c20 {
+.c19 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -691,7 +707,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c25 {
+.c24 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -700,7 +716,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18 {
+.c17 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -713,11 +729,11 @@ exports[`Monthly donation renders correctly 1`] = `
   width: 100%;
 }
 
-.c21 {
+.c20 {
   margin-bottom: 0.5rem;
 }
 
-.c23 {
+.c22 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -737,20 +753,20 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c23:focus {
+.c22:focus {
   border: 1px solid #666;
 }
 
-.c22 {
+.c21 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c19 {
+.c18 {
   display: block;
 }
 
-.c19 input {
+.c18 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -762,13 +778,13 @@ exports[`Monthly donation renders correctly 1`] = `
   height: auto;
 }
 
-.c19 input:focus {
+.c18 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c19 input:active:focus {
+.c18 input:active:focus {
   box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
 }
 
@@ -826,7 +842,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c13 {
+.c12 {
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
@@ -835,37 +851,37 @@ exports[`Monthly donation renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c13 h3 {
+.c12 h3 {
   margin-top: 1rem;
 }
 
-.c13 input {
+.c12 input {
   max-width: 100%;
   margin: 0;
 }
 
-.c13 input[type='submit'] {
+.c12 input[type='submit'] {
   margin: 2rem 0;
 }
 
-.c14 {
+.c13 {
   padding: 0 1rem 1rem;
   margin: 0;
   border: none;
 }
 
-.c14 input[type='submit'] {
+.c13 input[type='submit'] {
   margin-bottom: 0;
 }
 
-.c15 {
+.c14 {
   margin: 0;
   padding: 2rem 0.5rem;
   display: block;
   width: 100%;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -880,19 +896,19 @@ exports[`Monthly donation renders correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.c17 label {
+.c16 label {
   -webkit-flex: 0 0 30%;
   -ms-flex: 0 0 30%;
   flex: 0 0 30%;
   margin-bottom: 0.5rem;
 }
 
-.c17 label input {
+.c16 label input {
   cursor: pointer;
   padding: 1.5rem 0.5rem;
 }
 
-.c24 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -907,11 +923,11 @@ exports[`Monthly donation renders correctly 1`] = `
   justify-content: center;
 }
 
-.c26 {
+.c25 {
   margin-right: 0.5rem;
 }
 
-.c27 {
+.c26 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -927,7 +943,7 @@ exports[`Monthly donation renders correctly 1`] = `
   display: block;
 }
 
-.c27 span {
+.c26 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -940,7 +956,7 @@ exports[`Monthly donation renders correctly 1`] = `
   z-index: 3;
 }
 
-.c27 input {
+.c26 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -948,17 +964,17 @@ exports[`Monthly donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c27 input:focus {
+.c26 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c28 {
+.c27 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c29 {
+.c28 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -977,14 +993,14 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c29:active,
-.c29:focus,
-.c29:hover {
+.c28:active,
+.c28:focus,
+.c28:hover {
   outline: none;
   background-color: #961D35;
 }
 
-.c12 {
+.c11 {
   width: 50%;
   height: 48px;
   border-radius: 2rem;
@@ -1022,7 +1038,7 @@ exports[`Monthly donation renders correctly 1`] = `
   background: #BECCF9;
 }
 
-.c8 .give-monthly:checked ~ .c11 {
+.c8 .give-monthly:checked ~ .c10 {
   left: calc(50% - 2px);
 }
 
@@ -1069,9 +1085,9 @@ exports[`Monthly donation renders correctly 1`] = `
   -webkit-transition: color 0.15s ease-out;
   transition: color 0.15s ease-out;
   z-index: 2;
-  cursor: default;
+  cursor: pointer;
   border-radius: 2rem;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .c9:active:focus {
@@ -1084,45 +1100,6 @@ exports[`Monthly donation renders correctly 1`] = `
   box-shadow: inset 0 0 0 4px #0565D1;
 }
 
-.c10 {
-  font-size: 1rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: bold;
-  min-height: 48px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  border: none;
-  -webkit-transition: color 0.15s ease-out;
-  transition: color 0.15s ease-out;
-  z-index: 2;
-  cursor: pointer;
-  border-radius: 2rem;
-  color: #000000;
-}
-
-.c10:active:focus {
-  box-shadow: none;
-}
-
-.c10:focus {
-  border: none;
-  outline: none;
-  box-shadow: inset 0 0 0 4px #0565D1;
-}
-
 @media (min-width:740px) {
   .c5 {
     font-size: 1.25rem;
@@ -1130,13 +1107,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c23 {
+  .c22 {
     max-width: 290px;
   }
 }
 
 @media (min-width:740px) {
-  .c19 input {
+  .c18 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -1193,7 +1170,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c12 {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
@@ -1201,13 +1178,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c14 {
+  .c13 {
     padding: 0 2rem 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c17 {
+  .c16 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -1215,13 +1192,13 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 label {
+  .c16 label {
     margin-bottom: 0;
   }
 }
 
 @media (min-width:740px) {
-  .c27 {
+  .c26 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -1229,7 +1206,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c29 {
+  .c28 {
     padding: 1rem 2rem;
   }
 }
@@ -1282,7 +1259,7 @@ exports[`Monthly donation renders correctly 1`] = `
         >
           <input
             aria-label="Single"
-            checked={true}
+            checked={false}
             className="give-once"
             id="give-once--mship-1"
             label=""
@@ -1307,28 +1284,28 @@ exports[`Monthly donation renders correctly 1`] = `
             value="Monthly"
           />
           <label
-            className="c10"
+            className="c9"
             htmlFor="give-monthly--mship-1"
           >
             Monthly
           </label>
           <span
-            className="c11 c12"
+            className="c10 c11"
           />
         </div>
       </div>
       <form
-        className="c13"
+        className="c12"
         onSubmit={[Function]}
       >
         <fieldset
-          className="c14"
+          className="c13"
         >
           <legend
-            className="c15"
+            className="c14"
           >
             <span
-              className="c16"
+              className="c15"
               color="inherit"
               size="l"
             >
@@ -1336,14 +1313,14 @@ exports[`Monthly donation renders correctly 1`] = `
             </span>
           </legend>
           <div
-            className="c17"
+            className="c16"
           >
             <label
-              className="c18 c19"
+              className="c17 c18"
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
-                className="c20 c21"
+                className="c19 c20"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1353,30 +1330,30 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c22"
+                className="c21"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box1"
-                  aria-label="£12.10"
-                  className="c23"
+                  aria-label="£5.50"
+                  className="c22"
                   id="mship-1--moneyBuy-box1"
                   name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
                   required={false}
                   type="button"
-                  value="£ 12.10"
+                  value="£ 5.50"
                 />
               </div>
               
             </label>
             <label
-              className="c18 c19"
+              className="c17 c18"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
-                className="c20 c21"
+                className="c19 c20"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -1386,695 +1363,15 @@ exports[`Monthly donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c22"
+                className="c21"
               >
                 
                 <input
                   aria-describedby="mship-1--moneyBuy-box2"
-                  aria-label="£20.00"
-                  className="c23"
+                  aria-label="£10.00"
+                  className="c22"
                   id="mship-1--moneyBuy-box2"
                   name="mship-1--moneyBuy2"
-                  onClick={[Function]}
-                  placeholder=""
-                  required={false}
-                  type="button"
-                  value="£ 20"
-                />
-              </div>
-              
-            </label>
-            <label
-              className="c18 c19"
-              htmlFor="mship-1--moneyBuy-box3"
-            >
-              <span
-                className="c20 c21"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c22"
-              >
-                
-                <input
-                  aria-describedby="mship-1--moneyBuy-box3"
-                  aria-label="£30.00"
-                  className="c23"
-                  id="mship-1--moneyBuy-box3"
-                  name="mship-1--moneyBuy3"
-                  onClick={[Function]}
-                  placeholder=""
-                  required={false}
-                  type="button"
-                  value="£ 30"
-                />
-              </div>
-              
-            </label>
-          </div>
-          <div
-            className="c24"
-          >
-            <span
-              className="c25 c26"
-              color="inherit"
-              size="s"
-            >
-              Other amount
-            </span>
-            <label
-              className="c18 c27"
-              htmlFor="mship-1--MoneyBuy-userInput"
-            >
-              <span
-                className="c20 c21"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "£",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c22"
-              >
-                
-                <input
-                  aria-describedby="mship-1--MoneyBuy-userInput"
-                  aria-label="Input a different amount"
-                  className="c23"
-                  id="mship-1--MoneyBuy-userInput"
-                  max="25000"
-                  min="1"
-                  name="membership_amount"
-                  onChange={[Function]}
-                  pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  placeholder="0.00"
-                  required={false}
-                  step="0.01"
-                  type="string"
-                  value={10}
-                />
-              </div>
-              
-            </label>
-          </div>
-          <p
-            className="c28"
-          >
-            <strong>
-              £10 
-            </strong>
-          </p>
-          <button
-            className="c29"
-            color="red"
-            type="submit"
-          >
-            Donate £10 now
-          </button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Single donation renders correctly 1`] = `
-.c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
-}
-
-.c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
-.c10 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c14 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c20 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: 500;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c12 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-  width: 100%;
-}
-
-.c15 {
-  margin-bottom: 0.5rem;
-}
-
-.c17 {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: 1rem 1.5rem;
-  background-color: #F4F3F5;
-  border: 1px solid;
-  border-color: #E1E2E3;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #000000;
-  border-radius: 0.5rem;
-  font-size: inherit;
-  z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c17:focus {
-  border: 1px solid #666;
-}
-
-.c16 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
-.c18 {
-  display: block;
-}
-
-.c18 input {
-  border: none;
-  background-color: #BECCF9;
-  color: #000000;
-  font-size: 1.5rem;
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
-  border-radius: 10px;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  height: auto;
-  background-color: #0565D1;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
-  color: #FFFFFF;
-}
-
-.c18 input:focus {
-  border: none;
-  outline: none;
-  box-shadow: inset 0 0 0 4px #0565D1;
-}
-
-.c18 input:active:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
-}
-
-.c18 input:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
-}
-
-.c13 {
-  display: block;
-}
-
-.c13 input {
-  border: none;
-  background-color: #BECCF9;
-  color: #000000;
-  font-size: 1.5rem;
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
-  border-radius: 10px;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  height: auto;
-}
-
-.c13 input:focus {
-  border: none;
-  outline: none;
-  box-shadow: inset 0 0 0 4px #0565D1;
-}
-
-.c13 input:active:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: auto;
-  background-color: #274084;
-}
-
-.c1 {
-  position: relative;
-  text-align: center;
-  padding: 2rem 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: block;
-  width: 100%;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c3 {
-  position: relative;
-  text-align: left;
-}
-
-.c6 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c7 {
-  position: relative;
-  width: 100%;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  margin-top: 1rem;
-}
-
-.c7 h3 {
-  margin-top: 1rem;
-}
-
-.c7 input {
-  max-width: 100%;
-  margin: 0;
-}
-
-.c7 input[type='submit'] {
-  margin: 2rem 0;
-}
-
-.c8 {
-  padding: 0 1rem 1rem;
-  margin: 0;
-  border: none;
-}
-
-.c8 input[type='submit'] {
-  margin-bottom: 0;
-}
-
-.c9 {
-  margin: 0;
-  padding: 2rem 0.5rem;
-  display: block;
-  width: 100%;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 2rem;
-}
-
-.c11 label {
-  -webkit-flex: 0 0 30%;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
-  margin-bottom: 0.5rem;
-}
-
-.c11 label input {
-  cursor: pointer;
-  padding: 1.5rem 0.5rem;
-}
-
-.c19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c21 {
-  margin-right: 0.5rem;
-}
-
-.c22 {
-  position: relative;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  font-weight: 400;
-  display: block;
-}
-
-.c22 span {
-  position: absolute;
-  font-size: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0px;
-  font-weight: 500;
-  padding: 0px 15px;
-  z-index: 3;
-}
-
-.c22 input {
-  height: 48px;
-  border: 2px solid #969598;
-  background: #F4F3F5;
-  border-radius: 10px;
-  padding: 0.5rem 1rem 0.5rem 2rem;
-}
-
-.c22 input:focus {
-  outline: none;
-  border: 2px solid #969598;
-}
-
-.c23 {
-  line-height: 1.5;
-  margin-top: 2rem;
-}
-
-.c24 {
-  width: 100%;
-  margin: 2rem 0 2rem;
-  color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  min-height: 48px;
-  background: #E52630;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-radius: 2rem;
-  border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c24:active,
-.c24:focus,
-.c24:hover {
-  outline: none;
-  background-color: #961D35;
-}
-
-@media (min-width:740px) {
-  .c5 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c17 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
-  .c18 input {
-    font-size: 2rem;
-    padding: 1.5rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c13 input {
-    font-size: 2rem;
-    padding: 1.5rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: inherit;
-    -webkit-justify-content: inherit;
-    -ms-flex-pack: inherit;
-    justify-content: inherit;
-    background-color: transparent;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    padding: 4rem 1rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 4rem 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c2 {
-    width: 50%;
-    padding: 4rem;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 50%;
-  }
-}
-
-@media (min-width:740px) {
-  .c7 {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    padding: 0 2rem 2rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c11 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-@media (min-width:740px) {
-  .c11 label {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:740px) {
-  .c22 {
-    -webkit-flex-basis: 60%;
-    -ms-flex-preferred-size: 60%;
-    flex-basis: 60%;
-  }
-}
-
-@media (min-width:740px) {
-  .c24 {
-    padding: 1rem 2rem;
-  }
-}
-
-@media (min-width:740px) {
-
-}
-
-<div
-  className="c0"
-  id="mship-1"
->
-  <div
-    aria-live="polite"
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-      >
-        <h2
-          className="c4"
-          color="white"
-          size="big"
-        >
-          Donate Now
-        </h2>
-        <p
-          className="c5"
-          color="white"
-          size="m"
-        >
-          Please help us fund life-changing projects in the UK and around the world.
-        </p>
-      </div>
-    </div>
-    <div
-      className="c6"
-    >
-      <form
-        className="c7"
-        onSubmit={[Function]}
-      >
-        <fieldset
-          className="c8"
-        >
-          <legend
-            className="c9"
-          >
-            <span
-              className="c10"
-              color="inherit"
-              size="l"
-            >
-              Choose an amount to give
-            </span>
-          </legend>
-          <div
-            className="c11"
-          >
-            <label
-              className="c12 c13"
-              htmlFor="mship-1--moneyBuy-box1"
-            >
-              <span
-                className="c14 c15"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c16"
-              >
-                
-                <input
-                  aria-describedby="mship-1--moneyBuy-box1"
-                  aria-label="£10"
-                  className="c17"
-                  id="mship-1--moneyBuy-box1"
-                  name="mship-1--moneyBuy1"
                   onClick={[Function]}
                   placeholder=""
                   required={false}
@@ -2085,11 +1382,11 @@ exports[`Single donation renders correctly 1`] = `
               
             </label>
             <label
-              className="c12 c18"
-              htmlFor="mship-1--moneyBuy-box2"
+              className="c17 c18"
+              htmlFor="mship-1--moneyBuy-box3"
             >
               <span
-                className="c14 c15"
+                className="c19 c20"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -2099,15 +1396,15 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c16"
+                className="c21"
               >
                 
                 <input
-                  aria-describedby="mship-1--moneyBuy-box2"
-                  aria-label="£20"
-                  className="c17"
-                  id="mship-1--moneyBuy-box2"
-                  name="mship-1--moneyBuy2"
+                  aria-describedby="mship-1--moneyBuy-box3"
+                  aria-label="£20.00"
+                  className="c22"
+                  id="mship-1--moneyBuy-box3"
+                  name="mship-1--moneyBuy3"
                   onClick={[Function]}
                   placeholder=""
                   required={false}
@@ -2117,56 +1414,23 @@ exports[`Single donation renders correctly 1`] = `
               </div>
               
             </label>
-            <label
-              className="c12 c13"
-              htmlFor="mship-1--moneyBuy-box3"
-            >
-              <span
-                className="c14 c15"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c16"
-              >
-                
-                <input
-                  aria-describedby="mship-1--moneyBuy-box3"
-                  aria-label="£30"
-                  className="c17"
-                  id="mship-1--moneyBuy-box3"
-                  name="mship-1--moneyBuy3"
-                  onClick={[Function]}
-                  placeholder=""
-                  required={false}
-                  type="button"
-                  value="£ 30"
-                />
-              </div>
-              
-            </label>
           </div>
           <div
-            className="c19"
+            className="c23"
           >
             <span
-              className="c20 c21"
+              className="c24 c25"
               color="inherit"
               size="s"
             >
               Other amount
             </span>
             <label
-              className="c12 c22"
+              className="c17 c26"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
-                className="c14 c15"
+                className="c19 c20"
                 color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
@@ -2176,481 +1440,13 @@ exports[`Single donation renders correctly 1`] = `
                 size="s"
               />
               <div
-                className="c16"
+                className="c21"
               >
                 
                 <input
                   aria-describedby="mship-1--MoneyBuy-userInput"
                   aria-label="Input a different amount"
-                  className="c17"
-                  id="mship-1--MoneyBuy-userInput"
-                  max="25000"
-                  min="1"
-                  name="membership_amount"
-                  onChange={[Function]}
-                  pattern="[^[0-9]+([,.][0-9]+)?$]"
-                  placeholder="0.00"
-                  required={false}
-                  step="0.01"
-                  type="string"
-                  value={20}
-                />
-              </div>
-              
-            </label>
-          </div>
-          <p
-            className="c23"
-          >
-            <strong>
-              £20 
-            </strong>
-            a support worker to visit 10 isolated young mums with postnatal depression in the UK.
-          </p>
-          <button
-            className="c24"
-            color="red"
-            type="submit"
-          >
-            Donate £20 now
-          </button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Single donation with no Money Buys renders correctly 1`] = `
-.c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
-}
-
-.c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
-}
-
-.c10 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c14 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c12 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #5C5C5E;
-  width: 100%;
-}
-
-.c15 {
-  margin-bottom: 0.5rem;
-}
-
-.c17 {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: 1rem 1.5rem;
-  background-color: #F4F3F5;
-  border: 1px solid;
-  border-color: #E1E2E3;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #000000;
-  border-radius: 0.5rem;
-  font-size: inherit;
-  z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c17:focus {
-  border: 1px solid #666;
-}
-
-.c16 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: auto;
-  background-color: #274084;
-}
-
-.c1 {
-  position: relative;
-  text-align: center;
-  padding: 2rem 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: block;
-  width: 100%;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c3 {
-  position: relative;
-  text-align: left;
-}
-
-.c6 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c7 {
-  position: relative;
-  width: 100%;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  margin-top: 1rem;
-}
-
-.c7 h3 {
-  margin-top: 1rem;
-}
-
-.c7 input {
-  max-width: 100%;
-  margin: 0;
-}
-
-.c7 input[type='submit'] {
-  margin: 2rem 0;
-}
-
-.c8 {
-  padding: 0 1rem 1rem;
-  margin: 0;
-  border: none;
-}
-
-.c8 input[type='submit'] {
-  margin-bottom: 0;
-}
-
-.c9 {
-  margin: 0;
-  padding: 2rem 0.5rem;
-  display: block;
-  width: 100%;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c13 {
-  position: relative;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  font-weight: 400;
-  display: block;
-}
-
-.c13 span {
-  position: absolute;
-  font-size: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0px;
-  font-weight: 500;
-  padding: 0px 15px;
-  z-index: 3;
-}
-
-.c13 input {
-  height: 48px;
-  border: 2px solid #969598;
-  background: #F4F3F5;
-  border-radius: 10px;
-  padding: 0.5rem 1rem 0.5rem 2rem;
-}
-
-.c13 input:focus {
-  outline: none;
-  border: 2px solid #969598;
-}
-
-.c18 {
-  width: 100%;
-  margin: 2rem 0 2rem;
-  color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  min-height: 48px;
-  background: #E52630;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-radius: 2rem;
-  border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c18:active,
-.c18:focus,
-.c18:hover {
-  outline: none;
-  background-color: #961D35;
-}
-
-@media (min-width:740px) {
-  .c5 {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c17 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: inherit;
-    -webkit-justify-content: inherit;
-    -ms-flex-pack: inherit;
-    justify-content: inherit;
-    background-color: transparent;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    padding: 4rem 1rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 4rem 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c2 {
-    width: 50%;
-    padding: 4rem;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 50%;
-  }
-}
-
-@media (min-width:740px) {
-  .c7 {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    padding: 0 2rem 2rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c13 {
-    -webkit-flex-basis: 60%;
-    -ms-flex-preferred-size: 60%;
-    flex-basis: 60%;
-  }
-}
-
-@media (min-width:740px) {
-  .c18 {
-    padding: 1rem 2rem;
-  }
-}
-
-<div
-  className="c0"
-  id="mship-1"
->
-  <div
-    aria-live="polite"
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-      >
-        <h2
-          className="c4"
-          color="white"
-          size="big"
-        >
-          Donate Now
-        </h2>
-        <p
-          className="c5"
-          color="white"
-          size="m"
-        >
-          Please help us fund life-changing projects in the UK and around the world.
-        </p>
-      </div>
-    </div>
-    <div
-      className="c6"
-    >
-      <form
-        className="c7"
-        onSubmit={[Function]}
-      >
-        <fieldset
-          className="c8"
-        >
-          <legend
-            className="c9"
-          >
-            <span
-              className="c10"
-              color="inherit"
-              size="l"
-            >
-              Overridden via the 'choose amount text' props
-            </span>
-          </legend>
-          <div
-            className="c11"
-          >
-            <label
-              className="c12 c13"
-              htmlFor="mship-1--MoneyBuy-userInput"
-            >
-              <span
-                className="c14 c15"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "£",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c16"
-              >
-                
-                <input
-                  aria-describedby="mship-1--MoneyBuy-userInput"
-                  aria-label="Input a different amount"
-                  className="c17"
+                  className="c22"
                   id="mship-1--MoneyBuy-userInput"
                   max="25000"
                   min="1"
@@ -2667,12 +1463,19 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               
             </label>
           </div>
+          <p
+            className="c27"
+          >
+            <strong>
+              £10 
+            </strong>
+          </p>
           <button
-            className="c18"
+            className="c28"
             color="red"
             type="submit"
           >
-            Donate £10
+            Donate £10 monthly
           </button>
         </fieldset>
       </form>
