@@ -122,6 +122,7 @@ const Signup = ({
       // Else, use whatever's available
       setGivingType(singleGiving !== null ? 'single' : 'monthly');
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitDonation = (
