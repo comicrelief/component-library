@@ -40,9 +40,10 @@ const Signup = ({
   otherAmountValue,
   additionalSingleCopy,
   additionalMonthlyCopy,
+  defaultGivingType,
   ...rest
 }) => {
-  const [givingType, setGivingType] = useState('single');
+  const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -109,6 +110,17 @@ const Signup = ({
   useEffect(() => {
     if (popOpen && !popUpShown) setPopUpShown(true);
   }, [popOpen, popUpShown]);
+
+  // On load, determine what should actually be the default giving type
+  useEffect(() => {
+    // Use any explicit setting
+    if (defaultGivingType) {
+      setGivingType(defaultGivingType);
+    } else {
+      // Else, use whatever's available
+      setGivingType(singleGiving !== null ? 'single' : 'monthly');
+    }
+  }, [singleGiving, defaultGivingType]);
 
   const submitDonation = (
     event,
@@ -329,7 +341,8 @@ Signup.propTypes = {
   submitButtonColor: PropTypes.string.isRequired,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
-  additionalMonthlyCopy: PropTypes.string
+  additionalMonthlyCopy: PropTypes.string,
+  defaultGivingType: PropTypes.string
 };
 
 Signup.defaultProps = {
@@ -337,7 +350,8 @@ Signup.defaultProps = {
   otherAmountValue: null,
   data: {},
   additionalSingleCopy: null,
-  additionalMonthlyCopy: null
+  additionalMonthlyCopy: null,
+  defaultGivingType: null
 };
 
 export default Signup;

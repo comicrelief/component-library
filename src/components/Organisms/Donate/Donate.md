@@ -412,7 +412,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Additional copy for single only
+## Additional copy for single only, default Monthly giving type
 
 ```js
 import data from './dev-data/data';
@@ -437,5 +437,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
+  defaultGivingType="monthly"
 />;
 ```
