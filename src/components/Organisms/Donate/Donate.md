@@ -494,3 +494,31 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   subtitle="Please help us fund life-changing projects in the UK and around the world."
 />;
 ```
+
+## Monthly ONLY, no moneybuys
+
+```js
+import data from './dev-data/data-monthly';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-15"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  noMoneyBuys
+/>;
+```

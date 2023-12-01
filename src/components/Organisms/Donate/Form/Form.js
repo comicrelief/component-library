@@ -305,25 +305,13 @@ const Signup = ({
           </p>
           )}
 
-          {noMoneyBuys ? (
-            <Button
-              type="submit"
-              color={submitButtonColor}
-            >
-              {errorMsg
-                ? 'Donate'
-                : `Donate £${amountDonate}`}
-            </Button>
-          ) : (
-            <Button
-              type="submit"
-              color={submitButtonColor}
-              ref={buttonRef}
-            >
-              {renderButtonText()}
-            </Button>
-
-          )}
+          <Button
+            type="submit"
+            color={submitButtonColor}
+            ref={buttonRef}
+          >
+            {renderButtonText()}
+          </Button>
 
         </OuterFieldset>
       </Form>
