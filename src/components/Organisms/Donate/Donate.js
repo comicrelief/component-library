@@ -48,7 +48,7 @@ const Donate = ({
   defaultGivingType,
   monthlyTitle,
   monthlySubtitle,
-  // Just to keep the function call character length undercontrol
+  // Just to keep the function call character length under control
   monthlyChooseAmountText: monthlyChoose,
   monthlyOtherAmountText: monthlyOther
 }) => {

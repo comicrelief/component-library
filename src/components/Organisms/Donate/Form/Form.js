@@ -130,9 +130,7 @@ const Signup = ({
       newGivingType = singleGiving !== null ? 'single' : 'monthly';
     }
 
-    // Assign accordingly:
     changeGivingType(newGivingType);
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

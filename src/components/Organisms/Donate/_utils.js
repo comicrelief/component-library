@@ -9,7 +9,7 @@ const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle
     thisTitle = monthlyTitle;
     thisSubtitle = monthlyTitle;
   } else if (showCopy) {
-    // Else, fall back to the default, after checking its appropriate
+    // Else, fall back to the default, after checking it's appropriate
     thisTitle = title;
     thisSubtitle = subtitle;
   }
