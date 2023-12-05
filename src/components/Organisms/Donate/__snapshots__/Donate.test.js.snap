@@ -432,6 +432,10 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   }
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
   .c1 {
     padding: 4rem 1rem;
@@ -1716,6 +1720,14 @@ exports[`Single donation renders correctly 1`] = `
     display: flex;
     padding: 4rem 0;
   }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:1024px) {

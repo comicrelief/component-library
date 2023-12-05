@@ -6,6 +6,8 @@ import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
+import handleCopy from './_utils';
+
 import {
   BgImage,
   Container,
@@ -44,8 +46,8 @@ const Donate = ({
   additionalSingleCopy,
   additionalMonthlyCopy,
   defaultGivingType,
-  monthlyTitleCopy,
-  monthlySubtitleCopy,
+  monthlyTitle,
+  monthlySubtitle,
   monthlyChooseAmountCopy,
   monthlyOtherAmountCopy
 }) => {
@@ -62,6 +64,9 @@ const Donate = ({
 
   // If a boolean value has been passed, let it replace our 'internal' value
   isDesktop = overrideValue !== null ? overrideValue : isDesktop;
+
+  // eslint-disable-next-line max-len
+  const { showCopy, thisTitle, thisSubtitle } = handleCopy(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
 
   return (
     <Container
@@ -100,9 +105,8 @@ const Donate = ({
       <Wrapper formAlignRight={formAlignRight} aria-live="polite">
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
-            {Boolean(subtitle) && (
+            {showCopy && (
               <>
-                {Boolean(title) && (
                 <Text
                   tag="h2"
                   color={textColor}
@@ -111,12 +115,10 @@ const Donate = ({
                   weight="normal"
                   uppercase
                 >
-                  {title}
+                  {thisTitle}
                 </Text>
-                )}
-
                 <Text tag="p" color={textColor} size="m">
-                  {subtitle}
+                  {thisSubtitle}
                 </Text>
               </>
             )}
@@ -138,8 +140,6 @@ const Donate = ({
           additionalSingleCopy={additionalSingleCopy}
           additionalMonthlyCopy={additionalMonthlyCopy}
           defaultGivingType={defaultGivingType}
-          monthlyTitleCopy={monthlyTitleCopy}
-          monthlySubtitleCopy={monthlySubtitleCopy}
           monthlyChooseAmountCopy={monthlyChooseAmountCopy}
           monthlyOtherAmountCopy={monthlyOtherAmountCopy}
           givingType={givingType}
@@ -180,8 +180,8 @@ Donate.propTypes = {
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
   defaultGivingType: PropTypes.string,
-  monthlyTitleCopy: PropTypes.string,
-  monthlySubtitleCopy: PropTypes.string,
+  monthlyTitle: PropTypes.string,
+  monthlySubtitle: PropTypes.string,
   monthlyChooseAmountCopy: PropTypes.string,
   monthlyOtherAmountCopy: PropTypes.string
 };
@@ -214,8 +214,8 @@ Donate.defaultProps = {
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
   defaultGivingType: null,
-  monthlyTitleCopy: null,
-  monthlySubtitleCopy: null,
+  monthlyTitle: null,
+  monthlySubtitle: null,
   monthlyChooseAmountCopy: null,
   monthlyOtherAmountCopy: null
 };
