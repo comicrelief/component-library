@@ -523,7 +523,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Monthly copy overrides
+## Monthly 'Choose Amount' and 'Other Amount' copy overrides
 
 ```js
 import data from './dev-data/data';
@@ -542,6 +542,68 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-17"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Standard title here"
+  subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
+  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyOtherAmountText="monthlyOtherAmountText here"
+/>;
+```
+
+## Monthly Title and Subtitle overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-18"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Standard title here"
+  subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
+  monthlyTitle="Monthly Title here"
+  monthlySubtitle="Monthly Subtitle here"
+/>;
+```
+
+## All monthly overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-19"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
