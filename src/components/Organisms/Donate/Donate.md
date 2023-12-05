@@ -513,12 +513,43 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-15"
+  mbshipID="mship-16"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   noMoneyBuys
+/>;
+```
+
+## Monthly copy overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-17"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Monthly copy overrides"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  monthlyTitleCopy="monthlyTitleCopy here"
+  monthlySubtitleCopy="monthlySubtitleCopy here"
+  monthlyChooseAmountCopy="monthlyChooseAmountCopy here"
+  monthlyOtherAmountCopy="monthlyOtherAmountCopy "
 />;
 ```

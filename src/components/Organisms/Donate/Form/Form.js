@@ -41,9 +41,15 @@ const Signup = ({
   additionalSingleCopy,
   additionalMonthlyCopy,
   defaultGivingType,
+  monthlyTitleCopy,
+  monthlySubtitleCopy,
+  monthlyChooseAmountCopy,
+  monthlyOtherAmountCopy,
+  changeGivingType,
+  givingType,
   ...rest
 }) => {
-  const [givingType, setGivingType] = useState();
+  // const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -68,7 +74,9 @@ const Signup = ({
 
       setAmountDonate(thisAmount);
     }
-  }, [givingType, singleGiving, regularGiving, otherAmountValue]);
+    // Pass givingType up to parent for copy-switching logic:
+    changeGivingType(givingType);
+  }, [givingType, singleGiving, regularGiving, otherAmountValue, changeGivingType]);
 
   useEffect(() => {
     if (givingType) {
@@ -115,13 +123,18 @@ const Signup = ({
 
   // On load, determine what should actually be the default giving type
   useEffect(() => {
+    let newGivingType;
     // Use any explicit setting
     if (defaultGivingType) {
-      setGivingType(defaultGivingType);
+      newGivingType = defaultGivingType;
     } else {
       // Else, use whatever's available
-      setGivingType(singleGiving !== null ? 'single' : 'monthly');
+      newGivingType = singleGiving !== null ? 'single' : 'monthly';
     }
+
+    // Assign accordingly:
+    changeGivingType(newGivingType);
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -217,7 +230,7 @@ const Signup = ({
       {showGivingSelector && (
         <GivingSelector
           givingType={givingType}
-          changeGivingType={data => setGivingType(data)}
+          changeGivingType={data => changeGivingType(data)}
           setPopOpen={setPopOpen}
           mbshipID={mbshipID}
         />
@@ -333,7 +346,13 @@ Signup.propTypes = {
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
-  defaultGivingType: PropTypes.string
+  defaultGivingType: PropTypes.string,
+  monthlyTitleCopy: PropTypes.string.isRequired,
+  monthlySubtitleCopy: PropTypes.string.isRequired,
+  monthlyChooseAmountCopy: PropTypes.string.isRequired,
+  monthlyOtherAmountCopy: PropTypes.string.isRequired,
+  changeGivingType: PropTypes.func.isRequired,
+  givingType: PropTypes.string.isRequired
 };
 
 Signup.defaultProps = {

@@ -43,12 +43,17 @@ const Donate = ({
   otherAmountValue,
   additionalSingleCopy,
   additionalMonthlyCopy,
-  defaultGivingType
+  defaultGivingType,
+  monthlyTitleCopy,
+  monthlySubtitleCopy,
+  monthlyChooseAmountCopy,
+  monthlyOtherAmountCopy
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
   // To let us store any updated override, and force a re-render
   const [overrideValue, setOverrideValue] = useState(null);
+  const [givingType, setGivingType] = useState();
 
   // Store the updated override value
   useEffect(() => {
@@ -133,6 +138,12 @@ const Donate = ({
           additionalSingleCopy={additionalSingleCopy}
           additionalMonthlyCopy={additionalMonthlyCopy}
           defaultGivingType={defaultGivingType}
+          monthlyTitleCopy={monthlyTitleCopy}
+          monthlySubtitleCopy={monthlySubtitleCopy}
+          monthlyChooseAmountCopy={monthlyChooseAmountCopy}
+          monthlyOtherAmountCopy={monthlyOtherAmountCopy}
+          givingType={givingType}
+          changeGivingType={setGivingType}
         />
       </Wrapper>
     </Container>
@@ -168,7 +179,11 @@ Donate.propTypes = {
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
-  defaultGivingType: PropTypes.string
+  defaultGivingType: PropTypes.string,
+  monthlyTitleCopy: PropTypes.string,
+  monthlySubtitleCopy: PropTypes.string,
+  monthlyChooseAmountCopy: PropTypes.string,
+  monthlyOtherAmountCopy: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -198,7 +213,11 @@ Donate.defaultProps = {
   title: null,
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
-  defaultGivingType: null
+  defaultGivingType: null,
+  monthlyTitleCopy: null,
+  monthlySubtitleCopy: null,
+  monthlyChooseAmountCopy: null,
+  monthlyOtherAmountCopy: null
 };
 
 export default Donate;
