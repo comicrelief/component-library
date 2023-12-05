@@ -1,4 +1,4 @@
-const handleCopy = (givingType, title, subtitle, monthlyTitle, monthlySubtitle) => {
+const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle) => {
   let thisTitle; let thisSubtitle;
   const showMonthlyCopy = givingType === 'monthly' && Boolean(monthlySubtitle) && Boolean(monthlyTitle);
   // Overall flag as to whether we render copy *at all*
@@ -17,4 +17,12 @@ const handleCopy = (givingType, title, subtitle, monthlyTitle, monthlySubtitle) 
   return { showCopy, thisTitle, thisSubtitle };
 };
 
-export default handleCopy;
+const handleCopy = (gType, otherAmount, chooseAmount, monthlyOtherAmount, monthlyChooseAmount) => {
+  // Only use any monthly overrides for the appropriate givingType
+  const thisOtherAmountText = (gType === 'monthly' && Boolean(monthlyOtherAmount) ? monthlyOtherAmount : otherAmount);
+  const thisChooseAmountText = (gType === 'monthly' && Boolean(monthlyChooseAmount) ? monthlyChooseAmount : chooseAmount);
+
+  return { thisOtherAmountText, thisChooseAmountText };
+};
+
+export { handleTitles, handleCopy };

@@ -547,9 +547,11 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Standard title here"
   subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
   monthlyTitle="Monthly Title here"
   monthlySubtitle="Monthly Subtitle here"
-  monthlyChooseAmountCopy="monthlyChooseAmountCopy here"
-  monthlyOtherAmountCopy="monthlyOtherAmountCopy "
+  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyOtherAmountText="monthlyOtherAmountText here"
 />;
 ```

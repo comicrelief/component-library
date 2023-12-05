@@ -6,7 +6,7 @@ import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
-import handleCopy from './_utils';
+import { handleTitles, handleCopy } from './_utils';
 
 import {
   BgImage,
@@ -48,8 +48,9 @@ const Donate = ({
   defaultGivingType,
   monthlyTitle,
   monthlySubtitle,
-  monthlyChooseAmountCopy,
-  monthlyOtherAmountCopy
+  // Just to keep the function call character length undercontrol
+  monthlyChooseAmountText: monthlyChoose,
+  monthlyOtherAmountText: monthlyOther
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
@@ -65,8 +66,17 @@ const Donate = ({
   // If a boolean value has been passed, let it replace our 'internal' value
   isDesktop = overrideValue !== null ? overrideValue : isDesktop;
 
-  // eslint-disable-next-line max-len
-  const { showCopy, thisTitle, thisSubtitle } = handleCopy(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
+  // Handy helper functions to process copy, based on givingType
+  const {
+    showCopy,
+    thisTitle,
+    thisSubtitle
+  } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
+
+  const {
+    thisOtherAmountText,
+    thisChooseAmountText
+  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
 
   return (
     <Container
@@ -127,21 +137,19 @@ const Donate = ({
 
         <Form
           data={data}
-          otherAmountText={otherAmountText}
+          otherAmountText={thisOtherAmountText}
           cartID={cartID}
           clientID={clientID}
           mbshipID={mbshipID}
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
-          chooseAmountText={chooseAmountText}
+          chooseAmountText={thisChooseAmountText}
           submitButtonColor={submitButtonColor}
           otherAmountValue={otherAmountValue}
           additionalSingleCopy={additionalSingleCopy}
           additionalMonthlyCopy={additionalMonthlyCopy}
           defaultGivingType={defaultGivingType}
-          monthlyChooseAmountCopy={monthlyChooseAmountCopy}
-          monthlyOtherAmountCopy={monthlyOtherAmountCopy}
           givingType={givingType}
           changeGivingType={setGivingType}
         />
@@ -182,8 +190,8 @@ Donate.propTypes = {
   defaultGivingType: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  monthlyChooseAmountCopy: PropTypes.string,
-  monthlyOtherAmountCopy: PropTypes.string
+  monthlyChooseAmountText: PropTypes.string,
+  monthlyOtherAmountText: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -216,8 +224,8 @@ Donate.defaultProps = {
   defaultGivingType: null,
   monthlyTitle: null,
   monthlySubtitle: null,
-  monthlyChooseAmountCopy: null,
-  monthlyOtherAmountCopy: null
+  monthlyChooseAmountText: null,
+  monthlyOtherAmountText: null
 };
 
 export default Donate;
