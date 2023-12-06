@@ -13,7 +13,7 @@ const colors = {
   cwg_22_red: '#E62731',
   cwg_22_yellow: '#F8E928',
   deep_violet_dark: '#2C0230',
-  deep_violet: '#2C0230' /** Will be removed  */,
+  deep_violet: '#2C0230' /** to be removed */,
   deep_violet_light: '#3e1c43',
   error_pink: '#FAE1E2',
   green: '#49D267',
