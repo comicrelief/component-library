@@ -6,6 +6,8 @@ import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
+import { handleTitles, handleCopy } from './_utils';
+
 import {
   BgImage,
   Container,
@@ -43,12 +45,18 @@ const Donate = ({
   otherAmountValue,
   additionalSingleCopy,
   additionalMonthlyCopy,
-  defaultGivingType
+  defaultGivingType,
+  monthlyTitle,
+  monthlySubtitle,
+  // Just to keep the function call character length under control
+  monthlyChooseAmountText: monthlyChoose,
+  monthlyOtherAmountText: monthlyOther
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
   // To let us store any updated override, and force a re-render
   const [overrideValue, setOverrideValue] = useState(null);
+  const [givingType, setGivingType] = useState();
 
   // Store the updated override value
   useEffect(() => {
@@ -57,6 +65,18 @@ const Donate = ({
 
   // If a boolean value has been passed, let it replace our 'internal' value
   isDesktop = overrideValue !== null ? overrideValue : isDesktop;
+
+  // Handy helper functions to process copy, based on givingType
+  const {
+    showCopy,
+    thisTitle,
+    thisSubtitle
+  } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
+
+  const {
+    thisOtherAmountText,
+    thisChooseAmountText
+  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
 
   return (
     <Container
@@ -95,9 +115,8 @@ const Donate = ({
       <Wrapper formAlignRight={formAlignRight} aria-live="polite">
         <Header formAlignRight={formAlignRight}>
           <HeaderInner>
-            {Boolean(subtitle) && (
+            {showCopy && (
               <>
-                {Boolean(title) && (
                 <Text
                   tag="h2"
                   color={textColor}
@@ -106,12 +125,10 @@ const Donate = ({
                   weight="normal"
                   uppercase
                 >
-                  {title}
+                  {thisTitle}
                 </Text>
-                )}
-
                 <Text tag="p" color={textColor} size="m">
-                  {subtitle}
+                  {thisSubtitle}
                 </Text>
               </>
             )}
@@ -120,19 +137,21 @@ const Donate = ({
 
         <Form
           data={data}
-          otherAmountText={otherAmountText}
+          otherAmountText={thisOtherAmountText}
           cartID={cartID}
           clientID={clientID}
           mbshipID={mbshipID}
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
-          chooseAmountText={chooseAmountText}
+          chooseAmountText={thisChooseAmountText}
           submitButtonColor={submitButtonColor}
           otherAmountValue={otherAmountValue}
           additionalSingleCopy={additionalSingleCopy}
           additionalMonthlyCopy={additionalMonthlyCopy}
           defaultGivingType={defaultGivingType}
+          givingType={givingType}
+          changeGivingType={setGivingType}
         />
       </Wrapper>
     </Container>
@@ -168,7 +187,11 @@ Donate.propTypes = {
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
-  defaultGivingType: PropTypes.string
+  defaultGivingType: PropTypes.string,
+  monthlyTitle: PropTypes.string,
+  monthlySubtitle: PropTypes.string,
+  monthlyChooseAmountText: PropTypes.string,
+  monthlyOtherAmountText: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -198,7 +221,11 @@ Donate.defaultProps = {
   title: null,
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
-  defaultGivingType: null
+  defaultGivingType: null,
+  monthlyTitle: null,
+  monthlySubtitle: null,
+  monthlyChooseAmountText: null,
+  monthlyOtherAmountText: null
 };
 
 export default Donate;
