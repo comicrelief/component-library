@@ -116,6 +116,8 @@ import data from './data/data';
 import Link from '../../Atoms/Link/Link';
 import searchIcon from './assets/icon--search--2023.svg';
 import shopIcon from './assets/icon--shop--2023.svg';
+import payinIcon from './assets/PayIn.svg';
+
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import RichText from '../../Atoms/RichText/RichText';
 
@@ -166,6 +168,17 @@ const [success, setSuccess] = React.useState(false);
           target="_blank"
           role="button"
           href="https://shop.comicrelief.com"
+          brand="comicrelief"
+          tabIndex="0"
+        />
+      </div>
+      <div>
+        <Icon
+          icon={payinIcon}
+          title="Payin"
+          target="_blank"
+          role="button"
+          href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
           brand="comicrelief"
           tabIndex="0"
         />
