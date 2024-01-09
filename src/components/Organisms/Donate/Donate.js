@@ -113,7 +113,7 @@ const Donate = ({
       ) : null}
 
       <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-        <Header formAlignRight={formAlignRight}>
+        <Header formAlignRight={formAlignRight} data-test="this-one-here">
           <HeaderInner>
             {showCopy && (
               <>
@@ -222,10 +222,10 @@ Donate.defaultProps = {
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
   defaultGivingType: null,
-  monthlyTitle: null,
-  monthlySubtitle: null,
-  monthlyChooseAmountText: null,
-  monthlyOtherAmountText: null
+  monthlyTitle: '',
+  monthlySubtitle: '',
+  monthlyChooseAmountText: '',
+  monthlyOtherAmountText: ''
 };
 
 export default Donate;

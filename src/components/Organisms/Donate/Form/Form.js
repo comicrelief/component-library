@@ -343,10 +343,10 @@ Signup.propTypes = {
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
   defaultGivingType: PropTypes.string,
-  monthlyChooseAmountCopy: PropTypes.string.isRequired,
-  monthlyOtherAmountCopy: PropTypes.string.isRequired,
+  monthlyChooseAmountCopy: PropTypes.string,
+  monthlyOtherAmountCopy: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
-  givingType: PropTypes.string.isRequired
+  givingType: PropTypes.string
 };
 
 Signup.defaultProps = {
@@ -355,7 +355,10 @@ Signup.defaultProps = {
   data: {},
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
-  defaultGivingType: null
+  defaultGivingType: null,
+  monthlyChooseAmountCopy: null,
+  monthlyOtherAmountCopy: null,
+  givingType: null
 };
 
 export default Signup;
