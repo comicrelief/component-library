@@ -11,8 +11,8 @@ import { handleTitles, handleCopy } from './_utils';
 import {
   BgImage,
   Container,
-  Header,
-  HeaderInner,
+  CopyWrapperInner,
+  CopyWrapperOuter,
   Wrapper
 } from './Donate.style';
 
@@ -70,13 +70,16 @@ const Donate = ({
   const {
     showCopy,
     thisTitle,
-    thisSubtitle
+    thisSubtitle,
+    noTitlesAtAll
   } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
 
   const {
     thisOtherAmountText,
     thisChooseAmountText
   } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
+
+  console.log('noTitlesAtAll????', noTitlesAtAll);
 
   return (
     <Container
@@ -112,28 +115,33 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-        <Header formAlignRight={formAlignRight} data-test="this-one-here">
-          <HeaderInner>
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
+
+        {/* Only render if there is SOME title copy; otherwise,
+        we need to the space to centre-align the form */}
+        { !noTitlesAtAll && (
+        <CopyWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
+          <CopyWrapperInner>
             {showCopy && (
-              <>
-                <Text
-                  tag="h2"
-                  color={textColor}
-                  size="big"
-                  family="Anton"
-                  weight="normal"
-                  uppercase
-                >
-                  {thisTitle}
-                </Text>
-                <Text tag="p" color={textColor} size="m">
-                  {thisSubtitle}
-                </Text>
-              </>
+            <>
+              <Text
+                tag="h2"
+                color={textColor}
+                size="big"
+                family="Anton"
+                weight="normal"
+                uppercase
+              >
+                {thisTitle}
+              </Text>
+              <Text tag="p" color={textColor} size="m">
+                {thisSubtitle}
+              </Text>
+            </>
             )}
-          </HeaderInner>
-        </Header>
+          </CopyWrapperInner>
+        </CopyWrapperOuter>
+        )}
 
         <Form
           data={data}

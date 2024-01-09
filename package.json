@@ -53,6 +53,7 @@
   },
   "scripts": {
     "test:unit": "yarn run jest",
+    "test:unit-update": "yarn jest -u",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
