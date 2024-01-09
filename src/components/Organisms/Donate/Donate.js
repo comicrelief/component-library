@@ -79,8 +79,6 @@ const Donate = ({
     thisChooseAmountText
   } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
 
-  console.log('noTitlesAtAll????', noTitlesAtAll);
-
   return (
     <Container
       mobileBackgroundColor={mobileBackgroundColor}
