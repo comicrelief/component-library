@@ -139,6 +139,8 @@ setTimeout(()=>{
   noMoneyBuys
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountValue={amountDonate}
+  otherAmountText="Here's an otherAmountText override"
+
 />;
 ```
 

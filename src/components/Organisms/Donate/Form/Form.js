@@ -292,7 +292,7 @@ const Signup = ({
               ref={amountRef}
             />
           </FormFieldset>
-          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
+          {amountDonate >= 1 && moneyBuyCopy && (
             <Copy as="p">
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
