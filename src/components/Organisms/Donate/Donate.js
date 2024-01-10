@@ -11,8 +11,8 @@ import { handleTitles, handleCopy } from './_utils';
 import {
   BgImage,
   Container,
-  CopyWrapperInner,
-  CopyWrapperOuter,
+  TitleWrapperInner,
+  TitleWrapperOuter,
   Wrapper
 } from './Donate.style';
 
@@ -118,8 +118,8 @@ const Donate = ({
         {/* Only render if there is SOME title copy; otherwise,
         we need to the space to centre-align the form */}
         { !noTitlesAtAll && (
-        <CopyWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
-          <CopyWrapperInner>
+        <TitleWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
+          <TitleWrapperInner>
             {showCopy && (
             <>
               <Text
@@ -137,8 +137,8 @@ const Donate = ({
               </Text>
             </>
             )}
-          </CopyWrapperInner>
-        </CopyWrapperOuter>
+          </TitleWrapperInner>
+        </TitleWrapperOuter>
         )}
 
         <Form

@@ -64,7 +64,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const CopyWrapperOuter = styled.div`
+const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
@@ -75,7 +75,7 @@ const CopyWrapperOuter = styled.div`
   }
 `;
 
-const CopyWrapperInner = styled.div`
+const TitleWrapperInner = styled.div`
   position: relative;
   text-align: left;
 `;
@@ -249,8 +249,8 @@ export {
   Error,
   FormFieldset,
   FormWrapper,
-  CopyWrapperOuter,
-  CopyWrapperInner,
+  TitleWrapperInner,
+  TitleWrapperOuter,
   Label,
   Wrapper,
   Form,
