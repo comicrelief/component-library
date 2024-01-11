@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-// import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
@@ -48,7 +47,14 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
+  // TO-DO: this condition is WRONG and needs fixing (should be 'false'), but deploy this change will
+  // require a lot of content updates down the line in order to bring the pages back to the desired layout
   flex-direction: ${({ formAlignRight }) => (formAlignRight === true ? 'row-reverse' : 'row')};
+
+  ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
+    justify-content: center;
+  `};
+
   ${media('small')} {
     padding: ${spacing('xl')} ${spacing('md')};
   }
@@ -58,7 +64,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Header = styled.div`
+const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
@@ -69,7 +75,7 @@ const Header = styled.div`
   }
 `;
 
-const HeaderInner = styled.div`
+const TitleWrapperInner = styled.div`
   position: relative;
   text-align: left;
 `;
@@ -243,8 +249,8 @@ export {
   Error,
   FormFieldset,
   FormWrapper,
-  Header,
-  HeaderInner,
+  TitleWrapperInner,
+  TitleWrapperOuter,
   Label,
   Wrapper,
   Form,

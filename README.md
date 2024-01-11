@@ -40,13 +40,13 @@ $ yarn styleguide
 
 To test:
 ```
-$ yarn test
+$ yarn test:unit
 ```
 _Test will run through all Jest tests and watch for any changes on snapshots._
 
 To update snapshots with desired changes brought in through your work:
 ```
-$ yarn test -u
+$ yarn test:unit-update
 ```
 
 To publish

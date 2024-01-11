@@ -1,8 +1,12 @@
 const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle) => {
   let thisTitle; let thisSubtitle;
+  const showSingleCopy = Boolean(subtitle) && Boolean(title);
   const showMonthlyCopy = givingType === 'monthly' && Boolean(monthlySubtitle) && Boolean(monthlyTitle);
-  // Overall flag as to whether we render copy *at all*
-  const showCopy = showMonthlyCopy || (Boolean(subtitle) && Boolean(title));
+  // Overall flag as to whether we render copy for the currently selected givingType
+  const showCopy = showMonthlyCopy || showSingleCopy;
+
+  // Acts as a flag to centre the form when no copy is supplied *at all*
+  const noTitlesAtAll = showSingleCopy === false && showMonthlyCopy === false;
 
   // Apply the override if we've got monthly content AND giving type:
   if (showMonthlyCopy) {
@@ -14,7 +18,9 @@ const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle
     thisSubtitle = subtitle;
   }
 
-  return { showCopy, thisTitle, thisSubtitle };
+  return {
+    showCopy, thisTitle, thisSubtitle, noTitlesAtAll
+  };
 };
 
 const handleCopy = (gType, otherAmount, chooseAmount, monthlyOtherAmount, monthlyChooseAmount) => {
