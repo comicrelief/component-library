@@ -122,7 +122,7 @@ test.describe('donate component', () => {
 
     // moneybuy 1
     await page.locator('[data-testid="Donate-example-3"] input[id$="moneyBuy-box1"][aria-label="£7777"]').click();
-    await expect(page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput')).toHaveValue('7777');
+    await expect(page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]')).toHaveValue('7777');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-3"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
@@ -131,7 +131,7 @@ test.describe('donate component', () => {
 
     // moneybuy 2
     await page.locator('[data-testid="Donate-example-3"] input[id$="moneyBuy-box2"][aria-label="£8888"]').click();
-    await expect(page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput')).toHaveValue('8888');
+    await expect(page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]')).toHaveValue('8888');
 
     const moneybuyTwoButtonText = await page.locator('[data-testid="Donate-example-3"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyTwoButtonText);
@@ -140,7 +140,7 @@ test.describe('donate component', () => {
 
     // moneybuy 3
     await page.locator('[data-testid="Donate-example-3"] input[id$="moneyBuy-box3"][aria-label="£9999"]').click();
-    await expect(page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput')).toHaveValue('9999');
+    await expect(page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]')).toHaveValue('9999');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-3"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
@@ -148,20 +148,20 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-3"] button[type="submit"]')).toContainText('Donate £9999 now');
 
     // amount field validation
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').fill('');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').type('0');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').type('0');
     await expect(page.locator('[data-testid="Donate-example-3"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').type('25001');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').type('25001');
     await expect(page.locator('[data-testid="Donate-example-3"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-3"] input#mship-2--MoneyBuy-userInput').type('22000');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').type('22000');
     await expect(page.locator('[data-testid="Donate-example-3"] button[type="submit"]')).toContainText('Donate £22000 now');
 
     // clicking the submit button should take to donate.comicrelief.com
@@ -176,8 +176,8 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-5"]')).toBeVisible();
 
     // moneybuy 1
-    await page.locator('[data-testid="Donate-example-5"] input[id$="moneyBuy-box3"][aria-label="£10"]').click();
-    await expect(page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput')).toHaveValue('10');
+    await page.locator('[data-testid="Donate-example-5"] input[id$="moneyBuy-box1"][aria-label="£10"]').click();
+    await expect(page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]')).toHaveValue('10');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-5"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
@@ -186,7 +186,7 @@ test.describe('donate component', () => {
 
     // moneybuy 2
     await page.locator('[data-testid="Donate-example-5"] input[id$="moneyBuy-box2"][aria-label="£20"]').click();
-    await expect(page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput')).toHaveValue('20');
+    await expect(page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]')).toHaveValue('20');
 
     const moneybuyTwoButtonText = await page.locator('[data-testid="Donate-example-5"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyTwoButtonText);
@@ -195,7 +195,7 @@ test.describe('donate component', () => {
 
     // moneybuy 3
     await page.locator('[data-testid="Donate-example-5"] input[id$="moneyBuy-box3"][aria-label="£30"]').click();
-    await expect(page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput')).toHaveValue('30');
+    await expect(page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]')).toHaveValue('30');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-5"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
@@ -203,20 +203,20 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-5"] button[type="submit"]')).toContainText('Donate £30 now');
 
     // amount field validation
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').fill('');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').type('0');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').type('0');
     await expect(page.locator('[data-testid="Donate-example-5"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').type('25001');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').type('25001');
     await expect(page.locator('[data-testid="Donate-example-5"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-5"] input#mship-3--MoneyBuy-userInput').type('20.01');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').type('20.01');
     await expect(page.locator('[data-testid="Donate-example-5"] button[type="submit"]')).toContainText('Donate £20.01 now');
 
     // clicking the submit button should take to donate.comicrelief.com
@@ -233,20 +233,20 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-7"] button[type="submit"]')).toContainText('Donate £20');
 
     // amount field validation
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').fill('');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').type('0');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').type('0');
     await expect(page.locator('[data-testid="Donate-example-7"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').type('25001');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').type('25001');
     await expect(page.locator('[data-testid="Donate-example-7"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-7"] input#mship-4--MoneyBuy-userInput').type('20.01');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').type('20.01');
     await expect(page.locator('[data-testid="Donate-example-7"] button[type="submit"]')).toContainText('Donate £20.01');
 
     // clicking the submit button should take to donate.comicrelief.com
@@ -263,20 +263,20 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-9"] button[type="submit"]')).toContainText('Donate £567.89');
 
     // amount field validation
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').fill('');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').type('0');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').type('0');
     await expect(page.locator('[data-testid="Donate-example-9"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').type('25001');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').type('25001');
     await expect(page.locator('[data-testid="Donate-example-9"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').fill('');
-    await page.locator('[data-testid="Donate-example-9"] input#mship-4--MoneyBuy-userInput').type('20.01');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').fill('');
+    await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').type('20.01');
     await expect(page.locator('[data-testid="Donate-example-9"] button[type="submit"]')).toContainText('Donate £20.01');
 
     // clicking the submit button should take to donate.comicrelief.com
