@@ -80,11 +80,12 @@ const Signup = ({
     if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-      let moneyBuyNewDescription = otherAmountText;
+      let moneyBuyUpdatedDescription = otherAmountText;
 
       givingData.moneybuys.map((moneyBuy, index) => {
-        if (moneyBuy.value === amountDonate) {
-          moneyBuyNewDescription = moneyBuy.description;
+        // Only show the MB-associated copy when we're actually showing moneybuys
+        if (moneyBuy.value === amountDonate && !noMoneyBuys) {
+          moneyBuyUpdatedDescription = moneyBuy.description;
         }
 
         return (
@@ -100,7 +101,7 @@ const Signup = ({
         if (!errorMsg) setErrorMsg(true);
       } else {
         if (errorMsg) setErrorMsg(false);
-        setMoneyBuyCopy(moneyBuyNewDescription);
+        setMoneyBuyCopy(moneyBuyUpdatedDescription);
       }
     }
   }, [
@@ -110,7 +111,8 @@ const Signup = ({
     regularGiving,
     givingType,
     amountDonate,
-    otherAmountText
+    otherAmountText,
+    noMoneyBuys
   ]);
 
   // Updates our flag that differentiates between the popup
