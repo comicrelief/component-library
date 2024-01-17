@@ -80,11 +80,12 @@ const Signup = ({
     if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-      let moneyBuyNewDescription = otherAmountText;
+      let moneyBuyUpdatedDescription = otherAmountText;
 
       givingData.moneybuys.map((moneyBuy, index) => {
-        if (moneyBuy.value === amountDonate) {
-          moneyBuyNewDescription = moneyBuy.description;
+        // Only show the MB-associated copy when we're actually showing moneybuys
+        if (moneyBuy.value === amountDonate && !noMoneyBuys) {
+          moneyBuyUpdatedDescription = moneyBuy.description;
         }
 
         return (
@@ -100,7 +101,7 @@ const Signup = ({
         if (!errorMsg) setErrorMsg(true);
       } else {
         if (errorMsg) setErrorMsg(false);
-        setMoneyBuyCopy(moneyBuyNewDescription);
+        setMoneyBuyCopy(moneyBuyUpdatedDescription);
       }
     }
   }, [
@@ -110,7 +111,8 @@ const Signup = ({
     regularGiving,
     givingType,
     amountDonate,
-    otherAmountText
+    otherAmountText,
+    noMoneyBuys
   ]);
 
   // Updates our flag that differentiates between the popup
@@ -292,7 +294,7 @@ const Signup = ({
               ref={amountRef}
             />
           </FormFieldset>
-          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
+          {amountDonate >= 1 && moneyBuyCopy && (
             <Copy as="p">
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
@@ -343,10 +345,10 @@ Signup.propTypes = {
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
   defaultGivingType: PropTypes.string,
-  monthlyChooseAmountCopy: PropTypes.string.isRequired,
-  monthlyOtherAmountCopy: PropTypes.string.isRequired,
+  monthlyChooseAmountCopy: PropTypes.string,
+  monthlyOtherAmountCopy: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
-  givingType: PropTypes.string.isRequired
+  givingType: PropTypes.string
 };
 
 Signup.defaultProps = {
@@ -355,7 +357,10 @@ Signup.defaultProps = {
   data: {},
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
-  defaultGivingType: null
+  defaultGivingType: null,
+  monthlyChooseAmountCopy: null,
+  monthlyOtherAmountCopy: null,
+  givingType: null
 };
 
 export default Signup;

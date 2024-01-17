@@ -239,6 +239,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 .c24 {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.c25 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -257,9 +262,9 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   appearance: none;
 }
 
-.c24:active,
-.c24:focus,
-.c24:hover {
+.c25:active,
+.c25:focus,
+.c25:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -492,7 +497,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width:740px) {
-  .c24 {
+  .c25 {
     padding: 1rem 2rem;
   }
 }
@@ -514,6 +519,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   >
     <div
       className="c2"
+      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -639,8 +645,16 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               
             </label>
           </div>
-          <button
+          <p
             className="c24"
+          >
+            <strong>
+              £345.67 
+            </strong>
+            will help us fund amazing projects in the UK and around the world.
+          </p>
+          <button
+            className="c25"
             color="red"
             type="submit"
           >
@@ -1142,6 +1156,7 @@ exports[`Monthly donation renders correctly 1`] = `
   >
     <div
       className="c2"
+      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -1803,6 +1818,7 @@ exports[`Single donation renders correctly 1`] = `
   >
     <div
       className="c2"
+      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -2256,6 +2272,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c18 {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.c19 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -2274,9 +2295,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c18:active,
-.c18:focus,
-.c18:hover {
+.c19:active,
+.c19:focus,
+.c19:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -2366,7 +2387,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c18 {
+  .c19 {
     padding: 1rem 2rem;
   }
 }
@@ -2381,6 +2402,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   >
     <div
       className="c2"
+      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -2463,8 +2485,15 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               
             </label>
           </div>
-          <button
+          <p
             className="c18"
+          >
+            <strong>
+              £10 
+            </strong>
+          </p>
+          <button
+            className="c19"
             color="red"
             type="submit"
           >

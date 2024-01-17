@@ -11,8 +11,8 @@ import { handleTitles, handleCopy } from './_utils';
 import {
   BgImage,
   Container,
-  Header,
-  HeaderInner,
+  TitleWrapperInner,
+  TitleWrapperOuter,
   Wrapper
 } from './Donate.style';
 
@@ -70,7 +70,8 @@ const Donate = ({
   const {
     showCopy,
     thisTitle,
-    thisSubtitle
+    thisSubtitle,
+    noTitlesAtAll
   } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
 
   const {
@@ -112,28 +113,33 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-        <Header formAlignRight={formAlignRight}>
-          <HeaderInner>
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
+
+        {/* Only render if there is SOME title copy; otherwise,
+        we need to the space to centre-align the form */}
+        { !noTitlesAtAll && (
+        <TitleWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
+          <TitleWrapperInner>
             {showCopy && (
-              <>
-                <Text
-                  tag="h2"
-                  color={textColor}
-                  size="big"
-                  family="Anton"
-                  weight="normal"
-                  uppercase
-                >
-                  {thisTitle}
-                </Text>
-                <Text tag="p" color={textColor} size="m">
-                  {thisSubtitle}
-                </Text>
-              </>
+            <>
+              <Text
+                tag="h2"
+                color={textColor}
+                size="big"
+                family="Anton"
+                weight="normal"
+                uppercase
+              >
+                {thisTitle}
+              </Text>
+              <Text tag="p" color={textColor} size="m">
+                {thisSubtitle}
+              </Text>
+            </>
             )}
-          </HeaderInner>
-        </Header>
+          </TitleWrapperInner>
+        </TitleWrapperOuter>
+        )}
 
         <Form
           data={data}
@@ -222,10 +228,10 @@ Donate.defaultProps = {
   additionalSingleCopy: null,
   additionalMonthlyCopy: null,
   defaultGivingType: null,
-  monthlyTitle: null,
-  monthlySubtitle: null,
-  monthlyChooseAmountText: null,
-  monthlyOtherAmountText: null
+  monthlyTitle: '',
+  monthlySubtitle: '',
+  monthlyChooseAmountText: '',
+  monthlyOtherAmountText: ''
 };
 
 export default Donate;
