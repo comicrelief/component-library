@@ -53,3 +53,5 @@ To publish
 ```
 $ yarn publish:npm
 ```
+
+yep
