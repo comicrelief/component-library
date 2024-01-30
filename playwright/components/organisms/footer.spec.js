@@ -2,7 +2,6 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('footer component', () => {
   test('Standard footer', async ({ page }) => {
-
     await page.goto('/#footer');
 
     await expect(page.locator('[data-testid="Footer-example-1"]')).toBeVisible();
@@ -22,7 +21,6 @@ test.describe('footer component', () => {
   });
 
   test('Overrides allowList functionality', async ({ page }) => {
-
     await page.goto('/#footer');
 
     await expect(page.locator('[data-testid="Footer-example-1"]')).toBeVisible();
@@ -42,7 +40,6 @@ test.describe('footer component', () => {
   });
 
   test('additional legal line footer', async ({ page }) => {
-
     await page.goto('/#footer');
 
     await expect(page.locator('[data-testid="Footer-example-1"]')).toBeVisible();
