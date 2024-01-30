@@ -18,7 +18,7 @@ import footerCopy from './data/footerCopy';
     
     <p>Adding a additionalLegalLine to the top of the footer</p>
     <Footer 
-      additionalLegalLine="MR. MEN ™ LITTLE MISS ™ © 2022 THOIP (a SANRIO Company). All rights reserved." 
+      additionalLegalLine="CHICKEN RUN: DAWN OF THE NUGGET ™/ © Aardman. Netflix ™/© Netflix. Used with permission/Wallace & Gromit Ltd. All rights reserved/ Shaun the Sheep © & TM /Morph ©/TM Aardman Animations Ltd. All rights reserved." 
       navItems={data} 
       footerCopy={footerCopy.copy} 
       campaign="Comic Relief" 
