@@ -48,7 +48,7 @@ test.describe('footer component', () => {
     await expect(page.locator('[data-testid="Footer-example-1"]')).toBeVisible();
 
     // legal line to the top of the footer should be present
-    await expect(page.locator('[data-preview="Footer"] > div > div:nth-child(6) > footer[role="banner"] > div > p')).toContainText('MR. MEN ™ LITTLE MISS ™ © 2022 THOIP (a SANRIO Company). All rights reserved.');
+    await expect(page.locator('[data-preview="Footer"] > div > div:nth-child(6) > footer[role="banner"] > div > p')).toContainText('CHICKEN RUN: DAWN OF THE NUGGET ™/ © Aardman. Netflix ™/© Netflix. Used with permission/Wallace & Gromit Ltd. All rights reserved/ Shaun the Sheep © & TM /Morph ©/TM Aardman Animations Ltd. All rights reserved.');
 
     // footer social icons should be visible
     await expect(page.locator('[data-preview="Footer"] > div > div:nth-child(4) > footer[role="banner"] [title="Check out our Facebook page"]')).toBeVisible();
