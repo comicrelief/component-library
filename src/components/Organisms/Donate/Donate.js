@@ -48,6 +48,7 @@ const Donate = ({
   defaultGivingType,
   monthlyTitle,
   monthlySubtitle,
+  paddingOption,
   // Just to keep the function call character length under control
   monthlyChooseAmountText: monthlyChoose,
   monthlyOtherAmountText: monthlyOther
@@ -113,7 +114,7 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll} paddingOption={paddingOption}>
 
         {/* Only render if there is SOME title copy; otherwise,
         we need to the space to centre-align the form */}
@@ -197,7 +198,8 @@ Donate.propTypes = {
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
-  monthlyOtherAmountText: PropTypes.string
+  monthlyOtherAmountText: PropTypes.string,
+  paddingOption: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -231,7 +233,8 @@ Donate.defaultProps = {
   monthlyTitle: '',
   monthlySubtitle: '',
   monthlyChooseAmountText: '',
-  monthlyOtherAmountText: ''
+  monthlyOtherAmountText: '',
+  paddingOption: null
 };
 
 export default Donate;

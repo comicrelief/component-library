@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button
+## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button and 'no top padding' option
 
 ```js
 import data from './dev-data/data';
@@ -24,10 +24,11 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  paddingOption="upper-off"
 />;
 ```
 
-## Form align left, with custom message after choosing an "Other amount" to donate, high value cart.
+## Form align left, with custom message after choosing an "Other amount" to donate, high value cart, and 'no bottom padding' option
 ```js
 import data from './dev-data/data-high-value';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
@@ -50,10 +51,11 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Overridden via the 'Other amount text' prop"
+  paddingOption="lower-off"
 />;
 ```
 
-## Single Giving
+## Single Giving, with 'no padding' option
 
 ```js
 import data from './dev-data/data-single';
@@ -76,6 +78,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  paddingOption="both-off"
 />;
 ```
 
