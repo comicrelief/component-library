@@ -24,7 +24,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  paddingOption="upper-off"
+  paddingOption="upper_off"
 />;
 ```
 
@@ -51,7 +51,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Overridden via the 'Other amount text' prop"
-  paddingOption="lower-off"
+  paddingOption="lower_off"
 />;
 ```
 
@@ -78,7 +78,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
-  paddingOption="both-off"
+  paddingOption="both_off"
 />;
 ```
 
