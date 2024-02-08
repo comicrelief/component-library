@@ -58,7 +58,6 @@ const Wrapper = styled.div`
 
   ${media('small')} {
     padding: ${spacing('xl')} ${spacing('md')};
-    ${({ paddingOption }) => handlePadding(paddingOption)};
   }
 
   ${media('medium')} {
