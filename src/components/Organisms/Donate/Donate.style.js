@@ -6,6 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
+import handlePadding from '../../../utils/_utils';
 
 const Container = styled.div`
   position: relative;
@@ -58,9 +59,11 @@ const Wrapper = styled.div`
   ${media('small')} {
     padding: ${spacing('xl')} ${spacing('md')};
   }
+
   ${media('medium')} {
     display: flex;
     padding: ${spacing('xl')} 0;
+    ${({ paddingOption }) => handlePadding(paddingOption)};
   }
 `;
 
