@@ -84,6 +84,59 @@ import Text from '../../Atoms/Text/Text';
 </SingleMessage>;
 ```
 
+Single Message with no Image - padding unmodified
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="both_on">
+  <Text tag="p" color="white" size="xxl">
+    “The creativity that goes into helping people have a better life is
+    extraordinary.”
+  </Text>
+</SingleMessage>;
+```
+
+Single Message with no Image - no bottom padding
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="lower_off">
+  <Text tag="p" color="white" size="xxl">
+    “The creativity that goes into helping people have a better life is
+    extraordinary.”
+  </Text>
+</SingleMessage>;
+```
+
+
+Single Message with no Image - no top padding
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="upper_off">
+  <Text tag="p" color="white" size="xxl">
+    “The creativity that goes into helping people have a better life is
+    extraordinary.”
+  </Text>
+</SingleMessage>;
+```
+
+Single Message with no Image - no top and bottom padding 
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="both_off">
+  <Text tag="p" color="white" size="xxl">
+    “The creativity that goes into helping people have a better life is
+    extraordinary.”
+  </Text>
+</SingleMessage>;
+```
+
 Single Message vertical height 100%
 
 ```js
