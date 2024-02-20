@@ -30,7 +30,8 @@ const SingleMessage = ({
   fullImage,
   vhFull,
   videoID,
-  landscapeVideo
+  landscapeVideo,
+  paddingOption
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
@@ -207,6 +208,7 @@ const SingleMessage = ({
               copyFirst={copyFirst}
               hasVideo={hasVideo}
               vhFull={vhFull}
+              paddingOption={paddingOption}
             >
               {children}
             </Copy>
@@ -234,7 +236,8 @@ SingleMessage.propTypes = {
   /** Image will be the height of the viewport */
   vhFull: PropTypes.bool,
   videoID: PropTypes.string,
-  landscapeVideo: PropTypes.bool
+  landscapeVideo: PropTypes.bool,
+  paddingOption: PropTypes.string
 };
 
 SingleMessage.defaultProps = {
@@ -251,7 +254,8 @@ SingleMessage.defaultProps = {
   children: null,
   vhFull: false,
   videoID: null,
-  landscapeVideo: false
+  landscapeVideo: false,
+  paddingOption: null
 };
 
 export default SingleMessage;
