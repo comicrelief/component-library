@@ -21,6 +21,9 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   margin: 0 0 0 ${spacing('m')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    margin: 0 -${spacing('m')} 0 ${spacing('m')};
+  }
 
   img {
     border-radius: ${spacing('md')};
@@ -47,7 +50,6 @@ const Copy = styled.div`
   box-shadow: 0 0 ${spacing('md')} rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   width: 100%;
-  margin: 0 ${spacing('m')} 0 -${spacing('m')}  ;
   @media ${({ theme }) => theme.breakpoint('large')} {
     height: 100%;
   }
@@ -57,12 +59,12 @@ const Copy = styled.div`
       margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
       @media ${({ theme }) => theme.breakpoint('small')} {
-        margin: ${spacing('m')} 0 ${spacing('m')} ${spacing('m')};
+        margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};
         width: calc(50% + 6rem);
       }
 
       @media ${({ theme }) => theme.breakpoint('large')} {
-        margin: calc(-2 * -${spacing('m')}) 0 ${spacing('m')} 0;
+        margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
         width: 100%;
       }
     `};
