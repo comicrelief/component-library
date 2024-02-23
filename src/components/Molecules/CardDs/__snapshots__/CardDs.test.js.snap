@@ -102,7 +102,7 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0,0,0,0.15);
   background: #FFFFFF;
-  margin: 0 1rem 0 0;
+  margin: 0 1.5rem 0 0;
   z-index: 1;
   margin-top: calc(-2 * 1.5rem);
   min-height: calc(5 * 2rem);
