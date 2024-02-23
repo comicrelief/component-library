@@ -50,6 +50,7 @@ const Copy = styled.div`
   box-shadow: 0 0 ${spacing('md')} rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   width: 100%;
+  margin: 0 ${spacing('m')} 0 -${spacing('m')};
   @media ${({ theme }) => theme.breakpoint('large')} {
     height: 100%;
   }
