@@ -39,8 +39,6 @@ it("renders a standard styled link correctly", () => {
       border: 1px solid white;
       background-color: background-color:#E52630;
       color: #FFFFFF;
-      background-color: #E52630;
-      color: #FFFFFF;
     }
 
     .c0:hover {
@@ -52,11 +50,6 @@ it("renders a standard styled link correctly", () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       color: inherit;
-    }
-
-    .c0:hover {
-      background-color: #890B11;
-      color: #FFFFFF;
     }
 
     .c0 (min-width:1024px) {

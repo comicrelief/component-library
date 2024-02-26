@@ -60,8 +60,6 @@ exports[`renders correctly 1`] = `
   border: 1px solid white;
   background-color: background-color:#E52630;
   color: #FFFFFF;
-  background-color: #E52630;
-  color: #FFFFFF;
 }
 
 .c15:hover {
@@ -73,11 +71,6 @@ exports[`renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
-}
-
-.c15:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
 }
 
 .c15 (min-width:1024px) {
