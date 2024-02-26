@@ -29,7 +29,7 @@ const StyledButton = styled.button`
     text-decoration: none;
     color: inherit;
   }
-  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+  // ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
   }
