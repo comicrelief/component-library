@@ -23,6 +23,7 @@ const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   color: ${({ backgroundColor }) => getContrastColor(backgroundColor)};
+  border: 1px solid ${({ backgroundColor }) => getContrastColor(backgroundColor)};
   background-color: ${({ backgroundColor, theme }) => theme.buttonColors(backgroundColor || 'red')};
   > a {
     text-decoration: none;
