@@ -57,6 +57,7 @@ exports[`renders correctly 1`] = `
   border: none;
   cursor: pointer;
   color: white;
+  border: 1px solid white;
   background-color: background-color:#E52630;
   color: #FFFFFF;
   background-color: #E52630;
