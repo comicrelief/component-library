@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import media from '../../../theme/shared/breakpoint';
 
+// Function to decide contrast color based on background color
+const getContrastColor = backgroundColor => (backgroundColor === 'red' ? 'white' : 'black');
+
 const StyledButton = styled.button`
   display: inline-flex;
   position: relative;
@@ -19,8 +22,11 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
+  color: ${({ backgroundColor }) => getContrastColor(backgroundColor)};
+  background-color: ${({ backgroundColor, theme }) => theme.buttonColors(backgroundColor || 'red')};
   > a {
     text-decoration: none;
+    color: inherit;
   }
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   @media ${({ theme }) => theme.breakpoint('small')} {
@@ -34,20 +40,31 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = React.forwardRef(({ children, wrapper, ...rest }, ref) => (
-  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref}>
-    {children}
-  </StyledButton>
-));
+const Button = React.forwardRef(
+  ({
+    children, backgroundColor = 'red', wrapper, ...rest
+  }, ref) => (
+    <StyledButton
+      {...rest}
+      backgroundColor={backgroundColor}
+      as={wrapper ? 'span' : 'button'}
+      ref={ref}
+    >
+      {children}
+    </StyledButton>
+  )
+);
 
 Button.propTypes = {
   /** Buttons as span */
   wrapper: PropTypes.bool,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  backgroundColor: PropTypes.string
 };
 
 Button.defaultProps = {
-  wrapper: false
+  wrapper: false,
+  backgroundColor: 'red'
 };
 
 export default Button;
