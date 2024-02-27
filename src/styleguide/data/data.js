@@ -52,86 +52,86 @@ const testImpactSliderItems = [
 const carouselItemsComplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
-  node1Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
-  node1Amount: '1,000',
-  node1Image: {
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node2Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
-  node2Amount: '2,000',
-  node2Image: {
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Amount: '2,000',
+  node2_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node3Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
-  node3Amount: '3,000',
-  node3Image: {
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node4Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
-  node4Amount: '4,000',
-  node4Image: {
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node5Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
-  node5Amount: '5,000',
-  node5Image: {
+  node5_Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
+  node5_Amount: '5,000',
+  node5_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node6Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
-  node6Amount: '6,000',
-  node6Image: {
+  node6_Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
+  node6_Amount: '6,000',
+  node6_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node7Copy: 'NODE7: people in the UK experiencing poverty to access advice and support.',
-  node7Amount: '7,000',
-  node7Image: {
+  node7_Copy: 'NODE7: people in the UK experiencing poverty to access advice and support.',
+  node7_Amount: '7,000',
+  node7_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node8Copy: 'NODE8: people in the UK experiencing poverty to access advice and support.',
-  node8Amount: '8,000',
-  node8Image: {
+  node8_Copy: 'NODE8: people in the UK experiencing poverty to access advice and support.',
+  node8_Amount: '8,000',
+  node8_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node9Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
-  node9Amount: '9,000',
-  node9Image: {
+  node9_Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
+  node9_Amount: '9,000',
+  node9_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node10Copy: 'NODE10: people in the UK experiencing poverty to access advice and support.',
-  node10Amount: '10,000',
-  node10Image: {
+  node10_Copy: 'NODE10: people in the UK experiencing poverty to access advice and support.',
+  node10_Amount: '10,000',
+  node10_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node11Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
-  node11Amount: '11,000',
-  node11Image: {
+  node11_Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
+  node11_Amount: '11,000',
+  node11_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node12Copy: 'NODE12: people in the UK experiencing poverty to access advice and support.750,000',
-  node12Amount: '12,000',
-  node12Image: {
+  node12_Copy: 'NODE12: people in the UK experiencing poverty to access advice and support.750,000',
+  node12_Amount: '12,000',
+  node12_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
@@ -141,70 +141,70 @@ const carouselItemsComplete = {
 const carouselItemsIncomplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '44KsoB8dd03R3murE9UhPi',
-  node1Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
-  node1Amount: '1,000',
-  node1Image: {
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node2Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
-  node2Amount: '2,000',
-  node2Image: {
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Amount: '2,000',
+  node2_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node3Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
-  node3Amount: '3,000',
-  node3Image: {
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node4Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
-  node4Amount: '4,000',
-  node4Image: {
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node5Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
-  node5Amount: '5,000',
-  node5Image: {
+  node5_Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
+  node5_Amount: '5,000',
+  node5_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node6Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
-  node6Amount: '6,000',
-  node6Image: null,
-  node7Copy: null,
-  node7Amount: null,
-  node7Image: null,
-  node8Copy: null,
-  node8Amount: null,
-  node8Image: {
+  node6_Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
+  node6_Amount: '6,000',
+  node6_Image: null,
+  node7_Copy: null,
+  node7_Amount: null,
+  node7_Image: null,
+  node8_Copy: null,
+  node8_Amount: null,
+  node8_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node9Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
-  node9Amount: null,
-  node9Image: null,
-  node10Copy: null,
-  node10Amount: '10,000',
-  node10Image: {
+  node9_Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
+  node9_Amount: null,
+  node9_Image: null,
+  node10_Copy: null,
+  node10_Amount: '10,000',
+  node10_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node11Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
-  node11Amount: '11,000',
-  node11Image: null,
-  node12Copy: 'people in the UK experiencing poverty to access advice and support.750,000',
-  node12Amount: null,
-  node12Image: {
+  node11_Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
+  node11_Amount: '11,000',
+  node11_Image: null,
+  node12_Copy: 'people in the UK experiencing poverty to access advice and support.750,000',
+  node12_Amount: null,
+  node12_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }

@@ -13,13 +13,14 @@ const formatItems = thisData => {
   for (let i = 1; i <= possibleNumberOfNodes; i += 1) {
     // Create a dynamic key prefix based on the counter, obviously matching
     // the naming convention set at the Content Type level in the CMS
-    const thisKeyPrefix = `node${i}`;
-
+    const thisKeyPrefix = `node${i}_`;
+    console.log('thisKeyPrefix', thisKeyPrefix);
     // Make an array of objects, each object representing a specific node and its fields:
     const thisNodeContent = theseKeys
       .filter(key => key.includes(thisKeyPrefix))
       .reduce((thisObj, thisKey) => {
         const thisFilteredObj = thisObj;
+        console.log('thisFilteredObj', thisFilteredObj);
         // Only assign if we have actually have a value; only the fields for nodes 1-4 are required:
         if (thisData[thisKey]) thisFilteredObj[thisKey] = thisData[thisKey];
         return thisFilteredObj;
@@ -27,6 +28,7 @@ const formatItems = thisData => {
 
     // Add our new object to the allValidNodes array, but only if we've got all 3 necessary fields:
     if (Object.keys(thisNodeContent).length === 3) {
+      console.log('thisNodeContent', thisNodeContent);
       allValidNodes.push(thisNodeContent);
     }
   }

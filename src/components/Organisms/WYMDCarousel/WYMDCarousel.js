@@ -1,11 +1,29 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+// import {
+//   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
+// } from 'pure-react-carousel';
 import formatItems from './_utils';
+// import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const WYMDCarousel = ({ data }) => {
   const theseItems = formatItems(data);
   console.log('theseItems', theseItems);
+
+  // Internet Explorer 6-11
+  const isIE = /* @cc_on!@ */false || !!document.documentMode;
+
+  if (isIE) {
+    return (
+      <ul className="carousel-fallback">
+        {Object.keys(theseItems).map(key => (
+          <li key={key}>{theseItems[key].description}</li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <p>
       New Carousel:
