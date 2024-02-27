@@ -1,19 +1,15 @@
-# 'What Your Money Does' Carousel - all fields
+# 'What Your Money Does' Carousel
 
 ```js
-const { carouselItemsComplete } = require('../../../styleguide/data/data');
+const { carouselItemsComplete, carouselItemsIncomplete } = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
 
-    <WYMDCarousel data={carouselItemsComplete}/>
-
-```
-
-# 'What Your Money Does' Carousel - all REQUIRED fields
-
-```js
-const { carouselItemsIncomplete} = require('../../../styleguide/data/data');
-import Text from '../../Atoms/Text/Text';
-
-    <WYMDCarousel data={carouselItemsIncomplete}/>
+    <div>
+        <h2>All fields supplied </h2>
+        <WYMDCarousel data={carouselItemsComplete}/>
+    
+        <h2>Incomplete fields </h2>
+        <WYMDCarousel data={carouselItemsIncomplete}/>
+    </div>
 
 ```

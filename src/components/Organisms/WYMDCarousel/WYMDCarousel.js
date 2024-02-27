@@ -7,12 +7,12 @@ const WYMDCarousel = ({ data }) => {
   const theseItems = formatItems(data);
   console.log('theseItems', theseItems);
   return (
-    <h1>
+    <p>
       New Carousel:
       (
       {data.contentful_id}
       )
-    </h1>
+    </p>
   );
 };
 
