@@ -1,15 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-// import {
-//   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-// } from 'pure-react-carousel';
+import {
+  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
+} from 'pure-react-carousel';
 import formatItems from './_utils';
-// import 'pure-react-carousel/dist/react-carousel.es.css';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import CarouselWrapper from './WYMDCarousel.style';
 
 const WYMDCarousel = ({ data }) => {
   const theseItems = formatItems(data);
-  console.log('theseItems', theseItems);
+  console.log('theseItems', theseItems, theseItems.length);
 
   // Internet Explorer 6-11
   const isIE = /* @cc_on!@ */false || !!document.documentMode;
@@ -25,12 +26,27 @@ const WYMDCarousel = ({ data }) => {
   }
 
   return (
-    <p>
-      New Carousel:
-      (
-      {data.contentful_id}
-      )
-    </p>
+    <CarouselWrapper className="CarouselWrapper">
+      <CarouselProvider
+        naturalSlideWidth={50}
+        naturalSlideHeight={20}
+        totalSlides={theseItems.length}
+        // isPlaying
+        interval={3000}
+        infinite
+        visibleSlides="3"
+      >
+        <Slider
+          classNameAnimation="wymd-carousel"
+        >
+          {Object.keys(theseItems).map((key, index) => (
+            <Slide index={index} key={key}>{theseItems[key].testing}</Slide>
+          ))}
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
+    </CarouselWrapper>
   );
 };
 

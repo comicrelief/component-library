@@ -211,6 +211,33 @@ const carouselItemsIncomplete = {
   }
 };
 
+const carouselItemsMinimal = {
+  __typename: 'ContentfulWhatYourMoneyDoesCarousel',
+  contentful_id: '7zdR84QkZwrTh9NWx2H926',
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Amount: '2,000',
+  node2_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  }
+};
+
 export {
-  defaultData, mobileImages, testImpactSliderItems, carouselItemsComplete, carouselItemsIncomplete
+  defaultData, mobileImages, testImpactSliderItems,
+  carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal
 };
