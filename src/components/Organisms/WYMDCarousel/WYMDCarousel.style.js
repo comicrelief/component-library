@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 const CarouselWrapper = styled.div`
-    background-color: #00ffe054;
-
-    // width: 100%;
-    height: 30vh;
-    overflow: hidden;
+    background-color: #00ffe0;
+    height: 50vh;
+    // padding-bottom: 500px;
 
       .wymd-carousel .carousel__slide .carousel__inner-slide {
         padding: 0 30px !important;
@@ -18,24 +16,20 @@ const CarouselWrapper = styled.div`
       .carousel {
         position: relative;
         margin: 0 auto;
-
-        .carousel__slider--horizontal {
-            // background-color: orange !important;
-            // overflow: unset;
-        }
       
         button.carousel__back-button,
         button.carousel__next-button {
           position: absolute;
           left: 0;
           top: 0;
-          width: 30px !important;
-          height: 30vh;
+          width: 33% !important;
+          height: 50vh;
           padding: 0 !important;
           box-shadow: none;
           text-indent: -9999px;
           background-color: transparent;
-      
+          border: none;
+          
           &:before {
             content: '';
             // background: transparent url(/images/payin/CR__Chevron_D--white.svg) no-repeat;
@@ -46,6 +40,17 @@ const CarouselWrapper = styled.div`
             left: 0;
             transform: translate(0, -50%) rotate(90deg);
           }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+
+          }
         }
       
         button.carousel__next-button {
@@ -54,6 +59,11 @@ const CarouselWrapper = styled.div`
           &:before {
             transform: translate(0, -50%) rotate(-90deg);
       
+          }
+          &:after {
+            left: auto;
+            right: 0;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
           }
         }
       
@@ -68,7 +78,7 @@ const CarouselWrapper = styled.div`
       
           .carousel__slide {
             // TO-DO: HAS GOTTA MATCH THE WRAPPER
-            padding-bottom: 30vh !important;
+            padding-bottom: 50vh !important;
       
             .carousel__inner-slide {
               padding: 0 33% !important;
@@ -76,6 +86,8 @@ const CarouselWrapper = styled.div`
               display: inline-flex;
               align-items: center;
               justify-content: center;
+              flex-direction: column;
+            }
             }
           }
         }
