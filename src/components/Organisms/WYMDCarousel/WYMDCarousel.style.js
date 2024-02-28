@@ -2,18 +2,10 @@ import styled from 'styled-components';
 
 const thisHeight = '50vh';
 
-// Having to target plugin-created markup this way
+// Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
   background-color: #00ffe0;
   height: ${thisHeight};
-
-  .wymd-carousel .carousel__slide .carousel__inner-slide {
-    padding: 0 30px !important;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   .carousel {
     position: relative;
