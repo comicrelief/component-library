@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+const thisHeight = '50vh';
+
 // Having to target plugin-created markup this way
 const CarouselWrapper = styled.div`
   background-color: #00ffe0;
-  height: 50vh;
-  // padding-bottom: 500px;
+  height: ${thisHeight};
 
   .wymd-carousel .carousel__slide .carousel__inner-slide {
     padding: 0 30px !important;
@@ -24,7 +25,7 @@ const CarouselWrapper = styled.div`
       left: 0;
       top: 0;
       width: 33% !important;
-      height: 50vh;
+      height: ${thisHeight};
       padding: 0 !important;
       box-shadow: none;
       text-indent: -9999px;
@@ -78,8 +79,7 @@ const CarouselWrapper = styled.div`
       will-change: transform;
       
       .carousel__slide {
-        // TO-DO: HAS GOTTA MATCH THE WRAPPER
-        padding-bottom: 50vh !important;
+        padding-bottom: ${thisHeight} !important;
       
         .carousel__inner-slide {
           padding: 0 33% !important;
@@ -89,12 +89,11 @@ const CarouselWrapper = styled.div`
           justify-content: center;
           flex-direction: column;
         }
-        }
       }
     }
   }
     
-      // A more IE11-friendly solution 
+  // A more IE11-friendly solution 
   ul.carousel-fallback {
     list-style: disc;
     padding-left: 30px;
