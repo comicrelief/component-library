@@ -10,12 +10,25 @@ import {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
+import { sizes } from '../../../theme/shared/breakpoint';
 
 const WYMDCarousel = ({ data, data: { autoPlay } }) => {
+  // Defaults to mobile config:
+  const [isMobile, setIsMobile] = useState(true);
+  const [visibleSlides, setVisibleSlides] = useState(1);
+
+  // Format our data before we use it in render:
   const theseItems = formatItems(data);
 
+  useEffect(() => {
+    if (window !== 'undefined' && window.innerWidth >= sizes.small) {
+      // Update the plugin config to suit the non-mobile layout and functionality:
+      setIsMobile(false);
+      setVisibleSlides(3);
+    }
+  }, []);
+
   // TO-DO: do we really need this any more?
-  // Internet Explorer 6-11
   const isIE = /* @cc_on!@ */false || !!document.documentMode;
 
   if (isIE) {
@@ -35,17 +48,29 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
-        totalSlides={theseItems.length}
+        totalSlides={isMobile ? theseItems.length : theseItems.length + 2}
         isPlaying={autoPlay}
         interval={4000}
         infinite
-        visibleSlides="3"
+        visibleSlides={visibleSlides}
       >
         <Slider classNameAnimation="wymd-carousel">
-          {Object.keys(theseItems).map((key, index) => (
-            <Slide index={index} key={key}>
 
-              <ImageWrapper>
+          {/* Dummy slide for our desired non-mobile layout and functionality */}
+          {!isMobile && (
+            <Slide index={0} key="bookend-first" />
+          )}
+
+          {Object.keys(theseItems).map((key, index) => (
+
+            // Calculate the index offset accordingly to reflect the number of slides:
+            <Slide
+              index={index + (isMobile ? 1 : 0)}
+              className={index === (theseItems.length - 1) && 'last-slide'}
+              key={key}
+            >
+
+              <ImageWrapper className="image-wrapper">
                 <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
               </ImageWrapper>
 
@@ -62,6 +87,12 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
               </CopyWrapper>
             </Slide>
           ))}
+
+          {/* Dummy slide for our desired non-mobile layout and functionality */}
+          {!isMobile && (
+            <Slide index={theseItems.length + 1} key="bookend-last" />
+          )}
+
         </Slider>
         <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext>

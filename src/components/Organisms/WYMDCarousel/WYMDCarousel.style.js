@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 
-const thisHeight = '75vh';
+const thisHeight = '50vw';
 
 // Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
   // TO REMOVE
-  background-color: #00ffe0;
-  border: 1px solid black;
+  // background-color: #00ffe0;
+  // border: 1px solid black;
 
   height: ${thisHeight};
 
@@ -46,7 +46,8 @@ const CarouselWrapper = styled.div`
         left: 0;
         width: 150%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0))
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))
       }
     }
       
@@ -61,7 +62,8 @@ const CarouselWrapper = styled.div`
       &:after {
         left: auto;
         right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
       }
     }
       
@@ -73,6 +75,12 @@ const CarouselWrapper = styled.div`
       transition: transform 0.75s;
       transition: transform 0.75s, -webkit-transform 0.75s;
       will-change: transform;
+
+      .last-slide {
+        .image-wrapper:after {
+          content: none;
+        }
+      }
       
       .carousel__slide {
         padding-bottom: ${thisHeight} !important;
@@ -105,7 +113,7 @@ const ImageWrapper = styled.div`
   width: 50%;
   display: block;
   padding: 9%;
-  border: 3px dotted #89888b;
+  border: 3px dashed #89888b;
   border-radius: 50%;
   position: relative;
   overflow: visible;
@@ -120,20 +128,19 @@ const ImageWrapper = styled.div`
     position: absolute;
     content: '';
     top: 50%;
-    left: auto;
-    right: -104%;
+    right: calc(-100% + -6px);
     width: 100%;
     height: 3px;
-    border-bottom: 3px dotted #89888b;
+    border-bottom: 3px dashed #89888b;
   }
 `;
 
 const AmountWrapper = styled.div`
-  padding: ${spacing('m')} ${spacing('l')};
+  padding: ${spacing('m')} ${spacing('m')};
 `;
 
 const CopyWrapper = styled.div`
-  padding: ${spacing('sm')} ${spacing('l')};
+  padding: ${spacing('sm')} ${spacing('m')};
 `;
 
 export {
