@@ -1,11 +1,7 @@
-import styled from 'styled-components';
-
-// Having to target plugin-created markup this way
-const CarouselWrapper = styled.div`
+.wrapper {
   background-color: #00ffe0;
   height: 50vh;
-  // padding-bottom: 500px;
-
+    
   .wymd-carousel .carousel__slide .carousel__inner-slide {
     padding: 0 30px !important;
     text-align: center;
@@ -33,7 +29,6 @@ const CarouselWrapper = styled.div`
           
       &:before {
         content: '';
-        // background: transparent url(/images/payin/CR__Chevron_D--white.svg) no-repeat;
         position: absolute;
         width: 30px;
         height: 30px;
@@ -49,7 +44,7 @@ const CarouselWrapper = styled.div`
         left: 0;
         width: 150%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0))
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
       }
     }
       
@@ -60,14 +55,14 @@ const CarouselWrapper = styled.div`
       &:before {
         transform: translate(0, -50%) rotate(-90deg);
       }
-
+        
       &:after {
         left: auto;
         right: 0;
         background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
       }
     }
-      
+    
     .wymd-carousel {
       // Override default animations
       -webkit-transition: -webkit-transform 0.75s;
@@ -80,7 +75,7 @@ const CarouselWrapper = styled.div`
       .carousel__slide {
         // TO-DO: HAS GOTTA MATCH THE WRAPPER
         padding-bottom: 50vh !important;
-      
+    
         .carousel__inner-slide {
           padding: 0 33% !important;
           text-align: center;
@@ -89,21 +84,19 @@ const CarouselWrapper = styled.div`
           justify-content: center;
           flex-direction: column;
         }
+          }
         }
       }
     }
-  }
     
-      // A more IE11-friendly solution 
-  ul.carousel-fallback {
-    list-style: disc;
-    padding-left: 30px;
-    margin: 20px 0;
+    // A more IE11-friendly solution 
+    ul.carousel-fallback {
+      list-style: disc;
+      padding-left: 30px;
+      margin: 20px 0;
     
-    li {
-      margin-bottom: 15px;
-    }
+      li {
+        margin-bottom: 15px;
+      }
   }
-`;
-
-export default CarouselWrapper;
+}

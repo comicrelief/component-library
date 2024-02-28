@@ -17,11 +17,13 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
   if (isIE) {
     return (
-      <ul className="carousel-fallback">
-        {Object.keys(theseItems).map(key => (
-          <li key={key}>{theseItems[key].copy}</li>
-        ))}
-      </ul>
+      <CarouselWrapper className="CarouselWrapper">
+        <ul className="carousel-fallback">
+          {Object.keys(theseItems).map(key => (
+            <li key={key}>{theseItems[key].copy}</li>
+          ))}
+        </ul>
+      </CarouselWrapper>
     );
   }
 
