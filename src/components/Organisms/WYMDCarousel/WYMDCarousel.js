@@ -6,7 +6,10 @@ import {
 } from 'pure-react-carousel';
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import CarouselWrapper from './WYMDCarousel.style';
+import {
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper
+} from './WYMDCarousel.style';
+import Text from '../../Atoms/Text/Text';
 
 const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   const theseItems = formatItems(data);
@@ -41,9 +44,22 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
         <Slider classNameAnimation="wymd-carousel">
           {Object.keys(theseItems).map((key, index) => (
             <Slide index={index} key={key}>
-              <p>{theseItems[key].amount}</p>
-              <p>{theseItems[key].copy}</p>
-              <img style={{ width: '50px', display: 'block' }} src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+
+              <ImageWrapper>
+                <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+              </ImageWrapper>
+
+              <AmountWrapper>
+                <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
+                  {theseItems[key].amount}
+                </Text>
+              </AmountWrapper>
+
+              <CopyWrapper>
+                <Text tag="p" size="l">
+                  {theseItems[key].copy}
+                </Text>
+              </CopyWrapper>
             </Slide>
           ))}
         </Slider>

@@ -1,10 +1,14 @@
 import styled from 'styled-components';
+import spacing from '../../../theme/shared/spacing';
 
-const thisHeight = '50vh';
+const thisHeight = '75vh';
 
 // Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
+  // TO REMOVE
   background-color: #00ffe0;
+  border: 1px solid black;
+
   height: ${thisHeight};
 
   .carousel {
@@ -74,7 +78,7 @@ const CarouselWrapper = styled.div`
         padding-bottom: ${thisHeight} !important;
       
         .carousel__inner-slide {
-          padding: 0 33% !important;
+          // padding: 0 !important;
           text-align: center;
           display: inline-flex;
           align-items: center;
@@ -97,4 +101,41 @@ const CarouselWrapper = styled.div`
   }
 `;
 
-export default CarouselWrapper;
+const ImageWrapper = styled.div`
+  width: 50%;
+  display: block;
+  padding: 9%;
+  border: 3px dotted #89888b;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+  // box-sizing: content-box;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: auto;
+    right: -104%;
+    width: 100%;
+    height: 3px;
+    border-bottom: 3px dotted #89888b;
+  }
+`;
+
+const AmountWrapper = styled.div`
+  padding: ${spacing('m')} ${spacing('l')};
+`;
+
+const CopyWrapper = styled.div`
+  padding: ${spacing('sm')} ${spacing('l')};
+`;
+
+export {
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper
+};
