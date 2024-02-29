@@ -35,8 +35,6 @@ it("renders a standard styled link correctly", () => {
       align-items: center;
       border: none;
       cursor: pointer;
-      color: white;
-      border: 1px solid white;
       background-color: background-color:#E52630;
       color: #FFFFFF;
     }

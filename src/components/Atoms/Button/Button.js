@@ -5,7 +5,12 @@ import spacing from '../../../theme/shared/spacing';
 import media from '../../../theme/shared/breakpoint';
 
 // Function to decide contrast color based on background color
-const getContrastColor = backgroundColor => (backgroundColor === 'red' ? 'white' : 'black');
+const getContrastColor = (backgroundColor, theme) => {
+  if (backgroundColor === theme.red) {
+    return theme.white; // Use white text for red background
+  }
+  return theme.black; // Default text color is black
+};
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -22,9 +27,8 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
-  color: ${({ backgroundColor }) => getContrastColor(backgroundColor)};
-  border: 1px solid ${({ backgroundColor }) => getContrastColor(backgroundColor)};
-  background-color: ${({ backgroundColor, theme }) => theme.buttonColors(backgroundColor || 'red')};
+  color: ${({ backgroundColor, theme }) => getContrastColor(backgroundColor, theme)};
+  background-color: ${({ backgroundColor, theme }) => theme.buttonColors(backgroundColor)};
   > a {
     text-decoration: none;
     color: inherit;
@@ -43,7 +47,7 @@ const StyledButton = styled.button`
 
 const Button = React.forwardRef(
   ({
-    children, backgroundColor = 'red', wrapper, ...rest
+    children, backgroundColor, wrapper, ...rest
   }, ref) => (
     <StyledButton
       {...rest}
