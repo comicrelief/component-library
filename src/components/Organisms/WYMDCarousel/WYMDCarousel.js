@@ -58,6 +58,19 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
   return (
     <CarouselWrapper className="CarouselWrapper">
+
+      <Text tag="p" size="xl" weight="bold" style={{ textAlign: 'center' }}>
+        { data.heading}
+      </Text>
+
+      <Text tag="h1" family="Anton" uppercase weight="normal" size="super" style={{ textAlign: 'center' }}>
+        { data.peopleHelpedText}
+      </Text>
+
+      <Text tag="p" weight="bold" style={{ textAlign: 'center' }}>
+        including...
+      </Text>
+
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
@@ -203,6 +216,8 @@ WYMDCarousel.propTypes = {
       })
     }),
     autoPlay: PropTypes.bool.isRequired,
+    heading: PropTypes.string.isRequired,
+    peopleHelpedText: PropTypes.string.isRequired,
     contentful_id: PropTypes.string.isRequired
   }).isRequired
 };

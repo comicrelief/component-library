@@ -52,7 +52,9 @@ const testImpactSliderItems = [
 const carouselItemsComplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
-  autoPlay: false,
+  heading: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: true,
   node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
   node1_Amount: '1,000',
   node1_Image: {
