@@ -17,6 +17,19 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
 
+  // THIS SEEMS KINDA AWFUL BUT:
+  const resize = () => {
+    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
+    if (screenSize !== null) {
+      console.log('resize');
+      // setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
+    }
+  };
+
+  if (typeof window !== 'undefined') {
+    window.onresize = resize;
+  }
+
   // Format our data before we use it in render:
   const theseItems = formatItems(data);
 
