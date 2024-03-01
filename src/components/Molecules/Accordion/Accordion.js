@@ -26,6 +26,7 @@ const Button = styled.button`
   border: none;
   transition: bottom 0.1s linear;
   cursor: pointer;
+  text-align: left;
   
   &:focus,
   &:hover {
