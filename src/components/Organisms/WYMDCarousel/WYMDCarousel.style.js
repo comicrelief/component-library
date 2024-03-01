@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import Text from '../../Atoms/Text/Text';
 
-const thisHeight = '50vw';
+// Duration in seconds
+const animationSpeed = 1.0;
 
 // Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
   // TO REMOVE
   // background-color: #00ffe0;
-  // border: 1px solid black;
 
-  height: ${thisHeight};
+  height: 100%;
 
   .carousel {
     position: relative;
@@ -21,7 +22,7 @@ const CarouselWrapper = styled.div`
       left: 0;
       top: 0;
       width: 33% !important;
-      height: ${thisHeight};
+      height: 100%;
       padding: 0 !important;
       box-shadow: none;
       text-indent: -9999px;
@@ -69,11 +70,11 @@ const CarouselWrapper = styled.div`
       
     .wymd-carousel {
       // Override default animations
-      -webkit-transition: -webkit-transform 0.75s;
-      transition: -webkit-transform 0.75s;
-      -o-transition: transform 0.75s;
-      transition: transform 0.75s;
-      transition: transform 0.75s, -webkit-transform 0.75s;
+      -webkit-transition: -webkit-transform ${animationSpeed}s;
+      transition: -webkit-transform ${animationSpeed}s;
+      -o-transition: transform ${animationSpeed}s;
+      transition: transform ${animationSpeed}s;
+      transition: transform ${animationSpeed}s;, -webkit-transform ${animationSpeed}s;
       will-change: transform;
 
       .last-slide {
@@ -83,14 +84,19 @@ const CarouselWrapper = styled.div`
       }
       
       .carousel__slide {
-        padding-bottom: ${thisHeight} !important;
+        // Is it worth making this CMSable, as it's so fiddly and content-dependent? 
+        padding-bottom: 550px !important;
+
+        @media ${({ theme }) => theme.breakpoint('small')} {
+          //padding-bottom: 500px !important;
+        }
       
         .carousel__inner-slide {
           // padding: 0 !important;
           text-align: center;
           display: inline-flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           flex-direction: column;
         }
       }
@@ -113,7 +119,7 @@ const ImageWrapper = styled.div`
   width: 50%;
   display: block;
   padding: 9%;
-  border: 3px dashed #89888b;
+  border: 2px dashed #89888b;
   border-radius: 50%;
   position: relative;
   overflow: visible;
@@ -130,8 +136,8 @@ const ImageWrapper = styled.div`
     top: 50%;
     right: calc(-100% + -6px);
     width: 100%;
-    height: 3px;
-    border-bottom: 3px dashed #89888b;
+    height: 2px;
+    border-bottom: 2px dashed #89888b;
   }
 `;
 
@@ -143,6 +149,45 @@ const CopyWrapper = styled.div`
   padding: ${spacing('sm')} ${spacing('m')};
 `;
 
+const Heading = styled(Text)`
+  // To override pre-existing first-child rule
+  &:first-child {
+    margin-bottom: ${spacing('l')};
+    text-align: center;
+    font-size: 16px;
+    line-height: 19.5px;
+
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      font-size: 20px;
+      line-height: 24.5px;  
+    }
+  }
+`;
+
+const PeopleHelpedText = styled(Text)`
+  margin-bottom: ${spacing('l')};
+  text-align: center;
+  font-size: 34px;
+  line-height: 34px;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: 64px;
+    line-height: 64px;
+  }
+`;
+
+const Including = styled(Text)`
+  margin-bottom: ${spacing('l')};
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;  
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: 16px;
+    line-height: 19.5px;  
+  }
+`;
+
 export {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
 };

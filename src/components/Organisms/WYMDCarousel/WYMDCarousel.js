@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import {
   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
@@ -7,7 +6,7 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { sizes } from '../../../theme/shared/breakpoint';
@@ -17,29 +16,30 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
 
-  // THIS SEEMS KINDA AWFUL BUT:
-  const resize = () => {
+  const resize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    if (screenSize !== null) {
-      console.log('resize');
-      // setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
-    }
-  };
+    const isCurrentlyMobile = window.innerWidth < sizes.small;
 
-  if (typeof window !== 'undefined') {
-    window.onresize = resize;
-  }
+    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
+      setIsMobile(isCurrentlyMobile);
+      setVisibleSlides(isCurrentlyMobile ? 1 : 3);
+    }
+  }, [isMobile]);
 
   // Format our data before we use it in render:
   const theseItems = formatItems(data);
 
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= sizes.small) {
-      // Update the plugin config to suit the non-mobile layout and functionality:
+      // When appropriate, update carousel plugin config on initial render
+      // to suit the non-mobile layout and functionality:
       setIsMobile(false);
       setVisibleSlides(3);
     }
-  }, []);
+
+    // Hook into browser's own onresize event:
+    if (typeof window !== 'undefined') window.onresize = resize;
+  }, [resize]);
 
   // TO-DO: do we really need this any more?
   const isIE = /* @cc_on!@ */false || !!document.documentMode;
@@ -59,24 +59,24 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   return (
     <CarouselWrapper className="CarouselWrapper">
 
-      <Text tag="p" size="xl" weight="bold" style={{ textAlign: 'center' }}>
+      <Heading tag="p" weight="bold">
         { data.heading}
-      </Text>
+      </Heading>
 
-      <Text tag="h1" family="Anton" uppercase weight="normal" size="super" style={{ textAlign: 'center' }}>
+      <PeopleHelpedText tag="h1" family="Anton" uppercase weight="normal" color="red">
         { data.peopleHelpedText}
-      </Text>
+      </PeopleHelpedText>
 
-      <Text tag="p" weight="bold" style={{ textAlign: 'center' }}>
+      <Including tag="p">
         including...
-      </Text>
+      </Including>
 
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
         totalSlides={isMobile ? theseItems.length : theseItems.length + 2}
         isPlaying={autoPlay}
-        interval={4000}
+        interval={5000}
         infinite
         visibleSlides={visibleSlides}
       >

@@ -54,6 +54,7 @@ const carouselItemsComplete = {
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
   heading: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
+  // autoPlay: false,
   autoPlay: true,
   node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
   node1_Amount: '1,000',
@@ -62,7 +63,7 @@ const carouselItemsComplete = {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support. This node has a load of copy to make things extra difficult',
   node2_Amount: '2,000',
   node2_Image: {
     file: {
