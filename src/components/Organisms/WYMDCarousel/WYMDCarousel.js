@@ -15,6 +15,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
+  const [theseItems, setTheseItems] = useState();
 
   const resize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
@@ -26,8 +27,10 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
     }
   }, [isMobile]);
 
-  // Format our data before we use it in render:
-  const theseItems = formatItems(data);
+  useEffect(() => {
+    // Format our data before we use it in render:
+    setTheseItems(formatItems(data));
+  }, [setTheseItems, data]);
 
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= sizes.small) {
@@ -71,6 +74,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
         including...
       </Including>
 
+      {theseItems && (
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
@@ -84,7 +88,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
           {!isMobile && (
-            <Slide index={0} key="bookend-first" />
+          <Slide index={0} key="bookend-first" />
           )}
 
           {Object.keys(theseItems).map((key, index) => (
@@ -116,13 +120,15 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
           {!isMobile && (
-            <Slide index={theseItems.length + 1} key="bookend-last" />
+          <Slide index={theseItems.length + 1} key="bookend-last" />
           )}
 
         </Slider>
         <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
+      )}
+
     </CarouselWrapper>
   );
 };
