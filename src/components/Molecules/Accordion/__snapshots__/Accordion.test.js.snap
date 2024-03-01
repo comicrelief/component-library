@@ -47,6 +47,7 @@ exports[`renders correctly 1`] = `
   -webkit-transition: bottom 0.1s linear;
   transition: bottom 0.1s linear;
   cursor: pointer;
+  text-align: left;
   padding: 2rem;
 }
 
