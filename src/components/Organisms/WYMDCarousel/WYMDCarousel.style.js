@@ -3,7 +3,41 @@ import spacing from '../../../theme/shared/spacing';
 import Text from '../../Atoms/Text/Text';
 
 // Duration in seconds
-const animationSpeed = 1.0;
+const animationSpeed = 0.5;
+
+const ImageWrapper = styled.div`
+  width: 33%;
+  display: block;
+  padding: 7%;
+  border: 2px dashed #89888b;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 200%;
+    right: calc(-200% - 8px);
+    height: 2px;
+    border-bottom: 2px dashed #89888b;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 50%;
+    padding: 9%;
+    &:after {
+      width: 100%;
+      right: calc(-100% - 8px);
+    }
+  }
+`;
 
 const AmountWrapper = styled.div`
   padding: ${spacing('m')} 0;
@@ -183,24 +217,35 @@ const CarouselWrapper = styled.div`
                 transition: transform ${animationSpeed}s ease,
                 width ${animationSpeed}s ease,
                 right ${animationSpeed}s ease;
-                right: calc(-210% - 6px);
-                transform: scale(1.5);
-                width: 165%;
+                right: calc(-300% - 6px);
+                transform: scale(1);
+                width: 300%;
               }
             }
           }
 
+          // Our 'first' slide of the three:
           &.carousel__slide--visible {
-            
+            .carousel__inner-slide {
+              > div:first-child {
+                &:after {
+                  right: calc(-250% - 6px);
+                  transform: scale(1);
+                  width: 250%;
+                }
+              }
+            }
+
+
             // 2nd and 3rd:
             + .carousel__slide--visible {
               .carousel__inner-slide {
                 > div:first-child {
                   transform: scale(1);
                   &:after {
-                    right: calc(-125% - 6px);
-                    transform: scale(1);
-                    width: 125%;
+                    right: calc(-187% - 6px);
+                    transform: scale(0.5);
+                    width: 250%;
                   }
                 }
               }
@@ -210,9 +255,9 @@ const CarouselWrapper = styled.div`
                 > div > div:first-child {
                   transform: scale(0.5);
                   &:after {
-                    right: calc(-210% - 6px);
-                    transform: scale(1.5);
-                    width: 165%;
+                    right: calc(-250% - 6px);
+                    transform: scale(1);
+                    width: 250%;
                   }
                 }
               }
@@ -278,40 +323,6 @@ const CarouselWrapper = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
-  width: 33%;
-  display: block;
-  padding: 7%;
-  border: 2px dashed #89888b;
-  border-radius: 50%;
-  position: relative;
-  overflow: visible;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  &:after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    width: 200%;
-    right: calc(-200% - 10px);
-    height: 2px;
-    border-bottom: 2px dashed #89888b;
-  }
-
-
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    width: 50%;
-    padding: 9%;
-    &:after {
-      width: 100%;
-      right: calc(-100% - 8px);
-    }
-  }
-`;
 
 export {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
