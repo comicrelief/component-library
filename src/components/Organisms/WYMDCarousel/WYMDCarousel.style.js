@@ -164,7 +164,7 @@ const CarouselWrapper = styled.div`
       }
       
       .carousel__slide {
-        // Relative arbitrary 'height' based on supplied copy
+        // Relatively arbitrary 'height' based on supplied copy
         padding-bottom: 500px !important;
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
@@ -172,34 +172,41 @@ const CarouselWrapper = styled.div`
           // Relative arbitrary 'height' based on supplied copy
           padding-bottom: 550px !important;
 
-          // Target ALL ImageWrappers:
-          > div > div:first-child {
-            transition: transform ${animationSpeed}s ease;
-            transform: scale(0.5);
-            
-            &:after {
-              transition: transform ${animationSpeed}s ease,
+          // All slides:
+          .carousel__inner-slide {
+            // All 'ImageWrappers':
+            > div:first-child {
+              transition: transform ${animationSpeed}s ease;
+              transform: scale(0.5);
+              
+              &:after {
+                transition: transform ${animationSpeed}s ease,
                 width ${animationSpeed}s ease,
                 right ${animationSpeed}s ease;
-              right: calc(-210% - 6px);
-              transform: scale(1.5);
-              width: 165%;
+                right: calc(-210% - 6px);
+                transform: scale(1.5);
+                width: 165%;
+              }
             }
           }
-  
-          // Target current/middle and 'next' ImageWrapper"
-            & + .carousel__slide--visible {
-              > div > div:first-child {
-                transform: scale(1);
-                &:after {
-                  right: calc(-125% - 6px);
+
+          &.carousel__slide--visible {
+            
+            // 2nd and 3rd:
+            + .carousel__slide--visible {
+              .carousel__inner-slide {
+                > div:first-child {
                   transform: scale(1);
-                  width: 125%;
+                  &:after {
+                    right: calc(-125% - 6px);
+                    transform: scale(1);
+                    width: 125%;
+                  }
                 }
               }
-  
-              // Undo modification for the 'next' ImageWrapper specifically
-              & + .carousel__slide--visible {
+
+              // Resets the 3rd slide:
+              + .carousel__slide--visible {
                 > div > div:first-child {
                   transform: scale(0.5);
                   &:after {
@@ -210,6 +217,41 @@ const CarouselWrapper = styled.div`
                 }
               }
             }
+          }
+
+            
+          // Target current/middle and 'next' ImageWrapper"
+            // & + .carousel__slide--visible {
+            //   background: pink;
+
+            //   .carousel__inner-slide {
+            //     > div:first-child {
+            //       background: purple;
+            //     }
+            //   }
+              
+            //   > div > div:first-child {
+            //     transform: scale(1);
+            //     &:after {
+            //       right: calc(-125% - 6px);
+            //       transform: scale(1);
+            //       width: 125%;
+            //     }
+            //   }
+  
+            //   // Undo modification for the 'next' ImageWrapper specifically
+            //   & + .carousel__slide--visible {
+            //     > div > div:first-child {
+            //       transform: scale(0.5);
+            //       &:after {
+            //         right: calc(-210% - 6px);
+            //         transform: scale(1.5);
+            //         width: 165%;
+            //       }
+            //     }
+            //   }
+
+            // }
           }
         }
       
@@ -223,7 +265,7 @@ const CarouselWrapper = styled.div`
       }
     }
   }
-    
+  
   // A more IE11-friendly solution 
   ul.carousel-fallback {
     list-style: disc;

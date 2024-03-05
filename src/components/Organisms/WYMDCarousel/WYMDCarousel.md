@@ -11,7 +11,7 @@ import Text from '../../Atoms/Text/Text';
     
 ```
 
-```js
+<!-- ```js
 const { carouselItemsIncomplete } = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
 
@@ -31,4 +31,4 @@ import Text from '../../Atoms/Text/Text';
     </div>
     
 
-```
+``` -->

@@ -94,39 +94,44 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
         <Slider classNameAnimation="wymd-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {!isMobileOrTablet && (
-          <Slide index={0} key="bookend-first" />
+          {isMobileOrTablet === false && (
+          <Slide index={0} key={0} />
           )}
 
-          {Object.keys(theseItems).map((key, index) => (
+          {Object.keys(theseItems).map((key, index) => {
+            const thisOffset = isMobileOrTablet ? 0 : 1;
+            const thisParsedKey = parseInt(key, 10);
+            const thisIndex = index + thisOffset;
 
+            return (
             // Calculate the index offset accordingly to reflect the number of slides:
-            <Slide
-              index={index + (isMobileOrTablet ? 1 : 0)}
-              className={index === (theseItems.length - 1) && 'last-slide'}
-              key={key}
-            >
+              <Slide
+                index={thisIndex}
+                className={thisIndex === (theseItems.length) && 'last-slide'}
+                key={thisParsedKey + thisOffset}
+              >
 
-              <ImageWrapper className="image-wrapper">
-                <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
-              </ImageWrapper>
+                <ImageWrapper className="image-wrapper">
+                  <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+                </ImageWrapper>
 
-              <AmountWrapper>
-                <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
-                  {theseItems[key].amount}
-                </Text>
-              </AmountWrapper>
+                <AmountWrapper>
+                  <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
+                    {theseItems[key].amount}
+                  </Text>
+                </AmountWrapper>
 
-              <CopyWrapper>
-                <Text tag="p" size="l">
-                  {theseItems[key].copy}
-                </Text>
-              </CopyWrapper>
-            </Slide>
-          ))}
+                <CopyWrapper>
+                  <Text tag="p" size="l">
+                    {theseItems[key].copy}
+                  </Text>
+                </CopyWrapper>
+              </Slide>
+            );
+          })}
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {!isMobileOrTablet && (
+          {isMobileOrTablet === false && (
           <Slide index={theseItems.length + 1} key="bookend-last" />
           )}
 
