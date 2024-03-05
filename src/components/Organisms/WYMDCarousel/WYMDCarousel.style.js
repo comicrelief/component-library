@@ -64,7 +64,7 @@ const Including = styled(Text)`
   }
 `;
 
-// Unfortunately having to target plugin-created markup the old fashioned way
+// Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
   padding: ${spacing('m')};
@@ -76,7 +76,6 @@ const CarouselWrapper = styled.div`
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
       padding-top: ${spacing('lg')};
-
     }
   
     button.carousel__back-button,
@@ -113,7 +112,7 @@ const CarouselWrapper = styled.div`
         height: 100%;
         transition: opacity 0.2s linear;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.95),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
 
 
@@ -125,7 +124,7 @@ const CarouselWrapper = styled.div`
         }
       }
 
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      @media ${({ theme }) => theme.breakpoint('medium')} {
         width: 33.3% !important;
         &:after {
           width: 100%;

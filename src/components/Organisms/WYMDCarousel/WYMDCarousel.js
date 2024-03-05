@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, {
+  useEffect, useState, useCallback, useRef
+} from 'react';
 import PropTypes from 'prop-types';
 import {
   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
@@ -11,21 +13,22 @@ import {
 import Text from '../../Atoms/Text/Text';
 import { sizes } from '../../../theme/shared/breakpoint';
 
-const WYMDCarousel = ({ data, data: { autoPlay } }) => {
+const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
   const [theseItems, setTheseItems] = useState();
+  const thisCarouselRef = useRef(null);
 
   const resize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
     const isCurrentlyMobile = window.innerWidth < sizes.medium;
 
-    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
-      setIsMobile(isCurrentlyMobile);
+    if (screenSize !== null && (isMobileOrTablet !== isCurrentlyMobile)) {
+      setIsMobileOrTablet(isCurrentlyMobile);
       setVisibleSlides(isCurrentlyMobile ? 1 : 3);
     }
-  }, [isMobile]);
+  }, [isMobileOrTablet]);
 
   useEffect(() => {
     // Format our data before we use it in render:
@@ -36,7 +39,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
     if (window !== 'undefined' && window.innerWidth >= sizes.medium) {
       // When appropriate, update carousel plugin config on initial render
       // to suit the non-mobile layout and functionality:
-      setIsMobile(false);
+      setIsMobileOrTablet(false);
       setVisibleSlides(3);
     }
 
@@ -60,7 +63,11 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   }
 
   return (
-    <CarouselWrapper className="CarouselWrapper">
+    <CarouselWrapper
+      className="CarouselWrapper"
+      ref={thisCarouselRef}
+      id={thisID}
+    >
 
       <Heading tag="p" weight="bold">
         { data.heading}
@@ -78,16 +85,16 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
-        totalSlides={isMobile ? theseItems.length : theseItems.length + 2}
+        totalSlides={isMobileOrTablet ? theseItems.length : theseItems.length + 2}
         isPlaying={autoPlay}
         interval={5000}
-        infinite
         visibleSlides={visibleSlides}
+        infinite
       >
         <Slider classNameAnimation="wymd-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {!isMobile && (
+          {!isMobileOrTablet && (
           <Slide index={0} key="bookend-first" />
           )}
 
@@ -95,7 +102,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
             // Calculate the index offset accordingly to reflect the number of slides:
             <Slide
-              index={index + (isMobile ? 1 : 0)}
+              index={index + (isMobileOrTablet ? 1 : 0)}
               className={index === (theseItems.length - 1) && 'last-slide'}
               key={key}
             >
@@ -119,7 +126,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
           ))}
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {!isMobile && (
+          {!isMobileOrTablet && (
           <Slide index={theseItems.length + 1} key="bookend-last" />
           )}
 

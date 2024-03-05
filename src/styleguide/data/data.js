@@ -54,7 +54,6 @@ const carouselItemsComplete = {
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
   heading: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
-  // autoPlay: false,
   autoPlay: true,
   node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
   node1_Amount: '1,000',
@@ -144,7 +143,10 @@ const carouselItemsComplete = {
 
 const carouselItemsIncomplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
-  contentful_id: '44KsoB8dd03R3murE9UhPi',
+  contentful_id: '7zdR84QkZwrTh9NWx2H9262',
+  heading: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: false,
   node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
   node1_Amount: '1,000',
   node1_Image: {
@@ -217,7 +219,10 @@ const carouselItemsIncomplete = {
 
 const carouselItemsMinimal = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
-  contentful_id: '7zdR84QkZwrTh9NWx2H926',
+  contentful_id: '7zdR84QkZwrTh9NWx2H9263',
+  heading: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: false,
   node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
   node1_Amount: '1,000',
   node1_Image: {
@@ -235,6 +240,13 @@ const carouselItemsMinimal = {
   node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
   node3_Amount: '3,000',
   node3_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
