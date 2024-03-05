@@ -6,13 +6,13 @@ import Text from '../../Atoms/Text/Text';
 const animationSpeed = 1.0;
 
 const AmountWrapper = styled.div`
-  padding: ${spacing('m')} 0; // ${spacing('m')};
+  padding: ${spacing('m')} 0;
   width: 75%;
   margin: 0 auto;
 `;
 
 const CopyWrapper = styled.div`
-  padding: ${spacing('sm')} 0; // ${spacing('m')};
+  padding: ${spacing('sm')} 0;
   width: 75%;
   margin: 0 auto;
 `;
@@ -66,9 +66,6 @@ const Including = styled(Text)`
 
 // Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
-  // TO REMOVE
-  // background-color: #00ffe0;
-
   height: 100%;
   padding: ${spacing('m')};
 
@@ -97,6 +94,7 @@ const CarouselWrapper = styled.div`
           
       &:before {
         content: '';
+        // Do we need some sort of icon here to show it's a button?
         // background: transparent url(/images/payin/CR__Chevron_D--white.svg) no-repeat;
         position: absolute;
         width: 30px;
@@ -120,7 +118,7 @@ const CarouselWrapper = styled.div`
 
 
       &:hover {
-        // TO-DO: 
+        // TO-DO: accessibiity?
         // border: 1px solid black;
         &:after {
           opacity: 0.5;
@@ -167,12 +165,15 @@ const CarouselWrapper = styled.div`
       }
       
       .carousel__slide {
-        // Is it worth making this CMSable, as it's so fiddly and content-dependent? 
-        padding-bottom: 550px !important;
+        // Relative arbitrary 'height' based on supplied copy
+        padding-bottom: 500px !important;
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
 
-          // Targets ALL ImageWrappers:
+          // Relative arbitrary 'height' based on supplied copy
+          padding-bottom: 550px !important;
+
+          // Target ALL ImageWrappers:
           > div > div:first-child {
             transition: transform ${animationSpeed}s ease;
             transform: scale(0.5);
@@ -187,7 +188,7 @@ const CarouselWrapper = styled.div`
             }
           }
   
-          // Targets current/middle and 'next' ImageWrapper
+          // Target current/middle and 'next' ImageWrapper"
             & + .carousel__slide--visible {
               > div > div:first-child {
                 transform: scale(1);
@@ -198,7 +199,7 @@ const CarouselWrapper = styled.div`
                 }
               }
   
-              // Undoes modification for the 'next' ImageWrapper specifically
+              // Undo modification for the 'next' ImageWrapper specifically
               & + .carousel__slide--visible {
                 > div > div:first-child {
                   transform: scale(0.5);
@@ -212,13 +213,8 @@ const CarouselWrapper = styled.div`
             }
           }
         }
-
-        @media ${({ theme }) => theme.breakpoint('medium')} {
-          //padding-bottom: 500px !important;
-        }
       
         .carousel__inner-slide {
-          // padding: 0 !important;
           text-align: center;
           display: inline-flex;
           align-items: center;
