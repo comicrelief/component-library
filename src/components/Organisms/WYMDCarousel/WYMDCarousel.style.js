@@ -323,7 +323,6 @@ const CarouselWrapper = styled.div`
   }
 `;
 
-
 export {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
 };
