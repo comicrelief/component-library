@@ -5,17 +5,83 @@ import Text from '../../Atoms/Text/Text';
 // Duration in seconds
 const animationSpeed = 1.0;
 
+const AmountWrapper = styled.div`
+  padding: ${spacing('m')} 0; // ${spacing('m')};
+  width: 75%;
+  margin: 0 auto;
+`;
+
+const CopyWrapper = styled.div`
+  padding: ${spacing('sm')} 0; // ${spacing('m')};
+  width: 75%;
+  margin: 0 auto;
+`;
+
+const Heading = styled(Text)`
+  width: 75%;
+  margin: 0 auto;
+  
+  // To override pre-existing first-child rule
+  &:first-child {
+    margin-bottom: ${spacing('l')};
+    text-align: center;
+    font-size: 20px;
+    line-height: 23px;
+
+    @media ${({ theme }) => theme.breakpoint('medium')} {
+      font-size: 21px;
+      line-height: 23px;
+    }
+  }
+`;
+
+const PeopleHelpedText = styled(Text)`
+  margin-bottom: ${spacing('l')};
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    font-size: 75px;
+    line-height: 78px;
+  }
+`;
+
+const Including = styled(Text)`
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    font-size: 17px;
+    line-height: 19px;
+  }
+`;
+
 // Unfortunately having to target plugin-created markup the old fashioned way
 const CarouselWrapper = styled.div`
   // TO REMOVE
   // background-color: #00ffe0;
 
   height: 100%;
+  padding: ${spacing('m')};
 
   .carousel {
     position: relative;
     margin: 0 auto;
-      
+    padding-top: ${spacing('l')};
+
+    @media ${({ theme }) => theme.breakpoint('medium')} {
+      padding-top: ${spacing('lg')};
+
+    }
+  
     button.carousel__back-button,
     button.carousel__next-button {
       position: absolute;
@@ -45,10 +111,27 @@ const CarouselWrapper = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 150%;
+        width: 50%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.9),
+        transition: opacity 0.2s linear;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))
+      }
+
+
+      &:hover {
+        // TO-DO: 
+        // border: 1px solid black;
+        &:after {
+          opacity: 0.5;
+        }
+      }
+
+      @media ${({ theme }) => theme.breakpoint('small')} {
+        width: 33.3% !important;
+        &:after {
+          width: 100%;
+        }
       }
     }
       
@@ -63,7 +146,7 @@ const CarouselWrapper = styled.div`
       &:after {
         left: auto;
         right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.9),
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
       }
     }
@@ -87,7 +170,48 @@ const CarouselWrapper = styled.div`
         // Is it worth making this CMSable, as it's so fiddly and content-dependent? 
         padding-bottom: 550px !important;
 
-        @media ${({ theme }) => theme.breakpoint('small')} {
+        // TO-DO: FIX MOBILE!
+
+        // Targets ALL ImageWrappers
+        > div > div:first-child {
+          transition: 0.5s all ease;
+          transform: scale(0.5);
+          &:after {
+            transform: scale(1.5);
+            width: 165%;
+            right: calc(-210% - 6px);
+          }
+        }
+
+          // Targets middle and next slide
+          & + .carousel__slide--visible {
+            // background: yellow;
+            > div > div:first-child {
+              transform: scale(1);
+              &:after {
+                transform: scale(1);
+                width: 125%;
+                right: calc(-125% - 6px);
+              }
+            }
+
+            // Undoes modification
+            & + .carousel__slide--visible {
+              background: none;
+              > div > div:first-child {
+                transform: scale(0.5);
+                &:after {
+                  transform: scale(1.5);
+                  width: 165%;
+                  right: calc(-210% - 6px);
+                }
+              }
+            }
+          }
+
+        }
+
+        @media ${({ theme }) => theme.breakpoint('medium')} {
           //padding-bottom: 500px !important;
         }
       
@@ -116,14 +240,13 @@ const CarouselWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 50%;
+  width: 33%;
   display: block;
-  padding: 9%;
+  padding: 7%;
   border: 2px dashed #89888b;
   border-radius: 50%;
   position: relative;
   overflow: visible;
-  // box-sizing: content-box;
 
   img {
     width: 100%;
@@ -134,57 +257,20 @@ const ImageWrapper = styled.div`
     position: absolute;
     content: '';
     top: 50%;
-    right: calc(-100% + -6px);
-    width: 100%;
+    width: 200%;
+    right: calc(-200% - 10px);
     height: 2px;
     border-bottom: 2px dashed #89888b;
   }
-`;
 
-const AmountWrapper = styled.div`
-  padding: ${spacing('m')} ${spacing('m')};
-`;
 
-const CopyWrapper = styled.div`
-  padding: ${spacing('sm')} ${spacing('m')};
-`;
-
-const Heading = styled(Text)`
-  // To override pre-existing first-child rule
-  &:first-child {
-    margin-bottom: ${spacing('l')};
-    text-align: center;
-    font-size: 16px;
-    line-height: 19.5px;
-
-    @media ${({ theme }) => theme.breakpoint('small')} {
-      font-size: 20px;
-      line-height: 24.5px;  
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 50%;
+    padding: 9%;
+    &:after {
+      width: 100%;
+      right: calc(-100% - 8px);
     }
-  }
-`;
-
-const PeopleHelpedText = styled(Text)`
-  margin-bottom: ${spacing('l')};
-  text-align: center;
-  font-size: 34px;
-  line-height: 34px;
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    font-size: 64px;
-    line-height: 64px;
-  }
-`;
-
-const Including = styled(Text)`
-  margin-bottom: ${spacing('l')};
-  text-align: center;
-  font-size: 12px;
-  line-height: 16px;  
-
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    font-size: 16px;
-    line-height: 19.5px;  
   }
 `;
 

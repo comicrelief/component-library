@@ -19,7 +19,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
 
   const resize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < sizes.small;
+    const isCurrentlyMobile = window.innerWidth < sizes.medium;
 
     if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
       setIsMobile(isCurrentlyMobile);
@@ -33,7 +33,7 @@ const WYMDCarousel = ({ data, data: { autoPlay } }) => {
   }, [setTheseItems, data]);
 
   useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= sizes.small) {
+    if (window !== 'undefined' && window.innerWidth >= sizes.medium) {
       // When appropriate, update carousel plugin config on initial render
       // to suit the non-mobile layout and functionality:
       setIsMobile(false);
