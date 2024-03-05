@@ -170,46 +170,47 @@ const CarouselWrapper = styled.div`
         // Is it worth making this CMSable, as it's so fiddly and content-dependent? 
         padding-bottom: 550px !important;
 
-        // TO-DO: FIX MOBILE!
+        @media ${({ theme }) => theme.breakpoint('medium')} {
 
-        // Targets ALL ImageWrappers
-        > div > div:first-child {
-          transition: 0.5s all ease;
-          transform: scale(0.5);
-          &:after {
-            transition: 0.5s all ease;
-            transform: scale(1.5);
-            width: 165%;
-            right: calc(-210% - 6px);
-          }
-        }
-
-          // Targets middle and next slide
-          & + .carousel__slide--visible {
-            // background: yellow;
-            > div > div:first-child {
-              transform: scale(1);
-              &:after {
-                transform: scale(1);
-                width: 125%;
-                right: calc(-125% - 6px);
-              }
+          // Targets ALL ImageWrappers:
+          > div > div:first-child {
+            transition: transform ${animationSpeed}s ease;
+            transform: scale(0.5);
+            
+            &:after {
+              transition: transform ${animationSpeed}s ease,
+                width ${animationSpeed}s ease,
+                right ${animationSpeed}s ease;
+              right: calc(-210% - 6px);
+              transform: scale(1.5);
+              width: 165%;
             }
-
-            // Undoes modification
+          }
+  
+          // Targets current/middle and 'next' ImageWrapper
             & + .carousel__slide--visible {
-              background: none;
               > div > div:first-child {
-                transform: scale(0.5);
+                transform: scale(1);
                 &:after {
-                  transform: scale(1.5);
-                  width: 165%;
-                  right: calc(-210% - 6px);
+                  right: calc(-125% - 6px);
+                  transform: scale(1);
+                  width: 125%;
+                }
+              }
+  
+              // Undoes modification for the 'next' ImageWrapper specifically
+              & + .carousel__slide--visible {
+                > div > div:first-child {
+                  transform: scale(0.5);
+                  &:after {
+                    right: calc(-210% - 6px);
+                    transform: scale(1.5);
+                    width: 165%;
+                  }
                 }
               }
             }
           }
-
         }
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
