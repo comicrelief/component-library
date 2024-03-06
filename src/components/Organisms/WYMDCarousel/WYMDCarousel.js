@@ -21,32 +21,34 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   const [theseItems, setTheseItems] = useState();
   const thisCarouselRef = useRef(null);
 
-  const resize = useCallback(() => {
+  // Custom function to let us update the carousel config dynamically
+  const screenResize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
     const isCurrentlyMobile = window.innerWidth < sizes.medium;
 
     if (screenSize !== null && (isMobileOrTablet !== isCurrentlyMobile)) {
       setIsMobileOrTablet(isCurrentlyMobile);
       setVisibleSlides(isCurrentlyMobile ? 1 : 3);
+      setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
     }
   }, [isMobileOrTablet]);
 
+  // Format our data BEFORE we use it in render:
   useEffect(() => {
-    // Format our data before we use it in render:
     setTheseItems(formatItems(data));
   }, [setTheseItems, data]);
 
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= sizes.medium) {
-      // When appropriate, update carousel plugin config on initial render
+      // On inital render, update carousel plugin config
       // to suit the non-mobile layout and functionality:
       setIsMobileOrTablet(false);
       setVisibleSlides(3);
     }
 
-    // Hook into browser's own onresize event:
-    if (typeof window !== 'undefined') window.onresize = resize;
-  }, [resize]);
+    // Hook into browser's own onresize event to call our custom wrapper function:
+    if (typeof window !== 'undefined') window.onresize = screenResize;
+  }, [screenResize]);
 
   // TO-DO: do we really need this any more?
   const isIE = /* @cc_on!@ */false || !!document.documentMode;
