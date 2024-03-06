@@ -1,5 +1,5 @@
 import React, {
-  useEffect, useState, useCallback, useRef
+  useEffect, useState, useCallback
 } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -19,7 +19,6 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   const [visibleSlides, setVisibleSlides] = useState(1);
   const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-  const thisCarouselRef = useRef(null);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
@@ -31,7 +30,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
       setVisibleSlides(isCurrentlyMobile ? 1 : 3);
       setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
     }
-  }, [isMobileOrTablet]);
+  }, [isMobileOrTablet, theseItems]);
 
   // Format our data BEFORE we use it in render:
   useEffect(() => {
@@ -50,21 +49,6 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
     if (typeof window !== 'undefined') window.onresize = screenResize;
   }, [screenResize]);
 
-  // TO-DO: do we really need this any more?
-  const isIE = /* @cc_on!@ */false || !!document.documentMode;
-
-  if (isIE) {
-    return (
-      <CarouselWrapper className="CarouselWrapper">
-        <ul className="carousel-fallback">
-          {Object.keys(theseItems).map(key => (
-            <li key={key}>{theseItems[key].copy}</li>
-          ))}
-        </ul>
-      </CarouselWrapper>
-    );
-  }
-
   if (theseItems && totalSlides === null) {
     // Reflects our two dummy/bookend slides for non-mobile/tablet views:
     setTotalSlides(isMobileOrTablet ? theseItems.length : theseItems.length + 2);
@@ -73,7 +57,6 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   return (
     <CarouselWrapper
       className="CarouselWrapper"
-      ref={thisCarouselRef}
       id={thisID}
     >
 

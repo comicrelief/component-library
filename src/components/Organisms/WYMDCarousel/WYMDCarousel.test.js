@@ -183,16 +183,6 @@ it("renders correctly", () => {
       flex-direction: column;
     }
 
-    .c0 ul.carousel-fallback {
-      list-style: disc;
-      padding-left: 30px;
-      margin: 20px 0;
-    }
-
-    .c0 ul.carousel-fallback li {
-      margin-bottom: 15px;
-    }
-
     @media (min-width:1024px) {
       .c2:first-child {
         font-size: 21px;

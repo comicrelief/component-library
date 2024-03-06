@@ -276,17 +276,6 @@ const CarouselWrapper = styled.div`
       }
     }
   }
-  
-  // A more IE11-friendly solution 
-  ul.carousel-fallback {
-    list-style: disc;
-    padding-left: 30px;
-    margin: 20px 0;
-    
-    li {
-      margin-bottom: 15px;
-    }
-  }
 `;
 
 export {
