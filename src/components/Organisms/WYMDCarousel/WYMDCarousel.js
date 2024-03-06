@@ -17,6 +17,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
+  const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
   const thisCarouselRef = useRef(null);
 
@@ -62,6 +63,11 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
     );
   }
 
+  if (theseItems && totalSlides === null) {
+    // Reflects our two dummy/bookend slides for non-mobile/tablet views:
+    setTotalSlides(isMobileOrTablet ? theseItems.length : theseItems.length + 2);
+  }
+
   return (
     <CarouselWrapper
       className="CarouselWrapper"
@@ -85,7 +91,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={200}
-        totalSlides={isMobileOrTablet ? theseItems.length : theseItems.length + 2}
+        totalSlides={totalSlides}
         isPlaying={autoPlay}
         interval={5000}
         visibleSlides={visibleSlides}
@@ -99,15 +105,16 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
           )}
 
           {Object.keys(theseItems).map((key, index) => {
-            const thisOffset = isMobileOrTablet ? 0 : 1;
-            const thisIndex = index + thisOffset;
+            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
+            const thisOffsetIndex = index + (isMobileOrTablet ? 0 : 1);
 
             return (
-            // Calculate the index offset accordingly to reflect the number of slides:
+              // Calculate the index offset accordingly to reflect the number of slides,
+              // but use the REAL index when determining if its the last REAL slide
               <Slide
-                index={thisIndex}
-                className={(thisIndex + 1) === (theseItems.length) && 'last-slide'}
-                key={thisIndex}
+                index={thisOffsetIndex}
+                className={index === (theseItems.length - 1) && 'last-slide'}
+                key={thisOffsetIndex}
               >
 
                 <ImageWrapper className="image-wrapper">
