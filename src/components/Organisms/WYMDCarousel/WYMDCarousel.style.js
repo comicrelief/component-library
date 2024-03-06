@@ -264,7 +264,6 @@ const CarouselWrapper = styled.div`
               }
             }
           }
-          }
         }
       
         .carousel__inner-slide {

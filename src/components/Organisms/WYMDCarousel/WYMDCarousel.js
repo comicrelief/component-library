@@ -103,11 +103,14 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
             const thisParsedKey = parseInt(key, 10);
             const thisIndex = index + thisOffset;
 
+            console.log(thisIndex, theseItems.length);
+
             return (
             // Calculate the index offset accordingly to reflect the number of slides:
               <Slide
                 index={thisIndex}
-                className={thisIndex === (theseItems.length) && 'last-slide'}
+                // TO-DO: fix this:
+                className={thisIndex === (theseItems.length + thisOffset) && 'last-slide'}
                 key={thisParsedKey + thisOffset}
               >
 
