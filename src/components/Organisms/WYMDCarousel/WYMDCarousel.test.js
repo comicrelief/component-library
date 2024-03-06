@@ -164,7 +164,7 @@ it("renders correctly", () => {
       padding-bottom: 500px !important;
     }
 
-    .c0 .carousel .wymd-carousel .carousel__inner-slide {
+    .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
       text-align: center;
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
