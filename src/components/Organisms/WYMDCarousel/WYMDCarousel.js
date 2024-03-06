@@ -100,18 +100,14 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
           {Object.keys(theseItems).map((key, index) => {
             const thisOffset = isMobileOrTablet ? 0 : 1;
-            const thisParsedKey = parseInt(key, 10);
             const thisIndex = index + thisOffset;
-
-            console.log(thisIndex, theseItems.length);
 
             return (
             // Calculate the index offset accordingly to reflect the number of slides:
               <Slide
                 index={thisIndex}
-                // TO-DO: fix this:
-                className={thisIndex === (theseItems.length + thisOffset) && 'last-slide'}
-                key={thisParsedKey + thisOffset}
+                className={(thisIndex + 1) === (theseItems.length) && 'last-slide'}
+                key={thisIndex}
               >
 
                 <ImageWrapper className="image-wrapper">
