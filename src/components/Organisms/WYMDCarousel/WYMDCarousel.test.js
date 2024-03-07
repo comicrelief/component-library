@@ -143,12 +143,8 @@ it("renders correctly", () => {
     .c0 .carousel .wymd-carousel {
       -webkit-transition: -webkit-transform 0.5s;
       -webkit-transition: -webkit-transform 0.5s;
-      -webkit-transition: -webkit-transform 0.5s;
       transition: -webkit-transform 0.5s;
       -o-transition: transform 0.5s;
-      -webkit-transition: -webkit-transform 0.5s;
-      -webkit-transition: transform 0.5s;
-      transition: transform 0.5s;
       -webkit-transition: -webkit-transform 0.5s;
       -webkit-transition: transform 0.5s;
       transition: transform 0.5s;
