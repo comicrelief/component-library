@@ -176,7 +176,6 @@ const carouselItemsIncomplete = {
     }
   },
   node5_Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
-  node5_Amount: '5,000',
   node5_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
