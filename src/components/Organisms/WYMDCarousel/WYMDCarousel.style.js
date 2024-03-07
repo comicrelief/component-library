@@ -184,12 +184,10 @@ const CarouselWrapper = styled.div`
       
     .wymd-carousel {
       // Override default animations
-      -webkit-transition: -webkit-transform ${animationSpeed}s;
       transition: -webkit-transform ${animationSpeed}s;
       -o-transition: transform ${animationSpeed}s;
       transition: transform ${animationSpeed}s;
-      transition: transform ${animationSpeed}s;
-      -webkit-transform ${animationSpeed}s;
+      -webkit-transform: ${animationSpeed}s;
       will-change: transform;
 
       .last-slide {
