@@ -58,6 +58,8 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
     <CarouselWrapper
       className="CarouselWrapper"
       id={thisID}
+      mobileHeight={data.mobileHeight}
+      desktopHeight={data.desktopHeight}
     >
 
       <Heading tag="p" weight="bold">
@@ -227,7 +229,9 @@ WYMDCarousel.propTypes = {
     autoPlay: PropTypes.bool.isRequired,
     heading: PropTypes.string.isRequired,
     peopleHelpedText: PropTypes.string.isRequired,
-    contentful_id: PropTypes.string.isRequired
+    contentful_id: PropTypes.string.isRequired,
+    mobileHeight: PropTypes.number,
+    desktopHeight: PropTypes.number
   }).isRequired
 };
 

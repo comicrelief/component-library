@@ -52,6 +52,8 @@ const testImpactSliderItems = [
 const carouselItemsComplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
+  mobileHeight: 500,
+  desktopHeight: 550,
   heading: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: true,
@@ -144,6 +146,8 @@ const carouselItemsComplete = {
 const carouselItemsIncomplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H9262',
+  mobileHeight: 500,
+  desktopHeight: 550,
   heading: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: false,
@@ -223,6 +227,8 @@ const carouselItemsIncomplete = {
 const carouselItemsMinimal = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H9263',
+  mobileHeight: 500,
+  desktopHeight: 550,
   heading: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: false,

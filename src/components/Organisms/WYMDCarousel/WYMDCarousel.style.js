@@ -197,13 +197,10 @@ const CarouselWrapper = styled.div`
       }
       
       .carousel__slide {
-        // Relatively arbitrary 'height' based on supplied copy
-        padding-bottom: 500px !important;
+        padding-bottom: ${props => props.mobileHeight}px !important;
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
-
-          // Relative arbitrary 'height' based on supplied copy
-          padding-bottom: 550px !important;
+          padding-bottom: ${props => props.desktopHeight}px !important;
 
           // All slides:
           .carousel__inner-slide {
