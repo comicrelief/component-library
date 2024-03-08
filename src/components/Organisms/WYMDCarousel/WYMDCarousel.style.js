@@ -102,6 +102,7 @@ const Including = styled(Text)`
 const CarouselWrapper = styled.div`
   height: 100%;
   padding: ${spacing('m')};
+  background-color: ${({ theme }) => theme.color('white')};
 
   .carousel {
     position: relative;
