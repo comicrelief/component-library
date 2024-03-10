@@ -31,6 +31,11 @@ export const BaseText = styled.span`
           }
         `
     : null)};
+    ${({ mobileColor, theme }) => mobileColor && css`
+    @media (max-width: 1023px) {
+      color: ${theme.color(mobileColor)};
+    }
+  `};
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
@@ -45,7 +50,7 @@ export const BaseText = styled.span`
  *  Weight is checked for existence to prevent overriding the tag's css
  */
 const Text = ({
-  tag, children, height, weight, family, ...rest
+  tag, children, height, weight, family, mobileColor, ...rest
 }) => (
   <BaseText
     {...rest}
@@ -53,6 +58,7 @@ const Text = ({
     height={height}
     weight={weight}
     family={family}
+    mobileColor={mobileColor}
   >
     {children}
   </BaseText>
@@ -77,7 +83,8 @@ Text.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.string
-  ])
+  ]),
+  mobileColor: PropTypes.string
 };
 
 Text.defaultProps = {
@@ -88,7 +95,8 @@ Text.defaultProps = {
   uppercase: false,
   size: 's',
   color: 'inherit',
-  children: undefined
+  children: undefined,
+  mobileColor: null
 };
 
 export default Text;
