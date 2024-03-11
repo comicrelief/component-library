@@ -63,7 +63,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
     >
 
       <Heading tag="p" weight="bold">
-        { data.heading}
+        { data.headerCopy}
       </Heading>
 
       <PeopleHelpedText tag="h1" family="Anton" uppercase weight="normal" color="red">
@@ -230,7 +230,7 @@ WYMDCarousel.propTypes = {
       })
     }),
     autoPlay: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired,
+    headerCopy: PropTypes.string.isRequired,
     peopleHelpedText: PropTypes.string.isRequired,
     contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
