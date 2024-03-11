@@ -8,8 +8,7 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { sizes } from '../../../theme/shared/breakpoint';
