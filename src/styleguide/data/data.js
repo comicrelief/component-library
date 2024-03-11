@@ -52,8 +52,9 @@ const testImpactSliderItems = [
 const carouselItemsComplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
-  mobileHeight: 500,
-  desktopHeight: 550,
+  mobileHeight: 450,
+  tabletHeight: 500,
+  desktopHeight: 475,
   headerCopy: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: true,
@@ -65,7 +66,7 @@ const carouselItemsComplete = {
     }
   },
   node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support. This node has a load of copy to make things extra difficult',
-  node2_Amount: '2,000',
+  node2_Amount: '750,000',
   node2_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
@@ -146,8 +147,9 @@ const carouselItemsComplete = {
 const carouselItemsIncomplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H9262',
-  mobileHeight: 500,
-  desktopHeight: 550,
+  mobileHeight: 450,
+  tabletHeight: 500,
+  desktopHeight: 475,
   headerCopy: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: false,
@@ -159,7 +161,7 @@ const carouselItemsIncomplete = {
     }
   },
   node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
-  node2_Amount: '2,000',
+  node2_Amount: '750,000',
   node2_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
@@ -227,8 +229,9 @@ const carouselItemsIncomplete = {
 const carouselItemsMinimal = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H9263',
-  mobileHeight: 500,
-  desktopHeight: 550,
+  mobileHeight: 450,
+  tabletHeight: 500,
+  desktopHeight: 475,
   headerCopy: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: false,
@@ -240,7 +243,7 @@ const carouselItemsMinimal = {
     }
   },
   node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
-  node2_Amount: '2,000',
+  node2_Amount: '750,000',
   node2_Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
