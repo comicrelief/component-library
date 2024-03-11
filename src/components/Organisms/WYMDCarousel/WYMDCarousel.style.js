@@ -10,9 +10,9 @@ const textScaleOffsetA = 50;
 const textScaleOffsetB = 5;
 
 const ImageWrapper = styled.div`
-  width: 33%;
+  width: 45%;
   display: block;
-  padding: 7%;
+  padding: 9%;
   border: 2px dashed #89888b;
   border-radius: 50%;
   position: relative;
@@ -27,8 +27,8 @@ const ImageWrapper = styled.div`
     position: absolute;
     content: '';
     top: 50%;
-    width: 200%;
-    right: calc(-200% - 8px);
+    width: 125%;
+    right: calc(-125% - 2px);
     height: 2px;
     border-bottom: 2px dashed #89888b;
   }
@@ -63,12 +63,12 @@ const Heading = styled(Text)`
   &:first-child {
     margin-bottom: ${spacing('l')};
     text-align: center;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 16px;
+    line-height: 19.5px;
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
-      font-size: 21px;
-      line-height: 23px;
+      font-size: 20px;
+      line-height: 24.38px;
     }
   }
 `;
@@ -76,8 +76,8 @@ const Heading = styled(Text)`
 const PeopleHelpedText = styled(Text)`
   margin-bottom: ${spacing('l')};
   text-align: center;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 34px;
+  line-height: 37px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     font-size: 60px;
@@ -85,16 +85,16 @@ const PeopleHelpedText = styled(Text)`
   }
 
   @media ${({ theme }) => theme.breakpoint('medium')} {
-    font-size: 75px;
-    line-height: 78px;
+    font-size: 64px;
+    line-height: 68px;
   }
 `;
 
 const Including = styled(Text)`
   margin-bottom: 0;
   text-align: center;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 14.63px;
 
   @media ${({ theme }) => theme.breakpoint('small')} {
     font-size: 17px;
@@ -106,6 +106,12 @@ const Including = styled(Text)`
 const CarouselWrapper = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.color('white')};
+  max-width: 760px;
+  padding:  ${spacing('l')};
+  margin: 0 auto;
+  
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 
   .carousel {
     position: relative;
@@ -113,7 +119,7 @@ const CarouselWrapper = styled.div`
     padding-top: ${spacing('l')};
 
     @media ${({ theme }) => theme.breakpoint('medium')} {
-      padding-top: ${spacing('lg')};
+      padding-top: ${spacing('l')};
     }
   
     button.carousel__back-button,
@@ -202,6 +208,10 @@ const CarouselWrapper = styled.div`
       
       .carousel__slide {
         padding-bottom: ${props => props.mobileHeight}px !important;
+
+        @media ${({ theme }) => theme.breakpoint('small')} {
+          padding-bottom: ${props => props.tabletHeight}px !important;
+        }
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
           padding-bottom: ${props => props.desktopHeight}px !important;

@@ -49,27 +49,32 @@ it("renders correctly", () => {
     .c2:first-child {
       margin-bottom: 2rem;
       text-align: center;
-      font-size: 20px;
-      line-height: 23px;
+      font-size: 16px;
+      line-height: 19.5px;
     }
 
     .c4 {
       margin-bottom: 2rem;
       text-align: center;
-      font-size: 40px;
-      line-height: 40px;
+      font-size: 34px;
+      line-height: 37px;
     }
 
     .c6 {
       margin-bottom: 0;
       text-align: center;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 12px;
+      line-height: 14.63px;
     }
 
     .c0 {
       height: 100%;
       background-color: #FFFFFF;
+      max-width: 760px;
+      padding: 2rem;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
     }
 
     .c0 .carousel {
@@ -157,7 +162,7 @@ it("renders correctly", () => {
     }
 
     .c0 .carousel .wymd-carousel .carousel__slide {
-      padding-bottom: 500px !important;
+      padding-bottom: 450px !important;
     }
 
     .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
@@ -181,8 +186,8 @@ it("renders correctly", () => {
 
     @media (min-width:1024px) {
       .c2:first-child {
-        font-size: 21px;
-        line-height: 23px;
+        font-size: 20px;
+        line-height: 24.38px;
       }
     }
 
@@ -195,8 +200,8 @@ it("renders correctly", () => {
 
     @media (min-width:1024px) {
       .c4 {
-        font-size: 75px;
-        line-height: 78px;
+        font-size: 64px;
+        line-height: 68px;
       }
     }
 
@@ -209,7 +214,7 @@ it("renders correctly", () => {
 
     @media (min-width:1024px) {
       .c0 .carousel {
-        padding-top: 3rem;
+        padding-top: 2rem;
       }
     }
 
@@ -225,9 +230,15 @@ it("renders correctly", () => {
       }
     }
 
+    @media (min-width:740px) {
+      .c0 .carousel .wymd-carousel .carousel__slide {
+        padding-bottom: 500px !important;
+      }
+    }
+
     @media (min-width:1024px) {
       .c0 .carousel .wymd-carousel .carousel__slide {
-        padding-bottom: 550px !important;
+        padding-bottom: 475px !important;
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
