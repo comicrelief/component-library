@@ -69,7 +69,6 @@ it("renders correctly", () => {
 
     .c0 {
       height: 100%;
-      padding: 1.5rem;
       background-color: #FFFFFF;
     }
 

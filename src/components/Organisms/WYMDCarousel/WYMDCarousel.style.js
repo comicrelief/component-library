@@ -105,7 +105,6 @@ const Including = styled(Text)`
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
-  padding: ${spacing('m')};
   background-color: ${({ theme }) => theme.color('white')};
 
   .carousel {
