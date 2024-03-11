@@ -59,6 +59,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
       className="CarouselWrapper"
       id={thisID}
       mobileHeight={data.mobileHeight}
+      tabletHeight={data.tabletHeight}
       desktopHeight={data.desktopHeight}
     >
 
@@ -110,13 +111,13 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
                 <div className="all-text-wrapper">
                   <AmountWrapper>
-                    <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
+                    <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">
                       {theseItems[key].amount}
                     </Text>
                   </AmountWrapper>
 
                   <CopyWrapper>
-                    <Text tag="p" size="l">
+                    <Text tag="p" size="m">
                       {theseItems[key].copy}
                     </Text>
                   </CopyWrapper>
@@ -234,6 +235,7 @@ WYMDCarousel.propTypes = {
     peopleHelpedText: PropTypes.string.isRequired,
     contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
+    tabletHeight: PropTypes.number,
     desktopHeight: PropTypes.number
   }).isRequired
 };
