@@ -10,8 +10,7 @@
   >
     <b style={{ width: "100px", display: "inline-block" }}>H1 </b>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 80px / 5rem /
-      super
+      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 80px / 5rem / super <b>mobileColor:</b> blue
     </Text>
   </Text>
   <Text
@@ -25,6 +24,7 @@
     <b style={{ width: "100px", display: "inline-block" }}>H2 </b>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
       <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 64px / 4rem / big
+      <b>mobileColor:</b> green
     </Text>
   </Text>
   <Text
@@ -38,6 +38,7 @@
     <b style={{ width: "100px", display: "inline-block" }}>H3 </b>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
       <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 48px / 3rem / xxl
+      <b>mobileColor:</b> red
     </Text>
   </Text>
   <Text tag="h1" family="Anton" uppercase weight="normal" size="super">

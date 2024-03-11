@@ -32,10 +32,10 @@ export const BaseText = styled.span`
         `
     : null)};
     ${({ mobileColor, theme }) => mobileColor && css`
-    @media (max-width: 1023px) {
-      color: ${theme.color(mobileColor)};
-    }
-  `};
+  @media ${theme.breakpoint('medium')} {
+    color: ${theme.color(mobileColor)};
+  }
+`};
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
