@@ -75,3 +75,4 @@ export {
   buildValidationSchema
 } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
 export { default as ImpactSlider } from './components/Organisms/ImpactSlider/ImpactSlider';
+export { default as WYMDCarousel } from './components/Organisms/WYMDCarousel/WYMDCarousel';
