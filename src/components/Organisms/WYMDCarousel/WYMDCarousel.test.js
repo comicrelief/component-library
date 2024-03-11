@@ -69,7 +69,6 @@ it("renders correctly", () => {
 
     .c0 {
       height: 100%;
-      padding: 1.5rem;
       background-color: #FFFFFF;
     }
 
@@ -142,14 +141,14 @@ it("renders correctly", () => {
     }
 
     .c0 .carousel .wymd-carousel {
-      -webkit-transition: -webkit-transform 0.5s;
-      -webkit-transition: -webkit-transform 0.5s;
-      transition: -webkit-transform 0.5s;
-      -o-transition: transform 0.5s;
-      -webkit-transition: -webkit-transform 0.5s;
-      -webkit-transition: transform 0.5s;
-      transition: transform 0.5s;
-      -webkit-transform: 0.5s;
+      -webkit-transition: -webkit-transform 0.75s;
+      -webkit-transition: -webkit-transform 0.75s;
+      transition: -webkit-transform 0.75s;
+      -o-transition: transform 0.75s;
+      -webkit-transition: -webkit-transform 0.75s;
+      -webkit-transition: transform 0.75s;
+      transition: transform 0.75s;
+      -webkit-transform: 0.75s;
       will-change: transform;
     }
 
@@ -232,23 +231,35 @@ it("renders correctly", () => {
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
-        -webkit-transition: -webkit-transform 0.5s ease;
-        -webkit-transition: transform 0.5s ease;
-        transition: transform 0.5s ease;
+        -webkit-transition: -webkit-transform 0.75s ease;
+        -webkit-transition: transform 0.75s ease;
+        transition: transform 0.75s ease;
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
-        -webkit-transition: -webkit-transform 0.5s ease,width 0.5s ease,right 0.5s ease;
-        -webkit-transition: transform 0.5s ease,width 0.5s ease,right 0.5s ease;
-        transition: transform 0.5s ease,width 0.5s ease,right 0.5s ease;
+        -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
         right: calc(-300% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
         width: 300%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
+        -webkit-transition: -webkit-transform 0.75s ease;
+        -webkit-transition: transform 0.75s ease;
+        transition: transform 0.75s ease;
+        -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        transform: translateY(calc(-50px + 5%)) scale(0.5);
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
@@ -273,6 +284,12 @@ it("renders correctly", () => {
         width: 250%;
       }
 
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+        -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+      }
+
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
@@ -285,6 +302,12 @@ it("renders correctly", () => {
         -ms-transform: scale(1);
         transform: scale(1);
         width: 250%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        transform: translateY(calc(-50px + 5%)) scale(0.5);
       }
     }
 

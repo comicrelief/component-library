@@ -3,7 +3,11 @@ import spacing from '../../../theme/shared/spacing';
 import Text from '../../Atoms/Text/Text';
 
 // Duration in seconds
-const animationSpeed = 0.5;
+const animationSpeed = 0.75;
+
+// Use to calc positions when scaling copy
+const textScaleOffsetA = 50;
+const textScaleOffsetB = 5;
 
 const ImageWrapper = styled.div`
   width: 33%;
@@ -101,7 +105,6 @@ const Including = styled(Text)`
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
-  padding: ${spacing('m')};
   background-color: ${({ theme }) => theme.color('white')};
 
   .carousel {
@@ -205,6 +208,7 @@ const CarouselWrapper = styled.div`
 
           // All slides:
           .carousel__inner-slide {
+
             // All 'ImageWrappers':
             > div:first-child {
               transition: transform ${animationSpeed}s ease;
@@ -218,6 +222,14 @@ const CarouselWrapper = styled.div`
                 transform: scale(1);
                 width: 300%;
               }
+            }
+
+            // Scale down ALL copy
+            .all-text-wrapper {
+              transition: transform ${animationSpeed}s ease;
+              // HERE
+              transform-origin: top;
+              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
             }
           }
 
@@ -247,6 +259,10 @@ const CarouselWrapper = styled.div`
                 }
               }
 
+              .all-text-wrapper {
+                transform: translateY(0) scale(1);
+              }
+
               // Resets the 3rd slide:
               + .carousel__slide--visible {
                 > div > div:first-child {
@@ -256,6 +272,10 @@ const CarouselWrapper = styled.div`
                     transform: scale(1);
                     width: 250%;
                   }
+                }
+                .all-text-wrapper {
+                  // HERE
+                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
                 }
               }
             }
