@@ -8,7 +8,8 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { sizes } from '../../../theme/shared/breakpoint';
@@ -108,17 +109,20 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
                   <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
                 </ImageWrapper>
 
-                <AmountWrapper>
-                  <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
-                    {theseItems[key].amount}
-                  </Text>
-                </AmountWrapper>
+                <div className="all-text-wrapper">
+                  <AmountWrapper>
+                    <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
+                      {theseItems[key].amount}
+                    </Text>
+                  </AmountWrapper>
 
-                <CopyWrapper>
-                  <Text tag="p" size="l">
-                    {theseItems[key].copy}
-                  </Text>
-                </CopyWrapper>
+                  <CopyWrapper>
+                    <Text tag="p" size="l">
+                      {theseItems[key].copy}
+                    </Text>
+                  </CopyWrapper>
+                </div>
+
               </Slide>
             );
           })}
