@@ -49,6 +49,220 @@ const testImpactSliderItems = [
   }
 ];
 
+const carouselItemsComplete = {
+  __typename: 'ContentfulWhatYourMoneyDoesCarousel',
+  contentful_id: '7zdR84QkZwrTh9NWx2H926',
+  mobileHeight: 500,
+  desktopHeight: 550,
+  headerCopy: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: true,
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support. This node has a load of copy to make things extra difficult',
+  node2_Amount: '2,000',
+  node2_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node5_Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
+  node5_Amount: '5,000',
+  node5_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node6_Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
+  node6_Amount: '6,000',
+  node6_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node7_Copy: 'NODE7: people in the UK experiencing poverty to access advice and support.',
+  node7_Amount: '7,000',
+  node7_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node8_Copy: 'NODE8: people in the UK experiencing poverty to access advice and support.',
+  node8_Amount: '8,000',
+  node8_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node9_Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
+  node9_Amount: '9,000',
+  node9_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node10_Copy: 'NODE10: people in the UK experiencing poverty to access advice and support.',
+  node10_Amount: '10,000',
+  node10_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node11_Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
+  node11_Amount: '11,000',
+  node11_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node12_Copy: 'NODE12: people in the UK experiencing poverty to access advice and support.750,000',
+  node12_Amount: '12,000',
+  node12_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  }
+};
+
+const carouselItemsIncomplete = {
+  __typename: 'ContentfulWhatYourMoneyDoesCarousel',
+  contentful_id: '7zdR84QkZwrTh9NWx2H9262',
+  mobileHeight: 500,
+  desktopHeight: 550,
+  headerCopy: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: false,
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Amount: '2,000',
+  node2_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node5_Copy: 'NODE5: people in the UK experiencing poverty to access advice and support.',
+  node5_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node6_Copy: 'NODE6: people in the UK experiencing poverty to access advice and support.',
+  node6_Amount: '6,000',
+  node6_Image: null,
+  node7_Copy: null,
+  node7_Amount: null,
+  node7_Image: null,
+  node8_Copy: null,
+  node8_Amount: null,
+  node8_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node9_Copy: 'NODE9: people in the UK experiencing poverty to access advice and support.',
+  node9_Amount: null,
+  node9_Image: null,
+  node10_Copy: null,
+  node10_Amount: '10,000',
+  node10_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node11_Copy: 'NODE11: people in the UK experiencing poverty to access advice and support.',
+  node11_Amount: '11,000',
+  node11_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node12_Copy: 'people in the UK experiencing poverty to access advice and support.750,000',
+  node12_Amount: null,
+  node12_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  }
+};
+
+const carouselItemsMinimal = {
+  __typename: 'ContentfulWhatYourMoneyDoesCarousel',
+  contentful_id: '7zdR84QkZwrTh9NWx2H9263',
+  mobileHeight: 500,
+  desktopHeight: 550,
+  headerCopy: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: false,
+  node1_Copy: 'NODE1: people in the UK experiencing poverty to access advice and support.',
+  node1_Amount: '1,000',
+  node1_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node2_Copy: 'NODE2: people in the UK experiencing poverty to access advice and support.',
+  node2_Amount: '2,000',
+  node2_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node3_Copy: 'NODE3: people in the UK experiencing poverty to access advice and support.',
+  node3_Amount: '3,000',
+  node3_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  },
+  node4_Copy: 'NODE4: people in the UK experiencing poverty to access advice and support.',
+  node4_Amount: '4,000',
+  node4_Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
+    }
+  }
+};
+
 export {
-  defaultData, mobileImages, testImpactSliderItems
+  defaultData, mobileImages, testImpactSliderItems,
+  carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal
 };
