@@ -258,9 +258,9 @@ it("renders correctly", () => {
         -webkit-transform-origin: top;
         -ms-transform-origin: top;
         transform-origin: top;
-        -webkit-transform: translateY(calc(-50px + 2%)) scale(0.5);
-        -ms-transform: translateY(calc(-50px + 2%)) scale(0.5);
-        transform: translateY(calc(-50px + 2%)) scale(0.5);
+        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        transform: translateY(calc(-50px + 5%)) scale(0.5);
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
@@ -306,9 +306,9 @@ it("renders correctly", () => {
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
-        -webkit-transform: translateY(calc(-50px + 2%)) scale(0.5);
-        -ms-transform: translateY(calc(-50px + 2%)) scale(0.5);
-        transform: translateY(calc(-50px + 2%)) scale(0.5);
+        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
+        transform: translateY(calc(-50px + 5%)) scale(0.5);
       }
     }
 

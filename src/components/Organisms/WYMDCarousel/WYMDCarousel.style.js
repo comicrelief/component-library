@@ -7,7 +7,7 @@ const animationSpeed = 0.75;
 
 // Use to calc positions when scaling copy
 const textScaleOffsetA = 50;
-const textScaleOffsetB = 2;
+const textScaleOffsetB = 5;
 
 const ImageWrapper = styled.div`
   width: 33%;
