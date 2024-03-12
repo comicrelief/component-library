@@ -157,7 +157,7 @@ const CarouselWrapper = styled.div`
         width: 50%;
         height: 100%;
         transition: opacity 0.2s linear;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.95),
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1),
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
 
@@ -187,7 +187,7 @@ const CarouselWrapper = styled.div`
       &:after {
         left: auto;
         right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.95),
+        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
     }
@@ -214,6 +214,10 @@ const CarouselWrapper = styled.div`
         }
 
         @media ${({ theme }) => theme.breakpoint('medium')} {
+          padding-bottom: ${props => props.tabletHeight}px !important;
+        }
+
+        @media ${({ theme }) => theme.breakpoint('small')} {
           padding-bottom: ${props => props.desktopHeight}px !important;
 
           // All slides:
@@ -237,7 +241,6 @@ const CarouselWrapper = styled.div`
             // Scale down ALL copy
             .all-text-wrapper {
               transition: transform ${animationSpeed}s ease;
-              // HERE
               transform-origin: top;
               transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
             }
@@ -248,9 +251,9 @@ const CarouselWrapper = styled.div`
             .carousel__inner-slide {
               > div:first-child {
                 &:after {
-                  right: calc(-250% - 6px);
+                  right: calc(-300% - 6px);
                   transform: scale(1);
-                  width: 250%;
+                  width: 300%;
                 }
               }
             }
@@ -262,9 +265,9 @@ const CarouselWrapper = styled.div`
                 > div:first-child {
                   transform: scale(1);
                   &:after {
-                    right: calc(-187% - 6px);
+                    right: calc(-222% - 6px);
                     transform: scale(0.5);
-                    width: 250%;
+                    width: 300%;
                   }
                 }
               }
@@ -278,20 +281,66 @@ const CarouselWrapper = styled.div`
                 > div > div:first-child {
                   transform: scale(0.5);
                   &:after {
-                    right: calc(-250% - 6px);
+                    right: calc(-300% - 6px);
                     transform: scale(1);
-                    width: 250%;
+                    width: 300%;
                   }
                 }
                 .all-text-wrapper {
-                  // HERE
                   transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
                 }
               }
             }
           }
         }
-      
+
+        // HERE WE GO
+        // START OF DESKTOP
+        @media ${({ theme }) => theme.breakpoint('medium')} {
+
+          // First
+          &.carousel__slide--visible {
+            .carousel__inner-slide {
+              > div:first-child {
+                &:after {
+                  right: calc(-250% - 6px);
+                  width: 250%;
+                }
+              }
+            }
+
+            // 2nd and 3rd
+            + .carousel__slide--visible {
+              .carousel__inner-slide {
+                > div:first-child {
+                  &:after {
+                    right: calc(-187% - 6px);
+                    width: 250%;
+                  }
+                }
+              }
+
+
+              // 3rd only
+              + .carousel__slide--visible {
+                .carousel__inner-slide {
+                  > div:first-child {
+                    &:after {
+                      right: calc(-250% - 6px);
+                      width: 250%;
+                    }
+                  }
+                }
+              }
+            }
+
+
+          }
+
+        }
+        // END OF DESKTOP
+
+
         .carousel__inner-slide {
           text-align: center;
           display: inline-flex;
