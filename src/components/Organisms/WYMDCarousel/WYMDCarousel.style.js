@@ -163,14 +163,12 @@ const CarouselWrapper = styled.div`
 
 
       &:hover {
-        // TO-DO: accessibiity?
-        // border: 1px solid black;
         &:after {
           opacity: 0.5;
         }
       }
 
-      @media ${({ theme }) => theme.breakpoint('medium')} {
+      @media ${({ theme }) => theme.breakpoint('small')} {
         width: 33.3% !important;
         &:after {
           width: 100%;
@@ -190,7 +188,7 @@ const CarouselWrapper = styled.div`
         left: auto;
         right: 0;
         background: linear-gradient(270deg, rgba(255, 255, 255, 0.95),
-        rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
     }
       
