@@ -57,7 +57,7 @@ const carouselItemsComplete = {
   desktopHeight: 475,
   headerCopy: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
-  autoplay: false,
+  autoPlay: false,
   node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
   node1Amount: '1,000',
   node1Image: {

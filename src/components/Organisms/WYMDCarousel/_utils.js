@@ -8,8 +8,6 @@ const formatItems = thisData => {
   // Grab ALL keys from our raw data:
   const theseKeys = Object.keys(thisData);
 
-  console.log('theseKeys', theseKeys);
-
   // Iterate over all of the data, using a dynamic key prefix to filter
   // what we need in order to create each object for our allValidNodes array:
   for (let i = 1; i <= possibleNumberOfNodes; i += 1) {
@@ -24,9 +22,8 @@ const formatItems = thisData => {
         const thisFilteredObj = thisObj;
         // Only assign if we have actually have a value; only the fields for nodes 1-4 are required:
         if (thisData[thisKey]) {
-          console.log('yep:', thisKey);
           // Use a repeatable, generic key so rendering is a LOT easier:
-          const simplifedKey = thisKey.split('_').pop().toLowerCase();
+          const simplifedKey = thisKey.split(/([0-9])/).pop().toLowerCase();
           thisFilteredObj[simplifedKey] = thisData[thisKey];
         }
         return thisFilteredObj;
