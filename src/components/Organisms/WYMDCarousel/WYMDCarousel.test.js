@@ -97,19 +97,6 @@ it("renders correctly", () => {
       border: none;
     }
 
-    .c0 .carousel button.carousel__back-button:before,
-    .c0 .carousel button.carousel__next-button:before {
-      content: '';
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 50%;
-      left: 0;
-      -webkit-transform: translate(0,-50%) rotate(90deg);
-      -ms-transform: translate(0,-50%) rotate(90deg);
-      transform: translate(0,-50%) rotate(90deg);
-    }
-
     .c0 .carousel button.carousel__back-button:after,
     .c0 .carousel button.carousel__next-button:after {
       content: "";
@@ -268,9 +255,9 @@ it("renders correctly", () => {
         -webkit-transform-origin: top;
         -ms-transform-origin: top;
         transform-origin: top;
-        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
-        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
-        transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        transform: translateY(calc(-45px + 5%)) scale(0.5);
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
@@ -316,9 +303,9 @@ it("renders correctly", () => {
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
-        -webkit-transform: translateY(calc(-50px + 5%)) scale(0.5);
-        -ms-transform: translateY(calc(-50px + 5%)) scale(0.5);
-        transform: translateY(calc(-50px + 5%)) scale(0.5);
+        -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        transform: translateY(calc(-45px + 5%)) scale(0.5);
       }
     }
 

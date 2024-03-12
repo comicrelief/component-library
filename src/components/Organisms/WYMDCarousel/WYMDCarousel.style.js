@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 const animationSpeed = 0.75;
 
 // Use to calc positions when scaling copy
-const textScaleOffsetA = 50;
+const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
 const ImageWrapper = styled.div`
@@ -21,6 +21,7 @@ const ImageWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
+    display: block;
   }
 
   &:after {
@@ -44,15 +45,28 @@ const ImageWrapper = styled.div`
 `;
 
 const AmountWrapper = styled.div`
-  padding: ${spacing('m')} 0;
-  width: 75%;
-  margin: 0 auto;
+  padding: ${spacing('m')} 0 0.75rem;
+  
+  h1 {
+    font-size: 34px;
+    line-height: 37px;
+    
+    @media ${({ theme }) => theme.breakpoint('small')} {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
 `;
 
 const CopyWrapper = styled.div`
-  padding: ${spacing('sm')} 0;
+  padding: 0;
   width: 75%;
   margin: 0 auto;
+
+  p {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+    line-height: ${({ theme }) => theme.fontSize('l')};
+  }
 `;
 
 const Heading = styled(Text)`
@@ -134,19 +148,7 @@ const CarouselWrapper = styled.div`
       text-indent: -9999px;
       background-color: transparent;
       border: none;
-          
-      &:before {
-        content: '';
-        // Do we need some sort of icon here to show it's a button?
-        // background: transparent url(/images/payin/CR__Chevron_D--white.svg) no-repeat;
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        top: 50%;
-        left: 0;
-        transform: translate(0, -50%) rotate(90deg);
-      }
-
+        
       &:after {
         content: "";
         position: absolute;

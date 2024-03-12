@@ -15,7 +15,7 @@ import { sizes } from '../../../theme/shared/breakpoint';
 
 const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
-  const [isMobileOrTablet, setIsMobileOrTablet] = useState(true);
+  const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
   const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
@@ -23,14 +23,14 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < sizes.medium;
+    const isCurrentlyMobile = window.innerWidth < sizes.small;
 
-    if (screenSize !== null && (isMobileOrTablet !== isCurrentlyMobile)) {
-      setIsMobileOrTablet(isCurrentlyMobile);
+    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
+      setIsMobile(isCurrentlyMobile);
       setVisibleSlides(isCurrentlyMobile ? 1 : 3);
       setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
     }
-  }, [isMobileOrTablet, theseItems]);
+  }, [isMobile, theseItems]);
 
   // Format our data BEFORE we use it in render:
   useEffect(() => {
@@ -38,10 +38,10 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   }, [setTheseItems, data]);
 
   useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= sizes.medium) {
+    if (window !== 'undefined' && window.innerWidth >= sizes.small) {
       // On inital render, update carousel plugin config
       // to suit the non-mobile layout and functionality:
-      setIsMobileOrTablet(false);
+      setIsMobile(false);
       setVisibleSlides(3);
     }
 
@@ -51,7 +51,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
   if (theseItems && totalSlides === null) {
     // Reflects our two dummy/bookend slides for non-mobile/tablet views:
-    setTotalSlides(isMobileOrTablet ? theseItems.length : theseItems.length + 2);
+    setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
   return (
@@ -88,13 +88,13 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
         <Slider classNameAnimation="wymd-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobileOrTablet === false && (
+          {isMobile === false && (
           <Slide index={0} key={0} />
           )}
 
           {Object.keys(theseItems).map((key, index) => {
             // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-            const thisOffsetIndex = index + (isMobileOrTablet ? 0 : 1);
+            const thisOffsetIndex = index + (isMobile ? 0 : 1);
 
             return (
               // Calculate the index offset accordingly to reflect the number of slides,
@@ -111,13 +111,13 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
                 <div className="all-text-wrapper">
                   <AmountWrapper>
-                    <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">
+                    <Text tag="h1" family="Anton" uppercase weight="normal">
                       {theseItems[key].amount}
                     </Text>
                   </AmountWrapper>
 
                   <CopyWrapper>
-                    <Text tag="p" size="m">
+                    <Text tag="p">
                       {theseItems[key].copy}
                     </Text>
                   </CopyWrapper>
@@ -128,7 +128,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
           })}
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobileOrTablet === false && (
+          {isMobile === false && (
           <Slide index={theseItems.length + 1} key="bookend-last" />
           )}
 
