@@ -129,7 +129,7 @@ it("renders correctly", () => {
     .c0 .carousel button.carousel__next-button:after {
       left: auto;
       right: 0;
-      background: linear-gradient(270deg,rgba(255,255,255,0.95),rgba(255,255,255,0.75),rgba(255,255,255,0));
+      background: linear-gradient(270deg,rgba(255,255,255,0.95),rgba(255,255,255,0.5),rgba(255,255,255,0));
     }
 
     .c0 .carousel .wymd-carousel {
@@ -205,7 +205,7 @@ it("renders correctly", () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:740px) {
       .c0 .carousel button.carousel__back-button,
       .c0 .carousel button.carousel__next-button {
         width: 33.3% !important;
