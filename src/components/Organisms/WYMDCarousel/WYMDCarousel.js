@@ -145,87 +145,87 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 WYMDCarousel.propTypes = {
   data: PropTypes.shape({
     // Required 'node' fields:
-    node1_Amount: PropTypes.string.isRequired,
-    node1_Copy: PropTypes.string.isRequired,
-    node1_Image: PropTypes.shape({
+    node1Amount: PropTypes.string.isRequired,
+    node1Copy: PropTypes.string.isRequired,
+    node1Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string.isRequired
       }).isRequired
     }).isRequired,
-    node2_Amount: PropTypes.string.isRequired,
-    node2_Copy: PropTypes.string.isRequired,
-    node2_Image: PropTypes.shape({
+    node2Amount: PropTypes.string.isRequired,
+    node2Copy: PropTypes.string.isRequired,
+    node2Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string.isRequired
       }).isRequired
     }).isRequired,
-    node3_Amount: PropTypes.string.isRequired,
-    node3_Copy: PropTypes.string.isRequired,
-    node3_Image: PropTypes.shape({
+    node3Amount: PropTypes.string.isRequired,
+    node3Copy: PropTypes.string.isRequired,
+    node3Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string.isRequired
       }).isRequired
     }).isRequired,
-    node4_Amount: PropTypes.string.isRequired,
-    node4_Copy: PropTypes.string.isRequired,
-    node4_Image: PropTypes.shape({
+    node4Amount: PropTypes.string.isRequired,
+    node4Copy: PropTypes.string.isRequired,
+    node4Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string.isRequired
       }).isRequired
     }).isRequired,
     // Non-required 'node' fields:
-    node5_Amount: PropTypes.string,
-    node5_Copy: PropTypes.string,
-    node5_Image: PropTypes.shape({
+    node5Amount: PropTypes.string,
+    node5Copy: PropTypes.string,
+    node5Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node6_Amount: PropTypes.string,
-    node6_Copy: PropTypes.string,
-    node6_Image: PropTypes.shape({
+    node6Amount: PropTypes.string,
+    node6Copy: PropTypes.string,
+    node6Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node7_Amount: PropTypes.string,
-    node7_Copy: PropTypes.string,
-    node7_Image: PropTypes.shape({
+    node7Amount: PropTypes.string,
+    node7Copy: PropTypes.string,
+    node7Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node8_Amount: PropTypes.string,
-    node8_Copy: PropTypes.string,
-    node8_Image: PropTypes.shape({
+    node8Amount: PropTypes.string,
+    node8Copy: PropTypes.string,
+    node8Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node9_Amount: PropTypes.string,
-    node9_Copy: PropTypes.string,
-    node9_Image: PropTypes.shape({
+    node9Amount: PropTypes.string,
+    node9Copy: PropTypes.string,
+    node9Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node10_Amount: PropTypes.string,
-    node10_Copy: PropTypes.string,
-    node10_Image: PropTypes.shape({
+    node10Amount: PropTypes.string,
+    node10Copy: PropTypes.string,
+    node10Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node11_Amount: PropTypes.string,
-    node11_Copy: PropTypes.string,
-    node11_Image: PropTypes.shape({
+    node11Amount: PropTypes.string,
+    node11Copy: PropTypes.string,
+    node11Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
     }),
-    node12_Amount: PropTypes.string,
-    node12_Copy: PropTypes.string,
-    node12_Image: PropTypes.shape({
+    node12Amount: PropTypes.string,
+    node12Copy: PropTypes.string,
+    node12Image: PropTypes.shape({
       file: PropTypes.shape({
         url: PropTypes.string
       })
