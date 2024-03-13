@@ -13,7 +13,7 @@ const formatItems = thisData => {
   for (let i = 1; i <= possibleNumberOfNodes; i += 1) {
     // Create a dynamic key prefix based on the counter, obviously matching
     // the naming convention set at the Content Type level in the CMS
-    const thisKeyPrefix = `node${i}_`;
+    const thisKeyPrefix = `node${i}`;
 
     // Make an array of objects, each object representing a specific node and its fields:
     const thisNodeContent = theseKeys
@@ -23,7 +23,7 @@ const formatItems = thisData => {
         // Only assign if we have actually have a value; only the fields for nodes 1-4 are required:
         if (thisData[thisKey]) {
           // Use a repeatable, generic key so rendering is a LOT easier:
-          const simplifedKey = thisKey.split('_').pop().toLowerCase();
+          const simplifedKey = thisKey.split(/([0-9])/).pop().toLowerCase();
           thisFilteredObj[simplifedKey] = thisData[thisKey];
         }
         return thisFilteredObj;
