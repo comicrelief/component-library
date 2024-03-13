@@ -209,27 +209,6 @@ WYMDCarousel.propTypes = {
         url: PropTypes.string
       })
     }),
-    node10_Amount: PropTypes.string,
-    node10_Copy: PropTypes.string,
-    node10_Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node11_Amount: PropTypes.string,
-    node11_Copy: PropTypes.string,
-    node11_Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node12_Amount: PropTypes.string,
-    node12_Copy: PropTypes.string,
-    node12_Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
     autoPlay: PropTypes.bool.isRequired,
     headerCopy: PropTypes.string.isRequired,
     peopleHelpedText: PropTypes.string.isRequired,
