@@ -3,7 +3,7 @@ const formatItems = thisData => {
   const allValidNodes = [];
 
   // Set at a Content Type field level, so doesn't need to be dynamic:
-  const possibleNumberOfNodes = 12;
+  const possibleNumberOfNodes = 9;
 
   // Grab ALL keys from our raw data:
   const theseKeys = Object.keys(thisData);

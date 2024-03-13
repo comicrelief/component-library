@@ -120,27 +120,6 @@ const carouselItemsComplete = {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
-  },
-  node10Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node10Amount: '10,000',
-  node10Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
-  },
-  node11Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node11Amount: '11,000',
-  node11Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
-  },
-  node12Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.750,000',
-  node12Amount: '12,000',
-  node12Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
   }
 };
 
@@ -200,30 +179,9 @@ const carouselItemsIncomplete = {
       url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
     }
   },
-  node9Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node9Amount: null,
-  node9Image: null,
-  node10Copy: null,
-  node10Amount: '10,000',
-  node10Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
-  },
-  node11Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node11Amount: '11,000',
-  node11Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
-  },
-  node12Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.750,000',
-  node12Amount: null,
-  node12Image: {
-    file: {
-      url: '//images.ctfassets.net/zsfivwzfgl3t/45yv3H0XZsvsySHtutQ8vb/1fb6d1afe4037c7dccde743a747f6b4f/Test-Carousel-Icon.png'
-    }
-  }
+  node9_Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node9_Amount: null,
+  node9_Image: null
 };
 
 const carouselItemsMinimal = {
