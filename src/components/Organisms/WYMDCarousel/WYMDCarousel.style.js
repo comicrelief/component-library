@@ -161,7 +161,6 @@ const CarouselWrapper = styled.div`
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
 
-
       &:hover {
         &:after {
           opacity: 0.5;
@@ -207,18 +206,13 @@ const CarouselWrapper = styled.div`
       }
       
       .carousel__slide {
+        // 'Mobile'
         padding-bottom: ${props => props.mobileHeight}px !important;
 
+        // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.breakpoint('small')} {
-          padding-bottom: ${props => props.tabletHeight}px !important;
-        }
 
-        @media ${({ theme }) => theme.breakpoint('medium')} {
           padding-bottom: ${props => props.tabletHeight}px !important;
-        }
-
-        @media ${({ theme }) => theme.breakpoint('small')} {
-          padding-bottom: ${props => props.desktopHeight}px !important;
 
           // All slides:
           .carousel__inner-slide {
@@ -258,7 +252,6 @@ const CarouselWrapper = styled.div`
               }
             }
 
-
             // 2nd and 3rd:
             + .carousel__slide--visible {
               .carousel__inner-slide {
@@ -294,9 +287,9 @@ const CarouselWrapper = styled.div`
           }
         }
 
-        // HERE WE GO
-        // START OF DESKTOP
+        // 'Desktop'
         @media ${({ theme }) => theme.breakpoint('medium')} {
+          padding-bottom: ${props => props.desktopHeight}px !important;
 
           // First
           &.carousel__slide--visible {
