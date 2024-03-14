@@ -209,18 +209,10 @@ const CarouselWrapper = styled.div`
         // 'Mobile'
         padding-bottom: ${props => props.mobileHeight}px !important;
 
-        // 'Tablet'
-        @media ${({ theme }) => theme.breakpoint('small')} {
-          padding-bottom: ${props => props.tabletHeight}px !important;
-        }
-
-        // 'Desktop'
-        @media ${({ theme }) => theme.breakpoint('medium')} {
-          padding-bottom: ${props => props.desktopHeight}px !important;
-        }
-
         // 'Tablet'+ tweaks for the 3-visible ta
         @media ${({ theme }) => theme.breakpoint('small')} {
+          
+          padding-bottom: ${props => props.tabletHeight}px !important;
 
           // All slides:
           .carousel__inner-slide {
@@ -295,9 +287,9 @@ const CarouselWrapper = styled.div`
           }
         }
 
-        // HERE WE GO
-        // START OF DESKTOP
+        // 'Desktop'
         @media ${({ theme }) => theme.breakpoint('medium')} {
+          padding-bottom: ${props => props.desktopHeight}px !important;
 
           // First
           &.carousel__slide--visible {
