@@ -209,9 +209,9 @@ const CarouselWrapper = styled.div`
         // 'Mobile'
         padding-bottom: ${props => props.mobileHeight}px !important;
 
-        // 'Tablet'+ tweaks for the 3-visible ta
+        // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.breakpoint('small')} {
-          
+
           padding-bottom: ${props => props.tabletHeight}px !important;
 
           // All slides:
