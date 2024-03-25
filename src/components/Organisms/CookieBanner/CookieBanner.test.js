@@ -1,18 +1,18 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import CookieBanner from './CookieBanner';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import CookieBanner from "./CookieBanner";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <CookieBanner
-      acceptCookie={e => {
+      acceptCookie={(e) => {
         e.preventDefault();
-        return 'User accept';
+        return "User accept";
       }}
-      denyCookie={e => {
+      denyCookie={(e) => {
         e.preventDefault();
-        return 'User does not accept cookies';
+        return "User does not accept cookies";
       }}
       cookiePolicyUrl="https://www.comicrelief.com/cookies-policy"
     />
@@ -116,6 +116,18 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c5 {
         width: auto;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c5 {
+        background-color: #FFFFFF;
+        color: #000000;
+      }
+
+      .c5:hover {
+        background-color: #969598;
+        color: #000000;
       }
     }
 

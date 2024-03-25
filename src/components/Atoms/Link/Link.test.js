@@ -1,10 +1,10 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Link from './Link';
-import { Internal } from '../Icons/index';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Link from "./Link";
+import { Internal } from "../Icons/index";
 
-it('renders a standard styled link correctly', () => {
+it("renders a standard styled link correctly", () => {
   const tree = renderWithTheme(
     <Link href="/test" type="standard">
       A standard link
@@ -40,7 +40,7 @@ it('renders a standard styled link correctly', () => {
   `);
 });
 
-it('renders a button with an icon', () => {
+it("renders a button with an icon", () => {
   const tree = renderWithTheme(
     <Link
       href="/test"
@@ -125,7 +125,7 @@ it('renders a button with an icon', () => {
   `);
 });
 
-it('renders a standard styled link correctly with target blank and assistive text', () => {
+it("renders a standard styled link correctly with target blank and assistive text", () => {
   const tree = renderWithTheme(
     <Link href="/test" type="standard" target="blank">
       A standard link
@@ -181,7 +181,7 @@ it('renders a standard styled link correctly with target blank and assistive tex
   `);
 });
 
-it('renders link styled as button correctly', () => {
+it("renders link styled as button correctly", () => {
   const tree = renderWithTheme(
     <Link href="/test" type="button" color="yellow">
       A yellow button
@@ -226,6 +226,18 @@ it('renders link styled as button correctly', () => {
     @media (min-width:740px) {
       .c0 {
         width: auto;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c0 {
+        background-color: #FFE400;
+        color: #000000;
+      }
+
+      .c0:hover {
+        background-color: #FEFD5A;
+        color: #000000;
       }
     }
 

@@ -163,6 +163,18 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c11 {
+    background-color: #2042AD;
+    color: #FFFFFF;
+  }
+
+  .c11:hover {
+    background-color: #274084;
+    color: #FFFFFF;
+  }
+}
+
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
