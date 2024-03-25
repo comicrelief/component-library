@@ -44,9 +44,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Internal colour="white" />}
+      icon={<Internal colour="white" mobileColour="red"/>}
     >
-      Internal link, 'blue' on tablet and mobile
+      Internal link, 'blue' with red icon on tablet and mobile
     </Link>
   </div>
 
