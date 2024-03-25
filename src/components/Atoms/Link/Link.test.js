@@ -85,6 +85,10 @@ it("renders a button with an icon", () => {
       border-bottom: 2px solid #000000;
     }
 
+    .c2 {
+      fill: #FFFFFF;
+    }
+
     @media (min-width:740px) {
       .c1 {
         width: auto;
@@ -94,6 +98,12 @@ it("renders a button with an icon", () => {
         right: -2rem;
         top: 0;
         bottom: 0;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        fill: #FFFFFF;
       }
     }
 
@@ -110,6 +120,7 @@ it("renders a button with an icon", () => {
         type="standard"
       >
         <svg
+          className="c2"
           fill="#FFFFFF"
           height={24}
           viewBox="0 0 96 96"

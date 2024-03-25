@@ -11,16 +11,25 @@ const angle = {
 
 const Icon = styled.svg`
   transform: ${({ direction }) => `rotate(${angle[direction]})`};
+
+  // Mobile-colour if available, else use standard prop
+  fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
+
+  // Reinstate standard styles for 'desktop', adding a fallback for good measure:
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    fill: ${({ colour, theme }) => (colour ? theme.color(colour) : theme.color('white'))};
+  }
 `;
 
 const Arrow = ({
-  colour, theme, size, direction, ...rest
+  colour, mobileColour, theme, size, direction, ...rest
 }) => (
   <Icon
     direction={direction}
     width={size}
     height={size}
-    fill={theme.color(colour)}
+    colour={colour}
+    mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 96 96"
     {...rest}
@@ -31,6 +40,7 @@ const Arrow = ({
 
 Arrow.propTypes = {
   colour: PropTypes.string,
+  mobileColour: PropTypes.string,
   size: PropTypes.number,
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
   theme: PropTypes.objectOf(PropTypes.shape).isRequired
@@ -38,6 +48,7 @@ Arrow.propTypes = {
 
 Arrow.defaultProps = {
   colour: 'white',
+  mobileColour: null,
   size: 24,
   direction: 'up'
 };
