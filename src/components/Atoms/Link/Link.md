@@ -52,13 +52,14 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
 
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
-      color="red"
+      color="blue"
+      mobileColour="black"
       href="#anchor"
       target="blank"
       type="button"
       icon={<External colour="white" />}
     >
-      External link
+      External link (black on mobile, blue on desktop)
     </Link>
   </div>
 
