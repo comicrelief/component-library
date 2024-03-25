@@ -216,18 +216,11 @@ it("renders link styled as button correctly", () => {
       cursor: pointer;
       background-color: #FFE400;
       color: #000000;
-      background-color: #E52630;
-      color: #FFFFFF;
     }
 
     .c0:hover {
       background-color: #FEFD5A;
       color: #000000;
-    }
-
-    .c0:hover {
-      background-color: #890B11;
-      color: #FFFFFF;
     }
 
     @media (min-width:740px) {

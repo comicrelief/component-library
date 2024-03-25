@@ -54,13 +54,6 @@ exports[`renders correctly 1`] = `
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
-  background-color: #E52630;
-  color: #FFFFFF;
-}
-
-.c7:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
 }
 
 .c7:hover {

@@ -230,18 +230,11 @@ exports[`renders Single Message with Image correctly 1`] = `
   cursor: pointer;
   background-color: #FFFFFF;
   color: #000000;
-  background-color: #E52630;
-  color: #FFFFFF;
 }
 
 .c8:hover {
   background-color: #969598;
   color: #000000;
-}
-
-.c8:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
 }
 
 .c0 {
@@ -695,18 +688,11 @@ exports[`renders Single Message with full width correctly 1`] = `
   cursor: pointer;
   background-color: #FFFFFF;
   color: #000000;
-  background-color: #E52630;
-  color: #FFFFFF;
 }
 
 .c8:hover {
   background-color: #969598;
   color: #000000;
-}
-
-.c8:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
 }
 
 .c0 {

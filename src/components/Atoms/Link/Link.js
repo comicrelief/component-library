@@ -92,7 +92,7 @@ Link.propTypes = {
 Link.defaultProps = {
   type: 'standard',
   color: 'red',
-  mobileColour: 'red',
+  mobileColour: null,
   target: null,
   home: false,
   underline: true,

@@ -71,18 +71,11 @@ it("renders correctly", () => {
       cursor: pointer;
       background-color: #FFFFFF;
       color: #000000;
-      background-color: #E52630;
-      color: #FFFFFF;
     }
 
     .c5:hover {
       background-color: #969598;
       color: #000000;
-    }
-
-    .c5:hover {
-      background-color: #890B11;
-      color: #FFFFFF;
     }
 
     .c0 {
