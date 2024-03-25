@@ -20,6 +20,7 @@ exports[`renders correctly 1`] = `
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  fill: #000000;
 }
 
 .c0 {
@@ -86,6 +87,12 @@ exports[`renders correctly 1`] = `
   -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   padding: 0 2rem;
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    fill: #000000;
+  }
 }
 
 @media (min-width:740px) {

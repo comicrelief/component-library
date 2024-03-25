@@ -121,6 +121,7 @@ it("renders a button with an icon", () => {
       >
         <svg
           className="c2"
+          fill="#FFFFFF"
           height={24}
           viewBox="0 0 96 96"
           width={24}

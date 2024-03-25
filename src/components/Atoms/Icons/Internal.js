@@ -19,6 +19,7 @@ const Internal = ({
     {...rest}
     width={size}
     height={size}
+    fill={theme.color(colour)}
     colour={colour}
     mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
