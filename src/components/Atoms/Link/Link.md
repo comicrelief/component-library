@@ -40,12 +40,13 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
   <div style={{ display: 'block', marginBottom: '10px' }}>
     <Link
       color="red"
+      mobileColour="blue"
       href="#anchor"
       target="blank"
       type="button"
       icon={<Internal colour="white" />}
     >
-      Internal link
+      Internal link, 'blue' on tablet and mobile
     </Link>
   </div>
 

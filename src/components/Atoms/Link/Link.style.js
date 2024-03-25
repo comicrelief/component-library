@@ -17,8 +17,17 @@ const buttonStyle = () => css`
   align-items: center;
   cursor: pointer;
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+
+  // Override with mobile-specific colours where available:
+  ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
+
   @media ${({ theme }) => theme.breakpoint('small')} {
     width: auto;
+  }
+
+  // Reinstate general styles for 'desktop':
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   }
 `;
 

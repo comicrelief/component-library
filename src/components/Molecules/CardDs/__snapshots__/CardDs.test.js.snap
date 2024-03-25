@@ -54,6 +54,13 @@ exports[`renders correctly 1`] = `
   cursor: pointer;
   background-color: #E52630;
   color: #FFFFFF;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c7:hover {
+  background-color: #890B11;
+  color: #FFFFFF;
 }
 
 .c7:hover {
@@ -126,6 +133,18 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c7 {
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    background-color: #E52630;
+    color: #FFFFFF;
+  }
+
+  .c7:hover {
+    background-color: #890B11;
+    color: #FFFFFF;
   }
 }
 
