@@ -57,7 +57,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<External colour="white" />}
+      icon={<External colour="white" mobileColour="blue" />}
     >
       External link (black on mobile, blue on desktop)
     </Link>
@@ -69,9 +69,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Download colour="white" />}
+      icon={<Download colour="white" mobileColour="blue" />}
     >
-      Download link
+      Download link (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -81,9 +81,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Favourite colour="white" />}
+      icon={<Favourite colour="white" mobileColour="blue" />}
     >
-      Favourite link
+      Favourite link (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -93,9 +93,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Chevron direction="up" colour="white" />}
+      icon={<Chevron direction="up" colour="white" mobileColour="blue" />}
     >
-      Chevron Up
+      Chevron Up (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -105,9 +105,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Chevron direction="down" colour="white" />}
+      icon={<Chevron direction="down" colour="white" mobileColour="blue" />}
     >
-      Chevron Down
+      Chevron Down (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -117,9 +117,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Chevron direction="left" colour="white" />}
+      icon={<Chevron direction="left" colour="white" mobileColour="blue" />}
     >
-      Chevron Left
+      Chevron Left (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -129,9 +129,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<Chevron direction="right" colour="white" />}
+      icon={<Chevron direction="right" colour="white" mobileColour="blue" />}
     >
-      Chevron Right
+      Chevron Right (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -142,9 +142,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       target="blank"
       type="button"
       iconFirst
-      icon={<Arrow direction="left" colour="white" />}
+      icon={<Arrow direction="left" colour="white" mobileColour="blue" />}
     >
-      Arrow Left
+      Arrow Left (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 
@@ -154,9 +154,9 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       href="#anchor"
       target="blank"
       type="button"
-      icon={<AtSign />}
+      icon={<AtSign colour="white" mobileColour="blue" />}
     >
-      At Sign
+      At Sign (blue mobile-tablet icon, white desktop icon)
     </Link>
   </div>
 </div>;
