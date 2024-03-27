@@ -5,6 +5,7 @@ import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';
 import loadingIcon from './assets/loader.svg';
+import handlePadding from '../../../utils/_utils';
 
 const Container = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
   padding: ${spacing('l')};
+  
   ${media('small')} {
     ${({ vhFull, fullImage }) => (vhFull || fullImage
     ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
@@ -44,6 +46,7 @@ const Copy = styled.div`
     justify-content: center;
     padding: ${spacing('xl')};
   }
+
   ${props => props.fullImage
     && css`
       ${media('small')} {
@@ -52,17 +55,13 @@ const Copy = styled.div`
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        ${props.copyFirst
-    ? css`
-              left: 0;
-            `
-    : null}
+        ${props.copyFirst ? css`left: 0;` : null}
         width: 50%;
       }
     `};
+
   ${props => (props.hasImage
-    ? css`
-          @media ${({ theme }) => theme.breakpoint('small')} {
+    ? css`@media ${({ theme }) => theme.breakpoint('small')} {
             width: 50%;
           }
         `
@@ -75,6 +74,10 @@ const Copy = styled.div`
           margin: auto;
           padding: ${spacing('md')};
         `)};
+
+  ${media('medium')} {
+    ${({ paddingOption }) => handlePadding(paddingOption)};
+  }      
 `;
 
 const Media = styled.div`

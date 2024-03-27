@@ -38,9 +38,16 @@ const Signup = ({
   chooseAmountText,
   submitButtonColor,
   otherAmountValue,
+  additionalSingleCopy,
+  additionalMonthlyCopy,
+  defaultGivingType,
+  monthlyChooseAmountCopy,
+  monthlyOtherAmountCopy,
+  changeGivingType,
+  givingType,
   ...rest
 }) => {
-  const [givingType, setGivingType] = useState('single');
+  // const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -53,7 +60,7 @@ const Signup = ({
     // otherwise assign based on the associated moneybuys:
     if (otherAmountValue) {
       setAmountDonate(otherAmountValue);
-    } else {
+    } else if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
       // Check the 2nd moneybuy exists before using it;
@@ -65,32 +72,37 @@ const Signup = ({
 
       setAmountDonate(thisAmount);
     }
-  }, [givingType, singleGiving, regularGiving, otherAmountValue]);
+    // Pass givingType up to parent for copy-switching logic:
+    changeGivingType(givingType);
+  }, [givingType, singleGiving, regularGiving, otherAmountValue, changeGivingType]);
 
   useEffect(() => {
-    const givingData = givingType === 'single' ? singleGiving : regularGiving;
+    if (givingType) {
+      const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
-    let moneyBuyNewDescription = otherAmountText;
+      let moneyBuyUpdatedDescription = otherAmountText;
 
-    givingData.moneybuys.map((moneyBuy, index) => {
-      if (moneyBuy.value === amountDonate) {
-        moneyBuyNewDescription = moneyBuy.description;
+      givingData.moneybuys.map((moneyBuy, index) => {
+        // Only show the MB-associated copy when we're actually showing moneybuys
+        if (moneyBuy.value === amountDonate && !noMoneyBuys) {
+          moneyBuyUpdatedDescription = moneyBuy.description;
+        }
+
+        return (
+          index === 1
+          && amountDonate === undefined
+          && (setMoneyBuyCopy(moneyBuy.description),
+          setAmountDonate(moneyBuy.value))
+        );
+      });
+
+      if (!isAmountValid(amountDonate)) {
+        if (moneyBuyCopy) setMoneyBuyCopy(false);
+        if (!errorMsg) setErrorMsg(true);
+      } else {
+        if (errorMsg) setErrorMsg(false);
+        setMoneyBuyCopy(moneyBuyUpdatedDescription);
       }
-
-      return (
-        index === 1
-        && amountDonate === undefined
-        && (setMoneyBuyCopy(moneyBuy.description),
-        setAmountDonate(moneyBuy.value))
-      );
-    });
-
-    if (!isAmountValid(amountDonate)) {
-      if (moneyBuyCopy) setMoneyBuyCopy(false);
-      if (!errorMsg) setErrorMsg(true);
-    } else {
-      if (errorMsg) setErrorMsg(false);
-      setMoneyBuyCopy(moneyBuyNewDescription);
     }
   }, [
     errorMsg,
@@ -99,7 +111,8 @@ const Signup = ({
     regularGiving,
     givingType,
     amountDonate,
-    otherAmountText
+    otherAmountText,
+    noMoneyBuys
   ]);
 
   // Updates our flag that differentiates between the popup
@@ -107,6 +120,21 @@ const Signup = ({
   useEffect(() => {
     if (popOpen && !popUpShown) setPopUpShown(true);
   }, [popOpen, popUpShown]);
+
+  // On load, determine what should actually be the default giving type
+  useEffect(() => {
+    let newGivingType;
+    // Use any explicit setting
+    if (defaultGivingType) {
+      newGivingType = defaultGivingType;
+    } else {
+      // Else, use whatever's available
+      newGivingType = singleGiving !== null ? 'single' : 'monthly';
+    }
+
+    changeGivingType(newGivingType);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const submitDonation = (
     event,
@@ -168,7 +196,7 @@ const Signup = ({
 
       setAmountDonate(thisAmount);
     }
-  }, [errorMsg, givingData.moneybuys]);
+  }, [errorMsg, givingData]);
 
   // Listen for click outside custom amount input if there is no value entered.
   useEffect(() => {
@@ -191,12 +219,16 @@ const Signup = ({
     return `Donate £${amountDonate} monthly`;
   };
 
+  const showAdditionalSingleCopy = givingType === 'single' && additionalSingleCopy;
+  const showAdditionalMonthlyCopy = givingType === 'monthly' && additionalMonthlyCopy;
+  const additionalCopy = showAdditionalSingleCopy || showAdditionalMonthlyCopy;
+
   return (
     <FormWrapper>
       {showGivingSelector && (
         <GivingSelector
           givingType={givingType}
-          changeGivingType={data => setGivingType(data)}
+          changeGivingType={data => changeGivingType(data)}
           setPopOpen={setPopOpen}
           mbshipID={mbshipID}
         />
@@ -221,7 +253,7 @@ const Signup = ({
               {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
-          {!noMoneyBuys && (
+          {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
@@ -262,7 +294,7 @@ const Signup = ({
               ref={amountRef}
             />
           </FormFieldset>
-          {amountDonate >= 1 && !noMoneyBuys && moneyBuyCopy && (
+          {amountDonate >= 1 && moneyBuyCopy && (
             <Copy as="p">
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
@@ -276,25 +308,21 @@ const Signup = ({
           </Error>
           )}
 
-          {noMoneyBuys ? (
-            <Button
-              type="submit"
-              color={submitButtonColor}
-            >
-              {errorMsg
-                ? 'Donate'
-                : `Donate £${amountDonate}`}
-            </Button>
-          ) : (
-            <Button
-              type="submit"
-              color={submitButtonColor}
-              ref={buttonRef}
-            >
-              {renderButtonText()}
-            </Button>
-
+          {additionalCopy && (
+          <p className="additional-copy">
+            <strong>
+              {additionalCopy}
+            </strong>
+          </p>
           )}
+
+          <Button
+            type="submit"
+            color={submitButtonColor}
+            ref={buttonRef}
+          >
+            {renderButtonText()}
+          </Button>
 
         </OuterFieldset>
       </Form>
@@ -313,13 +341,26 @@ Signup.propTypes = {
   PopUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string.isRequired,
   submitButtonColor: PropTypes.string.isRequired,
-  otherAmountValue: PropTypes.number
+  otherAmountValue: PropTypes.number,
+  additionalSingleCopy: PropTypes.string,
+  additionalMonthlyCopy: PropTypes.string,
+  defaultGivingType: PropTypes.string,
+  monthlyChooseAmountCopy: PropTypes.string,
+  monthlyOtherAmountCopy: PropTypes.string,
+  changeGivingType: PropTypes.func.isRequired,
+  givingType: PropTypes.string
 };
 
 Signup.defaultProps = {
   noMoneyBuys: false,
   otherAmountValue: null,
-  data: {}
+  data: {},
+  additionalSingleCopy: null,
+  additionalMonthlyCopy: null,
+  defaultGivingType: null,
+  monthlyChooseAmountCopy: null,
+  monthlyOtherAmountCopy: null,
+  givingType: null
 };
 
 export default Signup;

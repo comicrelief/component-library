@@ -3,7 +3,7 @@ import color from './colors';
 
 const buttonColors = {
   black: {
-    background: color('grey_dark'),
+    background: color('black'),
     color: color('white'),
     hoverBackground: color('grey'),
     hoverColor: color('white')

@@ -79,6 +79,10 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
+.c13 {
+  fill: #FFFFFF;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,6 +164,24 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c11 {
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c11 {
+    background-color: #2042AD;
+    color: #FFFFFF;
+  }
+
+  .c11:hover {
+    background-color: #274084;
+    color: #FFFFFF;
+  }
+}
+
+@media (min-width:1024px) {
+  .c13 {
+    fill: #FFFFFF;
   }
 }
 
@@ -298,6 +320,7 @@ exports[`renders correctly 1`] = `
           type="button"
         >
           <svg
+            className="c13"
             fill="#FFFFFF"
             height={24}
             viewBox="0 0 96 96"

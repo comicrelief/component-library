@@ -6,11 +6,13 @@ import { screen } from '../../../theme/shared/size';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
+import { handleTitles, handleCopy } from './_utils';
+
 import {
   BgImage,
   Container,
-  Header,
-  HeaderInner,
+  TitleWrapperInner,
+  TitleWrapperOuter,
   Wrapper
 } from './Donate.style';
 
@@ -40,12 +42,22 @@ const Donate = ({
   PopUpText,
   chooseAmountText,
   isDesktopOverride,
-  otherAmountValue
+  otherAmountValue,
+  additionalSingleCopy,
+  additionalMonthlyCopy,
+  defaultGivingType,
+  monthlyTitle,
+  monthlySubtitle,
+  paddingOption,
+  // Just to keep the function call character length under control
+  monthlyChooseAmountText: monthlyChoose,
+  monthlyOtherAmountText: monthlyOther
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${screen.medium})` });
 
   // To let us store any updated override, and force a re-render
   const [overrideValue, setOverrideValue] = useState(null);
+  const [givingType, setGivingType] = useState();
 
   // Store the updated override value
   useEffect(() => {
@@ -54,6 +66,19 @@ const Donate = ({
 
   // If a boolean value has been passed, let it replace our 'internal' value
   isDesktop = overrideValue !== null ? overrideValue : isDesktop;
+
+  // Handy helper functions to process copy, based on givingType
+  const {
+    showCopy,
+    thisTitle,
+    thisSubtitle,
+    noTitlesAtAll
+  } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
+
+  const {
+    thisOtherAmountText,
+    thisChooseAmountText
+  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
 
   return (
     <Container
@@ -89,44 +114,51 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite">
-        <Header formAlignRight={formAlignRight}>
-          <HeaderInner>
-            {Boolean(subtitle) && (
-              <>
-                {Boolean(title) && (
-                <Text
-                  tag="h2"
-                  color={textColor}
-                  size="big"
-                  family="Anton"
-                  weight="normal"
-                  uppercase
-                >
-                  {title}
-                </Text>
-                )}
+      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll} paddingOption={paddingOption}>
 
-                <Text tag="p" color={textColor} size="m">
-                  {subtitle}
-                </Text>
-              </>
+        {/* Only render if there is SOME title copy; otherwise,
+        we need to the space to centre-align the form */}
+        { !noTitlesAtAll && (
+        <TitleWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
+          <TitleWrapperInner>
+            {showCopy && (
+            <>
+              <Text
+                tag="h2"
+                color={textColor}
+                size="big"
+                family="Anton"
+                weight="normal"
+                uppercase
+              >
+                {thisTitle}
+              </Text>
+              <Text tag="p" color={textColor} size="m">
+                {thisSubtitle}
+              </Text>
+            </>
             )}
-          </HeaderInner>
-        </Header>
+          </TitleWrapperInner>
+        </TitleWrapperOuter>
+        )}
 
         <Form
           data={data}
-          otherAmountText={otherAmountText}
+          otherAmountText={thisOtherAmountText}
           cartID={cartID}
           clientID={clientID}
           mbshipID={mbshipID}
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
-          chooseAmountText={chooseAmountText}
+          chooseAmountText={thisChooseAmountText}
           submitButtonColor={submitButtonColor}
           otherAmountValue={otherAmountValue}
+          additionalSingleCopy={additionalSingleCopy}
+          additionalMonthlyCopy={additionalMonthlyCopy}
+          defaultGivingType={defaultGivingType}
+          givingType={givingType}
+          changeGivingType={setGivingType}
         />
       </Wrapper>
     </Container>
@@ -159,7 +191,15 @@ Donate.propTypes = {
   PopUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
   isDesktopOverride: PropTypes.bool,
-  otherAmountValue: PropTypes.number
+  otherAmountValue: PropTypes.number,
+  additionalSingleCopy: PropTypes.string,
+  additionalMonthlyCopy: PropTypes.string,
+  defaultGivingType: PropTypes.string,
+  monthlyTitle: PropTypes.string,
+  monthlySubtitle: PropTypes.string,
+  monthlyChooseAmountText: PropTypes.string,
+  monthlyOtherAmountText: PropTypes.string,
+  paddingOption: PropTypes.string
 };
 
 Donate.defaultProps = {
@@ -186,7 +226,15 @@ Donate.defaultProps = {
   chooseAmountText: '',
   isDesktopOverride: null,
   otherAmountValue: null,
-  title: null
+  title: null,
+  additionalSingleCopy: null,
+  additionalMonthlyCopy: null,
+  defaultGivingType: null,
+  monthlyTitle: '',
+  monthlySubtitle: '',
+  monthlyChooseAmountText: '',
+  monthlyOtherAmountText: '',
+  paddingOption: null
 };
 
 export default Donate;

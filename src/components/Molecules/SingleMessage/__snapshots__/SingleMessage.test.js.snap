@@ -104,6 +104,10 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   }
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
   .c1 {
     height: auto;
@@ -280,6 +284,18 @@ exports[`renders Single Message with Image correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c8 {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .c8:hover {
+    background-color: #969598;
+    color: #000000;
+  }
+}
+
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -310,6 +326,10 @@ exports[`renders Single Message with Image correctly 1`] = `
   .c5 {
     width: 50%;
   }
+}
+
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:740px) {
@@ -498,11 +518,19 @@ exports[`renders Single Message with double image correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
 
 }
 
@@ -714,6 +742,18 @@ exports[`renders Single Message with full width correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c8 {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .c8:hover {
+    background-color: #969598;
+    color: #000000;
+  }
+}
+
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -764,6 +804,10 @@ exports[`renders Single Message with full width correctly 1`] = `
   .c5 {
     width: 50%;
   }
+}
+
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:740px) {
@@ -900,6 +944,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -917,6 +965,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
 
 }
 
@@ -1018,6 +1070,10 @@ exports[`renders Single Message with no Image correctly 1`] = `
 
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -1052,11 +1108,19 @@ exports[`renders Single Message with no Image correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
 
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
 
 }
 

@@ -10,6 +10,7 @@ let window = '';
 const Link = ({
   children,
   color,
+  mobileColour,
   href,
   target,
   type,
@@ -54,6 +55,7 @@ const Link = ({
     <StyledLink
       {...rest}
       color={color}
+      mobileColour={mobileColour}
       href={href}
       target={window}
       type={type}
@@ -72,6 +74,7 @@ Link.propTypes = {
   type: PropTypes.oneOf(['button', 'standard', 'standard_white']),
   /** Color for button style link. See buttonColors in theme */
   color: PropTypes.string,
+  mobileColour: PropTypes.string,
   /** Link target */
   target: PropTypes.string,
   /** Set to true if link rel attribute should be home */
@@ -89,6 +92,7 @@ Link.propTypes = {
 Link.defaultProps = {
   type: 'standard',
   color: 'red',
+  mobileColour: null,
   target: null,
   home: false,
   underline: true,

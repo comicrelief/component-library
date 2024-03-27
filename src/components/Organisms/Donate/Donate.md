@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button
+## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button and 'no top padding' option
 
 ```js
 import data from './dev-data/data';
@@ -24,10 +24,11 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  paddingOption="upper_off"
 />;
 ```
 
-## Form align left, with custom message after choosing an "Other amount" to donate, high value cart.
+## Form align left, with custom message after choosing an "Other amount" to donate, high value cart, and 'no bottom padding' option
 ```js
 import data from './dev-data/data-high-value';
 const mobilePictures = require('../../../styleguide/data/data').mobileImages;
@@ -50,10 +51,11 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Overridden via the 'Other amount text' prop"
+  paddingOption="lower_off"
 />;
 ```
 
-## Single Giving
+## Single Giving, with 'no padding' option
 
 ```js
 import data from './dev-data/data-single';
@@ -76,6 +78,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  paddingOption="both_off"
 />;
 ```
 
@@ -131,7 +134,7 @@ setTimeout(()=>{
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-4"
+  mbshipID="mship-5"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -139,6 +142,8 @@ setTimeout(()=>{
   noMoneyBuys
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountValue={amountDonate}
+  otherAmountText="Here's an otherAmountText override"
+
 />;
 ```
 
@@ -166,7 +171,7 @@ setTimeout(()=>{
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-1"
+  mbshipID="mship-6"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -191,7 +196,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-2"
+  mbshipID="mship-7"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -202,7 +207,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 ```
 
 
-## Form align right - no subtitle
+## Form align right, but no copy, so ACTUALLY centre-aligns
 
 ```js
 import data from './dev-data/data';
@@ -220,12 +225,16 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-5"
+  mbshipID="mship-8"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
-  title="Donate Now"
+  // Directly omiting values for these to centre-align
+  title=""
   subtitle=""
+  chooseAmountText=""
+  monthlyTitle=""
+  monthlySubtitle=""
 />;
 ```
 
@@ -245,7 +254,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-6"
+  mbshipID="mship-9"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -270,7 +279,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-7"
+  mbshipID="mship-10"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -295,7 +304,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-8"
+  mbshipID="mship-11"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -316,7 +325,7 @@ import data from './dev-data/data-single';
   mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   data={data}
-  mbshipID="mship-9"
+  mbshipID="mship-12"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -345,12 +354,275 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImageLow={mobilePictures.imageLow}
   mobileImages={mobilePictures.images}
   data={data}
-  mbshipID="mship-10"
+  mbshipID="mship-13"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   isDesktopOverride={false}
+/>;
+```
+
+## Additional copy for BOTH giving types
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-14"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
+  additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+/>;
+```
+
+## Additional copy for monthly only
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-15"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+/>;
+```
+
+## Additional copy for single only
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-16"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
+/>;
+```
+
+## Default monthly giving type
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-17"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  defaultGivingType="monthly"
+/>;
+```
+
+## Monthly ONLY
+
+```js
+import data from './dev-data/data-monthly';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-18"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+/>;
+```
+
+## Monthly ONLY, no moneybuys
+
+```js
+import data from './dev-data/data-monthly';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-19"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  noMoneyBuys
+/>;
+```
+
+## Monthly 'Choose Amount' and 'Other Amount' copy overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-20"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Standard title here"
+  subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
+  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyOtherAmountText="monthlyOtherAmountText here"
+/>;
+```
+
+## Monthly Title and Subtitle overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-21"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Standard title here"
+  subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
+  monthlyTitle="Monthly Title here"
+  monthlySubtitle="Monthly Subtitle here"
+/>;
+```
+
+## All monthly overrides
+
+```js
+import data from './dev-data/data';
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+
+<Donate
+  alt="Background image"
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  submitButtonColor="blue_dark"
+  formAlignRight={true}
+  imageLow={desktopPictures.imageLow}
+  images={desktopPictures.images}
+  mobileImageLow={mobilePictures.imageLow}
+  mobileImages={mobilePictures.images}
+  data={data}
+  mbshipID="mship-22"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Standard title here"
+  subtitle="Standard subtitle here"
+  otherAmountText="Here's an otherAmountText override"
+  chooseAmountText="Here's an chooseAmountText override"
+  monthlyTitle="Monthly Title here"
+  monthlySubtitle="Monthly Subtitle here"
+  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyOtherAmountText="monthlyOtherAmountText here"
 />;
 ```
