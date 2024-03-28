@@ -1,8 +1,22 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
+
+const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
+  color: ${theme.color('grey_dark')};
+  border: 2px solid ${theme.color('grey_dark')};
+  background-color: ${theme.color('white')};
+  padding-left: ${spacing('lg')};
+  padding-right: ${spacing('lg')};
+
+  &:hover {
+    color: ${theme.color('grey_dark')};
+    background-color: ${theme.color('white')};
+  }
+`}`;
 
 const KEY_CODE_ENTER = 13;
 
@@ -19,6 +33,7 @@ const KEY_CODE_ENTER = 13;
  * - only throw errors with user-friendly messages
  *
  * Any errors thrown will be caught and the message will be displayed to the user.
+ *
  * The `onSelect` function will receive the chosen option.
  *
  * @param name
@@ -42,8 +57,8 @@ const Lookup = ({
   lookupHandler,
   mapOptionToString,
   onSelect,
-  noResultsMessage = 'Sorry, could not find any results for your search',
-  dropdownInstruction = '',
+  noResultsMessage,
+  dropdownInstruction,
   ...rest
 }) => {
   const [query, setQuery] = useState('');
@@ -70,14 +85,13 @@ const Lookup = ({
   return (
     <div {...rest}>
       <TextInputWithDropdown
+        label={label}
+        placeholder={placeholder}
         css={{ marginBottom: spacing('md') }}
         name={name}
         id={name}
         value={query}
         options={options.map(mapOptionToString)}
-        label={label}
-        placeholder={placeholder}
-        data-test="lookupDropdown"
         onChange={e => {
           setQuery(e.target.value);
           setErrorMessage('');
@@ -101,18 +115,15 @@ const Lookup = ({
         errorMsg={errorMessage}
         dropdownInstruction={dropdownInstruction}
       />
-      <ButtonWithStates
+      <StyledButton
         type="button"
         onClick={() => handler()}
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
-        data-test="lookupButton"
-        buttonType="secondary"
-        color="black"
       >
         {buttonText}
-      </ButtonWithStates>
+      </StyledButton>
     </div>
   );
 };
@@ -127,6 +138,11 @@ Lookup.propTypes = {
   onSelect: PropTypes.func.isRequired,
   noResultsMessage: PropTypes.string,
   dropdownInstruction: PropTypes.string
+};
+
+Lookup.defaultProps = {
+  noResultsMessage: 'Sorry, could not find any results for your search',
+  dropdownInstruction: ''
 };
 
 export default Lookup;
