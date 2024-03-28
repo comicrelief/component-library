@@ -85,13 +85,13 @@ const Lookup = ({
   return (
     <div {...rest}>
       <TextInputWithDropdown
-        label={label}
-        placeholder={placeholder}
         css={{ marginBottom: spacing('md') }}
         name={name}
         id={name}
         value={query}
         options={options.map(mapOptionToString)}
+        label={label}
+        placeholder={placeholder}
         onChange={e => {
           setQuery(e.target.value);
           setErrorMessage('');
