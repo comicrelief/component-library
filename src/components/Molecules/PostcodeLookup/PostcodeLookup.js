@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
-import axios from 'axios';
 import Lookup from '../Lookup/Lookup';
 import StyledWrapper from './PostcodeLookup.style';
 
@@ -10,13 +9,27 @@ const validatePostcode = postcode => {
   return isValid(trimmed) && toNormalised(trimmed);
 };
 
-const getAddresses = postcode => axios.get(
-  'https://lookups-staging.sls.comicrelief.com/postcode/lookup',
-  {
-    timeout: 10000,
-    params: { query: postcode }
+const getAddresses = async postcode => {
+  const url = `https://lookups-staging.sls.comicrelief.com/postcode/lookup?query=${postcode}`;
+  const options = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    timeout: 10000
+  };
+
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data.addresses || [];
+  } catch (error) {
+    throw new Error('Sorry, something unexpected went wrong. Please try again or enter your address manually');
   }
-).then(res => res.data.addresses || []);
+};
 
 const addressToString = address => [address.Line1, address.Line2, address.Line3, address.posttown]
   .filter(line => line)

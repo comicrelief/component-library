@@ -11,7 +11,7 @@ const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
   background-color: ${theme.color('white')};
   padding-left: ${spacing('lg')};
   padding-right: ${spacing('lg')};
-  
+
   &:hover {
     color: ${theme.color('grey_dark')};
     background-color: ${theme.color('white')};
@@ -85,13 +85,13 @@ const Lookup = ({
   return (
     <div {...rest}>
       <TextInputWithDropdown
+        label={label}
+        placeholder={placeholder}
         css={{ marginBottom: spacing('md') }}
         name={name}
         id={name}
         value={query}
         options={options.map(mapOptionToString)}
-        label={label}
-        placeholder={placeholder}
         onChange={e => {
           setQuery(e.target.value);
           setErrorMessage('');
