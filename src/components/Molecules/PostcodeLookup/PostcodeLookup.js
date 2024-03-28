@@ -9,7 +9,8 @@ const validatePostcode = postcode => {
   return isValid(trimmed) && toNormalised(trimmed);
 };
 
-const getAddresses = async postcode => {
+// report Error - Sentry function passed as a prop
+const getAddresses = async (postcode, reportError) => {
   const url = `https://lookups-staging.sls.comicrelief.com/postcode/lookup?query=${postcode}`;
   const options = {
     method: 'GET',
@@ -27,6 +28,10 @@ const getAddresses = async postcode => {
     const data = await response.json();
     return data.addresses || [];
   } catch (error) {
+    // Report the error to Sentry if available, or handle it locally
+    if (reportError) {
+      reportError(error);
+    }
     throw new Error('Sorry, something unexpected went wrong. Please try again or enter your address manually');
   }
 };
@@ -35,33 +40,22 @@ const addressToString = address => [address.Line1, address.Line2, address.Line3,
   .filter(line => line)
   .join(', ');
 
-const addressFetcher = async postcode => {
+const addressFetcher = async (postcode, reportError) => {
   const valid = validatePostcode(postcode);
   if (!valid) {
     throw new Error('Please provide a valid postcode');
   }
   try {
-    return await getAddresses(valid);
+    return await getAddresses(valid, reportError);
   } catch (error) {
-    // if (typeof Sentry !== 'undefined') {
-    //   Sentry.captureException(error);
-    // }
-    throw new Error('Sorry, something unexpected went wrong. Please try again or enter your address manually');
+    /* eslint-disable-next-line */
+    console.error('Error fetching addresses:', error);
+    return [];
   }
 };
 
-/**
- * A simple postcode lookup component
- *
- * The parent component must provide an `onSelect` prop in order to receive the selected address.
- *
- * @param onSelect
- * @param rest
- * @returns {JSX.Element}
- * @constructor
- */
 const PostcodeLookup = ({
-  onSelect, label, placeholder, buttonText, noResultsMessage, ...rest
+  onSelect, label, placeholder, buttonText, noResultsMessage, reportError, ...rest
 }) => (
   <StyledWrapper>
     <Lookup
@@ -70,7 +64,7 @@ const PostcodeLookup = ({
       buttonText={buttonText}
       noResultsMessage={noResultsMessage}
       mapOptionToString={addressToString}
-      lookupHandler={addressFetcher}
+      lookupHandler={postcode => addressFetcher(postcode, reportError)}
       onSelect={onSelect}
       {...rest}
     />
@@ -82,7 +76,8 @@ PostcodeLookup.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   buttonText: PropTypes.string,
-  noResultsMessage: PropTypes.string
+  noResultsMessage: PropTypes.string,
+  reportError: PropTypes.func.isRequired // Sentry function passed as a prop
 };
 
 PostcodeLookup.defaultProps = {
