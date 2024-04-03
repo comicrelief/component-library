@@ -27,6 +27,14 @@ exports[`renders correctly 1`] = `
   flex-direction: column;
 }
 
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <div
   className="c0"
 >
@@ -75,6 +83,14 @@ exports[`renders correctly with no body 1`] = `
 
 .c1 {
   height: auto;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 <div
