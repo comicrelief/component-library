@@ -74,7 +74,9 @@ Card.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  squaredCorners: PropTypes.bool
+  squaredCorners: PropTypes.bool,
+  smallBreakpointLayout: PropTypes.string,
+  mediumBreakpointLayout: PropTypes.string
 };
 
 Card.defaultProps = {
@@ -86,7 +88,9 @@ Card.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  squaredCorners: false
+  squaredCorners: false,
+  smallBreakpointLayout: 'Cards',
+  mediumBreakpointLayout: 'Cards'
 };
 
 export default Card;
