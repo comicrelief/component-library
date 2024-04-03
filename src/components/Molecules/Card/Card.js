@@ -7,7 +7,10 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: ${props => (props.smallBreakpointLayout === 'Row' ? 'row' : 'column')};
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    flex-direction: ${props => (props.mediumBreakpointLayout === 'Row' ? 'row' : 'column')};
+  }
   height: 100%;
   border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
   overflow: hidden;
@@ -34,9 +37,17 @@ const Card = ({
   width,
   children,
   squaredCorners,
+  smallBreakpointLayout,
+  mediumBreakpointLayout,
   ...rest
 }) => (
-  <Container backgroundColor={backgroundColor} squaredCorners={squaredCorners} {...rest}>
+  <Container
+    backgroundColor={backgroundColor}
+    squaredCorners={squaredCorners}
+    smallBreakpointLayout={smallBreakpointLayout}
+    mediumBreakpointLayout={mediumBreakpointLayout}
+    {...rest}
+  >
     {imageLow ? (
       <Image>
         <Picture
