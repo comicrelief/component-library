@@ -51,6 +51,57 @@ exports[`renders correctly 1`] = `
 </div>
 `;
 
+exports[`renders correctly 2`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFE400;
+}
+
+.c1 {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2>
+      Title
+    </h2>
+    <p>
+      Text body copy description. Loads more text test. Loads more text test.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`renders correctly with no body 1`] = `
 .c2 {
   display: block;
