@@ -29,8 +29,8 @@ import Link from '../../Atoms/Link/Link';
   smallBreakpointLayout="Row"
   mediumBreakpointLayout="Row"
 >
-  <Text tag="h3" color="purple" size="xl">
-    Title
+  <Text tag="h2" color="black">
+    TITLE
   </Text>
   <Text tag="p">Text body copy description. Loads more text test. Loads more text test.</Text>
 </Card>;

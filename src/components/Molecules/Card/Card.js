@@ -1,16 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import spacing from '../../../theme/shared/spacing';
 
 const Container = styled.div`
-  display: flex;
   position: relative;
+  display: flex;
+
   flex-direction: ${props => (props.smallBreakpointLayout === 'Row' ? 'row' : 'column')};
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: ${props => (props.mediumBreakpointLayout === 'Row' ? 'row' : 'column')};
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+      && css`
+        flex-direction: row;
+      `}
   }
+
   height: 100%;
   border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
   overflow: hidden;
@@ -22,7 +27,11 @@ const Image = styled.div`
 `;
 
 const Copy = styled.div`
+
+  border: 1px solid red;
+
   padding: ${spacing('l')};
+
   display: flex;
   flex-direction: column;
 `;
