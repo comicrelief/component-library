@@ -7,14 +7,16 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
+  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
   flex-direction: ${props => (props.smallBreakpointLayout === 'Row' ? 'row' : 'column')};
+  /* Check for mediumBreakpointLayout prop coming from the CMS */
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
       && css`
         flex-direction: row;
       `}
   }
+  /* Return all settings to column view for larger viewports */
   @media ${({ theme }) => theme.breakpoint('medium')} {
     flex-direction: column;
   }
