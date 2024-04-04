@@ -32,6 +32,11 @@ const Copy = styled.div`
 
   padding: ${spacing('l')};
 
+  ${({ smallBreakpointLayout, mediumBreakpointLayout }) => ((mediumBreakpointLayout || smallBreakpointLayout) === 'Row')
+    && css`
+      padding: ${spacing('sm')};
+    `}
+
   display: flex;
   flex-direction: column;
 `;
@@ -70,7 +75,15 @@ const Card = ({
         />
       </Image>
     ) : null}
-    {children ? <Copy>{children}</Copy> : null}
+    {children
+      ? (
+        <Copy
+          smallBreakpointLayout={smallBreakpointLayout}
+          mediumBreakpointLayout={mediumBreakpointLayout}
+        >
+          {children}
+        </Copy>
+      ) : null}
   </Container>
 );
 
