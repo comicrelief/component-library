@@ -32,7 +32,7 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="h2" color="black">
     TITLE
   </Text>
-  <Text tag="p">Text body copy description. Loads more text test. Loads more text test.</Text>
+  <Text tag="p">Text body copy description. Loads more text test. Loads more text test. Loads more texty text testing more text.</Text>
 </Card>;
 ```
 
@@ -43,7 +43,5 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
 <Card
   imageLow={defaultData.image}
   images={defaultData.image}
-  smallBreakpointLayout="Row"
-  mediumBreakpointLayout="Row"
 />;
 ```

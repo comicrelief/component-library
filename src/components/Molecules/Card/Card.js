@@ -7,7 +7,7 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   position: relative;
   display: flex;
-
+  flex-direction: column;
   flex-direction: ${props => (props.smallBreakpointLayout === 'Row' ? 'row' : 'column')};
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
@@ -15,7 +15,9 @@ const Container = styled.div`
         flex-direction: row;
       `}
   }
-
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    flex-direction: column;
+  }
   height: 100%;
   border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
   overflow: hidden;
@@ -27,18 +29,16 @@ const Image = styled.div`
 `;
 
 const Copy = styled.div`
-
-  border: 1px solid red;
-
+  display: flex;
+  flex-direction: column;
   padding: ${spacing('l')};
-
   ${({ smallBreakpointLayout, mediumBreakpointLayout }) => ((mediumBreakpointLayout || smallBreakpointLayout) === 'Row')
     && css`
       padding: ${spacing('sm')};
+      h1, h2, h3, h4, h5 {
+       margin-bottom: 0.5rem;
+      }
     `}
-
-  display: flex;
-  flex-direction: column;
 `;
 
 const Card = ({
@@ -63,7 +63,10 @@ const Card = ({
     {...rest}
   >
     {imageLow ? (
-      <Image>
+      <Image
+        smallBreakpointLayout={smallBreakpointLayout}
+        mediumBreakpointLayout={mediumBreakpointLayout}
+      >
         <Picture
           alt={imageAltText}
           imageLow={imageLow}

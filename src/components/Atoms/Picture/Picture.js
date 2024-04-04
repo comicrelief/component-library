@@ -23,7 +23,7 @@ const Image = styled.img`
   display: block;
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
-    || (props.objectFit === 'contain' && 'contain')};  
+    || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 `;
 
