@@ -1,9 +1,9 @@
 export const sizes = {
-  small: 0,
-  medium: 740,
-  large: 1024,
+  mobile: 0,
+  tablet: 740,
+  desktop: 1024,
   nav: 1150,
-  xlarge: 1440
+  large: 1440
 };
 
 export default size => {
