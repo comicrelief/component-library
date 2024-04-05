@@ -33,7 +33,6 @@ const Wrapper = styled.div`
 const Copy = styled.div`
   display: flex;
   flex-direction: column;
-  /* default padding */
   padding: ${spacing('l')};
   /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
   ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')

@@ -20,18 +20,32 @@ const Wrapper = styled.div`
 const Image = styled.img`
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
+
   display: block;
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
+  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
   ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
     && css`
-      /* width: 30%; */
       padding: 10px;
       border-radius: 15px;
     `}
+  /* Check for mediumBreakpointLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+      && css`
+        padding: 10px;
+        border-radius: 15px;
+      `}
+  }
+  /* Return all settings to column view for larger viewports */
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: 0;
+    border-radius: 0;
+  }
 `;
 
 /** Responsive Picture */
