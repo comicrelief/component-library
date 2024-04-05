@@ -39,6 +39,24 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1,
+  .c1 h2,
+  .c1 h3,
+  .c1 h4,
+  .c1 h5 {
+    margin: 0.5rem 0 0.5rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -104,6 +122,34 @@ exports[`renders correctly 2`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    padding: 0.5rem;
+  }
+
+  .c1 h1,
+  .c1 h2,
+  .c1 h3,
+  .c1 h4,
+  .c1 h5 {
+    margin: 0.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1,
+  .c1 h2,
+  .c1 h3,
+  .c1 h4,
+  .c1 h5 {
+    margin: 0.5rem 0 0.5rem;
   }
 }
 
