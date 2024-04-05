@@ -26,21 +26,40 @@ const Container = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
-const Image = styled.div`
+const Wrapper = styled.div`
   height: auto;
 `;
 
 const Copy = styled.div`
   display: flex;
   flex-direction: column;
+  /* default padding */
   padding: ${spacing('l')};
-  ${({ smallBreakpointLayout, mediumBreakpointLayout }) => ((mediumBreakpointLayout || smallBreakpointLayout) === 'Row')
+  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
+  ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
     && css`
       padding: ${spacing('sm')};
       h1, h2, h3, h4, h5 {
        margin-bottom: 0.5rem;
       }
     `}
+  /* Check for mediumBreakpointLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.breakpoint('small')} {
+    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+      && css`
+        padding: ${spacing('sm')};
+        h1, h2, h3, h4, h5 {
+         margin: 0.5rem 0 0.5rem;
+        }
+      `}
+  }
+  /* Return all settings to column view for larger viewports */
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    padding: ${spacing('l')};
+    h1, h2, h3, h4, h5 {
+      margin: 0.5rem 0 0.5rem;
+    }
+  }
 `;
 
 const Card = ({
@@ -65,10 +84,7 @@ const Card = ({
     {...rest}
   >
     {imageLow ? (
-      <Image
-        smallBreakpointLayout={smallBreakpointLayout}
-        mediumBreakpointLayout={mediumBreakpointLayout}
-      >
+      <Wrapper>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -77,8 +93,10 @@ const Card = ({
           objectFit="cover"
           width={width}
           height={height}
+          smallBreakpointLayout={smallBreakpointLayout}
+          mediumBreakpointLayout={mediumBreakpointLayout}
         />
-      </Image>
+      </Wrapper>
     ) : null}
     {children
       ? (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import 'lazysizes';
@@ -25,6 +25,13 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+
+  ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
+    && css`
+      /* width: 30%; */
+      padding: 10px;
+      border-radius: 15px;
+    `}
 `;
 
 /** Responsive Picture */
@@ -38,6 +45,8 @@ const Picture = ({
   objectFit,
   imageLow,
   isBackgroundImage,
+  smallBreakpointLayout,
+  mediumBreakpointLayout,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -109,6 +118,8 @@ const Picture = ({
         data-lowsrc={imageLow}
         className="lazyload"
         objFitState={objFitState}
+        smallBreakpointLayout={smallBreakpointLayout}
+        mediumBreakpointLayout={mediumBreakpointLayout}
       />
     </Wrapper>
   );
@@ -128,7 +139,9 @@ Picture.propTypes = {
   ]),
   width: PropTypes.string,
   height: PropTypes.string,
-  isBackgroundImage: PropTypes.bool
+  isBackgroundImage: PropTypes.bool,
+  smallBreakpointLayout: PropTypes.string,
+  mediumBreakpointLayout: PropTypes.string
 };
 
 Picture.defaultProps = {
@@ -139,7 +152,9 @@ Picture.defaultProps = {
   width: '100%',
   height: 'auto',
   alt: '',
-  isBackgroundImage: false
+  isBackgroundImage: false,
+  smallBreakpointLayout: 'Cards',
+  mediumBreakpointLayout: 'Cards'
 };
 
 export default withTheme(Picture);

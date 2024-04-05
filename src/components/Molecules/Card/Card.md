@@ -32,7 +32,9 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="h2" color="black">
     TITLE
   </Text>
-  <Text tag="p">Text body copy description. Loads more text test. Loads more text test. Loads more texty text testing more text.</Text>
+  <Text tag="p">
+    Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
+  </Text>
 </Card>;
 ```
 
