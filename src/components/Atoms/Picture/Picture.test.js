@@ -35,6 +35,8 @@ it("renders correctly", () => {
       .c1 {
         padding: 0;
         border-radius: 0;
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -94,6 +96,8 @@ it("renders correctly with custom props", () => {
       .c1 {
         padding: 0;
         border-radius: 0;
+        width: 200px;
+        height: 100px;
       }
     }
 

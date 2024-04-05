@@ -162,6 +162,8 @@ it("renders article teaser correctly", () => {
       .c6 {
         padding: 0;
         border-radius: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -430,6 +432,8 @@ it("renders press realese correctly", () => {
       .c6 {
         padding: 0;
         border-radius: 0;
+        width: 80px;
+        height: 80px;
       }
     }
 

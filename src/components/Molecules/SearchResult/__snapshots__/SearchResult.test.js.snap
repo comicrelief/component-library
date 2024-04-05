@@ -105,6 +105,8 @@ exports[`renders correctly in minimalist form 1`] = `
   .c5 {
     padding: 0;
     border-radius: 0;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -298,6 +300,8 @@ exports[`renders correctly with copy 1`] = `
   .c5 {
     padding: 0;
     border-radius: 0;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -482,6 +486,8 @@ exports[`renders correctly with date 1`] = `
   .c5 {
     padding: 0;
     border-radius: 0;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -660,6 +666,8 @@ exports[`renders correctly with date and type 1`] = `
   .c5 {
     padding: 0;
     border-radius: 0;
+    width: 100%;
+    height: auto;
   }
 }
 

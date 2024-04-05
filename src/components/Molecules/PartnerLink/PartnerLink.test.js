@@ -124,6 +124,8 @@ it("renders correctly", () => {
       .c3 {
         padding: 0;
         border-radius: 0;
+        width: 100%;
+        height: auto;
       }
     }
 
