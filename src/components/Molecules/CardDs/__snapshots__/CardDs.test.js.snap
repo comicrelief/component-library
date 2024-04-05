@@ -120,6 +120,17 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+@media (min-width:740px) {
   .c8 {
     width: auto;
     right: auto;

@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ArticleTeaser from './ArticleTeaser';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders article teaser correctly', () => {
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ArticleTeaser from "./ArticleTeaser";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders article teaser correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -155,6 +155,17 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
+
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+
+    @media (min-width:740px) {
       .c2 {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -258,7 +269,7 @@ it('renders article teaser correctly', () => {
   `);
 });
 
-it('renders press realese correctly', () => {
+it("renders press realese correctly", () => {
   const tree = renderWithTheme(
     <ArticleTeaser
       href="/test"
@@ -409,6 +420,17 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @media (min-width:740px) {
+
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        padding: 0;
+        border-radius: 0;
+      }
     }
 
     @media (min-width:740px) {

@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 const Image = styled.img`
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
-
   display: block;
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
@@ -32,6 +31,8 @@ const Image = styled.img`
     && css`
       padding: 10px;
       border-radius: 15px;
+      width: 110px;
+      height: 110px;
     `}
   /* Check for mediumBreakpointLayout prop coming from the CMS */
   @media ${({ theme }) => theme.breakpoint('small')} {
@@ -39,12 +40,16 @@ const Image = styled.img`
       && css`
         padding: 10px;
         border-radius: 15px;
+        width: 120px;
+        height: 120px;
       `}
   }
   /* Return all settings to column view for larger viewports */
   @media ${({ theme }) => theme.breakpoint('medium')} {
     padding: 0;
     border-radius: 0;
+    width: ${props => (props.width ? props.width : '100%')};
+    height: ${props => (props.height ? props.height : 'auto')};
   }
 `;
 

@@ -154,6 +154,17 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+@media (min-width:740px) {
   .c9 {
     width: auto;
   }
@@ -428,6 +439,17 @@ exports[`renders Promo correctly end position 1`] = `
     font-size: 5rem;
     line-height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    padding: 0;
+    border-radius: 0;
   }
 }
 
