@@ -200,33 +200,6 @@ const ChevronWrapper = styled.div`
   padding-top: 2px;
 `;
 
-const ParentItem = styled.div`
-  display: inline-block;
-  border: 0;
-  padding: 17px 20px;
-  line-height: 1.3rem;
-  height: 46px;
-  font-weight: 700;
-  width: 100%;
-  color: ${({ theme }) => theme.color('deep_violet_dark')};
-  :hover {
-    border: 0;
-    color: ${({ theme }) => theme.color('deep_violet_dark')};
-    font-weight: inherit;
-  }
-
-  display: flex;
-  gap: 4px;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  @media ${({ theme }) => theme.breakpoint('nav')} {
-    padding: 10px 0;
-    height: auto;
-    :focus + ${SubNavMenu} {
-      display: flex;
-    }
-  }
-`;
-
 export {
   Nav,
   NavMenu,
@@ -235,7 +208,5 @@ export {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  ChevronWrapper,
-  // New stuff:
-  ParentItem
+  ChevronWrapper
 };

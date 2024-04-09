@@ -17,7 +17,6 @@ import {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  // SubNavLinkUnderline,
   ChevronWrapper
 } from './HeaderNav.style';
 
