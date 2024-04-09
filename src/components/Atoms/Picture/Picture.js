@@ -26,7 +26,7 @@ const Image = styled.img`
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
-  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
+  /* Check for Cards/smallBreakpointLayout prop coming from the CMS, otherwise column view default */
   ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
     && css`
       padding: 10px;
@@ -34,7 +34,7 @@ const Image = styled.img`
       width: 110px;
       height: 110px;
     `}
-  /* Check for mediumBreakpointLayout prop coming from the CMS */
+  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
   @media ${({ theme }) => theme.breakpoint('small')} {
     ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
       && css`
