@@ -7,18 +7,20 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   position: relative;
   display: flex;
-  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
-  flex-direction: ${props => (props.smallBreakpointLayout === 'Row' ? 'row' : 'column')};
-  /* Check for mediumBreakpointLayout prop coming from the CMS */
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+  flex-direction: column;
+  /* Check for Cards/smallBreakpointLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
+    ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
       && css`
         flex-direction: row;
       `}
   }
-  /* Return all settings to column view for larger viewports */
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    flex-direction: column;
+  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+      && css`
+        flex-direction: row;
+      `}
   }
   height: 100%;
   border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
@@ -34,16 +36,18 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${spacing('l')};
-  /* Check for smallBreakpointLayout prop coming from the CMS, otherwise column view default */
-  ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
-    && css`
-      padding: ${spacing('sm')};
-      h1, h2, h3, h4, h5 {
-       margin-bottom: 0.5rem;
-      }
-    `}
-  /* Check for mediumBreakpointLayout prop coming from the CMS */
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  /* Check for Cards/smallBreakpointLayout prop coming from the CMS, adjust text spacing */
+  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
+    ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
+      && css`
+        padding: ${spacing('sm')};
+        h1, h2, h3, h4, h5 {
+         margin-bottom: 0.5rem;
+        }
+      `}
+  }
+  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
       && css`
         padding: ${spacing('sm')};
@@ -51,13 +55,6 @@ const Copy = styled.div`
          margin: 0.5rem 0 0.5rem;
         }
       `}
-  }
-  /* Return all settings to column view for larger viewports */
-  @media ${({ theme }) => theme.breakpoint('medium')} {
-    padding: ${spacing('l')};
-    h1, h2, h3, h4, h5 {
-      margin: 0.5rem 0 0.5rem;
-    }
   }
 `;
 
