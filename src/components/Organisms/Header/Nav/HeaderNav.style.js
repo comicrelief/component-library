@@ -106,39 +106,6 @@ const SubNavLink = styled(NavLinkClass)`
 `;
 
 /**
- * Sub menu link item underline
- */
-// const SubNavLinkUnderline = styled(SubNavLink)`
-//   padding: 26px 21px;
-//   ::after {
-//     content: '';
-//     position: absolute;
-//     width: 14px;
-//     border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-//     left: 12px;
-//     top: auto;
-//     bottom: 10px;
-//     margin: 0 10px;
-//   }
-//   @media ${({ theme }) => theme.breakpoint('nav')} {
-//     ::before {
-//       display: block;
-//       position: absolute;
-//       content: '';
-//       left: 34px;
-//       width: 10px;
-//       height: 10px;
-//       border: 11px solid transparent;
-//       border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
-//       top: -22px;
-//     }
-//     :hover::before {
-//       border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
-//     }
-//   }
-// `;
-
-/**
  * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
@@ -268,7 +235,6 @@ export {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  // SubNavLinkUnderline,
   ChevronWrapper,
   // New stuff:
   ParentItem

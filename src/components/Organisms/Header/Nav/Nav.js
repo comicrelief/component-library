@@ -17,9 +17,9 @@ import {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  SubNavLinkUnderline,
+  // SubNavLinkUnderline,
   ChevronWrapper
-} from './Nav.style';
+} from './HeaderNav.style';
 
 const MainNav = ({ navItems }) => {
   const { menuGroups } = navItems;
@@ -136,24 +136,11 @@ const MainNav = ({ navItems }) => {
                     isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >
                     {group.links.map((child, childIndex) => {
-                      let thisSubUrl = NavHelper(child);
+                      // Skip the first item, as we've already rendered it above as our main item:
+                      if (childIndex === 0) return null;
 
-                      thisSubUrl = InternalLinkHelper(thisSubUrl);
+                      const thisSubUrl = NavHelper(child);
 
-                      /* Wrap our first child item with special tags */
-                      if (childIndex === 0) {
-                        return (
-                          <SubNavItem role="none" key={thisSubUrl}>
-                            <SubNavLinkUnderline
-                              href={thisSubUrl}
-                              inline
-                              role="menuitem"
-                            >
-                              <Text>{child.title}</Text>
-                            </SubNavLinkUnderline>
-                          </SubNavItem>
-                        );
-                      }
                       return (
                         <SubNavItem key={thisSubUrl}>
                           <SubNavLink href={thisSubUrl} inline role="menuitem">
