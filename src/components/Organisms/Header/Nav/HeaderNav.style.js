@@ -108,35 +108,35 @@ const SubNavLink = styled(NavLinkClass)`
 /**
  * Sub menu link item underline
  */
-const SubNavLinkUnderline = styled(SubNavLink)`
-  padding: 26px 21px;
-  ::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-    left: 12px;
-    top: auto;
-    bottom: 10px;
-    margin: 0 10px;
-  }
-  @media ${({ theme }) => theme.breakpoint('nav')} {
-    ::before {
-      display: block;
-      position: absolute;
-      content: '';
-      left: 34px;
-      width: 10px;
-      height: 10px;
-      border: 11px solid transparent;
-      border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
-      top: -22px;
-    }
-    :hover::before {
-      border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
-    }
-  }
-`;
+// const SubNavLinkUnderline = styled(SubNavLink)`
+//   padding: 26px 21px;
+//   ::after {
+//     content: '';
+//     position: absolute;
+//     width: 14px;
+//     border-bottom: 2px solid ${({ theme }) => theme.color('white')};
+//     left: 12px;
+//     top: auto;
+//     bottom: 10px;
+//     margin: 0 10px;
+//   }
+//   @media ${({ theme }) => theme.breakpoint('nav')} {
+//     ::before {
+//       display: block;
+//       position: absolute;
+//       content: '';
+//       left: 34px;
+//       width: 10px;
+//       height: 10px;
+//       border: 11px solid transparent;
+//       border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
+//       top: -22px;
+//     }
+//     :hover::before {
+//       border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
+//     }
+//   }
+// `;
 
 /**
  * Navigation Menu (first level)
@@ -233,6 +233,33 @@ const ChevronWrapper = styled.div`
   padding-top: 2px;
 `;
 
+const ParentItem = styled.div`
+  display: inline-block;
+  border: 0;
+  padding: 17px 20px;
+  line-height: 1.3rem;
+  height: 46px;
+  font-weight: 700;
+  width: 100%;
+  color: ${({ theme }) => theme.color('deep_violet_dark')};
+  :hover {
+    border: 0;
+    color: ${({ theme }) => theme.color('deep_violet_dark')};
+    font-weight: inherit;
+  }
+
+  display: flex;
+  gap: 4px;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    padding: 10px 0;
+    height: auto;
+    :focus + ${SubNavMenu} {
+      display: flex;
+    }
+  }
+`;
+
 export {
   Nav,
   NavMenu,
@@ -241,6 +268,8 @@ export {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  SubNavLinkUnderline,
-  ChevronWrapper
+  // SubNavLinkUnderline,
+  ChevronWrapper,
+  // New stuff:
+  ParentItem
 };
