@@ -25,18 +25,17 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
-
-  /* Check for Cards/smallBreakpointLayout prop coming from the CMS, otherwise column view default */
-  ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, otherwise column view default */
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === 'Row')
     && css`
       padding: 10px;
       border-radius: 15px;
       width: 110px;
       height: 110px;
     `}
-  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
-  @media ${({ theme }) => theme.breakpoint('small')} {
-    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === 'Row')
       && css`
         padding: 10px;
         border-radius: 15px;
@@ -45,7 +44,7 @@ const Image = styled.img`
       `}
   }
   /* Return all settings to column view for larger viewports */
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     padding: 0;
     border-radius: 0;
     width: ${props => (props.width ? props.width : '100%')};
@@ -64,8 +63,8 @@ const Picture = ({
   objectFit,
   imageLow,
   isBackgroundImage,
-  smallBreakpointLayout,
-  mediumBreakpointLayout,
+  smallBreakpointRowLayout,
+  mediumBreakpointRowLayout,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -137,8 +136,8 @@ const Picture = ({
         data-lowsrc={imageLow}
         className="lazyload"
         objFitState={objFitState}
-        smallBreakpointLayout={smallBreakpointLayout}
-        mediumBreakpointLayout={mediumBreakpointLayout}
+        smallBreakpointRowLayout={smallBreakpointRowLayout}
+        mediumBreakpointRowLayout={mediumBreakpointRowLayout}
       />
     </Wrapper>
   );
@@ -159,8 +158,8 @@ Picture.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   isBackgroundImage: PropTypes.bool,
-  smallBreakpointLayout: PropTypes.string,
-  mediumBreakpointLayout: PropTypes.string
+  smallBreakpointRowLayout: PropTypes.bool,
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Picture.defaultProps = {
@@ -172,8 +171,8 @@ Picture.defaultProps = {
   height: 'auto',
   alt: '',
   isBackgroundImage: false,
-  smallBreakpointLayout: 'Cards',
-  mediumBreakpointLayout: 'Cards'
+  smallBreakpointRowLayout: null,
+  mediumBreakpointRowLayout: null
 };
 
 export default withTheme(Picture);

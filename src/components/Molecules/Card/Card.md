@@ -26,8 +26,8 @@ import Link from '../../Atoms/Link/Link';
   images={defaultData.images}
   backgroundColor="grey_light"
   height="auto"
-  smallBreakpointLayout="Row"
-  mediumBreakpointLayout="Row"
+  smallBreakpointRowLayout={true}
+  mediumBreakpointRowLayout={true}
 >
   <Text tag="h2" color="black">
     TITLE

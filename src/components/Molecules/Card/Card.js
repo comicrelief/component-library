@@ -8,16 +8,16 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  /* Check for Cards/smallBreakpointLayout prop coming from the CMS */
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
+    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === 'Row')
       && css`
         flex-direction: row;
       `}
   }
-  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === 'Row')
       && css`
         flex-direction: row;
       `}
@@ -36,9 +36,9 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${spacing('l')};
-  /* Check for Cards/smallBreakpointLayout prop coming from the CMS, adjust text spacing */
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointLayout }) => (smallBreakpointLayout === 'Row')
+    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === 'Row')
       && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
@@ -46,9 +46,9 @@ const Copy = styled.div`
         }
       `}
   }
-  /* Check for Cards/mediumBreakpointLayout prop coming from the CMS */
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointLayout }) => (mediumBreakpointLayout === 'Row')
+    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === 'Row')
       && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
@@ -68,15 +68,15 @@ const Card = ({
   width,
   children,
   squaredCorners,
-  smallBreakpointLayout,
-  mediumBreakpointLayout,
+  smallBreakpointRowLayout,
+  mediumBreakpointRowLayout,
   ...rest
 }) => (
   <Container
     backgroundColor={backgroundColor}
     squaredCorners={squaredCorners}
-    smallBreakpointLayout={smallBreakpointLayout}
-    mediumBreakpointLayout={mediumBreakpointLayout}
+    smallBreakpointRowLayout={smallBreakpointRowLayout}
+    mediumBreakpointRowLayout={mediumBreakpointRowLayout}
     {...rest}
   >
     {imageLow ? (
@@ -89,16 +89,16 @@ const Card = ({
           objectFit="cover"
           width={width}
           height={height}
-          smallBreakpointLayout={smallBreakpointLayout}
-          mediumBreakpointLayout={mediumBreakpointLayout}
+          smallBreakpointRowLayout={smallBreakpointRowLayout}
+          mediumBreakpointRowLayout={mediumBreakpointRowLayout}
         />
       </Wrapper>
     ) : null}
     {children
       ? (
         <Copy
-          smallBreakpointLayout={smallBreakpointLayout}
-          mediumBreakpointLayout={mediumBreakpointLayout}
+          smallBreakpointRowLayout={smallBreakpointRowLayout}
+          mediumBreakpointRowLayout={mediumBreakpointRowLayout}
         >
           {children}
         </Copy>
@@ -116,8 +116,8 @@ Card.propTypes = {
   imageAltText: PropTypes.string,
   children: PropTypes.node,
   squaredCorners: PropTypes.bool,
-  smallBreakpointLayout: PropTypes.string,
-  mediumBreakpointLayout: PropTypes.string
+  smallBreakpointRowLayout: PropTypes.bool,
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -130,8 +130,8 @@ Card.defaultProps = {
   width: '100%',
   height: '100%',
   squaredCorners: false,
-  smallBreakpointLayout: 'Cards',
-  mediumBreakpointLayout: 'Cards'
+  smallBreakpointRowLayout: null,
+  mediumBreakpointRowLayout: null
 };
 
 export default Card;
