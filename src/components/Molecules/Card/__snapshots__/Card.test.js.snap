@@ -27,34 +27,20 @@ exports[`renders correctly 1`] = `
   padding: 2rem;
 }
 
-@media (min-width:740px) {
+@media (min-width:0px) {
 
-}
-
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
 }
 
 @media (min-width:740px) {
 
 }
 
-@media (min-width:1024px) {
-  .c1 {
-    padding: 2rem;
-  }
+@media (min-width:0px) {
 
-  .c1 h1,
-  .c1 h2,
-  .c1 h3,
-  .c1 h4,
-  .c1 h5 {
-    margin: 0.5rem 0 0.5rem;
-  }
+}
+
+@media (min-width:740px) {
+
 }
 
 <div
@@ -80,9 +66,9 @@ exports[`renders correctly 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -98,15 +84,14 @@ exports[`renders correctly 2`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
-  padding: 0.5rem;
 }
 
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5 {
-  margin-bottom: 0.5rem;
+@media (min-width:0px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 @media (min-width:740px) {
@@ -117,15 +102,7 @@ exports[`renders correctly 2`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width:0px) {
   .c1 {
     padding: 0.5rem;
   }
@@ -135,13 +112,13 @@ exports[`renders correctly 2`] = `
   .c1 h3,
   .c1 h4,
   .c1 h5 {
-    margin: 0.5rem 0 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width:740px) {
   .c1 {
-    padding: 2rem;
+    padding: 0.5rem;
   }
 
   .c1 h1,
@@ -216,16 +193,12 @@ exports[`renders correctly with no body 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:0px) {
 
 }
 
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+@media (min-width:740px) {
+
 }
 
 <div
