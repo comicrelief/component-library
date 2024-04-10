@@ -11,9 +11,10 @@ const Container = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: row;
   }
+  border: 1px solid red;
 `;
 
 const Info = styled.div`
@@ -22,7 +23,7 @@ const Info = styled.div`
   width: 100%;
   margin-bottom: ${spacing('l')};
   flex-direction: column;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     width: calc(100% / 3);
   }
 `;

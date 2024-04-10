@@ -40,6 +40,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  border: 1px solid red;
 }
 
 .c1 {
