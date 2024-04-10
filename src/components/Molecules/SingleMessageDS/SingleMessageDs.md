@@ -12,7 +12,7 @@ const Title = styled(Text)`
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin: ${spacing('md')} 0;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     margin-bottom: ${spacing('m')};
   }
 `;
@@ -57,7 +57,7 @@ import spacing from '../../../theme/shared/spacing';
 
 const Title = styled(Text)`
   margin: ${spacing('md')} 0;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     margin-bottom: ${spacing('m')};
   }
 `;
@@ -103,7 +103,7 @@ import spacing from '../../../theme/shared/spacing';
 
 const Title = styled(Text)`
   margin: ${spacing('md')} 0;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     margin-bottom: ${spacing('m')};
   }
 `;
