@@ -54,7 +54,7 @@ const PlayHolder = styled.div`
 const PlayImage = styled.img`
   position: absolute;
   margin: auto;
-  ${zIndex('')};
+  ${zIndex('medium')};
   top: 0;
   right: 0;
   bottom: 0;
@@ -103,7 +103,7 @@ const CloseButton = styled.button`
 const CTA = styled.div`
   position: absolute;
   bottom: -${spacing('m')};
-  ${zIndex('')};
+  ${zIndex('medium')};
 
   a {
     font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
