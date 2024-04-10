@@ -9,7 +9,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('tablet')} {
+  ${media('small')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -166,7 +166,7 @@ const ExtraInfo = styled.span`
 const MPTextInput = styled(TextInput)`
   input {
     border: 1px solid  ${({ theme }) => theme.color('black')};;
-    ${media('tablet')} {
+    ${media('small')} {
       max-width: none;
     }
   }
