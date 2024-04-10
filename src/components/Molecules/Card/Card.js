@@ -1,8 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
-import spacing from '../../../theme/shared/spacing';
 import { Container, Wrapper, Copy } from './Card.style';
 
 const Card = ({
