@@ -9,11 +9,11 @@ const Container = styled.div`
   position: relative;
   height: 100%;
   flex-direction: column;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: row;
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     flex-direction: column;
   }
 `;
@@ -34,11 +34,11 @@ const Copy = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: calc(200% / 3);
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     justify-content: center;
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     justify-content: normal;
   }
 `;
