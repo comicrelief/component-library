@@ -34,7 +34,7 @@ const ImageWrapper = styled.div`
     border-bottom: 2px dashed #89888b;
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     width: 50%;
     padding: 9%;
     &:after {
@@ -46,12 +46,12 @@ const ImageWrapper = styled.div`
 
 const AmountWrapper = styled.div`
   padding: ${spacing('m')} 0 0.75rem;
-  
+
   h1 {
     font-size: 34px;
     line-height: 37px;
-    
-    @media ${({ theme }) => theme.breakpoint('small')} {
+
+    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
       font-size: 40px;
       line-height: 40px;
     }
@@ -72,7 +72,7 @@ const CopyWrapper = styled.div`
 const Heading = styled(Text)`
   width: 75%;
   margin: 0 auto;
-  
+
   // To override pre-existing first-child rule
   &:first-child {
     margin-bottom: ${spacing('l')};
@@ -80,7 +80,7 @@ const Heading = styled(Text)`
     font-size: 16px;
     line-height: 19.5px;
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
       font-size: 20px;
       line-height: 24.38px;
     }
@@ -93,12 +93,12 @@ const PeopleHelpedText = styled(Text)`
   font-size: 34px;
   line-height: 37px;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     font-size: 60px;
     line-height: 60px;
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     font-size: 64px;
     line-height: 68px;
   }
@@ -110,7 +110,7 @@ const Including = styled(Text)`
   font-size: 12px;
   line-height: 14.63px;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     font-size: 17px;
     line-height: 19px;
   }
@@ -123,7 +123,7 @@ const CarouselWrapper = styled.div`
   max-width: 760px;
   padding:  ${spacing('l')};
   margin: 0 auto;
-  
+
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 
@@ -132,10 +132,10 @@ const CarouselWrapper = styled.div`
     margin: 0 auto;
     padding-top: ${spacing('l')};
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
       padding-top: ${spacing('l')};
     }
-  
+
     button.carousel__back-button,
     button.carousel__next-button {
       position: absolute;
@@ -148,7 +148,7 @@ const CarouselWrapper = styled.div`
       text-indent: -9999px;
       background-color: transparent;
       border: none;
-        
+
       &:after {
         content: "";
         position: absolute;
@@ -167,18 +167,18 @@ const CarouselWrapper = styled.div`
         }
       }
 
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      @media ${({ theme }) => theme.allBreakpoints('tablet')} {
         width: 33.3% !important;
         &:after {
           width: 100%;
         }
       }
     }
-      
+
     button.carousel__next-button {
       left: auto;
       right: 0;
-      
+
       &:before {
         transform: translate(0, -50%) rotate(-90deg);
       }
@@ -190,7 +190,7 @@ const CarouselWrapper = styled.div`
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
     }
-      
+
     .wymd-carousel {
       // Override default animations
       transition: -webkit-transform ${animationSpeed}s;
@@ -204,13 +204,13 @@ const CarouselWrapper = styled.div`
           content: none;
         }
       }
-      
+
       .carousel__slide {
         // 'Mobile'
         padding-bottom: ${props => props.mobileHeight}px !important;
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
-        @media ${({ theme }) => theme.breakpoint('small')} {
+        @media ${({ theme }) => theme.allBreakpoints('tablet')} {
 
           padding-bottom: ${props => props.tabletHeight}px !important;
 
@@ -221,7 +221,7 @@ const CarouselWrapper = styled.div`
             > div:first-child {
               transition: transform ${animationSpeed}s ease;
               transform: scale(0.5);
-              
+
               &:after {
                 transition: transform ${animationSpeed}s ease,
                 width ${animationSpeed}s ease,
@@ -288,7 +288,7 @@ const CarouselWrapper = styled.div`
         }
 
         // 'Desktop'
-        @media ${({ theme }) => theme.breakpoint('medium')} {
+        @media ${({ theme }) => theme.allBreakpoints('desktop')} {
           padding-bottom: ${props => props.desktopHeight}px !important;
 
           // First
