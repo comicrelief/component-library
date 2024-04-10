@@ -51,11 +51,11 @@ const NameWrapper = styled.div`
   flex-direction: column;
   gap: 0;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     justify-content: start;
     flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
     gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
-)}; 
+)};
 
   }
 `;
@@ -68,7 +68,7 @@ const InputField = styled(TextInput)`
     color: ${({ theme }) => theme.color('white')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     max-width: 290px;
   }
 `;
