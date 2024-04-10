@@ -37,11 +37,11 @@ const Link = styled(link)`
   color: inherit;
   width: 100%;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: row;
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     flex-direction: ${({ category }) => !category && category !== '' && 'column'};
   }
 `;
@@ -65,13 +65,13 @@ const ImageWrapper = styled.div`
       img {
         border-radius: 1rem 1rem 0 0;
       }
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      @media ${({ theme }) => theme.allBreakpoints('tablet')} {
         width: 45%;
         img {
           border-radius: 1rem 0 0 1rem;
         }
       }
-      @media ${({ theme }) => theme.breakpoint('medium')} {
+      @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         width: 100%;
         img {
           border-radius: 1rem 1rem 0 0;
@@ -88,11 +88,11 @@ const CopyWrapper = styled.div`
   ${({ category }) => !category
     && category !== ''
     && css`
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      @media ${({ theme }) => theme.allBreakpoints('tablet')} {
         width: 55%;
       }
     `};
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     width: 100%;
   }
 `;
