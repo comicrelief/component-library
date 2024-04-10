@@ -10,14 +10,14 @@ const Container = styled.div`
   flex-direction: column;
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === 'Row')
+    ${({ smallBreakpointRowLayout }) => smallBreakpointRowLayout
       && css`
         flex-direction: row;
       `}
   }
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === 'Row')
+    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
       && css`
         flex-direction: row;
       `}
@@ -38,7 +38,7 @@ const Copy = styled.div`
   padding: ${spacing('l')};
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === 'Row')
+    ${({ smallBreakpointRowLayout }) => smallBreakpointRowLayout
       && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
@@ -48,7 +48,7 @@ const Copy = styled.div`
   }
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === 'Row')
+    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
       && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
