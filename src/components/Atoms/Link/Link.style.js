@@ -21,12 +21,12 @@ const buttonStyle = () => css`
   // Override with mobile-specific colours where available:
   ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     width: auto;
   }
 
   // Reinstate general styles for 'desktop':
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
   }
 `;
@@ -53,7 +53,7 @@ export const IconWrapper = styled.span`
       top: 0;
       bottom: 0;
     `};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     width: auto;
     right: auto;
     position: relative;
