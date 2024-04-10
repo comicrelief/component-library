@@ -10,7 +10,7 @@ const MoneybuyWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         flex-direction: row;
         align-items: stretch;
     }
@@ -34,13 +34,13 @@ const Moneybuy = styled.div`
         opacity: 0.5;
     `}
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
         width: 70%;
         padding: 8px 40px;
 
     }
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         padding: 20px 14px;
         flex-direction: column;
         width: 18%;
@@ -56,13 +56,13 @@ const OrLabel = styled(Text)`
 `;
 
 const MoneybuyImage = styled.span`
-    background: center / 65% no-repeat url("${props => props.imageURL}"), 
+    background: center / 65% no-repeat url("${props => props.imageURL}"),
     ${props => props.theme.color('grey_extra_light')};
     width: 48px;
     height: 48px;
     border-radius: 48px;
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         width: 0;
         height: 0;
         padding: 30%;
@@ -75,7 +75,7 @@ const MoneybuyAmount = styled(Text)`
     margin: 0 10px;
     width: 25%;
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         margin: 8px 15px 2px;
         width: auto;
     }
@@ -85,7 +85,7 @@ const MoneybuyDescription = styled(Text)`
     text-align: left;
     width: 50%;
 
-    @media ${({ theme }) => theme.breakpoint('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
         width: 100%;
         text-align: center;
     }
