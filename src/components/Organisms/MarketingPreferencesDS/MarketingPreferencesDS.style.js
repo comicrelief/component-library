@@ -9,7 +9,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('small')} {
+  ${media('tablet')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -20,7 +20,7 @@ const TopCopyWrapper = styled.div`
   display: flex;
   width: 100%;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     padding: 10px;
   }
 `;
@@ -42,7 +42,7 @@ const FormField = styled.div`${({ theme }) => css`
   display: flex;
   flex-direction: column;
 
-  @media ${theme.breakpoint('small')} {
+  @media ${theme.allBreakpoints('tablet')} {
     width: 50%;
     padding: 10px;
   }
@@ -82,7 +82,7 @@ const CheckLabel = styled.label`${({ theme }) => css`
   align-items: center;
   font-size: ${theme.fontSize('xs')};
 
-  @media ${theme.breakpoint('small')} {
+  @media ${theme.allBreakpoints('tablet')} {
     font-size: ${theme.fontSize('s')};
   }
 `}`;
@@ -108,7 +108,7 @@ const CheckInput = styled.input`
     float: left;
     border-radius: 8px;
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
       margin-right: 15px;
     }
   }
@@ -166,7 +166,7 @@ const ExtraInfo = styled.span`
 const MPTextInput = styled(TextInput)`
   input {
     border: 1px solid  ${({ theme }) => theme.color('black')};;
-    ${media('small')} {
+    ${media('tablet')} {
       max-width: none;
     }
   }
