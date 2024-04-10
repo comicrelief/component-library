@@ -15,11 +15,11 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: ${screen.large};
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     padding: ${spacing('xl')} ${spacing('l')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     padding: ${spacing('xl')} ${spacing('xl')};
   }
 `;
