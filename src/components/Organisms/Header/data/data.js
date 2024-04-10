@@ -132,67 +132,67 @@ export default {
           }
         }
       ]
-    },
-    {
-      title: 'Shop',
-      id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
-      links: [
-        {
-          title: 'Shop',
-          path: 'https://shop.comicrelief.com',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        }
-      ]
-    },
-    {
-      title: 'External Links (menu group)',
-      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
-      links: [
-        {
-          title: 'Test allowListed external link',
-          url: 'https://www.sportrelief.com',
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        },
-        {
-          title: 'Test non-allowListed external link',
-          url: 'https://bing.com',
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        },
-        {
-          title: 'Link comp: URL and Ref',
-          url: 'https://www.google.com',
-          reference: {
-            path: 'test-ref-path-1'
-          },
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        },
-        {
-          title: 'Link comp: only Ref',
-          url: null,
-          reference: {
-            path: 'test-ref-path-2'
-          },
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        },
-        {
-          title: 'Link comp: only URL',
-          url: 'test-url',
-          reference: null,
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        }
-      ]
     }
+    // {
+    //   title: 'Shop',
+    //   id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
+    //   links: [
+    //     {
+    //       title: 'Shop',
+    //       path: 'https://shop.comicrelief.com',
+    //       internal: {
+    //         type: 'ContentfulPageLandingPage'
+    //       }
+    //     }
+    //   ]
+    // },
+    // {
+    //   title: 'External Links (menu group)',
+    //   id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
+    //   links: [
+    //     {
+    //       title: 'Test allowListed external link',
+    //       url: 'https://www.sportrelief.com',
+    //       internal: {
+    //         type: 'ContentfulComponentLink'
+    //       }
+    //     },
+    //     {
+    //       title: 'Test non-allowListed external link',
+    //       url: 'https://bing.com',
+    //       internal: {
+    //         type: 'ContentfulComponentLink'
+    //       }
+    //     },
+    //     {
+    //       title: 'Link comp: URL and Ref',
+    //       url: 'https://www.google.com',
+    //       reference: {
+    //         path: 'test-ref-path-1'
+    //       },
+    //       internal: {
+    //         type: 'ContentfulComponentLink'
+    //       }
+    //     },
+    //     {
+    //       title: 'Link comp: only Ref',
+    //       url: null,
+    //       reference: {
+    //         path: 'test-ref-path-2'
+    //       },
+    //       internal: {
+    //         type: 'ContentfulComponentLink'
+    //       }
+    //     },
+    //     {
+    //       title: 'Link comp: only URL',
+    //       url: 'test-url',
+    //       reference: null,
+    //       internal: {
+    //         type: 'ContentfulComponentLink'
+    //       }
+    //     }
+    //   ]
+    // }
   ]
 };

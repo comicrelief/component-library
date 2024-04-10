@@ -65,14 +65,19 @@ const SubNavMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
+  background-color: ${({ theme }) => theme.color('white')};
+  border-radius: 0 0 25px 25px;
+  overflow: hidden;
+
+  // DEBUG
+  border: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
 
   @media ${({ theme }) => theme.breakpoint('nav')} {
     display: none;
     display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
-    top: 90px;
+    top: 93px;
     position: absolute;
-    padding: 0 0 20px;
+    padding: 0;
     width: 250px;
     height: auto;
   }
@@ -85,12 +90,22 @@ const SubNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  span {
+    font-weight: 100;
+  }
+
   :hover {
-    background-color: ${({ theme }) => theme.color('deep_violet_light')};
+    background-color: ${({ theme }) => theme.color('grey_extra_light')};
     span {
       border-bottom: 0;
       padding-bottom: 2px;
-      color: ${({ theme }) => theme.color('white')};
+      color: ${({ theme }) => theme.color('red')};
     }
   }
 `;
@@ -99,8 +114,8 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 14px 14px 7px 21px;
-  color: ${({ theme }) => theme.color('white')};
+  padding: 20px;
+  color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
 `;
@@ -220,7 +235,7 @@ const SubSubNavMenu = styled.ul`
     // display: none;
     // display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     display: flex;
-    padding: 0 0 20px;
+    padding: 0;
     width: 250px;
     height: auto;
   }
@@ -229,7 +244,7 @@ const SubSubNavMenu = styled.ul`
 const SubSubNavMenuTitle = styled.span`
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   padding: 14px 14px 7px 21px;
-  color: ${({ theme }) => theme.color('white')};
+  color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
 `;
