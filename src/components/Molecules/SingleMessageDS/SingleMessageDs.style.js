@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: space-around;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: ${({ imageLeft }) => (imageLeft ? 'row' : 'row-reverse')};
   }
 `;
@@ -24,7 +24,7 @@ const Subtitle = styled(Text)`
 
 const Image = styled.div`
   height: 100%;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     height: 448px;
   }
   img {
@@ -38,7 +38,7 @@ const MediaLink = styled.a`
     ? `margin-right: ${spacing('m')}`
     : `margin-left: ${spacing('m')}`)};
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     margin: 0;
     height: 448px;
     flex-grow: 0;
@@ -54,7 +54,7 @@ const PlayHolder = styled.div`
 const PlayImage = styled.img`
   position: absolute;
   margin: auto;
-  ${zIndex('medium')};
+  ${zIndex('')};
   top: 0;
   right: 0;
   bottom: 0;
@@ -103,13 +103,13 @@ const CloseButton = styled.button`
 const CTA = styled.div`
   position: absolute;
   bottom: -${spacing('m')};
-  ${zIndex('medium')};
+  ${zIndex('')};
 
   a {
     font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`}
   }
 `;
@@ -133,7 +133,7 @@ const Copy = styled.div`
   )};
 
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     min-height: 448px;
     height: auto;
     width: calc(50% + 1.5rem);
@@ -149,7 +149,7 @@ const Copy = styled.div`
     : `margin: ${spacing('l')} -${spacing('m')} ${spacing('m')} 0`)};
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     padding: calc(${spacing('m')} * 2);
 
     ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
