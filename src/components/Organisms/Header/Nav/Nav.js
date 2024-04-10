@@ -17,12 +17,15 @@ import {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
+  // SubSubNavMenu,
+  // SubSubNavMenuTitle,
   ChevronWrapper,
-  SubSubNavMenu,
-  SubSubNavMenuTitle
+  NavMetaIcons,
+  DonateButtonWrapper
 } from './HeaderNav.style';
 
-const MainNav = ({ navItems }) => {
+const MainNav = ({ navItems, metaIcons, donateButton }) => {
+  console.log('NAV: metaIcons', metaIcons);
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -184,6 +187,10 @@ const MainNav = ({ navItems }) => {
             );
           })}
         </NavMenu>
+
+        <NavMetaIcons>{metaIcons}</NavMetaIcons>
+        <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
+
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
@@ -193,11 +200,16 @@ const MainNav = ({ navItems }) => {
 };
 
 MainNav.propTypes = {
-  navItems: PropTypes.objectOf(PropTypes.shape)
+  navItems: PropTypes.objectOf(PropTypes.shape),
+  metaIcons: PropTypes.node.isRequired,
+  // As this is rendered in both the Header AND the Nav, just passing
+  // the same prop through to here:
+  donateButton: PropTypes.node
 };
 
 MainNav.defaultProps = {
-  navItems: {}
+  navItems: {},
+  donateButton: null
 };
 
 export default MainNav;

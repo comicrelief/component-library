@@ -264,6 +264,44 @@ const SubSubNavMenuTitle = styled.span`
   position: relative;
 `;
 
+const NavMetaIcons = styled.div`
+  width: auto;
+  display: flex;
+  align-items: center;
+
+  > div {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+
+    > a {
+      height: inherit;
+      width: inherit;
+      margin-left: 0.5rem;
+
+      img {
+        padding: 5px;
+        height: inherit;
+        width: inherit;
+      }
+    }
+  }
+
+  // Hide these when using non-mobile nav,
+  // just leaving the Header version in place
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    display: none;
+  }
+`;
+
+const DonateButtonWrapper = styled.div`
+  // Hide the 'Nav'-embedded version of the button when the nav
+  // goes FULL DESKTOP, leaving just the 'Header'-embedded example
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    display: none;
+  }
+`;
+
 export {
   Nav,
   NavMenu,
@@ -274,5 +312,7 @@ export {
   SubNavLink,
   ChevronWrapper,
   SubSubNavMenu,
-  SubSubNavMenuTitle
+  SubSubNavMenuTitle,
+  NavMetaIcons,
+  DonateButtonWrapper
 };

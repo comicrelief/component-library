@@ -7,9 +7,9 @@ import Link from '../../Atoms/Link/Link';
 <Header
   navItems={data}
   rotate="true"
-  metaIcons={
+  donateButton={
     <>
-      <Link color="green" type="button" href="/donation">
+      <Link color="red" type="button" href="/donation">
         Donate
       </Link>
     </>
@@ -26,9 +26,9 @@ import Link from '../../Atoms/Link/Link';
 <Header
   navItems={data}
   campaign="Sport Relief"
-  metaIcons={
+  donateButton={
     <>
-      <Link color="green" type="button" href="/donation">
+      <Link color="red" type="button" href="/donation">
         Donate
       </Link>
     </>
@@ -45,9 +45,9 @@ import Link from '../../Atoms/Link/Link';
 <Header
   navItems={data}
   campaign="Pride"
-  metaIcons={
+  donateButton={
     <>
-      <Link color="green" type="button" href="/donation">
+      <Link color="red" type="button" href="/donation">
         Donate
       </Link>
     </>
@@ -87,12 +87,15 @@ const [success, setSuccess] = React.useState(false);
 <Header
   navItems={data}
   rotate="true"
-  metaIcons={
+  donateButton={
     <>
-      <Link color="green" type="button" href="/donation">
+      <Link color="red" type="button" href="/donation">
         Donate
       </Link>
-
+    </>
+  }
+  metaIcons={
+    <>
       <div>
         <Icon
           icon={searchIcon}
@@ -144,12 +147,15 @@ const [success, setSuccess] = React.useState(false);
 <Header
   navItems={data}
   rotate="true"
-  metaIcons={
+    donateButton={
     <>
-      <Link color="green" type="button" href="/donation">
+      <Link color="red" type="button" href="/donation">
         Donate
       </Link>
-
+    </>
+  }
+  metaIcons={
+    <>
       <div>
         <Icon
           icon={searchIcon}

@@ -32,6 +32,7 @@ const InnerWrapper = styled.div`
 
 const Brand = styled.div`
   ${zIndex('high')};
+  margin-right: auto;
   display: flex;
   align-items: center;
   a {
@@ -46,32 +47,43 @@ const Brand = styled.div`
       border: 0;
     }
   }
-`;
-
-const MetaIcons = styled.div`
-  width: auto;
-  display: flex;
-  align-items: center;
-
-  > div {
-    height: 35px;
-    width: auto;
-    display: inline-block;
-
-    > a {
-      height: inherit;
-      width: inherit;
-      margin-left: 0.5rem;
-
-      img {
-        padding: 5px;
-        height: inherit;
-        width: inherit;
-      }
-    }
-  }
 
   @media ${({ theme }) => theme.breakpoint('nav')} {
+    margin-right: 0
+  }
+`;
+
+const DonateButtonWrapper = styled.div`
+  // JUST KEEPING HANDY FOR NOW:
+`;
+
+const HeaderMetaIcons = styled.div`
+  // Hide these when using the mobile navigation, 
+  // now only rendered in the HeaderNav
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    width: auto;
+    align-items: center;
+
+    > div {
+      height: 35px;
+      width: auto;
+      display: inline-block;
+  
+      > a {
+        height: inherit;
+        width: inherit;
+        margin-left: 0.5rem;
+  
+        img {
+          padding: 5px;
+          height: inherit;
+          width: inherit;
+        }
+      }
+    }
+
     position: relative;
     display: flex;
     align-items: center;
@@ -81,6 +93,11 @@ const MetaIcons = styled.div`
   }
 `;
 
+const ButtonsAndIcons = styled.div`
+  margin-left: auto;
+  display: flex;
+`;
+
 export {
-  Brand, HeaderWrapper, InnerWrapper, MetaIcons
+  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapper, HeaderMetaIcons, ButtonsAndIcons
 };
