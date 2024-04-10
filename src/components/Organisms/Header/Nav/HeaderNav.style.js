@@ -16,7 +16,7 @@ const NavLinkClass = styled(Link)`
   color: ${({ theme }) => theme.color('deep_violet_dark')};
   :hover {
     border: 0;
-    color: ${({ theme }) => theme.color('deep_violet_dark')};
+    color: ${({ theme }) => theme.color('red')};
     font-weight: inherit;
   }
 `;
@@ -162,19 +162,13 @@ const NavItem = styled.li`
   ${zIndex('medium')};
   position: relative;
   font-weight: 700;
-  :hover {
-    li {
-      span {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    }
-  }
+
   li {
     span {
       border-bottom: none;
       padding-bottom: 0;
     }
+
     :hover {
       span {
         border-bottom: none;
@@ -182,9 +176,29 @@ const NavItem = styled.li`
       }
     }
   }
+
+  :hover {
+    li {
+      span {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    // Icon:
+    span > a > div {
+      transform: rotate(180deg);
+      img {
+        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(10deg);
+      }
+    }
+  
+  }
+  
   :hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
+  
   @media ${({ theme }) => theme.breakpoint('nav')} {
     margin: 0 4px;
     padding: 25px 5px;
@@ -211,6 +225,7 @@ const NavItem = styled.li`
 `;
 
 const ChevronWrapper = styled.div`
+  transition: transform 0.15s;
   width: 12px;
   padding-top: 2px;
 `;

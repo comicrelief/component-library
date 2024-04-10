@@ -104,7 +104,7 @@ const MainNav = ({ navItems }) => {
                     {hasSubMenu
                       && (
                       <ChevronWrapper>
-                        <img src={chevronDown} alt="chevron down icon" />
+                        <img src={chevronDown} alt="Chevron icon" />
                       </ChevronWrapper>
                       )
                     }
@@ -122,7 +122,7 @@ const MainNav = ({ navItems }) => {
                       {hasSubMenu
                         && (
                         <ChevronWrapper>
-                          <img src={chevronDown} alt="chevron down icon" />
+                          <img src={chevronDown} alt="Chevron icon" />
                         </ChevronWrapper>
                         )
                       }
@@ -142,32 +142,32 @@ const MainNav = ({ navItems }) => {
 
                       // If this child object has a 'links' property, it's a *nested* menu group,
                       // so handle this accordingly and iterate over it's own content:
-                      if (child.links) {
-                        console.log('child', child);
-                        return (
-                          <SubSubNavMenu>
-                            {/* The title of the whole subSUBmenu: */}
-                            <SubSubNavMenuTitle>
-                              {child.title}
-                            </SubSubNavMenuTitle>
+                      // if (child.links) {
+                      //   console.log('child', child);
+                      //   return (
+                      //     <SubSubNavMenu>
+                      //       {/* The title of the whole subSUBmenu: */}
+                      //       <SubSubNavMenuTitle>
+                      //         {child.title}
+                      //       </SubSubNavMenuTitle>
 
-                            {/* Iterate over each of the subSUBmenu items: */}
-                            { child.links.map(subChild => {
-                              console.log('boop');
-                              const thisSubChildURL = NavHelper(subChild);
+                      //       {/* Iterate over each of the subSUBmenu items: */}
+                      //       { child.links.map(subChild => {
+                      //         console.log('boop');
+                      //         const thisSubChildURL = NavHelper(subChild);
 
-                              return (
-                                <li>
-                                  <a href={thisSubChildURL}>
-                                    {subChild.title}
-                                  </a>
-                                </li>
-                              );
-                            })
-                          }
-                          </SubSubNavMenu>
-                        );
-                      }
+                      //         return (
+                      //           <li>
+                      //             <a href={thisSubChildURL}>
+                      //               {subChild.title}
+                      //             </a>
+                      //           </li>
+                      //         );
+                      //       })
+                      //     }
+                      //     </SubSubNavMenu>
+                      //   );
+                      // }
                       const thisSubUrl = NavHelper(child);
 
                       return (
