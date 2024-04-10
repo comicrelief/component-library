@@ -14,7 +14,6 @@ const Container = styled.section`
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: row;
   }
-  border: 1px solid red;
 `;
 
 const Info = styled.div`
