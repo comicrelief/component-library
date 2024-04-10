@@ -200,6 +200,40 @@ const ChevronWrapper = styled.div`
   padding-top: 2px;
 `;
 
+/**
+ * SubSUB Navigation Menu (third level)
+ */
+const SubSubNavMenu = styled.ul`
+  // display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  display: flex;
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
+
+  @media ${({ theme }) => theme.breakpoint('nav')} {
+    // display: none;
+    // display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
+    display: flex;
+    padding: 0 0 20px;
+    width: 250px;
+    height: auto;
+  }
+`;
+
+const SubSubNavMenuTitle = styled.span`
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  padding: 14px 14px 7px 21px;
+  color: ${({ theme }) => theme.color('white')};
+  height: auto;
+  position: relative;
+`;
+
 export {
   Nav,
   NavMenu,
@@ -208,5 +242,7 @@ export {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  ChevronWrapper
+  ChevronWrapper,
+  SubSubNavMenu,
+  SubSubNavMenuTitle
 };
