@@ -20,12 +20,12 @@ export const BaseText = styled.span`
     ? css`
           font-size: ${theme.fontSize('xxl')};
           line-height: 3rem;
-          @media ${theme.breakpoint('small')} {
+          @media ${theme.allBreakpoints('tablet')} {
             font-size: ${theme.fontSize('big')};
             line-height: ${theme.fontSize('big')};
             margin-bottom: 2rem;
           }
-          @media ${theme.breakpoint('medium')} {
+          @media ${theme.allBreakpoints('desktop')} {
             font-size: ${theme.fontSize('super')};
             line-height: ${theme.fontSize('super')};
             margin-bottom: 2rem;
@@ -40,7 +40,7 @@ export const BaseText = styled.span`
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
-      @media ${theme.breakpoint('small')} {
+      @media ${theme.allBreakpoints('tablet')} {
         font-size: ${theme.fontSize('m')};
       }
     `
