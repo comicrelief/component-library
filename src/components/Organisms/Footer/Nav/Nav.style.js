@@ -51,7 +51,7 @@ const SubNavMenu = styled.ul`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     max-height: none;
     height: auto;
 
@@ -73,7 +73,7 @@ const SubNavItem = styled.li`
   background-color: inherit;
   padding: 8px 0;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     height: auto;
     margin-top: 12px;
     padding: 0;
@@ -99,7 +99,7 @@ const SubNavItem = styled.li`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
   }
 `;
@@ -122,7 +122,7 @@ const NavMenu = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -143,12 +143,12 @@ const NavItem = styled.li`
   margin: 0;
   margin-bottom: 1rem;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex: 0 0 30%;
     margin: 0;
   }
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     /* Minus 9% to remove 3 x 1.5% margins from previous rule */
     flex: 0 0 calc(25% - 1rem);
     margin-right: 1rem;
@@ -169,7 +169,7 @@ const NavItem = styled.li`
     line-height: 40px;
     font-weight: 800;
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
       font-size: 20px;
       line-height: 40px;
     }
@@ -190,7 +190,7 @@ const NavItem = styled.li`
       right: -25px;
     }
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
       cursor: default;
       display: inline;
 
