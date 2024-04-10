@@ -9,11 +9,11 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     flex-direction: row;
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     flex-direction: column;
   }
 `;
@@ -21,7 +21,7 @@ const Container = styled.div`
 const Image = styled.div`
   height: auto;
   margin: 0 0 0 ${spacing('m')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     margin: 0 -${spacing('m')} 0 ${spacing('m')};
   }
 
@@ -33,10 +33,10 @@ const Image = styled.div`
 
 const MediaLink = styled.a`
   width: 100%;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     width: calc(50% + 6rem);
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     width: 100%;
   }
 `;
@@ -51,7 +51,7 @@ const Copy = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   // width: 100%;
   margin: 0 ${spacing('m')} 0 0;
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('large')} {
     height: 100%;
   }
   ${zIndex('low')};
@@ -59,12 +59,12 @@ const Copy = styled.div`
     && css`
       margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
-      @media ${({ theme }) => theme.breakpoint('small')} {
+      @media ${({ theme }) => theme.allBreakpoints('tablet')} {
         margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')};
         width: calc(50% + 6rem);
       }
 
-      @media ${({ theme }) => theme.breakpoint('large')} {
+      @media ${({ theme }) => theme.allBreakpoints('large')} {
         margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
         width: 100%;
       }
@@ -76,7 +76,7 @@ const CTA = styled.div`
   right: ${spacing('m')};
   bottom: -${spacing('m')};
   ${zIndex('medium')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
     bottom: calc(-1 * (${spacing('l')} + ${spacing('md')}));
     ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`};
   }
