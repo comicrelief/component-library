@@ -11,7 +11,7 @@ const Container = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
 `;
@@ -22,7 +22,7 @@ const Info = styled.div`
   width: 100%;
   margin-bottom: ${spacing('l')};
   flex-direction: column;
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: calc(100% / 3);
   }
 `;

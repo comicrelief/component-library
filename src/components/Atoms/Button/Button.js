@@ -23,7 +23,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: auto;
   }
 

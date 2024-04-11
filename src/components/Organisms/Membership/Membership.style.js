@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     align-items: center;
     justify-content: inherit;
     min-height: 750px;
@@ -37,7 +37,7 @@ const BgImage = styled(Picture)`
     height: 100%;
     box-shadow: inset 0px ${spacing('xl')} ${spacing('l')} -${spacing('l')};
   }
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 100%;
 
     :before {

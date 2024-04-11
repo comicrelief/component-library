@@ -8,7 +8,7 @@ import zIndex from '../../../theme/shared/zIndex';
 const MoreInfo = styled(Text)`
   ${hideVisually}
   height: auto;
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     font-size: ${({ theme }) => theme.fontSize('s')};
   }
 `;

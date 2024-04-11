@@ -20,7 +20,7 @@ const TopCopyWrapper = styled.div`
   display: flex;
   width: 100%;
 
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 10px;
   }
 `;
@@ -42,7 +42,7 @@ const FormField = styled.div`${({ theme }) => css`
   display: flex;
   flex-direction: column;
 
-  @media ${theme.allBreakpoints('tablet')} {
+  @media ${theme.allBreakpoints('M')} {
     width: 50%;
     padding: 10px;
   }
@@ -82,7 +82,7 @@ const CheckLabel = styled.label`${({ theme }) => css`
   align-items: center;
   font-size: ${theme.fontSize('xs')};
 
-  @media ${theme.allBreakpoints('tablet')} {
+  @media ${theme.allBreakpoints('M')} {
     font-size: ${theme.fontSize('s')};
   }
 `}`;
@@ -108,7 +108,7 @@ const CheckInput = styled.input`
     float: left;
     border-radius: 8px;
 
-    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-right: 15px;
     }
   }

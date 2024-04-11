@@ -11,7 +11,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
   background: #222;
   position: relative;
   padding: ${spacing('md')} 0;
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('l')};
   }
 `;
@@ -23,7 +23,7 @@ const Angle = styled.div`
   height: 50px;
   background: #222;
   margin-bottom: 1rem;
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
     height: 95px;
   }
@@ -37,7 +37,7 @@ const InnerWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${spacing('md')} ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: 0 ${spacing('md')} ${spacing('xl')};
   }
 `;
@@ -67,7 +67,7 @@ const FooterCopyright = styled.div`
     line-height: 24px;
     margin-bottom: 5px;
 
-    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       font-size: 16px;
       line-height: 27px;
     }

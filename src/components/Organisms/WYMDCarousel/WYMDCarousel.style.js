@@ -34,7 +34,7 @@ const ImageWrapper = styled.div`
     border-bottom: 2px dashed #89888b;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     padding: 9%;
     &:after {
@@ -51,7 +51,7 @@ const AmountWrapper = styled.div`
     font-size: 34px;
     line-height: 37px;
 
-    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       font-size: 40px;
       line-height: 40px;
     }
@@ -80,7 +80,7 @@ const Heading = styled(Text)`
     font-size: 16px;
     line-height: 19.5px;
 
-    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       font-size: 20px;
       line-height: 24.38px;
     }
@@ -93,12 +93,12 @@ const PeopleHelpedText = styled(Text)`
   font-size: 34px;
   line-height: 37px;
 
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     font-size: 60px;
     line-height: 60px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     font-size: 64px;
     line-height: 68px;
   }
@@ -110,7 +110,7 @@ const Including = styled(Text)`
   font-size: 12px;
   line-height: 14.63px;
 
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     font-size: 17px;
     line-height: 19px;
   }
@@ -132,7 +132,7 @@ const CarouselWrapper = styled.div`
     margin: 0 auto;
     padding-top: ${spacing('l')};
 
-    @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding-top: ${spacing('l')};
     }
 
@@ -167,7 +167,7 @@ const CarouselWrapper = styled.div`
         }
       }
 
-      @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
         width: 33.3% !important;
         &:after {
           width: 100%;
@@ -210,7 +210,7 @@ const CarouselWrapper = styled.div`
         padding-bottom: ${props => props.mobileHeight}px !important;
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
-        @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+        @media ${({ theme }) => theme.allBreakpoints('M')} {
 
           padding-bottom: ${props => props.tabletHeight}px !important;
 
@@ -288,7 +288,7 @@ const CarouselWrapper = styled.div`
         }
 
         // 'Desktop'
-        @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+        @media ${({ theme }) => theme.allBreakpoints('L')} {
           padding-bottom: ${props => props.desktopHeight}px !important;
 
           // First

@@ -16,7 +16,7 @@ const Icon = styled.svg`
   fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
 
   // Reinstate standard styles for 'desktop', adding a fallback for good measure:
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     fill: ${({ colour, theme }) => (colour ? theme.color(colour) : theme.color('white'))};
   }
 `;

@@ -8,10 +8,10 @@ const OuterWrapper = styled.div`
   background-color: ${props => props.theme.color(`${props.backgroundColour}`)};
   padding: 32px 16px;
 
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 50px;
   }
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: 64px 0;
   }
 `;
@@ -21,7 +21,7 @@ const InnerWrapper = styled.div`
   max-width: 780px;
   margin: 0 auto;
 
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     h1 {
       font-size: 48px;
       line-height: 48px;
@@ -31,7 +31,7 @@ const InnerWrapper = styled.div`
 
 const Copy = styled.div`
   position: relative;
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     p {
       font-size: 20px;
       line-height: 24.38px;
@@ -43,7 +43,7 @@ const CurrentAmountCopy = styled(Text)`
   font-weight: bold;
   margin-top: 16px;
 
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     font-size: 20px;
     line-height: 24.38px;
     margin: 24px 0 38px;
@@ -56,12 +56,12 @@ const SubmitButton = styled(Button)`
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   display: block;
 
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 70%;
     margin: 40px auto 0;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 100%;
   }
 `;

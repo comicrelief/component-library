@@ -39,7 +39,7 @@ const Button = styled.button`
   }
 
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('l')} ${spacing('lg')};
   }
 `;
@@ -56,7 +56,7 @@ const Copy = styled.div`
   visibility: none;
   transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
   padding: 0 ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('lg')};
   }
 
@@ -66,7 +66,7 @@ const Copy = styled.div`
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
     padding: 0 ${spacing('l')} ${spacing('l')};
 
-    @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: 0 ${spacing('lg')} ${spacing('l')};
     }
   `)}
