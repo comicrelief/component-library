@@ -27,7 +27,7 @@ const Button = styled.button`
   transition: bottom 0.1s linear;
   cursor: pointer;
   text-align: left;
-  
+
   &:focus,
   &:hover {
     color: inherit; // text was flashing white on focus on safari without this.
@@ -37,9 +37,9 @@ const Button = styled.button`
       animation-duration: 0.4s;
     }
   }
-  
+
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('l')} ${spacing('lg')};
   }
 `;
@@ -52,11 +52,11 @@ const Icon = styled.div`
 
 const Copy = styled.div`
   overflow: hidden;
-  height: 0; 
+  height: 0;
   visibility: none;
   transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
   padding: 0 ${spacing('l')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('lg')};
   }
 
@@ -66,7 +66,7 @@ const Copy = styled.div`
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
     padding: 0 ${spacing('l')} ${spacing('l')};
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: 0 ${spacing('lg')} ${spacing('l')};
     }
   `)}

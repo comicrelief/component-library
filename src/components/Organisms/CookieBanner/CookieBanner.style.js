@@ -20,7 +20,7 @@ const CookieText = styled(Text)`
   &:first-of-type {
     margin-bottom: ${spacing('sm')};
   }
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 75%;
     margin: ${spacing('none')} auto;
     &:first-of-type {
@@ -33,7 +33,7 @@ const AcceptCookieBtn = styled(Link)`
   padding: ${spacing('sm')} ${spacing('md')};
   display: block;
   margin-bottom: 10px;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     margin: 0 ${spacing('xsm')} 0 0;
     display: inline-block;
   }

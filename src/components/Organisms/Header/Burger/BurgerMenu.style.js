@@ -91,7 +91,7 @@ const BurgerWrapper = styled(Link)`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
   }
 `;

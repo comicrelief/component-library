@@ -33,7 +33,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
     border: 1px solid ${theme.color('grey_for_forms')};
   }
 
-  @media ${theme.breakpoint('small')} {
+  @media ${theme.allBreakpoints('M')} {
     max-width: 290px;
   }
 `}`;

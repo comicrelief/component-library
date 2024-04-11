@@ -54,7 +54,7 @@ const PlayButton = styled.button`
     left: 10px;
   `}
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     top: 20px;
     right: 20px;
 
