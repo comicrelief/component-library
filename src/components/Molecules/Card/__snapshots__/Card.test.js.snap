@@ -7,9 +7,6 @@ exports[`renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -28,11 +25,27 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (min-width:0px) {
@@ -41,6 +54,30 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
 
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1,
+  .c1 h3,
+  .c1 h4,
+  .c1 h5 {
+    margin-bottom: 1rem;
+  }
+
+  .c1 h2 {
+    margin-bottom: 2rem;
+  }
+
+  .c1 h2:first-child,
+  .c1 h3:first-child,
+  .c1 h4:first-child,
+  .c1 h5:first-child {
+    margin-top: 0;
+  }
 }
 
 <div
@@ -66,9 +103,6 @@ exports[`renders correctly 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -87,11 +121,27 @@ exports[`renders correctly 2`] = `
 }
 
 @media (min-width:0px) {
-
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (min-width:0px) {
@@ -100,6 +150,30 @@ exports[`renders correctly 2`] = `
 
 @media (min-width:740px) {
 
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1,
+  .c1 h3,
+  .c1 h4,
+  .c1 h5 {
+    margin-bottom: 1rem;
+  }
+
+  .c1 h2 {
+    margin-bottom: 2rem;
+  }
+
+  .c1 h2:first-child,
+  .c1 h3:first-child,
+  .c1 h4:first-child,
+  .c1 h5:first-child {
+    margin-top: 0;
+  }
 }
 
 <div
@@ -139,9 +213,6 @@ exports[`renders correctly with no body 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -166,11 +237,27 @@ exports[`renders correctly with no body 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 <div

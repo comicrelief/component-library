@@ -46,9 +46,8 @@ const Copy = styled.div`
   }
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) =>
-      mediumBreakpointRowLayout &&
-      css`
+    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
+      && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
           margin: ${spacing('sm')} 0 ${spacing('sm')};
