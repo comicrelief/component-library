@@ -13,20 +13,15 @@ it("renders correctly", () => {
       display: block;
       height: auto;
       margin-right: 1rem;
-      -webkit-transition: -webkit-transform;
-      -webkit-transition: transform;
-      transition: transform;
-      -webkit-animation-duration: 0.5s;
-      animation-duration: 0.5s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      -webkit-animation-name: laawda;
-      animation-name: laawda;
+      -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.41,1.64,0.41,0.8);
+      -webkit-transition: transform 0.35s cubic-bezier(0.41,1.64,0.41,0.8);
+      transition: transform 0.35s cubic-bezier(0.41,1.64,0.41,0.8);
     }
 
     .c1:hover {
-      -webkit-animation-name: dFkhNN;
-      animation-name: dFkhNN;
+      -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+      transform: rotate(-20deg);
     }
 
     .c0 {

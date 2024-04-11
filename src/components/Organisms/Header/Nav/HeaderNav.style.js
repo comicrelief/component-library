@@ -4,7 +4,6 @@ import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 import { screen } from '../../../../theme/shared/size';
-import { ChevronRotateHoverOn, ChevronRotateHoverOff } from '../../../../theme/shared/animations.style';
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -180,10 +179,7 @@ const NavItem = styled.li`
 
   // Chevron icon:
   span > a > div {
-    transition: transform;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-name: ${ChevronRotateHoverOff};
+    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
   :hover {
@@ -196,7 +192,7 @@ const NavItem = styled.li`
 
     // Icon:
     span > a > div {
-      animation-name: ${ChevronRotateHoverOn};
+      transform: rotate(-180deg);
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }
@@ -234,7 +230,6 @@ const NavItem = styled.li`
 `;
 
 const ChevronWrapper = styled.div`
-  transition: transform 0.15s;
   width: 12px;
   padding-top: 2px;
 `;

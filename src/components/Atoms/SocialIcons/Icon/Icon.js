@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
-import { NavIconHoverOn, NavIconHoverOff } from '../../../../theme/shared/animations.style';
 import Text from '../../Text/Text';
+
+const RevealTextWidth = 75;
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -14,28 +15,33 @@ const StyledLink = styled.a`
   ${({ isHeader }) => isHeader && css`
     overflow: hidden;
     padding-right: 0px;
-    animation-duration: 0.35s;
-    animation-fill-mode: both;
-    animation-name: ${NavIconHoverOff};
+    transition: padding-right 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+
     &:hover,
     &:focus {
-      animation-name: ${NavIconHoverOn};
+      padding-right: ${RevealTextWidth}px;
 
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+
+        & + span {
+          // Show the Reveal text  
+          display: block;
+        }
       }
     }
   `}
 `;
 
 const RevealText = styled(Text)`
-  width: 50px;
-  display: block;
+  width: 100%;
+  display: none;
   text-align: center;
   color: ${({ theme }) => theme.color('red')};
   position: absolute;
-  top: 10px;
-  left: 50px;
+  top: 8px;
+  left: calc(50% + 17px);
+  transform: translateX(-50%);
 `;
 
 const StyledImage = styled.img`
