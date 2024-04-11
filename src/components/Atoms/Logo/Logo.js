@@ -9,12 +9,22 @@ import srLogo from './assets/sr-logo.svg';
 import srLogoGameOn from './assets/sr-gameon-logo.svg';
 import crLogoPride from './assets/CR_LOGO_PRIDE_KEY_RGB.svg';
 
+import { LogoRotateHoverOn, LogoRotateHoverOff } from '../../../theme/shared/animations.style';
+
 const Image = styled.img`
   object-fit: cover;
   width: 100%;
   display: block;
   height: auto;
   margin-right: ${spacing('md')};
+  transition: transform;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: ${props => props.animations.LogoRotateHoverOff};
+
+  &:hover {
+    animation-name: ${props => props.animations.LogoRotateHoverOn};
+  }
 `;
 
 /**
@@ -50,6 +60,7 @@ const Logo = ({
 }) => (
   <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
     <Image
+      animations={{ LogoRotateHoverOn, LogoRotateHoverOff }}
       src={themeSwitcher(campaign)}
       alt={
           campaign === 'Comic Relief' || campaign === 'Pride'
@@ -70,8 +81,8 @@ Logo.propTypes = {
 
 Logo.defaultProps = {
   rotate: false,
-  sizeSm: '51px', // - to work with the header 75px height and 12px padding
-  sizeMd: '70px',
+  sizeSm: '51px',
+  sizeMd: '51px',
   campaign: 'Comic Relief'
 };
 

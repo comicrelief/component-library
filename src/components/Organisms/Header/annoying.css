@@ -1,0 +1,4 @@
+/* Overiding the crummy Styleguidest styles */
+.rsg--preview-35 {
+    padding: 0 !important;
+}

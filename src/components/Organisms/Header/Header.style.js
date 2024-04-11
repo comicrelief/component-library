@@ -4,6 +4,8 @@ import zIndex from '../../../theme/shared/zIndex';
 import { container } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 
+import './annoying.css';
+
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`

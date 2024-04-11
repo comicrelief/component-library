@@ -16,7 +16,7 @@ const Header = ({
     <HeaderWrapper navItems {...rest}>
       <InnerWrapper>
         <Brand>
-          <Logos campaign={campaign} />
+          <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
         </Brand>
         <MainNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
         <ButtonsAndIcons>

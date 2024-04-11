@@ -4,6 +4,7 @@ import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 import { screen } from '../../../../theme/shared/size';
+import { ChevronRotateHoverOn, ChevronRotateHoverOff } from '../../../../theme/shared/animations.style';
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -78,7 +79,7 @@ const SubNavMenu = styled.ul`
     top: 93px;
     position: absolute;
     padding: 0;
-    width: 250px;
+    width: 300px;
     height: auto;
   }
 `;
@@ -177,6 +178,14 @@ const NavItem = styled.li`
     }
   }
 
+  // Chevron icon:
+  span > a > div {
+    transition: transform;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: ${ChevronRotateHoverOff};
+  }
+
   :hover {
     li {
       span {
@@ -187,7 +196,7 @@ const NavItem = styled.li`
 
     // Icon:
     span > a > div {
-      transform: rotate(180deg);
+      animation-name: ${ChevronRotateHoverOn};
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(10deg);
       }
