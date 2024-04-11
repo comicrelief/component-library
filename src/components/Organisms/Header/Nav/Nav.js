@@ -188,7 +188,7 @@ const MainNav = ({ navItems, metaIcons, donateButton }) => {
           })}
         </NavMenu>
 
-        <NavMetaIcons>{metaIcons}</NavMetaIcons>
+        <NavMetaIcons isHeader>{metaIcons}</NavMetaIcons>
         <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
 
       </Nav>

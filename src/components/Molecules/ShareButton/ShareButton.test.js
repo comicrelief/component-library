@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import ShareButton from './ShareButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import ShareButton from "./ShareButton";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -12,13 +12,7 @@ it('renders correctly', () => {
       text-decoration: none;
       cursor: pointer;
       display: block;
-      -webkit-transition: opacity 0.2s;
-      transition: opacity 0.2s;
-    }
-
-    .c4:hover,
-    .c4:focus {
-      opacity: 0.6;
+      position: relative;
     }
 
     .c5 {

@@ -20,7 +20,7 @@ const Header = ({
         </Brand>
         <MainNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
         <ButtonsAndIcons>
-          <HeaderMetaIcons>{metaIcons}</HeaderMetaIcons>
+          <HeaderMetaIcons isHeader>{metaIcons}</HeaderMetaIcons>
           <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
         </ButtonsAndIcons>
 

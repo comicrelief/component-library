@@ -13,6 +13,20 @@ it("renders correctly", () => {
       display: block;
       height: auto;
       margin-right: 1rem;
+      -webkit-transition: -webkit-transform;
+      -webkit-transition: transform;
+      transition: transform;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: laawda;
+      animation-name: laawda;
+    }
+
+    .c1:hover {
+      -webkit-animation-name: dFkhNN;
+      animation-name: dFkhNN;
     }
 
     .c0 {
@@ -27,7 +41,7 @@ it("renders correctly", () => {
 
     @media (min-width:1150px) {
       .c0 {
-        width: 70px;
+        width: 51px;
       }
     }
 

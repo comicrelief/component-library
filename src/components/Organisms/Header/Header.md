@@ -105,6 +105,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          isHeader
         />
       </div>
     </>
@@ -159,12 +160,13 @@ const [success, setSuccess] = React.useState(false);
       <div>
         <Icon
           icon={payinIcon}
-          title="Payin"
+          title="Pay in"
           target="_blank"
           role="button"
           href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
           brand="comicrelief"
           tabIndex="0"
+          isHeader
         />
       </div>
 
@@ -177,6 +179,7 @@ const [success, setSuccess] = React.useState(false);
           href="https://shop.comicrelief.com"
           brand="comicrelief"
           tabIndex="0"
+          isHeader
         />
       </div>
 
@@ -189,6 +192,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          isHeader
         />
       </div>
     </>
