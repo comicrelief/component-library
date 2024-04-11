@@ -32,6 +32,25 @@ const ChevronRotateHoverOff = keyframes`
     100% { transform: rotate(0); }
 `;
 
+const NavIconHoverOn = keyframes`
+    0% { padding-right: 0px; }
+    50%{ padding-right: 100px; }
+    75%{ padding-right: 97px; }
+    100%{ padding-right: 100px; }
+`;
+
+const NavIconHoverOff = keyframes`
+    0% { padding-right: 100px; }
+    50%{ padding-right: 0px; }
+    75%{ padding-right: 3px; }
+    100%{ padding-right: 0px; }
+`;
+
 export {
-  LogoRotateHoverOn, LogoRotateHoverOff, ChevronRotateHoverOn, ChevronRotateHoverOff
+  LogoRotateHoverOn,
+  LogoRotateHoverOff,
+  ChevronRotateHoverOn,
+  ChevronRotateHoverOff,
+  NavIconHoverOn,
+  NavIconHoverOff
 };

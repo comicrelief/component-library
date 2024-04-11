@@ -198,7 +198,7 @@ const NavItem = styled.li`
     span > a > div {
       animation-name: ${ChevronRotateHoverOn};
       img {
-        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(10deg);
+        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }
     }
   

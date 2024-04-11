@@ -2,17 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import { NavIconHoverOn, NavIconHoverOff } from '../../../../theme/shared/animations.style';
+import Text from '../../Text/Text';
 
 const StyledLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   display: block;
-  transition: opacity 0.2s;
+  position: relative;
+  overflow: hidden;
+  padding-right: 0px;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  animation-name: ${NavIconHoverOff};
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    animation-name: ${NavIconHoverOn};
+
+    img {
+      filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+    }
   }
+`;
+
+const RevealText = styled(Text)`
+  width: 50px;
+  display: block;
+  text-align: center;
+  color: ${({ theme }) => theme.color('red')};
+  position: absolute;
+  top: 10px;
+  left: 50px;
 `;
 
 const StyledImage = styled.img`
@@ -32,9 +53,14 @@ const Icon = ({
     {...restProps}
     title={title}
     rel="noopener noreferrer"
+    /* TODO: needs to be dynamic; it's using the same for every icon currently... */
     data-test="header-esu-icon"
   >
     <StyledImage src={icon} alt={brand} />
+
+    <RevealText>{title}</RevealText>
+
+    {/* This is terrible and should be changed */}
     {title !== 'Sign up for emails' && (
       <HelperText>(opens in new window)</HelperText>
     )}

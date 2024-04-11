@@ -76,7 +76,7 @@ const HeaderMetaIcons = styled.div`
       > a {
         height: inherit;
         width: inherit;
-        margin-left: 0.5rem;
+        margin-right: 20px;
   
         img {
           padding: 5px;

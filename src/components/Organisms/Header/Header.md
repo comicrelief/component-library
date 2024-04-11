@@ -158,15 +158,16 @@ const [success, setSuccess] = React.useState(false);
     <>
       <div>
         <Icon
-          icon={searchIcon}
-          title="Search"
-          target="self"
+          icon={payinIcon}
+          title="Payin"
+          target="_blank"
           role="button"
-          href="/search"
+          href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
           brand="comicrelief"
           tabIndex="0"
         />
       </div>
+
       <div>
         <Icon
           icon={shopIcon}
@@ -178,13 +179,14 @@ const [success, setSuccess] = React.useState(false);
           tabIndex="0"
         />
       </div>
+
       <div>
         <Icon
-          icon={payinIcon}
-          title="Payin"
-          target="_blank"
+          icon={searchIcon}
+          title="Search"
+          target="self"
           role="button"
-          href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
+          href="/search"
           brand="comicrelief"
           tabIndex="0"
         />
