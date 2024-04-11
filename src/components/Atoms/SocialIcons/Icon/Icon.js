@@ -34,14 +34,22 @@ const StyledLink = styled.a`
 `;
 
 const RevealText = styled(Text)`
-  width: 100%;
-  display: none;
-  text-align: center;
-  color: ${({ theme }) => theme.color('red')};
+  width: auto;
+  color: ${({ theme }) => theme.color('black')};
   position: absolute;
-  top: 8px;
-  left: calc(50% + 17px);
-  transform: translateX(-50%);
+  top: 19px;
+  left: 55px;
+
+  @media ${({ theme }) => theme.breakpoint('medium')} {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 8px;
+    left: calc(50% + 17px);
+    transform: translateX(-50%);
+    display: none;
+    color: ${({ theme }) => theme.color('red')};
+  }
 `;
 
 const StyledImage = styled.img`

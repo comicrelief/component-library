@@ -8,9 +8,9 @@ import { screen } from '../../../../theme/shared/size';
 const NavLinkClass = styled(Link)`
   display: inline-block;
   border: 0;
-  padding: 17px 20px;
+  padding: 25px;
   line-height: 1.3rem;
-  height: 46px;
+  height: auto;
   font-weight: 700;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet_dark')};
@@ -201,7 +201,7 @@ const NavItem = styled.li`
   }
   
   :hover {
-    background-color: ${({ theme }) => theme.color('teal_light')};
+    // background-color: ${({ theme }) => theme.color('teal_light')};
   }
   
   @media ${({ theme }) => theme.breakpoint('nav')} {
@@ -268,25 +268,27 @@ const SubSubNavMenuTitle = styled.span`
   position: relative;
 `;
 
+// This represents the 'desktop'/non-mobile nav icons:
 const NavMetaIcons = styled.div`
   width: auto;
   display: flex;
   align-items: center;
+  flex-direction: column;
 
   > div {
-    height: 35px;
-    width: auto;
-    display: inline-block;
+    height: 55px;
+    width: 100%;
+    display: flex;
 
     > a {
       height: inherit;
-      width: inherit;
-      margin-left: 0.5rem;
+      width: 100%;
+      padding: 10px;
 
       img {
         padding: 5px;
-        height: inherit;
-        width: inherit;
+        height: 35px;
+        width: 35px;
       }
     }
   }
