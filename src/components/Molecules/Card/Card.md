@@ -29,8 +29,8 @@ import Link from '../../Atoms/Link/Link';
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={true}
 >
-  <Text tag="h2" color="black">
-    TITLE
+  <Text tag="h3" color="purple" size="xl">
+    Title
   </Text>
   <Text tag="p">
     Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.

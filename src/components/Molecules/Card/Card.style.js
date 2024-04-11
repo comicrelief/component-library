@@ -4,21 +4,22 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
-  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS */
+
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointRowLayout }) => smallBreakpointRowLayout
-      && css`
-        flex-direction: row;
-      `}
+    flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
   }
-  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
+
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
-      && css`
-        flex-direction: row;
-      `}
+    flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
   }
+
+  /* Set desktop and up to normal column view */
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    flex-direction: column;
+  }
+
   height: 100%;
   border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
   overflow: hidden;
@@ -35,23 +36,40 @@ const Copy = styled.div`
   padding: ${spacing('l')};
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
-    ${({ smallBreakpointRowLayout }) => smallBreakpointRowLayout
-      && css`
+    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
+      === true) && css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
-         margin-bottom: 0.5rem;
+          margin: ${spacing('sm')} 0 ${spacing('sm')};
         }
       `}
   }
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
   @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
-      && css`
+    ${({ mediumBreakpointRowLayout }) =>
+      mediumBreakpointRowLayout &&
+      css`
         padding: ${spacing('sm')};
         h1, h2, h3, h4, h5 {
-         margin: 0.5rem 0 0.5rem;
+          margin: ${spacing('sm')} 0 ${spacing('sm')};
         }
       `}
+  }
+  /* Set desktop view to original layout / spacing */
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    padding: ${spacing('l')};
+    h1, h3, h4, h5 {
+      margin-bottom: ${spacing('md')};
+    }
+    h2 {
+      margin-bottom: ${spacing('l')};
+    }
+    h2:first-child,
+    h3:first-child,
+    h4:first-child,
+    h5:first-child {
+      margin-top: 0;
+    }
   }
 `;
 
