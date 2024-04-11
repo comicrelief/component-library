@@ -38,7 +38,7 @@ const Nav = styled.nav`
     left: inherit;
   }
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     ${zIndex('medium')};
     position: relative;
     top: 0;
@@ -72,7 +72,7 @@ const SubNavMenu = styled.ul`
   // DEBUG
   border: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
     display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
     top: 93px;
@@ -129,7 +129,7 @@ const NavMenu = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -146,7 +146,7 @@ const NavLink = styled(NavLinkClass)`
   display: flex;
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     padding: 10px 0;
     height: auto;
     :focus + ${SubNavMenu} {
@@ -204,7 +204,7 @@ const NavItem = styled.li`
     // background-color: ${({ theme }) => theme.color('teal_light')};
   }
   
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 4px;
     padding: 25px 5px;
 

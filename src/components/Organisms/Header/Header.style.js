@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     height: auto;
   }
 `;
@@ -27,7 +27,7 @@ const InnerWrapper = styled.div`
   cursor: pointer;
   max-width: ${container.large};
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
   }
 `;
@@ -50,7 +50,7 @@ const Brand = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin-right: 0
   }
 `;
@@ -64,7 +64,7 @@ const HeaderMetaIcons = styled.div`
   // now only rendered in the HeaderNav
   display: none;
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     width: auto;
     align-items: center;
 

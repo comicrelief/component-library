@@ -32,7 +32,7 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
   padding: ${spacing('l')};
-  
+
   ${media('small')} {
     ${({ vhFull, fullImage }) => (vhFull || fullImage
     ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
@@ -61,12 +61,12 @@ const Copy = styled.div`
     `};
 
   ${props => (props.hasImage
-    ? css`@media ${({ theme }) => theme.breakpoint('small')} {
+    ? css`@media ${({ theme }) => theme.allBreakpoints('M')} {
             width: 50%;
           }
         `
     : css`
-          @media ${({ theme }) => theme.breakpoint('small')} {
+          @media ${({ theme }) => theme.allBreakpoints('M')} {
             width: 100%;
             max-width ${container.small};
             padding: ${spacing('xl')};
@@ -77,13 +77,13 @@ const Copy = styled.div`
 
   ${media('medium')} {
     ${({ paddingOption }) => handlePadding(paddingOption)};
-  }      
+  }
 `;
 
 const Media = styled.div`
   width: 100%;
   ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     height: auto;
     width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
     ${({ fullImage }) => (fullImage ? 'min-height: 500px;' : null)};
@@ -129,7 +129,7 @@ const PlayButton = styled.button`
 `;
 
 const Image = styled.div`
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     img {
       position: ${({ fullImage, vhFull }) => (fullImage || vhFull ? 'absolute' : null)};
     }

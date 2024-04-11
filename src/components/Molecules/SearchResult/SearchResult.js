@@ -24,7 +24,7 @@ const Item = styled(Link)`
   text-decoration: none;
   color: inherit;
   width: 100%;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
   :hover {
@@ -35,10 +35,10 @@ const Item = styled(Link)`
 
 const ImageWrapper = styled.div`
   height: auto;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ smallImageWidth }) => smallImageWidth};
   }
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
     width: ${({ largeImageWidth }) => largeImageWidth};
   }
 `;

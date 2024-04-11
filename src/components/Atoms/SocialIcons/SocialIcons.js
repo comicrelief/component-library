@@ -14,7 +14,7 @@ const StyledList = styled.ul`
   padding: 0;
   align-items: center;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     justify-content: start;
   }
 `;
@@ -22,7 +22,7 @@ const StyledList = styled.ul`
 const StyledItem = styled.li`
   width: 32px;
   margin-right: ${spacing('m')};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 48px;
   }
 `;
