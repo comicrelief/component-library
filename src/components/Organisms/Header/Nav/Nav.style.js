@@ -32,7 +32,7 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('higher')};
 
-  @media (min-width: ${screen.tablet}) {
+  @media (min-width: ${screen.small}) {
     width: 50%;
     right: 0;
     left: inherit;
