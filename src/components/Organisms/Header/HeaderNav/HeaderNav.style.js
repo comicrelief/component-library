@@ -190,14 +190,14 @@ const NavItem = styled.li`
       }
     }
 
-    // Icon:
+    // Chevron icon:
     span > a > div {
       transform: rotate(-180deg);
       img {
+        // Use fancy filter to colour 'img' version of SVG
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }
     }
-  
   }
   
   :hover {
@@ -230,43 +230,54 @@ const NavItem = styled.li`
 `;
 
 const ChevronWrapper = styled.div`
-  width: 12px;
-  padding-top: 2px;
+  width: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 12px;
+    padding-top: 2px;
+  }
+
 `;
 
 /**
  * SubSUB Navigation Menu (third level)
  */
-const SubSubNavMenu = styled.ul`
-  // display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
-  display: flex;
-  padding: 0;
-  position: relative;
-  list-style: none outside;
-  left: 0;
-  top: 0;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
+// const SubSubNavMenu = styled.ul`
+//   // display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+//   display: flex;
+//   padding: 0;
+//   position: relative;
+//   list-style: none outside;
+//   left: 0;
+//   top: 0;
+//   flex-direction: column;
+//   justify-content: left;
+//   align-items: left;
+//   background-color: ${({ theme }) => theme.color('deep_violet_dark')};
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
-    // display: none;
-    // display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
-    display: flex;
-    padding: 0;
-    width: 250px;
-    height: auto;
-  }
-`;
+//   @media ${({ theme }) => theme.breakpoint('nav')} {
+//     // display: none;
+//     // display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
+//     display: flex;
+//     padding: 0;
+//     width: 250px;
+//     height: auto;
+//   }
+// `;
 
-const SubSubNavMenuTitle = styled.span`
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  padding: 14px 14px 7px 21px;
-  color: ${({ theme }) => theme.color('black')};
-  height: auto;
-  position: relative;
-`;
+// const SubSubNavMenuTitle = styled.span`
+//   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+//   padding: 14px 14px 7px 21px;
+//   color: ${({ theme }) => theme.color('black')};
+//   height: auto;
+//   position: relative;
+// `;
 
 // This represents the 'desktop'/non-mobile nav icons:
 const NavMetaIcons = styled.div`
@@ -317,8 +328,8 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
-  SubSubNavMenu,
-  SubSubNavMenuTitle,
+  // SubSubNavMenu,
+  // SubSubNavMenuTitle,
   NavMetaIcons,
   DonateButtonWrapper
 };

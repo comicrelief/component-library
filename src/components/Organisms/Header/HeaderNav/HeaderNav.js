@@ -7,6 +7,7 @@ import { sizes } from '../../../../theme/shared/breakpoint';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
+// TO-DO: this needs to be replaced with the new asset
 import chevronDown from './chevron-down.svg';
 
 import {
@@ -24,7 +25,7 @@ import {
   DonateButtonWrapper
 } from './HeaderNav.style';
 
-const MainNav = ({ navItems, metaIcons, donateButton }) => {
+const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   console.log('NAV: metaIcons', metaIcons);
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -199,7 +200,7 @@ const MainNav = ({ navItems, metaIcons, donateButton }) => {
   );
 };
 
-MainNav.propTypes = {
+HeaderNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   metaIcons: PropTypes.node.isRequired,
   // As this is rendered in both the Header AND the Nav, just passing
@@ -207,9 +208,9 @@ MainNav.propTypes = {
   donateButton: PropTypes.node
 };
 
-MainNav.defaultProps = {
+HeaderNav.defaultProps = {
   navItems: {},
   donateButton: null
 };
 
-export default MainNav;
+export default HeaderNav;

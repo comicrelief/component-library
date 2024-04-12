@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Logos from '../../Molecules/Logos/Logos';
-import MainNav from './Nav/Nav';
+import HeaderNav from './HeaderNav/HeaderNav';
 import {
   Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapper, HeaderMetaIcons, ButtonsAndIcons
 } from './Header.style';
@@ -18,7 +18,7 @@ const Header = ({
         <Brand>
           <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
         </Brand>
-        <MainNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
+        <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
         <ButtonsAndIcons>
           <HeaderMetaIcons isHeader>{metaIcons}</HeaderMetaIcons>
           <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
