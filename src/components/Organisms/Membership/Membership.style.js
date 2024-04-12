@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`

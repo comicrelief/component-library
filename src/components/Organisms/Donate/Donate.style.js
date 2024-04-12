@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 import handlePadding from '../../../utils/_utils';
