@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
-import { container } from '../../../theme/shared/size';
+import container from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 
 const HeaderWrapper = styled.header.attrs(() => ({
