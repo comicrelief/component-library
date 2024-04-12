@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
-import { media } from '../../../../theme/shared/size';
 
 const MoneyBuyButton = styled(Input)`
   display: block;

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
-import { media } from '../../../../theme/shared/size';
 import CloseCross from '../assets/close.svg';
 
 const closeDuration = 0.6;

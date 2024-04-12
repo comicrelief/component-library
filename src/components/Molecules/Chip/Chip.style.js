@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
-import media from '../../../theme/shared/breakpoint';
 import redShed from './assets/CR_RedShed.svg';
 import howWeFund from './assets/CR_Funding.svg';
 import mentalHealth from './assets/CR_MentalHealth.svg';

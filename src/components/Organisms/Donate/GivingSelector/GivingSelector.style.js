@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import { media } from '../../../../theme/shared/size';
 import spacing from '../../../../theme/shared/spacing';
 import zIndex from '../../../../theme/shared/zIndex';
 import hideVisually from '../../../../theme/shared/hideVisually';

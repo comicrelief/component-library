@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import checkBoxIcon from './assets/CR_Tick_black.svg';
 import TextInput from './_TextInput';
 

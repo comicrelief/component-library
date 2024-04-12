@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
-import { media } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 
 const Wrapper = styled.div`
