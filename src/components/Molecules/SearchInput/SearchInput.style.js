@@ -39,7 +39,7 @@ const SearchField = styled(Input)`
     :focus {
       border: 0;
     }
-    ${media('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       height: 100px;
       font-size: ${({ theme }) => theme.fontSize('xxl')};
     }

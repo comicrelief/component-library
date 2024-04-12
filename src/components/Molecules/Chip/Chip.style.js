@@ -56,7 +56,7 @@ const CheckLabel = styled.label`
   padding-right: 1rem;
   flex: 0 0 auto;
   position: relative;
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     margin: ${spacing('md')} ${spacing('md')} 0 0;
   }
 `;

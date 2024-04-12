@@ -46,7 +46,7 @@ const StyledPopUp = styled.div`
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
