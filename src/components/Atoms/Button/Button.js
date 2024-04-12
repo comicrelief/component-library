@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import media from '../../../theme/shared/breakpoint';
 
 const StyledButton = styled.button`
   display: inline-flex;
