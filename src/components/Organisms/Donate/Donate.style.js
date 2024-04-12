@@ -15,7 +15,7 @@ const Container = styled.div`
   justify-content: center;
   height: auto;
   background-color: ${({ theme, mobileBackgroundColor }) => theme.color(mobileBackgroundColor)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
     padding: ${spacing('xl')} ${spacing('md')};
   }
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('xl')} 0;
     ${({ paddingOption }) => handlePadding(paddingOption)};
@@ -71,7 +71,7 @@ const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     padding: ${spacing('xl')};
     align-items: center;
@@ -86,7 +86,7 @@ const TitleWrapperInner = styled.div`
 const FormWrapper = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
   }
 `;

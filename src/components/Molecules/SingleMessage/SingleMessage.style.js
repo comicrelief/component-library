@@ -75,7 +75,7 @@ const Copy = styled.div`
           padding: ${spacing('md')};
         `)};
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     ${({ paddingOption }) => handlePadding(paddingOption)};
   }
 `;

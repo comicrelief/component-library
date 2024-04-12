@@ -27,7 +27,7 @@ const StyledButton = styled.button`
     width: auto;
   }
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: auto;
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};
