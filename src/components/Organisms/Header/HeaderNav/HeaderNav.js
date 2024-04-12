@@ -1,9 +1,10 @@
+/* eslint-disable no-trailing-spaces */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
-import { sizes } from '../../../../theme/shared/breakpoint';
+import { sizes } from '../../../../theme/shared/allBreakpoints';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
@@ -26,7 +27,6 @@ import {
 } from './HeaderNav.style';
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
-  console.log('NAV: metaIcons', metaIcons);
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -46,13 +46,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   // Handle tab key on menu nav
   const keyPressed = item => () => {
-    window.onkeyup = e => {
-      if (
-        e.target.querySelector('span')
-        && e.target.querySelector('span').innerText === item
-      ) {
+    window.onkeyup = e => {      
+      // If the currently tabbed-to element is our item, do something
+      if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
+        // I have no idea what this is supposed to do; it doesn't EVER get called?
+        console.log('hello??');
         setIsKeyPressed({ [item]: !isKeyPressed[item] });
       } else if (!e.target.querySelector('span')) {
+        // console.log('BBB: onkeyup listener -  ITEM reset');
         setIsKeyPressed({});
       }
     };
@@ -60,13 +61,15 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   useEffect(() => {
     const width = window.innerWidth;
-    setIsMobile(width < sizes.nav);
+    setIsMobile(width < sizes.Nav);
     window.addEventListener('onkeyup', setIsKeyPressed);
 
     return () => {
       window.removeEventListener('onkeyup', setIsKeyPressed);
     };
   }, []);
+
+  console.log('isMobile', isMobile);
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
@@ -86,6 +89,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
+
             return (
               <NavItem
                 role="none"
@@ -141,8 +145,22 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >
                     {group.links.map((child, childIndex) => {
-                      // Skip the first item, as we've already rendered it above as our main item:
-                      if (childIndex === 0) return null;
+                      const thisSubUrl = NavHelper(child);
+
+                      // Only render our 'cloned' first item for the mobile nav:
+                      if (childIndex === 0) {
+                        return isMobile ? (
+                          <SubNavItem role="none" key={thisSubUrl}>
+                            <SubNavLink
+                              href={thisSubUrl}
+                              inline
+                              role="menuitem"
+                            >
+                              <Text>{child.title}</Text>
+                            </SubNavLink>
+                          </SubNavItem>
+                        ) : null;
+                      }       
 
                       // If this child object has a 'links' property, it's a *nested* menu group,
                       // so handle this accordingly and iterate over it's own content:
@@ -172,7 +190,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       //     </SubSubNavMenu>
                       //   );
                       // }
-                      const thisSubUrl = NavHelper(child);
 
                       return (
                         <SubNavItem key={thisSubUrl}>
