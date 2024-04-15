@@ -44,6 +44,15 @@ const Copy = styled.div`
         }
       `}
   }
+  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
+      === true) && css`
+        padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+        h1, h2, h3, h4, h5 {
+          margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+        }
+      `}
+  }
 `;
 
 export { Container, Wrapper, Copy };
