@@ -25,6 +25,7 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, otherwise column view default */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
