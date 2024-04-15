@@ -117,19 +117,6 @@ it("renders correctly", () => {
     }
 
     @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-      .c3 {
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    @media (min-width:740px) {
       .c6 {
         font-size: 1rem;
       }

@@ -65,18 +65,18 @@ exports[`renders correctly 1`] = `
   .c1 h3,
   .c1 h4,
   .c1 h5 {
-    margin-bottom: 1rem;
+    margin: inherit;
   }
 
   .c1 h2 {
-    margin-bottom: 2rem;
+    margin: inherit;
   }
 
   .c1 h2:first-child,
   .c1 h3:first-child,
   .c1 h4:first-child,
   .c1 h5:first-child {
-    margin-top: 0;
+    margin: inherit;
   }
 }
 
@@ -161,18 +161,18 @@ exports[`renders correctly 2`] = `
   .c1 h3,
   .c1 h4,
   .c1 h5 {
-    margin-bottom: 1rem;
+    margin: inherit;
   }
 
   .c1 h2 {
-    margin-bottom: 2rem;
+    margin: inherit;
   }
 
   .c1 h2:first-child,
   .c1 h3:first-child,
   .c1 h4:first-child,
   .c1 h5:first-child {
-    margin-top: 0;
+    margin: inherit;
   }
 }
 
@@ -221,19 +221,6 @@ exports[`renders correctly with no body 1`] = `
 
 .c1 {
   height: auto;
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-  .c3 {
-    padding: 0;
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media (min-width:0px) {

@@ -27,19 +27,6 @@ it("renders correctly", () => {
       object-fit: none;
     }
 
-    @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-      .c1 {
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-        height: auto;
-      }
-    }
-
     <div
       className="c0 lazyload"
       height="auto"
@@ -86,19 +73,6 @@ it("renders correctly with custom props", () => {
       height: 100px;
       display: block;
       object-fit: cover;
-    }
-
-    @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-      .c1 {
-        padding: 0;
-        border-radius: 0;
-        width: 200px;
-        height: 100px;
-      }
     }
 
     <div

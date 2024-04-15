@@ -331,19 +331,6 @@ it("renders correctly", () => {
     }
 
     @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-      .c3 {
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    @media (min-width:740px) {
       .c19 {
         max-width: 290px;
       }
