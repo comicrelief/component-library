@@ -58,16 +58,16 @@ const Copy = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('desktop')} {
     padding: ${spacing('l')};
     h1, h3, h4, h5 {
-      margin-bottom: ${spacing('md')};
+      margin: inherit;
     }
     h2 {
-      margin-bottom: ${spacing('l')};
+      margin: inherit;
     }
     h2:first-child,
     h3:first-child,
     h4:first-child,
     h5:first-child {
-      margin-top: 0;
+      margin: inherit;
     }
   }
 `;
