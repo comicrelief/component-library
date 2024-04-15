@@ -1,4 +1,3 @@
-/* eslint-disable no-trailing-spaces */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -26,6 +25,9 @@ import {
   DonateButtonWrapper
 } from './HeaderNav.style';
 
+const characterLimit = 50;
+let characterCount = 0;
+
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -33,6 +35,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
+  // const [isMoreNav, setIsMoreNav] = useState(null);
+
+  // const [groupLimit, setGroupLimit] = useState(null);
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
@@ -46,7 +51,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   // Handle tab key on menu nav
   const keyPressed = item => () => {
-    window.onkeyup = e => {      
+    window.onkeyup = e => {
       // If the currently tabbed-to element is our item, do something
       if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
         // I have no idea what this is supposed to do; it doesn't EVER get called?
@@ -69,7 +74,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     };
   }, []);
 
-  console.log('isMobile', isMobile);
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
@@ -80,6 +84,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">
           {menuGroups.map((group, index) => {
+            let dontRender = false;
             /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
 
@@ -90,6 +95,16 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
+            /* MORE NAV functionality : */
+
+            // Keep track of how many characters our nav has in total:
+            characterCount += thisFirstChild.title.length;
+
+            // If we've gone over our limit, stop rendering
+            dontRender = characterCount > characterLimit;
+
+            console.log('dontRender', dontRender);
+
             return (
               <NavItem
                 role="none"
@@ -97,27 +112,35 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 index={index}
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
-                {isMobile ? (
-                  <NavLink
-                    href={hasPopUp ? '#' : thisUrl}
-                    inline
-                    rel={relNoopener}
-                    aria-expanded={!!isSubMenuOpen[group.id]}
-                    aria-haspopup={hasPopUp}
-                    onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
-                    onKeyUp={keyPressed(group.title)}
-                    role="button"
-                  >
-                    {thisFirstChild.title}
-                    {hasSubMenu
-                      && (
-                      <ChevronWrapper>
-                        <img src={chevronDown} alt="Chevron icon" />
-                      </ChevronWrapper>
-                      )
-                    }
-                  </NavLink>
-                ) : (
+
+                {/* Mobile/tablet nav */}
+                {isMobile && (
+                <NavLink
+                  href={hasPopUp ? '#' : thisUrl}
+                  inline
+                  rel={relNoopener}
+                  aria-expanded={!!isSubMenuOpen[group.id]}
+                  aria-haspopup={hasPopUp}
+                  onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                  onKeyUp={keyPressed(group.title)}
+                  role="button"
+                >
+                  {thisFirstChild.title}
+                  {hasSubMenu && (
+                    <ChevronWrapper>
+                      <img src={chevronDown} alt="Chevron icon" />
+                    </ChevronWrapper>
+                  )}
+                </NavLink>
+                )}
+
+                {/* {!dontRender && (
+                  <p>please do render</p>
+                )} */}
+
+                {/* Desktop Nav */}
+                {(!isMobile && !dontRender) && (
+
                   <Text>
                     <NavLink
                       href={thisUrl}
@@ -128,15 +151,16 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     >
                       {thisFirstChild.title}
                       {hasSubMenu
-                        && (
-                        <ChevronWrapper>
-                          <img src={chevronDown} alt="Chevron icon" />
-                        </ChevronWrapper>
-                        )
-                      }
+                      && (
+                      <ChevronWrapper>
+                        <img src={chevronDown} alt="Chevron icon" />
+                      </ChevronWrapper>
+                      )
+                    }
                     </NavLink>
                   </Text>
                 )}
+
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {hasSubMenu && (
                   <SubNavMenu
@@ -160,7 +184,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                             </SubNavLink>
                           </SubNavItem>
                         ) : null;
-                      }       
+                      }
 
                       // If this child object has a 'links' property, it's a *nested* menu group,
                       // so handle this accordingly and iterate over it's own content:

@@ -9,25 +9,21 @@ import {
 
 const Header = ({
   navItems, metaIcons, campaign, donateButton, ...rest
-}) => {
-  console.log('HEADER: metaIcons', metaIcons);
+}) => (
+  <HeaderWrapper navItems {...rest}>
+    <InnerWrapper>
+      <Brand>
+        <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
+      </Brand>
+      <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
+      <ButtonsAndIcons>
+        <HeaderMetaIcons isHeader>{metaIcons}</HeaderMetaIcons>
+        <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
+      </ButtonsAndIcons>
 
-  return (
-    <HeaderWrapper navItems {...rest}>
-      <InnerWrapper>
-        <Brand>
-          <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
-        </Brand>
-        <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
-        <ButtonsAndIcons>
-          <HeaderMetaIcons isHeader>{metaIcons}</HeaderMetaIcons>
-          <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
-        </ButtonsAndIcons>
-
-      </InnerWrapper>
-    </HeaderWrapper>
-  );
-};
+    </InnerWrapper>
+  </HeaderWrapper>
+);
 
 Header.propTypes = {
   // Check data structure example in src/components/moleculecules/header/data/data
