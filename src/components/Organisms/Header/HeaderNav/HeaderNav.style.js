@@ -319,6 +319,10 @@ const DonateButtonWrapper = styled.div`
   }
 `;
 
+const MoreNavItem = styled.div`
+  background-color: red;
+`;
+
 export {
   Nav,
   NavMenu,
@@ -331,5 +335,6 @@ export {
   // SubSubNavMenu,
   // SubSubNavMenuTitle,
   NavMetaIcons,
-  DonateButtonWrapper
+  DonateButtonWrapper,
+  MoreNavItem
 };

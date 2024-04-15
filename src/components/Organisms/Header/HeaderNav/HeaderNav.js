@@ -22,7 +22,8 @@ import {
   // SubSubNavMenuTitle,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapper
+  DonateButtonWrapper,
+  MoreNavItem
 } from './HeaderNav.style';
 
 const characterLimit = 50;
@@ -35,10 +36,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
-  // const [isMoreNav, setIsMoreNav] = useState(null);
-
-  // const [groupLimit, setGroupLimit] = useState(null);
-
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
@@ -74,6 +71,19 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     };
   }, []);
 
+  // Helper function to breakout logic a bit
+  const moreNavWrapper = (isMoreNav, children) => {
+    if (isMoreNav) {
+      return (
+        <MoreNavItem>
+          {children}
+        </MoreNavItem>
+      );
+    }
+
+    return children;
+  };
+
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
@@ -84,7 +94,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">
           {menuGroups.map((group, index) => {
-            let dontRender = false;
+            let isMoreNav = false;
             /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
 
@@ -101,9 +111,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             characterCount += thisFirstChild.title.length;
 
             // If we've gone over our limit, stop rendering
-            dontRender = characterCount > characterLimit;
+            isMoreNav = characterCount > characterLimit;
 
-            console.log('dontRender', dontRender);
+            console.log('isMoreNav', isMoreNav);
 
             return (
               <NavItem
@@ -134,31 +144,35 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 </NavLink>
                 )}
 
-                {/* {!dontRender && (
-                  <p>please do render</p>
-                )} */}
-
                 {/* Desktop Nav */}
-                {(!isMobile && !dontRender) && (
+                {!isMobile && (
+                // Conditionally wrap:
+                <>
+                  { moreNavWrapper(
+                    isMoreNav,
 
-                  <Text>
-                    <NavLink
-                      href={thisUrl}
-                      inline
-                      rel={relNoopener}
-                      aria-haspopup={hasPopUp}
-                      onKeyUp={keyPressed(group.title)}
-                    >
-                      {thisFirstChild.title}
-                      {hasSubMenu
-                      && (
-                      <ChevronWrapper>
-                        <img src={chevronDown} alt="Chevron icon" />
-                      </ChevronWrapper>
-                      )
-                    }
-                    </NavLink>
-                  </Text>
+                    <Text>
+                      <NavLink
+                        href={thisUrl}
+                        inline
+                        rel={relNoopener}
+                        aria-haspopup={hasPopUp}
+                        onKeyUp={keyPressed(group.title)}
+                      >
+                        {thisFirstChild.title}
+                        {hasSubMenu
+                         && (
+                         <ChevronWrapper>
+                           <img src={chevronDown} alt="Chevron icon" />
+                         </ChevronWrapper>
+                         )
+                       }
+                      </NavLink>
+                    </Text>
+
+                  )}
+                </>
+
                 )}
 
                 {/* Second level of the navigation (ul tag): Child(ren) */}
@@ -185,35 +199,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                           </SubNavItem>
                         ) : null;
                       }
-
-                      // If this child object has a 'links' property, it's a *nested* menu group,
-                      // so handle this accordingly and iterate over it's own content:
-                      // if (child.links) {
-                      //   console.log('child', child);
-                      //   return (
-                      //     <SubSubNavMenu>
-                      //       {/* The title of the whole subSUBmenu: */}
-                      //       <SubSubNavMenuTitle>
-                      //         {child.title}
-                      //       </SubSubNavMenuTitle>
-
-                      //       {/* Iterate over each of the subSUBmenu items: */}
-                      //       { child.links.map(subChild => {
-                      //         console.log('boop');
-                      //         const thisSubChildURL = NavHelper(subChild);
-
-                      //         return (
-                      //           <li>
-                      //             <a href={thisSubChildURL}>
-                      //               {subChild.title}
-                      //             </a>
-                      //           </li>
-                      //         );
-                      //       })
-                      //     }
-                      //     </SubSubNavMenu>
-                      //   );
-                      // }
 
                       return (
                         <SubNavItem key={thisSubUrl}>
