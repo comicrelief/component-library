@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 import handlePadding from '../../../utils/_utils';
@@ -15,7 +14,7 @@ const Container = styled.div`
   justify-content: center;
   height: auto;
   background-color: ${({ theme, mobileBackgroundColor }) => theme.color(mobileBackgroundColor)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
@@ -56,11 +55,11 @@ const Wrapper = styled.div`
     justify-content: center;
   `};
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('xl')} ${spacing('md')};
   }
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('xl')} 0;
     ${({ paddingOption }) => handlePadding(paddingOption)};
@@ -71,7 +70,7 @@ const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     padding: ${spacing('xl')};
     align-items: center;
@@ -86,7 +85,7 @@ const TitleWrapperInner = styled.div`
 const FormWrapper = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
   }
 `;
@@ -118,7 +117,7 @@ const Form = styled.form`
     margin: ${spacing('l')} 0;
   }
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
@@ -129,7 +128,7 @@ const OuterFieldset = styled.fieldset`
   padding: 0 ${spacing('md')} ${spacing('md')};
   margin: 0;
   border: none;
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('l')} ${spacing('l')};
   }
 
@@ -150,13 +149,13 @@ const MoneyBuys = styled.div`
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: ${spacing('l')};
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
   label {
     flex: 0 0 30%;
     margin-bottom: ${spacing('sm')};
-    ${media('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-bottom: 0;
     }
     input {
@@ -184,7 +183,7 @@ const AmountField = styled(Input)`
   font-weight: 400;
   display: block;
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-basis: 60%;
   }
 
@@ -238,7 +237,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('md')} ${spacing('l')};
   }
 `;
