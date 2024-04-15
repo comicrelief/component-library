@@ -53,6 +53,22 @@ const Copy = styled.div`
         }
       `}
   }
+  /* Set desktop view to original layout / spacing */
+  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+    padding: ${spacing('l')};
+    h1, h3, h4, h5 {
+      margin: inherit;
+    }
+    h2 {
+      margin: inherit;
+    }
+    h2:first-child,
+    h3:first-child,
+    h4:first-child,
+    h5:first-child {
+      margin: inherit;
+    }
+  }
 `;
 
 export { Container, Wrapper, Copy };
