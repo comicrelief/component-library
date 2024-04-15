@@ -38,9 +38,9 @@ const Copy = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('mobile')} {
     ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
       === true) && css`
-        padding: ${spacing('sm')};
+        padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
         h1, h2, h3, h4, h5 {
-          margin: ${spacing('sm')} 0 ${spacing('sm')};
+          margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
         }
       `}
   }
