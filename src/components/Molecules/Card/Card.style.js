@@ -44,32 +44,6 @@ const Copy = styled.div`
         }
       `}
   }
-  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => mediumBreakpointRowLayout
-      && css`
-        padding: ${spacing('sm')};
-        h1, h2, h3, h4, h5 {
-          margin: ${spacing('sm')} 0 ${spacing('sm')};
-        }
-      `}
-  }
-  /* Set desktop view to original layout / spacing */
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
-    padding: ${spacing('l')};
-    h1, h3, h4, h5 {
-      margin: inherit;
-    }
-    h2 {
-      margin: inherit;
-    }
-    h2:first-child,
-    h3:first-child,
-    h4:first-child,
-    h5:first-child {
-      margin: inherit;
-    }
-  }
 `;
 
 export { Container, Wrapper, Copy };

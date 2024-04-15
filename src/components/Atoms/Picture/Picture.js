@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled, { withTheme } from 'styled-components';
-// import { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import 'lazysizes';
