@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styled, { css, withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
+// import { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import 'lazysizes';
@@ -25,36 +26,9 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
-
-  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, otherwise column view default */
-  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
-    === true) && css`
-      padding: 10px;
-      border-radius: 15px;
-      width: 110px;
-      height: 110px;
-    `}
-  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS */
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
-    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
-      === true) && css`
-        padding: 10px;
-        border-radius: 15px;
-        width: 120px;
-        height: 120px;
-      `}
-  }
-  /* Return all settings to previous for larger viewports */
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
-    padding: 0;
-    border-radius: 0;
-    width: ${props => (props.width ? props.width : '100%')};
-    height: ${props => (props.height ? props.height : 'auto')};
-  }
 `;
 
 /** Responsive Picture */
-
 const Picture = ({
   images,
   image,
