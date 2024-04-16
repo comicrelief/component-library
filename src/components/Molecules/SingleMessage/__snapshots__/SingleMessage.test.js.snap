@@ -65,15 +65,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   z-index: 1;
 }
 
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
@@ -287,15 +278,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (min-width:740px) {
   .c8 {
     width: auto;
@@ -498,15 +480,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   height: 100%;
   height: 50%;
   z-index: 1;
-}
-
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media (min-width:740px) {
@@ -763,15 +736,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (min-width:740px) {
   .c8 {
     width: auto;
@@ -976,15 +940,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   z-index: 1;
 }
 
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (min-width:740px) {
 
 }
@@ -1109,10 +1064,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 2rem;
   margin: auto;
   padding: 1rem;
-}
-
-@media (min-width:0px) {
-
 }
 
 @media (min-width:740px) {

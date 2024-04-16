@@ -60,15 +60,6 @@ exports[`renders correctly 1`] = `
   flex-basis: calc(200% / 3);
 }
 
-@media (min-width:0px) {
-  .c3 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;

@@ -116,15 +116,6 @@ it("renders correctly", () => {
       background-color: #E52630;
     }
 
-    @media (min-width:0px) {
-      .c3 {
-        padding: inherit;
-        border-radius: inherit;
-        width: 100%;
-        height: auto;
-      }
-    }
-
     @media (min-width:740px) {
       .c6 {
         font-size: 1rem;

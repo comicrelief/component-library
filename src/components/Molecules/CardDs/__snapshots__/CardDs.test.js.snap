@@ -119,15 +119,6 @@ exports[`renders correctly 1`] = `
   fill: #FFFFFF;
 }
 
-@media (min-width:0px) {
-  .c4 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (min-width:740px) {
   .c8 {
     width: auto;

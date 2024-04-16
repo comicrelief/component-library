@@ -330,15 +330,6 @@ it("renders correctly", () => {
       background-color: #961D35;
     }
 
-    @media (min-width:0px) {
-      .c3 {
-        padding: inherit;
-        border-radius: inherit;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
     @media (min-width:740px) {
       .c19 {
         max-width: 290px;

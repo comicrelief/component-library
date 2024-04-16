@@ -97,15 +97,6 @@ exports[`renders correctly in minimalist form 1`] = `
   margin: 0;
 }
 
-@media (min-width:0px) {
-  .c5 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (min-width:740px) {
   .c2 {
     -webkit-flex-direction: row;
@@ -288,15 +279,6 @@ exports[`renders correctly with copy 1`] = `
   }
 }
 
-@media (min-width:0px) {
-  .c5 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (min-width:740px) {
   .c2 {
     -webkit-flex-direction: row;
@@ -470,15 +452,6 @@ exports[`renders correctly with date 1`] = `
   margin: 0;
 }
 
-@media (min-width:0px) {
-  .c5 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (min-width:740px) {
   .c2 {
     -webkit-flex-direction: row;
@@ -644,15 +617,6 @@ exports[`renders correctly with date and type 1`] = `
 
 .c9 {
   margin: 0;
-}
-
-@media (min-width:0px) {
-  .c5 {
-    padding: inherit;
-    border-radius: inherit;
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media (min-width:740px) {

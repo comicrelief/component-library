@@ -27,15 +27,6 @@ it("renders correctly", () => {
       object-fit: none;
     }
 
-    @media (min-width:0px) {
-      .c1 {
-        padding: inherit;
-        border-radius: inherit;
-        width: 100%;
-        height: auto;
-      }
-    }
-
     <div
       className="c0 lazyload"
       height="auto"
@@ -82,15 +73,6 @@ it("renders correctly with custom props", () => {
       height: 100px;
       display: block;
       object-fit: cover;
-    }
-
-    @media (min-width:0px) {
-      .c1 {
-        padding: inherit;
-        border-radius: inherit;
-        width: 200px;
-        height: 100px;
-      }
     }
 
     <div
