@@ -28,7 +28,12 @@ it("renders correctly", () => {
     }
 
     @media (min-width:0px) {
-
+      .c1 {
+        padding: inherit;
+        border-radius: inherit;
+        width: 100%;
+        height: auto;
+      }
     }
 
     <div
@@ -80,7 +85,12 @@ it("renders correctly with custom props", () => {
     }
 
     @media (min-width:0px) {
-
+      .c1 {
+        padding: inherit;
+        border-radius: inherit;
+        width: 200px;
+        height: 100px;
+      }
     }
 
     <div

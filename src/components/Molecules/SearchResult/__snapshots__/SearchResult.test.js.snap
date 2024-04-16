@@ -98,7 +98,12 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c5 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width:740px) {
@@ -284,7 +289,12 @@ exports[`renders correctly with copy 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c5 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width:740px) {
@@ -461,7 +471,12 @@ exports[`renders correctly with date 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c5 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width:740px) {
@@ -632,7 +647,12 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c5 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width:740px) {

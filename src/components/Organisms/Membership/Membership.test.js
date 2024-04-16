@@ -331,7 +331,12 @@ it("renders correctly", () => {
     }
 
     @media (min-width:0px) {
-
+      .c3 {
+        padding: inherit;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (min-width:740px) {

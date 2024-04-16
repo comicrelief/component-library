@@ -154,7 +154,12 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c4 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width:740px) {

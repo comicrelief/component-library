@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { css, withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 import spacing from '../../../theme/shared/spacing';
 
@@ -29,15 +29,11 @@ const Image = styled.img`
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
-  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
-    === true) && css`
-      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : 'inherit')};
-      border-radius: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('md')}` : 'inherit')};
-      width: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.width ? props.width : '100%'}`)};
-      height: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.height ? props.height : '100%'}`)};
-    `}
+    padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : 'inherit')};
+    border-radius: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('md')}` : 'inherit')};
+    width: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.width ? props.width : '100%'}`)};
+    height: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.height ? props.height : '100%'}`)};
   }
-
 `;
 
 /** Responsive Picture */

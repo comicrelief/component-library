@@ -154,7 +154,12 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c3 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (min-width:740px) {
@@ -436,7 +441,12 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 @media (min-width:0px) {
-
+  .c3 {
+    padding: inherit;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (min-width:740px) {

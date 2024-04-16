@@ -155,7 +155,12 @@ it("renders article teaser correctly", () => {
     }
 
     @media (min-width:0px) {
-
+      .c6 {
+        padding: inherit;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (min-width:740px) {
@@ -416,7 +421,12 @@ it("renders press realese correctly", () => {
     }
 
     @media (min-width:0px) {
-
+      .c6 {
+        padding: inherit;
+        border-radius: inherit;
+        width: 80px;
+        height: 80px;
+      }
     }
 
     @media (min-width:740px) {
