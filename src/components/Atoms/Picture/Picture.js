@@ -28,14 +28,16 @@ const Image = styled.img`
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
+  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
       padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : 'inherit')};
-      border-radius: 15px;
       border-radius: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('md')}` : 'inherit')};
       width: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.width ? props.width : '100%'}`)};
       height: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.height ? props.height : '100%'}`)};
     `}
+  }
+
 `;
 
 /** Responsive Picture */

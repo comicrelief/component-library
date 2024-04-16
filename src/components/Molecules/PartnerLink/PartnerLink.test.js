@@ -1,11 +1,11 @@
-import React from 'react';
-import 'jest-styled-components';
+import React from "react";
+import "jest-styled-components";
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import PartnerLink from './PartnerLink';
-import Picture from '../../Atoms/Picture/Picture';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders correctly', () => {
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import PartnerLink from "./PartnerLink";
+import Picture from "../../Atoms/Picture/Picture";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <PartnerLink link="https://www.comicrelief.com">
       <Picture
@@ -114,6 +114,10 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       background-color: #E52630;
+    }
+
+    @media (min-width:0px) {
+
     }
 
     @media (min-width:740px) {

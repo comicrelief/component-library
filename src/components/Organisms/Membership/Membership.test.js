@@ -330,6 +330,10 @@ it("renders correctly", () => {
       background-color: #961D35;
     }
 
+    @media (min-width:0px) {
+
+    }
+
     @media (min-width:740px) {
       .c19 {
         max-width: 290px;
