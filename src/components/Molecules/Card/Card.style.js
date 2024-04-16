@@ -50,9 +50,9 @@ const Copy = styled.div`
   ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
     === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      padding: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
-        margin: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+        margin: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
       }
     }
   `}
