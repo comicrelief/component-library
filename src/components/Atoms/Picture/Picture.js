@@ -30,11 +30,13 @@ const Image = styled.img`
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('S')} {
       padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
       width: '110px';
       height: '110px';
-    `}
+    }
+  `}
 `;
 
 /** Responsive Picture */
