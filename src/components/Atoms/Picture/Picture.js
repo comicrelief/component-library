@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 import spacing from '../../../theme/shared/spacing';
 
@@ -32,8 +32,8 @@ const Image = styled.img`
     === true) && css`
       padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: ${props.width ? props.width : '100%'};
-      height: ${props.height ? props.height : '100%'};
+      width: '110px';
+      height: '110px';
     `}
 `;
 
