@@ -61,17 +61,14 @@ const Copy = styled.div`
   ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
       @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: ${spacing('l')};
-        h1, h3, h4, h5 {
-          margin: inherit;
+        h1 {
+          margin: 0 0 1rem 0;
         }
         h2 {
-          margin: inherit;
+          margin-bottom: 2rem;
         }
-        h2:first-child,
-        h3:first-child,
-        h4:first-child,
-        h5:first-child {
-          margin: inherit;
+        h3, h4, h5 {
+          margin-bottom: 1rem;
         }
       }
   `}
