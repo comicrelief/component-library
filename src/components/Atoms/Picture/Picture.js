@@ -51,7 +51,6 @@ const Image = styled.img`
 
 `;
 
-
 /** Responsive Picture */
 const Picture = ({
   images,
