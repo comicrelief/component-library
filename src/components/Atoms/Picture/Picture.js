@@ -28,24 +28,22 @@ const Image = styled.img`
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
-  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
-    === true) && css`
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
       padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: '110px';
-      height: '110px';
+      width: 110px;
+      height: 110px;
     }
   `}
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
-  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
-    === true) && css`
+  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: '120px';
-      height: '120px';
+      width: 120px;
+      height: 120px;
     }
   `}
 
