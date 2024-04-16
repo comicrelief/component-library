@@ -15,7 +15,7 @@ const Container = styled.div`
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
   }
 
-  /* Set desktop and up to normal column view */
+  /* Set desktop and upwards to normal vertical layout */
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: column;
   }
@@ -39,9 +39,9 @@ const Copy = styled.div`
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
-      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      padding: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
-        margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+        margin: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
       }
     }
   `}
