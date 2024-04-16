@@ -6,17 +6,17 @@ const Container = styled.div`
   display: flex;
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
-  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
+  @media ${({ theme }) => theme.allBreakpoints('S')} {
     flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
   }
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
   }
 
   /* Set desktop and up to normal column view */
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: column;
   }
 
@@ -35,7 +35,7 @@ const Copy = styled.div`
   flex-direction: column;
   padding: ${spacing('l')};
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
-  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
+  @media ${({ theme }) => theme.allBreakpoints('S')} {
     ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
       === true) && css`
         padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
@@ -44,7 +44,7 @@ const Copy = styled.div`
         }
       `}
   }
-  @media ${({ theme }) => theme.allBreakpoints('tablet')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
       === true) && css`
         padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
@@ -54,7 +54,7 @@ const Copy = styled.div`
       `}
   }
   /* Set desktop view to original layout / spacing */
-  @media ${({ theme }) => theme.allBreakpoints('desktop')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')};
     h1, h3, h4, h5 {
       margin: inherit;

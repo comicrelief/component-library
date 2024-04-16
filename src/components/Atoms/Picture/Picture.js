@@ -28,7 +28,7 @@ const Image = styled.img`
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
-  @media ${({ theme }) => theme.allBreakpoints('mobile')} {
+  @media ${({ theme }) => theme.allBreakpoints('S')} {
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
       padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : 'inherit')};
