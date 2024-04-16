@@ -49,6 +49,16 @@ const Image = styled.img`
     }
   `}
 
+  /* Check for Cards/smallBreakpointRowLayout or mediumBreakpointRowLayout prop coming from the CMS and adjust styling back to column view */
+  ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
+      @media ${({ theme }) => theme.allBreakpoints('L')} {
+        padding: none;
+        border-radius: none;
+        width: ${props => (props.width ? props.width : '100%')};
+        height: ${props => (props.height ? props.height : 'auto')};
+      }
+  `}
+
 `;
 
 /** Responsive Picture */

@@ -34,41 +34,47 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${spacing('l')};
+
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
-  @media ${({ theme }) => theme.allBreakpoints('S')} {
-    ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
-      === true) && css`
-        padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
-        h1, h2, h3, h4, h5 {
-          margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
+    === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('S')} {
+      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      h1, h2, h3, h4, h5 {
+        margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+      }
+    }
+  `}
+
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, adjust text spacing */
+  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
+    === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      h1, h2, h3, h4, h5 {
+        margin: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+      }
+    }
+  `}
+
+  /* Check for Cards/smallBreakpointRowLayout or mediumBreakpointRowLayout prop coming from the CMS and adjust styling back to column view */
+  ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
+      @media ${({ theme }) => theme.allBreakpoints('L')} {
+        padding: ${spacing('l')};
+        h1, h3, h4, h5 {
+          margin: inherit;
         }
-      `}
-  }
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
-      === true) && css`
-        padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
-        h1, h2, h3, h4, h5 {
-          margin: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')} 0 ${spacing('sm')}` : 'inherit')};
+        h2 {
+          margin: inherit;
         }
-      `}
-  }
-  /* Set desktop view to original layout / spacing */
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')};
-    h1, h3, h4, h5 {
-      margin: inherit;
-    }
-    h2 {
-      margin: inherit;
-    }
-    h2:first-child,
-    h3:first-child,
-    h4:first-child,
-    h5:first-child {
-      margin: inherit;
-    }
-  }
+        h2:first-child,
+        h3:first-child,
+        h4:first-child,
+        h5:first-child {
+          margin: inherit;
+        }
+      }
+  `}
 `;
 
 export { Container, Wrapper, Copy };
