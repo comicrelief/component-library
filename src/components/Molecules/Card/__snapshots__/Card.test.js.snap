@@ -48,38 +48,6 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:0px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    padding: 2rem;
-  }
-
-  .c1 h1,
-  .c1 h3,
-  .c1 h4,
-  .c1 h5 {
-    margin: inherit;
-  }
-
-  .c1 h2 {
-    margin: inherit;
-  }
-
-  .c1 h2:first-child,
-  .c1 h3:first-child,
-  .c1 h4:first-child,
-  .c1 h5:first-child {
-    margin: inherit;
-  }
-}
-
 <div
   className="c0"
 >
@@ -141,38 +109,6 @@ exports[`renders correctly 2`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-}
-
-@media (min-width:0px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    padding: 2rem;
-  }
-
-  .c1 h1,
-  .c1 h3,
-  .c1 h4,
-  .c1 h5 {
-    margin: inherit;
-  }
-
-  .c1 h2 {
-    margin: inherit;
-  }
-
-  .c1 h2:first-child,
-  .c1 h3:first-child,
-  .c1 h4:first-child,
-  .c1 h5:first-child {
-    margin: inherit;
   }
 }
 
