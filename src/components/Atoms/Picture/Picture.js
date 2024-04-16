@@ -37,7 +37,20 @@ const Image = styled.img`
       height: '110px';
     }
   `}
+
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
+  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
+    === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: ${spacing('sm')};
+      border-radius: ${spacing('md')};
+      width: '120px';
+      height: '120px';
+    }
+  `}
+
 `;
+
 
 /** Responsive Picture */
 const Picture = ({
