@@ -4,7 +4,7 @@ import spacing from '../../../theme/shared/spacing';
 
 const Section = styled.section`
   width: 100%;
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     display: flex;
   }
 `;

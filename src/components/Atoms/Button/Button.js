@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import media from '../../../theme/shared/breakpoint';
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -23,11 +22,11 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: auto;
   }
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: auto;
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};

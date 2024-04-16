@@ -32,7 +32,7 @@ const StyledSelect = styled.select`
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     max-width: 290px;
   }
 `;

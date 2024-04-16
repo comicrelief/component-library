@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`
@@ -12,7 +11,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     align-items: center;
     justify-content: inherit;
     min-height: 750px;
@@ -37,7 +36,7 @@ const BgImage = styled(Picture)`
     height: 100%;
     box-shadow: inset 0px ${spacing('xl')} ${spacing('l')} -${spacing('l')};
   }
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 100%;
 
     :before {
@@ -52,7 +51,7 @@ const Wrapper = styled.div`
   text-align: center;
   margin-bottom: 50%;
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     margin: 0 ${spacing('xxl')};
     max-width: 420px;
   }
@@ -68,7 +67,7 @@ const FormWrapper = styled.div`
   box-shadow: 0px ${spacing('md')} ${spacing('xl')} rgba(0, 0, 0, 0.3);
   height: 450px;
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 430px;
   }
 `;
@@ -139,7 +138,7 @@ const AmountField = styled(Input)`
   font-weight: 400;
   display: block;
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex: 0 0 60%;
   }
 
@@ -185,7 +184,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: auto;
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};

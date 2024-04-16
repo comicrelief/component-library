@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { media, container } from '../../../theme/shared/size';
+import container from '../../../theme/shared/allContainers';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -10,25 +10,25 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
   }
   ${({ position }) => position === 'upper' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    ${media('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
   `}
   ${({ position }) => position === 'lower' && css`
     clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
-    ${media('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
     }
   `}
   ${({ position }) => position === 'end' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 101%);
     border-radius: 0 0 0 2rem;
-    ${media('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
       border-radius: 0 0 0 4rem;
     }
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   position: relative;
 
   ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     min-height: calc(100vh - 90px);
   }
 `;
@@ -57,14 +57,14 @@ const Copy = styled.div`
   padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
   ${zIndex('low')};
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 100%;
     padding: ${spacing('xxl')} ${spacing('m')};
   }
 
   ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
-    ${media('medium')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding: 6rem ${spacing('m')};
       margin-top: 6rem;
     }
@@ -77,7 +77,7 @@ const Media = styled.div`
   img {
     object-position: center;
   }
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 100%;
     position: absolute;
   }
@@ -97,7 +97,7 @@ const Gradient = styled.div`
   display: flex;
   align-items: center;
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     position: absolute;
     top: 0;
