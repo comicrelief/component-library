@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -18,16 +21,18 @@ import {
   SubNavMenu,
   SubNavItem,
   SubNavLink,
-  // SubSubNavMenu,
-  // SubSubNavMenuTitle,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapper,
-  MoreNavItem
+  DonateButtonWrapper
+  // MoreNavItem
+  // SubSubNavMenu,
+  // SubSubNavMenuTitle,
 } from './HeaderNav.style';
 
 const characterLimit = 50;
 let characterCount = 0;
+const moreNavItems = [];
+const moreNavGroups = [];
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const { menuGroups } = navItems;
@@ -36,6 +41,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const [isKeyPressed, setIsKeyPressed] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
+
   const toggleBurgerMenu = event => {
     event.preventDefault();
     setIsExpandable(!isExpandable);
@@ -72,17 +78,16 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   }, []);
 
   // Helper function to breakout logic a bit
-  const moreNavWrapper = (isMoreNav, children) => {
+  const moreNavHelper = (isMoreNav, element) => {
     if (isMoreNav) {
-      return (
-        <MoreNavItem>
-          {children}
-        </MoreNavItem>
-      );
+      // Store to render later
+      moreNavItems.push(element);
+      return null;
     }
-
-    return children;
+    return element;
   };
+
+  let isMoreNav = false;
 
   return (
     <>
@@ -93,8 +98,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
         {/* First level of the navigation (ul tag): Parent */}
         <NavMenu role="menubar">
+
           {menuGroups.map((group, index) => {
-            let isMoreNav = false;
             /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
 
@@ -113,7 +118,13 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             // If we've gone over our limit, stop rendering
             isMoreNav = characterCount > characterLimit;
 
-            console.log('isMoreNav', isMoreNav);
+            // DO SOMETHING HERE
+            if (isMoreNav) {
+              console.log('group', group);
+              // Store these groups for later:
+              moreNavGroups.push(group);
+              return null;
+            }
 
             return (
               <NavItem
@@ -123,7 +134,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
 
-                {/* Mobile/tablet nav */}
+                {/* START OF Mobile/tablet nav */}
                 {isMobile && (
                 <NavLink
                   href={hasPopUp ? '#' : thisUrl}
@@ -143,77 +154,101 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                   )}
                 </NavLink>
                 )}
+                {/* END OF Mobile/tablet nav */}
 
-                {/* Desktop Nav */}
+                {/* START Desktop Nav */}
                 {!isMobile && (
-                // Conditionally wrap:
+                // *Conditionally* render this element, or store it we've hit the character limit:
                 <>
-                  { moreNavWrapper(
+                  { moreNavHelper(
                     isMoreNav,
 
-                    <Text>
-                      <NavLink
-                        href={thisUrl}
-                        inline
-                        rel={relNoopener}
-                        aria-haspopup={hasPopUp}
-                        onKeyUp={keyPressed(group.title)}
-                      >
-                        {thisFirstChild.title}
-                        {hasSubMenu
-                         && (
-                         <ChevronWrapper>
-                           <img src={chevronDown} alt="Chevron icon" />
-                         </ChevronWrapper>
-                         )
-                       }
-                      </NavLink>
-                    </Text>
+
+                    <>
+                      <Text>
+                        <NavLink
+                          href={thisUrl}
+                          inline
+                          rel={relNoopener}
+                          aria-haspopup={hasPopUp}
+                          onKeyUp={keyPressed(group.title)}
+                        >
+                          {thisFirstChild.title}
+                          {hasSubMenu
+                            && (
+                              <ChevronWrapper>
+                                <img src={chevronDown} alt="Chevron icon" />
+                              </ChevronWrapper>
+                            )}
+                        </NavLink>
+                      </Text>
+                      <>
+                        {/* Second level of the navigation (ul tag): Child(ren) */}
+                        {hasSubMenu && (
+                        <SubNavMenu
+                          role="list"
+                          isKeyPressed={!!isKeyPressed[group.title]}
+                          isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                        >
+                          {group.links.map((child, childIndex) => {
+                            const thisSubUrl = NavHelper(child);
+
+                            // Render our 'cloned' first item only on mobile nav:
+                            if (childIndex === 0) {
+                              return isMobile && (
+                              <SubNavItem role="none" key={thisSubUrl}>
+                                <SubNavLink
+                                  href={thisSubUrl}
+                                  inline
+                                  role="menuitem"
+                                >
+                                  <Text>{child.title}</Text>
+                                </SubNavLink>
+                              </SubNavItem>
+                              );
+                            }
+
+                            return (
+                              <SubNavItem key={thisSubUrl}>
+                                <SubNavLink href={thisSubUrl} inline role="menuitem">
+                                  <Text>{child.title}</Text>
+                                </SubNavLink>
+                              </SubNavItem>
+                            );
+                          })}
+                        </SubNavMenu>
+                        )}
+                      </>
+                    </>
+
 
                   )}
                 </>
-
                 )}
 
-                {/* Second level of the navigation (ul tag): Child(ren) */}
-                {hasSubMenu && (
-                  <SubNavMenu
-                    role="list"
-                    isKeyPressed={!!isKeyPressed[group.title]}
-                    isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                  >
-                    {group.links.map((child, childIndex) => {
-                      const thisSubUrl = NavHelper(child);
 
-                      // Only render our 'cloned' first item for the mobile nav:
-                      if (childIndex === 0) {
-                        return isMobile ? (
-                          <SubNavItem role="none" key={thisSubUrl}>
-                            <SubNavLink
-                              href={thisSubUrl}
-                              inline
-                              role="menuitem"
-                            >
-                              <Text>{child.title}</Text>
-                            </SubNavLink>
-                          </SubNavItem>
-                        ) : null;
-                      }
-
-                      return (
-                        <SubNavItem key={thisSubUrl}>
-                          <SubNavLink href={thisSubUrl} inline role="menuitem">
-                            <Text>{child.title}</Text>
-                          </SubNavLink>
-                        </SubNavItem>
-                      );
-                    })}
-                  </SubNavMenu>
-                )}
               </NavItem>
             );
           })}
+
+          {/* MORE NAV item */}
+          {/* {(!isMobile && isMoreNav) && (
+          // Conditionally render, or store if we've hit the character limit:
+          <>
+            <p>MORE NAV IS NOW</p>
+          </>
+          )} */}
+
         </NavMenu>
+
+        {/* <ul>
+          <span>MORE NAV BUTTON</span>
+          {moreNavItems.map(item => (
+            <li>
+              {item}
+            </li>
+          ))}
+        </ul> */}
 
         <NavMetaIcons isHeader>{metaIcons}</NavMetaIcons>
         <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
