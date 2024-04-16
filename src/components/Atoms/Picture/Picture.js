@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
+import spacing from '../../../theme/shared/spacing';
 
 import 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
@@ -25,6 +26,16 @@ const Image = styled.img`
     || (props.objectFit === 'cover' && 'cover')
     || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
+    === true) && css`
+      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : 'inherit')};
+      border-radius: 15px;
+      border-radius: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('md')}` : 'inherit')};
+      width: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.width ? props.width : '100%'}`)};
+      height: ${props => ((props.smallBreakpointRowLayout === true) ? '110px' : `${props.height ? props.height : '100%'}`)};
+    `}
 `;
 
 /** Responsive Picture */
