@@ -1,28 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
-import spacing from '../../../theme/shared/spacing';
-
-const Container = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  height: 100%;
-  border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
-  overflow: hidden;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-`;
-
-const Image = styled.div`
-  height: auto;
-`;
-
-const Copy = styled.div`
-  padding: ${spacing('l')};
-  display: flex;
-  flex-direction: column;
-`;
+import { Container, Wrapper, Copy } from './Card.style';
 
 const Card = ({
   backgroundColor,
@@ -34,11 +13,19 @@ const Card = ({
   width,
   children,
   squaredCorners,
+  smallBreakpointRowLayout,
+  mediumBreakpointRowLayout,
   ...rest
 }) => (
-  <Container backgroundColor={backgroundColor} squaredCorners={squaredCorners} {...rest}>
+  <Container
+    backgroundColor={backgroundColor}
+    squaredCorners={squaredCorners}
+    smallBreakpointRowLayout={smallBreakpointRowLayout}
+    mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+    {...rest}
+  >
     {imageLow ? (
-      <Image>
+      <Wrapper>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -47,10 +34,20 @@ const Card = ({
           objectFit="cover"
           width={width}
           height={height}
+          smallBreakpointRowLayout={smallBreakpointRowLayout}
+          mediumBreakpointRowLayout={mediumBreakpointRowLayout}
         />
-      </Image>
+      </Wrapper>
     ) : null}
-    {children ? <Copy>{children}</Copy> : null}
+    {children
+      ? (
+        <Copy
+          smallBreakpointRowLayout={smallBreakpointRowLayout}
+          mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+        >
+          {children}
+        </Copy>
+      ) : null}
   </Container>
 );
 
@@ -63,7 +60,9 @@ Card.propTypes = {
   height: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  squaredCorners: PropTypes.bool
+  squaredCorners: PropTypes.bool,
+  smallBreakpointRowLayout: PropTypes.bool,
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -75,7 +74,9 @@ Card.defaultProps = {
   imageAltText: '',
   width: '100%',
   height: '100%',
-  squaredCorners: false
+  squaredCorners: false,
+  smallBreakpointRowLayout: null,
+  mediumBreakpointRowLayout: null
 };
 
 export default Card;

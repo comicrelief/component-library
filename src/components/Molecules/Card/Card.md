@@ -1,5 +1,4 @@
 # Card
-
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
@@ -7,7 +6,7 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="yellow"
+  backgroundColor="grey_light"
   height="auto"
 >
   <Text tag="h3" color="purple" size="xl">
@@ -17,9 +16,78 @@ import Link from '../../Atoms/Link/Link';
 </Card>;
 ```
 
+### Card - row layout on small breakpoint only
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+
+<Card
+  imageLow={defaultData.image}
+  images={defaultData.images}
+  backgroundColor="grey_light"
+  height="auto"
+  smallBreakpointRowLayout={true}
+  mediumBreakpointRowLayout={false}
+>
+  <Text tag="h3" color="purple" size="xl">
+    Title
+  </Text>
+  <Text tag="p">
+    Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
+  </Text>
+</Card>;
+```
+
+### Card - row layout on medium breakpoint only
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+
+<Card
+  imageLow={defaultData.image}
+  images={defaultData.images}
+  backgroundColor="grey_light"
+  height="auto"
+  smallBreakpointRowLayout={false}
+  mediumBreakpointRowLayout={true}
+>
+  <Text tag="h3" color="purple" size="xl">
+    Title
+  </Text>
+  <Text tag="p">
+    Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
+  </Text>
+</Card>;
+```
+
+### Card - row layout on small and medium breakpoints
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+
+<Card
+  imageLow={defaultData.image}
+  images={defaultData.images}
+  backgroundColor="grey_light"
+  height="auto"
+  smallBreakpointRowLayout={true}
+  mediumBreakpointRowLayout={true}
+>
+  <Text tag="h3" color="purple" size="xl">
+    Title
+  </Text>
+  <Text tag="p">
+    Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
+  </Text>
+</Card>;
+```
+
 ### Card no body
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-<Card imageLow={defaultData.image} images={defaultData.image} />;
+<Card
+  imageLow={defaultData.image}
+  images={defaultData.image}
+/>;
 ```
