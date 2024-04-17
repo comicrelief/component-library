@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import container from '../../../theme/shared/allContainers';
+import allContainers from '../../../theme/shared/allContainers';
 import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';
@@ -68,7 +68,7 @@ const Copy = styled.div`
     : css`
           @media ${({ theme }) => theme.allBreakpoints('M')} {
             width: 100%;
-            max-width ${container.small};
+            max-width ${allContainers.small};
             padding: ${spacing('xl')};
           }
           margin: auto;
