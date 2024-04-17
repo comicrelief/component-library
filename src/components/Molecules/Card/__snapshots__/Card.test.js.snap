@@ -2,14 +2,11 @@
 
 exports[`renders correctly 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -17,7 +14,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  padding: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,6 +21,31 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding: 2rem;
+}
+
+@media (min-width:0px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 <div
@@ -38,6 +59,70 @@ exports[`renders correctly 1`] = `
     </h2>
     <p>
       Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFE400;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+@media (min-width:0px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2>
+      Title
+    </h2>
+    <p>
+      Text body copy description. Loads more text test. Loads more text test.
     </p>
   </div>
 </div>
@@ -59,14 +144,11 @@ exports[`renders correctly with no body 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -75,6 +157,30 @@ exports[`renders correctly with no body 1`] = `
 
 .c1 {
   height: auto;
+}
+
+@media (min-width:0px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 <div
