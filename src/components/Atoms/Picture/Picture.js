@@ -35,6 +35,12 @@ const Image = styled.img`
       width: 110px;
       height: 110px;
     }
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: none;
+      border-radius: none;
+      width: ${props => (props.width ? props.width : '100%')};
+      height: ${props => (props.height ? props.height : 'auto')};
+    }
   `}
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
