@@ -1,7 +1,4 @@
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -10,6 +7,7 @@ import { sizes } from '../../../../theme/shared/allBreakpoints';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
+
 // TO-DO: this needs to be replaced with the new asset
 import chevronDown from './chevron-down.svg';
 
@@ -31,7 +29,6 @@ import {
 
 const characterLimit = 50;
 let characterCount = 0;
-const moreNavItems = [];
 const moreNavGroups = [];
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
@@ -78,15 +75,16 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   }, []);
 
   // Helper function to breakout logic a bit
-  const moreNavHelper = (isMoreNav, element) => {
-    if (isMoreNav) {
-      // Store to render later
-      moreNavItems.push(element);
-      return null;
-    }
-    return element;
-  };
+  // const moreNavHelper = (isMoreNav, element) => {
+  //   if (isMoreNav) {
+  //     // Store to render later
+  //     moreNavItems.push(element);
+  //     return null;
+  //   }
+  //   return element;
+  // };
 
+  // Reset for each complete render:
   let isMoreNav = false;
 
   return (
@@ -110,19 +108,20 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
-            /* MORE NAV functionality : */
+            /* MORE NAV FUNCTIONALITY FOR DESKTOP ONLY */
+            if (!isMobile) {
+              // Keep track of how many characters our nav has in total:
+              characterCount += thisFirstChild.title.length;
 
-            // Keep track of how many characters our nav has in total:
-            characterCount += thisFirstChild.title.length;
+              // If over the limit, stop rendering from this item
+              isMoreNav = characterCount > characterLimit;
 
-            // If we've gone over our limit, stop rendering
-            isMoreNav = characterCount > characterLimit;
-
-            if (isMoreNav && !isMobile) {
-              // Store these groups for later:
-              moreNavGroups.push(group);
-              console.log('moreNavGroups', moreNavGroups);
-              // return null;
+              if (isMoreNav) {
+                // Store these groups for later:
+                moreNavGroups.push(group);
+                console.log('moreNavGroups', moreNavGroups);
+                return null;
+              }
             }
 
             return (
@@ -166,7 +165,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
                           // Render our 'cloned' first item only on mobile nav:
                           if (childIndex === 0) {
-                            return isMobile && (
                             <SubNavItem role="none" key={thisSubUrl}>
                               <SubNavLink
                                 href={thisSubUrl}
@@ -175,8 +173,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                               >
                                 <Text>{child.title}</Text>
                               </SubNavLink>
-                            </SubNavItem>
-                            );
+                            </SubNavItem>;
                           }
 
                           return (
@@ -215,8 +212,10 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                             )}
                       </NavLink>
                     </Text>
+
                     <>
                       {/* Second level of the navigation (ul tag): Child(ren) */}
+                      {/* TODO: make this resuable as its repeated here from above */}
                       {hasSubMenu && (
                         <SubNavMenu
                           role="list"
@@ -255,29 +254,28 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                   </>
                 )}
 
-
               </NavItem>
             );
           })}
 
-          {/* MORE NAV item */}
-          {/* {(!isMobile && isMoreNav) && (
-          // Conditionally render, or store if we've hit the character limit:
-          <>
-            <p>MORE NAV IS NOW</p>
-          </>
-          )} */}
+          <li>
+            <span>MORE NAV BUTTON</span>
+            <ul>
+              {
+              moreNavGroups.map(item => {
+                console.log('item', item);
+                return (
+                  <li>
+                    {item.title}
+                  </li>
+                );
+              })
+              }
+            </ul>
+
+          </li>
 
         </NavMenu>
-
-        {/* <ul>
-          <span>MORE NAV BUTTON</span>
-          {moreNavItems.map(item => (
-            <li>
-              {item}
-            </li>
-          ))}
-        </ul> */}
 
         <NavMetaIcons isHeader>{metaIcons}</NavMetaIcons>
         <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
