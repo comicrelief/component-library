@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import container from '../../../theme/shared/allContainers';
+import allContainers from '../../../theme/shared/allContainers';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -37,7 +37,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: ${container.medium};
+  max-width: ${allContainers.medium};
   height: 100%;
   left: 0;
   right: 0;

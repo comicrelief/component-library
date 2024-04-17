@@ -11,6 +11,7 @@ export { default as spacing } from './theme/shared/spacing';
 export { default as breakpoint } from './theme/shared/breakpoint';
 export { default as allBreakpoints } from './theme/shared/allBreakpoints';
 export { media, screen, container } from './theme/shared/size';
+export { default as allContainers } from './theme/shared/allContainers';
 
 /* Atoms */
 export { default as Text } from './components/Atoms/Text/Text';
