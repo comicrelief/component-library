@@ -74,16 +74,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     };
   }, []);
 
-  // Helper function to breakout logic a bit
-  // const moreNavHelper = (isMoreNav, element) => {
-  //   if (isMoreNav) {
-  //     // Store to render later
-  //     moreNavItems.push(element);
-  //     return null;
-  //   }
-  //   return element;
-  // };
-
   // Reset for each complete render:
   let isMoreNav = false;
 
@@ -188,7 +178,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       )}
                     </>
                   </>
-
                 )}
                 {/* END OF Mobile/tablet nav */}
 
@@ -258,22 +247,24 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             );
           })}
 
-          <li>
-            <span>MORE NAV BUTTON</span>
+          {isMoreNav && (
+          <NavItem>
+            <span>{moreNavGroups[0].links[0].title}</span>
             <ul>
               {
-              moreNavGroups.map(item => {
-                console.log('item', item);
-                return (
-                  <li>
-                    {item.title}
-                  </li>
-                );
-              })
-              }
+            moreNavGroups.map(item => {
+              console.log('item', item);
+              return (
+                <li>
+                  {item.title}
+                </li>
+              );
+            })
+            }
             </ul>
 
-          </li>
+          </NavItem>
+          )}
 
         </NavMenu>
 
