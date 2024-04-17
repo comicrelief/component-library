@@ -118,12 +118,11 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             // If we've gone over our limit, stop rendering
             isMoreNav = characterCount > characterLimit;
 
-            // DO SOMETHING HERE
-            if (isMoreNav) {
-              console.log('group', group);
+            if (isMoreNav && !isMobile) {
               // Store these groups for later:
               moreNavGroups.push(group);
-              return null;
+              console.log('moreNavGroups', moreNavGroups);
+              // return null;
             }
 
             return (
@@ -136,55 +135,89 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
                 {/* START OF Mobile/tablet nav */}
                 {isMobile && (
-                <NavLink
-                  href={hasPopUp ? '#' : thisUrl}
-                  inline
-                  rel={relNoopener}
-                  aria-expanded={!!isSubMenuOpen[group.id]}
-                  aria-haspopup={hasPopUp}
-                  onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
-                  onKeyUp={keyPressed(group.title)}
-                  role="button"
-                >
-                  {thisFirstChild.title}
-                  {hasSubMenu && (
-                    <ChevronWrapper>
-                      <img src={chevronDown} alt="Chevron icon" />
-                    </ChevronWrapper>
-                  )}
-                </NavLink>
+                  <>
+                    <NavLink
+                      href={hasPopUp ? '#' : thisUrl}
+                      inline
+                      rel={relNoopener}
+                      aria-expanded={!!isSubMenuOpen[group.id]}
+                      aria-haspopup={hasPopUp}
+                      onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                      onKeyUp={keyPressed(group.title)}
+                      role="button"
+                    >
+                      {thisFirstChild.title}
+                      {hasSubMenu && (
+                      <ChevronWrapper>
+                        <img src={chevronDown} alt="Chevron icon" />
+                      </ChevronWrapper>
+                      )}
+                    </NavLink>
+                    <>
+                      {/* Second level of the navigation (ul tag): Child(ren) */}
+                      {hasSubMenu && (
+                      <SubNavMenu
+                        role="list"
+                        isKeyPressed={!!isKeyPressed[group.title]}
+                        isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                      >
+                        {group.links.map((child, childIndex) => {
+                          const thisSubUrl = NavHelper(child);
+
+                          // Render our 'cloned' first item only on mobile nav:
+                          if (childIndex === 0) {
+                            return isMobile && (
+                            <SubNavItem role="none" key={thisSubUrl}>
+                              <SubNavLink
+                                href={thisSubUrl}
+                                inline
+                                role="menuitem"
+                              >
+                                <Text>{child.title}</Text>
+                              </SubNavLink>
+                            </SubNavItem>
+                            );
+                          }
+
+                          return (
+                            <SubNavItem key={thisSubUrl}>
+                              <SubNavLink href={thisSubUrl} inline role="menuitem">
+                                <Text>{child.title}</Text>
+                              </SubNavLink>
+                            </SubNavItem>
+                          );
+                        })}
+                      </SubNavMenu>
+                      )}
+                    </>
+                  </>
+
                 )}
                 {/* END OF Mobile/tablet nav */}
 
                 {/* START Desktop Nav */}
                 {!isMobile && (
-                // *Conditionally* render this element, or store it we've hit the character limit:
-                <>
-                  { moreNavHelper(
-                    isMoreNav,
-
-
-                    <>
-                      <Text>
-                        <NavLink
-                          href={thisUrl}
-                          inline
-                          rel={relNoopener}
-                          aria-haspopup={hasPopUp}
-                          onKeyUp={keyPressed(group.title)}
-                        >
-                          {thisFirstChild.title}
-                          {hasSubMenu
+                  <>
+                    <Text>
+                      <NavLink
+                        href={thisUrl}
+                        inline
+                        rel={relNoopener}
+                        aria-haspopup={hasPopUp}
+                        onKeyUp={keyPressed(group.title)}
+                      >
+                        {thisFirstChild.title}
+                        {hasSubMenu
                             && (
                               <ChevronWrapper>
                                 <img src={chevronDown} alt="Chevron icon" />
                               </ChevronWrapper>
                             )}
-                        </NavLink>
-                      </Text>
-                      <>
-                        {/* Second level of the navigation (ul tag): Child(ren) */}
-                        {hasSubMenu && (
+                      </NavLink>
+                    </Text>
+                    <>
+                      {/* Second level of the navigation (ul tag): Child(ren) */}
+                      {hasSubMenu && (
                         <SubNavMenu
                           role="list"
                           isKeyPressed={!!isKeyPressed[group.title]}
@@ -217,13 +250,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                             );
                           })}
                         </SubNavMenu>
-                        )}
-                      </>
+                      )}
                     </>
-
-
-                  )}
-                </>
+                  </>
                 )}
 
 
