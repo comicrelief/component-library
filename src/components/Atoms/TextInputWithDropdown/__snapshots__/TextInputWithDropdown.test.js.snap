@@ -319,7 +319,7 @@ exports[`renders correctly with value and options 1`] = `
   }
 }
 
-@media (min-width:740) {
+@media (min-width:740px) {
   .c6 {
     max-width: 500px;
   }
