@@ -1,3 +1,7 @@
+/**
+ * For usage and examples see utils.md
+ */
+
 export const sizes = {
   S: 0,
   M: 740,
