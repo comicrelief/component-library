@@ -1,3 +1,5 @@
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-unreachable */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -109,12 +111,13 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               if (isMoreNav) {
                 // Store these groups for later:
                 moreNavGroups.push(group);
-                console.log('moreNavGroups', moreNavGroups);
+                // console.log('moreNavGroups', moreNavGroups);
                 return null;
               }
             }
 
             return (
+              // HERE
               <NavItem
                 role="none"
                 key={group.id}
@@ -133,7 +136,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       aria-haspopup={hasPopUp}
                       onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
                       onKeyUp={keyPressed(group.title)}
-                      role="button"
+                      role={hasPopUp ? 'button' : 'link'}
                     >
                       {thisFirstChild.title}
                       {hasSubMenu && (
@@ -247,21 +250,123 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             );
           })}
 
-          {isMoreNav && (
+
+
+          {/*
+            *********************************
+            *********************************
+               MORE NAV RENDER STARTS HERE:
+            *********************************
+            *********************************
+          */}
+
+          {(isMoreNav && moreNavGroups.length > 0) && (
+          // The 'More' nav li:
+          // HERE:
           <NavItem>
-            <span>{moreNavGroups[0].links[0].title}</span>
-            <ul>
-              {
-            moreNavGroups.map(item => {
-              console.log('item', item);
-              return (
-                <li>
-                  {item.title}
-                </li>
-              );
-            })
-            }
-            </ul>
+            {/* The 'More' nav button: */}
+            <NavLink
+              href="#"
+              inline
+                // aria-expanded={!!isSubMenuOpen[group.id]}
+                // aria-haspopup={hasPopUp}
+                // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                // onKeyUp={keyPressed(group.title)}
+              role="button"
+            >
+              More
+              <ChevronWrapper>
+                <img src={chevronDown} alt="Chevron icon" />
+              </ChevronWrapper>
+            </NavLink>
+
+            {/* All of the 'More' items */}
+            <SubNavMenu
+              role="list"
+              // isKeyPressed={!!isKeyPressed[group.title]}
+              // DEBUG:
+              isSubMenuOpen
+              // DEBUG:
+              style={{ display: 'block' }}
+            >
+
+              {moreNavGroups.map((child, childIndex) => {
+                /* Grab the first links properties to use for our parent/button */
+                const thisFirstChild = child.links[0];
+                console.log('child', child, 'thisFirstChild', thisFirstChild);
+                // return;
+                // const thisSubUrl = NavHelper(child);
+                console.log('*** moreNavGroups.map', child, childIndex);
+
+                let thisUrl = NavHelper(thisFirstChild);
+                const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
+                const hasSubMenu = child.links && child.links.length > 1;
+                const hasPopUp = hasSubMenu ? 'true' : null;
+                thisUrl = InternalLinkHelper(thisUrl);
+
+                // 'Schools & youth - menu group'
+                // 'External Links (menu group)'
+                return (
+                  <li>
+                    <NavLink
+                      href={hasPopUp ? '#' : thisUrl}
+                      inline
+                      rel={relNoopener}
+                      // aria-expanded={!!isSubMenuOpen[group.id]}
+                      aria-haspopup={hasPopUp}
+                      // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                      // onKeyUp={keyPressed(group.title)}
+                      role={hasPopUp ? 'button' : 'link'}
+                    >
+                      {thisFirstChild.title}
+                      {hasSubMenu && (
+                      <ChevronWrapper>
+                        <img src={chevronDown} alt="Chevron icon" />
+                      </ChevronWrapper>
+                      )}
+                    </NavLink>
+                    <>
+                      {/* Second level of the navigation (ul tag): Child(ren) */}
+                      {hasSubMenu && (
+                      // This is a UL
+                      <SubNavMenu
+                        role="list"
+                        // isKeyPressed={!!isKeyPressed[group.title]}
+                        // isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                        style={{ display: 'block' }}
+                      >
+                        {child.links.map((subChild, subChildIndex) => {
+                          const thisSubUrl = NavHelper(subChild);
+
+                          // Render our 'cloned' first item only on mobile nav:
+                          if (subChildIndex === 0) {
+                            <SubNavItem role="none" key={thisSubUrl}>
+                              <SubNavLink
+                                href={thisSubUrl}
+                                inline
+                                role="menuitem"
+                              >
+                                <Text>{child.title}</Text>
+                              </SubNavLink>
+                            </SubNavItem>;
+                          }
+
+                          // What is this? I'm so confused
+                          return (
+                            <SubNavItem key={thisSubUrl}>
+                              <SubNavLink href={thisSubUrl} inline role="menuitem">
+                                <Text>{child.title}</Text>
+                              </SubNavLink>
+                            </SubNavItem>
+                          );
+                        })}
+                      </SubNavMenu>
+                      )}
+                    </>
+                  </li>
+                );
+              })}
+            </SubNavMenu>
 
           </NavItem>
           )}
