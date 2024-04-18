@@ -21,7 +21,7 @@ const Dropdown = styled.div`
   margin-top: -1px;
   width: 100%;
 
-  @media (min-width: ${sizes.M}) {
+  @media (min-width: ${sizes.M}px) {
     max-width: 500px;
   }
 `;
