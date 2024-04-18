@@ -1,3 +1,15 @@
+/**
+ * Example Usages
+
+  media queries (no need to import):
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+
+  screen sizes:
+  import { sizes } from '../../../theme/shared/allBreakpoints';
+  ...
+  max-width: ${sizes.XL};
+ */
+
 export const sizes = {
   S: 0,
   M: 740,
