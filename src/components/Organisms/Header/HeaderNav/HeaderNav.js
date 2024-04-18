@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 /* eslint-disable no-multiple-empty-lines */
 /* eslint-disable no-unreachable */
 import React, { useState, useEffect } from 'react';
@@ -49,6 +50,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+    console.log('item', item, typeof item, isSubMenuOpen);
   };
 
   // Handle tab key on menu nav
@@ -56,11 +58,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     window.onkeyup = e => {
       // If the currently tabbed-to element is our item, do something
       if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-        // I have no idea what this is supposed to do; it doesn't EVER get called?
-        console.log('hello??');
         setIsKeyPressed({ [item]: !isKeyPressed[item] });
       } else if (!e.target.querySelector('span')) {
-        // console.log('BBB: onkeyup listener -  ITEM reset');
+        console.log('BBB: onkeyup listener -  ITEM reset');
         setIsKeyPressed({});
       }
     };
@@ -111,7 +111,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               if (isMoreNav) {
                 // Store these groups for later:
                 moreNavGroups.push(group);
-                // console.log('moreNavGroups', moreNavGroups);
                 return null;
               }
             }
@@ -262,16 +261,21 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
           {(isMoreNav && moreNavGroups.length > 0) && (
           // The 'More' nav li:
-          // HERE:
           <NavItem>
             {/* The 'More' nav button: */}
             <NavLink
               href="#"
               inline
-                // aria-expanded={!!isSubMenuOpen[group.id]}
-                // aria-haspopup={hasPopUp}
-                // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
-                // onKeyUp={keyPressed(group.title)}
+              // As this is a hover-over dropdown (NEVER a direct link buttom)
+              // , we don't need to do anything on this front?
+              // aria-expanded={!!isSubMenuOpen['More']}
+              onClick={e => { e.preventDefault(); }}
+              // onKeyUp={e => {
+              //   e.preventDefault();
+              //   console.log('ugh');
+              // }}
+              // ALWAYS gonna be true
+              aria-haspopup="true"
               role="button"
             >
               More
@@ -287,16 +291,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               // DEBUG:
               isSubMenuOpen
               // DEBUG:
-              style={{ display: 'block' }}
+              // style={{ display: 'block' }}
             >
 
-              {moreNavGroups.map((child, childIndex) => {
+              {moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
                 const thisFirstChild = child.links[0];
-                console.log('child', child, 'thisFirstChild', thisFirstChild);
-                // return;
                 // const thisSubUrl = NavHelper(child);
-                console.log('*** moreNavGroups.map', child, childIndex);
+                // console.log('*** moreNavGroups.map', child, childIndex);
 
                 let thisUrl = NavHelper(thisFirstChild);
                 const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
