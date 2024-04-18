@@ -67,5 +67,5 @@ comin soon...
 |:-------:|--------:| ------:|
 | 800px   | 1200px  | 1440px |
 
-### Note:These are used in a max-width context:
+### Note: these are used in a max-width context:
 `max-width: ${allContainers.small}`
