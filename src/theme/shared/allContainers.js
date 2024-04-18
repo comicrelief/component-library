@@ -1,3 +1,4 @@
+// These are used in a max-width context
 const allContainers = {
   small: '880px',
   medium: '1200px',
