@@ -53,7 +53,7 @@ const Donate = ({
   monthlyChooseAmountText: monthlyChoose,
   monthlyOtherAmountText: monthlyOther
 }) => {
-  let isDesktop = useMediaQuery({ query: `(min-width: ${sizes.L})` });
+  let isDesktop = useMediaQuery({ query: `(min-width: ${sizes.L}px)` });
 
   // To let us store any updated override, and force a re-render
   const [overrideValue, setOverrideValue] = useState(null);

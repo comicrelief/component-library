@@ -13,7 +13,7 @@ const Container = styled.div`
   text-align: center;
   padding: calc(${spacing('m')} * 2) ${spacing('m')};
   margin: 0 auto;
-  max-width: ${sizes.XL};
+  max-width: ${sizes.XL}px;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('xl')} ${spacing('l')};

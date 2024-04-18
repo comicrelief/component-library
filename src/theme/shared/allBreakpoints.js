@@ -7,7 +7,7 @@
   screen sizes:
   import { sizes } from '../../../theme/shared/allBreakpoints';
   ...
-  max-width: ${sizes.XL};
+  max-width: ${sizes.XL}px;
  */
 
 export const sizes = {
