@@ -322,6 +322,40 @@ const MoreNavItem = styled.div`
   background-color: red;
 `;
 
+// TO REMOVE:
+/**
+ * Sub menu link item underline
+ */
+const SubNavLinkUnderline = styled(SubNavLink)`
+  padding: 26px 21px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
+    left: 12px;
+    top: auto;
+    bottom: 10px;
+    margin: 0 10px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    ::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 34px;
+      width: 10px;
+      height: 10px;
+      border: 11px solid transparent;
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
+      top: -22px;
+    }
+    :hover::before {
+      border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
+    }
+  }
+`;
+
 export {
   Nav,
   NavMenu,
@@ -335,5 +369,7 @@ export {
   // SubSubNavMenuTitle,
   NavMetaIcons,
   DonateButtonWrapper,
-  MoreNavItem
+  MoreNavItem,
+  // TO REMOVE:
+  SubNavLinkUnderline
 };
