@@ -3,7 +3,7 @@ export default {
   menuGroups: [
     {
       title: 'Fundraising - menu group',
-      id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
+      id: 'fundraising-menu-group',
       links: [
         {
           title: 'Fundraising',
@@ -51,8 +51,8 @@ export default {
       ]
     },
     {
-      title: 'Schools & youth - menu group',
-      id: 'eaec51921-bbb3-5e8d-b966-c53fff34998b5',
+      title: 'Single Page - menu group',
+      id: 'single-page-menu-group',
       links: [
         {
           title: 'Single menu link',
@@ -65,7 +65,7 @@ export default {
     },
     {
       title: 'What your money does - menu group',
-      id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
+      id: 'wymd-menu-group',
       links: [
         {
           title: 'What your money does',
@@ -85,7 +85,7 @@ export default {
     },
     {
       title: 'Schools & youth - menu group',
-      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998b',
+      id: 'schools-menu-group',
       links: [
         {
           title: 'Schools & youth',
@@ -133,22 +133,9 @@ export default {
         }
       ]
     },
-    // {
-    //   title: 'Shop',
-    //   id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
-    //   links: [
-    //     {
-    //       title: 'Shop',
-    //       path: 'https://shop.comicrelief.com',
-    //       internal: {
-    //         type: 'ContentfulPageLandingPage'
-    //       }
-    //     }
-    //   ]
-    // },
     {
       title: 'External Links (menu group)',
-      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
+      id: 'external-menu-group',
       links: [
         {
           title: 'Test allowListed external link',

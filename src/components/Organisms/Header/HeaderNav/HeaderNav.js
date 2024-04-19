@@ -41,6 +41,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isKeyPressed, setIsKeyPressed] = useState({});
+  const [renderList, setRenderList] = useState({});
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -77,8 +78,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   }, []);
 
   // Reset for each complete render:
+  // THIS DOESN'T WORK RIGHT
   let isMoreNav = false;
-
+  // console.log('*** BLORP', isMoreNav);
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
@@ -91,7 +93,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
           {menuGroups.map((group, index) => {
           /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
-            let renderThisItem = true;
+            const thisID = group.id;
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
@@ -99,6 +101,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
+            const renderThisItem = true;
 
             /* MORE NAV FUNCTIONALITY FOR DESKTOP ONLY */
             if (!isMobile) {
@@ -108,14 +111,17 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               // If over the limit, stop rendering from this item
               isMoreNav = characterCount > characterLimit;
 
-              if (isMoreNav) {
+              if (isMoreNav && typeof renderList[thisID] === 'undefined') {
+                console.log('Gonna add', thisID);
                 // Update render flag for this item:
-                renderThisItem = false;
-                // And store for later:
-                moreNavGroups.push(group);
+                setRenderList(prevState => ({
+                  ...prevState,
+                  [thisID]: true
+                }));
               }
             }
 
+            console.log(renderList);
             return (
               <>
                 {renderThisItem && (
