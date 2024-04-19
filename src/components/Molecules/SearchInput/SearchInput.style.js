@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import Input from '../../Atoms/Input/Input';
-import { media } from '../../../theme/shared/size';
 import spacing from '../../../theme/shared/spacing';
 
 const Wrapper = styled.div`
@@ -39,7 +38,7 @@ const SearchField = styled(Input)`
     :focus {
       border: 0;
     }
-    ${media('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       height: 100px;
       font-size: ${({ theme }) => theme.fontSize('xxl')};
     }

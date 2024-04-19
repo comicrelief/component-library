@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
+import spacing from '../../../theme/shared/spacing';
 
 import 'lazysizes';
 import 'lazysizes/plugins/blur-up/ls.blur-up';
@@ -23,12 +24,48 @@ const Image = styled.img`
   display: block;
   object-fit: ${props => (props.objectFit === 'none' && 'none')
     || (props.objectFit === 'cover' && 'cover')
-    || (props.objectFit === 'contain' && 'contain')};  
+    || (props.objectFit === 'contain' && 'contain')};
   ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+
+  /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('S')} {
+      padding: ${spacing('sm')};
+      border-radius: ${spacing('md')};
+      width: 110px;
+      height: 110px;
+    }
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: none;
+      border-radius: none;
+      width: ${props => (props.width ? props.width : '100%')};
+      height: ${props => (props.height ? props.height : 'auto')};
+    }
+  `}
+
+  /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
+  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: ${spacing('sm')};
+      border-radius: ${spacing('md')};
+      width: 120px;
+      height: 120px;
+    }
+  `}
+
+  /* Check for Cards/smallBreakpointRowLayout or mediumBreakpointRowLayout prop coming from the CMS and adjust styling back to normal */
+  ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
+      @media ${({ theme }) => theme.allBreakpoints('L')} {
+        padding: none;
+        border-radius: none;
+        width: ${props => (props.width ? props.width : '100%')};
+        height: ${props => (props.height ? props.height : 'auto')};
+      }
+  `}
+
 `;
 
 /** Responsive Picture */
-
 const Picture = ({
   images,
   image,
@@ -38,6 +75,8 @@ const Picture = ({
   objectFit,
   imageLow,
   isBackgroundImage,
+  smallBreakpointRowLayout,
+  mediumBreakpointRowLayout,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -109,6 +148,8 @@ const Picture = ({
         data-lowsrc={imageLow}
         className="lazyload"
         objFitState={objFitState}
+        smallBreakpointRowLayout={smallBreakpointRowLayout}
+        mediumBreakpointRowLayout={mediumBreakpointRowLayout}
       />
     </Wrapper>
   );
@@ -128,7 +169,9 @@ Picture.propTypes = {
   ]),
   width: PropTypes.string,
   height: PropTypes.string,
-  isBackgroundImage: PropTypes.bool
+  isBackgroundImage: PropTypes.bool,
+  smallBreakpointRowLayout: PropTypes.bool,
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Picture.defaultProps = {
@@ -139,7 +182,9 @@ Picture.defaultProps = {
   width: '100%',
   height: 'auto',
   alt: '',
-  isBackgroundImage: false
+  isBackgroundImage: false,
+  smallBreakpointRowLayout: null,
+  mediumBreakpointRowLayout: null
 };
 
 export default withTheme(Picture);

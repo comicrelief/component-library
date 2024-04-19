@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import { screen } from '../../../../theme/shared/size';
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -32,7 +31,7 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('higher')};
 
-  @media (min-width: ${screen.small}) {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;
     right: 0;
     left: inherit;

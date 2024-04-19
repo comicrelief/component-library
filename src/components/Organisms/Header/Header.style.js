@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
-import { container } from '../../../theme/shared/size';
+import allContainers from '../../../theme/shared/allContainers';
 import spacing from '../../../theme/shared/spacing';
 
 import './annoying.css';
@@ -25,7 +25,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 12px;
   cursor: pointer;
-  max-width: ${container.large};
+  max-width: ${allContainers.large};
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;

@@ -1,10 +1,10 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
-import Chip from './Chip';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../hoc/shallowWithTheme";
+import Chip from "./Chip";
 
-it('renders article teaser correctly', () => {
-  const handleToggle = e => e.target.value;
+it("renders article teaser correctly", () => {
+  const handleToggle = (e) => e.target.value;
   const tree = renderWithTheme(
     <Chip category="Gender Justice" handleToggle={handleToggle} />
   ).toJSON();
@@ -30,10 +30,6 @@ it('renders article teaser correctly', () => {
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       position: relative;
-    }
-
-    .c0 (min-width:740px) {
-      margin: 1rem 1rem 0 0;
     }
 
     .c2 {
@@ -91,6 +87,12 @@ it('renders article teaser correctly', () => {
     .c1:focus + span {
       border-color: #666;
       border-width: 3px;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        margin: 1rem 1rem 0 0;
+      }
     }
 
     <label

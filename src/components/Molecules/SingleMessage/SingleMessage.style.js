@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import { media, container } from '../../../theme/shared/size';
+import allContainers from '../../../theme/shared/allContainers';
 import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';
@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
     ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
   }
@@ -33,7 +33,7 @@ const Copy = styled.div`
   ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
   padding: ${spacing('l')};
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${({ vhFull, fullImage }) => (vhFull || fullImage
     ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
     : 'height: auto;')};
@@ -49,7 +49,7 @@ const Copy = styled.div`
 
   ${props => props.fullImage
     && css`
-      ${media('small')} {
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
         position: absolute;
         width: 100%;
         right: 0;
@@ -68,14 +68,14 @@ const Copy = styled.div`
     : css`
           @media ${({ theme }) => theme.allBreakpoints('M')} {
             width: 100%;
-            max-width ${container.small};
+            max-width ${allContainers.small};
             padding: ${spacing('xl')};
           }
           margin: auto;
           padding: ${spacing('md')};
         `)};
 
-  ${media('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     ${({ paddingOption }) => handlePadding(paddingOption)};
   }
 `;
@@ -94,7 +94,7 @@ const Media = styled.div`
   ${({ hasVideo }) => (hasVideo
     ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
     : null)};
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding-bottom: ${({ landscapeVideo, hasVideo }) => (landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;')};
   }
 `;
@@ -123,7 +123,7 @@ const PlayButton = styled.button`
     background-image: ${({ isBuffering }) => (isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`)};
   }
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     background-size: 100px;
   }
 `;
