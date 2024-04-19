@@ -50,7 +50,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
-    console.log('item', item, typeof item, isSubMenuOpen);
   };
 
   // Handle tab key on menu nav
@@ -60,7 +59,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
       if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
         setIsKeyPressed({ [item]: !isKeyPressed[item] });
       } else if (!e.target.querySelector('span')) {
-        console.log('BBB: onkeyup listener -  ITEM reset');
         setIsKeyPressed({});
       }
     };
@@ -297,6 +295,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               {moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
                 const thisFirstChild = child.links[0];
+                console.log('child', child);
                 // const thisSubUrl = NavHelper(child);
                 // console.log('*** moreNavGroups.map', child, childIndex);
 
@@ -309,7 +308,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 // 'Schools & youth - menu group'
                 // 'External Links (menu group)'
                 return (
-                  <li>
+                  <li key={child.title}>
                     <NavLink
                       href={hasPopUp ? '#' : thisUrl}
                       inline
