@@ -54,7 +54,7 @@ How to use in your styled component
 
 #### screen sizes:
 ```
-import { sizes } from '../../../theme/shared/allBreakpoints';
+import { breakpoints } from '../../../theme/shared/allBreakpoints';
 ...
 max-width: ${sizes.M}px;
 ```

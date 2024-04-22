@@ -2,7 +2,7 @@
  * For usage and examples see utils.md
  */
 
-export const sizes = {
+export const breakpoints = {
   S: 0,
   M: 740,
   L: 1024,
@@ -12,7 +12,7 @@ export const sizes = {
 
 export default size => {
   if (size) {
-    return `(min-width: ${sizes[size]}px)`;
+    return `(min-width: ${breakpoints[size]}px)`;
   }
   return 'inherit';
 };

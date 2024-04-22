@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PromoVideo from './_PromoVideo';
-import { sizes } from '../../../theme/shared/allBreakpoints';
+import { breakpoints } from '../../../theme/shared/allBreakpoints';
 
 import Picture from '../../Atoms/Picture/Picture';
 
@@ -42,7 +42,7 @@ const Promo = ({
   useEffect(() => {
     if (hasVideo) {
       // Checks size on load ONLY; don't want to mess about with listeners:
-      const isDesktop = window.innerWidth >= sizes.Nav; // 1024+ px
+      const isDesktop = window.innerWidth >= breakpoints.Nav; // 1024+ px
       let currentPoster; let currentSrc;
 
       // If we've got both desktop AND mobile videos, let the

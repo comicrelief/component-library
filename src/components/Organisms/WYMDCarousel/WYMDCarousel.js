@@ -11,7 +11,7 @@ import {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
-import { sizes } from '../../../theme/shared/allBreakpoints';
+import { breakpoints } from '../../../theme/shared/allBreakpoints';
 
 const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
@@ -23,7 +23,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < sizes.M;
+    const isCurrentlyMobile = window.innerWidth < breakpoints.M;
 
     if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
       setIsMobile(isCurrentlyMobile);
@@ -38,7 +38,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   }, [setTheseItems, data]);
 
   useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= sizes.M) {
+    if (window !== 'undefined' && window.innerWidth >= breakpoints.M) {
       // On inital render, update carousel plugin config
       // to suit the non-mobile layout and functionality:
       setIsMobile(false);
