@@ -12,4 +12,28 @@ const NavHelper = navItem => {
   return thisUrl;
 };
 
-export default NavHelper;
+const preProcessItems = menuGroups => {
+  const characterLimit = 50;
+  let characterCount = 0;
+  const overLimit = false;
+  const standardGroups = [];
+  const moreNavGroups = [];
+
+  menuGroups.map(group => {
+    // As this first item is used as our top level parent 'button' link,
+    // look to this to grab the amount of copied rendered:
+    const thisFirstChild = group.links[0];
+
+    // Keep track of how many characters our nav has in total:
+    characterCount += thisFirstChild.title.length;
+
+    // Assign groups to the relevant array if we've got over the limit
+    return characterCount > characterLimit !== overLimit
+      ? moreNavGroups.push(group)
+      : standardGroups.push(group);
+  });
+
+  return { standardGroups, moreNavGroups };
+};
+
+export { NavHelper, preProcessItems };
