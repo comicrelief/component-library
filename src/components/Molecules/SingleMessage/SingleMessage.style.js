@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import containers from '../../../theme/shared/allContainers';
+import containers from '../../../theme/shared/containers';
 import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';

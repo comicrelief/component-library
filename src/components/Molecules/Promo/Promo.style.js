@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import containers from '../../../theme/shared/allContainers';
+import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 

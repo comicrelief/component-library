@@ -9,7 +9,7 @@ export { default as zIndex } from './theme/shared/zIndex';
 export { default as allowListed } from './utils/allowListed';
 export { default as spacing } from './theme/shared/spacing';
 export { default as allBreakpoints } from './theme/shared/allBreakpoints';
-export { default as allContainers } from './theme/shared/allContainers';
+export { default as containers } from './theme/shared/containers';
 
 /* Atoms */
 export { default as Text } from './components/Atoms/Text/Text';

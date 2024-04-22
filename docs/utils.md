@@ -62,7 +62,7 @@ max-width: ${sizes.M}px;
 ### Usage within Component Library
 comin soon...
 
-## containers from allContainers.js
+## containers from containers.js
 | small   | medium  | large  |
 |:-------:|--------:| ------:|
 | 800px   | 1200px  | 1440px |
