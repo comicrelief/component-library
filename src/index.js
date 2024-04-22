@@ -8,7 +8,6 @@ export { default as hideVisually } from './theme/shared/hideVisually';
 export { default as zIndex } from './theme/shared/zIndex';
 export { default as allowListed } from './utils/allowListed';
 export { default as spacing } from './theme/shared/spacing';
-export { default as breakpoint } from './theme/shared/breakpoint';
 export { default as allBreakpoints } from './theme/shared/allBreakpoints';
 export { media, screen, container } from './theme/shared/size';
 export { default as allContainers } from './theme/shared/allContainers';
