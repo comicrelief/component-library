@@ -1,3 +1,4 @@
+/* eslint-disable no-multiple-empty-lines */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -72,11 +73,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   }, [menuGroups]);
 
   // Once we've processed the items, assign according to breakpoint:
-  if (processedItems) {
-    theseGroups = isMobile ? menuGroups : processedItems.standardGroups;
-  }
-
-  console.log('processedItems', processedItems);
+  if (processedItems) theseGroups = isMobile ? menuGroups : processedItems.standardGroups;
 
   return (
     <>
@@ -101,11 +98,12 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
-            const relNoopener = !allowListed(thisUrl) && 'noopener';
+            const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
+            // Clones and renders out the first menugroup item to act as the parent:
             return (
               <NavItem
                 role="none"
@@ -126,13 +124,11 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     key={thisID}
                   >
                     {thisFirstChild.title}
-                    {hasSubMenu
-                        && (
-                        <ChevronWrapper>
-                          <img src={chevronDown} alt="chevron down icon" />
-                        </ChevronWrapper>
-                        )
-                                }
+                    {hasSubMenu && (
+                      <ChevronWrapper>
+                        <img src={chevronDown} alt="chevron down icon" />
+                      </ChevronWrapper>
+                    )}
                   </NavLink>
                 ) : (
                   <Text>
@@ -163,10 +159,15 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     isSubMenuOpen={!!isSubMenuOpen[thisID]}
                     key={thisID}
                   >
-                    {group.links.map(child => {
+                    {group.links.map((child, childIndex) => {
                       let thisSubUrl = NavHelper(child);
                       thisSubUrl = InternalLinkHelper(thisSubUrl);
+                      console.log('childIndex', childIndex);
 
+                      // Skip the very first child as we've already made a 'button' version above:
+                      if (childIndex === 0) return null;
+
+                      // Otherwise, return each of the other children:
                       return (
                         <SubNavItem key={thisSubUrl}>
                           <SubNavLink href={thisSubUrl} inline role="menuitem">
@@ -182,6 +183,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             );
           })}
 
+
+
+
+
+
+
+
+
           {/*
             *********************************
             MORE NAV RENDER STARTS HERE:
@@ -195,8 +204,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             <NavLink
               href="#"
               inline
-              // As this is a hover-over dropdown (NEVER a direct link buttom)
-              // , we don't need to do anything on this front?
+              // As this is a hover-over dropdown (NEVER a direct link button),
+              // we don't need to do anything on this front?
               // aria-expanded={!!isSubMenuOpen['More']}
               onClick={e => { e.preventDefault(); }}
               // onKeyUp={e => {
@@ -224,7 +233,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               {processedItems.moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
                 const thisFirstChild = child.links[0];
-                console.log('child', child);
                 // const thisSubUrl = NavHelper(child);
                 // console.log('*** moreNavGroups.map', child, childIndex);
 
@@ -268,24 +276,29 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                         {child.links.map((subChild, subChildIndex) => {
                           const thisSubUrl = NavHelper(subChild);
 
-                          // Render our 'cloned' first item only on mobile nav:
+                          // DROPDOWN BUTTON THING
                           if (subChildIndex === 0) {
                             <SubNavItem role="none" key={thisSubUrl}>
                               <SubNavLink
                                 href={thisSubUrl}
                                 inline
                                 role="menuitem"
+                                className="more-nav-li-button"
                               >
-                                <Text>{child.title}</Text>
+                                <Text>
+                                  {child.title}
+                                </Text>
                               </SubNavLink>
                             </SubNavItem>;
                           }
 
-                          // What is this? I'm so confused
                           return (
-                            <SubNavItem key={thisSubUrl}>
-                              <SubNavLink href={thisSubUrl} inline role="menuitem">
-                                <Text>{child.title}</Text>
+                            // 'More Nav' sub item:
+                            <SubNavItem key={thisSubUrl} className="MORENAV-SUBITEM">
+                              <SubNavLink href={thisSubUrl} inline role="menuitem" className="MORENAV-SUBITEM-LINK">
+                                <Text>
+                                  {child.title}
+                                </Text>
                               </SubNavLink>
                             </SubNavItem>
                           );

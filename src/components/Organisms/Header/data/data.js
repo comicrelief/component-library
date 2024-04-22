@@ -88,14 +88,14 @@ export default {
       id: 'schools-menu-group',
       links: [
         {
-          title: 'Schools & youth',
+          title: 'Schools & youth (MORE NAV)',
           path: 'https://www.comicrelief.com/rednoseday/schools',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Primary schools',
+          title: 'Primary schools (MORE NAV)',
           path:
             'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
@@ -103,7 +103,7 @@ export default {
           }
         },
         {
-          title: 'Secondary schools',
+          title: 'Secondary schools (MORE NAV)',
           path:
             'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
           internal: {
@@ -111,21 +111,21 @@ export default {
           }
         },
         {
-          title: 'Nurseries',
+          title: 'Nurseries (MORE NAV)',
           path: 'https://www.comicrelief.com/rednoseday/schools/nurseries',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Youth groups',
+          title: 'Youth groups (MORE NAV)',
           path: 'https://www.comicrelief.com/rednoseday/youth',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Free downloads',
+          title: 'Free downloads (MORE NAV)',
           path: 'https://www.comicrelief.com/rednoseday/schools/free-downloads',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -138,21 +138,21 @@ export default {
       id: 'external-menu-group',
       links: [
         {
-          title: 'Test allowListed external link',
+          title: 'AllowListed ext (MORE NAV)',
           url: 'https://www.sportrelief.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Test non-allowListed external link',
+          title: 'Non-allowListed ext (MORE NAV)',
           url: 'https://bing.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Link comp: URL and Ref',
+          title: 'Link comp: URL and Ref (MORE NAV)',
           url: 'https://www.google.com',
           reference: {
             path: 'test-ref-path-1'
@@ -162,7 +162,7 @@ export default {
           }
         },
         {
-          title: 'Link comp: only Ref',
+          title: 'Link comp: only Ref (MORE NAV)',
           url: null,
           reference: {
             path: 'test-ref-path-2'
@@ -172,7 +172,7 @@ export default {
           }
         },
         {
-          title: 'Link comp: only URL',
+          title: 'Link comp: only URL (MORE NAV)',
           url: 'test-url',
           reference: null,
           internal: {
