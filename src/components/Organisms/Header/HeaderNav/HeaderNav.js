@@ -89,6 +89,11 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
         { processedItems && (
         // First level of the navigation (ul tag): Parent
         <NavMenu role="menubar">
+          {/*
+            *********************************
+            STANDARD RENDER STARTS HERE:
+            *********************************
+          */}
           { theseGroups.map((group, index) => {
           /* Grab the first links properties to use for our parent/button */
             const thisFirstChild = group.links[0];
@@ -102,23 +107,42 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             thisUrl = InternalLinkHelper(thisUrl);
 
             return (
-              <>
-                <NavItem
-                  role="none"
-                  key={thisID}
-                  index={index}
-                  isSubMenuOpen={!!isSubMenuOpen[thisID]}
-                >
-                  {isMobile ? (
+              <NavItem
+                role="none"
+                key={thisID}
+                index={index}
+                isSubMenuOpen={!!isSubMenuOpen[thisID]}
+              >
+                {isMobile ? (
+                  <NavLink
+                    href={hasPopUp ? '#' : thisUrl}
+                    inline
+                    rel={relNoopener}
+                    aria-expanded={!!isSubMenuOpen[thisID]}
+                    aria-haspopup={hasPopUp}
+                    onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
+                    onKeyUp={keyPressed(group.title)}
+                    role="button"
+                    key={thisID}
+                  >
+                    {thisFirstChild.title}
+                    {hasSubMenu
+                        && (
+                        <ChevronWrapper>
+                          <img src={chevronDown} alt="chevron down icon" />
+                        </ChevronWrapper>
+                        )
+                                }
+                  </NavLink>
+                ) : (
+                  <Text>
                     <NavLink
-                      href={hasPopUp ? '#' : thisUrl}
+                      href={thisUrl}
                       inline
                       rel={relNoopener}
-                      aria-expanded={!!isSubMenuOpen[thisID]}
                       aria-haspopup={hasPopUp}
-                      onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
                       onKeyUp={keyPressed(group.title)}
-                      role="button"
+                      key={thisID}
                     >
                       {thisFirstChild.title}
                       {hasSubMenu
@@ -127,34 +151,17 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                           <img src={chevronDown} alt="chevron down icon" />
                         </ChevronWrapper>
                         )
-                                }
-                    </NavLink>
-                  ) : (
-                    <Text>
-                      <NavLink
-                        href={thisUrl}
-                        inline
-                        rel={relNoopener}
-                        aria-haspopup={hasPopUp}
-                        onKeyUp={keyPressed(group.title)}
-                      >
-                        {thisFirstChild.title}
-                        {hasSubMenu
-                        && (
-                        <ChevronWrapper>
-                          <img src={chevronDown} alt="chevron down icon" />
-                        </ChevronWrapper>
-                        )
                       }
-                      </NavLink>
-                    </Text>
-                  )}
-                  {/* Second level of the navigation (ul tag): Child(ren) */}
-                  {hasSubMenu && (
+                    </NavLink>
+                  </Text>
+                )}
+                {/* Second level of the navigation (ul tag): Child(ren) */}
+                {hasSubMenu && (
                   <SubNavMenu
                     role="list"
                     isKeyPressed={!!isKeyPressed[group.title]}
                     isSubMenuOpen={!!isSubMenuOpen[thisID]}
+                    key={thisID}
                   >
                     {group.links.map(child => {
                       let thisSubUrl = NavHelper(child);
@@ -169,10 +176,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       );
                     })}
                   </SubNavMenu>
-                  )}
-                </NavItem>
-
-              </>
+                )}
+              </NavItem>
 
             );
           })}
