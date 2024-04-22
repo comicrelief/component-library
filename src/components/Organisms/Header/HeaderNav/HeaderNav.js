@@ -49,23 +49,25 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   // Handle tab key on menu nav
   const keyPressed = item => () => {
     window.onkeyup = e => {
-      // If the currently tabbed-to element is our item, do something
-      if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-        setIsFocussed({ [item]: !isFoccused[item] });
-      } else if (!e.target.querySelector('span')) {
-        setIsFocussed({});
+      if (e.which === 9) {
+        // If the currently tabbed-to element is our item, do something
+        if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
+          setIsFocussed({ [item]: !isFoccused[item] });
+        } else if (!e.target.querySelector('span')) {
+          setIsFocussed({});
+        }
       }
     };
   };
 
   useEffect(() => {
-    const width = window.innerWidth;
-    // TO-DO: this needs to be updated properly on resize!
-    setIsMobile(width < sizes.Nav);
-    window.addEventListener('onkeyup', setIsFocussed);
-
-    // Divide up our nav:
+    // Divide up our nav on initial mount:
     setProcessedItems(preProcessItems(menuGroups));
+
+    // TO-DO: this needs to be updated properly on resize!
+    setIsMobile(window.innerWidth < sizes.Nav);
+
+    window.addEventListener('onkeyup', setIsFocussed);
 
     return () => {
       window.removeEventListener('onkeyup', setIsFocussed);

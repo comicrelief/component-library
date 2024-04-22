@@ -76,7 +76,7 @@ export default {
         },
         {
           title: 'Our legacy',
-          path: 'https://www.comicrelief.com/What-we-do/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
