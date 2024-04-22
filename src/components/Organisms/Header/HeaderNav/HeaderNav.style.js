@@ -244,40 +244,6 @@ const ChevronWrapper = styled.div`
 
 `;
 
-/**
- * SubSUB Navigation Menu (third level)
- */
-// const SubSubNavMenu = styled.ul`
-//   // display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
-//   display: flex;
-//   padding: 0;
-//   position: relative;
-//   list-style: none outside;
-//   left: 0;
-//   top: 0;
-//   flex-direction: column;
-//   justify-content: left;
-//   align-items: left;
-//   background-color: ${({ theme }) => theme.color('deep_violet_dark')};
-
-//   @media ${({ theme }) => theme.breakpoint('nav')} {
-//     // display: none;
-//     // display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
-//     display: flex;
-//     padding: 0;
-//     width: 250px;
-//     height: auto;
-//   }
-// `;
-
-// const SubSubNavMenuTitle = styled.span`
-//   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-//   padding: 14px 14px 7px 21px;
-//   color: ${({ theme }) => theme.color('black')};
-//   height: auto;
-//   position: relative;
-// `;
-
 // This represents the 'desktop'/non-mobile nav icons:
 const NavMetaIcons = styled.div`
   width: auto;
@@ -322,40 +288,6 @@ const MoreNavItem = styled.div`
   background-color: red;
 `;
 
-// TO REMOVE:
-/**
- * Sub menu link item underline
- */
-const SubNavLinkUnderline = styled(SubNavLink)`
-  padding: 26px 21px;
-  ::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    border-bottom: 2px solid ${({ theme }) => theme.color('white')};
-    left: 12px;
-    top: auto;
-    bottom: 10px;
-    margin: 0 10px;
-  }
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    ::before {
-      display: block;
-      position: absolute;
-      content: '';
-      left: 34px;
-      width: 10px;
-      height: 10px;
-      border: 11px solid transparent;
-      border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
-      top: -22px;
-    }
-    :hover::before {
-      border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
-    }
-  }
-`;
-
 export {
   Nav,
   NavMenu,
@@ -365,11 +297,7 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
-  // SubSubNavMenu,
-  // SubSubNavMenuTitle,
   NavMetaIcons,
   DonateButtonWrapper,
-  MoreNavItem,
-  // TO REMOVE:
-  SubNavLinkUnderline
+  MoreNavItem
 };

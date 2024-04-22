@@ -82,14 +82,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
           Main navigation
         </Text>
 
-        {/* Only render once we've processed the items: */}
+        {/* Only render once we've processed the menu items: */}
         { processedItems && (
         // First level of the navigation (ul tag): Parent
         <NavMenu role="menubar">
           {/*
-            *********************************
+            ****************************
             STANDARD RENDER STARTS HERE:
-            *********************************
+            ****************************
           */}
           { theseGroups.map((group, index) => {
           /* Grab the first links properties to use for our parent/button */
@@ -103,7 +103,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
 
-            // Clones and renders out the first menugroup item to act as the parent:
+            // Renders the first menugroup item to act as the parent; a button for the dropdown
+            // on mobile, a clickable LINK on desktop but hover to reveal the submenu
             return (
               <NavItem
                 role="none"
@@ -152,6 +153,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                   </Text>
                 )}
                 {/* Second level of the navigation (ul tag): Child(ren) */}
+                {/* Used for BOTH nav types */}
+
                 {hasSubMenu && (
                   <SubNavMenu
                     role="list"
@@ -162,12 +165,12 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     {group.links.map((child, childIndex) => {
                       let thisSubUrl = NavHelper(child);
                       thisSubUrl = InternalLinkHelper(thisSubUrl);
-                      console.log('childIndex', childIndex);
 
-                      // Skip the very first child as we've already made a 'button' version above:
-                      if (childIndex === 0) return null;
+                      // Skip the very first child on desktop, since
+                      // we've already made a 'button' version above:
+                      if (childIndex === 0 && !isMobile) return null;
 
-                      // Otherwise, return each of the other children:
+                      // Otherwise, render out as usual:
                       return (
                         <SubNavItem key={thisSubUrl}>
                           <SubNavLink href={thisSubUrl} inline role="menuitem">
@@ -179,42 +182,37 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                   </SubNavMenu>
                 )}
               </NavItem>
-
             );
           })}
 
 
 
-
-
-
-
-
-
           {/*
-            *********************************
+            ****************************
             MORE NAV RENDER STARTS HERE:
-            *********************************
+            ****************************
           */}
 
+          {/* Obviously only render our 'more nav'
+          stuff when we've got content */}
           {(processedItems.moreNavGroups.length > 0) && (
-          // The 'More' nav li:
           <NavItem>
             {/* The 'More' nav button: */}
             <NavLink
               href="#"
               inline
-              // As this is a hover-over dropdown (NEVER a direct link button),
-              // we don't need to do anything on this front?
-              // aria-expanded={!!isSubMenuOpen['More']}
+              // As this is purely used to hover-over, and
+              // never represents a direct link to a page,
+              // we can nip any click even in the bud:
               onClick={e => { e.preventDefault(); }}
+              // aria-expanded={!!isSubMenuOpen['More']}
               // onKeyUp={e => {
               //   e.preventDefault();
               //   console.log('ugh');
               // }}
-              // ALWAYS gonna be true
-              aria-haspopup="true"
               role="button"
+              // Can hardcode this as it's ALWAYS gonna be true:
+              aria-haspopup="true"
             >
               More
               <ChevronWrapper>
