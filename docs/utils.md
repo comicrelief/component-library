@@ -62,10 +62,10 @@ max-width: ${sizes.M}px;
 ### Usage within Component Library
 comin soon...
 
-## allContainers
+## containers from allContainers.js
 | small   | medium  | large  |
 |:-------:|--------:| ------:|
 | 800px   | 1200px  | 1440px |
 
 ### Note:These are used in a max-width context:
-`max-width: ${allContainers.small}`
+`max-width: ${containers.small}`
