@@ -73,7 +73,7 @@ const SubNavMenu = styled.ul`
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
-    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
+    display: ${({ isFocussed }) => (isFocussed ? 'flex' : 'none')};
     top: 93px;
     position: absolute;
     padding: 0;

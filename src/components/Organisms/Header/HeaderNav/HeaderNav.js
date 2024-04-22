@@ -30,7 +30,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
-  const [isKeyPressed, setIsKeyPressed] = useState({});
+  const [isFoccused, setIsFocussed] = useState({});
   const [isMobile, setIsMobile] = useState(false);
   let theseGroups = null;
 
@@ -51,9 +51,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     window.onkeyup = e => {
       // If the currently tabbed-to element is our item, do something
       if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-        setIsKeyPressed({ [item]: !isKeyPressed[item] });
+        setIsFocussed({ [item]: !isFoccused[item] });
       } else if (!e.target.querySelector('span')) {
-        setIsKeyPressed({});
+        setIsFocussed({});
       }
     };
   };
@@ -62,13 +62,13 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     const width = window.innerWidth;
     // TO-DO: this needs to be updated properly on resize!
     setIsMobile(width < sizes.Nav);
-    window.addEventListener('onkeyup', setIsKeyPressed);
+    window.addEventListener('onkeyup', setIsFocussed);
 
     // Divide up our nav:
     setProcessedItems(preProcessItems(menuGroups));
 
     return () => {
-      window.removeEventListener('onkeyup', setIsKeyPressed);
+      window.removeEventListener('onkeyup', setIsFocussed);
     };
   }, [menuGroups]);
 
@@ -158,7 +158,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 {hasSubMenu && (
                   <SubNavMenu
                     role="list"
-                    isKeyPressed={!!isKeyPressed[group.title]}
+                    isFocussed={!!isFoccused[group.title]}
                     isSubMenuOpen={!!isSubMenuOpen[thisID]}
                     key={thisID}
                   >
@@ -223,7 +223,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             {/* All of the 'More' items */}
             <SubNavMenu
               role="list"
-              // isKeyPressed={!!isKeyPressed[group.title]}
+              // isFoccused={!!isFoccused[group.title]}
               // DEBUG:
               isSubMenuOpen
             >
@@ -267,7 +267,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       // This is a UL
                       <SubNavMenu
                         role="list"
-                        // isKeyPressed={!!isKeyPressed[group.title]}
+                        // isFoccused={!!isFoccused[group.title]}
                         // isSubMenuOpen={!!isSubMenuOpen[group.id]}
                         style={{ display: 'block' }}
                       >
