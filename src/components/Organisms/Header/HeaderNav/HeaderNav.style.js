@@ -1,3 +1,4 @@
+/* eslint-disable no-multiple-empty-lines */
 import styled from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
@@ -71,6 +72,7 @@ const SubNavMenu = styled.ul`
   // DEBUG
   border: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
 
+  // DESKTOP:   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
     display: ${({ isFocussed }) => (isFocussed ? 'flex' : 'none')};
@@ -228,6 +230,7 @@ const NavItem = styled.li`
   }
 `;
 
+
 const ChevronWrapper = styled.div`
   width: 24px;
   position: absolute;
@@ -284,9 +287,59 @@ const DonateButtonWrapper = styled.div`
   }
 `;
 
-const MoreNavItem = styled.div`
-  background-color: red;
+
+
+/*
+ **********
+ * NEW STUFF
+ ***********
+ */
+
+// Clone Of SubNavMenu
+const MoreSubNavMenu = styled(SubNavMenu)`
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    // DEBUG
+    // background: green;
+    top: 94px;
+  }
 `;
+
+// Clone Of NavLink
+const MoreNavLink = styled(NavLink)`
+  // DEBUG
+  // background: yellow;
+
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    :focus + ${MoreSubNavMenu} {
+      display: flex;
+    }
+  }
+`;
+
+// CLONE OF NavItem
+const MoreNavItem = styled(NavItem)`
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    :hover > ${MoreSubNavMenu}, :focus-within > ${MoreSubNavMenu} {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+    }
+
+    :hover {
+      ${SubNavMenu} {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+`;
+
+
+/*
+ **********
+ * END OF NEW STUFF
+ ***********
+ */
 
 export {
   Nav,
@@ -297,7 +350,11 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
+  // New:
+  MoreNavLink,
+  MoreSubNavMenu,
+  MoreNavItem,
+  // End of New
   NavMetaIcons,
-  DonateButtonWrapper,
-  MoreNavItem
+  DonateButtonWrapper
 };

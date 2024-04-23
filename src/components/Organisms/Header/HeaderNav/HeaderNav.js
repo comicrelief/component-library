@@ -22,15 +22,17 @@ import {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapper
-  // SubNavLinkUnderline
+  DonateButtonWrapper,
+  MoreNavLink,
+  MoreSubNavMenu,
+  MoreNavItem
 } from './HeaderNav.style';
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
-  const [isFoccused, setIsFocussed] = useState({});
+  const [isTabFocussed, setIsTabFocussed] = useState({});
   const [isMobile, setIsMobile] = useState(false);
   let theseGroups = null;
 
@@ -52,9 +54,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
       if (e.which === 9) {
         // If the currently tabbed-to element is our item, do something
         if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-          setIsFocussed({ [item]: !isFoccused[item] });
+          setIsTabFocussed({ [item]: !isTabFocussed[item] });
         } else if (!e.target.querySelector('span')) {
-          setIsFocussed({});
+          setIsTabFocussed({});
         }
       }
     };
@@ -67,10 +69,10 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     // TO-DO: this needs to be updated properly on resize!
     setIsMobile(window.innerWidth < sizes.Nav);
 
-    window.addEventListener('onkeyup', setIsFocussed);
+    window.addEventListener('onkeyup', setIsTabFocussed);
 
     return () => {
-      window.removeEventListener('onkeyup', setIsFocussed);
+      window.removeEventListener('onkeyup', setIsTabFocussed);
     };
   }, [menuGroups]);
 
@@ -154,13 +156,13 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     </NavLink>
                   </Text>
                 )}
+
                 {/* Second level of the navigation (ul tag): Child(ren) */}
                 {/* Used for BOTH nav types */}
-
                 {hasSubMenu && (
                   <SubNavMenu
                     role="list"
-                    isFocussed={!!isFoccused[group.title]}
+                    isFocussed={!!isTabFocussed[group.title]}
                     isSubMenuOpen={!!isSubMenuOpen[thisID]}
                     key={thisID}
                   >
@@ -198,15 +200,16 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
           {/* Obviously only render our 'more nav'
           stuff when we've got content */}
           {(processedItems.moreNavGroups.length > 0) && (
-          <NavItem>
+          <MoreNavItem>
             {/* The 'More' nav button: */}
-            <NavLink
+            <MoreNavLink
               href="#"
               inline
               // As this is purely used to hover-over, and
               // never represents a direct link to a page,
               // we can nip any click even in the bud:
               onClick={e => { e.preventDefault(); }}
+              // TO-DO: do we need this here?
               // aria-expanded={!!isSubMenuOpen['More']}
               // onKeyUp={e => {
               //   e.preventDefault();
@@ -220,22 +223,19 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               <ChevronWrapper>
                 <img src={chevronDown} alt="Chevron icon" />
               </ChevronWrapper>
-            </NavLink>
+            </MoreNavLink>
 
-            {/* All of the 'More' items */}
-            <SubNavMenu
+            {/* The Ul to wrap each of the 'More Nav' items */}
+            <MoreSubNavMenu
               role="list"
-              // isFoccused={!!isFoccused[group.title]}
-              // DEBUG:
-              isSubMenuOpen
+              isFocussed={!!isTabFocussed.more}
+              isSubMenuOpen={!!isSubMenuOpen.more}
+              key="more-nav-ul"
             >
 
               {processedItems.moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
                 const thisFirstChild = child.links[0];
-                // const thisSubUrl = NavHelper(child);
-                // console.log('*** moreNavGroups.map', child, childIndex);
-
                 let thisUrl = NavHelper(thisFirstChild);
                 const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
                 const hasSubMenu = child.links && child.links.length > 1;
@@ -250,8 +250,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       href={hasPopUp ? '#' : thisUrl}
                       inline
                       rel={relNoopener}
-                      // aria-expanded={!!isSubMenuOpen[group.id]}
                       aria-haspopup={hasPopUp}
+                      // aria-expanded={!!isSubMenuOpen[group.id]}
                       // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
                       // onKeyUp={keyPressed(group.title)}
                       role={hasPopUp ? 'button' : 'link'}
@@ -309,9 +309,9 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                   </li>
                 );
               })}
-            </SubNavMenu>
+            </MoreSubNavMenu>
 
-          </NavItem>
+          </MoreNavItem>
           )}
 
         </NavMenu>
