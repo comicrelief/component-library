@@ -14,7 +14,9 @@ const NavLinkClass = styled(Link)`
   font-weight: 700;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet_dark')};
-  :hover {
+  :hover,
+  :focus,
+  :focus-within {
     border: 0;
     color: ${({ theme }) => theme.color('red')};
     font-weight: inherit;
@@ -102,7 +104,9 @@ const SubNavItem = styled.li`
     font-weight: 100;
   }
 
-  :hover {
+  :hover,
+  :focus,
+  :focus-within {
     background-color: ${({ theme }) => theme.color('grey_extra_light')};
     + span {
       border-bottom: 0;
@@ -151,9 +155,12 @@ const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     padding: 10px 0;
     height: auto;
-    :focus + ${SubNavMenu} {
+    :hover,
+    :focus-within,
+    :focus {
+      + ${SubNavMenu} {
       display: flex;
-    }
+    }}
   }
 `;
 
@@ -171,7 +178,9 @@ const NavItem = styled.li`
       padding-bottom: 0;
     }
 
-    :hover {
+    :hover,
+    :focus,
+    :focus-within {
       span {
         border-bottom: none;
         padding-bottom: 0;
@@ -184,7 +193,9 @@ const NavItem = styled.li`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover {
+  :hover,
+  :focus,
+  :focus-within {
     li {
       span {
         border-bottom: none;
@@ -205,7 +216,9 @@ const NavItem = styled.li`
     }
   }
   
-  :hover {
+  :hover,
+  :focus,
+  :focus-within {
     // background-color: ${({ theme }) => theme.color('teal_light')};
   }
   
@@ -213,13 +226,19 @@ const NavItem = styled.li`
     margin: 0 4px;
     padding: 25px 5px;
 
-    :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
-      visibility: visible;
-      opacity: 1;
-      display: flex;
+    :hover,
+    :focus,
+    :focus-within {
+      > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+      }
     }
 
-    :hover {
+    :hover,
+    :focus,
+    :focus-within {
       background-color: transparent;
       ${zIndex('high')};
       span {
@@ -304,11 +323,16 @@ const MoreSubNavMenu = styled(SubNavMenu)`
     top: 94px;
   }
 `;
+
 // Clone Of NavLink
 const MoreNavLink = styled(NavLink)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    :focus + ${MoreSubNavMenu} {
-      display: flex;
+    :focus,
+    :hover,
+    :focus-within {
+      + ${MoreSubNavMenu} {
+        display: flex;
+      }
     }
   }
 `;
@@ -316,14 +340,19 @@ const MoreNavLink = styled(NavLink)`
 // CLONE OF NavItem, use for the 'More' link only
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    :hover > ${MoreSubNavMenu},
-    :focus-within > ${MoreSubNavMenu} {
-      visibility: visible;
-      opacity: 1;
-      display: flex;
+    :hover,
+    :focus-within,
+    :focus {
+      > ${MoreSubNavMenu} {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+      }
     }
 
-    :hover {
+    :hover,
+    :focus,
+    :focus-within {
       ${MoreSubNavMenu} {
         display: flex;
         flex-direction: column;
@@ -350,13 +379,13 @@ const MoreSubNavItem = styled(SubNavItem)`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  &:hover {
+  :hover, 
+  :focus,
+  :focus-within {
     > a {
       color: ${({ theme }) => theme.color('red')};
     }
     > a > div {
-      // SHOULDN'T BE ON HOVER
-      // transform: rotate(-180deg);
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }
