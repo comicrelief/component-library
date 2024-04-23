@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-multiple-empty-lines */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -23,10 +24,13 @@ import {
   ChevronWrapper,
   NavMetaIcons,
   DonateButtonWrapper,
+  // More Nav stuff:
   MoreNavLink,
   MoreSubNavMenu,
   MoreNavItem,
-  MoreNestedSubNavMenu
+  MoreNestedSubNavMenu,
+  MoreSubNavItem,
+  MoreNavNestedLink
 } from './HeaderNav.style';
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
@@ -198,9 +202,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             ****************************
           */}
 
-          {/* Obviously only render our 'more nav'
-          stuff when we've got content */}
-          {(processedItems.moreNavGroups.length > 0) && (
+          {/* Only actually render 'more nav' stuff when we've got content */}
+          {(!isMobile && processedItems.moreNavGroups.length > 0) && (
           <MoreNavItem>
             {/* The 'More' nav button: */}
             <Text>
@@ -223,7 +226,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               </MoreNavLink>
             </Text>
 
-            {/* The Ul to wrap each of the 'More Nav' items */}
+            {/* The Ul to wrap each of the 'More Nav' menu groups */}
             <MoreSubNavMenu
               role="list"
               isFocussed={!!isTabFocussed.more}
@@ -231,6 +234,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               key="more-nav-ul"
             >
 
+              
+              {/* For each item in this menu group:  */}
               {processedItems.moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
                 const thisFirstChild = child.links[0];
@@ -240,71 +245,55 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 const hasPopUp = hasSubMenu ? 'true' : null;
                 thisUrl = InternalLinkHelper(thisUrl);
 
-                // 'Schools & youth - menu group'
-                // 'External Links (menu group)'
                 return (
-                  <li key={child.title}>
-                    <MoreNavLink
+                  <MoreSubNavItem key={child.title}>
+                    {/* Either the Direct link (for a one-link menu item)
+                      or a 'button' to show the submenu: */}
+                    <MoreNavNestedLink
                       href={hasPopUp ? '#' : thisUrl}
                       inline
                       rel={relNoopener}
                       aria-haspopup={hasPopUp}
+                      role={hasPopUp ? 'button' : 'link'}
                       // aria-expanded={!!isSubMenuOpen[group.id]}
                       // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
                       // onKeyUp={keyPressed(group.title)}
-                      role={hasPopUp ? 'button' : 'link'}
                     >
+                      AAA:
                       {thisFirstChild.title}
                       {hasSubMenu && (
                       <ChevronWrapper>
                         <img src={chevronDown} alt="Chevron icon" />
                       </ChevronWrapper>
                       )}
-                    </MoreNavLink>
+                    </MoreNavNestedLink>
+
                     <>
-                      {/* Second level of the navigation (ul tag): Child(ren) */}
                       {hasSubMenu && (
-                      // This is a UL
                       <MoreNestedSubNavMenu
                         role="list"
                         // isFoccused={!!isFoccused[group.title]}
                         // isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                        style={{ display: 'block' }}
+                        // style={{ display: 'block' }}
                       >
-                        {child.links.map((subChild, subChildIndex) => {
+                        {child.links.map(subChild => {
                           const thisSubUrl = NavHelper(subChild);
-
-                          // DROPDOWN BUTTON THING
-                          if (subChildIndex === 0) {
-                            <SubNavItem role="none" key={thisSubUrl}>
-                              <SubNavLink
-                                href={thisSubUrl}
-                                inline
-                                role="menuitem"
-                                className="more-nav-li-button"
-                              >
-                                <Text>
-                                  {child.title}
-                                </Text>
-                              </SubNavLink>
-                            </SubNavItem>;
-                          }
-
                           return (
                             // 'More Nav' sub item:
-                            <SubNavItem key={thisSubUrl} className="MORENAV-SUBITEM">
-                              <SubNavLink href={thisSubUrl} inline role="menuitem" className="MORENAV-SUBITEM-LINK">
+                            <MoreSubNavItem key={thisSubUrl}>
+                              <SubNavLink href={thisSubUrl} inline role="menuitem">
                                 <Text>
+                                  BBB:
                                   {child.title}
                                 </Text>
                               </SubNavLink>
-                            </SubNavItem>
+                            </MoreSubNavItem>
                           );
                         })}
                       </MoreNestedSubNavMenu>
                       )}
                     </>
-                  </li>
+                  </MoreSubNavItem>
                 );
               })}
             </MoreSubNavMenu>

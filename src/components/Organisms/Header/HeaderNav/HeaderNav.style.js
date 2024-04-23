@@ -79,7 +79,8 @@ const SubNavMenu = styled.ul`
     top: 93px;
     position: absolute;
     padding: 0;
-    width: 300px;
+    // OVERBLOWN WIDTH FOR DEBUGGING
+    width: 400px;
     height: auto;
   }
 `;
@@ -92,7 +93,7 @@ const SubNavItem = styled.li`
   height: 100%;
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
-
+  position: relative;
   &:first-of-type {
     border-top: none;
   }
@@ -300,16 +301,6 @@ const MoreSubNavMenu = styled(SubNavMenu)`
     top: 94px;
   }
 `;
-
-// Clone Of SubNavMenu
-const MoreNestedSubNavMenu = styled(SubNavMenu)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    // DEBUG
-    background: orange;
-    // top: 94px;
-  }
-`;
-
 // Clone Of NavLink
 const MoreNavLink = styled(NavLink)`
   // DEBUG
@@ -322,7 +313,7 @@ const MoreNavLink = styled(NavLink)`
   }
 `;
 
-// CLONE OF NavItem
+// CLONE OF NavItem, use for the 'More' link only
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     :hover > ${MoreSubNavMenu}, :focus-within > ${MoreSubNavMenu} {
@@ -340,6 +331,37 @@ const MoreNavItem = styled(NavItem)`
   }
 `;
 
+
+// Clone Of SubNavMenu, NESTED menu
+const MoreNestedSubNavMenu = styled(SubNavMenu)`
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    // DEBUG
+    // background: orange;
+    top: 0;
+    position: relative;
+    display: none !important;
+  }
+`;
+
+// CLONE OF SubNavItem
+const MoreSubNavItem = styled(SubNavItem)`
+   //
+`;
+
+// CLONE OF SubNavItem
+const MoreNavNestedLink = styled(NavLink)`
+   // background-color: turquoise;
+   padding: 20px;
+
+   &:hover {
+    // background-color: yellow;
+    + ${MoreNestedSubNavMenu} {
+      // background-color: red !important;
+      display: flex !important;
+    }
+   } 
+`;
+
 export {
   Nav,
   NavMenu,
@@ -355,5 +377,7 @@ export {
   MoreNavLink,
   MoreSubNavMenu,
   MoreNavItem,
-  MoreNestedSubNavMenu
+  MoreNestedSubNavMenu,
+  MoreSubNavItem,
+  MoreNavNestedLink
 };
