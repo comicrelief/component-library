@@ -30,7 +30,8 @@ import {
   MoreNavItem,
   MoreNestedSubNavMenu,
   MoreSubNavItem,
-  MoreNavNestedLink
+  MoreNavNestedLink,
+  MoreSubNavLink
 } from './HeaderNav.style';
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
@@ -83,6 +84,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   // Once we've processed the items, assign according to breakpoint:
   if (processedItems) theseGroups = isMobile ? menuGroups : processedItems.standardGroups;
+
+  console.log('isSubMenuOpen', isSubMenuOpen);
 
   return (
     <>
@@ -210,12 +213,10 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
               <MoreNavLink
                 href="#"
                 inline
-              // As this is purely used to hover-over, and never represents a
-              // direct link to a page we can nip any click event in the bud:
+                // As this is purely used to hover-over, and never represents a
+                // direct link to a page, we can nip any click event in the bud:
                 onClick={e => { e.preventDefault(); }}
-              // TO-DO: do we need this here?
-              // aria-expanded={!!isSubMenuOpen['More']}
-              // onKeyUp={e => { e.preventDefault(); console.log('ugh');}}
+                // onKeyUp={e => { e.preventDefault(); console.log('ugh');}}
                 role="button"
                 aria-haspopup="true"
               >
@@ -230,10 +231,10 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             <MoreSubNavMenu
               role="list"
               isFocussed={!!isTabFocussed.more}
-              isSubMenuOpen={!!isSubMenuOpen.more}
+              // Always 'open', just hide/shown
+              // isSubMenuOpen={!!isSubMenuOpen.more}
               key="more-nav-ul"
             >
-
               
               {/* For each item in this menu group:  */}
               {processedItems.moreNavGroups.map(child => {
@@ -255,11 +256,12 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       rel={relNoopener}
                       aria-haspopup={hasPopUp}
                       role={hasPopUp ? 'button' : 'link'}
-                      // aria-expanded={!!isSubMenuOpen[group.id]}
-                      // onClick={hasPopUp ? e => toggleSubMenu(e, group.id) : null}
+                      onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
+                      isSubMenuOpen={!!isSubMenuOpen[child.id]}
+                      aria-expanded={!!isSubMenuOpen[child.id]}
                       // onKeyUp={keyPressed(group.title)}
                     >
-                      AAA:
+                      {/* AAA: */}
                       {thisFirstChild.title}
                       {hasSubMenu && (
                       <ChevronWrapper>
@@ -272,21 +274,20 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       {hasSubMenu && (
                       <MoreNestedSubNavMenu
                         role="list"
+                        isSubMenuOpen={!!isSubMenuOpen[child.id]}
                         // isFoccused={!!isFoccused[group.title]}
-                        // isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                        // style={{ display: 'block' }}
                       >
                         {child.links.map(subChild => {
                           const thisSubUrl = NavHelper(subChild);
                           return (
                             // 'More Nav' sub item:
                             <MoreSubNavItem key={thisSubUrl}>
-                              <SubNavLink href={thisSubUrl} inline role="menuitem">
+                              <MoreSubNavLink href={thisSubUrl} inline role="menuitem">
                                 <Text>
-                                  BBB:
-                                  {child.title}
+                                  {/* BBB: */}
+                                  {subChild.title}
                                 </Text>
-                              </SubNavLink>
+                              </MoreSubNavLink>
                             </MoreSubNavItem>
                           );
                         })}

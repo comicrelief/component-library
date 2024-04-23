@@ -1,5 +1,5 @@
 /* eslint-disable no-multiple-empty-lines */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
@@ -104,7 +104,7 @@ const SubNavItem = styled.li`
 
   :hover {
     background-color: ${({ theme }) => theme.color('grey_extra_light')};
-    span {
+    + span {
       border-bottom: 0;
       padding-bottom: 2px;
       color: ${({ theme }) => theme.color('red')};
@@ -193,11 +193,14 @@ const NavItem = styled.li`
     }
 
     // Chevron icon:
-    span > a > div {
-      transform: rotate(-180deg);
-      img {
-        // Use fancy filter to colour 'img' version of SVG
-        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+    span > a {
+      color: ${({ theme }) => theme.color('red')};
+      > div {
+        transform: rotate(-180deg);
+        img {
+          // Use fancy filter to colour 'img' version of SVG
+          filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+        }
       }
     }
   }
@@ -287,6 +290,8 @@ const DonateButtonWrapper = styled.div`
   }
 `;
 
+
+
 /*
  * **********
  *  MORE NAV
@@ -296,16 +301,11 @@ const DonateButtonWrapper = styled.div`
 // Clone Of SubNavMenu
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    // DEBUG
-    // background: green;
     top: 94px;
   }
 `;
 // Clone Of NavLink
 const MoreNavLink = styled(NavLink)`
-  // DEBUG
-  // background: yellow;
-
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     :focus + ${MoreSubNavMenu} {
       display: flex;
@@ -316,7 +316,8 @@ const MoreNavLink = styled(NavLink)`
 // CLONE OF NavItem, use for the 'More' link only
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    :hover > ${MoreSubNavMenu}, :focus-within > ${MoreSubNavMenu} {
+    :hover > ${MoreSubNavMenu},
+    :focus-within > ${MoreSubNavMenu} {
       visibility: visible;
       opacity: 1;
       display: flex;
@@ -331,35 +332,51 @@ const MoreNavItem = styled(NavItem)`
   }
 `;
 
-
 // Clone Of SubNavMenu, NESTED menu
 const MoreNestedSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    // DEBUG
-    // background: orange;
     top: 0;
     position: relative;
-    display: none !important;
+    display: none;
+    // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block !important' : 'none !important')};
   }
 `;
 
 // CLONE OF SubNavItem
 const MoreSubNavItem = styled(SubNavItem)`
-   //
+  // Chevron icon
+  > a > div {
+    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+  }
+
+  &:hover {
+    > a {
+      color: ${({ theme }) => theme.color('red')};
+    }
+    > a > div {
+      // SHOULDN'T BE ON HOVER
+      // transform: rotate(-180deg);
+      img {
+        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+      }
+    }
+  }
 `;
 
 // CLONE OF SubNavItem
 const MoreNavNestedLink = styled(NavLink)`
-   // background-color: turquoise;
-   padding: 20px;
+  padding: 20px;
 
-   &:hover {
-    // background-color: yellow;
-    + ${MoreNestedSubNavMenu} {
-      // background-color: red !important;
-      display: flex !important;
+  ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+    > div {
+      transform: rotate(-180deg);
     }
-   } 
+  `)};
+`;
+
+const MoreSubNavLink = styled(SubNavLink)`
+  //
 `;
 
 export {
@@ -379,5 +396,6 @@ export {
   MoreNavItem,
   MoreNestedSubNavMenu,
   MoreSubNavItem,
-  MoreNavNestedLink
+  MoreNavNestedLink,
+  MoreSubNavLink
 };
