@@ -287,12 +287,10 @@ const DonateButtonWrapper = styled.div`
   }
 `;
 
-
-
 /*
- **********
- * NEW STUFF
- ***********
+ * **********
+ *  MORE NAV
+ * **********
  */
 
 // Clone Of SubNavMenu
@@ -326,20 +324,13 @@ const MoreNavItem = styled(NavItem)`
     }
 
     :hover {
-      ${SubNavMenu} {
+      ${MoreSubNavMenu} {
         display: flex;
         flex-direction: column;
       }
     }
   }
 `;
-
-
-/*
- **********
- * END OF NEW STUFF
- ***********
- */
 
 export {
   Nav,
@@ -350,11 +341,10 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
-  // New:
+  NavMetaIcons,
+  DonateButtonWrapper,
+  // More Nav stuff:
   MoreNavLink,
   MoreSubNavMenu,
-  MoreNavItem,
-  // End of New
-  NavMetaIcons,
-  DonateButtonWrapper
+  MoreNavItem
 };
