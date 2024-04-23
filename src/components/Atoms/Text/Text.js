@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { sizes } from '../../../theme/shared/breakpoint';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 /** Text component */
 export const BaseText = styled.span`
@@ -33,7 +33,7 @@ export const BaseText = styled.span`
         `
     : null)};
   ${({ mobileColor, theme }) => mobileColor && css`
-  @media (max-width: ${sizes.medium - 1}px) {
+  @media (max-width: ${breakpointValues.L - 1}px) {
     color: ${theme.color(mobileColor)};
   }
 `};

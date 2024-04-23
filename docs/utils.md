@@ -42,7 +42,7 @@ How to use in your styled component
 `export const Component = styled.span'`
 `padding: ${spacing('md)'} ${spacing('l)'};';`
 
-## allBreakpoints, and { sizes } within allBreakpoints
+## allBreakpoints, and { breakpointValues } within allBreakpoints
 
 | S    | M     | L      | Nav   | XL     |
 |:----:|------:| ------:| -----:| ------:|
@@ -54,18 +54,23 @@ How to use in your styled component
 
 #### screen sizes:
 ```
-import { sizes } from '../../../theme/shared/allBreakpoints';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 ...
-max-width: ${sizes.M}px;
+max-width: ${breakpointValues.M}px;
 ```
 
 ### Usage within Component Library
-comin soon...
+```
+import { breakpointValues } from '@comicrelief/component-library/src/theme/shared/allBreakpoints';
+...
+max-width: ${breakpointValues.M}px);
+```
 
-## allContainers
+
+## containers from containers.js
 | small   | medium  | large  |
 |:-------:|--------:| ------:|
 | 800px   | 1200px  | 1440px |
 
-### Note:These are used in a max-width context:
-`max-width: ${allContainers.small}`
+### Note: These are used in a max-width context:
+`max-width: ${containers.small}`

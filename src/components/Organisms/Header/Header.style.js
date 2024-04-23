@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
-import allContainers from '../../../theme/shared/allContainers';
+import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 
 const HeaderWrapper = styled.header.attrs(() => ({
@@ -23,7 +23,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 12px;
   cursor: pointer;
-  max-width: ${allContainers.large};
+  max-width: ${containers.large};
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
