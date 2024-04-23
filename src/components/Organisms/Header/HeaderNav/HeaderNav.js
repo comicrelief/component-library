@@ -25,7 +25,8 @@ import {
   DonateButtonWrapper,
   MoreNavLink,
   MoreSubNavMenu,
-  MoreNavItem
+  MoreNavItem,
+  MoreNestedSubNavMenu
 } from './HeaderNav.style';
 
 const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
@@ -202,28 +203,25 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
           {(processedItems.moreNavGroups.length > 0) && (
           <MoreNavItem>
             {/* The 'More' nav button: */}
-            <MoreNavLink
-              href="#"
-              inline
-              // As this is purely used to hover-over, and
-              // never represents a direct link to a page,
-              // we can nip any click even in the bud:
-              onClick={e => { e.preventDefault(); }}
+            <Text>
+              <MoreNavLink
+                href="#"
+                inline
+              // As this is purely used to hover-over, and never represents a
+              // direct link to a page we can nip any click event in the bud:
+                onClick={e => { e.preventDefault(); }}
               // TO-DO: do we need this here?
               // aria-expanded={!!isSubMenuOpen['More']}
-              // onKeyUp={e => {
-              //   e.preventDefault();
-              //   console.log('ugh');
-              // }}
-              role="button"
-              // Can hardcode this as it's ALWAYS gonna be true:
-              aria-haspopup="true"
-            >
-              More
-              <ChevronWrapper>
-                <img src={chevronDown} alt="Chevron icon" />
-              </ChevronWrapper>
-            </MoreNavLink>
+              // onKeyUp={e => { e.preventDefault(); console.log('ugh');}}
+                role="button"
+                aria-haspopup="true"
+              >
+                More
+                <ChevronWrapper>
+                  <img src={chevronDown} alt="Chevron icon" />
+                </ChevronWrapper>
+              </MoreNavLink>
+            </Text>
 
             {/* The Ul to wrap each of the 'More Nav' items */}
             <MoreSubNavMenu
@@ -246,7 +244,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 // 'External Links (menu group)'
                 return (
                   <li key={child.title}>
-                    <NavLink
+                    <MoreNavLink
                       href={hasPopUp ? '#' : thisUrl}
                       inline
                       rel={relNoopener}
@@ -262,12 +260,12 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                         <img src={chevronDown} alt="Chevron icon" />
                       </ChevronWrapper>
                       )}
-                    </NavLink>
+                    </MoreNavLink>
                     <>
                       {/* Second level of the navigation (ul tag): Child(ren) */}
                       {hasSubMenu && (
                       // This is a UL
-                      <SubNavMenu
+                      <MoreNestedSubNavMenu
                         role="list"
                         // isFoccused={!!isFoccused[group.title]}
                         // isSubMenuOpen={!!isSubMenuOpen[group.id]}
@@ -303,7 +301,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                             </SubNavItem>
                           );
                         })}
-                      </SubNavMenu>
+                      </MoreNestedSubNavMenu>
                       )}
                     </>
                   </li>
