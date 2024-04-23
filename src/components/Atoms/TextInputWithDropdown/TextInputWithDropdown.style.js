@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
-import { breakpoints } from '../../../theme/shared/allBreakpoints';
 import Text from '../Text/Text';
 
 const Container = styled.div`
@@ -21,7 +20,7 @@ const Dropdown = styled.div`
   margin-top: -1px;
   width: 100%;
 
-  @media (min-width: ${breakpoints.M}px) {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     max-width: 500px;
   }
 `;

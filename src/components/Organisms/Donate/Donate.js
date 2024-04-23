@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
-import { breakpoints } from '../../../theme/shared/allBreakpoints';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
@@ -53,7 +53,7 @@ const Donate = ({
   monthlyChooseAmountText: monthlyChoose,
   monthlyOtherAmountText: monthlyOther
 }) => {
-  let isDesktop = useMediaQuery({ query: `(min-width: ${breakpoints.L}px)` });
+  let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
 
   // To let us store any updated override, and force a re-render
   const [overrideValue, setOverrideValue] = useState(null);

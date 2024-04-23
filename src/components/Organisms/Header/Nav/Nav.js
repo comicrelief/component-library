@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
-import { breakpoints } from '../../../../theme/shared/allBreakpoints';
+import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import NavHelper from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
@@ -55,7 +55,7 @@ const MainNav = ({ navItems }) => {
 
   useEffect(() => {
     const width = window.innerWidth;
-    setIsMobile(width < breakpoints.Nav);
+    setIsMobile(width < breakpointValues.Nav);
     window.addEventListener('onkeyup', setIsKeyPressed);
 
     return () => {
