@@ -324,55 +324,7 @@ const MoreNavLink = styled(NavLink)`
 
 // CLONE OF NavItem
 const MoreNavItem = styled(NavItem)`
-  ${zIndex('medium')};
-  position: relative;
-  font-weight: 700;
-
-  li {
-    span {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    :hover {
-      span {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  // Chevron icon:
-  span > a > div {
-    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-  }
-
-  :hover {
-    li {
-      span {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    }
-
-    // Chevron icon:
-    span > a > div {
-      transform: rotate(-180deg);
-      img {
-        // Use fancy filter to colour 'img' version of SVG
-        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
-      }
-    }
-  }
-
-  :hover {
-    // background-color: ${({ theme }) => theme.color('teal_light')};
-  }
-
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    margin: 0 4px;
-    padding: 25px 5px;
-
     :hover > ${MoreSubNavMenu}, :focus-within > ${MoreSubNavMenu} {
       visibility: visible;
       opacity: 1;
@@ -380,12 +332,6 @@ const MoreNavItem = styled(NavItem)`
     }
 
     :hover {
-      background-color: transparent;
-      ${zIndex('high')};
-      span {
-        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-        padding-bottom: 2px;
-      }
       ${MoreSubNavMenu} {
         display: flex;
         flex-direction: column;
