@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
-import { sizes } from '../../../../theme/shared/breakpoint';
+import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 
@@ -26,7 +26,7 @@ const FooterNav = ({ navItems, ...rest }) => {
   const resize = () => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
     if (screenSize !== null) {
-      setIsSmallBreakpoint(screenSize < parseFloat(sizes.small));
+      setIsSmallBreakpoint(screenSize < parseFloat(breakpointValues.M));
     }
   };
 
@@ -48,7 +48,7 @@ const FooterNav = ({ navItems, ...rest }) => {
   useEffect(() => {
     // Detect window screen size when page load
     const width = typeof window !== 'undefined' ? window.innerWidth : null;
-    setIsSmallBreakpoint(width < parseFloat(sizes.small));
+    setIsSmallBreakpoint(width < parseFloat(breakpointValues.M));
   }, []);
 
   return (

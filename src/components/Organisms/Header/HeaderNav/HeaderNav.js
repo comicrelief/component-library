@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
-import { sizes } from '../../../../theme/shared/allBreakpoints';
+import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper, preProcessItems } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
@@ -73,7 +73,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     setProcessedItems(preProcessItems(menuGroups));
 
     // TO-DO: this needs to be updated properly on resize!
-    setIsMobile(window.innerWidth < sizes.Nav);
+    setIsMobile(window.innerWidth < breakpointValues.Nav);
 
     window.addEventListener('onkeyup', setIsTabFocussed);
 
