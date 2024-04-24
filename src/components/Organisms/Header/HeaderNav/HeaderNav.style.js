@@ -372,8 +372,8 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     top: 0;
     left: -1px;
     border-radius: 0;
+    border-bottom: 0;
     position: relative;
-    display: none;
     // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
     display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block !important' : 'none !important')};
   }
