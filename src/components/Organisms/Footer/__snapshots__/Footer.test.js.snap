@@ -567,7 +567,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="c5"
-                data-test="header-esu-icon"
+                data-test="header-facebook"
                 href="https://www.facebook.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -590,7 +590,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="c5"
-                data-test="header-esu-icon"
+                data-test="header-instagram"
                 href="https://www.instagram.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -613,7 +613,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="c5"
-                data-test="header-esu-icon"
+                data-test="header-twitter"
                 href="https://twitter.com/comicrelief"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -636,7 +636,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="c5"
-                data-test="header-esu-icon"
+                data-test="header-youtube"
                 href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
                 rel="noopener noreferrer"
                 target="_blank"

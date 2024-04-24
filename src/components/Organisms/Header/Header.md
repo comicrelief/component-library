@@ -105,6 +105,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          id="search"
           isHeader
         />
       </div>
@@ -167,6 +168,7 @@ const [success, setSuccess] = React.useState(false);
           brand="comicrelief"
           tabIndex="0"
           isHeader
+          id="payin"
         />
       </div>
 
@@ -180,6 +182,7 @@ const [success, setSuccess] = React.useState(false);
           brand="comicrelief"
           tabIndex="0"
           isHeader
+          id="shop"
         />
       </div>
 
@@ -193,6 +196,7 @@ const [success, setSuccess] = React.useState(false);
           brand="comicrelief"
           tabIndex="0"
           isHeader
+          id="search"
         />
       </div>
     </>

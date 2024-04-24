@@ -62,7 +62,7 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, isHeader, ...restProps
+  href, target, icon, brand, title, isHeader, id, ...restProps
 }) => (
   <StyledLink
     href={href}
@@ -71,7 +71,7 @@ const Icon = ({
     title={title}
     rel="noopener noreferrer"
     /* TODO: needs to be dynamic; it's using the same for every icon currently... */
-    data-test={`header-${kebabCase(title)}`}
+    data-test={`header-${kebabCase(id)}`}
     isHeader={isHeader}
   >
     <StyledImage src={icon} alt={brand} />
@@ -97,7 +97,8 @@ Icon.propTypes = {
   target: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  isHeader: PropTypes.bool
+  isHeader: PropTypes.bool,
+  id: PropTypes.string.isRequired
 };
 
 export default Icon;
