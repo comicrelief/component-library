@@ -40,7 +40,7 @@ const RevealText = styled(Text)`
   top: 19px;
   left: 55px;
 
-  @media ${({ theme }) => theme.breakpoint('medium')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 100%;
     text-align: center;
     position: absolute;

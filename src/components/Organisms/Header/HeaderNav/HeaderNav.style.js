@@ -296,7 +296,7 @@ const NavMetaIcons = styled.div`
 
   // Hide these when using non-mobile nav,
   // just leaving the Header version in place
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
   }
 `;
@@ -304,7 +304,7 @@ const NavMetaIcons = styled.div`
 const DonateButtonWrapper = styled.div`
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
   }
 `;
