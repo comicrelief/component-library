@@ -5,15 +5,19 @@ import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 
+const transitionDuration = 0.1;
+
 const NavLinkClass = styled(Link)`
   display: inline-block;
   border: 0;
   padding: 25px;
-  line-height: 1.3rem;
+  line-height: 1rem;
   height: auto;
   font-weight: 700;
   width: 100%;
-  color: ${({ theme }) => theme.color('deep_violet_dark')};
+  color: ${({ theme }) => theme.color('black')};
+  transition: color ${transitionDuration}s ease;
+
   :hover,
   :focus,
   :focus-within {
@@ -70,19 +74,18 @@ const SubNavMenu = styled.ul`
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: 0 0 25px 25px;
   overflow: hidden;
-
-  // DEBUG
-  border: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
+  border: 1px solid ${({ theme }) => theme.color('grey_medium')};;
 
   // DESKTOP:   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
     display: ${({ isFocussed }) => (isFocussed ? 'flex' : 'none')};
-    top: 93px;
+    top: 88px;
+    left: -5px;
     position: absolute;
     padding: 0;
     // OVERBLOWN WIDTH FOR DEBUGGING
-    width: 400px;
+    width: 330px;
     height: auto;
   }
 `;
@@ -94,8 +97,10 @@ const SubNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
-  border-top: 1px solid ${({ theme }) => theme.color('grey_extra_light')};;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};;
   position: relative;
+  transition: background-color ${transitionDuration}s ease;
+
   &:first-of-type {
     border-top: none;
   }
@@ -120,7 +125,7 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 20px;
+  padding: 20px 25px 18px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
@@ -320,7 +325,7 @@ const DonateButtonWrapper = styled.div`
 // Clone Of SubNavMenu
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    top: 94px;
+    top: 88px;
   }
 `;
 
@@ -365,6 +370,8 @@ const MoreNavItem = styled(NavItem)`
 const MoreNestedSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     top: 0;
+    left: -1px;
+    border-radius: 0;
     position: relative;
     display: none;
     // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
@@ -376,6 +383,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
 const MoreSubNavItem = styled(SubNavItem)`
   // Chevron icon
   > a > div {
+    width: 15px;
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
@@ -395,7 +403,7 @@ const MoreSubNavItem = styled(SubNavItem)`
 
 // CLONE OF SubNavItem
 const MoreNavNestedLink = styled(NavLink)`
-  padding: 20px;
+  padding: 20px 25px 18px;
 
   ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
     > div {

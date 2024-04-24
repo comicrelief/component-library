@@ -11,7 +11,6 @@ const TitleLabel = styled.span`
 `;
 
 const LogoLink = styled.a`
-
   img {
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
