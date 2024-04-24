@@ -88,14 +88,14 @@ export default {
       id: 'schools-menu-group',
       links: [
         {
-          title: 'Schools & youth (MORE NAV)',
+          title: 'Schools & youth',
           path: 'https://www.comicrelief.com/rednoseday/schools',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Primary schools (MORE NAV)',
+          title: 'Primary schools',
           path:
             'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
@@ -103,7 +103,7 @@ export default {
           }
         },
         {
-          title: 'Secondary schools (MORE NAV)',
+          title: 'Secondary schools',
           path:
             'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
           internal: {
@@ -111,21 +111,21 @@ export default {
           }
         },
         {
-          title: 'Nurseries (MORE NAV)',
+          title: 'Nurseries',
           path: 'https://www.comicrelief.com/rednoseday/schools/nurseries',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Youth groups (MORE NAV)',
+          title: 'Youth groups',
           path: 'https://www.comicrelief.com/rednoseday/youth',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Free downloads (MORE NAV)',
+          title: 'Free downloads',
           path: 'https://www.comicrelief.com/rednoseday/schools/free-downloads',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -134,11 +134,11 @@ export default {
       ]
     },
     {
-      title: 'More Nav single page group (single link MORE NAV)',
+      title: 'More Nav single page group (single link)',
       id: 'single-more-menu-group',
       links: [
         {
-          title: 'Partners (single link MORE NAV)',
+          title: 'Partners (single link)',
           path: 'https://www.comicrelief.com/working-with-us/',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -147,18 +147,18 @@ export default {
       ]
     },
     {
-      title: 'More Nav double link (single link MORE NAV)',
+      title: 'More Nav double link (single link)',
       id: 'single-more-menu-group',
       links: [
         {
-          title: 'Homepage (MORE NAV)',
+          title: 'Homepage',
           url: 'https://www.comicrelief.com/working-with-us/',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Something (MORE NAV)',
+          title: 'Something else',
           url: 'https://www.comicrelief.com/404/',
           internal: {
             type: 'ContentfulComponentLink'

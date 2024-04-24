@@ -15,11 +15,6 @@ const Image = styled.img`
   display: block;
   height: auto;
   margin-right: ${spacing('md')};
-  transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-
-  &:hover {
-    transform: rotate(-20deg);
-  }
 `;
 
 /**
