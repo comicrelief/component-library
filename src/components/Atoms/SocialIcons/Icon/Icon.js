@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { kebabCase } from 'lodash';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
 
@@ -70,7 +71,7 @@ const Icon = ({
     title={title}
     rel="noopener noreferrer"
     /* TODO: needs to be dynamic; it's using the same for every icon currently... */
-    data-test="header-esu-icon"
+    data-test={`header-${kebabCase(title)}`}
     isHeader={isHeader}
   >
     <StyledImage src={icon} alt={brand} />
