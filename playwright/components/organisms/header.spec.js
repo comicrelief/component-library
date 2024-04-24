@@ -6,7 +6,7 @@ test.describe('header component', () => {
 
     await expect(page.locator('[data-testid="Header-example-1"]')).toBeVisible();
     // donate locator
-    await expect(page.locator('[data-testid="Header-example-1"] header[role="banner"] a[href="/donation"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-1"] header[role="banner"] [data-testid="donate-button--desktop"] a[href="/donation"]')).toBeVisible();
     // CR logo
     await expect(page.locator('[data-testid="Header-example-1"] [title="Go to Comic Relief homepage"]')).toBeVisible();
 
