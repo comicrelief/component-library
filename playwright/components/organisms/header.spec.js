@@ -18,7 +18,7 @@ test.describe('header component', () => {
 
     await expect(page.locator('[data-testid="Header-example-3"]')).toBeVisible();
     // donate locator
-    await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] a[href="/donation"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] [data-testid="donate-button--desktop"] a[href="/donation"]')).toBeVisible();
     // SR logo
     await expect(page.locator('[data-testid="Header-example-3"] header[role="banner"] a[href="/sportrelief"]')).toBeVisible();
 
@@ -30,7 +30,7 @@ test.describe('header component', () => {
 
     await expect(page.locator('[data-testid="Header-example-5"]')).toBeVisible();
     // donate locator
-    await expect(page.locator('[data-testid="Header-example-5"] header[role="banner"] a[href="/donation"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-5"] header[role="banner"] [data-testid="donate-button--desktop"] a[href="/donation"]')).toBeVisible();
     // CR logo
     await expect(page.locator('[data-testid="Header-example-5"] [title="Go to Comic Relief homepage"]')).toBeVisible();
 
@@ -42,7 +42,7 @@ test.describe('header component', () => {
 
     await expect(page.locator('[data-testid="Header-example-7"]')).toBeVisible();
     // donate locator
-    await expect(page.locator('[data-testid="Header-example-7"] header[role="banner"] a[href="/donation"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-7"] header[role="banner"] [data-testid="donate-button--desktop"] a[href="/donation"]')).toBeVisible();
     // CR logo
     await expect(page.locator('[data-testid="Header-example-7"] [title="Go to Comic Relief homepage"]')).toBeVisible();
     // search
@@ -56,7 +56,7 @@ test.describe('header component', () => {
 
     await expect(page.locator('[data-testid="Header-example-9"]')).toBeVisible();
     // donate locator
-    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] a[href="/donation"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="donate-button--desktop"] a[href="/donation"]')).toBeVisible();
     // CR logo
     await expect(page.locator('[data-testid="Header-example-9"] [title="Go to Comic Relief homepage"]')).toBeVisible();
     // shop icon

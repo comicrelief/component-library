@@ -197,8 +197,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             );
           })}
 
-
-
           {/*
             ****************************
             MORE NAV RENDER STARTS HERE:
@@ -305,8 +303,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
         </NavMenu>
         )}
 
-        <NavMetaIcons isHeader>{metaIcons}</NavMetaIcons>
-        <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
+        {/* These are only shown on the non-desktop view; the desktop nav renders
+           these in the parent Header component to suit the design layout */}
+        <NavMetaIcons isHeader data-testid="meta-icons--mobile">
+          {metaIcons}
+        </NavMetaIcons>
+        <DonateButtonWrapper data-testid="donate-button--mobile">
+          {donateButton}
+        </DonateButtonWrapper>
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open

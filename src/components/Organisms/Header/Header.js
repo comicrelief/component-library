@@ -17,8 +17,8 @@ const Header = ({
       </Brand>
       <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
       <ButtonsAndIcons>
-        <HeaderMetaIcons isHeader>{metaIcons}</HeaderMetaIcons>
-        <DonateButtonWrapper>{donateButton}</DonateButtonWrapper>
+        <HeaderMetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</HeaderMetaIcons>
+        <DonateButtonWrapper data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapper>
       </ButtonsAndIcons>
 
     </InnerWrapper>
@@ -28,9 +28,9 @@ const Header = ({
 Header.propTypes = {
   // Check data structure example in src/components/moleculecules/header/data/data
   navItems: PropTypes.objectOf(PropTypes.shape),
-  // NB: no longer to include the Donate button:
+  // NB: metaIcons no longer include the Donate button:
   metaIcons: PropTypes.node.isRequired,
-  // Breaking out to separate prop to fully control:
+  // ... and is supplied separately to allow more render control:
   donateButton: PropTypes.node,
   campaign: PropTypes.string
 };
