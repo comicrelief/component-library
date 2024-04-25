@@ -122,6 +122,7 @@ import Link from '../../Atoms/Link/Link';
 import searchIcon from './assets/icon--search--2023.svg';
 import shopIcon from './assets/icon--shop--2023.svg';
 import payinIcon from './assets/PayIn.svg';
+import esuIcon from './assets/Post.svg';
 
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import RichText from '../../Atoms/RichText/RichText';
@@ -158,6 +159,19 @@ const [success, setSuccess] = React.useState(false);
   }
   metaIcons={
     <>
+      <div>
+        <Icon
+          icon={esuIcon}
+          title="Newsletter"
+          target="_blank"
+          role="button"
+          href="#"
+          brand="comicrelief"
+          tabIndex="0"
+          isHeader
+          id="esu"
+        />
+      </div>
       <div>
         <Icon
           icon={payinIcon}

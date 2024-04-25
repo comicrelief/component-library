@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
 
-const RevealTextWidth = 75;
+const RevealTextWidth = 95;
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -38,8 +38,9 @@ const RevealText = styled(Text)`
   width: auto;
   color: ${({ theme }) => theme.color('black')};
   position: absolute;
-  top: 19px;
-  left: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 70px;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 100%;

@@ -165,54 +165,54 @@ export default {
           }
         }
       ]
+    },
+    {
+      title: 'External Links (menu group)',
+      id: 'external-menu-group',
+      links: [
+        {
+          title: 'Multi-item (MORE NAV)',
+          url: 'https://www.sportrelief.com',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'item2 (MORE NAV)',
+          url: 'https://bing.com',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'item3 (MORE NAV)',
+          url: 'https://www.google.com',
+          reference: {
+            path: 'test-ref-path-1'
+          },
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'item4 (MORE NAV)',
+          url: null,
+          reference: {
+            path: 'test-ref-path-2'
+          },
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'item5 (MORE NAV)',
+          url: 'test-url',
+          reference: null,
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        }
+      ]
     }
-    // {
-    //   title: 'External Links (menu group)',
-    //   id: 'external-menu-group',
-    //   links: [
-    //     {
-    //       title: 'Multi-item (MORE NAV)',
-    //       url: 'https://www.sportrelief.com',
-    //       internal: {
-    //         type: 'ContentfulComponentLink'
-    //       }
-    //     },
-    //     {
-    //       title: 'item2 (MORE NAV)',
-    //       url: 'https://bing.com',
-    //       internal: {
-    //         type: 'ContentfulComponentLink'
-    //       }
-    //     },
-    //     {
-    //       title: 'item3 (MORE NAV)',
-    //       url: 'https://www.google.com',
-    //       reference: {
-    //         path: 'test-ref-path-1'
-    //       },
-    //       internal: {
-    //         type: 'ContentfulComponentLink'
-    //       }
-    //     },
-    //     {
-    //       title: 'item4 (MORE NAV)',
-    //       url: null,
-    //       reference: {
-    //         path: 'test-ref-path-2'
-    //       },
-    //       internal: {
-    //         type: 'ContentfulComponentLink'
-    //       }
-    //     },
-    //     {
-    //       title: 'item5 (MORE NAV)',
-    //       url: 'test-url',
-    //       reference: null,
-    //       internal: {
-    //         type: 'ContentfulComponentLink'
-    //       }
-    //     }
-    //   ]
-    // }
   ]
 };

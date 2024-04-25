@@ -274,7 +274,7 @@ const ChevronWrapper = styled.div`
   }
 `;
 
-// This represents the 'desktop'/non-mobile nav icons:
+// This represents the 'non-desktop'/mobile nav icons:
 const NavMetaIcons = styled.div`
   width: auto;
   display: flex;
@@ -282,21 +282,39 @@ const NavMetaIcons = styled.div`
   flex-direction: column;
 
   > div {
-    height: 55px;
+    height: 60px;
     width: 100%;
     display: flex;
+    border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
     > a {
       height: inherit;
       width: 100%;
-      padding: 10px;
+      padding: 15px 20px;
 
       img {
         padding: 5px;
         height: 35px;
         width: 35px;
       }
+
+      span {
+        transition: color 0.15s ease-out;
+      }
+
+      &:focus,
+      &:hover {
+        span {
+          color: ${({ theme }) => theme.color('red')};
+        }
+      }
     }
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+
   }
 
   // Hide these when using non-mobile nav,
@@ -306,7 +324,9 @@ const NavMetaIcons = styled.div`
   }
 `;
 
-const DonateButtonWrapper = styled.div`
+const DonateButtonWrapperBottom = styled.div`
+  padding: 35px 20px;
+  
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -314,22 +334,18 @@ const DonateButtonWrapper = styled.div`
   }
 `;
 
-
-
 /*
  * **********
  *  MORE NAV
  * **********
  */
 
-// Clone Of SubNavMenu
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     top: 88px;
   }
 `;
 
-// Clone Of NavLink
 const MoreNavLink = styled(NavLink)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     :focus,
@@ -342,7 +358,7 @@ const MoreNavLink = styled(NavLink)`
   }
 `;
 
-// CLONE OF NavItem, use for the 'More' link only
+// Use for the 'More' link only
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     :hover,
@@ -379,7 +395,6 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
   }
 `;
 
-// CLONE OF SubNavItem
 const MoreSubNavItem = styled(SubNavItem)`
   // Chevron icon
   > a > div {
@@ -401,7 +416,6 @@ const MoreSubNavItem = styled(SubNavItem)`
   }
 `;
 
-// CLONE OF SubNavItem
 const MoreNavNestedLink = styled(NavLink)`
   padding: 20px 25px 18px;
 
@@ -426,8 +440,8 @@ export {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapper,
-  // More Nav stuff:
+  DonateButtonWrapperBottom,
+  // 'More Nav' stuff:
   MoreNavLink,
   MoreSubNavMenu,
   MoreNavItem,

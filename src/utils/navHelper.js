@@ -27,7 +27,7 @@ const preProcessItems = menuGroups => {
     // Keep track of how many characters our nav has in total:
     characterCount += thisFirstChild.title.length;
 
-    // Assign groups to the relevant array if we've got over the limit
+    // Assign groups to the relevant array if we're over the limit
     return characterCount > characterLimit !== overLimit
       ? moreNavGroups.push(group)
       : standardGroups.push(group);

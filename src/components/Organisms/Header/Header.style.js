@@ -55,7 +55,7 @@ const Brand = styled.div`
   }
 `;
 
-const DonateButtonWrapper = styled.div`
+const DonateButtonWrapperTop = styled.div`
   // JUST KEEPING HANDY FOR NOW:
 `;
 
@@ -101,5 +101,5 @@ const ButtonsAndIcons = styled.div`
 `;
 
 export {
-  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapper, HeaderMetaIcons, ButtonsAndIcons
+  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapperTop, HeaderMetaIcons, ButtonsAndIcons
 };

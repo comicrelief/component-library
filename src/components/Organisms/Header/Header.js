@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Logos from '../../Molecules/Logos/Logos';
 import HeaderNav from './HeaderNav/HeaderNav';
 import {
-  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapper, HeaderMetaIcons, ButtonsAndIcons
+  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapperTop, HeaderMetaIcons, ButtonsAndIcons
 } from './Header.style';
 
 const Header = ({
@@ -18,7 +18,7 @@ const Header = ({
       <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
       <ButtonsAndIcons>
         <HeaderMetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</HeaderMetaIcons>
-        <DonateButtonWrapper data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapper>
+        <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
 
     </InnerWrapper>

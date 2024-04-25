@@ -23,7 +23,7 @@ import {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapper,
+  DonateButtonWrapperBottom,
   // More Nav stuff:
   MoreNavLink,
   MoreSubNavMenu,
@@ -308,9 +308,10 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
         <NavMetaIcons isHeader data-testid="meta-icons--mobile">
           {metaIcons}
         </NavMetaIcons>
-        <DonateButtonWrapper data-testid="donate-button--mobile">
+        {/* TODO: handle 'hide donate btn' functionality? */}
+        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
           {donateButton}
-        </DonateButtonWrapper>
+        </DonateButtonWrapperBottom>
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
