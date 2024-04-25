@@ -46,7 +46,7 @@ test.describe('header component', () => {
     // CR logo
     await expect(page.locator('[data-testid="Header-example-7"] [title="Go to Comic Relief homepage"]')).toBeVisible();
     // search
-    await expect(page.locator('[data-testid="Header-example-7"] header[role="banner"] a[href="/search"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-7"] header[role="banner"] [data-testid="meta-icons--desktop"] a[data-testid="header-search"]')).toBeVisible();
 
     await page.close();
   });
@@ -62,7 +62,7 @@ test.describe('header component', () => {
     // shop icon
     await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="meta-icons--desktop"] [title="Shop"]')).toBeVisible();
     // search
-    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="meta-icons--desktop"] a[href="/search"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="meta-icons--desktop"] a[data-testid="header-search"]')).toBeVisible();
 
     await page.close();
   });

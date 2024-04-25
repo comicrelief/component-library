@@ -70,8 +70,7 @@ const Icon = ({
     {...restProps}
     title={title}
     rel="noopener noreferrer"
-    /* TODO: needs to be dynamic; it's using the same for every icon currently... */
-    data-test={`header-${kebabCase(id)}`}
+    data-testid={`${isHeader ? 'header' : 'icon'}-${kebabCase(id)}`}
     isHeader={isHeader}
   >
     <StyledImage src={icon} alt={brand} />
@@ -80,8 +79,7 @@ const Icon = ({
     <RevealText>{title}</RevealText>
     )}
 
-    {/* This is terrible and should be changed */}
-    {title !== 'Sign up for emails' && (
+    {id === 'esu' && (
       <HelperText>(opens in new window)</HelperText>
     )}
   </StyledLink>
