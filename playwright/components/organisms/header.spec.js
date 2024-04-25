@@ -62,7 +62,7 @@ test.describe('header component', () => {
     // shop icon
     await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="meta-icons--desktop"] [title="Shop"]')).toBeVisible();
     // search
-    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] a[href="/search"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Header-example-9"] header[role="banner"] [data-testid="meta-icons--desktop"] a[href="/search"]')).toBeVisible();
 
     await page.close();
   });
