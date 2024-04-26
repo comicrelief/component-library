@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
+import Arrow from './arrow-right.png';
 
 const transitionDuration = 0.1;
 
@@ -72,7 +73,6 @@ const SubNavMenu = styled.ul`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.color('white')};
-  border-radius: 0 0 25px 25px;
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.color('grey_medium')};;
 
@@ -80,13 +80,13 @@ const SubNavMenu = styled.ul`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
     display: ${({ isFocussed }) => (isFocussed ? 'flex' : 'none')};
-    top: 88px;
-    left: -5px;
-    position: absolute;
-    padding: 0;
-    // OVERBLOWN WIDTH FOR DEBUGGING
     width: 330px;
     height: auto;
+    padding: 0;
+    position: absolute;
+    top: 88px;
+    left: -5px;
+    border-radius: 0 0 25px 25px;
   }
 `;
 
@@ -291,6 +291,22 @@ const NavMetaIcons = styled.div`
       height: inherit;
       width: 100%;
       padding: 15px 20px;
+      position: relative;
+
+      &: after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(${Arrow});
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+
 
       img {
         padding: 5px;

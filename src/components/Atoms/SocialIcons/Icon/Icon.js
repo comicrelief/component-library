@@ -42,7 +42,7 @@ const RevealText = styled(Text)`
   transform: translateY(-50%);
   left: 70px;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     width: 100%;
     text-align: center;
     position: absolute;
