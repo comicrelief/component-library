@@ -148,7 +148,7 @@ export default {
     },
     {
       title: 'More Nav double link (single link)',
-      id: 'single-more-menu-group',
+      id: 'double-more-menu-group',
       links: [
         {
           title: 'Homepage',

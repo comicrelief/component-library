@@ -1,6 +1,6 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable no-multiple-empty-lines */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -9,8 +9,6 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper, preProcessItems } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-
-// TO-DO: this needs to be replaced with the new asset
 import chevronDown from './chevron-down.svg';
 
 import {
@@ -68,14 +66,27 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
     };
   };
 
+  // Custom function to let us update the carousel config dynamically
+  const screenResize = useCallback(() => {
+    // WHY ISN'T THIS CORRECT??
+    console.log('CURRENT isMobile', isMobile);
+    // if (isMobile !== window.innerWidth < breakpointValues.Nav) {
+    //   // console.log('resizey, isMobile', isMobile);
+    //   setIsMobile(window.innerWidth < breakpointValues.Nav);
+    // }
+  }, [isMobile]);
+
   useEffect(() => {
     // Divide up our nav on initial mount:
     setProcessedItems(preProcessItems(menuGroups));
-
-    // TO-DO: this needs to be updated properly on resize!
+  
     setIsMobile(window.innerWidth < breakpointValues.Nav);
 
-    window.addEventListener('onkeyup', setIsTabFocussed);
+    // Hook into browser's own onresize event to call our custom wrapper function:
+    if (typeof window !== 'undefined') {
+      window.onresize = screenResize;
+      window.addEventListener('onkeyup', setIsTabFocussed);
+    }
 
     return () => {
       window.removeEventListener('onkeyup', setIsTabFocussed);
@@ -84,8 +95,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   // Once we've processed the items, assign according to breakpoint:
   if (processedItems) theseGroups = isMobile ? menuGroups : processedItems.standardGroups;
-
-  console.log('isSubMenuOpen', isSubMenuOpen);
 
   return (
     <>
@@ -120,7 +129,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             return (
               <NavItem
                 role="none"
-                key={thisID}
+                key={`${thisID}-item`}
                 index={index}
                 isSubMenuOpen={!!isSubMenuOpen[thisID]}
               >
@@ -134,7 +143,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                     onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
                     onKeyUp={keyPressed(group.title)}
                     role="button"
-                    key={thisID}
+                    key={`${thisID}-link`}
                   >
                     {thisFirstChild.title}
                     {hasSubMenu && (

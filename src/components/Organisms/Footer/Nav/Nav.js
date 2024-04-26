@@ -62,7 +62,8 @@ const FooterNav = ({ navItems, ...rest }) => {
         {menuGroups.map((group, index) => (
           <NavItem
             role="none"
-            key={group.id}
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${group.id}-${index}`}
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
