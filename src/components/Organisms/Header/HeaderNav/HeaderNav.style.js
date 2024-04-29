@@ -414,8 +414,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border-bottom: 0;
     position: relative;
     // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
-    display: block;
-    visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible !important' : 'hidden !important')};
+    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block !important' : 'none !important')};
   }
 `;
 
