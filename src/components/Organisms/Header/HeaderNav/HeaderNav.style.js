@@ -63,8 +63,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  display: flex;
   visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
+  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -88,7 +88,7 @@ const SubNavMenu = styled.ul`
     top: 88px;
     left: -5px;
     border-radius: 0 0 25px 25px;
-    transition: opacity 0.2s ease;
+    transition: opacity ${transitionDuration}s ease;
     opacity: 0;
   }
 `;
