@@ -6,7 +6,7 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 import Arrow from './arrow-right.png';
 
-const transitionDuration = 0.1;
+const transitionDuration = 0.2;
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -413,8 +413,15 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border-radius: 0;
     border-bottom: 0;
     position: relative;
-    // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block !important' : 'none !important')};
+    transition: max-height 0.5s cubic-bezier(0.41, 1.54, 0.41, 0.8);;
+    max-height: 0;
+    border: 0;
+
+    ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+      // Calculating a realistic height ceiling (8 subnav items)
+      // to make animation as slick as possible
+      max-height: calc(57px * 8);
+  `)};
   }
 `;
 

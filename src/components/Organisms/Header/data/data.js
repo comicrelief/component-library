@@ -88,14 +88,7 @@ export default {
       id: 'schools-menu-group',
       links: [
         {
-          title: 'Schools & youth',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Primary schools',
+          title: 'Item one',
           path:
             'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
@@ -103,7 +96,7 @@ export default {
           }
         },
         {
-          title: 'Secondary schools',
+          title: 'Item two',
           path:
             'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
           internal: {
@@ -111,21 +104,45 @@ export default {
           }
         },
         {
-          title: 'Nurseries',
+          title: 'Item three',
+          path:
+            'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Item four',
+          path:
+            'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Item five',
+          path:
+            'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Item six',
           path: 'https://www.comicrelief.com/rednoseday/schools/nurseries',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Youth groups',
+          title: 'Item seven',
           path: 'https://www.comicrelief.com/rednoseday/youth',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Free downloads',
+          title: 'Item eight',
           path: 'https://www.comicrelief.com/rednoseday/schools/free-downloads',
           internal: {
             type: 'ContentfulPageLandingPage'
