@@ -55,6 +55,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
   // Handle tab key on menu nav
   const keyPressed = item => () => {
     window.onkeyup = e => {
+      // Specifies the tab key:
       if (e.which === 9) {
         // If the currently tabbed-to element is our item, do something
         if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
@@ -223,7 +224,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                 // As this is purely used to hover-over, and never represents a
                 // direct link to a page, we can nip any click event in the bud:
                 onClick={e => { e.preventDefault(); }}
-                // onKeyUp={e => { e.preventDefault(); console.log('ugh');}}
                 role="button"
                 aria-haspopup="true"
               >
@@ -238,8 +238,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
             <MoreSubNavMenu
               role="list"
               isFocussed={!!isTabFocussed.more}
-              // Always 'open', just hide/shown
-              // isSubMenuOpen={!!isSubMenuOpen.more}
               key="more-nav-ul"
             >
               
@@ -266,9 +264,8 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
                       isSubMenuOpen={!!isSubMenuOpen[child.id]}
                       aria-expanded={!!isSubMenuOpen[child.id]}
-                      // onKeyUp={keyPressed(group.title)}
+                      onKeyUp={keyPressed(child.id)}
                     >
-                      {/* AAA: */}
                       {thisFirstChild.title}
                       {hasSubMenu && (
                       <ChevronWrapper>
@@ -282,6 +279,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                       <MoreNestedSubNavMenu
                         role="list"
                         isSubMenuOpen={!!isSubMenuOpen[child.id]}
+                        // DO WE NEED THIS?
                         // isFoccused={!!isFoccused[group.title]}
                       >
                         {child.links.map(subChild => {
@@ -291,7 +289,6 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                             <MoreSubNavItem key={thisSubUrl}>
                               <MoreSubNavLink href={thisSubUrl} inline role="menuitem">
                                 <Text>
-                                  {/* BBB: */}
                                   {subChild.title}
                                 </Text>
                               </MoreSubNavLink>

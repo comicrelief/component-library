@@ -63,7 +63,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  display: flex;
+  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -74,12 +75,12 @@ const SubNavMenu = styled.ul`
   align-items: center;
   background-color: ${({ theme }) => theme.color('white')};
   overflow: hidden;
-  border: 1px solid ${({ theme }) => theme.color('grey_medium')};;
+  border: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   // DESKTOP:   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    display: none;
-    display: ${({ isFocussed }) => (isFocussed ? 'flex' : 'none')};
+    display: flex;
+    visibility: ${({ isFocussed }) => (isFocussed ? 'visible' : 'hidden')};
     width: 330px;
     height: auto;
     padding: 0;
@@ -87,6 +88,8 @@ const SubNavMenu = styled.ul`
     top: 88px;
     left: -5px;
     border-radius: 0 0 25px 25px;
+    transition: opacity 0.2s ease;
+    opacity: 0;
   }
 `;
 
@@ -165,6 +168,7 @@ const NavLink = styled(NavLinkClass)`
     :focus {
       + ${SubNavMenu} {
       display: flex;
+      opacity: 1;
     }}
   }
 `;
@@ -221,11 +225,6 @@ const NavItem = styled.li`
     }
   }
   
-  :hover,
-  :focus,
-  :focus-within {
-    // background-color: ${({ theme }) => theme.color('teal_light')};
-  }
   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 4px;
@@ -246,12 +245,20 @@ const NavItem = styled.li`
     :focus-within {
       background-color: transparent;
       ${zIndex('high')};
+
       span {
         border-bottom: 2px solid ${({ theme }) => theme.color('black')};
         padding-bottom: 2px;
       }
+
+      // > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+
+      // }
+
       ${SubNavMenu} {
         display: flex;
+        opacity: 1;
+        visibility: visible;
         flex-direction: column;
       }
     }
@@ -358,7 +365,7 @@ const DonateButtonWrapperBottom = styled.div`
 
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    top: 88px;
+    // top: 88px
   }
 `;
 
@@ -407,7 +414,8 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border-bottom: 0;
     position: relative;
     // Having to strong-arm styles to as the interaction is a little different to the preexisting SubNavMenu styles
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'block !important' : 'none !important')};
+    display: block;
+    visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible !important' : 'hidden !important')};
   }
 `;
 
