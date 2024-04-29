@@ -58,7 +58,7 @@ const RevealText = styled(Text)`
     text-align: center;
     position: absolute;
     top: 8px;
-    left: 18px;
+    left: 15px;
     transform: translateX(0);
     display: none;
     color: ${({ theme }) => theme.color('red')};
