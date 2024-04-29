@@ -18,7 +18,7 @@ const LogoLink = styled.a`
   &:hover,
   &:focus {
     img {
-      transform: rotate(-20deg);
+      transform: rotate(-14deg);
     }
   }
 `;
