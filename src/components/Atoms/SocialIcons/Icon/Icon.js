@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
 
-const RevealTextWidth = 95;
+const RevealTextWidth = 58;
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -20,7 +20,18 @@ const StyledLink = styled.a`
 
     &:hover,
     &:focus {
+      // Default
       padding-right: ${RevealTextWidth}px;
+
+      // Tweak for ESU's longer text:
+      &[data-testid="header-esu"] {
+        padding-right: 95px;
+      }
+
+      // Tweak for Shop 's shorter text:
+      &[data-testid="header-shop"] {
+        padding-right: 50px;
+      }
 
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
@@ -47,8 +58,8 @@ const RevealText = styled(Text)`
     text-align: center;
     position: absolute;
     top: 8px;
-    left: calc(50% + 17px);
-    transform: translateX(-50%);
+    left: 18px;
+    transform: translateX(0);
     display: none;
     color: ${({ theme }) => theme.color('red')};
   }
