@@ -62,7 +62,6 @@ const Copy = styled.div`
   /* Reset styles at large breakpoint */
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')};
-    font-size: 2rem;
     h1 {
       font-size: 2rem;
     }
@@ -73,7 +72,6 @@ const Copy = styled.div`
       font-size: 1.2rem;
     }
   }
-
 `;
 
 export { Container, Wrapper, Copy };
