@@ -41,7 +41,7 @@ const Copy = styled.div`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
       padding: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
-        margin: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
+        margin: ${props => ((props.smallBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: 24px;
       }
     }
@@ -53,7 +53,7 @@ const Copy = styled.div`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
-        margin: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
+        margin: ${props => ((props.mediumBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: 24px;
       }
     }
