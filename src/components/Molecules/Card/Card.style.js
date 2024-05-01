@@ -62,13 +62,13 @@ const Copy = styled.div`
       @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: ${spacing('l')};
         h1 {
-          margin: 0 0 1rem 0;
+          margin: 0 0 ${spacing('md')} 0;
         }
         h2 {
-          margin-bottom: 2rem;
+          margin-bottom: ${spacing('l')};
         }
         h3, h4, h5 {
-          margin-bottom: 1rem;
+          margin-bottom: ${spacing('md')};
         }
       }
   `}
