@@ -48,6 +48,24 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1 {
+    font-size: 2rem;
+  }
+
+  .c1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .c1 h3 {
+    font-size: 1.2rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -109,6 +127,24 @@ exports[`renders correctly 2`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1 {
+    font-size: 2rem;
+  }
+
+  .c1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .c1 h3 {
+    font-size: 1.2rem;
   }
 }
 
