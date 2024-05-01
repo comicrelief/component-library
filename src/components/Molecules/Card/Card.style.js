@@ -42,6 +42,7 @@ const Copy = styled.div`
       padding: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
         margin: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
+        font-size: 24px;
       }
     }
   `}
@@ -53,6 +54,7 @@ const Copy = styled.div`
       padding: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')}`)};
       h1, h2, h3, h4, h5 {
         margin: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')} 0 ${spacing('sm')}`)};
+        font-size: 24px;
       }
     }
   `}
@@ -63,12 +65,15 @@ const Copy = styled.div`
         padding: ${spacing('l')};
         h1 {
           margin: 0 0 ${spacing('md')} 0;
+          font-size: 2rem;
         }
         h2 {
           margin-bottom: ${spacing('l')};
+          font-size: 2rem;
         }
         h3, h4, h5 {
           margin-bottom: ${spacing('md')};
+          font-size: 2rem;
         }
       }
   `}
