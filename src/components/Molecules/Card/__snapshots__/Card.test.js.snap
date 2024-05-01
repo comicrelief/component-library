@@ -60,10 +60,6 @@ exports[`renders correctly 1`] = `
   .c1 h2 {
     font-size: 1.5rem;
   }
-
-  .c1 h3 {
-    font-size: 1.2rem;
-  }
 }
 
 <div
@@ -141,10 +137,6 @@ exports[`renders correctly 2`] = `
 
   .c1 h2 {
     font-size: 1.5rem;
-  }
-
-  .c1 h3 {
-    font-size: 1.2rem;
   }
 }
 
