@@ -39,10 +39,10 @@ const Copy = styled.div`
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
     === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
-      padding: ${props => ((props.smallBreakpointRowLayout === true) && `${spacing('sm')}`)};
-      h1, h2, h3, h4, h5 {
+      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      h1, h2, h3 {
         margin: ${props => ((props.smallBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
-        font-size: 24px;
+        font-size: ${props => ((props.smallBreakpointRowLayout === true) ? '24px' : '2rem')};
       }
     }
   `}
@@ -51,32 +51,29 @@ const Copy = styled.div`
   ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
     === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: ${props => ((props.mediumBreakpointRowLayout === true) && `${spacing('sm')}`)};
-      h1, h2, h3, h4, h5 {
+      padding: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      h1, h2, h3 {
         margin: ${props => ((props.mediumBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
-        font-size: 24px;
+        font-size: ${props => ((props.mediumBreakpointRowLayout === true) ? '24px' : '2rem')};
       }
     }
   `}
 
-  /* Check for Cards/smallBreakpointRowLayout or mediumBreakpointRowLayout prop coming from the CMS and adjust styling back to normal */
-  ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
-      @media ${({ theme }) => theme.allBreakpoints('L')} {
-        padding: ${spacing('l')};
-        h1 {
-          margin: 0 0 ${spacing('md')} 0;
-          font-size: 2rem;
-        }
-        h2 {
-          margin-bottom: ${spacing('l')};
-          font-size: 2rem;
-        }
-        h3, h4, h5 {
-          margin-bottom: ${spacing('md')};
-          font-size: 2rem;
-        }
-      }
-  `}
+  /* Reset styles at large breakpoint */
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding: ${spacing('l')};
+    font-size: 2rem;
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
 `;
 
 export { Container, Wrapper, Copy };
