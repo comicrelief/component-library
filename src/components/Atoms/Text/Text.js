@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { sizes } from '../../../theme/shared/breakpoint';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 /** Text component */
 export const BaseText = styled.span`
@@ -20,12 +20,12 @@ export const BaseText = styled.span`
     ? css`
           font-size: ${theme.fontSize('xxl')};
           line-height: 3rem;
-          @media ${theme.breakpoint('small')} {
+          @media ${theme.allBreakpoints('M')} {
             font-size: ${theme.fontSize('big')};
             line-height: ${theme.fontSize('big')};
             margin-bottom: 2rem;
           }
-          @media ${theme.breakpoint('medium')} {
+          @media ${theme.allBreakpoints('L')} {
             font-size: ${theme.fontSize('super')};
             line-height: ${theme.fontSize('super')};
             margin-bottom: 2rem;
@@ -33,14 +33,14 @@ export const BaseText = styled.span`
         `
     : null)};
   ${({ mobileColor, theme }) => mobileColor && css`
-  @media (max-width: ${sizes.medium - 1}px) {
+  @media (max-width: ${breakpointValues.L - 1}px) {
     color: ${theme.color(mobileColor)};
   }
 `};
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
-      @media ${theme.breakpoint('small')} {
+      @media ${theme.allBreakpoints('M')} {
         font-size: ${theme.fontSize('m')};
       }
     `

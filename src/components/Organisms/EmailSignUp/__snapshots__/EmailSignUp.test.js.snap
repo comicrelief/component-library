@@ -70,12 +70,6 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c15 (min-width:1024px) {
-  width: auto;
-  padding: 1rem 2rem;
-  margin: 0 auto 2rem;
-}
-
 .c8 {
   position: relative;
   display: -webkit-box;
@@ -220,6 +214,14 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c15 {
     width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
   }
 }
 

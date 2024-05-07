@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import { media } from '../../../theme/shared/size';
 import checkBoxIcon from './assets/CR_Tick_black.svg';
 import TextInput from './_TextInput';
 
@@ -9,7 +8,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${media('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -20,7 +19,7 @@ const TopCopyWrapper = styled.div`
   display: flex;
   width: 100%;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 10px;
   }
 `;
@@ -42,7 +41,7 @@ const FormField = styled.div`${({ theme }) => css`
   display: flex;
   flex-direction: column;
 
-  @media ${theme.breakpoint('small')} {
+  @media ${theme.allBreakpoints('M')} {
     width: 50%;
     padding: 10px;
   }
@@ -82,7 +81,7 @@ const CheckLabel = styled.label`${({ theme }) => css`
   align-items: center;
   font-size: ${theme.fontSize('xs')};
 
-  @media ${theme.breakpoint('small')} {
+  @media ${theme.allBreakpoints('M')} {
     font-size: ${theme.fontSize('s')};
   }
 `}`;
@@ -108,7 +107,7 @@ const CheckInput = styled.input`
     float: left;
     border-radius: 8px;
 
-    @media ${({ theme }) => theme.breakpoint('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-right: 15px;
     }
   }
@@ -166,7 +165,7 @@ const ExtraInfo = styled.span`
 const MPTextInput = styled(TextInput)`
   input {
     border: 1px solid  ${({ theme }) => theme.color('black')};;
-    ${media('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
   }

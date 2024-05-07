@@ -1,11 +1,11 @@
-_Hide Visually_
+## hideVisually
 
 `import { hideVisually } from '@comicrelief/component-library';`
 
-how to use in your styled component
+How to use in your styled component
 `export const Component = styled.span'${hideVisually};';`
 
-_allowListed_
+## allowListed
 
 `import { allowListed } from '@comicrelief/component-library';`
 
@@ -13,14 +13,14 @@ _allowListed_
 
 Check if a url is allowListed. Used to check links and change link target.
 
-_Z Index_
+## zIndex
 
 `import { zIndex } from '@comicrelief/component-library';`
 
-how to use in your styled component
+How to use in your styled component
 `export const Component = styled.span'${zIndex('high')};';`
 
-_Spacing_
+## spacing
 
 `import { spacing } from '@comicrelief/component-library';`
 
@@ -37,25 +37,40 @@ Default spacing scale
 | xxl  |  8rem   |
 | xxxl |  16rem  |
 
-how to use in your styled component
+How to use in your styled component
 
 `export const Component = styled.span'`
 `padding: ${spacing('md)'} ${spacing('l)'};';`
 
-_Width_
+## allBreakpoints, and { breakpointValues } within allBreakpoints
 
-`import { media, container } from '@comicrelief/component-library';`
+| S    | M     | L      | Nav   | XL     |
+|:----:|------:| ------:| -----:| ------:|
+| 0    | 740   | 1024   | 1150  | 1440   |
 
- Breakpoint and container sizes
+### Usage within Component Library itself
+#### media queries (no need to import):
+`@media ${({ theme }) => theme.allBreakpoints('M')} {`
 
-| Name   |      small      |  medium | large |
-|----------|:-------------:|------:| ------:|
-| screen   | 740px           | 1024px  |1440px    |
-| container |   800px        | 1200px  |1440px    |
+#### screen sizes:
+```
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+...
+max-width: ${breakpointValues.M}px;
+```
 
-How to use in your styled component
+### Usage within Component Library
+```
+import { breakpointValues } from '@comicrelief/component-library/src/theme/shared/allBreakpoints';
+...
+max-width: ${breakpointValues.M}px);
+```
 
-`const BreakPoint = styled.div'${media('small')}{ font-size: 16px}'`
 
-`const Container = styled.div'max-width: ${container.small}'`
+## containers from containers.js
+| small   | medium  | large  |
+|:-------:|--------:| ------:|
+| 800px   | 1200px  | 1440px |
 
+### Note: These are used in a max-width context:
+`max-width: ${containers.small}`

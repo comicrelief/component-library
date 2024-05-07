@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import { screen } from '../../../theme/shared/size';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const Wrapper = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
@@ -13,13 +13,13 @@ const Container = styled.div`
   text-align: center;
   padding: calc(${spacing('m')} * 2) ${spacing('m')};
   margin: 0 auto;
-  max-width: ${screen.large};
+  max-width: ${breakpointValues.XL}px;
 
-  @media ${({ theme }) => theme.breakpoint('small')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${spacing('xl')} ${spacing('l')};
   }
 
-  @media ${({ theme }) => theme.breakpoint('large')} {
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
     padding: ${spacing('xl')} ${spacing('xl')};
   }
 `;

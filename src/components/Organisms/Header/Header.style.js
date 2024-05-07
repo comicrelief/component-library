@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
-import { container } from '../../../theme/shared/size';
+import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 
 const HeaderWrapper = styled.header.attrs(() => ({
@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     height: auto;
   }
 `;
@@ -23,9 +23,9 @@ const InnerWrapper = styled.div`
   height: 100%;
   padding: 0 12px;
   cursor: pointer;
-  max-width: ${container.large};
+  max-width: ${containers.large};
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
   }
 `;
@@ -72,7 +72,7 @@ const MetaIcons = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoint('nav')} {
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     position: relative;
     display: flex;
     align-items: center;

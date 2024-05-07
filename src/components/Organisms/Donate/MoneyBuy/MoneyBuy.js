@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
-import { media } from '../../../../theme/shared/size';
 
 const MoneyBuyButton = styled(Input)`
   display: block;
@@ -19,7 +18,7 @@ const MoneyBuyButton = styled(Input)`
     padding: ${spacing('s')};
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
     height: auto;
-    ${media('small')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
       padding: ${spacing('m')};
     }
