@@ -128,7 +128,7 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 20px 25px 18px;
+  padding: 20px 25px 18px 40px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
@@ -138,7 +138,7 @@ const SubNavLink = styled(NavLinkClass)`
  * Navigation Menu (first level)
  */
 const NavMenu = styled.ul`
-  background-color: ${({ theme }) => theme.color('grey_extra_light')};
+  background-color: ${({ theme }) => theme.color('white')};
   list-style: none outside;
   padding: 0;
   margin: 0;
@@ -180,6 +180,7 @@ const NavItem = styled.li`
   ${zIndex('medium')};
   position: relative;
   font-weight: 700;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   li {
     span {

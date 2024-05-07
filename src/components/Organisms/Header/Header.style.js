@@ -56,7 +56,21 @@ const Brand = styled.div`
 `;
 
 const DonateButtonWrapperTop = styled.div`
-  // JUST KEEPING HANDY FOR NOW:
+  width: 120px;
+  display: flex;
+  justify-content: center;
+
+  // Donate button
+  a {
+    width: calc(100% - 10px);
+    transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+
+    &:hover,
+    &:focus {
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 0;
+    }
+  }
 `;
 
 const HeaderMetaIcons = styled.div`
