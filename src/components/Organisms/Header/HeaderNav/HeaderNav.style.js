@@ -349,7 +349,21 @@ const NavMetaIcons = styled.div`
 `;
 
 const DonateButtonWrapperBottom = styled.div`
+  display: flex;
+  justify-content: center;
   padding: 35px 20px;
+
+  // Donate button
+  a {
+    width: calc(100% - 10px);
+    transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+
+    &:hover,
+    &:focus {
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
+    }
+  }
   
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
