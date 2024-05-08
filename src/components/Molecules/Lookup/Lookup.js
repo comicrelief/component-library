@@ -128,7 +128,7 @@ const Lookup = ({
 };
 
 Lookup.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
@@ -140,7 +140,6 @@ Lookup.propTypes = {
 };
 
 Lookup.defaultProps = {
-  name: '',
   noResultsMessage: 'Sorry, could not find any results for your search',
   dropdownInstruction: ''
 };
