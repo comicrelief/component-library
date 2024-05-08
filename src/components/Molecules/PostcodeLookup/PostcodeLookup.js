@@ -55,10 +55,11 @@ const addressFetcher = async (postcode, reportError) => {
 };
 
 const PostcodeLookup = ({
-  onSelect, label, placeholder, buttonText, noResultsMessage, reportError, ...rest
+  onSelect, label, name, placeholder, buttonText, noResultsMessage, reportError, ...rest
 }) => (
   <StyledWrapper>
     <Lookup
+      name={name}
       label={label}
       placeholder={placeholder}
       buttonText={buttonText}
@@ -72,6 +73,7 @@ const PostcodeLookup = ({
 );
 
 PostcodeLookup.propTypes = {
+  name: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
   label: PropTypes.string,
   placeholder: PropTypes.string,
@@ -83,6 +85,7 @@ PostcodeLookup.propTypes = {
 };
 
 PostcodeLookup.defaultProps = {
+  name: 'postcode_lookup',
   label: 'Find address by postcode',
   placeholder: 'Enter postcode...',
   buttonText: 'Find address',
