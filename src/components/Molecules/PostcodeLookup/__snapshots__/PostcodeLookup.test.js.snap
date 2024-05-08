@@ -50,12 +50,6 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c8 (min-width:1024px) {
-  width: auto;
-  padding: 1rem 2rem;
-  margin: 0 auto 2rem;
-}
-
 .c3 {
   position: relative;
   display: -webkit-box;
@@ -145,6 +139,14 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c8 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
+  }
+}
+
 @media (min-width:740px) {
   .c7 {
     max-width: 290px;
@@ -161,6 +163,7 @@ exports[`renders correctly 1`] = `
     >
       <label
         className="c3 TextInputWithDropdown__input"
+        htmlFor="Find address by postcode"
       >
         <span
           className="c4 c5"
@@ -177,8 +180,11 @@ exports[`renders correctly 1`] = `
         >
           
           <input
+            aria-describedby="Find address by postcode"
             autoComplete="off"
             className="c7"
+            id="Find address by postcode"
+            name="Find address by postcode"
             onChange={[Function]}
             onKeyPress={[Function]}
             placeholder="Enter postcode..."

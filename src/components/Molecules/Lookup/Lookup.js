@@ -128,7 +128,7 @@ const Lookup = ({
 };
 
 Lookup.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
@@ -140,6 +140,7 @@ Lookup.propTypes = {
 };
 
 Lookup.defaultProps = {
+  name: 'Find address by postcode',
   noResultsMessage: 'Sorry, could not find any results for your search',
   dropdownInstruction: ''
 };
