@@ -140,7 +140,7 @@ Lookup.propTypes = {
 };
 
 Lookup.defaultProps = {
-  name: 'Find address by postcode',
+  name: '',
   noResultsMessage: 'Sorry, could not find any results for your search',
   dropdownInstruction: ''
 };
