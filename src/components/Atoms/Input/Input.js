@@ -104,7 +104,7 @@ const Input = React.forwardRef(
 );
 
 Input.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node
@@ -128,7 +128,6 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  name: '',
   showLabel: true,
   hasAria: true,
   placeholder: '',
