@@ -13,6 +13,9 @@ const fetchErrorHandler = () => {
 enterManually
   ? 'Sorry, there appears to be a problem. Please enter your details manually.'
   : (
-    <PostcodeLookup onSelect={address => alert(JSON.stringify(address, null, 2))} />
+    <PostcodeLookup
+        onSelect={address => alert(JSON.stringify(address, null, 2))}
+        label="Custom label"
+    />
   )
 ```

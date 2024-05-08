@@ -77,14 +77,17 @@ PostcodeLookup.propTypes = {
   placeholder: PropTypes.string,
   buttonText: PropTypes.string,
   noResultsMessage: PropTypes.string,
-  reportError: PropTypes.func.isRequired // Sentry function passed as a prop
+  reportError: PropTypes.oneOfType([
+    PropTypes.func
+  ])
 };
 
 PostcodeLookup.defaultProps = {
   label: 'Find address by postcode',
   placeholder: 'Enter postcode...',
   buttonText: 'Find address',
-  noResultsMessage: 'Sorry, could not find any addresses for that postcode'
+  noResultsMessage: 'Sorry, could not find any addresses for that postcode',
+  reportError: undefined // Set reportError default value to undefined
 };
 
 export default PostcodeLookup;
