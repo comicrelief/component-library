@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c4 {
+.c5 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -40,17 +40,17 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c8 > a {
+.c9 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c8:hover {
+.c9:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
 
-.c3 {
+.c4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,11 +63,11 @@ exports[`renders correctly 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   margin-bottom: 0.5rem;
 }
 
-.c7 {
+.c8 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -87,25 +87,25 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c7:focus {
+.c8:focus {
   border: 1px solid #666;
 }
 
-.c6 {
+.c7 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c1 {
+.c2 {
   position: relative;
 }
 
-.c9:disabled {
+.c10:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
 
-.c10 {
+.c11 {
   color: #222222;
   border: 2px solid #222222;
   background-color: #FFFFFF;
@@ -113,12 +113,12 @@ exports[`renders correctly 1`] = `
   padding-right: 3rem;
 }
 
-.c10:hover {
+.c11:hover {
   color: #222222;
   background-color: #FFFFFF;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
@@ -134,13 +134,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c8 {
+  .c9 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c9 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -148,7 +148,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c8 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
     max-width: 290px;
   }
 }
@@ -156,17 +162,19 @@ exports[`renders correctly 1`] = `
 <div
   className="c0"
 >
-  <div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 TextInputWithDropdown c2"
+      className="c2 TextInputWithDropdown c3"
       onKeyDown={[Function]}
     >
       <label
-        className="c3 TextInputWithDropdown__input"
+        className="c4 TextInputWithDropdown__input"
         htmlFor="postcode_lookup"
       >
         <span
-          className="c4 c5"
+          className="c5 c6"
           color="inherit"
           dangerouslySetInnerHTML={
             Object {
@@ -176,13 +184,13 @@ exports[`renders correctly 1`] = `
           size="s"
         />
         <div
-          className="c6"
+          className="c7"
         >
           
           <input
             aria-describedby="postcode_lookup"
             autoComplete="off"
-            className="c7"
+            className="c8"
             id="postcode_lookup"
             name="postcode_lookup"
             onChange={[Function]}
@@ -197,7 +205,7 @@ exports[`renders correctly 1`] = `
       </label>
     </div>
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11"
       disabled={false}
       onClick={[Function]}
       type="button"

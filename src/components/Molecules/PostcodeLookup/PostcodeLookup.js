@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import Lookup from '../Lookup/Lookup';
-import StyledWrapper from './PostcodeLookup.style';
+import Wrapper from './PostcodeLookup.style';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -57,7 +57,7 @@ const addressFetcher = async (postcode, reportError) => {
 const PostcodeLookup = ({
   onSelect, label, name, placeholder, buttonText, noResultsMessage, reportError, ...rest
 }) => (
-  <StyledWrapper>
+  <Wrapper>
     <Lookup
       name={name}
       label={label}
@@ -69,7 +69,7 @@ const PostcodeLookup = ({
       onSelect={onSelect}
       {...rest}
     />
-  </StyledWrapper>
+  </Wrapper>
 );
 
 PostcodeLookup.propTypes = {
