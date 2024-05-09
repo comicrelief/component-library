@@ -30,7 +30,7 @@ const StyledLink = styled.a`
 
       // Tweak for Shop 's shorter text:
       &[data-testid="header-shop"] {
-        padding-right: 50px;
+        padding-right: 52px;
       }
 
       img {
