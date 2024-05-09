@@ -62,9 +62,9 @@ const DonateButtonWrapperTop = styled.div`
 
   // Donate button
   a {
-    width: calc(100% - 10px);
-    transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
-
+    width: 90%;
+    transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);
+  
     &:hover,
     &:focus {
       width: 100%;

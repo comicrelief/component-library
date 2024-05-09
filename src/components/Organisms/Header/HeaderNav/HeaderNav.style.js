@@ -426,7 +426,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border-radius: 0;
     border-bottom: 0;
     position: relative;
-    transition: max-height 0.5s cubic-bezier(0.5, 1.5, 0.5, 0.85);
+    transition: max-height 0.5s cubic-bezier(0.5, 1.5, 0.5, 0.80);
     max-height: 0;
     border: 0;
 
