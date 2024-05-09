@@ -5,7 +5,13 @@ import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWi
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
-const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
+const Wrapper = styled.div`
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
+`;
+
+const Button = styled(ButtonWithStates)`${({ theme }) => css`
   color: ${theme.color('grey_dark')};
   border: 2px solid ${theme.color('grey_dark')};
   background-color: ${theme.color('white')};
@@ -82,7 +88,7 @@ const Lookup = ({
   }, [query, setOptions, setErrorMessage, noResultsMessage, lookupHandler]);
 
   return (
-    <div {...rest}>
+    <Wrapper {...rest}>
       <TextInputWithDropdown
         css={{ marginBottom: spacing('md') }}
         name={name}
@@ -114,7 +120,7 @@ const Lookup = ({
         errorMsg={errorMessage}
         dropdownInstruction={dropdownInstruction}
       />
-      <StyledButton
+      <Button
         type="button"
         onClick={() => handler()}
         loading={isSearching}
@@ -122,8 +128,8 @@ const Lookup = ({
         loadingText="Searching"
       >
         {buttonText}
-      </StyledButton>
-    </div>
+      </Button>
+    </Wrapper>
   );
 };
 

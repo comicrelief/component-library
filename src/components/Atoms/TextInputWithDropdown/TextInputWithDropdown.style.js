@@ -19,7 +19,6 @@ const Dropdown = styled.div`
   border: 1px solid;
   margin-top: -1px;
   width: 100%;
-
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     max-width: 500px;
   }
