@@ -287,7 +287,14 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
                           return (
                             // 'More Nav' sub item:
                             <MoreSubNavItem key={thisSubUrl}>
-                              <MoreSubNavLink href={thisSubUrl} inline role="menuitem">
+                              <MoreSubNavLink
+                                href={thisSubUrl}
+                                inline
+                                role="menuitem"
+                                // Allows us to avoid using the 'display:none'
+                                // approach so we can animate properly:
+                                tabIndex={isSubMenuOpen[child.id] ? '0' : '-1'}
+                              >
                                 <Text>
                                   {subChild.title}
                                 </Text>

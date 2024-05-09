@@ -431,7 +431,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     transition: max-height 0.5s cubic-bezier(0.5, 1.35, 0.5, 0.85);
     max-height: 0;
     border: 0;
-
+    
     ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
       // to make animation as slick as possible
