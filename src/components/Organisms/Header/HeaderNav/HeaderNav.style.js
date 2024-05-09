@@ -180,7 +180,7 @@ const NavItem = styled.li`
   ${zIndex('medium')};
   position: relative;
   font-weight: 700;
-  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   li {
     span {
@@ -230,6 +230,8 @@ const NavItem = styled.li`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 4px;
     padding: 25px 5px;
+    border-bottom: none;
+
 
     :hover,
     :focus,
@@ -251,10 +253,6 @@ const NavItem = styled.li`
         border-bottom: 2px solid ${({ theme }) => theme.color('black')};
         padding-bottom: 2px;
       }
-
-      // > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
-
-      // }
 
       ${SubNavMenu} {
         display: flex;
@@ -431,7 +429,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     transition: max-height 0.5s cubic-bezier(0.5, 1.35, 0.5, 0.85);
     max-height: 0;
     border: 0;
-    
+
     ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
       // to make animation as slick as possible

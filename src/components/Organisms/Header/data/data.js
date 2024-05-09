@@ -188,21 +188,21 @@ export default {
       id: 'external-menu-group',
       links: [
         {
-          title: 'Multi-item (MORE NAV)',
+          title: 'Multi-item',
           url: 'https://www.sportrelief.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'item2 (MORE NAV)',
+          title: 'item2',
           url: 'https://bing.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'item3 (MORE NAV)',
+          title: 'item3',
           url: 'https://www.google.com',
           reference: {
             path: 'test-ref-path-1'
@@ -212,7 +212,7 @@ export default {
           }
         },
         {
-          title: 'item4 (MORE NAV)',
+          title: 'item4',
           url: null,
           reference: {
             path: 'test-ref-path-2'
@@ -222,7 +222,7 @@ export default {
           }
         },
         {
-          title: 'item5 (MORE NAV)',
+          title: 'item5',
           url: 'test-url',
           reference: null,
           internal: {
