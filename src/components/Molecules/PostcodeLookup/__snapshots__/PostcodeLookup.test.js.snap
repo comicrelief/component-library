@@ -122,6 +122,10 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
+.c12 {
+  margin-top: 50px;
+}
+
 .c0 > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -215,6 +219,122 @@ exports[`renders correctly 1`] = `
         className=""
       />
     </button>
+  </div>
+  <div
+    className="c12"
+  >
+    <label
+      className="c4"
+    >
+      <span
+        className="c5 c6"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="s"
+      />
+      <div
+        className="c7"
+      >
+        
+        <input
+          className="c8"
+          name="line1"
+          placeholder="Address Line 1"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      
+    </label>
+    <label
+      className="c4"
+    >
+      <span
+        className="c5 c6"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="s"
+      />
+      <div
+        className="c7"
+      >
+        
+        <input
+          className="c8"
+          name="line2"
+          placeholder="Address Line 2"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      
+    </label>
+    <label
+      className="c4"
+    >
+      <span
+        className="c5 c6"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="s"
+      />
+      <div
+        className="c7"
+      >
+        
+        <input
+          className="c8"
+          name="line3"
+          placeholder="Address Line 3"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      
+    </label>
+    <label
+      className="c4"
+    >
+      <span
+        className="c5 c6"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="s"
+      />
+      <div
+        className="c7"
+      >
+        
+        <input
+          className="c8"
+          name="posttown"
+          placeholder="Post Town"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      
+    </label>
   </div>
 </div>
 `;
