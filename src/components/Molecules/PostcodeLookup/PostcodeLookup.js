@@ -1,8 +1,10 @@
-import React from 'react';
+// !! example for could not find address - n22 4qa
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import Lookup from '../Lookup/Lookup';
-import Wrapper from './PostcodeLookup.style';
+import AddressInputs from './AddressInputs';
+import Container from './PostcodeLookup.style';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -54,23 +56,44 @@ const addressFetcher = async (postcode, reportError) => {
   }
 };
 
-const PostcodeLookup = ({
+export default function PostcodeLookup({
   onSelect, label, name, placeholder, buttonText, noResultsMessage, reportError, ...rest
-}) => (
-  <Wrapper>
-    <Lookup
-      name={name}
-      label={label}
-      placeholder={placeholder}
-      buttonText={buttonText}
-      noResultsMessage={noResultsMessage}
-      mapOptionToString={addressToString}
-      lookupHandler={postcode => addressFetcher(postcode, reportError)}
-      onSelect={onSelect}
-      {...rest}
-    />
-  </Wrapper>
-);
+}) {
+  // Address field state
+  const [addressFields, setAddressFields] = useState({
+    line1: '',
+    line2: '',
+    line3: '',
+    posttown: ''
+  });
+
+  // Function to update address fields
+  const handleAddressSelect = selectedAddress => {
+    setAddressFields({
+      line1: selectedAddress.Line1 || '',
+      line2: selectedAddress.Line2 || '',
+      line3: selectedAddress.Line3 || '',
+      posttown: selectedAddress.posttown || ''
+    });
+  };
+
+  return (
+    <Container>
+      <Lookup
+        name={name}
+        label={label}
+        placeholder={placeholder}
+        buttonText={buttonText}
+        noResultsMessage={noResultsMessage}
+        mapOptionToString={addressToString}
+        lookupHandler={postcode => addressFetcher(postcode, reportError)}
+        onSelect={handleAddressSelect}
+        {...rest}
+      />
+      <AddressInputs addressFields={addressFields} />
+    </Container>
+  );
+}
 
 PostcodeLookup.propTypes = {
   name: PropTypes.string,
@@ -92,5 +115,3 @@ PostcodeLookup.defaultProps = {
   noResultsMessage: 'Sorry, could not find any addresses for that postcode',
   reportError: undefined // Set reportError default value to undefined
 };
-
-export default PostcodeLookup;

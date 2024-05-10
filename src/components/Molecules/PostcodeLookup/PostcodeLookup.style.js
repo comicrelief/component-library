@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 
-const Wrapper = styled.div`
+const Container = styled.div`
   > div {
     display: flex;
     flex-direction: column;
@@ -9,4 +9,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Wrapper;
+export default Container;
