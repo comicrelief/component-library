@@ -5,13 +5,8 @@ import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWi
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
-const Wrapper = styled.div`
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 290px;
-  }
-`;
-
 const Button = styled(ButtonWithStates)`${({ theme }) => css`
+  margin-top: ${spacing('m')};
   color: ${theme.color('grey_dark')};
   border: 2px solid ${theme.color('grey_dark')};
   background-color: ${theme.color('white')};
@@ -26,21 +21,6 @@ const Button = styled(ButtonWithStates)`${({ theme }) => css`
 const KEY_CODE_ENTER = 13;
 
 /**
- * A simple lookup component
- *
- * The `lookupHandler` should be an async function which is called when a lookup is triggered
- *  (either by hitting enter or clicking the button)
- *
- * It will receive the current search term and should:
- * - take care of any validation on the search term
- * - perform the actual lookup request
- * - return an array of options (or an empty array if none were found)
- * - only throw errors with user-friendly messages
- *
- * Any errors thrown will be caught and the message will be displayed to the user.
- *
- * The `onSelect` function will receive the chosen option.
- *
  * @param name
  * @param label
  * @param placeholder
@@ -88,7 +68,7 @@ const Lookup = ({
   }, [query, setOptions, setErrorMessage, noResultsMessage, lookupHandler]);
 
   return (
-    <Wrapper {...rest}>
+    <div {...rest}>
       <TextInputWithDropdown
         css={{ marginBottom: spacing('md') }}
         name={name}
@@ -129,7 +109,7 @@ const Lookup = ({
       >
         {buttonText}
       </Button>
-    </Wrapper>
+    </div>
   );
 };
 

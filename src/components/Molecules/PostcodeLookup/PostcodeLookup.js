@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { isValid, toNormalised } from 'postcode';
 import Lookup from '../Lookup/Lookup';
 import AddressInputs from './AddressInputs';
-import Container from './PostcodeLookup.style';
 
 const validatePostcode = postcode => {
   const trimmed = typeof postcode === 'string' ? postcode.trim() : '';
@@ -78,7 +77,7 @@ export default function PostcodeLookup({
   };
 
   return (
-    <Container>
+    <>
       <Lookup
         name={name}
         label={label}
@@ -91,7 +90,7 @@ export default function PostcodeLookup({
         {...rest}
       />
       <AddressInputs addressFields={addressFields} />
-    </Container>
+    </>
   );
 }
 

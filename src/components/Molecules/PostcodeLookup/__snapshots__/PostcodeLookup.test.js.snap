@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c5 {
+Array [
+  .c3 {
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
@@ -10,7 +11,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c9 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -40,17 +41,17 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c9 > a {
+.c7 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9:hover {
+.c7:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
 
-.c4 {
+.c2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,11 +64,11 @@ exports[`renders correctly 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c4 {
   margin-bottom: 0.5rem;
 }
 
-.c8 {
+.c6 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -87,25 +88,26 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c8:focus {
+.c6:focus {
   border: 1px solid #666;
 }
 
-.c7 {
+.c5 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c2 {
+.c0 {
   position: relative;
 }
 
-.c10:disabled {
+.c8:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
 
-.c11 {
+.c9 {
+  margin-top: 1.5rem;
   color: #222222;
   border: 2px solid #222222;
   background-color: #FFFFFF;
@@ -113,38 +115,23 @@ exports[`renders correctly 1`] = `
   padding-right: 3rem;
 }
 
-.c11:hover {
+.c9:hover {
   color: #222222;
   background-color: #FFFFFF;
 }
 
-.c3 {
+.c1 {
   margin-bottom: 1rem;
 }
 
-.c12 {
-  margin-top: 50px;
-}
-
-.c0 > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 @media (min-width:740px) {
-  .c9 {
+  .c7 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c9 {
+  .c7 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -152,33 +139,22 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c8 {
+  .c6 {
     max-width: 290px;
   }
 }
 
-@media (min-width:740px) {
-  .c1 {
-    max-width: 290px;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
+<div>
     <div
-      className="c2 TextInputWithDropdown c3"
+      className="c0 TextInputWithDropdown c1"
       onKeyDown={[Function]}
     >
       <label
-        className="c4 TextInputWithDropdown__input"
+        className="c2 TextInputWithDropdown__input"
         htmlFor="postcode_lookup"
       >
         <span
-          className="c5 c6"
+          className="c3 c4"
           color="inherit"
           dangerouslySetInnerHTML={
             Object {
@@ -188,13 +164,13 @@ exports[`renders correctly 1`] = `
           size="s"
         />
         <div
-          className="c7"
+          className="c5"
         >
           
           <input
             aria-describedby="postcode_lookup"
             autoComplete="off"
-            className="c8"
+            className="c6"
             id="postcode_lookup"
             name="postcode_lookup"
             onChange={[Function]}
@@ -209,7 +185,7 @@ exports[`renders correctly 1`] = `
       </label>
     </div>
     <button
-      className="c9 c10 c11"
+      className="c7 c8 c9"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -219,15 +195,88 @@ exports[`renders correctly 1`] = `
         className=""
       />
     </button>
-  </div>
-  <div
-    className="c12"
+  </div>,
+  .c2 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+  width: 100%;
+}
+
+.c3 {
+  margin-bottom: 0.5rem;
+}
+
+.c5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5:focus {
+  border: 1px solid #666;
+}
+
+.c4 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c0 {
+  margin-top: 1rem;
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:740px) {
+  .c5 {
+    max-width: 290px;
+  }
+}
+
+<div
+    className="c0"
   >
     <label
-      className="c4"
+      className="c1"
     >
       <span
-        className="c5 c6"
+        className="c2 c3"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {
@@ -237,11 +286,11 @@ exports[`renders correctly 1`] = `
         size="s"
       />
       <div
-        className="c7"
+        className="c4"
       >
         
         <input
-          className="c8"
+          className="c5"
           name="line1"
           placeholder="Address Line 1"
           required={false}
@@ -252,10 +301,10 @@ exports[`renders correctly 1`] = `
       
     </label>
     <label
-      className="c4"
+      className="c1"
     >
       <span
-        className="c5 c6"
+        className="c2 c3"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {
@@ -265,11 +314,11 @@ exports[`renders correctly 1`] = `
         size="s"
       />
       <div
-        className="c7"
+        className="c4"
       >
         
         <input
-          className="c8"
+          className="c5"
           name="line2"
           placeholder="Address Line 2"
           required={false}
@@ -280,10 +329,10 @@ exports[`renders correctly 1`] = `
       
     </label>
     <label
-      className="c4"
+      className="c1"
     >
       <span
-        className="c5 c6"
+        className="c2 c3"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {
@@ -293,11 +342,11 @@ exports[`renders correctly 1`] = `
         size="s"
       />
       <div
-        className="c7"
+        className="c4"
       >
         
         <input
-          className="c8"
+          className="c5"
           name="line3"
           placeholder="Address Line 3"
           required={false}
@@ -308,10 +357,10 @@ exports[`renders correctly 1`] = `
       
     </label>
     <label
-      className="c4"
+      className="c1"
     >
       <span
-        className="c5 c6"
+        className="c2 c3"
         color="inherit"
         dangerouslySetInnerHTML={
           Object {
@@ -321,11 +370,11 @@ exports[`renders correctly 1`] = `
         size="s"
       />
       <div
-        className="c7"
+        className="c4"
       >
         
         <input
-          className="c8"
+          className="c5"
           name="posttown"
           placeholder="Post Town"
           required={false}
@@ -335,6 +384,6 @@ exports[`renders correctly 1`] = `
       </div>
       
     </label>
-  </div>
-</div>
+  </div>,
+]
 `;

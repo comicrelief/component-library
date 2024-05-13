@@ -44,7 +44,6 @@ export { default as Donate } from './components/Organisms/Donate/Donate';
 export { default as DoubleCopy } from './components/Molecules/DoubleCopy/DoubleCopy';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Organisms/Footer/Footer';
-export { default as PostcodeLookup } from './components/Molecules/PostcodeLookup/PostcodeLookup';
 export { default as SearchResult } from './components/Molecules/SearchResult/SearchResult';
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';
@@ -61,6 +60,7 @@ export { default as Chip } from './components/Molecules/Chip/Chip';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
+export { default as PostcodeLookup } from './components/Molecules/PostcodeLookup/PostcodeLookup';
 
 /* Organisms */
 export {

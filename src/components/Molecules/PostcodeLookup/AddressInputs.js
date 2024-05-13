@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../Atoms/Input/Input';
+import spacing from '../../../theme/shared/spacing';
 
 const Wrapper = styled.div`
-  margin-top: 50px;
+  margin-top: ${spacing('md')};
 `;
 
 export default function AddressInputs({ addressFields }) {
