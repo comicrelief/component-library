@@ -1,5 +1,3 @@
-# PostcodeLookup
-
 ```js
 import PostcodeLookup from './PostcodeLookup';
 
