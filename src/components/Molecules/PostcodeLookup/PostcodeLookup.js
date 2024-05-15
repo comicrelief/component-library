@@ -1,22 +1,22 @@
-// !! example for could not find address - n22 4qa
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import spacing from '../../../theme/shared/spacing';
 import Lookup from '../Lookup/Lookup';
 import AddressInputs from './utils/AddressInputs';
 import { addressToString, addressFetcher } from './utils/PostcodeFunctions';
-
-const StyledLookup = styled(Lookup)`
-  /* margin-bottom: ${spacing('md')}; */
-`;
 
 const Button = styled.div`
   ${({ theme }) => theme.linkStyles('standard')};
 `;
 
 export default function PostcodeLookup({
-  onSelect, label, name, placeholder, buttonText, noResultsMessage, reportError, ...rest
+  label,
+  name,
+  placeholder,
+  buttonText,
+  noResultsMessage,
+  reportError,
+  dropdownInstruction
 }) {
   const [showFields, setShowFields] = useState(false);
 
@@ -46,16 +46,16 @@ export default function PostcodeLookup({
 
   return (
     <>
-      <StyledLookup
+      <Lookup
         name={name}
         label={label}
         placeholder={placeholder}
         buttonText={buttonText}
-        noResultsMessage={noResultsMessage}
         mapOptionToString={addressToString}
         lookupHandler={postcode => addressFetcher(postcode, reportError)}
         onSelect={handleAddressSelect}
-        {...rest}
+        dropdownInstruction={dropdownInstruction}
+        noResultsMessage={noResultsMessage}
       />
       <Button onClick={handleManualClick}>
         Or enter your address manually
@@ -67,11 +67,11 @@ export default function PostcodeLookup({
 
 PostcodeLookup.propTypes = {
   name: PropTypes.string,
-  onSelect: PropTypes.func.isRequired,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   buttonText: PropTypes.string,
   noResultsMessage: PropTypes.string,
+  dropdownInstruction: PropTypes.string,
   reportError: PropTypes.oneOfType([
     PropTypes.func
   ])
@@ -83,5 +83,6 @@ PostcodeLookup.defaultProps = {
   placeholder: 'Enter postcode...',
   buttonText: 'Find address',
   noResultsMessage: 'Sorry, could not find any addresses for that postcode',
+  dropdownInstruction: 'Please select an organisation from the list below',
   reportError: undefined
 };
