@@ -144,9 +144,7 @@ Array [
   }
 }
 
-<div
-    className=""
-  >
+<div>
     <div
       className="c0 TextInputWithDropdown c1"
       onKeyDown={[Function]}
