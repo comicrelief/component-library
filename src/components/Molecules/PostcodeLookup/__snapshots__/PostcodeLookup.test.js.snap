@@ -197,12 +197,16 @@ Array [
     </button>
   </div>,
   .c0 {
-  color: #000000;
-  font-weight: normal;
+  margin: 1rem 0 0 0.5rem;
+  background: inherit;
+  border: none;
+  font-size: 1rem;
 }
 
-.c0:hover {
-  color: #000000;
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width:740px) {
@@ -217,11 +221,11 @@ Array [
 
 }
 
-<div
+<button
     className="c0"
     onClick={[Function]}
   >
     Or enter your address manually
-  </div>,
+  </button>,
 ]
 `;
