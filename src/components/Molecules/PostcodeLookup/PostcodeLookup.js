@@ -4,9 +4,17 @@ import styled from 'styled-components';
 import Lookup from '../Lookup/Lookup';
 import AddressInputs from './utils/AddressInputs';
 import { addressToString, addressFetcher } from './utils/PostcodeFunctions';
+import spacing from '../../../theme/shared/spacing';
 
-const Button = styled.div`
-  ${({ theme }) => theme.linkStyles('standard')};
+// ${({ theme }) => theme.linkStyles('standard')};
+const Button = styled.button`
+  margin: ${spacing('md')} 0 0 ${spacing('sm')};
+  background: inherit;
+  border: none;
+  font-size: 1rem;
+  &:hover, &:active {
+    text-decoration: underline;
+  }
 `;
 
 export default function PostcodeLookup({
