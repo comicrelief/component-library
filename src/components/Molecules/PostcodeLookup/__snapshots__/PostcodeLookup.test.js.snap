@@ -108,16 +108,14 @@ Array [
 
 .c9 {
   margin-top: 1.5rem;
-  color: #222222;
-  border: 2px solid #222222;
-  background-color: #FFFFFF;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  color: white;
+  background-color: #E52630;
+  padding: 0 3rem;
 }
 
 .c9:hover {
-  color: #222222;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #890B11;
 }
 
 .c1 {
@@ -144,7 +142,9 @@ Array [
   }
 }
 
-<div>
+<div
+    buttonColour="#f04257"
+  >
     <div
       className="c0 TextInputWithDropdown c1"
       onKeyDown={[Function]}

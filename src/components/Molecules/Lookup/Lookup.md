@@ -55,6 +55,10 @@ const schoolToString = school => `${school.name}, ${school.post_code}`;
     lookupHandler={schoolFetcher}
     mapOptionToString={schoolToString}
     onSelect={address => alert(JSON.stringify(address, null, 2))}
+    // buttonTextColour='black'
+    // buttonBgColour='#f04257'
+    // buttonHoverTextColour='white'
+    // buttonHoverBgColour='orange'
 />
 ```
 

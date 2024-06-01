@@ -7,7 +7,7 @@ import { addressToString, addressFetcher } from './utils/PostcodeFunctions';
 import spacing from '../../../theme/shared/spacing';
 
 // ${({ theme }) => theme.linkStyles('standard')};
-const Button = styled.button`
+const AddressManually = styled.button`
   margin: ${spacing('md')} 0 0 ${spacing('sm')};
   background: inherit;
   border: none;
@@ -24,7 +24,8 @@ export default function PostcodeLookup({
   buttonText,
   noResultsMessage,
   reportError,
-  dropdownInstruction
+  dropdownInstruction,
+  buttonColour
 }) {
   const [showFields, setShowFields] = useState(false);
 
@@ -64,10 +65,11 @@ export default function PostcodeLookup({
         onSelect={handleAddressSelect}
         dropdownInstruction={dropdownInstruction}
         noResultsMessage={noResultsMessage}
+        buttonColour={buttonColour}
       />
-      <Button onClick={handleManualClick}>
+      <AddressManually onClick={handleManualClick}>
         Or enter your address manually
-      </Button>
+      </AddressManually>
       {showFields && <AddressInputs addressFields={addressFields} />}
     </>
   );
@@ -82,7 +84,8 @@ PostcodeLookup.propTypes = {
   dropdownInstruction: PropTypes.string,
   reportError: PropTypes.oneOfType([
     PropTypes.func
-  ])
+  ]),
+  buttonColour: PropTypes.string
 };
 
 PostcodeLookup.defaultProps = {
@@ -92,5 +95,6 @@ PostcodeLookup.defaultProps = {
   buttonText: 'Find address',
   noResultsMessage: 'Sorry, could not find any addresses for that postcode',
   dropdownInstruction: 'Please select an organisation from the list below',
-  reportError: undefined
+  reportError: undefined,
+  buttonColour: '#f04257'
 };

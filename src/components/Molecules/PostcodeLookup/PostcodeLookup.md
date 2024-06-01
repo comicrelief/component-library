@@ -12,12 +12,13 @@ enterManually
   ? 'Sorry, there appears to be a problem. Please enter your details manually.'
   : (
     <PostcodeLookup
-        label="Custom label"
-        buttonText="Custom Button Text"
+        label="Postal Address"
+        buttonText="Find Address"
         // Example for could not find address - n22 4qa
-        noResultsMessage='Sorry, we could not find etc'
+        noResultsMessage='Sorry, we could not find your address.'
         reportError='Custom report error'
         dropdownInstruction="Dropdown instruction here..."
+        buttonColour='#f04257'
     />
   )
 ```
