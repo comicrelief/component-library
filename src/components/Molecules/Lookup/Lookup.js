@@ -5,17 +5,21 @@ import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWi
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
-const Button = styled(ButtonWithStates)`${({ theme }) => css`
+const Button = styled(ButtonWithStates)`${({
+  theme,
+  buttonTextColour,
+  buttonBgColour,
+  buttonTextHoverColour,
+  buttonHoverBgColour
+}) => css`
   margin-top: ${spacing('m')};
-  color: ${theme.color('grey_dark')};
-  border: 2px solid ${theme.color('grey_dark')};
-  background-color: ${theme.color('white')};
-  padding-left: ${spacing('lg')};
-  padding-right: ${spacing('lg')};
+  color: ${buttonTextColour || theme.color('white')};
+  background-color: ${buttonBgColour || theme.color('red')};
   &:hover {
-    color: ${theme.color('grey_dark')};
-    background-color: ${theme.color('white')};
+    color: ${buttonTextHoverColour || theme.color('white')};
+    background-color: ${buttonHoverBgColour || theme.color('red_dark')};
   }
+  padding: 0 ${spacing('lg')};
 `}`;
 
 const KEY_CODE_ENTER = 13;
@@ -25,6 +29,10 @@ const KEY_CODE_ENTER = 13;
  * @param label
  * @param placeholder
  * @param buttonText
+ * @param buttonTextColour
+ * @param buttonBgColour
+ * @param buttonHoverBgColour
+ * @param buttonHoverTextColour
  * @param lookupHandler
  * @param mapOptionToString
  * @param onSelect
@@ -39,6 +47,10 @@ const Lookup = ({
   label,
   placeholder,
   buttonText,
+  buttonTextColour,
+  buttonBgColour,
+  buttonHoverBgColour,
+  buttonHoverTextColour,
   lookupHandler,
   mapOptionToString,
   onSelect,
@@ -106,6 +118,10 @@ const Lookup = ({
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
+        buttonTextColour={buttonTextColour}
+        buttonBgColour={buttonBgColour}
+        buttonHoverBgColour={buttonHoverBgColour}
+        buttonHoverTextColour={buttonHoverTextColour}
       >
         {buttonText}
       </Button>
@@ -118,6 +134,10 @@ Lookup.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
+  buttonTextColour: PropTypes.string,
+  buttonBgColour: PropTypes.string,
+  buttonHoverBgColour: PropTypes.string,
+  buttonHoverTextColour: PropTypes.string,
   lookupHandler: PropTypes.func.isRequired,
   mapOptionToString: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
@@ -127,7 +147,11 @@ Lookup.propTypes = {
 
 Lookup.defaultProps = {
   noResultsMessage: 'Sorry, could not find any results for your search',
-  dropdownInstruction: ''
+  dropdownInstruction: '',
+  buttonTextColour: 'white',
+  buttonBgColour: '#E52630',
+  buttonHoverTextColour: 'white',
+  buttonHoverBgColour: '#890B11'
 };
 
 export default Lookup;
