@@ -30,10 +30,9 @@ const Image = styled.img`
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
-      padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: 110px;
-      height: 110px;
+      width: 80px;
+      height: 80px;
     }
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: none;
@@ -46,10 +45,9 @@ const Image = styled.img`
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: 120px;
-      height: 120px;
+      width: 96px;
+      height: 96px;
     }
   `}
 
