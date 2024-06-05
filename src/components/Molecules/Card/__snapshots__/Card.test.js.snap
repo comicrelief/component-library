@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   overflow: hidden;
   background: #FFE400;
 }
@@ -29,6 +29,7 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -37,6 +38,7 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -82,7 +84,7 @@ exports[`renders correctly 2`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   overflow: hidden;
   background: #FFE400;
 }
@@ -103,6 +105,7 @@ exports[`renders correctly 2`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -111,6 +114,7 @@ exports[`renders correctly 2`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -170,7 +174,7 @@ exports[`renders correctly with no body 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   overflow: hidden;
   background: #FFE400;
 }
@@ -184,6 +188,7 @@ exports[`renders correctly with no body 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -192,6 +197,7 @@ exports[`renders correctly with no body 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1rem;
   }
 }
 

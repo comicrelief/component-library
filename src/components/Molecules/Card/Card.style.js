@@ -8,11 +8,13 @@ const Container = styled.div`
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
     flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
+    gap: ${spacing('md')};
   }
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
+    gap: ${spacing('md')};
   }
 
   /* Set desktop and upwards to normal vertical layout */
@@ -21,7 +23,7 @@ const Container = styled.div`
   }
 
   height: 100%;
-  border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
+  border-radius: ${props => (props.squaredCorners ? '0' : '0.8rem')};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
