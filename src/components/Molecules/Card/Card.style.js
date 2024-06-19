@@ -4,28 +4,31 @@ import spacing from '../../../theme/shared/spacing';
 const Container = styled.div`
   position: relative;
   display: flex;
+  height: 100%;
+  border-radius: ${props => (props.squaredCorners ? '0' : '0.8rem')};
+  overflow: hidden;
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
     flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
     gap: ${spacing('md')};
+    background: ${({ theme, backgroundColor, smallBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
   }
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
     gap: ${spacing('md')};
+    background: ${({ theme, backgroundColor, mediumBreakpointRowLayout }) => ((mediumBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
   }
 
   /* Set desktop and upwards to normal vertical layout */
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: column;
+    background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   }
 
-  height: 100%;
-  border-radius: ${props => (props.squaredCorners ? '0' : '0.8rem')};
-  overflow: hidden;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 const Wrapper = styled.div`
