@@ -1,0 +1,5 @@
+# Carousel
+
+```js
+<Carousel />
+```
