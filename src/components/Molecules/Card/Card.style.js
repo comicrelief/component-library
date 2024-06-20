@@ -28,7 +28,6 @@ const Container = styled.div`
     flex-direction: column;
     background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   }
-
 `;
 
 const Wrapper = styled.div`

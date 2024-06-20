@@ -36,7 +36,7 @@ const Image = styled.img`
     }
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: none;
-      border-radius: none;
+      border-radius: 0;
       width: ${props => (props.width ? props.width : '100%')};
       height: ${props => (props.height ? props.height : 'auto')};
     }
@@ -55,7 +55,7 @@ const Image = styled.img`
   ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
       @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: none;
-        border-radius: none;
+        border-radius: 0;
         width: ${props => (props.width ? props.width : '100%')};
         height: ${props => (props.height ? props.height : 'auto')};
       }
