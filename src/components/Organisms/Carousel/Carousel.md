@@ -1,5 +1,7 @@
-# Carousel
+# Carousel - generic
 
 ```js
-<Carousel />
+const { carouselItemsComplete } = require('../../../styleguide/data/data');
+
+<Carousel data={carouselItemsComplete}/>
 ```
