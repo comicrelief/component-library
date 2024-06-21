@@ -1,7 +1,7 @@
 import React, {
   useEffect, useState, useCallback
 } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Slider,
   // Slide,
@@ -9,6 +9,7 @@ import {
   ButtonNext,
   CarouselProvider
 } from 'pure-react-carousel';
+import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
   // ImageWrapper,
@@ -19,7 +20,7 @@ import {
 // import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const Carousel = () => {
+const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
@@ -38,6 +39,11 @@ const Carousel = () => {
     }
   }, [isMobile, theseItems]);
 
+  // Format our data BEFORE we use it in render:
+  useEffect(() => {
+    setTheseItems(formatItems(data));
+  }, [setTheseItems, data]);
+
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
       // On inital render, update carousel plugin config
@@ -55,20 +61,13 @@ const Carousel = () => {
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
-  const mockData = {
-    mobileHeight: 300,
-    tabletHeight: 450,
-    desktopHeight: 600,
-    thisID: 12345
-  };
-
   return (
     <CarouselWrapper
       className="CarouselWrapper"
-      id={mockData.thisID}
-      mobileHeight={mockData.mobileHeight}
-      tabletHeight={mockData.tabletHeight}
-      desktopHeight={mockData.desktopHeight}
+      id={thisID}
+      mobileHeight={data.mobileHeight}
+      tabletHeight={data.tabletHeight}
+      desktopHeight={data.desktopHeight}
     >
       <h1>Generic Carousel Component</h1>
 
@@ -136,6 +135,83 @@ const Carousel = () => {
       )}
     </CarouselWrapper>
   );
+};
+
+Carousel.propTypes = {
+  data: PropTypes.shape({
+    // Required 'node' fields:
+    node1Amount: PropTypes.string.isRequired,
+    node1Copy: PropTypes.string.isRequired,
+    node1Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node2Amount: PropTypes.string.isRequired,
+    node2Copy: PropTypes.string.isRequired,
+    node2Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node3Amount: PropTypes.string.isRequired,
+    node3Copy: PropTypes.string.isRequired,
+    node3Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node4Amount: PropTypes.string.isRequired,
+    node4Copy: PropTypes.string.isRequired,
+    node4Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    // Non-required 'node' fields:
+    node5Amount: PropTypes.string,
+    node5Copy: PropTypes.string,
+    node5Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node6Amount: PropTypes.string,
+    node6Copy: PropTypes.string,
+    node6Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node7Amount: PropTypes.string,
+    node7Copy: PropTypes.string,
+    node7Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node8Amount: PropTypes.string,
+    node8Copy: PropTypes.string,
+    node8Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node9Amount: PropTypes.string,
+    node9Copy: PropTypes.string,
+    node9Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    autoPlay: PropTypes.bool.isRequired,
+    headerCopy: PropTypes.string.isRequired,
+    peopleHelpedText: PropTypes.string.isRequired,
+    contentful_id: PropTypes.string.isRequired,
+    mobileHeight: PropTypes.number,
+    tabletHeight: PropTypes.number,
+    desktopHeight: PropTypes.number
+  }).isRequired
 };
 
 export default Carousel;
