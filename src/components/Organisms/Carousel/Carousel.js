@@ -4,7 +4,7 @@ import React, {
 import PropTypes from 'prop-types';
 import {
   Slider,
-  // Slide,
+  Slide,
   ButtonBack,
   ButtonNext,
   CarouselProvider
@@ -82,12 +82,12 @@ const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
         infinite
       >
         <Slider classNameAnimation="wymd-carousel">
-          {/**/}
+
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {/*   {isMobile === false && ( */}
-          {/*   <Slide index={0} key={0} /> */}
-          {/*   )} */}
-          {/**/}
+          {isMobile === false && (
+          <Slide index={0} key={0} />
+          )}
+
           {/*   {Object.keys(theseItems).map((key, index) => { */}
           {/*     // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views: */}
           {/*     const thisOffsetIndex = index + (isMobile ? 0 : 1); */}
@@ -122,12 +122,12 @@ const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
           {/*       </Slide> */}
           {/*     ); */}
           {/*   })} */}
-          {/**/}
+
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {/*   {isMobile === false && ( */}
-          {/*   <Slide index={theseItems.length + 1} key="bookend-last" /> */}
-          {/*   )} */}
-          {/**/}
+          {isMobile === false && (
+          <Slide index={theseItems.length + 1} key="bookend-last" />
+          )}
+
         </Slider>
         <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext>
