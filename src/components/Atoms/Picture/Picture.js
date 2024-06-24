@@ -30,14 +30,13 @@ const Image = styled.img`
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
-      padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: 110px;
-      height: 110px;
+      width: 80px;
+      height: 80px;
     }
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: none;
-      border-radius: none;
+      border-radius: 0;
       width: ${props => (props.width ? props.width : '100%')};
       height: ${props => (props.height ? props.height : 'auto')};
     }
@@ -46,10 +45,9 @@ const Image = styled.img`
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: ${spacing('sm')};
       border-radius: ${spacing('md')};
-      width: 120px;
-      height: 120px;
+      width: 96px;
+      height: 96px;
     }
   `}
 
@@ -57,7 +55,7 @@ const Image = styled.img`
   ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
       @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: none;
-        border-radius: none;
+        border-radius: 0;
         width: ${props => (props.width ? props.width : '100%')};
         height: ${props => (props.height ? props.height : 'auto')};
       }
