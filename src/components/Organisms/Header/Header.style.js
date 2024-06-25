@@ -112,15 +112,7 @@ const HeaderMetaIcons = styled.div`
 const ButtonsAndIcons = styled.div`
   margin-left: auto;
   display: flex;
-
-  // Prevents the nav icon 'RevealText' animation
-  // breaking the layout on tight fits:
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  //
 `;
 
 export {
