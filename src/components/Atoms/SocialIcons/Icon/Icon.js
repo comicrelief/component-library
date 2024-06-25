@@ -6,6 +6,7 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
 
 const RevealTextWidth = 58;
+const RevealTextSpeed = 0.35;
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -16,7 +17,7 @@ const StyledLink = styled.a`
   ${({ isHeader }) => isHeader && css`
     overflow: hidden;
     padding-right: 0px;
-    transition: padding-right 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    transition: padding-right ${RevealTextSpeed}s cubic-bezier(0.5, 1.5, 0.5, 0.75);
 
     &:hover,
     &:focus {
