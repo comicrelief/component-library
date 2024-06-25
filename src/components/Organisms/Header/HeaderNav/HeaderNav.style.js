@@ -38,6 +38,7 @@ const Nav = styled.nav`
   top: 75px;
   left: 0;
   ${zIndex('higher')};
+  background-color: ${({ theme }) => theme.color('white')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;
@@ -264,7 +265,6 @@ const NavItem = styled.li`
   }
 `;
 
-
 const ChevronWrapper = styled.div`
   width: 24px;
   position: absolute;
@@ -313,8 +313,6 @@ const NavMetaIcons = styled.div`
         background-repeat: no-repeat;
       }
 
-
-
       img {
         padding: 5px;
         height: 35px;
@@ -336,8 +334,6 @@ const NavMetaIcons = styled.div`
     &:first-child {
       margin-top: 20px;
     }
-
-
   }
 
   // Hide these when using non-mobile nav,
@@ -359,7 +355,7 @@ const DonateButtonWrapperBottom = styled.div`
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 
     &:hover,
-    &:focus {
+    &:focus { 
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
     }
