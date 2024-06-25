@@ -286,6 +286,7 @@ const NavMetaIcons = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: inherit;
 
   > div {
     height: 60px;
@@ -350,6 +351,7 @@ const DonateButtonWrapperBottom = styled.div`
   display: flex;
   justify-content: center;
   padding: 35px 20px;
+  background-color: inherit;
 
   // Donate button
   a {
