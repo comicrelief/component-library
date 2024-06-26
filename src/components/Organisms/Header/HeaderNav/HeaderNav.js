@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import { NavHelper, preProcessItems } from '../../../../utils/navHelper';
+import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import chevronDown from './chevron-down.svg';
@@ -32,7 +32,9 @@ import {
   MoreSubNavLink
 } from './HeaderNav.style';
 
-const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
+const HeaderNav = ({
+  navItems, metaIcons, donateButton, characterLimit 
+}) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -79,7 +81,7 @@ const HeaderNav = ({ navItems, metaIcons, donateButton }) => {
 
   useEffect(() => {
     // Divide up our nav on initial mount:
-    setProcessedItems(preProcessItems(menuGroups));
+    setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
   
     setIsMobile(window.innerWidth < breakpointValues.Nav);
 
@@ -338,12 +340,15 @@ HeaderNav.propTypes = {
   metaIcons: PropTypes.node.isRequired,
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
-  donateButton: PropTypes.node
+  donateButton: PropTypes.node,
+  characterLimit: PropTypes.number
 };
 
 HeaderNav.defaultProps = {
   navItems: {},
-  donateButton: null
+  donateButton: null,
+  // To be overridable as a CMS prop
+  characterLimit: 60
 };
 
 export default HeaderNav;

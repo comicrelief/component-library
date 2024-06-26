@@ -21,29 +21,34 @@ const StyledLink = styled.a`
 
     &:hover,
     &:focus {
-      // Default
-      padding-right: ${RevealTextWidth}px;
-
-      // Tweak for ESU's longer text:
-      &[data-testid="header-esu"] {
-        padding-right: 95px;
-      }
-
-      // Tweak for Shop 's shorter text:
-      &[data-testid="header-shop"] {
-        padding-right: 52px;
-      }
-
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+      }
+    }
 
-        & + span {
-          // Show the Reveal text  
+    @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+      &:hover,
+      &:focus {
+        // Default
+        padding-right: ${RevealTextWidth}px;
+  
+        // Tweak for ESU's longer text:
+        &[data-testid="header-esu"] {
+          padding-right: 95px;
+        }
+  
+        // Tweak for Shop 's shorter text:
+        &[data-testid="header-shop"] {
+          padding-right: 52px;
+        }
+        
+        // Show the Reveal text  
+        img + span {
           display: block;
         }
       }
-    }
-  `}
+    `}
+    };
 `;
 
 const RevealText = styled(Text)`

@@ -12,8 +12,7 @@ const NavHelper = navItem => {
   return thisUrl;
 };
 
-const preProcessItems = menuGroups => {
-  const characterLimit = 50;
+const MoreNavPreProcess = (menuGroups, characterLimit) => {
   let characterCount = 0;
   const overLimit = false;
   const standardGroups = [];
@@ -36,4 +35,4 @@ const preProcessItems = menuGroups => {
   return { standardGroups, moreNavGroups };
 };
 
-export { NavHelper, preProcessItems };
+export { NavHelper, MoreNavPreProcess };
