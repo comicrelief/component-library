@@ -331,7 +331,7 @@ exports[`renders correctly 1`] = `
   border: 0;
 }
 
-@media (min-width:1150px) {
+@media (min-width:1175px) {
   .c9 {
     width: 72px;
   }
