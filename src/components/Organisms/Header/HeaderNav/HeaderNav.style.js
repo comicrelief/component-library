@@ -40,11 +40,12 @@ const Nav = styled.nav`
   ${zIndex('higher')};
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid ${({ theme }) => theme.color('grey_medium')};
-
+  // border-top: none;
+  
   // experimenting
   max-height: calc(100vh - 75px);
   height: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -61,6 +62,11 @@ const Nav = styled.nav`
     margin: 0 10px;
     width: auto;
     height: 100%;
+    //
+    border: none;
+    max-height:none;
+    overflow-y: visible;
+    overflow-x: visible;
   }
   > h2 {
     ${hideVisually};
