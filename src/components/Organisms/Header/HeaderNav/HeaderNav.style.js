@@ -43,10 +43,10 @@ const Nav = styled.nav`
   // border-top: none;
   
   // experimenting
-  max-height: calc(100vh - 75px);
-  height: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+  // max-height: calc(100vh - 75px);
+  // height: auto;
+  // overflow-y: auto;
+  // overflow-x: hidden;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;
@@ -62,11 +62,11 @@ const Nav = styled.nav`
     margin: 0 10px;
     width: auto;
     height: 100%;
-    //
+
     border: none;
-    max-height:none;
-    overflow-y: visible;
-    overflow-x: visible;
+    // max-height:none;
+    // overflow-y: visible;
+    // overflow-x: visible;
   }
   > h2 {
     ${hideVisually};
