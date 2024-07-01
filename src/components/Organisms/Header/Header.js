@@ -15,7 +15,7 @@ const Header = ({
       <Brand>
         <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
       </Brand>
-      <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
+      <HeaderNav navItems={navItems} metaIcons={metaIcons} />
       <ButtonsAndIcons>
         <HeaderMetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</HeaderMetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>

@@ -39,6 +39,13 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('higher')};
   background-color: ${({ theme }) => theme.color('white')};
+  border: 1px solid ${({ theme }) => theme.color('grey_medium')};
+
+  // experimenting
+  max-height: calc(100vh - 75px);
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;

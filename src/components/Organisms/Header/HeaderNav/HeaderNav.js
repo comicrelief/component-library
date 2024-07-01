@@ -21,7 +21,6 @@ import {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapperBottom,
   // More Nav stuff:
   MoreNavLink,
   MoreSubNavMenu,
@@ -33,7 +32,7 @@ import {
 } from './HeaderNav.style';
 
 const HeaderNav = ({
-  navItems, metaIcons, donateButton, characterLimit 
+  navItems, metaIcons, characterLimit 
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -324,9 +323,9 @@ const HeaderNav = ({
           {metaIcons}
         </NavMetaIcons>
         {/* TODO: handle 'hide donate btn' functionality? */}
-        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
+        {/* <DonateButtonWrapperBottom data-testid="donate-button--mobile">
           {donateButton}
-        </DonateButtonWrapperBottom>
+        </DonateButtonWrapperBottom> */}
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
@@ -338,15 +337,11 @@ const HeaderNav = ({
 HeaderNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   metaIcons: PropTypes.node.isRequired,
-  // As this is rendered in both the Header AND the Nav, just passing
-  // the same prop through to here:
-  donateButton: PropTypes.node,
   characterLimit: PropTypes.number
 };
 
 HeaderNav.defaultProps = {
   navItems: {},
-  donateButton: null,
   // To be overridable as a CMS prop
   characterLimit: 60
 };
