@@ -181,11 +181,11 @@ export default {
       ]
     },
     {
-      title: 'GROUP5',
-      id: 'group5',
+      title: 'GROUP6',
+      id: 'group6',
       links: [
         {
-          title: 'Get Involved',
+          title: 'Something Here',
           url: 'https://www.comicrelief.com/working-with-us/',
           internal: {
             type: 'ContentfulComponentLink'
@@ -229,11 +229,11 @@ export default {
       ]
     },
     {
-      title: 'GROUP5',
-      id: 'group5',
+      title: 'GROUP7',
+      id: 'group7',
       links: [
         {
-          title: 'Get Involved',
+          title: 'Something Else',
           url: 'https://www.comicrelief.com/working-with-us/',
           internal: {
             type: 'ContentfulComponentLink'
