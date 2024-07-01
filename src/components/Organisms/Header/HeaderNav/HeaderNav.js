@@ -267,6 +267,7 @@ const HeaderNav = ({
                           onKeyUp={keyPressed(child.id)}
                         >
                           {thisFirstChild.title}
+                          {/* TO-DO: MOVE THIS UP A LAYER TO POSITION ACCORDINGLY */}
                           {hasSubMenu && (
                             <ChevronWrapper>
                               <img src={menuGroupIcon} alt="Chevron icon" />

@@ -281,9 +281,9 @@ const ChevronWrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     position: relative;
-    top: -4px;
-    right: auto;
-    width: 12px;
+    top: -3px;
+    right: -1px;
+    width: 10px;
     padding-top: 2px;
   }
 `;
@@ -448,7 +448,9 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
 const MoreSubNavItem = styled(SubNavItem)`
   // Chevron icon
   > a > div {
-    width: 15px;
+    width: 10px;
+    top: -3px;
+    right: -3px;
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
