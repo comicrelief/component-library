@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  .c3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
+}
+
+.c7 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7:hover {
+  background-color: #890B11;
+  color: #FFFFFF;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #5C5C5E;
+  width: 100%;
+}
+
+.c4 {
+  margin-bottom: 0.5rem;
+}
+
+.c6 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #E1E2E3;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6:focus {
+  border: 1px solid #666;
+}
+
+.c5 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c8:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.c9 {
+  margin-top: 1.5rem;
+  color: white;
+  background-color: #E52630;
+  padding: 0 3rem;
+}
+
+.c9:hover {
+  color: #FFFFFF;
+  background-color: #890B11;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width:740px) {
+  .c7 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    max-width: 290px;
+  }
+}
+
+<div
+    buttonColour="#f04257"
+  >
+    <div
+      className="c0 TextInputWithDropdown c1"
+      onKeyDown={[Function]}
+    >
+      <label
+        className="c2 TextInputWithDropdown__input"
+        htmlFor="postcode_lookup"
+      >
+        <span
+          className="c3 c4"
+          color="inherit"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Find address by postcode",
+            }
+          }
+          size="s"
+        />
+        <div
+          className="c5"
+        >
+          
+          <input
+            aria-describedby="postcode_lookup"
+            autoComplete="off"
+            className="c6"
+            id="postcode_lookup"
+            name="postcode_lookup"
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Enter postcode..."
+            required={false}
+            type="text"
+            value=""
+          />
+        </div>
+        
+      </label>
+    </div>
+    <button
+      className="c7 c8 c9"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Find address
+      <div
+        className=""
+      />
+    </button>
+  </div>,
+  .c0 {
+  margin: 1rem 0 0 0.5rem;
+  background: inherit;
+  border: none;
+  font-size: 1rem;
+}
+
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+<button
+    className="c0"
+    onClick={[Function]}
+  >
+    Or enter your address manually
+  </button>,
+]
+`;

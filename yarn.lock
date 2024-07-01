@@ -11097,6 +11097,11 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg==
 
+postcode@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/postcode/-/postcode-5.1.0.tgz#ef30a2a4028fd20255fb0aceccf4c70baab8df5b"
+  integrity sha512-rjwIdlQ8UvdOnUVZRCZQA54PmQJeoMBDQb4RsW5z3MVp/u7Gcet1vsjVy/p0+YX+R7cmgU9DEJf0zSx5mWqxAA==
+
 postcss-attribute-case-insensitive@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/postcss-attribute-case-insensitive/-/postcss-attribute-case-insensitive-4.0.2.tgz#d93e46b504589e94ac7277b0463226c68041a880"

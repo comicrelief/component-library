@@ -60,6 +60,7 @@ export { default as Chip } from './components/Molecules/Chip/Chip';
 export { default as Descriptor } from './components/Molecules/Descriptor/Descriptor';
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
+export { default as PostcodeLookup } from './components/Molecules/PostcodeLookup/PostcodeLookup';
 
 /* Organisms */
 export {
