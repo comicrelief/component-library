@@ -117,7 +117,7 @@ export default {
         {
           title: 'What Your Money Does',
           path:
-            'https://www.comicrelief.com/rednoseday/schools/primary-schools',
+              'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -125,9 +125,105 @@ export default {
         {
           title: 'Reports & Publications',
           path:
-            'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
+              'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
           internal: {
             type: 'ContentfulPageLandingPage'
+          }
+        }
+      ]
+    },
+    {
+      title: 'GROUP5',
+      id: 'group5',
+      links: [
+        {
+          title: 'Get Involved',
+          url: 'https://www.comicrelief.com/working-with-us/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Do your own fundraising',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Regular Donations',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Run for Comic Relief',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'How to pay in your fundraising money',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Partners',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        }
+      ]
+    },
+    {
+      title: 'GROUP5',
+      id: 'group5',
+      links: [
+        {
+          title: 'Get Involved',
+          url: 'https://www.comicrelief.com/working-with-us/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Do your own fundraising',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Regular Donations',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Run for Comic Relief',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'How to pay in your fundraising money',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
+          }
+        },
+        {
+          title: 'Partners',
+          url: 'https://www.comicrelief.com/404/',
+          internal: {
+            type: 'ContentfulComponentLink'
           }
         }
       ]
