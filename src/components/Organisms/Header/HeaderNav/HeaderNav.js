@@ -38,9 +38,8 @@ const HeaderNav = ({
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isTabFocussed, setIsTabFocussed] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(null);
-  let theseGroups = null;
-
   const [processedItems, setProcessedItems] = useState(null);
+  let theseGroups = null;
 
   const toggleBurgerMenu = event => {
     event.preventDefault();
@@ -214,7 +213,7 @@ const HeaderNav = ({
             ****************************
           */}
 
-          {/* Only actually render 'more nav' stuff when we've got content */}
+          {/* Only actually render 'More' nav stuff when we've got content */}
           {(!isNotDesktop && processedItems.moreNavGroups.length > 0) && (
           <MoreNavItem>
             {/* The 'More' nav button: */}
