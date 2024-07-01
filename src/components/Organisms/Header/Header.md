@@ -217,7 +217,9 @@ const [success, setSuccess] = React.useState(false);
     </>
   }
 />
-<div style={{height: "1000px", backgroundColor: "yellow"}}> test </div>
+<div style={{height: "1000px", backgroundColor: "yellow"}}>
+  <img style={{objectFit: "cover"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
+</div>
 </>;
 ```
 
@@ -324,6 +326,8 @@ const [success, setSuccess] = React.useState(false);
     </>
   }
 />
-<div style={{height: "1000px", backgroundColor: "yellow"}}> test </div>
+<div style={{height: "1000px", backgroundColor: "yellow"}}>
+  <img style={{objectFit: "cover"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
+</div>
 </>;
 ```

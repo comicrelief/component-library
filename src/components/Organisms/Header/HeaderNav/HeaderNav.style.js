@@ -39,19 +39,13 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('higher')};
   background-color: ${({ theme }) => theme.color('white')};
-  border: 1px solid ${({ theme }) => theme.color('grey_medium')};
-  // border-top: none;
-  
-  // experimenting
-  // max-height: calc(100vh - 75px);
-  // height: auto;
-  // overflow-y: auto;
-  // overflow-x: hidden;
+  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.3);
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;
     right: 0;
     left: inherit;
+    box-shadow: -20px 15px 20px 0px rgba(0, 0, 0, 0.3);
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -62,11 +56,7 @@ const Nav = styled.nav`
     margin: 0 10px;
     width: auto;
     height: 100%;
-
-    border: none;
-    // max-height:none;
-    // overflow-y: visible;
-    // overflow-x: visible;
+    box-shadow: none;
   }
   > h2 {
     ${hideVisually};
@@ -104,6 +94,7 @@ const SubNavMenu = styled.ul`
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
     opacity: 0;
+    box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.3);
   }
 `;
 
