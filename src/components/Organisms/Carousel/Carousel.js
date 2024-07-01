@@ -12,12 +12,12 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  // ImageWrapper,
-  // AmountWrapper,
-  // CopyWrapper,
+  ImageWrapper,
+  AmountWrapper,
+  CopyWrapper,
   CarouselWrapper
 } from './Carousel.style';
-// import Text from '../../Atoms/Text/Text';
+import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
@@ -88,40 +88,40 @@ const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
           <Slide index={0} key={0} />
           )}
 
-          {/*   {Object.keys(theseItems).map((key, index) => { */}
-          {/*     // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views: */}
-          {/*     const thisOffsetIndex = index + (isMobile ? 0 : 1); */}
-          {/**/}
-          {/*     return ( */}
-          {/*       // Calculate the index offset accordingly to reflect the number of slides, */}
-          {/*       // but use the REAL index when determining if its the last REAL slide */}
-          {/*       <Slide */}
-          {/*         index={thisOffsetIndex} */}
-          {/*         className={index === (theseItems.length - 1) && 'last-slide'} */}
-          {/*         key={thisOffsetIndex} */}
-          {/*       > */}
-          {/**/}
-          {/*         <ImageWrapper className="image-wrapper"> */}
-          {/*           <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} /> */}
-          {/*         </ImageWrapper> */}
-          {/**/}
-          {/*         <div className="all-text-wrapper"> */}
-          {/*           <AmountWrapper> */}
-          {/*             <Text tag="h1" family="Anton" uppercase weight="normal"> */}
-          {/*               {theseItems[key].amount} */}
-          {/*             </Text> */}
-          {/*           </AmountWrapper> */}
-          {/**/}
-          {/*           <CopyWrapper> */}
-          {/*             <Text tag="p"> */}
-          {/*               {theseItems[key].copy} */}
-          {/*             </Text> */}
-          {/*           </CopyWrapper> */}
-          {/*         </div> */}
-          {/**/}
-          {/*       </Slide> */}
-          {/*     ); */}
-          {/*   })} */}
+          {Object.keys(theseItems).map((key, index) => {
+            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
+            const thisOffsetIndex = index + (isMobile ? 0 : 1);
+
+            return (
+              // Calculate the index offset accordingly to reflect the number of slides,
+              // but use the REAL index when determining if its the last REAL slide
+              <Slide
+                index={thisOffsetIndex}
+                className={index === (theseItems.length - 1) && 'last-slide'}
+                key={thisOffsetIndex}
+              >
+
+                <ImageWrapper className="image-wrapper">
+                  <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+                </ImageWrapper>
+
+                <div className="all-text-wrapper">
+                  <AmountWrapper>
+                    <Text tag="h1" family="Anton" uppercase weight="normal">
+                      {theseItems[key].amount}
+                    </Text>
+                  </AmountWrapper>
+
+                  <CopyWrapper>
+                    <Text tag="p">
+                      {theseItems[key].copy}
+                    </Text>
+                  </CopyWrapper>
+                </div>
+
+              </Slide>
+            );
+          })}
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
           {isMobile === false && (
