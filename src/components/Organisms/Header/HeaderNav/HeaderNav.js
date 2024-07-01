@@ -1,5 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-multiple-empty-lines */
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
@@ -33,13 +31,13 @@ import {
 } from './HeaderNav.style';
 
 const HeaderNav = ({
-  navItems, metaIcons, donateButton, characterLimit 
+  navItems, metaIcons, donateButton, characterLimit
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
   const [isTabFocussed, setIsTabFocussed] = useState({});
-  const [isMobile, setIsMobile] = useState(false);
+  const [isNotDesktop, setIsNotDesktop] = useState(null);
   let theseGroups = null;
 
   const [processedItems, setProcessedItems] = useState(null);
@@ -69,35 +67,36 @@ const HeaderNav = ({
     };
   };
 
-  // Custom function to let us update the carousel config dynamically
-  const screenResize = useCallback(() => {
-    // WHY ISN'T THIS CORRECT??
-    console.log('CURRENT isMobile', isMobile);
-    // if (isMobile !== window.innerWidth < breakpointValues.Nav) {
-    //   // console.log('resizey, isMobile', isMobile);
-    //   setIsMobile(window.innerWidth < breakpointValues.Nav);
-    // }
-  }, [isMobile]);
-
   useEffect(() => {
     // Divide up our nav on initial mount:
     setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
-  
-    setIsMobile(window.innerWidth < breakpointValues.Nav);
 
-    // Hook into browser's own onresize event to call our custom wrapper function:
-    if (typeof window !== 'undefined') {
-      window.onresize = screenResize;
-      window.addEventListener('onkeyup', setIsTabFocussed);
-    }
+    // Set desktopFlag on
+    setIsNotDesktop(window.innerWidth < breakpointValues.Nav);
 
     return () => {
       window.removeEventListener('onkeyup', setIsTabFocussed);
     };
-  }, [menuGroups]);
+  }, [menuGroups, characterLimit]);
 
-  // Once we've processed the items, assign according to breakpoint:
-  if (processedItems) theseGroups = isMobile ? menuGroups : processedItems.standardGroups;
+  // Custom function to let us update the nav dynamically:
+  const screenResizeNav = useCallback(() => {
+    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
+    const isCurrentlyNotDesktop = window.innerWidth < breakpointValues.Nav;
+
+    if (screenSize !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
+      setIsNotDesktop(isCurrentlyNotDesktop);
+    }
+  }, [isNotDesktop]);
+
+  useEffect(() => {
+    // Hook into browser's own onresize event to call our custom wrapper function:
+    if (typeof window !== 'undefined') window.onresize = screenResizeNav;
+  }, [screenResizeNav]);
+
+  // Once we've processed the items, assign according to breakpoint; sub desktop 'Nav'
+  // breakpoints use 'raw' unprocessed menu groups, Desktop uses the divided up versions:
+  if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 
   return (
     <>
@@ -136,7 +135,7 @@ const HeaderNav = ({
                 index={index}
                 isSubMenuOpen={!!isSubMenuOpen[thisID]}
               >
-                {isMobile ? (
+                {isNotDesktop ? (
                   <NavLink
                     href={hasPopUp ? '#' : thisUrl}
                     inline
@@ -192,7 +191,7 @@ const HeaderNav = ({
 
                       // Skip the very first child on desktop, since
                       // we've already made a 'button' version above:
-                      if (childIndex === 0 && !isMobile) return null;
+                      if (childIndex === 0 && !isNotDesktop) return null;
 
                       // Otherwise, render out as usual:
                       return (
@@ -216,7 +215,7 @@ const HeaderNav = ({
           */}
 
           {/* Only actually render 'more nav' stuff when we've got content */}
-          {(!isMobile && processedItems.moreNavGroups.length > 0) && (
+          {(!isNotDesktop && processedItems.moreNavGroups.length > 0) && (
           <MoreNavItem>
             {/* The 'More' nav button: */}
             <Text>
@@ -242,7 +241,7 @@ const HeaderNav = ({
               isFocussed={!!isTabFocussed.more}
               key="more-nav-ul"
             >
-              
+
               {/* For each item in this menu group:  */}
               {processedItems.moreNavGroups.map(child => {
                 /* Grab the first links properties to use for our parent/button */
