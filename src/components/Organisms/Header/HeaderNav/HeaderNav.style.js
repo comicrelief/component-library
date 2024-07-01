@@ -270,14 +270,18 @@ const NavItem = styled.li`
 `;
 
 const ChevronWrapper = styled.div`
-  width: 24px;
+  width: 16px;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 20px;
+  right: 22px;
+
+  img {
+    width: 100%;
+  }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     position: relative;
-    top: auto;
+    top: -4px;
     right: auto;
     width: 12px;
     padding-top: 2px;
