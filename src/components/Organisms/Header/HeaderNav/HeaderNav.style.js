@@ -39,13 +39,13 @@ const Nav = styled.nav`
   left: 0;
   ${zIndex('higher')};
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 50%;
     right: 0;
     left: inherit;
-    box-shadow: -20px 15px 20px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: -20px 15px 20px 0px rgba(0, 0, 0, 0.25);
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -94,7 +94,7 @@ const SubNavMenu = styled.ul`
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
     opacity: 0;
-    box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   }
 `;
 
@@ -431,6 +431,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     transition: max-height 0.5s cubic-bezier(0.5, 1.5, 0.5, 0.80);
     max-height: 0;
     border: 0;
+    box-shadow: none;
 
     ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
