@@ -48,7 +48,6 @@ const Copy = styled.div`
         margin: ${props => ((props.smallBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: ${props => ((props.smallBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
       }
-      color: ${props => props.colorBasedParagraph};
     }
   `}
 
@@ -61,7 +60,6 @@ const Copy = styled.div`
         margin: ${props => ((props.mediumBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: ${props => ((props.mediumBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
       }
-      color: ${props => props.colorBasedParagraph};
     }
   `}
 
@@ -71,6 +69,22 @@ const Copy = styled.div`
     h1 {
       font-size: 2rem;
     }
+  }
+
+  /* Setting colors based on row (transparent background) vs column view */
+  @media ${({ theme }) => theme.allBreakpoints('S')} {
+    color: ${props => ((props.smallBreakpointRowLayout === true)
+    ? `${props.rowTextColor}`
+    : `${props.columnTextColor}`
+  )};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    color: ${props => ((props.mediumBreakpointRowLayout === true)
+    ? `${props.rowTextColor}`
+    : `${props.columnTextColor}`
+  )};
+  }
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    color: ${props => props.columnTextColor};
   }
 `;
 

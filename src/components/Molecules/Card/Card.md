@@ -8,6 +8,8 @@ import Link from '../../Atoms/Link/Link';
   images={defaultData.images}
   backgroundColor="blue"
   height="auto"
+  rowTextColor="purple"
+  columnTextColor="black"
 >
   <Text tag="h3" size="xl">
     Title
@@ -28,6 +30,8 @@ import Link from '../../Atoms/Link/Link';
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={false}
+  rowTextColor="purple"
+  columnTextColor="black"
 >
   <Text tag="h3" size="xl">
     Title
@@ -46,11 +50,12 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="green"
+  backgroundColor="orange"
   height="auto"
   smallBreakpointRowLayout={false}
   mediumBreakpointRowLayout={true}
-  colorBasedParagraph="red"
+  rowTextColor="purple"
+  columnTextColor="black"
 >
   <Text tag="h3" size="xl">
     Title
@@ -73,7 +78,8 @@ import Link from '../../Atoms/Link/Link';
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={true}
-  colorBasedParagraph="green"
+  rowTextColor="purple"
+  columnTextColor="black"
 >
   <Text tag="h3" size="xl">
     Title
