@@ -48,6 +48,7 @@ const Copy = styled.div`
         margin: ${props => ((props.smallBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: ${props => ((props.smallBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
       }
+      color: ${props => props.colorBasedParagraph || 'black'};
     }
   `}
 
@@ -60,6 +61,7 @@ const Copy = styled.div`
         margin: ${props => ((props.mediumBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
         font-size: ${props => ((props.mediumBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
       }
+      color: ${props => props.colorBasedParagraph || 'black'};
     }
   `}
 
