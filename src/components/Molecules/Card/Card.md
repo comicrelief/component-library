@@ -6,7 +6,7 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="blue"
   height="auto"
 >
   <Text tag="h3" size="xl">
@@ -24,7 +24,7 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="red"
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={false}
@@ -46,7 +46,7 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="green"
   height="auto"
   smallBreakpointRowLayout={false}
   mediumBreakpointRowLayout={true}
@@ -69,7 +69,7 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="purple"
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={true}
