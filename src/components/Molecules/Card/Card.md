@@ -6,10 +6,10 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="blue"
   height="auto"
 >
-  <Text tag="h3" color="purple" size="xl">
+  <Text tag="h3" size="xl">
     Title
   </Text>
   <Text tag="p">Text body copy description</Text>
@@ -24,12 +24,12 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="red"
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={false}
 >
-  <Text tag="h3" color="purple" size="xl">
+  <Text tag="h3" size="xl">
     Title
   </Text>
   <Text tag="p">
@@ -46,12 +46,13 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="green"
   height="auto"
   smallBreakpointRowLayout={false}
   mediumBreakpointRowLayout={true}
+  colorBasedParagraph="red"
 >
-  <Text tag="h3" color="purple" size="xl">
+  <Text tag="h3" size="xl">
     Title
   </Text>
   <Text tag="p">
@@ -68,12 +69,13 @@ import Link from '../../Atoms/Link/Link';
 <Card
   imageLow={defaultData.image}
   images={defaultData.images}
-  backgroundColor="grey_light"
+  backgroundColor="purple"
   height="auto"
   smallBreakpointRowLayout={true}
   mediumBreakpointRowLayout={true}
+  colorBasedParagraph="green"
 >
-  <Text tag="h3" color="purple" size="xl">
+  <Text tag="h3" size="xl">
     Title
   </Text>
   <Text tag="p">
