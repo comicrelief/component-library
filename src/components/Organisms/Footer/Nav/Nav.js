@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import NavHelper from '../../../../utils/navHelper';
+import { NavHelper } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 
 import {
@@ -62,7 +62,8 @@ const FooterNav = ({ navItems, ...rest }) => {
         {menuGroups.map((group, index) => (
           <NavItem
             role="none"
-            key={group.id}
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${group.id}-${index}`}
             index={index}
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >

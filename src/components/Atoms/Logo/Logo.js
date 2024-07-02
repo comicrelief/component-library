@@ -70,8 +70,8 @@ Logo.propTypes = {
 
 Logo.defaultProps = {
   rotate: false,
-  sizeSm: '51px', // - to work with the header 75px height and 12px padding
-  sizeMd: '70px',
+  sizeSm: '51px',
+  sizeMd: '51px',
   campaign: 'Comic Relief'
 };
 

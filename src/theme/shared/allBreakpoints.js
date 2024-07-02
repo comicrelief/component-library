@@ -6,7 +6,8 @@ export const breakpointValues = {
   S: 0,
   M: 740,
   L: 1024,
-  Nav: 1150,
+  Nav: 1175,
+  NavWithAnimations: 1280,
   XL: 1440
 };
 

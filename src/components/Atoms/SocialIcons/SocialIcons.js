@@ -40,6 +40,7 @@ const SocialIcons = ({ campaign, ...restProps }) => {
             href={links[brand].url}
             title={links[brand].title}
             brand={brand}
+            id={links[brand].id}
             {...restProps}
           />
         </StyledItem>

@@ -53,18 +53,20 @@ How to use in your styled component
 `@media ${({ theme }) => theme.allBreakpoints('M')} {`
 
 #### screen sizes:
-```
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
-...
-max-width: ${breakpointValues.M}px;
-```
+`import { breakpointValues } from '../../../theme/shared/allBreakpoints';`
+
+`...`
+
+`max-width: ${breakpointValues.M}px;`
+
 
 ### Usage within Component Library
-```
-import { breakpointValues } from '@comicrelief/component-library/src/theme/shared/allBreakpoints';
-...
-max-width: ${breakpointValues.M}px);
-```
+`import { breakpointValues } from '@comicrelief/component-library/src/theme/shared/allBreakpoints';`
+
+`...`
+
+`max-width: ${breakpointValues.M}px);`
+
 
 
 ## containers from containers.js
