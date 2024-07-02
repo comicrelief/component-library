@@ -1,7 +1,7 @@
 /* Overiding the crummy Styleguidest styles */
 .rsg--preview-35 {
     padding: 0 !important;
-    border: none;
+    border: none !important;
 }
 
 .rsg--content-3 {
@@ -10,5 +10,5 @@
 
 .rsg--header-11,
 .rsg--tabs-12 {
-    display: none;
+    display: none !important;;
 }
