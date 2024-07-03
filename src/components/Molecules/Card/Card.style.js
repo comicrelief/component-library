@@ -40,8 +40,7 @@ const Copy = styled.div`
   padding: ${spacing('l')};
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
-  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout
-    === true) && css`
+  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
       padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
       h1 {
@@ -52,8 +51,7 @@ const Copy = styled.div`
   `}
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, adjust text spacing */
-  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout
-    === true) && css`
+  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
       h1 {

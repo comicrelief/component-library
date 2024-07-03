@@ -14,7 +14,9 @@ import Link from '../../Atoms/Link/Link';
   <Text tag="h3" size="xl">
     Title
   </Text>
-  <Text tag="p">Text body copy description</Text>
+  <Text tag="p">
+    Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year.
+  </Text>
 </Card>;
 ```
 
