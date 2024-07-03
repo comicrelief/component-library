@@ -42,21 +42,27 @@ const Copy = styled.div`
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, adjust text spacing */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
-      padding: ${props => ((props.smallBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      padding: ${spacing('sm')};
       h1 {
-        margin: ${props => ((props.smallBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
-        font-size: ${props => ((props.smallBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
+        margin: 0 0 ${spacing('sm')};
+        font-size: 1.5rem;
       }
     }
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding: ${spacing('l')};
+      h1 {
+        font-size: 2rem;
+      }
+    )};
   `}
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, adjust text spacing */
   ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: ${props => ((props.mediumBreakpointRowLayout === true) ? `${spacing('sm')}` : `${spacing('l')}`)};
+      padding: ${spacing('sm')};
       h1 {
-        margin: ${props => ((props.mediumBreakpointRowLayout === true) && `0 0 ${spacing('sm')}`)};
-        font-size: ${props => ((props.mediumBreakpointRowLayout === true) ? '1.5rem' : '2rem')};
+        margin: 0 0 ${spacing('sm')};
+        font-size: 1.5rem;
       }
     }
   `}
