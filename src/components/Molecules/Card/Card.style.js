@@ -5,9 +5,10 @@ const Container = styled.div`
   position: relative;
   display: flex;
   height: 100%;
-  border-radius: ${props => (props.squaredCorners ? '0' : '0.8rem')};
+  border-radius: ${props => (props.squaredCorners ? '0' : `${spacing('md')}`)};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  /* border: 1px solid red; */
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
