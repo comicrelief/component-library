@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
 }
@@ -60,6 +60,12 @@ exports[`renders correctly 1`] = `
 
   .c1 h1 {
     font-size: 2rem;
+  }
+}
+
+@media (min-width:0px) {
+  .c1 {
+    color: black;
   }
 }
 
@@ -87,7 +93,7 @@ exports[`renders correctly 2`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
 }
@@ -139,6 +145,12 @@ exports[`renders correctly 2`] = `
 
   .c1 h1 {
     font-size: 2rem;
+  }
+}
+
+@media (min-width:0px) {
+  .c1 {
+    color: black;
   }
 }
 
@@ -180,7 +192,7 @@ exports[`renders correctly with no body 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
 }
