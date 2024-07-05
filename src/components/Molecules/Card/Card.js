@@ -62,7 +62,7 @@ Card.propTypes = {
   children: PropTypes.node,
   squaredCorners: PropTypes.bool,
   smallBreakpointRowLayout: PropTypes.bool,
-  mediumBreakpointRowLayout: PropTypes.bool,
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -76,7 +76,7 @@ Card.defaultProps = {
   height: '100%',
   squaredCorners: false,
   smallBreakpointRowLayout: null,
-  mediumBreakpointRowLayout: null,
+  mediumBreakpointRowLayout: null
 };
 
 export default Card;
