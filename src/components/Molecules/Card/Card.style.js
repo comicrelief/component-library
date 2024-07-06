@@ -74,22 +74,6 @@ const Copy = styled.div`
       font-size: 2rem;
     }
   }
-
-  /* Setting colors based on row (transparent background) vs column view */
-  @media ${({ theme }) => theme.allBreakpoints('S')} {
-    color: ${props => ((props.smallBreakpointRowLayout === true)
-    ? `${props.rowTextColor}`
-    : `${props.columnTextColor}`
-  )};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    color: ${props => ((props.mediumBreakpointRowLayout === true)
-    ? `${props.rowTextColor}`
-    : `${props.columnTextColor}`
-  )};
-  }
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    color: ${props => props.columnTextColor};
-  }
 `;
 
 export { Container, Wrapper, Copy };

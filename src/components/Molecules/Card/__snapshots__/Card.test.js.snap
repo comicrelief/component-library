@@ -63,12 +63,6 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:0px) {
-  .c1 {
-    color: undefined;
-  }
-}
-
 <div
   className="c0"
 >
@@ -145,12 +139,6 @@ exports[`renders correctly 2`] = `
 
   .c1 h1 {
     font-size: 2rem;
-  }
-}
-
-@media (min-width:0px) {
-  .c1 {
-    color: undefined;
   }
 }
 
