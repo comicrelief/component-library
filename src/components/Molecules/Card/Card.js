@@ -15,8 +15,6 @@ const Card = ({
   squaredCorners,
   smallBreakpointRowLayout,
   mediumBreakpointRowLayout,
-  rowTextColor,
-  columnTextColor,
   ...rest
 }) => (
   <Container
@@ -46,8 +44,6 @@ const Card = ({
         <Copy
           smallBreakpointRowLayout={smallBreakpointRowLayout}
           mediumBreakpointRowLayout={mediumBreakpointRowLayout}
-          rowTextColor={rowTextColor}
-          columnTextColor={columnTextColor}
         >
           {children}
         </Copy>
@@ -66,9 +62,7 @@ Card.propTypes = {
   children: PropTypes.node,
   squaredCorners: PropTypes.bool,
   smallBreakpointRowLayout: PropTypes.bool,
-  mediumBreakpointRowLayout: PropTypes.bool,
-  rowTextColor: PropTypes.string,
-  columnTextColor: PropTypes.string
+  mediumBreakpointRowLayout: PropTypes.bool
 };
 
 Card.defaultProps = {
@@ -82,9 +76,7 @@ Card.defaultProps = {
   height: '100%',
   squaredCorners: false,
   smallBreakpointRowLayout: null,
-  mediumBreakpointRowLayout: null,
-  rowTextColor: 'black',
-  columnTextColor: 'black'
+  mediumBreakpointRowLayout: null
 };
 
 export default Card;

@@ -9,8 +9,6 @@ import Link from '../../Atoms/Link/Link';
       images={defaultData.images}
       backgroundColor="blue"
       height="auto"
-      rowTextColor="purple"
-      columnTextColor="black"
     >
       <Text tag="h3" size="xl">
         Title
@@ -35,8 +33,6 @@ import Link from '../../Atoms/Link/Link';
       height="auto"
       smallBreakpointRowLayout={true}
       mediumBreakpointRowLayout={false}
-      rowTextColor="purple"
-      columnTextColor="black"
     >
       <Text tag="h3" size="xl">
         Title
@@ -61,8 +57,6 @@ import Link from '../../Atoms/Link/Link';
       height="auto"
       smallBreakpointRowLayout={false}
       mediumBreakpointRowLayout={true}
-      rowTextColor="purple"
-      columnTextColor="black"
     >
       <Text tag="h3" size="xl">
         Title
@@ -87,8 +81,6 @@ import Link from '../../Atoms/Link/Link';
       height="auto"
       smallBreakpointRowLayout={true}
       mediumBreakpointRowLayout={true}
-      rowTextColor="purple"
-      columnTextColor="black"
     >
       <Text tag="h3" size="xl">
         Title
