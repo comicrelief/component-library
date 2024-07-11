@@ -47,12 +47,12 @@
     "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
   },
   "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "test:unit": "yarn run jest",
     "test:unit:update": "yarn jest -u",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
     "postinstall": "yarn run build",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "test:e2e": "playwright test --project=chromium",
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
