@@ -1,7 +1,7 @@
 import React from "react";
 import "jest-styled-components";
 
-import renderWithTheme from "../../../hoc/shallowWithTheme";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import Membership from "./Membership";
 import { defaultData } from "../../../styleguide/data/data";
 import data from "./dev-data/data";

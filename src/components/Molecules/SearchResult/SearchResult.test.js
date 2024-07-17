@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import SearchResult from './SearchResult';
 import { defaultData } from '../../../styleguide/data/data';
 

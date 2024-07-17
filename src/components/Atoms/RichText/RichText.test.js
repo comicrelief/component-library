@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import RichText from './RichText';
 
 const htmlContent = "<p>Here's some copy</p><span>More copy</span>";
