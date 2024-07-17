@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import axios from 'axios';
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import Typeahead from './Typeahead';
 
 const schoolsLookup = async query => {

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 // import React from 'react';
 import 'jest-styled-components';
-// import renderWithTheme from '../../../hoc/shallowWithTheme';
+// import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 // import Header from './Header';
 
 // import data from './data/data';
