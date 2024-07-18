@@ -63,7 +63,7 @@ const buildValidationSchema = overrideOptions => {
 
   const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
-  const mpValidationSchema = yup.object({
+  const mpValidationFields = {
     mp_email: yup.string()
       .when('mp_permissionEmail', {
         is: val => (!(mpValidationOptions.mp_permissionEmail.disableOption)
@@ -125,11 +125,15 @@ const buildValidationSchema = overrideOptions => {
 
     mp_address3: yup.string()
       .max(50, 'Please enter a maximum of 50 characters')
-  });
+  };
+
+  const mpValidationSchema = yup.object(mpValidationFields);
 
   return {
     mpValidationSchema,
-    mpValidationOptions
+    mpValidationOptions,
+    // Return the raw fields object too, to make for easier schema-combining:
+    mpValidationFields
   };
 };
 
