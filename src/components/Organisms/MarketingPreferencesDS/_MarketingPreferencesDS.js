@@ -21,7 +21,7 @@ const MarketingPreferencesDS = ({
   id,
   formContext
 }) => {
-  const { errors, control } = formContext;
+  const { formState: { errors }, control } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
