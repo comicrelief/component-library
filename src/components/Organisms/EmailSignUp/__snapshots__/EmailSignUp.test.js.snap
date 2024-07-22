@@ -312,6 +312,8 @@ exports[`renders correctly 1`] = `
               className="c13"
               id="first-name"
               name="firstName"
+              onBlur={[Function]}
+              onChange={[Function]}
               placeholder="Enter your first name"
               required={false}
               type="text"
@@ -343,6 +345,8 @@ exports[`renders correctly 1`] = `
               className="c13"
               id="last-name"
               name="lastName"
+              onBlur={[Function]}
+              onChange={[Function]}
               placeholder="Enter your last name"
               required={false}
               type="text"
@@ -375,6 +379,8 @@ exports[`renders correctly 1`] = `
             className="c13"
             id="email"
             name="email"
+            onBlur={[Function]}
+            onChange={[Function]}
             placeholder="example@youremail.com"
             required={false}
             type="email"
@@ -388,7 +394,7 @@ exports[`renders correctly 1`] = `
         <button
           className="c15 c16"
           data-test="subscribe-button"
-          disabled={false}
+          disabled={true}
           type="submit"
         >
           <span
