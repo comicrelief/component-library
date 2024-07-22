@@ -20,7 +20,7 @@ const TextInput = ({
     ...rest
   };
 
-  return <Input {...props} ref={register} />;
+  return <Input {...props} {...register(fieldName)} />;
 };
 
 TextInput.defaultProps = {
