@@ -2,7 +2,6 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('Email Signup Form component', () => {
   test('Email SignUp Form', async ({ page }) => {
-
     await page.goto('/#emailsignupform');
 
     await expect(page.locator('[data-testid="EmailSignUpForm-example-1"]')).toBeVisible();
@@ -89,7 +88,7 @@ test.describe('Email Signup Form component', () => {
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').fill(''); // clear the email field
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').type('Test0-9!#$%&\'*+/=?^_{|}~-@comicrelief_9-8.com.uk');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').click();
-    await expect(page.locator('label[for="email"]  div ~ span')).toBeHidden('');
+    await expect(page.locator('label[for="email"]  div ~ span')).toContainText('Please enter a valid email address');
 
     // enter valid inputs should not show error messages
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
