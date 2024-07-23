@@ -68,14 +68,14 @@ const buildValidationSchema = overrideOptions => {
       .when('mp_permissionEmail', {
         is: val => (!(mpValidationOptions.mp_permissionEmail.disableOption)
       && mpValidationOptions.mp_permissionEmail[val]),
-        then: yup.string().required('Please enter your email address').email('Please enter a valid email address')
+        then: schema => schema.required('Please enter your email address').email('Please enter a valid email address')
       }),
 
     mp_mobile: yup.string()
       .when('mp_permissionSMS', {
         is: val => (!(mpValidationOptions.mp_permissionSMS.disableOption)
         && mpValidationOptions.mp_permissionSMS[val]),
-        then: yup.string().required('Please enter your mobile number')
+        then: schema => schema.required('Please enter your mobile number')
           .matches(phoneRegex, 'Please enter a valid UK mobile number')
       }),
 
@@ -83,7 +83,7 @@ const buildValidationSchema = overrideOptions => {
       .when('mp_permissionPhone', {
         is: val => (!(mpValidationOptions.mp_permissionPhone.disableOption)
         && mpValidationOptions.mp_permissionPhone[val]),
-        then: yup.string().required('Please enter your phone number')
+        then: schema => schema.required('Please enter your phone number')
           .matches(phoneRegex, 'Please enter a valid UK phone number')
       }),
 
@@ -91,7 +91,7 @@ const buildValidationSchema = overrideOptions => {
       .when('mp_permissionPost', {
         is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
       && mpValidationOptions.mp_permissionPost[val]),
-        then: yup.string().required('Please enter the first line of your address')
+        then: schema => schema.required('Please enter the first line of your address')
           .matches(/^[a-zA-Z0-9][a-zA-Z0-9'.,/()& -]*$/, 'This field only accepts alphanumeric characters and , . ( ) / & \' - and must start with an alphanumeric character')
           .max(50, 'Please enter a maximum of 50 characters')
       }),
@@ -100,7 +100,7 @@ const buildValidationSchema = overrideOptions => {
       .when('mp_permissionPost', {
         is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
         && mpValidationOptions.mp_permissionPost[val]),
-        then: yup.string().required('Please enter your town')
+        then: schema => schema.required('Please enter your town')
           .matches(/^[a-zA-Z0-9][a-zA-Z0-9'.,/()& -]*$/, 'This field only accepts alphanumeric characters and , . ( ) / & \' - and must start with an alphanumeric character')
           .max(50, 'Please enter a maximum of 50 characters')
       }),
@@ -108,13 +108,13 @@ const buildValidationSchema = overrideOptions => {
     mp_postcode: yup.string().when('mp_permissionPost', {
       is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
       && mpValidationOptions.mp_permissionPost[val]),
-      then: yup.string().required('Please enter your postcode').matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
+      then: schema => schema.required('Please enter your postcode').matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
     }),
 
     mp_country: yup.string().when('mp_permissionPost', {
       is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
       && mpValidationOptions.mp_permissionPost[val]),
-      then: yup.string().required('Please enter your country')
+      then: schema => schema.required('Please enter your country')
         .matches(/^[a-zA-Z0-9][a-zA-Z0-9'.,/()& -]*$/, 'This field only accepts alphanumeric characters and , . ( ) / & \' - and must start with an alphanumeric character')
         .max(50, 'Please enter a maximum of 50 characters')
     }),
