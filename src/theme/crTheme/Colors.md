@@ -319,5 +319,22 @@ const Item = styled.div`
       </Card>
     </Item>
   </Grid>
+
+   <Text tag="h3" family="Anton" uppercase color="black" size="l">
+    Additional Colours (CR Theme)
+  </Text>
+  <Text tag="h3" color="black" size="xs">
+    Currently, just one new colour used exclusively in the Donate widget on CRcom and the 2024 Donate build
+  </Text>
+  <Grid>
+    <Item>
+      <Card backgroundColor="blue_donate" height="auto">
+        <Text tag="h3" color="white" size="xs">
+          Blue Donate
+        </Text>
+        <Text tag="p" color="white">#2042AD</Text>
+      </Card>
+    </Item>
+  </Grid>
 </div>;
 ```
