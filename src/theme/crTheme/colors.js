@@ -2,6 +2,7 @@ const colors = {
   black: '#000000',
   blue: '#0565D1',
   blue_dark: '#274084',
+  blue_donate: '#2042AD',
   blue_light: '#BECCF9',
   blue_royal: '#6489FC',
   coral: '#F9686D',
