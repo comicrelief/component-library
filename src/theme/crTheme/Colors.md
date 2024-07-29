@@ -31,7 +31,7 @@ const Item = styled.div`
 
 <div>
   <Text tag="h3" family="Anton" uppercase color="black" size="l">
-    Primary
+    Primary (CR Theme)
   </Text>
   <Grid>
     <Item>
@@ -277,7 +277,7 @@ const Item = styled.div`
     </Item>
   </Grid>
   <Text tag="h3" family="Anton" uppercase color="black" size="l">
-    Accent Colours
+    Accent Colours (CR Theme)
   </Text>
   <Text tag="h3" color="black" size="xs">
     Used for highlighted actions and content
