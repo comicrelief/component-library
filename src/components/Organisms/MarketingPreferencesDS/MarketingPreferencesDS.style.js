@@ -138,6 +138,7 @@ const ExtraInfo = styled.span`
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   margin-bottom: 0.5rem;
+  color: ${({ theme }) => theme.color('grey_dark')};
 
   + label {
     margin-top: 20px;
