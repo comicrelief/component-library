@@ -20,7 +20,7 @@ import {
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const CardCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
+const CardCarousel = ({ data, data: { autoPlay } }) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
@@ -82,7 +82,7 @@ const CardCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
         visibleSlides={visibleSlides}
         infinite
       >
-        <Slider classNameAnimation="wymd-carousel">
+        <Slider classNameAnimation="card-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
           {isMobile === false && (
