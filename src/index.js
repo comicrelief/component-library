@@ -36,6 +36,7 @@ export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBan
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
+export { default as CardCarousel } from './components/Molecules/CardCarousel/CardCarousel';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
@@ -76,4 +77,3 @@ export {
 } from './components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS';
 export { default as ImpactSlider } from './components/Organisms/ImpactSlider/ImpactSlider';
 export { default as WYMDCarousel } from './components/Organisms/WYMDCarousel/WYMDCarousel';
-export { default as Carousel } from './components/Organisms/Carousel/Carousel';

@@ -16,11 +16,11 @@ import {
   AmountWrapper,
   CopyWrapper,
   CarouselWrapper
-} from './Carousel.style';
+} from './CardCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
+const CardCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
@@ -61,15 +61,16 @@ const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
+  console.log(data.desktopHeight);
+
   return (
     <CarouselWrapper
       className="CarouselWrapper"
-      id={thisID}
-      mobileHeight={data.mobileHeight}
-      tabletHeight={data.tabletHeight}
-      desktopHeight={data.desktopHeight}
+      mobileHeight={425}
+      tabletHeight={450}
+      desktopHeight={475}
     >
-      <h1>Generic Carousel Component</h1>
+      <h1>Card Carousel</h1>
 
       {theseItems && (
       <CarouselProvider
@@ -137,7 +138,7 @@ const Carousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   );
 };
 
-Carousel.propTypes = {
+CardCarousel.propTypes = {
   data: PropTypes.shape({
     // Required 'node' fields:
     node1Amount: PropTypes.string.isRequired,
@@ -214,4 +215,4 @@ Carousel.propTypes = {
   }).isRequired
 };
 
-export default Carousel;
+export default CardCarousel;
