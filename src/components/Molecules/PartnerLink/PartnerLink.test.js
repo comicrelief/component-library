@@ -1,7 +1,7 @@
 import React from "react";
 import "jest-styled-components";
 
-import renderWithTheme from "../../../hoc/shallowWithTheme";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import PartnerLink from "./PartnerLink";
 import Picture from "../../Atoms/Picture/Picture";
 import { defaultData } from "../../../styleguide/data/data";

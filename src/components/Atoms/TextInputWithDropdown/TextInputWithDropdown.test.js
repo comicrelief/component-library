@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import TextInputWithDropdown from './TextInputWithDropdown';
 import { Dropdown, Container } from './TextInputWithDropdown.style';
 

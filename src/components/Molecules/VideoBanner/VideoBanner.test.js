@@ -1,7 +1,7 @@
 import React from "react";
 import "jest-styled-components";
 
-import renderWithTheme from "../../../hoc/shallowWithTheme";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import VideoBanner from "./VideoBanner";
 import poster from "../../../styleguide/assets/VideoBannerPosterImage.png";
 

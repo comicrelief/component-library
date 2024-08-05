@@ -53,7 +53,7 @@ const CheckAnswer = ({
           name={name}
           id={`${name}-yes`}
           value="yes"
-          ref={register}
+          {...register(name)}
           onChange={onChange}
         />
         <span />

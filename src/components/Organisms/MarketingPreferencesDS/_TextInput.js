@@ -6,7 +6,7 @@ const TextInput = ({
   fieldName, label,
   optional, fieldType, formContext, ...rest
 }) => {
-  const { errors, register } = formContext;
+  const { formState: { errors }, register } = formContext;
 
   const props = {
     name: fieldName,
@@ -20,7 +20,7 @@ const TextInput = ({
     ...rest
   };
 
-  return <Input {...props} ref={register} />;
+  return <Input {...props} {...register(fieldName)} />;
 };
 
 TextInput.defaultProps = {

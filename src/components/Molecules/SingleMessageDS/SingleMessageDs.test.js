@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import SingleMessageDs from './SingleMessageDs';
 import Text from '../../Atoms/Text/Text';
 import Download from '../../Atoms/Icons/Download';
