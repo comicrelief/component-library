@@ -9,41 +9,6 @@ const animationSpeed = 0.75;
 const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
-const ImageWrapper = styled.div`
-  width: 45%;
-  display: block;
-  padding: 9%;
-  border: 2px dashed #89888b;
-  border-radius: 50%;
-  position: relative;
-  overflow: visible;
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  &:after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    width: 125%;
-    right: calc(-125% - 2px);
-    height: 2px;
-    border-bottom: 2px dashed #89888b;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 50%;
-    padding: 9%;
-    &:after {
-      width: 100%;
-      right: calc(-100% - 8px);
-    }
-  }
-`;
-
 const AmountWrapper = styled.div`
   padding: ${spacing('m')} 0 0.75rem;
 
@@ -55,17 +20,6 @@ const AmountWrapper = styled.div`
       font-size: 40px;
       line-height: 40px;
     }
-  }
-`;
-
-const CopyWrapper = styled.div`
-  padding: 0;
-  width: 75%;
-  margin: 0 auto;
-
-  p {
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    line-height: ${({ theme }) => theme.fontSize('l')};
   }
 `;
 
@@ -347,5 +301,5 @@ const CarouselWrapper = styled.div`
 `;
 
 export {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, AmountWrapper, Heading, PeopleHelpedText, Including
 };

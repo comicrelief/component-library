@@ -12,9 +12,7 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  ImageWrapper,
   AmountWrapper,
-  CopyWrapper,
   CarouselWrapper
 } from './CardCarousel.style';
 import Text from '../../Atoms/Text/Text';
@@ -99,6 +97,9 @@ const CardCarousel = ({ data }) => {
                 key={thisOffsetIndex}
               >
 
+
+
+
                 <div className="all-text-wrapper">
                   <AmountWrapper>
                     <Text tag="h1" family="Anton" uppercase weight="normal">
@@ -106,6 +107,10 @@ const CardCarousel = ({ data }) => {
                     </Text>
                   </AmountWrapper>
                 </div>
+
+
+
+
 
               </Slide>
             );
