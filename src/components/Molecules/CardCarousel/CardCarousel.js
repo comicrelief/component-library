@@ -137,41 +137,6 @@ const CardCarousel = ({ data }) => {
 
 CardCarousel.propTypes = {
   data: PropTypes.shape({
-    node5Amount: PropTypes.string,
-    node5Copy: PropTypes.string,
-    node5Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node6Amount: PropTypes.string,
-    node6Copy: PropTypes.string,
-    node6Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node7Amount: PropTypes.string,
-    node7Copy: PropTypes.string,
-    node7Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node8Amount: PropTypes.string,
-    node8Copy: PropTypes.string,
-    node8Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node9Amount: PropTypes.string,
-    node9Copy: PropTypes.string,
-    node9Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
     autoPlay: PropTypes.bool.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
