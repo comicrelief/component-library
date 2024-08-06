@@ -137,29 +137,6 @@ const CardCarousel = ({ data }) => {
 
 CardCarousel.propTypes = {
   data: PropTypes.shape({
-    // Required 'node' fields:
-    node2Amount: PropTypes.string.isRequired,
-    node2Copy: PropTypes.string.isRequired,
-    node2Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    node3Amount: PropTypes.string.isRequired,
-    node3Copy: PropTypes.string.isRequired,
-    node3Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    node4Amount: PropTypes.string.isRequired,
-    node4Copy: PropTypes.string.isRequired,
-    node4Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    // Non-required 'node' fields:
     node5Amount: PropTypes.string,
     node5Copy: PropTypes.string,
     node5Image: PropTypes.shape({
