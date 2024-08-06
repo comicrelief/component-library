@@ -1,4 +1,4 @@
-const mockData = {
+const cardData = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
   mobileHeight: 425,
@@ -72,4 +72,9 @@ const mockData = {
   }
 };
 
-export default mockData;
+const placeholder = 25;
+
+export {
+  cardData,
+  placeholder
+}

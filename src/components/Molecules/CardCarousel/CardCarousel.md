@@ -1,7 +1,6 @@
 # Card Carousel
 
-```js
-const { mockData } = require('./mockData');
+import { cardData } from '../../../utils/cardData';
 
-<CardCarousel data={mockData}/>
+<CardCarousel data={cardData}/>
 ```

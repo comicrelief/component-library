@@ -61,17 +61,16 @@ const CardCarousel = ({ data, data: { autoPlay } }) => {
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
-  // console.log(data.desktopHeight);
+  // console.log(data);
+  console.log(data.mobileHeight);
 
   return (
     <CarouselWrapper
       className="CarouselWrapper"
-      mobileHeight={425}
-      tabletHeight={450}
-      desktopHeight={475}
+      mobileHeight={data.mobileHeight}
+      tabletHeight={data.tabletHeight}
+      desktopHeight={data.desktopHeight}
     >
-      <h1>Card Carousel</h1>
-
       {theseItems && (
       <CarouselProvider
         naturalSlideWidth={50}
@@ -85,9 +84,7 @@ const CardCarousel = ({ data, data: { autoPlay } }) => {
         <Slider classNameAnimation="card-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <Slide index={0} key={0} />
-          )}
+          {isMobile === false && <Slide index={0} key={0} />}
 
           {Object.keys(theseItems).map((key, index) => {
             // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
