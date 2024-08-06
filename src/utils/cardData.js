@@ -77,4 +77,4 @@ const placeholder = 25;
 export {
   cardData,
   placeholder
-}
+};

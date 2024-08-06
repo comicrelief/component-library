@@ -1,6 +1,7 @@
 # Card Carousel
 
-import { cardData } from '../../../utils/cardData';
+```js
+const { cardData } = require('../../../utils/cardData');
 
 <CardCarousel data={cardData}/>
 ```
