@@ -20,7 +20,7 @@ import {
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const CardCarousel = ({ data, data: { autoPlay } }) => {
+const CardCarousel = ({ data }) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
@@ -76,7 +76,7 @@ const CardCarousel = ({ data, data: { autoPlay } }) => {
         naturalSlideWidth={50}
         naturalSlideHeight={200}
         totalSlides={totalSlides}
-        isPlaying={autoPlay}
+        isPlaying={data.autoPlay}
         interval={5000}
         visibleSlides={visibleSlides}
         infinite
@@ -138,13 +138,6 @@ const CardCarousel = ({ data, data: { autoPlay } }) => {
 CardCarousel.propTypes = {
   data: PropTypes.shape({
     // Required 'node' fields:
-    node1Amount: PropTypes.string.isRequired,
-    node1Copy: PropTypes.string.isRequired,
-    node1Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
     node2Amount: PropTypes.string.isRequired,
     node2Copy: PropTypes.string.isRequired,
     node2Image: PropTypes.shape({
@@ -203,9 +196,6 @@ CardCarousel.propTypes = {
       })
     }),
     autoPlay: PropTypes.bool.isRequired,
-    headerCopy: PropTypes.string.isRequired,
-    peopleHelpedText: PropTypes.string.isRequired,
-    contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
     desktopHeight: PropTypes.number
