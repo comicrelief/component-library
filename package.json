@@ -22,6 +22,14 @@
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@playwright/test": "^1.38.1",
+    "babel-plugin-import": "^1.13.8",
+    "ejs": "^3.1.9",
+    "jest-styled-components": "^7.1.1",
+    "react-scripts": "4.0.3",
+    "react-styleguidist": "^11.1.7",
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.2",
     "lazysizes": "^5.3.2",
@@ -72,12 +80,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@playwright/test": "^1.38.1",
-    "babel-plugin-import": "^1.13.8",
     "cross-env": "^7.0.3",
-    "ejs": "^3.1.9",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.27.5",
@@ -85,11 +88,8 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^26.1.0",
-    "jest-styled-components": "^7.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
-    "react-scripts": "4.0.3",
-    "react-styleguidist": "^11.1.7",
     "react-test-renderer": "^17.0.2",
     "semantic-release": "^17.4.6",
     "start-server-and-test": "^2.0.4"
