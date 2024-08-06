@@ -99,22 +99,12 @@ const CardCarousel = ({ data }) => {
                 key={thisOffsetIndex}
               >
 
-                <ImageWrapper className="image-wrapper">
-                  <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
-                </ImageWrapper>
-
                 <div className="all-text-wrapper">
                   <AmountWrapper>
                     <Text tag="h1" family="Anton" uppercase weight="normal">
                       {theseItems[key].amount}
                     </Text>
                   </AmountWrapper>
-
-                  <CopyWrapper>
-                    <Text tag="p">
-                      {theseItems[key].copy}
-                    </Text>
-                  </CopyWrapper>
                 </div>
 
               </Slide>
@@ -137,6 +127,71 @@ const CardCarousel = ({ data }) => {
 
 CardCarousel.propTypes = {
   data: PropTypes.shape({
+    // Required 'node' fields:
+    node1Amount: PropTypes.string.isRequired,
+    node1Copy: PropTypes.string.isRequired,
+    node1Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node2Amount: PropTypes.string.isRequired,
+    node2Copy: PropTypes.string.isRequired,
+    node2Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node3Amount: PropTypes.string.isRequired,
+    node3Copy: PropTypes.string.isRequired,
+    node3Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    node4Amount: PropTypes.string.isRequired,
+    node4Copy: PropTypes.string.isRequired,
+    node4Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired,
+    // Non-required 'node' fields:
+    node5Amount: PropTypes.string,
+    node5Copy: PropTypes.string,
+    node5Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node6Amount: PropTypes.string,
+    node6Copy: PropTypes.string,
+    node6Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node7Amount: PropTypes.string,
+    node7Copy: PropTypes.string,
+    node7Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node8Amount: PropTypes.string,
+    node8Copy: PropTypes.string,
+    node8Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
+    node9Amount: PropTypes.string,
+    node9Copy: PropTypes.string,
+    node9Image: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      })
+    }),
     autoPlay: PropTypes.bool.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
