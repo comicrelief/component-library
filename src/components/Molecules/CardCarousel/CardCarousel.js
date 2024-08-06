@@ -97,9 +97,6 @@ const CardCarousel = ({ data }) => {
                 key={thisOffsetIndex}
               >
 
-
-
-
                 <div className="all-text-wrapper">
                   <AmountWrapper>
                     <Text tag="h1" family="Anton" uppercase weight="normal">
@@ -107,10 +104,6 @@ const CardCarousel = ({ data }) => {
                     </Text>
                   </AmountWrapper>
                 </div>
-
-
-
-
 
               </Slide>
             );
