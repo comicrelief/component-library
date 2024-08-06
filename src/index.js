@@ -36,7 +36,6 @@ export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBan
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
-export { default as CardCarousel } from './components/Molecules/CardCarousel/CardCarousel';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
 export { default as CardsCarousel } from './components/Molecules/CardsCarousel/CardsCarousel';
 export { default as Box } from './components/Molecules/Box/Box';
