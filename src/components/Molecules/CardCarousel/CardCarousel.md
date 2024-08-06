@@ -1,7 +1,7 @@
 # Card Carousel
 
 ```js
-const { carouselItemsComplete } = require('./mockData');
+const { mockData } = require('./mockData');
 
-<CardCarousel data={carouselItemsComplete}/>
+<CardCarousel data={mockData}/>
 ```

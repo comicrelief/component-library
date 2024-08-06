@@ -1,4 +1,4 @@
-const carouselItemsComplete = {
+const mockData = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
   mobileHeight: 425,
@@ -72,6 +72,4 @@ const carouselItemsComplete = {
   }
 };
 
-export {
-  carouselItemsComplete
-};
+export default mockData;
