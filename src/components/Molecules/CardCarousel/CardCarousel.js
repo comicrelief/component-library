@@ -61,7 +61,7 @@ const CardCarousel = ({ data, data: { autoPlay } }) => {
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
-  console.log(data.desktopHeight);
+  // console.log(data.desktopHeight);
 
   return (
     <CarouselWrapper
