@@ -32,7 +32,7 @@ const CardsCarousel = () => (
   >
     <Slider>
       {slides.map((item, i) => (
-        <Slide index={i}>
+        <Slide index={i} key={item.text}>
           <Card
             imageLow={item.image}
             images={item.images}
