@@ -1,4 +1,3 @@
-
 const cards = [
   {
     title: 'I am Card 1.',
