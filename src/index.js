@@ -38,7 +38,6 @@ export { default as SingleMessage } from './components/Molecules/SingleMessage/S
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
 export { default as CardsCarousel } from './components/Molecules/CardsCarousel/CardsCarousel';
-export { default as CardsCarousel2 } from './components/Molecules/CardsCarousel2/CardsCarousel2';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Organisms/Header/Header';
