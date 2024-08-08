@@ -2,10 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonMoveLeft = styled.div`
+const ButtonMoveLeft = styled.button`
   --button-size: 70px;
   width: var(--button-size);
   height: var(--button-size);
+  border: 1px solid purple;
   border-radius: 50%;
   position: absolute;
   display: flex;
@@ -16,15 +17,13 @@ const ButtonMoveLeft = styled.div`
   top: 50%;
   transform: translateY(-60%);
   left: 20px;
-
-  background: lightgreen;
+  background: transparent;
 `;
 
 const ButtonMoveRight = styled(ButtonMoveLeft)`
   left: 0px;
   right: 20px;
-
-  background: lightblue;
+  border: 1px solid blue;
 `;
 
 const ButtonCarouselLeft = ({ slideIndex, setSlideIndex, cardCarouselMockData }) => {
