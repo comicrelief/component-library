@@ -1,98 +1,87 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import {
-  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import CardDs from '../CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
-import cardCarouselMockData from '../../../utils/cardCarouselMockData';
+import { ButtonCarouselLeft, ButtonCarouselRight } from './_CarouselButtons';
 
-import styles from './Slider.module.css';
-import ArrowButtonLeft from './ArrowButtonLeft';
-import ArrowButtonRight from './ArrowButtonRight';
-import dataSlider from './dataSlider';
+import cardCarouselMockData from './_cardCarouselMockData';
+
+const Container = styled.div`
+  margin: 50px 0 0;
+`;
+
+const InnerContainer = styled.div`
+  max-width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 700px){
+    margin: 0 10px;
+  }
+`;
+
+const Slide = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  opacity: ${({ slideIndex, index }) => (slideIndex === index ? '1' : '0')};
+`;
 
 const CardsCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
-  function prevSlide() {
-    if (slideIndex !== 0) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 0) {
-      setSlideIndex(dataSlider.length - 1);
-    }
-  }
-
-  function nextSlide() {
-    if (slideIndex !== dataSlider.length - 1) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === dataSlider.length - 1) {
-      setSlideIndex(0);
-    }
-  }
-
   return (
-    <>
+    <Container>
+      <InnerContainer>
 
-      <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={3}
-        style={{ border: '1px solid red' }}
-      >
-        <Slider>
-          {cardCarouselMockData.map((item, i) => (
-            <Slide index={i} key={item.title}>
-              <CardDs
-                target="_blank"
-                link="/home"
-                linkLabel="find out more"
-                imageLow={item.imageLow}
-                images={item.images}
-                imageAltText="Happy man going to work"
-                backgroundColor="white"
-                height="auto"
-                icon={<Internal colour="white" />}
-              >
-                <Text tag="h3" color="purple" size="xl">{item.title}</Text>
-                <Text tag="p">{item.description}</Text>
-              </CardDs>
-            </Slide>
-          ))}
-        </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider>
-
-      <div className={styles.slider}>
-        <div className={styles.imageContainer}>
-
-          {dataSlider.map((item, index) => (
-            <div
-              key={item.alt}
-              className={slideIndex === index ? `${styles.slide} ${styles.activeAnimation}` : `${styles.slide}`}
+        {cardCarouselMockData.map((item, i) => (
+          <Slide
+            key={item.title}
+            slideIndex={slideIndex}
+            index={i}
+          >
+            <CardDs
+              target="_blank"
+              link="/home"
+              linkLabel="find out more"
+              imageLow={item.imageLow}
+              images={item.images}
+              imageAltText="Happy man going to work"
+              backgroundColor="white"
+              height="auto"
+              icon={<Internal colour="white" />}
             >
-              <img
-                src={item.src}
-                alt={item.title}
-                width="100%"
-                height="100%"
-              />
-            </div>
-          ))}
+              <Text tag="h3" color="purple" size="xl">{item.title}</Text>
+              <Text tag="p">{item.description}</Text>
+            </CardDs>
+          </Slide>
+        ))}
 
-          {slideIndex !== 0
-            && <ArrowButtonLeft prevSlide={prevSlide} fill={{ fill: 'black' }} />}
-          {slideIndex !== dataSlider.length - 1
-            && <ArrowButtonRight nextSlide={nextSlide} fill={{ fill: 'black' }} />}
+        {slideIndex !== 0
+          && <ButtonCarouselLeft
+              slideIndex={slideIndex}
+              setSlideIndex={setSlideIndex}
+              cardCarouselMockData={cardCarouselMockData}
+            />}
+        {slideIndex !== cardCarouselMockData.length - 1
+          && <ButtonCarouselRight
+              slideIndex={slideIndex}
+              setSlideIndex={setSlideIndex}
+              cardCarouselMockData={cardCarouselMockData}
+            />}
 
-        </div>
-
-      </div>
-
-    </>
+      </InnerContainer>
+    </Container>
   );
 };
 
