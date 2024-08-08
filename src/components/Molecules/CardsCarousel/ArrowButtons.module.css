@@ -1,0 +1,30 @@
+
+.btnSlide {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnSlide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.prev, .next {
+  top: 50%;
+  transform: translateY(-60%);
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+

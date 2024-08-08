@@ -1,4 +1,4 @@
-const cards = [
+const cardsCarouselMockData = [
   {
     title: 'I am Card 1.',
     description: 'Describing Card 1',
@@ -19,4 +19,4 @@ const cards = [
   }
 ];
 
-export default cards;
+export default cardsCarouselMockData;
