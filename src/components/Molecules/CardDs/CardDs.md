@@ -4,7 +4,8 @@
 
 ### CardDs:  Image, Text & Link
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;
+import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import { Internal } from '../../Atoms/Icons/index';
 

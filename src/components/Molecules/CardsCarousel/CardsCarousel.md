@@ -1,0 +1,5 @@
+# Cards Carousel
+
+```js
+<CardsCarousel />
+```

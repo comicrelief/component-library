@@ -9,9 +9,9 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-  }
+  /* @media ${({ theme }) => theme.allBreakpoints('M')} { */
+  /*   flex-direction: row; */
+  /* } */
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     flex-direction: column;
