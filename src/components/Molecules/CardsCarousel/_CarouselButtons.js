@@ -2,27 +2,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ButtonsWrapper = styled.div`
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+`;
+
 const ButtonMoveLeft = styled.button`
-  --button-size: 70px;
+  --button-size: 90px;
   width: var(--button-size);
   height: var(--button-size);
-  border: 1px solid purple;
+  border: 1px solid red;
   border-radius: 50%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   z-index: 999;
-  top: 50%;
-  transform: translateY(-60%);
-  left: 20px;
   background: transparent;
 `;
 
 const ButtonMoveRight = styled(ButtonMoveLeft)`
-  left: 0px;
-  right: 20px;
   border: 1px solid blue;
 `;
 
@@ -55,6 +58,7 @@ const ButtonCarouselRight = ({ slideIndex, setSlideIndex, cardCarouselMockData }
 }
 
 export {
+  ButtonsWrapper,
   ButtonCarouselLeft,
   ButtonCarouselRight
 }

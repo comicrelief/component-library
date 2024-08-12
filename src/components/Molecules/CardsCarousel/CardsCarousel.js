@@ -4,45 +4,34 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import CardDs from '../CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
-import { ButtonCarouselLeft, ButtonCarouselRight } from './_CarouselButtons';
+import {
+  ButtonCarouselLeft,
+  ButtonCarouselRight,
+  ButtonsWrapper,
+} from './_CarouselButtons';
 
 import cardCarouselMockData from './_cardCarouselMockData';
 
 const Container = styled.div`
-  margin: 50px 0 0;
-`;
-
-const InnerContainer = styled.div`
-  max-width: 700px;
-  height: 500px;
+  max-width: 450px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  @media screen and (max-width: 700px){
-    margin: 0 10px;
-  }
+  border: 1px solid red;
 `;
 
 const Slide = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
+  height: auto;
+  /* Show only the active slide */
+  display: ${({ slideIndex, index }) => (slideIndex === index ? 'block' : 'none')};
   transition: opacity ease-in-out 0.4s;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  opacity: ${({ slideIndex, index }) => (slideIndex === index ? '1' : '0')};
 `;
 
 const CardsCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   return (
-    <Container>
-      <InnerContainer>
+      <Container>
 
         {cardCarouselMockData.map((item, i) => (
           <Slide
@@ -67,21 +56,20 @@ const CardsCarousel = () => {
           </Slide>
         ))}
 
-        {slideIndex !== 0
-          && <ButtonCarouselLeft
-              slideIndex={slideIndex}
-              setSlideIndex={setSlideIndex}
-              cardCarouselMockData={cardCarouselMockData}
-            />}
-        {slideIndex !== cardCarouselMockData.length - 1
-          && <ButtonCarouselRight
-              slideIndex={slideIndex}
-              setSlideIndex={setSlideIndex}
-              cardCarouselMockData={cardCarouselMockData}
-            />}
+        <ButtonsWrapper>
+          <ButtonCarouselLeft
+            slideIndex={slideIndex}
+            setSlideIndex={setSlideIndex}
+            cardCarouselMockData={cardCarouselMockData}
+          />
+          <ButtonCarouselRight
+            slideIndex={slideIndex}
+            setSlideIndex={setSlideIndex}
+            cardCarouselMockData={cardCarouselMockData}
+          />
+        </ButtonsWrapper>
 
-      </InnerContainer>
-    </Container>
+      </Container>
   );
 };
 
