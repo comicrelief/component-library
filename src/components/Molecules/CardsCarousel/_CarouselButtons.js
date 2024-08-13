@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ButtonsWrapper = styled.div`
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,21 +11,29 @@ const ButtonsWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-`;
-
-const ButtonMoveLeft = styled.button`
-  --button-size: 90px;
-  width: var(--button-size);
-  height: var(--button-size);
-  border: 1px solid red;
-  border-radius: 50%;
-  cursor: pointer;
+  height: 100%;
   z-index: 999;
-  background: transparent;
 `;
 
-const ButtonMoveRight = styled(ButtonMoveLeft)`
-  border: 1px solid blue;
+const createBlurEffect = (direction) => `
+  background: linear-gradient(${direction},
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%);
+  filter: blur(1px);
+`;
+
+export const blurEffectLeftToRight = createBlurEffect('to right');
+export const blurEffectRightToLeft = createBlurEffect('to left');
+
+const Button = styled.button`
+border: none;
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 999 !important;
+  background: transparent;
+
+  ${({ direction }) => direction === 'left-to-right' ? blurEffectLeftToRight : blurEffectRightToLeft}
 `;
 
 const ButtonCarouselLeft = ({ slideIndex, setSlideIndex, cardCarouselMockData }) => {
@@ -39,21 +46,17 @@ const ButtonCarouselLeft = ({ slideIndex, setSlideIndex, cardCarouselMockData })
   }
 
   return (
-    <ButtonMoveLeft onClick={prevSlide}/>
+    <Button onClick={prevSlide} direction='left-to-right'/>
   );
 }
 
 const ButtonCarouselRight = ({ slideIndex, setSlideIndex, cardCarouselMockData }) => {
   const nextSlide = () => {
-    if (slideIndex !== cardCarouselMockData.length - 1) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === cardCarouselMockData.length - 1) {
-      setSlideIndex(0);
-    }
+    setSlideIndex((slideIndex + 1) % cardCarouselMockData.length);
   }
 
   return (
-    <ButtonMoveRight onClick={nextSlide}/>
+    <Button onClick={nextSlide} direction='right-to-left'/>
   );
 }
 

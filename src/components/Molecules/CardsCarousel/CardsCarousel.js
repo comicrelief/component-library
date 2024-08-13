@@ -13,48 +13,54 @@ import {
 import cardCarouselMockData from './_cardCarouselMockData';
 
 const Container = styled.div`
-  max-width: 450px;
+  width: 650px;
+  height: 550px;
   margin: 0 auto;
   position: relative;
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 `;
 
 const Slide = styled.div`
-  width: 100%;
+  width: 450px;
   height: auto;
-  /* Show only the active slide */
-  display: ${({ slideIndex, index }) => (slideIndex === index ? 'block' : 'none')};
   transition: opacity ease-in-out 0.4s;
 `;
 
 const CardsCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
+  const chosenCard = (cardIndex) => {
+    return (
+      <Slide key={cardIndex}>
+        <CardDs
+          target="_blank"
+          link="/home"
+          linkLabel="find out more"
+          imageLow={cardCarouselMockData[cardIndex].imageLow}
+          images={cardCarouselMockData[cardIndex].images}
+          imageAltText="test"
+          backgroundColor="white"
+          height="auto"
+          icon={<Internal colour="white" />}
+        >
+          <Text tag="h3" color="purple" size="xl">{cardCarouselMockData[cardIndex].title}</Text>
+          <Text tag="p">{cardCarouselMockData[cardIndex].description}</Text>
+        </CardDs>
+      </Slide>
+    )
+  }
+
   return (
       <Container>
 
-        {cardCarouselMockData.map((item, i) => (
-          <Slide
-            key={item.title}
-            slideIndex={slideIndex}
-            index={i}
-          >
-            <CardDs
-              target="_blank"
-              link="/home"
-              linkLabel="find out more"
-              imageLow={item.imageLow}
-              images={item.images}
-              imageAltText="Happy man going to work"
-              backgroundColor="white"
-              height="auto"
-              icon={<Internal colour="white" />}
-            >
-              <Text tag="h3" color="purple" size="xl">{item.title}</Text>
-              <Text tag="p">{item.description}</Text>
-            </CardDs>
-          </Slide>
-        ))}
+        {chosenCard((slideIndex - 1 + cardCarouselMockData.length) % cardCarouselMockData.length)}
+
+        {chosenCard(slideIndex)}
+
+        {chosenCard((slideIndex + 1 + cardCarouselMockData.length) % cardCarouselMockData.length)}
 
         <ButtonsWrapper>
           <ButtonCarouselLeft
