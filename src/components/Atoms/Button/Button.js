@@ -40,9 +40,8 @@ const Button = React.forwardRef(({ children, wrapper = false, ...rest }, ref) =>
 ));
 
 Button.propTypes = {
-  /** Buttons as span */
   children: PropTypes.node.isRequired,
-  wrapper: PropTypes.bool
+  wrapper: PropTypes.bool // Buttons as span
 };
 
 export default Button;
