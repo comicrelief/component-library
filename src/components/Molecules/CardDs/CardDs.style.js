@@ -7,8 +7,10 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
+    justify-content: center;
   }
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
@@ -16,9 +18,14 @@ const Container = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  z-index: 999;
+`;
+
 const Image = styled.div`
   height: auto;
   margin: 0 0 0 1.5rem;
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     margin: 0 -1.5rem 0 1.5rem;
   }
@@ -31,9 +38,11 @@ const Image = styled.div`
 
 const MediaLink = styled.a`
   width: 100%;
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: calc(50% + 6rem);
   }
+
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     width: 100%;
   }
@@ -47,7 +56,6 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  // width: 100%;
   margin: 0 1.5rem 0 0;
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     height: 100%;
@@ -57,6 +65,7 @@ const Copy = styled.div`
     && css`
       margin-top: calc(-2 * 1.5rem);
       min-height: calc(5 * 2rem);
+
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         margin: 1.5rem 0 -1.5rem -1.5rem;
         width: calc(50% + 6rem);
@@ -69,14 +78,17 @@ const Copy = styled.div`
     `};
 `;
 
+// 'CTA' functions as a wrapper for the link
 const CTA = styled.div`
   display: flex;
   justify-content: end;
-  border: 1px solid black;
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  > a {
+    width: auto;
   }
+  margin: -1.5rem 0.5rem 0 0;
+  z-index: 999;
 `;
 
 export {
-  Container, Image, MediaLink, Copy, CTA
+  Container, Wrapper, Image, MediaLink, Copy, CTA
 };
