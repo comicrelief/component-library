@@ -31,7 +31,7 @@ function getAnimationSettings(originXA, originXB) {
   };
 }
 
-export default function Confetti({ trigger, duration }) {
+export default function Confetti({ trigger, duration = 3000 }) {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
 
@@ -95,10 +95,6 @@ export default function Confetti({ trigger, duration }) {
     </>
   );
 }
-
-Confetti.defaultProps = {
-  duration: 3000
-};
 
 Confetti.propTypes = {
   trigger: PropTypes.bool.isRequired,
