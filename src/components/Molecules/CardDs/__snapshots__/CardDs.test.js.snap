@@ -145,6 +145,14 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 @media (min-width:1440px) {
   .c0 {
     -webkit-flex-direction: column;
