@@ -59,19 +59,21 @@ const Prefix = styled.div`
   margin-left: 2px; // Just doesn't look quite right without this.
 `;
 
+
 const Input = React.forwardRef(
   (
     {
-      errorMsg,
+      errorMsg = '',
       id,
       label,
-      showLabel,
+      placeholder = '',
+      showLabel = true,
       type,
-      hasAria,
-      className,
-      labelProps,
-      prefix,
-      optional,
+      hasAria = true,
+      className = '',
+      labelProps = {},
+      prefix = '',
+      optional = null,
       ...rest
     },
     ref
@@ -125,17 +127,6 @@ Input.propTypes = {
   className: PropTypes.string,
   prefix: PropTypes.string,
   optional: PropTypes.bool
-};
-
-Input.defaultProps = {
-  showLabel: true,
-  hasAria: true,
-  placeholder: '',
-  errorMsg: '',
-  labelProps: {},
-  className: '',
-  prefix: '',
-  optional: null
 };
 
 export default Input;
