@@ -49,7 +49,9 @@ const Donate = ({
   cartID,
   clientID,
   paddingOption = null,
-  donateLink
+  donateLink,
+  monthlyChooseAmountText: monthlyChoose = '',
+  monthlyOtherAmountText: monthlyOther = ''
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
 
@@ -76,7 +78,7 @@ const Donate = ({
   const {
     thisOtherAmountText,
     thisChooseAmountText
-  } = handleCopy(givingType, otherAmountText, chooseAmountText);
+  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
 
   return (
     <Container
@@ -195,6 +197,8 @@ Donate.propTypes = {
   defaultGivingType: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
+  monthlyChooseAmountText: PropTypes.string,
+  monthlyOtherAmountText: PropTypes.string,
   paddingOption: PropTypes.string
 };
 
