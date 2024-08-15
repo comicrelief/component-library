@@ -15,28 +15,30 @@ const ButtonsWrapper = styled.div`
   z-index: 999;
 `;
 
-const createBlurEffect = (direction) => `
-  background: linear-gradient(${direction},
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%);
-  filter: blur(1px);
+const createBlurEffect = (gradientDirection, gradColour="white") => `
+  background: linear-gradient(${gradientDirection},
+    ${gradColour} 0%,
+    transparent 100%);
 `;
 
-export const blurEffectLeftToRight = createBlurEffect('to right');
-export const blurEffectRightToLeft = createBlurEffect('to left');
-
 const Button = styled.button`
-border: none;
+  border: none;
   width: 30%;
   height: 100%;
   cursor: pointer;
   z-index: 999 !important;
   background: transparent;
 
-  ${({ direction }) => direction === 'left-to-right' ? blurEffectLeftToRight : blurEffectRightToLeft}
+  ${({ gradientDirection, blurColour }) => gradientDirection === 'left' ? createBlurEffect('to right', blurColour) : createBlurEffect('to left', blurColour)}
 `;
 
-const ButtonCarouselLeft = ({ slideIndex, setSlideIndex, cardCarouselMockData }) => {
+const ButtonCarousel = ({
+  slideIndex,
+  setSlideIndex,
+  cardCarouselMockData,
+  blurColour,
+  direction
+}) => {
   const prevSlide = () => {
     if (slideIndex !== 0) {
       setSlideIndex(slideIndex - 1);
@@ -45,23 +47,20 @@ const ButtonCarouselLeft = ({ slideIndex, setSlideIndex, cardCarouselMockData })
     }
   }
 
-  return (
-    <Button onClick={prevSlide} direction='left-to-right'/>
-  );
-}
-
-const ButtonCarouselRight = ({ slideIndex, setSlideIndex, cardCarouselMockData }) => {
   const nextSlide = () => {
     setSlideIndex((slideIndex + 1) % cardCarouselMockData.length);
   }
 
   return (
-    <Button onClick={nextSlide} direction='right-to-left'/>
+    <Button
+      onClick={direction === 'right' ? prevSlide : nextSlide}
+      gradientDirection={direction}
+      blurColour={blurColour}
+    />
   );
 }
 
 export {
   ButtonsWrapper,
-  ButtonCarouselLeft,
-  ButtonCarouselRight
+  ButtonCarousel
 }

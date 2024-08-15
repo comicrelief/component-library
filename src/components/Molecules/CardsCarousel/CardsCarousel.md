@@ -1,5 +1,7 @@
 # Cards Carousel
 
 ```js
-<CardsCarousel />
+<div style={{backgroundColor: 'pink', padding: '10px'}}>
+    <CardsCarousel blurColour='pink' />
+</div>
 ```
