@@ -21,7 +21,7 @@ import {
   ChevronWrapper
 } from './Nav.style';
 
-const MainNav = ({ navItems }) => {
+const MainNav = ({ navItems = {} }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -178,10 +178,6 @@ const MainNav = ({ navItems }) => {
 
 MainNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape)
-};
-
-MainNav.defaultProps = {
-  navItems: {}
 };
 
 export default MainNav;

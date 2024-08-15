@@ -16,14 +16,14 @@ import {
 } from './Footer.style';
 
 const Footer = ({
-  navItems, footerCopy, campaign, additionalLegalLine, ...rest
+  navItems = {}, footerCopy = '', campaign = 'Comic Relief', additionalLegalLine = '', overrideallowList = false, ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
 
   return (
     <div>
-      <FooterWrapper navItems {...rest}>
+      <FooterWrapper overrideallowList={overrideallowList} navItems {...rest}>
         <InnerWrapper>
           {additionalLegalLine
             && <FooterLegalLine tag="p" color="grey">{additionalLegalLine}</FooterLegalLine>
@@ -54,14 +54,6 @@ Footer.propTypes = {
   campaign: PropTypes.string,
   overrideallowList: PropTypes.bool,
   additionalLegalLine: PropTypes.string
-};
-
-Footer.defaultProps = {
-  navItems: {},
-  footerCopy: '',
-  campaign: 'Comic Relief',
-  overrideallowList: false,
-  additionalLegalLine: ''
 };
 
 export default Footer;

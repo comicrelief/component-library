@@ -24,9 +24,9 @@ const MoneyBox = styled(Input)`
 
 const MoneyBuy = ({
   setOtherAmount,
-  amount,
-  currency,
-  description,
+  amount = '10',
+  currency = '£',
+  description = 'description',
   ...rest
 }) => (
   <MoneyBox
@@ -46,12 +46,6 @@ MoneyBuy.propTypes = {
   description: PropTypes.string,
   // Function already set does'nt need to be passed as props
   setOtherAmount: PropTypes.func.isRequired
-};
-
-MoneyBuy.defaultProps = {
-  amount: '10',
-  currency: '£',
-  description: 'description'
 };
 
 export default MoneyBuy;
