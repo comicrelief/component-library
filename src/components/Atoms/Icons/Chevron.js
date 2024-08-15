@@ -22,7 +22,7 @@ const Icon = styled.svg`
 `;
 
 const Chevron = ({
-  colour, mobileColour, theme, size, direction, ...rest
+  colour = 'white', mobileColour = null, theme, size = 24, direction = 'up', ...rest
 }) => (
   <Icon
     direction={direction}
@@ -45,13 +45,6 @@ Chevron.propTypes = {
   size: PropTypes.number,
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
   theme: PropTypes.objectOf(PropTypes.shape).isRequired
-};
-
-Chevron.defaultProps = {
-  colour: 'white',
-  mobileColour: null,
-  size: 24,
-  direction: 'up'
 };
 
 export default withTheme(Chevron);

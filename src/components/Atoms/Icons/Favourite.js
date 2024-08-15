@@ -13,7 +13,7 @@ const StyledSVG = styled.svg`
 `;
 
 const Favourite = ({
-  colour, mobileColour, theme, size, ...rest
+  colour = 'white', mobileColour = null, theme, size = 24, ...rest
 }) => (
   <StyledSVG
     {...rest}
@@ -34,12 +34,6 @@ Favourite.propTypes = {
   mobileColour: PropTypes.string,
   size: PropTypes.number,
   theme: PropTypes.objectOf(PropTypes.shape).isRequired
-};
-
-Favourite.defaultProps = {
-  colour: 'white',
-  mobileColour: null,
-  size: 24
 };
 
 export default withTheme(Favourite);

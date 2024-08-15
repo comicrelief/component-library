@@ -22,7 +22,7 @@ const Icon = styled.svg`
 `;
 
 const Arrow = ({
-  colour, mobileColour, theme, size, direction, ...rest
+  colour = 'white', mobileColour = null, theme, size = 24, direction = 'up', ...rest
 }) => (
   <Icon
     direction={direction}
@@ -44,13 +44,6 @@ Arrow.propTypes = {
   size: PropTypes.number,
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
   theme: PropTypes.objectOf(PropTypes.shape).isRequired
-};
-
-Arrow.defaultProps = {
-  colour: 'white',
-  mobileColour: null,
-  size: 24,
-  direction: 'up'
 };
 
 export default withTheme(Arrow);
