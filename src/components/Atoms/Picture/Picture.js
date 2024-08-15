@@ -65,16 +65,16 @@ const Image = styled.img`
 
 /** Responsive Picture */
 const Picture = ({
-  images,
-  image,
-  alt,
-  width,
-  height,
-  objectFit,
-  imageLow,
-  isBackgroundImage,
-  smallBreakpointRowLayout,
-  mediumBreakpointRowLayout,
+  images = null,
+  image = null,
+  alt = '',
+  width = '100%',
+  height = 'auto',
+  objectFit = 'none',
+  imageLow = null,
+  isBackgroundImage = false,
+  smallBreakpointRowLayout = null,
+  mediumBreakpointRowLayout = null,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -170,19 +170,6 @@ Picture.propTypes = {
   isBackgroundImage: PropTypes.bool,
   smallBreakpointRowLayout: PropTypes.bool,
   mediumBreakpointRowLayout: PropTypes.bool
-};
-
-Picture.defaultProps = {
-  imageLow: null,
-  image: null,
-  images: null,
-  objectFit: 'none',
-  width: '100%',
-  height: 'auto',
-  alt: '',
-  isBackgroundImage: false,
-  smallBreakpointRowLayout: null,
-  mediumBreakpointRowLayout: null
 };
 
 export default withTheme(Picture);
