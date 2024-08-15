@@ -59,14 +59,12 @@ const Prefix = styled.div`
   margin-left: 2px; // Just doesn't look quite right without this.
 `;
 
-
 const Input = React.forwardRef(
   (
     {
       errorMsg = '',
       id,
       label,
-      placeholder = '',
       showLabel = true,
       type,
       hasAria = true,
