@@ -69,6 +69,7 @@ const Input = React.forwardRef(
       type,
       hasAria = true,
       className = '',
+      placeholder = '',
       labelProps = {},
       prefix = '',
       optional = null,
@@ -90,6 +91,7 @@ const Input = React.forwardRef(
         <InputField
           id={id}
           type={type}
+          placeholder={placeholder}
           error={!!errorMsg}
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
