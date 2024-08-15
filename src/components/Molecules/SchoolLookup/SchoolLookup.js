@@ -20,10 +20,10 @@ const optionParser = school => `${school.name}, ${school.post_code}`;
 const SchoolLookup = React.forwardRef(
   (
     {
-      label,
-      placeholder,
-      notFoundMessage,
-      dropdownInstruction,
+      label = 'Enter the name or postcode of your school or nursery',
+      placeholder = 'Type to start search',
+      dropdownInstruction = 'Please select a school from the list below',
+      notFoundMessage = "Sorry, we can't find this school",
       onSelect,
       ...rest
     },
@@ -53,13 +53,6 @@ SchoolLookup.propTypes = {
   placeholder: PropTypes.string,
   dropdownInstruction: PropTypes.string,
   notFoundMessage: PropTypes.string
-};
-
-SchoolLookup.defaultProps = {
-  label: 'Enter the name or postcode of your school or nursery',
-  placeholder: 'Type to start search',
-  dropdownInstruction: 'Please select a school from the list below',
-  notFoundMessage: "Sorry, we can't find this school"
 };
 
 export default SchoolLookup;

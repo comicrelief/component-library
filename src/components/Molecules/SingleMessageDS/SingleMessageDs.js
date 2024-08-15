@@ -11,22 +11,22 @@ import {
 import playImage from './assets/play.png';
 
 const SingleMessageDs = ({
-  backgroundColor,
+  backgroundColor = 'white',
+  imageLow = null,
+  images = null,
+  image = null,
+  link = null,
+  ctaBgColor = 'red',
+  linkLabel = null,
+  target = null,
+  imageAltText = '',
+  width = '100%',
+  height = '100%',
+  linkIcon = null,
+  youTubeId = null,
   imageLeft,
-  imageLow,
-  images,
-  image,
-  imageAltText,
-  height,
-  width,
   subtitle,
   children,
-  link,
-  linkLabel,
-  ctaBgColor,
-  target,
-  linkIcon,
-  youTubeId,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -190,22 +190,6 @@ SingleMessageDs.propTypes = {
   children: PropTypes.node.isRequired,
   linkIcon: PropTypes.node,
   youTubeId: PropTypes.string
-};
-
-SingleMessageDs.defaultProps = {
-  backgroundColor: 'white',
-  imageLow: null,
-  images: null,
-  image: null,
-  link: null,
-  ctaBgColor: 'red',
-  linkLabel: null,
-  target: null,
-  imageAltText: '',
-  width: '100%',
-  height: '100%',
-  linkIcon: null,
-  youTubeId: null
 };
 
 export default SingleMessageDs;

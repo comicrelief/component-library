@@ -10,7 +10,13 @@ const Video = styled.video.attrs(() => ({
 `;
 
 const VideoBanner = ({
-  video, poster, controls, autoPlay, loop, muted, showPosterAfterPlaying
+  video,
+  poster,
+  controls = false,
+  autoPlay = true,
+  loop = false,
+  muted = true,
+  showPosterAfterPlaying = true
 }) => {
   // Use the prop as our default
   const [isMuted, setIsMuted] = useState(muted);
@@ -51,14 +57,6 @@ const VideoBanner = ({
       Your browser does not support video.
     </Video>
   );
-};
-
-VideoBanner.defaultProps = {
-  showPosterAfterPlaying: true,
-  controls: false,
-  autoPlay: true,
-  loop: false,
-  muted: true
 };
 
 VideoBanner.propTypes = {

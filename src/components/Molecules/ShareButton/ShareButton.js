@@ -27,7 +27,7 @@ const handleShare = (e, typeOfShare, urlToShare) => {
 
 /* Share Button component to handle FB and Twitter sharing */
 const ShareButton = ({
-  campaign, copy, urlToShare, ...restProps
+  campaign = 'comicrelief', copy = 'Share with:', urlToShare = null, ...restProps
 }) => {
   let checkedUrl = '';
 
@@ -68,12 +68,6 @@ ShareButton.propTypes = {
   campaign: PropTypes.string,
   copy: PropTypes.string,
   urlToShare: PropTypes.string
-};
-
-ShareButton.defaultProps = {
-  campaign: 'comicrelief',
-  copy: 'Share with:',
-  urlToShare: null
 };
 
 export default ShareButton;
