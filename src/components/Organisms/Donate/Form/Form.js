@@ -41,8 +41,6 @@ const Signup = ({
   additionalSingleCopy = null,
   additionalMonthlyCopy = null,
   defaultGivingType = null,
-  monthlyChooseAmountCopy = null,
-  monthlyOtherAmountCopy = null,
   changeGivingType,
   givingType = null,
   ...rest
@@ -345,8 +343,6 @@ Signup.propTypes = {
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
   defaultGivingType: PropTypes.string,
-  monthlyChooseAmountCopy: PropTypes.string,
-  monthlyOtherAmountCopy: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string
 };

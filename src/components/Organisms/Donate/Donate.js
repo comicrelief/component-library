@@ -33,7 +33,7 @@ const Donate = ({
   textColor = 'white',
   mbshipID = null,
   otherAmountText =
-    'will help us fund amazing projects in the UK and around the world.',
+  'will help us fund amazing projects in the UK and around the world.',
   subtitle = '',
   noMoneyBuys = false,
   PopUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
@@ -49,11 +49,7 @@ const Donate = ({
   cartID,
   clientID,
   paddingOption = null,
-  donateLink,
-  monthlyChooseAmountText = '', //
-  monthlyOtherAmountText = '', //
-  monthlyChooseAmountText =monthlyChoose, //
-  monthlyOtherAmountText =monthlyOther //
+  donateLink
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
 
@@ -80,7 +76,7 @@ const Donate = ({
   const {
     thisOtherAmountText,
     thisChooseAmountText
-  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
+  } = handleCopy(givingType, otherAmountText, chooseAmountText);
 
   return (
     <Container
@@ -199,8 +195,6 @@ Donate.propTypes = {
   defaultGivingType: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  monthlyChooseAmountText: PropTypes.string,
-  monthlyOtherAmountText: PropTypes.string,
   paddingOption: PropTypes.string
 };
 
