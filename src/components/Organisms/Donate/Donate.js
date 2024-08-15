@@ -17,41 +17,43 @@ import {
 } from './Donate.style';
 
 const Donate = ({
-  alt,
+  alt = '',
+  data = {},
+  formAlignRight = true,
+  imageLow = null,
+  image = null,
+  images = null,
+  mobileImageLow = null,
+  mobileImage = null,
+  mobileImages = null,
+  mobileAlt = '',
+  desktopOverlayColor = 'transparent',
+  mobileBackgroundColor = 'blue_dark',
+  submitButtonColor = 'red',
+  textColor = 'white',
+  mbshipID = null,
+  otherAmountText =
+    'will help us fund amazing projects in the UK and around the world.',
+  subtitle = '',
+  noMoneyBuys = false,
+  PopUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
+  chooseAmountText = '',
+  isDesktopOverride = null,
+  otherAmountValue = null,
+  title = null,
+  additionalSingleCopy = null,
+  additionalMonthlyCopy = null,
+  defaultGivingType = null,
+  monthlyTitle = '',
+  monthlySubtitle = '',
   cartID,
   clientID,
-  desktopOverlayColor,
-  mobileBackgroundColor,
-  submitButtonColor,
-  textColor,
+  paddingOption = null,
   donateLink,
-  data,
-  title,
-  subtitle,
-  otherAmountText,
-  formAlignRight,
-  images,
-  image,
-  imageLow,
-  mobileImages,
-  mobileImage,
-  mobileImageLow,
-  mobileAlt,
-  mbshipID,
-  noMoneyBuys,
-  PopUpText,
-  chooseAmountText,
-  isDesktopOverride,
-  otherAmountValue,
-  additionalSingleCopy,
-  additionalMonthlyCopy,
-  defaultGivingType,
-  monthlyTitle,
-  monthlySubtitle,
-  paddingOption,
-  // Just to keep the function call character length under control
-  monthlyChooseAmountText: monthlyChoose,
-  monthlyOtherAmountText: monthlyOther
+  monthlyChooseAmountText = '', //
+  monthlyOtherAmountText = '', //
+  monthlyChooseAmountText =monthlyChoose, //
+  monthlyOtherAmountText =monthlyOther //
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
 
@@ -200,41 +202,6 @@ Donate.propTypes = {
   monthlyChooseAmountText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
   paddingOption: PropTypes.string
-};
-
-Donate.defaultProps = {
-  alt: '',
-  data: {},
-  formAlignRight: true,
-  imageLow: null,
-  image: null,
-  images: null,
-  mobileImageLow: null,
-  mobileImage: null,
-  mobileImages: null,
-  mobileAlt: '',
-  desktopOverlayColor: 'transparent',
-  mobileBackgroundColor: 'blue_dark',
-  submitButtonColor: 'red',
-  textColor: 'white',
-  mbshipID: null,
-  otherAmountText:
-    'will help us fund amazing projects in the UK and around the world.',
-  subtitle: '',
-  noMoneyBuys: false,
-  PopUpText: 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
-  chooseAmountText: '',
-  isDesktopOverride: null,
-  otherAmountValue: null,
-  title: null,
-  additionalSingleCopy: null,
-  additionalMonthlyCopy: null,
-  defaultGivingType: null,
-  monthlyTitle: '',
-  monthlySubtitle: '',
-  monthlyChooseAmountText: '',
-  monthlyOtherAmountText: '',
-  paddingOption: null
 };
 
 export default Donate;
