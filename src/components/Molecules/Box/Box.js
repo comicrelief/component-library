@@ -44,14 +44,13 @@ const Copy = styled.div`
 `;
 
 const Box = ({
-  imageLow,
-  images,
-  image,
+  imageLow = null,
+  images = null,
+  image = null,
   imageAltText,
-  height,
-  width,
-  children,
-  squaredCorners,
+  width = '100%',
+  children = null,
+  squaredCorners = false,
   ...rest
 }) => (
   <Container {...rest}>
@@ -81,17 +80,6 @@ Box.propTypes = {
   imageAltText: PropTypes.string,
   children: PropTypes.node,
   squaredCorners: PropTypes.bool
-};
-
-Box.defaultProps = {
-  children: null,
-  imageLow: null,
-  images: null,
-  image: null,
-  imageAltText: '',
-  width: '100%',
-  height: '100%',
-  squaredCorners: false
 };
 
 export default Box;

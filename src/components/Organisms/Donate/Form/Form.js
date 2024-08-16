@@ -33,18 +33,16 @@ const Signup = ({
   clientID,
   cartID,
   mbshipID,
-  noMoneyBuys,
+  noMoneyBuys = false,
   PopUpText,
   chooseAmountText,
   submitButtonColor,
-  otherAmountValue,
-  additionalSingleCopy,
-  additionalMonthlyCopy,
-  defaultGivingType,
-  monthlyChooseAmountCopy,
-  monthlyOtherAmountCopy,
+  otherAmountValue = null,
+  additionalSingleCopy = null,
+  additionalMonthlyCopy = null,
+  defaultGivingType = null,
   changeGivingType,
-  givingType,
+  givingType = null,
   ...rest
 }) => {
   // const [givingType, setGivingType] = useState();
@@ -345,22 +343,8 @@ Signup.propTypes = {
   additionalSingleCopy: PropTypes.string,
   additionalMonthlyCopy: PropTypes.string,
   defaultGivingType: PropTypes.string,
-  monthlyChooseAmountCopy: PropTypes.string,
-  monthlyOtherAmountCopy: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string
-};
-
-Signup.defaultProps = {
-  noMoneyBuys: false,
-  otherAmountValue: null,
-  data: {},
-  additionalSingleCopy: null,
-  additionalMonthlyCopy: null,
-  defaultGivingType: null,
-  monthlyChooseAmountCopy: null,
-  monthlyOtherAmountCopy: null,
-  givingType: null
 };
 
 export default Signup;

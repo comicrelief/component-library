@@ -1,6 +1,6 @@
 import React from "react";
 import "jest-styled-components";
-import renderWithTheme from "../../../hoc/shallowWithTheme";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import { EmailSignUp, validationSchema } from "./_EmailSignUp";
 import RichText from "../../Atoms/RichText/RichText";
 import { useForm, FormProvider } from "react-hook-form";

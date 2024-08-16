@@ -31,7 +31,7 @@ const Item = styled.div`
 
 <div>
   <Text tag="h3" family="Anton" uppercase color="black" size="l">
-    Primary
+    Primary (CR Theme)
   </Text>
   <Grid>
     <Item>
@@ -277,7 +277,7 @@ const Item = styled.div`
     </Item>
   </Grid>
   <Text tag="h3" family="Anton" uppercase color="black" size="l">
-    Accent Colours
+    Accent Colours (CR Theme)
   </Text>
   <Text tag="h3" color="black" size="xs">
     Used for highlighted actions and content
@@ -316,6 +316,23 @@ const Item = styled.div`
           teal
         </Text>
         <Text tag="p">#4ECDBE</Text>
+      </Card>
+    </Item>
+  </Grid>
+
+   <Text tag="h3" family="Anton" uppercase color="black" size="l">
+    Additional Colours (CR Theme)
+  </Text>
+  <Text tag="h3" color="black" size="xs">
+    Currently, just one new colour used exclusively in the Donate widget on CRcom and the 2024 Donate build
+  </Text>
+  <Grid>
+    <Item>
+      <Card backgroundColor="blue_donate" height="auto">
+        <Text tag="h3" color="white" size="xs">
+          Blue Donate
+        </Text>
+        <Text tag="p" color="white">#2042AD</Text>
       </Card>
     </Item>
   </Grid>

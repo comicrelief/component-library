@@ -9,7 +9,7 @@ import {
 } from './MarketingPreferencesDS.style';
 
 const CheckAnswer = ({
-  name, mpValidationOptions, userSelection, formContext
+  name, mpValidationOptions, userSelection = null, formContext = null
 }) => {
   const { setValue, clearErrors, register } = formContext;
 
@@ -53,7 +53,7 @@ const CheckAnswer = ({
           name={name}
           id={`${name}-yes`}
           value="yes"
-          ref={register}
+          {...register(name)}
           onChange={onChange}
         />
         <span />
@@ -61,11 +61,6 @@ const CheckAnswer = ({
       </CheckLabel>
     </CheckContainer>
   );
-};
-
-CheckAnswer.defaultProps = {
-  userSelection: null,
-  formContext: null
 };
 
 CheckAnswer.propTypes = {

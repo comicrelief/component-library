@@ -11,7 +11,7 @@ import {
 
 const ImpactSlider = ({
   heading, cartID, donateLink, rowID, items, step, max,
-  backgroundColour, opacityAnimation, children, defaultSliderValue
+  backgroundColour = 'grey_extra_light', opacityAnimation = false, children, defaultSliderValue = null
 }) => {
   // Use the lowest possible amount as our default:
   const [currentAmount, setCurrentAmount] = useState(defaultSliderValue || step);
@@ -63,12 +63,6 @@ const ImpactSlider = ({
       </InnerWrapper>
     </OuterWrapper>
   );
-};
-
-ImpactSlider.defaultProps = {
-  opacityAnimation: false,
-  defaultSliderValue: null,
-  backgroundColour: 'grey_extra_light'
 };
 
 ImpactSlider.propTypes = {

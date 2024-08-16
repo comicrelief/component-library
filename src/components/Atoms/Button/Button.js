@@ -33,20 +33,15 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = React.forwardRef(({ children, wrapper, ...rest }, ref) => (
+const Button = React.forwardRef(({ children, wrapper = false, ...rest }, ref) => (
   <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref}>
     {children}
   </StyledButton>
 ));
 
 Button.propTypes = {
-  /** Buttons as span */
-  wrapper: PropTypes.bool,
-  children: PropTypes.node.isRequired
-};
-
-Button.defaultProps = {
-  wrapper: false
+  children: PropTypes.node.isRequired,
+  wrapper: PropTypes.bool // Buttons as span
 };
 
 export default Button;

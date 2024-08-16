@@ -46,7 +46,7 @@ const themeSwitcher = theme => {
 };
 
 const Logo = ({
-  rotate, sizeSm, sizeMd, campaign
+  rotate = false, sizeSm = '51px', sizeMd = '70px', campaign = 'Comic Relief'
 }) => (
   <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
     <Image
@@ -66,13 +66,6 @@ Logo.propTypes = {
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string,
   campaign: PropTypes.string
-};
-
-Logo.defaultProps = {
-  rotate: false,
-  sizeSm: '51px', // - to work with the header 75px height and 12px padding
-  sizeMd: '70px',
-  campaign: 'Comic Relief'
 };
 
 export default Logo;

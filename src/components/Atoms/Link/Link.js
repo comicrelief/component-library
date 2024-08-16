@@ -9,15 +9,15 @@ let window = '';
 
 const Link = ({
   children,
-  color,
-  mobileColour,
+  color = 'red',
+  mobileColour = null,
   href,
-  target,
-  type,
-  home,
-  underline,
-  icon,
-  iconFirst,
+  target = null,
+  type = 'standard',
+  home = false,
+  underline = true,
+  icon = null,
+  iconFirst = false,
   ...rest
 }) => {
   const [documentHost, setDocumentHost] = useState('');
@@ -59,6 +59,7 @@ const Link = ({
       href={href}
       target={window}
       type={type}
+      home={home}
       iconFirst={iconFirst}
       underline={underline}
     >
@@ -87,17 +88,6 @@ Link.propTypes = {
   iconFirst: PropTypes.bool,
   /** Embed icons */
   icon: PropTypes.node
-};
-
-Link.defaultProps = {
-  type: 'standard',
-  color: 'red',
-  mobileColour: null,
-  target: null,
-  home: false,
-  underline: true,
-  iconFirst: false,
-  icon: null
 };
 
 export default Link;

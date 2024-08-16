@@ -62,16 +62,17 @@ const Prefix = styled.div`
 const Input = React.forwardRef(
   (
     {
-      errorMsg,
+      errorMsg = '',
       id,
       label,
-      showLabel,
+      showLabel = true,
       type,
-      hasAria,
-      className,
-      labelProps,
-      prefix,
-      optional,
+      hasAria = true,
+      className = '',
+      placeholder = '',
+      labelProps = {},
+      prefix = '',
+      optional = null,
       ...rest
     },
     ref
@@ -90,6 +91,7 @@ const Input = React.forwardRef(
         <InputField
           id={id}
           type={type}
+          placeholder={placeholder}
           error={!!errorMsg}
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
@@ -125,17 +127,6 @@ Input.propTypes = {
   className: PropTypes.string,
   prefix: PropTypes.string,
   optional: PropTypes.bool
-};
-
-Input.defaultProps = {
-  showLabel: true,
-  hasAria: true,
-  placeholder: '',
-  errorMsg: '',
-  labelProps: {},
-  className: '',
-  prefix: '',
-  optional: null
 };
 
 export default Input;

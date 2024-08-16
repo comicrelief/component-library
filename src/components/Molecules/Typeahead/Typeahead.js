@@ -12,14 +12,14 @@ const Typeahead = React.forwardRef(
   (
     {
       optionFetcher,
-      optionParser,
+      optionParser = null,
       onSelect,
       id,
       label,
       name,
-      dropdownInstruction,
+      dropdownInstruction = null,
       notFoundMessage,
-      fetchErrorHandler,
+      fetchErrorHandler = () => 'Sorry, there was an unexpected error. Please try again',
       ...rest
     },
     ref
@@ -111,12 +111,6 @@ Typeahead.propTypes = {
    */
   fetchErrorHandler: PropTypes.func,
   dropdownInstruction: PropTypes.string
-};
-
-Typeahead.defaultProps = {
-  dropdownInstruction: null,
-  optionParser: null,
-  fetchErrorHandler: () => 'Sorry, there was an unexpected error. Please try again'
 };
 
 export default Typeahead;

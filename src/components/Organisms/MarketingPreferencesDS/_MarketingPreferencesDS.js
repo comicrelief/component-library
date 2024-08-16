@@ -15,13 +15,13 @@ import {
 } from './_MarketingPrefsConfig';
 
 const MarketingPreferencesDS = ({
-  copyTop,
-  copyBottom,
+  copyTop = defaultCopyTop,
+  copyBottom = defaultCopyBottom,
   mpValidationOptions,
-  id,
-  formContext
+  id = null,
+  formContext = null
 }) => {
-  const { errors, control } = formContext;
+  const { formState: { errors }, control } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
@@ -241,7 +241,7 @@ const MarketingPreferencesDS = ({
 };
 
 // removes from DOM completely
-const MaybeDisabled = ({ children, disabled }) => {
+const MaybeDisabled = ({ children = null, disabled = false }) => {
   if (disabled) return null;
   return children;
 };
@@ -256,21 +256,9 @@ MarketingPreferencesDS.propTypes = {
   formContext: PropTypes.shape()
 };
 
-MarketingPreferencesDS.defaultProps = {
-  copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom,
-  id: null,
-  formContext: null
-};
-
 MaybeDisabled.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool
-};
-
-MaybeDisabled.defaultProps = {
-  children: null,
-  disabled: false
 };
 
 export {
