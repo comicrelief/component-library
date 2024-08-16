@@ -47,10 +47,10 @@ const LabelText = ({
  * @constructor
  */
 const Label = ({
-  children,
+  children = null,
   label,
-  hideLabel,
-  optional,
+  hideLabel = false,
+  optional = null,
   ...rest
 }) => (
   <LabelElement {...rest} optional={optional}>
@@ -70,12 +70,6 @@ Label.propTypes = {
   optional: PropTypes.bool
 };
 
-Label.defaultProps = {
-  hideLabel: false,
-  children: null,
-  optional: null
-};
-
 LabelText.propTypes = {
   label: PropTypes.oneOfType([
     PropTypes.string,
@@ -85,8 +79,4 @@ LabelText.propTypes = {
   children: PropTypes.node
 };
 
-LabelText.defaultProps = {
-  hideLabel: false,
-  children: null
-};
 export default Label;

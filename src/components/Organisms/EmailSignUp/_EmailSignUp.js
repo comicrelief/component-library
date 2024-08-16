@@ -22,10 +22,10 @@ const EmailSignUp = ({
   topCopy,
   successCopy,
   privacyCopy,
-  backgroundColour,
-  buttonColour,
+  backgroundColour = 'deep_violet_dark',
+  buttonColour = 'red',
   formContext,
-  columnLayout,
+  columnLayout = false,
   ...rest
 }) => {
   const {
@@ -124,12 +124,6 @@ EmailSignUp.propTypes = {
   buttonColour: PropTypes.string,
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
-};
-
-EmailSignUp.defaultProps = {
-  backgroundColour: 'deep_violet_dark',
-  buttonColour: 'red',
-  columnLayout: false
 };
 
 export { EmailSignUp, buildEsuValidationSchema, ESU_FIELDS };

@@ -6,7 +6,7 @@ export const Inner = styled.div`
   text-align: ${props => props.align};
 `;
 
-const RichText = ({ align, markup, ...rest }) => (
+const RichText = ({ align = 'left', markup = '', ...rest }) => (
   <Inner
     align={align}
     dangerouslySetInnerHTML={{ __html: markup }}
@@ -17,11 +17,6 @@ const RichText = ({ align, markup, ...rest }) => (
 RichText.propTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right']),
   markup: PropTypes.string
-};
-
-RichText.defaultProps = {
-  align: 'left',
-  markup: ''
 };
 
 export default RichText;

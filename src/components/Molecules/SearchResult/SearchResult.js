@@ -59,16 +59,16 @@ const Title = styled(Text)`
  * Search Result component
  */
 const SearchResult = ({
+  imageLow = null,
+  images = null,
+  type = '',
+  date = '',
+  copy = '',
+  smallImageWidth = '45%',
+  largeImageWidth = '100%',
   href,
-  date,
   title,
-  copy,
-  type,
-  imageLow,
-  images,
-  alt,
-  smallImageWidth,
-  largeImageWidth
+  alt
 }) => (
   <Wrapper>
     <Item href={href} type="standard">
@@ -120,16 +120,6 @@ SearchResult.propTypes = {
   /** image url */
   images: PropTypes.string,
   imageLow: PropTypes.string
-};
-
-SearchResult.defaultProps = {
-  imageLow: null,
-  images: null,
-  type: '',
-  date: '',
-  copy: '',
-  smallImageWidth: '45%',
-  largeImageWidth: '100%'
 };
 
 export default SearchResult;

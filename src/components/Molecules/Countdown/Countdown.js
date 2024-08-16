@@ -5,7 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import { Wrapper, Digits } from './Countdown.style';
 
 const Countdown = ({
-  endDate, color, endMessage, introMessage
+  endDate, color = 'black', endMessage = null, introMessage = null
 }) => {
   const [countdownHasEnded, setCountdownHasEnded] = useState(false);
   const [countdownTime, setCountdownTime] = useState({
@@ -95,12 +95,6 @@ Countdown.propTypes = {
   color: PropTypes.string,
   endMessage: PropTypes.node,
   introMessage: PropTypes.node
-};
-
-Countdown.defaultProps = {
-  color: 'black',
-  endMessage: null,
-  introMessage: null
 };
 
 export default Countdown;

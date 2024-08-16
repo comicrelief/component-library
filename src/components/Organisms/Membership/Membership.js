@@ -8,19 +8,19 @@ import {
 } from './Membership.style';
 
 const Membership = ({
-  alt,
+  alt = '',
+  data = {},
+  formAligntRight = true,
+  imageLow = null,
+  image = null,
+  images = null,
+  backgroundColor = null,
+  mbshipID = null,
   cartID,
-  backgroundColor,
   donateLink,
-  data,
   title,
   subtitle,
-  otherDescription,
-  formAligntRight,
-  images,
-  image,
-  imageLow,
-  mbshipID
+  otherDescription
 }) => (
   <Container
     formAligntRight={formAligntRight}
@@ -72,14 +72,4 @@ Membership.propTypes = {
   mbshipID: PropTypes.string
 };
 
-Membership.defaultProps = {
-  alt: '',
-  data: {},
-  formAligntRight: true,
-  imageLow: null,
-  image: null,
-  images: null,
-  backgroundColor: null,
-  mbshipID: null
-};
 export default Membership;

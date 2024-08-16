@@ -135,14 +135,14 @@ const ArticleTeaser = ({
   href,
   date,
   title,
-  imageLow,
-  image,
-  images,
-  alt,
-  category,
-  logoSize,
-  family,
-  time
+  imageLow = null,
+  image = null,
+  images = null,
+  alt = '',
+  category = null,
+  logoSize = null,
+  family = 'Anton',
+  time = null
 }) => (
   <Wrapper>
     <Link href={href} type="standard" category={category} underline={false}>
@@ -207,17 +207,6 @@ ArticleTeaser.propTypes = {
   time: PropTypes.string,
   /** link url */
   href: PropTypes.string.isRequired
-};
-
-ArticleTeaser.defaultProps = {
-  imageLow: null,
-  image: null,
-  images: null,
-  category: null,
-  logoSize: null,
-  time: null,
-  alt: '',
-  family: 'Anton'
 };
 
 export default ArticleTeaser;

@@ -51,11 +51,14 @@ export const BaseText = styled.span`
  *  Weight is checked for existence to prevent overriding the tag's css
  */
 const Text = ({
-  tag, children, height, weight, family, mobileColor, ...rest
+  tag = 'span', size = 's', color = 'inherit', children = undefined, uppercase = false, height = undefined, weight = undefined, family = null, mobileColor = null, ...rest
 }) => (
   <BaseText
     {...rest}
     as={tag}
+    color={color}
+    size={size}
+    uppercase={uppercase}
     height={height}
     weight={weight}
     family={family}
@@ -86,18 +89,6 @@ Text.propTypes = {
     PropTypes.string
   ]),
   mobileColor: PropTypes.string
-};
-
-Text.defaultProps = {
-  family: null,
-  tag: 'span',
-  weight: undefined,
-  height: undefined,
-  uppercase: false,
-  size: 's',
-  color: 'inherit',
-  children: undefined,
-  mobileColor: null
 };
 
 export default Text;

@@ -32,7 +32,7 @@ const StyledTextArea = styled.textarea`${({ theme, error }) => css`
 `}`;
 
 const TextArea = React.forwardRef(({
-  id, label, hideLabel, errorMsg, rows, className, ...rest
+  id, label, placeholder = '', hideLabel = false, errorMsg = undefined, rows = 4, className = '', ...rest
 }, ref) => (
   <Label
     htmlFor={id}
@@ -43,6 +43,7 @@ const TextArea = React.forwardRef(({
   >
     <StyledTextArea
       {...rest}
+      placeholder={placeholder}
       rows={rows}
       error={!!errorMsg}
       aria-describedby={id}
@@ -66,14 +67,6 @@ TextArea.propTypes = {
   // className is needed so that styled(`TextArea`) will work
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string
-};
-
-TextArea.defaultProps = {
-  rows: 4,
-  placeholder: '',
-  errorMsg: undefined,
-  hideLabel: false,
-  className: ''
 };
 
 export default TextArea;
