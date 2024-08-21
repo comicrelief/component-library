@@ -10,7 +10,8 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
   CarouselWrapper, MainCopyWrapper,
   // AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including
+  Heading, PeopleHelpedText
+  // Including
 } from './RichtextCarousel.style';
 // import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
@@ -72,10 +73,6 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
       <PeopleHelpedText tag="h1" family="Anton" uppercase weight="normal" color="red">
         { data.peopleHelpedText}
       </PeopleHelpedText>
-
-      <Including tag="p">
-        including...
-      </Including>
 
       {theseItems && (
       <CarouselProvider

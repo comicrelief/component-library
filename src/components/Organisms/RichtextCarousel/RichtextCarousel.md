@@ -1,14 +1,14 @@
 # Richtext Carousel
 
 ```js
-const { carouselItemsComplete } = require('../../../styleguide/data/data');
+const { RichtextCarouselItems } = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
 
     <div>
         <h2 style={{textAlign: 'center'}}>
             All fields supplied, autoplay off:
         </h2>
-        <RichtextCarousel data={carouselItemsComplete}/>
+        <RichtextCarousel data={RichtextCarouselItems}/>
     </div>
     
 ```

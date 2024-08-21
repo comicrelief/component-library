@@ -33,14 +33,6 @@ it("renders correctly", () => {
       letter-spacing: 0.03rem;
     }
 
-    .c5 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
     .c2 {
       width: 75%;
       margin: 0 auto;
@@ -58,13 +50,6 @@ it("renders correctly", () => {
       text-align: center;
       font-size: 34px;
       line-height: 37px;
-    }
-
-    .c6 {
-      margin-bottom: 0;
-      text-align: center;
-      font-size: 12px;
-      line-height: 14.63px;
     }
 
     .c0 {
@@ -133,14 +118,14 @@ it("renders correctly", () => {
     }
 
     .c0 .carousel .wymd-carousel {
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
-      transition: -webkit-transform 0.75s;
-      -o-transition: transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: transform 0.75s;
-      transition: transform 0.75s;
-      -webkit-transform: 0.75s;
+      -webkit-transition: -webkit-transform 0.7s;
+      -webkit-transition: -webkit-transform 0.7s;
+      transition: -webkit-transform 0.7s;
+      -o-transition: transform 0.7s;
+      -webkit-transition: -webkit-transform 0.7s;
+      -webkit-transition: transform 0.7s;
+      transition: transform 0.7s;
+      -webkit-transform: 0.7s;
       will-change: transform;
     }
 
@@ -192,13 +177,6 @@ it("renders correctly", () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c6 {
-        font-size: 17px;
-        line-height: 19px;
-      }
-    }
-
     @media (min-width:1024px) {
       .c0 .carousel {
         padding-top: 2rem;
@@ -223,18 +201,18 @@ it("renders correctly", () => {
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
-        -webkit-transition: -webkit-transform 0.75s ease;
-        -webkit-transition: transform 0.75s ease;
-        transition: transform 0.75s ease;
+        -webkit-transition: -webkit-transform 0.7s ease;
+        -webkit-transition: transform 0.7s ease;
+        transition: transform 0.7s ease;
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
-        -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-        -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-        transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        -webkit-transition: -webkit-transform 0.7s ease,width 0.7s ease,right 0.7s ease;
+        -webkit-transition: transform 0.7s ease,width 0.7s ease,right 0.7s ease;
+        transition: transform 0.7s ease,width 0.7s ease,right 0.7s ease;
         right: calc(-300% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -253,8 +231,8 @@ it("renders correctly", () => {
         -ms-transform: scale(1);
         transform: scale(1);
         width: 10%;
-        width: 50%;
-        right: calc(-50% - 6px);
+        width: 80%;
+        right: calc(-80% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
@@ -272,8 +250,8 @@ it("renders correctly", () => {
         -ms-transform: scale(0.5);
         transform: scale(0.5);
         width: 300%;
-        width: 45%;
-        right: calc(-37% - 0px);
+        width: 85%;
+        right: calc(-65% - 1px);
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
@@ -317,13 +295,13 @@ it("renders correctly", () => {
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
-        right: calc(-50% - 6px);
-        width: 50%;
+        right: calc(-80% - 6px);
+        width: 80%;
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
-        right: calc(-37% - 5px);
-        width: 50%;
+        right: calc(-60% - 5px);
+        width: 80%;
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
@@ -350,13 +328,6 @@ it("renders correctly", () => {
       >
         11.7 million people
       </h1>
-      <p
-        className="c5 c6"
-        color="inherit"
-        size="s"
-      >
-        including...
-      </p>
     </div>
   `);
 });
