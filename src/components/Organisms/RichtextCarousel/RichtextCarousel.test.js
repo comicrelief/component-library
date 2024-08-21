@@ -132,7 +132,7 @@ it("renders correctly", () => {
       background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
     }
 
-    .c0 .carousel .richtext-carousel {
+    .c0 .carousel .wymd-carousel {
       -webkit-transition: -webkit-transform 0.75s;
       -webkit-transition: -webkit-transform 0.75s;
       transition: -webkit-transform 0.75s;
@@ -144,15 +144,15 @@ it("renders correctly", () => {
       will-change: transform;
     }
 
-    .c0 .carousel .richtext-carousel .last-slide .image-wrapper:after {
+    .c0 .carousel .wymd-carousel .last-slide .main-copy-wrapper:after {
       content: none;
     }
 
-    .c0 .carousel .richtext-carousel .carousel__slide {
+    .c0 .carousel .wymd-carousel .carousel__slide {
       padding-bottom: 425px !important;
     }
 
-    .c0 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide {
+    .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
       text-align: center;
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
@@ -218,11 +218,11 @@ it("renders correctly", () => {
     }
 
     @media (min-width:740px) {
-      .c0 .carousel .richtext-carousel .carousel__slide {
+      .c0 .carousel .wymd-carousel .carousel__slide {
         padding-bottom: 450px !important;
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child {
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
         -webkit-transition: -webkit-transform 0.75s ease;
         -webkit-transition: transform 0.75s ease;
         transition: transform 0.75s ease;
@@ -231,7 +231,7 @@ it("renders correctly", () => {
         transform: scale(0.5);
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
         -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
         -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
         transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
@@ -240,63 +240,71 @@ it("renders correctly", () => {
         -ms-transform: scale(1);
         transform: scale(1);
         width: 300%;
+        width: 100%;
+        right: calc(-100% - 6px);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
-        -webkit-transition: -webkit-transform 0.75s ease;
-        -webkit-transition: transform 0.75s ease;
-        transition: transform 0.75s ease;
-        -webkit-transform-origin: top;
-        -ms-transform-origin: top;
-        transform-origin: top;
-        -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
-        -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
-        transform: translateY(calc(-45px + 5%)) scale(0.5);
-      }
-
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
         right: calc(-300% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
-        width: 300%;
-      }
-
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
+        width: 10%;
+        width: 50%;
+        right: calc(-50% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
         right: calc(-222% - 6px);
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
         width: 300%;
-      }
-
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
-        -webkit-transform: translateY(0) scale(1);
-        -ms-transform: translateY(0) scale(1);
-        transform: translateY(0) scale(1);
-      }
-
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
+        width: 45%;
+        right: calc(-37% - 0px);
         -webkit-transform: scale(0.5);
         -ms-transform: scale(0.5);
         transform: scale(0.5);
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+        -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
         right: calc(-300% - 6px);
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
         width: 300%;
+        width: 50%;
+        right: calc(-50% - 6px);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
         -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
         -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
         transform: translateY(calc(-45px + 5%)) scale(0.5);
@@ -304,23 +312,23 @@ it("renders correctly", () => {
     }
 
     @media (min-width:1024px) {
-      .c0 .carousel .richtext-carousel .carousel__slide {
+      .c0 .carousel .wymd-carousel .carousel__slide {
         padding-bottom: 475px !important;
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
-        right: calc(-250% - 6px);
-        width: 250%;
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-50% - 6px);
+        width: 50%;
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
-        right: calc(-187% - 6px);
-        width: 250%;
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-37% - 5px);
+        width: 50%;
       }
 
-      .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
-        right: calc(-250% - 6px);
-        width: 250%;
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-125% - 5px);
+        width: 125%;
       }
     }
 

@@ -9,12 +9,11 @@ const animationSpeed = 0.75;
 const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
-const ImageWrapper = styled.div`
-  width: 45%;
+const MainCopyWrapper = styled.div`
+  width: 75%;
   display: block;
   padding: 9%;
   border: 2px dashed #89888b;
-  border-radius: 50%;
   position: relative;
   overflow: visible;
 
@@ -28,46 +27,47 @@ const ImageWrapper = styled.div`
     position: absolute;
     content: '';
     top: 50%;
-    width: 125%;
-    right: calc(-125% - 2px);
+    width: 35%;
+    right: calc(-35% - 2px);
     height: 2px;
     border-bottom: 2px dashed #89888b;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 50%;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    width: 100%;
     padding: 9%;
-    &:after {
-      width: 100%;
-      right: calc(-100% - 8px);
-    }
+    // Don't think this does owt anyway
+    // &:after {
+    //   width: 100%;
+    //   right: calc(-100% - 8px);
+    // }
   }
 `;
 
-const AmountWrapper = styled.div`
-  padding: ${spacing('m')} 0 0.75rem;
+// const AmountWrapper = styled.div`
+//   padding: ${spacing('m')} 0 0.75rem;
 
-  h1 {
-    font-size: 34px;
-    line-height: 37px;
+//   h1 {
+//     font-size: 34px;
+//     line-height: 37px;
 
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      font-size: 40px;
-      line-height: 40px;
-    }
-  }
-`;
+//     @media ${({ theme }) => theme.allBreakpoints('M')} {
+//       font-size: 40px;
+//       line-height: 40px;
+//     }
+//   }
+// `;
 
-const CopyWrapper = styled.div`
-  padding: 0;
-  width: 75%;
-  margin: 0 auto;
+// const CopyWrapper = styled.div`
+//   padding: 0;
+//   width: 75%;
+//   margin: 0 auto;
 
-  p {
-    font-size: ${({ theme }) => theme.fontSize('s')};
-    line-height: ${({ theme }) => theme.fontSize('l')};
-  }
-`;
+//   p {
+//     font-size: ${({ theme }) => theme.fontSize('s')};
+//     line-height: ${({ theme }) => theme.fontSize('l')};
+//   }
+// `;
 
 const Heading = styled(Text)`
   width: 75%;
@@ -200,7 +200,7 @@ const CarouselWrapper = styled.div`
       will-change: transform;
 
       .last-slide {
-        .image-wrapper:after {
+        .main-copy-wrapper:after {
           content: none;
         }
       }
@@ -217,7 +217,7 @@ const CarouselWrapper = styled.div`
           // All slides:
           .carousel__inner-slide {
 
-            // All 'ImageWrappers':
+            // All 'MainCopyWrapper's:
             > div:first-child {
               transition: transform ${animationSpeed}s ease;
               transform: scale(0.5);
@@ -229,15 +229,20 @@ const CarouselWrapper = styled.div`
                 right: calc(-300% - 6px);
                 transform: scale(1);
                 width: 300%;
+                // Update
+                width: 100%;
+                right: calc(-100% - 6px);
+                transform: scale(1);
+
               }
             }
 
             // Scale down ALL copy
-            .all-text-wrapper {
-              transition: transform ${animationSpeed}s ease;
-              transform-origin: top;
-              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
-            }
+            // .all-text-wrapper {
+            //   transition: transform ${animationSpeed}s ease;
+            //   transform-origin: top;
+            //   transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
+            // }
           }
 
           // Our 'first' slide of the three:
@@ -247,7 +252,11 @@ const CarouselWrapper = styled.div`
                 &:after {
                   right: calc(-300% - 6px);
                   transform: scale(1);
-                  width: 300%;
+                  width: 10%;
+                  // Update
+                  width: 50%;
+                  right: calc(-50% - 6px);
+                  transform: scale(1);
                 }
               }
             }
@@ -261,6 +270,10 @@ const CarouselWrapper = styled.div`
                     right: calc(-222% - 6px);
                     transform: scale(0.5);
                     width: 300%;
+                    // Update
+                    width: 45%;
+                    right: calc(-37% - 0px);
+                    transform: scale(0.5);
                   }
                 }
               }
@@ -277,6 +290,10 @@ const CarouselWrapper = styled.div`
                     right: calc(-300% - 6px);
                     transform: scale(1);
                     width: 300%;
+                    // Update
+                    width: 50%;
+                    right: calc(-50% - 6px);
+                    transform: scale(1);
                   }
                 }
                 .all-text-wrapper {
@@ -296,8 +313,8 @@ const CarouselWrapper = styled.div`
             .carousel__inner-slide {
               > div:first-child {
                 &:after {
-                  right: calc(-250% - 6px);
-                  width: 250%;
+                  right: calc(-50% - 6px);
+                  width: 50%;
                 }
               }
             }
@@ -307,8 +324,8 @@ const CarouselWrapper = styled.div`
               .carousel__inner-slide {
                 > div:first-child {
                   &:after {
-                    right: calc(-187% - 6px);
-                    width: 250%;
+                    right: calc(-37% - 5px);
+                    width: 50%;
                   }
                 }
               }
@@ -319,20 +336,16 @@ const CarouselWrapper = styled.div`
                 .carousel__inner-slide {
                   > div:first-child {
                     &:after {
-                      right: calc(-250% - 6px);
-                      width: 250%;
+                      right: calc(-125% - 5px);
+                      width: 125%;
                     }
                   }
                 }
               }
             }
-
-
           }
-
         }
         // END OF DESKTOP
-
 
         .carousel__inner-slide {
           text-align: center;
@@ -347,5 +360,7 @@ const CarouselWrapper = styled.div`
 `;
 
 export {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, MainCopyWrapper,
+  // AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including
 };

@@ -8,9 +8,11 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, MainCopyWrapper,
+  // AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including
 } from './RichtextCarousel.style';
-import Text from '../../Atoms/Text/Text';
+// import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
@@ -105,11 +107,18 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
                 key={thisOffsetIndex}
               >
 
-                <ImageWrapper className="image-wrapper">
-                  <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
-                </ImageWrapper>
+                <MainCopyWrapper className="main-copy-wrapper">
+                  <p>
+                    140 character count limit imposed in messages to fix the design height of each
+                    container and restrict anomalies. This is based on Twitters character limit
+                    for tweets.
+                  </p>
+                  <p>
+                    <b>John, London</b>
+                  </p>
+                </MainCopyWrapper>
 
-                <div className="all-text-wrapper">
+                {/* <div className="all-text-wrapper">
                   <AmountWrapper>
                     <Text tag="h1" family="Anton" uppercase weight="normal">
                       {theseItems[key].amount}
@@ -121,7 +130,7 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
                       {theseItems[key].copy}
                     </Text>
                   </CopyWrapper>
-                </div>
+                </div> */}
 
               </Slide>
             );
