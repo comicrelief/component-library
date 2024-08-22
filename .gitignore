@@ -9,6 +9,7 @@
 /build
 #/dist
 /styleguide
+/dist/styleguide
 
 # misc
 .DS_Store
