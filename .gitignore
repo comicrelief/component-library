@@ -7,7 +7,7 @@
 
 # production
 /build
-/dist
+#/dist
 /styleguide
 
 # misc
