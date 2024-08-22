@@ -149,7 +149,7 @@ it("renders correctly", () => {
     }
 
     .c0 .carousel .wymd-carousel .carousel__slide {
-      padding-bottom: 425px !important;
+      padding-bottom: 300px !important;
     }
 
     .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
@@ -219,7 +219,7 @@ it("renders correctly", () => {
 
     @media (min-width:740px) {
       .c0 .carousel .wymd-carousel .carousel__slide {
-        padding-bottom: 450px !important;
+        padding-bottom: 300px !important;
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
@@ -305,7 +305,7 @@ it("renders correctly", () => {
 
     @media (min-width:1024px) {
       .c0 .carousel .wymd-carousel .carousel__slide {
-        padding-bottom: 475px !important;
+        padding-bottom: 300px !important;
       }
 
       .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {

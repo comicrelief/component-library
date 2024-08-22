@@ -5,23 +5,30 @@ import PropTypes from 'prop-types';
 import {
   CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
 } from 'pure-react-carousel';
-import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, MainCopyWrapper,
-  // AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText
-  // Including
+  CarouselWrapper, SlideCopyWrapper, HeaderCopy
 } from './RichtextCarousel.style';
-// import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import RichText from '../../Atoms/RichText/RichText';
 
-const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
+const RichtextCarousel = ({
+  data,
+  data: {
+    autoPlay,
+    contentful_id:
+    thisID,
+    allNodes,
+    headerCopy
+  }
+}) => {
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
   const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
+
+  console.log('allNodes', allNodes);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
@@ -37,8 +44,12 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
 
   // Format our data BEFORE we use it in render:
   useEffect(() => {
-    setTheseItems(formatItems(data));
-  }, [setTheseItems, data]);
+    setTheseItems(allNodes);
+  }, [setTheseItems, allNodes]);
+
+  // useEffect(() => {
+  //   setTheseItems(formatItems(data));
+  // }, [setTheseItems, data]);
 
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
@@ -66,13 +77,9 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
       desktopHeight={data.desktopHeight}
     >
 
-      <Heading tag="p" weight="bold">
-        { data.headerCopy}
-      </Heading>
-
-      <PeopleHelpedText tag="h1" family="Anton" uppercase weight="normal" color="red">
-        { data.peopleHelpedText}
-      </PeopleHelpedText>
+      <HeaderCopy>
+        <RichText markup={headerCopy} />
+      </HeaderCopy>
 
       {theseItems && (
       <CarouselProvider
@@ -84,7 +91,7 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
         visibleSlides={visibleSlides}
         infinite
       >
-        <Slider classNameAnimation="wymd-carousel">
+        <Slider classNameAnimation="richtext-carousel">
 
           {/* Dummy slide for our desired non-mobile layout and functionality */}
           {isMobile === false && (
@@ -104,30 +111,16 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
                 key={thisOffsetIndex}
               >
 
-                <MainCopyWrapper className="main-copy-wrapper">
+                <SlideCopyWrapper
+                  className="slide-copy-wrapper"
+                  mobileHeight={data.mobileHeight}
+                  tabletHeight={data.tabletHeight}
+                  desktopHeight={data.desktopHeight}
+                >
                   <p>
-                    140 character count limit imposed in messages to fix the design height of each
-                    container and restrict anomalies. This is based on Twitters character limit
-                    for tweets.
+                    {theseItems[index].copy}
                   </p>
-                  <p>
-                    <b>John, London</b>
-                  </p>
-                </MainCopyWrapper>
-
-                {/* <div className="all-text-wrapper">
-                  <AmountWrapper>
-                    <Text tag="h1" family="Anton" uppercase weight="normal">
-                      {theseItems[key].amount}
-                    </Text>
-                  </AmountWrapper>
-
-                  <CopyWrapper>
-                    <Text tag="p">
-                      {theseItems[key].copy}
-                    </Text>
-                  </CopyWrapper>
-                </div> */}
+                </SlideCopyWrapper>
 
               </Slide>
             );
@@ -150,74 +143,11 @@ const RichtextCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) =
 
 RichtextCarousel.propTypes = {
   data: PropTypes.shape({
-    // Required 'node' fields:
-    node1Amount: PropTypes.string.isRequired,
-    node1Copy: PropTypes.string.isRequired,
-    node1Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    node2Amount: PropTypes.string.isRequired,
-    node2Copy: PropTypes.string.isRequired,
-    node2Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    node3Amount: PropTypes.string.isRequired,
-    node3Copy: PropTypes.string.isRequired,
-    node3Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    node4Amount: PropTypes.string.isRequired,
-    node4Copy: PropTypes.string.isRequired,
-    node4Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired,
-    // Non-required 'node' fields:
-    node5Amount: PropTypes.string,
-    node5Copy: PropTypes.string,
-    node5Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node6Amount: PropTypes.string,
-    node6Copy: PropTypes.string,
-    node6Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node7Amount: PropTypes.string,
-    node7Copy: PropTypes.string,
-    node7Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node8Amount: PropTypes.string,
-    node8Copy: PropTypes.string,
-    node8Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
-    node9Amount: PropTypes.string,
-    node9Copy: PropTypes.string,
-    node9Image: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    }),
+    headerCopy: PropTypes.node.isRequired, // Richtext
+    allNodes: PropTypes.arrayOf(PropTypes.shape({
+      copy: PropTypes.string.isRequired
+    })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
-    headerCopy: PropTypes.string.isRequired,
-    peopleHelpedText: PropTypes.string.isRequired,
     contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,

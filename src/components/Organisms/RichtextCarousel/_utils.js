@@ -1,16 +1,20 @@
+// NOT CURRENTLY USED BUT KEEPING AROUND IN CASE:
 const formatItems = thisData => {
   // Somewhere to store our formatted items:
   const allValidNodes = [];
 
+  const { allNodes } = thisData;
+  console.log('allNodes', allNodes);
+
   // Set at a Content Type field level, so doesn't need to be dynamic:
-  const possibleNumberOfNodes = 9;
+  const numberOfNodes = allNodes.length;
 
   // Grab ALL keys from our raw data:
   const theseKeys = Object.keys(thisData);
-
+  console.log('theseKeys', theseKeys);
   // Iterate over all of the data, using a dynamic key prefix to filter
   // what we need in order to create each object for our allValidNodes array:
-  for (let i = 1; i <= possibleNumberOfNodes; i += 1) {
+  for (let i = 1; i <= numberOfNodes; i += 1) {
     // Create a dynamic key prefix based on the counter, obviously matching
     // the naming convention set at the Content Type level in the CMS
     const thisKeyPrefix = `node${i}`;

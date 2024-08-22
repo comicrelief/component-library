@@ -1,121 +1,48 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-import Text from '../../Atoms/Text/Text';
+// import Text from '../../Atoms/Text/Text';
 
 // Duration in seconds
-const animationSpeed = 0.7;
+const animationSpeed = 0.75;
 
-// Use to calc positions when scaling copy
-const textScaleOffsetA = 45;
-const textScaleOffsetB = 5;
-
-const MainCopyWrapper = styled.div`
+const SlideCopyWrapper = styled.div`
   width: 75%;
-  display: block;
-  padding: 12% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
   border: 1px dashed #89888b;
-  border-radius: 10%;
+  border-radius: 20px;
   position: relative;
   overflow: visible;
 
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  //   display: block;
-  // }
-
+  // To be provided via the CMS
+  height: ${props => props.mobileHeight}px;
+  
   &:after {
     position: absolute;
     content: '';
     top: 50%;
-    width: 35%;
-    right: calc(-35% - 0px);
+    width: 34%;
+    right: calc(-34% - 0px);
     height: 2px;
     border-bottom: 1px dashed #89888b;
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 85%;
-    // padding: 9%;
-    // Don't think this does owt anyway
-    // &:after {
-    //   width: 100%;
-    //   right: calc(-100% - 8px);
-    // }
+    height: ${props => props.tabletHeight}px;
   }
-`;
-
-// const AmountWrapper = styled.div`
-//   padding: ${spacing('m')} 0 0.75rem;
-
-//   h1 {
-//     font-size: 34px;
-//     line-height: 37px;
-
-//     @media ${({ theme }) => theme.allBreakpoints('M')} {
-//       font-size: 40px;
-//       line-height: 40px;
-//     }
-//   }
-// `;
-
-// const CopyWrapper = styled.div`
-//   padding: 0;
-//   width: 75%;
-//   margin: 0 auto;
-
-//   p {
-//     font-size: ${({ theme }) => theme.fontSize('s')};
-//     line-height: ${({ theme }) => theme.fontSize('l')};
-//   }
-// `;
-
-const Heading = styled(Text)`
-  width: 75%;
-  margin: 0 auto;
-
-  // To override pre-existing first-child rule
-  &:first-child {
-    margin-bottom: ${spacing('l')};
-    text-align: center;
-    font-size: 16px;
-    line-height: 19.5px;
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-      font-size: 20px;
-      line-height: 24.38px;
-    }
+    // To be provided via the CMS
+    height: ${props => props.desktopHeight}px;
   }
 `;
 
-const PeopleHelpedText = styled(Text)`
-  margin-bottom: ${spacing('l')};
-  text-align: center;
-  font-size: 34px;
-  line-height: 37px;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    font-size: 64px;
-    line-height: 68px;
-  }
+const HeaderCopy = styled.div`
+  // background: orange;
 `;
-
-// const Including = styled(Text)`
-//   margin-bottom: 0;
-//   text-align: center;
-//   font-size: 12px;
-//   line-height: 14.63px;
-
-//   @media ${({ theme }) => theme.allBreakpoints('M')} {
-//     font-size: 17px;
-//     line-height: 19px;
-//   }
-// `;
 
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
@@ -131,11 +58,7 @@ const CarouselWrapper = styled.div`
   .carousel {
     position: relative;
     margin: 0 auto;
-    padding-top: ${spacing('l')};
-
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      padding-top: ${spacing('l')};
-    }
+    padding-top: ${spacing('m')};
 
     button.carousel__back-button,
     button.carousel__next-button {
@@ -192,7 +115,7 @@ const CarouselWrapper = styled.div`
       }
     }
 
-    .wymd-carousel {
+    .richtext-carousel {
       // Override default animations
       transition: -webkit-transform ${animationSpeed}s;
       -o-transition: transform ${animationSpeed}s;
@@ -201,7 +124,7 @@ const CarouselWrapper = styled.div`
       will-change: transform;
 
       .last-slide {
-        .main-copy-wrapper:after {
+        .slide-copy-wrapper:after {
           content: none;
         }
       }
@@ -218,32 +141,22 @@ const CarouselWrapper = styled.div`
           // All slides:
           .carousel__inner-slide {
 
-            // All 'MainCopyWrapper's:
+            // All 'SlideCopyWrapper's:
             > div:first-child {
               transition: transform ${animationSpeed}s ease;
-              transform: scale(0.5);
+              transform-origin: center;
+              transform: scale(0.8);
 
               &:after {
                 transition: transform ${animationSpeed}s ease,
                 width ${animationSpeed}s ease,
                 right ${animationSpeed}s ease;
-                right: calc(-300% - 6px);
-                transform: scale(1);
-                width: 300%;
-                // Update
                 width: 100%;
                 right: calc(-100% - 6px);
                 transform: scale(1);
 
               }
             }
-
-            // Scale down ALL copy
-            // .all-text-wrapper {
-            //   transition: transform ${animationSpeed}s ease;
-            //   transform-origin: top;
-            //   transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
-            // }
           }
 
           // Our 'first' slide of the three:
@@ -251,12 +164,8 @@ const CarouselWrapper = styled.div`
             .carousel__inner-slide {
               > div:first-child {
                 &:after {
-                  right: calc(-300% - 6px);
-                  transform: scale(1);
-                  width: 10%;
-                  // Update
-                  width: 80%;
-                  right: calc(-80% - 6px);
+                  width: 33%;
+                  right: calc(-33% - 3px);
                   transform: scale(1);
                 }
               }
@@ -268,37 +177,22 @@ const CarouselWrapper = styled.div`
                 > div:first-child {
                   transform: scale(1);
                   &:after {
-                    right: calc(-222% - 6px);
-                    transform: scale(0.5);
-                    width: 300%;
-                    // Update
-                    width: 85%;
-                    right: calc(-65% - 1px);
-                    transform: scale(0.5);
+                    width: 33%;
+                    right: calc(-33% + 3px);
+                    transform: scale(0.8);
                   }
                 }
-              }
-
-              .all-text-wrapper {
-                transform: translateY(0) scale(1);
               }
 
               // Resets the 3rd slide:
               + .carousel__slide--visible {
                 > div > div:first-child {
-                  transform: scale(0.5);
+                  transform: scale(0.8);
                   &:after {
-                    right: calc(-300% - 6px);
-                    transform: scale(1);
-                    width: 300%;
-                    // Update
                     width: 50%;
                     right: calc(-50% - 6px);
                     transform: scale(1);
                   }
-                }
-                .all-text-wrapper {
-                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
                 }
               }
             }
@@ -314,8 +208,9 @@ const CarouselWrapper = styled.div`
             .carousel__inner-slide {
               > div:first-child {
                 &:after {
-                  right: calc(-80% - 6px);
-                  width: 80%;
+                  // Not CURRENTLY required as still working with thirds as per Medium, but...
+                  // width: 33%;
+                  // right: calc(-33% - 3px);
                 }
               }
             }
@@ -325,8 +220,9 @@ const CarouselWrapper = styled.div`
               .carousel__inner-slide {
                 > div:first-child {
                   &:after {
-                    right: calc(-60% - 5px);
-                    width: 80%;
+                  // Not CURRENTLY required as still working with thirds as per Medium, but...
+                    // width: 33%;
+                    // right: calc(-33% + 3px);
                   }
                 }
               }
@@ -361,8 +257,6 @@ const CarouselWrapper = styled.div`
 `;
 
 export {
-  CarouselWrapper, MainCopyWrapper,
-  // AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText
-  // Including
+  CarouselWrapper, SlideCopyWrapper,
+  HeaderCopy
 };
