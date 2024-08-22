@@ -232,6 +232,12 @@ Object.defineProperty(exports, "RichText", {
     return _RichText.default;
   }
 });
+Object.defineProperty(exports, "RichtextCarousel", {
+  enumerable: true,
+  get: function () {
+    return _RichtextCarousel.default;
+  }
+});
 Object.defineProperty(exports, "SchoolLookup", {
   enumerable: true,
   get: function () {
@@ -455,3 +461,4 @@ var _Membership = _interopRequireDefault(require("./components/Organisms/Members
 var _MarketingPreferencesDS = require("./components/Organisms/MarketingPreferencesDS/_MarketingPreferencesDS");
 var _ImpactSlider = _interopRequireDefault(require("./components/Organisms/ImpactSlider/ImpactSlider"));
 var _WYMDCarousel = _interopRequireDefault(require("./components/Organisms/WYMDCarousel/WYMDCarousel"));
+var _RichtextCarousel = _interopRequireDefault(require("./components/Organisms/RichtextCarousel/RichtextCarousel"));
