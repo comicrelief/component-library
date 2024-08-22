@@ -19,7 +19,7 @@ it("renders correctly", () => {
       height: 100%;
       background-color: #FFFFFF;
       max-width: 760px;
-      padding: 2rem;
+      padding: 2rem 2rem 4rem;
       margin: 0 auto;
       border-radius: 20px;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.15);

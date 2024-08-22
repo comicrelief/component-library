@@ -49,7 +49,7 @@ const CarouselWrapper = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   max-width: 760px;
-  padding:  ${spacing('l')};
+  padding:  ${spacing('l')} ${spacing('l')} ${spacing('xl')};
   margin: 0 auto;
 
   border-radius: 20px;
