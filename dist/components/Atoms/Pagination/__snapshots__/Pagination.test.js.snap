@@ -1,0 +1,2531 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in full size with first page selected 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c4:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c4"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with last page selected 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c4"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c4"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with max pages less than current page 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/18"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 16"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/16"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      16
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 17"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/17"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      17
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 18"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/18"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      18
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 19"
+      className="c4"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      19
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 20"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/20"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      20
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/20"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/20"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with max pages less than total pages 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 6"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c4"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/10"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with max pages more than total pages 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 6"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with more on both sides 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c4"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 6"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/7"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with more on left 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c4"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 6"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in full size with more on right 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #FFFFFF;
+  color: #E1E2E3;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c4"
+      color="black"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in minimalist form 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly in minimalist form with non-default color 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #0565D1;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with custom labels 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFFFFF;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #E52630;
+  color: #FFFFFF;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      First
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Previous
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 1"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Page 1
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 2"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/2"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Page 2
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c3"
+      color="black"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      Page 3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Page 4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Page 5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Next
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="black"
+      disabled={false}
+      href="example.com/page/5"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      Last
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with custom style 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.c1 {
+  padding: 10px;
+}
+
+.c2 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #FFE400;
+  color: #E52630;
+}
+
+.c2:hover {
+  background: #4ECDBE;
+  color: #FFE400;
+}
+
+.c3 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #F4F3F5;
+  color: #FFFFFF;
+}
+
+.c4 {
+  padding: 9px 14px 9px 14px;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: default;
+  background: #4ECDBE;
+  color: #FFE400;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="First page"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/1"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Previous page"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ‹
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="red"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 3"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/3"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 4"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/4"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 5"
+      className="c4"
+      color="red"
+      disabled={false}
+      href={null}
+      onClick={[Function]}
+      selected={true}
+      target="_self"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 6"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Page 7"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/7"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      7
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="More pages"
+      className="c3"
+      color="red"
+      disabled={true}
+      href={null}
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ...
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Next page"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/6"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      ›
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      aria-label="Last page"
+      className="c2"
+      color="red"
+      disabled={false}
+      href="example.com/page/10"
+      onClick={[Function]}
+      selected={false}
+      target="_self"
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders nothing in case of no pages 1`] = `null`;

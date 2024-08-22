@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c4 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #000000;
+}
+
+.c0 {
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  -webkit-transition: bottom 0.1s linear;
+  transition: bottom 0.1s linear;
+  cursor: pointer;
+  text-align: left;
+  padding: 2rem;
+}
+
+.c1:focus,
+.c1:hover {
+  color: inherit;
+  outline: none;
+}
+
+.c1:focus > div,
+.c1:hover > div {
+  -webkit-animation-name: jiZjjg;
+  animation-name: jiZjjg;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c5 {
+  overflow: hidden;
+  height: 0;
+  visibility: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  padding: 0 2rem;
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 0 3rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <button
+    aria-expanded="false"
+    className="c1"
+    onClick={[Function]}
+  >
+    <h2
+      className="c2"
+      color="inherit"
+      size="l"
+    >
+      I am the title
+    </h2>
+    <div
+      className="c3"
+    >
+      <svg
+        className="c4"
+        direction="down"
+        fill="#000000"
+        height={24}
+        viewBox="0 0 48 48"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M40 33a1.992 1.992 0 01-1.414-.586L24 17.829 9.414 32.414a2 2 0 11-2.828-2.828l16-16a2 2 0 012.828 0l16 16A2 2 0 0140 33z"
+        />
+      </svg>
+    </div>
+  </button>
+  <div
+    className="c5"
+  >
+    <p
+      className="c6"
+      color="inherit"
+      size="s"
+    >
+      Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
+    </p>
+  </div>
+</div>
+`;

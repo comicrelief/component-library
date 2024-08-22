@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders heavy heading correctly 1`] = `
+.c0 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: 1000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+<h3
+  className="c0"
+  color="inherit"
+  size="s"
+>
+  Heading 3 heavy
+</h3>
+`;
+
+exports[`renders high heading correctly 1`] = `
+.c0 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: 5;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+<h3
+  className="c0"
+  color="inherit"
+  height="5"
+  size="s"
+>
+  Heading 3 high
+</h3>
+`;
+
+exports[`renders large heading correctly 1`] = `
+.c0 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+<h3
+  className="c0"
+  color="inherit"
+  size="l"
+>
+  Heading 3 large
+</h3>
+`;
+
+exports[`renders xl paragraph with Anton font correctly 1`] = `
+.c0 {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  -webkit-letter-spacing: 0.03rem;
+  -moz-letter-spacing: 0.03rem;
+  -ms-letter-spacing: 0.03rem;
+  letter-spacing: 0.03rem;
+}
+
+<p
+  className="c0"
+  color="inherit"
+  size="xl"
+>
+  My paragraph xl and font Anton
+</p>
+`;
+
+exports[`renders xl yellow paragraph correctly 1`] = `
+.c0 {
+  color: #FFE400;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+<p
+  className="c0"
+  color="yellow"
+  size="xl"
+>
+  My paragraph xl and yellow
+</p>
+`;

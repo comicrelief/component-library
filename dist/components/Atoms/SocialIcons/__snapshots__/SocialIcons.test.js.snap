@@ -1,0 +1,511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with Comic Relief links 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 32px;
+  margin-right: 1.5rem;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
+  }
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.facebook.com/comicrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Facebook page"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.instagram.com/comicrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://twitter.com/comicrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Twitter account"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our YouTube channel"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with Red Nose Day links and self target 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 32px;
+  margin-right: 1.5rem;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
+  }
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.facebook.com/rednoseday"
+      rel="noopener noreferrer"
+      target="_self"
+      title="Check out our Facebook page"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.instagram.com/rednoseday"
+      rel="noopener noreferrer"
+      target="_self"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://twitter.com/rednoseday"
+      rel="noopener noreferrer"
+      target="_self"
+      title="Check out our Twitter account"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
+      target="_self"
+      title="Check out our YouTube channel"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`renders correctly with Sport Relief links 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 32px;
+  margin-right: 1.5rem;
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    width: 48px;
+  }
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.facebook.com/sportrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Facebook page"
+    >
+      <img
+        alt="facebook"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.instagram.com/sportrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Instagram account"
+    >
+      <img
+        alt="instagram"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://twitter.com/sportrelief"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our Twitter account"
+    >
+      <img
+        alt="twitter"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      data-test="header-esu-icon"
+      href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Check out our YouTube channel"
+    >
+      <img
+        alt="youtube"
+        className="c3"
+        src="mock.asset"
+      />
+      <span
+        className="c4"
+      >
+        (opens in new window)
+      </span>
+    </a>
+  </li>
+</ul>
+`;
