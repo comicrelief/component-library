@@ -13,7 +13,7 @@ const animationSpeed = 0.75;
 const SlideCopyWrapper = exports.SlideCopyWrapper = _styledComponents.default.div.withConfig({
   displayName: "RichtextCarouselstyle__SlideCopyWrapper",
   componentId: "sc-35wlbv-0"
-})(["width:75%;display:flex;flex-direction:column;justify-content:center;padding:25px;border:1px dashed #89888b;border-radius:20px;position:relative;overflow:visible;height:", "px;&:after{position:absolute;content:'';top:50%;width:34%;right:calc(-34% - 0px);height:2px;border-bottom:1px dashed #89888b;}@media ", "{width:85%;height:", "px;}@media ", "{height:", "px;}"], props => props.mobileHeight, _ref => {
+})(["width:75%;display:flex;flex-direction:column;justify-content:center;padding:25px;border:1px dashed #89888b;border-radius:20px;position:relative;overflow:visible;word-wrap:break-word;height:", "px;&:after{position:absolute;content:'';top:50%;width:34%;right:calc(-34% - 0px);height:2px;border-bottom:1px dashed #89888b;}@media ", "{width:85%;height:", "px;}@media ", "{height:", "px;}"], props => props.mobileHeight, _ref => {
   let {
     theme
   } = _ref;

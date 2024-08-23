@@ -15,8 +15,7 @@ const SlideCopyWrapper = styled.div`
   border-radius: 20px;
   position: relative;
   overflow: visible;
-
-  // To be provided via the CMS
+  word-wrap: break-word;
   height: ${props => props.mobileHeight}px;
   
   &:after {
@@ -35,7 +34,6 @@ const SlideCopyWrapper = styled.div`
   }
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-    // To be provided via the CMS
     height: ${props => props.desktopHeight}px;
   }
 `;

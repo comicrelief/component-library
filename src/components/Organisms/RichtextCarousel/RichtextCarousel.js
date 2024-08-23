@@ -10,16 +10,18 @@ import {
   CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper
 } from './RichtextCarousel.style';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
-// import RichText from '../../Atoms/RichText/RichText';
 
 const RichtextCarousel = ({
   data,
   data: {
+    contentful_id: thisID,
     autoPlay,
-    contentful_id:
-    thisID,
     nodes,
-    headingCopy
+    headingCopy,
+    mobileHeight = 300,
+    tabletHeight = 350,
+    desktopHeight = 350
+
   }
 }) => {
   // Defaults to mobile config:
@@ -27,8 +29,6 @@ const RichtextCarousel = ({
   const [visibleSlides, setVisibleSlides] = useState(1);
   const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-
-  console.log('incoming nodes', nodes);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
@@ -69,9 +69,9 @@ const RichtextCarousel = ({
     <CarouselWrapper
       className="CarouselWrapper"
       id={thisID}
-      mobileHeight={data.mobileHeight}
-      tabletHeight={data.tabletHeight}
-      desktopHeight={data.desktopHeight}
+      mobileHeight={mobileHeight}
+      tabletHeight={tabletHeight}
+      desktopHeight={desktopHeight}
     >
 
       <HeadingCopyWrapper>

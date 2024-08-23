@@ -10,16 +10,17 @@ var _pureReactCarousel = require("pure-react-carousel");
 require("pure-react-carousel/dist/react-carousel.es.css");
 var _RichtextCarousel = require("./RichtextCarousel.style");
 var _allBreakpoints = require("../../../theme/shared/allBreakpoints");
-// import RichText from '../../Atoms/RichText/RichText';
-
 const RichtextCarousel = _ref => {
   let {
     data,
     data: {
-      autoPlay,
       contentful_id: thisID,
+      autoPlay,
       nodes,
-      headingCopy
+      headingCopy,
+      mobileHeight = 300,
+      tabletHeight = 350,
+      desktopHeight = 350
     }
   } = _ref;
   // Defaults to mobile config:
@@ -27,7 +28,6 @@ const RichtextCarousel = _ref => {
   const [visibleSlides, setVisibleSlides] = (0, _react.useState)(1);
   const [totalSlides, setTotalSlides] = (0, _react.useState)(null);
   const [theseItems, setTheseItems] = (0, _react.useState)();
-  console.log('incoming nodes', nodes);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = (0, _react.useCallback)(() => {
@@ -63,9 +63,9 @@ const RichtextCarousel = _ref => {
   return /*#__PURE__*/_react.default.createElement(_RichtextCarousel.CarouselWrapper, {
     className: "CarouselWrapper",
     id: thisID,
-    mobileHeight: data.mobileHeight,
-    tabletHeight: data.tabletHeight,
-    desktopHeight: data.desktopHeight
+    mobileHeight: mobileHeight,
+    tabletHeight: tabletHeight,
+    desktopHeight: desktopHeight
   }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeadingCopyWrapper, null, headingCopy), theseItems && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.CarouselProvider, {
     naturalSlideWidth: 50,
     naturalSlideHeight: 200,

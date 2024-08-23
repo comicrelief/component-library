@@ -4,14 +4,12 @@ const formatItems = thisData => {
   const allValidNodes = [];
 
   const { allNodes: nodes } = thisData;
-  console.log('nodes', nodes);
 
   // Set at a Content Type field level, so doesn't need to be dynamic:
   const numberOfNodes = nodes.length;
 
   // Grab ALL keys from our raw data:
   const theseKeys = Object.keys(thisData);
-  console.log('theseKeys', theseKeys);
   // Iterate over all of the data, using a dynamic key prefix to filter
   // what we need in order to create each object for our allValidNodes array:
   for (let i = 1; i <= numberOfNodes; i += 1) {
