@@ -18,8 +18,8 @@ const RichtextCarousel = _ref => {
     data: {
       autoPlay,
       contentful_id: thisID,
-      allNodes,
-      headerCopy
+      nodes,
+      headingCopy
     }
   } = _ref;
   // Defaults to mobile config:
@@ -27,7 +27,7 @@ const RichtextCarousel = _ref => {
   const [visibleSlides, setVisibleSlides] = (0, _react.useState)(1);
   const [totalSlides, setTotalSlides] = (0, _react.useState)(null);
   const [theseItems, setTheseItems] = (0, _react.useState)();
-  console.log('allNodes', allNodes);
+  console.log('incoming nodes', nodes);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = (0, _react.useCallback)(() => {
@@ -41,14 +41,10 @@ const RichtextCarousel = _ref => {
   }, [isMobile, theseItems]);
 
   // Format our data BEFORE we use it in render:
+  // TO-DO: probably don't need this any more
   (0, _react.useEffect)(() => {
-    setTheseItems(allNodes);
-  }, [setTheseItems, allNodes]);
-
-  // useEffect(() => {
-  //   setTheseItems(formatItems(data));
-  // }, [setTheseItems, data]);
-
+    setTheseItems(nodes);
+  }, [setTheseItems, nodes]);
   (0, _react.useEffect)(() => {
     if (window !== 'undefined' && window.innerWidth >= _allBreakpoints.breakpointValues.M) {
       // On inital render, update carousel plugin config
@@ -70,8 +66,8 @@ const RichtextCarousel = _ref => {
     mobileHeight: data.mobileHeight,
     tabletHeight: data.tabletHeight,
     desktopHeight: data.desktopHeight
-  }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeaderCopy, null, /*#__PURE__*/_react.default.createElement(_RichText.default, {
-    markup: headerCopy
+  }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeadingCopyWrapper, null, /*#__PURE__*/_react.default.createElement(_RichText.default, {
+    markup: headingCopy
   })), theseItems && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.CarouselProvider, {
     naturalSlideWidth: 50,
     naturalSlideHeight: 200,

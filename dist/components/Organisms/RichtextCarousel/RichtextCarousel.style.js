@@ -4,7 +4,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SlideCopyWrapper = exports.HeaderCopy = exports.CarouselWrapper = void 0;
+exports.SlideCopyWrapper = exports.HeadingCopyWrapper = exports.CarouselWrapper = void 0;
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _spacing = _interopRequireDefault(require("../../../theme/shared/spacing"));
 // import Text from '../../Atoms/Text/Text';
@@ -24,8 +24,8 @@ const SlideCopyWrapper = exports.SlideCopyWrapper = _styledComponents.default.di
   } = _ref2;
   return theme.allBreakpoints('L');
 }, props => props.desktopHeight);
-const HeaderCopy = exports.HeaderCopy = _styledComponents.default.div.withConfig({
-  displayName: "RichtextCarouselstyle__HeaderCopy",
+const HeadingCopyWrapper = exports.HeadingCopyWrapper = _styledComponents.default.div.withConfig({
+  displayName: "RichtextCarouselstyle__HeadingCopyWrapper",
   componentId: "sc-35wlbv-1"
 })([""]);
 
