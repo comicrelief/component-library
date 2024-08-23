@@ -224,8 +224,8 @@ const carouselItemsMinimal = {
 };
 
 const RichtextCarouselItems = {
-  __typename: 'ContentfulRichtextCarousel',
-  contentful_id: 'doesntmateter',
+  // __typename: 'ContentfulRichtextCarousel',
+  contentful_id: 'nqIEHjiYE8Yd2A2a5cI3O',
   // Ugly here, but to be provided by Richtextrender function in-situ:
   headerCopy: `<p style="text-align: center;">Send Billy a message of support as he takes on</p>
   <h2 style="text-align: center;">THE IRONMAN CHALLENGE</h2>`,
@@ -233,7 +233,7 @@ const RichtextCarouselItems = {
   mobileHeight: 300,
   tabletHeight: 350,
   desktopHeight: 350,
-  allNodes: [
+  nodes: [
     { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS.' },
     { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.' },
     { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },

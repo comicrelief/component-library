@@ -3,11 +3,11 @@ const formatItems = thisData => {
   // Somewhere to store our formatted items:
   const allValidNodes = [];
 
-  const { allNodes } = thisData;
-  console.log('allNodes', allNodes);
+  const { allNodes: nodes } = thisData;
+  console.log('nodes', nodes);
 
   // Set at a Content Type field level, so doesn't need to be dynamic:
-  const numberOfNodes = allNodes.length;
+  const numberOfNodes = nodes.length;
 
   // Grab ALL keys from our raw data:
   const theseKeys = Object.keys(thisData);

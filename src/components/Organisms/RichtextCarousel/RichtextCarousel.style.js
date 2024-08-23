@@ -40,7 +40,7 @@ const SlideCopyWrapper = styled.div`
   }
 `;
 
-const HeaderCopy = styled.div`
+const HeadingCopyWrapper = styled.div`
   // background: orange;
 `;
 
@@ -258,5 +258,5 @@ const CarouselWrapper = styled.div`
 
 export {
   CarouselWrapper, SlideCopyWrapper,
-  HeaderCopy
+  HeadingCopyWrapper
 };

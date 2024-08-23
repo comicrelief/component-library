@@ -7,7 +7,7 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, SlideCopyWrapper, HeaderCopy
+  CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper
 } from './RichtextCarousel.style';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import RichText from '../../Atoms/RichText/RichText';
@@ -18,8 +18,8 @@ const RichtextCarousel = ({
     autoPlay,
     contentful_id:
     thisID,
-    allNodes,
-    headerCopy
+    nodes,
+    headingCopy
   }
 }) => {
   // Defaults to mobile config:
@@ -28,7 +28,7 @@ const RichtextCarousel = ({
   const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
 
-  console.log('allNodes', allNodes);
+  console.log('incoming nodes', nodes);
 
   // Custom function to let us update the carousel config dynamically
   const screenResize = useCallback(() => {
@@ -43,13 +43,10 @@ const RichtextCarousel = ({
   }, [isMobile, theseItems]);
 
   // Format our data BEFORE we use it in render:
+  // TO-DO: probably don't need this any more
   useEffect(() => {
-    setTheseItems(allNodes);
-  }, [setTheseItems, allNodes]);
-
-  // useEffect(() => {
-  //   setTheseItems(formatItems(data));
-  // }, [setTheseItems, data]);
+    setTheseItems(nodes);
+  }, [setTheseItems, nodes]);
 
   useEffect(() => {
     if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
@@ -77,9 +74,9 @@ const RichtextCarousel = ({
       desktopHeight={data.desktopHeight}
     >
 
-      <HeaderCopy>
-        <RichText markup={headerCopy} />
-      </HeaderCopy>
+      <HeadingCopyWrapper>
+        <RichText markup={headingCopy} />
+      </HeadingCopyWrapper>
 
       {theseItems && (
       <CarouselProvider
@@ -143,8 +140,8 @@ const RichtextCarousel = ({
 
 RichtextCarousel.propTypes = {
   data: PropTypes.shape({
-    headerCopy: PropTypes.node.isRequired, // Richtext
-    allNodes: PropTypes.arrayOf(PropTypes.shape({
+    headingCopy: PropTypes.node.isRequired, // Richtext
+    nodes: PropTypes.arrayOf(PropTypes.shape({
       copy: PropTypes.string.isRequired
     })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
