@@ -10,7 +10,7 @@ import {
   CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper
 } from './RichtextCarousel.style';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
-import RichText from '../../Atoms/RichText/RichText';
+// import RichText from '../../Atoms/RichText/RichText';
 
 const RichtextCarousel = ({
   data,
@@ -75,7 +75,7 @@ const RichtextCarousel = ({
     >
 
       <HeadingCopyWrapper>
-        <RichText markup={headingCopy} />
+        {headingCopy}
       </HeadingCopyWrapper>
 
       {theseItems && (

@@ -1,6 +1,5 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard").default;
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -11,7 +10,8 @@ var _pureReactCarousel = require("pure-react-carousel");
 require("pure-react-carousel/dist/react-carousel.es.css");
 var _RichtextCarousel = require("./RichtextCarousel.style");
 var _allBreakpoints = require("../../../theme/shared/allBreakpoints");
-var _RichText = _interopRequireDefault(require("../../Atoms/RichText/RichText"));
+// import RichText from '../../Atoms/RichText/RichText';
+
 const RichtextCarousel = _ref => {
   let {
     data,
@@ -66,9 +66,7 @@ const RichtextCarousel = _ref => {
     mobileHeight: data.mobileHeight,
     tabletHeight: data.tabletHeight,
     desktopHeight: data.desktopHeight
-  }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeadingCopyWrapper, null, /*#__PURE__*/_react.default.createElement(_RichText.default, {
-    markup: headingCopy
-  })), theseItems && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.CarouselProvider, {
+  }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeadingCopyWrapper, null, headingCopy), theseItems && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.CarouselProvider, {
     naturalSlideWidth: 50,
     naturalSlideHeight: 200,
     totalSlides: totalSlides,
