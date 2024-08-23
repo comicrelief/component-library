@@ -114,9 +114,7 @@ const RichtextCarousel = ({
                   tabletHeight={data.tabletHeight}
                   desktopHeight={data.desktopHeight}
                 >
-                  <p>
-                    {theseItems[index].copy}
-                  </p>
+                  {theseItems[index].copy}
                 </SlideCopyWrapper>
 
               </Slide>
@@ -142,7 +140,7 @@ RichtextCarousel.propTypes = {
   data: PropTypes.shape({
     headingCopy: PropTypes.node.isRequired, // Richtext
     nodes: PropTypes.arrayOf(PropTypes.shape({
-      copy: PropTypes.string.isRequired
+      copy: PropTypes.node.isRequired
     })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
     contentful_id: PropTypes.string.isRequired,

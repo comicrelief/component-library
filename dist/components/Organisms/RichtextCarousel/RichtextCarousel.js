@@ -95,7 +95,7 @@ const RichtextCarousel = _ref => {
         mobileHeight: data.mobileHeight,
         tabletHeight: data.tabletHeight,
         desktopHeight: data.desktopHeight
-      }, /*#__PURE__*/_react.default.createElement("p", null, theseItems[index].copy)))
+      }, theseItems[index].copy))
     );
   }), isMobile === false && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.Slide, {
     index: theseItems.length + 1,
