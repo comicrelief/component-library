@@ -12,15 +12,17 @@ var _RichtextCarousel = require("./RichtextCarousel.style");
 var _allBreakpoints = require("../../../theme/shared/allBreakpoints");
 const RichtextCarousel = _ref => {
   let {
-    data,
     data: {
       contentful_id: thisID,
       autoPlay,
       nodes,
       headingCopy,
+      // Set some defaults for good measure:
       mobileHeight = 300,
       tabletHeight = 350,
-      desktopHeight = 350
+      desktopHeight = 350,
+      carouselBackgroundColour = 'white',
+      nodeBackgroundColour = 'white'
     }
   } = _ref;
   // Defaults to mobile config:
@@ -65,7 +67,8 @@ const RichtextCarousel = _ref => {
     id: thisID,
     mobileHeight: mobileHeight,
     tabletHeight: tabletHeight,
-    desktopHeight: desktopHeight
+    desktopHeight: desktopHeight,
+    carouselBackgroundColour: carouselBackgroundColour
   }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.HeadingCopyWrapper, null, headingCopy), theseItems && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.CarouselProvider, {
     naturalSlideWidth: 50,
     naturalSlideHeight: 200,
@@ -92,9 +95,10 @@ const RichtextCarousel = _ref => {
         key: thisOffsetIndex
       }, /*#__PURE__*/_react.default.createElement(_RichtextCarousel.SlideCopyWrapper, {
         className: "slide-copy-wrapper",
-        mobileHeight: data.mobileHeight,
-        tabletHeight: data.tabletHeight,
-        desktopHeight: data.desktopHeight
+        mobileHeight: mobileHeight,
+        tabletHeight: tabletHeight,
+        desktopHeight: desktopHeight,
+        nodeBackgroundColour: nodeBackgroundColour
       }, theseItems[index].copy))
     );
   }), isMobile === false && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.Slide, {
