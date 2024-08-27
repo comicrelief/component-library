@@ -12,16 +12,17 @@ import {
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const RichtextCarousel = ({
-  data,
   data: {
     contentful_id: thisID,
     autoPlay,
     nodes,
     headingCopy,
+    // Set some defaults for good measure:
     mobileHeight = 300,
     tabletHeight = 350,
     desktopHeight = 350,
-    carouselBackgroundColour = 'white'
+    carouselBackgroundColour = 'white',
+    nodeBackgroundColour = 'white'
   }
 }) => {
   // Defaults to mobile config:
@@ -111,9 +112,10 @@ const RichtextCarousel = ({
 
                 <SlideCopyWrapper
                   className="slide-copy-wrapper"
-                  mobileHeight={data.mobileHeight}
-                  tabletHeight={data.tabletHeight}
-                  desktopHeight={data.desktopHeight}
+                  mobileHeight={mobileHeight}
+                  tabletHeight={tabletHeight}
+                  desktopHeight={desktopHeight}
+                  nodeBackgroundColour={nodeBackgroundColour}
                 >
                   {theseItems[index].copy}
                 </SlideCopyWrapper>
@@ -148,7 +150,8 @@ RichtextCarousel.propTypes = {
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
     desktopHeight: PropTypes.number,
-    carouselBackgroundColour: PropTypes.string
+    carouselBackgroundColour: PropTypes.string,
+    nodeBackgroundColour: PropTypes.string
   }).isRequired
 };
 

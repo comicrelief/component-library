@@ -6,6 +6,8 @@ import spacing from '../../../theme/shared/spacing';
 const animationSpeed = 0.75;
 
 const SlideCopyWrapper = styled.div`
+  background: ${({ theme, nodeBackgroundColour }) => theme.color(nodeBackgroundColour)};
+  height: ${props => props.mobileHeight}px;
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -16,8 +18,7 @@ const SlideCopyWrapper = styled.div`
   position: relative;
   overflow: visible;
   word-wrap: break-word;
-  height: ${props => props.mobileHeight}px;
-  
+
   &:after {
     position: absolute;
     content: '';
@@ -29,10 +30,9 @@ const SlideCopyWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: 85%;
     height: ${props => props.tabletHeight}px;
+    width: 85%;
   }
-
     @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: ${props => props.desktopHeight}px;
   }
@@ -45,7 +45,6 @@ const HeadingCopyWrapper = styled.div`
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
-  // HERE
   background: ${({ theme, carouselBackgroundColour }) => theme.color(carouselBackgroundColour)};
   
   max-width: 760px;

@@ -236,6 +236,8 @@ const RichtextCarouselItems = {
     { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
   ],
   autoPlay: true
+  // carouselBackgroundColour: 'white',
+  // nodeBackgroundColour: 'white'
 };
 
 export {
