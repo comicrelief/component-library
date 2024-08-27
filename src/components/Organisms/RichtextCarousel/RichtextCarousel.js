@@ -20,8 +20,8 @@ const RichtextCarousel = ({
     headingCopy,
     mobileHeight = 300,
     tabletHeight = 350,
-    desktopHeight = 350
-
+    desktopHeight = 350,
+    carouselBackgroundColour = 'white'
   }
 }) => {
   // Defaults to mobile config:
@@ -72,6 +72,7 @@ const RichtextCarousel = ({
       mobileHeight={mobileHeight}
       tabletHeight={tabletHeight}
       desktopHeight={desktopHeight}
+      carouselBackgroundColour={carouselBackgroundColour}
     >
 
       <HeadingCopyWrapper>
@@ -146,7 +147,8 @@ RichtextCarousel.propTypes = {
     contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
-    desktopHeight: PropTypes.number
+    desktopHeight: PropTypes.number,
+    carouselBackgroundColour: PropTypes.string
   }).isRequired
 };
 

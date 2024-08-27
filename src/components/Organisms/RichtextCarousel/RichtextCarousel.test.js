@@ -12,12 +12,12 @@ it("renders correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      text-align: left;
+      text-align: center;
     }
 
     .c0 {
       height: 100%;
-      background-color: #FFFFFF;
+      background: #FFFFFF;
       max-width: 760px;
       padding: 2rem 2rem 4rem;
       margin: 0 auto;
@@ -55,7 +55,7 @@ it("renders correctly", () => {
       height: 100%;
       -webkit-transition: opacity 0.2s linear;
       transition: opacity 0.2s linear;
-      background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
     }
 
     .c0 .carousel button.carousel__back-button:hover:after,
@@ -77,7 +77,7 @@ it("renders correctly", () => {
     .c0 .carousel button.carousel__next-button:after {
       left: auto;
       right: 0;
-      background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+      background: linear-gradient(90deg,#FFFFFF00,#FFFFFF7a,#FFFFFF);
     }
 
     .c0 .carousel .richtext-carousel {
@@ -212,17 +212,8 @@ it("renders correctly", () => {
       id="7zdR84QkZwrTh9NWx2H926"
     >
       <div
-        className=""
-      >
-        <div
-          className="c1"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Over the past two years, we’ve supported",
-            }
-          }
-        />
-      </div>
+        className="c1"
+      />
     </div>
   `);
 });

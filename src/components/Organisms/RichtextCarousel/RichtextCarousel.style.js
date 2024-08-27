@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 // import Text from '../../Atoms/Text/Text';
 
@@ -39,13 +39,15 @@ const SlideCopyWrapper = styled.div`
 `;
 
 const HeadingCopyWrapper = styled.div`
-  // background: orange;
+  text-align: center;
 `;
 
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
-  background-color: ${({ theme }) => theme.color('white')};
+  // HERE
+  background: ${({ theme, carouselBackgroundColour }) => theme.color(carouselBackgroundColour)};
+  
   max-width: 760px;
   padding:  ${spacing('l')} ${spacing('l')} ${spacing('xl')};
   margin: 0 auto;
@@ -79,8 +81,10 @@ const CarouselWrapper = styled.div`
         width: 50%;
         height: 100%;
         transition: opacity 0.2s linear;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+        background: ${({ theme, carouselBackgroundColour }) => css`
+          linear-gradient(90deg, ${theme.color(carouselBackgroundColour)},
+          ${theme.color(carouselBackgroundColour)}7a, ${theme.color(carouselBackgroundColour)}00);
+        `};
       }
 
       &:hover {
@@ -108,8 +112,11 @@ const CarouselWrapper = styled.div`
       &:after {
         left: auto;
         right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+
+        background: ${({ theme, carouselBackgroundColour }) => css`
+          linear-gradient(90deg, ${theme.color(carouselBackgroundColour)}00,
+          ${theme.color(carouselBackgroundColour)}7a, ${theme.color(carouselBackgroundColour)});
+        `};
       }
     }
 
