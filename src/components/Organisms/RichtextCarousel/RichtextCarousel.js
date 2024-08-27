@@ -22,7 +22,8 @@ const RichtextCarousel = ({
     tabletHeight = 350,
     desktopHeight = 350,
     carouselBackgroundColour = 'white',
-    nodeBackgroundColour = 'white'
+    nodeBackgroundColour = 'white',
+    nodeOutlineColour = 'grey'
   }
 }) => {
   // Defaults to mobile config:
@@ -116,6 +117,7 @@ const RichtextCarousel = ({
                   tabletHeight={tabletHeight}
                   desktopHeight={desktopHeight}
                   nodeBackgroundColour={nodeBackgroundColour}
+                  nodeOutlineColour={nodeOutlineColour}
                 >
                   {theseItems[index].copy}
                 </SlideCopyWrapper>
@@ -151,7 +153,8 @@ RichtextCarousel.propTypes = {
     tabletHeight: PropTypes.number,
     desktopHeight: PropTypes.number,
     carouselBackgroundColour: PropTypes.string,
-    nodeBackgroundColour: PropTypes.string
+    nodeBackgroundColour: PropTypes.string,
+    nodeOutlineColour: PropTypes.string
   }).isRequired
 };
 

@@ -22,7 +22,8 @@ const RichtextCarousel = _ref => {
       tabletHeight = 350,
       desktopHeight = 350,
       carouselBackgroundColour = 'white',
-      nodeBackgroundColour = 'white'
+      nodeBackgroundColour = 'white',
+      nodeOutlineColour = 'grey'
     }
   } = _ref;
   // Defaults to mobile config:
@@ -98,7 +99,8 @@ const RichtextCarousel = _ref => {
         mobileHeight: mobileHeight,
         tabletHeight: tabletHeight,
         desktopHeight: desktopHeight,
-        nodeBackgroundColour: nodeBackgroundColour
+        nodeBackgroundColour: nodeBackgroundColour,
+        nodeOutlineColour: nodeOutlineColour
       }, theseItems[index].copy))
     );
   }), isMobile === false && /*#__PURE__*/_react.default.createElement(_pureReactCarousel.Slide, {

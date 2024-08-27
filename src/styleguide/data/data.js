@@ -238,6 +238,7 @@ const RichtextCarouselItems = {
   autoPlay: true
   // carouselBackgroundColour: 'white',
   // nodeBackgroundColour: 'white'
+  // nodeOutlineColour: 'grey'
 };
 
 export {

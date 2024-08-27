@@ -13,7 +13,7 @@ const SlideCopyWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 25px;
-  border: 1px dashed #89888b;
+  border: 1px dashed ${({ theme, nodeOutlineColour }) => theme.color(nodeOutlineColour)};
   border-radius: 20px;
   position: relative;
   overflow: visible;
@@ -26,13 +26,14 @@ const SlideCopyWrapper = styled.div`
     width: 34%;
     right: calc(-34% - 0px);
     height: 2px;
-    border-bottom: 1px dashed #89888b;
+    border-bottom: 1px dashed ${({ theme, nodeOutlineColour }) => theme.color(nodeOutlineColour)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     height: ${props => props.tabletHeight}px;
     width: 85%;
   }
+
     @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: ${props => props.desktopHeight}px;
   }
