@@ -207,6 +207,26 @@ const CarouselWrapper = styled.div`
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
           padding-bottom: ${props => props.desktopHeight}px !important;
+
+          // First
+          &.carousel__slide--visible {
+
+            // 2nd and 3rd
+            + .carousel__slide--visible {
+
+              // 3rd only
+              + .carousel__slide--visible {
+                .carousel__inner-slide {
+                  > div:first-child {
+                    &:after {
+                      right: calc(-125% - 5px);
+                      width: 125%;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         // END OF DESKTOP
 
