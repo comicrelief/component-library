@@ -58,7 +58,7 @@ const CarouselWrapper = styled.div`
   .carousel {
     position: relative;
     margin: 0 auto;
-    padding-top: ${spacing('m')};
+    padding-top: ${spacing('l')};
 
     button.carousel__back-button,
     button.carousel__next-button {
