@@ -213,7 +213,9 @@ it("renders correctly", () => {
     >
       <div
         className="c1"
-      />
+      >
+        Some heading copy that will be nicely constructed in-situ
+      </div>
     </div>
   `);
 });

@@ -44,8 +44,7 @@ const RichtextCarousel = ({
     }
   }, [isMobile, theseItems]);
 
-  // Format our data BEFORE we use it in render:
-  // TO-DO: probably don't need this any more
+  // Cache our data source, using as a flag for render logic:
   useEffect(() => {
     setTheseItems(nodes);
   }, [setTheseItems, nodes]);
@@ -143,9 +142,9 @@ const RichtextCarousel = ({
 
 RichtextCarousel.propTypes = {
   data: PropTypes.shape({
-    headingCopy: PropTypes.node.isRequired, // Richtext
+    headingCopy: PropTypes.string.isRequired,
     nodes: PropTypes.arrayOf(PropTypes.shape({
-      copy: PropTypes.node.isRequired
+      copy: PropTypes.string.isRequired
     })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
     contentful_id: PropTypes.string.isRequired,
