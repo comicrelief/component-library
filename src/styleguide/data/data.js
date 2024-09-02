@@ -224,7 +224,6 @@ const carouselItemsMinimal = {
 };
 
 const RichtextCarouselItems = {
-  // __typename: 'ContentfulRichtextCarousel',
   contentful_id: 'nqIEHjiYE8Yd2A2a5cI3O',
   // Ugly here, but to be provided by Richtextrender function in-situ:
   headerCopy: `<p style="text-align: center;">Send Billy a message of support as he takes on</p>
