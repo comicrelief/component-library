@@ -19,7 +19,7 @@ it("renders correctly", () => {
       height: 100%;
       background: #FFFFFF;
       max-width: 760px;
-      padding: 2.5rem 2rem 4rem;
+      padding: 2.5rem 2rem 3.5rem;
       margin: 0 auto;
       border-radius: 20px;
       box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
@@ -28,7 +28,7 @@ it("renders correctly", () => {
     .c0 .carousel {
       position: relative;
       margin: 0 auto;
-      padding-top: 1.5rem;
+      padding-top: 2rem;
     }
 
     .c0 .carousel button.carousel__back-button,
