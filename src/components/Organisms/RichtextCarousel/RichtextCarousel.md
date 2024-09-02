@@ -2,7 +2,6 @@
 
 ```js
 const { RichtextCarouselItems } = require('../../../styleguide/data/data');
-// import Text from '../../Atoms/Text/Text';
 
     <div>
         <h2 style={{textAlign: 'center'}}>

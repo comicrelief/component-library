@@ -3,11 +3,11 @@ import "jest-styled-components";
 
 import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import RichtextCarousel from "./RichtextCarousel";
-const { carouselItemsComplete } = require("../../../styleguide/data/data");
+const { RichtextCarouselItems } = require("../../../styleguide/data/data");
 
 it("renders correctly", () => {
   const tree = renderWithTheme(
-    <RichtextCarousel data={carouselItemsComplete} />
+    <RichtextCarousel data={RichtextCarouselItems} />
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -133,7 +133,7 @@ it("renders correctly", () => {
 
     @media (min-width:740px) {
       .c0 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 300px !important;
+        padding-bottom: 350px !important;
       }
 
       .c0 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child {
@@ -198,7 +198,7 @@ it("renders correctly", () => {
 
     @media (min-width:1024px) {
       .c0 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 300px !important;
+        padding-bottom: 350px !important;
       }
 
       .c0 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
@@ -209,7 +209,7 @@ it("renders correctly", () => {
 
     <div
       className="c0 CarouselWrapper"
-      id="7zdR84QkZwrTh9NWx2H926"
+      id="nqIEHjiYE8Yd2A2a5cI3O"
     >
       <div
         className="c1"

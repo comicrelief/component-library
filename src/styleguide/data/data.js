@@ -52,9 +52,9 @@ const testImpactSliderItems = [
 const carouselItemsComplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H926',
-  mobileHeight: 300,
-  tabletHeight: 300,
-  desktopHeight: 300,
+  mobileHeight: 425,
+  tabletHeight: 450,
+  desktopHeight: 475,
   headerCopy: 'Over the past two years, we’ve supported',
   peopleHelpedText: '11.7 million people',
   autoPlay: false,
@@ -236,9 +236,6 @@ const RichtextCarouselItems = {
     { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
   ],
   autoPlay: true
-  // carouselBackgroundColour: 'white',
-  // nodeBackgroundColour: 'white'
-  // nodeOutlineColour: 'grey'
 };
 
 export {
