@@ -1,7 +1,8 @@
 # Cards Carousel
-
 ```js
+import cardCarouselMockData from './_cardCarouselMockData.js';
+
 <div style={{backgroundColor: 'pink', padding: '10px'}}>
-    <CardsCarousel blurColour='pink' />
+    <CardsCarousel carouselData={cardCarouselMockData} blurColour='pink' />
 </div>
 ```

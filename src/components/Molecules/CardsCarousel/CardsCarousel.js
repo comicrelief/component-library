@@ -1,3 +1,4 @@
+// !!!!!!! Need to code for edge cases e.g. only 2 cards, no cards etc
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -8,8 +9,6 @@ import {
   ButtonCarousel,
   ButtonsWrapper
 } from './_CarouselButtons';
-
-import cardCarouselMockData from './_cardCarouselMockData';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -28,7 +27,7 @@ const Slide = styled.div`
   flex-shrink: 0;
 `;
 
-const CardsCarousel = ({ blurColour }) => {
+const CardsCarousel = ({ carouselData, blurColour }) => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const chosenCard = cardIndex => (
@@ -37,15 +36,15 @@ const CardsCarousel = ({ blurColour }) => {
         target="_blank"
         link="/home"
         linkLabel="find out more"
-        imageLow={cardCarouselMockData[cardIndex].imageLow}
-        images={cardCarouselMockData[cardIndex].images}
+        imageLow={carouselData[cardIndex].imageLow}
+        images={carouselData[cardIndex].images}
         imageAltText="test"
         backgroundColor="white"
         height="auto"
         icon={<Internal colour="white" />}
       >
-        <Text tag="h3" color="purple" size="xl">{cardCarouselMockData[cardIndex].title}</Text>
-        <Text tag="p">{cardCarouselMockData[cardIndex].description}</Text>
+        <Text tag="h3" color="purple" size="xl">{carouselData[cardIndex].title}</Text>
+        <Text tag="p">{carouselData[cardIndex].description}</Text>
       </CardDs>
     </Slide>
   );
@@ -54,24 +53,24 @@ const CardsCarousel = ({ blurColour }) => {
     <>
       <Container>
 
-        {chosenCard((slideIndex - 1 + cardCarouselMockData.length) % cardCarouselMockData.length)}
+        {chosenCard((slideIndex - 1 + carouselData.length) % carouselData.length)}
 
         {chosenCard(slideIndex)}
 
-        {chosenCard((slideIndex + 1 + cardCarouselMockData.length) % cardCarouselMockData.length)}
+        {chosenCard((slideIndex + 1 + carouselData.length) % carouselData.length)}
 
         <ButtonsWrapper>
           <ButtonCarousel
             slideIndex={slideIndex}
             setSlideIndex={setSlideIndex}
-            cardCarouselMockData={cardCarouselMockData}
+            carouselData={carouselData}
             blurColour={blurColour}
             direction="left"
           />
           <ButtonCarousel
             slideIndex={slideIndex}
             setSlideIndex={setSlideIndex}
-            cardCarouselMockData={cardCarouselMockData}
+            carouselData={carouselData}
             blurColour={blurColour}
             direction="right"
           />
@@ -82,8 +81,16 @@ const CardsCarousel = ({ blurColour }) => {
   );
 };
 
+const cardPropTypes = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imageLow: PropTypes.string.isRequired,
+  images: PropTypes.string.isRequired
+});
+
 CardsCarousel.propTypes = {
-  blurColour: PropTypes.string
+  blurColour: PropTypes.string,
+  carouselData: PropTypes.arrayOf(cardPropTypes).isRequired
 };
 
 CardsCarousel.defaultProps = {
