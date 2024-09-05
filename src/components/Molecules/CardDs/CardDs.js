@@ -7,18 +7,18 @@ import {
 } from './CardDs.style';
 
 const CardDs = ({
-  icon,
-  backgroundColor,
-  imageLow,
-  images,
-  image,
-  imageAltText,
-  height,
-  width,
+  backgroundColor = 'white',
+  imageLow = null,
+  images = null,
+  image = null,
+  link = null,
+  linkLabel = null,
+  target = null,
+  imageAltText = '',
+  width = '100%',
+  height = '100%',
+  icon = null,
   children,
-  link,
-  linkLabel,
-  target,
   ...rest
 }) => {
   const Media = (
@@ -102,20 +102,6 @@ CardDs.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
   icon: PropTypes.node
-};
-
-CardDs.defaultProps = {
-  backgroundColor: 'white',
-  imageLow: null,
-  images: null,
-  image: null,
-  link: null,
-  linkLabel: null,
-  target: null,
-  imageAltText: '',
-  width: '100%',
-  height: '100%',
-  icon: null
 };
 
 export default CardDs;

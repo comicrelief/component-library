@@ -44,12 +44,12 @@ const Select = React.forwardRef(
       description,
       label,
       options,
-      hideLabel,
-      defaultValue,
-      onChange,
-      greyDescription,
-      className,
-      optional,
+      hideLabel = false,
+      defaultValue = '',
+      onChange = null,
+      greyDescription = false,
+      className = '',
+      optional = false,
       ...rest
     },
     ref
@@ -112,17 +112,6 @@ Select.propTypes = {
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
   optional: PropTypes.bool
-};
-
-Select.defaultProps = {
-  hideLabel: false,
-  defaultValue: '',
-  onChange: null,
-  /** If true, the 'description' option, which is initially selected but disabled, will be grey
-   *   - like a text input's placeholder */
-  greyDescription: false,
-  className: '',
-  optional: false
 };
 
 export default Select;

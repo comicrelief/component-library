@@ -6,30 +6,39 @@ import { getPages } from './Utils/PaginationCalculator';
 
 /** Customizable Pagination component */
 const Pagination = ({
-  PageComponent,
+  PageComponent = Item,
+  pageComponentProps = {},
+  showFirst = true,
+  showPrevious = true,
+  showNext = true,
+  showLast = true,
+  showMore = true,
+  maxPages = 5,
+  previousLabel = '‹',
+  nextLabel = '›',
+  firstLabel = '«',
+  lastLabel = '»',
+  moreLabel = '...',
+  getPageLabel = currentPage => currentPage.toString(),
+  previousAriaLabel = 'Previous page',
+  nextAriaLabel = 'Next page',
+  firstAriaLabel = 'First page',
+  lastAriaLabel = 'Last page',
+  moreAriaLabel = 'More pages',
+  getPageAriaLabel = currentPage => `Page ${currentPage}`,
+  target = 'self',
+  color = 'black',
+  backgroundColor = 'white',
+  selectedColor = 'white',
+  selectedBackgroundColor = 'red',
+  disabledColor = 'grey_medium',
+  disabledBackgroundColor = 'white',
+  colorOnHover = 'white',
+  backgroundColorOnHover = 'teal',
   totalPages,
-  maxPages,
   currentPage,
-  showFirst,
-  firstLabel,
-  firstAriaLabel,
-  showPrevious,
-  previousLabel,
-  previousAriaLabel,
-  showMore,
-  moreLabel,
-  moreAriaLabel,
-  showNext,
-  nextLabel,
-  nextAriaLabel,
-  showLast,
-  lastLabel,
-  lastAriaLabel,
-  getPageLabel,
-  getPageAriaLabel,
   onSelect,
   createURL,
-  pageComponentProps,
   ...restProps
 }) => {
   if (!totalPages) {
@@ -95,6 +104,15 @@ const Pagination = ({
       pageComponentProps={pageComponentProps}
       createURL={createURL}
       onSelect={onSelect}
+      target={target}
+      color={color}
+      backgroundColor={backgroundColor}
+      selectedColor={selectedColor}
+      selectedBackgroundColor={selectedBackgroundColor}
+      disabledColor={disabledColor}
+      disabledBackgroundColor={disabledBackgroundColor}
+      colorOnHover={colorOnHover}
+      backgroundColorOnHover={backgroundColorOnHover}
       {...restProps}
     />
   );
@@ -181,35 +199,4 @@ Pagination.propTypes = {
   backgroundColorOnHover: PropTypes.string
 };
 
-Pagination.defaultProps = {
-  PageComponent: Item,
-  pageComponentProps: {},
-  showFirst: true,
-  showPrevious: true,
-  showNext: true,
-  showLast: true,
-  showMore: true,
-  maxPages: 5,
-  previousLabel: '‹',
-  nextLabel: '›',
-  firstLabel: '«',
-  lastLabel: '»',
-  moreLabel: '...',
-  getPageLabel: currentPage => currentPage.toString(),
-  previousAriaLabel: 'Previous page',
-  nextAriaLabel: 'Next page',
-  firstAriaLabel: 'First page',
-  lastAriaLabel: 'Last page',
-  moreAriaLabel: 'More pages',
-  getPageAriaLabel: currentPage => `Page ${currentPage}`,
-  target: 'self',
-  color: 'black',
-  backgroundColor: 'white',
-  selectedColor: 'white',
-  selectedBackgroundColor: 'red',
-  disabledColor: 'grey_medium',
-  disabledBackgroundColor: 'white',
-  colorOnHover: 'white',
-  backgroundColorOnHover: 'teal'
-};
 export default Pagination;

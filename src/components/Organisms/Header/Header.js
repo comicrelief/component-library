@@ -8,7 +8,7 @@ import {
 } from './Header.style';
 
 const Header = ({
-  navItems, metaIcons, campaign, ...rest
+  navItems = {}, metaIcons, campaign = 'Comic Relief', ...rest
 }) => (
   <HeaderWrapper navItems {...rest}>
     <InnerWrapper>
@@ -27,11 +27,6 @@ Header.propTypes = {
   /** it can be icons, buttons  */
   metaIcons: PropTypes.node.isRequired,
   campaign: PropTypes.string
-};
-
-Header.defaultProps = {
-  navItems: {},
-  campaign: 'Comic Relief'
 };
 
 export default Header;

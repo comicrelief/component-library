@@ -10,7 +10,7 @@ import {
 } from './SearchInput.style';
 
 const SearchInput = ({
-  onChange, placeholder, value, ...rest
+  onChange, placeholder = '', value, ...rest
 }) => (
   <Wrapper>
     <InnerWrapper>
@@ -39,10 +39,6 @@ SearchInput.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired
-};
-
-SearchInput.defaultProps = {
-  placeholder: ''
 };
 
 export default SearchInput;

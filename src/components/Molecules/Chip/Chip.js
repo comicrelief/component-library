@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { CheckLabel, Overlay, CheckInput } from './Chip.style';
 
 const Chip = ({
-  category, handleToggle, color, checked
+  category, handleToggle, color = 'purple', checked = false
 }) => (
   <CheckLabel>
     <CheckInput
@@ -25,11 +25,6 @@ Chip.propTypes = {
   color: PropTypes.string,
   checked: PropTypes.bool,
   handleToggle: PropTypes.func.isRequired
-};
-
-Chip.defaultProps = {
-  color: 'purple',
-  checked: false
 };
 
 export default Chip;

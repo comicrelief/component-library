@@ -35,8 +35,8 @@ const TextInputWithDropdown = React.forwardRef(
       id,
       name,
       label,
-      dropdownInstruction,
-      className,
+      dropdownInstruction = null,
+      className = '',
       ...otherInputProps
     },
     ref
@@ -186,21 +186,12 @@ TextInputWithDropdown.propTypes = {
   dropdownInstruction: PropTypes.string
 };
 
-TextInputWithDropdown.defaultProps = {
-  dropdownInstruction: null,
-  className: ''
-};
-
 Options.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onSelect: PropTypes.func.isRequired,
   dropdownInstruction: PropTypes.string,
   activeOption: PropTypes.number.isRequired,
   resetActiveOption: PropTypes.func.isRequired
-};
-
-Options.defaultProps = {
-  dropdownInstruction: null
 };
 
 export default TextInputWithDropdown;

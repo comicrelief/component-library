@@ -27,7 +27,7 @@ const Signup = ({
   data: { regularGiving },
   donateLink,
   otherDescription,
-  clientID,
+  clientID = 'the_fix',
   cartID,
   mbshipID,
   ...rest
@@ -204,8 +204,4 @@ Signup.propTypes = {
   data: PropTypes.objectOf(PropTypes.shape)
 };
 
-Signup.defaultProps = {
-  clientID: 'the_fix',
-  data: {}
-};
 export default Signup;

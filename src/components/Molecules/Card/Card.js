@@ -4,17 +4,17 @@ import Picture from '../../Atoms/Picture/Picture';
 import { Container, Wrapper, Copy } from './Card.style';
 
 const Card = ({
-  backgroundColor,
-  imageLow,
-  images,
-  image,
-  imageAltText,
-  height,
-  width,
-  children,
-  squaredCorners,
-  smallBreakpointRowLayout,
-  mediumBreakpointRowLayout,
+  backgroundColor = 'white',
+  children = null,
+  imageLow = null,
+  images = null,
+  image = null,
+  imageAltText = '',
+  width = '100%',
+  height = '100%',
+  squaredCorners = false,
+  smallBreakpointRowLayout = null,
+  mediumBreakpointRowLayout = null,
   ...rest
 }) => (
   <Container
@@ -63,20 +63,6 @@ Card.propTypes = {
   squaredCorners: PropTypes.bool,
   smallBreakpointRowLayout: PropTypes.bool,
   mediumBreakpointRowLayout: PropTypes.bool
-};
-
-Card.defaultProps = {
-  backgroundColor: 'white',
-  children: null,
-  imageLow: null,
-  images: null,
-  image: null,
-  imageAltText: '',
-  width: '100%',
-  height: '100%',
-  squaredCorners: false,
-  smallBreakpointRowLayout: null,
-  mediumBreakpointRowLayout: null
 };
 
 export default Card;
