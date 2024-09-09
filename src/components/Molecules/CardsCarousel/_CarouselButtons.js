@@ -35,7 +35,7 @@ const Button = styled.button`
 const ButtonCarousel = ({
   slideIndex,
   setSlideIndex,
-  cardCarouselMockData,
+  carouselData,
   blurColour,
   direction
 }) => {
@@ -43,12 +43,12 @@ const ButtonCarousel = ({
     if (slideIndex !== 0) {
       setSlideIndex(slideIndex - 1);
     } else if (slideIndex === 0) {
-      setSlideIndex(cardCarouselMockData.length - 1);
+      setSlideIndex(carouselData.length - 1);
     }
   }
 
   const nextSlide = () => {
-    setSlideIndex((slideIndex + 1) % cardCarouselMockData.length);
+    setSlideIndex((slideIndex + 1) % carouselData.length);
   }
 
   return (
