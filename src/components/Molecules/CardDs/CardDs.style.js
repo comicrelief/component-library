@@ -85,7 +85,7 @@ const CTA = styled.div`
   > a {
     width: auto;
   }
-  margin: -1.5rem 0.5rem 0 0;
+  margin: -1.5rem 1.5rem 0 0;
   z-index: 999;
 `;
 
