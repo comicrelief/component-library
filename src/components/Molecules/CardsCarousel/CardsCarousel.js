@@ -51,32 +51,32 @@ const CardsCarousel = ({ carouselData, blurColour }) => {
 
   return (
     <>
-      <Container>
+      {(carouselData.length > 0)
+        && (
+        <Container>
+          {chosenCard((slideIndex - 1 + carouselData.length) % carouselData.length)}
+          {chosenCard(slideIndex)}
+          {chosenCard((slideIndex + 1 + carouselData.length) % carouselData.length)}
 
-        {chosenCard((slideIndex - 1 + carouselData.length) % carouselData.length)}
-
-        {chosenCard(slideIndex)}
-
-        {chosenCard((slideIndex + 1 + carouselData.length) % carouselData.length)}
-
-        <ButtonsWrapper>
-          <ButtonCarousel
-            slideIndex={slideIndex}
-            setSlideIndex={setSlideIndex}
-            carouselData={carouselData}
-            blurColour={blurColour}
-            direction="left"
-          />
-          <ButtonCarousel
-            slideIndex={slideIndex}
-            setSlideIndex={setSlideIndex}
-            carouselData={carouselData}
-            blurColour={blurColour}
-            direction="right"
-          />
-        </ButtonsWrapper>
-
-      </Container>
+          <ButtonsWrapper>
+            <ButtonCarousel
+              slideIndex={slideIndex}
+              setSlideIndex={setSlideIndex}
+              carouselData={carouselData}
+              blurColour={blurColour}
+              direction="left"
+            />
+            <ButtonCarousel
+              slideIndex={slideIndex}
+              setSlideIndex={setSlideIndex}
+              carouselData={carouselData}
+              blurColour={blurColour}
+              direction="right"
+            />
+          </ButtonsWrapper>
+        </Container>
+        )
+      }
     </>
   );
 };
