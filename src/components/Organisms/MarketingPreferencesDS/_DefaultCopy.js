@@ -24,12 +24,13 @@ const defaultCopyBottom = (
     <Link
       type="standard"
       href="https://www.comicrelief.com/update-your-preferences"
+      target="blank"
     >
       preferences centre
     </Link>
     . Your details will be kept safe, see our
     {' '}
-    <Link type="standard" href="https://www.comicrelief.com/privacy-policy">
+    <Link type="standard" href="https://www.comicrelief.com/privacy-policy" target="blank">
       privacy policy
     </Link>
     {' '}
