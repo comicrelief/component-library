@@ -19,7 +19,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  z-index: 999;
+  z-index: 4;
 `;
 
 const Image = styled.div`
@@ -86,7 +86,6 @@ const CTA = styled.div`
     width: auto;
   }
   margin: -1.5rem 1.5rem 0 0;
-  z-index: 999;
 `;
 
 export {
