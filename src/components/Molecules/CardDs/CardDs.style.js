@@ -2,50 +2,56 @@ import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   height: 100%;
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-    justify-content: center;
-  }
+  ${({ hasImage }) => hasImage
+    && css`
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        grid-template-columns: 1fr 1fr;
+      }
+  `};
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
+
+  border: 1px solid black;
 `;
 
-const Wrapper = styled.div`
-  z-index: 4;
-`;
-
-const Image = styled.div`
-  height: auto;
-  margin: 0 0 0 1.5rem;
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  /* creates offset look */
+  padding: 0 0 0 1.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     margin: 0 -1.5rem 0 1.5rem;
+    padding: 0;
   }
 
   img {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   }
+
+  border: 1px solid green;
 `;
 
-const MediaLink = styled.a`
-  width: 100%;
+const TextCtaWrapper = styled.div`
+  z-index: 4;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: calc(50% + 6rem);
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    width: 100%;
-  }
+  /* creates offset look */
+  ${({ hasImage }) => hasImage
+    && css`
+      padding: 0 1.5rem 0 0;
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        padding: 1.5rem 0 0;
+      }
+    `};
+  border: 1px solid blue;
 `;
 
 const Copy = styled.div`
@@ -56,24 +62,22 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  margin: 0 1.5rem 0 0;
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     height: 100%;
   }
   ${zIndex('low')};
   ${({ hasImage }) => hasImage
     && css`
-      margin-top: calc(-2 * 1.5rem);
+      /* creates offset look */
+      margin: calc(-2 * 1.5rem) 0 0;
       min-height: calc(5 * 2rem);
 
       @media ${({ theme }) => theme.allBreakpoints('M')} {
-        margin: 1.5rem 0 -1.5rem -1.5rem;
-        width: calc(50% + 6rem);
+        margin: 0
       }
 
       @media ${({ theme }) => theme.allBreakpoints('XL')} {
         margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
-        width: 100%;
       }
     `};
 `;
@@ -85,9 +89,14 @@ const CTA = styled.div`
   > a {
     width: auto;
   }
+  /* creates offset look */
   margin: -1.5rem 1.5rem 0 0;
 `;
 
+const MediaLink = styled.a`
+  width: 100%;
+`;
+
 export {
-  Container, Wrapper, Image, MediaLink, Copy, CTA
+  Container, TextCtaWrapper, ImageWrapper, MediaLink, Copy, CTA
 };

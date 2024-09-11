@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import Link from '../../Atoms/Link/Link';
 import {
-  Container, Wrapper, Image, MediaLink, Copy, CTA
+  Container, TextCtaWrapper, ImageWrapper, MediaLink, Copy, CTA
 } from './CardDs.style';
 
 const CardDs = ({
@@ -21,8 +21,9 @@ const CardDs = ({
   children,
   ...rest
 }) => {
+
   const Media = (
-    <Image hasLink={link}>
+    <ImageWrapper hasLink={link}>
       <Picture
         alt={imageAltText}
         imageLow={imageLow}
@@ -32,7 +33,7 @@ const CardDs = ({
         width={width}
         height={height}
       />
-    </Image>
+    </ImageWrapper>
   );
 
   const hasMedia = () => {
@@ -59,9 +60,9 @@ const CardDs = ({
   const external = target === 'blank' ? 'noopener' : null;
 
   return (
-    <Container {...rest}>
+    <Container hasImage={imageLow} {...rest}>
       {hasMedia()}
-      <Wrapper>
+      <TextCtaWrapper hasImage={imageLow}>
         <Copy
           hasImage={imageLow}
           hasLink={link}
@@ -69,6 +70,9 @@ const CardDs = ({
         >
           {children}
         </Copy>
+
+        <div style={{ border: "1px solid red"}}>
+
         {link && (
           <CTA hasImage={imageLow}>
             <Link
@@ -84,7 +88,10 @@ const CardDs = ({
             </Link>
           </CTA>
         )}
-      </Wrapper>
+
+        </div>
+
+      </TextCtaWrapper>
     </Container>
   );
 };
