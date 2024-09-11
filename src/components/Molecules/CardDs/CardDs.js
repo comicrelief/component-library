@@ -21,7 +21,6 @@ const CardDs = ({
   children,
   ...rest
 }) => {
-
   const Media = (
     <ImageWrapper hasLink={link}>
       <Picture
@@ -71,9 +70,9 @@ const CardDs = ({
           {children}
         </Copy>
 
-        <div style={{ border: "1px solid red"}}>
+        <div style={{ border: '1px solid red' }}>
 
-        {link && (
+          {link && (
           <CTA hasImage={imageLow}>
             <Link
               rel={external}
@@ -87,7 +86,7 @@ const CardDs = ({
               {linkLabel}
             </Link>
           </CTA>
-        )}
+          )}
 
         </div>
 
