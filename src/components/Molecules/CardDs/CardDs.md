@@ -28,10 +28,9 @@ import { Internal } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
-    <Text tag="p">Text body copy description</Text>
+    <Text tag="h3" color="purple" size="xl">Title</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
+    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus malesuada justo vel, iaculis mattis magna. Pellentesque sit amet pellentesque risus.</Text>
   </CardDs>
 </div>;
 ```
