@@ -17,27 +17,22 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     grid-template-columns: 1fr;
   }
-
-  border: 1px solid black;
 `;
 
 const ImageWrapper = styled.div`
-  width: 100%;
-  height: 100%;
   /* creates offset look */
   padding: 0 0 0 1.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
+    /* creates offset look */
     margin: 0 -1.5rem 0 1.5rem;
-    padding: 0;
+    padding: 0 0 1.5rem 0;
   }
 
   img {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   }
-
-  border: 1px solid green;
 `;
 
 const TextCtaWrapper = styled.div`
@@ -51,7 +46,6 @@ const TextCtaWrapper = styled.div`
         padding: 1.5rem 0 0;
       }
     `};
-  border: 1px solid blue;
 `;
 
 const Copy = styled.div`
@@ -62,9 +56,6 @@ const Copy = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    height: 100%;
-  }
   ${zIndex('low')};
   ${({ hasImage }) => hasImage
     && css`
@@ -80,6 +71,11 @@ const Copy = styled.div`
         margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
       }
     `};
+
+    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+      height: 100%;
+    }
+  height: 100%;
 `;
 
 // 'CTA' functions as a wrapper for the link

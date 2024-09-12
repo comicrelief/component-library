@@ -70,25 +70,21 @@ const CardDs = ({
           {children}
         </Copy>
 
-        <div style={{ border: '1px solid red' }}>
-
-          {link && (
-          <CTA hasImage={imageLow}>
-            <Link
-              rel={external}
-              color="red"
-              href={link}
-              target={target}
-              type="button"
-              icon={icon}
-              data-button-cta-copy={linkLabel}
-            >
-              {linkLabel}
-            </Link>
-          </CTA>
-          )}
-
-        </div>
+        {link && (
+        <CTA hasImage={imageLow}>
+          <Link
+            rel={external}
+            color="red"
+            href={link}
+            target={target}
+            type="button"
+            icon={icon}
+            data-button-cta-copy={linkLabel}
+          >
+            {linkLabel}
+          </Link>
+        </CTA>
+        )}
 
       </TextCtaWrapper>
     </Container>
