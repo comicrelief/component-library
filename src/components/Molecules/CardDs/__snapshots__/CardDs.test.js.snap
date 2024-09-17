@@ -80,6 +80,7 @@ exports[`renders correctly 1`] = `
 .c5 {
   z-index: 4;
   padding: 0 1.5rem 0 0;
+  border: 1px solid green;
 }
 
 .c6 {
@@ -97,8 +98,8 @@ exports[`renders correctly 1`] = `
   background: #FFFFFF;
   z-index: 1;
   margin: calc(-2 * 1.5rem) 0 0;
+  padding-bottom: 4rem;
   min-height: calc(5 * 2rem);
-  height: 100%;
 }
 
 .c7 {
@@ -179,6 +180,7 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c6 {
     margin: 0;
+    height: 100%;
   }
 }
 

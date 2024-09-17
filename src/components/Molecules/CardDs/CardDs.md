@@ -1,7 +1,7 @@
 # CardDs
 ## Image and CTA are clickable and links user through to full content
 
-### CardDs:  Image, Text & Link - large amount of text
+### CardDs: example 1 - Image, Text & Link, large amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import { Internal } from '../../Atoms/Icons/index';
@@ -25,14 +25,14 @@ import Link from '../../Atoms/Link/Link';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">Title</Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
-    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus malesuada justo vel, iaculis mattis magna. Pellentesque sit amet pellentesque risus.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 1</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
+    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus male uada justo vel, iaculis mattis magna. Pelle tesque sit amet pelle tesque risus.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs:  Image, Text & Link - small amount of text
+### CardDs: example 2 - Image, Text & Link, small amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import { Internal } from '../../Atoms/Icons/index';
@@ -56,13 +56,13 @@ import Link from '../../Atoms/Link/Link';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">Title</Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 2</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Image & Text, No Link - large amount of text
+### CardDs: example 3 - Image & Text, No Link, large amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import Text from '../../Atoms/Text/Text';
@@ -82,14 +82,14 @@ import { Internal } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">Title</Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
-    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus malesuada justo vel, iaculis mattis magna. Pellentesque sit amet pellentesque risus.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 3</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
+    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus male uada justo vel, iaculis mattis magna. Pelle tesque sit amet pelle tesque risus.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Image & Text, No Link - small amount of text
+### CardDs: example 4 - Image & Text, No Link, small amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import Text from '../../Atoms/Text/Text';
@@ -109,13 +109,13 @@ import { Internal } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">Title</Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 4</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Text & Link - large amount of text
+### CardDs: example 5 - Text & Link, large amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import { Download } from '../../Atoms/Icons/index';
@@ -134,18 +134,17 @@ import { Download } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Download colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
-    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus malesuada justo vel, iaculis mattis magna. Pellentesque sit amet pellentesque risus.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 5</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
+    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus male uada justo vel, iaculis mattis magna. Pelle tesque sit amet pelle tesque risus.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Text & Link - small amount of text
+### CardDs: example 6 - Text & Link, small amount of text
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+const defaultData = require('../../../styleguide/data/data').defaultData;
+import Text from '../../Atoms/Text/Text';
 import { Download } from '../../Atoms/Icons/index';
 
 <div
@@ -162,15 +161,13 @@ import { Download } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Download colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
+    <Text tag="h3" color="purple" size="xl">Example 6</Text>
     <Text tag="p">Text body copy description</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Text only - large amount of text
+### CardDs: example 7 - Text only, large amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 <div
@@ -180,16 +177,14 @@ const defaultData = require('../../../styleguide/data/data').defaultData;import 
   }}
 >
   <CardDs backgroundColor="white" height="auto">
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
-    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar lectus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor leo, id dictum mauris vulputate at.</Text>
-    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus malesuada justo vel, iaculis mattis magna. Pellentesque sit amet pellentesque risus.</Text>
+    <Text tag="h3" color="purple" size="xl">Example 7</Text>
+    <Text tag="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor semper sapien, vitae pulvinar le tus porta sit amet. Ut dapibus, est sed varius ornare, turpis lorem blandit purus, quis placerat mi mauris aliquam tellus. Maecenas dignissim auctor le , id dictum mauris vulputate at.</Text>
+    <Text tag="p">Nam vitae congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis vestibulum dolor nec maximus. Aenean vitae neque id odio tempor euismod ut luctus lacus. Vivamus lacus arcu, faucibus male uada justo vel, iaculis mattis magna. Pelle tesque sit amet pelle tesque risus.</Text>
   </CardDs>
 </div>;
 ```
 
-### CardDs: Text only - small amount of text
+### CardDs: example 8 - Text only, small amount of text
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 <div
@@ -199,9 +194,7 @@ const defaultData = require('../../../styleguide/data/data').defaultData;import 
   }}
 >
   <CardDs backgroundColor="white" height="auto">
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
+    <Text tag="h3" color="purple" size="xl">Example 8</Text>
     <Text tag="p">Text body copy description</Text>
   </CardDs>
 </div>;

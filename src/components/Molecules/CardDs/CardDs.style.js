@@ -46,6 +46,8 @@ const TextCtaWrapper = styled.div`
         padding: 1.5rem 0 0;
       }
     `};
+
+  border: 1px solid green;
 `;
 
 const Copy = styled.div`
@@ -57,14 +59,18 @@ const Copy = styled.div`
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${zIndex('low')};
-  ${({ hasImage }) => hasImage
+  ${({ hasImage, hasLink }) => hasImage
     && css`
       /* creates offset look */
       margin: calc(-2 * 1.5rem) 0 0;
+      /* margin: ${hasLink ? 'calc(-2 * 1.5rem) 0 0' : 'calc(-2 * 1.5rem) 0 3rem'}; */
+      padding-bottom: 4rem;
+
       min-height: calc(5 * 2rem);
 
       @media ${({ theme }) => theme.allBreakpoints('M')} {
-        margin: 0
+        margin: 0;
+        height: 100%;
       }
 
       @media ${({ theme }) => theme.allBreakpoints('XL')} {
@@ -75,7 +81,6 @@ const Copy = styled.div`
     @media ${({ theme }) => theme.allBreakpoints('XL')} {
       height: 100%;
     }
-  height: 100%;
 `;
 
 // 'CTA' functions as a wrapper for the link
