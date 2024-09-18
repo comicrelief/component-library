@@ -1,4 +1,3 @@
-// !!!!!!! Need to code for edge cases e.g. only 2 cards, no cards etc
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
