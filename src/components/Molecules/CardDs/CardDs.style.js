@@ -59,9 +59,9 @@ const Copy = styled.div`
   ${zIndex('low')};
   ${({ hasImage }) => hasImage
     && css`
-      margin: calc(-2 * 1.5rem) 0 0;
+      margin: -1.5rem 0 0;
       padding-bottom: 4rem;
-      min-height: calc(5 * 2rem);
+      min-height: 10rem;
 
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         margin: 0;
@@ -69,7 +69,7 @@ const Copy = styled.div`
       }
 
       @media ${({ theme }) => theme.allBreakpoints('XL')} {
-        margin: calc(-2 * 1.5rem) 0 0;
+        margin: -3rem 0 0;
         min-height: 100%;
       }
     `};
