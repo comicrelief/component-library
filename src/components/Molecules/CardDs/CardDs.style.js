@@ -20,11 +20,9 @@ const Container = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  /* creates offset look */
   padding: 0 0 0 1.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    /* creates offset look */
     margin: 0 -1.5rem 0 1.5rem;
     padding: 0 0 1.5rem 0;
   }
@@ -38,16 +36,16 @@ const ImageWrapper = styled.div`
 const TextCtaWrapper = styled.div`
   z-index: 4;
 
-  /* creates offset look */
   ${({ hasImage }) => hasImage
     && css`
       padding: 0 1.5rem 0 0;
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         padding: 1.5rem 0 0;
       }
+      @media ${({ theme }) => theme.allBreakpoints('XL')} {
+        padding: 0;
+      }
     `};
-
-  border: 1px solid green;
 `;
 
 const Copy = styled.div`
@@ -59,13 +57,10 @@ const Copy = styled.div`
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${zIndex('low')};
-  ${({ hasImage, hasLink }) => hasImage
+  ${({ hasImage }) => hasImage
     && css`
-      /* creates offset look */
       margin: calc(-2 * 1.5rem) 0 0;
-      /* margin: ${hasLink ? 'calc(-2 * 1.5rem) 0 0' : 'calc(-2 * 1.5rem) 0 3rem'}; */
       padding-bottom: 4rem;
-
       min-height: calc(5 * 2rem);
 
       @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -74,13 +69,10 @@ const Copy = styled.div`
       }
 
       @media ${({ theme }) => theme.allBreakpoints('XL')} {
-        margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+        margin: calc(-2 * 1.5rem) 0 0;
+        min-height: 100%;
       }
     `};
-
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      height: 100%;
-    }
 `;
 
 // 'CTA' functions as a wrapper for the link
@@ -90,7 +82,6 @@ const CTA = styled.div`
   > a {
     width: auto;
   }
-  /* creates offset look */
   margin: -1.5rem 1.5rem 0 0;
 `;
 
