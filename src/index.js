@@ -37,7 +37,6 @@ export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBan
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
-export { default as CardsCarousel } from './components/Molecules/CardsCarousel/CardsCarousel';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Organisms/Header/Header';
@@ -68,6 +67,7 @@ export {
   buildEsuValidationSchema,
   ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
+export { default as CardsCarousel } from './components/Organisms/CardsCarousel/CardsCarousel';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export {

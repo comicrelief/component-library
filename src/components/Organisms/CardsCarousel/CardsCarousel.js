@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
-import CardDs from '../CardDs/CardDs';
+import CardDs from '../../Molecules/CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
 import {
   ButtonCarousel,
