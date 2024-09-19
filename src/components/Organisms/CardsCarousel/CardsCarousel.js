@@ -30,7 +30,7 @@ const CardsCarousel = ({ carouselData, blurColour }) => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const chosenCard = cardIndex => (
-    <Slide>
+    <Slide key={carouselData[cardIndex].imageLow}>
       <CardDs
         target="_blank"
         link="/home"
