@@ -1,10 +1,11 @@
 # Cards Carousel
 ```js
-import cardCarouselMockData from './_cardCarouselMockData.js';
+import cardsCarouselMockData from './_cardsCarouselMockData.js';
+import cardsCarouselMockData2 from './_cardsCarouselMockData2.js';
 import CardsCarousel from './CardsCarousel.js';
 
-
 <div style={{backgroundColor: 'pink', padding: '10px'}}>
-    <CardsCarousel carouselData={cardCarouselMockData} blurColour='pink' />
+    {console.log(cardsCarouselMockData2[0])}
+    <CardsCarousel carouselData={cardsCarouselMockData} blurColour='pink' />
 </div>
 ```
