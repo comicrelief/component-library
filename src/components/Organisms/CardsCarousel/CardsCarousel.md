@@ -5,7 +5,9 @@ import cardsCarouselMockData2 from './_cardsCarouselMockData2.js';
 import CardsCarousel from './CardsCarousel.js';
 
 <div style={{backgroundColor: 'pink', padding: '10px'}}>
-    {console.log(cardsCarouselMockData2[0])}
-    <CardsCarousel carouselData={cardsCarouselMockData} blurColour='pink' />
+    <CardsCarousel
+        carouselData={cardsCarouselMockData}
+        blurColour={cardsCarouselMockData2.backgroundColour}
+    />
 </div>
 ```
