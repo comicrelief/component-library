@@ -22,6 +22,14 @@ const Container = styled.div`
   gap: 1rem;
   overflow: hidden;
   background: ${({ bgColour }) => bgColour};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 700px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    max-width: 1200px;
+    height: 850px;
+    border: 1px solid red;
+  }
 `;
 
 const Slide = styled.div`
