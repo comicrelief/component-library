@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { snakeCase } from 'lodash';
 import Text from '../../Atoms/Text/Text';
 import CardDs from '../../Molecules/CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
@@ -12,13 +13,15 @@ import {
 const Container = styled.div`
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  max-width: 800px;
+  height: 450px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   overflow: hidden;
+  background: ${({ bgColour }) => bgColour};
 `;
 
 const Slide = styled.div`
@@ -26,56 +29,57 @@ const Slide = styled.div`
   flex-shrink: 0;
 `;
 
-const CardsCarousel = ({ carouselData, blurColour }) => {
+const CardsCarousel = ({ carouselData }) => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const { cards } = carouselData;
+  const CarouselBg = snakeCase(carouselData.backgroundColour || 'white');
 
   const chosenCard = cardIndex => (
-    <Slide key={carouselData[cardIndex].imageLow}>
+    <Slide key={cards[cardIndex].id}>
       <CardDs
         target="_blank"
-        link="/home"
-        linkLabel="find out more"
-        imageLow={carouselData[cardIndex].imageLow}
-        images={carouselData[cardIndex].images}
-        imageAltText="test"
-        backgroundColor="white"
+        link={cards[cardIndex].link}
+        linkLabel={cards[cardIndex].linkLabel}
+        imageLow={cards[cardIndex].image.fluidSrcSet}
+        image={cards[cardIndex].image.fluidSrcSet}
+        imageAltText={cards[cardIndex].title}
+        backgroundColor={snakeCase(cards[cardIndex].backgroundColour || 'white')}
         height="auto"
         icon={<Internal colour="white" />}
       >
-        <Text tag="h3" color="purple" size="xl">{carouselData[cardIndex].title}</Text>
-        <Text tag="p">{carouselData[cardIndex].description}</Text>
+        {/* need to sort richText import and conversion here */}
+        <Text tag="h3" color="purple" size="xl">{cardIndex}</Text>
+        <Text tag="p">{cards[cardIndex].title}</Text>
       </CardDs>
     </Slide>
   );
 
   return (
     <>
-      {(carouselData.length > 0)
-        && (
-        <Container>
-          {chosenCard((slideIndex - 1 + carouselData.length) % carouselData.length)}
+      {(carouselData.cards.length > 0) && (
+        <Container bgColour={CarouselBg}>
+          {chosenCard((slideIndex - 1 + cards.length) % cards.length)}
           {chosenCard(slideIndex)}
-          {chosenCard((slideIndex + 1 + carouselData.length) % carouselData.length)}
+          {chosenCard((slideIndex + 1 + cards.length) % cards.length)}
 
           <ButtonsWrapper>
             <ButtonCarousel
               slideIndex={slideIndex}
               setSlideIndex={setSlideIndex}
-              carouselData={carouselData}
-              blurColour={blurColour}
+              carouselData={cards}
+              blurColour={CarouselBg}
               direction="left"
             />
             <ButtonCarousel
               slideIndex={slideIndex}
               setSlideIndex={setSlideIndex}
-              carouselData={carouselData}
-              blurColour={blurColour}
+              carouselData={cards}
+              blurColour={CarouselBg}
               direction="right"
             />
           </ButtonsWrapper>
         </Container>
-        )
-      }
+      )}
     </>
   );
 };
@@ -84,16 +88,21 @@ const cardPropTypes = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageLow: PropTypes.string.isRequired,
-  images: PropTypes.string.isRequired
+  images: PropTypes.string.isRequired,
+  backgroundColour: PropTypes.string
 });
 
 CardsCarousel.propTypes = {
-  blurColour: PropTypes.string,
-  carouselData: PropTypes.arrayOf(cardPropTypes).isRequired
+  carouselData: PropTypes.shape({
+    backgroundColour: PropTypes.string,
+    cards: PropTypes.arrayOf(cardPropTypes).isRequired
+  }).isRequired
 };
 
 CardsCarousel.defaultProps = {
-  blurColour: 'white'
+  carouselData: {
+    backgroundColour: 'white'
+  }
 };
 
 export default CardsCarousel;

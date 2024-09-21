@@ -53,7 +53,7 @@ const ButtonCarousel = ({
 
   return (
     <Button
-      onClick={direction === 'right' ? prevSlide : nextSlide}
+      onClick={direction === 'right' ? nextSlide : prevSlide}
       gradientDirection={direction}
       blurColour={blurColour}
     />
