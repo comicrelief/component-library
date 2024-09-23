@@ -11,10 +11,7 @@ import {
 } from './_CarouselButtons';
 
 const Container = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
+  min-height: 800px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -56,8 +53,8 @@ const CardsCarousel = ({ carouselData }) => {
         icon={<Internal colour="white" />}
       >
         {/* need to sort richText import and conversion here */}
-        <Text tag="h3" color="purple" size="xl">{cardIndex}</Text>
-        <Text tag="p">{cards[cardIndex].title}</Text>
+        <Text tag="h2" size="xl">{cards[cardIndex].title}</Text>
+        <Text tag="p">{cards[cardIndex].bodyText}</Text>
       </CardDs>
     </Slide>
   );
