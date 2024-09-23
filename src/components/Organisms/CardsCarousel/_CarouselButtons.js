@@ -17,6 +17,7 @@ const LeftButton = styled.button`
   z-index: 999;
   border: none;
   background: transparent;
+  cursor: pointer;
 
   ${({ gradientDirection, blurColour }) => (gradientDirection === 'left' ? createBlurEffect('to right', blurColour) : createBlurEffect('to left', blurColour))}
 `;
