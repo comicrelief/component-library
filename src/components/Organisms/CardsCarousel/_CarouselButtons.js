@@ -2,37 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ButtonsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-`;
-
 const createBlurEffect = (gradientDirection, gradColour = 'white') => `
   background: linear-gradient(${gradientDirection},
     ${gradColour} 0%,
     transparent 100%);
 `;
 
-const Button = styled.button`
-  border: none;
-  width: 30%;
+const LeftButton = styled.button`
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 20%;
   height: 100%;
-  cursor: pointer;
-  z-index: 999 !important;
+  z-index: 999;
+  border: none;
   background: transparent;
 
   ${({ gradientDirection, blurColour }) => (gradientDirection === 'left' ? createBlurEffect('to right', blurColour) : createBlurEffect('to left', blurColour))}
 `;
 
-const ButtonCarousel = ({
+const RightButton = styled(LeftButton)`
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: 0%;
+`;
+
+const CarouselButton = ({
   slideIndex,
   setSlideIndex,
   carouselData,
@@ -52,18 +48,29 @@ const ButtonCarousel = ({
   };
 
   return (
-    <Button
-      onClick={direction === 'right' ? nextSlide : prevSlide}
-      gradientDirection={direction}
-      blurColour={blurColour}
-    />
+    <>
+      {direction === 'left' ? (
+        <LeftButton
+          onClick={prevSlide}
+          gradientDirection={direction}
+          blurColour={blurColour}
+        />
+      )
+        : (
+          <RightButton
+            onClick={nextSlide}
+            gradientDirection={direction}
+            blurColour={blurColour}
+          />
+        )}
+    </>
   );
 };
 
-ButtonCarousel.propTypes = {
+CarouselButton.propTypes = {
   blurColour: PropTypes.string,
   slideIndex: PropTypes.number.isRequired,
-  direction: PropTypes.number.isRequired,
+  direction: PropTypes.string.isRequired,
   setSlideIndex: PropTypes.func.isRequired,
   carouselData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -72,11 +79,10 @@ ButtonCarousel.propTypes = {
   ).isRequired
 };
 
-ButtonCarousel.defaultProps = {
+CarouselButton.defaultProps = {
   blurColour: 'white'
 };
 
 export {
-  ButtonsWrapper,
-  ButtonCarousel
+  CarouselButton
 };

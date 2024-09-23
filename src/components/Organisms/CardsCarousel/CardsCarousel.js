@@ -6,8 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import CardDs from '../../Molecules/CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
 import {
-  ButtonCarousel,
-  ButtonsWrapper
+  CarouselButton
 } from './_CarouselButtons';
 
 const Container = styled.div`
@@ -67,22 +66,20 @@ const CardsCarousel = ({ carouselData }) => {
           {chosenCard(slideIndex)}
           {chosenCard((slideIndex + 1 + cards.length) % cards.length)}
 
-          <ButtonsWrapper>
-            <ButtonCarousel
-              slideIndex={slideIndex}
-              setSlideIndex={setSlideIndex}
-              carouselData={cards}
-              blurColour={CarouselBg}
-              direction="left"
-            />
-            <ButtonCarousel
-              slideIndex={slideIndex}
-              setSlideIndex={setSlideIndex}
-              carouselData={cards}
-              blurColour={CarouselBg}
-              direction="right"
-            />
-          </ButtonsWrapper>
+          <CarouselButton
+            slideIndex={slideIndex}
+            setSlideIndex={setSlideIndex}
+            carouselData={cards}
+            blurColour={CarouselBg}
+            direction="left"
+          />
+          <CarouselButton
+            slideIndex={slideIndex}
+            setSlideIndex={setSlideIndex}
+            carouselData={cards}
+            blurColour={CarouselBg}
+            direction="right"
+          />
         </Container>
       )}
     </>
