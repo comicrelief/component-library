@@ -5,9 +5,7 @@ import { snakeCase } from 'lodash';
 import Text from '../../Atoms/Text/Text';
 import CardDs from '../../Molecules/CardDs/CardDs';
 import { Internal } from '../../Atoms/Icons/index';
-import {
-  CarouselButton
-} from './_CarouselButtons';
+import CarouselButton from './_CarouselButtons';
 
 const Container = styled.div`
   min-height: 800px;
@@ -87,7 +85,12 @@ const CardsCarousel = ({ carouselData }) => {
 };
 
 const cardPropTypes = PropTypes.shape({
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  linkLabel: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  bodyText: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageLow: PropTypes.string.isRequired,
   images: PropTypes.string.isRequired,
@@ -99,12 +102,6 @@ CardsCarousel.propTypes = {
     backgroundColour: PropTypes.string,
     cards: PropTypes.arrayOf(cardPropTypes).isRequired
   }).isRequired
-};
-
-CardsCarousel.defaultProps = {
-  carouselData: {
-    backgroundColour: 'white'
-  }
 };
 
 export default CardsCarousel;

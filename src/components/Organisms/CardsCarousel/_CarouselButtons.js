@@ -83,6 +83,4 @@ CarouselButton.defaultProps = {
   blurColour: 'white'
 };
 
-export {
-  CarouselButton
-};
+export default CarouselButton;
