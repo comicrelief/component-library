@@ -34,10 +34,6 @@ const ImageWrapper = styled.div`
 `;
 
 const TextCtaWrapper = styled.div`
-  height: 400px;
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    height: 480px;
-  }
   z-index: 4;
 
   ${({ hasImage }) => hasImage
