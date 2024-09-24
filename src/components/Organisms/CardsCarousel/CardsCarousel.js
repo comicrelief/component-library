@@ -8,6 +8,7 @@ import { Internal } from '../../Atoms/Icons/index';
 import CarouselButton from './_CarouselButtons';
 
 const Container = styled.div`
+  margin: 0 auto;
   min-height: 800px;
   position: relative;
   display: flex;
@@ -22,7 +23,6 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     max-width: 1200px;
     height: 850px;
-    border: 1px solid red;
   }
 `;
 
