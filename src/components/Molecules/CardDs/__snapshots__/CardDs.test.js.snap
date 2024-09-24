@@ -83,6 +83,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
+  height: 100%;
   padding: 2rem;
   padding-bottom: 4rem;
   display: -webkit-box;
