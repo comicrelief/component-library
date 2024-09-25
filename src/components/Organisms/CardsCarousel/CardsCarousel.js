@@ -8,13 +8,13 @@ import { Internal } from '../../Atoms/Icons/index';
 import CarouselButton from './_CarouselButtons';
 
 const Container = styled.div`
+  display: flex;
   margin: 0 auto;
   min-height: 800px;
   position: relative;
-  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   overflow: hidden;
   background: ${({ bgColour }) => bgColour};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -49,7 +49,6 @@ const CardsCarousel = ({ carouselData }) => {
         height="auto"
         icon={<Internal colour="white" />}
       >
-        {/* need to sort richText import and conversion here */}
         <Text tag="h2" size="xl">{cards[cardIndex].title}</Text>
         <Text tag="p">{cards[cardIndex].bodyText}</Text>
       </CardDs>
