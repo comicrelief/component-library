@@ -2,23 +2,24 @@ import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   ${({ hasImage }) => hasImage
     && css`
       @media ${({ theme }) => theme.allBreakpoints('M')} {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
       }
   `};
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 `;
 
 const ImageWrapper = styled.div`
-  height: 100%;
+  border: 1px solid red;
   padding: 0 0 0 1.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -29,13 +30,18 @@ const ImageWrapper = styled.div`
   img {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 `;
 
 const TextCtaWrapper = styled.div`
-  height: 100%;
-  border: 1px solid red;
+  border: 1px solid blue;
   z-index: 4;
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+  flex-basis: 80%;
 
   ${({ hasImage }) => hasImage
     && css`
@@ -51,7 +57,6 @@ const TextCtaWrapper = styled.div`
 
 const Copy = styled.div`
   height: 100%;
-  border: 1px solid blue;
   padding: 2rem;
   ${({ hasLink }) => hasLink && 'padding-bottom: 4rem'};
 
