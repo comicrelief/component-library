@@ -3,8 +3,6 @@ import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   display: grid;
-  height: 100%;
-  width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   ${({ hasImage }) => hasImage
@@ -20,6 +18,7 @@ const Container = styled.div`
 `;
 
 const ImageWrapper = styled.div`
+  height: 100%;
   padding: 0 0 0 1.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -34,6 +33,8 @@ const ImageWrapper = styled.div`
 `;
 
 const TextCtaWrapper = styled.div`
+  height: 100%;
+  border: 1px solid red;
   z-index: 4;
 
   ${({ hasImage }) => hasImage
@@ -50,14 +51,20 @@ const TextCtaWrapper = styled.div`
 
 const Copy = styled.div`
   height: 100%;
+  border: 1px solid blue;
   padding: 2rem;
   ${({ hasLink }) => hasLink && 'padding-bottom: 4rem'};
+
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   ${zIndex('low')};
+
   ${({ hasImage }) => hasImage
     && css`
       margin: -1.5rem 0 0;

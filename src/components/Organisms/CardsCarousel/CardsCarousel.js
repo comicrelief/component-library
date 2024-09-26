@@ -10,25 +10,20 @@ import CarouselButton from './_CarouselButtons';
 const Container = styled.div`
   display: flex;
   margin: 0 auto;
-  min-height: 800px;
   position: relative;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
   overflow: hidden;
   background: ${({ bgColour }) => bgColour};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 700px;
-  }
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    max-width: 1200px;
-    height: 850px;
-  }
 `;
 
 const Slide = styled.div`
   width: 60%;
   flex-shrink: 0;
+  > div {
+    height: 100%;
+    /* border: 1px solid red; */
+  }
 `;
 
 const CardsCarousel = ({ carouselData }) => {
