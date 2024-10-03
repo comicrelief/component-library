@@ -12,6 +12,9 @@ const Container = styled.div`
   /* @media ${({ theme }) => theme.allBreakpoints('M')} { */
   /*   flex-direction: row; */
   /* } */
+  ${({ isCarousel }) => !isCarousel && css`
+    border: 1px solid red;
+  `};
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     flex-direction: column;
@@ -24,6 +27,10 @@ const Image = styled.div`
   /* @media ${({ theme }) => theme.allBreakpoints('M')} { */
   /*   margin: 0 -${spacing('m')} 0 ${spacing('m')}; */
   /* } */
+  ${({ isCarousel }) => !isCarousel && css`
+    border: 1px solid green;
+  `};
+
 
   img {
     border-radius: ${spacing('md')};
@@ -36,6 +43,9 @@ const MediaLink = styled.a`
   /* @media ${({ theme }) => theme.allBreakpoints('M')} { */
   /*   width: calc(50% + 6rem); */
   /* } */
+  ${({ isCarousel }) => !isCarousel && css`
+    border: 1px solid blue;
+  `};
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     width: 100%;
   }
@@ -55,7 +65,7 @@ const Copy = styled.div`
     height: 100%;
   }
   ${zIndex('low')};
-  ${({ hasImage }) => hasImage
+  ${({ hasImage, isCarousel }) => hasImage
     && css`
       margin-top: calc(-2 * ${spacing('m')});
       min-height: calc(5 * ${spacing('l')});
@@ -63,6 +73,9 @@ const Copy = styled.div`
       /*   margin: ${spacing('m')} 0 -${spacing('m')} -${spacing('m')}; */
       /*   width: calc(50% + 6rem); */
       /* } */
+      ${!isCarousel && css`
+        border: 1px solid black;
+      `};
 
       @media ${({ theme }) => theme.allBreakpoints('XL')} {
         margin: calc(-2 * ${spacing('m')}) 0 -${spacing('m')} 0;
@@ -80,6 +93,9 @@ const CTA = styled.div`
   /*   bottom: calc(-1 * (${spacing('l')} + ${spacing('md')})); */
   /*   ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`}; */
   /* } */
+  ${({ isCarousel }) => !isCarousel && css`
+    border: 1px solid black;
+  `};
 `;
 
 export {
