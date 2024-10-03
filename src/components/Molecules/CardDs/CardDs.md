@@ -1,6 +1,40 @@
 # CardDs
 ## Image and CTA are clickable and links user through to full content
 
+### CardDs:  Image, Text & Link - only column view for use in CardsCarousel
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import { Internal } from '../../Atoms/Icons/index';
+
+<div
+  style={{
+    display: 'flex',
+    padding: '2rem 0',
+    background: '#E1E2E3',
+    justifyContent: 'space-around'
+  }}
+>
+  <CardDs
+    target="_blank"
+    link="/home"
+    linkLabel="find out more"
+    imageLow={defaultData.image}
+    images={defaultData.images}
+    imageAltText="Happy man going to work"
+    backgroundColor="white"
+    height="auto"
+    icon={<Internal colour="white" />}
+    isCarousel={true}
+  >
+    <Text tag="h3" color="purple" size="xl">
+      Only Column view
+    </Text>
+    <Text tag="p">Text body copy description</Text>
+  </CardDs>
+</div>;
+```
+
 
 ### CardDs:  Image, Text & Link
 ```js
