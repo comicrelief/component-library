@@ -103,4 +103,3 @@ const CTA = styled.div`
 export {
   Container, Image, MediaLink, Copy, CTA
 };
-
