@@ -22,3 +22,24 @@ it('renders correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('renders Column view correctly', () => {
+  const tree = renderWithTheme(
+    <CardDs
+      target="_blank"
+      link="/home"
+      linkLabel="find out more"
+      imageLow={defaultData.image}
+      images={defaultData.images}
+      imageAltText="Happy man going to work"
+      backgroundColor="white"
+      height="auto"
+      icon={<Internal colour="white" />}
+      isCarousel={true}
+  >
+    Column view
+  </CardDs>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
