@@ -30,6 +30,8 @@ export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
 export { default as Label } from './components/Atoms/Label/Label';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
 export { default as Confetti } from './components/Atoms/Confetti/Confetti';
+export { default as External } from './components/Atoms/Icons/External';
+export { default as Internal } from './components/Atoms/Icons/Internal';
 
 /* Molecules */
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
