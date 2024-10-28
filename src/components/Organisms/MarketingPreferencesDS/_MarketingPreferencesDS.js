@@ -19,7 +19,8 @@ const MarketingPreferencesDS = ({
   copyBottom = defaultCopyBottom,
   mpValidationOptions,
   id = null,
-  formContext = null
+  formContext = null,
+  ...rest
 }) => {
   const { formState: { errors }, control } = formContext;
 
@@ -61,7 +62,7 @@ const MarketingPreferencesDS = ({
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   return (
-    <OuterWrapper id={customId}>
+    <OuterWrapper id={customId} {...rest}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
