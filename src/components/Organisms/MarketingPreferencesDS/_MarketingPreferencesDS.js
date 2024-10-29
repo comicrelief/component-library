@@ -6,7 +6,7 @@ import CheckAnswer from './_CheckAnswer';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  TopCopyWrapper, BottomCopyWrapper, Head, FormField,
+  TopCopyWrapper, BottomCopyWrapper, CheckboxWrapper, FormField,
   ShowHideInputWrapper, ExtraInfo, OuterWrapper, MPTextInput
 } from './MarketingPreferencesDS.style';
 
@@ -68,7 +68,7 @@ const MarketingPreferencesDS = ({
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
       <FormField className="field-email">
-        <Head>
+        <CheckboxWrapper>
           <CheckAnswer
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
@@ -76,7 +76,7 @@ const MarketingPreferencesDS = ({
             userSelection={emailChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
 
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
@@ -103,7 +103,7 @@ const MarketingPreferencesDS = ({
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
       <FormField className="field-post">
-        <Head>
+        <CheckboxWrapper>
           <CheckAnswer
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
@@ -111,7 +111,7 @@ const MarketingPreferencesDS = ({
             userSelection={postChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disablePostInput}>
           <ShowHideInputWrapper show={showPostFields}>
             <ExtraInfo>
@@ -175,7 +175,7 @@ const MarketingPreferencesDS = ({
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
       <FormField className="field-sms">
-        <Head>
+        <CheckboxWrapper>
           <CheckAnswer
             name="mp_permissionSMS"
             id="mp_permissionSMS"
@@ -183,7 +183,7 @@ const MarketingPreferencesDS = ({
             userSelection={smsChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
             <ExtraInfo>
@@ -207,7 +207,7 @@ const MarketingPreferencesDS = ({
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
       <FormField className="field-phone">
-        <Head>
+        <CheckboxWrapper>
           <CheckAnswer
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
@@ -215,7 +215,7 @@ const MarketingPreferencesDS = ({
             userSelection={phoneChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
             <ExtraInfo>

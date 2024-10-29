@@ -9,8 +9,8 @@ const OuterWrapper = styled.div`
   flex-direction: column;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // flex-wrap: wrap;
   }
 `;
 
@@ -28,7 +28,7 @@ const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
 `;
 
-const Head = styled.div`
+const CheckboxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -40,10 +40,12 @@ const FormField = styled.div`${({ theme }) => css`
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #9ab3ff; // placeholder
+  padding: 10px;
+  border-radius: 10px;
 
   @media ${theme.allBreakpoints('M')} {
-    width: 50%;
-    padding: 10px;
+    // width: 50%;
   }
 
   label {
@@ -175,7 +177,7 @@ const MPTextInput = styled(TextInput)`
 export {
   TopCopyWrapper,
   BottomCopyWrapper,
-  Head,
+  CheckboxWrapper,
   FormField,
   CheckLabel,
   CheckInput,
