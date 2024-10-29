@@ -50,7 +50,8 @@ const FormField = styled.div`${({ theme }) => css`
 
   label {
     position: relative;
-    margin-bottom: ${spacing('md')};
+    // margin-bottom: ${spacing('md')};
+    margin-bottom: 0;
     width: 100%;
     color: ${theme.color('grey_dark')};
   }
@@ -139,11 +140,13 @@ const ExtraInfo = styled.span`
   font-weight: normal;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
   color: ${({ theme }) => theme.color('grey_dark')};
 
   + label {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
 
     // Visually hide the actual field label for the
     // non-multifield options, as we have the
