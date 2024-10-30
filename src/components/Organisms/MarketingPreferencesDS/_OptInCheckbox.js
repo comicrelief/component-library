@@ -5,10 +5,11 @@ import AssociatedFields from './_AssociatedFields';
 import {
   CheckContainer,
   CheckLabel,
-  CheckInput
+  CheckInput,
+  AssociatedFieldsName
 } from './MarketingPreferencesDS.style';
 
-const CheckAnswer = ({
+const OptInCheckbox = ({
   name, mpValidationOptions, userSelection = null, formContext = null
 }) => {
   const { setValue, clearErrors, register } = formContext;
@@ -48,6 +49,9 @@ const CheckAnswer = ({
   return (
     <CheckContainer>
       <CheckLabel htmlFor={`${name}-yes`} userSelection={userSelection}>
+        <AssociatedFieldsName className={`icon-${name}`}>
+          { AssociatedFields[name].label }
+        </AssociatedFieldsName>
         <CheckInput
           type="checkbox"
           name={name}
@@ -56,14 +60,14 @@ const CheckAnswer = ({
           {...register(name)}
           onChange={onChange}
         />
+        {/* What our custom checkbox is built on: */}
         <span />
-        { AssociatedFields[name].label }
       </CheckLabel>
     </CheckContainer>
   );
 };
 
-CheckAnswer.propTypes = {
+OptInCheckbox.propTypes = {
   name: PropTypes.string.isRequired,
   /* These options are created in _MarketingPrefsConfig.js, passed to react-hook-form
   in the parent to set-up the validation, but also required here for additional functionality */
@@ -75,4 +79,4 @@ CheckAnswer.propTypes = {
   formContext: PropTypes.shape()
 };
 
-export default CheckAnswer;
+export default OptInCheckbox;
