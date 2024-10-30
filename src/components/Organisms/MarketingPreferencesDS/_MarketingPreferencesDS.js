@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
-import CheckAnswer from './_CheckAnswer';
+import OptInCheckbox from './_OptInCheckbox';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
@@ -67,9 +67,9 @@ const MarketingPreferencesDS = ({
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
-      <FormField className="field-email">
+      <FormField className={`field-email ${emailChoice && 'selected'}`}>
         <CheckboxWrapper>
-          <CheckAnswer
+          <OptInCheckbox
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
             id="mp_permissionEmail"
@@ -102,9 +102,9 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
-      <FormField className="field-post">
+      <FormField className={`field-post ${postChoice && 'selected'}`}>
         <CheckboxWrapper>
-          <CheckAnswer
+          <OptInCheckbox
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
@@ -174,9 +174,9 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
-      <FormField className="field-sms">
+      <FormField className={`field-sms ${smsChoice && 'selected'}`}>
         <CheckboxWrapper>
-          <CheckAnswer
+          <OptInCheckbox
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
@@ -206,9 +206,9 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
-      <FormField className="field-phone">
+      <FormField className={`field-phone ${phoneChoice && 'selected'}`}>
         <CheckboxWrapper>
-          <CheckAnswer
+          <OptInCheckbox
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"

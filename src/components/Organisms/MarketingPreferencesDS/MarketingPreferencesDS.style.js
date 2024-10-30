@@ -40,20 +40,42 @@ const FormField = styled.div`${({ theme }) => css`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #9ab3ff; // placeholder
-  padding: 10px;
+  padding: ${spacing('m')};
+  border: 1px solid ${theme.color('grey')};;
   border-radius: 10px;
+  background-color: ${theme.color('grey_light')};
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: ${theme.color('grey_medium')};
+  }
+
+  &.selected {
+    background-color: ${theme.color('blue_donate')};
+
+    label, span {
+      color: white;
+    }
+    
+    &:hover {
+      background-color: #161a85;
+    }
+  }
+
 
   @media ${theme.allBreakpoints('M')} {
     // width: 50%;
   }
 
+  // All labels; input AND checkbox
   label {
     position: relative;
-    // margin-bottom: ${spacing('md')};
     margin-bottom: 0;
     width: 100%;
-    color: ${theme.color('grey_dark')};
+    color: ${theme.color('black')};
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
   }
 
   h3 {
@@ -102,21 +124,15 @@ const CheckInput = styled.input`
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
-    margin-right: 10px;
     width: 30px;
     height: 30px;
-    background-color: ${({ theme }) => theme.color('grey_light')};
+    background-color: ${({ theme }) => theme.color('white')};
     border: 1px solid ${({ theme }) => theme.color('black')};
     float: left;
     border-radius: 8px;
-
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      margin-right: 15px;
-    }
   }
   :checked + span {
-    background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('grey_light')};
+    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};;
     background-size: contain;
   }
 `;
@@ -142,10 +158,10 @@ const ExtraInfo = styled.span`
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   margin-bottom: 0rem;
   margin-top: 1rem;
-  color: ${({ theme }) => theme.color('grey_dark')};
+  color: ${({ theme }) => theme.color('black')};
 
   + label {
-    margin-top: 10px;
+    margin-top: ${spacing('md')};
     margin-bottom: 0;
 
     // Visually hide the actual field label for the
@@ -169,8 +185,15 @@ const ExtraInfo = styled.span`
 `;
 
 const MPTextInput = styled(TextInput)`
+  > span {
+    // background-color: purple;
+    margin-bottom: 0.5rem;
+  }
+
   input {
-    border: 1px solid  ${({ theme }) => theme.color('black')};;
+    border: 1px solid  ${({ theme }) => theme.color('black')};
+    background-color: ${({ theme }) => theme.color('white')};
+    margin-bottom: 10px;
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
