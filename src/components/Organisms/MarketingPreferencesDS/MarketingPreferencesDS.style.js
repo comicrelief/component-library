@@ -15,7 +15,7 @@ import SMSIconWhite from './assets/Text--white.svg';
 const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   // Preload 'selected' icons
   &:after {
     position:absolute;
@@ -29,8 +29,6 @@ const OuterWrapper = styled.div`
       url(${PostIconWhite})
       url(${SMSIconWhite});
   }
-
-  // background-image: url(${EmailIconWhite}), url(${PhoneIconWhite}), url(${PostIconWhite}), url(${SMSIconWhite}), none;
 `;
 
 const TopCopyWrapper = styled.div`
