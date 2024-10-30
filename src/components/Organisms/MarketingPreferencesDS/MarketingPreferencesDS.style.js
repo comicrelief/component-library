@@ -17,12 +17,18 @@ const OuterWrapper = styled.div`
   flex-direction: column;
 
   // Preload 'selected' icons
-  background-image:
-    url(${EmailIconWhite}),
-    url(${PhoneIconWhite}),
-    url(${PostIconWhite}),
-    url(${SMSIconWhite}),
-    none;
+  &:after {
+    position:absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: 
+      url(${EmailIconWhite})
+      url(${PhoneIconWhite})
+      url(${PostIconWhite})
+      url(${SMSIconWhite});
+  }
 `;
 
 const TopCopyWrapper = styled.div`
