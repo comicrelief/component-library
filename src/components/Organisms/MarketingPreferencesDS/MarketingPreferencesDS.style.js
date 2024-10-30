@@ -38,7 +38,7 @@ const CheckboxWrapper = styled.div`
 `;
 
 const AssociatedFieldsName = styled.span`
-  padding-left: 50px;
+  padding-left: 40px;
   line-height: 30px;
   background-repeat: no-repeat;
   background-position: left center;
