@@ -233,8 +233,13 @@ const ExtraInfo = styled.span`
 `;
 
 const MPTextInput = styled(TextInput)`
+  // Correct the ErrorMsg offset for this context
+  > div + span span {
+    margin-top: -20px;
+  }
+
   > span {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
 
   input {
