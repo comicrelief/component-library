@@ -3,6 +3,14 @@ import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import checkBoxIcon from './assets/CR_Tick_black.svg';
 import TextInput from './_TextInput';
+import EmailIcon from './assets/Email.svg';
+import PhoneIcon from './assets/Phone.svg';
+import PostIcon from './assets/Post.svg';
+import SMSIcon from './assets/Text.svg';
+import EmailIconWhite from './assets/Email--white.svg';
+import PhoneIconWhite from './assets/Phone--white.svg';
+import PostIconWhite from './assets/Post--white.svg';
+import SMSIconWhite from './assets/Text--white.svg';
 
 const OuterWrapper = styled.div`
   display: flex;
@@ -29,6 +37,29 @@ const CheckboxWrapper = styled.div`
   flex-direction: column;
 `;
 
+const AssociatedFieldsName = styled.span`
+  padding-left: 50px;
+  line-height: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &.icon-mp_permissionEmail {
+    background-image: url(${EmailIcon})
+  }
+
+  &.icon-mp_permissionPhone {
+    background-image: url(${PhoneIcon})
+  }
+
+  &.icon-mp_permissionPost {
+    background-image: url(${PostIcon})
+  }
+
+  &.icon-mp_permissionSMS {
+    background-image: url(${SMSIcon})
+  }
+`;
+
 const FormField = styled.div`${({ theme }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
@@ -48,8 +79,26 @@ const FormField = styled.div`${({ theme }) => css`
   &.selected {
     background-color: ${theme.color('blue_donate')};
 
-    label, span {
-      color: ${theme.color('white')};;
+    span.icon-mp_permissionEmail {
+      background-image: url(${EmailIconWhite});
+    }
+
+    span.icon-mp_permissionPhone {
+      background-image: url(${PhoneIconWhite});
+    }
+
+    span.icon-mp_permissionPost {
+      background-image: url(${PostIconWhite});
+    }
+
+    span.icon-mp_permissionSMS {
+      background-image: url(${SMSIconWhite});
+    }
+
+    > div {
+      label, > span {
+        color: ${theme.color('white')};
+      }
     }
 
     &:hover {
@@ -201,5 +250,6 @@ export {
   ShowHideInputWrapper,
   ExtraInfo,
   OuterWrapper,
-  MPTextInput
+  MPTextInput,
+  AssociatedFieldsName
 };

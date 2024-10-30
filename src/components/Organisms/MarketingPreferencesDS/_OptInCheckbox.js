@@ -5,7 +5,8 @@ import AssociatedFields from './_AssociatedFields';
 import {
   CheckContainer,
   CheckLabel,
-  CheckInput
+  CheckInput,
+  AssociatedFieldsName
 } from './MarketingPreferencesDS.style';
 
 const OptInCheckbox = ({
@@ -48,7 +49,9 @@ const OptInCheckbox = ({
   return (
     <CheckContainer>
       <CheckLabel htmlFor={`${name}-yes`} userSelection={userSelection}>
-        { AssociatedFields[name].label }
+        <AssociatedFieldsName className={`icon-${name}`}>
+          { AssociatedFields[name].label }
+        </AssociatedFieldsName>
         <CheckInput
           type="checkbox"
           name={name}
