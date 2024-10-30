@@ -7,11 +7,6 @@ import TextInput from './_TextInput';
 const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-  }
 `;
 
 const TopCopyWrapper = styled.div`
@@ -61,11 +56,6 @@ const FormField = styled.div`${({ theme }) => css`
       // No fancy functions yet to darken preexisting colours..
       background-color: #161a85;
     }
-  }
-
-
-  @media ${theme.allBreakpoints('M')} {
-    // width: 50%;
   }
 
   // All labels; input AND checkbox
@@ -187,7 +177,6 @@ const ExtraInfo = styled.span`
 
 const MPTextInput = styled(TextInput)`
   > span {
-    // background-color: purple;
     margin-bottom: 0.5rem;
   }
 
