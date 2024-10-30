@@ -54,10 +54,11 @@ const FormField = styled.div`${({ theme }) => css`
     background-color: ${theme.color('blue_donate')};
 
     label, span {
-      color: white;
+      color: ${theme.color('white')};;
     }
-    
+
     &:hover {
+      // No fancy functions yet to darken preexisting colours..
       background-color: #161a85;
     }
   }
