@@ -15,14 +15,22 @@ import SMSIconWhite from './assets/Text--white.svg';
 const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
+  
   // Preload 'selected' icons
-  background-image:
-    url(${EmailIconWhite}),
-    url(${PhoneIconWhite}),
-    url(${PostIconWhite}),
-    url(${SMSIconWhite}),
-    none;
+  &:after {
+    position:absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: 
+      url(${EmailIconWhite})
+      url(${PhoneIconWhite})
+      url(${PostIconWhite})
+      url(${SMSIconWhite});
+  }
+
+  // background-image: url(${EmailIconWhite}), url(${PhoneIconWhite}), url(${PostIconWhite}), url(${SMSIconWhite}), none;
 `;
 
 const TopCopyWrapper = styled.div`
