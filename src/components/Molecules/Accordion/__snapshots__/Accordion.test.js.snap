@@ -114,6 +114,7 @@ exports[`renders correctly 1`] = `
     aria-expanded="false"
     className="c1"
     onClick={[Function]}
+    type="button"
   >
     <h2
       className="c2"

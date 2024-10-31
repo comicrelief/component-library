@@ -83,7 +83,7 @@ const Accordion = ({
 
   return (
     <Container {...rest}>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes}>
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes} type="button">
         {title}
         <Icon>
           <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
