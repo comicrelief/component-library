@@ -22,26 +22,30 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: auto;
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: auto;
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
     padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};
   }
 `;
 
-const Button = React.forwardRef(({ children, wrapper = false, ...rest }, ref) => (
-  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref}>
+const Button = React.forwardRef(({
+  children, wrapper = false, fullWidth = false, ...rest
+}, ref) => (
+  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref} fullWidth={fullWidth}>
     {children}
   </StyledButton>
 ));
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  wrapper: PropTypes.bool // Buttons as span
+  wrapper: PropTypes.bool, // Buttons as span
+  fullWidth: PropTypes.bool
 };
 
 export default Button;
