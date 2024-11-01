@@ -18,13 +18,13 @@ import Text from '../../Atoms/Text/Text';
 import Text from '../../Atoms/Text/Text';
 
 <Accordion
-  contentPadding="666px"
+  contentBottomPadding="15px"
   title={
     <Text family="Anton" size="l" uppercase>
       I am the title
     </Text>
   }
   >
- <Text tag="p">Tweaked padding here</Text>
+ <Text tag="p">Customised bottom padding here!</Text>
 </Accordion>
 ```

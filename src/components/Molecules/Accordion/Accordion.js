@@ -60,20 +60,20 @@ const Copy = styled.div`
     padding: 0 ${spacing('lg')};
   }
 
-  ${({ isOpen, contentPadding }) => (isOpen && css`
+  ${({ isOpen, contentBottomPadding }) => (isOpen && css`
     height: auto;
     visibility: visible;
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
-    padding: 0 (${contentPadding} || ${spacing('l')}) (${contentPadding} || ${spacing('l')});
+    padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: 0 ${spacing('lg')} ${spacing('l')};
+      padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
     }
   `)}
 `;
 
 const Accordion = ({
-  children, title, contentPadding, ...rest
+  children, title, contentBottomPadding, ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -89,7 +89,7 @@ const Accordion = ({
           <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
         </Icon>
       </Button>
-      <Copy isOpen={isOpen} contentPadding={contentPadding}>
+      <Copy isOpen={isOpen} contentBottomPadding={contentBottomPadding}>
         {children}
       </Copy>
     </Container>
@@ -97,7 +97,7 @@ const Accordion = ({
 };
 
 Accordion.propTypes = {
-  contentPadding: PropTypes.string,
+  contentBottomPadding: PropTypes.string,
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string,
