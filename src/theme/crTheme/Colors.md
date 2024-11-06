@@ -341,7 +341,7 @@ const Item = styled.div`
         <Text tag="h3" color="white" size="xs">
           Blue Donate Interact
         </Text>
-        <Text tag="p" color="white">#2042AD</Text>
+        <Text tag="p" color="white">#001A85</Text>
       </Card>
     </Item>
   </Grid>
