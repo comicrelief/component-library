@@ -27,7 +27,7 @@ it("renders correctly", () => {
 
     @media (min-width:1175px) {
       .c0 {
-        width: 51px;
+        width: 70px;
       }
     }
 
