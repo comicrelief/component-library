@@ -166,7 +166,7 @@ const NavLink = styled(NavLinkClass)`
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    padding: 10px 0;
+    padding: 10px 15px 0 0;
     height: auto;
     :hover,
     :focus-within,
@@ -274,9 +274,12 @@ const ChevronWrapper = styled.div`
   position: absolute;
   top: 20px;
   right: 22px;
+  height: 16px;
 
   img {
     width: 100%;
+    display: block;
+    height: auto;
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -284,7 +287,11 @@ const ChevronWrapper = styled.div`
     top: -3px;
     right: -1px;
     width: 10px;
-    padding-top: 2px;
+    //
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 10px;
   }
 `;
 

@@ -31,7 +31,7 @@ import {
 } from './HeaderNav.style';
 
 const HeaderNav = ({
-  navItems, metaIcons, donateButton, characterLimit
+  navItems = {}, metaIcons, donateButton = null, characterLimit = 60
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -341,13 +341,6 @@ HeaderNav.propTypes = {
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
   donateButton: PropTypes.node
-};
-
-HeaderNav.defaultProps = {
-  navItems: {},
-  // To be overridable as a CMS prop
-  characterLimit: 60,
-  donateButton: null
 };
 
 export default HeaderNav;
