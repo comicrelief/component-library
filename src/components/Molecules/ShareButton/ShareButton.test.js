@@ -1,7 +1,7 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../hoc/shallowWithTheme";
-import ShareButton from "./ShareButton";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import ShareButton from './ShareButton';
 
 it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();

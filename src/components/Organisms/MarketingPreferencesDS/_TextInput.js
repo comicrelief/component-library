@@ -4,9 +4,9 @@ import Input from '../../Atoms/Input/Input';
 
 const TextInput = ({
   fieldName, label,
-  optional, fieldType, formContext, ...rest
+  optional = null, fieldType = 'text', formContext = null, ...rest
 }) => {
-  const { errors, register } = formContext;
+  const { formState: { errors }, register } = formContext;
 
   const props = {
     name: fieldName,
@@ -20,13 +20,7 @@ const TextInput = ({
     ...rest
   };
 
-  return <Input {...props} ref={register} />;
-};
-
-TextInput.defaultProps = {
-  optional: null,
-  fieldType: 'text',
-  formContext: null
+  return <Input {...props} {...register(fieldName)} />;
 };
 
 TextInput.propTypes = {

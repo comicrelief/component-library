@@ -2,7 +2,6 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('marketing preferences component', () => {
   test('marketing preferences', async ({ page }) => {
-
     await page.goto('/#marketingpreferencesdsform');
 
     await expect(page.locator('[data-testid="MarketingPreferencesDSForm-example-1"]')).toBeVisible();
@@ -80,7 +79,7 @@ test.describe('marketing preferences component', () => {
     await page.locator('div#marketing-preferences--default input#mp_email').fill(''); // clear the email field
     await page.locator('div#marketing-preferences--default input#mp_email').type('Test0-9!#$%&\'*+/=?^_{|}~-@comicrelief_9-8.com.uk');
     await page.locator('div#marketing-preferences--default input#mp_address1').click();
-    await expect(page.locator('div#marketing-preferences--default div.field-email > div > label[for="mp_email"] > span > span')).toBeHidden('');
+    await expect(page.locator('div#marketing-preferences--default div.field-email > div > label[for="mp_email"] > span > span')).toContainText('Please enter a valid email address');
 
     // postal address fields validation
     // validate address line 1 field

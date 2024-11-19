@@ -19,7 +19,7 @@ const LoaderContainer = styled.div`${({ withMargin }) => (withMargin ? `
 
 // A button with loading and disabled states.
 const ButtonWithStates = React.forwardRef(({
-  children, loadingText, loading, disabled, ...rest
+  children, loadingText = 'Loading', loading = false, disabled = false, ...rest
 }, ref) => {
   const [loaderColour, setLoaderColour] = useState(null);
 
@@ -53,12 +53,6 @@ ButtonWithStates.propTypes = {
   loadingText: PropTypes.string,
   loading: PropTypes.bool,
   disabled: PropTypes.bool
-};
-
-ButtonWithStates.defaultProps = {
-  loading: false,
-  disabled: false,
-  loadingText: 'Loading'
 };
 
 export default ButtonWithStates;

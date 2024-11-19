@@ -12,7 +12,7 @@ const Switch = styled.span`
   display: block;
   position: absolute;
   transition: left 0.15s ease-out;
-  background-color: ${({ theme }) => theme.color('blue')};
+  background-color: ${({ theme }) => theme.color('blue_donate')};
   left: 2px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
 `;
@@ -42,7 +42,7 @@ const MoneyBox = styled.div`
     ${hideVisually}
   }
   input:focus:not(:checked) + label {
-    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue_donate')};
   }
 `;
 
@@ -68,7 +68,7 @@ const Label = styled.label`
   &:focus {
     border: none;
     outline: none;
-    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue')};
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue_donate')};
   }
 `;
 

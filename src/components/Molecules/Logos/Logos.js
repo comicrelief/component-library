@@ -23,7 +23,7 @@ const LogoLink = styled.a`
   }
 `;
 
-const Logos = ({ campaign }) => {
+const Logos = ({ campaign = 'Comic Relief' }) => {
   if (campaign === 'Sport Relief Gameon') {
     return (
       <>
@@ -67,10 +67,6 @@ const Logos = ({ campaign }) => {
 
 Logos.propTypes = {
   campaign: PropTypes.string
-};
-
-Logos.defaultProps = {
-  campaign: 'Comic Relief'
 };
 
 export default Logos;

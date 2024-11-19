@@ -37,9 +37,8 @@ Default spacing scale
 | xxl  |  8rem   |
 | xxxl |  16rem  |
 
-How to use in your styled component
+How to use in your styled component:
 
-`export const Component = styled.span'`
 `padding: ${spacing('md)'} ${spacing('l)'};';`
 
 ## allBreakpoints, and { breakpointValues } within allBreakpoints
@@ -48,25 +47,19 @@ How to use in your styled component
 |:----:|------:| ------:| -----:| ------:|
 | 0    | 740   | 1024   | 1150  | 1440   |
 
-### Usage within Component Library itself
+## Usage within Component Library itself
 #### media queries (no need to import):
 `@media ${({ theme }) => theme.allBreakpoints('M')} {`
 
-#### screen sizes:
+### screen sizes:
 `import { breakpointValues } from '../../../theme/shared/allBreakpoints';`
-
-`...`
 
 `max-width: ${breakpointValues.M}px;`
 
-
-### Usage within Component Library
+### Usage within Component Library:
 `import { breakpointValues } from '@comicrelief/component-library/src/theme/shared/allBreakpoints';`
 
-`...`
-
 `max-width: ${breakpointValues.M}px);`
-
 
 
 ## containers from containers.js

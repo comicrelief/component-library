@@ -17,21 +17,21 @@ const allPlayers = {};
 
 /* Single Message is our main component usually to build landing pages */
 const SingleMessage = ({
-  backgroundColor,
-  copyFirst,
-  imageLow,
-  imageSet,
-  image,
-  imageSet2,
-  image2,
-  imageAltText,
-  imageAltText2,
-  children,
-  fullImage,
-  vhFull,
-  videoID,
-  landscapeVideo,
-  paddingOption
+  backgroundColor = 'white',
+  copyFirst = false,
+  fullImage = false,
+  imageSet = null,
+  imageLow = null,
+  image = null,
+  imageSet2 = null,
+  image2 = null,
+  imageAltText = '',
+  imageAltText2 = '',
+  children = null,
+  vhFull = false,
+  videoID = null,
+  landscapeVideo = false,
+  paddingOption = null
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
@@ -238,24 +238,6 @@ SingleMessage.propTypes = {
   videoID: PropTypes.string,
   landscapeVideo: PropTypes.bool,
   paddingOption: PropTypes.string
-};
-
-SingleMessage.defaultProps = {
-  backgroundColor: 'white',
-  copyFirst: false,
-  fullImage: false,
-  imageSet: null,
-  imageLow: null,
-  image: null,
-  imageSet2: null,
-  image2: null,
-  imageAltText: '',
-  imageAltText2: '',
-  children: null,
-  vhFull: false,
-  videoID: null,
-  landscapeVideo: false,
-  paddingOption: null
 };
 
 export default SingleMessage;

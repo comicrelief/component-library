@@ -28,7 +28,7 @@ const StyledItem = styled.li`
 `;
 
 /** Social media icons with customizable style linked to campaign social media accounts */
-const SocialIcons = ({ campaign, ...restProps }) => {
+const SocialIcons = ({ target = 'blank', campaign, ...restProps }) => {
   const links = getLinks(campaign);
 
   return (
@@ -36,6 +36,7 @@ const SocialIcons = ({ campaign, ...restProps }) => {
       {Object.keys(icons).map(brand => (
         <StyledItem key={brand}>
           <Icon
+            target={target}
             icon={icons[brand]}
             href={links[brand].url}
             title={links[brand].title}
@@ -54,10 +55,6 @@ SocialIcons.propTypes = {
   campaign: PropTypes.string.isRequired,
   /** Social media account link target */
   target: PropTypes.string
-};
-
-SocialIcons.defaultProps = {
-  target: 'blank'
 };
 
 export default SocialIcons;

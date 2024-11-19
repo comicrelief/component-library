@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import Donate from './Donate';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';

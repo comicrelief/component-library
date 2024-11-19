@@ -10,23 +10,23 @@ import {
 } from './Promo.style';
 
 const Promo = ({
-  copyLeft,
-  backgroundColor,
-  imageLow,
-  imageSet,
-  image,
-  imageAltText,
-  children,
-  position,
-  autoPlay,
-  loop,
-  poster,
-  mobilePoster,
-  showPosterAfterPlaying,
-  videoSrc,
-  mobileVideoSrc,
-  behindTextGradient,
-  blackPlayButton
+  backgroundColor = 'white',
+  copyLeft = false,
+  imageSet = null,
+  imageLow = null,
+  image = null,
+  imageAltText = '',
+  children = null,
+  position = 'none',
+  autoPlay = true,
+  loop = true,
+  poster = null,
+  mobilePoster = null,
+  videoSrc = null,
+  mobileVideoSrc = null,
+  showPosterAfterPlaying = true,
+  behindTextGradient = 'none',
+  blackPlayButton = false
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -122,26 +122,6 @@ Promo.propTypes = {
   showPosterAfterPlaying: PropTypes.bool,
   behindTextGradient: PropTypes.oneOf(['black', 'white', 'none']),
   blackPlayButton: PropTypes.bool
-};
-
-Promo.defaultProps = {
-  backgroundColor: 'white',
-  copyLeft: false,
-  imageSet: null,
-  imageLow: null,
-  image: null,
-  imageAltText: '',
-  children: null,
-  position: 'none',
-  autoPlay: true,
-  loop: true,
-  poster: null,
-  mobilePoster: null,
-  videoSrc: null,
-  mobileVideoSrc: null,
-  showPosterAfterPlaying: true,
-  behindTextGradient: 'none',
-  blackPlayButton: false
 };
 
 export default Promo;

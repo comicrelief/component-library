@@ -8,7 +8,7 @@ import {
 } from './Header.style';
 
 const Header = ({
-  navItems, metaIcons, campaign, donateButton, ...rest
+  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null, ...rest
 }) => (
   <HeaderWrapper navItems {...rest}>
     <InnerWrapper>
@@ -33,12 +33,6 @@ Header.propTypes = {
   // ... and is supplied separately to allow more render control:
   donateButton: PropTypes.node,
   campaign: PropTypes.string
-};
-
-Header.defaultProps = {
-  navItems: {},
-  campaign: 'Comic Relief',
-  donateButton: null
 };
 
 export default Header;

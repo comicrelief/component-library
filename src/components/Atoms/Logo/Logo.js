@@ -46,7 +46,7 @@ const themeSwitcher = theme => {
 };
 
 const Logo = ({
-  rotate, sizeSm, sizeMd, campaign
+  rotate = false, sizeSm = '51px', sizeMd = '70px', campaign = 'Comic Relief'
 }) => (
   <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
     <Image

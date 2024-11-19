@@ -45,7 +45,7 @@ const Label = styled.label`
 `;
 
 const Checkbox = React.forwardRef(({
-  label, value, children, ...rest
+  label = undefined, value, children = undefined, ...rest
 }, ref) => (
   <Label hasLabelAsString={!!label}>
     <StyledCheckboxInput {...rest} value={value} ref={ref} />
@@ -59,11 +59,6 @@ Checkbox.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string,
   children: PropTypes.node
-};
-
-Checkbox.defaultProps = {
-  label: undefined,
-  children: undefined
 };
 
 export default Checkbox;

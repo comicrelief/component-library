@@ -15,7 +15,7 @@ const StyledSVG = styled.svg`
 `;
 
 const AtSign = ({
-  theme, size, colour, mobileColour, ...rest
+  theme, size = 24, colour = 'white', mobileColour = null, ...rest
 }) => (
   <StyledSVG
     width={size}
@@ -34,12 +34,6 @@ AtSign.propTypes = {
   size: PropTypes.number,
   colour: PropTypes.string,
   mobileColour: PropTypes.string
-};
-
-AtSign.defaultProps = {
-  size: 24,
-  colour: 'white',
-  mobileColour: null
 };
 
 export default withTheme(AtSign);

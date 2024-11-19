@@ -57,8 +57,8 @@ const Lookup = ({
   lookupHandler,
   mapOptionToString,
   onSelect,
-  noResultsMessage,
-  dropdownInstruction,
+  noResultsMessage = 'Sorry, could not find any results for your search',
+  dropdownInstruction = '',
   ...rest
 }) => {
   const [query, setQuery] = useState('');
@@ -138,11 +138,6 @@ Lookup.propTypes = {
   onSelect: PropTypes.func.isRequired,
   noResultsMessage: PropTypes.string,
   dropdownInstruction: PropTypes.string
-};
-
-Lookup.defaultProps = {
-  noResultsMessage: 'Sorry, could not find any results for your search',
-  dropdownInstruction: ''
 };
 
 export default Lookup;

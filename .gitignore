@@ -7,8 +7,12 @@
 
 # production
 /build
-/dist
 /styleguide
+
+/dist
+# Kinda crummy, but in order to use your PR branch in another context (for prototyping etc.),
+# you can *temporarily* un-ignore the dist folder (all apart from the styleguide folder; don't need that):
+#/dist/styleguide
 
 # misc
 .DS_Store

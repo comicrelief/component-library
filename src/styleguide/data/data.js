@@ -223,7 +223,20 @@ const carouselItemsMinimal = {
   }
 };
 
+const RichtextCarouselItems = {
+  contentful_id: 'nqIEHjiYE8Yd2A2a5cI3O',
+  // Ugly here, but to be provided by Richtextrender function in-situ:
+  headingCopy: 'Some heading copy that will be nicely constructed in-situ',
+  nodes: [
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS.' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.' },
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
+  ],
+  autoPlay: true
+};
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
-  carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal
+  carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal, RichtextCarouselItems
 };

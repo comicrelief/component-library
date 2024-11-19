@@ -2,6 +2,8 @@ const colors = {
   black: '#000000',
   blue: '#0565D1',
   blue_dark: '#274084',
+  blue_donate: '#2042AD',
+  blue_donate_interact: '#001A85',
   blue_light: '#BECCF9',
   blue_royal: '#6489FC',
   coral: '#F9686D',
@@ -19,14 +21,21 @@ const colors = {
   green: '#49D267',
   green_dark: '#1B651D',
   green_light: '#F4F2F4',
-  grey: '#969598',
-  grey_dark: '#222222',
   grey_stone: '#CEDCDA',
   grey_extra_light: '#f0f0f0',
   grey_for_forms: '#666',
   grey_label: '#5C5C5E',
+  // this is the Curtis approved list of 5 greys that will be later numbered grey_1 thru grey_5
+  // grey_1
   grey_light: '#F4F3F5',
+  // grey_2
   grey_medium: '#E1E2E3',
+  // grey_3
+  grey: '#969598',
+  // grey_4
+  grey_4: '#6E6E6E',
+  // grey_5
+  grey_dark: '#222222',
   magenta: '#FC59CE',
   magenta_dark: '#821C5D',
   magenta_light: '#FEB4DC',

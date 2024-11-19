@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../hoc/shallowWithTheme';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import Card from './Card';
 import { defaultData } from '../../../styleguide/data/data';
 it('renders correctly', () => {

@@ -24,7 +24,7 @@ const Container = styled.div`
   }
 `;
 
-const Banner = ({ children, backgroundColor }) => (
+const Banner = ({ children, backgroundColor = 'grey_dark' }) => (
   <Wrapper backgroundColor={backgroundColor}>
     <Container>
       { children }
@@ -35,10 +35,6 @@ const Banner = ({ children, backgroundColor }) => (
 Banner.propTypes = {
   children: PropTypes.node.isRequired,
   backgroundColor: PropTypes.string
-};
-
-Banner.defaultProps = {
-  backgroundColor: 'grey_dark'
 };
 
 export default Banner;

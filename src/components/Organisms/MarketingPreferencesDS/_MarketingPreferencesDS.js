@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
-import CheckAnswer from './_CheckAnswer';
+import OptInCheckbox from './_OptInCheckbox';
 
 import { defaultCopyTop, defaultCopyBottom } from './_DefaultCopy';
 import {
-  TopCopyWrapper, BottomCopyWrapper, Head, FormField,
+  TopCopyWrapper, BottomCopyWrapper, CheckboxWrapper, FormField,
   ShowHideInputWrapper, ExtraInfo, OuterWrapper, MPTextInput
 } from './MarketingPreferencesDS.style';
 
@@ -15,13 +15,14 @@ import {
 } from './_MarketingPrefsConfig';
 
 const MarketingPreferencesDS = ({
-  copyTop,
-  copyBottom,
+  copyTop = defaultCopyTop,
+  copyBottom = defaultCopyBottom,
   mpValidationOptions,
-  id,
-  formContext
+  id = null,
+  formContext = null,
+  ...rest
 }) => {
-  const { errors, control } = formContext;
+  const { formState: { errors }, control } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
@@ -61,21 +62,21 @@ const MarketingPreferencesDS = ({
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   return (
-    <OuterWrapper id={customId}>
+    <OuterWrapper id={customId} {...rest}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
-      <FormField className="field-email">
-        <Head>
-          <CheckAnswer
+      <FormField className={`field-email ${emailChoice && 'selected'}`}>
+        <CheckboxWrapper>
+          <OptInCheckbox
             mpValidationOptions={mpValidationOptions}
             name="mp_permissionEmail"
             id="mp_permissionEmail"
             userSelection={emailChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
 
         <MaybeDisabled disabled={disableEmailInput}>
           <ShowHideInputWrapper show={showEmailField}>
@@ -101,16 +102,16 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
-      <FormField className="field-post">
-        <Head>
-          <CheckAnswer
+      <FormField className={`field-post ${postChoice && 'selected'}`}>
+        <CheckboxWrapper>
+          <OptInCheckbox
             name="mp_permissionPost"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPost"
             userSelection={postChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disablePostInput}>
           <ShowHideInputWrapper show={showPostFields}>
             <ExtraInfo>
@@ -173,16 +174,16 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
-      <FormField className="field-sms">
-        <Head>
-          <CheckAnswer
+      <FormField className={`field-sms ${smsChoice && 'selected'}`}>
+        <CheckboxWrapper>
+          <OptInCheckbox
             name="mp_permissionSMS"
             id="mp_permissionSMS"
             mpValidationOptions={mpValidationOptions}
             userSelection={smsChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper show={showSMSField}>
             <ExtraInfo>
@@ -205,16 +206,16 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
-      <FormField className="field-phone">
-        <Head>
-          <CheckAnswer
+      <FormField className={`field-phone ${phoneChoice && 'selected'}`}>
+        <CheckboxWrapper>
+          <OptInCheckbox
             name="mp_permissionPhone"
             mpValidationOptions={mpValidationOptions}
             id="mp_permissionPhone"
             userSelection={phoneChoice}
             formContext={formContext}
           />
-        </Head>
+        </CheckboxWrapper>
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper show={showPhoneField}>
             <ExtraInfo>
@@ -241,7 +242,7 @@ const MarketingPreferencesDS = ({
 };
 
 // removes from DOM completely
-const MaybeDisabled = ({ children, disabled }) => {
+const MaybeDisabled = ({ children = null, disabled = false }) => {
   if (disabled) return null;
   return children;
 };
@@ -256,21 +257,9 @@ MarketingPreferencesDS.propTypes = {
   formContext: PropTypes.shape()
 };
 
-MarketingPreferencesDS.defaultProps = {
-  copyTop: defaultCopyTop,
-  copyBottom: defaultCopyBottom,
-  id: null,
-  formContext: null
-};
-
 MaybeDisabled.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool
-};
-
-MaybeDisabled.defaultProps = {
-  children: null,
-  disabled: false
 };
 
 export {

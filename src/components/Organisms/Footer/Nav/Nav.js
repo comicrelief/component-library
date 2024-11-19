@@ -16,7 +16,7 @@ import {
   SubNavLink
 } from './Nav.style';
 
-const FooterNav = ({ navItems, ...rest }) => {
+const FooterNav = ({ navItems = {}, ...rest }) => {
   const { menuGroups } = navItems;
   const [isExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
@@ -122,10 +122,6 @@ const FooterNav = ({ navItems, ...rest }) => {
 
 FooterNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape)
-};
-
-FooterNav.defaultProps = {
-  navItems: {}
 };
 
 export default FooterNav;

@@ -15,6 +15,7 @@
       "exceptions": [""]
     }],
     "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
+    "react/require-default-props": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": "off",

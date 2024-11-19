@@ -3,6 +3,8 @@ const colors = {
   black_dark: '#030e1a',
   blue: '#223c59',
   blue_dark: '#3a4972',
+  blue_donate: '#2042AD',
+  blue_donate_interact: '#001A85',
   blue_light: '#274084',
   blue_royal: '#6489FC',
   coral: '#FF6F61',

@@ -7,22 +7,26 @@ import {
 } from './CardDs.style';
 
 const CardDs = ({
-  icon,
-  backgroundColor,
-  imageLow,
-  images,
-  image,
-  imageAltText,
-  height,
-  width,
+  backgroundColor = 'white',
+  imageLow = null,
+  images = null,
+  image = null,
+  link = null,
+  linkLabel = null,
+  target = null,
+  imageAltText = '',
+  width = '100%',
+  height = '100%',
+  icon = null,
   children,
-  link,
-  linkLabel,
-  target,
+  isCarousel,
   ...rest
 }) => {
   const Media = (
-    <Image hasLink={link}>
+    <Image
+      hasLink={link}
+      isCarousel={isCarousel}
+    >
       <Picture
         alt={imageAltText}
         imageLow={imageLow}
@@ -39,6 +43,7 @@ const CardDs = ({
     if (imageLow && link) {
       return (
         <MediaLink
+          isCarousel={isCarousel}
           aria-hidden="true"
           tabIndex="-1"
           href={link}
@@ -59,9 +64,13 @@ const CardDs = ({
   const external = target === 'blank' ? 'noopener' : null;
 
   return (
-    <Container {...rest}>
+    <Container
+      isCarousel={isCarousel}
+      {...rest}
+    >
       {hasMedia()}
       <Copy
+        isCarousel={isCarousel}
         hasImage={imageLow}
         hasLink={link}
         backgroundColor={backgroundColor}
@@ -69,7 +78,10 @@ const CardDs = ({
         {children}
       </Copy>
       {link && (
-        <CTA hasImage={imageLow}>
+        <CTA
+          hasImage={imageLow}
+          isCarousel={isCarousel}
+        >
           <Link
             rel={external}
             color="red"
@@ -88,6 +100,7 @@ const CardDs = ({
 };
 
 CardDs.propTypes = {
+  isCarousel: PropTypes.bool,
   backgroundColor: PropTypes.string,
   imageLow: PropTypes.string,
   images: PropTypes.string,
@@ -100,20 +113,6 @@ CardDs.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
   icon: PropTypes.node
-};
-
-CardDs.defaultProps = {
-  backgroundColor: 'white',
-  imageLow: null,
-  images: null,
-  image: null,
-  link: null,
-  linkLabel: null,
-  target: null,
-  imageAltText: '',
-  width: '100%',
-  height: '100%',
-  icon: null
 };
 
 export default CardDs;

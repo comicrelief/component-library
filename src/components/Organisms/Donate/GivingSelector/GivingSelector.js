@@ -6,7 +6,7 @@ import {
 } from './GivingSelector.style';
 
 const GivingSelector = ({
-  givingType, changeGivingType, setPopOpen, mbshipID
+  givingType = null, changeGivingType, setPopOpen, mbshipID
 }) => {
   // Only updates giving type and popup status when appropriate
   const handleGivingTypeChange = (thisButtonType, currentGivingType) => {
@@ -49,10 +49,6 @@ const GivingSelector = ({
       </MoneyBox>
     </Wrapper>
   );
-};
-
-GivingSelector.defaultProps = {
-  givingType: null
 };
 
 GivingSelector.propTypes = {
