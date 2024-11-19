@@ -68,11 +68,4 @@ Logo.propTypes = {
   campaign: PropTypes.string
 };
 
-Logo.defaultProps = {
-  rotate: false,
-  sizeSm: '51px',
-  sizeMd: '51px',
-  campaign: 'Comic Relief'
-};
-
 export default Logo;
