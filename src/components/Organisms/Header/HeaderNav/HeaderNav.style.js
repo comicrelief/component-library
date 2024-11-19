@@ -166,7 +166,8 @@ const NavLink = styled(NavLinkClass)`
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    padding: 10px 15px 0 0;
+    padding: 10px 0;
+    padding: 10px 15px 15px 0;
     height: auto;
     :hover,
     :focus-within,
