@@ -16,7 +16,7 @@ const Dropdown = styled.div`
   max-height: 300px;
   overflow: auto;
   background-color: ${({ theme }) => theme.color('white')};
-  border: ${({ theme, hideBorder }) => (hideBorder ? 'none' : `1px solid ${theme.color('black')}`)};
+  border: ${({ theme, hideBorder }) => (hideBorder ? 'none' : `1px solid`)};
   margin-top: -1px;
   width: 100%;
 
