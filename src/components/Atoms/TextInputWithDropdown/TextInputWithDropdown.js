@@ -56,13 +56,15 @@ const TextInputWithDropdown = React.forwardRef(
         }
       };
 
-      // Only add the listener if we have options showing
+      // Only add the listeners if we have options showing
       if (options.length > 0 && !forceClosed) {
         document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
       }
 
       return () => {
         document.removeEventListener('mousedown', handleClickOutside);
+        document.removeEventListener('touchstart', handleClickOutside);
       };
     }, [options.length, forceClosed, onChange]);
 
