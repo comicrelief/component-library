@@ -53,10 +53,6 @@ const TextInputWithDropdown = React.forwardRef(
           && !dropdownRef.current.contains(event.target)
           && !containerRef.current.contains(event.target)) {
           setForceClosed(true);
-          // Clear the input
-          if (onChange) {
-            onChange({ target: { value: '' } });
-          }
         }
       };
 
