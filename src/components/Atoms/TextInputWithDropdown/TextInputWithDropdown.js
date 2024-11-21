@@ -52,7 +52,6 @@ const TextInputWithDropdown = React.forwardRef(
         if (dropdownRef.current
           && !dropdownRef.current.contains(event.target)
           && !containerRef.current.contains(event.target)) {
-          console.log('clicked outside');
           setForceClosed(true);
           // Clear the input
           if (onChange) {
