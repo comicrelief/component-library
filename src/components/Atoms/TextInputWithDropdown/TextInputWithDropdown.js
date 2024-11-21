@@ -52,6 +52,7 @@ const TextInputWithDropdown = React.forwardRef(
         if (dropdownRef.current
           && !dropdownRef.current.contains(event.target)
           && !containerRef.current.contains(event.target)) {
+          console.log('clicked outside');
           setForceClosed(true);
           // Clear the input
           if (onChange) {
@@ -143,19 +144,17 @@ const TextInputWithDropdown = React.forwardRef(
   }
 );
 
-const Options = ({
+const Options = React.forwardRef(({
   options,
   dropdownInstruction,
   onSelect,
   activeOption,
   resetActiveOption,
   ...rest
-}) => {
+}, ref) => {
   // Reset 'activeOption' when the list is unfocused.
   const onBlur = e => {
     const { target } = e;
-    // There's a delay before the new activeOption becomes the document.activeElement when
-    //  scrolling through the dropdown list via keyboard.
     setTimeout(() => {
       if (document.activeElement.parentNode !== target.parentNode) {
         resetActiveOption();
@@ -166,6 +165,7 @@ const Options = ({
   return (
     <Dropdown {...rest}>
       <DropdownList
+        ref={ref}
         role="listbox"
         onBlur={onBlur}
         aria-activedescendant={
@@ -203,7 +203,7 @@ const Options = ({
       </DropdownList>
     </Dropdown>
   );
-};
+});
 
 TextInputWithDropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
