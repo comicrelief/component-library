@@ -58,11 +58,11 @@ const TextInputWithDropdown = React.forwardRef(
 
       // Only add the listeners if we have options showing
       if (options.length > 0 && !forceClosed) {
-        ["mousedown", "touchstart"].forEach(event => document.addEventListener(event, handleClickOutside));
+        ['mousedown', 'touchstart'].forEach(event => document.addEventListener(event, handleClickOutside));
       }
 
       return () => {
-        ["mousedown", "touchstart"].forEach(event => document. removeEventListener(event, handleClickOutside));
+        ['mousedown', 'touchstart'].forEach(event => document.removeEventListener(event, handleClickOutside));
       };
     }, [options.length, forceClosed, onChange]);
 
