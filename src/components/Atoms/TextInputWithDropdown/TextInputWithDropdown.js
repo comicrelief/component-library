@@ -58,13 +58,11 @@ const TextInputWithDropdown = React.forwardRef(
 
       // Only add the listeners if we have options showing
       if (options.length > 0 && !forceClosed) {
-        document.addEventListener('mousedown', handleClickOutside);
-        document.addEventListener('touchstart', handleClickOutside);
+        ["mousedown", "touchstart"].forEach(event => document.addEventListener(event, handleClickOutside));
       }
 
       return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-        document.removeEventListener('touchstart', handleClickOutside);
+        ["mousedown", "touchstart"].forEach(event => document. removeEventListener(event, handleClickOutside));
       };
     }, [options.length, forceClosed, onChange]);
 
@@ -152,6 +150,8 @@ const Options = React.forwardRef(({
   // Reset 'activeOption' when the list is unfocused.
   const onBlur = e => {
     const { target } = e;
+    // There's a delay before the new activeOption becomes the document.activeElement when
+    //  scrolling through the dropdown list via keyboard.
     setTimeout(() => {
       if (document.activeElement.parentNode !== target.parentNode) {
         resetActiveOption();
