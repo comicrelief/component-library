@@ -25,6 +25,7 @@ const SchoolLookup = React.forwardRef(
       dropdownInstruction = 'Please select a school from the list below',
       notFoundMessage = "Sorry, we can't find this school",
       onSelect,
+      hideBorder = false,
       ...rest
     },
     ref
@@ -39,6 +40,7 @@ const SchoolLookup = React.forwardRef(
       placeholder,
       notFoundMessage,
       dropdownInstruction,
+      hideBorder,
       ...rest
     };
 
@@ -52,7 +54,10 @@ SchoolLookup.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   dropdownInstruction: PropTypes.string,
-  notFoundMessage: PropTypes.string
+  notFoundMessage: PropTypes.string,
+  hideBorder: PropTypes.bool
 };
+
+SchoolLookup.displayName = 'SchoolLookup';
 
 export default SchoolLookup;

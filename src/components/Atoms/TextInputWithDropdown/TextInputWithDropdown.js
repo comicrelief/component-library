@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Input from '../Input/Input';
@@ -37,16 +37,39 @@ const TextInputWithDropdown = React.forwardRef(
       label,
       dropdownInstruction = null,
       className = '',
+      hideBorder = false,
       ...otherInputProps
     },
-    ref
+    forwardedRef
   ) => {
     const [activeOption, setActiveOption] = useState(-1);
     const [forceClosed, setForceClosed] = useState(false);
+    const dropdownRef = useRef(null);
+    const containerRef = useRef(null);
+
     useEffect(() => {
-      // reset if options change
-      setActiveOption(-1);
+      const handleClickOutside = event => {
+        if (dropdownRef.current
+          && !dropdownRef.current.contains(event.target)
+          && !containerRef.current.contains(event.target)) {
+          setForceClosed(true);
+        }
+      };
+
+      // Only add the listeners if we have options showing
+      if (options.length > 0 && !forceClosed) {
+        ['mousedown', 'touchstart'].forEach(event => document.addEventListener(event, handleClickOutside));
+      }
+
+      return () => {
+        ['mousedown', 'touchstart'].forEach(event => document.removeEventListener(event, handleClickOutside));
+      };
+    }, [options.length, forceClosed, onChange]);
+
+    // Reset forceClosed when options change
+    useEffect(() => {
       setForceClosed(false);
+      setActiveOption(-1);
     }, [options]);
 
     const down = () => (activeOption < options.length - 1
@@ -96,16 +119,19 @@ const TextInputWithDropdown = React.forwardRef(
       <Container
         className={`TextInputWithDropdown ${className}`.trim()}
         onKeyDown={navigateOptions}
+        ref={containerRef}
       >
         <Input
           {...inputProps}
           className="TextInputWithDropdown__input"
-          ref={ref}
+          ref={forwardedRef}
         />
-        {options.length > 0 && forceClosed === false && (
+        {options.length > 0 && !forceClosed && (
           <Options
             {...optionsProps}
             className="TextInputWithDropdown__options"
+            ref={dropdownRef}
+            hideBorder={hideBorder}
           />
         )}
       </Container>
@@ -113,14 +139,14 @@ const TextInputWithDropdown = React.forwardRef(
   }
 );
 
-const Options = ({
+const Options = React.forwardRef(({
   options,
   dropdownInstruction,
   onSelect,
   activeOption,
   resetActiveOption,
   ...rest
-}) => {
+}, ref) => {
   // Reset 'activeOption' when the list is unfocused.
   const onBlur = e => {
     const { target } = e;
@@ -136,6 +162,7 @@ const Options = ({
   return (
     <Dropdown {...rest}>
       <DropdownList
+        ref={ref}
         role="listbox"
         onBlur={onBlur}
         aria-activedescendant={
@@ -173,7 +200,7 @@ const Options = ({
       </DropdownList>
     </Dropdown>
   );
-};
+});
 
 TextInputWithDropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -183,7 +210,8 @@ TextInputWithDropdown.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
-  dropdownInstruction: PropTypes.string
+  dropdownInstruction: PropTypes.string,
+  hideBorder: PropTypes.bool
 };
 
 Options.propTypes = {
@@ -191,7 +219,10 @@ Options.propTypes = {
   onSelect: PropTypes.func.isRequired,
   dropdownInstruction: PropTypes.string,
   activeOption: PropTypes.number.isRequired,
-  resetActiveOption: PropTypes.func.isRequired
+  resetActiveOption: PropTypes.func.isRequired,
+  hideBorder: PropTypes.bool
 };
+
+TextInputWithDropdown.displayName = 'TextInputWithDropdown';
 
 export default TextInputWithDropdown;
