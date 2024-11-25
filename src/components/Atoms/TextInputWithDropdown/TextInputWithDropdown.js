@@ -234,7 +234,7 @@ Options.propTypes = {
   activeOption: PropTypes.number.isRequired,
   resetActiveOption: PropTypes.func.isRequired,
   hideBorder: PropTypes.bool,
-  closeDropdown: PropTypes.func.isRequired
+  closeDropdown: PropTypes.func
 };
 
 TextInputWithDropdown.displayName = 'TextInputWithDropdown';
