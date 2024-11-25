@@ -66,7 +66,6 @@ const TextInputWithDropdown = React.forwardRef(
     }, [options.length, forceClosed, onChange]);
 
     const closeDropdown = () => {
-      console.log('handleDropdownInstructionClick');
       setForceClosed(true);
       setActiveOption(-1);
     };
