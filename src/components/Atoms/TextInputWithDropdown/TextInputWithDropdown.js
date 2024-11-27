@@ -7,7 +7,6 @@ import {
   Container,
   Dropdown,
   DropdownList,
-  DropdownItem,
   DropdownItemSelectable,
   TextItalic
 } from './TextInputWithDropdown.style';
@@ -66,6 +65,11 @@ const TextInputWithDropdown = React.forwardRef(
       };
     }, [options.length, forceClosed, onChange]);
 
+    const closeDropdown = () => {
+      setForceClosed(true);
+      setActiveOption(-1);
+    };
+
     // Reset forceClosed when options change
     useEffect(() => {
       setForceClosed(false);
@@ -112,6 +116,7 @@ const TextInputWithDropdown = React.forwardRef(
       onSelect,
       dropdownInstruction,
       activeOption,
+      closeDropdown,
       resetActiveOption: () => setActiveOption(-1)
     };
 
@@ -144,6 +149,7 @@ const Options = React.forwardRef(({
   dropdownInstruction,
   onSelect,
   activeOption,
+  closeDropdown,
   resetActiveOption,
   ...rest
 }, ref) => {
@@ -170,9 +176,16 @@ const Options = React.forwardRef(({
         }
       >
         {dropdownInstruction && (
-          <DropdownItem role="option">
-            <TextItalic>{dropdownInstruction}</TextItalic>
-          </DropdownItem>
+          <DropdownItemSelectable
+            id="dropdown-instruction"
+            role="option"
+            key="dropdown-instruction"
+            onClick={closeDropdown}
+          >
+            <TextItalic>
+              {dropdownInstruction}
+            </TextItalic>
+          </DropdownItemSelectable>
         )}
         {options.map((option, index) => (
           <DropdownItemSelectable
@@ -220,7 +233,8 @@ Options.propTypes = {
   dropdownInstruction: PropTypes.string,
   activeOption: PropTypes.number.isRequired,
   resetActiveOption: PropTypes.func.isRequired,
-  hideBorder: PropTypes.bool
+  hideBorder: PropTypes.bool,
+  closeDropdown: PropTypes.func
 };
 
 TextInputWithDropdown.displayName = 'TextInputWithDropdown';
