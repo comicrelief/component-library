@@ -2,66 +2,60 @@ export default {
   title: 'Header',
   menuGroups: [
     {
-      title: 'GROUP1',
-      id: 'group1',
+      title: 'Fundraising - menu group',
+      id: 'f7dc5eef-f4eb-5405-8a35-08808b55cb33',
       links: [
         {
-          title: 'Sport Relief',
+          title: 'Fundraising',
           path: 'https://www.comicrelief.com/fundraising/pay-in-your-money',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Run 30 Miles in June',
+          title: 'Red Nose Day',
           path: 'https://www.comicrelief.com/rednoseday',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Be a Good Sport: Schools',
+          title: 'Regular donations',
           path: 'https://www.comicrelief.com/join',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Win a trip to New York with Major League Baseball',
+          title: 'Squads',
           path: 'https://www.comicrelief.com/squads',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
+        },
+        {
+          title: 'The Noseys',
+          path: 'https://www.comicrelief.com/rednoseday/fundraising/the-noseys',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Free downloads',
+          path:
+            'https://www.comicrelief.com/rednoseday/fundraising/free-downloads',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
         }
       ]
     },
     {
-      title: 'GROUP2',
-      id: 'group2',
+      title: 'Schools & youth - menu group',
+      id: 'eaec51921-bbb3-5e8d-b966-c53fff34998b5',
       links: [
         {
-          title: 'Red Nose Day',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'The New Red Nose',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Schools',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'The Red Nose Day Nosey Awards',
+          title: 'Single menu link',
           path: 'https://www.comicrelief.com/rednoseday/schools',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -70,40 +64,19 @@ export default {
       ]
     },
     {
-      title: 'GROUP3',
-      id: 'group3',
+      title: 'What your money does - menu group',
+      id: '9f3980f3-d02b-52e9-ac41-933a778c040a',
       links: [
         {
-          title: 'Funding',
+          title: 'What your money does',
           path: 'https://www.comicrelief.com/what-your-money-does',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
-          title: 'Our Funding Practice',
-          path: 'https://www.comicrelief.com/our-legacy',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Funding opportunities',
-          path: 'https://www.comicrelief.com/our-legacy',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Our Funding strategy',
-          path: 'https://www.comicrelief.com/our-legacy',
-          internal: {
-            type: 'ContentfulPageLandingPage'
-          }
-        },
-        {
-          title: 'Managing your funding',
-          path: 'https://www.comicrelief.com/our-legacy',
+          title: 'Our legacy',
+          path: 'https://www.comicrelief.com/What-we-do/our-legacy',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -111,11 +84,18 @@ export default {
       ]
     },
     {
-      title: 'GROUP4',
-      id: 'group4',
+      title: 'Schools & youth - menu group',
+      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998b',
       links: [
         {
-          title: 'What Your Money Does',
+          title: 'Schools & youth',
+          path: 'https://www.comicrelief.com/rednoseday/schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Primary schools',
           path:
             'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
@@ -123,9 +103,30 @@ export default {
           }
         },
         {
-          title: 'Reports & Publications',
+          title: 'Secondary schools',
           path:
             'https://www.comicrelief.com/rednoseday/schools/secondary-schools',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Nurseries',
+          path: 'https://www.comicrelief.com/rednoseday/schools/nurseries',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Youth groups',
+          path: 'https://www.comicrelief.com/rednoseday/youth',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        },
+        {
+          title: 'Free downloads',
+          path: 'https://www.comicrelief.com/rednoseday/schools/free-downloads',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -133,47 +134,60 @@ export default {
       ]
     },
     {
-      title: 'GROUP5',
-      id: 'group5',
+      title: 'Shop',
+      id: 'eaec51921-bb89b3-5e8d-b9566-c53fff34998b5',
       links: [
         {
-          title: 'Get Involved',
-          url: 'https://www.comicrelief.com/working-with-us/',
+          title: 'Shop',
+          path: 'https://shop.comicrelief.com',
+          internal: {
+            type: 'ContentfulPageLandingPage'
+          }
+        }
+      ]
+    },
+    {
+      title: 'External Links (menu group)',
+      id: 'eaec5191-bbb3-5e8d-b966-c53fff34998a',
+      links: [
+        {
+          title: 'Test allowListed external link',
+          url: 'https://www.sportrelief.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Do your own fundraising',
-          url: 'https://www.comicrelief.com/404/',
+          title: 'Test non-allowListed external link',
+          url: 'https://bing.com',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Regular Donations',
-          url: 'https://www.comicrelief.com/404/',
+          title: 'Link comp: URL and Ref',
+          url: 'https://www.google.com',
+          reference: {
+            path: 'test-ref-path-1'
+          },
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'Run for Comic Relief',
-          url: 'https://www.comicrelief.com/404/',
+          title: 'Link comp: only Ref',
+          url: null,
+          reference: {
+            path: 'test-ref-path-2'
+          },
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
-          title: 'How to pay in your fundraising money',
-          url: 'https://www.comicrelief.com/404/',
-          internal: {
-            type: 'ContentfulComponentLink'
-          }
-        },
-        {
-          title: 'Partners',
-          url: 'https://www.comicrelief.com/404/',
+          title: 'Link comp: only URL',
+          url: 'test-url',
+          reference: null,
           internal: {
             type: 'ContentfulComponentLink'
           }

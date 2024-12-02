@@ -4,8 +4,6 @@ import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 
-import './annoying.css';
-
 const HeaderWrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`
@@ -49,57 +47,32 @@ const Brand = styled.div`
       border: 0;
     }
   }
-
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    margin-right: 0
-  }
 `;
 
-const DonateButtonWrapperTop = styled.div`
-  width: 120px;
+const MetaIcons = styled.div`
+  width: auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
 
-  // Donate button
-  a {
-    width: 90%;
-    transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);
-  
-    &:hover,
-    &:focus {
-      width: 100%;
-      box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
-    }
-  }
-`;
-
-const HeaderMetaIcons = styled.div`
-  // Hide these when using the mobile navigation, 
-  // now only rendered in the HeaderNav
-  display: none;
-
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  > div {
+    height: 35px;
     width: auto;
-    align-items: center;
+    display: inline-block;
 
-    > div {
-      height: 35px;
-      width: auto;
-      display: inline-block;
-  
-      > a {
+    > a {
+      height: inherit;
+      width: inherit;
+      margin-left: 0.5rem;
+
+      img {
+        padding: 5px;
         height: inherit;
         width: inherit;
-        margin-right: 20px;
-  
-        img {
-          padding: 5px;
-          height: inherit;
-          width: inherit;
-        }
       }
     }
+  }
 
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     position: relative;
     display: flex;
     align-items: center;
@@ -109,12 +82,6 @@ const HeaderMetaIcons = styled.div`
   }
 `;
 
-const ButtonsAndIcons = styled.div`
-  margin-left: auto;
-  display: flex;
-  //
-`;
-
 export {
-  Brand, HeaderWrapper, InnerWrapper, DonateButtonWrapperTop, HeaderMetaIcons, ButtonsAndIcons
+  Brand, HeaderWrapper, InnerWrapper, MetaIcons
 };

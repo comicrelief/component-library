@@ -50,7 +50,6 @@ const BurgerWrapper = styled(Link)`
     ::after {
       width: 25px;
       height: 3px;
-      border-radius: 3px;
       display: inline-block;
     }
 
