@@ -7,7 +7,6 @@ import { ChevronWrapper } from './HeaderNav2024.style';
 import menuGroupIcon from './Menu-Group-Icon.svg';
 
 import {
-  // More Nav stuff:
   MoreNavLink,
   MoreSubNavMenu,
   MoreNavItem,
