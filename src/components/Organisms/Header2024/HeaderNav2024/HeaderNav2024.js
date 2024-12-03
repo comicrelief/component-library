@@ -281,8 +281,6 @@ const HeaderNav = ({
                             <MoreNestedSubNavMenu
                               role="list"
                               isSubMenuOpen={!!isSubMenuOpen[child.id]}
-                            // DO WE NEED THIS?
-                            // isFoccused={!!isFoccused[group.title]}
                             >
                               {child.links.map(subChild => {
                                 const thisSubUrl = NavHelper(subChild);
