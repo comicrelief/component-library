@@ -53,3 +53,15 @@ To publish
 ```
 $ yarn publish:npm
 ```
+
+### Testing
+
+Install Playwright:
+```
+yarn playwright install
+```
+
+Run the tests
+```
+yarn test:e2e:local
+```
