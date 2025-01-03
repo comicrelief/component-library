@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Logos from '../../Molecules/Logos/Logos';
-import HeaderNav from './HeaderNav2025/HeaderNav2025';
+import HeaderNav2025 from './HeaderNav2025/HeaderNav2025';
 import {
   Brand, Header2025Wrapper, InnerWrapper,
   DonateButtonWrapperTop, Header2025MetaIcons, ButtonsAndIcons
@@ -16,7 +16,7 @@ const Header2025 = ({
       <Brand>
         <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
       </Brand>
-      <HeaderNav navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
+      <HeaderNav2025 navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
       <ButtonsAndIcons>
         <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>

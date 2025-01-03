@@ -17,13 +17,13 @@ import {
   DonateButtonWrapperBottom
 } from './HeaderNav2025.style';
 
-const HeaderNav = ({
+const HeaderNav2025 = ({
   navItems = {}, metaIcons, donateButton = null, characterLimit = 60
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
-  const [isTabFocussed, setIsTabFocussed] = useState({});
+  const [openedSubMenu, setOpenedSubMenu] = useState({});
+  const [focussedTab, setFocussedTab] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(null);
   const [processedItems, setProcessedItems] = useState(null);
   let theseGroups = null;
@@ -35,7 +35,8 @@ const HeaderNav = ({
 
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
-    setIsSubMenuOpen({ [item]: !isSubMenuOpen[item] });
+    setOpenedSubMenu({ [item]: !openedSubMenu[item] });
+    console.log('setOpenedSubMenu');
   };
 
   // Handle tab key on menu nav
@@ -45,9 +46,9 @@ const HeaderNav = ({
       if (e.which === 9) {
         // If the currently tabbed-to element is our item, do something
         if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-          setIsTabFocussed({ [item]: !isTabFocussed[item] });
+          setFocussedTab({ [item]: !focussedTab[item] });
         } else if (!e.target.querySelector('span')) {
-          setIsTabFocussed({});
+          setFocussedTab({});
         }
       }
     };
@@ -62,7 +63,7 @@ const HeaderNav = ({
 
     return () => {
       // Remove listener on dismount:
-      window.removeEventListener('onkeyup', setIsTabFocussed);
+      window.removeEventListener('onkeyup', setFocussedTab);
     };
   }, [menuGroups, characterLimit]);
 
@@ -97,8 +98,10 @@ const HeaderNav = ({
           // First level of the navigation (ul tag): Parent
           <NavMenu role="menubar">
             {theseGroups.map((group, index) => {
+              // console.log('HeaderNav2025', group);
               /* Grab the first links properties to use for our parent/button */
               const thisFirstChild = group.links[0];
+              console.log('isTabFocussed', focussedTab);
               const thisID = group.id;
               /* Determine which field represents our url path */
               let thisUrl = NavHelper(thisFirstChild);
@@ -114,7 +117,7 @@ const HeaderNav = ({
                   thisID={thisID}
                   index={index}
                   hasSubMenu={hasSubMenu}
-                  isSubMenuOpen={!!isSubMenuOpen[thisID]}
+                  openedSubMenu={!!openedSubMenu[thisID]}
                   relNoopener={relNoopener}
                   hasPopUp={hasPopUp}
                   isNotDesktop={isNotDesktop}
@@ -123,7 +126,7 @@ const HeaderNav = ({
                   keyPressed={keyPressed}
                   group={group}
                   thisFirstChild={thisFirstChild}
-                  isTabFocussed={isTabFocussed}
+                  focussedTab={focussedTab}
                   navHelper={NavHelper}
                   internalLinkHelper={InternalLinkHelper}
                   key={`${thisID}--item`}
@@ -134,9 +137,9 @@ const HeaderNav = ({
             {/* Only actually render 'More' nav stuff when we've got content */}
             {(!isNotDesktop && processedItems.moreNavGroups.length > 0) && (
               <MoreNav
-                isTabFocussed={isTabFocussed}
+                focussedTab={focussedTab}
                 processedItems={processedItems}
-                isSubMenuOpen={isSubMenuOpen}
+                openedSubMenu={openedSubMenu}
                 keyPressed={keyPressed}
                 toggleSubMenu={toggleSubMenu}
                 navHelper={NavHelper}
@@ -164,7 +167,7 @@ const HeaderNav = ({
   );
 };
 
-HeaderNav.propTypes = {
+HeaderNav2025.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   metaIcons: PropTypes.node.isRequired,
   characterLimit: PropTypes.number,
@@ -173,4 +176,4 @@ HeaderNav.propTypes = {
   donateButton: PropTypes.node
 };
 
-export default HeaderNav;
+export default HeaderNav2025;

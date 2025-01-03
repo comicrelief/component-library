@@ -17,75 +17,78 @@ import {
 } from './MoreNav.style';
 
 const MoreNav = ({
-  isTabFocussed, processedItems, isSubMenuOpen, keyPressed,
+  focussedTab, processedItems, openedSubMenu, keyPressed,
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
-}) => (
-  <MoreNavItem>
-    {/* The 'More' nav button: */}
-    <Text>
-      <MoreNavLink
-        href="#"
-        inline
+}) => {
+  //
+  console.log('focussedTab', focussedTab);
+  return (
+    <MoreNavItem>
+      {/* The 'More' nav button: */}
+      <Text>
+        <MoreNavLink
+          href="#"
+          inline
         // As this is purely used to hover-over, and never represents a
         // direct link to a page, we can nip any click event in the bud:
-        onClick={e => { e.preventDefault(); }}
-        role="button"
-        aria-haspopup="true"
+          onClick={e => { e.preventDefault(); }}
+          role="button"
+          aria-haspopup="true"
+        >
+          More
+          <ChevronWrapper>
+            <img src={menuGroupIcon} alt="Chevron icon" />
+          </ChevronWrapper>
+        </MoreNavLink>
+      </Text>
+
+      {/* The Ul to wrap each of the 'More Nav' menu groups */}
+      <MoreSubNavMenu
+        role="list"
+        isFocussed={!!focussedTab.more} // I have no idea what this is for
+        key="more-nav-ul"
       >
-        More
-        <ChevronWrapper>
-          <img src={menuGroupIcon} alt="Chevron icon" />
-        </ChevronWrapper>
-      </MoreNavLink>
-    </Text>
 
-    {/* The Ul to wrap each of the 'More Nav' menu groups */}
-    <MoreSubNavMenu
-      role="list"
-      isFocussed={!!isTabFocussed.more}
-      key="more-nav-ul"
-    >
-
-      {/* For each item in this menu group:  */}
-      {processedItems.moreNavGroups.map(child => {
+        {/* For each item in this menu group:  */}
+        {processedItems.moreNavGroups.map(child => {
         /* Grab the first links properties to use for our parent/button */
-        const thisFirstChild = child.links[0];
-        let thisUrl = navHelper(thisFirstChild);
-        const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
-        const hasSubMenu = child.links && child.links.length > 1;
-        const hasPopUp = hasSubMenu ? 'true' : null;
-        thisUrl = internalLinkHelper(thisUrl);
+          const thisFirstChild = child.links[0];
+          let thisUrl = navHelper(thisFirstChild);
+          const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
+          const hasSubMenu = child.links && child.links.length > 1;
+          const hasPopUp = hasSubMenu ? 'true' : null;
+          thisUrl = internalLinkHelper(thisUrl);
 
-        return (
-          <MoreSubNavItem key={child.title}>
-            {/* Either the Direct link (for a one-link menu item)
+          return (
+            <MoreSubNavItem key={child.title}>
+              {/* Either the Direct link (for a one-link menu item)
                 or a 'button' to show the submenu: */}
-            <MoreNavNestedLink
-              href={hasPopUp ? '#' : thisUrl}
-              inline
-              rel={relNoopener}
-              aria-haspopup={hasPopUp}
-              role={hasPopUp ? 'button' : 'link'}
-              onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
-              isSubMenuOpen={!!isSubMenuOpen[child.id]}
-              aria-expanded={!!isSubMenuOpen[child.id]}
-              onKeyUp={keyPressed(child.id)}
-            >
-              {thisFirstChild.title}
+              <MoreNavNestedLink
+                href={hasPopUp ? '#' : thisUrl}
+                inline
+                rel={relNoopener}
+                aria-haspopup={hasPopUp}
+                role={hasPopUp ? 'button' : 'link'}
+                onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
+                isSubMenuOpen={!!openedSubMenu[child.id]}
+                aria-expanded={!!openedSubMenu[child.id]}
+                onKeyUp={keyPressed(child.id)}
+              >
+                {thisFirstChild.title}
 
-              {hasSubMenu && (
+                {hasSubMenu && (
                 <ChevronWrapper>
                   <img src={menuGroupIcon} alt="Chevron icon" />
                 </ChevronWrapper>
-              )}
+                )}
 
-            </MoreNavNestedLink>
+              </MoreNavNestedLink>
 
-            <>
-              {hasSubMenu && (
+              <>
+                {hasSubMenu && (
                 <MoreNestedSubNavMenu
                   role="list"
-                  isSubMenuOpen={!!isSubMenuOpen[child.id]}
+                  isSubMenuOpen={!!openedSubMenu[child.id]}
                 >
                   {child.links.map(subChild => {
                     const thisSubUrl = navHelper(subChild);
@@ -98,7 +101,7 @@ const MoreNav = ({
                           role="menuitem"
                           // Allows us to avoid using the 'display:none'
                           // approach so we can animate properly:
-                          tabIndex={isSubMenuOpen[child.id] ? '0' : '-1'}
+                          tabIndex={openedSubMenu[child.id] ? '0' : '-1'}
                         >
                           <Text>
                             {subChild.title}
@@ -108,20 +111,30 @@ const MoreNav = ({
                     );
                   })}
                 </MoreNestedSubNavMenu>
-              )}
-            </>
-          </MoreSubNavItem>
-        );
-      })}
-    </MoreSubNavMenu>
+                )}
+              </>
+            </MoreSubNavItem>
+          );
+        })}
+      </MoreSubNavMenu>
 
-  </MoreNavItem>
-);
+    </MoreNavItem>
+  );
+};
 
 MoreNav.propTypes = {
-  isTabFocussed: PropTypes.shape.isRequired,
+  focussedTab: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    )
+  }),
   processedItems: PropTypes.shape.isRequired,
-  isSubMenuOpen: PropTypes.shape.isRequired,
+  openedSubMenu: PropTypes.bool,
   keyPressed: PropTypes.func.isRequired,
   toggleSubMenu: PropTypes.func.isRequired,
   navHelper: PropTypes.func.isRequired,
