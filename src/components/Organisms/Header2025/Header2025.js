@@ -27,8 +27,20 @@ const Header2025 = ({
 );
 
 Header2025.propTypes = {
-  // Check data structure example in src/components/moleculecules/header/data/data
-  navItems: PropTypes.objectOf(PropTypes.shape),
+  navItems: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    menuGroups: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        links: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            url: PropTypes.string
+          })
+        )
+      })
+    )
+  }),
   // NB: metaIcons no longer include the Donate button:
   metaIcons: PropTypes.node.isRequired,
   // ... and is supplied separately to allow more render control:
