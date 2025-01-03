@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 
-import { ChevronWrapper } from './HeaderNav2024.style';
+import { ChevronWrapper } from './HeaderNav2025.style';
 
 import menuGroupIcon from './Menu-Group-Icon.svg';
 

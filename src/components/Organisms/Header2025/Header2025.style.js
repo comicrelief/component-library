@@ -6,7 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 
 import './annoying.css';
 
-const Header2024Wrapper = styled.header.attrs(() => ({
+const Header2025Wrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`
   position: relative;
@@ -73,9 +73,9 @@ const DonateButtonWrapperTop = styled.div`
   }
 `;
 
-const Header2024MetaIcons = styled.div`
+const Header2025MetaIcons = styled.div`
   // Hide these when using the mobile navigation, 
-  // now only rendered in the Header2024Nav
+  // now only rendered in the Header2025Nav
   display: none;
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -116,6 +116,6 @@ const ButtonsAndIcons = styled.div`
 `;
 
 export {
-  Brand, Header2024Wrapper, InnerWrapper, DonateButtonWrapperTop,
-  Header2024MetaIcons, ButtonsAndIcons
+  Brand, Header2025Wrapper, InnerWrapper, DonateButtonWrapperTop,
+  Header2025MetaIcons, ButtonsAndIcons
 };

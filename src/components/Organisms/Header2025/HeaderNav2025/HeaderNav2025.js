@@ -21,7 +21,7 @@ import {
   ChevronWrapper,
   NavMetaIcons,
   DonateButtonWrapperBottom
-} from './HeaderNav2024.style';
+} from './HeaderNav2025.style';
 
 const HeaderNav = ({
   navItems = {}, metaIcons, donateButton = null, characterLimit = 60
