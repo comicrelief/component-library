@@ -83,7 +83,6 @@ const SubNavMenu = styled.ul`
   // DESKTOP:   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: flex;
-    visibility: ${({ isFocussed }) => (isFocussed ? 'visible' : 'hidden')};
     width: 330px;
     height: auto;
     padding: 0;

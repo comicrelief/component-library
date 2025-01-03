@@ -17,11 +17,11 @@ import {
 } from './MoreNav.style';
 
 const MoreNav = ({
-  focussedTab, processedItems, openedSubMenu, keyPressed,
+  processedItems, openedSubMenu,
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
 }) => {
   //
-  console.log('MoreNAv focussedTab', focussedTab);
+  console.log('');
   return (
     <MoreNavItem>
       {/* The 'More' nav button: */}
@@ -45,7 +45,6 @@ const MoreNav = ({
       {/* The Ul to wrap each of the 'More Nav' menu groups */}
       <MoreSubNavMenu
         role="list"
-        isFocussed={Boolean(focussedTab.more)} // I have no idea what this is for
         key="more-nav-ul"
       >
 
@@ -72,7 +71,6 @@ const MoreNav = ({
                 onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
                 isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 aria-expanded={Boolean(openedSubMenu[child.id])}
-                onKeyUp={keyPressed(child.id)}
               >
                 {thisFirstChild.title}
 
@@ -123,17 +121,6 @@ const MoreNav = ({
 };
 
 MoreNav.propTypes = {
-  // Non-required fields as this isn't always populated
-  focussedTab: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        url: PropTypes.string
-      })
-    )
-  }),
   processedItems: PropTypes.shape({
     moreNavGroups: PropTypes.arrayOf(
       PropTypes.shape({
@@ -171,7 +158,6 @@ MoreNav.propTypes = {
       })
     )
   }),
-  keyPressed: PropTypes.func.isRequired,
   toggleSubMenu: PropTypes.func.isRequired,
   navHelper: PropTypes.func.isRequired,
   allowListed: PropTypes.func.isRequired,

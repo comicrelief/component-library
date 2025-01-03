@@ -23,7 +23,6 @@ const HeaderNav2025 = ({
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [openedSubMenu, setOpenedSubMenu] = useState({});
-  const [focussedTab, setFocussedTab] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(null);
   const [processedItems, setProcessedItems] = useState(null);
   let theseGroups = null;
@@ -38,34 +37,12 @@ const HeaderNav2025 = ({
     setOpenedSubMenu({ [item]: !openedSubMenu[item] });
   };
 
-  // Handle tab key on menu nav
-  const keyPressed = item => () => {
-    window.onkeyup = e => {
-      // Specifies the tab key:
-      if (e.which === 9) {
-        // If the currently tabbed-to element is our item, do something
-        if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
-          console.log('GOING TO FOCUS', item);
-          setFocussedTab({ [item]: !focussedTab[item] });
-        } else if (!e.target.querySelector('span')) {
-          console.log('GOING TO REMOVE');
-          setFocussedTab({});
-        }
-      }
-    };
-  };
-
   useEffect(() => {
     // Divide up our nav on initial mount:
     setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
 
     // And set our 'desktop' flag:
     setIsNotDesktop(window.innerWidth < breakpointValues.Nav);
-
-    return () => {
-      // Remove listener on dismount:
-      window.removeEventListener('onkeyup', setFocussedTab);
-    };
   }, [menuGroups, characterLimit]);
 
   // Custom function to let us update the nav dynamically:
@@ -119,13 +96,11 @@ const HeaderNav2025 = ({
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
                   toggleSubMenu={toggleSubMenu}
-                  keyPressed={keyPressed}
                   hasPopUp={hasPopUp}
                   isNotDesktop={isNotDesktop}
                   thisUrl={thisUrl}
                   group={group}
                   thisFirstChild={thisFirstChild}
-                  focussedTab={focussedTab}
                   navHelper={NavHelper}
                   internalLinkHelper={InternalLinkHelper}
                   relNoopener={relNoopener}
@@ -136,10 +111,8 @@ const HeaderNav2025 = ({
             {/* Only actually render 'More' nav stuff when we've got content */}
             {(!isNotDesktop && processedItems.moreNavGroups.length > 0) && (
               <MoreNav
-                focussedTab={focussedTab}
                 processedItems={processedItems}
                 openedSubMenu={openedSubMenu}
-                keyPressed={keyPressed}
                 toggleSubMenu={toggleSubMenu}
                 navHelper={NavHelper}
                 allowListed={allowListed}

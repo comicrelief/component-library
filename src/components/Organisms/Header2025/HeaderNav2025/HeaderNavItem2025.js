@@ -11,27 +11,27 @@ import menuGroupIcon from './Menu-Group-Icon.svg';
 const HeaderNavItem2025 = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
-    isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, keyPressed, group,
-    thisFirstChild, navHelper, focussedTab, internalLinkHelper
+    isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
+    thisFirstChild, navHelper, internalLinkHelper
   }
 ) => {
-  console.log('HeaderNavItem2025 focussedTab', focussedTab);
+  console.log('');
+
   return (
     <NavItem
       role="none"
       key={`${index}-${thisID}--item`}
       index={index}
-      isSubMenuOpen={Boolean(openedSubMenu)}
+      isSubMenuOpen={!!openedSubMenu}
     >
       {isNotDesktop ? (
         <NavLink
           href={hasPopUp ? '#' : thisUrl}
           inline
           rel={relNoopener}
-          aria-expanded={Boolean(openedSubMenu[thisID])}
+          aria-expanded={!!openedSubMenu[thisID]}
           aria-haspopup={hasPopUp}
           onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
-          onKeyUp={keyPressed(group.title)}
           role="button"
           key={`${index}-${thisID}--link`}
         >
@@ -49,7 +49,6 @@ const HeaderNavItem2025 = (
             inline
             rel={relNoopener}
             aria-haspopup={hasPopUp}
-            onKeyUp={keyPressed(group.title)}
             key={`${index}-${thisID}`}
           >
             {thisFirstChild.title}
@@ -69,8 +68,7 @@ const HeaderNavItem2025 = (
       {hasSubMenu && (
       <SubNavMenu
         role="list"
-        isFocussed={Boolean(focussedTab[group.title])}
-        isSubMenuOpen={Boolean(openedSubMenu[thisID])}
+        isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
       >
         {group.links.map((child, childIndex) => {
@@ -112,7 +110,6 @@ HeaderNavItem2025.propTypes = {
     )
   }),
   toggleSubMenu: PropTypes.func.isRequired,
-  keyPressed: PropTypes.func.isRequired,
   hasPopUp: PropTypes.string,
   isNotDesktop: PropTypes.bool,
   thisUrl: PropTypes.string.isRequired,
@@ -128,17 +125,6 @@ HeaderNavItem2025.propTypes = {
   }),
   // Non-required fields as this isn't always populated
   thisFirstChild: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        url: PropTypes.string
-      })
-    )
-  }),
-  // Non-required fields as this isn't always populated
-  focussedTab: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
     links: PropTypes.arrayOf(
