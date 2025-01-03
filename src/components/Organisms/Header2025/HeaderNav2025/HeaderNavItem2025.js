@@ -10,7 +10,7 @@ import menuGroupIcon from './Menu-Group-Icon.svg';
 
 const HeaderNavItem2025 = (
   {
-    id, relNoopener, hasSubMenu, index, isSubMenuOpen,
+    thisID, relNoopener, hasSubMenu, index, isSubMenuOpen,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, keyPressed, group,
     thisFirstChild, navHelper, isTabFocussed, internalLinkHelper
   }
@@ -20,7 +20,7 @@ const HeaderNavItem2025 = (
   return (
     <NavItem
       role="none"
-      key={`${id}-item`}
+      key={`${index}-${thisID}--item`}
       index={index}
       isSubMenuOpen={isSubMenuOpen}
     >
@@ -29,12 +29,12 @@ const HeaderNavItem2025 = (
           href={hasPopUp ? '#' : thisUrl}
           inline
           rel={relNoopener}
-          aria-expanded={!!isSubMenuOpen[id]}
+          aria-expanded={!!isSubMenuOpen[thisID]}
           aria-haspopup={hasPopUp}
-          onClick={hasPopUp ? e => toggleSubMenu(e, id) : null}
+          onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
           onKeyUp={keyPressed(group.title)}
           role="button"
-          key={`${id}-link`}
+          key={`${index}-${thisID}--link`}
         >
           {thisFirstChild.title}
           {hasSubMenu && (
@@ -51,7 +51,7 @@ const HeaderNavItem2025 = (
             rel={relNoopener}
             aria-haspopup={hasPopUp}
             onKeyUp={keyPressed(group.title)}
-            key={id}
+            key={`${index}-${thisID}`}
           >
             {thisFirstChild.title}
             {hasSubMenu
@@ -71,8 +71,8 @@ const HeaderNavItem2025 = (
         <SubNavMenu
           role="list"
           isFocussed={!!isTabFocussed[group.title]}
-          isSubMenuOpen={!!isSubMenuOpen[id]}
-          key={id}
+          isSubMenuOpen={!!isSubMenuOpen[thisID]}
+          key={`${index}-${thisID}--sub-item`}
         >
           {group.links.map((child, childIndex) => {
             let thisSubUrl = navHelper(child);
@@ -84,7 +84,7 @@ const HeaderNavItem2025 = (
 
             // Otherwise, render out as usual:
             return (
-              <SubNavItem key={thisSubUrl}>
+              <SubNavItem key={`${index}-${thisSubUrl}`}>
                 <SubNavLink href={thisSubUrl} inline role="menuitem">
                   <Text>{child.title}</Text>
                 </SubNavLink>
@@ -98,13 +98,12 @@ const HeaderNavItem2025 = (
 };
 
 HeaderNavItem2025.propTypes = {
-  id: PropTypes.string.isRequired,
+  thisID: PropTypes.string.isRequired,
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
   isSubMenuOpen: PropTypes.bool,
   relNoopener: PropTypes.bool,
   isNotDesktop: PropTypes.bool,
-  isTabFocussed: PropTypes.bool,
   hasPopUp: PropTypes.string,
   thisUrl: PropTypes.string.isRequired,
   toggleSubMenu: PropTypes.func.isRequired,
@@ -112,9 +111,9 @@ HeaderNavItem2025.propTypes = {
   navHelper: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
   // TO-DO: specify shapes
-  group: PropTypes.shape.isRequired,
-  thisFirstChild: PropTypes.shape.isRequired
-
+  group: PropTypes.shape,
+  thisFirstChild: PropTypes.shape,
+  isTabFocussed: PropTypes.shape
 };
 
 export default HeaderNavItem2025;

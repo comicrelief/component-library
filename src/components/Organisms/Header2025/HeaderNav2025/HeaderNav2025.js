@@ -111,7 +111,7 @@ const HeaderNav = ({
               // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
                 <HeaderNavItem2025
-                  id={thisID}
+                  thisID={thisID}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   isSubMenuOpen={!!isSubMenuOpen[thisID]}
@@ -126,8 +126,8 @@ const HeaderNav = ({
                   isTabFocussed={isTabFocussed}
                   navHelper={NavHelper}
                   internalLinkHelper={InternalLinkHelper}
+                  key={`${thisID}--item`}
                 />
-
               );
             })}
 

@@ -47,28 +47,28 @@ export default {
         },
         {
           title: 'Our Funding Practice',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy-two',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Funding opportunities',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy-three',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Our Funding strategy',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy-four',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Managing your funding',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy-five',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -110,35 +110,35 @@ export default {
         },
         {
           title: 'Do your own fundraising',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/one/',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Regular Donations',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/two/',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Run for Comic Relief',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/three/',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'How to pay in your fundraising money',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/four/',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Partners',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/five/',
           internal: {
             type: 'ContentfulComponentLink'
           }
