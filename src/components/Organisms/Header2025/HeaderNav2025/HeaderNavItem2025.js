@@ -101,7 +101,16 @@ HeaderNavItem2025.propTypes = {
   thisID: PropTypes.string.isRequired,
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
-  openedSubMenu: PropTypes.bool,
+  openedSubMenu: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    )
+  }),
   relNoopener: PropTypes.bool,
   isNotDesktop: PropTypes.bool,
   hasPopUp: PropTypes.string,
