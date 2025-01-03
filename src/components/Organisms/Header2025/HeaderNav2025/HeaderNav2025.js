@@ -45,8 +45,10 @@ const HeaderNav2025 = ({
       if (e.which === 9) {
         // If the currently tabbed-to element is our item, do something
         if (e.target.querySelector('span') && e.target.querySelector('span').innerText === item) {
+          console.log('GOING TO FOCUS', item);
           setFocussedTab({ [item]: !focussedTab[item] });
         } else if (!e.target.querySelector('span')) {
+          console.log('GOING TO REMOVE');
           setFocussedTab({});
         }
       }

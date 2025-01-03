@@ -21,7 +21,7 @@ const MoreNav = ({
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
 }) => {
   //
-  console.log('processedItems', processedItems);
+  console.log('MoreNAv focussedTab', focussedTab);
   return (
     <MoreNavItem>
       {/* The 'More' nav button: */}
@@ -29,8 +29,8 @@ const MoreNav = ({
         <MoreNavLink
           href="#"
           inline
-        // As this is purely used to hover-over, and never represents a
-        // direct link to a page, we can nip any click event in the bud:
+          // As this is purely used to hover-over, and never represents a
+          // direct link to a page, we can nip any click event in the bud:
           onClick={e => { e.preventDefault(); }}
           role="button"
           aria-haspopup="true"

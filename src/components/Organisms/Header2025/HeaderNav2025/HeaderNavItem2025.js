@@ -14,84 +14,87 @@ const HeaderNavItem2025 = (
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, keyPressed, group,
     thisFirstChild, navHelper, focussedTab, internalLinkHelper
   }
-) => (
-  <NavItem
-    role="none"
-    key={`${index}-${thisID}--item`}
-    index={index}
-    isSubMenuOpen={Boolean(openedSubMenu)}
-  >
-    {isNotDesktop ? (
-      <NavLink
-        href={hasPopUp ? '#' : thisUrl}
-        inline
-        rel={relNoopener}
-        aria-expanded={Boolean(openedSubMenu[thisID])}
-        aria-haspopup={hasPopUp}
-        onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
-        onKeyUp={keyPressed(group.title)}
-        role="button"
-        key={`${index}-${thisID}--link`}
-      >
-        {thisFirstChild.title}
-        {hasSubMenu && (
-        <ChevronWrapper>
-          <img src={menuGroupIcon} alt="chevron down icon" />
-        </ChevronWrapper>
-        )}
-      </NavLink>
-    ) : (
-      <Text>
+) => {
+  console.log('HeaderNavItem2025 focussedTab', focussedTab);
+  return (
+    <NavItem
+      role="none"
+      key={`${index}-${thisID}--item`}
+      index={index}
+      isSubMenuOpen={Boolean(openedSubMenu)}
+    >
+      {isNotDesktop ? (
         <NavLink
-          href={thisUrl}
+          href={hasPopUp ? '#' : thisUrl}
           inline
           rel={relNoopener}
+          aria-expanded={Boolean(openedSubMenu[thisID])}
           aria-haspopup={hasPopUp}
+          onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
           onKeyUp={keyPressed(group.title)}
-          key={`${index}-${thisID}`}
+          role="button"
+          key={`${index}-${thisID}--link`}
         >
           {thisFirstChild.title}
-          {hasSubMenu
+          {hasSubMenu && (
+          <ChevronWrapper>
+            <img src={menuGroupIcon} alt="chevron down icon" />
+          </ChevronWrapper>
+          )}
+        </NavLink>
+      ) : (
+        <Text>
+          <NavLink
+            href={thisUrl}
+            inline
+            rel={relNoopener}
+            aria-haspopup={hasPopUp}
+            onKeyUp={keyPressed(group.title)}
+            key={`${index}-${thisID}`}
+          >
+            {thisFirstChild.title}
+            {hasSubMenu
               && (
                 <ChevronWrapper>
                   <img src={menuGroupIcon} alt="chevron down icon" />
                 </ChevronWrapper>
               )
             }
-        </NavLink>
-      </Text>
-    )}
+          </NavLink>
+        </Text>
+      )}
 
-    {/* Second level of the navigation (ul tag): Child(ren) */}
-    {/* Used for BOTH nav types */}
-    {hasSubMenu && (
-    <SubNavMenu
-      role="list"
-      isFocussed={Boolean(focussedTab[group.title])}
-      isSubMenuOpen={Boolean(openedSubMenu[thisID])}
-      key={`${index}-${thisID}--sub-item`}
-    >
-      {group.links.map((child, childIndex) => {
-        let thisSubUrl = navHelper(child);
-        thisSubUrl = internalLinkHelper(thisSubUrl);
+      {/* Second level of the navigation (ul tag): Child(ren) */}
+      {/* Used for BOTH nav types */}
+      {hasSubMenu && (
+      <SubNavMenu
+        role="list"
+        isFocussed={Boolean(focussedTab[group.title])}
+        isSubMenuOpen={Boolean(openedSubMenu[thisID])}
+        key={`${index}-${thisID}--sub-item`}
+      >
+        {group.links.map((child, childIndex) => {
+          let thisSubUrl = navHelper(child);
+          thisSubUrl = internalLinkHelper(thisSubUrl);
 
-        // Skip the very first child on desktop, since
-        // we've already made a 'button' version above:
-        if (childIndex === 0 && !isNotDesktop) return null;
+          // Skip the very first child on desktop, since
+          // we've already made a 'button' version above:
+          if (childIndex === 0 && !isNotDesktop) return null;
 
-        // Otherwise, render out as usual:
-        return (
-          <SubNavItem key={`${index}-${thisSubUrl}`}>
-            <SubNavLink href={thisSubUrl} inline role="menuitem">
-              <Text>{child.title}</Text>
-            </SubNavLink>
-          </SubNavItem>
-        );
-      })}
-    </SubNavMenu>
-    )}
-  </NavItem>
-);
+          // Otherwise, render out as usual:
+          return (
+            <SubNavItem key={`${index}-${thisSubUrl}`}>
+              <SubNavLink href={thisSubUrl} inline role="menuitem">
+                <Text>{child.title}</Text>
+              </SubNavLink>
+            </SubNavItem>
+          );
+        })}
+      </SubNavMenu>
+      )}
+    </NavItem>
+  );
+};
 
 HeaderNavItem2025.propTypes = {
   thisID: PropTypes.string.isRequired,
