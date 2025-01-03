@@ -8,17 +8,11 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import HeaderNavItem2025 from './HeaderNavItem2025';
 
 import {
   Nav,
   NavMenu,
-  NavItem,
-  NavLink,
-  SubNavMenu,
-  SubNavItem,
-  SubNavLink,
-  ChevronWrapper,
   NavMetaIcons,
   DonateButtonWrapperBottom
 } from './HeaderNav2025.style';
@@ -63,10 +57,11 @@ const HeaderNav = ({
     // Divide up our nav on initial mount:
     setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
 
-    // Set desktopFlag on
+    // And set our 'desktop' flag:
     setIsNotDesktop(window.innerWidth < breakpointValues.Nav);
 
     return () => {
+      // Remove listener on dismount:
       window.removeEventListener('onkeyup', setIsTabFocussed);
     };
   }, [menuGroups, characterLimit]);
@@ -87,7 +82,7 @@ const HeaderNav = ({
   }, [screenResizeNav]);
 
   // Once we've processed the items, assign according to breakpoint; sub desktop 'Nav'
-  // breakpoints use 'raw' unprocessed menu groups, Desktop uses the divided up versions:
+  // breakpoints use 'raw' unprocessed menu groups, Desktop uses the divided-up versions:
   if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 
   return (
@@ -101,16 +96,10 @@ const HeaderNav = ({
         {processedItems && (
           // First level of the navigation (ul tag): Parent
           <NavMenu role="menubar">
-            {/*
-            ****************************
-            STANDARD RENDER STARTS HERE:
-            ****************************
-          */}
             {theseGroups.map((group, index) => {
               /* Grab the first links properties to use for our parent/button */
               const thisFirstChild = group.links[0];
               const thisID = group.id;
-
               /* Determine which field represents our url path */
               let thisUrl = NavHelper(thisFirstChild);
               const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
@@ -119,84 +108,26 @@ const HeaderNav = ({
               thisUrl = InternalLinkHelper(thisUrl);
 
               // Renders the first menugroup item to act as the parent; a button for the dropdown
-              // on mobile, a clickable LINK on desktop but hover to reveal the submenu
+              // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
-                <NavItem
-                  role="none"
-                  key={`${thisID}-item`}
+                <HeaderNavItem2025
+                  id={thisID}
                   index={index}
+                  hasSubMenu={hasSubMenu}
                   isSubMenuOpen={!!isSubMenuOpen[thisID]}
-                >
-                  {isNotDesktop ? (
-                    <NavLink
-                      href={hasPopUp ? '#' : thisUrl}
-                      inline
-                      rel={relNoopener}
-                      aria-expanded={!!isSubMenuOpen[thisID]}
-                      aria-haspopup={hasPopUp}
-                      onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
-                      onKeyUp={keyPressed(group.title)}
-                      role="button"
-                      key={`${thisID}-link`}
-                    >
-                      {thisFirstChild.title}
-                      {hasSubMenu && (
-                        <ChevronWrapper>
-                          <img src={menuGroupIcon} alt="chevron down icon" />
-                        </ChevronWrapper>
-                      )}
-                    </NavLink>
-                  ) : (
-                    <Text>
-                      <NavLink
-                        href={thisUrl}
-                        inline
-                        rel={relNoopener}
-                        aria-haspopup={hasPopUp}
-                        onKeyUp={keyPressed(group.title)}
-                        key={thisID}
-                      >
-                        {thisFirstChild.title}
-                        {hasSubMenu
-                          && (
-                            <ChevronWrapper>
-                              <img src={menuGroupIcon} alt="chevron down icon" />
-                            </ChevronWrapper>
-                          )
-                        }
-                      </NavLink>
-                    </Text>
-                  )}
+                  relNoopener={relNoopener}
+                  hasPopUp={hasPopUp}
+                  isNotDesktop={isNotDesktop}
+                  thisUrl={thisUrl}
+                  toggleSubMenu={toggleSubMenu}
+                  keyPressed={keyPressed}
+                  group={group}
+                  thisFirstChild={thisFirstChild}
+                  isTabFocussed={isTabFocussed}
+                  navHelper={NavHelper}
+                  internalLinkHelper={InternalLinkHelper}
+                />
 
-                  {/* Second level of the navigation (ul tag): Child(ren) */}
-                  {/* Used for BOTH nav types */}
-                  {hasSubMenu && (
-                    <SubNavMenu
-                      role="list"
-                      isFocussed={!!isTabFocussed[group.title]}
-                      isSubMenuOpen={!!isSubMenuOpen[thisID]}
-                      key={thisID}
-                    >
-                      {group.links.map((child, childIndex) => {
-                        let thisSubUrl = NavHelper(child);
-                        thisSubUrl = InternalLinkHelper(thisSubUrl);
-
-                        // Skip the very first child on desktop, since
-                        // we've already made a 'button' version above:
-                        if (childIndex === 0 && !isNotDesktop) return null;
-
-                        // Otherwise, render out as usual:
-                        return (
-                          <SubNavItem key={thisSubUrl}>
-                            <SubNavLink href={thisSubUrl} inline role="menuitem">
-                              <Text>{child.title}</Text>
-                            </SubNavLink>
-                          </SubNavItem>
-                        );
-                      })}
-                    </SubNavMenu>
-                  )}
-                </NavItem>
               );
             })}
 
