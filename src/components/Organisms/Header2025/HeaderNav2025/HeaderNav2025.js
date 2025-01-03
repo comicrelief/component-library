@@ -36,7 +36,6 @@ const HeaderNav2025 = ({
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setOpenedSubMenu({ [item]: !openedSubMenu[item] });
-    console.log('setOpenedSubMenu');
   };
 
   // Handle tab key on menu nav
@@ -98,10 +97,8 @@ const HeaderNav2025 = ({
           // First level of the navigation (ul tag): Parent
           <NavMenu role="menubar">
             {theseGroups.map((group, index) => {
-              // console.log('HeaderNav2025', group);
               /* Grab the first links properties to use for our parent/button */
               const thisFirstChild = group.links[0];
-              console.log('isTabFocussed', focussedTab);
               const thisID = group.id;
               /* Determine which field represents our url path */
               let thisUrl = NavHelper(thisFirstChild);
@@ -115,21 +112,21 @@ const HeaderNav2025 = ({
               return (
                 <HeaderNavItem2025
                   thisID={thisID}
+                  key={`${thisID}--item`}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
-                  relNoopener={relNoopener}
+                  toggleSubMenu={toggleSubMenu}
+                  keyPressed={keyPressed}
                   hasPopUp={hasPopUp}
                   isNotDesktop={isNotDesktop}
                   thisUrl={thisUrl}
-                  toggleSubMenu={toggleSubMenu}
-                  keyPressed={keyPressed}
                   group={group}
                   thisFirstChild={thisFirstChild}
                   focussedTab={focussedTab}
                   navHelper={NavHelper}
                   internalLinkHelper={InternalLinkHelper}
-                  key={`${thisID}--item`}
+                  relNoopener={relNoopener}
                 />
               );
             })}

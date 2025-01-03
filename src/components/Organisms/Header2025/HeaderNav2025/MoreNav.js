@@ -21,7 +21,7 @@ const MoreNav = ({
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
 }) => {
   //
-  console.log('focussedTab', focussedTab);
+  console.log('processedItems', processedItems);
   return (
     <MoreNavItem>
       {/* The 'More' nav button: */}
@@ -45,7 +45,7 @@ const MoreNav = ({
       {/* The Ul to wrap each of the 'More Nav' menu groups */}
       <MoreSubNavMenu
         role="list"
-        isFocussed={!!focussedTab.more} // I have no idea what this is for
+        isFocussed={Boolean(focussedTab.more)} // I have no idea what this is for
         key="more-nav-ul"
       >
 
@@ -70,8 +70,8 @@ const MoreNav = ({
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
                 onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
-                isSubMenuOpen={!!openedSubMenu[child.id]}
-                aria-expanded={!!openedSubMenu[child.id]}
+                isSubMenuOpen={Boolean(openedSubMenu[child.id])}
+                aria-expanded={Boolean(openedSubMenu[child.id])}
                 onKeyUp={keyPressed(child.id)}
               >
                 {thisFirstChild.title}
@@ -88,7 +88,7 @@ const MoreNav = ({
                 {hasSubMenu && (
                 <MoreNestedSubNavMenu
                   role="list"
-                  isSubMenuOpen={!!openedSubMenu[child.id]}
+                  isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 >
                   {child.links.map(subChild => {
                     const thisSubUrl = navHelper(subChild);
@@ -123,6 +123,7 @@ const MoreNav = ({
 };
 
 MoreNav.propTypes = {
+  // Non-required fields as this isn't always populated
   focussedTab: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
@@ -133,8 +134,43 @@ MoreNav.propTypes = {
       })
     )
   }),
-  processedItems: PropTypes.shape.isRequired,
-  openedSubMenu: PropTypes.bool,
+  processedItems: PropTypes.shape({
+    moreNavGroups: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        links: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            url: PropTypes.string
+          })
+        )
+      })
+    ),
+    standardGroups: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        links: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            url: PropTypes.string
+          })
+        )
+      })
+    )
+  }),
+  // Non-required fields as this isn't always populated
+  openedSubMenu: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    )
+  }),
   keyPressed: PropTypes.func.isRequired,
   toggleSubMenu: PropTypes.func.isRequired,
   navHelper: PropTypes.func.isRequired,
