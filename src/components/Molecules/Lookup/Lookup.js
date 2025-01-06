@@ -11,7 +11,7 @@ const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
   background-color: ${theme.color('white')};
   padding-left: ${spacing('lg')};
   padding-right: ${spacing('lg')};
-  
+
   &:hover {
     color: ${theme.color('grey_dark')};
     background-color: ${theme.color('white')};
@@ -121,6 +121,7 @@ const Lookup = ({
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
+        data-test={`lookupButton-${buttonText}`}
       >
         {buttonText}
       </StyledButton>
