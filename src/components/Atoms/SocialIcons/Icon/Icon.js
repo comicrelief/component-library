@@ -89,7 +89,7 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, isHeader, id, ...restProps
+  href, target, icon, brand, title, isHeader = false, id, ...restProps
 }) => (
   <StyledLink
     href={href}
@@ -111,10 +111,6 @@ const Icon = ({
     )}
   </StyledLink>
 );
-
-Icon.defaultProps = {
-  isHeader: false
-};
 
 Icon.propTypes = {
   brand: PropTypes.string.isRequired,
