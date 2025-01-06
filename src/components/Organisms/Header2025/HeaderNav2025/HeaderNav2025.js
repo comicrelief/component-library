@@ -18,7 +18,7 @@ import {
 } from './HeaderNav2025.style';
 
 const HeaderNav2025 = ({
-  navItems = {}, metaIcons, donateButton = null, characterLimit = 55
+  navItems = {}, metaIcons, donateButton = null, characterLimit = 60
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);

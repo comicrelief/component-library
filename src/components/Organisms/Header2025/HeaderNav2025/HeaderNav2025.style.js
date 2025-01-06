@@ -96,7 +96,7 @@ const SubNavMenu = styled.ul`
     height: auto;
     padding: 0;
     position: absolute;
-    top: 91px;
+    top: 86px;
     left: -5px;
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
@@ -173,8 +173,13 @@ const NavLink = styled(NavLinkClass)`
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    padding: 10px 0;
-    padding: 10px 15px 15px 0;
+    padding: 10px 0px 10px 0;
+    // HAS DROPDOWN CHECK HERE
+
+    ${({ hasSubMenu }) => (hasSubMenu && css`
+      padding: 10px 15px 10px 0;
+    `)}
+    
     height: auto;
     :hover,
     :focus-within,
@@ -241,10 +246,9 @@ const NavItem = styled.li`
   
   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    margin: 0 4px;
+    margin: 0 25px 0 0;
     padding: 25px 5px;
     border-bottom: none;
-
 
     :hover,
     :focus,

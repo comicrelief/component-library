@@ -237,7 +237,6 @@ const NavItem = styled.li`
     padding: 25px 5px;
     border-bottom: none;
 
-
     :hover,
     :focus,
     :focus-within {

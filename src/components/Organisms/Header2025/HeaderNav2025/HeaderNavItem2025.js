@@ -14,59 +14,57 @@ const HeaderNavItem2025 = (
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
     thisFirstChild, navHelper, internalLinkHelper
   }
-) => {
-  console.log('');
-
-  return (
-    <NavItem
-      role="none"
-      key={`${index}-${thisID}--item`}
-      index={index}
-      isSubMenuOpen={!!openedSubMenu}
-    >
-      {isNotDesktop ? (
-        <NavLink
-          href={hasPopUp ? '#' : thisUrl}
-          inline
-          rel={relNoopener}
-          aria-expanded={!!openedSubMenu[thisID]}
-          aria-haspopup={hasPopUp}
-          onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
-          role="button"
-          key={`${index}-${thisID}--link`}
-          isExpanded={!!openedSubMenu[thisID]}
-        >
-          {thisFirstChild.title}
-          {hasSubMenu && (
+) => (
+  <NavItem
+    role="none"
+    key={`${index}-${thisID}--item`}
+    index={index}
+    isSubMenuOpen={!!openedSubMenu}
+  >
+    {isNotDesktop ? (
+      <NavLink
+        href={hasPopUp ? '#' : thisUrl}
+        inline
+        rel={relNoopener}
+        aria-expanded={!!openedSubMenu[thisID]}
+        aria-haspopup={hasPopUp}
+        onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
+        role="button"
+        key={`${index}-${thisID}--link`}
+        isExpanded={!!openedSubMenu[thisID]}
+      >
+        {thisFirstChild.title}
+        {hasSubMenu && (
           <ChevronWrapper>
             <img src={menuGroupIcon} alt="chevron down icon" />
           </ChevronWrapper>
-          )}
-        </NavLink>
-      ) : (
-        <Text>
-          <NavLink
-            href={thisUrl}
-            inline
-            rel={relNoopener}
-            aria-haspopup={hasPopUp}
-            key={`${index}-${thisID}`}
-          >
-            {thisFirstChild.title}
-            {hasSubMenu
+        )}
+      </NavLink>
+    ) : (
+      <Text>
+        <NavLink
+          href={thisUrl}
+          inline
+          rel={relNoopener}
+          aria-haspopup={hasPopUp}
+          key={`${index}-${thisID}`}
+          hasSubMenu={hasSubMenu}
+        >
+          {thisFirstChild.title}
+          {hasSubMenu
               && (
                 <ChevronWrapper>
                   <img src={menuGroupIcon} alt="chevron down icon" />
                 </ChevronWrapper>
               )
             }
-          </NavLink>
-        </Text>
-      )}
+        </NavLink>
+      </Text>
+    )}
 
-      {/* Second level of the navigation (ul tag): Child(ren) */}
-      {/* Used for BOTH nav types */}
-      {hasSubMenu && (
+    {/* Second level of the navigation (ul tag): Child(ren) */}
+    {/* Used for BOTH nav types */}
+    {hasSubMenu && (
       <SubNavMenu
         role="list"
         isSubMenuOpen={!!openedSubMenu[thisID]}
@@ -90,10 +88,9 @@ const HeaderNavItem2025 = (
           );
         })}
       </SubNavMenu>
-      )}
-    </NavItem>
-  );
-};
+    )}
+  </NavItem>
+);
 
 HeaderNavItem2025.propTypes = {
   thisID: PropTypes.string.isRequired,

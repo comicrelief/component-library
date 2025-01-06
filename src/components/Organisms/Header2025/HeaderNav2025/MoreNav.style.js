@@ -5,12 +5,25 @@ import {
 
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    // top: 88px
+    // Just extending this here to make a clean separation,
+    // despite the fact no additional styles are needed right now
   }
 `;
 
 const MoreNavLink = styled(NavLink)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+
+    padding: 10px 15px 10px 0;
+
+    // &:before {
+    //   content: 'piss';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    // }:
+  
     :focus,
     :hover,
     :focus-within {
@@ -61,7 +74,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
       // to make animation as slick as possible
-      max-height: calc(57px * 8);
+      max-height: calc(54px * 8);
   `)};
   }
 `;
@@ -91,7 +104,8 @@ const MoreSubNavItem = styled(SubNavItem)`
 `;
 
 const MoreNavNestedLink = styled(NavLink)`
-  padding: 20px 25px 18px;
+    // HERE
+  padding: 20px 25px 22px 42px;
 
   > div {
     height: auto;
@@ -105,7 +119,8 @@ const MoreNavNestedLink = styled(NavLink)`
 `;
 
 const MoreSubNavLink = styled(SubNavLink)`
-  //
+  // Just extending this here to make a clean separation,
+  // despite the fact no additional styles are needed right now
 `;
 
 export {
