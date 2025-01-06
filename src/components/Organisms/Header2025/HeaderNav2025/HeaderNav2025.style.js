@@ -87,7 +87,7 @@ const SubNavMenu = styled.ul`
     height: auto;
     padding: 0;
     position: absolute;
-    top: 88px;
+    top: 91px;
     left: -5px;
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
