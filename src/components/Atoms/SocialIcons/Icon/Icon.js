@@ -20,6 +20,7 @@ const StyledLink = styled.a`
     opacity: 0.6;
   }
 
+  // 'isHeader' is only set and passed in Header2025, so the pre-existing Header isn't affected:
   ${({ isHeader }) => isHeader && css`
     overflow: hidden;
     padding-right: 0px;
