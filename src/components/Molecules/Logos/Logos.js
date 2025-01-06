@@ -25,7 +25,9 @@ const LogoLink = styled.a`
   `}
 `;
 
-const Logos = ({ campaign = 'Comic Relief', animateRotate = false }) => {
+const Logos = ({
+  campaign = 'Comic Relief', animateRotate = false, sizeSm, sizeMd
+}) => {
   if (campaign === 'Sport Relief Gameon') {
     return (
       <>
@@ -53,7 +55,7 @@ const Logos = ({ campaign = 'Comic Relief', animateRotate = false }) => {
   if (campaign === 'Pride') {
     return (
       <LogoLink href="/" title="Go to Comic Relief homepage" animateRotate={animateRotate}>
-        <Logo rotate={false} campaign="Pride" title="Go to Comic Relief homepage" />
+        <Logo rotate={false} campaign="Pride" title="Go to Comic Relief homepage" sizeSm={sizeSm} sizeMd={sizeMd} />
         <TitleLabel>Go to Comic Relief homepage</TitleLabel>
       </LogoLink>
     );
@@ -61,7 +63,7 @@ const Logos = ({ campaign = 'Comic Relief', animateRotate = false }) => {
 
   return (
     <LogoLink href="/" title="Go to Comic Relief homepage" animateRotate={animateRotate}>
-      <Logo rotate={false} campaign="Comic Relief" title="Go to Comic Relief homepage" />
+      <Logo rotate={false} campaign="Comic Relief" title="Go to Comic Relief homepage" sizeSm={sizeSm} sizeMd={sizeMd} />
       <TitleLabel>Go to Comic Relief homepage</TitleLabel>
     </LogoLink>
   );
@@ -69,7 +71,9 @@ const Logos = ({ campaign = 'Comic Relief', animateRotate = false }) => {
 
 Logos.propTypes = {
   campaign: PropTypes.string,
-  animateRotate: PropTypes.bool
+  animateRotate: PropTypes.bool,
+  sizeSm: PropTypes.string,
+  sizeMd: PropTypes.string
 };
 
 export default Logos;
