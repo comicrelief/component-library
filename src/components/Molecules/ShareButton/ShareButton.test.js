@@ -80,7 +80,7 @@ it("renders correctly", () => {
         >
           <a
             className="c4"
-            data-testid="icon-"
+            data-testid="icon-share-button-facebook"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -100,7 +100,7 @@ it("renders correctly", () => {
         >
           <a
             className="c4"
-            data-testid="icon-"
+            data-testid="icon-share-button-twitter"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"

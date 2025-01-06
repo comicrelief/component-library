@@ -14,7 +14,7 @@ const Header2025 = ({
   <Header2025Wrapper navItems {...rest}>
     <InnerWrapper>
       <Brand>
-        <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" />
+        <Logos campaign={campaign} sizeSm="100px" sizeMd="100px" animateRotate />
       </Brand>
       <HeaderNav2025 navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
       <ButtonsAndIcons>
