@@ -93,6 +93,10 @@ const MoreSubNavItem = styled(SubNavItem)`
 const MoreNavNestedLink = styled(NavLink)`
   padding: 20px 25px 18px;
 
+  > div {
+    height: auto;
+  }
+
   ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
     > div {
       transform: rotate(-180deg);
