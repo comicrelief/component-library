@@ -217,8 +217,8 @@ const [success, setSuccess] = React.useState(false);
     </>
   }
 />
-<div style={{height: "1000px", backgroundColor: "yellow"}}>
-  <img style={{objectFit: "cover"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
+<div style={{height: "1000px", backgroundColor: "turquoise", width:"100%"}}>
+  <img style={{width: "100%", maxWidth:"1440px", margin: "0 auto", display: "block"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
 </div>
 </>;
 ```
@@ -326,8 +326,8 @@ const [success, setSuccess] = React.useState(false);
     </>
   }
 />
-<div style={{height: "1000px", backgroundColor: "yellow"}}>
-  <img style={{objectFit: "cover"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
+<div style={{height: "1000px", backgroundColor: "turquoise", width:"100%"}}>
+  <img style={{width: "100%", maxWidth:"1440px", margin: "0 auto", display: "block"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
 </div>
 </>;
 ```
@@ -435,8 +435,8 @@ const [success, setSuccess] = React.useState(false);
     </>
   }
 />
-<div style={{height: "1000px", backgroundColor: "yellow"}}>
-  <img style={{objectFit: "cover"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
+<div style={{height: "1000px", backgroundColor: "turquoise", width:"100%"}}>
+  <img style={{width: "100%", maxWidth:"1440px", margin: "0 auto", display: "block"}} src="https://images.ctfassets.net/zsfivwzfgl3t/ecqrPx7BesE3JsYR2ns0E/a374276ba6d8024b9cd7c6d27c911303/Manchester_Marathon.jpeg"/>
 </div>
 </>;
 ```

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
@@ -24,6 +24,15 @@ const NavLinkClass = styled(Link)`
     border: 0;
     color: ${({ theme }) => theme.color('red')};
     font-weight: inherit;
+  }
+    
+  // Chevron icon:
+  > div {
+    height: auto;
+    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    ${({ isExpanded }) => (isExpanded && css`
+      transform: rotate(-180deg);
+    `)}
   }
 `;
 
@@ -78,7 +87,7 @@ const SubNavMenu = styled.ul`
   align-items: center;
   background-color: ${({ theme }) => theme.color('white')};
   overflow: hidden;
-  border: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   // DESKTOP:   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -131,7 +140,7 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 20px 25px 18px 40px;
+  padding: 20px 25px 22px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;

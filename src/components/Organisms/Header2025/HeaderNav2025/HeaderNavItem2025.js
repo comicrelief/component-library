@@ -34,6 +34,7 @@ const HeaderNavItem2025 = (
           onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
           role="button"
           key={`${index}-${thisID}--link`}
+          isExpanded={!!openedSubMenu[thisID]}
         >
           {thisFirstChild.title}
           {hasSubMenu && (

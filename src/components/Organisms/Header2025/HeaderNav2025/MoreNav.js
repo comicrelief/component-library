@@ -19,71 +19,68 @@ import {
 const MoreNav = ({
   processedItems, openedSubMenu,
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
-}) => {
-  //
-  console.log('');
-  return (
-    <MoreNavItem>
-      {/* The 'More' nav button: */}
-      <Text>
-        <MoreNavLink
-          href="#"
-          inline
+}) => (
+  <MoreNavItem>
+    {/* The 'More' nav button: */}
+    <Text>
+      <MoreNavLink
+        href="#"
+        inline
           // As this is purely used to hover-over, and never represents a
           // direct link to a page, we can nip any click event in the bud:
-          onClick={e => { e.preventDefault(); }}
-          role="button"
-          aria-haspopup="true"
-        >
-          More
-          <ChevronWrapper>
-            <img src={menuGroupIcon} alt="Chevron icon" />
-          </ChevronWrapper>
-        </MoreNavLink>
-      </Text>
-
-      {/* The Ul to wrap each of the 'More Nav' menu groups */}
-      <MoreSubNavMenu
-        role="list"
-        key="more-nav-ul"
+        onClick={e => { e.preventDefault(); }}
+        role="button"
+        aria-haspopup="true"
       >
+        More
+        <ChevronWrapper>
+          <img src={menuGroupIcon} alt="Chevron icon" />
+        </ChevronWrapper>
+      </MoreNavLink>
+    </Text>
 
-        {/* For each item in this menu group:  */}
-        {processedItems.moreNavGroups.map(child => {
+    {/* The Ul to wrap each of the 'More Nav' menu groups */}
+    <MoreSubNavMenu
+      role="list"
+      key="more-nav-ul"
+    >
+
+      {/* For each item in this menu group:  */}
+      {processedItems.moreNavGroups.map(child => {
         /* Grab the first links properties to use for our parent/button */
-          const thisFirstChild = child.links[0];
-          let thisUrl = navHelper(thisFirstChild);
-          const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
-          const hasSubMenu = child.links && child.links.length > 1;
-          const hasPopUp = hasSubMenu ? 'true' : null;
-          thisUrl = internalLinkHelper(thisUrl);
+        const thisFirstChild = child.links[0];
+        let thisUrl = navHelper(thisFirstChild);
+        const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
+        const hasSubMenu = child.links && child.links.length > 1;
+        const hasPopUp = hasSubMenu ? 'true' : null;
+        thisUrl = internalLinkHelper(thisUrl);
 
-          return (
-            <MoreSubNavItem key={child.title}>
-              {/* Either the Direct link (for a one-link menu item)
+        return (
+          <MoreSubNavItem key={child.title}>
+            {/* Either the Direct link (for a one-link menu item)
                 or a 'button' to show the submenu: */}
-              <MoreNavNestedLink
-                href={hasPopUp ? '#' : thisUrl}
-                inline
-                rel={relNoopener}
-                aria-haspopup={hasPopUp}
-                role={hasPopUp ? 'button' : 'link'}
-                onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
-                isSubMenuOpen={Boolean(openedSubMenu[child.id])}
-                aria-expanded={Boolean(openedSubMenu[child.id])}
-              >
-                {thisFirstChild.title}
+            <MoreNavNestedLink
+              href={hasPopUp ? '#' : thisUrl}
+              inline
+              rel={relNoopener}
+              aria-haspopup={hasPopUp}
+              role={hasPopUp ? 'button' : 'link'}
+              onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
+              isSubMenuOpen={Boolean(openedSubMenu[child.id])}
+              aria-expanded={Boolean(openedSubMenu[child.id])}
+            >
+              {thisFirstChild.title}
 
-                {hasSubMenu && (
+              {hasSubMenu && (
                 <ChevronWrapper>
                   <img src={menuGroupIcon} alt="Chevron icon" />
                 </ChevronWrapper>
-                )}
+              )}
 
-              </MoreNavNestedLink>
+            </MoreNavNestedLink>
 
-              <>
-                {hasSubMenu && (
+            <>
+              {hasSubMenu && (
                 <MoreNestedSubNavMenu
                   role="list"
                   isSubMenuOpen={Boolean(openedSubMenu[child.id])}
@@ -109,16 +106,15 @@ const MoreNav = ({
                     );
                   })}
                 </MoreNestedSubNavMenu>
-                )}
-              </>
-            </MoreSubNavItem>
-          );
-        })}
-      </MoreSubNavMenu>
+              )}
+            </>
+          </MoreSubNavItem>
+        );
+      })}
+    </MoreSubNavMenu>
 
-    </MoreNavItem>
-  );
-};
+  </MoreNavItem>
+);
 
 MoreNav.propTypes = {
   processedItems: PropTypes.shape({
