@@ -23,7 +23,7 @@ import {
 } from './HeaderNav.style';
 
 const HeaderNav = ({
-  navItems = {}, metaIcons, donateButton = null, characterLimit = 60
+  navItems = {}, metaIcons, donateButton = null
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -64,7 +64,7 @@ const HeaderNav = ({
     return () => {
       window.removeEventListener('onkeyup', setIsTabFocussed);
     };
-  }, [menuGroups, characterLimit]);
+  }, [menuGroups]);
 
   // Custom function to let us update the nav dynamically:
   const screenResizeNav = useCallback(() => {
@@ -204,7 +204,6 @@ const HeaderNav = ({
 HeaderNav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   metaIcons: PropTypes.node.isRequired,
-  characterLimit: PropTypes.number,
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
   donateButton: PropTypes.node
