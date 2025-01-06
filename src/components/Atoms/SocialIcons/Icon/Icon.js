@@ -13,6 +13,12 @@ const StyledLink = styled.a`
   cursor: pointer;
   display: block;
   position: relative;
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
   ${({ isHeader }) => isHeader && css`
     overflow: hidden;
@@ -21,6 +27,8 @@ const StyledLink = styled.a`
 
     &:hover,
     &:focus {
+      opacity: 1;
+      
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }

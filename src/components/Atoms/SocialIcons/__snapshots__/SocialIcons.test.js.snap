@@ -7,6 +7,13 @@ exports[`renders correctly with Comic Relief links 1`] = `
   cursor: pointer;
   display: block;
   position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {
@@ -136,6 +143,13 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   cursor: pointer;
   display: block;
   position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {
@@ -265,6 +279,13 @@ exports[`renders correctly with Sport Relief links 1`] = `
   cursor: pointer;
   display: block;
   position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c2:hover,
+.c2:focus {
+  opacity: 0.6;
 }
 
 .c3 {

@@ -91,6 +91,13 @@ exports[`renders correctly 1`] = `
   cursor: pointer;
   display: block;
   position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.c5:hover,
+.c5:focus {
+  opacity: 0.6;
 }
 
 .c6 {

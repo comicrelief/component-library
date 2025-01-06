@@ -1,7 +1,7 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import ShareButton from './ShareButton';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import ShareButton from "./ShareButton";
 
 it("renders correctly", () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
@@ -13,6 +13,13 @@ it("renders correctly", () => {
       cursor: pointer;
       display: block;
       position: relative;
+      -webkit-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    .c4:hover,
+    .c4:focus {
+      opacity: 0.6;
     }
 
     .c5 {
