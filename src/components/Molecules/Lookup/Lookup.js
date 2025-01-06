@@ -120,7 +120,7 @@ const Lookup = ({
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
-        data-test={`lookupButton-${buttonText}`}
+        data-test="lookupButton"
       >
         {buttonText}
       </StyledButton>
