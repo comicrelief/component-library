@@ -102,7 +102,7 @@ const Icon = ({
     <StyledImage src={icon} alt={brand} />
 
     { isHeader && (
-    <RevealText>{title}</RevealText>
+      <RevealText>{title}</RevealText>
     )}
 
     {id === 'esu' && (
