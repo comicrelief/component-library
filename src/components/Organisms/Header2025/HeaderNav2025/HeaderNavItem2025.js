@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 
 import {
-  NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper
+  NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
 } from './HeaderNav2025.style';
 
 import menuGroupIcon from './Menu-Group-Icon.svg';
@@ -41,7 +41,7 @@ const HeaderNavItem2025 = (
         )}
       </NavLink>
     ) : (
-      <Text>
+      <StyledText>
         <NavLink
           href={thisUrl}
           inline
@@ -59,7 +59,7 @@ const HeaderNavItem2025 = (
               )
             }
         </NavLink>
-      </Text>
+      </StyledText>
     )}
 
     {/* Second level of the navigation (ul tag): Child(ren) */}

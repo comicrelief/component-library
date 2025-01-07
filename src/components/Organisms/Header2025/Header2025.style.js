@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
-import spacing from '../../../theme/shared/spacing';
 
 import './annoying.css';
 
@@ -29,6 +28,11 @@ const InnerWrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    justify-content: normal;
   }
 `;
 
@@ -37,14 +41,17 @@ const Brand = styled.div`
   margin-right: auto;
   display: flex;
   align-items: center;
+  
   a {
     border: 0;
     color: transparent;
-    margin-right: ${spacing('md')};
+    margin-right: 20px;
+
     img {
       width: 100%;
       object-fit: contain;
     }
+      
     :hover {
       border: 0;
     }
@@ -56,13 +63,14 @@ const Brand = styled.div`
 `;
 
 const DonateButtonWrapperTop = styled.div`
-  width: 120px;
+  width: 100px;
   display: flex;
   justify-content: center;
+  margin-left: 5px;
 
   // Donate button
   a {
-    width: 90%;
+    width: 100%;
     transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);
   
     &:hover,
@@ -82,6 +90,7 @@ const Header2025MetaIcons = styled.div`
     width: auto;
     align-items: center;
 
+      // Icons
     > div {
       height: 35px;
       width: auto;
@@ -90,7 +99,7 @@ const Header2025MetaIcons = styled.div`
       > a {
         height: inherit;
         width: inherit;
-        margin-right: 20px;
+        margin-right: 6px;
   
         img {
           padding: 5px;
@@ -107,12 +116,23 @@ const Header2025MetaIcons = styled.div`
     margin-right: 0px;
     right: 0px;
   }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    // Icons
+    > div > a {
+      margin-right: 20px;
+    }
+  }
 `;
 
 const ButtonsAndIcons = styled.div`
-  margin-left: auto;
+  margin-left: 0;
   display: flex;
-  //
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    margin-left: auto;
+  }
+  
 `;
 
 export {

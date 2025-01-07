@@ -11,12 +11,14 @@ const MoreSubNavMenu = styled(SubNavMenu)`
 `;
 
 const MoreNavLink = styled(NavLink)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
 
+
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    font-size: 15px;
     padding: 10px 15px 10px 0;
 
     // &:before {
-    //   content: 'piss';
+    //   content: 'LINE HERE';
     //   position: absolute;
     //   top: 0;
     //   left: 0;
@@ -31,6 +33,10 @@ const MoreNavLink = styled(NavLink)`
         display: flex;
       }
     }
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    font-size: 1rem;
   }
 `;
 

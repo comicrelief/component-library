@@ -4,6 +4,7 @@ import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 import Arrow from './arrow-right.png';
+import Text from '../../../Atoms/Text/Text';
 
 const transitionDuration = 0.2;
 
@@ -61,11 +62,16 @@ const Nav = styled.nav`
     position: relative;
     top: 0;
     display: block;
-    margin: 0 10px;
+    margin: 0;
     width: auto;
     height: 100%;
     box-shadow: none;
   }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    margin: 0 10px;
+  }
+
   > h2 {
     ${hideVisually};
   }
@@ -174,11 +180,8 @@ const NavLink = styled(NavLinkClass)`
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     padding: 10px 0px 10px 0;
-    // HAS DROPDOWN CHECK HERE
-
-    ${({ hasSubMenu }) => (hasSubMenu && css`
-      padding: 10px 15px 10px 0;
-    `)}
+    
+    ${({ hasSubMenu }) => (hasSubMenu && css` padding: 10px 14px 10px 0;`)}
     
     height: auto;
     :hover,
@@ -188,6 +191,10 @@ const NavLink = styled(NavLinkClass)`
       display: flex;
       opacity: 1;
     }}
+  }
+    
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    ${({ hasSubMenu }) => (hasSubMenu && css` padding: 10px 16px 10px 0;`)}
   }
 `;
 
@@ -247,7 +254,7 @@ const NavItem = styled.li`
   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 20px 0 0;
-    padding: 25px 5px;
+    padding: 25px 0px;
     border-bottom: none;
 
     :hover,
@@ -278,6 +285,10 @@ const NavItem = styled.li`
         flex-direction: column;
       }
     }
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    margin: 0 20px 0 0;
   }
 `;
 
@@ -370,6 +381,16 @@ const NavMetaIcons = styled.div`
   }
 `;
 
+const StyledText = styled(Text)`
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    font-size: 15px;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    font-size: 1rem;
+  }
+`;
+
 const DonateButtonWrapperBottom = styled.div`
   display: flex;
   justify-content: center;
@@ -405,5 +426,6 @@ export {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapperBottom
+  DonateButtonWrapperBottom,
+  StyledText
 };
