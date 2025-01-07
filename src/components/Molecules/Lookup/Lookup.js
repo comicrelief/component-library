@@ -32,7 +32,6 @@ const KEY_CODE_ENTER = 13;
  * - only throw errors with user-friendly messages
  *
  * Any errors thrown will be caught and the message will be displayed to the user.
- *
  * The `onSelect` function will receive the chosen option.
  *
  * @param name
