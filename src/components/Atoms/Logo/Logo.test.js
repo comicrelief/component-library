@@ -25,7 +25,7 @@ it("renders correctly", () => {
       vertical-align: bottom;
     }
 
-    @media (min-width:1175px) {
+    @media (min-width:1300px) {
       .c0 {
         width: 70px;
       }
