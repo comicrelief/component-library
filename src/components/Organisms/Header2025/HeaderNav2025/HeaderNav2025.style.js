@@ -68,7 +68,7 @@ const Nav = styled.nav`
     box-shadow: none;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     margin: 0 10px;
   }
 
@@ -193,7 +193,7 @@ const NavLink = styled(NavLinkClass)`
     }}
   }
     
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     ${({ hasSubMenu }) => (hasSubMenu && css` padding: 10px 16px 10px 0;`)}
   }
 `;
@@ -287,7 +287,7 @@ const NavItem = styled.li`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     margin: 0 20px 0 0;
   }
 `;
@@ -386,7 +386,7 @@ const StyledText = styled(Text)`
     font-size: 15px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     font-size: 1rem;
   }
 `;

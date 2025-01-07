@@ -35,7 +35,7 @@ const MoreNavLink = styled(NavLink)`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     font-size: 1rem;
   }
 `;

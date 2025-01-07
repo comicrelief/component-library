@@ -35,7 +35,7 @@ const StyledLink = styled.a`
       }
     }
 
-    @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+    @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
       &:hover,
       &:focus {
         // Default

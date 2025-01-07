@@ -31,7 +31,7 @@ const InnerWrapper = styled.div`
     // justify-content: space-between;
   }
 
-  // @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  // @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
   //   justify-content: normal;
   // }
 `;
@@ -117,7 +117,7 @@ const Header2025MetaIcons = styled.div`
     right: 0px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     // Icons
     > div > a {
       margin-right: 20px;
@@ -130,7 +130,7 @@ const ButtonsAndIcons = styled.div`
   margin-left: auto;
   display: flex;
 
-  // @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  // @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
   //   margin-left: auto;
   // }
   
