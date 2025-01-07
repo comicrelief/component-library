@@ -28,12 +28,12 @@ const InnerWrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
-    justify-content: normal;
-  }
+  // @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  //   justify-content: normal;
+  // }
 `;
 
 const Brand = styled.div`
@@ -126,12 +126,13 @@ const Header2025MetaIcons = styled.div`
 `;
 
 const ButtonsAndIcons = styled.div`
-  margin-left: 0;
+  // margin-left: 0;
+  margin-left: auto;
   display: flex;
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
-    margin-left: auto;
-  }
+  // @media ${({ theme }) => theme.allBreakpoints('NavWithAnimations')} {
+  //   margin-left: auto;
+  // }
   
 `;
 
