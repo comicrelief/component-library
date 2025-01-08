@@ -45,7 +45,7 @@ const Brand = styled.div`
   a {
     border: 0;
     color: transparent;
-    margin-right: 20px;
+    margin-right: 25px;
 
     img {
       width: 100%;
@@ -102,7 +102,7 @@ const Header2025MetaIcons = styled.div`
         margin-right: 6px;
   
         img {
-          padding: 5px;
+          padding: 5px 7px;
           height: inherit;
           width: inherit;
         }

@@ -17,14 +17,17 @@ const MoreNavLink = styled(NavLink)`
     font-size: 15px;
     padding: 10px 15px 10px 0;
 
-    // &:before {
-    //   content: 'LINE HERE';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    // }:
+    :before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 70%;
+      top: 50%;
+      left: -23px;
+      transform: translateY(-50%);
+      border-left: 2px solid ${({ theme }) => theme.color('grey_medium')};
+      border-radius: 2px;
+    }:
   
     :focus,
     :hover,
@@ -37,12 +40,26 @@ const MoreNavLink = styled(NavLink)`
 
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     font-size: 1rem;
+
+    :before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 70%;
+      top: 50%;
+      left: -21px;
+      transform: translateY(-50%);
+      border-left: 2px solid ${({ theme }) => theme.color('grey_medium')};
+      border-radius: 2px;
+    }:
   }
 `;
 
 // Use for the 'More' link only
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    margin-left: 22px;
+
     :hover,
     :focus-within,
     :focus {
@@ -61,6 +78,10 @@ const MoreNavItem = styled(NavItem)`
         flex-direction: column;
       }
     }
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+    margin-left: 20px;
   }
 `;
 

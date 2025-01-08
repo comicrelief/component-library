@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
 
-const RevealTextWidth = 58;
+const RevealTextWidth = 55;
 const RevealTextSpeed = 0.35;
 
 const StyledLink = styled.a`
@@ -43,12 +43,12 @@ const StyledLink = styled.a`
   
         // Tweak for ESU's longer text:
         &[data-testid="header-esu"] {
-          padding-right: 95px;
+          padding-right: 92px;
         }
   
-        // Tweak for Shop 's shorter text:
+        // Tweak for Shop's shorter text:
         &[data-testid="header-shop"] {
-          padding-right: 52px;
+          padding-right: 48px;
         }
         
         // Show the Reveal text  

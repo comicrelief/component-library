@@ -253,7 +253,7 @@ const NavItem = styled.li`
   
   
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    margin: 0 20px 0 0;
+    margin: 0 22px 0 0;
     padding: 25px 0px;
     border-bottom: none;
 
