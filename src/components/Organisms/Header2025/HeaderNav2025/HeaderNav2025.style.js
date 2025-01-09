@@ -318,6 +318,9 @@ const ChevronWrapper = styled.div`
   }
 `;
 
+const ChevronImage = styled.img`
+`;
+
 // This represents the 'non-desktop'/mobile nav icons:
 const NavMetaIcons = styled.div`
   width: auto;
@@ -425,6 +428,7 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
+  ChevronImage,
   NavMetaIcons,
   DonateButtonWrapperBottom,
   StyledText

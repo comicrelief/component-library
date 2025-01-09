@@ -18,6 +18,7 @@ import {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
+  ChevronImage,
   NavMetaIcons,
   DonateButtonWrapperBottom
 } from './HeaderNav.style';
@@ -125,7 +126,7 @@ const HeaderNav = ({
                     {thisFirstChild.title}
                     {hasSubMenu && (
                       <ChevronWrapper>
-                        <img src={menuGroupIcon} alt="chevron down icon" />
+                        <ChevronImage src={menuGroupIcon} alt="chevron down icon" />
                       </ChevronWrapper>
                     )}
                   </NavLink>

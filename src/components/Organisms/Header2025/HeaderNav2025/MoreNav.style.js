@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import {
-  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
+  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper, ChevronImage
 } from './HeaderNav2025.style';
 import Text from '../../../Atoms/Text/Text';
 
@@ -56,7 +56,7 @@ const MoreNavItem = styled(NavItem)`
     margin-left: 22px;
 
     // Chevron icon:
-    ${MoreNavLabel} > div {
+    ${MoreNavLabel} > ${ChevronWrapper} {
       transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
     }
 
@@ -65,9 +65,9 @@ const MoreNavItem = styled(NavItem)`
       // Chevron icon:
       ${MoreNavLabel} {
         color: ${({ theme }) => theme.color('red')};
-        > div {
+        > ${ChevronWrapper} {
           transform: rotate(-180deg);
-          img {
+          ${ChevronImage} {
             // Use fancy filter to colour 'img' version of SVG
             filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
           }
