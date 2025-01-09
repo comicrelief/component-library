@@ -20,6 +20,7 @@ const MoreNavLabel = styled(Text)`
     padding: 10px 15px 10px 0;
     display: flex;
 
+    // Divider
     :before {
       content: '';
       position: absolute;
@@ -36,6 +37,7 @@ const MoreNavLabel = styled(Text)`
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     font-size: 1rem;
 
+    // Divider
     :before {
       content: '';
       position: absolute;

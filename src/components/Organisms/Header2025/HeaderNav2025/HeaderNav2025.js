@@ -61,7 +61,8 @@ const HeaderNav2025 = ({
   }, [screenResizeNav]);
 
   // Once we've processed the items, assign according to breakpoint; sub desktop 'Nav'
-  // breakpoints use 'raw' unprocessed menu groups, Desktop uses the divided-up versions:
+  // breakpoints use 'raw' unprocessed menu groups, Desktop (Nav breakpoint and up)
+  // uses the divided-up versions:
   if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 
   return (
