@@ -7,7 +7,7 @@ import { ChevronWrapper } from './HeaderNav2025.style';
 import menuGroupIcon from './Menu-Group-Icon.svg';
 
 import {
-  MoreNavLink,
+  MoreNavLabel,
   MoreSubNavMenu,
   MoreNavItem,
   MoreNestedSubNavMenu,
@@ -21,23 +21,16 @@ const MoreNav = ({
   toggleSubMenu, navHelper, allowListed, internalLinkHelper
 }) => (
   <MoreNavItem>
-    {/* The 'More' nav button: */}
-    <Text>
-      <MoreNavLink
-        href="#"
-        inline
-          // As this is purely used to hover-over, and never represents a
-          // direct link to a page, we can nip any click event in the bud:
-        onClick={e => { e.preventDefault(); }}
-        role="button"
-        aria-haspopup="true"
-      >
-        More
-        <ChevronWrapper>
-          <img src={menuGroupIcon} alt="Chevron icon" />
-        </ChevronWrapper>
-      </MoreNavLink>
-    </Text>
+    {/* The 'More' nav label; not really a button: */}
+    <MoreNavLabel
+      aria-haspopup="true"
+      tabIndex="0"
+    >
+      More
+      <ChevronWrapper>
+        <img src={menuGroupIcon} alt="Chevron icon" />
+      </ChevronWrapper>
+    </MoreNavLabel>
 
     {/* The Ul to wrap each of the 'More Nav' menu groups */}
     <MoreSubNavMenu

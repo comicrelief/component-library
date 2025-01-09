@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import {
-  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink
+  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
 } from './HeaderNav2025.style';
+import Text from '../../../Atoms/Text/Text';
 
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
@@ -10,12 +11,14 @@ const MoreSubNavMenu = styled(SubNavMenu)`
   }
 `;
 
-const MoreNavLink = styled(NavLink)`
-
-
+const MoreNavLabel = styled(Text)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    // Recreating 'NavLink' as a Text element
+    position: relative;
     font-size: 15px;
+    line-height: 16px;
     padding: 10px 15px 10px 0;
+    display: flex;
 
     :before {
       content: '';
@@ -28,14 +31,6 @@ const MoreNavLink = styled(NavLink)`
       border-left: 2px solid ${({ theme }) => theme.color('grey_medium')};
       border-radius: 2px;
     }:
-  
-    :focus,
-    :hover,
-    :focus-within {
-      + ${MoreSubNavMenu} {
-        display: flex;
-      }
-    }
   }
 
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
@@ -60,22 +55,48 @@ const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin-left: 22px;
 
+    // Chevron icon:
+    ${MoreNavLabel} > div {
+      transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    }
+
     :hover,
-    :focus-within,
     :focus {
-      > ${MoreSubNavMenu} {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
+      // Chevron icon:
+      ${MoreNavLabel} {
+        color: ${({ theme }) => theme.color('red')};
+        > div {
+          transform: rotate(-180deg);
+          img {
+            // Use fancy filter to colour 'img' version of SVG
+            filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+          }
+        }
       }
     }
 
     :hover,
     :focus,
     :focus-within {
-      ${MoreSubNavMenu} {
+     > ${MoreNavLabel} {
+      border-bottom: none;
+      padding-bottom: 10px;
+     }
+
+      > ${MoreSubNavMenu} {
+        visibility: visible;
+        opacity: 1;
         display: flex;
         flex-direction: column;
+      }
+    }
+
+    :focus {
+      > ${MoreSubNavMenu} {
+        // Annoyingly having to strongarm styles here;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        display: none !important;
       }
     }
   }
@@ -108,7 +129,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
 
 const MoreSubNavItem = styled(SubNavItem)`
   // Chevron icon
-  > a > div {
+  > a > ${ChevronWrapper} {
     position: absolute;
     width: 15px;
     top: 13px;
@@ -122,7 +143,7 @@ const MoreSubNavItem = styled(SubNavItem)`
     > a {
       color: ${({ theme }) => theme.color('red')};
     }
-    > a > div {
+    > a > ${ChevronWrapper} {
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }
@@ -131,7 +152,6 @@ const MoreSubNavItem = styled(SubNavItem)`
 `;
 
 const MoreNavNestedLink = styled(NavLink)`
-    // HERE
   padding: 20px 25px 22px 42px;
 
   > div {
@@ -151,7 +171,7 @@ const MoreSubNavLink = styled(SubNavLink)`
 `;
 
 export {
-  MoreNavLink,
+  MoreNavLabel,
   MoreSubNavMenu,
   MoreNavItem,
   MoreNestedSubNavMenu,
