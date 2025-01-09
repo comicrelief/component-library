@@ -32,11 +32,11 @@ const MoreNav = ({
 
   return (
     <MoreNavItem>
-      {/* The 'More' nav label; not really a button: */}
+      {/* The 'More' nav label text, since it doesn't actually function as a button: */}
       <MoreNavLabel
         aria-haspopup="true"
         tabIndex="0"
-      // Shrug off any click-fire focus events:
+        // Shrug off any click-fire focus events to not mess with other events:
         onClick={e => e.target.blur()}
       >
         More
