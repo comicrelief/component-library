@@ -25,6 +25,8 @@ const MoreNav = ({
     <MoreNavLabel
       aria-haspopup="true"
       tabIndex="0"
+      // Shrug off any click-fire focus events:
+      onClick={e => e.target.blur()}
     >
       More
       <ChevronWrapper>

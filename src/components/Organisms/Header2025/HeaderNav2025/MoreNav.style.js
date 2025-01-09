@@ -159,8 +159,14 @@ const MoreNavNestedLink = styled(NavLink)`
   }
 
   ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
-    > div {
+    color: ${({ theme }) => theme.color('red')};
+
+    > ${ChevronWrapper} {
       transform: rotate(-180deg);
+      
+      img {
+        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+      }
     }
   `)};
 `;
