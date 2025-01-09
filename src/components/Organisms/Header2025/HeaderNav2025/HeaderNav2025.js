@@ -35,16 +35,41 @@ const HeaderNav2025 = ({
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setOpenedSubMenu({ [item]: !openedSubMenu[item] });
-    console.log('openedSubMenu:', openedSubMenu);
+  };
+
+  const focusBlurHandler = e => {
+    console.log('e', e);
+    setOpenedSubMenu({ });
   };
 
   useEffect(() => {
     // Divide up our nav on initial mount:
     setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
 
-    // And set our 'desktop' flag:
+    // Set our 'desktop or not' flag:
     setIsNotDesktop(window.innerWidth < breakpointValues.Nav);
   }, [menuGroups, characterLimit]);
+
+  useEffect(() => {
+    // TO-DO: put this check in a single piece of state
+    if (!isNotDesktop
+      && processedItems
+      && processedItems.moreNavGroups
+      && processedItems.moreNavGroups.length) {
+      document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
+      document.getElementById('more-nav-label').addEventListener('focusin', focusBlurHandler);
+    }
+
+    return () => {
+      if (!isNotDesktop
+        && processedItems
+        && processedItems.moreNavGroups
+        && processedItems.moreNavGroups.length) {
+        document.getElementById('more-nav').removeEventListener('focusin');
+        document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
+      }
+    };
+  }, [isNotDesktop, processedItems]);
 
   // Custom function to let us update the nav dynamically:
   const screenResizeNav = useCallback(() => {
@@ -68,7 +93,7 @@ const HeaderNav2025 = ({
 
   return (
     <>
-      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
+      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation" id="main-nav">
         <Text id="main-menu" tag="h2">
           Main navigation
         </Text>

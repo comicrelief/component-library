@@ -28,13 +28,14 @@ const MoreNav = ({
   };
 
   return (
-    <MoreNavItem>
+    <MoreNavItem id="more-nav">
       {/* The 'More' nav label text, since it doesn't actually function as a button: */}
       <MoreNavLabel
         aria-haspopup="true"
         tabIndex="0"
         // Shrug off any click-fire focus events to not mess with other events:
         onClick={e => e.target.blur()}
+        id="more-nav-label"
       >
         More
         <ChevronWrapper>
