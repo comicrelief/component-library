@@ -35,6 +35,7 @@ const HeaderNav2025 = ({
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setOpenedSubMenu({ [item]: !openedSubMenu[item] });
+    console.log('openedSubMenu:', openedSubMenu);
   };
 
   useEffect(() => {

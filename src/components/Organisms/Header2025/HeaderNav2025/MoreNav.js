@@ -24,9 +24,6 @@ const MoreNav = ({
     if (hasPopUp) {
       // Toggle the state for this item:
       toggleSubMenu(e, childID);
-      // And also remove focus state, so that mousing away from the dropdown will close it
-      // as it'll no longer adhere to the MoreNavItem :focus-within rule:
-      e.target.blur();
     }
   };
 
@@ -71,7 +68,6 @@ const MoreNav = ({
                 rel={relNoopener}
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
-              // onClick={hasPopUp ? e => toggleSubMenu(e, child.id) : null}
                 onClick={e => handleNestedLinkClick(e, child.id, hasPopUp)}
                 isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 aria-expanded={Boolean(openedSubMenu[child.id])}
