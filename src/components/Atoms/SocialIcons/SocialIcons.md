@@ -1,5 +1,4 @@
 ### Comic Relief
-
 ```js
 <div style={{ background: "green"}}>
     <SocialIcons campaign="comicrelief" />
@@ -7,7 +6,6 @@
 ```
 
 ### Red Nose Day
-
 ```js
 <div style={{ background: "black"}}>
     <SocialIcons campaign="rednoseday" />
@@ -15,7 +13,6 @@
 ```
 
 ### Sport Relief with self target
-
 ```js
 <div style={{ background: "red"}}>
     <SocialIcons campaign="sportrelief" target="self" />
