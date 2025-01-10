@@ -11,10 +11,7 @@ import allowListed from '../../../../utils/allowListed';
 import HeaderNavItem2025 from './HeaderNavItem2025';
 
 import {
-  Nav,
-  NavMenu,
-  NavMetaIcons,
-  DonateButtonWrapperBottom
+  Nav, NavMenu, NavMetaIcons, DonateButtonWrapperBottom
 } from './HeaderNav2025.style';
 
 const HeaderNav2025 = ({
@@ -26,22 +23,30 @@ const HeaderNav2025 = ({
   const [isNotDesktop, setIsNotDesktop] = useState(null);
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
-
   let theseGroups = null;
 
-  const toggleBurgerMenu = event => {
-    event.preventDefault();
+  const toggleBurgerMenu = e => {
+    e.preventDefault();
     setIsExpandable(!isExpandable);
+
+    // If we've just closed the nav, collapse any open submenus:
+    if (isExpandable) {
+      setOpenedSubMenu({}); // TODO: confirm with Curtis this is desired
+    }
   };
 
+  // Toggle the open/not-open value of the specific submenu passed
   const toggleSubMenu = (e, item) => {
     e.preventDefault();
     setOpenedSubMenu({ [item]: !openedSubMenu[item] });
   };
 
-  const focusBlurHandler = e => {
-    console.log('e', e);
-    setOpenedSubMenu({ });
+  // Called by eventHandler to reset the nav on a specific mouse interaction
+  const resetMoreNavMouse = () => {
+    // Remove active 'opened' state for any open More Nav submenus
+    setOpenedSubMenu({});
+    // And also remove the focus state so the 'focus-within' nav rules don't apply:
+    document.activeElement.blur();
   };
 
   // Process the nav items on initial mount:
@@ -50,47 +55,53 @@ const HeaderNav2025 = ({
     // assigned as local vars since useState won't be ready in time below:
     const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
     const notDesktop = window.innerWidth < breakpointValues.Nav;
-
     setProcessedItems(theseItems);
     setIsNotDesktop(notDesktop);
 
     // Use these flags to detemine if we render the More nav or not:
-    const useMoreNav = !notDesktop && theseItems.moreNavGroups.length;
-
-    setShowMoreNav(useMoreNav);
+    setShowMoreNav(!notDesktop && theseItems.moreNavGroups.length);
   }, [menuGroups, characterLimit]);
 
+  // Attach eventListener on mount and after potential changes
+  // to showMoreNav triggered by a window resize:
   useEffect(() => {
-    if (showMoreNav) {
-      document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
-      document.getElementById('more-nav-label').addEventListener('focusin', focusBlurHandler);
+    if (processedItems && showMoreNav) {
+      document.getElementById('more-nav-ul').addEventListener('mouseleave', resetMoreNavMouse);
     }
-
-    return () => {
-      if (showMoreNav) {
-        document.getElementById('more-nav').removeEventListener('focusin');
-        document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
-      }
-    };
-  }, [isNotDesktop, processedItems]);
+  }, [processedItems, showMoreNav]);
 
   // Custom function to let us update the nav dynamically:
   const screenResizeNav = useCallback(() => {
-    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyNotDesktop = window.innerWidth < breakpointValues.Nav;
+    // Grab the current width:
+    const currentScreenWidth = typeof window !== 'undefined' ? window.innerWidth : null;
 
-    if (screenSize !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
+    // Compare to our breakpoint:
+    const isCurrentlyNotDesktop = currentScreenWidth < breakpointValues.Nav;
+
+    // Only if the screen size has *changed*, update the state:
+    if (currentScreenWidth !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
+      // If we've changed from desktop to not, remove any previously-attached MoreNav event
+      // listeners, BEFORE we update the flag that'd remove the elements from the DOM:
+      if (isCurrentlyNotDesktop) {
+        document.getElementById('more-nav-ul').removeEventListener('mouseleave', resetMoreNavMouse);
+      }
+
+      // Update our desktop flag to prevent any further calls:
       setIsNotDesktop(isCurrentlyNotDesktop);
-    }
-  }, [isNotDesktop]);
 
+      // And since we've changed breakpoints, use these flags
+      // to determine if we should render the More nav or not,
+      setShowMoreNav(Boolean(!isCurrentlyNotDesktop && processedItems.moreNavGroups));
+    }
+  }, [isNotDesktop, processedItems]);
+
+  // Hook into browser's own onresize event to call our custom wrapper function:
   useEffect(() => {
-    // Hook into browser's own onresize event to call our custom wrapper function:
     if (typeof window !== 'undefined') window.onresize = screenResizeNav;
   }, [screenResizeNav]);
 
-  // Once we've processed the items, assign according to breakpoint; sub desktop 'Nav'
-  // breakpoints use 'raw' unprocessed menu groups, Desktop (Nav breakpoint and up)
+  // Once we've processed the items, assign according to breakpoint; sub-desktop 'Nav'
+  // breakpoints use 'raw' unprocessed menu groups, Desktop ('Nav' breakpoint and up)
   // uses the divided-up versions:
   if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 

@@ -31,11 +31,13 @@ const MoreNav = ({
     <MoreNavItem id="more-nav">
       {/* The 'More' nav label text, since it doesn't actually function as a button: */}
       <MoreNavLabel
-        aria-haspopup="true"
+        // Used to target focus/blur handlers
+        id="more-nav-label"
+        // Ensure we can tab to this normally non-foccusable element:
         tabIndex="0"
         // Shrug off any click-fire focus events to not mess with other events:
         onClick={e => e.target.blur()}
-        id="more-nav-label"
+        aria-haspopup="true"
       >
         More
         <ChevronWrapper>
@@ -46,6 +48,7 @@ const MoreNav = ({
       {/* The Ul to wrap each of the 'More Nav' menu groups */}
       <MoreSubNavMenu
         role="list"
+        id="more-nav-ul"
         key="more-nav-ul"
       >
 

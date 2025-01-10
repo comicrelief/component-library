@@ -31,6 +31,7 @@ const MoreNavLabel = styled(Text)`
       transform: translateY(-50%);
       border-left: 2px solid ${({ theme }) => theme.color('grey_medium')};
       border-radius: 2px;
+      pointer-events: none;
     }:
   }
 
