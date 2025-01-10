@@ -44,7 +44,6 @@ const HeaderNav = ({
 
   // Handle tab key on menu nav
   const keyPressed = item => () => {
-    console.log('keyPressed', item);
     window.onkeyup = e => {
       // Specifies the tab key:
       if (e.which === 9) {
