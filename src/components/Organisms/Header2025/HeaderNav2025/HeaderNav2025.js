@@ -25,6 +25,8 @@ const HeaderNav2025 = ({
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(null);
   const [processedItems, setProcessedItems] = useState(null);
+  const [showMoreNav, setShowMoreNav] = useState(false);
+
   let theseGroups = null;
 
   const toggleBurgerMenu = event => {
@@ -42,29 +44,30 @@ const HeaderNav2025 = ({
     setOpenedSubMenu({ });
   };
 
+  // Process the nav items on initial mount:
   useEffect(() => {
-    // Divide up our nav on initial mount:
-    setProcessedItems(MoreNavPreProcess(menuGroups, characterLimit));
+    // Divide up nav items accordingly and determine breakpoint,
+    // assigned as local vars since useState won't be ready in time below:
+    const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
+    const notDesktop = window.innerWidth < breakpointValues.Nav;
 
-    // Set our 'desktop or not' flag:
-    setIsNotDesktop(window.innerWidth < breakpointValues.Nav);
+    setProcessedItems(theseItems);
+    setIsNotDesktop(notDesktop);
+
+    // Use these flags to detemine if we render the More nav or not:
+    const useMoreNav = !notDesktop && theseItems.moreNavGroups.length;
+
+    setShowMoreNav(useMoreNav);
   }, [menuGroups, characterLimit]);
 
   useEffect(() => {
-    // TO-DO: put this check in a single piece of state
-    if (!isNotDesktop
-      && processedItems
-      && processedItems.moreNavGroups
-      && processedItems.moreNavGroups.length) {
+    if (showMoreNav) {
       document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
       document.getElementById('more-nav-label').addEventListener('focusin', focusBlurHandler);
     }
 
     return () => {
-      if (!isNotDesktop
-        && processedItems
-        && processedItems.moreNavGroups
-        && processedItems.moreNavGroups.length) {
+      if (showMoreNav) {
         document.getElementById('more-nav').removeEventListener('focusin');
         document.getElementById('more-nav-label').addEventListener('mouseover', focusBlurHandler);
       }
@@ -136,7 +139,7 @@ const HeaderNav2025 = ({
             })}
 
             {/* Only actually render 'More' nav stuff when we've got content */}
-            {(!isNotDesktop && processedItems.moreNavGroups.length > 0) && (
+            {showMoreNav && (
               <MoreNav
                 processedItems={processedItems}
                 openedSubMenu={openedSubMenu}
