@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import {
-  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper, ChevronImage
+  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
 } from './HeaderNav2025.style';
 import Text from '../../../Atoms/Text/Text';
 
@@ -69,7 +69,7 @@ const MoreNavItem = styled(NavItem)`
         color: ${({ theme }) => theme.color('red')};
         > ${ChevronWrapper} {
           transform: rotate(-180deg);
-          ${ChevronImage} {
+          img {
             // Use fancy filter to colour 'img' version of SVG
             filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
           }
