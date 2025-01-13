@@ -29,9 +29,15 @@ const StyledLink = styled.a`
     &:hover,
     &:focus {
       opacity: 1;
-      
-      img {
-        filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+    }
+    
+    // No hover state for mobile:
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      &:hover,
+      &:focus {        
+        img {
+          filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
+        }
       }
     }
 

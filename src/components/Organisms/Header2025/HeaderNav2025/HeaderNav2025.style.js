@@ -23,8 +23,16 @@ const NavLinkClass = styled(Link)`
   :focus,
   :focus-within {
     border: 0;
-    color: ${({ theme }) => theme.color('red')};
-    font-weight: inherit;
+  }
+    
+  // No hover state for mobile:
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    :hover,
+    :focus,
+    :focus-within {
+      color: ${({ theme }) => theme.color('red')};
+      font-weight: inherit;
+    }
   }
     
   // Chevron icon:
@@ -133,7 +141,12 @@ const SubNavItem = styled.li`
   :hover,
   :focus,
   :focus-within {
-    background-color: ${({ theme }) => theme.color('grey_extra_light')};
+    // No hover state for mobile:
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      background-color: ${({ theme }) => theme.color('grey_extra_light')};
+    }
+
+    // WHAT IS THIS
     + span {
       border-bottom: 0;
       padding-bottom: 2px;
@@ -178,12 +191,25 @@ const NavLink = styled(NavLinkClass)`
   display: flex;
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+
+  ${({ isExpanded, theme }) => (isExpanded && css`
+    &,
+    &:hover,
+    &:focus-within,
+    &:focus {
+      color: ${theme.color('red')};
+    }
+  `)}
+
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     padding: 10px 0px 10px 0;
-    
-    ${({ hasSubMenu }) => (hasSubMenu && css` padding: 10px 14px 10px 0;`)}
-    
     height: auto;
+
+    // Additional room for the chevron:
+    ${({ hasSubMenu }) => (hasSubMenu && css`
+      padding: 10px 14px 10px 0;
+    `)}
+    
     :hover,
     :focus-within,
     :focus {
@@ -194,7 +220,9 @@ const NavLink = styled(NavLinkClass)`
   }
     
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
-    ${({ hasSubMenu }) => (hasSubMenu && css` padding: 10px 16px 10px 0;`)}
+    ${({ hasSubMenu }) => (hasSubMenu && css`
+      padding: 10px 16px 10px 0;
+    `)}
   }
 `;
 
@@ -338,7 +366,8 @@ const NavMetaIcons = styled.div`
       padding: 15px 20px;
       position: relative;
 
-      &: after {
+      // Arrow icon:
+      &:after {
         position: absolute;
         right: 20px;
         top: 50%;
@@ -351,6 +380,7 @@ const NavMetaIcons = styled.div`
         background-repeat: no-repeat;
       }
 
+      // Icon itself
       img {
         padding: 5px;
         height: 35px;
@@ -361,10 +391,13 @@ const NavMetaIcons = styled.div`
         transition: color 0.15s ease-out;
       }
 
-      &:focus,
-      &:hover {
-        span {
-          color: ${({ theme }) => theme.color('red')};
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        &:focus,
+        &:hover {
+          span {
+            // HERE FOR SURE
+            color: ${({ theme }) => theme.color('red')};
+          } 
         }
       }
     }
