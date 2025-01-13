@@ -146,7 +146,6 @@ const SubNavItem = styled.li`
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
     }
 
-    // WHAT IS THIS
     + span {
       border-bottom: 0;
       padding-bottom: 2px;
