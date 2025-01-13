@@ -9,7 +9,7 @@ import {
 } from './Header2025.style';
 
 const Header2025 = ({
-  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null, ...rest
+  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null, characterLimit = 60, ...rest
 }) => (
   <Header2025Wrapper navItems {...rest}>
     <InnerWrapper>
@@ -21,7 +21,12 @@ const Header2025 = ({
           animateRotate
         />
       </Brand>
-      <HeaderNav2025 navItems={navItems} metaIcons={metaIcons} donateButton={donateButton} />
+      <HeaderNav2025
+        navItems={navItems}
+        metaIcons={metaIcons}
+        donateButton={donateButton}
+        characterLimit={characterLimit}
+      />
       <ButtonsAndIcons>
         <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
@@ -50,7 +55,9 @@ Header2025.propTypes = {
   metaIcons: PropTypes.node.isRequired,
   // ... and is supplied separately to allow more render control:
   donateButton: PropTypes.node,
-  campaign: PropTypes.string
+  campaign: PropTypes.string,
+  characterLimit: PropTypes.number
+
 };
 
 export default Header2025;
