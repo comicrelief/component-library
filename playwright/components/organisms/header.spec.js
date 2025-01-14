@@ -4,9 +4,6 @@ test.describe('header component', () => {
   test('Comic Relief header', async ({ page }) => {
     await page.goto('/#header');
 
-    // Temp fix while I suss out how to do this globally
-    await page.setViewportSize({ width: 1300, height: 1000 });
-
     await expect(page.locator('[data-testid="Header-example-1"]')).toBeVisible();
     // donate locator
     await expect(page.locator('[data-testid="Header-example-1"] header[role="banner"] a[href="/donation"]')).toBeVisible();
@@ -20,9 +17,6 @@ test.describe('header component', () => {
 
   test('Sport Relief header', async ({ page }) => {
     await page.goto('/#header');
-
-    // Temp fix while I suss out how to do this globally
-    await page.setViewportSize({ width: 1300, height: 1000 });
 
     await expect(page.locator('[data-testid="Header-example-3"]')).toBeVisible();
     // donate locator
@@ -38,9 +32,6 @@ test.describe('header component', () => {
   test('Pride header', async ({ page }) => {
     await page.goto('/#header');
 
-    // Temp fix while I suss out how to do this globally
-    await page.setViewportSize({ width: 1300, height: 1000 });
-
     await expect(page.locator('[data-testid="Header-example-5"]')).toBeVisible();
     // donate locator
     await expect(page.locator('[data-testid="Header-example-5"] header[role="banner"] a[href="/donation"]')).toBeVisible();
@@ -54,9 +45,6 @@ test.describe('header component', () => {
 
   test('Comic Relief header with Search', async ({ page }) => {
     await page.goto('/#header');
-
-    // Temp fix while I suss out how to do this globally
-    await page.setViewportSize({ width: 1300, height: 1000 });
 
     await expect(page.locator('[data-testid="Header-example-7"]')).toBeVisible();
     // donate locator
@@ -73,9 +61,6 @@ test.describe('header component', () => {
 
   test('Comic Relief header with Search and Shop', async ({ page }) => {
     await page.goto('/#header');
-
-    // Temp fix while I suss out how to do this globally
-    await page.setViewportSize({ width: 1300, height: 1000 });
 
     await expect(page.locator('[data-testid="Header-example-9"]')).toBeVisible();
     // donate locator
