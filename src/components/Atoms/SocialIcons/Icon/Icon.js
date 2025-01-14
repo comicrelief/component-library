@@ -31,7 +31,7 @@ const StyledLink = styled.a`
       opacity: 1;
     }
     
-    // No hover state for mobile:
+    // No hover state for mobile, so targetting Medium+:
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       &:hover,
       &:focus {        

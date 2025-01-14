@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 
 import {
-  NavItem, NavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
+  NavItem, NavLink, DesktopNavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
 } from './HeaderNav2025.style';
 
 import menuGroupIcon from './Menu-Group-Icon.svg';
@@ -12,7 +12,7 @@ const HeaderNavItem2025 = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
-    thisFirstChild, navHelper, internalLinkHelper
+    thisFirstChild, navHelper, internalLinkHelper, ...rest
   }
 ) => (
   <NavItem
@@ -42,13 +42,14 @@ const HeaderNavItem2025 = (
       </NavLink>
     ) : (
       <StyledText>
-        <NavLink
+        <DesktopNavLink
           href={thisUrl}
           inline
           rel={relNoopener}
           aria-haspopup={hasPopUp}
           key={`${index}-${thisID}`}
           hasSubMenu={hasSubMenu}
+          {...rest}
         >
           {thisFirstChild.title}
           {hasSubMenu
@@ -58,7 +59,7 @@ const HeaderNavItem2025 = (
                 </ChevronWrapper>
               )
             }
-        </NavLink>
+        </DesktopNavLink>
       </StyledText>
     )}
 

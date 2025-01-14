@@ -25,13 +25,24 @@ const NavLinkClass = styled(Link)`
     border: 0;
   }
     
-  // No hover state for mobile:
+  // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.allBreakpoints('M')} {
+
     :hover,
-    :focus,
-    :focus-within {
+    :focus {
       color: ${({ theme }) => theme.color('red')};
+      background-color: ${({ theme }) => theme.color('grey_extra_light')};
       font-weight: inherit;
+    }
+
+    :focus-within {
+      // Reset the colour of a parent...
+      background-color: ${({ theme }) => theme.color('white')};
+
+      // ...unless it's also being hovered
+      &:hover {
+        background-color: ${({ theme }) => theme.color('grey_extra_light')};
+      }
     }
   }
     
@@ -137,21 +148,6 @@ const SubNavItem = styled.li`
   span {
     font-weight: 100;
   }
-
-  :hover,
-  :focus,
-  :focus-within {
-    // No hover state for mobile:
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      background-color: ${({ theme }) => theme.color('grey_extra_light')};
-    }
-
-    + span {
-      border-bottom: 0;
-      padding-bottom: 2px;
-      color: ${({ theme }) => theme.color('red')};
-    }
-  }
 `;
 
 /**
@@ -222,6 +218,15 @@ const NavLink = styled(NavLinkClass)`
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
+  }
+`;
+
+const DesktopNavLink = styled(NavLink)`
+  &,
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: ${({ theme }) => theme.color('white')};
   }
 `;
 
@@ -394,7 +399,6 @@ const NavMetaIcons = styled.div`
         &:focus,
         &:hover {
           span {
-            // HERE FOR SURE
             color: ${({ theme }) => theme.color('red')};
           } 
         }
@@ -453,6 +457,7 @@ export {
   NavMenu,
   NavItem,
   NavLink,
+  DesktopNavLink,
   SubNavMenu,
   SubNavItem,
   SubNavLink,
