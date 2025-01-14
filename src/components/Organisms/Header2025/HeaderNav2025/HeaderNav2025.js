@@ -31,7 +31,7 @@ const HeaderNav2025 = ({
 
     // If we've just closed the nav, collapse any open submenus:
     if (isExpandable) {
-      setOpenedSubMenu({}); // TODO: confirm with Curtis this is desired
+      setOpenedSubMenu({});
     }
   };
 
