@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('header component', () => {
   test('Comic Relief header', async ({ page }) => {
+
     await page.goto('/#header');
 
     await expect(page.locator('[data-testid="Header-example-1"]')).toBeVisible();
@@ -16,6 +17,7 @@ test.describe('header component', () => {
   });
 
   test('Sport Relief header', async ({ page }) => {
+
     await page.goto('/#header');
 
     await expect(page.locator('[data-testid="Header-example-3"]')).toBeVisible();
@@ -30,6 +32,7 @@ test.describe('header component', () => {
   });
 
   test('Pride header', async ({ page }) => {
+
     await page.goto('/#header');
 
     await expect(page.locator('[data-testid="Header-example-5"]')).toBeVisible();
@@ -44,6 +47,7 @@ test.describe('header component', () => {
   });
 
   test('Comic Relief header with Search', async ({ page }) => {
+
     await page.goto('/#header');
 
     await expect(page.locator('[data-testid="Header-example-7"]')).toBeVisible();
@@ -60,6 +64,7 @@ test.describe('header component', () => {
   });
 
   test('Comic Relief header with Search and Shop', async ({ page }) => {
+
     await page.goto('/#header');
 
     await expect(page.locator('[data-testid="Header-example-9"]')).toBeVisible();
