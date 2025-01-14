@@ -76,7 +76,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Do stuff
-        run: sudo apt-get update && apt-get install -y locales locales-all
+        run: apt-get libasound2
         continue-on-error: false
 
       - name: Install dependencies
