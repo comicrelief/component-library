@@ -75,6 +75,9 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Do stuff
+        run: sudo apt-get update
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile --ignore-scripts
 
