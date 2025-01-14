@@ -1,4 +1,4 @@
-name: Main
+run: yarn playwright install chromiumname: Main
 
 on: [push]
 
@@ -79,7 +79,7 @@ jobs:
         run: yarn install --frozen-lockfile --ignore-scripts
 
       - name: Install playwright browsers
-        run: yarn playwright install --with-deps chromium
+        run: yarn playwright install chromium
 
       - name: Run end-to-end tests
         run: yarn test:e2e:ci
