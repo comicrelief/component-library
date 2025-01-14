@@ -27,7 +27,6 @@ const NavLinkClass = styled(Link)`
     
   // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-
     :hover,
     :focus {
       color: ${({ theme }) => theme.color('red')};
