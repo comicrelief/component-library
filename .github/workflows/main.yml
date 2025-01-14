@@ -75,15 +75,15 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Do stuff
-        run: sudo apt-get install libasound2-dev
-        continue-on-error: false
+      # - name: Do stuff
+      #   run: sudo apt-get install libasound2-dev
+      #   continue-on-error: false
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile --ignore-scripts
 
       - name: Install playwright browsers
-        run: yarn playwright install --with-deps chromium
+        run: yarn playwright install chromium
 
       - name: Run end-to-end tests
         run: yarn test:e2e:ci
