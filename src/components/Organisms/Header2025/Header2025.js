@@ -57,7 +57,6 @@ Header2025.propTypes = {
   donateButton: PropTypes.node,
   campaign: PropTypes.string,
   characterLimit: PropTypes.number
-
 };
 
 export default Header2025;

@@ -282,11 +282,6 @@ const ChevronWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    position: relative;
-    top: -3px;
-    right: -1px;
-    width: 10px;
-    //
     position: absolute;
     top: 10px;
     right: 0;
