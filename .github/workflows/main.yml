@@ -1,5 +1,3 @@
-run: yarn playwright install chromiumname: Main
-
 on: [push]
 
 jobs:
