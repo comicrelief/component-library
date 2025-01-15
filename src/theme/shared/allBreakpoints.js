@@ -7,6 +7,7 @@ export const breakpointValues = {
   M: 740,
   L: 1024,
   Nav: 1150,
+  NavWide: 1350,
   XL: 1440
 };
 

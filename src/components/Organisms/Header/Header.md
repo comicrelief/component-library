@@ -102,6 +102,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          id="search"
         />
       </div>
     </>
@@ -159,6 +160,7 @@ const [success, setSuccess] = React.useState(false);
           href="/search"
           brand="comicrelief"
           tabIndex="0"
+          id="search"
         />
       </div>
       <div>
@@ -170,6 +172,7 @@ const [success, setSuccess] = React.useState(false);
           href="https://shop.comicrelief.com"
           brand="comicrelief"
           tabIndex="0"
+          id="shop"
         />
       </div>
       <div>
@@ -181,6 +184,7 @@ const [success, setSuccess] = React.useState(false);
           href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
           brand="comicrelief"
           tabIndex="0"
+          id="payin"
         />
       </div>
     </>

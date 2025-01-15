@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import NavHelper from '../../../../utils/navHelper';
+import { NavHelper } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import chevronDown from './chevron-down.svg';

@@ -54,6 +54,7 @@ const ShareButton = ({
               target="_blank"
               role="button"
               href="#"
+              id={`share-button--${shareType}`}
               {...restProps}
             />
           </ShareButtonItem>

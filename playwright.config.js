@@ -19,7 +19,7 @@ module.exports = defineConfig({
   workers: 2,
   timeout: 60 * 1000,
   expect: {
-    timeout: 60 * 1000,
+    timeout: 60 * 1000
   },
   reporter: [
     ['list'],
@@ -28,15 +28,22 @@ module.exports = defineConfig({
   use: {
     actionTimeout: 0,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: {
+          // Match our widest nav:
+          width: 1300,
+          height: 1000
+        }
+      }
+    }
   ],
 
   /* Run your local dev server before starting the tests */
@@ -44,6 +51,6 @@ module.exports = defineConfig({
     command: 'yarn styleguide',
     port: '6060',
     timeout: 120000,
-    reuseExistingServer: true,
-  },
+    reuseExistingServer: true
+  }
 });
