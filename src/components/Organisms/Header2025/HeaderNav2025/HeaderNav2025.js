@@ -82,7 +82,8 @@ const HeaderNav2025 = ({
     if (currentScreenWidth !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
       // If we've changed from desktop to not, remove any previously-attached MoreNav event
       // listeners, BEFORE we update the flag that'd remove the elements from the DOM:
-      if (isCurrentlyNotDesktop) {
+      if (isCurrentlyNotDesktop && processedItems.moreNavGroups.length) {
+        // HERE CHERE
         document.getElementById('more-nav-ul').removeEventListener('mouseleave', resetMoreNavMouse);
       }
 
@@ -91,7 +92,7 @@ const HeaderNav2025 = ({
 
       // And since we've changed breakpoints, use these flags
       // to determine if we should render the More nav or not,
-      setShowMoreNav(Boolean(!isCurrentlyNotDesktop && processedItems.moreNavGroups));
+      setShowMoreNav(Boolean(!isCurrentlyNotDesktop && processedItems.moreNavGroups.length));
     }
   }, [isNotDesktop, processedItems]);
 
@@ -150,7 +151,7 @@ const HeaderNav2025 = ({
             })}
 
             {/* Only actually render 'More' nav stuff when we've got content */}
-            {showMoreNav && (
+            {showMoreNav ? (
               <MoreNav
                 processedItems={processedItems}
                 openedSubMenu={openedSubMenu}
@@ -159,7 +160,7 @@ const HeaderNav2025 = ({
                 allowListed={allowListed}
                 internalLinkHelper={InternalLinkHelper}
               />
-            )}
+            ) : null}
 
           </NavMenu>
         )}
