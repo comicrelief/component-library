@@ -3,8 +3,14 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
+const Wrapper = styled.div`
+  ${({ marginTop }) => marginTop && `margin-top: ${marginTop}`};
+  border: 1px solid red;
+`;
+
 /** Text component */
 export const BaseText = styled.span`
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   line-height: ${({ size, theme }) => theme.fontSize(size)};
@@ -51,24 +57,40 @@ export const BaseText = styled.span`
  *  Weight is checked for existence to prevent overriding the tag's css
  */
 const Text = ({
-  tag = 'span', size = 's', color = 'inherit', children = undefined, uppercase = false, height = undefined, weight = undefined, family = null, mobileColor = null, ...rest
+  tag = 'span',
+  size = 's',
+  color = 'inherit',
+  children = undefined,
+  uppercase = false,
+  height = undefined,
+  weight = undefined,
+  family = null,
+  mobileColor = null,
+  marginTop = undefined,
+  ...rest
 }) => (
-  <BaseText
-    {...rest}
-    as={tag}
-    color={color}
-    size={size}
-    uppercase={uppercase}
-    height={height}
-    weight={weight}
-    family={family}
-    mobileColor={mobileColor}
-  >
-    {children}
-  </BaseText>
+  <Wrapper marginTop={marginTop}>
+    <BaseText
+      {...rest}
+      as={tag}
+      color={color}
+      size={size}
+      uppercase={uppercase}
+      height={height}
+      weight={weight}
+      family={family}
+      mobileColor={mobileColor}
+    >
+      {children}
+    </BaseText>
+  </Wrapper>
 );
 
 Text.propTypes = {
+  /** Wrapper for top spacing */
+  marginTop: PropTypes.string,
+  /** Text Align */
+  textAlign: PropTypes.string,
   /** Font family */
   family: PropTypes.string,
   /** Font weight */
