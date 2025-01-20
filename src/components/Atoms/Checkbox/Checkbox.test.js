@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Checkbox from './Checkbox';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import Checkbox from "./Checkbox";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <>
       <Checkbox name="sport" value="Tenis" label="Tenis" />
@@ -81,13 +81,17 @@ it('renders correctly', () => {
           value="Tenis"
         />
         <span />
-        <span
-          className="c2"
-          color="inherit"
-          size="s"
+        <div
+          className=""
         >
-          Tenis
-        </span>
+          <span
+            className="c2"
+            color="inherit"
+            size="s"
+          >
+            Tenis
+          </span>
+        </div>
       </label>,
       .c2 {
       font-size: 1rem;
@@ -157,13 +161,17 @@ it('renders correctly', () => {
           value="Handball"
         />
         <span />
-        <span
-          className="c2"
-          color="inherit"
-          size="s"
+        <div
+          className=""
         >
-          Handball
-        </span>
+          <span
+            className="c2"
+            color="inherit"
+            size="s"
+          >
+            Handball
+          </span>
+        </div>
       </label>,
     ]
   `);

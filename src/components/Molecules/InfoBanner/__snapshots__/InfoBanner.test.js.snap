@@ -78,118 +78,166 @@ exports[`renders correctly 1`] = `
   <div
     className="c1"
   >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
+    <div
+      className=""
     >
-      Project Name
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
-    >
-      Hello There
-    </p>
-  </div>
-  <div
-    className="c1"
-  >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
-    >
-      End Date
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
-    >
-      1st June 2020
-    </p>
-  </div>
-  <div
-    className="c1"
-  >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
-    >
-      Funding theme
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
-    >
-      <a
-        className="c4"
-        color="red"
-        href="cr.com"
-        target="_self"
-        type="standard"
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
       >
-        Be happy
-      </a>
-    </p>
+        Project Name
+      </h3>
+    </div>
+    <div
+      className=""
+    >
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        Hello There
+      </p>
+    </div>
   </div>
   <div
     className="c1"
   >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
+    <div
+      className=""
     >
-      Amount Awarded
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
+      >
+        End Date
+      </h3>
+    </div>
+    <div
+      className=""
     >
-      £2,000,000
-    </p>
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        1st June 2020
+      </p>
+    </div>
   </div>
   <div
     className="c1"
   >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
+    <div
+      className=""
     >
-      Start Date
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
+      >
+        Funding theme
+      </h3>
+    </div>
+    <div
+      className=""
     >
-      1st June 2010
-    </p>
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        <a
+          className="c4"
+          color="red"
+          href="cr.com"
+          target="_self"
+          type="standard"
+        >
+          Be happy
+        </a>
+      </p>
+    </div>
   </div>
   <div
     className="c1"
   >
-    <h3
-      className="c2"
-      color="inherit"
-      size="md"
+    <div
+      className=""
     >
-      Beneficiary Country
-    </h3>
-    <p
-      className="c3"
-      color="inherit"
-      size="sm"
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
+      >
+        Amount Awarded
+      </h3>
+    </div>
+    <div
+      className=""
     >
-      Uk
-    </p>
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        £2,000,000
+      </p>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className=""
+    >
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
+      >
+        Start Date
+      </h3>
+    </div>
+    <div
+      className=""
+    >
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        1st June 2010
+      </p>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className=""
+    >
+      <h3
+        className="c2"
+        color="inherit"
+        size="md"
+      >
+        Beneficiary Country
+      </h3>
+    </div>
+    <div
+      className=""
+    >
+      <p
+        className="c3"
+        color="inherit"
+        size="sm"
+      >
+        Uk
+      </p>
+    </div>
   </div>
 </section>
 `;

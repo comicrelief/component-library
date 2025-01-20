@@ -1,12 +1,12 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import SearchInput from './SearchInput';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import SearchInput from "./SearchInput";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
@@ -146,16 +146,20 @@ it('renders correctly', () => {
               className="c4 c5"
               htmlFor="search"
             >
-              <span
-                className="c6 c7"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Search",
+              <div
+                className=""
+              >
+                <span
+                  className="c6 c7"
+                  color="inherit"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Search",
+                    }
                   }
-                }
-                size="s"
-              />
+                  size="s"
+                />
+              </div>
               <div
                 className="c8"
               >

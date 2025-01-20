@@ -74,16 +74,20 @@ exports[`renders correctly 1`] = `
     className="c1 TextInputWithDropdown__input"
     htmlFor="typeahead-test"
   >
-    <span
-      className="c2 c3"
-      color="inherit"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Typeahead test",
+    <div
+      className=""
+    >
+      <span
+        className="c2 c3"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Typeahead test",
+          }
         }
-      }
-      size="s"
-    />
+        size="s"
+      />
+    </div>
     <div
       className="c4"
     >

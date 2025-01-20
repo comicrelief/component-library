@@ -653,14 +653,18 @@ exports[`renders correctly 1`] = `
         className="c11"
         role="navigation"
       >
-        <h2
-          className="c12"
-          color="inherit"
-          id="footer-menu"
-          size="s"
+        <div
+          className=""
         >
-          Footer navigation
-        </h2>
+          <h2
+            className="c12"
+            color="inherit"
+            id="footer-menu"
+            size="s"
+          >
+            Footer navigation
+          </h2>
+        </div>
         <ul
           className="c13"
           role="menubar"
@@ -669,13 +673,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              Hear from us
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                Hear from us
+              </span>
+            </div>
             <ul
               aria-label="Hear from us"
               className="c16"
@@ -692,13 +700,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Get the newsletter
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Get the newsletter
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -712,13 +724,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    How we contact you
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      How we contact you
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -727,13 +743,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              Get in touch
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                Get in touch
+              </span>
+            </div>
             <ul
               aria-label="Get in touch"
               className="c21"
@@ -750,13 +770,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Contact us
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Contact us
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -770,13 +794,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Your Gift Aid
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Your Gift Aid
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -790,13 +818,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    FAQs
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      FAQs
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -810,13 +842,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Red Nose Day 2019 FAQs
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Red Nose Day 2019 FAQs
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -825,13 +861,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              About us
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                About us
+              </span>
+            </div>
             <ul
               aria-label="About us"
               className="c21"
@@ -848,13 +888,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Mission
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Mission
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -868,13 +912,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Our history
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Our history
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -888,13 +936,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Finances
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Finances
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -908,13 +960,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Partners
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Partners
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -928,13 +984,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Meet the team
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Meet the team
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -948,13 +1008,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Sport Relief
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Sport Relief
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -963,13 +1027,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              Careers
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                Careers
+              </span>
+            </div>
             <ul
               aria-label="Careers"
               className="c16"
@@ -986,13 +1054,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Working at Comic Relief
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Working at Comic Relief
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -1006,13 +1078,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Open roles
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Open roles
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -1021,13 +1097,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              News
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                News
+              </span>
+            </div>
             <ul
               aria-label="News"
               className="c16"
@@ -1044,13 +1124,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    News
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      News
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -1064,13 +1148,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Press area
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Press area
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -1079,13 +1167,17 @@ exports[`renders correctly 1`] = `
             className="c14"
             role="none"
           >
-            <span
-              className="c15"
-              color="white"
-              size="s"
+            <div
+              className=""
             >
-              Legal
-            </span>
+              <span
+                className="c15"
+                color="white"
+                size="s"
+              >
+                Legal
+              </span>
+            </div>
             <ul
               aria-label="Legal"
               className="c16"
@@ -1102,13 +1194,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Link comp with both URL and Ref
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Link comp with both URL and Ref
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -1122,13 +1218,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Link comp with only Ref
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Link comp with only Ref
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -1142,13 +1242,17 @@ exports[`renders correctly 1`] = `
                   target="_blank"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Link comp with only URL
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Link comp with only URL
+                    </span>
+                  </div>
                   <span
                     className="c23"
                   >
@@ -1167,13 +1271,17 @@ exports[`renders correctly 1`] = `
                   target="_self"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Test allowListed external link
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Test allowListed external link
+                    </span>
+                  </div>
                 </a>
               </li>
               <li
@@ -1187,13 +1295,17 @@ exports[`renders correctly 1`] = `
                   target="_blank"
                   type="standard"
                 >
-                  <span
-                    className="c20"
-                    color="white"
-                    size="s"
+                  <div
+                    className=""
                   >
-                    Test non-allowListed external link
-                  </span>
+                    <span
+                      className="c20"
+                      color="white"
+                      size="s"
+                    >
+                      Test non-allowListed external link
+                    </span>
+                  </div>
                   <span
                     className="c23"
                   >
@@ -1208,13 +1320,17 @@ exports[`renders correctly 1`] = `
       <div
         className="c24"
       >
-        <p
-          className="c25"
-          color="grey"
-          size="s"
+        <div
+          className=""
         >
-          Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
-        </p>
+          <p
+            className="c25"
+            color="grey"
+            size="s"
+          >
+            Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
+          </p>
+        </div>
       </div>
     </div>
   </footer>

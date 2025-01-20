@@ -160,13 +160,17 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   <div
     className="c5"
   >
-    <p
-      className="c6"
-      color="white"
-      size="xxl"
+    <div
+      className=""
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
-    </p>
+      <p
+        className="c6"
+        color="white"
+        size="xxl"
+      >
+        “The creativity that goes into helping people have a better life is extraordinary.”
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -382,20 +386,28 @@ exports[`renders Single Message with Image correctly 1`] = `
   <div
     className="c5"
   >
-    <h1
-      className="c6"
-      color="white"
-      size="xxl"
+    <div
+      className=""
     >
-      title
-    </h1>
-    <p
-      className="c7"
-      color="white"
-      size="s"
+      <h1
+        className="c6"
+        color="white"
+        size="xxl"
+      >
+        title
+      </h1>
+    </div>
+    <div
+      className=""
     >
-      description
-    </p>
+      <p
+        className="c7"
+        color="white"
+        size="s"
+      >
+        description
+      </p>
+    </div>
     <a
       className="c8"
       color="white"
@@ -618,13 +630,17 @@ exports[`renders Single Message with double image correctly 1`] = `
   <div
     className="c5"
   >
-    <p
-      className="c6"
-      color="black"
-      size="xxl"
+    <div
+      className=""
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
-    </p>
+      <p
+        className="c6"
+        color="black"
+        size="xxl"
+      >
+        “The creativity that goes into helping people have a better life is extraordinary.”
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -863,20 +879,28 @@ exports[`renders Single Message with full width correctly 1`] = `
   <div
     className="c5"
   >
-    <h1
-      className="c6"
-      color="white"
-      size="xxl"
+    <div
+      className=""
     >
-      title
-    </h1>
-    <p
-      className="c7"
-      color="white"
-      size="s"
+      <h1
+        className="c6"
+        color="white"
+        size="xxl"
+      >
+        title
+      </h1>
+    </div>
+    <div
+      className=""
     >
-      description
-    </p>
+      <p
+        className="c7"
+        color="white"
+        size="s"
+      >
+        description
+      </p>
+    </div>
     <a
       className="c8"
       color="white"
@@ -1143,13 +1167,17 @@ exports[`renders Single Message with no Image correctly 1`] = `
   <div
     className="c1"
   >
-    <p
-      className="c2"
-      color="white"
-      size="xxl"
+    <div
+      className=""
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
-    </p>
+      <p
+        className="c2"
+        color="white"
+        size="xxl"
+      >
+        “The creativity that goes into helping people have a better life is extraordinary.”
+      </p>
+    </div>
   </div>
 </div>
 `;

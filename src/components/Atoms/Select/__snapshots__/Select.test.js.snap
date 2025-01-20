@@ -64,16 +64,20 @@ exports[`renders correctly 1`] = `
 <label
   className="c0"
 >
-  <span
-    className="c1 c2"
-    color="inherit"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "Label",
+  <div
+    className=""
+  >
+    <span
+      className="c1 c2"
+      color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Label",
+        }
       }
-    }
-    size="s"
-  />
+      size="s"
+    />
+  </div>
   <select
     className="c3"
     defaultValue=""

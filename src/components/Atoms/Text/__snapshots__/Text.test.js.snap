@@ -9,13 +9,17 @@ exports[`renders heavy heading correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-<h3
-  className="c0"
-  color="inherit"
-  size="s"
+<div
+  className=""
 >
-  Heading 3 heavy
-</h3>
+  <h3
+    className="c0"
+    color="inherit"
+    size="s"
+  >
+    Heading 3 heavy
+  </h3>
+</div>
 `;
 
 exports[`renders high heading correctly 1`] = `
@@ -27,14 +31,18 @@ exports[`renders high heading correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-<h3
-  className="c0"
-  color="inherit"
-  height="5"
-  size="s"
+<div
+  className=""
 >
-  Heading 3 high
-</h3>
+  <h3
+    className="c0"
+    color="inherit"
+    height="5"
+    size="s"
+  >
+    Heading 3 high
+  </h3>
+</div>
 `;
 
 exports[`renders large heading correctly 1`] = `
@@ -45,13 +53,17 @@ exports[`renders large heading correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-<h3
-  className="c0"
-  color="inherit"
-  size="l"
+<div
+  className=""
 >
-  Heading 3 large
-</h3>
+  <h3
+    className="c0"
+    color="inherit"
+    size="l"
+  >
+    Heading 3 large
+  </h3>
+</div>
 `;
 
 exports[`renders xl paragraph with Anton font correctly 1`] = `
@@ -67,13 +79,17 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
   letter-spacing: 0.03rem;
 }
 
-<p
-  className="c0"
-  color="inherit"
-  size="xl"
+<div
+  className=""
 >
-  My paragraph xl and font Anton
-</p>
+  <p
+    className="c0"
+    color="inherit"
+    size="xl"
+  >
+    My paragraph xl and font Anton
+  </p>
+</div>
 `;
 
 exports[`renders xl yellow paragraph correctly 1`] = `
@@ -86,11 +102,15 @@ exports[`renders xl yellow paragraph correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-<p
-  className="c0"
-  color="yellow"
-  size="xl"
+<div
+  className=""
 >
-  My paragraph xl and yellow
-</p>
+  <p
+    className="c0"
+    color="yellow"
+    size="xl"
+  >
+    My paragraph xl and yellow
+  </p>
+</div>
 `;

@@ -116,13 +116,17 @@ exports[`renders correctly 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <h2
-      className="c2"
-      color="inherit"
-      size="l"
+    <div
+      className=""
     >
-      I am the title
-    </h2>
+      <h2
+        className="c2"
+        color="inherit"
+        size="l"
+      >
+        I am the title
+      </h2>
+    </div>
     <div
       className="c3"
     >
@@ -144,13 +148,17 @@ exports[`renders correctly 1`] = `
   <div
     className="c5"
   >
-    <p
-      className="c6"
-      color="inherit"
-      size="s"
+    <div
+      className=""
     >
-      Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
-    </p>
+      <p
+        className="c6"
+        color="inherit"
+        size="s"
+      >
+        Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
+      </p>
+    </div>
   </div>
 </div>
 `;

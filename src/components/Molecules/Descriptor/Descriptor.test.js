@@ -1,11 +1,11 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Descriptor from './Descriptor';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import Descriptor from "./Descriptor";
 
-it('renders article teaser correctly', () => {
-  const tags = ['tag1', 'tag2', 'tag3', 'tag4'];
-  const categories = ['How we fund', 'Social Tech', 'Sport for Change'];
+it("renders article teaser correctly", () => {
+  const tags = ["tag1", "tag2", "tag3", "tag4"];
+  const categories = ["How we fund", "Social Tech", "Sport for Change"];
   const tree = renderWithTheme(
     <Descriptor
       title="Title"
@@ -162,13 +162,17 @@ it('renders article teaser correctly', () => {
         <div
           className="c2"
         >
-          <span
-            className="c3 c4"
-            color="grey_dark"
-            size="s"
+          <div
+            className=""
           >
-            15/06/2020
-          </span>
+            <span
+              className="c3 c4"
+              color="grey_dark"
+              size="s"
+            >
+              15/06/2020
+            </span>
+          </div>
           <div
             className="c5"
           >
@@ -189,45 +193,65 @@ it('renders article teaser correctly', () => {
             />
           </div>
         </div>
-        <h3
-          className="c7 c8"
-          color="inherit"
-          height="2rem"
-          size="xl"
+        <div
+          className=""
         >
-          Title
-        </h3>
+          <h3
+            className="c7 c8"
+            color="inherit"
+            height="2rem"
+            size="xl"
+          >
+            Title
+          </h3>
+        </div>
         <div
           className="c9"
         >
-          <span
-            className="c10 c11"
-            color="grey_dark"
-            size="xs"
+          <div
+            className=""
           >
-            tag1
-          </span>
-          <span
-            className="c10 c11"
-            color="grey_dark"
-            size="xs"
+            <span
+              className="c10 c11"
+              color="grey_dark"
+              size="xs"
+            >
+              tag1
+            </span>
+          </div>
+          <div
+            className=""
           >
-            tag2
-          </span>
-          <span
-            className="c10 c11"
-            color="grey_dark"
-            size="xs"
+            <span
+              className="c10 c11"
+              color="grey_dark"
+              size="xs"
+            >
+              tag2
+            </span>
+          </div>
+          <div
+            className=""
           >
-            tag3
-          </span>
-          <span
-            className="c10 c11"
-            color="grey_dark"
-            size="xs"
+            <span
+              className="c10 c11"
+              color="grey_dark"
+              size="xs"
+            >
+              tag3
+            </span>
+          </div>
+          <div
+            className=""
           >
-            tag4
-          </span>
+            <span
+              className="c10 c11"
+              color="grey_dark"
+              size="xs"
+            >
+              tag4
+            </span>
+          </div>
         </div>
         <div
           className="c12"

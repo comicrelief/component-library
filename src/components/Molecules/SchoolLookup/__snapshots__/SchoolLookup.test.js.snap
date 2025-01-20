@@ -74,16 +74,20 @@ exports[`renders correctly 1`] = `
     className="c1 TextInputWithDropdown__input"
     htmlFor="school-lookup"
   >
-    <span
-      className="c2 c3"
-      color="inherit"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "Enter the name or postcode of your school or nursery",
+    <div
+      className=""
+    >
+      <span
+        className="c2 c3"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Enter the name or postcode of your school or nursery",
+          }
         }
-      }
-      size="s"
-    />
+        size="s"
+      />
+    </div>
     <div
       className="c4"
     >
