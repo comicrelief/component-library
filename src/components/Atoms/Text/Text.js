@@ -5,7 +5,6 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const Wrapper = styled.div`
   ${({ marginTop }) => marginTop && `margin-top: ${marginTop}`};
-  border: 1px solid red;
 `;
 
 /** Text component */
