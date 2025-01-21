@@ -61,7 +61,7 @@ const Text = ({
   weight = undefined,
   family = null,
   mobileColor = null,
-  marginTop = undefined,
+  textAlign = null,
   ...rest
 }) => (
   <BaseText
@@ -74,6 +74,7 @@ const Text = ({
     weight={weight}
     family={family}
     mobileColor={mobileColor}
+    textAlign={textAlign}
   >
     {children}
   </BaseText>
