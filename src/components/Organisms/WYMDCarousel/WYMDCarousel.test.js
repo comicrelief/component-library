@@ -328,39 +328,27 @@ it("renders correctly", () => {
       className="c0 CarouselWrapper"
       id="7zdR84QkZwrTh9NWx2H926"
     >
-      <div
-        className=""
+      <p
+        className="c1 c2"
+        color="inherit"
+        size="s"
       >
-        <p
-          className="c1 c2"
-          color="inherit"
-          size="s"
-        >
-          Over the past two years, we’ve supported
-        </p>
-      </div>
-      <div
-        className=""
+        Over the past two years, we’ve supported
+      </p>
+      <h1
+        className="c3 c4"
+        color="red"
+        size="s"
       >
-        <h1
-          className="c3 c4"
-          color="red"
-          size="s"
-        >
-          11.7 million people
-        </h1>
-      </div>
-      <div
-        className=""
+        11.7 million people
+      </h1>
+      <p
+        className="c5 c6"
+        color="inherit"
+        size="s"
       >
-        <p
-          className="c5 c6"
-          color="inherit"
-          size="s"
-        >
-          including...
-        </p>
-      </div>
+        including...
+      </p>
     </div>
   `);
 });

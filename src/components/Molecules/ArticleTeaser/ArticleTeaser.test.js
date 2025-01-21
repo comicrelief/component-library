@@ -237,29 +237,21 @@ it("renders article teaser correctly", () => {
         <div
           className="c7"
         >
-          <div
-            className=""
+          <span
+            className="c8 c9"
+            color="inherit"
+            size="xs"
           >
-            <span
-              className="c8 c9"
-              color="inherit"
-              size="xs"
-            >
-               01 July 2019
-            </span>
-          </div>
-          <div
-            className=""
+             01 July 2019
+          </span>
+          <h3
+            className="c10 c11"
+            color="inherit"
+            height="2rem"
+            size="xl"
           >
-            <h3
-              className="c10 c11"
-              color="inherit"
-              height="2rem"
-              size="xl"
-            >
-              News article
-            </h3>
-          </div>
+            News article
+          </h3>
         </div>
       </a>
     </article>
@@ -472,29 +464,21 @@ it("renders press realese correctly", () => {
         <div
           className="c7"
         >
-          <div
-            className=""
+          <span
+            className="c8 c9"
+            color="inherit"
+            size="xs"
           >
-            <span
-              className="c8 c9"
-              color="inherit"
-              size="xs"
-            >
-               01 July 2019
-            </span>
-          </div>
-          <div
-            className=""
+             01 July 2019
+          </span>
+          <h3
+            className="c10 c11"
+            color="inherit"
+            height="2rem"
+            size="xl"
           >
-            <h3
-              className="c10 c11"
-              color="inherit"
-              height="2rem"
-              size="xl"
-            >
-              Press Release
-            </h3>
-          </div>
+            Press Release
+          </h3>
         </div>
       </a>
     </article>

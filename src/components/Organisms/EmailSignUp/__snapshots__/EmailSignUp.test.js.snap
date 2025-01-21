@@ -257,38 +257,30 @@ exports[`renders correctly 1`] = `
   <div
     className="c0"
   >
-    <div
-      className=""
+    <h2
+      className="c1 c2"
+      color="inherit"
+      size="xxl"
     >
-      <h2
-        className="c1 c2"
-        color="inherit"
-        size="xxl"
-      >
-        sign up letter
-      </h2>
-    </div>
+      sign up letter
+    </h2>
     <div
       className="c3"
     >
-      <div
-        className=""
+      <span
+        className="c4"
+        color="inherit"
+        size="s"
       >
-        <span
-          className="c4"
-          color="inherit"
-          size="s"
-        >
-          <div
-            className="c5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-              }
+        <div
+          className="c5"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
             }
-          />
-        </span>
-      </div>
+          }
+        />
+      </span>
     </div>
     <div
       className="c6"
@@ -300,20 +292,16 @@ exports[`renders correctly 1`] = `
           className="c8 c9"
           htmlFor="first-name"
         >
-          <div
-            className=""
-          >
-            <span
-              className="c10 c11"
-              color="inherit"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "First Name",
-                }
+          <span
+            className="c10 c11"
+            color="inherit"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "First Name",
               }
-              size="s"
-            />
-          </div>
+            }
+            size="s"
+          />
           <div
             className="c12"
           >
@@ -337,20 +325,16 @@ exports[`renders correctly 1`] = `
           className="c8 c9"
           htmlFor="last-name"
         >
-          <div
-            className=""
-          >
-            <span
-              className="c10 c11"
-              color="inherit"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "Last Name",
-                }
+          <span
+            className="c10 c11"
+            color="inherit"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Last Name",
               }
-              size="s"
-            />
-          </div>
+            }
+            size="s"
+          />
           <div
             className="c12"
           >
@@ -375,20 +359,16 @@ exports[`renders correctly 1`] = `
         className="c8 c9"
         htmlFor="email"
       >
-        <div
-          className=""
-        >
-          <span
-            className="c10 c11"
-            color="inherit"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Email Address",
-              }
+        <span
+          className="c10 c11"
+          color="inherit"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Email Address",
             }
-            size="s"
-          />
-        </div>
+          }
+          size="s"
+        />
         <div
           className="c12"
         >
@@ -417,17 +397,13 @@ exports[`renders correctly 1`] = `
           disabled={true}
           type="submit"
         >
-          <div
-            className=""
+          <span
+            className="c4"
+            color="inherit"
+            size="s"
           >
-            <span
-              className="c4"
-              color="inherit"
-              size="s"
-            >
-              Subscribe
-            </span>
-          </div>
+            Subscribe
+          </span>
           <div
             className=""
           />
@@ -437,24 +413,20 @@ exports[`renders correctly 1`] = `
     <div
       className="c17"
     >
-      <div
-        className=""
+      <span
+        className="c4"
+        color="inherit"
+        size="s"
       >
-        <span
-          className="c4"
-          color="inherit"
-          size="s"
-        >
-          <div
-            className="c5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-              }
+        <div
+          className="c5"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
             }
-          />
-        </span>
-      </div>
+          }
+        />
+      </span>
     </div>
   </div>
 </form>

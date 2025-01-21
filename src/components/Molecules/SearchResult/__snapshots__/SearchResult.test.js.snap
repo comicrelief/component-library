@@ -147,28 +147,20 @@ exports[`renders correctly in minimalist form 1`] = `
     <div
       className="c6"
     >
-      <div
-        className=""
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
       >
-        <span
-          className="c7"
-          color="inherit"
-          size="xs"
-        >
-           
-        </span>
-      </div>
-      <div
-        className=""
+         
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
       >
-        <h3
-          className="c8 c9"
-          color="inherit"
-          size="xl"
-        >
-          News article
-        </h3>
-      </div>
+        News article
+      </h3>
       
     </div>
   </a>
@@ -337,39 +329,27 @@ exports[`renders correctly with copy 1`] = `
     <div
       className="c6"
     >
-      <div
-        className=""
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
       >
-        <span
-          className="c7"
-          color="inherit"
-          size="xs"
-        >
-           
-        </span>
-      </div>
-      <div
-        className=""
+         
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
       >
-        <h3
-          className="c8 c9"
-          color="inherit"
-          size="xl"
-        >
-          News article
-        </h3>
-      </div>
-      <div
-        className=""
+        News article
+      </h3>
+      <p
+        className="c10"
+        color="inherit"
+        size="m"
       >
-        <p
-          className="c10"
-          color="inherit"
-          size="m"
-        >
-          News article copy
-        </p>
-      </div>
+        News article copy
+      </p>
     </div>
   </a>
 </article>
@@ -522,28 +502,20 @@ exports[`renders correctly with date 1`] = `
     <div
       className="c6"
     >
-      <div
-        className=""
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
       >
-        <span
-          className="c7"
-          color="inherit"
-          size="xs"
-        >
-           01 July 2019
-        </span>
-      </div>
-      <div
-        className=""
+         01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
       >
-        <h3
-          className="c8 c9"
-          color="inherit"
-          size="xl"
-        >
-          News article
-        </h3>
-      </div>
+        News article
+      </h3>
       
     </div>
   </a>
@@ -697,28 +669,20 @@ exports[`renders correctly with date and type 1`] = `
     <div
       className="c6"
     >
-      <div
-        className=""
+      <span
+        className="c7"
+        color="inherit"
+        size="xs"
       >
-        <span
-          className="c7"
-          color="inherit"
-          size="xs"
-        >
-           article | 01 July 2019
-        </span>
-      </div>
-      <div
-        className=""
+         article | 01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+        color="inherit"
+        size="xl"
       >
-        <h3
-          className="c8 c9"
-          color="inherit"
-          size="xl"
-        >
-          News article
-        </h3>
-      </div>
+        News article
+      </h3>
       
     </div>
   </a>

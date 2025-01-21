@@ -147,17 +147,13 @@ it("renders correctly", () => {
           width="100%"
         />
       </div>
-      <div
-        className=""
+      <span
+        className="c4 c5 c6"
+        color="white"
+        size="xxs"
       >
-        <span
-          className="c4 c5 c6"
-          color="white"
-          size="xxs"
-        >
-          Find out more
-        </span>
-      </div>
+        Find out more
+      </span>
     </a>
   `);
 });

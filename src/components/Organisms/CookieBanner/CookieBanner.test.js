@@ -152,59 +152,51 @@ it("renders correctly", () => {
     <div
       className="c0"
     >
-      <div
-        className=""
+      <p
+        className="c1 c2"
+        color="white"
+        size="s"
       >
-        <p
-          className="c1 c2"
-          color="white"
-          size="s"
+        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
+        <a
+          className="c3 c4"
+          color="red"
+          href="https://www.comicrelief.com/cookies-policy"
+          target="_self"
+          type="standard_white"
         >
-          Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
-          <a
-            className="c3 c4"
-            color="red"
-            href="https://www.comicrelief.com/cookies-policy"
-            target="_self"
-            type="standard_white"
-          >
-            our use of cookies
-          </a>
-          . We also use optional cookies for marketing purposes:
-        </p>
-      </div>
-      <div
-        className=""
+          our use of cookies
+        </a>
+        . We also use optional cookies for marketing purposes:
+      </p>
+      <p
+        className="c1 c2"
+        color="white"
+        size="s"
       >
-        <p
-          className="c1 c2"
+        <a
+          className="c5 c6"
           color="white"
-          size="s"
+          href="/comic"
+          onClick={[Function]}
+          target="_self"
+          type="button"
         >
-          <a
-            className="c5 c6"
-            color="white"
-            href="/comic"
-            onClick={[Function]}
-            target="_self"
-            type="button"
-          >
-            Accept
-          </a>
-          Or click
-          <a
-            className="c3 c4"
-            color="red"
-            href=""
-            onClick={[Function]}
-            target="_self"
-            type="standard_white"
-          >
-            here
-          </a>
-          to deny these.
-        </p>
-      </div>
+          Accept
+        </a>
+        Or click
+        <a
+          className="c3 c4"
+          color="red"
+          href=""
+          onClick={[Function]}
+          target="_self"
+          type="standard_white"
+        >
+          here
+        </a>
+        to deny these.
+      </p>
     </div>
   `);
 });

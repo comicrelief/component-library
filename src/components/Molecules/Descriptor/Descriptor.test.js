@@ -162,17 +162,13 @@ it("renders article teaser correctly", () => {
         <div
           className="c2"
         >
-          <div
-            className=""
+          <span
+            className="c3 c4"
+            color="grey_dark"
+            size="s"
           >
-            <span
-              className="c3 c4"
-              color="grey_dark"
-              size="s"
-            >
-              15/06/2020
-            </span>
-          </div>
+            15/06/2020
+          </span>
           <div
             className="c5"
           >
@@ -193,65 +189,45 @@ it("renders article teaser correctly", () => {
             />
           </div>
         </div>
-        <div
-          className=""
+        <h3
+          className="c7 c8"
+          color="inherit"
+          height="2rem"
+          size="xl"
         >
-          <h3
-            className="c7 c8"
-            color="inherit"
-            height="2rem"
-            size="xl"
-          >
-            Title
-          </h3>
-        </div>
+          Title
+        </h3>
         <div
           className="c9"
         >
-          <div
-            className=""
+          <span
+            className="c10 c11"
+            color="grey_dark"
+            size="xs"
           >
-            <span
-              className="c10 c11"
-              color="grey_dark"
-              size="xs"
-            >
-              tag1
-            </span>
-          </div>
-          <div
-            className=""
+            tag1
+          </span>
+          <span
+            className="c10 c11"
+            color="grey_dark"
+            size="xs"
           >
-            <span
-              className="c10 c11"
-              color="grey_dark"
-              size="xs"
-            >
-              tag2
-            </span>
-          </div>
-          <div
-            className=""
+            tag2
+          </span>
+          <span
+            className="c10 c11"
+            color="grey_dark"
+            size="xs"
           >
-            <span
-              className="c10 c11"
-              color="grey_dark"
-              size="xs"
-            >
-              tag3
-            </span>
-          </div>
-          <div
-            className=""
+            tag3
+          </span>
+          <span
+            className="c10 c11"
+            color="grey_dark"
+            size="xs"
           >
-            <span
-              className="c10 c11"
-              color="grey_dark"
-              size="xs"
-            >
-              tag4
-            </span>
-          </div>
+            tag4
+          </span>
         </div>
         <div
           className="c12"

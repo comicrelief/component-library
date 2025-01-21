@@ -32,19 +32,15 @@ exports[`renders correctly 1`] = `
   color: #E52630;
 }
 
-<div
-  className=""
+<span
+  className="c0"
+  color="red"
+  size="sm"
 >
   <span
-    className="c0"
-    color="red"
-    size="sm"
+    className="c1"
   >
-    <span
-      className="c1"
-    >
-      This is an error
-    </span>
+    This is an error
   </span>
-</div>
+</span>
 `;

@@ -39,17 +39,13 @@ exports[`renders correctly 1`] = `
   <div
     className="c1"
   >
-    <div
-      className=""
+    <p
+      className="c2"
+      color="white"
+      size="s"
     >
-      <p
-        className="c2"
-        color="white"
-        size="s"
-      >
-        Mental health issues affect 1 in 4 of us in the UK. Join now and with your help we can provide vital support for people like Jordan. You know what to do.
-      </p>
-    </div>
+      Mental health issues affect 1 in 4 of us in the UK. Join now and with your help we can provide vital support for people like Jordan. You know what to do.
+    </p>
   </div>
 </div>
 `;

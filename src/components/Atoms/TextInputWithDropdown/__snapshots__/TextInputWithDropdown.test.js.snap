@@ -74,20 +74,16 @@ exports[`renders correctly with no value and no options 1`] = `
     className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
-    <div
-      className=""
-    >
-      <span
-        className="c2 c3"
-        color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Search for bikes",
-          }
+    <span
+      className="c2 c3"
+      color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
         }
-        size="s"
-      />
-    </div>
+      }
+      size="s"
+    />
     <div
       className="c4"
     >
@@ -184,20 +180,16 @@ exports[`renders correctly with value and no options 1`] = `
     className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
-    <div
-      className=""
-    >
-      <span
-        className="c2 c3"
-        color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Search for bikes",
-          }
+    <span
+      className="c2 c3"
+      color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
         }
-        size="s"
-      />
-    </div>
+      }
+      size="s"
+    />
     <div
       className="c4"
     >
@@ -341,20 +333,16 @@ exports[`renders correctly with value and options 1`] = `
     className="c1 TextInputWithDropdown__input"
     htmlFor="text-input-with-dropdown"
   >
-    <div
-      className=""
-    >
-      <span
-        className="c2 c3"
-        color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Search for bikes",
-          }
+    <span
+      className="c2 c3"
+      color="inherit"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Search for bikes",
         }
-        size="s"
-      />
-    </div>
+      }
+      size="s"
+    />
     <div
       className="c4"
     >
@@ -391,17 +379,13 @@ exports[`renders correctly with value and options 1`] = `
         role="option"
         tabIndex="-1"
       >
-        <div
-          className=""
+        <span
+          className="c10"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c10"
-            color="inherit"
-            size="s"
-          >
-            Canyon
-          </span>
-        </div>
+          Canyon
+        </span>
       </li>
       <li
         aria-selected={false}
@@ -412,17 +396,13 @@ exports[`renders correctly with value and options 1`] = `
         role="option"
         tabIndex="-1"
       >
-        <div
-          className=""
+        <span
+          className="c10"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c10"
-            color="inherit"
-            size="s"
-          >
-            Cannondale
-          </span>
-        </div>
+          Cannondale
+        </span>
       </li>
       <li
         aria-selected={false}
@@ -433,17 +413,13 @@ exports[`renders correctly with value and options 1`] = `
         role="option"
         tabIndex="-1"
       >
-        <div
-          className=""
+        <span
+          className="c10"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c10"
-            color="inherit"
-            size="s"
-          >
-            Condor
-          </span>
-        </div>
+          Condor
+        </span>
       </li>
       <li
         aria-selected={false}
@@ -454,17 +430,13 @@ exports[`renders correctly with value and options 1`] = `
         role="option"
         tabIndex="-1"
       >
-        <div
-          className=""
+        <span
+          className="c10"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c10"
-            color="inherit"
-            size="s"
-          >
-            Cube
-          </span>
-        </div>
+          Cube
+        </span>
       </li>
     </ul>
   </div>

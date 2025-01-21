@@ -417,28 +417,20 @@ it("renders correctly", () => {
         <div
           className="c5"
         >
-          <div
-            className=""
+          <h2
+            className="c6"
+            color="inherit"
+            size="l"
           >
-            <h2
-              className="c6"
-              color="inherit"
-              size="l"
-            >
-              Help someone like Jordan see a better tomorrow
-            </h2>
-          </div>
-          <div
-            className=""
+            Help someone like Jordan see a better tomorrow
+          </h2>
+          <p
+            className="c7"
+            color="inherit"
+            size="s"
           >
-            <p
-              className="c7"
-              color="inherit"
-              size="s"
-            >
-              Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
-            </p>
-          </div>
+            Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
+          </p>
         </div>
         <div
           className="c8"
@@ -453,17 +445,13 @@ it("renders correctly", () => {
               <legend
                 className="c11"
               >
-                <div
-                  className=""
+                <h3
+                  className="c12"
+                  color="inherit"
+                  size="s"
                 >
-                  <h3
-                    className="c12"
-                    color="inherit"
-                    size="s"
-                  >
-                    Choose your monthly donation
-                  </h3>
-                </div>
+                  Choose your monthly donation
+                </h3>
               </legend>
               <div
                 className="c13"
@@ -472,20 +460,16 @@ it("renders correctly", () => {
                   className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box1"
                 >
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c16 c17"
-                      color="inherit"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "",
-                        }
+                  <span
+                    className="c16 c17"
+                    color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
                       }
-                      size="s"
-                    />
-                  </div>
+                    }
+                    size="s"
+                  />
                   <div
                     className="c18"
                   >
@@ -509,20 +493,16 @@ it("renders correctly", () => {
                   className="c14 c20"
                   htmlFor="mship-1--moneyBuy-box2"
                 >
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c16 c17"
-                      color="inherit"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "",
-                        }
+                  <span
+                    className="c16 c17"
+                    color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
                       }
-                      size="s"
-                    />
-                  </div>
+                    }
+                    size="s"
+                  />
                   <div
                     className="c18"
                   >
@@ -546,20 +526,16 @@ it("renders correctly", () => {
                   className="c14 c15"
                   htmlFor="mship-1--moneyBuy-box3"
                 >
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c16 c17"
-                      color="inherit"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "",
-                        }
+                  <span
+                    className="c16 c17"
+                    color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
                       }
-                      size="s"
-                    />
-                  </div>
+                    }
+                    size="s"
+                  />
                   <div
                     className="c18"
                   >
@@ -583,35 +559,27 @@ it("renders correctly", () => {
               <div
                 className="c21"
               >
-                <div
-                  className=""
+                <span
+                  className="c22 c23"
+                  color="inherit"
+                  size="s"
                 >
-                  <span
-                    className="c22 c23"
-                    color="inherit"
-                    size="s"
-                  >
-                    Other amount
-                  </span>
-                </div>
+                  Other amount
+                </span>
                 <label
                   className="c14 c24"
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
-                  <div
-                    className=""
-                  >
-                    <span
-                      className="c16 c17"
-                      color="inherit"
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "£",
-                        }
+                  <span
+                    className="c16 c17"
+                    color="inherit"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "£",
                       }
-                      size="s"
-                    />
-                  </div>
+                    }
+                    size="s"
+                  />
                   <div
                     className="c18"
                   >

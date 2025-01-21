@@ -81,20 +81,16 @@ it("renders correctly", () => {
       className="c0"
       htmlFor="Accessibility info go here"
     >
-      <div
-        className=""
-      >
-        <span
-          className="c1 c2"
-          color="inherit"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Label",
-            }
+      <span
+        className="c1 c2"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Label",
           }
-          size="s"
-        />
-      </div>
+        }
+        size="s"
+      />
       <div
         className="c3"
       >

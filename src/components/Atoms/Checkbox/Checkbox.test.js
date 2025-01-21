@@ -81,17 +81,13 @@ it("renders correctly", () => {
           value="Tenis"
         />
         <span />
-        <div
-          className=""
+        <span
+          className="c2"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c2"
-            color="inherit"
-            size="s"
-          >
-            Tenis
-          </span>
-        </div>
+          Tenis
+        </span>
       </label>,
       .c2 {
       font-size: 1rem;
@@ -161,17 +157,13 @@ it("renders correctly", () => {
           value="Handball"
         />
         <span />
-        <div
-          className=""
+        <span
+          className="c2"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c2"
-            color="inherit"
-            size="s"
-          >
-            Handball
-          </span>
-        </div>
+          Handball
+        </span>
       </label>,
     ]
   `);

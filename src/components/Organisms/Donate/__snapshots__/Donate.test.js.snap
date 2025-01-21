@@ -524,28 +524,20 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
       <div
         className="c3"
       >
-        <div
-          className=""
+        <h2
+          className="c4"
+          color="white"
+          size="big"
         >
-          <h2
-            className="c4"
-            color="white"
-            size="big"
-          >
-            Donate Now
-          </h2>
-        </div>
-        <div
-          className=""
+          Donate Now
+        </h2>
+        <p
+          className="c5"
+          color="white"
+          size="m"
         >
-          <p
-            className="c5"
-            color="white"
-            size="m"
-          >
-            Please help us fund life-changing projects in the UK and around the world.
-          </p>
-        </div>
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
       </div>
     </div>
     <div
@@ -604,17 +596,13 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           <legend
             className="c15"
           >
-            <div
-              className=""
+            <span
+              className="c16"
+              color="inherit"
+              size="l"
             >
-              <span
-                className="c16"
-                color="inherit"
-                size="l"
-              >
-                Enter an amount to give
-              </span>
-            </div>
+              Enter an amount to give
+            </span>
           </legend>
           <div
             className="c17"
@@ -623,20 +611,16 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               className="c18 c19"
               htmlFor="mship-4--MoneyBuy-userInput"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c20 c21"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+              <span
+                className="c20 c21"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c22"
               >
@@ -1177,28 +1161,20 @@ exports[`Monthly donation renders correctly 1`] = `
       <div
         className="c3"
       >
-        <div
-          className=""
+        <h2
+          className="c4"
+          color="white"
+          size="big"
         >
-          <h2
-            className="c4"
-            color="white"
-            size="big"
-          >
-            Donate Now
-          </h2>
-        </div>
-        <div
-          className=""
+          Donate Now
+        </h2>
+        <p
+          className="c5"
+          color="white"
+          size="m"
         >
-          <p
-            className="c5"
-            color="white"
-            size="m"
-          >
-            Please help us fund life-changing projects in the UK and around the world.
-          </p>
-        </div>
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
       </div>
     </div>
     <div
@@ -1257,50 +1233,38 @@ exports[`Monthly donation renders correctly 1`] = `
           <legend
             className="c14"
           >
-            <div
-              className=""
+            <span
+              className="c15"
+              color="inherit"
+              size="l"
             >
-              <span
-                className="c15"
-                color="inherit"
-                size="l"
-              >
-                Choose an amount to give
-              </span>
-            </div>
+              Choose an amount to give
+            </span>
           </legend>
           <div
             className="c16"
           >
-            <div
-              className=""
+            <span
+              className="c17 c18"
+              color="inherit"
+              size="s"
             >
-              <span
-                className="c17 c18"
-                color="inherit"
-                size="s"
-              >
-                Other amount
-              </span>
-            </div>
+              Other amount
+            </span>
             <label
               className="c19 c20"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c21 c22"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+              <span
+                className="c21 c22"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c23"
               >
@@ -1859,28 +1823,20 @@ exports[`Single donation renders correctly 1`] = `
       <div
         className="c3"
       >
-        <div
-          className=""
+        <h2
+          className="c4"
+          color="white"
+          size="big"
         >
-          <h2
-            className="c4"
-            color="white"
-            size="big"
-          >
-            Donate Now
-          </h2>
-        </div>
-        <div
-          className=""
+          Donate Now
+        </h2>
+        <p
+          className="c5"
+          color="white"
+          size="m"
         >
-          <p
-            className="c5"
-            color="white"
-            size="m"
-          >
-            Please help us fund life-changing projects in the UK and around the world.
-          </p>
-        </div>
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
       </div>
     </div>
     <div
@@ -1896,17 +1852,13 @@ exports[`Single donation renders correctly 1`] = `
           <legend
             className="c9"
           >
-            <div
-              className=""
+            <span
+              className="c10"
+              color="inherit"
+              size="l"
             >
-              <span
-                className="c10"
-                color="inherit"
-                size="l"
-              >
-                Choose an amount to give
-              </span>
-            </div>
+              Choose an amount to give
+            </span>
           </legend>
           <div
             className="c11"
@@ -1915,20 +1867,16 @@ exports[`Single donation renders correctly 1`] = `
               className="c12 c13"
               htmlFor="mship-1--moneyBuy-box1"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c14 c15"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+              <span
+                className="c14 c15"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c16"
               >
@@ -1952,20 +1900,16 @@ exports[`Single donation renders correctly 1`] = `
               className="c12 c18"
               htmlFor="mship-1--moneyBuy-box2"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c14 c15"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+              <span
+                className="c14 c15"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c16"
               >
@@ -1989,20 +1933,16 @@ exports[`Single donation renders correctly 1`] = `
               className="c12 c13"
               htmlFor="mship-1--moneyBuy-box3"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c14 c15"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
+              <span
+                className="c14 c15"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c16"
               >
@@ -2026,35 +1966,27 @@ exports[`Single donation renders correctly 1`] = `
           <div
             className="c19"
           >
-            <div
-              className=""
+            <span
+              className="c20 c21"
+              color="inherit"
+              size="s"
             >
-              <span
-                className="c20 c21"
-                color="inherit"
-                size="s"
-              >
-                Other amount
-              </span>
-            </div>
+              Other amount
+            </span>
             <label
               className="c12 c22"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c14 c15"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+              <span
+                className="c14 c15"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c16"
               >
@@ -2475,28 +2407,20 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
       <div
         className="c3"
       >
-        <div
-          className=""
+        <h2
+          className="c4"
+          color="white"
+          size="big"
         >
-          <h2
-            className="c4"
-            color="white"
-            size="big"
-          >
-            Donate Now
-          </h2>
-        </div>
-        <div
-          className=""
+          Donate Now
+        </h2>
+        <p
+          className="c5"
+          color="white"
+          size="m"
         >
-          <p
-            className="c5"
-            color="white"
-            size="m"
-          >
-            Please help us fund life-changing projects in the UK and around the world.
-          </p>
-        </div>
+          Please help us fund life-changing projects in the UK and around the world.
+        </p>
       </div>
     </div>
     <div
@@ -2512,17 +2436,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           <legend
             className="c9"
           >
-            <div
-              className=""
+            <span
+              className="c10"
+              color="inherit"
+              size="l"
             >
-              <span
-                className="c10"
-                color="inherit"
-                size="l"
-              >
-                Overridden via the 'choose amount text' props
-              </span>
-            </div>
+              Overridden via the 'choose amount text' props
+            </span>
           </legend>
           <div
             className="c11"
@@ -2531,20 +2451,16 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               className="c12 c13"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
-              <div
-                className=""
-              >
-                <span
-                  className="c14 c15"
-                  color="inherit"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "£",
-                    }
+              <span
+                className="c14 c15"
+                color="inherit"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "£",
                   }
-                  size="s"
-                />
-              </div>
+                }
+                size="s"
+              />
               <div
                 className="c16"
               >

@@ -244,28 +244,20 @@ exports[`renders Promo correctly 1`] = `
       <div
         className="c6"
       >
-        <div
-          className=""
+        <h1
+          className="c7"
+          color="white"
+          size="super"
         >
-          <h1
-            className="c7"
-            color="white"
-            size="super"
-          >
-            Curabitur pretium tincidunt lacus
-          </h1>
-        </div>
-        <div
-          className=""
+          Curabitur pretium tincidunt lacus
+        </h1>
+        <p
+          className="c8"
+          color="white"
+          size="s"
         >
-          <p
-            className="c8"
-            color="white"
-            size="s"
-          >
-            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
-          </p>
-        </div>
+          Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+        </p>
         <span>
           <a
             className="c9"
@@ -538,28 +530,20 @@ exports[`renders Promo correctly end position 1`] = `
       <div
         className="c6"
       >
-        <div
-          className=""
+        <h1
+          className="c7"
+          color="white"
+          size="super"
         >
-          <h1
-            className="c7"
-            color="white"
-            size="super"
-          >
-            Curabitur pretium tincidunt lacus
-          </h1>
-        </div>
-        <div
-          className=""
+          Curabitur pretium tincidunt lacus
+        </h1>
+        <p
+          className="c8"
+          color="white"
+          size="s"
         >
-          <p
-            className="c8"
-            color="white"
-            size="s"
-          >
-            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
-          </p>
-        </div>
+          Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+        </p>
         <span>
           <a
             className="c9"

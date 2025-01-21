@@ -92,17 +92,13 @@ it("renders correctly", () => {
           value="male"
         />
         <span />
-        <div
-          className=""
+        <span
+          className="c2"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c2"
-            color="inherit"
-            size="s"
-          >
-            Male
-          </span>
-        </div>
+          Male
+        </span>
       </label>,
       .c2 {
       font-size: 1rem;
@@ -183,17 +179,13 @@ it("renders correctly", () => {
           value="female"
         />
         <span />
-        <div
-          className=""
+        <span
+          className="c2"
+          color="inherit"
+          size="s"
         >
-          <span
-            className="c2"
-            color="inherit"
-            size="s"
-          >
-            Female
-          </span>
-        </div>
+          Female
+        </span>
       </label>,
     ]
   `);

@@ -288,28 +288,20 @@ exports[`renders correctly 1`] = `
   <div
     className="c5"
   >
-    <div
-      className=""
+    <span
+      className="c6 c7"
+      color="blue_dark"
+      size="s"
     >
-      <span
-        className="c6 c7"
-        color="blue_dark"
-        size="s"
-      >
-        Subtitle
-      </span>
-    </div>
-    <div
-      className=""
+      Subtitle
+    </span>
+    <p
+      className="c8"
+      color="inherit"
+      size="s"
     >
-      <p
-        className="c8"
-        color="inherit"
-        size="s"
-      >
-        Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
-      </p>
-    </div>
+      Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
+    </p>
     <div
       className="c9 c10"
     >

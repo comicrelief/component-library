@@ -85,20 +85,16 @@ it("renders correctly", () => {
       className="c0"
       htmlFor="Please leave your comment here"
     >
-      <div
-        className=""
-      >
-        <span
-          className="c1 c2"
-          color="inherit"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Label",
-            }
+      <span
+        className="c1 c2"
+        color="inherit"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Label",
           }
-          size="s"
-        />
-      </div>
+        }
+        size="s"
+      />
       <textarea
         aria-describedby="Please leave your comment here"
         className="c3"
