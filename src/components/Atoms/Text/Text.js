@@ -3,10 +3,6 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const Wrapper = styled.div`
-  ${({ marginTop }) => marginTop && `margin-top: ${marginTop}`};
-`;
-
 /** Text component */
 export const BaseText = styled.span`
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
@@ -68,26 +64,22 @@ const Text = ({
   marginTop = undefined,
   ...rest
 }) => (
-  <Wrapper marginTop={marginTop}>
-    <BaseText
-      {...rest}
-      as={tag}
-      color={color}
-      size={size}
-      uppercase={uppercase}
-      height={height}
-      weight={weight}
-      family={family}
-      mobileColor={mobileColor}
-    >
-      {children}
-    </BaseText>
-  </Wrapper>
+  <BaseText
+    {...rest}
+    as={tag}
+    color={color}
+    size={size}
+    uppercase={uppercase}
+    height={height}
+    weight={weight}
+    family={family}
+    mobileColor={mobileColor}
+  >
+    {children}
+  </BaseText>
 );
 
 Text.propTypes = {
-  /** Wrapper for top spacing */
-  marginTop: PropTypes.string,
   /** Text Align */
   textAlign: PropTypes.string,
   /** Font family */
