@@ -9,9 +9,10 @@ import {
 } from './Header2025.style';
 
 const Header2025 = ({
-  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null, characterLimit = 60, ...rest
+  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null,
+  characterLimit = 60, showBoxShadow = false, ...rest
 }) => (
-  <Header2025Wrapper navItems {...rest}>
+  <Header2025Wrapper navItems showBoxShadow={showBoxShadow} {...rest}>
     <InnerWrapper>
       <Brand>
         <Logos
@@ -56,7 +57,8 @@ Header2025.propTypes = {
   // ... and is supplied separately to allow more render control:
   donateButton: PropTypes.node,
   campaign: PropTypes.string,
-  characterLimit: PropTypes.number
+  characterLimit: PropTypes.number,
+  showBoxShadow: PropTypes.bool
 };
 
 export default Header2025;

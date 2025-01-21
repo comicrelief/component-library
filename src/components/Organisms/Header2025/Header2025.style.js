@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
@@ -16,6 +16,10 @@ const Header2025Wrapper = styled.header.attrs(() => ({
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     height: auto;
   }
+
+  ${({ showBoxShadow }) => showBoxShadow && css`
+    box-shadow: 0 5px 15px 0 ${({ theme }) => theme.color('grey_4')};
+  `};
 `;
 
 const InnerWrapper = styled.div`

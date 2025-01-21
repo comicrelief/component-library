@@ -140,10 +140,6 @@ const SubNavItem = styled.li`
   position: relative;
   transition: background-color ${transitionDuration}s ease;
 
-  &:first-of-type {
-    border-top: none;
-  }
-
   span {
     font-weight: 100;
   }
