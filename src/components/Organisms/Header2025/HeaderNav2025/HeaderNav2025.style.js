@@ -125,8 +125,7 @@ const SubNavMenu = styled.ul`
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
     opacity: 0;
-    // here
-    box-shadow: 0px 20px 20px 5px red;
+    box-shadow: 0px 15px 15px 0 ${({ theme }) => theme.color('grey_4')};
   }
 `;
 
