@@ -125,7 +125,8 @@ const SubNavMenu = styled.ul`
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
     opacity: 0;
-    box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
+    // here
+    box-shadow: 0px 20px 20px 5px red;
   }
 `;
 
