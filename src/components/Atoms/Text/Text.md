@@ -105,14 +105,17 @@ Sport Relief
   <Text tag="h4" family="Founders_bold" uppercase size="xl">
     Heading 4
   </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="l">
-    Heading 5
+  <Text tag="h4" family="Founders_bold" uppercase size="l" textAlign="center">
+    Heading 5, textAlign prop
   </Text>
   <Text tag="p" family="Founders" size="m">
     Body 1
   </Text>
   <Text tag="p" family="Founders" size="s">
     Body 2
+  </Text>
+  <Text tag="p" family="Founders" size="m" marginTop="2rem">
+    using marginTop prop
   </Text>
   <Text tag="p" family="Founders" size="s" weight="bold" uppercase>
     Bold and Uppercase

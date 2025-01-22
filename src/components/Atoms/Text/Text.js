@@ -5,6 +5,7 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 /** Text component */
 export const BaseText = styled.span`
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   line-height: ${({ size, theme }) => theme.fontSize(size)};
@@ -51,7 +52,17 @@ export const BaseText = styled.span`
  *  Weight is checked for existence to prevent overriding the tag's css
  */
 const Text = ({
-  tag = 'span', size = 's', color = 'inherit', children = undefined, uppercase = false, height = undefined, weight = undefined, family = null, mobileColor = null, ...rest
+  tag = 'span',
+  size = 's',
+  color = 'inherit',
+  children = undefined,
+  uppercase = false,
+  height = undefined,
+  weight = undefined,
+  family = null,
+  mobileColor = null,
+  textAlign = null,
+  ...rest
 }) => (
   <BaseText
     {...rest}
@@ -63,12 +74,15 @@ const Text = ({
     weight={weight}
     family={family}
     mobileColor={mobileColor}
+    textAlign={textAlign}
   >
     {children}
   </BaseText>
 );
 
 Text.propTypes = {
+  /** Text Align */
+  textAlign: PropTypes.string,
   /** Font family */
   family: PropTypes.string,
   /** Font weight */
