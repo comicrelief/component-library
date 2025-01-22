@@ -154,6 +154,12 @@ const MoreSubNavItem = styled(SubNavItem)`
   }
 `;
 
+const MoreNavSubItem = styled(MoreSubNavItem)`
+  &:first-of-type {
+    border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  }
+`;
+
 const MoreNavNestedLink = styled(NavLink)`
   padding: 20px 25px 22px 42px;
 
@@ -186,5 +192,6 @@ export {
   MoreNestedSubNavMenu,
   MoreSubNavItem,
   MoreNavNestedLink,
-  MoreSubNavLink
+  MoreSubNavLink,
+  MoreNavSubItem
 };

@@ -83,7 +83,6 @@ const HeaderNav2025 = ({
       // If we've changed from desktop to not, remove any previously-attached MoreNav event
       // listeners, BEFORE we update the flag that'd remove the elements from the DOM:
       if (isCurrentlyNotDesktop && processedItems.moreNavGroups.length) {
-        // HERE CHERE
         document.getElementById('more-nav-ul').removeEventListener('mouseleave', resetMoreNavMouse);
       }
 
