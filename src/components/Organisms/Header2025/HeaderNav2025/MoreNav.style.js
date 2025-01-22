@@ -57,6 +57,9 @@ const MoreNavLabel = styled(Text)`
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin-left: 22px;
+    // Let it take up all the space to be a bigger target:
+    display: flex;
+    flex-grow: 0.5;
 
     // Chevron icon:
     ${MoreNavLabel} > ${ChevronWrapper} {

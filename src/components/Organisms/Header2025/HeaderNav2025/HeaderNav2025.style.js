@@ -81,7 +81,7 @@ const Nav = styled.nav`
     top: 0;
     display: block;
     margin: 0;
-    width: auto;
+    width: 100%;
     height: 100%;
     box-shadow: none;
   }
@@ -121,9 +121,9 @@ const SubNavMenu = styled.ul`
     padding: 0;
     position: absolute;
     top: 86px;
-    left: -5px;
+    left: -42px;
     border-radius: 0 0 25px 25px;
-    transition: opacity ${transitionDuration}s ease;
+    transition: opacity ${transitionDuration}s linear;
     opacity: 0;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.15);
   }
