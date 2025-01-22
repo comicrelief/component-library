@@ -13,7 +13,8 @@ import {
   MoreNestedSubNavMenu,
   MoreSubNavItem,
   MoreNavNestedLink,
-  MoreSubNavLink
+  MoreSubNavLink,
+  MoreNavSubItem
 } from './MoreNav.style';
 
 const MoreNav = ({
@@ -96,7 +97,7 @@ const MoreNav = ({
                     const thisSubUrl = navHelper(subChild);
                     return (
                       // 'More Nav' sub item:
-                      <MoreSubNavItem key={thisSubUrl}>
+                      <MoreNavSubItem key={thisSubUrl}>
                         <MoreSubNavLink
                           href={thisSubUrl}
                           inline
@@ -109,7 +110,7 @@ const MoreNav = ({
                             {subChild.title}
                           </Text>
                         </MoreSubNavLink>
-                      </MoreSubNavItem>
+                      </MoreNavSubItem>
                     );
                   })}
                 </MoreNestedSubNavMenu>
