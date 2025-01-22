@@ -478,6 +478,7 @@ const [success, setSuccess] = React.useState(false);
 
 <>
 <Header2025
+  showBoxShadow="true"
   characterLimit={50}
   navItems={data}
   rotate="true"

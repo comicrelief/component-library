@@ -125,7 +125,7 @@ const SubNavMenu = styled.ul`
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s ease;
     opacity: 0;
-    box-shadow: 0px 15px 15px 0 ${({ theme }) => theme.color('grey_4')};
+    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.15);
   }
 `;
 
@@ -139,6 +139,10 @@ const SubNavItem = styled.li`
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};;
   position: relative;
   transition: background-color ${transitionDuration}s ease;
+
+  &:first-of-type {
+    border-top: none;
+  }
 
   span {
     font-weight: 100;
