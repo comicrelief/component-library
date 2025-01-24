@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Checkbox from './Checkbox';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import Checkbox from "./Checkbox";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <>
       <Checkbox name="sport" value="Tenis" label="Tenis" />
@@ -22,16 +22,22 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
     .c1 {
-      display: block;
-      box-sizing: border-box;
-      opacity: 0;
-      position: absolute;
-      left: 0px;
-      width: 24px;
-      height: 24px;
+      width: 0;
+      height: 0;
       margin: 0;
-      border: 1px solid #969598;
     }
 
     .c1 + span {
@@ -55,20 +61,8 @@ it('renders correctly', () => {
     }
 
     .c1:focus + span {
-      border-color: #E52630;
+      border-color: inherit;
       border-width: 1px;
-    }
-
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin-bottom: 8px;
     }
 
     <label
@@ -98,16 +92,22 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
     .c1 {
-      display: block;
-      box-sizing: border-box;
-      opacity: 0;
-      position: absolute;
-      left: 0px;
-      width: 24px;
-      height: 24px;
+      width: 0;
+      height: 0;
       margin: 0;
-      border: 1px solid #969598;
     }
 
     .c1 + span {
@@ -131,20 +131,8 @@ it('renders correctly', () => {
     }
 
     .c1:focus + span {
-      border-color: #E52630;
+      border-color: inherit;
       border-width: 1px;
-    }
-
-    .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin-bottom: 8px;
     }
 
     <label
