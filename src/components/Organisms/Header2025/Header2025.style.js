@@ -14,7 +14,7 @@ const Header2025Wrapper = styled.header.attrs(() => ({
   height: 75px;
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    height: auto;
+    height: 86px;
   }
 
   ${({ showBoxShadow }) => showBoxShadow && css`
@@ -66,12 +66,13 @@ const DonateButtonWrapperTop = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 5px;
+  height: 2.8rem;
 
   // Donate button
   a {
     width: 100%;
+    height: inherit;
     transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);
-  
     &:hover,
     &:focus {
       width: 100%;

@@ -164,7 +164,7 @@ const MoreNavSubItem = styled(MoreSubNavItem)`
 `;
 
 const MoreNavNestedLink = styled(NavLink)`
-  padding: 20px 25px 22px 42px;
+  padding: 20px 30px 22px 30px;
 
   > div {
     height: auto;
