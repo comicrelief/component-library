@@ -21,7 +21,12 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme }) => theme.color('white')};
+    background-color: ${({ theme, checkboxBackground }) =>
+      checkboxBackground ?
+      theme.color(checkboxBackground)
+      :
+      theme.color('white')
+    };
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     flex-shrink: 0;
@@ -29,13 +34,11 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
     background-color: ${({ theme }) => theme.color('red')};
-    border-color: ${({ theme, checkboxBorderColour }) => theme.color(checkboxBorderColour)};
-    background-color: grey;
-    border-color: green;
+    border-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
   }
   :focus + span {
-    border-color: ${({ theme, checkboxBorderColour }) => theme.color(checkboxBorderColour)};
+    border-color: ${({ theme, checkboxBorderChecked }) => theme.color(checkboxBorderChecked)};
     border-width: 1px;
   }
 `;
@@ -50,11 +53,22 @@ const Checkbox = React.forwardRef(({
   label = undefined,
   value,
   children = undefined,
-  checkboxBorderColour,
+  checkboxBackground,
+  checkboxBorder,
+  checkboxBackgroundChecked,
+  checkboxBorderChecked,
   ...rest
 }, ref) => (
   <Label hasLabelAsString={!!label}>
-    <StyledCheckboxInput {...rest} value={value} ref={ref} />
+    <StyledCheckboxInput
+      {...rest}
+      value={value}
+      ref={ref}
+      checkboxBackground={checkboxBackground}
+      checkboxBorder={checkboxBorder}
+      checkboxBackgroundChecked={checkboxBackgroundChecked}
+      checkboxBorderChecked={checkboxBorderChecked}
+    />
     <span />
     {label ? <Text weight="bold">{label}</Text> : children}
   </Label>
@@ -65,7 +79,12 @@ Checkbox.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string,
   children: PropTypes.node,
-  checkboxBorderColour: PropTypes.string
+  checkboxBackground: PropTypes.string,
+  checkboxBorderChecked: PropTypes.string,
+  checkboxBackground: PropTypes.string,
+  checkboxBorder: PropTypes.string,
+  checkboxBackgroundChecked: PropTypes.string,
+  checkboxBorderChecked: PropTypes.string
 };
 
 export default Checkbox;
