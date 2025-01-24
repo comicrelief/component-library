@@ -22,7 +22,7 @@ const HeaderNav2025 = ({
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
   const [openedSubMenu, setOpenedSubMenu] = useState({});
-  const [isNotDesktop, setIsNotDesktop] = useState(null);
+  const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
   let theseGroups = null;
@@ -53,16 +53,19 @@ const HeaderNav2025 = ({
 
   // Process the nav items on initial mount:
   useMemo(() => {
-    // Divide up nav items accordingly and determine breakpoint,
-    // assigned as local vars since useState won't be ready in time below:
+    // Divide up nav items accordingly
     const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
-    const notDesktop = window.innerWidth < breakpointValues.Nav;
     setProcessedItems(theseItems);
+  }, [menuGroups, characterLimit]);
+
+  // Determine which nav we should use only once 'window' exists:
+  useEffect(() => {
+    const notDesktop = window.innerWidth < breakpointValues.Nav;
     setIsNotDesktop(notDesktop);
 
     // Use these flags to detemine if we render the More nav or not:
-    setShowMoreNav(!notDesktop && theseItems.moreNavGroups.length);
-  }, [menuGroups, characterLimit]);
+    setShowMoreNav(!notDesktop && processedItems.moreNavGroups.length);
+  }, [processedItems]);
 
   // Attach eventListener on mount and after potential changes
   // to showMoreNav triggered by a window resize:
