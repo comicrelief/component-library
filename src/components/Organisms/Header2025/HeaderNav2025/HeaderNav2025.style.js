@@ -121,7 +121,7 @@ const SubNavMenu = styled.ul`
     padding: 0;
     position: absolute;
     top: 86px;
-    left: -32px;
+    left: -29px;
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s linear;
     opacity: 0;
@@ -153,10 +153,15 @@ const SubNavItem = styled.li`
  * Sub menu link item
  */
 const SubNavLink = styled(NavLinkClass)`
-  padding: 20px 30px 22px 30px;
+  padding: 20px 25px 22px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
+
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    padding: 20px 30px 22px;
+  }
+
 `;
 
 /**
