@@ -53,8 +53,7 @@ const HeaderNav2025 = ({
 
   // Process the nav items on initial mount:
   useMemo(() => {
-    // Divide up nav items accordingly and determine breakpoint,
-    // assigned as local vars since useState won't be ready in time below:
+    // Divide up nav items accordingly
     const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
     setProcessedItems(theseItems);
   }, [menuGroups, characterLimit]);
