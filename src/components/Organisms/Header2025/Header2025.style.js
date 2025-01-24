@@ -18,7 +18,7 @@ const Header2025Wrapper = styled.header.attrs(() => ({
   }
 
   ${({ showBoxShadow }) => showBoxShadow && css`
-    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
   `};
 `;
 
