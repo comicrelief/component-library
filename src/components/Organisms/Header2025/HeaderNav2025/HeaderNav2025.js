@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, {
+  useState, useEffect, useCallback, useMemo
+} from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
@@ -50,7 +52,7 @@ const HeaderNav2025 = ({
   };
 
   // Process the nav items on initial mount:
-  useEffect(() => {
+  useMemo(() => {
     // Divide up nav items accordingly and determine breakpoint,
     // assigned as local vars since useState won't be ready in time below:
     const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
