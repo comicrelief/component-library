@@ -65,7 +65,7 @@ const HeaderNav2025 = ({
 
     // Use these flags to detemine if we render the More nav or not:
     setShowMoreNav(!notDesktop && processedItems.moreNavGroups.length);
-  }, [menuGroups, characterLimit, processedItems]);
+  }, [processedItems]);
 
   // Attach eventListener on mount and after potential changes
   // to showMoreNav triggered by a window resize:
