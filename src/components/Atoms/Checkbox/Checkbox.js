@@ -78,8 +78,6 @@ Checkbox.propTypes = {
   label: PropTypes.string,
   children: PropTypes.node,
   checkboxBackground: PropTypes.string,
-  checkboxBorderChecked: PropTypes.string,
-  checkboxBackground: PropTypes.string,
   checkboxBorder: PropTypes.string,
   checkboxBackgroundChecked: PropTypes.string,
   checkboxBorderChecked: PropTypes.string
