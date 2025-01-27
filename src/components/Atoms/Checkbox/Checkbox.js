@@ -23,23 +23,19 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme, checkboxBg }) => (checkboxBg
-    ? theme.color(checkboxBg)
-    : theme.color('white'))
-};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    background-color: ${({ theme, checkboxBg }) => (checkboxBg ? theme.color(checkboxBg) : theme.color('white'))};
+    border: 1px solid ${({ theme, checkboxBorder }) => (checkboxBorder ? theme.color(checkboxBorder) : theme.color('grey'))};
     float: left;
     flex-shrink: 0;
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('red')};
-    border-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
+    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('white'))};
+    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('grey'))};
   }
   :focus + span {
-    border-color: ${({ theme, checkboxBorderChecked }) => theme.color(checkboxBorderChecked)};
-    border-width: 1px;
+    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
   }
 `;
 
