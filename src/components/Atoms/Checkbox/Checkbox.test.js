@@ -55,14 +55,13 @@ it("renders correctly", () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #E52630;
-      border-color: #E52630;
       background-size: contain;
+      background-color: #FFFFFF;
+      border: 1px solid #969598;
     }
 
     .c1:focus + span {
-      border-color: inherit;
-      border-width: 1px;
+      border: 1px solid #E52630;
     }
 
     <label
@@ -125,14 +124,13 @@ it("renders correctly", () => {
 
     .c1:checked + span {
       background: url(mock.asset) no-repeat center;
-      background-color: #E52630;
-      border-color: #E52630;
       background-size: contain;
+      background-color: #FFFFFF;
+      border: 1px solid #969598;
     }
 
     .c1:focus + span {
-      border-color: inherit;
-      border-width: 1px;
+      border: 1px solid #E52630;
     }
 
     <label
