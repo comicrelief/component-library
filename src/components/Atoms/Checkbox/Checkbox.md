@@ -27,7 +27,6 @@ const LongLabel = () => (
     <Checkbox name="sport" value="Tennis" label="Tennis" />
     <Checkbox name="sport" value="Basketball" label="Basketball" />
     <Checkbox name="sport" value="Cycling" label="Cycling" />
-    <Checkbox name="sport" value="Football" label="Football" />
     <Checkbox
         name="sport"
         value="Football"
