@@ -28,6 +28,7 @@ const LongLabel = () => (
         name="sport"
         value="Tennis"
         label="Tennis (with wacky styling to test props)"
+        labelColour="pink"
         checkboxBg="red"
         checkboxBorder="blue"
         checkboxBgChecked="green"

@@ -10,6 +10,7 @@ const Label = styled.label`
   display: flex;
   ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
   margin-bottom: 8px;
+  ${({ labelColour }) => labelColour && `color: ${labelColour};`}
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
@@ -43,13 +44,17 @@ const Checkbox = React.forwardRef(({
   label = undefined,
   value,
   children = undefined,
+  labelColour,
   checkboxBg,
   checkboxBorder,
   checkboxBgChecked,
   checkboxBorderChecked,
   ...rest
 }, ref) => (
-  <Label hasLabelAsString={!!label}>
+  <Label
+    hasLabelAsString={!!label}
+    labelColour={labelColour}
+  >
     <StyledCheckboxInput
       {...rest}
       value={value}
@@ -67,8 +72,9 @@ const Checkbox = React.forwardRef(({
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  label: PropTypes.string,
   children: PropTypes.node,
+  label: PropTypes.string,
+  labelColour: PropTypes.string,
   checkboxBg: PropTypes.string,
   checkboxBorder: PropTypes.string,
   checkboxBgChecked: PropTypes.string,
