@@ -14,7 +14,7 @@ const Label = styled.label`
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
-  /* This input is not visible as it is set to opacity: 0 */
+  /* This input is not visible */
   width: 0;
   height: 0;
   margin: 0;
