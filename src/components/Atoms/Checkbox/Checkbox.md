@@ -27,10 +27,10 @@ const LongLabel = () => (
     <Checkbox
         name="sport"
         value="Tennis"
-        label="Tennis (with wacky styling props)"
-        checkboxBackground="red"
+        label="Tennis (with wacky styling to test props)"
+        checkboxBg="red"
         checkboxBorder="green"
-        checkboxBackgroundChecked="green"
+        checkboxBgChecked="green"
         checkboxBorderChecked="red"
     />
     <Checkbox name="sport" value="Basketball" label="Basketball" />

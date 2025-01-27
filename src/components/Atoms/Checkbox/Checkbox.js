@@ -23,10 +23,10 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme, checkboxBackground }) => (checkboxBackground
-    ? theme.color(checkboxBackground)
+    background-color: ${({ theme, checkboxBg }) => (checkboxBg
+    ? theme.color(checkboxBg)
     : theme.color('white'))
-};
+  };
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     flex-shrink: 0;
@@ -47,9 +47,9 @@ const Checkbox = React.forwardRef(({
   label = undefined,
   value,
   children = undefined,
-  checkboxBackground,
+  checkboxBg,
   checkboxBorder,
-  checkboxBackgroundChecked,
+  checkboxBgChecked,
   checkboxBorderChecked,
   ...rest
 }, ref) => (
@@ -58,9 +58,9 @@ const Checkbox = React.forwardRef(({
       {...rest}
       value={value}
       ref={ref}
-      checkboxBackground={checkboxBackground}
+      checkboxBg={checkboxBg}
       checkboxBorder={checkboxBorder}
-      checkboxBackgroundChecked={checkboxBackgroundChecked}
+      checkboxBgChecked={checkboxBgChecked}
       checkboxBorderChecked={checkboxBorderChecked}
     />
     <span />
@@ -73,9 +73,9 @@ Checkbox.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string,
   children: PropTypes.node,
-  checkboxBackground: PropTypes.string,
+  checkboxBg: PropTypes.string,
   checkboxBorder: PropTypes.string,
-  checkboxBackgroundChecked: PropTypes.string,
+  checkboxBgChecked: PropTypes.string,
   checkboxBorderChecked: PropTypes.string
 };
 
