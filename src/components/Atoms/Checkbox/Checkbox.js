@@ -26,7 +26,7 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     background-color: ${({ theme, checkboxBg }) => (checkboxBg
     ? theme.color(checkboxBg)
     : theme.color('white'))
-  };
+};
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     flex-shrink: 0;
