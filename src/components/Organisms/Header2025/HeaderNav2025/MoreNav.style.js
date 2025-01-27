@@ -57,6 +57,9 @@ const MoreNavLabel = styled(Text)`
 const MoreNavItem = styled(NavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin-left: 22px;
+    // Let it take up all the space to be a bigger target:
+    display: flex;
+    flex-grow: 0.5;
 
     // Chevron icon:
     ${MoreNavLabel} > ${ChevronWrapper} {
@@ -161,7 +164,7 @@ const MoreNavSubItem = styled(MoreSubNavItem)`
 `;
 
 const MoreNavNestedLink = styled(NavLink)`
-  padding: 20px 25px 22px 42px;
+  padding: 20px 30px 22px 30px;
 
   > div {
     height: auto;

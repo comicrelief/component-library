@@ -81,7 +81,7 @@ const Nav = styled.nav`
     top: 0;
     display: block;
     margin: 0;
-    width: auto;
+    width: 100%;
     height: 100%;
     box-shadow: none;
   }
@@ -121,11 +121,11 @@ const SubNavMenu = styled.ul`
     padding: 0;
     position: absolute;
     top: 86px;
-    left: -5px;
+    left: -29px;
     border-radius: 0 0 25px 25px;
-    transition: opacity ${transitionDuration}s ease;
+    transition: opacity ${transitionDuration}s linear;
     opacity: 0;
-    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
   }
 `;
 
@@ -157,6 +157,11 @@ const SubNavLink = styled(NavLinkClass)`
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
+
+  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+    padding: 20px 30px 22px;
+  }
+
 `;
 
 /**
