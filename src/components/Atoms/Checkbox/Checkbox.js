@@ -18,7 +18,7 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   width: 0;
   height: 0;
   margin: 0;
-  /* This span is actually the visual square checkbox you see */
+  /* This span is actually the visual square Checkbox you see */
   + span {
     margin-right: 12px;
     width: 24px;
@@ -29,12 +29,14 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     float: left;
     flex-shrink: 0;
   }
+  /* Visual checkbox when ticked */
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
     background-size: contain;
     background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('white'))};
     border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('grey'))};
   }
+  /* Visual checkbox when focused */
   :focus + span {
     border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
   }
