@@ -33,8 +33,8 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
     background-size: contain;
-    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('white'))};
-    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('grey'))};
+    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('red'))};
+    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
   }
   /* Visual checkbox when focused */
   :focus + span {
