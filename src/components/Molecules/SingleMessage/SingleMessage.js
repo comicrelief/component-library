@@ -54,13 +54,22 @@ const SingleMessage = ({
         && /iPad|iPhone|iPod/.test(navigator.platform)
     : false;
 
+  useEffect(() => {
+    if (thisRef.current) {
+      const thisID = getID(thisRef.current);
+      if (thisID) {
+        setUniqueID(`${thisID}__video`);
+      }
+    }
+  }, [thisRef]);
+
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
     // Store the dynamically-created UUID (from the main render func) in our state
     // so useEffect can access it
     const thisVideoID = `${thisRowID}__video`;
 
-    setUniqueID(thisVideoID);
+    // setUniqueID(thisVideoID);
 
     return (
       <VideoWrapper
