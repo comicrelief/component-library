@@ -1,4 +1,4 @@
-const ExampleYoutubeIds = [
+const exampleYoutubeIds = [
   'fwCQRMlKBnA',
   'ZlGgFEDYKlY',
   'yKADOGvq1Hs',
@@ -7,4 +7,4 @@ const ExampleYoutubeIds = [
   'DjTmbU9nZNk'
 ];
 
-export default ExampleYoutubeIds;
+export default exampleYoutubeIds;

@@ -184,7 +184,7 @@ Single Message with 16:9 video
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 
 <SingleMessage
   backgroundColor="purple"
@@ -192,7 +192,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID={ExampleYoutubeIds[0]}
+  videoID={exampleYoutubeIds[0]}
   landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
@@ -204,7 +204,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 
 <SingleMessage
   backgroundColor="purple"
@@ -212,7 +212,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
   image={defaultData.image}
   imageAltText=""
   copyFirst={false}
-  videoID={ExampleYoutubeIds[1]}
+  videoID={exampleYoutubeIds[1]}
   landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
@@ -226,7 +226,7 @@ Single Message with portrait video
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 
 <SingleMessage
   backgroundColor="purple"
@@ -234,7 +234,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID={ExampleYoutubeIds[2]}
+  videoID={exampleYoutubeIds[2]}
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video
@@ -246,7 +246,7 @@ Single Message with portrait video, 100VH
 
 ```js
 import Text from '../../Atoms/Text/Text';
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
 <SingleMessage
@@ -255,7 +255,7 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID={ExampleYoutubeIds[3]}
+  videoID={exampleYoutubeIds[3]}
   vhFull
 >
   <Text tag="p" color="black" size="xxl">
@@ -269,7 +269,7 @@ Single Message with landscape video, 100VH, fullwidth image
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 
 <SingleMessage
   backgroundColor="purple"
@@ -277,7 +277,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID={ExampleYoutubeIds[4]}
+  videoID={exampleYoutubeIds[4]}
   vhFull
   fullImage={true}
 >
@@ -293,7 +293,7 @@ Single Message with landscape video, 50VH, fullwidth image
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import ExampleYoutubeIds from './exampleYoutubeIds.js';
+import exampleYoutubeIds from './_ExampleYoutubeIds.js';
 
 <SingleMessage
   backgroundColor="purple"
@@ -301,7 +301,7 @@ import ExampleYoutubeIds from './exampleYoutubeIds.js';
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID={ExampleYoutubeIds[5]}
+  videoID={exampleYoutubeIds[5]}
   fullImage={true}
 >
   <Text tag="p" color="black" size="xxl">
