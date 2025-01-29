@@ -54,6 +54,14 @@ const SingleMessage = ({
         && /iPad|iPhone|iPod/.test(navigator.platform)
     : false;
 
+  /* Dynamically retrieve ID that Gatsby has already baked into the page,
+  need to null check for initial render */
+  const getID = refWithID => {
+    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
+
+    return thisID;
+  };
+
   useEffect(() => {
     if (thisRef.current) {
       const thisID = getID(thisRef.current);
@@ -122,14 +130,6 @@ const SingleMessage = ({
       });
     }, 1000);
     setIsBuffering(true);
-  };
-
-  /* Dynamically retrieve ID that Gatsby has already baked into the page,
-  need to null check for initial render */
-  const getID = refWithID => {
-    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
-
-    return thisID;
   };
 
   return (
