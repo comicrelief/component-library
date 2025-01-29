@@ -12,7 +12,6 @@ import {
   Image,
   VideoWrapper
 } from './SingleMessage.style';
-import { uniqueId } from 'lodash';
 
 const allPlayers = {};
 
@@ -74,18 +73,16 @@ const SingleMessage = ({
   }, [thisRef]);
 
   // Break-out video markup into its own function
-  const renderVideoPlayers = () => {
-    return (
-      <VideoWrapper
-        isPlaying={isPlaying}
-        isBuffering={isBuffering}
-        key={uniqueID}
-        landscapeVideo={landscapeVideo}
-      >
-        <div id={uniqueID} />
-      </VideoWrapper>
-    );
-  };
+  const renderVideoPlayers = () => (
+    <VideoWrapper
+      isPlaying={isPlaying}
+      isBuffering={isBuffering}
+      key={uniqueID}
+      landscapeVideo={landscapeVideo}
+    >
+      <div id={uniqueID} />
+    </VideoWrapper>
+  );
 
   /* Waiting on a usable ref from render before setting our flag used in other functions */
   useEffect(() => {
