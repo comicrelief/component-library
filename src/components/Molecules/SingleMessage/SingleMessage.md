@@ -124,7 +124,7 @@ import Text from '../../Atoms/Text/Text';
 </SingleMessage>;
 ```
 
-Single Message with no Image - no top and bottom padding 
+Single Message with no Image - no top and bottom padding
 
 ```js
 import Text from '../../Atoms/Text/Text';
@@ -184,13 +184,15 @@ Single Message with 16:9 video
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID="WUgvvPRH7Oc"
+  videoID={ExampleYoutubeIds[0]}
   landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
@@ -202,13 +204,15 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={false}
-  videoID="WUgvvPRH7Oc"
+  videoID={ExampleYoutubeIds[1]}
   landscapeVideo
 >
   <Text tag="p" color="black" size="xxl">
@@ -222,13 +226,15 @@ Single Message with portrait video
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID="FoMlSB6ftQg"
+  videoID={ExampleYoutubeIds[2]}
 >
   <Text tag="p" color="black" size="xxl">
     Single Message with portrait video
@@ -240,14 +246,16 @@ Single Message with portrait video, 100VH
 
 ```js
 import Text from '../../Atoms/Text/Text';
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID="fwCQRMlKBnA"
+  videoID={ExampleYoutubeIds[3]}
   vhFull
 >
   <Text tag="p" color="black" size="xxl">
@@ -261,13 +269,15 @@ Single Message with landscape video, 100VH, fullwidth image
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID="WUgvvPRH7Oc"
+  videoID={ExampleYoutubeIds[4]}
   vhFull
   fullImage={true}
 >
@@ -283,13 +293,15 @@ Single Message with landscape video, 50VH, fullwidth image
 ```js
 import Text from '../../Atoms/Text/Text';
 const defaultData = require('../../../styleguide/data/data').defaultData;
+import ExampleYoutubeIds from './exampleYoutubeIds.js';
+
 <SingleMessage
   backgroundColor="purple"
   imageSet={defaultData.images}
   image={defaultData.image}
   imageAltText=""
   copyFirst={true}
-  videoID="WUgvvPRH7Oc"
+  videoID={ExampleYoutubeIds[5]}
   fullImage={true}
 >
   <Text tag="p" color="black" size="xxl">

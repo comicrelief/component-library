@@ -62,14 +62,14 @@ const SingleMessage = ({
     return thisID;
   };
 
-  useEffect(() => {
-    if (thisRef.current) {
-      const thisID = getID(thisRef.current);
-      if (thisID) {
-        setUniqueID(`${thisID}__video`);
-      }
-    }
-  }, [thisRef]);
+  // useEffect(() => {
+  //   if (thisRef.current) {
+  //     const thisID = getID(thisRef.current);
+  //     if (thisID) {
+  //       setUniqueID(`${thisID}__video`);
+  //     }
+  //   }
+  // }, [thisRef]);
 
   // Break-out video markup into its own function
   const renderVideoPlayers = thisRowID => {
@@ -77,7 +77,7 @@ const SingleMessage = ({
     // so useEffect can access it
     const thisVideoID = `${thisRowID}__video`;
 
-    // setUniqueID(thisVideoID);
+    setUniqueID(thisVideoID);
 
     return (
       <VideoWrapper
