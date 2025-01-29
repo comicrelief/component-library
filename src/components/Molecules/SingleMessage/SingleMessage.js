@@ -12,6 +12,7 @@ import {
   Image,
   VideoWrapper
 } from './SingleMessage.style';
+import { uniqueId } from 'lodash';
 
 const allPlayers = {};
 
@@ -62,31 +63,26 @@ const SingleMessage = ({
     return thisID;
   };
 
-  // useEffect(() => {
-  //   if (thisRef.current) {
-  //     const thisID = getID(thisRef.current);
-  //     if (thisID) {
-  //       setUniqueID(`${thisID}__video`);
-  //     }
-  //   }
-  // }, [thisRef]);
+  // Create the id string for the youtube video
+  useEffect(() => {
+    if (thisRef.current) {
+      const thisID = getID(thisRef.current);
+      if (thisID) {
+        setUniqueID(`${thisID}__video`);
+      }
+    }
+  }, [thisRef]);
 
   // Break-out video markup into its own function
-  const renderVideoPlayers = thisRowID => {
-    // Store the dynamically-created UUID (from the main render func) in our state
-    // so useEffect can access it
-    const thisVideoID = `${thisRowID}__video`;
-
-    setUniqueID(thisVideoID);
-
+  const renderVideoPlayers = () => {
     return (
       <VideoWrapper
         isPlaying={isPlaying}
         isBuffering={isBuffering}
-        key={thisVideoID}
+        key={uniqueID}
         landscapeVideo={landscapeVideo}
       >
-        <div id={thisVideoID} />
+        <div id={uniqueID} />
       </VideoWrapper>
     );
   };
