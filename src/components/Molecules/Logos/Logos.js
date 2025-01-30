@@ -72,6 +72,7 @@ const Logos = ({
 Logos.propTypes = {
   campaign: PropTypes.string,
   animateRotate: PropTypes.bool,
+  title: PropTypes.string,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string
 };
