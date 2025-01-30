@@ -114,9 +114,6 @@ Sport Relief
   <Text tag="p" family="Founders" size="s">
     Body 2
   </Text>
-  <Text tag="p" family="Founders" size="m" marginTop="2rem">
-    using marginTop prop
-  </Text>
   <Text tag="p" family="Founders" size="s" weight="bold" uppercase>
     Bold and Uppercase
   </Text>
