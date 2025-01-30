@@ -5,9 +5,9 @@ import styled, { css } from 'styled-components';
 import Logo from '../../Atoms/Logo/Logo';
 
 const TitleLabel = styled.span`
-  line-height: 0; 
+  line-height: 0;
   font-size: 0;
-  color: transparent; 
+  color: transparent;
 `;
 
 const LogoLink = styled.a`
@@ -26,7 +26,7 @@ const LogoLink = styled.a`
 `;
 
 const Logos = ({
-  campaign = 'Comic Relief', animateRotate = false, sizeSm, sizeMd
+  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', animateRotate = false, sizeSm, sizeMd
 }) => {
   if (campaign === 'Sport Relief Gameon') {
     return (
@@ -62,9 +62,9 @@ const Logos = ({
   }
 
   return (
-    <LogoLink href="/" title="Go to Comic Relief homepage" animateRotate={animateRotate}>
-      <Logo rotate={false} campaign="Comic Relief" title="Go to Comic Relief homepage" sizeSm={sizeSm} sizeMd={sizeMd} />
-      <TitleLabel>Go to Comic Relief homepage</TitleLabel>
+    <LogoLink href="/" title={title} animateRotate={animateRotate}>
+      <Logo rotate={false} campaign="Comic Relief" title={title} sizeSm={sizeSm} sizeMd={sizeMd} />
+      <TitleLabel>{title}</TitleLabel>
     </LogoLink>
   );
 };
