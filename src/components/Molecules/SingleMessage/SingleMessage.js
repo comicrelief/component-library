@@ -35,7 +35,7 @@ const SingleMessage = ({
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
-  const hasVideo = !!(videoID !== null && videoID !== '');
+  const hasVideo = Boolean(videoID !== null && videoID !== '');
 
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
