@@ -102,7 +102,7 @@ it('renders correctly', () => {
         placeholder="This is text area"
         rows={5}
       />
-
+      
     </label>
   `);
 });

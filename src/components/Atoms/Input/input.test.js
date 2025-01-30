@@ -94,7 +94,7 @@ it('renders correctly', () => {
       <div
         className="c3"
       >
-
+        
         <input
           aria-describedby="Accessibility info go here"
           className="c4"
@@ -105,7 +105,7 @@ it('renders correctly', () => {
           type="text"
         />
       </div>
-
+      
     </label>
   `);
 });

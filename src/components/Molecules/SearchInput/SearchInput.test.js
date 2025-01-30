@@ -6,7 +6,7 @@ import SearchInput from './SearchInput';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
@@ -159,7 +159,7 @@ it('renders correctly', () => {
               <div
                 className="c8"
               >
-
+                
                 <input
                   aria-describedby="search"
                   className="c9"
@@ -173,7 +173,7 @@ it('renders correctly', () => {
                   value=""
                 />
               </div>
-
+              
             </label>
           </div>
         </div>
