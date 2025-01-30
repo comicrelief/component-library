@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Input from './Input';
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import Input from "./Input";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Input
       name="fullname"
@@ -94,7 +94,7 @@ it('renders correctly', () => {
       <div
         className="c3"
       >
-
+        
         <input
           aria-describedby="Accessibility info go here"
           className="c4"
@@ -105,7 +105,7 @@ it('renders correctly', () => {
           type="text"
         />
       </div>
-
+      
     </label>
   `);
 });
