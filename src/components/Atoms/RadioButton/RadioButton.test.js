@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import RadioButton from "./RadioButton";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import RadioButton from './RadioButton';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
       <RadioButton id="male" name="gender" value="male" label="Male" />
