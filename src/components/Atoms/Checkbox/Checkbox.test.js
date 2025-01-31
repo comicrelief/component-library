@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Checkbox from "./Checkbox";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Checkbox from './Checkbox';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
       <Checkbox name="sport" value="Tenis" label="Tenis" />
