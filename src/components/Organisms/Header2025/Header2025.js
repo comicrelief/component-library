@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Logos from '../../Molecules/Logos/Logos';
+import LogoLinked from '../../Molecules/LogoLinked/LogoLinked';
 import HeaderNav2025 from './HeaderNav2025/HeaderNav2025';
 import {
   Brand, Header2025Wrapper, InnerWrapper,
@@ -15,7 +15,7 @@ const Header2025 = ({
   <Header2025Wrapper navItems showBoxShadow={showBoxShadow} {...rest}>
     <InnerWrapper>
       <Brand>
-        <Logos
+        <LogoLinked
           campaign={campaign}
           sizeSm="50px"
           sizeMd="55px"

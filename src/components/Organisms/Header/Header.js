@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Logos from '../../Molecules/Logos/Logos';
+import LogoLinked from '../../Molecules/LogoLinked/LogoLinked';
 import MainNav from './Nav/Nav';
 import {
   Brand, HeaderWrapper, InnerWrapper, MetaIcons
@@ -13,7 +13,7 @@ const Header = ({
   <HeaderWrapper navItems {...rest}>
     <InnerWrapper>
       <Brand>
-        <Logos campaign={campaign} />
+        <LogoLinked campaign={campaign} />
       </Brand>
       <MainNav navItems={navItems} />
       <MetaIcons>{metaIcons}</MetaIcons>

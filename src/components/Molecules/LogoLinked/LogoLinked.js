@@ -25,7 +25,7 @@ const LogoLink = styled.a`
   `}
 `;
 
-const Logos = ({
+const LogoLinked = ({
   campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', animateRotate = false, sizeSm, sizeMd
 }) => {
   if (campaign === 'Sport Relief Gameon') {
@@ -69,7 +69,7 @@ const Logos = ({
   );
 };
 
-Logos.propTypes = {
+LogoLinked.propTypes = {
   campaign: PropTypes.string,
   animateRotate: PropTypes.bool,
   title: PropTypes.string,
@@ -77,4 +77,4 @@ Logos.propTypes = {
   sizeMd: PropTypes.string
 };
 
-export default Logos;
+export default LogoLinked;
