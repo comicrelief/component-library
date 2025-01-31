@@ -105,8 +105,8 @@ Sport Relief
   <Text tag="h4" family="Founders_bold" uppercase size="xl">
     Heading 4
   </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="l">
-    Heading 5
+  <Text tag="h4" family="Founders_bold" uppercase size="l" textAlign="center">
+    Heading 5, textAlign prop
   </Text>
   <Text tag="p" family="Founders" size="m">
     Body 1

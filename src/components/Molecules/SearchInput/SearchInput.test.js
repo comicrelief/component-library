@@ -6,7 +6,7 @@ import SearchInput from './SearchInput';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SearchInput
-      onChange={e => {
+      onChange={(e) => {
         e.preventDefault();
         return e.target.value;
       }}
