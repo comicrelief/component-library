@@ -5,50 +5,67 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import checkBoxIcon from './assets/tick.svg';
 
+// This label wraps both the input and the span that is the visual square checkbox you see */
+const Label = styled.label`
+  display: flex;
+  ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
+  margin-bottom: 8px;
+  ${({ labelColour }) => labelColour && `color: ${labelColour};`}
+`;
+
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
-  font-size: ${({ theme }) => theme.fontSize('sm')};
-  display: block;
-  box-sizing: border-box;
-  opacity: 0;
-  position: absolute;
-  left: 0px;
-  width: 24px;
-  height: 24px;
+  /* This input is not visible */
+  width: 0;
+  height: 0;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey')};
+  /* This span is actually the visual square Checkbox you see */
   + span {
     margin-right: 12px;
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    background-color: ${({ theme, checkboxBg }) => (checkboxBg ? theme.color(checkboxBg) : theme.color('white'))};
+    border: 1px solid ${({ theme, checkboxBorder }) => (checkboxBorder ? theme.color(checkboxBorder) : theme.color('grey'))};
     float: left;
     flex-shrink: 0;
   }
+  /* Visual checkbox when ticked */
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
-    background-color: ${({ theme }) => theme.color('red')};
-    border-color: ${({ theme }) => theme.color('red')};
     background-size: contain;
+    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('red'))};
+    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
   }
+  /* Visual checkbox when focused */
   :focus + span {
-    border-color: ${({ theme }) => theme.color('red')};
-    border-width: 1px;
+    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
   }
-`;
-
-const Label = styled.label`
-  display: flex;
-  ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
-  margin-bottom: 8px;
 `;
 
 const Checkbox = React.forwardRef(({
-  label = undefined, value, children = undefined, ...rest
+  label = undefined,
+  value,
+  children = undefined,
+  labelColour,
+  checkboxBg,
+  checkboxBorder,
+  checkboxBgChecked,
+  checkboxBorderChecked,
+  ...rest
 }, ref) => (
-  <Label hasLabelAsString={!!label}>
-    <StyledCheckboxInput {...rest} value={value} ref={ref} />
+  <Label
+    hasLabelAsString={!!label}
+    labelColour={labelColour}
+  >
+    <StyledCheckboxInput
+      {...rest}
+      value={value}
+      ref={ref}
+      checkboxBg={checkboxBg}
+      checkboxBorder={checkboxBorder}
+      checkboxBgChecked={checkboxBgChecked}
+      checkboxBorderChecked={checkboxBorderChecked}
+    />
     <span />
     {label ? <Text weight="bold">{label}</Text> : children}
   </Label>
@@ -57,8 +74,13 @@ const Checkbox = React.forwardRef(({
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
+  children: PropTypes.node,
   label: PropTypes.string,
-  children: PropTypes.node
+  labelColour: PropTypes.string,
+  checkboxBg: PropTypes.string,
+  checkboxBorder: PropTypes.string,
+  checkboxBgChecked: PropTypes.string,
+  checkboxBorderChecked: PropTypes.string
 };
 
 export default Checkbox;

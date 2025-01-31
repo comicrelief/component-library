@@ -35,7 +35,7 @@ const SingleMessage = ({
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
-  const hasVideo = !!(videoID !== null && videoID !== '');
+  const hasVideo = Boolean(videoID !== null && videoID !== '');
 
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
@@ -54,25 +54,35 @@ const SingleMessage = ({
         && /iPad|iPhone|iPod/.test(navigator.platform)
     : false;
 
-  // Break-out video markup into its own function
-  const renderVideoPlayers = thisRowID => {
-    // Store the dynamically-created UUID (from the main render func) in our state
-    // so useEffect can access it
-    const thisVideoID = `${thisRowID}__video`;
+  /* Dynamically retrieve ID that Gatsby has already baked into the page,
+  need to null check for initial render */
+  const getID = refWithID => {
+    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
 
-    setUniqueID(thisVideoID);
-
-    return (
-      <VideoWrapper
-        isPlaying={isPlaying}
-        isBuffering={isBuffering}
-        key={thisVideoID}
-        landscapeVideo={landscapeVideo}
-      >
-        <div id={thisVideoID} />
-      </VideoWrapper>
-    );
+    return thisID;
   };
+
+  // Create the id string for the youtube video
+  useEffect(() => {
+    if (thisRef.current) {
+      const thisID = getID(thisRef.current);
+      if (thisID) {
+        setUniqueID(`${thisID}__video`);
+      }
+    }
+  }, [thisRef]);
+
+  // Break-out video markup into its own function
+  const renderVideoPlayers = () => (
+    <VideoWrapper
+      isPlaying={isPlaying}
+      isBuffering={isBuffering}
+      key={uniqueID}
+      landscapeVideo={landscapeVideo}
+    >
+      <div id={uniqueID} />
+    </VideoWrapper>
+  );
 
   /* Waiting on a usable ref from render before setting our flag used in other functions */
   useEffect(() => {
@@ -113,14 +123,6 @@ const SingleMessage = ({
       });
     }, 1000);
     setIsBuffering(true);
-  };
-
-  /* Dynamically retrieve ID that Gatsby has already baked into the page,
-  need to null check for initial render */
-  const getID = refWithID => {
-    const thisID = refWithID !== null ? refWithID.getAttribute('id') : null;
-
-    return thisID;
   };
 
   return (
