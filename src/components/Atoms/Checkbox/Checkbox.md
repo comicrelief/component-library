@@ -27,7 +27,16 @@ const LongLabel = () => (
     <Checkbox name="sport" value="Tennis" label="Tennis" />
     <Checkbox name="sport" value="Basketball" label="Basketball" />
     <Checkbox name="sport" value="Cycling" label="Cycling" />
-    <Checkbox name="sport" value="Football" label="Football" />
+    <Checkbox
+        name="sport"
+        value="Football"
+        label="Tennis (with wacky styling to test props)"
+        labelColour="pink"
+        checkboxBg="red"
+        checkboxBorder="blue"
+        checkboxBgChecked="green"
+        checkboxBorderChecked="red"
+    />
     <br/>
     <p>A checkbox with a long label containing links</p>
     <Checkbox name="node_label" value="node_label">
