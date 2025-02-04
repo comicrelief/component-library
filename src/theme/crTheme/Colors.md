@@ -128,6 +128,17 @@ const Item = styled.div`
     </Item>
 
     <Item>
+      <Card backgroundColor="grey_4" height="auto">
+        <Text tag="h3" color="white" size="xs">
+          grey_4
+        </Text>
+        <Text color="white" tag="p">
+            #6E6E6E
+        </Text>
+      </Card>
+    </Item>
+
+    <Item>
       <Card backgroundColor="grey_dark" height="auto">
         <Text tag="h3" color="white" size="xs">
           grey_dark
