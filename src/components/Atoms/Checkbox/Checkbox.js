@@ -83,7 +83,7 @@ Checkbox.propTypes = {
   checkboxBorder: PropTypes.string,
   checkboxBgChecked: PropTypes.string,
   checkboxBorderChecked: PropTypes.string,
-  checkboxBorderFocus: PropTypes.string,
+  checkboxBorderFocus: PropTypes.string
 };
 
 export default Checkbox;
