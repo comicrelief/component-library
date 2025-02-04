@@ -10,7 +10,7 @@ const Label = styled.label`
   display: flex;
   ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
   margin-bottom: 8px;
-  ${({ labelColour, theme }) => labelColour && `color: ${theme.color(labelColour)}`}
+  ${({ theme, labelColour }) => labelColour && `color: ${theme.color(labelColour)}`}
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
