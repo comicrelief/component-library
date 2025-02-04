@@ -32,10 +32,11 @@ const LongLabel = () => (
         value="Football"
         label="Tennis (with wacky styling to test props)"
         labelColour="purple_dark"
-        checkboxBg="red"
+        checkboxBg="white"
         checkboxBorder="blue"
         checkboxBgChecked="green"
         checkboxBorderChecked="red"
+        checkboxBorderFocus="teal"
     />
     <br/>
     <p>A checkbox with a long label containing links</p>

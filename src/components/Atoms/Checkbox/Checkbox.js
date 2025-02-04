@@ -38,7 +38,7 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   }
   /* Visual checkbox when focused */
   :focus + span {
-    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
+    border: 1px solid ${({ theme, checkboxBorderFocus }) => (checkboxBorderFocus ? theme.color(checkboxBorderFocus) : theme.color('red'))};
   }
 `;
 
@@ -51,6 +51,7 @@ const Checkbox = React.forwardRef(({
   checkboxBorder,
   checkboxBgChecked,
   checkboxBorderChecked,
+  checkboxBorderFocus,
   ...rest
 }, ref) => (
   <Label
@@ -65,6 +66,7 @@ const Checkbox = React.forwardRef(({
       checkboxBorder={checkboxBorder}
       checkboxBgChecked={checkboxBgChecked}
       checkboxBorderChecked={checkboxBorderChecked}
+      checkboxBorderFocus={checkboxBorderFocus}
     />
     <span />
     {label ? <Text weight="bold">{label}</Text> : children}
@@ -80,7 +82,8 @@ Checkbox.propTypes = {
   checkboxBg: PropTypes.string,
   checkboxBorder: PropTypes.string,
   checkboxBgChecked: PropTypes.string,
-  checkboxBorderChecked: PropTypes.string
+  checkboxBorderChecked: PropTypes.string,
+  checkboxBorderFocus: PropTypes.string,
 };
 
 export default Checkbox;
