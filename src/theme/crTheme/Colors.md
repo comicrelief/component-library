@@ -330,7 +330,7 @@ const Item = styled.div`
     <Item>
       <Card backgroundColor="blue_donate" height="auto">
         <Text tag="h3" color="white" size="xs">
-          Blue Donate
+          blue_donate
         </Text>
         <Text tag="p" color="white">#2042AD</Text>
       </Card>
@@ -339,7 +339,7 @@ const Item = styled.div`
     <Item>
       <Card backgroundColor="blue_donate_interact" height="auto">
         <Text tag="h3" color="white" size="xs">
-          Blue Donate Interact
+            blue_donate_interact
         </Text>
         <Text tag="p" color="white">#001A85</Text>
       </Card>
