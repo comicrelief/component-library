@@ -128,6 +128,17 @@ const Item = styled.div`
     </Item>
 
     <Item>
+      <Card backgroundColor="grey_4" height="auto">
+        <Text tag="h3" color="white" size="xs">
+          grey_4
+        </Text>
+        <Text color="white" tag="p">
+          #6E6E6E
+        </Text>
+      </Card>
+    </Item>
+
+    <Item>
       <Card backgroundColor="grey_dark" height="auto">
         <Text tag="h3" color="white" size="xs">
           grey_dark
@@ -330,7 +341,7 @@ const Item = styled.div`
     <Item>
       <Card backgroundColor="blue_donate" height="auto">
         <Text tag="h3" color="white" size="xs">
-          Blue Donate
+          blue_donate
         </Text>
         <Text tag="p" color="white">#2042AD</Text>
       </Card>
@@ -339,7 +350,7 @@ const Item = styled.div`
     <Item>
       <Card backgroundColor="blue_donate_interact" height="auto">
         <Text tag="h3" color="white" size="xs">
-          Blue Donate Interact
+          blue_donate_interact
         </Text>
         <Text tag="p" color="white">#001A85</Text>
       </Card>
