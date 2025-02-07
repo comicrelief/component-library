@@ -35,9 +35,16 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      width: 0;
-      height: 0;
-      margin: 0;
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
 
     .c1 + span {
@@ -104,9 +111,16 @@ it('renders correctly', () => {
     }
 
     .c1 {
-      width: 0;
-      height: 0;
-      margin: 0;
+      border: 0;
+      -webkit-clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
     }
 
     .c1 + span {
