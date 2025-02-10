@@ -14,10 +14,17 @@ const Label = styled.label`
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
-  /* This input is not visible */
-  width: 0;
-  height: 0;
-  margin: 0;
+  /* This input is not visible but needs these long winded styles to remain accessible to screen readers */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
   /* This span is actually the visual square Checkbox you see */
   + span {
     margin-right: 12px;
