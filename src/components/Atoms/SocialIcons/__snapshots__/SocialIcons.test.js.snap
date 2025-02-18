@@ -66,7 +66,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-facebook"
+      data-test="icon-facebook"
       href="https://www.facebook.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -84,7 +84,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-instagram"
+      data-test="icon-instagram"
       href="https://www.instagram.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -102,7 +102,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-twitter"
+      data-test="icon-twitter"
       href="https://twitter.com/comicrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -120,7 +120,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-youtube"
+      data-test="icon-youtube"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_blank"
@@ -202,7 +202,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-facebook"
+      data-test="icon-facebook"
       href="https://www.facebook.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -220,7 +220,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-instagram"
+      data-test="icon-instagram"
       href="https://www.instagram.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -238,7 +238,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-twitter"
+      data-test="icon-twitter"
       href="https://twitter.com/rednoseday"
       rel="noopener noreferrer"
       target="_self"
@@ -256,7 +256,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-youtube"
+      data-test="icon-youtube"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_self"
@@ -338,7 +338,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-facebook"
+      data-test="icon-facebook"
       href="https://www.facebook.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -356,7 +356,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-instagram"
+      data-test="icon-instagram"
       href="https://www.instagram.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -374,7 +374,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-twitter"
+      data-test="icon-twitter"
       href="https://twitter.com/sportrelief"
       rel="noopener noreferrer"
       target="_blank"
@@ -392,7 +392,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   >
     <a
       className="c2"
-      data-testid="icon-youtube"
+      data-test="icon-youtube"
       href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
       rel="noopener noreferrer"
       target="_blank"

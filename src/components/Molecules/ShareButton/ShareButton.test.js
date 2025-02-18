@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import ShareButton from "./ShareButton";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import ShareButton from './ShareButton';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(<ShareButton />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
@@ -80,7 +80,7 @@ it("renders correctly", () => {
         >
           <a
             className="c4"
-            data-testid="icon-share-button-facebook"
+            data-test="icon-share-button-facebook"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
@@ -100,7 +100,7 @@ it("renders correctly", () => {
         >
           <a
             className="c4"
-            data-testid="icon-share-button-twitter"
+            data-test="icon-share-button-twitter"
             href="#"
             onClick={[Function]}
             rel="noopener noreferrer"
