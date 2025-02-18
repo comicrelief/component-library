@@ -103,7 +103,7 @@ const Icon = ({
     {...restProps}
     title={title}
     rel="noopener noreferrer"
-    data-testid={`${isHeader ? 'header' : 'icon'}-${kebabCase(id)}`}
+    data-test={`${isHeader ? 'header' : 'icon'}-${kebabCase(id)}`}
     isHeader={isHeader}
   >
     <StyledImage src={icon} alt={brand} />
