@@ -48,7 +48,7 @@ const StyledLink = styled.a`
         padding-right: ${RevealTextWidth}px;
   
         // Tweak for ESU's longer text:
-        &[data-testid="header-esu"] {
+        &[data-test="header-esu"] {
           padding-right: 92px;
         }
   
