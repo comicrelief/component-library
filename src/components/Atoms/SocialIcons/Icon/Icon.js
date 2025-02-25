@@ -48,12 +48,12 @@ const StyledLink = styled.a`
         padding-right: ${RevealTextWidth}px;
   
         // Tweak for ESU's longer text:
-        &[data-testid="header-esu"] {
+        &[data-test="header-esu"] {
           padding-right: 92px;
         }
   
         // Tweak for Shop's shorter text:
-        &[data-testid="header-shop"] {
+        &[data-test="header-shop"] {
           padding-right: 48px;
         }
         
