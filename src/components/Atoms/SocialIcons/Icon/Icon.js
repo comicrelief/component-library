@@ -53,7 +53,7 @@ const StyledLink = styled.a`
         }
   
         // Tweak for Shop's shorter text:
-        &[data-testid="header-shop"] {
+        &[data-test="header-shop"] {
           padding-right: 48px;
         }
         
