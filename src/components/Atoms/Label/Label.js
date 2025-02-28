@@ -54,7 +54,7 @@ const Label = ({
   label,
   hideLabel = false,
   optional = null,
-  errorMsg = false,
+  errorMsg = '',
   ...rest
 }) => (
   <LabelElement
