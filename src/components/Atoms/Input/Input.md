@@ -103,6 +103,6 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
       const price = event.target.value;
       if (typeof Number(price) === 'number') {
         event.target.value = Number(price).toFixed(2);
-      } 
+      }
     }}
   />

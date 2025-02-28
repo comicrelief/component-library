@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
+import alertIcon from './assets/CR_Error--red.svg';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 import spacing from '../../../theme/shared/spacing';
@@ -41,6 +42,21 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
+
+  ${({ error }) => error && css`
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      background: url(${alertIcon}) center/contain no-repeat;
+      --iconSize: 19px;
+      width: var(--iconSize);
+      height: var(--iconSize);
+      z-index: 3;
+    }
+  `}
 `;
 
 const Prefix = styled.div`
@@ -86,7 +102,7 @@ const Input = React.forwardRef(
       optional={optional}
       {...labelProps}
     >
-      <InputWrapper>
+      <InputWrapper error={!!errorMsg}>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}

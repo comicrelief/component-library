@@ -7,12 +7,15 @@ import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
 const LabelElement = styled.label`
-  position: relative; 
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  color: ${({ theme }) => theme.color('grey_label')};
-  width: 100%;
-  
+
+  color: ${({ theme, errorMsg }) => errorMsg ? theme.color('grey_label') : theme.color('grey_label')};
+
+  color: green;
+
   ${({ optional, theme }) => optional === true && `
   :after {
     position: absolute;
@@ -51,9 +54,14 @@ const Label = ({
   label,
   hideLabel = false,
   optional = null,
+  errorMsg = false,
   ...rest
 }) => (
-  <LabelElement {...rest} optional={optional}>
+  <LabelElement
+    optional={optional}
+    errorMsg={errorMsg}
+    {...rest}
+  >
     <LabelText label={label} hideLabel={hideLabel} />
     {children}
   </LabelElement>
