@@ -6,8 +6,8 @@ import Checkbox from './Checkbox';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <>
-      <Checkbox name="sport" value="Tenis" label="Tenis" />
-      <Checkbox name="sport" value="Handball" label="Handball" />
+      <Checkbox name="sport1" value="Tennis" label="Tennis" />
+      <Checkbox name="sport2" value="Handball" label="Handball" />
     </>
   ).toJSON();
 
@@ -73,13 +73,14 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="sport"
+        htmlFor="sport1"
       >
         <input
           className="c1"
-          name="sport"
+          id="sport1"
+          name="sport1"
           type="checkbox"
-          value="Tenis"
+          value="Tennis"
         />
         <span />
         <span
@@ -87,7 +88,7 @@ it('renders correctly', () => {
           color="inherit"
           size="s"
         >
-          Tenis
+          Tennis
         </span>
       </label>,
       .c2 {
@@ -150,11 +151,12 @@ it('renders correctly', () => {
 
     <label
         className="c0"
-        htmlFor="sport"
+        htmlFor="sport2"
       >
         <input
           className="c1"
-          name="sport"
+          id="sport2"
+          name="sport2"
           type="checkbox"
           value="Handball"
         />
