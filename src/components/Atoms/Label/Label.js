@@ -11,10 +11,7 @@ const LabelElement = styled.label`
   position: relative;
   display: flex;
   flex-direction: column;
-
-  color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('grey_label') : theme.color('grey_label'))};
-
-  color: green;
+  color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('red') : theme.color('grey_label'))};
 
   ${({ optional, theme }) => optional === true && `
   :after {
@@ -26,9 +23,12 @@ const LabelElement = styled.label`
     font-size: ${theme.fontSize('s')};
   }`}
 `;
-const VisibleText = styled(Text).attrs({ weight: 'bold' })`
+
+const VisibleText = styled(Text)`
   margin-bottom: ${spacing('sm')};
+  font-weight: normal;
 `;
+
 const HiddenText = styled(Text)`${hideVisually}`;
 
 // eslint-disable-next-line react/prop-types
@@ -68,7 +68,6 @@ const Label = ({
     />
     {children}
   </LabelElement>
-
 );
 
 Label.propTypes = {

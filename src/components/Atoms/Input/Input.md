@@ -19,7 +19,6 @@
     label="Label"
     errorMsg="This is an error message"
     id="input-example-2"
-    showLabel={false}
   />
 ```
 
