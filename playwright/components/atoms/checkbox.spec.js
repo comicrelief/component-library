@@ -51,7 +51,7 @@ test.describe('checkbox', () => {
 
     // football checkbox
     await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football');
+    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football (with wacky styling to test props)');
     expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').isChecked()).toBeFalsy();
 
     // terms and conditions
