@@ -5,7 +5,6 @@ exports[`renders correctly with no value and no options 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -21,11 +20,11 @@ exports[`renders correctly with no value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c3 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c5 {
@@ -112,7 +111,6 @@ exports[`renders correctly with value and no options 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -128,11 +126,11 @@ exports[`renders correctly with value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c3 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c5 {
@@ -219,15 +217,6 @@ exports[`renders correctly with value and options 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c10 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -243,11 +232,11 @@ exports[`renders correctly with value and options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c3 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c5 {
@@ -383,7 +372,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c10"
+          className="c2"
           color="inherit"
           size="s"
         >
@@ -400,7 +389,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c10"
+          className="c2"
           color="inherit"
           size="s"
         >
@@ -417,7 +406,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c10"
+          className="c2"
           color="inherit"
           size="s"
         >
@@ -434,7 +423,7 @@ exports[`renders correctly with value and options 1`] = `
         tabIndex="-1"
       >
         <span
-          className="c10"
+          className="c2"
           color="inherit"
           size="s"
         >

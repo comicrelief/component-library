@@ -78,12 +78,12 @@ Label.propTypes = {
   hideLabel: PropTypes.bool,
   children: PropTypes.node,
   optional: PropTypes.bool,
-  errorMsg: PropTypes.bool
+  errorMsg: PropTypes.string
 };
 
 LabelElement.propTypes = {
   optional: PropTypes.bool,
-  errorMsg: PropTypes.bool
+  errorMsg: PropTypes.string
 };
 
 LabelText.propTypes = {

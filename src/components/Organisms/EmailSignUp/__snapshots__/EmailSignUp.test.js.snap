@@ -21,16 +21,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c10 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c15 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -60,12 +51,12 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c15 > a {
+.c14 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c15:hover {
+.c14:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
@@ -81,14 +72,14 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
-.c11 {
+.c10 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
-.c13 {
+.c12 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -108,11 +99,11 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c13:focus {
+.c12:focus {
   border: 1px solid #666;
 }
 
-.c12 {
+.c11 {
   position: relative;
   font-size: 1.25rem;
 }
@@ -121,7 +112,7 @@ exports[`renders correctly 1`] = `
   text-align: left;
 }
 
-.c16:disabled {
+.c15:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
@@ -148,15 +139,15 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c13 {
   margin-top: 1rem;
 }
 
-.c14 button {
+.c13 button {
   background-color: #E52630;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,12 +158,12 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c17 p {
+.c16 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c17 p a {
+.c16 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
@@ -213,13 +204,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c14 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c15 {
+  .c14 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -227,7 +218,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c13 {
+  .c12 {
     max-width: 290px;
   }
 }
@@ -294,7 +285,7 @@ exports[`renders correctly 1`] = `
           htmlFor="first-name"
         >
           <span
-            className="c10 c11"
+            className="c4 c10"
             color="inherit"
             dangerouslySetInnerHTML={
               Object {
@@ -304,13 +295,13 @@ exports[`renders correctly 1`] = `
             size="s"
           />
           <div
-            className="c12"
+            className="c11"
           >
             
             <input
               aria-describedby="first-name"
               aria-required={true}
-              className="c13"
+              className="c12"
               id="first-name"
               name="firstName"
               onBlur={[Function]}
@@ -327,7 +318,7 @@ exports[`renders correctly 1`] = `
           htmlFor="last-name"
         >
           <span
-            className="c10 c11"
+            className="c4 c10"
             color="inherit"
             dangerouslySetInnerHTML={
               Object {
@@ -337,13 +328,13 @@ exports[`renders correctly 1`] = `
             size="s"
           />
           <div
-            className="c12"
+            className="c11"
           >
             
             <input
               aria-describedby="last-name"
               aria-required={true}
-              className="c13"
+              className="c12"
               id="last-name"
               name="lastName"
               onBlur={[Function]}
@@ -361,7 +352,7 @@ exports[`renders correctly 1`] = `
         htmlFor="email"
       >
         <span
-          className="c10 c11"
+          className="c4 c10"
           color="inherit"
           dangerouslySetInnerHTML={
             Object {
@@ -371,13 +362,13 @@ exports[`renders correctly 1`] = `
           size="s"
         />
         <div
-          className="c12"
+          className="c11"
         >
           
           <input
             aria-describedby="email"
             aria-required={true}
-            className="c13"
+            className="c12"
             id="email"
             name="email"
             onBlur={[Function]}
@@ -390,10 +381,10 @@ exports[`renders correctly 1`] = `
         
       </label>
       <div
-        className="c14"
+        className="c13"
       >
         <button
-          className="c15 c16"
+          className="c14 c15"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
@@ -412,7 +403,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c17"
+      className="c16"
     >
       <span
         className="c4"

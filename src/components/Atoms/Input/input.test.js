@@ -20,7 +20,6 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
-      font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
@@ -36,11 +35,11 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      color: green;
     }
 
     .c2 {
       margin-bottom: 0.5rem;
+      font-weight: normal;
     }
 
     .c4 {

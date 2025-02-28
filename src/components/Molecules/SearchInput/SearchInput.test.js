@@ -34,7 +34,6 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      color: green;
     }
 
     .c7 {

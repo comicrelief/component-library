@@ -37,7 +37,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -53,11 +52,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c21 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c23 {
@@ -714,7 +713,6 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -730,11 +728,11 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c22 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c24 {
@@ -1358,7 +1356,6 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -1374,11 +1371,11 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c15 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c17 {
@@ -2073,7 +2070,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -2089,11 +2085,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  color: green;
 }
 
 .c15 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c17 {
