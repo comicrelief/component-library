@@ -61,7 +61,7 @@ Install Playwright:
 yarn playwright install
 ```
 
-Run the tests
+Run the tests:
 ```
 yarn test:e2e:local
 ```
