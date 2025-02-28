@@ -24,11 +24,12 @@ const LongLabel = () => (
 
 <>
     <p>List of checkboxes</p>
-    <Checkbox name="sport" value="Tennis" label="Tennis" />
-    <Checkbox name="sport" value="Basketball" label="Basketball" />
-    <Checkbox name="sport" value="Cycling" label="Cycling" />
+    <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" />
+    <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" />
+    <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" />
     <Checkbox
-        name="sport"
+        id="sport4"
+        name="sport4"
         value="Football"
         label="Tennis (with wacky styling to test props)"
         labelColour="purple_dark"

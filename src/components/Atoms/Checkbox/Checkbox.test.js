@@ -73,6 +73,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
+        htmlFor="sport"
       >
         <input
           className="c1"
@@ -149,6 +150,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
+        htmlFor="sport"
       >
         <input
           className="c1"
