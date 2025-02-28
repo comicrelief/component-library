@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('checkbox', () => {
-  test.only('checkbox component', async ({ page }) => {
+  test('checkbox component', async ({ page }) => {
     await page.goto('/#checkbox');
 
     // checkbox component should be visible
