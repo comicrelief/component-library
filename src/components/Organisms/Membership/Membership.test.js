@@ -1,12 +1,12 @@
-import React from "react";
-import "jest-styled-components";
+import React from 'react';
+import 'jest-styled-components';
 
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Membership from "./Membership";
-import { defaultData } from "../../../styleguide/data/data";
-import data from "./dev-data/data";
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Membership from './Membership';
+import { defaultData } from '../../../styleguide/data/data';
+import data from './dev-data/data';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <Membership
       alt="Background image"
@@ -81,6 +81,7 @@ it("renders correctly", () => {
     }
 
     .c14 {
+      width: 100%;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -90,7 +91,7 @@ it("renders correctly", () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      width: 100%;
+      color: green;
     }
 
     .c17 {

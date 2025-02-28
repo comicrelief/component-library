@@ -11,6 +11,7 @@ exports[`renders correctly with no value and no options 1`] = `
 }
 
 .c1 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,7 +21,7 @@ exports[`renders correctly with no value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c3 {
@@ -117,6 +118,7 @@ exports[`renders correctly with value and no options 1`] = `
 }
 
 .c1 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -126,7 +128,7 @@ exports[`renders correctly with value and no options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c3 {
@@ -231,6 +233,7 @@ exports[`renders correctly with value and options 1`] = `
 }
 
 .c1 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -240,7 +243,7 @@ exports[`renders correctly with value and options 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c3 {

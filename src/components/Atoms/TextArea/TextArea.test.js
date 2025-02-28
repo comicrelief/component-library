@@ -26,6 +26,7 @@ it('renders correctly', () => {
     }
 
     .c0 {
+      width: 100%;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -35,7 +36,7 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      width: 100%;
+      color: green;
     }
 
     .c2 {

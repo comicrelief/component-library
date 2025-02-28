@@ -43,6 +43,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 .c18 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,7 +53,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c21 {
@@ -719,6 +720,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c19 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -728,7 +730,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c22 {
@@ -1362,6 +1364,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c12 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1371,7 +1374,7 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c15 {
@@ -2076,6 +2079,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c12 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2085,7 +2089,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
+  color: green;
 }
 
 .c15 {
