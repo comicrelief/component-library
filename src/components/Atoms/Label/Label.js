@@ -12,7 +12,7 @@ const LabelElement = styled.label`
   display: flex;
   flex-direction: column;
 
-  color: ${({ theme, errorMsg }) => errorMsg ? theme.color('grey_label') : theme.color('grey_label')};
+  color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('grey_label') : theme.color('grey_label'))};
 
   color: green;
 
@@ -62,7 +62,10 @@ const Label = ({
     errorMsg={errorMsg}
     {...rest}
   >
-    <LabelText label={label} hideLabel={hideLabel} />
+    <LabelText
+      label={label}
+      hideLabel={hideLabel}
+    />
     {children}
   </LabelElement>
 
@@ -75,7 +78,13 @@ Label.propTypes = {
   ]).isRequired,
   hideLabel: PropTypes.bool,
   children: PropTypes.node,
-  optional: PropTypes.bool
+  optional: PropTypes.bool,
+  errorMsg: PropTypes.bool
+};
+
+LabelElement.propTypes = {
+  optional: PropTypes.bool,
+  errorMsg: PropTypes.bool
 };
 
 LabelText.propTypes = {
