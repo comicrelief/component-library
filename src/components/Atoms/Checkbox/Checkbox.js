@@ -69,6 +69,7 @@ const Checkbox = React.forwardRef(({
   >
     <StyledCheckboxInput
       {...rest}
+      id={rest.id || name}
       name={name}
       value={value}
       ref={ref}
