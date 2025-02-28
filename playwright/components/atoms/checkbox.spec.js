@@ -1,8 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('checkbox', () => {
-  test('checkbox component', async ({ page }) => {
-
+  test.only('checkbox component', async ({ page }) => {
     await page.goto('/#checkbox');
 
     // checkbox component should be visible
@@ -27,7 +26,7 @@ test.describe('checkbox', () => {
 
     // football checkbox
     await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football');
+    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football (with wacky styling to test props)');
     expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').isChecked()).toBeTruthy();
 
     // terms and conditions
