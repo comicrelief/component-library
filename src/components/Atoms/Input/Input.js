@@ -12,36 +12,13 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
-const InputField = styled.input`${({ theme, error, prefixLength }) => css`
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: ${spacing('md')} ${spacing('m')};
-  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
-  background-color: ${theme.color('grey_light')};
-  border: 1px solid;
-  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
-  box-shadow: none;
-  appearance: none;
-  color: ${theme.color('black')};
-  border-radius: ${spacing('sm')};
-  font-size: inherit;
-  z-index: 2;
-  font-family: ${theme.fontFamilies(theme.font.regular)};
-
-  :focus {
-    border: 1px solid ${theme.color('grey_for_forms')};
-  }
-
-  @media ${theme.allBreakpoints('M')} {
-    max-width: 290px;
-  }
-`}`;
-
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
 
   ${({ error }) => error && css`
     &::after {
@@ -75,6 +52,29 @@ const Prefix = styled.div`
   margin-left: 2px; // Just doesn't look quite right without this.
 `;
 
+const InputField = styled.input`${({ theme, error, prefixLength }) => css`
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: ${spacing('md')} ${spacing('m')};
+  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
+  background-color: ${theme.color('grey_light')};
+  border: 1px solid;
+  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
+  box-shadow: none;
+  appearance: none;
+  color: ${theme.color('black')};
+  border-radius: ${spacing('sm')};
+  font-size: inherit;
+  z-index: 2;
+  font-family: ${theme.fontFamilies(theme.font.regular)};
+
+  :focus {
+    border: 1px solid ${theme.color('grey_for_forms')};
+  }
+`}`;
+
 const Input = React.forwardRef(
   (
     {
@@ -102,7 +102,9 @@ const Input = React.forwardRef(
       optional={optional}
       {...labelProps}
     >
-      <InputWrapper error={!!errorMsg}>
+      <InputWrapper
+        error={!!errorMsg}
+      >
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}
@@ -116,7 +118,16 @@ const Input = React.forwardRef(
           {...rest}
         />
       </InputWrapper>
-      {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+      {errorMsg
+        && (
+        <ErrorText
+          size="sm"
+          weight="bold"
+          data-test="error-message"
+        >
+          {errorMsg}
+        </ErrorText>
+        )}
     </Label>
   )
 );
