@@ -35,22 +35,6 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   }
 `}`;
 
-const Prefix = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  ${zIndex('high')}
-  display: flex;
-  height: 100%;
-  width: ${({ length }) => getPrefixWidth(length)};
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.color('grey_dark')};
-  font-weight: 700;
-  font-size: inherit;
-  margin-left: 2px; // Just doesn't look quite right without this.
-`;
-
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
@@ -73,6 +57,22 @@ const InputWrapper = styled.div`
       z-index: 3;
     }
   `}
+`;
+
+const Prefix = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  ${zIndex('high')}
+  display: flex;
+  height: 100%;
+  width: ${({ length }) => getPrefixWidth(length)};
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.color('grey_dark')};
+  font-weight: 700;
+  font-size: inherit;
+  margin-left: 2px; // Just doesn't look quite right without this.
 `;
 
 const Input = React.forwardRef(
