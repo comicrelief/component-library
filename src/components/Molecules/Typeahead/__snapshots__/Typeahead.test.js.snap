@@ -27,6 +27,11 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
 }
 
+.c4 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c5 {
   position: relative;
   box-sizing: border-box;
@@ -51,17 +56,12 @@ exports[`renders correctly 1`] = `
   border: 1px solid #666;
 }
 
-.c4 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c0 {
   position: relative;
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c4 {
     max-width: 290px;
   }
 }

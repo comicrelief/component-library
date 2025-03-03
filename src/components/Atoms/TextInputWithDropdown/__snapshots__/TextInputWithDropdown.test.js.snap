@@ -27,6 +27,11 @@ exports[`renders correctly with no value and no options 1`] = `
   font-weight: normal;
 }
 
+.c4 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c5 {
   position: relative;
   box-sizing: border-box;
@@ -51,17 +56,12 @@ exports[`renders correctly with no value and no options 1`] = `
   border: 1px solid #666;
 }
 
-.c4 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c0 {
   position: relative;
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c4 {
     max-width: 290px;
   }
 }
@@ -133,6 +133,11 @@ exports[`renders correctly with value and no options 1`] = `
   font-weight: normal;
 }
 
+.c4 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c5 {
   position: relative;
   box-sizing: border-box;
@@ -157,17 +162,12 @@ exports[`renders correctly with value and no options 1`] = `
   border: 1px solid #666;
 }
 
-.c4 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c0 {
   position: relative;
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c4 {
     max-width: 290px;
   }
 }
@@ -239,6 +239,11 @@ exports[`renders correctly with value and options 1`] = `
   font-weight: normal;
 }
 
+.c4 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c5 {
   position: relative;
   box-sizing: border-box;
@@ -261,11 +266,6 @@ exports[`renders correctly with value and options 1`] = `
 
 .c5:focus {
   border: 1px solid #666;
-}
-
-.c4 {
-  position: relative;
-  font-size: 1.25rem;
 }
 
 .c0 {
@@ -306,7 +306,7 @@ exports[`renders correctly with value and options 1`] = `
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c4 {
     max-width: 290px;
   }
 }

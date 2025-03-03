@@ -89,6 +89,11 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
+    .c17 {
+      position: relative;
+      font-size: 1.25rem;
+    }
+
     .c18 {
       position: relative;
       box-sizing: border-box;
@@ -111,11 +116,6 @@ it('renders correctly', () => {
 
     .c18:focus {
       border: 1px solid #666;
-    }
-
-    .c17 {
-      position: relative;
-      font-size: 1.25rem;
     }
 
     .c15 {
@@ -323,7 +323,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c18 {
+      .c17 {
         max-width: 290px;
       }
     }

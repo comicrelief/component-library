@@ -79,6 +79,11 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
 }
 
+.c11 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c12 {
   position: relative;
   box-sizing: border-box;
@@ -101,11 +106,6 @@ exports[`renders correctly 1`] = `
 
 .c12:focus {
   border: 1px solid #666;
-}
-
-.c11 {
-  position: relative;
-  font-size: 1.25rem;
 }
 
 .c5 {
@@ -218,7 +218,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c11 {
     max-width: 290px;
   }
 }
