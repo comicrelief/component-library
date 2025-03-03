@@ -37,21 +37,6 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   @media ${theme.allBreakpoints('M')} {
     max-width: 290px;
   }
-
-  ${({ error }) => error && css`
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 0.5rem;
-      transform: translateY(-50%);
-      background: url(${alertIcon}) center/contain no-repeat;
-      --iconSize: 19px;
-      width: var(--iconSize);
-      height: var(--iconSize);
-      z-index: 3;
-    }
-  `}
 `}`;
 
 const InputWrapper = styled.div`
@@ -124,7 +109,6 @@ const Input = React.forwardRef(
           type={type}
           placeholder={placeholder}
           error={!!errorMsg}
-        errorMsg={errorMsg}
           aria-describedby={hasAria ? id : undefined}
           ref={ref}
           prefixLength={prefix.length}
