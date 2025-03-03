@@ -39,10 +39,6 @@ const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 290px;
-  }
-
   ${({ error }) => error && css`
     &::after {
       content: '';
@@ -57,6 +53,10 @@ const InputWrapper = styled.div`
       z-index: 3;
     }
   `}
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
 `;
 
 const Prefix = styled.div`
@@ -102,9 +102,7 @@ const Input = React.forwardRef(
       optional={optional}
       {...labelProps}
     >
-      <InputWrapper
-        error={!!errorMsg}
-      >
+      <InputWrapper error={Boolean(errorMsg)} >
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}
