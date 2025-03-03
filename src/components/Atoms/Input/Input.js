@@ -12,6 +12,45 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS)
 const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
 
+const InputField = styled.input`${({ theme, error, prefixLength }) => css`
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: ${spacing('md')} ${spacing('m')};
+  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
+  background-color: ${theme.color('grey_light')};
+  border: 1px solid;
+  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
+  box-shadow: none;
+  appearance: none;
+  color: ${theme.color('black')};
+  border-radius: ${spacing('sm')};
+  font-size: inherit;
+  z-index: 2;
+  font-family: ${theme.fontFamilies(theme.font.regular)};
+
+  :focus {
+    border: 1px solid ${theme.color('grey_for_forms')};
+  }
+`}`;
+
+const Prefix = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  ${zIndex('high')}
+  display: flex;
+  height: 100%;
+  width: ${({ length }) => getPrefixWidth(length)};
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.color('grey_dark')};
+  font-weight: 700;
+  font-size: inherit;
+  margin-left: 2px; // Just doesn't look quite right without this.
+`;
+
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
@@ -35,45 +74,6 @@ const InputWrapper = styled.div`
     }
   `}
 `;
-
-const Prefix = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  ${zIndex('high')}
-  display: flex;
-  height: 100%;
-  width: ${({ length }) => getPrefixWidth(length)};
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.color('grey_dark')};
-  font-weight: 700;
-  font-size: inherit;
-  margin-left: 2px; // Just doesn't look quite right without this.
-`;
-
-const InputField = styled.input`${({ theme, error, prefixLength }) => css`
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 48px;
-  padding: ${spacing('md')} ${spacing('m')};
-  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
-  background-color: ${theme.color('grey_light')};
-  border: 1px solid;
-  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
-  box-shadow: none;
-  appearance: none;
-  color: ${theme.color('black')};
-  border-radius: ${spacing('sm')};
-  font-size: inherit;
-  z-index: 2;
-  font-family: ${theme.fontFamilies(theme.font.regular)};
-
-  :focus {
-    border: 1px solid ${theme.color('grey_for_forms')};
-  }
-`}`;
 
 const Input = React.forwardRef(
   (
