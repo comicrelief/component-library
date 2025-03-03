@@ -65,7 +65,7 @@ const Checkbox = React.forwardRef(({
   <Label
     hasLabelAsString={!!label}
     labelColour={labelColour}
-    htmlFor={name}
+    htmlFor={rest.id || name}
   >
     <StyledCheckboxInput
       {...rest}
