@@ -42,11 +42,6 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c3 {
-      position: relative;
-      font-size: 1.25rem;
-    }
-
     .c4 {
       position: relative;
       box-sizing: border-box;
@@ -69,6 +64,11 @@ it('renders correctly', () => {
 
     .c4:focus {
       border: 1px solid #666;
+    }
+
+    .c3 {
+      position: relative;
+      font-size: 1.25rem;
     }
 
     @media (min-width:740px) {

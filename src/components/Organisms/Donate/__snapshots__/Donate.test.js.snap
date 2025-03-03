@@ -59,11 +59,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   font-weight: normal;
 }
 
-.c22 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c23 {
   position: relative;
   box-sizing: border-box;
@@ -86,6 +81,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c23:focus {
   border: 1px solid #666;
+}
+
+.c22 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -735,11 +735,6 @@ exports[`Monthly donation renders correctly 1`] = `
   font-weight: normal;
 }
 
-.c23 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c24 {
   position: relative;
   box-sizing: border-box;
@@ -762,6 +757,11 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c24:focus {
   border: 1px solid #666;
+}
+
+.c23 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -1378,11 +1378,6 @@ exports[`Single donation renders correctly 1`] = `
   font-weight: normal;
 }
 
-.c16 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c17 {
   position: relative;
   box-sizing: border-box;
@@ -1405,6 +1400,11 @@ exports[`Single donation renders correctly 1`] = `
 
 .c17:focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c13 {
@@ -2092,11 +2092,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-weight: normal;
 }
 
-.c16 {
-  position: relative;
-  font-size: 1.25rem;
-}
-
 .c17 {
   position: relative;
   box-sizing: border-box;
@@ -2119,6 +2114,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c17:focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {

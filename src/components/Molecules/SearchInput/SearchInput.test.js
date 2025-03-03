@@ -51,11 +51,6 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c8 {
-      position: relative;
-      font-size: 1.25rem;
-    }
-
     .c9 {
       position: relative;
       box-sizing: border-box;
@@ -78,6 +73,11 @@ it('renders correctly', () => {
 
     .c9:focus {
       border: 1px solid #666;
+    }
+
+    .c8 {
+      position: relative;
+      font-size: 1.25rem;
     }
 
     .c0 {

@@ -102,7 +102,7 @@ const Input = React.forwardRef(
       optional={optional}
       {...labelProps}
     >
-      <InputWrapper error={Boolean(errorMsg)} >
+      <InputWrapper error={Boolean(errorMsg)}>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputField
           id={id}
