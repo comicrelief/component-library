@@ -5,12 +5,11 @@ import styled, { css } from 'styled-components';
 import alertIcon from './assets/error-alert-icon-red.svg';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
-import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
 //  the element with JS)
-const getPrefixWidth = prefixLength => `calc(${spacing('m')} + (${prefixLength} * ${spacing('sm')}))`;
+const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem))`;
 
 const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   position: relative;
@@ -25,7 +24,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   box-shadow: none;
   appearance: none;
   color: ${theme.color('black')};
-  border-radius: ${spacing('sm')};
+  border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
   font-family: ${theme.fontFamilies(theme.font.regular)};
