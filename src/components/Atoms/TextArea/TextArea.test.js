@@ -20,12 +20,12 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
-      font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c0 {
+      width: 100%;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -35,11 +35,11 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      width: 100%;
     }
 
     .c2 {
       margin-bottom: 0.5rem;
+      font-weight: normal;
     }
 
     .c3 {

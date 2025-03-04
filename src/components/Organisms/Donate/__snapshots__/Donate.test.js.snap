@@ -37,12 +37,12 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c18 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,11 +52,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
 }
 
 .c21 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c23 {
@@ -64,7 +64,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -415,7 +415,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width:740px) {
-  .c23 {
+  .c22 {
     max-width: 290px;
   }
 }
@@ -713,12 +713,12 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c19 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -728,11 +728,11 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
 }
 
 .c22 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c24 {
@@ -740,7 +740,7 @@ exports[`Monthly donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -1056,7 +1056,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c24 {
+  .c23 {
     max-width: 290px;
   }
 }
@@ -1356,12 +1356,12 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c12 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1371,11 +1371,11 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
 }
 
 .c15 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c17 {
@@ -1383,7 +1383,7 @@ exports[`Single donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -1685,7 +1685,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
+  .c16 {
     max-width: 290px;
   }
 }
@@ -2070,12 +2070,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c12 {
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2085,11 +2085,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   color: #5C5C5E;
-  width: 100%;
 }
 
 .c15 {
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .c17 {
@@ -2097,7 +2097,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -2309,7 +2309,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
+  .c16 {
     max-width: 290px;
   }
 }

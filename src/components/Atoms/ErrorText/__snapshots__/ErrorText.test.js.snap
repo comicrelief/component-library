@@ -10,26 +10,10 @@ exports[`renders correctly 1`] = `
 
 .c1 {
   display: inline-block;
-  padding: 1.5rem 1rem 1rem;
   width: 100%;
   z-index: 1;
-  margin-top: -10px;
-  background-color: #FAE1E2;
-  border-radius: 0.5rem;
   font-weight: bold;
-}
-
-.c1:before {
-  position: relative;
-  content: '';
-  top: 1px;
-  margin-right: 3px;
-  background: url(mock.asset) left 0/100% no-repeat;
-  width: 18px;
-  height: 19px;
-  display: inline-block;
-  vertical-align: top;
-  color: #E52630;
+  padding: 0.6rem 0 1rem;
 }
 
 <span

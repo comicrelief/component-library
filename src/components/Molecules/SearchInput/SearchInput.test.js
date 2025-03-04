@@ -24,6 +24,7 @@ it('renders correctly', () => {
     }
 
     .c4 {
+      width: 100%;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -33,7 +34,6 @@ it('renders correctly', () => {
       -ms-flex-direction: column;
       flex-direction: column;
       color: #5C5C5E;
-      width: 100%;
     }
 
     .c7 {
@@ -56,7 +56,7 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       height: 48px;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
       border-color: #E1E2E3;
@@ -117,7 +117,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c9 {
+      .c8 {
         max-width: 290px;
       }
     }
