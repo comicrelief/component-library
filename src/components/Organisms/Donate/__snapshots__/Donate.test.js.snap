@@ -64,7 +64,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -740,7 +740,7 @@ exports[`Monthly donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -1383,7 +1383,7 @@ exports[`Single donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
@@ -2097,7 +2097,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #E1E2E3;
