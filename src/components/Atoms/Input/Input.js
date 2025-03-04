@@ -17,7 +17,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: ${spacing('md')} ${spacing('m')};
+  padding: 1rem 2.4rem 1rem 1.5rem;
   ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
@@ -51,6 +51,7 @@ const InputWrapper = styled.div`
       width: var(--iconSize);
       height: var(--iconSize);
       z-index: 3;
+      margin-left: 20px;
     }
   `}
 
