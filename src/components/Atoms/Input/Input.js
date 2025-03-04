@@ -50,7 +50,6 @@ const InputWrapper = styled.div`
       width: var(--iconSize);
       height: var(--iconSize);
       z-index: 3;
-      margin-left: 20px;
     }
   `}
 
