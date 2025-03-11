@@ -11,6 +11,23 @@ import zIndex from '../../../theme/shared/zIndex';
 //  the element with JS)
 const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem))`;
 
+const InputWrapper = styled.div`
+  position: relative;
+  font-size: ${({ theme }) => theme.fontSize('m')};
+`;
+
+const InputFieldContainer = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
+`;
+
 const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   position: relative;
   box-sizing: border-box;
@@ -32,30 +49,20 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
   }
-`}`;
 
-const InputWrapper = styled.div`
-  position: relative;
-  font-size: ${({ theme }) => theme.fontSize('m')};
-
-  ${({ error }) => error && css`
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 0.5rem;
-      transform: translateY(-50%);
-      background: url(${alertIcon}) center/contain no-repeat;
-      --iconSize: 19px;
-      width: var(--iconSize);
-      height: var(--iconSize);
-      z-index: 3;
-    }
-  `}
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${theme.allBreakpoints('M')} {
     max-width: 290px;
   }
+`}`;
+
+const ErrorIconWrapper = styled.div`
+  position: absolute;
+  right: 0.6rem;
+  background: url(${alertIcon}) center/contain no-repeat;
+  --iconSize: 19px;
+  width: var(--iconSize);
+  height: var(--iconSize);
+  z-index: 3;
 `;
 
 const Prefix = styled.div`
@@ -103,17 +110,20 @@ const Input = React.forwardRef(
     >
       <InputWrapper error={Boolean(errorMsg)}>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
-        <InputField
-          id={id}
-          type={type}
-          placeholder={placeholder}
-          error={!!errorMsg}
-          aria-describedby={hasAria ? id : undefined}
-          ref={ref}
-          prefixLength={prefix.length}
-          required={optional === false}
-          {...rest}
-        />
+        <InputFieldContainer>
+          <InputField
+            id={id}
+            type={type}
+            placeholder={placeholder}
+            error={Boolean(errorMsg)}
+            aria-describedby={hasAria ? id : undefined}
+            ref={ref}
+            prefixLength={prefix.length}
+            required={optional === false}
+            {...rest}
+          />
+          {errorMsg && <ErrorIconWrapper />}
+        </InputFieldContainer>
       </InputWrapper>
       {errorMsg
         && (
