@@ -42,7 +42,29 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
+    .c3 {
+      position: relative;
+      font-size: 1.25rem;
+    }
+
     .c4 {
+      position: relative;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .c5 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -62,17 +84,18 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c4:focus {
+    .c5:focus {
       border: 1px solid #666;
     }
 
-    .c3 {
-      position: relative;
-      font-size: 1.25rem;
+    @media (min-width:740px) {
+      .c4 {
+        max-width: 290px;
+      }
     }
 
     @media (min-width:740px) {
-      .c3 {
+      .c5 {
         max-width: 290px;
       }
     }
@@ -95,15 +118,20 @@ it('renders correctly', () => {
         className="c3"
       >
         
-        <input
-          aria-describedby="Accessibility info go here"
+        <div
           className="c4"
-          id="Accessibility info go here"
-          name="fullname"
-          placeholder="This is the hint text"
-          required={false}
-          type="text"
-        />
+        >
+          <input
+            aria-describedby="Accessibility info go here"
+            className="c5"
+            id="Accessibility info go here"
+            name="fullname"
+            placeholder="This is the hint text"
+            required={false}
+            type="text"
+          />
+          
+        </div>
       </div>
       
     </label>

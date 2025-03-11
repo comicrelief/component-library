@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c14 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -51,12 +51,12 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c14 > a {
+.c15 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14:hover {
+.c15:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
@@ -79,7 +79,29 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
 }
 
+.c11 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
 .c12 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -99,20 +121,15 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c12:focus {
+.c13:focus {
   border: 1px solid #666;
-}
-
-.c11 {
-  position: relative;
-  font-size: 1.25rem;
 }
 
 .c5 {
   text-align: left;
 }
 
-.c15:disabled {
+.c16:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
@@ -139,15 +156,15 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c13 {
+.c14 {
   margin-top: 1rem;
 }
 
-.c13 button {
+.c14 button {
   background-color: #E52630;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,12 +175,12 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c16 p {
+.c17 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c16 p a {
+.c17 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
@@ -204,13 +221,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c14 {
+  .c15 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c14 {
+  .c15 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -218,7 +235,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c11 {
+  .c12 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c13 {
     max-width: 290px;
   }
 }
@@ -298,18 +321,23 @@ exports[`renders correctly 1`] = `
             className="c11"
           >
             
-            <input
-              aria-describedby="first-name"
-              aria-required={true}
+            <div
               className="c12"
-              id="first-name"
-              name="firstName"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="Enter your first name"
-              required={false}
-              type="text"
-            />
+            >
+              <input
+                aria-describedby="first-name"
+                aria-required={true}
+                className="c13"
+                id="first-name"
+                name="firstName"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter your first name"
+                required={false}
+                type="text"
+              />
+              
+            </div>
           </div>
           
         </label>
@@ -331,18 +359,23 @@ exports[`renders correctly 1`] = `
             className="c11"
           >
             
-            <input
-              aria-describedby="last-name"
-              aria-required={true}
+            <div
               className="c12"
-              id="last-name"
-              name="lastName"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="Enter your last name"
-              required={false}
-              type="text"
-            />
+            >
+              <input
+                aria-describedby="last-name"
+                aria-required={true}
+                className="c13"
+                id="last-name"
+                name="lastName"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter your last name"
+                required={false}
+                type="text"
+              />
+              
+            </div>
           </div>
           
         </label>
@@ -365,26 +398,31 @@ exports[`renders correctly 1`] = `
           className="c11"
         >
           
-          <input
-            aria-describedby="email"
-            aria-required={true}
+          <div
             className="c12"
-            id="email"
-            name="email"
-            onBlur={[Function]}
-            onChange={[Function]}
-            placeholder="example@youremail.com"
-            required={false}
-            type="email"
-          />
+          >
+            <input
+              aria-describedby="email"
+              aria-required={true}
+              className="c13"
+              id="email"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="example@youremail.com"
+              required={false}
+              type="email"
+            />
+            
+          </div>
         </div>
         
       </label>
       <div
-        className="c13"
+        className="c14"
       >
         <button
-          className="c14 c15"
+          className="c15 c16"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
@@ -403,7 +441,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c16"
+      className="c17"
     >
       <span
         className="c4"
