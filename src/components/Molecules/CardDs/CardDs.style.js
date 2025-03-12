@@ -41,7 +41,7 @@ const MediaLink = styled.a`
 
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
-      width: calc(50% + 6rem);
+      width: 3rem;
     }
   `};
 
@@ -67,18 +67,18 @@ const Copy = styled.div`
   ${zIndex('low')};
 
   ${({ hasImage, isCarousel, theme }) => hasImage && css`
-    margin-top: calc(-2 * 1.5rem});
-    min-height: calc(5 * 2rem);
+    margin-top: -3rem;
+    min-height: 10rem;
 
     ${!isCarousel && css`
       @media ${theme.allBreakpoints('M')} {
         margin: 1.5rem 0 -1.5rem -1.5rem;
-        width: calc(50% + 6rem);
+        width: 3rem;
       }
     `};
 
     @media ${theme.allBreakpoints('XL')} {
-      margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+      margin: -3rem 0 -1.5rem 0;
       width: 100%;
     }
   `};
@@ -93,7 +93,7 @@ const CTA = styled.div`
 
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
-      bottom: calc(-1 * 3rem);
+      bottom: -3rem;
       ${({ hasImage }) => !hasImage && 'bottom: -1.5rem;'};
     }
   `};
