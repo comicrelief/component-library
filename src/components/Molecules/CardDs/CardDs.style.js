@@ -52,7 +52,7 @@ const MediaLink = styled.a`
 
 const Copy = styled.div`
   padding: 2rem;
-  ${({ hasLink }) => hasLink && `padding-bottom: 4rem`};
+  ${({ hasLink }) => hasLink && 'padding-bottom: 4rem'};
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -94,7 +94,7 @@ const CTA = styled.div`
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
       bottom: calc(-1 * (2rem + 1rem));
-      ${({ hasImage }) => !hasImage && `bottom: -1.5rem;`};
+      ${({ hasImage }) => !hasImage && 'bottom: -1.5rem;'};
     }
   `};
 `;
