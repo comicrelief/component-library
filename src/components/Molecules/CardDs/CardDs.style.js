@@ -52,7 +52,7 @@ const MediaLink = styled.a`
 
 const Copy = styled.div`
   padding: 2rem;
-  ${({ hasLink }) => hasLink && 'padding-bottom: 4rem'};
+  ${({ hasLink }) => hasLink && `padding-bottom: 4rem`};
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -78,7 +78,7 @@ const Copy = styled.div`
     `};
 
     @media ${theme.allBreakpoints('XL')} {
-      margin: calc(-2 * 1.5rem 0 -1.5rem 0);
+      margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
       width: 100%;
     }
   `};
@@ -93,8 +93,8 @@ const CTA = styled.div`
 
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
-      bottom: calc(-1 * (2rem + 1rem));
-      ${({ hasImage }) => !hasImage && 'bottom: -1.5rem;'};
+      bottom: calc(-1 * 3rem);
+      ${({ hasImage }) => !hasImage && `bottom: -1.5rem;`};
     }
   `};
 `;
