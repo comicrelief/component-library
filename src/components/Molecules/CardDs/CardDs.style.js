@@ -41,7 +41,7 @@ const MediaLink = styled.a`
 
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
-      width: 3rem;
+      width: calc(50% + 6rem);
     }
   `};
 
@@ -73,7 +73,7 @@ const Copy = styled.div`
     ${!isCarousel && css`
       @media ${theme.allBreakpoints('M')} {
         margin: 1.5rem 0 -1.5rem -1.5rem;
-        width: 3rem;
+        width: calc(50% + 6rem);
       }
     `};
 
