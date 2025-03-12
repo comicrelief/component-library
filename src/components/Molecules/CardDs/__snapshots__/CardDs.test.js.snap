@@ -173,7 +173,7 @@ exports[`renders Column view correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    margin: calc(-2 * 1.5rem 0 -1.5rem 0);
+    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
     width: 100%;
   }
 }
@@ -452,14 +452,14 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    margin: calc(-2 * 1.5rem 0 -1.5rem 0);
+    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
     width: 100%;
   }
 }
 
 @media (min-width:740px) {
   .c6 {
-    bottom: calc(-1 * (2rem + 1rem));
+    bottom: calc(-1 * 3rem);
   }
 }
 
