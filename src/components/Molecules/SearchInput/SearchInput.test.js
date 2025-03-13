@@ -51,7 +51,29 @@ it('renders correctly', () => {
       width: 1px;
     }
 
+    .c8 {
+      position: relative;
+      font-size: 1.25rem;
+    }
+
     .c9 {
+      position: relative;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .c10 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -71,13 +93,8 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c9:focus {
+    .c10:focus {
       border: 1px solid #666;
-    }
-
-    .c8 {
-      position: relative;
-      font-size: 1.25rem;
     }
 
     .c0 {
@@ -117,7 +134,13 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c8 {
+      .c9 {
+        max-width: 290px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c10 {
         max-width: 290px;
       }
     }
@@ -160,18 +183,23 @@ it('renders correctly', () => {
                 className="c8"
               >
                 
-                <input
-                  aria-describedby="search"
+                <div
                   className="c9"
-                  id="search"
-                  name="search"
-                  onChange={[Function]}
-                  placeholder=""
-                  required={false}
-                  role="searchbox"
-                  type="text"
-                  value=""
-                />
+                >
+                  <input
+                    aria-describedby="search"
+                    className="c10"
+                    id="search"
+                    name="search"
+                    onChange={[Function]}
+                    placeholder=""
+                    required={false}
+                    role="searchbox"
+                    type="text"
+                    value=""
+                  />
+                  
+                </div>
               </div>
               
             </label>
