@@ -48,7 +48,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c22 {
+    .c23 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -71,7 +71,7 @@ it('renders correctly', () => {
       object-fit: cover;
     }
 
-    .c14 {
+    .c15 {
       width: 100%;
       position: relative;
       display: -webkit-box;
@@ -84,17 +84,21 @@ it('renders correctly', () => {
       color: #5C5C5E;
     }
 
-    .c16 {
+    .c17 {
       margin-bottom: 0.5rem;
       font-weight: normal;
     }
 
-    .c17 {
+    .c14 {
+      width: 100%;
+    }
+
+    .c18 {
       position: relative;
       font-size: 1.25rem;
     }
 
-    .c18 {
+    .c19 {
       position: relative;
       width: 100%;
       display: -webkit-box;
@@ -111,7 +115,7 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c19 {
+    .c20 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -131,15 +135,15 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c19:focus {
+    .c20:focus {
       border: 1px solid #666;
     }
 
-    .c15 {
+    .c16 {
       display: block;
     }
 
-    .c15 input {
+    .c16 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -150,11 +154,11 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c20 {
+    .c21 {
       display: block;
     }
 
-    .c20 input {
+    .c21 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -271,7 +275,7 @@ it('renders correctly', () => {
       border-color: #E52630;
     }
 
-    .c21 {
+    .c22 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -282,11 +286,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c23 {
+    .c24 {
       margin-right: auto;
     }
 
-    .c24 {
+    .c25 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -295,7 +299,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c24 span {
+    .c25 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -307,21 +311,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c24 input {
+    .c25 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c24 input:focus {
+    .c25 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c26 {
+    .c27 {
       line-height: 1.5;
     }
 
-    .c25 {
+    .c26 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1rem;
@@ -333,20 +337,14 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c25:active,
-    .c25:focus,
-    .c25:hover {
+    .c26:active,
+    .c26:focus,
+    .c26:hover {
       background-color: #961D35;
     }
 
     @media (min-width:740px) {
-      .c18 {
-        max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c19 {
+      .c14 {
         max-width: 290px;
       }
     }
@@ -394,7 +392,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c24 {
+      .c25 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -402,7 +400,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c25 {
+      .c26 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -471,183 +469,199 @@ it('renders correctly', () => {
               <div
                 className="c13"
               >
-                <label
-                  className="c14 c15"
-                  htmlFor="mship-1--moneyBuy-box1"
+                <div
+                  className="c14"
                 >
-                  <span
-                    className="c7 c16"
-                    color="inherit"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "",
-                      }
-                    }
-                    size="s"
-                  />
-                  <div
-                    className="c17"
+                  <label
+                    className="c15 c16"
+                    htmlFor="mship-1--moneyBuy-box1"
                   >
-                    
+                    <span
+                      className="c7 c17"
+                      color="inherit"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                      size="s"
+                    />
                     <div
                       className="c18"
                     >
-                      <input
-                        aria-describedby="mship-1--moneyBuy-box1"
-                        aria-label="£5"
-                        className="c19"
-                        id="mship-1--moneyBuy-box1"
-                        name="mship-1--moneyBuy1"
-                        onClick={[Function]}
-                        placeholder=""
-                        required={false}
-                        type="button"
-                        value="£ 5"
-                      />
                       
+                      <div
+                        className="c19"
+                      >
+                        <input
+                          aria-describedby="mship-1--moneyBuy-box1"
+                          aria-label="£5"
+                          className="c20"
+                          id="mship-1--moneyBuy-box1"
+                          name="mship-1--moneyBuy1"
+                          onClick={[Function]}
+                          placeholder=""
+                          required={false}
+                          type="button"
+                          value="£ 5"
+                        />
+                        
+                      </div>
                     </div>
-                  </div>
-                  
-                </label>
-                <label
-                  className="c14 c20"
-                  htmlFor="mship-1--moneyBuy-box2"
-                >
-                  <span
-                    className="c7 c16"
-                    color="inherit"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "",
-                      }
-                    }
-                    size="s"
-                  />
-                  <div
-                    className="c17"
-                  >
                     
+                  </label>
+                </div>
+                <div
+                  className="c14"
+                >
+                  <label
+                    className="c15 c21"
+                    htmlFor="mship-1--moneyBuy-box2"
+                  >
+                    <span
+                      className="c7 c17"
+                      color="inherit"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                      size="s"
+                    />
                     <div
                       className="c18"
                     >
-                      <input
-                        aria-describedby="mship-1--moneyBuy-box2"
-                        aria-label="£10"
-                        className="c19"
-                        id="mship-1--moneyBuy-box2"
-                        name="mship-1--moneyBuy2"
-                        onClick={[Function]}
-                        placeholder=""
-                        required={false}
-                        type="button"
-                        value="£ 10"
-                      />
                       
+                      <div
+                        className="c19"
+                      >
+                        <input
+                          aria-describedby="mship-1--moneyBuy-box2"
+                          aria-label="£10"
+                          className="c20"
+                          id="mship-1--moneyBuy-box2"
+                          name="mship-1--moneyBuy2"
+                          onClick={[Function]}
+                          placeholder=""
+                          required={false}
+                          type="button"
+                          value="£ 10"
+                        />
+                        
+                      </div>
                     </div>
-                  </div>
-                  
-                </label>
-                <label
-                  className="c14 c15"
-                  htmlFor="mship-1--moneyBuy-box3"
-                >
-                  <span
-                    className="c7 c16"
-                    color="inherit"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "",
-                      }
-                    }
-                    size="s"
-                  />
-                  <div
-                    className="c17"
-                  >
                     
+                  </label>
+                </div>
+                <div
+                  className="c14"
+                >
+                  <label
+                    className="c15 c16"
+                    htmlFor="mship-1--moneyBuy-box3"
+                  >
+                    <span
+                      className="c7 c17"
+                      color="inherit"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                      size="s"
+                    />
                     <div
                       className="c18"
                     >
-                      <input
-                        aria-describedby="mship-1--moneyBuy-box3"
-                        aria-label="£20"
-                        className="c19"
-                        id="mship-1--moneyBuy-box3"
-                        name="mship-1--moneyBuy3"
-                        onClick={[Function]}
-                        placeholder=""
-                        required={false}
-                        type="button"
-                        value="£ 20"
-                      />
                       
+                      <div
+                        className="c19"
+                      >
+                        <input
+                          aria-describedby="mship-1--moneyBuy-box3"
+                          aria-label="£20"
+                          className="c20"
+                          id="mship-1--moneyBuy-box3"
+                          name="mship-1--moneyBuy3"
+                          onClick={[Function]}
+                          placeholder=""
+                          required={false}
+                          type="button"
+                          value="£ 20"
+                        />
+                        
+                      </div>
                     </div>
-                  </div>
-                  
-                </label>
+                    
+                  </label>
+                </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <span
-                  className="c22 c23"
+                  className="c23 c24"
                   color="inherit"
                   size="s"
                 >
                   Other amount
                 </span>
-                <label
-                  className="c14 c24"
-                  htmlFor="mship-1--MoneyBuy-userInput"
+                <div
+                  className="c14"
                 >
-                  <span
-                    className="c7 c16"
-                    color="inherit"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "£",
-                      }
-                    }
-                    size="s"
-                  />
-                  <div
-                    className="c17"
+                  <label
+                    className="c15 c25"
+                    htmlFor="mship-1--MoneyBuy-userInput"
                   >
-                    
+                    <span
+                      className="c7 c17"
+                      color="inherit"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "£",
+                        }
+                      }
+                      size="s"
+                    />
                     <div
                       className="c18"
                     >
-                      <input
-                        aria-describedby="mship-1--MoneyBuy-userInput"
-                        aria-label="Input a different amount"
-                        className="c19"
-                        id="mship-1--MoneyBuy-userInput"
-                        max="25000"
-                        min="1"
-                        name="membership_amount"
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
-                        pattern="[^[0-9]+([,.][0-9]+)?$]"
-                        placeholder="0.00"
-                        required={false}
-                        step="0.01"
-                        type="number"
-                        value=""
-                      />
                       
+                      <div
+                        className="c19"
+                      >
+                        <input
+                          aria-describedby="mship-1--MoneyBuy-userInput"
+                          aria-label="Input a different amount"
+                          className="c20"
+                          id="mship-1--MoneyBuy-userInput"
+                          max="25000"
+                          min="1"
+                          name="membership_amount"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          pattern="[^[0-9]+([,.][0-9]+)?$]"
+                          placeholder="0.00"
+                          required={false}
+                          step="0.01"
+                          type="number"
+                          value=""
+                        />
+                        
+                      </div>
                     </div>
-                  </div>
-                  
-                </label>
+                    
+                  </label>
+                </div>
               </div>
               <input
-                className="c25"
+                className="c26"
                 type="submit"
                 value="Donate"
               />
               <p
-                className="c26"
+                className="c27"
               />
             </fieldset>
           </form>

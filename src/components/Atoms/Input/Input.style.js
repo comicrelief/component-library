@@ -82,5 +82,5 @@ export {
   InputFieldContainer,
   InputField,
   ErrorIconWrapper,
-  Prefix,
+  Prefix
 };

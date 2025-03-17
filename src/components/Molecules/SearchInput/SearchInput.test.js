@@ -15,7 +15,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c6 {
+    .c7 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -23,7 +23,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c4 {
+    .c5 {
       width: 100%;
       position: relative;
       display: -webkit-box;
@@ -36,7 +36,7 @@ it('renders correctly', () => {
       color: #5C5C5E;
     }
 
-    .c7 {
+    .c8 {
       border: 0;
       -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
@@ -51,12 +51,16 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c8 {
+    .c4 {
+      width: 100%;
+    }
+
+    .c9 {
       position: relative;
       font-size: 1.25rem;
     }
 
-    .c9 {
+    .c10 {
       position: relative;
       width: 100%;
       display: -webkit-box;
@@ -73,7 +77,7 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c10 {
+    .c11 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -93,7 +97,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c10:focus {
+    .c11:focus {
       border: 1px solid #666;
     }
 
@@ -120,7 +124,7 @@ it('renders correctly', () => {
       padding: 0 0.5rem;
     }
 
-    .c5 input {
+    .c6 input {
       padding: 13px 0;
       margin: 0;
       max-width: 100%;
@@ -129,24 +133,18 @@ it('renders correctly', () => {
       background: none;
     }
 
-    .c5 input:focus {
+    .c6 input:focus {
       border: 0;
     }
 
     @media (min-width:740px) {
-      .c9 {
+      .c4 {
         max-width: 290px;
       }
     }
 
     @media (min-width:740px) {
-      .c10 {
-        max-width: 290px;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c5 input {
+      .c6 input {
         height: 100px;
         font-size: 3rem;
       }
@@ -165,44 +163,48 @@ it('renders correctly', () => {
           <div
             className="c3"
           >
-            <label
-              className="c4 c5"
-              htmlFor="search"
+            <div
+              className="c4"
             >
-              <span
-                className="c6 c7"
-                color="inherit"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "Search",
-                  }
-                }
-                size="s"
-              />
-              <div
-                className="c8"
+              <label
+                className="c5 c6"
+                htmlFor="search"
               >
-                
+                <span
+                  className="c7 c8"
+                  color="inherit"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Search",
+                    }
+                  }
+                  size="s"
+                />
                 <div
                   className="c9"
                 >
-                  <input
-                    aria-describedby="search"
-                    className="c10"
-                    id="search"
-                    name="search"
-                    onChange={[Function]}
-                    placeholder=""
-                    required={false}
-                    role="searchbox"
-                    type="text"
-                    value=""
-                  />
                   
+                  <div
+                    className="c10"
+                  >
+                    <input
+                      aria-describedby="search"
+                      className="c11"
+                      id="search"
+                      name="search"
+                      onChange={[Function]}
+                      placeholder=""
+                      required={false}
+                      role="searchbox"
+                      type="text"
+                      value=""
+                    />
+                    
+                  </div>
                 </div>
-              </div>
-              
-            </label>
+                
+              </label>
+            </div>
           </div>
         </div>
       </div>
