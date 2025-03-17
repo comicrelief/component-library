@@ -1,38 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import Text from '../Text/Text';
-import hideVisually from '../../../theme/shared/hideVisually';
-
-const LabelElement = styled.label`
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('red') : theme.color('grey_label'))};
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 290px;
-  }
-
-  ${({ optional, theme }) => optional === true && `
-  :after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: 'Optional';
-    font-family: ${theme.fontFamilies(theme.font.regular)};
-    font-size: ${theme.fontSize('s')};
-  }`}
-`;
-
-const VisibleText = styled(Text)`
-  margin-bottom: 0.5rem;
-  font-weight: normal;
-`;
-
-const HiddenText = styled(Text)`${hideVisually}`;
+import {
+  LabelElement,
+  VisibleText,
+  HiddenText
+} from './Label.style';
 
 // eslint-disable-next-line react/prop-types
 const LabelText = ({

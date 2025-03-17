@@ -1,5 +1,7 @@
 ```js
-<Label label="Wrapping a basic text input">
+<Label
+  label="Wrapping a basic text input"
+>
   <input type="text" name="field-wrapper-test" style={{maxWidth: '300px'}} />
 </Label>
 ```
@@ -15,7 +17,10 @@ const StyledInput = styled.input`
   border-width: 1px;
 `;
 
-<Label label="Wrapping a styled input" optional>
+<Label
+  label="Wrapping a styled input"
+  optional
+>
   <StyledInput type="text" name="field-wrapper-test-1" />
 </Label>
 ```
