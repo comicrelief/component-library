@@ -56,6 +56,12 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c0 {
+    max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
   .c3 {
     max-width: 290px;
   }

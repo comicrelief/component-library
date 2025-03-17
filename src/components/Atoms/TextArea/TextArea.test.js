@@ -81,6 +81,12 @@ it('renders correctly', () => {
       visibility: hidden;
     }
 
+    @media (min-width:740px) {
+      .c0 {
+        max-width: 290px;
+      }
+    }
+
     <label
       className="c0"
       htmlFor="Please leave your comment here"
