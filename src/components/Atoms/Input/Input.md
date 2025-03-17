@@ -7,6 +7,7 @@
     label="Label"
     id="input-example-1"
     showLabel={true}
+    optional
   />
 ```
 

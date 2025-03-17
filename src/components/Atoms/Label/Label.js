@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
-import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
 const LabelElement = styled.label`
@@ -12,6 +11,10 @@ const LabelElement = styled.label`
   display: flex;
   flex-direction: column;
   color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('red') : theme.color('grey_label'))};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
 
   ${({ optional, theme }) => optional === true && `
   :after {
@@ -25,7 +28,7 @@ const LabelElement = styled.label`
 `;
 
 const VisibleText = styled(Text)`
-  margin-bottom: ${spacing('sm')};
+  margin-bottom: 0.5rem;
   font-weight: normal;
 `;
 

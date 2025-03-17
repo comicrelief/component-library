@@ -15,7 +15,7 @@ const StyledInput = styled.input`
   border-width: 1px;
 `;
 
-<Label label="Wrapping a styled input">
+<Label label="Wrapping a styled input" optional>
   <StyledInput type="text" name="field-wrapper-test-1" />
 </Label>
 ```
