@@ -7,6 +7,13 @@ import zIndex from '../../../theme/shared/zIndex';
 
 const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem))`;
 
+const Container = styled.div`
+  width: 100%;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 290px;
+  }
+`;
+
 const InputWrapper = styled.div`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize('m')};
@@ -18,10 +25,6 @@ const InputFieldContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 290px;
-  }
 `;
 
 const InputField = styled.input`${({ theme, error, prefixLength }) => css`
@@ -44,10 +47,6 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
 
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
-  }
-
-  @media ${theme.allBreakpoints('M')} {
-    max-width: 290px;
   }
 `}`;
 
@@ -78,9 +77,10 @@ const Prefix = styled.div`
 `;
 
 export {
+  Container,
   InputWrapper,
   InputFieldContainer,
   InputField,
   ErrorIconWrapper,
-  Prefix
+  Prefix,
 };

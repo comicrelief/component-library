@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 import {
+  Container,
   InputWrapper,
   InputFieldContainer,
   InputField,
@@ -29,43 +30,45 @@ const Input = React.forwardRef(
     },
     ref
   ) => (
-    <Label
-      className={className}
-      htmlFor={id}
-      label={label}
-      hideLabel={!showLabel}
-      errorMsg={errorMsg}
-      optional={optional}
-      {...labelProps}
-    >
-      <InputWrapper error={Boolean(errorMsg)}>
-        {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
-        <InputFieldContainer>
-          <InputField
-            id={id}
-            type={type}
-            placeholder={placeholder}
-            error={Boolean(errorMsg)}
-            aria-describedby={hasAria ? id : undefined}
-            ref={ref}
-            prefixLength={prefix.length}
-            required={optional === false}
-            {...rest}
-          />
-          {errorMsg && <ErrorIconWrapper />}
-        </InputFieldContainer>
-      </InputWrapper>
-      {errorMsg
-        && (
-        <ErrorText
-          size="sm"
-          weight="bold"
-          data-test="error-message"
-        >
-          {errorMsg}
-        </ErrorText>
-        )}
-    </Label>
+    <Container>
+      <Label
+        className={className}
+        htmlFor={id}
+        label={label}
+        hideLabel={!showLabel}
+        errorMsg={errorMsg}
+        optional={optional}
+        {...labelProps}
+      >
+        <InputWrapper error={Boolean(errorMsg)}>
+          {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
+          <InputFieldContainer>
+            <InputField
+              id={id}
+              type={type}
+              placeholder={placeholder}
+              error={Boolean(errorMsg)}
+              aria-describedby={hasAria ? id : undefined}
+              ref={ref}
+              prefixLength={prefix.length}
+              required={optional === false}
+              {...rest}
+            />
+            {errorMsg && <ErrorIconWrapper />}
+          </InputFieldContainer>
+        </InputWrapper>
+        {errorMsg
+          && (
+          <ErrorText
+            size="sm"
+            weight="bold"
+            data-test="error-message"
+          >
+            {errorMsg}
+          </ErrorText>
+          )}
+      </Label>
+    </Container>
   )
 );
 
