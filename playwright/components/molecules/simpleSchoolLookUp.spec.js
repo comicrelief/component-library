@@ -21,7 +21,7 @@ test.describe('simple school lookup component', () => {
     await page.locator('input#school_lookup').type('St Paul');
     await expect(page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]')).toBeVisible();
     await page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]').click();
-    await expect(page.locator('label[for="school_lookup"] ~ div > ul[role="listbox"]')).toBeVisible();
+    await expect(page.locator('ul[role="listbox"]')).toBeVisible();
 
     // clear school name and enter school postcode
     await page.locator('input#school_lookup').fill('');
@@ -29,7 +29,7 @@ test.describe('simple school lookup component', () => {
     await expect(page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]')).toBeVisible();
     await page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]').click();
 
-    await expect(page.locator('label[for="school_lookup"] ~ div > ul[role="listbox"]')).toBeVisible();
+    await expect(page.locator('ul[role="listbox"]')).toBeVisible();
     await page.close();
   });
 });

@@ -18,8 +18,8 @@ test.describe('school lookup component', () => {
     expect(placeholderAttribute).toBe('Type to start search');
 
     await page.locator('#school-lookup').type('St Paul');
-    await expect(page.locator('label[for="school-lookup"] ~ div > ul[role="listbox"]')).toBeVisible();
-    await page.locator('label[for="school-lookup"] ~ div > ul[role="listbox"] > li[id="option-6"]').click();
+    await expect(page.locator('ul[role="listbox"]')).toBeVisible();
+    await page.locator('ul[role="listbox"] > li[id="option-6"]').click();
 
     await page.close();
   });
