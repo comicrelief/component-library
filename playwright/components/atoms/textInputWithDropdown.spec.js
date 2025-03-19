@@ -14,9 +14,9 @@ test.describe('Text Input With Dropdown Component', () => {
     await page.locator('label[for="input-with-dropdown"]').type('test');
 
     // ensure select dropdown values are visible
-    await expect(page.locator('label[for="input-with-dropdown"] ~ div > ul[role="listbox"]')).toBeVisible();
+    await expect(page.locator('ul[role="listbox"]')).toBeVisible();
 
-    await page.locator('label[for="input-with-dropdown"] ~ div > ul[role="listbox"] > li[id="option-1"]').click();
+    await page.locator('ul[role="listbox"] > li[id="option-1"]').click();
 
     await page.close();
   });

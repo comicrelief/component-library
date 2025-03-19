@@ -16,7 +16,7 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c1 {
+    .c2 {
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
@@ -24,7 +24,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c0 {
+    .c1 {
       width: 100%;
       position: relative;
       display: -webkit-box;
@@ -37,17 +37,21 @@ it('renders correctly', () => {
       color: #5C5C5E;
     }
 
-    .c2 {
+    .c3 {
       margin-bottom: 0.5rem;
       font-weight: normal;
     }
 
-    .c3 {
+    .c0 {
+      width: 100%;
+    }
+
+    .c4 {
       position: relative;
       font-size: 1.25rem;
     }
 
-    .c4 {
+    .c5 {
       position: relative;
       width: 100%;
       display: -webkit-box;
@@ -64,7 +68,7 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c5 {
+    .c6 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -84,56 +88,54 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c5:focus {
+    .c6:focus {
       border: 1px solid #666;
     }
 
     @media (min-width:740px) {
-      .c4 {
+      .c0 {
         max-width: 290px;
       }
     }
 
-    @media (min-width:740px) {
-      .c5 {
-        max-width: 290px;
-      }
-    }
-
-    <label
+    <div
       className="c0"
-      htmlFor="Accessibility info go here"
     >
-      <span
-        className="c1 c2"
-        color="inherit"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "Label",
-          }
-        }
-        size="s"
-      />
-      <div
-        className="c3"
+      <label
+        className="c1"
+        htmlFor="Accessibility info go here"
       >
-        
+        <span
+          className="c2 c3"
+          color="inherit"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Label",
+            }
+          }
+          size="s"
+        />
         <div
           className="c4"
         >
-          <input
-            aria-describedby="Accessibility info go here"
-            className="c5"
-            id="Accessibility info go here"
-            name="fullname"
-            placeholder="This is the hint text"
-            required={false}
-            type="text"
-          />
           
+          <div
+            className="c5"
+          >
+            <input
+              aria-describedby="Accessibility info go here"
+              className="c6"
+              id="Accessibility info go here"
+              name="fullname"
+              placeholder="This is the hint text"
+              required={false}
+              type="text"
+            />
+            
+          </div>
         </div>
-      </div>
-      
-    </label>
+        
+      </label>
+    </div>
   `);
 });

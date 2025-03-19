@@ -19,8 +19,8 @@ test.describe('typeahead component', () => {
 
     // type a word and typeahead should give options
     await page.locator('input#typeahead-test').type('red nos');
-    await expect(page.locator('label[for="typeahead-test"] ~ div > ul[role="listbox"]')).toBeVisible();
-    await expect(page.locator('label[for="typeahead-test"] ~ div > ul[role="listbox"] > li[id="option-0"]')).toContainText('red nose');
+    await expect(page.locator('ul[role="listbox"]')).toBeVisible();
+    await expect(page.locator('ul[role="listbox"] > li[id="option-0"]')).toContainText('red nose');
 
     await page.close();
   });

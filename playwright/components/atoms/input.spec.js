@@ -41,7 +41,7 @@ test.describe('input component', () => {
     await page.locator('#input-example-2').type('This is test input text');
 
     // error message should be visible
-    await expect(page.locator('[data-preview="Input"] > div > label > span[data-test="error-message"]')).toBeVisible();
+    await expect(page.locator('[data-preview="Input"] > div > div > label > span[data-test="error-message"]')).toBeVisible();
 
     await page.close();
   });

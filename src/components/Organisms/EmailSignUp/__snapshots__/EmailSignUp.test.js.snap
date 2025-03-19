@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c15 {
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -51,17 +51,17 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c15 > a {
+.c16 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c15:hover {
+.c16:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -74,17 +74,21 @@ exports[`renders correctly 1`] = `
   color: #5C5C5E;
 }
 
-.c10 {
+.c11 {
   margin-bottom: 0.5rem;
   font-weight: normal;
 }
 
-.c11 {
+.c8 {
+  width: 100%;
+}
+
+.c12 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -101,7 +105,7 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c13 {
+.c14 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -121,7 +125,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c13:focus {
+.c14:focus {
   border: 1px solid #666;
 }
 
@@ -129,7 +133,7 @@ exports[`renders correctly 1`] = `
   text-align: left;
 }
 
-.c16:disabled {
+.c17:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
@@ -156,15 +160,15 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 1rem;
 }
 
-.c14 button {
+.c15 button {
   background-color: #E52630;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,12 +179,12 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c17 p {
+.c18 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c17 p a {
+.c18 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
@@ -207,12 +211,12 @@ exports[`renders correctly 1`] = `
   gap: 0;
 }
 
-.c9 {
+.c10 {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.c9 > span:first-child {
+.c10 > span:first-child {
   color: #FFFFFF;
 }
 
@@ -221,13 +225,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c16 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c15 {
+  .c16 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -235,13 +239,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
-    max-width: 290px;
-  }
-}
-
-@media (min-width:740px) {
-  .c13 {
+  .c8 {
     max-width: 290px;
   }
 }
@@ -260,7 +258,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c9 {
+  .c10 {
     max-width: 290px;
   }
 }
@@ -303,76 +301,126 @@ exports[`renders correctly 1`] = `
       <div
         className="c7"
       >
-        <label
-          className="c8 c9"
-          htmlFor="first-name"
+        <div
+          className="c8"
         >
-          <span
-            className="c4 c10"
-            color="inherit"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "First Name",
-              }
-            }
-            size="s"
-          />
-          <div
-            className="c11"
+          <label
+            className="c9 c10"
+            htmlFor="first-name"
           >
-            
+            <span
+              className="c4 c11"
+              color="inherit"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "First Name",
+                }
+              }
+              size="s"
+            />
             <div
               className="c12"
             >
-              <input
-                aria-describedby="first-name"
-                aria-required={true}
-                className="c13"
-                id="first-name"
-                name="firstName"
-                onBlur={[Function]}
-                onChange={[Function]}
-                placeholder="Enter your first name"
-                required={false}
-                type="text"
-              />
               
+              <div
+                className="c13"
+              >
+                <input
+                  aria-describedby="first-name"
+                  aria-required={true}
+                  className="c14"
+                  id="first-name"
+                  name="firstName"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Enter your first name"
+                  required={false}
+                  type="text"
+                />
+                
+              </div>
             </div>
-          </div>
-          
-        </label>
+            
+          </label>
+        </div>
+        <div
+          className="c8"
+        >
+          <label
+            className="c9 c10"
+            htmlFor="last-name"
+          >
+            <span
+              className="c4 c11"
+              color="inherit"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Last Name",
+                }
+              }
+              size="s"
+            />
+            <div
+              className="c12"
+            >
+              
+              <div
+                className="c13"
+              >
+                <input
+                  aria-describedby="last-name"
+                  aria-required={true}
+                  className="c14"
+                  id="last-name"
+                  name="lastName"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Enter your last name"
+                  required={false}
+                  type="text"
+                />
+                
+              </div>
+            </div>
+            
+          </label>
+        </div>
+      </div>
+      <div
+        className="c8"
+      >
         <label
-          className="c8 c9"
-          htmlFor="last-name"
+          className="c9 c10"
+          htmlFor="email"
         >
           <span
-            className="c4 c10"
+            className="c4 c11"
             color="inherit"
             dangerouslySetInnerHTML={
               Object {
-                "__html": "Last Name",
+                "__html": "Email Address",
               }
             }
             size="s"
           />
           <div
-            className="c11"
+            className="c12"
           >
             
             <div
-              className="c12"
+              className="c13"
             >
               <input
-                aria-describedby="last-name"
+                aria-describedby="email"
                 aria-required={true}
-                className="c13"
-                id="last-name"
-                name="lastName"
+                className="c14"
+                id="email"
+                name="email"
                 onBlur={[Function]}
                 onChange={[Function]}
-                placeholder="Enter your last name"
+                placeholder="example@youremail.com"
                 required={false}
-                type="text"
+                type="email"
               />
               
             </div>
@@ -380,49 +428,11 @@ exports[`renders correctly 1`] = `
           
         </label>
       </div>
-      <label
-        className="c8 c9"
-        htmlFor="email"
-      >
-        <span
-          className="c4 c10"
-          color="inherit"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Email Address",
-            }
-          }
-          size="s"
-        />
-        <div
-          className="c11"
-        >
-          
-          <div
-            className="c12"
-          >
-            <input
-              aria-describedby="email"
-              aria-required={true}
-              className="c13"
-              id="email"
-              name="email"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="example@youremail.com"
-              required={false}
-              type="email"
-            />
-            
-          </div>
-        </div>
-        
-      </label>
       <div
-        className="c14"
+        className="c15"
       >
         <button
-          className="c15 c16"
+          className="c16 c17"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
@@ -441,7 +451,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c17"
+      className="c18"
     >
       <span
         className="c4"
