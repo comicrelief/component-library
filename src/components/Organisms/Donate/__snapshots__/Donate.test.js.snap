@@ -432,15 +432,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width:740px) {
-  .c23 {
-    max-width: 290px;
-  }
+
 }
 
-@media (min-width:740px) {
-  .c24 {
-    max-width: 290px;
-  }
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:1024px) {
@@ -1101,15 +1097,11 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c24 {
-    max-width: 290px;
-  }
+
 }
 
-@media (min-width:740px) {
-  .c25 {
-    max-width: 290px;
-  }
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:1024px) {
@@ -1758,15 +1750,11 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
-    max-width: 290px;
-  }
+
 }
 
-@media (min-width:740px) {
-  .c18 {
-    max-width: 290px;
-  }
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:740px) {
@@ -2425,15 +2413,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
-    max-width: 290px;
-  }
+
 }
 
-@media (min-width:740px) {
-  .c18 {
-    max-width: 290px;
-  }
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:1024px) {

@@ -89,15 +89,11 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c4 {
-        max-width: 290px;
-      }
+
     }
 
-    @media (min-width:740px) {
-      .c5 {
-        max-width: 290px;
-      }
+    @media (min-width:1024px) {
+
     }
 
     <label
@@ -117,7 +113,7 @@ it('renders correctly', () => {
       <div
         className="c3"
       >
-
+        
         <div
           className="c4"
         >
@@ -130,10 +126,10 @@ it('renders correctly', () => {
             required={false}
             type="text"
           />
-
+          
         </div>
       </div>
-
+      
     </label>
   `);
 });
@@ -236,18 +232,6 @@ it('renders with responsive max widths correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c5 {
-        max-width: 20rem;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c5 {
-        max-width: 30rem;
-      }
-    }
-
     <label
       className="c0"
       htmlFor="input-example-7"
@@ -265,7 +249,7 @@ it('renders with responsive max widths correctly', () => {
       <div
         className="c3"
       >
-
+        
         <div
           className="c4"
         >
@@ -278,10 +262,10 @@ it('renders with responsive max widths correctly', () => {
             required={false}
             type="text"
           />
-
+          
         </div>
       </div>
-
+      
     </label>
   `);
 });
