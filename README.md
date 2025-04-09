@@ -46,7 +46,7 @@ _Test will run through all Jest tests and watch for any changes on snapshots._
 
 To update snapshots with desired changes brought in through your work:
 ```
-$ yarn test:unit-update
+$ yarn test:unit:update
 ```
 
 To publish
