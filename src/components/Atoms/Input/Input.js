@@ -22,12 +22,12 @@ const InputFieldContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  ${({ maxRemWidthMediumBreakpoint, maxRemWidthLargeBreakpoint, theme }) => css`
+  ${({ maxPxWidthMediumBreakpoint, maxPxWidthLargeBreakpoint, theme }) => css`
     @media ${theme.allBreakpoints('M')} {
-      ${maxRemWidthMediumBreakpoint && `max-width: ${maxRemWidthMediumBreakpoint}rem;`}
+      ${maxPxWidthMediumBreakpoint && `max-width: ${maxPxWidthMediumBreakpoint}px;`}
     }
     @media ${theme.allBreakpoints('L')} {
-      ${maxRemWidthLargeBreakpoint && `max-width: ${maxRemWidthLargeBreakpoint}rem;`}
+      ${maxPxWidthLargeBreakpoint && `max-width: ${maxPxWidthLargeBreakpoint}px;`}
     }
   `}
 `;
@@ -95,8 +95,8 @@ const Input = React.forwardRef(
       labelProps = {},
       prefix = '',
       optional = null,
-      maxRemWidthMediumBreakpoint,
-      maxRemWidthLargeBreakpoint,
+      maxPxWidthMediumBreakpoint,
+      maxPxWidthLargeBreakpoint,
       ...rest
     },
     ref
@@ -113,8 +113,8 @@ const Input = React.forwardRef(
       <InputWrapper error={Boolean(errorMsg)}>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputFieldContainer
-          maxRemWidthMediumBreakpoint={maxRemWidthMediumBreakpoint}
-          maxRemWidthLargeBreakpoint={maxRemWidthLargeBreakpoint}
+          maxPxWidthMediumBreakpoint={maxPxWidthMediumBreakpoint}
+          maxPxWidthLargeBreakpoint={maxPxWidthLargeBreakpoint}
         >
           <InputField
             id={id}
@@ -166,8 +166,8 @@ Input.propTypes = {
   className: PropTypes.string,
   prefix: PropTypes.string,
   optional: PropTypes.bool,
-  maxRemWidthMediumBreakpoint: PropTypes.number,
-  maxRemWidthLargeBreakpoint: PropTypes.number
+  maxPxWidthMediumBreakpoint: PropTypes.number,
+  maxPxWidthLargeBreakpoint: PropTypes.number
 };
 
 export default Input;

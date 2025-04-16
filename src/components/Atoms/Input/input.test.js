@@ -142,8 +142,8 @@ it('renders with responsive max widths correctly', () => {
       type="text"
       label="Responsive Width Input"
       id="input-example-7"
-      maxRemWidthMediumBreakpoint={20}
-      maxRemWidthLargeBreakpoint={30}
+      maxPxWidthMediumBreakpoint={150}
+      maxPxWidthLargeBreakpoint={250}
     />
   ).toJSON();
 
@@ -222,13 +222,13 @@ it('renders with responsive max widths correctly', () => {
 
     @media (min-width:740px) {
       .c4 {
-        max-width: 20rem;
+        max-width: 150px;
       }
     }
 
     @media (min-width:1024px) {
       .c4 {
-        max-width: 30rem;
+        max-width: 250px;
       }
     }
 

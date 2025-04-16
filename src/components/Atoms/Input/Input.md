@@ -111,11 +111,11 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
   <h4>Input with responsive max width</h4>
   <Input
     name="responsive-width"
-    placeholder="I have responsive max widths"
+    placeholder="I'm responsive"
     type="text"
     label="Responsive Width Input at M and L breakpoints"
     id="input-example-7"
-    maxRemWidthMediumBreakpoint={20}
-    maxRemWidthLargeBreakpoint={30}
+    maxPxWidthMediumBreakpoint={150}
+    maxPxWidthLargeBreakpoint={250}
   />
 ```
