@@ -78,15 +78,11 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c5 {
-    max-width: 290px;
-  }
+
 }
 
-@media (min-width:740px) {
-  .c6 {
-    max-width: 290px;
-  }
+@media (min-width:1024px) {
+
 }
 
 <div

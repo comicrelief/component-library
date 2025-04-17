@@ -134,15 +134,11 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c9 {
-        max-width: 290px;
-      }
+
     }
 
-    @media (min-width:740px) {
-      .c10 {
-        max-width: 290px;
-      }
+    @media (min-width:1024px) {
+
     }
 
     @media (min-width:740px) {
