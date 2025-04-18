@@ -340,15 +340,11 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c18 {
-        max-width: 290px;
-      }
+
     }
 
-    @media (min-width:740px) {
-      .c19 {
-        max-width: 290px;
-      }
+    @media (min-width:1024px) {
+
     }
 
     @media (min-width:1024px) {
