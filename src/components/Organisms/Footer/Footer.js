@@ -23,7 +23,7 @@ const Footer = ({
 
   return (
     <div>
-      <FooterWrapper overrideallowList={overrideallowList} navItems {...rest}>
+      <FooterWrapper navItems {...rest}>
         <InnerWrapper>
           {additionalLegalLine
             && <FooterLegalLine tag="p" color="grey">{additionalLegalLine}</FooterLegalLine>
@@ -36,7 +36,7 @@ const Footer = ({
               <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
-          <FooterNav navItems={navItems} {...rest} />
+          <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />
           <FooterCopyright>
             <Text tag="p" color="grey">
               {footerCopy}
