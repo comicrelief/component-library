@@ -84,6 +84,20 @@ const Brand = styled(Link)`
 
 const SocialIconWrapper = styled.div``;
 
+const FooterLogoWrapper = styled.div`
+  a {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+`;
+
 export {
   FooterWrapper,
   Angle,
@@ -92,5 +106,6 @@ export {
   FooterCopyright,
   FooterBranding,
   SocialIconWrapper,
-  Brand
+  Brand,
+  FooterLogoWrapper
 };

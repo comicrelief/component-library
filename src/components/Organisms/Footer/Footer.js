@@ -12,7 +12,8 @@ import {
   FooterBranding,
   FooterCopyright,
   SocialIconWrapper,
-  Brand
+  Brand,
+  FooterLogoWrapper
 } from './Footer.style';
 
 const Footer = ({
@@ -32,9 +33,15 @@ const Footer = ({
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
             </SocialIconWrapper>
-            <Brand href="/" title={`Go to ${campaign} homepage`}>
-              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-            </Brand>
+            <FooterLogoWrapper>
+              <Brand href="/" title={`Go to ${campaign} homepage`}>
+                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+              </Brand>
+              {/* FR logo to go here */}
+              <Brand href="/" title={`Go to ${campaign} homepage`}>
+                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+              </Brand>
+            </FooterLogoWrapper>
           </FooterBranding>
           <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />
           <FooterCopyright>
