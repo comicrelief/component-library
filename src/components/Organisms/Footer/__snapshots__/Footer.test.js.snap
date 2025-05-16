@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c26 {
+.c27 {
   color: #969598;
   font-size: 1rem;
   line-height: 1rem;
@@ -315,15 +315,15 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c25 {
+.c26 {
   display: block;
   width: 100%;
   height: 100%;
   text-align: left;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
-.c25 p {
+.c26 p {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 5px;
@@ -340,6 +340,7 @@ exports[`renders correctly 1`] = `
 
 .c7 a {
   display: inline-block;
+  line-height: 1.5rem;
 }
 
 .c7 a:first-child {
@@ -347,7 +348,14 @@ exports[`renders correctly 1`] = `
 }
 
 .c7 a img {
+  display: block;
   margin: 0;
+}
+
+.c25 {
+  width: 75%;
+  max-width: 300px;
+  margin: 3rem auto 0;
 }
 
 @media (min-width:1150px) {
@@ -542,9 +550,15 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c25 p {
+  .c26 p {
     font-size: 16px;
     line-height: 27px;
+  }
+}
+
+@media (min-width:740px) {
+  .c25 {
+    margin: 2.5rem auto 0;
   }
 }
 
@@ -643,25 +657,6 @@ exports[`renders correctly 1`] = `
         <div
           className="c7"
         >
-          <a
-            className="c8 c9"
-            color="red"
-            href="/"
-            target="_self"
-            title="Go to Comic Relief homepage"
-            type="standard"
-          >
-            <div
-              className="c10"
-              rotate={0}
-            >
-              <img
-                alt="Comic Relief logo"
-                className="c11"
-                src="mock.asset"
-              />
-            </div>
-          </a>
           <a
             className="c8 c9"
             color="red"
@@ -1243,8 +1238,32 @@ exports[`renders correctly 1`] = `
       <div
         className="c25"
       >
+        <a
+          className="fr-digital-badge"
+          href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF"
+          rel="noreferrer"
+          style={
+            Object {
+              "height": "auto",
+              "textDecoration": "none",
+              "width": "150px",
+            }
+          }
+          target="_blank"
+        >
+          <img
+            alt="Fundraising Regulator badge with validation link"
+            loading="lazy"
+            src="https://www.fundraisingregulator.org.uk/fr-badge/80983ed7-ea80-40db-8e52-4a3351d9e77d/en/white"
+            width="100%"
+          />
+        </a>
+      </div>
+      <div
+        className="c26"
+      >
         <p
-          className="c26"
+          className="c27"
           color="grey"
           size="s"
         >
