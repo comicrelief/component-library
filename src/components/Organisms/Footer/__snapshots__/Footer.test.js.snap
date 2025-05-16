@@ -239,8 +239,8 @@ exports[`renders correctly 1`] = `
 .c14 {
   background-color: inherit;
   list-style: none outside;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 4rem;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .c15 {
@@ -320,7 +320,7 @@ exports[`renders correctly 1`] = `
   width: 100%;
   height: 100%;
   text-align: left;
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .c26 p {
@@ -354,8 +354,8 @@ exports[`renders correctly 1`] = `
 
 .c25 {
   width: 75%;
-  max-width: 300px;
-  margin: 3rem auto 0;
+  max-width: 250px;
+  margin: 3rem 0 2rem;
 }
 
 @media (min-width:1150px) {
@@ -558,7 +558,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c25 {
-    margin: 2.5rem auto 0;
+    margin: 3rem 0 2rem;
   }
 }
 

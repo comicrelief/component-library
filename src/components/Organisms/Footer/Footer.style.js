@@ -60,7 +60,7 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
-  margin-top: ${spacing('m')};
+  margin-top: 0;
 
   p {
     font-size: 15px;
@@ -103,11 +103,11 @@ const FooterLogoWrapper = styled.div`
 const FundraisingRegulatorLogo = styled.div`
   // Overriding the baked-in styles for ease of update
   width: 75%;
-  max-width: 300px;
-  margin: ${spacing('lg')} auto 0;
+  max-width: 250px;
+  margin: ${spacing('lg')} 0 ${spacing('l')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    margin: 2.5rem auto 0;
+    margin: ${spacing('lg')} 0 ${spacing('l')};
   }
 `;
 
