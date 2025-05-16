@@ -13,7 +13,8 @@ import {
   FooterCopyright,
   SocialIconWrapper,
   Brand,
-  FooterLogoWrapper
+  FooterLogoWrapper,
+  FundraisingRegulatorLogo
 } from './Footer.style';
 
 const Footer = ({
@@ -37,19 +38,23 @@ const Footer = ({
               <Brand href="/" title={`Go to ${campaign} homepage`}>
                 <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
               </Brand>
-              {/* FR logo to go here */}
-              <Brand href="/" title={`Go to ${campaign} homepage`}>
-                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-              </Brand>
             </FooterLogoWrapper>
           </FooterBranding>
           <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />
+
+          <FundraisingRegulatorLogo>
+            <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank" rel="noreferrer">
+              <img src="https://www.fundraisingregulator.org.uk/fr-badge/80983ed7-ea80-40db-8e52-4a3351d9e77d/en/white" width="100%" alt="Fundraising Regulator badge with validation link" loading="lazy" />
+            </a>
+          </FundraisingRegulatorLogo>
+
           <FooterCopyright>
             <Text tag="p" color="grey">
               {footerCopy}
             </Text>
           </FooterCopyright>
         </InnerWrapper>
+
       </FooterWrapper>
     </div>
   );

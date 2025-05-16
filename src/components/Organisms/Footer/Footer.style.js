@@ -60,7 +60,7 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
-  margin-top: ${spacing('lg')};
+  margin-top: ${spacing('m')};
 
   p {
     font-size: 15px;
@@ -87,14 +87,27 @@ const SocialIconWrapper = styled.div``;
 const FooterLogoWrapper = styled.div`
   a {
     display: inline-block;
+    line-height: 1.5rem;
 
     &:first-child {
       margin-right: 20px;
     }
 
     img {
+      display: block;
       margin: 0;
     }
+  }
+`;
+
+const FundraisingRegulatorLogo = styled.div`
+  // Overriding the baked-in styles for ease of update
+  width: 75%;
+  max-width: 300px;
+  margin: ${spacing('lg')} auto 0;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin: 2.5rem auto 0;
   }
 `;
 
@@ -107,5 +120,6 @@ export {
   FooterBranding,
   SocialIconWrapper,
   Brand,
-  FooterLogoWrapper
+  FooterLogoWrapper,
+  FundraisingRegulatorLogo
 };
