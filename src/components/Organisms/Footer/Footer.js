@@ -4,6 +4,7 @@ import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
+import FundraisingRegulatorLogo from './FundraisingRegulatorLogo';
 
 import {
   FooterWrapper,
@@ -32,11 +33,15 @@ const Footer = ({
             <SocialIconWrapper>
               <SocialIcons campaign={campaignName} />
             </SocialIconWrapper>
+
             <Brand href="/" title={`Go to ${campaign} homepage`}>
               <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
           <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />
+
+          <FundraisingRegulatorLogo />
+
           <FooterCopyright>
             <Text tag="p" color="grey">
               {footerCopy}
