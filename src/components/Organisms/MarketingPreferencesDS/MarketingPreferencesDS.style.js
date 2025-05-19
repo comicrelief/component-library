@@ -16,7 +16,7 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  // Preload 'selected' icons
+  /* Preload 'selected' icons */
   &:after {
     position:absolute;
     width: 0;
@@ -74,24 +74,24 @@ const AssociatedFieldsName = styled.span`
   }
 `;
 
-const FormField = styled.div`${({ theme }) => css`
+const FormField = styled.div`${({ theme, isError }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: ${spacing('m')};
-  border: 1px solid ${theme.color('grey')};;
-  border-radius: 10px;
   background-color: ${theme.color('grey_light')};
   transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: ${theme.color('grey_medium')};
-  }
+  border-radius: 10px;
+  border: 1px solid ${theme.color('grey')};;
 
   &.selected {
-    background-color: ${theme.color('blue_donate')};
+    background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+    &:hover {
+      background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+      border-color: ${theme.color('grey_4')};;
+    }
 
     span.icon-mp_permissionEmail {
       background-image: url(${EmailIconWhite});
@@ -114,14 +114,9 @@ const FormField = styled.div`${({ theme }) => css`
         color: ${theme.color('white')};
       }
     }
-
-    &:hover {
-      // No fancy functions yet to darken preexisting colours..
-      background-color: #161a85;
-    }
   }
 
-  // All labels; input AND checkbox
+  /* All labels; input AND checkbox */
   label {
     position: relative;
     margin-bottom: 0;
@@ -218,9 +213,9 @@ const ExtraInfo = styled.span`
     margin-top: ${spacing('md')};
     margin-bottom: 0;
 
-    // Visually hide the actual field label for the
-    // non-multifield options, as we have the
-    // more chatty 'extra info' language
+    /* Visually hide the actual field label for the */
+    /* non-multifield options, as we have the */
+    /* more chatty 'extra info' language */
     &[for="mp_email"],
     &[for="mp_mobile"],
     &[for="mp_phone"] {

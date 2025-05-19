@@ -61,13 +61,17 @@ const MarketingPreferencesDS = ({
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
+  const isError = true;
+
   return (
     <OuterWrapper id={customId} {...rest}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
-      <FormField className={`field-email ${emailChoice && 'selected'}`}>
+      <FormField
+        className={`field-email ${emailChoice && 'selected'}`}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             mpValidationOptions={mpValidationOptions}
@@ -102,7 +106,9 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
-      <FormField className={`field-post ${postChoice && 'selected'}`}>
+      <FormField
+        className={`field-post ${postChoice && 'selected'}`}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionPost"
@@ -174,7 +180,10 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
-      <FormField className={`field-sms ${smsChoice && 'selected'}`}>
+      <FormField
+        className={`field-sms ${smsChoice && 'selected'}`}
+        isError={isError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionSMS"
@@ -206,7 +215,10 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
-      <FormField className={`field-phone ${phoneChoice && 'selected'}`}>
+      <FormField
+        className={`field-phone ${phoneChoice && 'selected'}`}
+        isError={isError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionPhone"
