@@ -23,7 +23,7 @@ const OuterWrapper = styled.div`
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: 
+    content:
       url(${EmailIconWhite})
       url(${PhoneIconWhite})
       url(${PostIconWhite})
@@ -239,19 +239,9 @@ const ExtraInfo = styled.span`
 `;
 
 const MPTextInput = styled(TextInput)`
-  // Correct the ErrorMsg offset for this context
-  > div + span span {
-    margin-top: -20px;
-  }
-
-  > span {
-    margin-bottom: .5rem;
-  }
-
   input {
     border: 1px solid  ${({ theme }) => theme.color('black')};
     background-color: ${({ theme }) => theme.color('white')};
-    margin-bottom: 10px;
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
