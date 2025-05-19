@@ -84,33 +84,6 @@ const Brand = styled(Link)`
 
 const SocialIconWrapper = styled.div``;
 
-const FooterLogoWrapper = styled.div`
-  a {
-    display: inline-block;
-    line-height: 1.5rem;
-
-    &:first-child {
-      margin-right: 20px;
-    }
-
-    img {
-      display: block;
-      margin: 0;
-    }
-  }
-`;
-
-const FundraisingRegulatorLogo = styled.div`
-  // Overriding the baked-in styles for ease of update
-  width: 75%;
-  margin: ${spacing('lg')} 0;
-  max-width: 200px;
-
-  img {
-    display: block;
-  }
-`;
-
 export {
   FooterWrapper,
   Angle,
@@ -119,7 +92,5 @@ export {
   FooterCopyright,
   FooterBranding,
   SocialIconWrapper,
-  Brand,
-  FooterLogoWrapper,
-  FundraisingRegulatorLogo
+  Brand
 };
