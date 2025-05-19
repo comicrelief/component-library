@@ -354,8 +354,12 @@ exports[`renders correctly 1`] = `
 
 .c25 {
   width: 75%;
-  max-width: 250px;
-  margin: 3rem 0 2rem;
+  margin: 3rem 0;
+  max-width: 200px;
+}
+
+.c25 img {
+  display: block;
 }
 
 @media (min-width:1150px) {
@@ -553,12 +557,6 @@ exports[`renders correctly 1`] = `
   .c26 p {
     font-size: 16px;
     line-height: 27px;
-  }
-}
-
-@media (min-width:740px) {
-  .c25 {
-    margin: 3rem 0 2rem;
   }
 }
 

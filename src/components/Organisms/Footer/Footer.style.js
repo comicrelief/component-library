@@ -103,11 +103,11 @@ const FooterLogoWrapper = styled.div`
 const FundraisingRegulatorLogo = styled.div`
   // Overriding the baked-in styles for ease of update
   width: 75%;
-  max-width: 250px;
-  margin: ${spacing('lg')} 0 ${spacing('l')};
+  margin: ${spacing('lg')} 0;
+  max-width: 200px;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    margin: ${spacing('lg')} 0 ${spacing('l')};
+  img {
+    display: block;
   }
 `;
 
