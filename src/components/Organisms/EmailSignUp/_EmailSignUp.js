@@ -24,6 +24,7 @@ const EmailSignUp = ({
   privacyCopy,
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
+  buttonText = 'Subscribe',
   formContext,
   columnLayout = false,
   ...rest
@@ -93,7 +94,7 @@ const EmailSignUp = ({
               loadingText="Submitting..."
               data-test="subscribe-button"
             >
-              <Text>Subscribe</Text>
+              <Text>{buttonText}</Text>
             </ButtonWithStates>
           </ButtonWrapper>
         </FormInner>
@@ -122,6 +123,7 @@ EmailSignUp.propTypes = {
   privacyCopy: PropTypes.node.isRequired,
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
+  buttonText: PropTypes.string,
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
 };
