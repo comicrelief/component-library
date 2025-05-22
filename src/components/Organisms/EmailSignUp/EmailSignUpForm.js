@@ -55,6 +55,7 @@ const EmailSignUpForm = () => {
           successCopy={successCopy}
           privacyCopy={privacyCopy}
           formContext={formMethods}
+          buttonText=""
         />
       </form>
     </FormProvider>

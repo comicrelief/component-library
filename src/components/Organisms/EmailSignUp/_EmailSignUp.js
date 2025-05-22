@@ -24,7 +24,6 @@ const EmailSignUp = ({
   privacyCopy,
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
-  buttonText = 'Subscribe',
   containerPadding = true,
   formContext,
   columnLayout = false,
@@ -39,6 +38,8 @@ const EmailSignUp = ({
       errors
     }
   } = formContext;
+
+  const normalisedButtonText = Boolean(buttonText) ? buttonText : 'Subscribe';
 
   return (
     <ESUWrapper
@@ -99,7 +100,7 @@ const EmailSignUp = ({
               loadingText="Submitting..."
               data-test="subscribe-button"
             >
-              <Text>{buttonText}</Text>
+              <Text>{normalisedButtonText}</Text>
             </ButtonWithStates>
           </ButtonWrapper>
         </FormInner>
