@@ -10,7 +10,7 @@ const ESUWrapper = styled.div`
   font-size: ${({ theme }) => theme.fontSize('s')};
   color: ${({ theme }) => theme.color('white')};
   background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
-  padding: ${spacing('m')};
+  padding: ${({ containerPadding }) => (containerPadding ? spacing('m') : 0)};
 `;
 
 const TopCopyWrapper = styled.div`

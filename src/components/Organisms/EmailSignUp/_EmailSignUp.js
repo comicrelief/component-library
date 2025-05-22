@@ -25,6 +25,7 @@ const EmailSignUp = ({
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
   buttonText = 'Subscribe',
+  containerPadding = true,
   formContext,
   columnLayout = false,
   ...rest
@@ -40,7 +41,11 @@ const EmailSignUp = ({
   } = formContext;
 
   return (
-    <ESUWrapper backgroundColour={backgroundColour} {...rest}>
+    <ESUWrapper
+      backgroundColour={backgroundColour}
+      containerPadding={containerPadding}
+      {...rest}
+    >
       <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
@@ -124,6 +129,7 @@ EmailSignUp.propTypes = {
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
   buttonText: PropTypes.string,
+  containerPadding: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
 };
