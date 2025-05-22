@@ -24,6 +24,7 @@ const EmailSignUp = ({
   privacyCopy,
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
+  buttonText,
   containerPadding = true,
   formContext,
   columnLayout = false,
@@ -39,7 +40,7 @@ const EmailSignUp = ({
     }
   } = formContext;
 
-  const normalisedButtonText = Boolean(buttonText) ? buttonText : 'Subscribe';
+  const normalisedButtonText = buttonText || 'Subscribe';
 
   return (
     <ESUWrapper
