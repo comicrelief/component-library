@@ -25,10 +25,7 @@ const EmailSignUp = ({
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
   buttonText = 'Subscribe',
-<<<<<<< HEAD
   containerPadding = true,
-=======
->>>>>>> e7cde2dc60c7050f199671e632f4b052d2587390
   formContext,
   columnLayout = false,
   ...rest
@@ -132,10 +129,7 @@ EmailSignUp.propTypes = {
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
   buttonText: PropTypes.string,
-<<<<<<< HEAD
   containerPadding: PropTypes.bool,
-=======
->>>>>>> e7cde2dc60c7050f199671e632f4b052d2587390
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
 };
