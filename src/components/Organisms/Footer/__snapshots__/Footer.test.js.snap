@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c26 {
+.c25 {
   color: #969598;
   font-size: 1rem;
   line-height: 1rem;
@@ -281,16 +281,6 @@ exports[`renders correctly 1`] = `
   right: -25px;
 }
 
-.c24 {
-  width: 75%;
-  margin: 3rem 0;
-  max-width: 200px;
-}
-
-.c24 img {
-  display: block;
-}
-
 .c0 {
   text-align: center;
   line-height: initial;
@@ -325,7 +315,7 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c25 {
+.c24 {
   display: block;
   width: 100%;
   height: 100%;
@@ -333,7 +323,7 @@ exports[`renders correctly 1`] = `
   margin-top: 0;
 }
 
-.c25 p {
+.c24 p {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 5px;
@@ -540,7 +530,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c25 p {
+  .c24 p {
     font-size: 16px;
     line-height: 27px;
   }
@@ -1218,32 +1208,8 @@ exports[`renders correctly 1`] = `
       <div
         className="c24"
       >
-        <a
-          className="fr-digital-badge"
-          href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF"
-          rel="noreferrer"
-          style={
-            Object {
-              "height": "auto",
-              "textDecoration": "none",
-              "width": "150px",
-            }
-          }
-          target="_blank"
-        >
-          <img
-            alt="Fundraising Regulator badge with validation link"
-            loading="lazy"
-            src="https://www.fundraisingregulator.org.uk/fr-badge/80983ed7-ea80-40db-8e52-4a3351d9e77d/en/white"
-            width="100%"
-          />
-        </a>
-      </div>
-      <div
-        className="c25"
-      >
         <p
-          className="c26"
+          className="c25"
           color="grey"
           size="s"
         >
