@@ -28,6 +28,7 @@ const EmailSignUp = ({
   containerPadding = true,
   formContext,
   columnLayout = false,
+  textColour,
   ...rest
 }) => {
   const {
@@ -45,6 +46,7 @@ const EmailSignUp = ({
   return (
     <ESUWrapper
       backgroundColour={backgroundColour}
+      textColour={textColour}
       containerPadding={containerPadding}
       {...rest}
     >
@@ -69,6 +71,7 @@ const EmailSignUp = ({
         <FormInner>
           <NameWrapper columnLayout={columnLayout}>
             <InputField
+              textColour={textColour}
               fieldName={ESU_FIELDS.FIRST_NAME}
               id="first-name"
               type="text"
@@ -77,6 +80,7 @@ const EmailSignUp = ({
               formContext={formContext}
             />
             <InputField
+              textColour={textColour}
               fieldName={ESU_FIELDS.LAST_NAME}
               id="last-name"
               type="text"
@@ -86,6 +90,7 @@ const EmailSignUp = ({
             />
           </NameWrapper>
           <InputField
+            textColour={textColour}
             fieldName={ESU_FIELDS.EMAIL}
             id="email"
             type="email"
@@ -116,7 +121,9 @@ const EmailSignUp = ({
         </>
       )}
 
-      <PrivacyCopyWrapper>
+      <PrivacyCopyWrapper
+        textColour={textColour}
+      >
         <Text>{privacyCopy}</Text>
       </PrivacyCopyWrapper>
     </ESUWrapper>
@@ -131,6 +138,7 @@ EmailSignUp.propTypes = {
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
   buttonText: PropTypes.string,
+  textColour: PropTypes.string,
   containerPadding: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
