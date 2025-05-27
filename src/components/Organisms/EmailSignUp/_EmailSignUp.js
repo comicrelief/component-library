@@ -28,7 +28,7 @@ const EmailSignUp = ({
   containerPadding = true,
   formContext,
   columnLayout = false,
-  textColour,
+  textColour = 'white',
   ...rest
 }) => {
   const {

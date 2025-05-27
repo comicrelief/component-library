@@ -57,8 +57,6 @@ const EmailSignUpForm = () => {
           successCopy={successCopy}
           privacyCopy={privacyCopy}
           formContext={formMethods}
-          backgroundColour="orange"
-          textColour="green"
         />
       </form>
     </FormProvider>

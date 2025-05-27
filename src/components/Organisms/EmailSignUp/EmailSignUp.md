@@ -1,8 +1,8 @@
 # Email SignUp Form
+### EmailSignUpForm.js is just a wrapper for viewing in the CL
+### The email sign up component that is used/exported is _EmailSignUp.js
 
 ```js
-// EmailSignUpForm.js is just a wrapper for viewing in the CL
-// The email sign up component that is used/exported is _EmailSignUp.js
 import EmailSignUpForm from './EmailSignUpForm';
 import Text from '../../Atoms/Text/Text';
 
