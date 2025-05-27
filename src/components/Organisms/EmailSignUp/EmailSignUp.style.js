@@ -8,7 +8,7 @@ const ESUWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  color: ${({ textColour }) => textColour};
+  color: ${({ theme, textColour }) => theme.color(textColour)};
   background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
   padding: ${({ containerPadding }) => (containerPadding ? spacing('m') : 0)};
 `;
@@ -35,7 +35,7 @@ const PrivacyCopyWrapper = styled.div`
     line-height: ${({ theme }) => theme.fontSize('xl')};
     a {
       font-size: ${({ theme }) => theme.fontSize('s')};
-      color: ${({ textColour }) => textColour};
+      color: ${({ theme, textColour }) => theme.color(textColour)};
     }
   }
 `;
@@ -65,7 +65,7 @@ const InputField = styled(TextInput)`
   margin-bottom: ${spacing('md')};
 
   & > span:first-child {
-    color: ${({ textColour }) => textColour};
+    color: ${({ theme, textColour }) => theme.color(textColour)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {

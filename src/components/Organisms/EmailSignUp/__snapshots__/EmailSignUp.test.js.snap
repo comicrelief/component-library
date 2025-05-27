@@ -143,7 +143,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
-  color: white;
+  color: #FFFFFF;
   background-color: #2C0230;
   padding: 1.5rem;
 }
@@ -182,7 +182,7 @@ exports[`renders correctly 1`] = `
 
 .c17 p a {
   font-size: 1rem;
-  color: white;
+  color: #FFFFFF;
 }
 
 .c6 {
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c9 > span:first-child {
-  color: white;
+  color: #FFFFFF;
 }
 
 .c2 {
