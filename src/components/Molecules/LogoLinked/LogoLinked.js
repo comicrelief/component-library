@@ -26,12 +26,12 @@ const LogoLink = styled.a`
 `;
 
 const LogoLinked = ({
-  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', animateRotate = false, sizeSm, sizeMd
+  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', url = '/', animateRotate = false, sizeSm, sizeMd
 }) => {
   if (campaign === 'Sport Relief Gameon') {
     return (
       <>
-        <LogoLink href="/" title="Go to Comic Relief homepage" animateRotate={animateRotate}>
+        <LogoLink href={url} title="Go to Comic Relief homepage" animateRotate={animateRotate}>
           <Logo rotate sizeSm="50px" sizeMd="60px" campaign="Comic Relief" title="Go to Comic Relief homepage" />
           <TitleLabel>Go to Comic Relief homepage</TitleLabel>
         </LogoLink>
@@ -45,7 +45,7 @@ const LogoLinked = ({
 
   if (campaign === 'Sport Relief') {
     return (
-      <LogoLink href="/sportrelief" title="Go to Sport Relief homepage" animateRotate={animateRotate}>
+      <LogoLink href={url} title="Go to Sport Relief homepage" animateRotate={animateRotate}>
         <Logo rotate={false} campaign="Sport Relief" title="Sport Relief in homepage" />
         <TitleLabel>Go to Sport Relief homepage</TitleLabel>
       </LogoLink>
@@ -54,7 +54,7 @@ const LogoLinked = ({
 
   if (campaign === 'Pride') {
     return (
-      <LogoLink href="/" title="Go to Comic Relief homepage" animateRotate={animateRotate}>
+      <LogoLink href={url} title="Go to Comic Relief homepage" animateRotate={animateRotate}>
         <Logo rotate={false} campaign="Pride" title="Go to Comic Relief homepage" sizeSm={sizeSm} sizeMd={sizeMd} />
         <TitleLabel>Go to Comic Relief homepage</TitleLabel>
       </LogoLink>
@@ -62,7 +62,7 @@ const LogoLinked = ({
   }
 
   return (
-    <LogoLink href="/" title={title} animateRotate={animateRotate}>
+    <LogoLink href={url} title={title} animateRotate={animateRotate}>
       <Logo rotate={false} campaign="Comic Relief" title={title} sizeSm={sizeSm} sizeMd={sizeMd} />
       <TitleLabel>{title}</TitleLabel>
     </LogoLink>
@@ -73,6 +73,7 @@ LogoLinked.propTypes = {
   campaign: PropTypes.string,
   animateRotate: PropTypes.bool,
   title: PropTypes.string,
+  url: PropTypes.string,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string
 };
