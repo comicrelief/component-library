@@ -87,9 +87,11 @@ const FormField = styled.div`${({ theme, isError }) => css`
   border: 1px solid ${theme.color('grey')};;
 
   &.selected {
-    background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+    background-color: ${isError ? theme.color('green') : theme.color('blue_donate')};
+    color: ${theme.color('white')};
+    color: yellow;
     &:hover {
-      background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+      background-color: ${isError ? theme.color('green') : theme.color('blue_donate')};
       border-color: ${theme.color('grey_4')};;
     }
 

@@ -71,6 +71,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionEmail.disableOption && (
       <FormField
         className={`field-email ${emailChoice && 'selected'}`}
+        isError={isError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -108,6 +109,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPost.disableOption && (
       <FormField
         className={`field-post ${postChoice && 'selected'}`}
+        isError={isError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
