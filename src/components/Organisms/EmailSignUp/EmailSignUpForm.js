@@ -1,3 +1,5 @@
+// EmailSignUpForm.js is just a wrapper for viewing in the CL
+// The email sign up component that is used/exported is _EmailSignUp.js
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
