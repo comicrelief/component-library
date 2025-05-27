@@ -87,11 +87,9 @@ const FormField = styled.div`${({ theme, isError }) => css`
   border: 1px solid ${theme.color('grey')};;
 
   &.selected {
-    background-color: ${isError ? theme.color('green') : theme.color('blue_donate')};
-    color: ${theme.color('white')};
-    color: yellow;
+    background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
     &:hover {
-      background-color: ${isError ? theme.color('green') : theme.color('blue_donate')};
+      background-color: ${isError ? theme.color('blue_donate') : theme.color('blue_donate')};
       border-color: ${theme.color('grey_4')};;
     }
 
@@ -242,6 +240,10 @@ const MPTextInput = styled(TextInput)`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
+  }
+  /* error message text colour */
+  span {
+    color: white;
   }
 `;
 
