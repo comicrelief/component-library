@@ -24,9 +24,11 @@ const EmailSignUp = ({
   privacyCopy,
   backgroundColour = 'deep_violet_dark',
   buttonColour = 'red',
-  buttonText = 'Subscribe',
+  buttonText,
+  containerPadding = true,
   formContext,
   columnLayout = false,
+  textColour = 'white',
   ...rest
 }) => {
   const {
@@ -39,8 +41,15 @@ const EmailSignUp = ({
     }
   } = formContext;
 
+  const normalisedButtonText = buttonText || 'Subscribe';
+
   return (
-    <ESUWrapper backgroundColour={backgroundColour} {...rest}>
+    <ESUWrapper
+      backgroundColour={backgroundColour}
+      textColour={textColour}
+      containerPadding={containerPadding}
+      {...rest}
+    >
       <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
         {title}
       </Title>
@@ -62,6 +71,7 @@ const EmailSignUp = ({
         <FormInner>
           <NameWrapper columnLayout={columnLayout}>
             <InputField
+              textColour={textColour}
               fieldName={ESU_FIELDS.FIRST_NAME}
               id="first-name"
               type="text"
@@ -70,6 +80,7 @@ const EmailSignUp = ({
               formContext={formContext}
             />
             <InputField
+              textColour={textColour}
               fieldName={ESU_FIELDS.LAST_NAME}
               id="last-name"
               type="text"
@@ -79,6 +90,7 @@ const EmailSignUp = ({
             />
           </NameWrapper>
           <InputField
+            textColour={textColour}
             fieldName={ESU_FIELDS.EMAIL}
             id="email"
             type="email"
@@ -94,7 +106,7 @@ const EmailSignUp = ({
               loadingText="Submitting..."
               data-test="subscribe-button"
             >
-              <Text>{buttonText}</Text>
+              <Text>{normalisedButtonText}</Text>
             </ButtonWithStates>
           </ButtonWrapper>
         </FormInner>
@@ -109,7 +121,9 @@ const EmailSignUp = ({
         </>
       )}
 
-      <PrivacyCopyWrapper>
+      <PrivacyCopyWrapper
+        textColour={textColour}
+      >
         <Text>{privacyCopy}</Text>
       </PrivacyCopyWrapper>
     </ESUWrapper>
@@ -124,6 +138,8 @@ EmailSignUp.propTypes = {
   backgroundColour: PropTypes.string,
   buttonColour: PropTypes.string,
   buttonText: PropTypes.string,
+  textColour: PropTypes.string,
+  containerPadding: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   columnLayout: PropTypes.bool
 };

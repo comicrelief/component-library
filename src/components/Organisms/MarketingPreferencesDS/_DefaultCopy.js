@@ -18,7 +18,7 @@ const defaultCopyTop = (
 );
 
 const defaultCopyBottom = (
-  <Text tag="p" color="grey_dark">
+  <Text tag="p" size="xs" color="grey_dark">
     Update your preferences at any time by visiting our
     {' '}
     <Link

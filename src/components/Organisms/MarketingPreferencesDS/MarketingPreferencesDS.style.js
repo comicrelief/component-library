@@ -43,6 +43,7 @@ const TopCopyWrapper = styled.div`
 
 const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
+  text-align: center;
 `;
 
 const CheckboxWrapper = styled.div`
@@ -171,12 +172,12 @@ const CheckInput = styled.input`
   left: 0;
   top:0;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+  border: 1px solid ${({ theme }) => theme.color('grey')};
   + span {
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('black')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     border-radius: 8px;
   }
