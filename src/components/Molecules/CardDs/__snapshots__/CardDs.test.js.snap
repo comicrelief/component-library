@@ -108,13 +108,13 @@ exports[`renders Column view correctly 1`] = `
   background: #FFFFFF;
   margin: 0 1.5rem 0 0;
   z-index: 1;
-  margin-top: calc(-2 * 1.5rem);
-  min-height: calc(5 * 2rem);
+  margin-top: -3rem;
+  min-height: 10rem;
 }
 
 .c6 {
   position: absolute;
-  right: 1.5rem;
+  right: 3rem;
   bottom: -1.5rem;
   z-index: 2;
 }
@@ -173,7 +173,7 @@ exports[`renders Column view correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+    margin: -3rem 0 -1.5rem 0;
     width: 100%;
   }
 }
@@ -360,13 +360,13 @@ exports[`renders correctly 1`] = `
   background: #FFFFFF;
   margin: 0 1.5rem 0 0;
   z-index: 1;
-  margin-top: calc(-2 * 1.5rem);
-  min-height: calc(5 * 2rem);
+  margin-top: -3rem;
+  min-height: 10rem;
 }
 
 .c6 {
   position: absolute;
-  right: 1.5rem;
+  right: 3rem;
   bottom: -1.5rem;
   z-index: 2;
 }
@@ -452,14 +452,14 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1440px) {
   .c5 {
-    margin: calc(-2 * 1.5rem) 0 -1.5rem 0;
+    margin: -3rem 0 -1.5rem 0;
     width: 100%;
   }
 }
 
 @media (min-width:740px) {
   .c6 {
-    bottom: calc(-1 * (2rem + 1rem));
+    bottom: -3rem;
   }
 }
 
