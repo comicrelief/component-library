@@ -23,7 +23,7 @@ const OuterWrapper = styled.div`
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: 
+    content:
       url(${EmailIconWhite})
       url(${PhoneIconWhite})
       url(${PostIconWhite})
@@ -176,12 +176,12 @@ const CheckInput = styled.input`
   left: 0;
   top:0;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+  border: 1px solid ${({ theme }) => theme.color('grey')};
   + span {
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('black')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     border-radius: 8px;
   }
