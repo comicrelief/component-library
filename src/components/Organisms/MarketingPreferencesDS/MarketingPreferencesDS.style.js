@@ -43,6 +43,7 @@ const TopCopyWrapper = styled.div`
 
 const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
+  text-align: center;
 `;
 
 const CheckboxWrapper = styled.div`
