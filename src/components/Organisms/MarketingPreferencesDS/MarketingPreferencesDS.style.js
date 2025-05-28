@@ -23,7 +23,7 @@ const OuterWrapper = styled.div`
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: 
+    content:
       url(${EmailIconWhite})
       url(${PhoneIconWhite})
       url(${PostIconWhite})
@@ -43,6 +43,7 @@ const TopCopyWrapper = styled.div`
 
 const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
+  text-align: center;
 `;
 
 const CheckboxWrapper = styled.div`
