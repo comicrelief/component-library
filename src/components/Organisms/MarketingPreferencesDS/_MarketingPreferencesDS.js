@@ -61,13 +61,23 @@ const MarketingPreferencesDS = ({
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
+  // Check for field-specific errors
+  const hasEmailError = Boolean(errors.mp_permissionEmail || errors.mp_email);
+  const hasPostError = Boolean(errors.mp_permissionPost || errors.mp_address1 || errors.mp_address2
+  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode);
+  const hasSMSError = Boolean(errors.mp_permissionSMS || errors.mp_mobile);
+  const hasPhoneError = Boolean(errors.mp_permissionPhone || errors.mp_phone);
+
   return (
     <OuterWrapper id={customId} {...rest}>
       {copyTop && <TopCopyWrapper>{copyTop}</TopCopyWrapper>}
 
       {/* Render Email checkboxes and input if not removed in config */}
       {!mp_permissionEmail.disableOption && (
-      <FormField className={`field-email ${emailChoice && 'selected'}`}>
+      <FormField
+        className={`field-email ${emailChoice && 'selected'}`}
+        isError={hasEmailError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             mpValidationOptions={mpValidationOptions}
@@ -102,7 +112,10 @@ const MarketingPreferencesDS = ({
 
       {/* Render Post checkboxes and inputs if not removed in config */}
       {!mp_permissionPost.disableOption && (
-      <FormField className={`field-post ${postChoice && 'selected'}`}>
+      <FormField
+        className={`field-post ${postChoice && 'selected'}`}
+        isError={hasPostError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionPost"
@@ -174,7 +187,10 @@ const MarketingPreferencesDS = ({
 
       {/* Render SMS checkboxes and inputs if not removed in config */}
       {!mp_permissionSMS.disableOption && (
-      <FormField className={`field-sms ${smsChoice && 'selected'}`}>
+      <FormField
+        className={`field-sms ${smsChoice && 'selected'}`}
+        isError={hasSMSError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionSMS"
@@ -206,7 +222,10 @@ const MarketingPreferencesDS = ({
 
       {/* Render Phone checkboxes and input if not removed in config */}
       {!mp_permissionPhone.disableOption && (
-      <FormField className={`field-phone ${phoneChoice && 'selected'}`}>
+      <FormField
+        className={`field-phone ${phoneChoice && 'selected'}`}
+        isError={hasPhoneError}
+      >
         <CheckboxWrapper>
           <OptInCheckbox
             name="mp_permissionPhone"
