@@ -24,7 +24,7 @@ const NavLinkClass = styled(Link)`
   :focus-within {
     border: 0;
   }
-    
+
   // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     :hover,
@@ -44,7 +44,7 @@ const NavLinkClass = styled(Link)`
       }
     }
   }
-    
+
   // Chevron icon:
   > div {
     height: auto;
@@ -113,7 +113,7 @@ const SubNavMenu = styled.ul`
   overflow: hidden;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
-  // DESKTOP:   
+  // DESKTOP:
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: flex;
     width: 330px;
@@ -136,7 +136,7 @@ const SubNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
-  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
   position: relative;
   transition: background-color ${transitionDuration}s ease;
 
@@ -208,7 +208,7 @@ const NavLink = styled(NavLinkClass)`
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 14px 10px 0;
     `)}
-    
+
     :hover,
     :focus-within,
     :focus {
@@ -217,7 +217,7 @@ const NavLink = styled(NavLinkClass)`
       opacity: 1;
     }}
   }
-    
+
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 16px 10px 0;
@@ -286,8 +286,8 @@ const NavItem = styled.li`
       }
     }
   }
-  
-  
+
+
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 22px 0 0;
     padding: 25px 0px;
@@ -399,7 +399,7 @@ const NavMetaIcons = styled.div`
         &:hover {
           span {
             color: ${({ theme }) => theme.color('red')};
-          } 
+          }
         }
       }
     }
@@ -438,12 +438,12 @@ const DonateButtonWrapperBottom = styled.div`
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 
     &:hover,
-    &:focus { 
+    &:focus {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
     }
   }
-  
+
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
