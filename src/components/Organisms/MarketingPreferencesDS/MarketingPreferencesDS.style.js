@@ -85,13 +85,13 @@ const FormField = styled.div`${({ theme, isError }) => css`
   background-color: ${theme.color('grey_light')};
   transition: background-color 0.3s, color 0.3s;
   border-radius: 10px;
-  border: 1px solid ${theme.color('grey')};;
+  border: 1px solid ${theme.color('grey')};
 
   &.selected {
     background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
     &:hover {
       background-color: ${isError ? theme.color('blue_donate') : theme.color('blue_donate')};
-      border-color: ${theme.color('grey_4')};;
+      border-color: ${theme.color('grey_4')};
     }
 
     span.icon-mp_permissionEmail {
@@ -182,7 +182,7 @@ const CheckInput = styled.input`
     border-radius: 8px;
   }
   :checked + span {
-    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};;
+    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};
     background-size: contain;
   }
 `;
