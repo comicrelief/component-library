@@ -20,7 +20,7 @@ const InputFieldContainer = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: ${({error}) => error ? 'row' : 'column'};
+  ${({error}) => error && 'flex-direction: row;'};
   justify-content: flex-end;
   align-items: center;
   ${({ maxPxWidthMediumBreakpoint, maxPxWidthLargeBreakpoint, theme }) => css`
