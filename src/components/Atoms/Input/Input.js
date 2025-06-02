@@ -20,7 +20,7 @@ const InputFieldContainer = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({error}) => error ? 'row' : 'column'};
   justify-content: flex-end;
   align-items: center;
   ${({ maxPxWidthMediumBreakpoint, maxPxWidthLargeBreakpoint, theme }) => css`
@@ -116,6 +116,7 @@ const Input = React.forwardRef(
         <InputFieldContainer
           maxPxWidthMediumBreakpoint={maxPxWidthMediumBreakpoint}
           maxPxWidthLargeBreakpoint={maxPxWidthLargeBreakpoint}
+          error={Boolean(errorMsg)}
         >
           <InputField
             id={id}
