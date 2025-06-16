@@ -60,7 +60,7 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
-  margin-top: ${spacing('lg')};
+  margin-top: 0;
 
   p {
     font-size: 15px;

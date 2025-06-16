@@ -80,7 +80,7 @@ const SubNavMenu = styled.ul`
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
-  // DESKTOP:   
+  // DESKTOP:
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: flex;
     visibility: ${({ isFocussed }) => (isFocussed ? 'visible' : 'hidden')};
@@ -104,7 +104,7 @@ const SubNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
-  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
   position: relative;
   transition: background-color ${transitionDuration}s ease;
 
@@ -230,8 +230,8 @@ const NavItem = styled.li`
       }
     }
   }
-  
-  
+
+
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 4px;
     padding: 25px 5px;
@@ -364,12 +364,12 @@ const DonateButtonWrapperBottom = styled.div`
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 
     &:hover,
-    &:focus { 
+    &:focus {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
     }
   }
-  
+
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {

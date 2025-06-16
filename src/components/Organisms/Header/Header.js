@@ -8,12 +8,12 @@ import {
 } from './Header.style';
 
 const Header = ({
-  navItems = {}, metaIcons, campaign = 'Comic Relief', ...rest
+  navItems = {}, metaIcons, campaign = 'Comic Relief', logoUrl = '/', ...rest
 }) => (
   <HeaderWrapper navItems {...rest}>
     <InnerWrapper>
       <Brand>
-        <LogoLinked campaign={campaign} />
+        <LogoLinked url={logoUrl} campaign={campaign} />
       </Brand>
       <MainNav navItems={navItems} />
       <MetaIcons>{metaIcons}</MetaIcons>
@@ -26,7 +26,8 @@ Header.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   /** it can be icons, buttons  */
   metaIcons: PropTypes.node.isRequired,
-  campaign: PropTypes.string
+  campaign: PropTypes.string,
+  logoUrl: PropTypes.string
 };
 
 export default Header;

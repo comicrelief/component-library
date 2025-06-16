@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import spacing from '../../../../theme/shared/spacing';
 
 const NavLinkClass = styled(Link)`
   border: 0;
@@ -119,8 +120,8 @@ const SubNavLink = styled(NavLinkClass)`
 const NavMenu = styled.ul`
   background-color: inherit;
   list-style: none outside;
-  padding: 0;
-  margin: 0;
+  padding: 0 0  ${spacing('xl')};
+  border-bottom: 1px solid ${({ theme }) => theme.color('white')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     display: flex;

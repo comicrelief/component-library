@@ -16,14 +16,14 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  // Preload 'selected' icons
+  /* Preload 'selected' icons */
   &:after {
     position:absolute;
     width: 0;
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: 
+    content:
       url(${EmailIconWhite})
       url(${PhoneIconWhite})
       url(${PostIconWhite})
@@ -43,6 +43,7 @@ const TopCopyWrapper = styled.div`
 
 const BottomCopyWrapper = styled.div`
   margin: ${spacing('md')} 0;
+  text-align: center;
 `;
 
 const CheckboxWrapper = styled.div`
@@ -74,24 +75,24 @@ const AssociatedFieldsName = styled.span`
   }
 `;
 
-const FormField = styled.div`${({ theme }) => css`
+const FormField = styled.div`${({ theme, isError }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: ${spacing('m')};
-  border: 1px solid ${theme.color('grey')};;
-  border-radius: 10px;
   background-color: ${theme.color('grey_light')};
   transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: ${theme.color('grey_medium')};
-  }
+  border-radius: 10px;
+  border: 1px solid ${theme.color('grey')};
 
   &.selected {
-    background-color: ${theme.color('blue_donate')};
+    background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+    &:hover {
+      background-color: ${isError ? theme.color('red_dark') : theme.color('blue_donate')};
+      border-color: ${theme.color('grey_4')};
+    }
 
     span.icon-mp_permissionEmail {
       background-image: url(${EmailIconWhite});
@@ -114,14 +115,9 @@ const FormField = styled.div`${({ theme }) => css`
         color: ${theme.color('white')};
       }
     }
-
-    &:hover {
-      // No fancy functions yet to darken preexisting colours..
-      background-color: #161a85;
-    }
   }
 
-  // All labels; input AND checkbox
+  /* All labels; input AND checkbox */
   label {
     position: relative;
     margin-bottom: 0;
@@ -176,17 +172,17 @@ const CheckInput = styled.input`
   left: 0;
   top:0;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
+  border: 1px solid ${({ theme }) => theme.color('grey')};
   + span {
     width: 30px;
     height: 30px;
     background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('black')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
     border-radius: 8px;
   }
   :checked + span {
-    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};;
+    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};
     background-size: contain;
   }
 `;
@@ -218,9 +214,9 @@ const ExtraInfo = styled.span`
     margin-top: ${spacing('md')};
     margin-bottom: 0;
 
-    // Visually hide the actual field label for the
-    // non-multifield options, as we have the
-    // more chatty 'extra info' language
+    /* Visually hide the actual field label for the */
+    /* non-multifield options, as we have the */
+    /* more chatty 'extra info' language */
     &[for="mp_email"],
     &[for="mp_mobile"],
     &[for="mp_phone"] {
@@ -239,22 +235,16 @@ const ExtraInfo = styled.span`
 `;
 
 const MPTextInput = styled(TextInput)`
-  // Correct the ErrorMsg offset for this context
-  > div + span span {
-    margin-top: -20px;
-  }
-
-  > span {
-    margin-bottom: .5rem;
-  }
-
   input {
     border: 1px solid  ${({ theme }) => theme.color('black')};
     background-color: ${({ theme }) => theme.color('white')};
-    margin-bottom: 10px;
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
+  }
+  /* error message text colour */
+  span {
+    color: white;
   }
 `;
 
