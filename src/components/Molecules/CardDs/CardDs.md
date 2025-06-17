@@ -26,16 +26,10 @@ import { Internal } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <div
-      style={{
-        border: '2px solid red'
-      }}
-    >
-        <Text tag="h3" color="purple" size="xl">
-          Title
-        </Text>
-        <Text tag="p">Text body copy description</Text>
-    </div>
+    <Text tag="h3" color="purple" size="xl">
+      Title
+    </Text>
+    <Text tag="p">Text body copy description</Text>
   </CardDs>
 </div>;
 ```
