@@ -86,10 +86,14 @@ const Copy = styled.div`
 
 const CTA = styled.div`
   position: absolute;
-  right: 3rem;
+  right: 3.5rem;
   bottom: -1.5rem;
 
   ${zIndex('medium')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    right: 3rem;
+  }
 
   ${({ isCarousel, theme }) => !isCarousel && css`
     @media ${theme.allBreakpoints('M')} {

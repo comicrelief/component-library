@@ -26,10 +26,16 @@ import { Internal } from '../../Atoms/Icons/index';
     height="auto"
     icon={<Internal colour="white" />}
   >
-    <Text tag="h3" color="purple" size="xl">
-      Title
-    </Text>
-    <Text tag="p">Text body copy description</Text>
+    <div
+      style={{
+        border: '2px solid red'
+      }}
+    >
+        <Text tag="h3" color="purple" size="xl">
+          Title
+        </Text>
+        <Text tag="p">Text body copy description</Text>
+    </div>
   </CardDs>
 </div>;
 ```
@@ -118,7 +124,7 @@ import { Internal } from '../../Atoms/Icons/index';
 ```
 
 
-### CardDs:  only column view for use in CardsCarousel
+### CardDs:  Only column view for use in CardsCarousel
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
