@@ -27,9 +27,23 @@ import { Internal } from '../../Atoms/Icons/index';
     icon={<Internal colour="white" />}
   >
     <Text tag="h3" color="purple" size="xl">
-      Title
+      EDINBURGH MARATHON
     </Text>
-    <Text tag="p">Text body copy description</Text>
+    <Text size="m" weight="bold">
+      24 May 2026
+    </Text>
+    <Text tag="p" size="m" weight="bold" style={{marginTop: "1rem"}}>
+      Marathon
+    </Text>
+    <Text tag="p" size="m">
+        Voted the fastest marathon in the UK, Edinburgh Marathon is perfect for first-timers and those seeking a personal best whilst soaking in the picturesque views of the East Lothian coastline.
+    </Text>
+    <Text tag="p" size="m">
+        Registration fee: £39
+    </Text>
+    <Text tag="p" size="m">
+        Sponsorship pledge: £500
+    </Text>
   </CardDs>
 </div>;
 ```
