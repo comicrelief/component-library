@@ -92,7 +92,7 @@ const CTA = styled.div`
   ${zIndex('medium')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    right: 3rem;
+    right: 2rem;
   }
 
   ${({ isCarousel, theme }) => !isCarousel && css`

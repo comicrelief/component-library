@@ -180,7 +180,7 @@ exports[`renders Column view correctly 1`] = `
 
 @media (min-width:740px) {
   .c6 {
-    right: 3rem;
+    right: 2rem;
   }
 }
 
@@ -465,7 +465,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c6 {
-    right: 3rem;
+    right: 2rem;
   }
 }
 
