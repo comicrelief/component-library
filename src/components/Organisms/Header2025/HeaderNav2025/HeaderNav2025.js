@@ -127,7 +127,7 @@ const HeaderNav2025 = ({
               const thisID = group.id;
               /* Determine which field represents our url path */
               let thisUrl = NavHelper(thisFirstChild);
-              const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
+              const relNoopener = (!allowListed(thisUrl) && 'noopener') || undefined;
               const hasSubMenu = group.links && group.links.length > 1;
               const hasPopUp = hasSubMenu ? 'true' : null;
               thisUrl = InternalLinkHelper(thisUrl);
