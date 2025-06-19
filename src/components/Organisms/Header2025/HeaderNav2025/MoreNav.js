@@ -94,7 +94,9 @@ const MoreNav = ({
                   isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 >
                   {child.links.map(subChild => {
-                    const thisSubUrl = navHelper(subChild);
+                    let thisSubUrl = navHelper(subChild);
+                    thisSubUrl = internalLinkHelper(thisSubUrl);
+
                     return (
                       // 'More Nav' sub item:
                       <MoreNavSubItem key={thisSubUrl}>

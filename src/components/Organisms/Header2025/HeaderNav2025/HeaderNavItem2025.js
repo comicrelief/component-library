@@ -135,8 +135,7 @@ HeaderNavItem2025.propTypes = {
   }),
   navHelper: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
-  relNoopener: PropTypes.bool
-
+  relNoopener: PropTypes.string
 };
 
 export default HeaderNavItem2025;
