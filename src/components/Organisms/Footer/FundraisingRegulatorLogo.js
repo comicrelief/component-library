@@ -16,8 +16,7 @@ const FundraisingRegulatorWrapper = styled.div`
 const FundraisingRegulatorLogo = () => (
   <FundraisingRegulatorWrapper>
     {/* Code from https://www.fundraisingregulator.org.uk/ */}
-    {/* eslint-disable-next-line react/jsx-no-target-blank */}
-    <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank">
+    <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank" rel="noreferrer">
       <img src="https://www.fundraisingregulator.org.uk/fr-badge/80983ed7-ea80-40db-8e52-4a3351d9e77d/en/white" width="100%" alt="Fundraising Regulator badge with validation link" loading="lazy" />
     </a>
   </FundraisingRegulatorWrapper>
