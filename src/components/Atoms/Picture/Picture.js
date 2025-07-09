@@ -13,9 +13,9 @@ const Wrapper = styled.div`
   // If this browser doesn't support objectFit:
   ${({ nonObjFitImage }) => (nonObjFitImage)
   && `@supports not (object-fit: cover) {
-        background-color: yellow !important;
         background-image: url(${nonObjFitImage});
-        background-size: cover; background-position: center;
+        background-size: cover;
+        background-position: center;
       }
   `};
 
@@ -23,7 +23,9 @@ const Wrapper = styled.div`
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : '100%')};
   position: relative;
-  ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
+
+  ${({ isBackgroundImage }) => isBackgroundImage
+    && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
   `;
 
 const Image = styled.img`
@@ -37,8 +39,8 @@ const Image = styled.img`
 
   // If this browser doesn't support objectFit:
   ${({ objectFit }) => (objectFit !== 'none')
-  && '@supports not (object-fit: cover) { visibility: hidden;'}
-  // Allows image to provide the container height, but make it invisible
+    && '@supports not (object-fit: cover) { visibility: hidden;'}
+    // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
   ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
@@ -73,7 +75,6 @@ const Image = styled.img`
         height: ${props => (props.height ? props.height : 'auto')};
       }
   `}
-
 `;
 
 /** Responsive Picture */
