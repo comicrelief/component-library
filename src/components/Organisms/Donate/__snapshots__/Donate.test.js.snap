@@ -538,7 +538,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   >
     <div
       className="c2"
-      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -574,7 +573,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             className="give-once"
             id="give-once--mship-4"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Single"
           />
@@ -590,7 +589,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             className="give-monthly"
             id="give-monthly--mship-4"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Monthly"
           />
@@ -1199,7 +1198,6 @@ exports[`Monthly donation renders correctly 1`] = `
   >
     <div
       className="c2"
-      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -1235,7 +1233,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="give-once"
             id="give-once--mship-1"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Single"
           />
@@ -1251,7 +1249,7 @@ exports[`Monthly donation renders correctly 1`] = `
             className="give-monthly"
             id="give-monthly--mship-1"
             label=""
-            onClick={[Function]}
+            onChange={[Function]}
             type="radio"
             value="Monthly"
           />
@@ -1885,7 +1883,6 @@ exports[`Single donation renders correctly 1`] = `
   >
     <div
       className="c2"
-      data-test="this-one-here"
     >
       <div
         className="c3"
@@ -2508,7 +2505,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   >
     <div
       className="c2"
-      data-test="this-one-here"
     >
       <div
         className="c3"

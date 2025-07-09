@@ -27,7 +27,7 @@ const GivingSelector = ({
           type="radio"
           label=""
           checked={givingType === 'single'}
-          onClick={() => handleGivingTypeChange('single', givingType)}
+          onChange={() => handleGivingTypeChange('single', givingType)}
         />
         <Label active={givingType === 'single'} htmlFor={`give-once--${mbshipID}`}>
           Single
@@ -40,7 +40,7 @@ const GivingSelector = ({
           type="radio"
           label=""
           checked={givingType === 'monthly'}
-          onClick={() => handleGivingTypeChange('monthly', givingType)}
+          onChange={() => handleGivingTypeChange('monthly', givingType)}
         />
         <Label active={givingType === 'monthly'} htmlFor={`give-monthly--${mbshipID}`}>
           Monthly

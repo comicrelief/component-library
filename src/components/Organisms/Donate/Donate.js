@@ -119,7 +119,7 @@ const Donate = ({
         {/* Only render if there is SOME title copy; otherwise,
         we need to the space to centre-align the form */}
         { !noTitlesAtAll && (
-        <TitleWrapperOuter formAlignRight={formAlignRight} data-test="this-one-here">
+        <TitleWrapperOuter formAlignRight={formAlignRight}>
           <TitleWrapperInner>
             {showCopy && (
             <>
