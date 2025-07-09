@@ -154,6 +154,21 @@ it('renders article teaser correctly', () => {
       display: flex;
     }
 
+    @supports not (object-fit:cover) {
+      .c4 {
+        background-color: yellow !important;
+        background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c6 {
+        visibility: hidden;
+      }
+    }
+
     @media (min-width:740px) {
       .c2 {
         -webkit-flex-direction: row;
@@ -409,6 +424,21 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @supports not (object-fit:cover) {
+      .c4 {
+        background-color: yellow !important;
+        background-image: url(mock.asset);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    @supports not (object-fit:cover) {
+      .c6 {
+        visibility: hidden;
+      }
     }
 
     @media (min-width:740px) {
