@@ -9,12 +9,6 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 // Transparent pixel png
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-// 'none',
-// 'cover',
-// 'contain',
-// 'fill',
-// 'scale-down';
-
 const Wrapper = styled.div`
   // If this browser doesn't support objectFit:
   ${({ nonObjFitImage }) => (nonObjFitImage)
