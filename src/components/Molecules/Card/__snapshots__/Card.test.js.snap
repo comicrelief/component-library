@@ -189,7 +189,7 @@ exports[`renders correctly with no body 1`] = `
   height: auto;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c3 {
     visibility: hidden;
   }

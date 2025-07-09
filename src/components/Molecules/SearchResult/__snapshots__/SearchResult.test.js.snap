@@ -97,7 +97,7 @@ exports[`renders correctly in minimalist form 1`] = `
   margin: 0;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c5 {
     visibility: hidden;
   }
@@ -285,7 +285,7 @@ exports[`renders correctly with copy 1`] = `
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c5 {
     visibility: hidden;
   }
@@ -464,7 +464,7 @@ exports[`renders correctly with date 1`] = `
   margin: 0;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c5 {
     visibility: hidden;
   }
@@ -637,7 +637,7 @@ exports[`renders correctly with date and type 1`] = `
   margin: 0;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c5 {
     visibility: hidden;
   }

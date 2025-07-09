@@ -153,16 +153,15 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c2 {
-    background-color: yellow !important;
     background-image: url(../promo.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c3 {
     visibility: hidden;
   }
@@ -446,16 +445,15 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c2 {
-    background-color: yellow !important;
     background-image: url(../promo.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c3 {
     visibility: hidden;
   }

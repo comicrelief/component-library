@@ -154,16 +154,15 @@ it('renders article teaser correctly', () => {
       display: flex;
     }
 
-    @supports not (object-fit:cover) {
+    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
       .c4 {
-        background-color: yellow !important;
         background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
         background-size: cover;
         background-position: center;
       }
     }
 
-    @supports not (object-fit:cover) {
+    @supports not ((object-fit:cover) or (object-fit:contain)) {
       .c6 {
         visibility: hidden;
       }
@@ -426,16 +425,15 @@ it('renders press realese correctly', () => {
       display: flex;
     }
 
-    @supports not (object-fit:cover) {
+    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
       .c4 {
-        background-color: yellow !important;
         background-image: url(mock.asset);
         background-size: cover;
         background-position: center;
       }
     }
 
-    @supports not (object-fit:cover) {
+    @supports not ((object-fit:cover) or (object-fit:contain)) {
       .c6 {
         visibility: hidden;
       }

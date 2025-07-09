@@ -9,10 +9,16 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 // Transparent pixel png
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
+// 'none',
+// 'cover',
+// 'contain',
+// 'fill',
+// 'scale-down';
+
 const Wrapper = styled.div`
   // If this browser doesn't support objectFit:
   ${({ nonObjFitImage }) => (nonObjFitImage)
-  && `@supports not (object-fit: cover) {
+  && `@supports not ((object-fit: cover) or (object-fit: none) or (object-fit: contain)) {
         background-image: url(${nonObjFitImage});
         background-size: cover;
         background-position: center;
@@ -39,7 +45,9 @@ const Image = styled.img`
 
   // If this browser doesn't support objectFit:
   ${({ objectFit }) => (objectFit !== 'none')
-    && '@supports not (object-fit: cover) { visibility: hidden;'}
+    && `@supports not ((object-fit: cover) or (object-fit: contain)) {
+      visibility: hidden;
+    `}
     // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */

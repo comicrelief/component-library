@@ -65,16 +65,15 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c3 {
-    background-color: yellow !important;
     background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c4 {
     visibility: hidden;
   }
@@ -293,16 +292,15 @@ exports[`renders Single Message with Image correctly 1`] = `
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c3 {
-    background-color: yellow !important;
     background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c4 {
     visibility: hidden;
   }
@@ -512,16 +510,15 @@ exports[`renders Single Message with double image correctly 1`] = `
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c3 {
-    background-color: yellow !important;
     background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c4 {
     visibility: hidden;
   }
@@ -781,16 +778,15 @@ exports[`renders Single Message with full width correctly 1`] = `
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c3 {
-    background-color: yellow !important;
     background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c4 {
     visibility: hidden;
   }
@@ -1000,16 +996,15 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   z-index: 1;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
   .c3 {
-    background-color: yellow !important;
     background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
   .c4 {
     visibility: hidden;
   }
@@ -1141,11 +1136,11 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 1rem;
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
 
 }
 
-@supports not (object-fit:cover) {
+@supports not ((object-fit:cover) or (object-fit:contain)) {
 
 }
 
