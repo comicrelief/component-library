@@ -339,6 +339,12 @@ it('renders correctly', () => {
       background-color: #961D35;
     }
 
+    @supports not ((object-fit:cover) or (object-fit:contain)) {
+      .c3 {
+        visibility: hidden;
+      }
+    }
+
     @media (min-width:740px) {
 
     }

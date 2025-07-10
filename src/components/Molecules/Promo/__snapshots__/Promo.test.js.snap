@@ -153,6 +153,20 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
+  .c2 {
+    background-image: url(../promo.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@supports not ((object-fit:cover) or (object-fit:contain)) {
+  .c3 {
+    visibility: hidden;
+  }
+}
+
 @media (min-width:740px) {
   .c9 {
     width: auto;
@@ -428,6 +442,20 @@ exports[`renders Promo correctly end position 1`] = `
     font-size: 5rem;
     line-height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
+  .c2 {
+    background-image: url(../promo.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@supports not ((object-fit:cover) or (object-fit:contain)) {
+  .c3 {
+    visibility: hidden;
   }
 }
 
