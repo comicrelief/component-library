@@ -10,7 +10,8 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
 Custom Size.
 
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;<Picture
+const defaultData = require('../../../styleguide/data/data').defaultData;
+<Picture
   alt="test Image"
   imageLow={defaultData.imageLow}
   images={defaultData.images}
