@@ -1,10 +1,11 @@
 /**
  * Adding Colours / Nomenclature
-  - campaign colours at the top, followed by greyscale then general colours
-  - campaign colours get overwritten each year i.e. rnd26 replaces the rnd25 colours.
+  - campaign colours at the top, followed by greyscale, then general colours
+  - campaign colours get overwritten each year.
+  - i.e. new rnd26 colours replace last year's old rnd25 colours.
   - general naming convention => "hue_variation"
   - there is a need to filter the "creativity" of funky colours coming from agencies,
-  to make them long term usable...
+    to make them long term usable...
  */
 
 const colors = {
