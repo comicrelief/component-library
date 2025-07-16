@@ -24,6 +24,7 @@ const colors = {
   black: '#000000',
   white: '#FFFFFF',
   transparent: 'transparent',
+
   // grey chaos needs sorting...
   grey_stone: '#CEDCDA',
   grey_extra_light: '#f0f0f0',
@@ -42,26 +43,22 @@ const colors = {
   grey_dark: '#222222',
 
   /* GENERAL COLOURS */
-  // blue_donate is a bad naming
   blue: '#0565D1',
   blue_dark: '#274084',
+  // blue_donate is a bad naming?
   blue_donate: '#2042AD',
   blue_donate_interact: '#001A85',
   blue_light: '#BECCF9',
   blue_royal: '#6489FC',
 
-  // fine
   coral: '#F9686D',
   coral_dark: '#961D35',
   coral_light: '#FFCECE',
 
-  // change naming
   deep_violet: '#2C0230' /** Will be removed  */,
   deep_violet_dark: '#2C0230',
   deep_violet_light: '#3e1c43',
-  error_pink: '#FAE1E2',
 
-  // fine
   green: '#49D267',
   green_dark: '#1B651D',
   green_light: '#F4F2F4',
@@ -80,12 +77,14 @@ const colors = {
 
   lavender: '#C180F9',
 
+  // change naming
+  error_pink: '#FAE1E2',
+
   red: '#E52630',
   red_dark: '#890B11',
   // change naming
   red_secondary: '#F9723A',
 
-  // fine
   teal: '#4ECDBE',
   teal_dark: '#13767C',
   teal_light: '#86E4E9',
