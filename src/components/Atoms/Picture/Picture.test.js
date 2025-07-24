@@ -1,9 +1,9 @@
-import React from 'react';
-import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Picture from './Picture';
-import { defaultData } from '../../../styleguide/data/data';
-it('renders correctly', () => {
+import React from "react";
+import "jest-styled-components";
+import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
+import Picture from "./Picture";
+import { defaultData } from "../../../styleguide/data/data";
+it("renders correctly", () => {
   const tree = renderWithTheme(
     <Picture
       images={defaultData.images}
@@ -27,14 +27,6 @@ it('renders correctly', () => {
       object-fit: none;
     }
 
-    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-      .c0 {
-        background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
     <div
       className="c0 lazyload"
       height="auto"
@@ -56,7 +48,7 @@ it('renders correctly', () => {
   `);
 });
 
-it('renders correctly with custom props', () => {
+it("renders correctly with custom props", () => {
   const tree = renderWithTheme(
     <Picture
       images={defaultData.images}
@@ -81,20 +73,6 @@ it('renders correctly with custom props', () => {
       height: 100px;
       display: block;
       object-fit: cover;
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-      .c0 {
-        background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:contain)) {
-      .c1 {
-        visibility: hidden;
-      }
     }
 
     <div
