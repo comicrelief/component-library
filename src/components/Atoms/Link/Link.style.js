@@ -22,7 +22,7 @@ const buttonStyle = () => css`
   ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: auto;
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
   // Reinstate general styles for 'desktop':

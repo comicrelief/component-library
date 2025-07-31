@@ -18,6 +18,7 @@ const Link = ({
   underline = true,
   icon = null,
   iconFirst = false,
+  fullWidth = false,
   ...rest
 }) => {
   const [documentHost, setDocumentHost] = useState('');
@@ -62,6 +63,7 @@ const Link = ({
       home={home}
       iconFirst={iconFirst}
       underline={underline}
+      fullWidth={fullWidth}
     >
       {children}
       {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
@@ -87,7 +89,8 @@ Link.propTypes = {
   children: PropTypes.node.isRequired,
   iconFirst: PropTypes.bool,
   /** Embed icons */
-  icon: PropTypes.node
+  icon: PropTypes.node,
+  fullWidth: PropTypes.bool
 };
 
 export default Link;
