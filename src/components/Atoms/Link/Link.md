@@ -209,11 +209,11 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
       <Link color="white" href="/test" target="blank" type="button">
         White button
       </Link>
-        <div style={{ display: 'block', marginTop: '10px' }}>
+    </div>
+    <div style={{ display: 'block', marginTop: '10px' }}>
       <Link color="red" href="/test" target="blank" type="button" fullWidth>
         Full-width red button
       </Link>
-    </div>
     </div>
   </div>
 </div>
