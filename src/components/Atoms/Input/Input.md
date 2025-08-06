@@ -119,3 +119,15 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
     maxPxWidthLargeBreakpoint={250}
   />
 ```
+
+```js
+  <h4>Input with dark label</h4>
+  <Input
+    name="dark-label"
+    placeholder="£0.00"
+    type="text"
+    label="The label text can be made black rather than the default grey"
+    id="input-example-8"
+    labelProps={{ darkLabel: true }}
+  />
+```
