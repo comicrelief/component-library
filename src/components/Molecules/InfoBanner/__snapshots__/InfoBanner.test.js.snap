@@ -7,6 +7,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c3 {
+  font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -88,7 +90,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       Hello There
     </p>
@@ -106,7 +108,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       1st June 2020
     </p>
@@ -124,7 +126,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       <a
         className="c4"
@@ -150,7 +152,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       £2,000,000
     </p>
@@ -168,7 +170,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       1st June 2010
     </p>
@@ -186,7 +188,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       Uk
     </p>
