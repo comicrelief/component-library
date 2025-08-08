@@ -12,7 +12,7 @@ const ErrorIcon = styled.span`
 `;
 
 const ErrorText = ({ children, ...rest }) => (
-  <Text {...rest} color="red">
+  <Text {...rest} color="red" size="error">
     <ErrorIcon>{children}</ErrorIcon>
   </Text>
 );

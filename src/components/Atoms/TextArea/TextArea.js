@@ -49,7 +49,7 @@ const TextArea = React.forwardRef(({
       aria-describedby={id}
       ref={ref}
     />
-    {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+    {errorMsg && <ErrorText size="error" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
   </Label>
 ));
 

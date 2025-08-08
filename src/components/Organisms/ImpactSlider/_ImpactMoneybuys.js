@@ -16,7 +16,7 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
           <Moneybuy isInactive={isInactive} data-testid={`impact-slider--moneybuy-${index + 1}`}>
             <MoneybuyImage imageURL={item.imageURL} />
             <MoneybuyAmount tag="p" family="Anton" uppercase weight="normal" size="xl" data-testid="moneybuy-amount">{thisAmount}</MoneybuyAmount>
-            <MoneybuyDescription tag="p" size="sm" data-testid="moneybuy-description">{item.description}</MoneybuyDescription>
+            <MoneybuyDescription tag="p" size="s" data-testid="moneybuy-description">{item.description}</MoneybuyDescription>
           </Moneybuy>
           { index < (items.length - 1) && (
             <OrLabel tag="span">Or</OrLabel>

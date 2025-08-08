@@ -45,7 +45,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         Project Name
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         {title}
       </Text>
     </Info>
@@ -53,7 +53,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         End Date
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         {endDate}
       </Text>
     </Info>
@@ -61,7 +61,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         Funding theme
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         <Link href={themeLink} target="self" type="standard">
           {theme}
         </Link>
@@ -71,7 +71,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         Amount Awarded
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         <CurrencyFormat
           value={amount}
           displayType="text"
@@ -85,7 +85,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         Start Date
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         {startDate}
       </Text>
     </Info>
@@ -93,7 +93,7 @@ const InfoBanner = ({
       <Text tag="h3" size="md" uppercase>
         Beneficiary Country
       </Text>
-      <Text tag="p" size="sm">
+      <Text tag="p" size="s">
         {country}
       </Text>
     </Info>

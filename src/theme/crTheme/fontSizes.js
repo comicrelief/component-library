@@ -7,7 +7,10 @@ const fontSizes = {
   xl: '2rem',
   xxl: '3rem',
   big: '4rem',
-  super: '5rem'
+  super: '5rem',
+  // Temporary edgecase fix to at least keep all sizing centralise
+  // before website project design review overhaul
+  error: '0.875rem'
 };
 
 export default size => {

@@ -116,7 +116,7 @@ const EmailSignUp = ({
           {/* This error can be set as part of the submit callback using RHF's `setError` function.
           e.g. setError('formError', { message: 'Some error message'}) */}
           {errors.formError !== undefined && (
-            <ErrorText>{errors.formError.message}</ErrorText>
+            <ErrorText size="error">{errors.formError.message}</ErrorText>
           )}
         </>
       )}
