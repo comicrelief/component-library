@@ -88,7 +88,7 @@ const Select = React.forwardRef(
             </option>
           ))}
         </StyledSelect>
-        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+        {errorMsg && <ErrorText size="error" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
       </Label>
     );
   }

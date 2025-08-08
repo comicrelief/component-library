@@ -135,7 +135,7 @@ const Input = React.forwardRef(
       {errorMsg
         && (
         <ErrorText
-          size="sm"
+          size="error"
           weight="bold"
           data-test="error-message"
         >
