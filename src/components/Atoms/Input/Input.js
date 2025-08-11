@@ -42,7 +42,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
+  border-color: ${error ? theme.color('red') : theme.color('grey')};
   box-shadow: none;
   appearance: none;
   color: ${theme.color('black')};

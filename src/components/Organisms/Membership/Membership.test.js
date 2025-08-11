@@ -119,7 +119,7 @@ it('renders correctly', () => {
       padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #E1E2E3;
+      border-color: #969598;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
