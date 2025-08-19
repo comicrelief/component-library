@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import spacing from '../../../theme/shared/spacing';
+import spacing from '../../../../theme/shared/spacing';
 
 const FundraisingRegulatorWrapper = styled.div`
   // Overriding the baked-in styles for ease of update
