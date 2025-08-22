@@ -33,7 +33,7 @@
   ]}
 />
 
-<h4>DROPDOWN MENU - just one option</h4>
+<h4>DROPDOWN MENU - hide arrow / just one option</h4>
 <Select
     label="Label"
     errorMsg="This is an error message"
