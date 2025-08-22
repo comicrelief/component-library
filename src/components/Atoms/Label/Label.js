@@ -6,14 +6,11 @@ import Text from '../Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
-const getLabelColor = ({ theme, errorMsg, darkLabel }) => {
+const getLabelColor = ({ theme, errorMsg }) => {
   if (errorMsg) {
     return theme.color('red');
   }
-  if (darkLabel) {
-    return theme.color('black');
-  }
-  return theme.color('grey_label');
+  return theme.color('black');
 };
 
 const LabelElement = styled.label`
@@ -55,7 +52,6 @@ const LabelText = ({
  * @param children
  * @param label
  * @param hideLabel - Visually hide the label text (without removing it from the document)
- * @param darkLabel - Make the label text black rather than the default grey
  * @param rest
  * @returns {JSX.Element}
  * @constructor
@@ -64,7 +60,6 @@ const Label = ({
   children = null,
   label,
   hideLabel = false,
-  darkLabel = false,
   optional = null,
   errorMsg = '',
   ...rest
@@ -72,7 +67,6 @@ const Label = ({
   <LabelElement
     optional={optional}
     errorMsg={errorMsg}
-    darkLabel={darkLabel}
     {...rest}
   >
     <LabelText
@@ -91,14 +85,12 @@ Label.propTypes = {
   hideLabel: PropTypes.bool,
   children: PropTypes.node,
   optional: PropTypes.bool,
-  errorMsg: PropTypes.string,
-  darkLabel: PropTypes.bool
+  errorMsg: PropTypes.string
 };
 
 LabelElement.propTypes = {
   optional: PropTypes.bool,
-  errorMsg: PropTypes.string,
-  darkLabel: PropTypes.bool
+  errorMsg: PropTypes.string
 };
 
 LabelText.propTypes = {
