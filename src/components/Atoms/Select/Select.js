@@ -19,11 +19,10 @@ const StyledSelect = styled.select`
   height: 48px;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  background: ${({ theme, hideArrow }) =>
-    hideArrow
-      ? theme.color('grey_light')
-      : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`
-  };
+  background: ${({ theme, hideArrow }) => (hideArrow
+    ? theme.color('grey_light')
+    : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)
+};
   border: 1px solid;
   border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey_medium'))};
   box-shadow: none;
@@ -91,7 +90,7 @@ const Select = React.forwardRef(
             <option disabled value="">
               {description}
             </option>
-          )}
+            )}
 
           {options.map(option => (
             <option key={option.value} value={option.value}>
