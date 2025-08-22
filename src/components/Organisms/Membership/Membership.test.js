@@ -81,7 +81,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      color: #5C5C5E;
+      color: #000000;
     }
 
     .c16 {

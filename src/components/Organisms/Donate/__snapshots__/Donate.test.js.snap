@@ -51,7 +51,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c21 {
@@ -750,7 +750,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c22 {
@@ -1416,7 +1416,7 @@ exports[`Single donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c15 {
@@ -2168,7 +2168,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c15 {

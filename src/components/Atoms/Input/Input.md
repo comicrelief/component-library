@@ -128,6 +128,5 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
     type="text"
     label="The label text can be made black rather than the default grey"
     id="input-example-8"
-    labelProps={{ darkLabel: true }}
   />
 ```
