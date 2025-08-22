@@ -32,4 +32,16 @@
     { value: 'Option four', displayValue: 'The fourth option' }
   ]}
 />
+
+<h4>DROPDOWN MENU - just one option</h4>
+<Select
+    label="Label"
+    errorMsg="This is an error message"
+    description="Select an option"
+    greyDescription
+    hideArrow={true}
+    options={[
+        { value: 'Option one', displayValue: 'The first option' }
+    ]}
+/>
 ```
