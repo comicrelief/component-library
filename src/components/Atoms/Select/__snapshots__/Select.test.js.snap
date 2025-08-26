@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background: #F4F3F5 url(mock.asset) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
