@@ -23,7 +23,7 @@ const StyledSelect = styled.select`
     ? theme.color('grey_light')
     : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)};
   border: 1px solid;
-  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey_medium'))};
+  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey'))};
   box-shadow: none;
   appearance: none;
   color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};

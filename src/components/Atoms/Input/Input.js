@@ -155,7 +155,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
   // This prop allows us to _visually_ hide the label if we want (even if we
-  //  don't want to display a label, it should be present for screen readers).
+  // don't want to display a label, it should be present for screen readers).
   // todo: convert this to 'hideLabel' to make it consistent with other components
   showLabel: PropTypes.bool,
   hasAria: PropTypes.bool,
