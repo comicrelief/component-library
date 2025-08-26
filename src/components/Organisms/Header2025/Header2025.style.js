@@ -3,8 +3,6 @@ import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
 
-import './annoying.css';
-
 const Header2025Wrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`

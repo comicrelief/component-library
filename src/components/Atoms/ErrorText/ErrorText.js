@@ -8,7 +8,7 @@ const ErrorIcon = styled.span`
   width: 100%;
   z-index: 1;
   font-weight: bold;
-  padding: 0.6rem 0 1rem;
+  margin-top: 0.6rem;
 `;
 
 const ErrorText = ({ children, ...rest }) => (
