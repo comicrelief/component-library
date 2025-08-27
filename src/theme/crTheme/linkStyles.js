@@ -32,9 +32,14 @@ export default styleName => {
     style = css`
       color: ${linkStyles[styleName].color};
       font-weight: ${linkStyles[styleName].weight};
-      :hover {
+      text-decoration-color: ${linkStyles[styleName].color};
+      transition: text-decoration-color 150ms;
+      :hover,
+      :focus {
         color: ${linkStyles[styleName].hoverColor};
         font-weight: ${linkStyles[styleName].hoverWeight};
+        // Provide 100% transparent version of the colour to animate to:
+        text-decoration-color: ${linkStyles[styleName].color}00;
       }
     `;
   }

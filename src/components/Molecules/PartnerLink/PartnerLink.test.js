@@ -46,10 +46,17 @@ it('renders correctly', () => {
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
+      -webkit-text-decoration-color: #000000;
+      text-decoration-color: #000000;
+      -webkit-transition: text-decoration-color 150ms;
+      transition: text-decoration-color 150ms;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
+      -webkit-text-decoration-color: #00000000;
+      text-decoration-color: #00000000;
     }
 
     .c6 {

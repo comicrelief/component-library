@@ -18,10 +18,17 @@ it('renders a standard styled link correctly', () => {
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
+      -webkit-text-decoration-color: #000000;
+      text-decoration-color: #000000;
+      -webkit-transition: text-decoration-color 150ms;
+      transition: text-decoration-color 150ms;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
+      -webkit-text-decoration-color: #00000000;
+      text-decoration-color: #00000000;
     }
 
     <a
@@ -71,10 +78,17 @@ it('renders a button with an icon', () => {
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
+      -webkit-text-decoration-color: #000000;
+      text-decoration-color: #000000;
+      -webkit-transition: text-decoration-color 150ms;
+      transition: text-decoration-color 150ms;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
+      -webkit-text-decoration-color: #00000000;
+      text-decoration-color: #00000000;
     }
 
     .c2 {
@@ -142,10 +156,17 @@ it('renders a standard styled link correctly with target blank and assistive tex
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
+      -webkit-text-decoration-color: #000000;
+      text-decoration-color: #000000;
+      -webkit-transition: text-decoration-color 150ms;
+      transition: text-decoration-color 150ms;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
+      -webkit-text-decoration-color: #00000000;
+      text-decoration-color: #00000000;
     }
 
     .c1 {

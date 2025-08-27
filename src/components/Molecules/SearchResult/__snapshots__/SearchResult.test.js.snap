@@ -36,10 +36,17 @@ exports[`renders correctly in minimalist form 1`] = `
   line-height: 1.5rem;
   color: #000000;
   font-weight: normal;
+  -webkit-text-decoration-color: #000000;
+  text-decoration-color: #000000;
+  -webkit-transition: text-decoration-color 150ms;
+  transition: text-decoration-color 150ms;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   color: #000000;
+  -webkit-text-decoration-color: #00000000;
+  text-decoration-color: #00000000;
 }
 
 .c0 {
@@ -208,10 +215,17 @@ exports[`renders correctly with copy 1`] = `
   line-height: 1.5rem;
   color: #000000;
   font-weight: normal;
+  -webkit-text-decoration-color: #000000;
+  text-decoration-color: #000000;
+  -webkit-transition: text-decoration-color 150ms;
+  transition: text-decoration-color 150ms;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   color: #000000;
+  -webkit-text-decoration-color: #00000000;
+  text-decoration-color: #00000000;
 }
 
 .c0 {
@@ -383,10 +397,17 @@ exports[`renders correctly with date 1`] = `
   line-height: 1.5rem;
   color: #000000;
   font-weight: normal;
+  -webkit-text-decoration-color: #000000;
+  text-decoration-color: #000000;
+  -webkit-transition: text-decoration-color 150ms;
+  transition: text-decoration-color 150ms;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   color: #000000;
+  -webkit-text-decoration-color: #00000000;
+  text-decoration-color: #00000000;
 }
 
 .c0 {
@@ -546,10 +567,17 @@ exports[`renders correctly with date and type 1`] = `
   line-height: 1.5rem;
   color: #000000;
   font-weight: normal;
+  -webkit-text-decoration-color: #000000;
+  text-decoration-color: #000000;
+  -webkit-transition: text-decoration-color 150ms;
+  transition: text-decoration-color 150ms;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   color: #000000;
+  -webkit-text-decoration-color: #00000000;
+  text-decoration-color: #00000000;
 }
 
 .c0 {
