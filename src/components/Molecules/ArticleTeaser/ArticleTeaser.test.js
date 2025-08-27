@@ -61,17 +61,13 @@ it('renders article teaser correctly', () => {
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
-      -webkit-text-decoration-color: #000000;
-      text-decoration-color: #000000;
-      -webkit-transition: text-decoration-color 150ms;
-      transition: text-decoration-color 150ms;
     }
 
     .c1:hover,
     .c1:focus {
       color: #000000;
-      -webkit-text-decoration-color: #00000000;
-      text-decoration-color: #00000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c0 {
@@ -318,17 +314,13 @@ it('renders press realese correctly', () => {
       line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
-      -webkit-text-decoration-color: #000000;
-      text-decoration-color: #000000;
-      -webkit-transition: text-decoration-color 150ms;
-      transition: text-decoration-color 150ms;
     }
 
     .c1:hover,
     .c1:focus {
       color: #000000;
-      -webkit-text-decoration-color: #00000000;
-      text-decoration-color: #00000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c0 {

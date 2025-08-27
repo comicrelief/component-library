@@ -34,17 +34,13 @@ it('renders correctly', () => {
       line-height: 1.5rem;
       color: #FFFFFF;
       font-weight: normal;
-      -webkit-text-decoration-color: #FFFFFF;
-      text-decoration-color: #FFFFFF;
-      -webkit-transition: text-decoration-color 150ms;
-      transition: text-decoration-color 150ms;
     }
 
     .c3:hover,
     .c3:focus {
       color: #FFFFFF;
-      -webkit-text-decoration-color: #FFFFFF00;
-      text-decoration-color: #FFFFFF00;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c5 {
