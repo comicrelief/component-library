@@ -32,18 +32,14 @@ exports[`renders correctly in minimalist form 1`] = `
 
 .c1 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
   line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
   color: #000000;
-  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -208,18 +204,14 @@ exports[`renders correctly with copy 1`] = `
 
 .c1 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
   line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
   color: #000000;
-  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -387,18 +379,14 @@ exports[`renders correctly with date 1`] = `
 
 .c1 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
   line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
   color: #000000;
-  border-bottom: 2px solid #000000;
 }
 
 .c0 {
@@ -554,18 +542,14 @@ exports[`renders correctly with date and type 1`] = `
 
 .c1 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
   line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
 .c1:hover {
   color: #000000;
-  border-bottom: 2px solid #000000;
 }
 
 .c0 {
