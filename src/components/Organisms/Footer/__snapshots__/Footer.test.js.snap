@@ -131,6 +131,8 @@ exports[`renders correctly 1`] = `
   height: 46px;
   width: 100%;
   background-color: #2C0230;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c18:hover,

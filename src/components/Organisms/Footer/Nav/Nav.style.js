@@ -8,7 +8,7 @@ const NavLinkClass = styled(Link)`
   height: 46px;
   width: 100%;
   background-color: ${({ theme }) => theme.color('deep_violet_dark')};
-
+  text-decoration: none;
   &:hover,
   &:focus {
     border-bottom: none;
@@ -133,7 +133,9 @@ const NavMenu = styled.ul`
 /**
  * Menu item link
  */
-const NavLink = styled(NavLinkClass)``;
+const NavLink = styled(NavLinkClass)`
+  text-decoration: none;
+`;
 
 /**
  * Menu list items
