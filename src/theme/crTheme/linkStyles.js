@@ -4,17 +4,13 @@ import color from './colors';
 const linkStyles = {
   standard: {
     color: color('black'),
-    // border: `2px solid ${color('black')}`,
     weight: 'normal',
-    hoverColor: color('black'),
-    hoverBorder: `2px solid ${color('black')}`
+    hoverColor: color('black')
   },
   standard_white: {
     color: color('white'),
-    // border: `2px solid ${color('white')}`,
     weight: 'normal',
-    hoverColor: color('white'),
-    hoverBorder: `2px solid ${color('white')}`
+    hoverColor: color('white')
   }
 };
 
