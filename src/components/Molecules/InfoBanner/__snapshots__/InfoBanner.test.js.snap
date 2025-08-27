@@ -16,18 +16,17 @@ exports[`renders correctly 1`] = `
 
 .c4 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
   line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
-.c4:hover {
+.c4:hover,
+.c4:focus {
   color: #000000;
-  border-bottom: 2px solid #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 {

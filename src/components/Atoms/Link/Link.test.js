@@ -14,18 +14,17 @@ it('renders a standard styled link correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
       line-height: 1.5rem;
       color: #000000;
-      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
-      border-bottom: 2px solid #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     <a
@@ -71,18 +70,17 @@ it('renders a button with an icon', () => {
 
     .c0 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
       line-height: 1.5rem;
       color: #000000;
-      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
-      border-bottom: 2px solid #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c2 {
@@ -146,18 +144,17 @@ it('renders a standard styled link correctly with target blank and assistive tex
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
       line-height: 1.5rem;
       color: #000000;
-      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
-      border-bottom: 2px solid #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c1 {

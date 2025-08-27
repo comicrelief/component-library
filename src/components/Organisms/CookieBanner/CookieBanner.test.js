@@ -30,18 +30,17 @@ it('renders correctly', () => {
 
     .c3 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
       line-height: 1.5rem;
       color: #FFFFFF;
-      border-bottom: 2px solid #FFFFFF;
       font-weight: normal;
     }
 
-    .c3:hover {
+    .c3:hover,
+    .c3:focus {
       color: #FFFFFF;
-      border-bottom: 2px solid #FFFFFF;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c5 {

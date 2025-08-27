@@ -33,12 +33,11 @@ const buttonStyle = () => css`
 
 const linkStyle = () => css`
   position: relative;
-  text-decoration: none;
   display: inline;
   line-height: ${({ theme }) => theme.fontSize('l')};
-  ${({ type, theme, underline }) => (type
-    ? theme.linkStyles(type, underline)
-    : theme.linkStyles('standard', underline))};
+  ${({ type, theme }) => (type
+    ? theme.linkStyles(type)
+    : theme.linkStyles('standard'))};
 `;
 
 export const IconWrapper = styled.span`
