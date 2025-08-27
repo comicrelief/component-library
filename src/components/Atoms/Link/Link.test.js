@@ -15,7 +15,6 @@ it('renders a standard styled link correctly', () => {
     .c0 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
@@ -71,7 +70,6 @@ it('renders a button with an icon', () => {
     .c0 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
@@ -145,7 +143,6 @@ it('renders a standard styled link correctly with target blank and assistive tex
     .c0 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
