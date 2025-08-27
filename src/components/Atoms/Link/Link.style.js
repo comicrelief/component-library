@@ -34,7 +34,6 @@ const buttonStyle = () => css`
 const linkStyle = () => css`
   position: relative;
   display: inline;
-  line-height: ${({ theme }) => theme.fontSize('l')};
   ${({ type, theme }) => (type
     ? theme.linkStyles(type)
     : theme.linkStyles('standard'))};

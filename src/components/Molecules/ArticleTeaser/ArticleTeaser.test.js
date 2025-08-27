@@ -58,7 +58,6 @@ it('renders article teaser correctly', () => {
     .c1 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
@@ -311,7 +310,6 @@ it('renders press realese correctly', () => {
     .c1 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }

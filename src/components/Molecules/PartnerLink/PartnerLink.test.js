@@ -43,7 +43,6 @@ it('renders correctly', () => {
     .c0 {
       position: relative;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
