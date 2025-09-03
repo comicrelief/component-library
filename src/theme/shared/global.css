@@ -141,3 +141,11 @@ table td {
   opacity: 0;
   filter: blur(5px);
 }
+
+a { 
+  color: inherit;
+}
+
+a:hover, a:focus { 
+  text-decoration: none;
+}
