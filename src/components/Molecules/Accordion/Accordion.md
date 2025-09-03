@@ -18,13 +18,18 @@ import Text from '../../Atoms/Text/Text';
 import Text from '../../Atoms/Text/Text';
 
 <Accordion
-  contentBottomPadding="15px"
+  contentBottomPadding="100px"
   title={
     <Text family="Anton" size="l" uppercase>
       I am the title
     </Text>
   }
   >
- <Text tag="p">Customised bottom padding here!</Text>
+  
+  <Text tag="p">Customised bottom padding here!</Text>
+  
+  <Text tag="p">
+    <a href="https://www.google.com">A plain anchor link, made to resemble a Link component</a>.
+  </Text>
 </Accordion>
 ```
