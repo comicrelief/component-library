@@ -18,6 +18,7 @@ const NavLinkClass = styled(Link)`
   width: 100%;
   color: ${({ theme }) => theme.color('black')};
   transition: color ${transitionDuration}s ease;
+  text-decoration: none;
 
   :hover,
   :focus,
