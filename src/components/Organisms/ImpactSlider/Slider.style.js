@@ -8,12 +8,12 @@ const sizeMultiplier = 1.4;
 const StyledRangerSlider = styled(RangeSlider)`
     background: white;
     height: 16px;
-    border-radius: 16px;
+    border-radius: 1rem;
     border: 1px solid ${props => props.theme.color('black')};
 
     .range-slider__range {
         height: 14px;
-        border-radius: 10px;
+        border-radius: 0.5rem;
         background-color: ${props => props.theme.color('red')};
         z-index: 2;
     }

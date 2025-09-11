@@ -22,7 +22,7 @@ const Moneybuy = styled.div`
     padding: 8px 20px;
     height: auto;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     border: 1px solid ${props => props.theme.color('black')};
     position: relative;
     flex-direction: row;

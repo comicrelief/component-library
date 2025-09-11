@@ -102,7 +102,7 @@ const Form = styled.form`
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-top: ${spacing('md')};
 
   h3 {
@@ -202,7 +202,7 @@ const AmountField = styled(Input)`
     height: 48px;
     border: 2px solid ${({ theme }) => theme.color('grey')};
     background: ${({ theme }) => theme.color('grey_light')};
-    border-radius: 10px;
+    border-radius: 0.5rem;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     &:focus {
       outline: none;
