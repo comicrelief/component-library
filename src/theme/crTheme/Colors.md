@@ -23,7 +23,7 @@ const Item = styled.div`
   div {
     width: 160px;
     height: 160px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     justify-content: flex-end;
   }

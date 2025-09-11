@@ -14,7 +14,7 @@ const MoneyBuyButton = styled(Input)`
     font-size: ${({ theme }) => theme.fontSize('l')};
     font-family: ${({ theme }) => theme.fontFamilies('Anton')};
     font-weight: normal;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     padding: ${spacing('s')};
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
     height: auto;
