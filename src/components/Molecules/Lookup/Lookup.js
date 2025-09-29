@@ -90,6 +90,7 @@ const Lookup = ({
         options={options.map(mapOptionToString)}
         label={label}
         placeholder={placeholder}
+        data-test="lookupDropdown"
         onChange={e => {
           setQuery(e.target.value);
           setErrorMessage('');
