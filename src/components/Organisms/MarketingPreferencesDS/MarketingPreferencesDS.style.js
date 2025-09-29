@@ -35,10 +35,6 @@ const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
   display: flex;
   width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 10px;
-  }
 `;
 
 const BottomCopyWrapper = styled.div`
