@@ -64,16 +64,14 @@ const buildValidationSchema = overrideOptions => {
 
   const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
-  const transformPostcode = (postcode) => {
+  const transformPostcode = postcode => {
     if (typeof postcode === 'string') {
       return fixPostcode(postcode);
     }
     return postcode;
   };
 
-  const validatePostcode = (postcode) => {
-    return isValid(postcode);
-  };
+  const validatePostcode = postcode => isValid(postcode);
 
   const mpValidationFields = {
     mp_email: yup.string()
