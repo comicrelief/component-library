@@ -64,7 +64,7 @@ const buildValidationSchema = overrideOptions => {
 
   const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
-  const validatePostcode = (postcode) => {
+  const validatePostcode = postcode => {
     const fixed = fixPostcode(postcode || '');
     return isValid(fixed) && fixed;
   };
