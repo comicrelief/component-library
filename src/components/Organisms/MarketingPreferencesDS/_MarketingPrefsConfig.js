@@ -64,9 +64,15 @@ const buildValidationSchema = overrideOptions => {
 
   const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
-  const validatePostcode = postcode => {
-    const fixed = fixPostcode(postcode || '');
-    return isValid(fixed) && fixed;
+  const transformPostcode = (postcode) => {
+    if (typeof postcode === 'string') {
+      return fixPostcode(postcode);
+    }
+    return postcode;
+  };
+
+  const validatePostcode = (postcode) => {
+    return isValid(postcode);
   };
 
   const mpValidationFields = {
@@ -114,7 +120,7 @@ const buildValidationSchema = overrideOptions => {
     mp_postcode: yup.string().when('mp_permissionPost', {
       is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
       && mpValidationOptions.mp_permissionPost[val]),
-      then: schema => schema.required('Please enter your postcode').test('postcode-valid', 'Please enter a valid postcode', validatePostcode)
+      then: schema => schema.required('Please enter your postcode').transform(transformPostcode).test('postcode-valid', 'Please enter a valid postcode', validatePostcode)
     }),
 
     mp_country: yup.string().when('mp_permissionPost', {
