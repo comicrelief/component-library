@@ -183,7 +183,6 @@ it('renders correctly', () => {
                   className="c9"
                 >
                   <input
-                    aria-describedby="search"
                     className="c10"
                     id="search"
                     name="search"

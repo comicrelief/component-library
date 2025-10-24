@@ -489,7 +489,6 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box1"
                         aria-label="£5"
                         className="c19"
                         id="mship-1--moneyBuy-box1"
@@ -527,7 +526,6 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box2"
                         aria-label="£10"
                         className="c19"
                         id="mship-1--moneyBuy-box2"
@@ -565,7 +563,6 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box3"
                         aria-label="£20"
                         className="c19"
                         id="mship-1--moneyBuy-box3"
@@ -614,7 +611,6 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--MoneyBuy-userInput"
                         aria-label="Input a different amount"
                         className="c19"
                         id="mship-1--MoneyBuy-userInput"

@@ -130,3 +130,22 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
     id="input-example-8"
   />
 ```
+
+```js
+  import Text from '../../Atoms/Text/Text';
+
+  const exampleDescription = (
+    <Text>Here's a description with some <b>formatting</b></Text>
+  );
+  
+  <>
+    <h4>Input with Description:</h4>
+    <Input
+      placeholder="I have a description"
+      type="text"
+      label="My Great Input"
+      id="input-example-9"
+      description={exampleDescription}
+    />
+  </>
+```
