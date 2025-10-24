@@ -98,6 +98,7 @@ it('renders correctly', () => {
       <textarea
         aria-describedby="Please leave your comment here"
         className="c3"
+        id="Please leave your comment here"
         name="description"
         placeholder="This is text area"
         rows={5}
