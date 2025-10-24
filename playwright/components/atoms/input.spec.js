@@ -131,7 +131,7 @@ test.describe('input component', () => {
     const specificElement = page.locator('#price');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="price"]');
+    const inputElement = page.locator('#price');
 
     // Get the 'name' attribute
     const nameAttribute = await inputElement.getAttribute('name');
