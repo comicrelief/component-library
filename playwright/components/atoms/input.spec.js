@@ -2,14 +2,13 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('input component', () => {
   test('input required with label and hint', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-1');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-1"]');
+    const inputElement = page.locator('#input-example-1');
 
     // Get the placeholder attribute
     const placeholderText = await inputElement.getAttribute('placeholder');
@@ -23,14 +22,13 @@ test.describe('input component', () => {
   });
 
   test('input with error message', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-2');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-2"]');
+    const inputElement = page.locator('#input-example-2');
 
     // Get the placeholder attribute
     const placeholderText = await inputElement.getAttribute('placeholder');
@@ -47,14 +45,13 @@ test.describe('input component', () => {
   });
 
   test('Simple input (optional)', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-3');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-3"]');
+    const inputElement = page.locator('#input-example-3');
 
     // Get the 'name' attribute
     const nameAttribute = await inputElement.getAttribute('name');
@@ -68,14 +65,13 @@ test.describe('input component', () => {
   });
 
   test('Simple input (required)', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-4');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-4"]');
+    const inputElement = page.locator('#input-example-4');
 
     // Get the 'name' attribute
     const nameAttribute = await inputElement.getAttribute('name');
@@ -89,14 +85,13 @@ test.describe('input component', () => {
   });
 
   test('Input Label with markup', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-5');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-5"]');
+    const inputElement = page.locator('#input-example-5');
 
     // Get the 'name' attribute
     const nameAttribute = await inputElement.getAttribute('name');
@@ -110,14 +105,13 @@ test.describe('input component', () => {
   });
 
   test('Input label as React element', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
     const specificElement = page.locator('input#input-example-6');
     await expect(specificElement).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="input-example-6"]');
+    const inputElement = page.locator('#input-example-6');
 
     // Get the 'name' attribute
     const nameAttribute = await inputElement.getAttribute('name');
@@ -131,7 +125,6 @@ test.describe('input component', () => {
   });
 
   test('Input with prefix', async ({ page }) => {
-
     await page.goto('/#input');
 
     // input required with label and hint
