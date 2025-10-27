@@ -10,7 +10,7 @@ test.describe('Email Signup Form component', () => {
     await expect(page.locator('[data-testid="EmailSignUpForm-example-1"] #email')).toBeVisible();
 
     // firstname field
-    const firstnamePlaceholder = page.locator('[aria-describedby="first-name"]');
+    const firstnamePlaceholder = page.locator('#first-name');
 
     // Get the 'placeholder' attribute
     const placeholderAttribute = await firstnamePlaceholder.getAttribute('placeholder');
@@ -37,7 +37,7 @@ test.describe('Email Signup Form component', () => {
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
 
     // lastname
-    const lastnamePlaceholder = page.locator('[aria-describedby="last-name"]');
+    const lastnamePlaceholder = page.locator('#last-name');
 
     // Get the 'placeholder' attribute
     const lastnamePlaceholderAttribute = await lastnamePlaceholder.getAttribute('placeholder');
@@ -64,7 +64,7 @@ test.describe('Email Signup Form component', () => {
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
 
     // email
-    const emailPlaceholder = page.locator('[aria-describedby="email"]');
+    const emailPlaceholder = page.locator('#email');
 
     // Get the 'placeholder' attribute
     const emailPlaceholderAttribute = await emailPlaceholder.getAttribute('placeholder');

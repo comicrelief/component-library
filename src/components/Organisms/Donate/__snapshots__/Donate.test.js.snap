@@ -647,7 +647,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                   className="c23"
                 >
                   <input
-                    aria-describedby="mship-4--MoneyBuy-userInput"
                     aria-label="Input a different amount"
                     className="c24"
                     id="mship-4--MoneyBuy-userInput"
@@ -1314,7 +1313,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   className="c24"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
                     className="c25"
                     id="mship-1--MoneyBuy-userInput"
@@ -1949,7 +1947,6 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£10"
                     className="c18"
                     id="mship-1--moneyBuy-box1"
@@ -1987,7 +1984,6 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£20"
                     className="c18"
                     id="mship-1--moneyBuy-box2"
@@ -2025,7 +2021,6 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£30"
                     className="c18"
                     id="mship-1--moneyBuy-box3"
@@ -2074,7 +2069,6 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
                     className="c18"
                     id="mship-1--MoneyBuy-userInput"
@@ -2571,7 +2565,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
                     className="c18"
                     id="mship-1--MoneyBuy-userInput"

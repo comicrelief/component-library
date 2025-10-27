@@ -2,14 +2,13 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('simple school lookup component', () => {
   test('simple school lookup', async ({ page, context }) => {
-
     await page.goto('/#simpleschoollookup');
 
     // simple school lookup elements should be visible
     await expect(page.locator('[data-testid="SimpleSchoolLookup-example-0"]')).toBeVisible();
     await expect(page.locator('[data-preview="SimpleSchoolLookup"]')).toBeVisible();
 
-    const inputElement = page.locator('[aria-describedby="school_lookup"]');
+    const inputElement = page.locator('#school_lookup');
 
     // Get the 'placeholder' attribute
     const placeholderAttribute = await inputElement.getAttribute('placeholder');
