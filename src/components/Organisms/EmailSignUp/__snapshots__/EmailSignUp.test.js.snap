@@ -321,7 +321,6 @@ exports[`renders correctly 1`] = `
               className="c12"
             >
               <input
-                aria-describedby="first-name"
                 aria-required={true}
                 className="c13"
                 id="first-name"
@@ -359,7 +358,6 @@ exports[`renders correctly 1`] = `
               className="c12"
             >
               <input
-                aria-describedby="last-name"
                 aria-required={true}
                 className="c13"
                 id="last-name"
@@ -398,7 +396,6 @@ exports[`renders correctly 1`] = `
             className="c12"
           >
             <input
-              aria-describedby="email"
               aria-required={true}
               className="c13"
               id="email"

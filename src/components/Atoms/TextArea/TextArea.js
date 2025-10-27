@@ -46,6 +46,7 @@ const TextArea = React.forwardRef(({
       placeholder={placeholder}
       rows={rows}
       error={!!errorMsg}
+      id={id}
       aria-describedby={id}
       ref={ref}
     />

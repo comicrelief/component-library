@@ -118,7 +118,6 @@ it('renders correctly', () => {
           className="c4"
         >
           <input
-            aria-describedby="Accessibility info go here"
             className="c5"
             id="Accessibility info go here"
             name="fullname"
@@ -254,7 +253,6 @@ it('renders with responsive max widths correctly', () => {
           className="c4"
         >
           <input
-            aria-describedby="input-example-7"
             className="c5"
             id="input-example-7"
             name="responsive-width"
