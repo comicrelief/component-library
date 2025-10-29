@@ -676,7 +676,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             will help us fund amazing projects in the UK and around the world.
           </p>
           <button
-            className="c26"
+            className="c26 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -1341,7 +1341,7 @@ exports[`Monthly donation renders correctly 1`] = `
             </strong>
           </p>
           <button
-            className="c27"
+            className="c27 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -2098,7 +2098,7 @@ exports[`Single donation renders correctly 1`] = `
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
           <button
-            className="c25"
+            className="c25 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -2593,7 +2593,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             </strong>
           </p>
           <button
-            className="c20"
+            className="c20 Button_DonateWidget"
             color="red"
             type="submit"
           >
