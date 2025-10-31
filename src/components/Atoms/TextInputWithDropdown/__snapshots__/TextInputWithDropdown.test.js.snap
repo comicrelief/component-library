@@ -111,6 +111,7 @@ exports[`renders correctly with no value and no options 1`] = `
         className="c5"
       >
         <input
+          aria-required={false}
           autoComplete="off"
           className="c6"
           id="text-input-with-dropdown"
@@ -240,6 +241,7 @@ exports[`renders correctly with value and no options 1`] = `
         className="c5"
       >
         <input
+          aria-required={false}
           autoComplete="off"
           className="c6"
           id="text-input-with-dropdown"
@@ -408,6 +410,7 @@ exports[`renders correctly with value and options 1`] = `
         className="c5"
       >
         <input
+          aria-required={false}
           autoComplete="off"
           className="c6"
           id="text-input-with-dropdown"

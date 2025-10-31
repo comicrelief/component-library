@@ -490,6 +490,7 @@ it('renders correctly', () => {
                     >
                       <input
                         aria-label="£5"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box1"
                         name="mship-1--moneyBuy1"
@@ -527,6 +528,7 @@ it('renders correctly', () => {
                     >
                       <input
                         aria-label="£10"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box2"
                         name="mship-1--moneyBuy2"
@@ -564,6 +566,7 @@ it('renders correctly', () => {
                     >
                       <input
                         aria-label="£20"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box3"
                         name="mship-1--moneyBuy3"
@@ -612,6 +615,7 @@ it('renders correctly', () => {
                     >
                       <input
                         aria-label="Input a different amount"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--MoneyBuy-userInput"
                         max="25000"

@@ -136,10 +136,11 @@ const Input = React.forwardRef(
             type={type}
             placeholder={placeholder}
             error={Boolean(errorMsg)}
-            aria-describedby={description ? `${id}-description` : undefined}
             ref={ref}
             prefixLength={prefix.length}
             required={optional === false}
+            aria-required={optional === false}
+            aria-describedby={description ? `${id}-description` : undefined}
             {...rest}
           />
           {errorMsg && <ErrorIconWrapper />}
