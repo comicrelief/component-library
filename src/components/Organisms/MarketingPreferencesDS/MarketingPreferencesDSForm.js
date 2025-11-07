@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-console */
+import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Text from '../../Atoms/Text/Text';
@@ -41,9 +42,12 @@ const {
 } = mpValidationCustom;
 
 const MarketingPreferencesDSForm = () => {
+  const [emailInteractedWith, setEmailInteractedWith] = useState(false);
+
   function customSubmitHandler(formData) {
-    // eslint-disable-next-line no-console
     console.log('Successful submission', formData);
+    // And we'd do something with this in a real context:
+    console.log('emailInteractedWith:', emailInteractedWith);
   }
 
   // For our default instance:
@@ -71,6 +75,8 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptions}
             id="default"
             formContext={formMethods}
+            // Pass in our useState function as the callback directly:
+            emailChoiceCallback={setEmailInteractedWith}
           />
           <input type="submit" />
         </form>
@@ -85,6 +91,9 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptionsCustom}
             id="custom"
             formContext={formMethodsCustom}
+            // Pass in our useState function as the callback directly:
+            emailChoiceCallback={setEmailInteractedWith}
+
           />
           <input type="submit" />
         </form>

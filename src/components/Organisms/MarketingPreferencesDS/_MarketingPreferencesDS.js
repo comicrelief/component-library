@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useWatch } from 'react-hook-form';
 import _ from 'lodash';
@@ -20,6 +20,7 @@ const MarketingPreferencesDS = ({
   mpValidationOptions,
   id = null,
   formContext = null,
+  emailChoiceCallback,
   ...rest
 }) => {
   const { formState: { errors }, control } = formContext;
@@ -30,6 +31,15 @@ const MarketingPreferencesDS = ({
   const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: null });
   const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
+  // NB: this presumes we're still not setting this to option 'Yes' by default):
+  useEffect(() => {
+    // Don't run on initial mount, only when actually updated:
+    if (emailChoice !== null) {
+      // Fire callback to update flag in parent component:
+      emailChoiceCallback(true);
+    }
+  }, [emailChoice, emailChoiceCallback]);
+
   const {
     // eslint-disable-next-line camelcase
     mp_permissionEmail, mp_permissionSMS, mp_permissionPhone, mp_permissionPost
@@ -37,11 +47,8 @@ const MarketingPreferencesDS = ({
 
   // If the field is not required for each No/Yes choice, remove it from the DOM entirely
   const disableEmailInput = (mp_permissionEmail.yes === false && emailChoice.includes('yes'));
-
   const disableSMSInput = (mp_permissionSMS.yes === false && smsChoice.includes('yes'));
-
   const disablePhoneInput = (mp_permissionPhone.yes === false && phoneChoice.includes('yes'));
-
   const disablePostInput = (mp_permissionPost.yes === false && postChoice.includes('yes'));
 
   // Required to track multiple errors to determine whether to show/hide the fieldset
@@ -273,7 +280,9 @@ MarketingPreferencesDS.propTypes = {
   in the parent to set-up the validation, but also required here for additional functionality */
   mpValidationOptions: PropTypes.objectOf(PropTypes.shape).isRequired,
   id: PropTypes.string,
-  formContext: PropTypes.shape()
+  formContext: PropTypes.shape(),
+  // For soft opt-in, as react-hook-form's 'isDirty' doesn't work with checkboxes, only Fields 😮‍💨
+  emailChoiceCallback: PropTypes.func
 };
 
 MaybeDisabled.propTypes = {
