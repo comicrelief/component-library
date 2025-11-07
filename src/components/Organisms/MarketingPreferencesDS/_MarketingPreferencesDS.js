@@ -20,7 +20,7 @@ const MarketingPreferencesDS = ({
   mpValidationOptions,
   id = null,
   formContext = null,
-  emailChoiceCallback,
+  emailInteractedCallback,
   ...rest
 }) => {
   const { formState: { errors }, control } = formContext;
@@ -31,14 +31,13 @@ const MarketingPreferencesDS = ({
   const phoneChoice = useWatch({ control, name: 'mp_permissionPhone', defaultValue: null });
   const smsChoice = useWatch({ control, name: 'mp_permissionSMS', defaultValue: null });
 
-  // NB: this presumes we're still not setting this to option 'Yes' by default):
   useEffect(() => {
     // Don't run on initial mount, only when actually updated:
     if (emailChoice !== null) {
       // Fire callback to update flag in parent component:
-      emailChoiceCallback(true);
+      emailInteractedCallback(true);
     }
-  }, [emailChoice, emailChoiceCallback]);
+  }, [emailChoice, emailInteractedCallback]);
 
   const {
     // eslint-disable-next-line camelcase
@@ -282,7 +281,7 @@ MarketingPreferencesDS.propTypes = {
   id: PropTypes.string,
   formContext: PropTypes.shape(),
   // For soft opt-in, as react-hook-form's 'isDirty' doesn't work with checkboxes, only Fields 😮‍💨
-  emailChoiceCallback: PropTypes.func
+  emailInteractedCallback: PropTypes.func
 };
 
 MaybeDisabled.propTypes = {

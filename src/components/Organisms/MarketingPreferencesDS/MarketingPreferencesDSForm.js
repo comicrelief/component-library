@@ -76,7 +76,7 @@ const MarketingPreferencesDSForm = () => {
             id="default"
             formContext={formMethods}
             // Pass in our useState function as the callback directly:
-            emailChoiceCallback={setEmailInteractedWith}
+            emailInteractedCallback={setEmailInteractedWith}
           />
           <input type="submit" />
         </form>
@@ -92,7 +92,7 @@ const MarketingPreferencesDSForm = () => {
             id="custom"
             formContext={formMethodsCustom}
             // Pass in our useState function as the callback directly:
-            emailChoiceCallback={setEmailInteractedWith}
+            emailInteractedCallback={setEmailInteractedWith}
 
           />
           <input type="submit" />
