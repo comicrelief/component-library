@@ -111,6 +111,7 @@ exports[`renders correctly 1`] = `
         className="c5"
       >
         <input
+          aria-required={false}
           autoComplete="off"
           className="c6"
           defaultValue=""
