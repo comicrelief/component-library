@@ -46,8 +46,8 @@ const MarketingPreferencesDSForm = () => {
   const [emailInteractedWith, setEmailInteractedWith] = useState(false);
 
   function customSubmitHandler(formData) {
+    // Obviously, in a *real* context, we'd do something useful with this data:
     console.log('Successful submission', formData);
-    // And we'd do something with this in a real context:
     console.log('emailInteractedWith:', emailInteractedWith);
   }
 
@@ -76,7 +76,7 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptions}
             id="default"
             formContext={formMethods}
-            // Pass in our useState function as the callback directly:
+            // Directly pass in our useState 'set' function as the callback:
             emailInteractedCallback={setEmailInteractedWith}
           />
           <input type="submit" />
@@ -92,9 +92,8 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptionsCustom}
             id="custom"
             formContext={formMethodsCustom}
-            // Pass in our useState function as the callback directly:
+            // Directly pass in our useState 'set' function as the callback:
             emailInteractedCallback={setEmailInteractedWith}
-
           />
           <input type="submit" />
         </form>
