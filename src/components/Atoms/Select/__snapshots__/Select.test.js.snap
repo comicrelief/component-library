@@ -75,6 +75,7 @@ exports[`renders correctly 1`] = `
     size="s"
   />
   <select
+    aria-required={true}
     className="c3"
     defaultValue=""
     onChange={[Function]}
