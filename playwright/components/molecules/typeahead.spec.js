@@ -21,6 +21,7 @@ test.describe('typeahead component', () => {
     await page.waitForTimeout(500);
     await page.locator('label[for="typeahead-test"] ~ div > ul[role="listbox"]').waitFor({ state: 'visible' });
     await expect(page.locator('label[for="typeahead-test"] ~ div > ul[role="listbox"]')).toBeVisible();
+    await expect(page.locator('label[for="typeahead-test"] ~ div > ul[role="listbox"] > li[id="option-0"]')).toContainText('red nose');
 
     await page.close();
   });
