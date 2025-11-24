@@ -1,4 +1,3 @@
-// WEBSITE PROJECT UPDATES:
 const fontSizes = {
   xxs: '0.875rem',
   xs: '1rem',

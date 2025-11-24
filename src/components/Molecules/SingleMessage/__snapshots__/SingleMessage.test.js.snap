@@ -178,6 +178,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   text-transform: inherit;
   color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .c7 {
@@ -276,6 +278,20 @@ exports[`renders Single Message with Image correctly 1`] = `
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -636,6 +652,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   text-transform: inherit;
   color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .c7 {
@@ -734,6 +752,20 @@ exports[`renders Single Message with full width correctly 1`] = `
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:740px) {

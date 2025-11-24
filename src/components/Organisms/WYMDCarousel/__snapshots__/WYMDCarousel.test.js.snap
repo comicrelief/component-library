@@ -361,6 +361,8 @@ exports[`renders correctly:
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .c5 {
@@ -499,6 +501,20 @@ exports[`renders correctly:
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@media (min-width:740px) {
+  .c3 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width:1024px) {

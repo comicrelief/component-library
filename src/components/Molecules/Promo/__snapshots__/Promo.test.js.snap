@@ -13,7 +13,7 @@ exports[`renders Promo correctly 1`] = `
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .c8 {
@@ -141,7 +141,6 @@ exports[`renders Promo correctly 1`] = `
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -149,7 +148,6 @@ exports[`renders Promo correctly 1`] = `
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -288,7 +286,7 @@ exports[`renders Promo correctly end position 1`] = `
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .c8 {
@@ -419,7 +417,6 @@ exports[`renders Promo correctly end position 1`] = `
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -427,7 +424,6 @@ exports[`renders Promo correctly end position 1`] = `
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
-    margin-bottom: 2rem;
   }
 }
 

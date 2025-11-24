@@ -6,6 +6,8 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 /** Text component */
 export const BaseText = styled.span`
 
+  // TO-DO: MAKES THESE ALL CONDITIONAL
+  // Prop overrides
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   line-height: ${({ size, theme }) => theme.lineHeight(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
@@ -23,24 +25,6 @@ export const BaseText = styled.span`
   // Anton customisation:
   ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
 
-  // 'Super' size customisations:
-  ${({ size, theme }) => (size === 'super'
-    ? css`
-          font-size: ${theme.fontSize('xxl')};
-          line-height: 3rem;
-          @media ${theme.allBreakpoints('M')} {
-            font-size: ${theme.fontSize('big')};
-            line-height: ${theme.fontSize('big')};
-            margin-bottom: 2rem;
-          }
-          @media ${theme.allBreakpoints('L')} {
-            font-size: ${theme.fontSize('super')};
-            line-height: ${theme.fontSize('super')};
-            margin-bottom: 2rem;
-          }
-        `
-    : null)};
-
   ${({ mobileColor, theme }) => mobileColor && css`
   @media (max-width: ${breakpointValues.L - 1}px) {
     color: ${theme.color(mobileColor)};
@@ -56,6 +40,28 @@ export const BaseText = styled.span`
       }
     `
     : null)};
+
+  //**** WEBSITE PROJECT ******
+
+  // H1 styles:
+  ${({ as, theme }) => (as === 'h1' && css`
+    // Small breakpoint
+    font-size: ${theme.fontSize('xxl')};
+    line-height: ${theme.lineHeight('xxl')};
+
+    // Medium breakpoint
+    @media ${theme.allBreakpoints('M')} {
+      font-size: ${theme.fontSize('big')};
+      line-height: ${theme.lineHeight('big')};
+    }
+
+    // L & XL breakpoints
+    @media ${theme.allBreakpoints('L')} {
+      font-size: ${theme.fontSize('super')};
+      line-height: ${theme.lineHeight('super')};
+    }
+  `)};
+
 `;
 
 /** Text renders different elements based on the `tag` prop
