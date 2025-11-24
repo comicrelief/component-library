@@ -20,11 +20,11 @@ it('renders correctly', () => {
     .c4 {
       font-size: 0.875rem;
       line-height: 1.063rem;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      text-transform: inherit;
       color: #FFFFFF;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }

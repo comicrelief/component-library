@@ -16,12 +16,12 @@ it('renders correctly', () => {
       .c2 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      font-weight: bold;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: bold;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -106,12 +106,12 @@ it('renders correctly', () => {
       .c2 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      font-weight: bold;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: bold;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

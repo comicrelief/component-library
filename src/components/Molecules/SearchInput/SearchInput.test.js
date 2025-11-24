@@ -18,11 +18,11 @@ it('renders correctly', () => {
     .c6 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

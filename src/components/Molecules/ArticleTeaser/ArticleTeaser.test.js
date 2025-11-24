@@ -22,27 +22,27 @@ it('renders article teaser correctly', () => {
     .c8 {
       font-size: 1rem;
       line-height: 1.25rem;
+      font-weight: bold;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: bold;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
       font-size: 1.875rem;
       line-height: 1.875rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-weight: normal;
+      line-height: 2rem;
+      text-transform: uppercase;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: normal;
-      line-height: 2rem;
-      text-transform: uppercase;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
       font-family: 'Anton',Impact,sans-serif;
     }
 
@@ -293,27 +293,27 @@ it('renders press realese correctly', () => {
     .c8 {
       font-size: 1rem;
       line-height: 1.25rem;
+      font-weight: bold;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: bold;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
       font-size: 1.875rem;
       line-height: 1.875rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-weight: normal;
+      line-height: 2rem;
+      text-transform: uppercase;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: normal;
-      line-height: 2rem;
-      text-transform: uppercase;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
       font-family: 'Anton',Impact,sans-serif;
     }
 

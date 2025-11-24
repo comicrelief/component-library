@@ -28,63 +28,63 @@ it('renders correctly', () => {
     .c6 {
       font-size: 1.5rem;
       line-height: 1.625rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: 800;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: 800;
-      text-transform: inherit;
-      font-size: 1.5rem;
-      line-height: 1.5rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      text-transform: inherit;
-      font-size: 1rem;
-      line-height: 1.25rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c12 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      text-transform: inherit;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c16 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c23 {
       font-size: 1.125rem;
       line-height: 1.375rem;
+      font-weight: 500;
+      text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-weight: 500;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
