@@ -36,22 +36,23 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c10 {
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  height: auto;
-  margin-right: 1rem;
-}
-
 .c9 {
   display: inline-block;
   z-index: 3;
-  width: 48px;
+  width: 100%;
   -webkit-transform: inherit;
   -ms-transform: inherit;
   transform: inherit;
   vertical-align: bottom;
+}
+
+.c10 {
+  color: #E52630;
+  font-size: 1.5rem;
+  -webkit-letter-spacing: 1.5px;
+  -moz-letter-spacing: 1.5px;
+  -ms-letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 }
 
 .c7 {
@@ -640,11 +641,11 @@ exports[`renders correctly 1`] = `
             className="c9"
             rotate={0}
           >
-            <img
-              alt="Comic Relief logo"
+            <h1
               className="c10"
-              src="mock.asset"
-            />
+            >
+              Comic Relief
+            </h1>
           </div>
         </a>
       </div>

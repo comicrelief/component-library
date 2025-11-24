@@ -1,28 +1,29 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Logo from "./Logo";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Logo from './Logo';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c1 {
-      object-fit: cover;
-      width: 100%;
-      display: block;
-      height: auto;
-      margin-right: 1rem;
-    }
-
     .c0 {
       display: inline-block;
       z-index: 3;
-      width: 51px;
+      width: 100%;
       -webkit-transform: rotate(-14deg);
       -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
       vertical-align: bottom;
+    }
+
+    .c1 {
+      color: #E52630;
+      font-size: 1.5rem;
+      -webkit-letter-spacing: 1.5px;
+      -moz-letter-spacing: 1.5px;
+      -ms-letter-spacing: 1.5px;
+      letter-spacing: 1.5px;
     }
 
     @media (min-width:1150px) {
@@ -35,11 +36,11 @@ it("renders correctly", () => {
       className="c0"
       rotate={1}
     >
-      <img
-        alt="Comic Relief logo"
+      <h1
         className="c1"
-        src="mock.asset"
-      />
+      >
+        Comic Relief
+      </h1>
     </div>
   `);
 });
