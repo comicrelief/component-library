@@ -34,10 +34,12 @@ it('renders correctly', () => {
 
     <div
       className="c0"
+      data-testid="LogoWrapper"
       rotate={1}
     >
       <h1
         className="c1"
+        data-testid="ComicReliefTextLogo"
       >
         Comic Relief
       </h1>

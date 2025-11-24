@@ -639,10 +639,12 @@ exports[`renders correctly 1`] = `
         >
           <div
             className="c9"
+            data-testid="LogoWrapper"
             rotate={0}
           >
             <h1
               className="c10"
+              data-testid="ComicReliefTextLogo"
             >
               Comic Relief
             </h1>
