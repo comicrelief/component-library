@@ -18,8 +18,6 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
-      font-size: 0.875rem;
-      line-height: 1.063rem;
       text-transform: inherit;
       color: #FFFFFF;
       line-height: normal;

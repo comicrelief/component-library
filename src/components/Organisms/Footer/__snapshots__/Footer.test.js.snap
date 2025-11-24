@@ -2,15 +2,13 @@
 
 exports[`renders correctly 1`] = `
 .c12 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .c15 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   color: #FFFFFF;
   font-weight: bold;
@@ -19,8 +17,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c20 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   color: #FFFFFF;
   line-height: normal;
@@ -28,12 +24,12 @@ exports[`renders correctly 1`] = `
 }
 
 .c25 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   color: #969598;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
@@ -336,6 +332,34 @@ exports[`renders correctly 1`] = `
 
 .c8:hover {
   border: 0;
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:1150px) {

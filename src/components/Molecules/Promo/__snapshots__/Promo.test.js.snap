@@ -2,8 +2,6 @@
 
 exports[`renders Promo correctly 1`] = `
 .c7 {
-  font-size: 3rem;
-  line-height: 3rem;
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: normal;
@@ -17,12 +15,12 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c8 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -152,6 +150,20 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c9 {
     width: auto;
   }
@@ -275,8 +287,6 @@ exports[`renders Promo correctly 1`] = `
 
 exports[`renders Promo correctly end position 1`] = `
 .c7 {
-  font-size: 3rem;
-  line-height: 3rem;
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: normal;
@@ -290,12 +300,12 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 .c8 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -424,6 +434,20 @@ exports[`renders Promo correctly end position 1`] = `
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

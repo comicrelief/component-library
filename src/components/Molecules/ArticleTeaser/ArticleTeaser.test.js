@@ -20,8 +20,6 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 1rem;
-      line-height: 1.25rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -29,8 +27,6 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -39,6 +35,8 @@ it('renders article teaser correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c4 {
@@ -152,6 +150,20 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     @media (min-width:740px) {
@@ -272,8 +284,6 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 1rem;
-      line-height: 1.25rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -281,8 +291,6 @@ it('renders press realese correctly', () => {
     }
 
     .c10 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -291,6 +299,8 @@ it('renders press realese correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c4 {
@@ -409,6 +419,20 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     @media (min-width:740px) {

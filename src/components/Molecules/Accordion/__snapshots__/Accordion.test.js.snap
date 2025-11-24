@@ -2,18 +2,18 @@
 
 exports[`renders correctly 1`] = `
 .c2 {
-  font-size: 1.5rem;
-  line-height: 1.625rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .c6 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c4 {
@@ -87,6 +87,34 @@ exports[`renders correctly 1`] = `
   -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   padding: 0 2rem;
+}
+
+@media (min-width:740px) {
+  .c2 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:1024px) {

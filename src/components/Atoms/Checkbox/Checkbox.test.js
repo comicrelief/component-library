@@ -14,8 +14,6 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
-      font-size: 1.125rem;
-      line-height: 1.375rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -92,8 +90,6 @@ it('renders correctly', () => {
         </span>
       </label>,
       .c2 {
-      font-size: 1.125rem;
-      line-height: 1.375rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;

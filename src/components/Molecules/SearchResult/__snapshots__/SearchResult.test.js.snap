@@ -2,18 +2,16 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c4 {
@@ -93,6 +91,20 @@ exports[`renders correctly in minimalist form 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -167,27 +179,24 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c10 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c4 {
@@ -270,8 +279,30 @@ exports[`renders correctly with copy 1`] = `
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c8 {
     font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -353,18 +384,16 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c4 {
@@ -444,6 +473,20 @@ exports[`renders correctly with date 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -518,18 +561,16 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c4 {
@@ -609,6 +650,20 @@ exports[`renders correctly with date and type 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {

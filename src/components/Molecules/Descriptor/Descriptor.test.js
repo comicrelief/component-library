@@ -25,8 +25,6 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      font-size: 1.125rem;
-      line-height: 1.375rem;
       text-transform: inherit;
       color: #222222;
       font-weight: bold;
@@ -35,8 +33,6 @@ it('renders article teaser correctly', () => {
     }
 
     .c7 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -45,11 +41,11 @@ it('renders article teaser correctly', () => {
       -moz-letter-spacing: 0.03rem;
       -ms-letter-spacing: 0.03rem;
       letter-spacing: 0.03rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c10 {
-      font-size: 1rem;
-      line-height: 1.25rem;
       text-transform: inherit;
       color: #222222;
       font-weight: normal;
@@ -151,6 +147,20 @@ it('renders article teaser correctly', () => {
 
     .c12 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    @media (min-width:740px) {
+      .c7 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     <article

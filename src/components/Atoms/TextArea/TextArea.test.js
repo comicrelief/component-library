@@ -17,8 +17,6 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1.125rem;
-      line-height: 1.375rem;
       text-transform: inherit;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;

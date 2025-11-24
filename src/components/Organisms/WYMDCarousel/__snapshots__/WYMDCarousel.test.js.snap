@@ -342,17 +342,15 @@ exports[`renders correctly:
     </div>
    1`] = `
 .c1 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c3 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: uppercase;
   color: #E52630;
   font-weight: normal;
@@ -366,11 +364,11 @@ exports[`renders correctly:
 }
 
 .c5 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -504,6 +502,20 @@ exports[`renders correctly:
 }
 
 @media (min-width:740px) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c3 {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -514,6 +526,20 @@ exports[`renders correctly:
   .c3 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

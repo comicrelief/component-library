@@ -2,14 +2,15 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
 export const BaseText = styled.span`
 
   // TO-DO: MAKES THESE ALL CONDITIONAL
   // Prop overrides
-  font-size: ${({ size, theme }) => theme.fontSize(size)};
-  line-height: ${({ size, theme }) => theme.lineHeight(size)};
+  // font-size: ${({ size, theme }) => theme.fontSize(size)};
+  // line-height: ${({ size, theme }) => theme.lineHeight(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
 
@@ -31,37 +32,11 @@ export const BaseText = styled.span`
   }
 `};
 
-  // 'Medium' size customisations:
-  ${({ size, theme }) => (size === 'm'
-    ? css`
-      font-size: ${theme.fontSize('s')};
-      @media ${theme.allBreakpoints('M')} {
-        font-size: ${theme.fontSize('m')};
-      }
-    `
-    : null)};
-
   //**** WEBSITE PROJECT ******
-
-  // H1 styles:
-  ${({ as, theme }) => (as === 'h1' && css`
-    // Small breakpoint
-    font-size: ${theme.fontSize('xxl')};
-    line-height: ${theme.lineHeight('xxl')};
-
-    // Medium breakpoint
-    @media ${theme.allBreakpoints('M')} {
-      font-size: ${theme.fontSize('big')};
-      line-height: ${theme.lineHeight('big')};
-    }
-
-    // L & XL breakpoints
-    @media ${theme.allBreakpoints('L')} {
-      font-size: ${theme.fontSize('super')};
-      line-height: ${theme.lineHeight('super')};
-    }
+  // Use our helper function to streamline things:
+  ${({ as, theme }) => (as !== undefined && css`
+    ${fontHelper(theme, as)}
   `)};
-
 `;
 
 /** Text renders different elements based on the `tag` prop
@@ -97,22 +72,22 @@ const Text = ({
 );
 
 Text.propTypes = {
+  /** Sizes */
+  size: PropTypes.string, // TO BE DEPRECATED
+  /** Line height */
+  height: PropTypes.string, // TO BE DEPRECATED
   /** Text Align */
   textAlign: PropTypes.string,
   /** Font family */
   family: PropTypes.string,
   /** Font weight */
   weight: PropTypes.string,
-  /** Line height */
-  height: PropTypes.string,
   /** Sets text transform to uppercase. */
   uppercase: PropTypes.bool,
   /** Colors */
   color: PropTypes.string,
   /** Tag type */
   tag: PropTypes.string,
-  /** Sizes */
-  size: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

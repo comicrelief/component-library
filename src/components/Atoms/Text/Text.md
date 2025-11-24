@@ -54,17 +54,10 @@
     </Text>
   </Text>
   <Text tag="p" size="m">
-    <span style={{ width: "100px", display: "inline-block" }}>Body1</span>
+    <span style={{ width: "100px", display: "inline-block" }}>Body</span>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
       <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
       1.25rem / m
-    </Text>
-  </Text>
-  <Text tag="p" size="s">
-    <span style={{ width: "100px", display: "inline-block" }}>Body2</span>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 16px / 1rem
-      / s
     </Text>
   </Text>
 </div>
