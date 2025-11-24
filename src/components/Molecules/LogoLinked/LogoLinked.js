@@ -99,9 +99,9 @@ const LogoLinked = ({
 
   return (
     <>
-      {config.map((item, index) => (
+      {config.map(item => (
         <LogoLink
-          key={index}
+          key={`${item.logoProps.campaign}-${item.url}`}
           data-testid="LogoLink"
           href={item.url}
           title={item.title}
