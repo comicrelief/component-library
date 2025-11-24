@@ -2,8 +2,13 @@
 
 exports[`renders correctly with no value and no options 1`] = `
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -130,8 +135,13 @@ exports[`renders correctly with no value and no options 1`] = `
 
 exports[`renders correctly with value and no options 1`] = `
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
@@ -258,8 +268,13 @@ exports[`renders correctly with value and no options 1`] = `
 
 exports[`renders correctly with value and options 1`] = `
 .c2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 

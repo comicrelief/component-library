@@ -20,23 +20,30 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      text-transform: inherit;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: bold;
-      line-height: normal;
+      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
-      text-transform: uppercase;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: normal;
       line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      -webkit-letter-spacing: 0.03rem;
-      -moz-letter-spacing: 0.03rem;
-      -ms-letter-spacing: 0.03rem;
-      letter-spacing: 0.03rem;
+      text-transform: uppercase;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
     .c4 {
@@ -284,23 +291,30 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      text-transform: inherit;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: bold;
-      line-height: normal;
+      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c10 {
-      text-transform: uppercase;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: normal;
       line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      -webkit-letter-spacing: 0.03rem;
-      -moz-letter-spacing: 0.03rem;
-      -ms-letter-spacing: 0.03rem;
-      letter-spacing: 0.03rem;
+      text-transform: uppercase;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      font-family: 'Anton',Impact,sans-serif;
     }
 
     .c4 {

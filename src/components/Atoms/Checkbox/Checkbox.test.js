@@ -14,9 +14,14 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
-      text-transform: inherit;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: bold;
-      line-height: normal;
+      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
@@ -90,9 +95,14 @@ it('renders correctly', () => {
         </span>
       </label>,
       .c2 {
-      text-transform: inherit;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: bold;
-      line-height: normal;
+      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

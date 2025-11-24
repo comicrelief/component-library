@@ -6,37 +6,34 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
 export const BaseText = styled.span`
+  // Base styles to keep things sane:
+  font-size: ${({ size, theme }) => theme.fontSize(size)};
+  line-height: ${({ size, theme }) => theme.lineHeight(size)};
 
-  // TO-DO: MAKES THESE ALL CONDITIONAL
-  // Prop overrides
-  // font-size: ${({ size, theme }) => theme.fontSize(size)};
-  // line-height: ${({ size, theme }) => theme.lineHeight(size)};
-  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
-  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+  // Use our helper function to streamline font-sizes and line-heights,
+  // overriding the above rules when we've got config for this tag:
+  ${({ as, theme }) => (as !== undefined && css`
+    ${fontHelper(theme, as)}
+  `)};
+
 
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
-  ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
+  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
+  letter-spacing: 0;
 
+  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+
+  ${({ mobileColor, theme }) => mobileColor && css`
+    @media (max-width: ${breakpointValues.L - 1}px) {
+      color: ${theme.color(mobileColor)};
+    }
+  `};
+  
   font-family: ${({ family, theme }) => (family
     ? theme.fontFamilies(family)
     : theme.fontFamilies(theme.font.regular))};
-  
-  // Anton customisation:
-  ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
-
-  ${({ mobileColor, theme }) => mobileColor && css`
-  @media (max-width: ${breakpointValues.L - 1}px) {
-    color: ${theme.color(mobileColor)};
-  }
-`};
-
-  //**** WEBSITE PROJECT ******
-  // Use our helper function to streamline things:
-  ${({ as, theme }) => (as !== undefined && css`
-    ${fontHelper(theme, as)}
-  `)};
 `;
 
 /** Text renders different elements based on the `tag` prop
@@ -72,21 +69,13 @@ const Text = ({
 );
 
 Text.propTypes = {
-  /** Sizes */
-  size: PropTypes.string, // TO BE DEPRECATED
-  /** Line height */
-  height: PropTypes.string, // TO BE DEPRECATED
-  /** Text Align */
+  size: PropTypes.string, // TO BE DEPRECATED EVENTUALLY
+  height: PropTypes.string, // TO BE DEPRECATED EVENTUALLY
   textAlign: PropTypes.string,
-  /** Font family */
   family: PropTypes.string,
-  /** Font weight */
   weight: PropTypes.string,
-  /** Sets text transform to uppercase. */
   uppercase: PropTypes.bool,
-  /** Colors */
   color: PropTypes.string,
-  /** Tag type */
   tag: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

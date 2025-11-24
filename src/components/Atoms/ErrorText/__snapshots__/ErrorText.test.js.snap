@@ -2,9 +2,12 @@
 
 exports[`renders correctly 1`] = `
 .c0 {
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
   color: #E52630;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 

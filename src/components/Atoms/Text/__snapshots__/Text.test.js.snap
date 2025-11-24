@@ -2,11 +2,17 @@
 
 exports[`renders heavy heading correctly 1`] = `
 .c0 {
-  text-transform: inherit;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-weight: 1000;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  text-transform: inherit;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 @media (min-width:740px) {
@@ -34,11 +40,17 @@ exports[`renders heavy heading correctly 1`] = `
 
 exports[`renders high heading correctly 1`] = `
 .c0 {
-  text-transform: inherit;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   line-height: 5;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  text-transform: inherit;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 @media (min-width:740px) {
@@ -67,10 +79,16 @@ exports[`renders high heading correctly 1`] = `
 
 exports[`renders large heading correctly 1`] = `
 .c0 {
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 @media (min-width:740px) {
@@ -98,15 +116,16 @@ exports[`renders large heading correctly 1`] = `
 
 exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  line-height: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
   font-size: 1rem;
   line-height: 1.25rem;
+  font-family: 'Anton',Impact,sans-serif;
 }
 
 @media (min-width:740px) {
@@ -134,12 +153,17 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
   color: #FFE400;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 @media (min-width:740px) {

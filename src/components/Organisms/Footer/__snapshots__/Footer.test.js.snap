@@ -2,34 +2,55 @@
 
 exports[`renders correctly 1`] = `
 .c12 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c15 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: bold;
   text-transform: inherit;
   color: #FFFFFF;
-  font-weight: bold;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c20 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
   color: #FFFFFF;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c25 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   text-transform: inherit;
   color: #969598;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c10 {

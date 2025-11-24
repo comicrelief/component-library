@@ -26,38 +26,65 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      text-transform: inherit;
+      font-size: 1.5rem;
+      line-height: 1.625rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: 800;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      text-transform: inherit;
       font-size: 1.5rem;
       line-height: 1.5rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       text-transform: inherit;
-      line-height: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-size: 1rem;
       line-height: 1.25rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c12 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       text-transform: inherit;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c16 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c23 {
-      text-transform: inherit;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-weight: 500;
-      line-height: normal;
+      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 

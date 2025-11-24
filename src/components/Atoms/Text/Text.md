@@ -47,49 +47,12 @@
       <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 32px / 2rem / xl
     </Text>
   </Text>
-  <Text tag="h4" family="Anton" uppercase weight="normal" size="l">
-    <b style={{ width: "100px", display: "inline-block" }}>H5 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 24px / 1.5rem / l
-    </Text>
-  </Text>
   <Text tag="p" size="m">
     <span style={{ width: "100px", display: "inline-block" }}>Body</span>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
       <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
       1.25rem / m
     </Text>
-  </Text>
-</div>
-```
-
-Sport Relief
-
-```js
-<div>
-  <Text tag="h1" family="Founders_bold" uppercase size="super">
-    Heading 1
-  </Text>
-  <Text tag="h2" family="Founders_bold" uppercase size="big">
-    Heading 2
-  </Text>
-  <Text tag="h3" family="Founders_bold" uppercase size="xxl">
-    Heading 3
-  </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="xl">
-    Heading 4
-  </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="l" textAlign="center">
-    Heading 5, textAlign prop
-  </Text>
-  <Text tag="p" family="Founders" size="m">
-    Body 1
-  </Text>
-  <Text tag="p" family="Founders" size="s">
-    Body 2
-  </Text>
-  <Text tag="p" family="Founders" size="s" weight="bold" uppercase>
-    Bold and Uppercase
   </Text>
 </div>
 ```
