@@ -16,7 +16,7 @@ const BurgerHiddenText = styled(Text)`
  * Burger menu bar
  */
 const BurgerBar = styled.span`
-  background-color: ${({ theme }) => theme.color('deep_violet_dark')};
+  background-color: ${({ theme }) => theme.color('black')};
   margin: 0 auto;
 `;
 
@@ -24,16 +24,17 @@ const BurgerBar = styled.span`
  * Burger wrapper
  */
 const BurgerWrapper = styled(Link)`
+  background-color: ${({ theme }) => theme.color('grey_light')};
+  border-radius: 8px;
   ${zIndex('medium')};
   order: 50;
   display: flex;
   align-items: center;
   position: relative;
   text-indent: -9999px;
-  background-color: transparent;
-  height: 100%;
-  width: 45px;
-  left: 5px;
+  height: 36px;
+  width: 36px;
+  left: 12px;
   cursor: pointer;
   transition: all 0.2s;
 

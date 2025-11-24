@@ -8,6 +8,10 @@ const Header2026Wrapper = styled.header.attrs(() => ({
 }))`
   position: relative;
   background-color: ${({ theme }) => theme.color('white')};
+  border: 1px solid ${({ theme }) => theme.color('grey_light')};
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+
   padding: 0;
   height: 75px;
 
@@ -24,12 +28,18 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 12px;
+  padding: 10px 32px;
   cursor: pointer;
   max-width: ${containers.large};
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
+  }
+
+  border: 1px solid red;
+  > * {
+    border: 1px solid green;
+
   }
 `;
 
@@ -63,11 +73,13 @@ const DonateButtonWrapperTop = styled.div`
   width: 100px;
   display: flex;
   justify-content: center;
-  margin-left: 5px;
-  height: 2.8rem;
 
   // Donate button
   a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-size: 0.875rem;
     width: 100%;
     height: inherit;
     transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);

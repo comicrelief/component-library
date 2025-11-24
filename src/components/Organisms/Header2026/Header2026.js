@@ -14,6 +14,7 @@ const Header2026 = ({
 }) => (
   <Header2026Wrapper navItems showBoxShadow={showBoxShadow} {...rest}>
     <InnerWrapper>
+
       <Brand>
         <LogoLinked
           campaign={campaign}
@@ -22,16 +23,20 @@ const Header2026 = ({
           animateRotate
         />
       </Brand>
+
+      {/* <div style={{border: "1px solid black"}}> */}
       <HeaderNav2026
         navItems={navItems}
         metaIcons={metaIcons}
         donateButton={donateButton}
         characterLimit={characterLimit}
       />
+
       <ButtonsAndIcons>
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
+      {/* </div> */}
 
     </InnerWrapper>
   </Header2026Wrapper>
