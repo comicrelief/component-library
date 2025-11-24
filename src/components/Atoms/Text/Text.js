@@ -7,22 +7,23 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 export const BaseText = styled.span`
 
   font-size: ${({ size, theme }) => theme.fontSize(size)};
-
   line-height: ${({ size, theme }) => theme.fontSize(size)};
+  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
+  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
 
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
-
-  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
-
   ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
+
   font-family: ${({ family, theme }) => (family
     ? theme.fontFamilies(family)
     : theme.fontFamilies(theme.font.regular))};
-
+  
+  // Anton customisation:
   ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
 
+  // 'Super' size customisations:
   ${({ size, theme }) => (size === 'super'
     ? css`
           font-size: ${theme.fontSize('xxl')};
@@ -40,14 +41,13 @@ export const BaseText = styled.span`
         `
     : null)};
 
-  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
-
   ${({ mobileColor, theme }) => mobileColor && css`
   @media (max-width: ${breakpointValues.L - 1}px) {
     color: ${theme.color(mobileColor)};
   }
 `};
 
+  // 'Medium' size customisations:
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
