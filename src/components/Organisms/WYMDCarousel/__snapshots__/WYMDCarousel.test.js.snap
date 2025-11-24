@@ -351,7 +351,6 @@ exports[`renders correctly:
 }
 
 .c3 {
-  color: #E52630;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: uppercase;
@@ -361,6 +360,7 @@ exports[`renders correctly:
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  color: #E52630;
 }
 
 .c5 {

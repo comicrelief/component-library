@@ -2,7 +2,6 @@
 
 exports[`"Single Giving, No Money Buys, with overridden manual input value" renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
   text-transform: uppercase;
@@ -12,15 +11,16 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  color: #FFFFFF;
 }
 
 .c5 {
-  color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
   font-size: 1rem;
 }
 
@@ -692,7 +692,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 exports[`Monthly donation renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
   text-transform: uppercase;
@@ -702,15 +701,16 @@ exports[`Monthly donation renders correctly 1`] = `
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  color: #FFFFFF;
 }
 
 .c5 {
-  color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
   font-size: 1rem;
 }
 
@@ -1358,7 +1358,6 @@ exports[`Monthly donation renders correctly 1`] = `
 
 exports[`Single donation renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
   text-transform: uppercase;
@@ -1368,15 +1367,16 @@ exports[`Single donation renders correctly 1`] = `
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  color: #FFFFFF;
 }
 
 .c5 {
-  color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
   font-size: 1rem;
 }
 
@@ -2119,7 +2119,6 @@ exports[`Single donation renders correctly 1`] = `
 
 exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
   font-size: 4rem;
   line-height: 4rem;
   text-transform: uppercase;
@@ -2129,15 +2128,16 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -moz-letter-spacing: 0.03rem;
   -ms-letter-spacing: 0.03rem;
   letter-spacing: 0.03rem;
+  color: #FFFFFF;
 }
 
 .c5 {
-  color: #FFFFFF;
   font-size: 1.25rem;
   line-height: 1.25rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
   font-size: 1rem;
 }
 

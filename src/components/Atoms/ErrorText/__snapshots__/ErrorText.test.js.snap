@@ -2,12 +2,12 @@
 
 exports[`renders correctly 1`] = `
 .c0 {
-  color: #E52630;
   font-size: 0.875rem;
   line-height: 0.875rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #E52630;
 }
 
 .c1 {

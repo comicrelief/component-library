@@ -2,12 +2,12 @@
 
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c3 {
@@ -173,20 +173,20 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 exports[`renders Single Message with Image correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c7 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c3 {
@@ -411,12 +411,12 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 exports[`renders Single Message with double image correctly 1`] = `
 .c6 {
-  color: #000000;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #000000;
 }
 
 .c3 {
@@ -631,20 +631,20 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 exports[`renders Single Message with full width correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c7 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c3 {
@@ -1027,12 +1027,12 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 exports[`renders Single Message with no Image correctly 1`] = `
 .c2 {
-  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c0 {

@@ -9,31 +9,31 @@ exports[`renders correctly 1`] = `
 }
 
 .c15 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   font-weight: bold;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c20 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c25 {
-  color: #969598;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #969598;
 }
 
 .c10 {

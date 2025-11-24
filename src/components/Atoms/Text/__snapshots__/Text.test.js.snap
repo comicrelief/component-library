@@ -78,12 +78,12 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
-  color: #FFE400;
   font-size: 2rem;
   line-height: 2rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFE400;
 }
 
 <p

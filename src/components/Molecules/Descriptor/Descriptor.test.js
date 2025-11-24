@@ -25,13 +25,13 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      color: #222222;
       font-size: 1rem;
       line-height: 1rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      color: #222222;
     }
 
     .c7 {
@@ -48,13 +48,13 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      color: #222222;
       font-size: 0.75rem;
       line-height: 0.75rem;
       text-transform: inherit;
       font-weight: normal;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      color: #222222;
     }
 
     .c0 {

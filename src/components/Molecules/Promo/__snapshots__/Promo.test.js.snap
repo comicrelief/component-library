@@ -2,7 +2,6 @@
 
 exports[`renders Promo correctly 1`] = `
 .c7 {
-  color: #FFFFFF;
   font-size: 5rem;
   line-height: 5rem;
   text-transform: uppercase;
@@ -14,15 +13,16 @@ exports[`renders Promo correctly 1`] = `
   letter-spacing: 0.03rem;
   font-size: 3rem;
   line-height: 3rem;
+  color: #FFFFFF;
 }
 
 .c8 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c2 {
@@ -277,7 +277,6 @@ exports[`renders Promo correctly 1`] = `
 
 exports[`renders Promo correctly end position 1`] = `
 .c7 {
-  color: #FFFFFF;
   font-size: 5rem;
   line-height: 5rem;
   text-transform: uppercase;
@@ -289,15 +288,16 @@ exports[`renders Promo correctly end position 1`] = `
   letter-spacing: 0.03rem;
   font-size: 3rem;
   line-height: 3rem;
+  color: #FFFFFF;
 }
 
 .c8 {
-  color: #FFFFFF;
   font-size: 1rem;
   line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
 }
 
 .c2 {

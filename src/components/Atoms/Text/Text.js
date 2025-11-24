@@ -5,18 +5,24 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 /** Text component */
 export const BaseText = styled.span`
-  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
-  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+
   font-size: ${({ size, theme }) => theme.fontSize(size)};
+
   line-height: ${({ size, theme }) => theme.fontSize(size)};
+
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
+
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
+
   ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
   font-family: ${({ family, theme }) => (family
     ? theme.fontFamilies(family)
     : theme.fontFamilies(theme.font.regular))};
+
   ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
+
   ${({ size, theme }) => (size === 'super'
     ? css`
           font-size: ${theme.fontSize('xxl')};
@@ -33,11 +39,15 @@ export const BaseText = styled.span`
           }
         `
     : null)};
+
+  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+
   ${({ mobileColor, theme }) => mobileColor && css`
   @media (max-width: ${breakpointValues.L - 1}px) {
     color: ${theme.color(mobileColor)};
   }
 `};
+
   ${({ size, theme }) => (size === 'm'
     ? css`
       font-size: ${theme.fontSize('s')};
