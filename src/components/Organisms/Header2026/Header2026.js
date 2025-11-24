@@ -12,27 +12,28 @@ const Header2026 = ({
   navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null,
   characterLimit = 60, showBoxShadow = false, ...rest
 }) => (
-  <Header2026Wrapper navItems showBoxShadow={showBoxShadow} {...rest}>
-    <InnerWrapper>
+  <Header2026Wrapper data-testid="Header2026Wrapper" navItems showBoxShadow={showBoxShadow} {...rest}>
+    <InnerWrapper data-testid="InnerWrapper">
 
-      <Brand>
+      <Brand data-testid="Brand">
         <LogoLinked
           campaign={campaign}
           sizeSm="50px"
           sizeMd="55px"
           animateRotate
+          data-testid="LogoLinked"
         />
       </Brand>
 
-      {/* <div style={{border: "1px solid black"}}> */}
       <HeaderNav2026
         navItems={navItems}
         metaIcons={metaIcons}
         donateButton={donateButton}
         characterLimit={characterLimit}
+        data-testid="HeaderNav2026"
       />
 
-      <ButtonsAndIcons>
+      <ButtonsAndIcons data-testid="ButtonsAndIcons">
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>

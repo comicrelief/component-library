@@ -58,21 +58,23 @@ const Logo = ({
   campaign = 'Comic Relief'
 }) => (
   <LogoWrapper
+    data-testid="LogoWrapper"
     rotate={rotate ? 1 : 0}
     sizeSm={sizeSm}
     sizeMd={sizeMd}
     campaign={campaign}
   >
     {campaign === 'Comic Relief'
-      ? <ComicReliefTextLogo>Comic Relief</ComicReliefTextLogo>
+      ? <ComicReliefTextLogo data-testid="ComicReliefTextLogo">Comic Relief</ComicReliefTextLogo>
       : (
         <Image
+          data-testid="Image"
           src={themeSwitcher(campaign)}
           alt={
           campaign === 'Comic Relief' || campaign === 'Pride'
             ? 'Comic Relief logo'
             : 'Sport Relief logo'
-        }
+          }
         />
       )
     }
