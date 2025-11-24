@@ -66,6 +66,8 @@ button {
 }
 
 h2 {
+  text-transform: uppercase;
+  font-family: 'Anton', Impact, sans-serif;
   margin-bottom: 2rem;
 }
 
