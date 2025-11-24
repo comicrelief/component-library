@@ -7,7 +7,7 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 export const BaseText = styled.span`
 
   font-size: ${({ size, theme }) => theme.fontSize(size)};
-  line-height: ${({ size, theme }) => theme.fontSize(size)};
+  line-height: ${({ size, theme }) => theme.lineHeight(size)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
 
