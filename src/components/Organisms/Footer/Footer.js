@@ -4,7 +4,7 @@ import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
 import FooterNav from './Nav/Nav';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
-import FundraisingRegulatorLogo from './FundraisingRegulatorLogo';
+import FundraisingRegulatorLogo from './FundraisingRegulatorLogo/FundraisingRegulatorLogo';
 
 import {
   FooterWrapper,

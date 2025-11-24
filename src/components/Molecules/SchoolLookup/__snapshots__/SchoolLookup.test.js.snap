@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c3 {
@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
   padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -111,7 +111,7 @@ exports[`renders correctly 1`] = `
         className="c5"
       >
         <input
-          aria-describedby="school-lookup"
+          aria-required={false}
           autoComplete="off"
           className="c6"
           defaultValue=""

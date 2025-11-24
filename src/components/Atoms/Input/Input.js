@@ -42,7 +42,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
+  border-color: ${error ? theme.color('red') : theme.color('grey')};
   box-shadow: none;
   appearance: none;
   color: ${theme.color('black')};
@@ -82,6 +82,14 @@ const Prefix = styled.div`
   margin-left: 2px; // Just doesn't look quite right without this.
 `;
 
+const DescriptionWrapper = styled.div`
+  margin-bottom: 0.5rem;
+
+  * {
+    font-size: ${({ theme }) => theme.fontSize('xs')};
+  }
+`;
+
 const Input = React.forwardRef(
   (
     {
@@ -90,7 +98,6 @@ const Input = React.forwardRef(
       label,
       showLabel = true,
       type,
-      hasAria = true,
       className = '',
       placeholder = '',
       labelProps = {},
@@ -98,6 +105,7 @@ const Input = React.forwardRef(
       optional = null,
       maxPxWidthMediumBreakpoint,
       maxPxWidthLargeBreakpoint,
+      description = null,
       ...rest
     },
     ref
@@ -111,6 +119,11 @@ const Input = React.forwardRef(
       optional={optional}
       {...labelProps}
     >
+      {description && (
+      <DescriptionWrapper id={`${id}-description`}>
+        {description}
+      </DescriptionWrapper>
+      )}
       <InputWrapper error={Boolean(errorMsg)}>
         {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
         <InputFieldContainer
@@ -123,10 +136,11 @@ const Input = React.forwardRef(
             type={type}
             placeholder={placeholder}
             error={Boolean(errorMsg)}
-            aria-describedby={hasAria ? id : undefined}
             ref={ref}
             prefixLength={prefix.length}
             required={optional === false}
+            aria-required={optional === false}
+            aria-describedby={description ? `${id}-description` : undefined}
             {...rest}
           />
           {errorMsg && <ErrorIconWrapper />}
@@ -135,7 +149,7 @@ const Input = React.forwardRef(
       {errorMsg
         && (
         <ErrorText
-          size="sm"
+          size="error"
           weight="bold"
           data-test="error-message"
         >
@@ -155,10 +169,9 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   errorMsg: PropTypes.string,
   // This prop allows us to _visually_ hide the label if we want (even if we
-  //  don't want to display a label, it should be present for screen readers).
+  // don't want to display a label, it should be present for screen readers).
   // todo: convert this to 'hideLabel' to make it consistent with other components
   showLabel: PropTypes.bool,
-  hasAria: PropTypes.bool,
   id: PropTypes.string.isRequired,
   /** text, email, number, date, search, tel, url, password */
   type: PropTypes.string.isRequired,
@@ -169,7 +182,8 @@ Input.propTypes = {
   prefix: PropTypes.string,
   optional: PropTypes.bool,
   maxPxWidthMediumBreakpoint: PropTypes.number,
-  maxPxWidthLargeBreakpoint: PropTypes.number
+  maxPxWidthLargeBreakpoint: PropTypes.number,
+  description: PropTypes.node
 };
 
 export default Input;

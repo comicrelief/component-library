@@ -57,16 +57,16 @@ it('renders article teaser correctly', () => {
 
     .c1 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
 
-    .c1:hover {
+    .c1:hover,
+    .c1:focus {
       color: #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c0 {
@@ -152,20 +152,6 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-      .c4 {
-        background-image: url(http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:contain)) {
-      .c6 {
-        visibility: hidden;
-      }
     }
 
     @media (min-width:740px) {
@@ -323,16 +309,16 @@ it('renders press realese correctly', () => {
 
     .c1 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
       font-weight: normal;
     }
 
-    .c1:hover {
+    .c1:hover,
+    .c1:focus {
       color: #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c0 {
@@ -423,20 +409,6 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-      .c4 {
-        background-image: url(mock.asset);
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:contain)) {
-      .c6 {
-        visibility: hidden;
-      }
     }
 
     @media (min-width:740px) {

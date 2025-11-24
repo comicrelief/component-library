@@ -33,7 +33,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      color: #5C5C5E;
+      color: #000000;
     }
 
     .c7 {
@@ -81,7 +81,7 @@ it('renders correctly', () => {
       padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #E1E2E3;
+      border-color: #969598;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -183,7 +183,7 @@ it('renders correctly', () => {
                   className="c9"
                 >
                   <input
-                    aria-describedby="search"
+                    aria-required={false}
                     className="c10"
                     id="search"
                     name="search"

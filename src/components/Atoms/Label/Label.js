@@ -6,12 +6,19 @@ import Text from '../Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 
+const getLabelColor = ({ theme, errorMsg }) => {
+  if (errorMsg) {
+    return theme.color('red');
+  }
+  return theme.color('black');
+};
+
 const LabelElement = styled.label`
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  color: ${({ theme, errorMsg }) => (errorMsg ? theme.color('red') : theme.color('grey_label'))};
+  color: ${getLabelColor};
 
   ${({ optional, theme }) => optional === true && `
   :after {

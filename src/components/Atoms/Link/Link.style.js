@@ -22,7 +22,7 @@ const buttonStyle = () => css`
   ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: auto;
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
   // Reinstate general styles for 'desktop':
@@ -33,12 +33,10 @@ const buttonStyle = () => css`
 
 const linkStyle = () => css`
   position: relative;
-  text-decoration: none;
   display: inline;
-  line-height: ${({ theme }) => theme.fontSize('l')};
-  ${({ type, theme, underline }) => (type
-    ? theme.linkStyles(type, underline)
-    : theme.linkStyles('standard', underline))};
+  ${({ type, theme }) => (type
+    ? theme.linkStyles(type)
+    : theme.linkStyles('standard'))};
 `;
 
 export const IconWrapper = styled.span`

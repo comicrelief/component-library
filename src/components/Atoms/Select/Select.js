@@ -19,10 +19,11 @@ const StyledSelect = styled.select`
   height: 48px;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  background: ${({ theme }) => theme.color('grey_light')} url(${dropDownIcon})
-    calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat;
+  background: ${({ theme, hideArrow }) => (hideArrow
+    ? theme.color('grey_light')
+    : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)};
   border: 1px solid;
-  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey_medium'))};
+  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey'))};
   box-shadow: none;
   appearance: none;
   color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};
@@ -50,11 +51,13 @@ const Select = React.forwardRef(
       greyDescription = false,
       className = '',
       optional = false,
+      hideArrow = false,
       ...rest
     },
     ref
   ) => {
-    const [value, setValue] = useState('');
+    const initialValue = hideArrow ? options[0].value : defaultValue;
+    const [value, setValue] = useState(initialValue);
 
     return (
       <Label
@@ -75,20 +78,27 @@ const Select = React.forwardRef(
           error={errorMsg}
           defaultValue={defaultValue}
           required={optional === false}
+          aria-required={optional === false}
           hasValue={!!value}
           greyDescription={greyDescription}
           ref={ref}
+          hideArrow={hideArrow}
         >
-          <option disabled value="">
-            {description}
-          </option>
+
+          {/* empty string "" is falsy so will show */
+            !initialValue && (
+            <option disabled value="">
+              {description}
+            </option>
+            )}
+
           {options.map(option => (
             <option key={option.value} value={option.value}>
               {option.displayValue}
             </option>
           ))}
         </StyledSelect>
-        {errorMsg && <ErrorText size="sm" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
+        {errorMsg && <ErrorText size="error" weight="bold" data-test="error-message">{errorMsg}</ErrorText>}
       </Label>
     );
   }
@@ -111,7 +121,8 @@ Select.propTypes = {
   // className is needed so that styled(`Select`) will work
   // (as `rest` is not spread on the outermost component)
   className: PropTypes.string,
-  optional: PropTypes.bool
+  optional: PropTypes.bool,
+  hideArrow: PropTypes.bool
 };
 
 export default Select;

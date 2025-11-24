@@ -119,3 +119,33 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
     maxPxWidthLargeBreakpoint={250}
   />
 ```
+
+```js
+  <h4>Input with dark label</h4>
+  <Input
+    name="dark-label"
+    placeholder="£0.00"
+    type="text"
+    label="The label text can be made black rather than the default grey"
+    id="input-example-8"
+  />
+```
+
+```js
+  import Text from '../../Atoms/Text/Text';
+
+  const exampleDescription = (
+    <Text>Here's a description with some <b>formatting</b></Text>
+  );
+  
+  <>
+    <h4>Input with Description:</h4>
+    <Input
+      placeholder="I have a description"
+      type="text"
+      label="My Great Input"
+      id="input-example-9"
+      description={exampleDescription}
+    />
+  </>
+```

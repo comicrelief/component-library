@@ -34,7 +34,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      color: #5C5C5E;
+      color: #000000;
     }
 
     .c2 {
@@ -72,7 +72,7 @@ it('renders correctly', () => {
       padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #E1E2E3;
+      border-color: #969598;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -118,7 +118,7 @@ it('renders correctly', () => {
           className="c4"
         >
           <input
-            aria-describedby="Accessibility info go here"
+            aria-required={false}
             className="c5"
             id="Accessibility info go here"
             name="fullname"
@@ -166,7 +166,7 @@ it('renders with responsive max widths correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      color: #5C5C5E;
+      color: #000000;
     }
 
     .c2 {
@@ -204,7 +204,7 @@ it('renders with responsive max widths correctly', () => {
       padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #E1E2E3;
+      border-color: #969598;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -254,7 +254,7 @@ it('renders with responsive max widths correctly', () => {
           className="c4"
         >
           <input
-            aria-describedby="input-example-7"
+            aria-required={false}
             className="c5"
             id="input-example-7"
             name="responsive-width"

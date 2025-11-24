@@ -54,7 +54,13 @@ const ImpactSlider = ({
           currentAmount={currentAmount}
           opacityAnimation={opacityAnimation}
         />
-        <SubmitButton type="submit" onClick={handleSubmit} disabled={currentAmount === 0}>
+        <SubmitButton
+          type="submit"
+          onClick={handleSubmit}
+          disabled={currentAmount === 0}
+          // Used by analytics:
+          className="Button_DonateSlider"
+        >
           Donate £
           {currentAmount}
           {' '}

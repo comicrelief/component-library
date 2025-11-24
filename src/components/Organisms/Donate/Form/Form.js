@@ -318,6 +318,8 @@ const Signup = ({
             type="submit"
             color={submitButtonColor}
             ref={buttonRef}
+            // Used by analytics:
+            className="Button_DonateWidget"
           >
             {renderButtonText()}
           </Button>

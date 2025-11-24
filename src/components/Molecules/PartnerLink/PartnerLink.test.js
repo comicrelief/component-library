@@ -42,18 +42,16 @@ it('renders correctly', () => {
 
     .c0 {
       position: relative;
-      -webkit-text-decoration: none;
-      text-decoration: none;
       display: inline;
-      line-height: 1.5rem;
       color: #000000;
-      border-bottom: 2px solid #000000;
       font-weight: normal;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus {
       color: #000000;
-      border-bottom: 2px solid #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
     }
 
     .c6 {
@@ -114,14 +112,6 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       background-color: #E52630;
-    }
-
-    @supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-      .c2 {
-        background-image: url(//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-        background-size: cover;
-        background-position: center;
-      }
     }
 
     @media (min-width:740px) {

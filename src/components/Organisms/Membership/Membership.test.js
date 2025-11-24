@@ -81,7 +81,7 @@ it('renders correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      color: #5C5C5E;
+      color: #000000;
     }
 
     .c16 {
@@ -119,7 +119,7 @@ it('renders correctly', () => {
       padding: 1rem 2.4rem 1rem 1.5rem;
       background-color: #F4F3F5;
       border: 1px solid;
-      border-color: #E1E2E3;
+      border-color: #969598;
       box-shadow: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -339,12 +339,6 @@ it('renders correctly', () => {
       background-color: #961D35;
     }
 
-    @supports not ((object-fit:cover) or (object-fit:contain)) {
-      .c3 {
-        visibility: hidden;
-      }
-    }
-
     @media (min-width:740px) {
 
     }
@@ -495,8 +489,8 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box1"
                         aria-label="£5"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box1"
                         name="mship-1--moneyBuy1"
@@ -533,8 +527,8 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box2"
                         aria-label="£10"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box2"
                         name="mship-1--moneyBuy2"
@@ -571,8 +565,8 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--moneyBuy-box3"
                         aria-label="£20"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--moneyBuy-box3"
                         name="mship-1--moneyBuy3"
@@ -620,8 +614,8 @@ it('renders correctly', () => {
                       className="c18"
                     >
                       <input
-                        aria-describedby="mship-1--MoneyBuy-userInput"
                         aria-label="Input a different amount"
+                        aria-required={false}
                         className="c19"
                         id="mship-1--MoneyBuy-userInput"
                         max="25000"

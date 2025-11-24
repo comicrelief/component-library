@@ -153,20 +153,6 @@ exports[`renders correctly 1`] = `
   right: 1.5rem;
 }
 
-@supports not ((object-fit:cover) or (object-fit:none) or (object-fit:contain)) {
-  .c3 {
-    background-image: url(//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@supports not ((object-fit:cover) or (object-fit:contain)) {
-  .c4 {
-    visibility: hidden;
-  }
-}
-
 @media (min-width:740px) {
   .c12 {
     width: auto;

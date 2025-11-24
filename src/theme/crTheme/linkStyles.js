@@ -4,25 +4,19 @@ import color from './colors';
 const linkStyles = {
   standard: {
     color: color('black'),
-    border: `2px solid ${color('black')}`,
     weight: 'normal',
-    hoverColor: color('black'),
-    hoverBorder: `2px solid ${color('black')}`
+    hoverColor: color('black')
   },
   standard_white: {
     color: color('white'),
-    border: `2px solid ${color('white')}`,
     weight: 'normal',
-    hoverColor: color('white'),
-    hoverBorder: `2px solid ${color('white')}`
+    hoverColor: color('white')
   }
 };
 
-export default (styleName, underline) => {
+export default styleName => {
   let style = css`
     color: ${color('black')};
-    border-bottom: solid 2px;
-    border-bottom-color: inherit;
     font-weight: normal;
     :hover {
       color: inherit;
@@ -33,12 +27,12 @@ export default (styleName, underline) => {
   if (styleName) {
     style = css`
       color: ${linkStyles[styleName].color};
-      border-bottom: ${underline && linkStyles[styleName].border};
       font-weight: ${linkStyles[styleName].weight};
-      :hover {
+      :hover,
+      :focus {
         color: ${linkStyles[styleName].hoverColor};
-        border-bottom: ${underline && linkStyles[styleName].hoverBorder};
         font-weight: ${linkStyles[styleName].hoverWeight};
+        text-decoration: none;
       }
     `;
   }

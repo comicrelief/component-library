@@ -51,7 +51,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c21 {
@@ -89,7 +89,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -164,7 +164,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -246,7 +246,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
@@ -647,8 +647,8 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                   className="c23"
                 >
                   <input
-                    aria-describedby="mship-4--MoneyBuy-userInput"
                     aria-label="Input a different amount"
+                    aria-required={false}
                     className="c24"
                     id="mship-4--MoneyBuy-userInput"
                     max="25000"
@@ -677,7 +677,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             will help us fund amazing projects in the UK and around the world.
           </p>
           <button
-            className="c26"
+            className="c26 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -750,7 +750,7 @@ exports[`Monthly donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c22 {
@@ -788,7 +788,7 @@ exports[`Monthly donation renders correctly 1`] = `
   padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -863,7 +863,7 @@ exports[`Monthly donation renders correctly 1`] = `
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -949,7 +949,7 @@ exports[`Monthly donation renders correctly 1`] = `
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
@@ -1314,8 +1314,8 @@ exports[`Monthly donation renders correctly 1`] = `
                   className="c24"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
+                    aria-required={false}
                     className="c25"
                     id="mship-1--MoneyBuy-userInput"
                     max="25000"
@@ -1343,7 +1343,7 @@ exports[`Monthly donation renders correctly 1`] = `
             </strong>
           </p>
           <button
-            className="c27"
+            className="c27 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -1416,7 +1416,7 @@ exports[`Single donation renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c15 {
@@ -1454,7 +1454,7 @@ exports[`Single donation renders correctly 1`] = `
   padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1481,7 +1481,7 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1.5rem;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   height: auto;
 }
@@ -1507,7 +1507,7 @@ exports[`Single donation renders correctly 1`] = `
   font-size: 1.5rem;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
   height: auto;
   background-color: #2042AD;
@@ -1588,7 +1588,7 @@ exports[`Single donation renders correctly 1`] = `
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -1701,7 +1701,7 @@ exports[`Single donation renders correctly 1`] = `
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
@@ -1949,8 +1949,8 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box1"
                     aria-label="£10"
+                    aria-required={false}
                     className="c18"
                     id="mship-1--moneyBuy-box1"
                     name="mship-1--moneyBuy1"
@@ -1987,8 +1987,8 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box2"
                     aria-label="£20"
+                    aria-required={false}
                     className="c18"
                     id="mship-1--moneyBuy-box2"
                     name="mship-1--moneyBuy2"
@@ -2025,8 +2025,8 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--moneyBuy-box3"
                     aria-label="£30"
+                    aria-required={false}
                     className="c18"
                     id="mship-1--moneyBuy-box3"
                     name="mship-1--moneyBuy3"
@@ -2074,8 +2074,8 @@ exports[`Single donation renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
+                    aria-required={false}
                     className="c18"
                     id="mship-1--MoneyBuy-userInput"
                     max="25000"
@@ -2104,7 +2104,7 @@ exports[`Single donation renders correctly 1`] = `
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
           <button
-            className="c25"
+            className="c25 Button_DonateWidget"
             color="red"
             type="submit"
           >
@@ -2168,7 +2168,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #5C5C5E;
+  color: #000000;
 }
 
 .c15 {
@@ -2206,7 +2206,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   padding: 1rem 2.4rem 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #E1E2E3;
+  border-color: #969598;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2281,7 +2281,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -2363,7 +2363,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
@@ -2571,8 +2571,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   className="c17"
                 >
                   <input
-                    aria-describedby="mship-1--MoneyBuy-userInput"
                     aria-label="Input a different amount"
+                    aria-required={false}
                     className="c18"
                     id="mship-1--MoneyBuy-userInput"
                     max="25000"
@@ -2600,7 +2600,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             </strong>
           </p>
           <button
-            className="c20"
+            className="c20 Button_DonateWidget"
             color="red"
             type="submit"
           >

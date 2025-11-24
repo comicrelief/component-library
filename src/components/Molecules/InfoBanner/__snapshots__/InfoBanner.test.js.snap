@@ -7,6 +7,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c3 {
+  font-size: 1rem;
+  line-height: 1rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -14,18 +16,16 @@ exports[`renders correctly 1`] = `
 
 .c4 {
   position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline;
-  line-height: 1.5rem;
   color: #000000;
-  border-bottom: 2px solid #000000;
   font-weight: normal;
 }
 
-.c4:hover {
+.c4:hover,
+.c4:focus {
   color: #000000;
-  border-bottom: 2px solid #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 {
@@ -88,7 +88,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       Hello There
     </p>
@@ -106,7 +106,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       1st June 2020
     </p>
@@ -124,7 +124,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       <a
         className="c4"
@@ -150,7 +150,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       £2,000,000
     </p>
@@ -168,7 +168,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       1st June 2010
     </p>
@@ -186,7 +186,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c3"
       color="inherit"
-      size="sm"
+      size="s"
     >
       Uk
     </p>

@@ -1,5 +1,5 @@
 # ErrorText
 
 ```jsx
-<ErrorText>This is an error</ErrorText>
+<ErrorText size="error">This is an error</ErrorText>
 ```

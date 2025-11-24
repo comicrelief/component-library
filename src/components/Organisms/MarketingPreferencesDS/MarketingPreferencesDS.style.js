@@ -35,10 +35,6 @@ const TopCopyWrapper = styled.div`
   margin: ${spacing('l')} 0;
   display: flex;
   width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 10px;
-  }
 `;
 
 const BottomCopyWrapper = styled.div`
@@ -84,7 +80,7 @@ const FormField = styled.div`${({ theme, isError }) => css`
   padding: ${spacing('m')};
   background-color: ${theme.color('grey_light')};
   transition: background-color 0.3s, color 0.3s;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   border: 1px solid ${theme.color('grey')};
 
   &.selected {
@@ -179,7 +175,7 @@ const CheckInput = styled.input`
     background-color: ${({ theme }) => theme.color('white')};
     border: 1px solid ${({ theme }) => theme.color('grey')};
     float: left;
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
   :checked + span {
     background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};

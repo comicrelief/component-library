@@ -13,6 +13,7 @@ const NavLinkClass = styled(Link)`
   font-weight: 700;
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet_dark')};
+  text-decoration: none;
   :hover {
     border: 0;
     color: ${({ theme }) => theme.color('deep_violet_dark')};
