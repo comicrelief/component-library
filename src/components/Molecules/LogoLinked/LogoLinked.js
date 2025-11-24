@@ -35,7 +35,7 @@ const LogoLinked = ({
   const campaignConfig = {
     'Sport Relief Gameon': [
       {
-        url: url,
+        url,
         title: 'Go to Comic Relief homepage',
         logoProps: {
           rotate: true,
@@ -67,7 +67,7 @@ const LogoLinked = ({
         }
       }
     ],
-    'Pride': [
+    Pride: [
       {
         url,
         title: 'Go to Comic Relief homepage',
