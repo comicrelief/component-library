@@ -20,8 +20,8 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -29,8 +29,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -272,8 +272,8 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
       text-transform: inherit;
       font-weight: bold;
       line-height: normal;
@@ -281,8 +281,8 @@ it('renders press realese correctly', () => {
     }
 
     .c10 {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;

@@ -20,12 +20,12 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       text-transform: inherit;
+      color: #FFFFFF;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      color: #FFFFFF;
     }
 
     .c3 {
@@ -52,7 +52,7 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.125rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;

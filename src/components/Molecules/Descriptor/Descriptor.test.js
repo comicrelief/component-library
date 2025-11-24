@@ -25,18 +25,18 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      font-size: 1rem;
-      line-height: 1rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       text-transform: inherit;
+      color: #222222;
       font-weight: bold;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      color: #222222;
     }
 
     .c7 {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
       text-transform: uppercase;
       font-weight: normal;
       line-height: 2rem;
@@ -48,13 +48,13 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
       text-transform: inherit;
+      color: #222222;
       font-weight: normal;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      color: #222222;
     }
 
     .c0 {

@@ -18,12 +18,12 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
-      font-size: 0.6875rem;
-      line-height: 0.6875rem;
+      font-size: 0.875rem;
+      line-height: 1.063rem;
       text-transform: inherit;
+      color: #FFFFFF;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      color: #FFFFFF;
     }
 
     .c2 {
@@ -116,7 +116,7 @@ it('renders correctly', () => {
 
     @media (min-width:740px) {
       .c6 {
-        font-size: 1rem;
+        font-size: 1.125rem;
       }
     }
 

@@ -2,12 +2,12 @@
 
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
+  color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  color: #FFFFFF;
 }
 
 .c3 {
@@ -173,20 +173,20 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 exports[`renders Single Message with Image correctly 1`] = `
 .c6 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   text-transform: inherit;
+  color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  color: #FFFFFF;
 }
 
 .c3 {
@@ -213,7 +213,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -411,12 +411,12 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 exports[`renders Single Message with double image correctly 1`] = `
 .c6 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
+  color: #000000;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  color: #000000;
 }
 
 .c3 {
@@ -631,20 +631,20 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 exports[`renders Single Message with full width correctly 1`] = `
 .c6 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   text-transform: inherit;
+  color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  color: #FFFFFF;
 }
 
 .c3 {
@@ -671,7 +671,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1027,12 +1027,12 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 exports[`renders Single Message with no Image correctly 1`] = `
 .c2 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   text-transform: inherit;
+  color: #FFFFFF;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  color: #FFFFFF;
 }
 
 .c0 {

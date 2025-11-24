@@ -204,7 +204,7 @@ it('renders link styled as button correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.125rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;

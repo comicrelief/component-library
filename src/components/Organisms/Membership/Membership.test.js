@@ -27,30 +27,30 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
       font-size: 1.5rem;
-      line-height: 1.5rem;
+      line-height: 1.625rem;
       text-transform: inherit;
       font-weight: 800;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c7 {
-      font-size: 1rem;
-      line-height: 1rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       text-transform: inherit;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c12 {
-      font-size: 1rem;
-      line-height: 1rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
     .c22 {
-      font-size: 1rem;
-      line-height: 1rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
       text-transform: inherit;
       font-weight: 500;
       line-height: normal;
@@ -324,7 +324,7 @@ it('renders correctly', () => {
     .c25 {
       width: 100%;
       color: #FFFFFF;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: bold;
       cursor: pointer;
       padding: 1rem 0.5rem;

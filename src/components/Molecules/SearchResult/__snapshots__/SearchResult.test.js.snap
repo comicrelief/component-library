@@ -2,16 +2,16 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -167,27 +167,27 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c10 {
   font-size: 1.25rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   text-transform: inherit;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .c4 {
@@ -353,16 +353,16 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
@@ -518,16 +518,16 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-transform: uppercase;
   line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c8 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
   text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }

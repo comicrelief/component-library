@@ -1,16 +1,13 @@
 const lineHeights = {
-  xxs: '0.6875rem',
-  xs: '0.75rem',
-  s: '1rem',
-  m: '1.25rem',
-  l: '1.5rem',
-  xl: '2rem',
-  xxl: '3rem',
-  big: '4rem',
-  super: '5rem',
-  // Temporary edgecase fix to at least keep all sizing centralise
-  // before website project design review overhaul
-  error: '0.875rem'
+  xxs: '1.063rem',
+  xs: '1.25rem',
+  s: '1.375rem',
+  m: '1.5rem',
+  l: '1.625rem',
+  xl: '1.875rem',
+  xxl: '2rem',
+  big: '2.5rem',
+  super: '3rem'
 };
 
 export default size => {
