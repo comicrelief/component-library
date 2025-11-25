@@ -3,41 +3,37 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import zIndex from '../../../theme/shared/zIndex';
-import spacing from '../../../theme/shared/spacing';
 import crLogo from './assets/cr-logo.svg';
 
 const Image = styled.img`
   display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  margin-right: ${spacing('md')};
+  width: auto;
+  height: 100%;
+  max-width: 100%; // prevents overflow
 `;
 
 const LogoWrapper = styled.div`
-  display: inline-block;
   ${zIndex('high')}
-  width: ${props => props.sizeSm};
-  transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
-  vertical-align: bottom; // height fix
+
+  width: ${props => props.logoWidth};
+  width: 200px;
+
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    width: ${props => props.sizeMd};
+    width: ${props => props.logoWidthMd};
   }
+
+  border: 1px solid blue;
+
 `;
 
 const LogoNav2026 = ({
-  rotate = false,
-  sizeSm = '51px',
-  sizeMd = '70px',
-  campaign = 'Comic Relief'
+  logoWidth = '50px',
+  logoWidthMd = '70px'
 }) => (
   <LogoWrapper
     data-testid="LogoWrapper"
-    rotate={rotate ? 1 : 0}
-    sizeSm={sizeSm}
-    sizeMd={sizeMd}
-    campaign={campaign}
+    logoWidth={logoWidth}
+    logoWidthMd={logoWidthMd}
   >
     <Image
       data-testid="Image"
@@ -48,10 +44,8 @@ const LogoNav2026 = ({
 );
 
 LogoNav2026.propTypes = {
-  rotate: PropTypes.bool,
-  sizeSm: PropTypes.string,
-  sizeMd: PropTypes.string,
-  campaign: PropTypes.string
+  logoWidth: PropTypes.string,
+  logoWidthMd: PropTypes.string
 };
 
 export default LogoNav2026;
