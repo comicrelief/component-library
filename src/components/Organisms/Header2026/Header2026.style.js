@@ -52,7 +52,7 @@ const Brand = styled.div`
   a {
     border: 0;
     color: transparent;
-    margin-right: 25px;
+    margin-right: 12px;
 
     img {
       width: 100%;

@@ -24,18 +24,12 @@ const Image = styled.img`
 const LogoWrapper = styled.div`
   display: inline-block;
   ${zIndex('high')}
-  width: ${props => (props.campaign === 'Comic Relief' ? '100%' : props.sizeSm)};
+  width: ${props => props.sizeSm};
   transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
   vertical-align: bottom; // height fix
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     width: ${props => props.sizeMd};
   }
-`;
-
-const ComicReliefTextLogo = styled.h1`
-  color: ${({ theme }) => theme.color('red')};
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
 `;
 
 const themeSwitcher = theme => {
@@ -52,33 +46,17 @@ const themeSwitcher = theme => {
 };
 
 const Logo = ({
-  rotate = false,
-  sizeSm = '51px',
-  sizeMd = '70px',
-  campaign = 'Comic Relief'
+  rotate = false, sizeSm = '51px', sizeMd = '70px', campaign = 'Comic Relief'
 }) => (
-  <LogoWrapper
-    data-testid="LogoWrapper"
-    rotate={rotate ? 1 : 0}
-    sizeSm={sizeSm}
-    sizeMd={sizeMd}
-    campaign={campaign}
-  >
-    {campaign === 'Comic Relief'
-      ? <ComicReliefTextLogo data-testid="ComicReliefTextLogo">Comic Relief</ComicReliefTextLogo>
-      : (
-        <Image
-          data-testid="Image"
-          src={themeSwitcher(campaign)}
-          alt={
+  <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
+    <Image
+      src={themeSwitcher(campaign)}
+      alt={
           campaign === 'Comic Relief' || campaign === 'Pride'
             ? 'Comic Relief logo'
             : 'Sport Relief logo'
-          }
-        />
-      )
-    }
-
+        }
+    />
   </LogoWrapper>
 );
 

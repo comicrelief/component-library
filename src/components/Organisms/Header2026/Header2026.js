@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LogoLinked from '../../Molecules/LogoLinked/LogoLinked';
+import LogoLinked2026 from '../../Molecules/LogoLinked2026/LogoLinked2026';
 import HeaderNav2026 from './HeaderNav2026/HeaderNav2026';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
@@ -16,12 +16,12 @@ const Header2026 = ({
     <InnerWrapper data-testid="InnerWrapper">
 
       <Brand data-testid="Brand">
-        <LogoLinked
+        <LogoLinked2026
           campaign={campaign}
-          sizeSm="50px"
-          sizeMd="55px"
+          sizeSm="150px"
+          sizeMd="155px"
           animateRotate
-          data-testid="LogoLinked"
+          data-testid="LogoLinked2026"
         />
       </Brand>
 
@@ -37,7 +37,6 @@ const Header2026 = ({
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
-      {/* </div> */}
 
     </InnerWrapper>
   </Header2026Wrapper>
