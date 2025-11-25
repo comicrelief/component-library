@@ -15,7 +15,7 @@ it('renders correctly', () => {
     Array [
       .c2 {
       font-size: 1.125rem;
-      line-height: 1.375rem;
+      line-height: 1.125rem;
       font-weight: bold;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
@@ -96,7 +96,7 @@ it('renders correctly', () => {
       </label>,
       .c2 {
       font-size: 1.125rem;
-      line-height: 1.375rem;
+      line-height: 1.125rem;
       font-weight: bold;
       text-transform: inherit;
       -webkit-letter-spacing: 0;

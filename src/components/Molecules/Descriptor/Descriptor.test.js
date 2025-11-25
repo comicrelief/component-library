@@ -26,7 +26,7 @@ it('renders article teaser correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
       font-size: 1.125rem;
-      line-height: 1.375rem;
+      line-height: 1.125rem;
       font-weight: bold;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
@@ -54,7 +54,7 @@ it('renders article teaser correctly', () => {
 
     .c10 {
       font-size: 1rem;
-      line-height: 1.25rem;
+      line-height: 1rem;
       font-weight: normal;
       text-transform: inherit;
       -webkit-letter-spacing: 0;

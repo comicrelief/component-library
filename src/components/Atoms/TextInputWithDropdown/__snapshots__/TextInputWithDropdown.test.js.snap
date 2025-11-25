@@ -3,7 +3,7 @@
 exports[`renders correctly with no value and no options 1`] = `
 .c2 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -136,7 +136,7 @@ exports[`renders correctly with no value and no options 1`] = `
 exports[`renders correctly with value and no options 1`] = `
 .c2 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -269,7 +269,7 @@ exports[`renders correctly with value and no options 1`] = `
 exports[`renders correctly with value and options 1`] = `
 .c2 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;

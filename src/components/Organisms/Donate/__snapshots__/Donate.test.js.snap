@@ -18,7 +18,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   line-height: 1.25rem;
   text-transform: inherit;
@@ -32,7 +32,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c16 {
   font-size: 1.5rem;
-  line-height: 1.625rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -44,7 +44,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c20 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -742,7 +742,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   line-height: 1.25rem;
   text-transform: inherit;
@@ -756,7 +756,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c15 {
   font-size: 1.5rem;
-  line-height: 1.625rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -768,7 +768,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c17 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   font-weight: 500;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -780,7 +780,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c21 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -1445,7 +1445,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   line-height: 1.25rem;
   text-transform: inherit;
@@ -1459,7 +1459,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c10 {
   font-size: 1.5rem;
-  line-height: 1.625rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -1471,7 +1471,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c21 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   font-weight: 500;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -1483,7 +1483,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c14 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -2243,7 +2243,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   line-height: 1.25rem;
   text-transform: inherit;
@@ -2257,7 +2257,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c10 {
   font-size: 1.5rem;
-  line-height: 1.625rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
@@ -2269,7 +2269,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c14 {
   font-size: 1.125rem;
-  line-height: 1.375rem;
+  line-height: 1.125rem;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;

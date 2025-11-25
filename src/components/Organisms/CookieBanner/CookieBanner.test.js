@@ -21,7 +21,7 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
       font-size: 1.125rem;
-      line-height: 1.375rem;
+      line-height: 1.125rem;
       font-size: 1rem;
       line-height: 1.25rem;
       text-transform: inherit;

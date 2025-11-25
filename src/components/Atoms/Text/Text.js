@@ -8,7 +8,7 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 export const BaseText = styled.span`
   // Base styles to keep things sane:
   font-size: ${({ size, theme }) => theme.fontSize(size)};
-  line-height: ${({ size, theme }) => theme.lineHeight(size)};
+  line-height: ${({ size, theme }) => theme.fontSize(size)};
 
   // Use our helper function to streamline font-sizes and line-heights,
   // overriding the above rules when we've got config for this tag:

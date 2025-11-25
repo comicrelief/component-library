@@ -21,7 +21,7 @@ it('renders article teaser correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-size: 1rem;
-      line-height: 1.25rem;
+      line-height: 1rem;
       font-weight: bold;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
@@ -292,7 +292,7 @@ it('renders press realese correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-size: 1rem;
-      line-height: 1.25rem;
+      line-height: 1rem;
       font-weight: bold;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
