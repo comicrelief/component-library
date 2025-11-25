@@ -26,7 +26,7 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const Logo2026 = ({
+const LogoNav2026 = ({
   rotate = false,
   sizeSm = '51px',
   sizeMd = '70px',
@@ -47,11 +47,11 @@ const Logo2026 = ({
   </LogoWrapper>
 );
 
-Logo2026.propTypes = {
+LogoNav2026.propTypes = {
   rotate: PropTypes.bool,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string,
   campaign: PropTypes.string
 };
 
-export default Logo2026;
+export default LogoNav2026;

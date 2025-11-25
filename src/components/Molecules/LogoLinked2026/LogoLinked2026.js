@@ -10,7 +10,7 @@ const TitleLabel = styled.span`
 `;
 
 const LogoLink = styled.a`
-  ${({ animateRotate }) => animateRotate && css`
+  ${({ animate }) => animate && css`
     img {
       transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
     }
@@ -24,36 +24,30 @@ const LogoLink = styled.a`
 `;
 
 const LogoLinkedNav2026 = ({
-  campaign = 'Comic Relief',
-  title = 'Go to Comic Relief homepage',
-  url = '/',
-  animateRotate = false,
+  animate = false,
   sizeSm,
   sizeMd
 }) => (
   <>
     <LogoLink
       data-testid="LogoLink"
-      href="/"
+      href="https://www.comicrelief.com/"
       title="Go to Comic Relief homepage"
-      animateRotate={animateRotate}
+      animate={animate}
     >
       <LogoNav2026
         data-testid="LogoNav2026"
         rotate
-        sizeSm="150px"
-        sizeMd="180px"
+        sizeSm={sizeSm}
+        sizeMd={sizeMd}
       />
-      <TitleLabel data-testid="TitleLabel">{item.title}</TitleLabel>
+      <TitleLabel data-testid="TitleLabel">Go to Comic Relief homepage</TitleLabel>
     </LogoLink>
   </>
 );
 
 LogoLinkedNav2026.propTypes = {
-  campaign: PropTypes.string,
-  animateRotate: PropTypes.bool,
-  title: PropTypes.string,
-  url: PropTypes.string,
+  animate: PropTypes.bool,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string
 };
