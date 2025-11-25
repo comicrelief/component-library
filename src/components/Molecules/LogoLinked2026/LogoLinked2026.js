@@ -30,27 +30,24 @@ const LogoLinkedNav2026 = ({
   animateRotate = false,
   sizeSm,
   sizeMd
-}) => {
-
-  return (
-    <>
-      <LogoLink
-        data-testid="LogoLink"
-        href="/"
-        title="Go to Comic Relief homepage"
-        animateRotate={animateRotate}
-      >
-        <LogoNav2026
-          data-testid="LogoNav2026"
-          rotate={true}
-          sizeSm="150px"
-          sizeMd="180px"
-        />
-        <TitleLabel data-testid="TitleLabel">{item.title}</TitleLabel>
-      </LogoLink>
-    </>
-  );
-};
+}) => (
+  <>
+    <LogoLink
+      data-testid="LogoLink"
+      href="/"
+      title="Go to Comic Relief homepage"
+      animateRotate={animateRotate}
+    >
+      <LogoNav2026
+        data-testid="LogoNav2026"
+        rotate
+        sizeSm="150px"
+        sizeMd="180px"
+      />
+      <TitleLabel data-testid="TitleLabel">{item.title}</TitleLabel>
+    </LogoLink>
+  </>
+);
 
 LogoLinkedNav2026.propTypes = {
   campaign: PropTypes.string,
