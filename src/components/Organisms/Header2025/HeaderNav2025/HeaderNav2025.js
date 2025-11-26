@@ -137,7 +137,7 @@ const HeaderNav2025 = ({
               return (
                 <HeaderNavItem2025
                   thisID={thisID}
-                  key={`${thisID}--item`}
+                  key={`${index}-${thisID}--item`}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
