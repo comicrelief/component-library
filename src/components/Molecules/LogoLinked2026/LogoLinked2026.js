@@ -2,19 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
-import { pulse } from '../../../theme/shared/animations';
+import { pulseIn, pulseOut } from '../../../theme/shared/animations';
 
 const LogoLink = styled.a`
   img {
-    // transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-    transition: all;
+    animation: ${pulseOut} 0.4s ease-in-out forwards;
   }
   &:hover,
   &:focus {
     img {
-      // transform: rotate(-14deg);
-      animation: ${pulse} 0.6s ease-in-out;
-      // animation-timing-function: ease-in-out;
+      animation: ${pulseIn} 0.4s ease-in-out forwards;
     }
   }
 `;
