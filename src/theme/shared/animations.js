@@ -4,10 +4,10 @@ const pulseIn = keyframes`
   from {
     transform: scale3d(1, 1, 1);
   }
-  50% {
+  30% {
     transform: scale3d(1.04, 1.04, 1.04);
   }
-  75% {
+  65% {
     transform: scale3d(1.02, 1.02, 1.02);
   }
   to {
@@ -19,10 +19,10 @@ const pulseOut = keyframes`
   from {
     transform: scale3d(1.04, 1.04, 1.04);
   }
-  50% {
+  30% {
     transform: scale3d(1, 1, 1);
   }
-  75% {
+  65% {
     transform: scale3d(1.01, 1.01, 1.01);
   }
   to {
