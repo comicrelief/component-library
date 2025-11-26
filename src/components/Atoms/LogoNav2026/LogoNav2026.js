@@ -16,14 +16,10 @@ const LogoWrapper = styled.div`
   ${zIndex('high')}
 
   width: ${props => props.logoWidth};
-  width: 200px;
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     width: ${props => props.logoWidthMd};
   }
-
-  border: 1px solid blue;
-
 `;
 
 const LogoNav2026 = ({

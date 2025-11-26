@@ -2,8 +2,8 @@
 # Comic Relief Logo 2026 without animation
 ```js
 <LogoLinkedNav2026
-    sizeSm="150px"
-    sizeMd="160px"
+    logoWidth="250px"
+    logoWidthMd="270px"
 />
 ```
 
@@ -11,7 +11,7 @@
 ```js
 <LogoLinkedNav2026
     title="I'm a custom title"
-    sizeSm="150px"
-    sizeMd="160px"
+    logoWidth="250px"
+    logoWidthMd="270px"
 />
 ```
