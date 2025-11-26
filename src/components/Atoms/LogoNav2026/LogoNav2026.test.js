@@ -1,10 +1,10 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Logo from './Logo';
+import LogoNav2026 from './LogoNav2026';
 
 it('renders correctly', () => {
-  const tree = renderWithTheme(<Logo rotate />).toJSON();
+  const tree = renderWithTheme(<LogoNav2026 rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
