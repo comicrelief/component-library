@@ -5,25 +5,25 @@ const pulseIn = keyframes`
     transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.04, 1.04, 1.04);
   }
   75% {
-    transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.02, 1.02, 1.02);
   }
   to {
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.04, 1.04, 1.04);
   }
 `;
 
 const pulseOut = keyframes`
   from {
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.04, 1.04, 1.04);
   }
   50% {
     transform: scale3d(1, 1, 1);
   }
   75% {
-    transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.01, 1.01, 1.01);
   }
   to {
     transform: scale3d(1, 1, 1);
