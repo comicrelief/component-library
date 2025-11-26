@@ -6,12 +6,12 @@ import { pulseIn, pulseOut } from '../../../theme/shared/animations';
 
 const LogoLink = styled.a`
   img {
-    animation: ${pulseOut} 0.3s ease-in-out forwards;
+    animation: ${pulseOut} 0.4s ease-in-out forwards;
   }
   &:hover,
   &:focus {
     img {
-      animation: ${pulseIn} 0.3s ease-in-out forwards;
+      animation: ${pulseIn} 0.4s ease-in-out forwards;
     }
   }
 `;
