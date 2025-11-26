@@ -7,23 +7,18 @@ it('renders correctly', () => {
   const tree = renderWithTheme(<LogoNav2026 rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c0 {
-      display: inline-block;
-      z-index: 3;
-      width: 100%;
-      -webkit-transform: rotate(-14deg);
-      -ms-transform: rotate(-14deg);
-      transform: rotate(-14deg);
-      vertical-align: bottom;
+    .c1 {
+      display: block;
+      width: auto;
+      height: 100%;
+      max-width: 100%;
     }
 
-    .c1 {
-      color: #E52630;
-      font-size: 1.5rem;
-      -webkit-letter-spacing: 1.5px;
-      -moz-letter-spacing: 1.5px;
-      -ms-letter-spacing: 1.5px;
-      letter-spacing: 1.5px;
+    .c0 {
+      z-index: 3;
+      width: 50px;
+      width: 200px;
+      border: 1px solid blue;
     }
 
     @media (min-width:1150px) {
@@ -35,14 +30,13 @@ it('renders correctly', () => {
     <div
       className="c0"
       data-testid="LogoWrapper"
-      rotate={1}
     >
-      <h1
+      <img
+        alt="Comic Relief logo"
         className="c1"
-        data-testid="ComicReliefTextLogo"
-      >
-        Comic Relief
-      </h1>
+        data-testid="Image"
+        src="mock.asset"
+      />
     </div>
   `);
 });
