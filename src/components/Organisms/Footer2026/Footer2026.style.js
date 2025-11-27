@@ -147,16 +147,27 @@ const SecondaryNavText = styled(Text)`
 `;
 
 const LogosContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: ${spacing('md')};
+  display: ${({ $desktopOnly, $mobileOnly }) => {
+    if ($desktopOnly) return 'none';
+    if ($mobileOnly) return 'flex';
+    return 'flex';
+  }};
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: ${spacing('l')};
+  margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
+    display: ${({ $desktopOnly, $mobileOnly }) => {
+      if ($desktopOnly) return 'flex';
+      if ($mobileOnly) return 'none';
+      return 'flex';
+    }};
     flex-direction: row;
     align-items: center;
-    gap: ${spacing('lg')};
     flex: 0 0 auto;
+    margin-top: 0;
   }
 `;
 

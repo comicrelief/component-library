@@ -55,7 +55,7 @@ const Footer2026 = ({
             <EmailSignUpWrapper>
               <EmailSignUp onSubmit={onEmailSubmit} errorMsg={emailSignupErrorMessage} />
             </EmailSignUpWrapper>
-            <LogosContainer>
+            <LogosContainer $desktopOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
                 <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
               </Brand>
@@ -92,6 +92,13 @@ const Footer2026 = ({
               </FooterCopyrightText>
             )}
           </FooterCopyright>
+
+          <LogosContainer $mobileOnly>
+            <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+            </Brand>
+            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
+          </LogosContainer>
         </InnerWrapper>
       </FooterWrapper>
     </div>
