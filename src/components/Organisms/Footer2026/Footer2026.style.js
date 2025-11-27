@@ -61,7 +61,21 @@ const EmailSignUpWrapper = styled.div`
 `;
 
 const SocialIconWrapper = styled.div`
-  margin-bottom: ${spacing('md')};
+margin-bottom: ${spacing('md')};
+box-sizing: content-box;
+gap: ${spacing('md')};
+  display: ${({ $desktopOnly }) => {
+    if ($desktopOnly) return 'none';
+    return 'block';
+  }};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  box-sizing: border-box;
+    display: ${({ $mobileOnly }) => {
+      if ($mobileOnly) return 'none';
+      return 'block';
+    }};
+  }
 `;
 
 const PrimaryNav = styled.nav`

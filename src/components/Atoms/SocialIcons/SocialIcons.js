@@ -10,7 +10,7 @@ const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: ${( newStyle ) => (newStyle ? 'space-around' : 'center')};
   padding: 0;
   align-items: center;
 

@@ -63,7 +63,7 @@ const Footer2026 = ({
             </LogosContainer>
           </TopSection>
 
-          <SocialIconWrapper>
+          <SocialIconWrapper $desktopOnly>
             <SocialIcons
               campaign={campaignName}
               newStyle
@@ -77,6 +77,19 @@ const Footer2026 = ({
           </SocialIconWrapper>
 
           <PrimaryNav navItems={primaryLinksList} {...rest} />
+
+          <SocialIconWrapper $mobileOnly>
+            <SocialIcons
+              campaign={campaignName}
+              newStyle
+              invertColor
+              showFacebookSocialIcon={showFacebookSocialIcon}
+              showInstagramSocialIcon={showInstagramSocialIcon}
+              showXSocialIcon={showXSocialIcon}
+              showTikTokSocialIcon={showTikTokSocialIcon}
+              showYouTubeSocialIcon={showYouTubeSocialIcon}
+            />
+          </SocialIconWrapper>
 
           <SecondaryNav navItems={secondaryLinksList} {...rest} />
 
