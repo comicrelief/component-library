@@ -16,7 +16,7 @@ it('renders correctly', () => {
 
     .c0 {
       z-index: 3;
-      width: 50px;
+      width: 150px;
     }
 
     @media (min-width:1150px) {
