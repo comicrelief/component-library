@@ -40,6 +40,7 @@ const colors = {
   grey: '#969598',
   grey_3: '#969598',
   grey_4: '#222222',
+  grey_4_hover: '#3A3A3A',
   grey_5: '#18181A',
 
   /* GENERAL COLOURS */
