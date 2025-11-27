@@ -9,21 +9,23 @@ export const BaseText = styled.span`
   // Base styles to keep things sane:
   font-size: ${({ size, theme }) => theme.fontSize(size)};
   line-height: ${({ size, theme }) => theme.fontSize(size)};
+  letter-spacing: 0;
 
   // Use our helper function to streamline font-sizes and line-heights,
   // overriding the above rules when we've got config for this tag:
+  // TODO: _should_ be ditch the above rules...? 
   ${({ as, theme }) => (as !== undefined && css`
     ${fontHelper(theme, as)}
   `)};
 
-
-  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
+  // TODO: we want to ditch these eventually:
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
   ${({ height }) => (height ? `line-height: ${height}` : null)};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
-  letter-spacing: 0;
-
+  
+  // Still useful:
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
   ${({ mobileColor, theme }) => mobileColor && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
