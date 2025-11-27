@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { kebabCase } from 'lodash';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Text from '../../Text/Text';
+import { springScaleAnimation } from '../../../../theme/shared/animations';
 
 const RevealTextWidth = 55;
 const RevealTextSpeed = 0.35;
@@ -30,11 +31,11 @@ const StyledLink = styled.a`
     &:focus {
       opacity: 1;
     }
-    
+
     // No hover state for mobile, so targetting Medium+:
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       &:hover,
-      &:focus {        
+      &:focus {
         img {
           filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
         }
@@ -46,24 +47,46 @@ const StyledLink = styled.a`
       &:focus {
         // Default
         padding-right: ${RevealTextWidth}px;
-  
+
         // Tweak for ESU's longer text:
         &[data-test="header-esu"] {
           padding-right: 92px;
         }
-  
+
         // Tweak for Shop's shorter text:
         &[data-test="header-shop"] {
           padding-right: 48px;
         }
-        
-        // Show the Reveal text  
+
+        // Show the Reveal text
         img + span {
           display: block;
         }
       }
     `}
     };
+
+  // New style is rounded square buttons with dark grey background, and animation.
+  // When we've moved fully to the new design,
+  // this prop and the old styles can be removed.
+  ${({ newStyle }) => newStyle && css`
+    background-color: ${({ theme }) => theme.color('grey_dark')};
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    ${springScaleAnimation(true, 1.15, 2)}
+
+    &:hover,
+    &:focus {
+      background-color: ${({ theme }) => theme.color('grey_4_hover')};
+      opacity: 1;
+    }
+  `}
 `;
 
 const RevealText = styled(Text)`
@@ -88,6 +111,9 @@ const RevealText = styled(Text)`
 
 const StyledImage = styled.img`
   width: 100%;
+  ${({ invertColor }) => invertColor && css`
+    filter: brightness(0) invert(1);
+  `}
 `;
 
 const HelperText = styled.span`
@@ -95,7 +121,8 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, isHeader = false, id, ...restProps
+  href, target, icon, brand, title, isHeader = false,
+  id, newStyle = false, invertColor = false, ...restProps
 }) => (
   <StyledLink
     href={href}
@@ -105,9 +132,9 @@ const Icon = ({
     rel="noopener noreferrer"
     data-test={`${isHeader ? 'header' : 'icon'}-${kebabCase(id)}`}
     isHeader={isHeader}
+    newStyle={newStyle}
   >
-    <StyledImage src={icon} alt={brand} />
-
+    <StyledImage src={icon} alt={brand} invertColor={invertColor} />
     { isHeader && (
       <RevealText>{title}</RevealText>
     )}
@@ -125,7 +152,16 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isHeader: PropTypes.bool,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  /** This applies the newer style, fitting with the new footer design for our pre-RND 2026
+   * website redesign.
+   * Currently only in use in the new footer. Once we have moved fully to the new design,
+   * this prop and the old styles can be removed. */
+  newStyle: PropTypes.bool,
+  /** Invert the color of the svg icon, e.g. for if you're using a dark background
+   * (currently only in use in the new footer)
+   */
+  invertColor: PropTypes.bool
 };
 
 export default Icon;

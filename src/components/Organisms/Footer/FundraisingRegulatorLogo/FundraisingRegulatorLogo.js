@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import spacing from '../../../../theme/shared/spacing';
+import { springScaleAnimation } from '../../../../theme/shared/animations';
 
 const FundraisingRegulatorWrapper = styled.div`
   // Overriding the baked-in styles for ease of update
@@ -11,10 +13,12 @@ const FundraisingRegulatorWrapper = styled.div`
   img {
     display: block;
   }
+
+  ${({ animateOnHover }) => animateOnHover && springScaleAnimation(true)}
 `;
 
-const FundraisingRegulatorLogo = () => (
-  <FundraisingRegulatorWrapper>
+const FundraisingRegulatorLogo = ({ animateOnHover = false }) => (
+  <FundraisingRegulatorWrapper animateOnHover={animateOnHover}>
     {/* Code from https://www.fundraisingregulator.org.uk/ */}
     {/* eslint-disable-next-line react/jsx-no-target-blank */}
     <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank">
@@ -24,3 +28,8 @@ const FundraisingRegulatorLogo = () => (
 );
 
 export default FundraisingRegulatorLogo;
+
+FundraisingRegulatorLogo.propTypes = {
+  /** Animate the logo on hover with spring scale animation */
+  animateOnHover: PropTypes.bool
+};
