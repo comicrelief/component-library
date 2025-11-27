@@ -46,7 +46,8 @@ const Footer2026 = ({
   const validationSchema = yup.object({
     email: yup
       .string()
-      .required('Please provide a valid email address')
+      .nullable()
+      .transform(value => (value === '' ? null : value))
       .email('Please provide a valid email address')
   });
 
