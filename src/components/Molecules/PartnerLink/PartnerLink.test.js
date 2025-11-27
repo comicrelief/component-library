@@ -150,7 +150,7 @@ it('renders correctly', () => {
         color="white"
         size="xxs"
       >
-        Find out more
+        HERE IS A FUNNY TEST
       </span>
     </a>
   `);

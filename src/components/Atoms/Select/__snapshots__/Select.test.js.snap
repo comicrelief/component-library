@@ -73,7 +73,9 @@ exports[`renders correctly 1`] = `
       }
     }
     size="s"
-  />
+  >
+    HERE IS A FUNNY TEST
+  </span>
   <select
     aria-required={true}
     className="c3"

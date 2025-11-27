@@ -167,7 +167,7 @@ it('renders article teaser correctly', () => {
             color="grey_dark"
             size="s"
           >
-            15/06/2020
+            HERE IS A FUNNY TEST
           </span>
           <div
             className="c5"
@@ -195,7 +195,7 @@ it('renders article teaser correctly', () => {
           height="2rem"
           size="xl"
         >
-          Title
+          HERE IS A FUNNY TEST
         </h3>
         <div
           className="c9"
@@ -205,28 +205,28 @@ it('renders article teaser correctly', () => {
             color="grey_dark"
             size="xs"
           >
-            tag1
+            HERE IS A FUNNY TEST
           </span>
           <span
             className="c10 c11"
             color="grey_dark"
             size="xs"
           >
-            tag2
+            HERE IS A FUNNY TEST
           </span>
           <span
             className="c10 c11"
             color="grey_dark"
             size="xs"
           >
-            tag3
+            HERE IS A FUNNY TEST
           </span>
           <span
             className="c10 c11"
             color="grey_dark"
             size="xs"
           >
-            tag4
+            HERE IS A FUNNY TEST
           </span>
         </div>
         <div

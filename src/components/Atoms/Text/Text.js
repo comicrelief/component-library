@@ -76,7 +76,7 @@ const Text = ({
     mobileColor={mobileColor}
     textAlign={textAlign}
   >
-    {children}
+    HERE IS A FUNNY TEST
   </BaseText>
 );
 

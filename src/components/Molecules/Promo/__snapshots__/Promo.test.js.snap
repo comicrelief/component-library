@@ -249,14 +249,14 @@ exports[`renders Promo correctly 1`] = `
           color="white"
           size="super"
         >
-          Curabitur pretium tincidunt lacus
+          HERE IS A FUNNY TEST
         </h1>
         <p
           className="c8"
           color="white"
           size="s"
         >
-          Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+          HERE IS A FUNNY TEST
         </p>
         <span>
           <a
@@ -535,14 +535,14 @@ exports[`renders Promo correctly end position 1`] = `
           color="white"
           size="super"
         >
-          Curabitur pretium tincidunt lacus
+          HERE IS A FUNNY TEST
         </h1>
         <p
           className="c8"
           color="white"
           size="s"
         >
-          Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+          HERE IS A FUNNY TEST
         </p>
         <span>
           <a

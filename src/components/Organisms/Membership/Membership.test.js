@@ -433,14 +433,14 @@ it('renders correctly', () => {
             color="inherit"
             size="l"
           >
-            Help someone like Jordan see a better tomorrow
+            HERE IS A FUNNY TEST
           </h2>
           <p
             className="c7"
             color="inherit"
             size="s"
           >
-            Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
+            HERE IS A FUNNY TEST
           </p>
         </div>
         <div
@@ -461,7 +461,7 @@ it('renders correctly', () => {
                   color="inherit"
                   size="s"
                 >
-                  Choose your monthly donation
+                  HERE IS A FUNNY TEST
                 </h3>
               </legend>
               <div
@@ -480,7 +480,9 @@ it('renders correctly', () => {
                       }
                     }
                     size="s"
-                  />
+                  >
+                    HERE IS A FUNNY TEST
+                  </span>
                   <div
                     className="c17"
                   >
@@ -518,7 +520,9 @@ it('renders correctly', () => {
                       }
                     }
                     size="s"
-                  />
+                  >
+                    HERE IS A FUNNY TEST
+                  </span>
                   <div
                     className="c17"
                   >
@@ -556,7 +560,9 @@ it('renders correctly', () => {
                       }
                     }
                     size="s"
-                  />
+                  >
+                    HERE IS A FUNNY TEST
+                  </span>
                   <div
                     className="c17"
                   >
@@ -590,7 +596,7 @@ it('renders correctly', () => {
                   color="inherit"
                   size="s"
                 >
-                  Other amount
+                  HERE IS A FUNNY TEST
                 </span>
                 <label
                   className="c14 c24"
@@ -605,7 +611,9 @@ it('renders correctly', () => {
                       }
                     }
                     size="s"
-                  />
+                  >
+                    HERE IS A FUNNY TEST
+                  </span>
                   <div
                     className="c17"
                   >

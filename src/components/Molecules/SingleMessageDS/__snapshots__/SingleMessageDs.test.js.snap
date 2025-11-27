@@ -293,14 +293,14 @@ exports[`renders correctly 1`] = `
       color="blue_dark"
       size="s"
     >
-      Subtitle
+      HERE IS A FUNNY TEST
     </span>
     <p
       className="c8"
       color="inherit"
       size="s"
     >
-      Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
+      HERE IS A FUNNY TEST
     </p>
     <div
       className="c9 c10"

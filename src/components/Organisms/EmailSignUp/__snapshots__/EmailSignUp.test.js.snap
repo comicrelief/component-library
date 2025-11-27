@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c15 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -51,17 +51,17 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c15 > a {
+.c14 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c15:hover {
+.c14:hover {
   background-color: #890B11;
   color: #FFFFFF;
 }
 
-.c8 {
+.c7 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -74,17 +74,17 @@ exports[`renders correctly 1`] = `
   color: #000000;
 }
 
-.c10 {
+.c9 {
   margin-bottom: 0.5rem;
   font-weight: normal;
 }
 
-.c11 {
+.c10 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c12 {
+.c11 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c13 {
+.c12 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -121,15 +121,11 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c13:focus {
+.c12:focus {
   border: 1px solid #666;
 }
 
-.c5 {
-  text-align: left;
-}
-
-.c16:disabled {
+.c15:disabled {
   cursor: not-allowed;
   opacity: 0.75;
 }
@@ -156,15 +152,15 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c13 {
   margin-top: 1rem;
 }
 
-.c14 button {
+.c13 button {
   background-color: #E52630;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,17 +171,17 @@ exports[`renders correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c17 p {
+.c16 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c17 p a {
+.c16 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,7 +192,7 @@ exports[`renders correctly 1`] = `
   margin: 1rem 0;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,12 +203,12 @@ exports[`renders correctly 1`] = `
   gap: 0;
 }
 
-.c9 {
+.c8 {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.c9 > span:first-child {
+.c8 > span:first-child {
   color: #FFFFFF;
 }
 
@@ -221,13 +217,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c14 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c15 {
+  .c14 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -243,7 +239,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c6 {
     -webkit-box-pack: start;
     -webkit-justify-content: start;
     -ms-flex-pack: start;
@@ -256,7 +252,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c9 {
+  .c8 {
     max-width: 290px;
   }
 }
@@ -273,7 +269,7 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="xxl"
     >
-      sign up letter
+      HERE IS A FUNNY TEST
     </h2>
     <div
       className="c3"
@@ -283,28 +279,21 @@ exports[`renders correctly 1`] = `
         color="inherit"
         size="s"
       >
-        <div
-          className="c5"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-            }
-          }
-        />
+        HERE IS A FUNNY TEST
       </span>
     </div>
     <div
-      className="c6"
+      className="c5"
     >
       <div
-        className="c7"
+        className="c6"
       >
         <label
-          className="c8 c9"
+          className="c7 c8"
           htmlFor="first-name"
         >
           <span
-            className="c4 c10"
+            className="c4 c9"
             color="inherit"
             dangerouslySetInnerHTML={
               Object {
@@ -312,17 +301,19 @@ exports[`renders correctly 1`] = `
               }
             }
             size="s"
-          />
+          >
+            HERE IS A FUNNY TEST
+          </span>
           <div
-            className="c11"
+            className="c10"
           >
             
             <div
-              className="c12"
+              className="c11"
             >
               <input
                 aria-required={true}
-                className="c13"
+                className="c12"
                 id="first-name"
                 name="firstName"
                 onBlur={[Function]}
@@ -337,11 +328,11 @@ exports[`renders correctly 1`] = `
           
         </label>
         <label
-          className="c8 c9"
+          className="c7 c8"
           htmlFor="last-name"
         >
           <span
-            className="c4 c10"
+            className="c4 c9"
             color="inherit"
             dangerouslySetInnerHTML={
               Object {
@@ -349,17 +340,19 @@ exports[`renders correctly 1`] = `
               }
             }
             size="s"
-          />
+          >
+            HERE IS A FUNNY TEST
+          </span>
           <div
-            className="c11"
+            className="c10"
           >
             
             <div
-              className="c12"
+              className="c11"
             >
               <input
                 aria-required={true}
-                className="c13"
+                className="c12"
                 id="last-name"
                 name="lastName"
                 onBlur={[Function]}
@@ -375,11 +368,11 @@ exports[`renders correctly 1`] = `
         </label>
       </div>
       <label
-        className="c8 c9"
+        className="c7 c8"
         htmlFor="email"
       >
         <span
-          className="c4 c10"
+          className="c4 c9"
           color="inherit"
           dangerouslySetInnerHTML={
             Object {
@@ -387,17 +380,19 @@ exports[`renders correctly 1`] = `
             }
           }
           size="s"
-        />
+        >
+          HERE IS A FUNNY TEST
+        </span>
         <div
-          className="c11"
+          className="c10"
         >
           
           <div
-            className="c12"
+            className="c11"
           >
             <input
               aria-required={true}
-              className="c13"
+              className="c12"
               id="email"
               name="email"
               onBlur={[Function]}
@@ -412,10 +407,10 @@ exports[`renders correctly 1`] = `
         
       </label>
       <div
-        className="c14"
+        className="c13"
       >
         <button
-          className="c15 c16"
+          className="c14 c15"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
@@ -425,7 +420,7 @@ exports[`renders correctly 1`] = `
             color="inherit"
             size="s"
           >
-            Subscribe
+            HERE IS A FUNNY TEST
           </span>
           <div
             className=""
@@ -434,21 +429,14 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="c17"
+      className="c16"
     >
       <span
         className="c4"
         color="inherit"
         size="s"
       >
-        <div
-          className="c5"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
-            }
-          }
-        />
+        HERE IS A FUNNY TEST
       </span>
     </div>
   </div>

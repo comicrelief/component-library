@@ -102,7 +102,9 @@ exports[`renders correctly with no value and no options 1`] = `
         }
       }
       size="s"
-    />
+    >
+      HERE IS A FUNNY TEST
+    </span>
     <div
       className="c4"
     >
@@ -232,7 +234,9 @@ exports[`renders correctly with value and no options 1`] = `
         }
       }
       size="s"
-    />
+    >
+      HERE IS A FUNNY TEST
+    </span>
     <div
       className="c4"
     >
@@ -401,7 +405,9 @@ exports[`renders correctly with value and options 1`] = `
         }
       }
       size="s"
-    />
+    >
+      HERE IS A FUNNY TEST
+    </span>
     <div
       className="c4"
     >
@@ -448,7 +454,7 @@ exports[`renders correctly with value and options 1`] = `
           color="inherit"
           size="s"
         >
-          Canyon
+          HERE IS A FUNNY TEST
         </span>
       </li>
       <li
@@ -465,7 +471,7 @@ exports[`renders correctly with value and options 1`] = `
           color="inherit"
           size="s"
         >
-          Cannondale
+          HERE IS A FUNNY TEST
         </span>
       </li>
       <li
@@ -482,7 +488,7 @@ exports[`renders correctly with value and options 1`] = `
           color="inherit"
           size="s"
         >
-          Condor
+          HERE IS A FUNNY TEST
         </span>
       </li>
       <li
@@ -499,7 +505,7 @@ exports[`renders correctly with value and options 1`] = `
           color="inherit"
           size="s"
         >
-          Cube
+          HERE IS A FUNNY TEST
         </span>
       </li>
     </ul>

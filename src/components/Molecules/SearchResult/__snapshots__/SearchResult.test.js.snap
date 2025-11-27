@@ -150,14 +150,14 @@ exports[`renders correctly in minimalist form 1`] = `
         color="inherit"
         size="xs"
       >
-         
+        HERE IS A FUNNY TEST
       </span>
       <h3
         className="c8 c9"
         color="inherit"
         size="xl"
       >
-        News article
+        HERE IS A FUNNY TEST
       </h3>
       
     </div>
@@ -330,21 +330,21 @@ exports[`renders correctly with copy 1`] = `
         color="inherit"
         size="xs"
       >
-         
+        HERE IS A FUNNY TEST
       </span>
       <h3
         className="c8 c9"
         color="inherit"
         size="xl"
       >
-        News article
+        HERE IS A FUNNY TEST
       </h3>
       <p
         className="c10"
         color="inherit"
         size="m"
       >
-        News article copy
+        HERE IS A FUNNY TEST
       </p>
     </div>
   </a>
@@ -501,14 +501,14 @@ exports[`renders correctly with date 1`] = `
         color="inherit"
         size="xs"
       >
-         01 July 2019
+        HERE IS A FUNNY TEST
       </span>
       <h3
         className="c8 c9"
         color="inherit"
         size="xl"
       >
-        News article
+        HERE IS A FUNNY TEST
       </h3>
       
     </div>
@@ -666,14 +666,14 @@ exports[`renders correctly with date and type 1`] = `
         color="inherit"
         size="xs"
       >
-         article | 01 July 2019
+        HERE IS A FUNNY TEST
       </span>
       <h3
         className="c8 c9"
         color="inherit"
         size="xl"
       >
-        News article
+        HERE IS A FUNNY TEST
       </h3>
       
     </div>

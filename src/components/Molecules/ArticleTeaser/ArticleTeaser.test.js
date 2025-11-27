@@ -242,7 +242,7 @@ it('renders article teaser correctly', () => {
             color="inherit"
             size="xs"
           >
-             01 July 2019
+            HERE IS A FUNNY TEST
           </span>
           <h3
             className="c10 c11"
@@ -250,7 +250,7 @@ it('renders article teaser correctly', () => {
             height="2rem"
             size="xl"
           >
-            News article
+            HERE IS A FUNNY TEST
           </h3>
         </div>
       </a>
@@ -469,7 +469,7 @@ it('renders press realese correctly', () => {
             color="inherit"
             size="xs"
           >
-             01 July 2019
+            HERE IS A FUNNY TEST
           </span>
           <h3
             className="c10 c11"
@@ -477,7 +477,7 @@ it('renders press realese correctly', () => {
             height="2rem"
             size="xl"
           >
-            Press Release
+            HERE IS A FUNNY TEST
           </h3>
         </div>
       </a>

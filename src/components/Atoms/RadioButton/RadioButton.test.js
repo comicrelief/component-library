@@ -97,7 +97,7 @@ it('renders correctly', () => {
           color="inherit"
           size="s"
         >
-          Male
+          HERE IS A FUNNY TEST
         </span>
       </label>,
       .c2 {
@@ -184,7 +184,7 @@ it('renders correctly', () => {
           color="inherit"
           size="s"
         >
-          Female
+          HERE IS A FUNNY TEST
         </span>
       </label>,
     ]

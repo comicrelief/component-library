@@ -10,23 +10,11 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c1 {
-  display: inline-block;
-  width: 100%;
-  z-index: 1;
-  font-weight: bold;
-  margin-top: 0.6rem;
-}
-
 <span
   className="c0"
   color="red"
   size="error"
 >
-  <span
-    className="c1"
-  >
-    This is an error
-  </span>
+  HERE IS A FUNNY TEST
 </span>
 `;

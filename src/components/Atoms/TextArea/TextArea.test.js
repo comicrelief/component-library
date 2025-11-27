@@ -94,7 +94,9 @@ it('renders correctly', () => {
           }
         }
         size="s"
-      />
+      >
+        HERE IS A FUNNY TEST
+      </span>
       <textarea
         aria-describedby="Please leave your comment here"
         className="c3"

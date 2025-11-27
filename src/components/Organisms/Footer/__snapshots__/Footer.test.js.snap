@@ -659,7 +659,7 @@ exports[`renders correctly 1`] = `
           id="footer-menu"
           size="s"
         >
-          Footer navigation
+          HERE IS A FUNNY TEST
         </h2>
         <ul
           className="c13"
@@ -674,7 +674,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              Hear from us
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="Hear from us"
@@ -697,7 +697,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Get the newsletter
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -717,7 +717,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    How we contact you
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -732,7 +732,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              Get in touch
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="Get in touch"
@@ -755,7 +755,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Contact us
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -775,7 +775,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Your Gift Aid
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -795,7 +795,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    FAQs
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -815,7 +815,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Red Nose Day 2019 FAQs
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -830,7 +830,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              About us
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="About us"
@@ -853,7 +853,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Mission
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -873,7 +873,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Our history
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -893,7 +893,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Finances
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -913,7 +913,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Partners
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -933,7 +933,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Meet the team
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -953,7 +953,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Sport Relief
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -968,7 +968,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              Careers
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="Careers"
@@ -991,7 +991,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Working at Comic Relief
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1011,7 +1011,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Open roles
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1026,7 +1026,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              News
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="News"
@@ -1049,7 +1049,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    News
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1069,7 +1069,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Press area
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1084,7 +1084,7 @@ exports[`renders correctly 1`] = `
               color="white"
               size="s"
             >
-              Legal
+              HERE IS A FUNNY TEST
             </span>
             <ul
               aria-label="Legal"
@@ -1107,7 +1107,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Link comp with both URL and Ref
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1127,7 +1127,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Link comp with only Ref
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1147,7 +1147,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Link comp with only URL
+                    HERE IS A FUNNY TEST
                   </span>
                   <span
                     className="c23"
@@ -1172,7 +1172,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Test allowListed external link
+                    HERE IS A FUNNY TEST
                   </span>
                 </a>
               </li>
@@ -1192,7 +1192,7 @@ exports[`renders correctly 1`] = `
                     color="white"
                     size="s"
                   >
-                    Test non-allowListed external link
+                    HERE IS A FUNNY TEST
                   </span>
                   <span
                     className="c23"
@@ -1213,7 +1213,7 @@ exports[`renders correctly 1`] = `
           color="grey"
           size="s"
         >
-          Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
+          HERE IS A FUNNY TEST
         </p>
       </div>
     </div>

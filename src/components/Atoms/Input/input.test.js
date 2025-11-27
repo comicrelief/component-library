@@ -109,7 +109,9 @@ it('renders correctly', () => {
           }
         }
         size="s"
-      />
+      >
+        HERE IS A FUNNY TEST
+      </span>
       <div
         className="c3"
       >
@@ -245,7 +247,9 @@ it('renders with responsive max widths correctly', () => {
           }
         }
         size="s"
-      />
+      >
+        HERE IS A FUNNY TEST
+      </span>
       <div
         className="c3"
       >

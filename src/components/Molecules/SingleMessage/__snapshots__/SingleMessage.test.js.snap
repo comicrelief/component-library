@@ -165,7 +165,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
       color="white"
       size="xxl"
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
+      HERE IS A FUNNY TEST
     </p>
   </div>
 </div>
@@ -387,14 +387,14 @@ exports[`renders Single Message with Image correctly 1`] = `
       color="white"
       size="xxl"
     >
-      title
+      HERE IS A FUNNY TEST
     </h1>
     <p
       className="c7"
       color="white"
       size="s"
     >
-      description
+      HERE IS A FUNNY TEST
     </p>
     <a
       className="c8"
@@ -623,7 +623,7 @@ exports[`renders Single Message with double image correctly 1`] = `
       color="black"
       size="xxl"
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
+      HERE IS A FUNNY TEST
     </p>
   </div>
 </div>
@@ -868,14 +868,14 @@ exports[`renders Single Message with full width correctly 1`] = `
       color="white"
       size="xxl"
     >
-      title
+      HERE IS A FUNNY TEST
     </h1>
     <p
       className="c7"
       color="white"
       size="s"
     >
-      description
+      HERE IS A FUNNY TEST
     </p>
     <a
       className="c8"
@@ -1148,7 +1148,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
       color="white"
       size="xxl"
     >
-      “The creativity that goes into helping people have a better life is extraordinary.”
+      HERE IS A FUNNY TEST
     </p>
   </div>
 </div>

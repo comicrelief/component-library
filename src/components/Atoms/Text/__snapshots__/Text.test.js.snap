@@ -14,7 +14,7 @@ exports[`renders heavy heading correctly 1`] = `
   color="inherit"
   size="s"
 >
-  Heading 3 heavy
+  HERE IS A FUNNY TEST
 </h3>
 `;
 
@@ -33,7 +33,7 @@ exports[`renders high heading correctly 1`] = `
   height="5"
   size="s"
 >
-  Heading 3 high
+  HERE IS A FUNNY TEST
 </h3>
 `;
 
@@ -50,7 +50,7 @@ exports[`renders large heading correctly 1`] = `
   color="inherit"
   size="l"
 >
-  Heading 3 large
+  HERE IS A FUNNY TEST
 </h3>
 `;
 
@@ -72,7 +72,7 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
   color="inherit"
   size="xl"
 >
-  My paragraph xl and font Anton
+  HERE IS A FUNNY TEST
 </p>
 `;
 
@@ -91,6 +91,6 @@ exports[`renders xl yellow paragraph correctly 1`] = `
   color="yellow"
   size="xl"
 >
-  My paragraph xl and yellow
+  HERE IS A FUNNY TEST
 </p>
 `;

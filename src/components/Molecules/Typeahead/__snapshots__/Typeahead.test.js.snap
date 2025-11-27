@@ -102,7 +102,9 @@ exports[`renders correctly 1`] = `
         }
       }
       size="s"
-    />
+    >
+      HERE IS A FUNNY TEST
+    </span>
     <div
       className="c4"
     >

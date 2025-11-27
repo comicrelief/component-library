@@ -88,7 +88,7 @@ it('renders correctly', () => {
           color="inherit"
           size="s"
         >
-          Tennis
+          HERE IS A FUNNY TEST
         </span>
       </label>,
       .c2 {
@@ -166,7 +166,7 @@ it('renders correctly', () => {
           color="inherit"
           size="s"
         >
-          Handball
+          HERE IS A FUNNY TEST
         </span>
       </label>,
     ]

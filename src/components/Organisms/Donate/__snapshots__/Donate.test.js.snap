@@ -547,14 +547,14 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           color="white"
           size="big"
         >
-          Donate Now
+          HERE IS A FUNNY TEST
         </h2>
         <p
           className="c5"
           color="white"
           size="m"
         >
-          Please help us fund life-changing projects in the UK and around the world.
+          HERE IS A FUNNY TEST
         </p>
       </div>
     </div>
@@ -619,7 +619,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               color="inherit"
               size="l"
             >
-              Enter an amount to give
+              HERE IS A FUNNY TEST
             </span>
           </legend>
           <div
@@ -638,7 +638,9 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c22"
               >
@@ -1207,14 +1209,14 @@ exports[`Monthly donation renders correctly 1`] = `
           color="white"
           size="big"
         >
-          Donate Now
+          HERE IS A FUNNY TEST
         </h2>
         <p
           className="c5"
           color="white"
           size="m"
         >
-          Please help us fund life-changing projects in the UK and around the world.
+          HERE IS A FUNNY TEST
         </p>
       </div>
     </div>
@@ -1279,7 +1281,7 @@ exports[`Monthly donation renders correctly 1`] = `
               color="inherit"
               size="l"
             >
-              Choose an amount to give
+              HERE IS A FUNNY TEST
             </span>
           </legend>
           <div
@@ -1290,7 +1292,7 @@ exports[`Monthly donation renders correctly 1`] = `
               color="inherit"
               size="s"
             >
-              Other amount
+              HERE IS A FUNNY TEST
             </span>
             <label
               className="c19 c20"
@@ -1305,7 +1307,9 @@ exports[`Monthly donation renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c23"
               >
@@ -1892,14 +1896,14 @@ exports[`Single donation renders correctly 1`] = `
           color="white"
           size="big"
         >
-          Donate Now
+          HERE IS A FUNNY TEST
         </h2>
         <p
           className="c5"
           color="white"
           size="m"
         >
-          Please help us fund life-changing projects in the UK and around the world.
+          HERE IS A FUNNY TEST
         </p>
       </div>
     </div>
@@ -1921,7 +1925,7 @@ exports[`Single donation renders correctly 1`] = `
               color="inherit"
               size="l"
             >
-              Choose an amount to give
+              HERE IS A FUNNY TEST
             </span>
           </legend>
           <div
@@ -1940,7 +1944,9 @@ exports[`Single donation renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c16"
               >
@@ -1978,7 +1984,9 @@ exports[`Single donation renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c16"
               >
@@ -2016,7 +2024,9 @@ exports[`Single donation renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c16"
               >
@@ -2050,7 +2060,7 @@ exports[`Single donation renders correctly 1`] = `
               color="inherit"
               size="s"
             >
-              Other amount
+              HERE IS A FUNNY TEST
             </span>
             <label
               className="c12 c23"
@@ -2065,7 +2075,9 @@ exports[`Single donation renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c16"
               >
@@ -2514,14 +2526,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           color="white"
           size="big"
         >
-          Donate Now
+          HERE IS A FUNNY TEST
         </h2>
         <p
           className="c5"
           color="white"
           size="m"
         >
-          Please help us fund life-changing projects in the UK and around the world.
+          HERE IS A FUNNY TEST
         </p>
       </div>
     </div>
@@ -2543,7 +2555,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               color="inherit"
               size="l"
             >
-              Overridden via the 'choose amount text' props
+              HERE IS A FUNNY TEST
             </span>
           </legend>
           <div
@@ -2562,7 +2574,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   }
                 }
                 size="s"
-              />
+              >
+                HERE IS A FUNNY TEST
+              </span>
               <div
                 className="c16"
               >

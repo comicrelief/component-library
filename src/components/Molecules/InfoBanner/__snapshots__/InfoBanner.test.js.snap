@@ -14,20 +14,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c4 {
-  position: relative;
-  display: inline;
-  color: #000000;
-  font-weight: normal;
-}
-
-.c4:hover,
-.c4:focus {
-  color: #000000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -83,14 +69,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      Project Name
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      Hello There
+      HERE IS A FUNNY TEST
     </p>
   </div>
   <div
@@ -101,14 +87,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      End Date
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      1st June 2020
+      HERE IS A FUNNY TEST
     </p>
   </div>
   <div
@@ -119,22 +105,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      Funding theme
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      <a
-        className="c4"
-        color="red"
-        href="cr.com"
-        target="_self"
-        type="standard"
-      >
-        Be happy
-      </a>
+      HERE IS A FUNNY TEST
     </p>
   </div>
   <div
@@ -145,14 +123,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      Amount Awarded
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      £2,000,000
+      HERE IS A FUNNY TEST
     </p>
   </div>
   <div
@@ -163,14 +141,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      Start Date
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      1st June 2010
+      HERE IS A FUNNY TEST
     </p>
   </div>
   <div
@@ -181,14 +159,14 @@ exports[`renders correctly 1`] = `
       color="inherit"
       size="md"
     >
-      Beneficiary Country
+      HERE IS A FUNNY TEST
     </h3>
     <p
       className="c3"
       color="inherit"
       size="s"
     >
-      Uk
+      HERE IS A FUNNY TEST
     </p>
   </div>
 </section>

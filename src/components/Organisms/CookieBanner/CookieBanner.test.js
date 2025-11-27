@@ -28,54 +28,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c3 {
-      position: relative;
-      display: inline;
-      color: #FFFFFF;
-      font-weight: normal;
-    }
-
-    .c3:hover,
-    .c3:focus {
-      color: #FFFFFF;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-    }
-
-    .c5 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      position: relative;
-      padding: 0.5rem 1.25rem;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      height: 3.125rem;
-      width: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      cursor: pointer;
-      background-color: #FFFFFF;
-      color: #000000;
-    }
-
-    .c5:hover {
-      background-color: #969598;
-      color: #000000;
-    }
-
     .c0 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -99,36 +51,6 @@ it('renders correctly', () => {
       margin-bottom: 0.5rem;
     }
 
-    .c6 {
-      padding: 0.5rem 1rem;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .c4 {
-      color: #FFFFFF;
-      padding: 0 0.25rem 1px;
-      border-bottom: 2px solid;
-    }
-
-    @media (min-width:740px) {
-      .c5 {
-        width: auto;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c5 {
-        background-color: #FFFFFF;
-        color: #000000;
-      }
-
-      .c5:hover {
-        background-color: #969598;
-        color: #000000;
-      }
-    }
-
     @media (min-width:740px) {
       .c2 {
         width: 75%;
@@ -140,13 +62,6 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c6 {
-        margin: 0 0.25rem 0 0;
-        display: inline-block;
-      }
-    }
-
     <div
       className="c0"
     >
@@ -155,45 +70,14 @@ it('renders correctly', () => {
         color="white"
         size="s"
       >
-        Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
-        <a
-          className="c3 c4"
-          color="red"
-          href="https://www.comicrelief.com/cookies-policy"
-          target="_self"
-          type="standard_white"
-        >
-          our use of cookies
-        </a>
-        . We also use optional cookies for marketing purposes:
+        HERE IS A FUNNY TEST
       </p>
       <p
         className="c1 c2"
         color="white"
         size="s"
       >
-        <a
-          className="c5 c6"
-          color="white"
-          href="/comic"
-          onClick={[Function]}
-          target="_self"
-          type="button"
-        >
-          Accept
-        </a>
-        Or click
-        <a
-          className="c3 c4"
-          color="red"
-          href=""
-          onClick={[Function]}
-          target="_self"
-          type="standard_white"
-        >
-          here
-        </a>
-        to deny these.
+        HERE IS A FUNNY TEST
       </p>
     </div>
   `);
