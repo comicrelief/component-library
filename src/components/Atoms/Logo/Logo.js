@@ -17,10 +17,6 @@ const Image = styled.img`
   margin-right: ${spacing('md')};
 `;
 
-/**
- * Logo wrapper
- */
-
 const LogoWrapper = styled.div`
   display: inline-block;
   ${zIndex('high')}

@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
-import { pulseIn, pulseOut } from '../../../theme/shared/animations';
+import { pulseInAnimation, pulseOutAnimation } from '../../../theme/shared/animations';
 
 const LogoLink = styled.a`
   img {
-    animation: ${pulseOut} 0.4s ease-in-out forwards;
+    ${pulseOutAnimation};
   }
   &:hover,
   &:focus {
     img {
-      animation: ${pulseIn} 0.4s ease-in-out forwards;
+      ${pulseInAnimation};
     }
   }
 `;

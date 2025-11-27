@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes, css } from 'styled-components';
 
 const pulseIn = keyframes`
   from {
@@ -30,6 +30,15 @@ const pulseOut = keyframes`
   }
 `;
 
+const pulseInAnimation = css`
+  animation: ${pulseIn} 0.4s ease-in-out forwards;
+`;
+
+const pulseOutAnimation = css`
+  ${pulseInAnimation}
+  animation-name: ${pulseOut};
+`;
+
 export {
-  pulseIn, pulseOut
+  pulseInAnimation, pulseOutAnimation
 };

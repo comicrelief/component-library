@@ -18,7 +18,7 @@ const Header2026 = ({
       <Brand data-testid="Brand">
         <LogoLinked2026
           campaign={campaign}
-          sizeSm="150px"
+          sizeSm="80px"
           sizeMd="155px"
           animateRotate
           data-testid="LogoLinked2026"
@@ -33,10 +33,12 @@ const Header2026 = ({
         data-testid="HeaderNav2026"
       />
 
+      {/* <div style={{ border: "1px solid blue" }}> */}
       <ButtonsAndIcons data-testid="ButtonsAndIcons">
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
+      {/* </div> */}
 
     </InnerWrapper>
   </Header2026Wrapper>

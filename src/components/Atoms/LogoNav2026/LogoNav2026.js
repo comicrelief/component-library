@@ -23,7 +23,7 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoNav2026 = ({
-  logoWidth = '50px',
+  logoWidth = '150px',
   logoWidthMd = '70px'
 }) => (
   <LogoWrapper

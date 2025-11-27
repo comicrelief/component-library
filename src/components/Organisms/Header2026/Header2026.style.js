@@ -28,9 +28,13 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 10px 32px;
   cursor: pointer;
   max-width: ${containers.large};
+
+  padding: 10px 20px 10px 10px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    padding: 10px 32px;
+  }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
@@ -39,26 +43,19 @@ const InnerWrapper = styled.div`
   border: 1px solid red;
   > * {
     border: 1px solid green;
-
   }
 `;
 
+// size of "Comic Relief" logo is set with props on LogoLinked2026
 const Brand = styled.div`
   ${zIndex('high')};
   margin-right: auto;
   display: flex;
   align-items: center;
-
+  border: 1px solid blue;
   a {
     border: 0;
     color: transparent;
-    margin-right: 12px;
-
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
-
     :hover {
       border: 0;
     }
@@ -69,8 +66,13 @@ const Brand = styled.div`
   }
 `;
 
+const ButtonsAndIcons = styled.div`
+  margin-left: auto;
+  display: flex;
+`;
+
 const DonateButtonWrapperTop = styled.div`
-  width: 100px;
+  width: 80px;
   display: flex;
   justify-content: center;
 
@@ -133,11 +135,6 @@ const Header2026MetaIcons = styled.div`
       margin-right: 20px;
     }
   }
-`;
-
-const ButtonsAndIcons = styled.div`
-  margin-left: auto;
-  display: flex;
 `;
 
 export {
