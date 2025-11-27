@@ -60,15 +60,14 @@ const StyledEmailInput = styled(Input)`
     background-color: ${({ theme }) => theme.color('grey_5')};
     border-color: transparent;
     transition: background-color 0.2s ease;
-    border: 1px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('white')};
     color: ${({ theme }) => theme.color('white')};
-
-
+    &::placeholder {
+      color: ${({ theme }) => theme.color('grey_2')};
+    }
     &:hover,
     &:focus {
       background-color: ${({ theme }) => theme.color('grey_4_hover')};
-      border-color: transparent;
-      border: 1px solid ${({ theme }) => theme.color('grey')};
     }
   }
 `;
@@ -89,7 +88,7 @@ const StyledEmailSignUpButton = styled(Button)`
   border-radius: 0.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${springScaleAnimation(true, 1.04, 1)}
+    ${springScaleAnimation(true, 1.02, 1)}
     margin: 0;
   }
 
