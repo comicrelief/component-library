@@ -72,9 +72,9 @@ gap: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
   box-sizing: border-box;
     display: ${({ $mobileOnly }) => {
-      if ($mobileOnly) return 'none';
-      return 'block';
-    }};
+    if ($mobileOnly) return 'none';
+    return 'block';
+  }};
   }
 `;
 
@@ -174,10 +174,10 @@ const LogosContainer = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     display: ${({ $desktopOnly, $mobileOnly }) => {
-      if ($desktopOnly) return 'flex';
-      if ($mobileOnly) return 'none';
-      return 'flex';
-    }};
+    if ($desktopOnly) return 'flex';
+    if ($mobileOnly) return 'none';
+    return 'flex';
+  }};
     flex-direction: row;
     align-items: center;
     flex: 0 0 auto;

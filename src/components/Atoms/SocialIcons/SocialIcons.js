@@ -9,14 +9,14 @@ import spacing from '../../../theme/shared/spacing';
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
-  justify-content: ${( newStyle ) => (newStyle ? 'space-around' : 'center')};
-  margin: ${({ newStyle }) => (newStyle ? `${spacing('lg')} 0` : `0 auto 0 0`)};
+  justify-content: ${newStyle => (newStyle ? 'space-around' : 'center')};
+  margin: ${({ newStyle }) => (newStyle ? `${spacing('lg')} 0` : '0 auto 0 0')};
   padding: 0;
   align-items: center;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     justify-content: start;
-     margin: ${({ newStyle }) => (newStyle ? `${spacing('sm')} 0` : `0 auto 0 0`)};
+     margin: ${({ newStyle }) => (newStyle ? `${spacing('sm')} 0` : '0 auto 0 0')};
   }
 `;
 
