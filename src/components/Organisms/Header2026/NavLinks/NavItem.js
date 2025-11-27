@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 
 import {
-  NavItem, NavLink, DesktopNavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
-} from './HeaderNav2026.style';
+  StyledNavItem, NavLink, DesktopNavLink,
+  SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
+} from './NavLinks.style';
 
 import menuGroupIcon from './Menu-Group-Icon.svg';
 
-const HeaderNavItem2026 = (
+const NavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
     thisFirstChild, navHelper, internalLinkHelper, ...rest
   }
 ) => (
-  <NavItem
+  <StyledNavItem
     role="none"
     key={`${index}-${thisID}--item`}
     index={index}
@@ -90,10 +91,10 @@ const HeaderNavItem2026 = (
         })}
       </SubNavMenu>
     )}
-  </NavItem>
+  </StyledNavItem>
 );
 
-HeaderNavItem2026.propTypes = {
+NavItem.propTypes = {
   thisID: PropTypes.string.isRequired,
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
@@ -138,4 +139,4 @@ HeaderNavItem2026.propTypes = {
   relNoopener: PropTypes.string
 };
 
-export default HeaderNavItem2026;
+export default NavItem;

@@ -40,10 +40,10 @@ const InnerWrapper = styled.div`
     margin: 0 auto;
   }
 
-  border: 1px solid red;
-  > * {
-    border: 1px solid green;
-  }
+  // border: 1px solid red;
+  // > * {
+  //   border: 1px solid green;
+  // }
 `;
 
 // size of "Comic Relief" logo is set with props on LogoLinked2026
@@ -52,7 +52,7 @@ const Brand = styled.div`
   margin-right: auto;
   display: flex;
   align-items: center;
-  border: 1px solid blue;
+
   a {
     border: 0;
     color: transparent;
@@ -72,7 +72,6 @@ const ButtonsAndIcons = styled.div`
 `;
 
 const DonateButtonWrapperTop = styled.div`
-  width: 80px;
   display: flex;
   justify-content: center;
 

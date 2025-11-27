@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
-  NavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
-} from './HeaderNav2026.style';
+  StyledNavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
+} from './NavLinks.style';
 import Text from '../../../Atoms/Text/Text';
 
 const MoreSubNavMenu = styled(SubNavMenu)`
@@ -54,7 +54,7 @@ const MoreNavLabel = styled(Text)`
 `;
 
 // Use for the 'More' link only
-const MoreNavItem = styled(NavItem)`
+const MoreNavItem = styled(StyledNavItem)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin-left: 22px;
     // Let it take up all the space to be a bigger target:
@@ -126,7 +126,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     box-shadow: none;
 
     ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
-      // Calculating a realistic height ceiling (8 subnav items) 
+      // Calculating a realistic height ceiling (8 subnav items)
       // to make animation as slick as possible
       max-height: calc(54px * 8);
   `)};
@@ -143,7 +143,7 @@ const MoreSubNavItem = styled(SubNavItem)`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover, 
+  :hover,
   :focus,
   :focus-within {
     > a {
@@ -175,7 +175,7 @@ const MoreNavNestedLink = styled(NavLink)`
 
     > ${ChevronWrapper} {
       transform: rotate(-180deg);
-      
+
       img {
         filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
       }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LogoLinked2026 from '../../Molecules/LogoLinked2026/LogoLinked2026';
-import HeaderNav2026 from './HeaderNav2026/HeaderNav2026';
+import NavLinks from './NavLinks/NavLinks';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
   DonateButtonWrapperTop, Header2026MetaIcons, ButtonsAndIcons
@@ -18,27 +18,25 @@ const Header2026 = ({
       <Brand data-testid="Brand">
         <LogoLinked2026
           campaign={campaign}
-          sizeSm="80px"
-          sizeMd="155px"
+          logoWidth="100px"
+          logoWidthMd="180px"
           animateRotate
           data-testid="LogoLinked2026"
         />
       </Brand>
 
-      <HeaderNav2026
+      <NavLinks
         navItems={navItems}
         metaIcons={metaIcons}
         donateButton={donateButton}
         characterLimit={characterLimit}
-        data-testid="HeaderNav2026"
+        data-testid="NavLinks"
       />
 
-      {/* <div style={{ border: "1px solid blue" }}> */}
       <ButtonsAndIcons data-testid="ButtonsAndIcons">
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
-      {/* </div> */}
 
     </InnerWrapper>
   </Header2026Wrapper>

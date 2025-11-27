@@ -10,13 +10,13 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import HeaderNavItem2026 from './HeaderNavItem2026';
+import NavItem from './NavItem';
 
 import {
   Nav, NavMenu, NavMetaIcons, DonateButtonWrapperBottom
-} from './HeaderNav2026.style';
+} from './NavLinks.style';
 
-const HeaderNav2026 = ({
+const NavLinks = ({
   navItems = {}, metaIcons, donateButton = null, characterLimit
 }) => {
   const { menuGroups } = navItems;
@@ -135,7 +135,7 @@ const HeaderNav2026 = ({
               // Renders the first menugroup item to act as the parent; a button for the dropdown
               // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
-                <HeaderNavItem2026
+                <NavItem
                   thisID={thisID}
                   key={`${thisID}--item`}
                   index={index}
@@ -185,7 +185,7 @@ const HeaderNav2026 = ({
   );
 };
 
-HeaderNav2026.propTypes = {
+NavLinks.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   metaIcons: PropTypes.node.isRequired,
   characterLimit: PropTypes.number,
@@ -194,4 +194,4 @@ HeaderNav2026.propTypes = {
   donateButton: PropTypes.node
 };
 
-export default HeaderNav2026;
+export default NavLinks;

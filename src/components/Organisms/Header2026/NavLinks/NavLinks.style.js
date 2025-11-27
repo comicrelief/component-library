@@ -238,7 +238,7 @@ const DesktopNavLink = styled(NavLink)`
 /**
  * Menu list items
  */
-const NavItem = styled.li`
+const StyledNavItem = styled.li`
   ${zIndex('medium')};
   position: relative;
   font-weight: 700;
@@ -455,7 +455,7 @@ const DonateButtonWrapperBottom = styled.div`
 export {
   Nav,
   NavMenu,
-  NavItem,
+  StyledNavItem,
   NavLink,
   DesktopNavLink,
   SubNavMenu,
