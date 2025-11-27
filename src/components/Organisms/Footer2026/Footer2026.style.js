@@ -84,12 +84,12 @@ const PrimaryNav = styled.nav`
   list-style: none;
   padding: ${spacing('md')} 0;
   margin: 0 0 ${spacing('md')} 0;
-  gap: ${spacing('sm')};
+  gap: ${spacing('l')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: ${spacing('md')};
+    gap: ${spacing('m')};
   }
 `;
 

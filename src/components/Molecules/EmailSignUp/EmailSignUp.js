@@ -8,6 +8,10 @@ import spacing from '../../../theme/shared/spacing';
 import { springScaleAnimation } from '../../../theme/shared/animations';
 
 const EmailSignUpWrapper = styled.div`
+  margin-bottom: ${spacing('m')};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin-bottom: ${spacing('m')};
+  }
 `;
 
 const LabelWrapper = styled.div`
@@ -35,19 +39,30 @@ const InputWrapper = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  width: 100%;
   overflow: visible;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    width: auto;
+  }
 `;
 
 const StyledEmailInput = styled(Input)`
   overflow: visible;
+  input {
+    font-size: ${({ theme }) => theme.fontSize('s')};
+  }
 
-  ${springScaleAnimation(true, 1.04, 1)}
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    ${springScaleAnimation(true, 1.04, 1)}
+  }
 
   input {
     background-color: ${({ theme }) => theme.color('grey_5')};
     border-color: transparent;
     transition: background-color 0.2s ease;
     border: 1px solid ${({ theme }) => theme.color('grey')};
+    color: ${({ theme }) => theme.color('white')};
+
 
     &:hover,
     &:focus {
@@ -62,8 +77,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-shrink: 0;
+    width: auto;
   }
 `;
 
@@ -72,9 +88,8 @@ const StyledEmailSignUpButton = styled(Button)`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   border-radius: 0.5rem;
 
-  ${springScaleAnimation(true, 1.04, 1)}
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    ${springScaleAnimation(true, 1.04, 1)}
     margin: 0;
   }
 

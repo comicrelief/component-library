@@ -94,14 +94,14 @@ const Footer2026 = ({
           <SecondaryNav navItems={secondaryLinksList} {...rest} />
 
           <FooterCopyright>
-            {legalText && (
-              <FooterCopyrightText>
-                {legalText}
-              </FooterCopyrightText>
-            )}
             {copyrightText && (
               <FooterCopyrightText>
                 {copyrightText}
+              </FooterCopyrightText>
+            )}
+            {legalText && (
+              <FooterCopyrightText>
+                {legalText}
               </FooterCopyrightText>
             )}
           </FooterCopyright>
