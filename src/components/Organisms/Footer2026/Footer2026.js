@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useForm, FormProvider } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import Logo from '../../Atoms/Logo/Logo';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import EmailSignUp from '../../Molecules/EmailSignUp/EmailSignUp';
@@ -34,12 +37,31 @@ const Footer2026 = ({
   showTikTokSocialIcon,
   showYouTubeSocialIcon,
   animateRotate = false,
-  newsletterSignupErrorMessage = '',
   onNewsletterSubmit,
   ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
+
+  const validationSchema = yup.object({
+    email: yup
+      .string()
+      .required('Please provide a valid email address')
+      .email('Please provide a valid email address')
+  });
+
+  const formMethods = useForm({
+    mode: 'onBlur',
+    resolver: yupResolver(validationSchema)
+  });
+
+  const { handleSubmit } = formMethods;
+
+  const handleNewsletterSubmit = data => {
+    if (onNewsletterSubmit) {
+      onNewsletterSubmit(data.email);
+    }
+  };
 
   return (
     <div>
@@ -53,7 +75,11 @@ const Footer2026 = ({
 
           <TopSection>
             <NewsletterSignUpWrapper>
-              <EmailSignUp onSubmit={onNewsletterSubmit} errorMsg={newsletterSignupErrorMessage} />
+              <FormProvider {...formMethods}>
+                <form onSubmit={handleSubmit(handleNewsletterSubmit)} noValidate>
+                  <EmailSignUp formContext={formMethods} />
+                </form>
+              </FormProvider>
             </NewsletterSignUpWrapper>
             <LogosContainer $desktopOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
@@ -165,8 +191,6 @@ Footer2026.propTypes = {
   showYouTubeSocialIcon: PropTypes.bool,
   /** Animate logo rotation on hover */
   animateRotate: PropTypes.bool,
-  /** Error message to display on the newsletter signup input field */
-  newsletterSignupErrorMessage: PropTypes.string,
   /** Function to handle newsletter signup form submission */
   onNewsletterSubmit: PropTypes.func
 };

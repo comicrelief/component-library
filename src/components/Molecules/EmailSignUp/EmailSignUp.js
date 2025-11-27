@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
@@ -99,15 +99,9 @@ const StyledEmailSignUpButton = styled(Button)`
   }
 `;
 
-const EmailSignUp = ({ onSubmit, errorMsg, ...rest }) => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (onSubmit) {
-      onSubmit(email);
-    }
-  };
+const EmailSignUp = ({ formContext, ...rest }) => {
+  const { formState: { errors }, register } = formContext;
+  const errorMsg = errors && errors.email && errors.email.message;
 
   return (
     <EmailSignUpWrapper>
@@ -116,39 +110,34 @@ const EmailSignUp = ({ onSubmit, errorMsg, ...rest }) => {
           Subscribe to our newsletter
         </Text>
       </LabelWrapper>
-      <form onSubmit={handleSubmit}>
-        <FormWrapper error={!!errorMsg}>
-          <InputWrapper>
-            <StyledEmailInput
-              name="email"
-              type="email"
-              id="email-signup"
-              label="Email address"
-              showLabel={false}
-              placeholder="Enter your email address"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              errorMsg={errorMsg}
-              optional
-              {...rest}
-            />
-          </InputWrapper>
-          <ButtonWrapper>
-            <StyledEmailSignUpButton type="submit" color="white" disabled={!!errorMsg}>
-              Sign up
-            </StyledEmailSignUpButton>
-          </ButtonWrapper>
-        </FormWrapper>
-      </form>
+      <FormWrapper error={!!errorMsg}>
+        <InputWrapper>
+          <StyledEmailInput
+            name="email"
+            type="email"
+            id="email-signup"
+            label="Email address"
+            showLabel={false}
+            placeholder="Enter your email address"
+            errorMsg={errorMsg}
+            optional
+            {...register('email')}
+            {...rest}
+          />
+        </InputWrapper>
+        <ButtonWrapper>
+          <StyledEmailSignUpButton type="submit" color="white" disabled={!!errorMsg}>
+            Sign up
+          </StyledEmailSignUpButton>
+        </ButtonWrapper>
+      </FormWrapper>
     </EmailSignUpWrapper>
   );
 };
 
 EmailSignUp.propTypes = {
-  /** Function to handle form submission, receives email as parameter */
-  onSubmit: PropTypes.func,
-  /** Error message to display on the input field */
-  errorMsg: PropTypes.string
+  /** React Hook Form context object */
+  formContext: PropTypes.shape().isRequired
 };
 
 export default EmailSignUp;
