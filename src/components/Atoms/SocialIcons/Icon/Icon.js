@@ -70,7 +70,7 @@ const StyledLink = styled.a`
   // When we've moved fully to the new design,
   // this prop and the old styles can be removed.
   ${({ newStyle }) => newStyle && css`
-    background-color: ${({ theme }) => theme.color('grey_dark')};
+    background-color: ${({ theme }) => theme.color('grey_4')};
     border-radius: 0.5rem;
     padding: 0.5rem;
     display: flex;
