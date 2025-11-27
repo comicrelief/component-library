@@ -107,6 +107,6 @@ const secondaryLinksList = [
   showTikTokSocialIcon
   showYouTubeSocialIcon
   animateRotate
-  onEmailSubmit={(email) => console.log('Email submitted. Normally at this point, the frontend would run its own function to send.', email)}
+  onNewsletterSubmit={(email) => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
 />
 ```

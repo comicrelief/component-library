@@ -51,7 +51,7 @@ const TopSection = styled.div`
   }
 `;
 
-const EmailSignUpWrapper = styled.div`
+const NewsletterSignUpWrapper = styled.div`
   max-width: 100%;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -215,7 +215,7 @@ export {
   InnerWrapper,
   FooterLegalLine,
   TopSection,
-  EmailSignUpWrapper,
+  NewsletterSignUpWrapper,
   SocialIconWrapper,
   PrimaryNav,
   PrimaryNavItem,

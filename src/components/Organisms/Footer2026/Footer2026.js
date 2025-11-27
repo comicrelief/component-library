@@ -12,7 +12,7 @@ import {
   InnerWrapper,
   FooterLegalLine,
   TopSection,
-  EmailSignUpWrapper,
+  NewsletterSignUpWrapper,
   SocialIconWrapper,
   LogosContainer,
   FooterCopyright,
@@ -34,8 +34,8 @@ const Footer2026 = ({
   showTikTokSocialIcon,
   showYouTubeSocialIcon,
   animateRotate = false,
-  emailSignupErrorMessage = '',
-  onEmailSubmit,
+  newsletterSignupErrorMessage = '',
+  onNewsletterSubmit,
   ...rest
 }) => {
   // Remove white space between words
@@ -52,9 +52,9 @@ const Footer2026 = ({
           )}
 
           <TopSection>
-            <EmailSignUpWrapper>
-              <EmailSignUp onSubmit={onEmailSubmit} errorMsg={emailSignupErrorMessage} />
-            </EmailSignUpWrapper>
+            <NewsletterSignUpWrapper>
+              <EmailSignUp onSubmit={onNewsletterSubmit} errorMsg={newsletterSignupErrorMessage} />
+            </NewsletterSignUpWrapper>
             <LogosContainer $desktopOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
                 <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
@@ -165,10 +165,10 @@ Footer2026.propTypes = {
   showYouTubeSocialIcon: PropTypes.bool,
   /** Animate logo rotation on hover */
   animateRotate: PropTypes.bool,
-  /** Error message to display on the email signup input field */
-  emailSignupErrorMessage: PropTypes.string,
-  /** Function to handle email signup form submission */
-  onEmailSubmit: PropTypes.func
+  /** Error message to display on the newsletter signup input field */
+  newsletterSignupErrorMessage: PropTypes.string,
+  /** Function to handle newsletter signup form submission */
+  onNewsletterSubmit: PropTypes.func
 };
 
 export default Footer2026;
