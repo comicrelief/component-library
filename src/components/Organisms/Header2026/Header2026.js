@@ -1,27 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LogoLinked2026 from '../../Molecules/LogoLinked2026/LogoLinked2026';
+import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
 import NavLinks from './NavLinks/NavLinks';
+import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
   DonateButtonWrapperTop, Header2026MetaIcons, ButtonsAndIcons
 } from './Header2026.style';
 
 const Header2026 = ({
-  navItems = {}, metaIcons, campaign = 'Comic Relief', donateButton = null,
-  characterLimit = 60, showBoxShadow = false, ...rest
+  navItems = {},
+  metaIcons,
+  campaign = 'Comic Relief',
+  donateButton = null,
+  characterLimit = 60,
+  showBoxShadow = false,
+  ...rest
 }) => (
   <Header2026Wrapper data-testid="Header2026Wrapper" navItems showBoxShadow={showBoxShadow} {...rest}>
     <InnerWrapper data-testid="InnerWrapper">
 
       <Brand data-testid="Brand">
-        <LogoLinked2026
+        <LogoNav2026
           campaign={campaign}
           logoWidth="100px"
           logoWidthMd="180px"
           animateRotate
-          data-testid="LogoLinked2026"
+          data-testid="LogoNav2026"
         />
       </Brand>
 
@@ -35,7 +41,18 @@ const Header2026 = ({
 
       <ButtonsAndIcons data-testid="ButtonsAndIcons">
         <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
-        <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
+        <DonateButtonWrapperTop data-testid="donate-button--desktop">
+          {donateButton || (
+            <Link
+              color="red"
+              type="button"
+              href="/donation"
+            >
+              Donate
+            </Link>
+          )
+            }
+        </DonateButtonWrapperTop>
       </ButtonsAndIcons>
 
     </InnerWrapper>

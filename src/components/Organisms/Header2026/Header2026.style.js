@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
+import { pulseInAnimation, pulseOutAnimation } from '../../../theme/shared/animations';
 
 const Header2026Wrapper = styled.header.attrs(() => ({
   role: 'banner'
@@ -39,11 +40,6 @@ const InnerWrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 auto;
   }
-
-  // border: 1px solid red;
-  // > * {
-  //   border: 1px solid green;
-  // }
 `;
 
 // size of "Comic Relief" logo is set with props on LogoLinked2026
@@ -77,6 +73,7 @@ const DonateButtonWrapperTop = styled.div`
 
   // Donate button
   a {
+    ${pulseOutAnimation};
     padding: 8px 12px;
     border-radius: 8px;
     font-family: Montserrat;
@@ -88,6 +85,7 @@ const DonateButtonWrapperTop = styled.div`
     &:focus {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
+      ${pulseInAnimation};
     }
   }
 `;

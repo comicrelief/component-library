@@ -1,16 +1,15 @@
-
-export const breakpointValues2025 = {
+export const breakpointValues2026 = {
   S: 320,
   M: 740,
   L: 1024,
   Nav: 1150,
   NavWide: 1350,
   XL: 1440
-}
+};
 
 export default size => {
   if (size) {
-    return `(min-width: ${breakpointValues2025[size]}px)`;
+    return `(min-width: ${breakpointValues2026[size]}px)`;
   }
   return 'inherit';
 };

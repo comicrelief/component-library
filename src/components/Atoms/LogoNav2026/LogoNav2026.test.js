@@ -7,9 +7,17 @@ it('renders correctly', () => {
   const tree = renderWithTheme(<LogoNav2026 rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c0 {
-      z-index: 3;
-      width: 50px;
+    .c0 img {
+      -webkit-animation: jaJSCW 0.4s ease-in-out forwards;
+      animation: jaJSCW 0.4s ease-in-out forwards;
+      -webkit-animation-name: blCpAO;
+      animation-name: blCpAO;
+    }
+
+    .c0:hover img,
+    .c0:focus img {
+      -webkit-animation: jaJSCW 0.4s ease-in-out forwards;
+      animation: jaJSCW 0.4s ease-in-out forwards;
     }
 
     .c1 {
@@ -20,17 +28,15 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      z-index: 3;
+      width: 50px;
       display: block;
     }
 
     .c3 {
+      z-index: 3;
+      width: 115px;
       display: none;
-    }
-
-    @media (min-width:740px) {
-      .c0 {
-        width: 180px;
-      }
     }
 
     @media (min-width:320px) {
@@ -45,9 +51,17 @@ it('renders correctly', () => {
       }
     }
 
-    <div
+    @media (min-width:740px) {
+      .c3 {
+        width: 162px;
+      }
+    }
+
+    <a
       className="c0"
-      data-testid="LogoWrapper"
+      data-testid="LogoLink"
+      href="https://www.comicrelief.com/"
+      title="Go to Comic Relief homepage"
     >
       <img
         alt="Comic Relief logo"
@@ -61,6 +75,6 @@ it('renders correctly', () => {
         data-testid="DesktopImage"
         src="mock.asset"
       />
-    </div>
+    </a>
   `);
 });
