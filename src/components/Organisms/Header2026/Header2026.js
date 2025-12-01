@@ -18,7 +18,12 @@ const Header2026 = ({
   showBoxShadow = false,
   ...rest
 }) => (
-  <Header2026Wrapper data-testid="Header2026Wrapper" navItems showBoxShadow={showBoxShadow} {...rest}>
+  <Header2026Wrapper
+    data-testid="Header2026Wrapper"
+    navItems
+    showBoxShadow={showBoxShadow}
+    {...rest}
+  >
     <InnerWrapper data-testid="InnerWrapper">
 
       <Brand data-testid="Brand">

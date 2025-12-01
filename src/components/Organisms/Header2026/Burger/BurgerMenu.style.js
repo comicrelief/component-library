@@ -34,7 +34,17 @@ const BurgerWrapper = styled(Link)`
   text-indent: -9999px;
   height: 36px;
   width: 36px;
-  left: 12px;
+  left: 10px;
+  @media ${({ theme }) => theme.breakpoints2026('S')} {
+    left: 12px;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('S')} {
+    left: 12px;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    left: 16px;
+  }
+
   cursor: pointer;
   transition: all 0.2s;
 

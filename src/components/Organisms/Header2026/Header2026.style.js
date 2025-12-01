@@ -13,9 +13,6 @@ const Header2026Wrapper = styled.header.attrs(() => ({
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 16px;
 
-  padding: 0;
-  height: 75px;
-
   @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     height: 86px;
   }
