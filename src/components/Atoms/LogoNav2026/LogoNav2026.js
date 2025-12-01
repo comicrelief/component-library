@@ -5,15 +5,6 @@ import zIndex from '../../../theme/shared/zIndex';
 import crLogoSvg from './assets/cr-logo.svg';
 import crLogoMobSvg from './assets/cr-logo-mob.svg';
 
-const LogoWrapper = styled.div`
-  ${zIndex('high')}
-
-  width: 50px;
-  @media ${({ theme }) => theme.breakpoints2025('M')} {
-    width: 180px;
-  }
-`;
-
 const Image = styled.img`
   display: block;
   width: auto;
@@ -22,6 +13,8 @@ const Image = styled.img`
 `;
 
 const MobileLogo = styled(Image)`
+  ${zIndex('high')}
+  width: 50px;
   display: block;
   @media ${({ theme }) => theme.breakpoints2025('S')} {
     display: none
@@ -29,17 +22,20 @@ const MobileLogo = styled(Image)`
 `;
 
 const DesktopLogo = styled(Image)`
+  ${zIndex('high')}
+  width: 115px;
   display: none;
   @media ${({ theme }) => theme.breakpoints2025('S')} {
     display: block
+  }
+  @media ${({ theme }) => theme.breakpoints2025('M')} {
+    width: 162px;
   }
 `;
 
 const LogoNav2026 = () => {
   return (
-    <LogoWrapper
-      data-testid="LogoWrapper"
-    >
+    <>
       <MobileLogo
         data-testid="MobileImage"
         src={crLogoMobSvg}
@@ -50,7 +46,7 @@ const LogoNav2026 = () => {
         src={crLogoSvg}
         alt="Comic Relief logo"
       />
-    </LogoWrapper>
+    </>
   )
 };
 
