@@ -16,7 +16,7 @@ const Header2026Wrapper = styled.header.attrs(() => ({
   padding: 0;
   height: 75px;
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     height: 86px;
   }
 
@@ -33,11 +33,11 @@ const InnerWrapper = styled.div`
   max-width: ${containers.large};
 
   padding: 10px 20px 10px 10px;
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding: 10px 32px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     margin: 0 auto;
   }
 `;
@@ -57,7 +57,7 @@ const Brand = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     margin-right: 0
   }
 `;
@@ -74,7 +74,7 @@ const DonateButtonWrapperTop = styled.div`
   // Donate button
   a {
     ${pulseOutAnimation};
-    padding: 8px 12px;
+    padding: 8px;
     border-radius: 8px;
     font-family: Montserrat;
     font-size: 0.875rem;
@@ -87,6 +87,13 @@ const DonateButtonWrapperTop = styled.div`
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
       ${pulseInAnimation};
     }
+    @media ${({ theme }) => theme.breakpoints2026('S')} {
+      padding: 8px 12px;
+    }
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      font-size: 1rem;
+      padding: 10px 16px;
+    }
   }
 `;
 
@@ -95,7 +102,7 @@ const Header2026MetaIcons = styled.div`
   // now only rendered in the Header2026Nav
   display: none;
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     width: auto;
     align-items: center;
 
@@ -126,7 +133,7 @@ const Header2026MetaIcons = styled.div`
     right: 0px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     // Icons
     > div > a {
       margin-right: 20px;
