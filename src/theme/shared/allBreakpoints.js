@@ -9,7 +9,7 @@ export const breakpointValues = {
   Nav: 1150,
   NavWide: 1350,
   XL: 1440
-};
+}
 
 export default size => {
   if (size) {

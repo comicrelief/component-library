@@ -1,9 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 import zIndex from '../../../theme/shared/zIndex';
-import crLogo from './assets/cr-logo.svg';
+import crLogoSvg from './assets/cr-logo.svg';
+import crLogoMobSvg from './assets/cr-logo-mob.svg';
+
+const LogoWrapper = styled.div`
+  ${zIndex('high')}
+
+  width: 50px;
+  @media ${({ theme }) => theme.breakpoints2025('M')} {
+    width: 180px;
+  }
+`;
 
 const Image = styled.img`
   display: block;
@@ -12,36 +21,37 @@ const Image = styled.img`
   max-width: 100%; // prevents overflow
 `;
 
-const LogoWrapper = styled.div`
-  ${zIndex('high')}
-
-  width: ${props => props.logoWidth};
-
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    width: ${props => props.logoWidthMd};
+const MobileLogo = styled(Image)`
+  display: block;
+  @media ${({ theme }) => theme.breakpoints2025('S')} {
+    display: none
   }
 `;
 
-const LogoNav2026 = ({
-  logoWidth = '150px',
-  logoWidthMd = '70px'
-}) => (
-  <LogoWrapper
-    data-testid="LogoWrapper"
-    logoWidth={logoWidth}
-    logoWidthMd={logoWidthMd}
-  >
-    <Image
-      data-testid="Image"
-      src={crLogo}
-      alt="Comic Relief logo"
-    />
-  </LogoWrapper>
-);
+const DesktopLogo = styled(Image)`
+  display: none;
+  @media ${({ theme }) => theme.breakpoints2025('S')} {
+    display: block
+  }
+`;
 
-LogoNav2026.propTypes = {
-  logoWidth: PropTypes.string,
-  logoWidthMd: PropTypes.string
+const LogoNav2026 = () => {
+  return (
+    <LogoWrapper
+      data-testid="LogoWrapper"
+    >
+      <MobileLogo
+        data-testid="MobileImage"
+        src={crLogoMobSvg}
+        alt="Comic Relief logo"
+      />
+      <DesktopLogo
+        data-testid="DesktopImage"
+        src={crLogoSvg}
+        alt="Comic Relief logo"
+      />
+    </LogoWrapper>
+  )
 };
 
 export default LogoNav2026;
