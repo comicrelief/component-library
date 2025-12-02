@@ -27,7 +27,7 @@ const NavLinkClass = styled(Link)`
   }
 
   // No hover state for mobile, so targetting Medium+:
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     :hover,
     :focus {
       color: ${({ theme }) => theme.color('red')};
@@ -69,14 +69,14 @@ const Nav = styled.nav`
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: 50%;
     right: 0;
     left: inherit;
     box-shadow: -20px 15px 20px 0px rgba(0, 0, 0, 0.25);
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${zIndex('medium')};
     position: relative;
     top: 0;
@@ -87,7 +87,7 @@ const Nav = styled.nav`
     box-shadow: none;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     margin: 0 10px;
   }
 
@@ -115,7 +115,7 @@ const SubNavMenu = styled.ul`
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   // DESKTOP:
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: flex;
     width: 330px;
     height: auto;
@@ -159,7 +159,7 @@ const SubNavLink = styled(NavLinkClass)`
   height: auto;
   position: relative;
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 20px 30px 22px;
   }
 
@@ -174,7 +174,7 @@ const NavMenu = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -201,7 +201,7 @@ const NavLink = styled(NavLinkClass)`
     }
   `)}
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 10px 0px 10px 0;
     height: auto;
 
@@ -219,7 +219,7 @@ const NavLink = styled(NavLinkClass)`
     }}
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
@@ -289,7 +289,7 @@ const StyledNavItem = styled.li`
   }
 
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 0 22px 0 0;
     padding: 25px 0px;
     border-bottom: none;
@@ -324,7 +324,7 @@ const StyledNavItem = styled.li`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     margin: 0 20px 0 0;
   }
 `;
@@ -342,7 +342,7 @@ const ChevronWrapper = styled.div`
     height: auto;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: absolute;
     top: 10px;
     right: 0;
@@ -395,7 +395,7 @@ const NavMetaIcons = styled.div`
         transition: color 0.15s ease-out;
       }
 
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
+      @media ${({ theme }) => theme.breakpoints2026('M')} {
         &:focus,
         &:hover {
           span {
@@ -412,17 +412,17 @@ const NavMetaIcons = styled.div`
 
   // Hide these when using non-mobile nav,
   // just leaving the Header version in place
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }
 `;
 
 const StyledText = styled(Text)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     font-size: 15px;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     font-size: 1rem;
   }
 `;
@@ -447,7 +447,7 @@ const DonateButtonWrapperBottom = styled.div`
 
   // Hide the 'Nav'-embedded version of the button when the nav
   // goes FULL DESKTOP, leaving just the 'Header'-embedded example
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }
 `;
