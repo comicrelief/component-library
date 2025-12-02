@@ -86,14 +86,6 @@ const BurgerWrapper = styled(Link)`
     }
   }
 
-  :hover ${BurgerBar} {
-    &,
-    ::before,
-    ::after {
-      background-color: ${({ theme, isExpandable }) => !isExpandable && theme.color('grey')};
-    }
-  }
-
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
   }
