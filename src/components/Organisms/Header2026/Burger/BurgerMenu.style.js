@@ -92,14 +92,6 @@ const BurgerWrapper = styled(Link)`
     ::after {
       background-color: ${({ theme, isExpandable }) => !isExpandable && theme.color('grey')};
     }
-
-    ::before {
-      ${({ isExpandable }) => !isExpandable && 'top: -0.6rem;'};
-    }
-
-    ::after {
-      ${({ isExpandable }) => !isExpandable && 'top: 0.6rem;'};
-    }
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
