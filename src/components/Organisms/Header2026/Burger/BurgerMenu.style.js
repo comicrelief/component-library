@@ -5,28 +5,19 @@ import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import zIndex from '../../../../theme/shared/zIndex';
 
-/**
- * Burger hidden text
- */
 const BurgerHiddenText = styled(Text)`
   ${hideVisually};
 `;
 
-/**
- * Burger menu bar
- */
 const BurgerBar = styled.span`
   background-color: ${({ theme }) => theme.color('black')};
   margin: 0 auto;
 `;
 
-/**
- * Burger wrapper
- */
 const BurgerWrapper = styled(Link)`
   background-color: ${({ theme }) => theme.color('grey_light')};
-  border-radius: 8px;
   ${zIndex('medium')};
+  border-radius: 8px;
   order: 50;
   display: flex;
   align-items: center;
@@ -35,9 +26,6 @@ const BurgerWrapper = styled(Link)`
   height: 36px;
   width: 36px;
   left: 10px;
-  @media ${({ theme }) => theme.breakpoints2026('S')} {
-    left: 12px;
-  }
   @media ${({ theme }) => theme.breakpoints2026('S')} {
     left: 12px;
   }
@@ -52,15 +40,17 @@ const BurgerWrapper = styled(Link)`
     border: none;
     font-weight: inherit;
   }
+
+  // Top and Bottom Bars
   ${BurgerBar} {
     position: relative;
 
     &,
     ::before,
     ::after {
-      width: 25px;
+      width: 19px;
       height: 3px;
-      border-radius: 3px;
+      border-radius: 2px;
       display: inline-block;
     }
 
