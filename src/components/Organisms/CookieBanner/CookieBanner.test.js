@@ -22,15 +22,17 @@ it('renders correctly', () => {
     .c1 {
       font-size: 1.125rem;
       line-height: 1.125rem;
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      color: #FFFFFF;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      color: #FFFFFF;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c3 {

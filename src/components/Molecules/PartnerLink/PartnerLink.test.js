@@ -20,13 +20,17 @@ it('renders correctly', () => {
     .c4 {
       font-size: 0.875rem;
       line-height: 0.875rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      color: #FFFFFF;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      color: #FFFFFF;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c2 {
@@ -115,6 +119,20 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       background-color: #E52630;
+    }
+
+    @media (min-width:740px) {
+      .c4 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c4 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {

@@ -18,12 +18,16 @@ it('renders correctly', () => {
     .c6 {
       font-size: 1.125rem;
       line-height: 1.125rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c4 {
@@ -134,6 +138,20 @@ it('renders correctly', () => {
 
     .c5 input:focus {
       border: 0;
+    }
+
+    @media (min-width:740px) {
+      .c6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {

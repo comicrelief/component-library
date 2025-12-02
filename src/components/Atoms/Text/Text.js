@@ -6,24 +6,22 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
 export const BaseText = styled.span`
-  // Base styles to keep things sane:
+  // The pre-existing base styles (using the pre-existing Props that
+  // we're trying to phase out), just to keep things sane and non-explodey:
   font-size: ${({ size, theme }) => theme.fontSize(size)};
+
   line-height: ${({ size, theme }) => theme.fontSize(size)};
-  letter-spacing: 0;
 
-  // Use our helper function to streamline font-sizes and line-heights,
-  // overriding the above rules when we've got config for this tag:
-  // TODO: _should_ be ditch the above rules...? 
-  ${({ as, theme }) => (as !== undefined && css`
-    ${fontHelper(theme, as)}
-  `)};
-
-  // TODO: we want to ditch these eventually:
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
+
   ${({ height }) => (height ? `line-height: ${height}` : null)};
+
+  font-family: ${({ family, theme }) => (family
+    ? theme.fontFamilies(family)
+    : theme.fontFamilies(theme.font.regular))};
+
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   
-  // Still useful:
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
@@ -32,10 +30,12 @@ export const BaseText = styled.span`
       color: ${theme.color(mobileColor)};
     }
   `};
-  
-  font-family: ${({ family, theme }) => (family
-    ? theme.fontFamilies(family)
-    : theme.fontFamilies(theme.font.regular))};
+
+  // Use our helper function to streamline styling, overriding the 
+  // above rules when we've got config for this tag:
+  ${({ as, theme }) => (as !== undefined && css`
+    ${fontHelper(theme, as)}
+  `)};
 `;
 
 /** Text renders different elements based on the `tag` prop

@@ -4,10 +4,14 @@ export default (theme, thisTag) => {
   // Check we've got a match, just in case:
   if (Object.keys(fontConfig).includes(thisTag)) {
     return `
+      // General styles:
+      font-family: ${theme.fontFamilies(fontConfig[thisTag].family)};
+      font-weight: normal;
+      letter-spacing: 0;
+
       // Small ("mobile") breakpoint
       font-size: ${fontConfig[thisTag].small.fontSize};
       line-height: ${fontConfig[thisTag].small.lineHeight};
-      font-weight: normal;
 
       // Medium ("tablet") breakpoint
       @media ${theme.allBreakpoints('M')} {

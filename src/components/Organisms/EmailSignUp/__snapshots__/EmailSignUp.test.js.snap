@@ -4,26 +4,32 @@ exports[`renders correctly 1`] = `
 .c1 {
   font-size: 2rem;
   line-height: 2rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
   font-weight: 400;
+  font-family: 'Anton',Impact,sans-serif;
   text-transform: uppercase;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
   letter-spacing: 0;
-  font-family: 'Anton',Impact,sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .c4 {
   font-size: 1.125rem;
   line-height: 1.125rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   text-transform: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
   letter-spacing: 0;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 {
@@ -236,6 +242,20 @@ exports[`renders correctly 1`] = `
   .c1 {
     font-size: 2rem;
     line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

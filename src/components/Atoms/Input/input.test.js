@@ -19,12 +19,16 @@ it('renders correctly', () => {
     .c1 {
       font-size: 1.125rem;
       line-height: 1.125rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c0 {
@@ -92,6 +96,20 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
 
     }
 
@@ -154,12 +172,16 @@ it('renders with responsive max widths correctly', () => {
     .c1 {
       font-size: 1.125rem;
       line-height: 1.125rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c0 {
@@ -224,6 +246,20 @@ it('renders with responsive max widths correctly', () => {
 
     .c5:focus {
       border: 1px solid #666;
+    }
+
+    @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {

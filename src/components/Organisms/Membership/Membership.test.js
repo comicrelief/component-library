@@ -28,64 +28,63 @@ it('renders correctly', () => {
     .c6 {
       font-size: 1.5rem;
       line-height: 1.5rem;
-      font-size: 1.5rem;
-      line-height: 1.5rem;
       font-weight: 800;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
     }
 
     .c7 {
       font-size: 1.125rem;
       line-height: 1.125rem;
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c12 {
       font-size: 1.125rem;
       line-height: 1.125rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      text-transform: inherit;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
-      text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c16 {
-      font-size: 1.125rem;
-      line-height: 1.125rem;
-      text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-    }
-
-    .c23 {
+    .c22 {
       font-size: 1.125rem;
       line-height: 1.125rem;
       font-weight: 500;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c1 {
@@ -115,17 +114,17 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c17 {
+    .c16 {
       margin-bottom: 0.5rem;
       font-weight: normal;
     }
 
-    .c18 {
+    .c17 {
       position: relative;
       font-size: 1.25rem;
     }
 
-    .c19 {
+    .c18 {
       position: relative;
       width: 100%;
       display: -webkit-box;
@@ -142,7 +141,7 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c20 {
+    .c19 {
       position: relative;
       box-sizing: border-box;
       width: 100%;
@@ -162,7 +161,7 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
-    .c20:focus {
+    .c19:focus {
       border: 1px solid #666;
     }
 
@@ -181,11 +180,11 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c21 {
+    .c20 {
       display: block;
     }
 
-    .c21 input {
+    .c20 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 800;
@@ -302,7 +301,7 @@ it('renders correctly', () => {
       border-color: #E52630;
     }
 
-    .c22 {
+    .c21 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -313,11 +312,11 @@ it('renders correctly', () => {
       align-items: center;
     }
 
-    .c24 {
+    .c23 {
       margin-right: auto;
     }
 
-    .c25 {
+    .c24 {
       position: relative;
       -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
@@ -326,7 +325,7 @@ it('renders correctly', () => {
       display: block;
     }
 
-    .c25 span {
+    .c24 span {
       position: absolute;
       padding: 0px 15px;
       font-size: 20px;
@@ -338,21 +337,21 @@ it('renders correctly', () => {
       font-weight: 500;
     }
 
-    .c25 input {
+    .c24 input {
       border: 2px solid #E1E2E3;
       background: transparent;
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c25 input:focus {
+    .c24 input:focus {
       border: 2px solid #E52630;
     }
 
-    .c27 {
+    .c26 {
       line-height: 1.5;
     }
 
-    .c26 {
+    .c25 {
       width: 100%;
       color: #FFFFFF;
       font-size: 1.125rem;
@@ -364,9 +363,9 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c26:active,
-    .c26:focus,
-    .c26:hover {
+    .c25:active,
+    .c25:focus,
+    .c25:hover {
       background-color: #961D35;
     }
 
@@ -409,6 +408,20 @@ it('renders correctly', () => {
       .c12 {
         font-size: 1.375rem;
         line-height: 1.625rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c22 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c22 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 
@@ -463,7 +476,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c25 {
+      .c24 {
         -webkit-flex: 0 0 60%;
         -ms-flex: 0 0 60%;
         flex: 0 0 60%;
@@ -471,7 +484,7 @@ it('renders correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c26 {
+      .c25 {
         width: auto;
         padding: 1rem 2rem;
         margin: 0 auto 2rem;
@@ -545,7 +558,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box1"
                 >
                   <span
-                    className="c16 c17"
+                    className="c7 c16"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -555,16 +568,16 @@ it('renders correctly', () => {
                     size="s"
                   />
                   <div
-                    className="c18"
+                    className="c17"
                   >
                     
                     <div
-                      className="c19"
+                      className="c18"
                     >
                       <input
                         aria-label="£5"
                         aria-required={false}
-                        className="c20"
+                        className="c19"
                         id="mship-1--moneyBuy-box1"
                         name="mship-1--moneyBuy1"
                         onClick={[Function]}
@@ -579,11 +592,11 @@ it('renders correctly', () => {
                   
                 </label>
                 <label
-                  className="c14 c21"
+                  className="c14 c20"
                   htmlFor="mship-1--moneyBuy-box2"
                 >
                   <span
-                    className="c16 c17"
+                    className="c7 c16"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -593,16 +606,16 @@ it('renders correctly', () => {
                     size="s"
                   />
                   <div
-                    className="c18"
+                    className="c17"
                   >
                     
                     <div
-                      className="c19"
+                      className="c18"
                     >
                       <input
                         aria-label="£10"
                         aria-required={false}
-                        className="c20"
+                        className="c19"
                         id="mship-1--moneyBuy-box2"
                         name="mship-1--moneyBuy2"
                         onClick={[Function]}
@@ -621,7 +634,7 @@ it('renders correctly', () => {
                   htmlFor="mship-1--moneyBuy-box3"
                 >
                   <span
-                    className="c16 c17"
+                    className="c7 c16"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -631,16 +644,16 @@ it('renders correctly', () => {
                     size="s"
                   />
                   <div
-                    className="c18"
+                    className="c17"
                   >
                     
                     <div
-                      className="c19"
+                      className="c18"
                     >
                       <input
                         aria-label="£20"
                         aria-required={false}
-                        className="c20"
+                        className="c19"
                         id="mship-1--moneyBuy-box3"
                         name="mship-1--moneyBuy3"
                         onClick={[Function]}
@@ -656,21 +669,21 @@ it('renders correctly', () => {
                 </label>
               </div>
               <div
-                className="c22"
+                className="c21"
               >
                 <span
-                  className="c23 c24"
+                  className="c22 c23"
                   color="inherit"
                   size="s"
                 >
                   Other amount
                 </span>
                 <label
-                  className="c14 c25"
+                  className="c14 c24"
                   htmlFor="mship-1--MoneyBuy-userInput"
                 >
                   <span
-                    className="c16 c17"
+                    className="c7 c16"
                     color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
@@ -680,16 +693,16 @@ it('renders correctly', () => {
                     size="s"
                   />
                   <div
-                    className="c18"
+                    className="c17"
                   >
                     
                     <div
-                      className="c19"
+                      className="c18"
                     >
                       <input
                         aria-label="Input a different amount"
                         aria-required={false}
-                        className="c20"
+                        className="c19"
                         id="mship-1--MoneyBuy-userInput"
                         max="25000"
                         min="1"
@@ -711,12 +724,12 @@ it('renders correctly', () => {
                 </label>
               </div>
               <input
-                className="c26"
+                className="c25"
                 type="submit"
                 value="Donate"
               />
               <p
-                className="c27"
+                className="c26"
               />
             </fieldset>
           </form>

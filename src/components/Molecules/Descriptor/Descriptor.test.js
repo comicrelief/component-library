@@ -28,41 +28,51 @@ it('renders article teaser correctly', () => {
       font-size: 1.125rem;
       line-height: 1.125rem;
       font-weight: bold;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      color: #222222;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      color: #222222;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c7 {
       font-size: 1.875rem;
       line-height: 1.875rem;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
       font-weight: normal;
       line-height: 2rem;
+      font-family: 'Anton',Impact,sans-serif;
       text-transform: uppercase;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-family: 'Anton',Impact,sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c10 {
       font-size: 1rem;
       line-height: 1rem;
       font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
+      color: #222222;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      color: #222222;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c0 {
@@ -162,6 +172,20 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c3 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c3 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
       .c7 {
         font-size: 1.25rem;
         line-height: 1.5rem;
@@ -172,6 +196,20 @@ it('renders article teaser correctly', () => {
       .c7 {
         font-size: 1.375rem;
         line-height: 1.625rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 

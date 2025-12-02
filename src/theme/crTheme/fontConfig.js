@@ -1,5 +1,6 @@
 export default {
   h1: {
+    family: 'Anton',
     small: {
       fontSize: '2rem',
       lineHeight: '2rem'
@@ -14,6 +15,7 @@ export default {
     }
   },
   h2: {
+    family: 'Anton',
     small: {
       fontSize: '1.5rem',
       lineHeight: '1.5rem'
@@ -28,6 +30,7 @@ export default {
     }
   },
   h3: {
+    family: 'Anton',
     small: {
       fontSize: '1.25rem',
       lineHeight: '1.5rem'
@@ -42,6 +45,39 @@ export default {
     }
   },
   h4: {
+    family: 'Anton',
+    small: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    medium: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    large: {
+      fontSize: '1.125rem',
+      lineHeight: '1.375rem'
+    }
+  },
+  // H5 and H6 to be phased out of usage, but keeping
+  // some config here to keep pre-existing usage happy:
+  h5: {
+    family: 'Anton',
+    small: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    medium: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    large: {
+      fontSize: '1.125rem',
+      lineHeight: '1.375rem'
+    }
+  },
+  h6: {
+    family: 'Anton',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -56,6 +92,7 @@ export default {
     }
   },
   p: {
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -69,8 +106,24 @@ export default {
       lineHeight: '1.375rem'
     }
   },
-  // Used directly (not via fontHelper), but makes sense to keep here:
+  span: {
+    family: 'Montserrat',
+    small: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    medium: {
+      fontSize: '1rem',
+      lineHeight: '1.25rem'
+    },
+    large: {
+      fontSize: '1.125rem',
+      lineHeight: '1.375rem'
+    }
+  },
+  // To be used directly (not via fontHelper), but makes sense to keep here:
   button: {
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -84,9 +137,10 @@ export default {
       lineHeight: '1.375rem'
     }
   },
-  // TODO: given both of are the same for every breakpoint,
-  // perhaps they don't need to be added here?
+  // Admittedly, while the same for each breakpoint, these 2
+  // config objects made sense to keep it here all the same.
   formFieldLabel: {
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -101,6 +155,7 @@ export default {
     }
   },
   formFieldError: {
+    family: 'Montserrat',
     small: {
       fontSize: '0.875rem',
       lineHeight: '1.063rem'

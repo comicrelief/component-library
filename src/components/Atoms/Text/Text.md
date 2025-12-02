@@ -4,7 +4,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
 <div>
   <Text
     tag="h1"
-    // Do we even need the 'family' prop now, given it should be 100% determined by the tag?
+    // TODOL: Do we even need the 'family' prop now, given it should be 100% determined by the tag?
     family="Anton"
     mobileColor="blue"
   >
@@ -50,13 +50,35 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
       <b>family:</b> Anton <b>size:</b> 32px / 2rem
     </Text>
   </Text>
-  
+
   <Text tag="p" size="m">
     <span style={{ width: "100px", display: "inline-block" }}>Body</span>
+      <Text style={{ textTransform: "none" }} tag="span">
+        <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
+        1.25rem
+      </Text>
+    </Text>
+
+    <Text tag="p" style={{ marginTop: "50px"}}>
+      To be phased out:
+    </Text>
+
+    <Text tag="h5" family="Anton" uppercase weight="normal">
+    <b style={{ width: "100px", display: "inline-block" }}>H5 </b>
     <Text style={{ textTransform: "none" }} tag="span">
-      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
-      1.25rem
+      <b>family:</b> Anton <b>size:</b> 32px / 2rem
     </Text>
   </Text>
+  
+
+    <Text tag="h5" family="Anton" uppercase weight="normal">
+    <b style={{ width: "100px", display: "inline-block" }}>H6 </b>
+    <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> Anton <b>size:</b> 32px / 2rem
+    </Text>
+  </Text>
+  
+  
+
 </div>
 ```
