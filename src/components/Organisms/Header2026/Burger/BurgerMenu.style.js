@@ -76,7 +76,7 @@ const BurgerWrapper = styled(Link)`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }
 `;
