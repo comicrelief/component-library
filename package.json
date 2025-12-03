@@ -57,8 +57,7 @@
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
-    "lint-fix": "yarn lint --fix",
-    "build-pr": "rm -rf dist && NODE_ENV=development babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
+    "lint-fix": "yarn lint --fix"
   },
   "browserslist": {
     "production": [
