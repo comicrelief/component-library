@@ -46,6 +46,9 @@ const CardsContainer = styled.div`
     justify-content: center;
     align-items: stretch;
     gap: 2rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   // Desktop grid layout for XL breakpoint (1440px+) - 3 columns
@@ -56,7 +59,10 @@ const CardsContainer = styled.div`
     return `repeat(${cols}, 1fr)`;
   }};
     gap: 3rem;
-    justify-content: unset;
+    justify-content: center;
+    width: ${({ columns }) => (columns === 2 ? 'fit-content' : '100%')};
+    max-width: 100%;
+    margin: ${({ columns }) => (columns === 2 ? '0 auto' : '0')};
   }
 `;
 
@@ -123,7 +129,7 @@ const CardWrapper = styled.div`
   // Desktop M breakpoint (740-1023px) - 2 columns layout
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-basis: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+    max-width: 564px;
     height: 100%;
     align-self: stretch;
   }
@@ -131,7 +137,7 @@ const CardWrapper = styled.div`
   // Desktop XL breakpoint (1440px+) - 3 columns layout
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     flex-basis: unset;
-    max-width: unset;
+    max-width: 564px;
     height: 100%;
     align-self: stretch;
   }
