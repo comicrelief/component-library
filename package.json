@@ -61,8 +61,8 @@
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
-    "build-pr-new": "rm -rf dist && NODE_ENV=development BABEL_ENV=development yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
-    "postinstall": "yarn build-pr-new"
+    "build-pr": "rm -rf dist && NODE_ENV=development BABEL_ENV=development yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "postinstall": "yarn build-pr"
   },
   "browserslist": {
     "production": [
