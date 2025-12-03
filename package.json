@@ -38,14 +38,10 @@
     "react-range-slider-input": "^3.0.7",
     "react-responsive": "^9.0.2",
     "react-spinners": "^0.11.0",
-    "react-styleguidist": "^11.1.7",
     "react-uid": "^2.3.3",
     "styled-components": "^5.3.11",
     "youtube-player": "^5.6.0",
-    "yup": "^1.4.0",
-
-    "@babel/cli": "^7.21.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "yup": "^1.4.0"
   },
   "resolutions": {
     "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
@@ -62,7 +58,7 @@
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
-    "build-pr": "rm -rf dist; babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "build-pr": "rm -rf dist && babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "postinstall": "export NODE_ENV=development; yarn build-pr"
   },
   "browserslist": {
@@ -78,6 +74,9 @@
     ]
   },
   "devDependencies": {
+     "@babel/cli": "^7.21.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "react-styleguidist": "^11.1.7",
     "react-scripts": "4.0.3",
     "react-test-renderer": "^17.0.2",
     "ejs": "^3.1.9",
