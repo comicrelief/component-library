@@ -20,11 +20,12 @@ const CardsContainer = styled.div`
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
       gap: 0;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
+      padding-right: 1rem;
 
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       &::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
+        display: none;
       }
     }
   `}
@@ -95,12 +96,16 @@ const CardWrapper = styled.div`
   ${({ isCarousel }) => isCarousel && css`
     @media (max-width: ${breakpointValues.M - 1}px) {
       scroll-snap-align: start;
-      flex: 0 0 100%;
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
+      flex: 0 0 calc(100% - 1.5rem);
+      width: calc(100% - 1.5rem);
+      min-width: calc(100% - 1.5rem);
+      max-width: calc(100% - 1.5rem);
       flex-shrink: 0;
-      padding-right: 1.5rem;
+      margin-right: 1.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   `}
 
