@@ -61,7 +61,7 @@
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
     "build-pr": "export NODE_ENV=development; export BABEL_ENV=development; rm -rf dist; babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
-    "build-pr-two": "export NODE_ENV=development export BABEL_ENV=development rm -rf dist && babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "build-pr-two": "export NODE_ENV=development; export BABEL_ENV=development; rm -rf dist && yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
     "postinstall": "export NODE_ENV=development; export BABEL_ENV=development; yarn build-pr-two"
   },
   "browserslist": {
