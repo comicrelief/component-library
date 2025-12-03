@@ -8,8 +8,15 @@ The component accepts raw Contentful data and handles rich text rendering intern
 import CTAMultiCard from './CTAMultiCard';
 const exampleData = require('./example_data.json');
 
+const data = {
+  contentfulParagraphCardsDs: {
+    ...exampleData.data.contentfulParagraphCardsDs,
+    backgroundColour: "transparent"
+  }
+};
+
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
-  <CTAMultiCard data={exampleData.data} />
+  <CTAMultiCard data={data} />
 </div>;
 ```
 
@@ -25,6 +32,7 @@ const dataWithLongText = {
   contentfulParagraphCardsDs: {
     ...exampleData.data.contentfulParagraphCardsDs,
     layout: "2 columns",
+    backgroundColour: "Transparent",
     cards: [
       exampleData.data.contentfulParagraphCardsDs.cards[0],
       {
@@ -94,7 +102,8 @@ import CTAMultiCard from './CTAMultiCard';
 const data = {
   contentfulParagraphCardsDs: {
     ...exampleData.data.contentfulParagraphCardsDs,
-    carouselOfCards: true
+    carouselOfCards: true,
+    backgroundColour: "Transparent"
   }
 };
 
@@ -114,7 +123,8 @@ import CTAMultiCard from './CTAMultiCard';
 const data = {
   contentfulParagraphCardsDs: {
     ...exampleData.data.contentfulParagraphCardsDs,
-    carouselOfCards: false
+    carouselOfCards: false,
+    backgroundColour: "Transparent"
   }
 };
 

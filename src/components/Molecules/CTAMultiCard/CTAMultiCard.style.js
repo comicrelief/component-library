@@ -172,8 +172,7 @@ const ImageWrapper = styled.div`
     height: auto;
     object-fit: cover;
     display: block;
-    transform-origin: center;
-    transition: transform 0.3s cubic-bezier(0.68, -0.85, 0.265, 1.95);
+    transition: transform 0.3s cubic-bezier(0.68, 0, 0.265, 1.4);
 
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
