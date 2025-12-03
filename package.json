@@ -22,6 +22,9 @@
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
+    "react-scripts": "4.0.3",
+    "babel-plugin-import": "^1.13.8",
+    "@babel/cli": "^7.21.5",
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.2",
     "lazysizes": "^5.3.2",
@@ -57,7 +60,9 @@
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
-    "lint-fix": "yarn lint --fix"
+    "lint-fix": "yarn lint --fix",
+    "build-pr-new": "rm -rf dist && NODE_ENV=development BABEL_ENV=development yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "postinstall": "yarn build-pr-new"
   },
   "browserslist": {
     "production": [
@@ -72,10 +77,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@playwright/test": "^1.38.1",
-    "babel-plugin-import": "^1.13.8",
     "cross-env": "^7.0.3",
     "ejs": "^3.1.9",
     "eslint": "^7.32.0",
@@ -88,7 +91,6 @@
     "jest-styled-components": "^7.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
-    "react-scripts": "4.0.3",
     "react-styleguidist": "^11.1.7",
     "react-test-renderer": "^17.0.2",
     "semantic-release": "^17.4.6",
