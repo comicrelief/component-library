@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 // Container for all cards - handles grid/stack/carousel layouts
 const CardsContainer = styled.div`
@@ -9,16 +10,31 @@ const CardsContainer = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   gap: 4rem;
 
-  // Mobile carousel mode - horizontal scroll container (structure only, TODO: scrolling)
+  // Mobile carousel mode - horizontal scroll container (only on mobile, below M breakpoint)
   ${({ isCarousel }) => isCarousel && css`
-    @media ${({ theme }) => theme.allBreakpoints('S')} {
+    @media (max-width: ${breakpointValues.M - 1}px) {
       flex-direction: row;
+      flex-wrap: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
-      gap: 1.5rem;
-      padding-bottom: 1rem;
+      gap: 0;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    }
+  `}
+
+  // Mobile stack mode - vertical layout (only on mobile, below M breakpoint)
+  ${({ isCarousel }) => !isCarousel && css`
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      flex-direction: column;
+      gap: 1rem;
+      background: transparent;
     }
   `}
 
@@ -27,6 +43,7 @@ const CardsContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
     gap: 2rem;
   }
 
@@ -42,39 +59,6 @@ const CardsContainer = styled.div`
   }
 `;
 
-// Wrapper for individual card - handles spacing and carousel visibility
-const CardWrapper = styled.div`
-  width: 100%;
-  flex-shrink: 0;
-
-  // Mobile carousel mode - hide individual cards, show carousel instead
-  ${({ isCarousel }) => isCarousel && css`
-    @media (min-width: 390px) and (max-width: 1022px) {
-      display: none;
-    }
-  `}
-
-  // Desktop M breakpoint (740-1023px) - 2 columns layout
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-basis: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-  }
-
-  // Desktop XL breakpoint (1440px+) - 3 columns layout
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    flex-basis: unset;
-    max-width: unset;
-  }
-
-  // Carousel mode - snap scrolling
-  ${({ isCarousel }) => isCarousel && css`
-    @media ${({ theme }) => theme.allBreakpoints('S')} {
-      scroll-snap-align: start;
-      min-width: calc(100% - 3rem);
-    }
-  `}
-`;
-
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -82,7 +66,7 @@ const CardLink = styled.a`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: transparent;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   text-decoration: none;
@@ -97,6 +81,51 @@ const CardLink = styled.a`
     &:hover {
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
     }
+  }
+`;
+
+// Ensure all cards have equal height
+const CardWrapper = styled.div`
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+  // Mobile carousel mode - cards at normal width in horizontal scroll (only on mobile, below M breakpoint)
+  ${({ isCarousel }) => isCarousel && css`
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      scroll-snap-align: start;
+      flex: 0 0 100%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      flex-shrink: 0;
+      padding-right: 1.5rem;
+    }
+  `}
+
+  // Mobile stack mode - cards at normal width in vertical stack (only on mobile, below M breakpoint)
+  ${({ isCarousel }) => !isCarousel && css`
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  `}
+
+  // Desktop M breakpoint (740-1023px) - 2 columns layout
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-basis: calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    height: 100%;
+  }
+
+  // Desktop XL breakpoint (1440px+) - 3 columns layout
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    flex-basis: unset;
+    max-width: unset;
+    height: 100%;
   }
 `;
 
@@ -122,6 +151,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   flex-shrink: 0;
+  background: transparent;
 
   img {
     width: 100%;
@@ -134,7 +164,7 @@ const ImageWrapper = styled.div`
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       ${({ isHovered }) => isHovered && css`
-        transform: scale(1.08);
+        transform: scale(1.1);
       `}
     }
   }
@@ -177,6 +207,7 @@ const CopyAndLinkSection = styled.div`
   flex-direction: column;
   padding: 2rem;
   flex-shrink: 0;
+  border-radius: 0 0 1rem 1rem;
 `;
 
 const Copy = styled.div`
