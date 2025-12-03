@@ -24,9 +24,7 @@
   "dependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@playwright/test": "^1.38.1",
     "ejs": "^3.1.9",
-    "jest-styled-components": "^7.1.1",
     "react-scripts": "4.0.3",
     "react-styleguidist": "^11.1.7",
     "@hookform/resolvers": "^3.9.0",
@@ -81,6 +79,8 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "jest-styled-components": "^7.1.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.0",
