@@ -45,9 +45,7 @@
     "yup": "^1.4.0",
 
     "@babel/cli": "^7.21.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "react-scripts": "4.0.3",
-    "react-test-renderer": "^17.0.2"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "resolutions": {
     "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
@@ -80,6 +78,8 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
     "ejs": "^3.1.9",
     "@playwright/test": "^1.38.1",
     "babel-plugin-import": "^1.13.8",
