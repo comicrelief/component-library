@@ -52,14 +52,14 @@
     "test:unit:update": "yarn jest -u",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
-    "postinstall": "yarn run build",
     "test:e2e": "playwright test --project=chromium",
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
-    "build-pr": "rm -rf dist && NODE_ENV=development babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js"
+    "build-pr": "rm -rf dist && NODE_ENV=development babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "postinstall": "yarn build-pr"
   },
   "browserslist": {
     "production": [
