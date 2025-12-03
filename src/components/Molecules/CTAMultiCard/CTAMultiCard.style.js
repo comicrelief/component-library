@@ -91,6 +91,7 @@ const CardWrapper = styled.div`
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
 
   // Mobile carousel mode - cards at normal width in horizontal scroll (only on mobile, below M breakpoint)
   ${({ isCarousel }) => isCarousel && css`
@@ -124,6 +125,7 @@ const CardWrapper = styled.div`
     flex-basis: calc(50% - 1rem);
     max-width: calc(50% - 1rem);
     height: 100%;
+    align-self: stretch;
   }
 
   // Desktop XL breakpoint (1440px+) - 3 columns layout
@@ -131,6 +133,7 @@ const CardWrapper = styled.div`
     flex-basis: unset;
     max-width: unset;
     height: 100%;
+    align-self: stretch;
   }
 `;
 
@@ -211,7 +214,8 @@ const CopyAndLinkSection = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  flex-shrink: 0;
+  flex: 1;
+  min-height: 0;
   border-radius: 0 0 1rem 1rem;
 `;
 
