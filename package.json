@@ -59,7 +59,8 @@
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
     "build-pr": "export NODE_ENV=development; export BABEL_ENV=development; rm -rf dist; babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
-    "postinstall": "export NODE_ENV=development; export BABEL_ENV=development; yarn build-pr"
+    "build-pr-two": "export NODE_ENV=development; export BABEL_ENV=development; echo $NODE_ENV; echo $BABEL_ENV;",
+    "postinstall": "export NODE_ENV=development; export BABEL_ENV=development; yarn build-pr-two"
   },
   "browserslist": {
     "production": [
@@ -74,7 +75,7 @@
     ]
   },
   "devDependencies": {
-     "@babel/cli": "^7.21.5",
+    "@babel/cli": "^7.21.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "react-styleguidist": "^11.1.7",
     "react-scripts": "4.0.3",
