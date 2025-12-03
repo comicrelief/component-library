@@ -4,7 +4,9 @@ module.exports = function (api) {
 
   const presets = [['react-app', { absoluteRuntime: false }]];
   const plugins = [
-    ['babel-plugin-styled-components']];
+    ['babel-plugin-styled-components'],
+    ['import', { libraryName: 'lodash', libraryDirectory: '', camel2DashComponentName: false }]
+  ];
 
   return {
     presets,
