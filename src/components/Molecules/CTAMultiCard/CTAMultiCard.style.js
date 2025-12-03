@@ -1,6 +1,80 @@
 import styled, { css } from 'styled-components';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 
+// Container for all cards - handles grid/stack/carousel layouts
+const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  gap: 4rem;
+
+  // Mobile carousel mode - horizontal scroll container (structure only, TODO: scrolling)
+  ${({ isCarousel }) => isCarousel && css`
+    @media ${({ theme }) => theme.allBreakpoints('S')} {
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  `}
+
+  // Desktop flexbox layout for M breakpoint (740-1023px) - 2 columns with centered wrap
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  // Desktop grid layout for XL breakpoint (1440px+) - 3 columns
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    display: grid;
+    grid-template-columns: ${({ columns }) => {
+    const cols = columns || 2;
+    return `repeat(${cols}, 1fr)`;
+  }};
+    gap: 3rem;
+    justify-content: unset;
+  }
+`;
+
+// Wrapper for individual card - handles spacing and carousel visibility
+const CardWrapper = styled.div`
+  width: 100%;
+  flex-shrink: 0;
+
+  // Mobile carousel mode - hide individual cards, show carousel instead
+  ${({ isCarousel }) => isCarousel && css`
+    @media (min-width: 390px) and (max-width: 1022px) {
+      display: none;
+    }
+  `}
+
+  // Desktop M breakpoint (740-1023px) - 2 columns layout
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-basis: calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+
+  // Desktop XL breakpoint (1440px+) - 3 columns layout
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    flex-basis: unset;
+    max-width: unset;
+  }
+
+  // Carousel mode - snap scrolling
+  ${({ isCarousel }) => isCarousel && css`
+    @media ${({ theme }) => theme.allBreakpoints('S')} {
+      scroll-snap-align: start;
+      min-width: calc(100% - 3rem);
+    }
+  `}
+`;
+
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -157,5 +231,7 @@ export {
   Copy,
   CTA,
   CTAText,
-  ArrowIconWrapper
+  ArrowIconWrapper,
+  CardsContainer,
+  CardWrapper
 };
