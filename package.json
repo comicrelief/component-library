@@ -22,12 +22,9 @@
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "ejs": "^3.1.9",
-    "react-styleguidist": "^11.1.7",
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.2",
+    "ejs": "^3.1.9",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.11",
     "moment": "^2.29.4",
@@ -42,10 +39,16 @@
     "react-range-slider-input": "^3.0.7",
     "react-responsive": "^9.0.2",
     "react-spinners": "^0.11.0",
+    "react-styleguidist": "^11.1.7",
     "react-uid": "^2.3.3",
     "styled-components": "^5.3.11",
     "youtube-player": "^5.6.0",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    
+    "@babel/cli": "^7.21.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2"
   },
   "resolutions": {
     "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
@@ -78,10 +81,8 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "4.0.3",
-    "babel-plugin-import": "^1.13.8",
     "@playwright/test": "^1.38.1",
-    "jest-styled-components": "^7.1.1",
+    "babel-plugin-import": "^1.13.8",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -90,10 +91,11 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^26.1.0",
+    "jest-styled-components": "^7.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
-    "react-test-renderer": "^17.0.2",
     "semantic-release": "^17.4.6",
-    "start-server-and-test": "^2.0.4"
+    "start-server-and-test": "^2.0.4",
+    "react-google-recaptcha": "^3.1.0"
   }
 }
