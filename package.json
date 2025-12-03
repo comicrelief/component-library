@@ -22,6 +22,8 @@
     "url": "https://github.com/comicrelief/component-library.git"
   },
   "dependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.2",
     "lazysizes": "^5.3.2",
@@ -75,8 +77,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "react-styleguidist": "^11.1.7",
     "react-scripts": "4.0.3",
     "react-test-renderer": "^17.0.2",
