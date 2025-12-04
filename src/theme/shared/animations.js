@@ -10,11 +10,14 @@ import { css } from 'styled-components';
  * @param {number} bezierY1 - First Y value for cubic-bezier (default 0)
  * @param {number} bezierX2 - Second X value for cubic-bezier (default 0.265)
  * @param {number} bezierY2 - Second Y value for cubic-bezier (default 1.4)
- * @param {boolean} includeHoverFocus - Whether to include :hover and :focus selectors with scale transform (default: false)
- * @param {number} scaleFactor - Scale factor to apply on hover/focus (default 1.1 = 10%, only used if includeHoverFocus is true)
+ * @param {boolean} includeHoverFocus - Whether to include :hover and :focus
+ * selectors with scale transform (default: false)
+ * @param {number} scaleFactor - Scale factor to apply on hover/focus (default
+ * 1.1 = 10%, only used if includeHoverFocus is true)
  * @returns {css} template literal for the animation
  */
-const springScaleAnimation = (animateScale, duration = 0.3, bezierX1 = 0.68, bezierY1 = 0, bezierX2 = 0.265, bezierY2 = 1.4, includeHoverFocus = false, scaleFactor = 1.1) => {
+const springScaleAnimation = (animateScale, duration = 0.3, bezierX1 = 0.68, bezierY1 = 0,
+  bezierX2 = 0.265, bezierY2 = 1.4, includeHoverFocus = false, scaleFactor = 1.1) => {
   if (!animateScale) {
     return css``;
   }
