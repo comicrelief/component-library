@@ -1,7 +1,7 @@
 # CTAMultiCard
 ## Multi-card component that handles mapping through cards array internally
 
-The component accepts raw Contentful data and handles rich text rendering internally - no frontend processing required.
+The component accepts raw Contentful data and handles rich text rendering internally - no frontend processing required, as was previously the case with CardDs.
 
 ### CTAMultiCard: Desktop Grid View (3 columns)
 ```js
@@ -9,10 +9,8 @@ import CTAMultiCard from './CTAMultiCard';
 const exampleData = require('./example_data.json');
 
 const data = {
-  contentfulParagraphCardsDs: {
-    ...exampleData.data.contentfulParagraphCardsDs,
-    backgroundColour: "transparent"
-  }
+  ...exampleData,
+  backgroundColour: "transparent"
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
@@ -29,14 +27,13 @@ import CTAMultiCard from './CTAMultiCard';
 const exampleData = require('./example_data.json');
 
 const dataWithLongText = {
-  contentfulParagraphCardsDs: {
-    ...exampleData.data.contentfulParagraphCardsDs,
-    layout: "2 columns",
-    backgroundColour: "Transparent",
-    cards: [
-      exampleData.data.contentfulParagraphCardsDs.cards[0],
-      {
-        ...exampleData.data.contentfulParagraphCardsDs.cards[1],
+  ...exampleData,
+  layout: "2 columns",
+  backgroundColour: "Transparent",
+  cards: [
+    exampleData.cards[0],
+    {
+      ...exampleData.cards[1],
         body: {
           raw: JSON.stringify({
             nodeType: "document",
@@ -83,7 +80,6 @@ const dataWithLongText = {
         }
       }
     ]
-  }
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
@@ -100,11 +96,9 @@ const exampleData = require('./example_data.json');
 import CTAMultiCard from './CTAMultiCard';
 
 const data = {
-  contentfulParagraphCardsDs: {
-    ...exampleData.data.contentfulParagraphCardsDs,
-    carouselOfCards: true,
-    backgroundColour: "Transparent"
-  }
+  ...exampleData,
+  carouselOfCards: true,
+  backgroundColour: "Transparent"
 };
 
 <div style={{ width: '350px' }}>
@@ -121,11 +115,9 @@ const exampleData = require('./example_data.json');
 import CTAMultiCard from './CTAMultiCard';
 
 const data = {
-  contentfulParagraphCardsDs: {
-    ...exampleData.data.contentfulParagraphCardsDs,
-    carouselOfCards: false,
-    backgroundColour: "Transparent"
-  }
+  ...exampleData,
+  carouselOfCards: false,
+  backgroundColour: "Transparent"
 };
 
 <div style={{ width: '375px', padding: '1rem', background: '#E1E2E3' }}>

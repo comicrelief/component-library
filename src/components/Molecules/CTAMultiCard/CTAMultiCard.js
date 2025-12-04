@@ -17,16 +17,12 @@ import {
  */
 
 const CTAMultiCard = ({ data }) => {
-  // TODO: NECESSARY?
-  // Extract contentfulParagraphCardsDs if data is nested
-  const contentData = data?.contentfulParagraphCardsDs || data;
-
   const {
     cards,
     backgroundColour: bgCards,
     layout,
     carouselOfCards
-  } = contentData;
+  } = data;
 
   const cardsBackground = snakeCase(bgCards || 'white');
 
@@ -57,49 +53,16 @@ const CTAMultiCard = ({ data }) => {
 
 CTAMultiCard.propTypes = {
   data: PropTypes.shape({
-    contentfulParagraphCardsDs: PropTypes.shape({
-      cards: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          body: PropTypes.oneOfType([
-            PropTypes.node,
-            PropTypes.string,
-            PropTypes.shape({
-              raw: PropTypes.string
-            })
-          ]),
-          image: PropTypes.shape({
-            description: PropTypes.string,
-            gatsbyImageData: PropTypes.shape({
-              placeholder: PropTypes.shape({
-                fallback: PropTypes.string
-              }),
-              images: PropTypes.shape({
-                fallback: PropTypes.shape({
-                  src: PropTypes.string,
-                  srcSet: PropTypes.string
-                }),
-                sources: PropTypes.arrayOf(
-                  PropTypes.shape({
-                    srcSet: PropTypes.string
-                  })
-                )
-              })
-            })
-          }),
-          backgroundColour: PropTypes.string,
-          link: PropTypes.string,
-          linkLabel: PropTypes.string
-        })
-      ).isRequired,
-      backgroundColour: PropTypes.string,
-      layout: PropTypes.string,
-      carouselOfCards: PropTypes.bool
-    }),
     cards: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
-        body: PropTypes.node,
+        body: PropTypes.oneOfType([
+          PropTypes.node,
+          PropTypes.string,
+          PropTypes.shape({
+            raw: PropTypes.string
+          })
+        ]),
         image: PropTypes.shape({
           description: PropTypes.string,
           gatsbyImageData: PropTypes.shape({
@@ -123,7 +86,7 @@ CTAMultiCard.propTypes = {
         link: PropTypes.string,
         linkLabel: PropTypes.string
       })
-    ),
+    ).isRequired,
     backgroundColour: PropTypes.string,
     layout: PropTypes.string,
     carouselOfCards: PropTypes.bool

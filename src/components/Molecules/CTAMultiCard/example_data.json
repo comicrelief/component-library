@@ -1,14 +1,12 @@
 {
-  "data": {
-    "contentfulParagraphCardsDs": {
-      "__typename": "ContentfulParagraphCardsDs",
-      "title": "test cards 6",
-      "backgroundColour": "Transparent",
-      "layout": "3 columns",
-      "columnsOnMd": false,
-      "paddingOptions": "Both Off",
-      "carouselOfCards": false,
-      "cards": [
+  "__typename": "ContentfulParagraphCardsDs",
+  "title": "test cards 6",
+  "backgroundColour": "Transparent",
+  "layout": "3 columns",
+  "columnsOnMd": false,
+  "paddingOptions": "Both Off",
+  "carouselOfCards": false,
+  "cards": [
         {
           "id": "fd8ef3fc-7d0d-531b-b2d2-9ac5f40d3d14",
           "title": "Full Card Oooh Chilly",
@@ -115,7 +113,4 @@
           }
         }
       ]
-    }
-  },
-  "extensions": {}
 }
