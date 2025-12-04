@@ -6,7 +6,7 @@ export default {
       id: 'group1',
       links: [
         {
-          title: 'Sport Relief',
+          title: 'Get Involved',
           path: 'https://www.comicrelief.com/fundraising/pay-in-your-money',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -40,7 +40,7 @@ export default {
       id: 'group2',
       links: [
         {
-          title: 'Red Nose Day',
+          title: 'What your money does',
           path: 'https://www.comicrelief.com/rednoseday/schools',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -74,7 +74,7 @@ export default {
       id: 'group3',
       links: [
         {
-          title: 'Funding',
+          title: 'Shop',
           path: 'https://www.comicrelief.com/what-your-money-does',
           internal: {
             type: 'ContentfulPageLandingPage'
@@ -115,7 +115,7 @@ export default {
       id: 'group4',
       links: [
         {
-          title: 'What Your Money Does',
+          title: 'Grants',
           path:
             'https://www.comicrelief.com/rednoseday/schools/primary-schools',
           internal: {
@@ -137,7 +137,7 @@ export default {
       id: 'group5',
       links: [
         {
-          title: 'Get Involved',
+          title: 'About',
           url: 'https://www.comicrelief.com/working-with-us/',
           internal: {
             type: 'ContentfulComponentLink'

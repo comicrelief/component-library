@@ -179,8 +179,15 @@ const NavMenu = styled.ul`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: ${({ theme }) => theme.color('white')};
+
+    border: 1px solid red;
+    > * {
+      border: 1px solid green;
+    }
+    margin: 0 24px;
+
   }
 `;
 
