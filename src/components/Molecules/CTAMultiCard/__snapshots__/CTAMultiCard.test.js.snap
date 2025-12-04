@@ -85,9 +85,6 @@ exports[`handles data structure correctly 1`] = `
   height: auto;
   object-fit: cover;
   display: block;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
 }
 
 .c6 {
@@ -294,7 +291,14 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width:740px) {
-
+  .c3 img {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
 }
 
 <div
@@ -663,9 +667,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   height: auto;
   object-fit: cover;
   display: block;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
 }
 
 .c6 {
@@ -874,7 +875,14 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width:740px) {
-
+  .c3 img {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
 }
 
 <div
@@ -1243,9 +1251,6 @@ exports[`renders carousel mode correctly 1`] = `
   height: auto;
   object-fit: cover;
   display: block;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
 }
 
 .c6 {
@@ -1358,14 +1363,15 @@ exports[`renders carousel mode correctly 1`] = `
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow-x: visible;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     -webkit-scroll-snap-type: x mandatory;
     -moz-scroll-snap-type: x mandatory;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
-    padding-right: 1rem;
+    padding: 0.75rem 0.5rem;
+    margin-left: 0.5rem;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
     -ms-scrollbar-width: none;
@@ -1447,7 +1453,6 @@ exports[`renders carousel mode correctly 1`] = `
     -webkit-flex: 0 0 calc(100% - 1.5rem);
     -ms-flex: 0 0 calc(100% - 1.5rem);
     flex: 0 0 calc(100% - 1.5rem);
-    width: calc(100% - 1.5rem);
     min-width: calc(100% - 1.5rem);
     max-width: calc(100% - 1.5rem);
     -webkit-flex-shrink: 0;
@@ -1456,8 +1461,13 @@ exports[`renders carousel mode correctly 1`] = `
     margin-right: 0.5rem;
   }
 
+  .c1:first-child {
+    padding-left: 0.5rem;
+  }
+
   .c1:last-child {
     margin-right: 0;
+    padding-right: 0.5rem;
   }
 }
 
@@ -1488,7 +1498,14 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width:740px) {
-
+  .c3 img {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
 }
 
 <div
@@ -1857,9 +1874,6 @@ exports[`renders correctly with data prop 1`] = `
   height: auto;
   object-fit: cover;
   display: block;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
 }
 
 .c6 {
@@ -2066,7 +2080,14 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:740px) {
-
+  .c3 img {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
 }
 
 <div
