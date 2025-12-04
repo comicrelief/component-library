@@ -21,7 +21,7 @@ exports[`renders correctly in minimalist form 1`] = `
   line-height: 1.875rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  font-family: 'Anton',Impact,sans-serif;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -229,7 +229,7 @@ exports[`renders correctly with copy 1`] = `
   line-height: 1.875rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  font-family: 'Anton',Impact,sans-serif;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -472,7 +472,7 @@ exports[`renders correctly with date 1`] = `
   line-height: 1.875rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  font-family: 'Anton',Impact,sans-serif;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -680,7 +680,7 @@ exports[`renders correctly with date and type 1`] = `
   line-height: 1.875rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  font-family: 'Anton',Impact,sans-serif;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;

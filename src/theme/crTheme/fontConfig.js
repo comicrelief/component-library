@@ -30,7 +30,7 @@ export default {
     }
   },
   h3: {
-    family: 'Anton',
+    family: 'Montserrat',
     small: {
       fontSize: '1.25rem',
       lineHeight: '1.5rem'
@@ -45,7 +45,7 @@ export default {
     }
   },
   h4: {
-    family: 'Anton',
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -62,7 +62,7 @@ export default {
   // H5 and H6 to be phased out of usage, but keeping
   // some config here to keep pre-existing usage happy:
   h5: {
-    family: 'Anton',
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -77,7 +77,7 @@ export default {
     }
   },
   h6: {
-    family: 'Anton',
+    family: 'Montserrat',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'

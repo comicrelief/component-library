@@ -13,7 +13,6 @@ export const BaseText = styled.span`
   line-height: ${({ size, theme }) => theme.fontSize(size)};
 
   ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
-
   ${({ height }) => (height ? `line-height: ${height}` : null)};
 
   font-family: ${({ family, theme }) => (family

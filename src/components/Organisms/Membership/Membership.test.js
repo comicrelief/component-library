@@ -61,7 +61,7 @@ it('renders correctly', () => {
       line-height: 1.125rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       text-transform: inherit;
-      font-family: 'Anton',Impact,sans-serif;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;

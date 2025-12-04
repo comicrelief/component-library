@@ -42,7 +42,7 @@ it('renders article teaser correctly', () => {
       line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
       text-transform: uppercase;
-      font-family: 'Anton',Impact,sans-serif;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
@@ -333,7 +333,7 @@ it('renders press realese correctly', () => {
       line-height: 2rem;
       font-family: 'Anton',Impact,sans-serif;
       text-transform: uppercase;
-      font-family: 'Anton',Impact,sans-serif;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
