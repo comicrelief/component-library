@@ -101,7 +101,7 @@ const data = {
   backgroundColour: "Transparent"
 };
 
-<div style={{ width: '350px' }}>
+<div style={{ width: '350px', height: '400px', background: '#E1E2E3'}}>
   <CTAMultiCard data={data} />
 </div>;
 ```

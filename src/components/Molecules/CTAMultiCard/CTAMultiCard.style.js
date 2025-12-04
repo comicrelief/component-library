@@ -14,11 +14,12 @@ const CardsContainer = styled.div`
     @media (max-width: ${breakpointValues.M - 1}px) {
       flex-direction: row;
       flex-wrap: nowrap;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow-x: visible;
+      overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
-      padding-right: 1rem;
+      padding: 0.75rem 0.5rem;
+      margin-left: 0.5rem;
 
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -100,8 +101,13 @@ const CardWrapper = styled.div`
       flex-shrink: 0;
       margin-right: 0.5rem;
 
+      &:first-child {
+        padding-left: 0.5rem;
+      }
+
       &:last-child {
         margin-right: 0;
+        padding-right: 0.5rem;
       }
     }
   `}
