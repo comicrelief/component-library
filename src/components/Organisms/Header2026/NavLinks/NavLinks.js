@@ -20,7 +20,8 @@ const NavLinks = ({
   navItems = {}, metaIcons, donateButton = null, characterLimit
 }) => {
   const { menuGroups } = navItems;
-  const [isExpandable, setIsExpandable] = useState(false);
+  // const [isExpandable, setIsExpandable] = useState(false);
+  const [isExpandable, setIsExpandable] = useState(true);
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
@@ -112,7 +113,13 @@ const NavLinks = ({
 
   return (
     <>
-      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation" id="main-nav">
+      <Nav
+        data-testid="Nav"
+        aria-label="main-menu"
+        isExpandable={isExpandable}
+        role="navigation"
+        id="main-nav"
+      >
         <Text id="main-menu" tag="h2">
           Main navigation
         </Text>
@@ -120,7 +127,10 @@ const NavLinks = ({
         {/* Only render once we've processed the menu items: */}
         {processedItems && (
           // First level of the navigation (ul tag): Parent
-          <NavMenu role="menubar">
+          <NavMenu
+            data-testid="NavMenu"
+            role="menubar"
+          >
             {theseGroups.map((group, index) => {
               /* Grab the first links properties to use for our parent/button */
               const thisFirstChild = group.links[0];
@@ -176,6 +186,7 @@ const NavLinks = ({
         </NavMetaIcons>
         <DonateButtonWrapperBottom data-testid="donate-button--mobile">
           {donateButton}
+          donate button
         </DonateButtonWrapperBottom>
       </Nav>
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>

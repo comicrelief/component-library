@@ -17,6 +17,7 @@ const NavItem = (
   }
 ) => (
   <StyledNavItem
+    data-testid="StyledNavItem"
     role="none"
     key={`${index}-${thisID}--item`}
     index={index}
@@ -24,6 +25,7 @@ const NavItem = (
   >
     {isNotDesktop ? (
       <NavLink
+        data-testid="NavLink"
         href={hasPopUp ? '#' : thisUrl}
         inline
         rel={relNoopener}
@@ -36,14 +38,19 @@ const NavItem = (
       >
         {thisFirstChild.title}
         {hasSubMenu && (
-          <ChevronWrapper>
+          <ChevronWrapper
+            data-testid="ChevronWrapper"
+          >
             <img src={menuGroupIcon} alt="chevron down icon" />
           </ChevronWrapper>
         )}
       </NavLink>
     ) : (
-      <StyledText>
+      <StyledText
+        data-testid="StyledText"
+      >
         <DesktopNavLink
+          data-testid="DesktopNavLink"
           href={thisUrl}
           inline
           rel={relNoopener}
@@ -55,7 +62,9 @@ const NavItem = (
           {thisFirstChild.title}
           {hasSubMenu
               && (
-                <ChevronWrapper>
+                <ChevronWrapper
+                  data-testid="ChevronWrapper"
+                >
                   <img src={menuGroupIcon} alt="chevron down icon" />
                 </ChevronWrapper>
               )

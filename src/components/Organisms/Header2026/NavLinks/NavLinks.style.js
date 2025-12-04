@@ -68,13 +68,12 @@ const Nav = styled.nav`
   ${zIndex('higher')};
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: 50%;
-    right: 0;
-    left: inherit;
-    box-shadow: -20px 15px 20px 0px rgba(0, 0, 0, 0.25);
-  }
+  border: 1px solid green;
+  padding: 0 !important;
+  margin: 0 !important;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${zIndex('medium')};
@@ -85,10 +84,6 @@ const Nav = styled.nav`
     width: 100%;
     height: 100%;
     box-shadow: none;
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
-    margin: 0 10px;
   }
 
   > h2 {
@@ -174,6 +169,10 @@ const NavMenu = styled.ul`
   padding: 0;
   margin: 0;
 
+  border: 1px solid red;
+  padding: 0 !important;
+  margin: 0 !important;
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: relative;
     display: flex;
@@ -181,13 +180,7 @@ const NavMenu = styled.ul`
     align-items: center;
     justify-content: center;
     background-color: ${({ theme }) => theme.color('white')};
-
-    border: 1px solid red;
-    > * {
-      border: 1px solid green;
-    }
     margin: 0 24px;
-
   }
 `;
 
@@ -209,9 +202,9 @@ const NavLink = styled(NavLinkClass)`
   `)}
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 10px 0px 10px 0;
     height: auto;
 
+    padding: 10px 0px;
     // Additional room for the chevron:
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 14px 10px 0;
@@ -226,7 +219,7 @@ const NavLink = styled(NavLinkClass)`
     }}
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
@@ -297,9 +290,13 @@ const StyledNavItem = styled.li`
 
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    margin: 0 22px 0 0;
-    padding: 25px 0px;
     border-bottom: none;
+    padding: 25px 0px;
+    margin: 0 22px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     :hover,
     :focus,
@@ -437,7 +434,6 @@ const StyledText = styled(Text)`
 const DonateButtonWrapperBottom = styled.div`
   display: flex;
   justify-content: center;
-  padding: 35px 20px;
   background-color: inherit;
 
   // Donate button
