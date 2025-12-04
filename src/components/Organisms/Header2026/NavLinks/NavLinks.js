@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
-import MoreNav from './MoreNav';
+// import MoreNav from './MoreNav';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
