@@ -13,8 +13,8 @@ const mockData = {
       id: '6bc887c7-f939-5654-a0c5-1b2caf91de6c',
       title: 'Card no pic',
       backgroundColour: 'Blue Light',
-      link: null,
-      linkLabel: null,
+      link: '/test-no-image',
+      linkLabel: 'View card',
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Load of text here","marks":[],"data":{}}]}]}'
       },

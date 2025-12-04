@@ -1,68 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Column view correctly 1`] = `
-.c3 {
+exports[`handles data structure correctly 1`] = `
+.c4 {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
 }
 
-.c4 {
+.c5 {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-left: 1rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  right: 1.5rem;
-}
-
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #E52630;
+.c11 {
+  display: inline-block;
   color: #FFFFFF;
-}
-
-.c7:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
-}
-
-.c9 {
-  fill: #FFFFFF;
+  fill: currentColor;
 }
 
 .c0 {
@@ -70,32 +26,39 @@ exports[`renders Column view correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: #FFFFFF;
+  gap: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
   width: 100%;
-  background: inherit;
-}
-
-.c2 {
-  height: auto;
-  margin: 0 0 0 1.5rem;
-}
-
-.c2 img {
+  height: 100%;
+  background: transparent;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .c1 {
   width: 100%;
-}
-
-.c5 {
-  padding: 2rem;
-  padding-bottom: 4rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,309 +66,138 @@ exports[`renders Column view correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  background: #FFFFFF;
-  margin: 0 1.5rem 0 0;
-  z-index: 1;
-  margin-top: -3rem;
-  min-height: 10rem;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.c3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
 }
 
 .c6 {
-  position: absolute;
-  right: 3.5rem;
-  bottom: -1.5rem;
-  z-index: 2;
+  width: 100%;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-@media (min-width:740px) {
-  .c8 {
-    width: auto;
-    right: auto;
-    position: relative;
-  }
+.c12 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-@media (min-width:740px) {
-  .c7 {
-    width: auto;
-  }
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
 }
 
-@media (min-width:1024px) {
-  .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover {
-    background-color: #890B11;
-    color: #FFFFFF;
-  }
+.c9 {
+  color: #969598;
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-@media (min-width:1024px) {
-  .c9 {
-    fill: #FFFFFF;
-  }
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
-@media (min-width:1440px) {
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width:739px) {
   .c0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (min-width:1440px) {
-  .c5 {
-    height: 100%;
-  }
-}
-
-@media (min-width:1440px) {
-  .c5 {
-    margin: -3rem 0 -1.5rem 0;
-    width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c6 {
-    right: 2rem;
-  }
-}
-
-<div
-  className="c0"
->
-  <a
-    aria-hidden="true"
-    className="c1"
-    data-image-cta-copy="find out more"
-    href="/home"
-    tabIndex="-1"
-    target="_blank"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3 lazyload"
-        height="auto"
-        width="100%"
-      >
-        <img
-          alt="Happy man going to work"
-          className="c4 lazyload"
-          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-          data-sizes="auto"
-          data-src={null}
-          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-          height="auto"
-          src={null}
-          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          width="100%"
-        />
-      </div>
-    </div>
-  </a>
-  <div
-    className="c5"
-  >
-    Column view
-  </div>
-  <div
-    className="c6"
-  >
-    <a
-      className="c7"
-      color="red"
-      data-button-cta-copy="find out more"
-      href="/home"
-      rel={null}
-      target="_self"
-      type="button"
-    >
-      find out more
-      <span
-        className="c8"
-        type="button"
-      >
-        <svg
-          className="c9"
-          fill="#FFFFFF"
-          height={24}
-          viewBox="0 0 96 96"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M90.871 50.776c-.016.016-.026.036-.043.052l-32 32C58.047 83.609 57.024 84 56 84s-2.047-.391-2.829-1.171a4 4 0 010-5.657L78.343 52H8a4 4 0 010-8h70.343L53.171 18.829a4 4 0 015.657-5.657l32 32c.016.016.027.036.043.052.167.172.321.357.455.557.069.104.118.216.176.325.065.121.138.236.191.364.057.137.09.279.13.42.032.109.074.214.097.327a4.017 4.017 0 010 1.568c-.023.113-.065.217-.097.327-.041.141-.074.283-.13.42-.053.128-.126.243-.191.364-.059.109-.107.221-.176.325a4.035 4.035 0 01-.455.555z"
-          />
-        </svg>
-      </span>
-    </a>
-  </div>
-</div>
-`;
-
-exports[`renders correctly 1`] = `
-.c3 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-left: 1rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  right: 1.5rem;
-}
-
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #E52630;
-  color: #FFFFFF;
-}
-
-.c7:hover {
-  background-color: #890B11;
-  color: #FFFFFF;
-}
-
-.c9 {
-  fill: #FFFFFF;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background: inherit;
-}
-
-.c2 {
-  height: auto;
-  margin: 0 0 0 1.5rem;
-}
-
-.c2 img {
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-}
-
-.c1 {
-  width: 100%;
-}
-
-.c5 {
-  padding: 2rem;
-  padding-bottom: 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  background: #FFFFFF;
-  margin: 0 1.5rem 0 0;
-  z-index: 1;
-  margin-top: -3rem;
-  min-height: 10rem;
-}
-
-.c6 {
-  position: absolute;
-  right: 3.5rem;
-  bottom: -1.5rem;
-  z-index: 2;
-}
-
-@media (min-width:740px) {
-  .c8 {
-    width: auto;
-    right: auto;
-    position: relative;
-  }
-}
-
-@media (min-width:740px) {
-  .c7 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover {
-    background-color: #890B11;
-    color: #FFFFFF;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    fill: #FFFFFF;
+    background: transparent;
   }
 }
 
@@ -414,136 +206,2145 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
 @media (min-width:1440px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
   }
 }
 
 @media (min-width:740px) {
   .c2 {
-    margin: 0 -1.5rem 0 1.5rem;
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-2%);
+    -ms-transform: translateY(-2%);
+    transform: translateY(-2%);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
   }
 }
 
-@media (min-width:740px) {
-  .c1 {
-    width: calc(50% + 6rem);
-  }
-}
-
-@media (min-width:1440px) {
+@media (max-width:739px) {
   .c1 {
     width: 100%;
   }
 }
 
-@media (min-width:1440px) {
-  .c5 {
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
     height: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c5 {
-    margin: 1.5rem 0 -1.5rem -1.5rem;
-    width: calc(50% + 6rem);
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
 @media (min-width:1440px) {
-  .c5 {
-    margin: -3rem 0 -1.5rem 0;
-    width: 100%;
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
 @media (min-width:740px) {
-  .c6 {
-    right: 2rem;
-  }
-}
 
-@media (min-width:740px) {
-  .c6 {
-    bottom: -3rem;
-  }
 }
 
 <div
   className="c0"
 >
-  <a
-    aria-hidden="true"
+  <div
     className="c1"
-    data-image-cta-copy="Find out more"
-    href="/home"
-    tabIndex="-1"
-    target="_blank"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3 lazyload"
-        height="auto"
-        width="100%"
-      >
-        <img
-          alt=""
-          className="c4 lazyload"
-          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-          data-sizes="auto"
-          data-src={null}
-          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-          height="auto"
-          src={null}
-          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          width="100%"
-        />
-      </div>
-    </div>
-  </a>
-  <div
-    className="c5"
-  >
-    Text body copy description
-  </div>
-  <div
-    className="c6"
   >
     <a
-      className="c7"
-      color="red"
-      data-button-cta-copy="Find out more"
-      href="/home"
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       rel={null}
-      target="_self"
-      type="button"
+      target="self"
     >
-      Find out more
-      <span
-        className="c8"
-        type="button"
+      <div
+        className="c3"
       >
-        <svg
-          className="c9"
-          fill="#FFFFFF"
-          height={24}
-          viewBox="0 0 96 96"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
         >
-          <path
-            d="M90.871 50.776c-.016.016-.026.036-.043.052l-32 32C58.047 83.609 57.024 84 56 84s-2.047-.391-2.829-1.171a4 4 0 010-5.657L78.343 52H8a4 4 0 010-8h70.343L53.171 18.829a4 4 0 015.657-5.657l32 32c.016.016.027.036.043.052.167.172.321.357.455.557.069.104.118.216.176.325.065.121.138.236.191.364.057.137.09.279.13.42.032.109.074.214.097.327a4.017 4.017 0 010 1.568c-.023.113-.065.217-.097.327-.041.141-.074.283-.13.42-.053.128-.126.243-.191.364-.059.109-.107.221-.176.325a4.035 4.035 0 01-.455.555z"
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
           />
-        </svg>
-      </span>
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            View card
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders 2 columns layout correctly 1`] = `
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c11 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.c3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+}
+
+.c6 {
+  width: 100%;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c9 {
+  color: #969598;
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: transparent;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: repeat(2,1fr);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-2%);
+    -ms-transform: translateY(-2%);
+    transform: translateY(-2%);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            View card
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders carousel mode correctly 1`] = `
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c11 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.c3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+}
+
+.c6 {
+  width: 100%;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c9 {
+  color: #969598;
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scroll-snap-type: x mandatory;
+    -moz-scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    padding-right: 1rem;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c0::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-2%);
+    -ms-transform: translateY(-2%);
+    transform: translateY(-2%);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    -webkit-scroll-snap-align: start;
+    -moz-scroll-snap-align: start;
+    -ms-scroll-snap-align: start;
+    scroll-snap-align: start;
+    -webkit-flex: 0 0 calc(100% - 1.5rem);
+    -ms-flex: 0 0 calc(100% - 1.5rem);
+    flex: 0 0 calc(100% - 1.5rem);
+    width: calc(100% - 1.5rem);
+    min-width: calc(100% - 1.5rem);
+    max-width: calc(100% - 1.5rem);
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+
+  .c1:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            View card
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with data prop 1`] = `
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c11 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.c3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+  transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+}
+
+.c6 {
+  width: 100%;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c9 {
+  color: #969598;
+  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: transparent;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-2%);
+    -ms-transform: translateY(-2%);
+    transform: translateY(-2%);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c5 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            height="100%"
+            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            <b>
+              Load
+            </b>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            test go
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      rel={null}
+      target="self"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          className="c7"
+        >
+          <p>
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c8"
+        >
+          <span
+            className="c9"
+          >
+            View card
+          </span>
+          <div
+            className="c10"
+          >
+            <svg
+              className="c11"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
     </a>
   </div>
 </div>
