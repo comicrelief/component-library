@@ -25,8 +25,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
     }
 
@@ -128,7 +126,6 @@ it('renders correctly', () => {
             "__html": "Label",
           }
         }
-        size="s"
       />
       <div
         className="c3"
@@ -177,8 +174,6 @@ it('renders with responsive max widths correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
     }
 
@@ -284,7 +279,6 @@ it('renders with responsive max widths correctly', () => {
             "__html": "Responsive Width Input",
           }
         }
-        size="s"
       />
       <div
         className="c3"

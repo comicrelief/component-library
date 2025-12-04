@@ -27,8 +27,6 @@ exports[`renders Promo correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
   color: #FFFFFF;
 }
@@ -274,7 +272,6 @@ exports[`renders Promo correctly 1`] = `
         <p
           className="c8"
           color="white"
-          size="s"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>
@@ -322,8 +319,6 @@ exports[`renders Promo correctly end position 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
   color: #FFFFFF;
 }
@@ -580,7 +575,6 @@ exports[`renders Promo correctly end position 1`] = `
         <p
           className="c8"
           color="white"
-          size="s"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>

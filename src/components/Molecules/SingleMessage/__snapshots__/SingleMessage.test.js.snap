@@ -216,8 +216,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
   color: #FFFFFF;
 }
@@ -453,7 +451,6 @@ exports[`renders Single Message with Image correctly 1`] = `
     <p
       className="c7"
       color="white"
-      size="s"
     >
       description
     </p>
@@ -735,8 +732,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
   color: #FFFFFF;
 }
@@ -995,7 +990,6 @@ exports[`renders Single Message with full width correctly 1`] = `
     <p
       className="c7"
       color="white"
-      size="s"
     >
       description
     </p>

@@ -28,8 +28,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
       color: #FFFFFF;
     }
@@ -173,7 +171,6 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
-        size="s"
       >
         Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
@@ -190,7 +187,6 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
-        size="s"
       >
         <a
           className="c5 c6"

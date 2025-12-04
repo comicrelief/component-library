@@ -49,8 +49,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
     }
 
@@ -63,8 +61,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
     }
 
@@ -520,7 +516,6 @@ it('renders correctly', () => {
           <p
             className="c7"
             color="inherit"
-            size="s"
           >
             Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
           </p>
@@ -541,7 +536,6 @@ it('renders correctly', () => {
                 <h3
                   className="c12"
                   color="inherit"
-                  size="s"
                 >
                   Choose your monthly donation
                 </h3>
@@ -561,7 +555,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -599,7 +592,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -637,7 +629,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -686,7 +677,6 @@ it('renders correctly', () => {
                         "__html": "£",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"

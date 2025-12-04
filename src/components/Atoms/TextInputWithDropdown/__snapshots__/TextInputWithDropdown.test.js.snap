@@ -10,8 +10,6 @@ exports[`renders correctly with no value and no options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -121,7 +119,6 @@ exports[`renders correctly with no value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      size="s"
     />
     <div
       className="c4"
@@ -160,8 +157,6 @@ exports[`renders correctly with value and no options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -271,7 +266,6 @@ exports[`renders correctly with value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      size="s"
     />
     <div
       className="c4"
@@ -310,8 +304,6 @@ exports[`renders correctly with value and options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -460,7 +452,6 @@ exports[`renders correctly with value and options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      size="s"
     />
     <div
       className="c4"
@@ -506,7 +497,6 @@ exports[`renders correctly with value and options 1`] = `
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Canyon
         </span>
@@ -523,7 +513,6 @@ exports[`renders correctly with value and options 1`] = `
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Cannondale
         </span>
@@ -540,7 +529,6 @@ exports[`renders correctly with value and options 1`] = `
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Condor
         </span>
@@ -557,7 +545,6 @@ exports[`renders correctly with value and options 1`] = `
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Cube
         </span>

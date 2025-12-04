@@ -43,8 +43,8 @@ export const BaseText = styled.span`
  */
 const Text = ({
   tag = 'span',
-  size = 's',
   color = 'inherit',
+  size = undefined,
   children = undefined,
   uppercase = false,
   height = undefined,

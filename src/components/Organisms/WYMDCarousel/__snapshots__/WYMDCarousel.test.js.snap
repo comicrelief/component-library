@@ -350,8 +350,6 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   font-weight: bold;
   text-transform: inherit;
 }
@@ -365,8 +363,6 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -382,8 +378,6 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -719,21 +713,18 @@ exports[`renders correctly:
   <p
     className="c1 c2"
     color="inherit"
-    size="s"
   >
     Over the past two years, we’ve supported
   </p>
   <h1
     className="c3 c4"
     color="red"
-    size="s"
   >
     11.7 million people
   </h1>
   <p
     className="c5 c6"
     color="inherit"
-    size="s"
   >
     including...
   </p>

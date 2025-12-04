@@ -25,8 +25,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       text-transform: inherit;
     }
 
@@ -113,7 +111,6 @@ it('renders correctly', () => {
             "__html": "Label",
           }
         }
-        size="s"
       />
       <textarea
         aria-describedby="Please leave your comment here"

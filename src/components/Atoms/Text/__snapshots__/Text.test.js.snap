@@ -10,8 +10,6 @@ exports[`renders heavy heading correctly 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   font-weight: 1000;
   text-transform: inherit;
 }
@@ -33,7 +31,6 @@ exports[`renders heavy heading correctly 1`] = `
 <h3
   className="c0"
   color="inherit"
-  size="s"
 >
   Heading 3 heavy
 </h3>
@@ -49,8 +46,6 @@ exports[`renders high heading correctly 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   line-height: 5;
   text-transform: inherit;
 }
@@ -73,7 +68,6 @@ exports[`renders high heading correctly 1`] = `
   className="c0"
   color="inherit"
   height="5"
-  size="s"
 >
   Heading 3 high
 </h3>

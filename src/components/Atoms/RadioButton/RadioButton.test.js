@@ -22,8 +22,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       font-weight: bold;
       text-transform: inherit;
     }
@@ -115,7 +113,6 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Male
         </span>
@@ -129,8 +126,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
       font-weight: bold;
       text-transform: inherit;
     }
@@ -222,7 +217,6 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Female
         </span>

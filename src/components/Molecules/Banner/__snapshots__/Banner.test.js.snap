@@ -10,8 +10,6 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
   color: #FFFFFF;
 }
@@ -62,7 +60,6 @@ exports[`renders correctly 1`] = `
     <p
       className="c2"
       color="white"
-      size="s"
     >
       Mental health issues affect 1 in 4 of us in the UK. Join now and with your help we can provide vital support for people like Jordan. You know what to do.
     </p>

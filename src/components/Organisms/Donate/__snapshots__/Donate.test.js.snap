@@ -57,8 +57,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -708,7 +706,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c22"
@@ -833,8 +830,6 @@ exports[`Monthly donation renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -1466,7 +1461,6 @@ exports[`Monthly donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c23"
@@ -1590,8 +1584,6 @@ exports[`Single donation renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -2192,7 +2184,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2230,7 +2221,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2268,7 +2258,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2317,7 +2306,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2427,8 +2415,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 1.125rem;
-  font-size: 1.125rem;
   text-transform: inherit;
 }
 
@@ -2885,7 +2871,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
