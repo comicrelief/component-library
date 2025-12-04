@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation, springScaleAnimation } from '../../../theme/shared/animations';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const CardsContainer = styled.div`
@@ -95,7 +95,6 @@ const CardWrapper = styled.div`
     @media (max-width: ${breakpointValues.M - 1}px) {
       scroll-snap-align: start;
       flex: 0 0 calc(100% - 1.5rem);
-      width: calc(100% - 1.5rem);
       min-width: calc(100% - 1.5rem);
       max-width: calc(100% - 1.5rem);
       flex-shrink: 0;
@@ -147,10 +146,11 @@ const ImageWrapper = styled.div`
     height: auto;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s cubic-bezier(0.68, 0, 0.265, 1.4);
 
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
+      ${springScaleAnimation(true)}
+
       ${({ isHovered }) => isHovered && css`
         transform: scale(1.1);
       `}
