@@ -14,11 +14,6 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
-      font-size: 1.125rem;
-      line-height: 1.125rem;
-      font-weight: bold;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -27,6 +22,10 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      font-weight: bold;
+      text-transform: inherit;
     }
 
     .c0 {
@@ -113,11 +112,6 @@ it('renders correctly', () => {
         </span>
       </label>,
       .c2 {
-      font-size: 1.125rem;
-      line-height: 1.125rem;
-      font-weight: bold;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -126,6 +120,10 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      font-weight: bold;
+      text-transform: inherit;
     }
 
     .c0 {

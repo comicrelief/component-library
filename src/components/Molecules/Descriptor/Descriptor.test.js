@@ -25,12 +25,6 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      font-size: 1.125rem;
-      line-height: 1.125rem;
-      font-weight: bold;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
-      color: #222222;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -39,15 +33,15 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: bold;
+      text-transform: inherit;
+      color: #222222;
     }
 
     .c7 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
-      font-weight: normal;
-      line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -56,15 +50,15 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      line-height: 1.875rem;
+      font-size: 1.875rem;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
+      line-height: 2rem;
+      text-transform: uppercase;
     }
 
     .c10 {
-      font-size: 1rem;
-      line-height: 1rem;
-      font-weight: normal;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
-      color: #222222;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -73,6 +67,12 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1rem;
+      font-size: 1rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      text-transform: inherit;
+      color: #222222;
     }
 
     .c0 {

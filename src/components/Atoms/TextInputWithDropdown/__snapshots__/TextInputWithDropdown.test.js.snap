@@ -2,10 +2,6 @@
 
 exports[`renders correctly with no value and no options 1`] = `
 .c2 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -14,6 +10,9 @@ exports[`renders correctly with no value and no options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c1 {
@@ -153,10 +152,6 @@ exports[`renders correctly with no value and no options 1`] = `
 
 exports[`renders correctly with value and no options 1`] = `
 .c2 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -165,6 +160,9 @@ exports[`renders correctly with value and no options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c1 {
@@ -304,10 +302,6 @@ exports[`renders correctly with value and no options 1`] = `
 
 exports[`renders correctly with value and options 1`] = `
 .c2 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -316,6 +310,9 @@ exports[`renders correctly with value and options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c1 {

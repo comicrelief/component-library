@@ -342,11 +342,6 @@ exports[`renders correctly:
     </div>
    1`] = `
 .c1 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-weight: bold;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -355,15 +350,13 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: inherit;
 }
 
 .c3 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-weight: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  text-transform: uppercase;
-  color: #E52630;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -372,13 +365,15 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #E52630;
 }
 
 .c5 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -387,6 +382,9 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c2 {

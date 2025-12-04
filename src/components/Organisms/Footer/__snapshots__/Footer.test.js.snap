@@ -2,10 +2,6 @@
 
 exports[`renders correctly 1`] = `
 .c12 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -14,15 +10,12 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c15 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-weight: bold;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
-  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -31,14 +24,14 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: inherit;
+  color: #FFFFFF;
 }
 
 .c20 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
-  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -47,14 +40,13 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
+  color: #FFFFFF;
 }
 
 .c25 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
-  color: #969598;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -63,6 +55,10 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
+  color: #969598;
 }
 
 .c10 {

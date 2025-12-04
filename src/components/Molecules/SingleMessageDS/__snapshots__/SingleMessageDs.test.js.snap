@@ -2,12 +2,6 @@
 
 exports[`renders correctly 1`] = `
 .c6 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-weight: bold;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
-  color: #274084;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -16,13 +10,15 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  text-transform: inherit;
+  color: #274084;
 }
 
 .c8 {
-  font-size: 1.125rem;
-  line-height: 1.125rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -31,6 +27,9 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.125rem;
+  font-size: 1.125rem;
+  text-transform: inherit;
 }
 
 .c3 {

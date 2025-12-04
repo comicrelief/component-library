@@ -20,11 +20,6 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 1rem;
-      line-height: 1rem;
-      font-weight: bold;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -33,15 +28,13 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: inherit;
     }
 
     .c10 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
-      font-weight: normal;
-      line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -50,6 +43,12 @@ it('renders article teaser correctly', () => {
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      line-height: 1.875rem;
+      font-size: 1.875rem;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
+      line-height: 2rem;
+      text-transform: uppercase;
     }
 
     .c4 {
@@ -311,11 +310,6 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 1rem;
-      line-height: 1rem;
-      font-weight: bold;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -324,15 +318,13 @@ it('renders press realese correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: inherit;
     }
 
     .c10 {
-      font-size: 1.875rem;
-      line-height: 1.875rem;
-      font-weight: normal;
-      line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      text-transform: uppercase;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -341,6 +333,12 @@ it('renders press realese correctly', () => {
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
+      line-height: 1.875rem;
+      font-size: 1.875rem;
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
+      line-height: 2rem;
+      text-transform: uppercase;
     }
 
     .c4 {

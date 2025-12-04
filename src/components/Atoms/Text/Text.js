@@ -6,22 +6,28 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
 export const BaseText = styled.span`
-  // The pre-existing base styles (using the pre-existing Props that
-  // we're trying to phase out), just to keep things sane and non-explodey:
-  font-size: ${({ size, theme }) => theme.fontSize(size)};
 
-  line-height: ${({ size, theme }) => theme.fontSize(size)};
+  // Use our helper function to streamline styling, laying the groundwork for the new styling:
+  ${({ as, theme }) => (as !== undefined && css`
+    ${fontHelper(theme, as)}
+  `)};
 
-  ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
-  ${({ height }) => (height ? `line-height: ${height}` : null)};
+  // Then, override with the pre-existing base styles *but only when props are provided.*
+  // Part of this new work is to phase-out all usage of these 'customisation' props, 
+  // so that all tags will use the standardised styles set in fontHelper
 
-  font-family: ${({ family, theme }) => (family
-    ? theme.fontFamilies(family)
-    : theme.fontFamilies(theme.font.regular))};
+  // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
+  ${({ size, theme }) => (size && `line-height: ${theme.fontSize(size)}`)};
+  ${({ size, theme }) => (size && `font-size: ${theme.fontSize(size)}`)};
+
+  ${({ family, theme }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
+  ${({ weight }) => (weight && `font-weight: ${weight}`)};
+  ${({ height }) => (height && `line-height: ${height}`)};
 
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
   ${({ mobileColor, theme }) => mobileColor && css`
@@ -30,11 +36,6 @@ export const BaseText = styled.span`
     }
   `};
 
-  // Use our helper function to streamline styling, overriding the 
-  // above rules when we've got config for this tag:
-  ${({ as, theme }) => (as !== undefined && css`
-    ${fontHelper(theme, as)}
-  `)};
 `;
 
 /** Text renders different elements based on the `tag` prop
@@ -70,8 +71,8 @@ const Text = ({
 );
 
 Text.propTypes = {
-  size: PropTypes.string, // TO BE DEPRECATED EVENTUALLY
-  height: PropTypes.string, // TO BE DEPRECATED EVENTUALLY
+  size: PropTypes.string, // To be deprecated eventually
+  height: PropTypes.string, // To be deprecated eventually
   textAlign: PropTypes.string,
   family: PropTypes.string,
   weight: PropTypes.string,

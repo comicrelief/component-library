@@ -20,11 +20,6 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1.125rem;
-      line-height: 1.125rem;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      text-transform: inherit;
-      color: #FFFFFF;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       -webkit-letter-spacing: 0;
@@ -33,6 +28,10 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      text-transform: inherit;
+      color: #FFFFFF;
     }
 
     .c3 {

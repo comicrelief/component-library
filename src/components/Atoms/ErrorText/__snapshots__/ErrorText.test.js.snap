@@ -3,9 +3,6 @@
 exports[`renders correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
-  color: #E52630;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -13,6 +10,10 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: undefined;
+  font-size: undefined;
+  text-transform: inherit;
+  color: #E52630;
 }
 
 .c1 {

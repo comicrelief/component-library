@@ -2,10 +2,6 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -14,13 +10,12 @@ exports[`renders correctly in minimalist form 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -29,6 +24,9 @@ exports[`renders correctly in minimalist form 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  line-height: 1.875rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
 }
 
 .c4 {
@@ -210,10 +208,6 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -222,13 +216,12 @@ exports[`renders correctly with copy 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -237,13 +230,12 @@ exports[`renders correctly with copy 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  line-height: 1.875rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
 }
 
 .c10 {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -252,6 +244,9 @@ exports[`renders correctly with copy 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+  text-transform: inherit;
 }
 
 .c4 {
@@ -453,10 +448,6 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -465,13 +456,12 @@ exports[`renders correctly with date 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -480,6 +470,9 @@ exports[`renders correctly with date 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  line-height: 1.875rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
 }
 
 .c4 {
@@ -661,10 +654,6 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -673,13 +662,12 @@ exports[`renders correctly with date and type 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .c8 {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: normal;
   -webkit-letter-spacing: 0;
@@ -688,6 +676,9 @@ exports[`renders correctly with date and type 1`] = `
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  line-height: 1.875rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
 }
 
 .c4 {
