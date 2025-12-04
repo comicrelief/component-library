@@ -1,5 +1,6 @@
 import * as yup from 'yup';
 import { merge } from 'lodash';
+import { fix as fixPostcode, isValid } from 'postcode';
 
 const setInitialValues = overrideValues => {
   const defaultValues = {
@@ -63,6 +64,15 @@ const buildValidationSchema = overrideOptions => {
 
   const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
+  const transformPostcode = postcode => {
+    if (typeof postcode === 'string') {
+      return fixPostcode(postcode);
+    }
+    return postcode;
+  };
+
+  const validatePostcode = postcode => isValid(postcode);
+
   const mpValidationFields = {
     mp_email: yup.string()
       .when('mp_permissionEmail', {
@@ -108,7 +118,7 @@ const buildValidationSchema = overrideOptions => {
     mp_postcode: yup.string().when('mp_permissionPost', {
       is: val => (!(mpValidationOptions.mp_permissionPost.disableOption)
       && mpValidationOptions.mp_permissionPost[val]),
-      then: schema => schema.required('Please enter your postcode').matches(/^[a-zA-Z]{1,2}\d[a-zA-Z\d]?\s*\d[a-zA-Z]{2}$/, 'Please enter a valid postcode')
+      then: schema => schema.required('Please enter your postcode').transform(transformPostcode).test('postcode-valid', 'Please enter a valid postcode', validatePostcode)
     }),
 
     mp_country: yup.string().when('mp_permissionPost', {

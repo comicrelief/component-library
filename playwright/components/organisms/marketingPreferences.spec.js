@@ -142,6 +142,42 @@ test.describe('marketing preferences component', () => {
     await page.locator('div#marketing-preferences--default input#mp_postcode').fill('E1 8QS'); // clear the email field
     await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
 
+    // Test postcode fix functionality - case correction
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('sw1a 2aa');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
+
+    // Test postcode fix functionality - I to 1 correction
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('SWIA 2AA');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
+
+    // Test postcode fix functionality - O to 0 correction
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('SW1A OAA');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
+
+    // Test postcode fix functionality - 1 to I correction
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('SW1A 21A');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
+
+    // Test postcode fix functionality - 0 to O correction
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('SW1A 20A');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toBeHidden('');
+
+    // Test invalid postcode that cannot be fixed
+    await page.locator('div#marketing-preferences--default input#mp_postcode').fill(''); // clear the field
+    await page.locator('div#marketing-preferences--default input#mp_postcode').type('INVALID123');
+    await page.locator('div#marketing-preferences--default input#mp_address2').click();
+    await expect(page.locator('div#marketing-preferences--default div.field-post > div > label[for="mp_postcode"] > span > span')).toContainText('Please enter a valid postcode');
+
     // country field should show error message when value is not entered
     await page.locator('div#marketing-preferences--default input#mp_country').type('United Kingdom');
     await page.locator('div#marketing-preferences--default input#mp_country').fill(''); // clear the email field
