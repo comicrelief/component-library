@@ -13,7 +13,7 @@ const Header2026Wrapper = styled.header.attrs(() => ({
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 16px;
 
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     height: 86px;
   }
 
@@ -34,7 +34,7 @@ const InnerWrapper = styled.div`
     padding: 10px 32px;
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 0 auto;
   }
 `;
@@ -54,7 +54,7 @@ const Brand = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin-right: 0
   }
 `;
@@ -99,7 +99,7 @@ const Header2026MetaIcons = styled.div`
   // now only rendered in the Header2026Nav
   display: none;
 
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: auto;
     align-items: center;
 
@@ -130,7 +130,7 @@ const Header2026MetaIcons = styled.div`
     right: 0px;
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     // Icons
     > div > a {
       margin-right: 20px;

@@ -49,6 +49,7 @@ const NavLinkClass = styled(Link)`
   // Chevron icon:
   > div {
     height: auto;
+    transform: rotate(-90deg);
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
     ${({ isExpanded }) => (isExpanded && css`
       transform: rotate(-180deg);
@@ -70,10 +71,6 @@ const Nav = styled.nav`
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   overflow: hidden;
-
-  border: 1px solid green;
-  padding: 0 !important;
-  margin: 0 !important;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${zIndex('medium')};
@@ -168,10 +165,6 @@ const NavMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
-
-  border: 1px solid red;
-  padding: 0 !important;
-  margin: 0 !important;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: relative;
@@ -327,10 +320,6 @@ const StyledNavItem = styled.li`
       }
     }
   }
-
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
-    margin: 0 20px 0 0;
-  }
 `;
 
 const ChevronWrapper = styled.div`
@@ -425,19 +414,17 @@ const StyledText = styled(Text)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     font-size: 15px;
   }
-
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
-    font-size: 1rem;
-  }
 `;
 
 const DonateButtonWrapperBottom = styled.div`
   display: flex;
   justify-content: center;
   background-color: inherit;
+  margin-top: 50px;
 
   // Donate button
   a {
+    border-radius: 16px;
     width: calc(100% - 10px);
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 

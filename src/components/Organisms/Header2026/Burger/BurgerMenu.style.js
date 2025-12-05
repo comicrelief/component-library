@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import hideVisually from '../../../../theme/shared/hideVisually';
 import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
@@ -26,9 +25,11 @@ const BurgerWrapper = styled(Link)`
   height: 36px;
   width: 36px;
   left: 10px;
+
   @media ${({ theme }) => theme.breakpoints2026('S')} {
     left: 12px;
   }
+
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     left: 16px;
   }
@@ -41,7 +42,6 @@ const BurgerWrapper = styled(Link)`
     font-weight: inherit;
   }
 
-  // Top and Bottom Bars
   ${BurgerBar} {
     position: relative;
 
@@ -54,7 +54,10 @@ const BurgerWrapper = styled(Link)`
       display: inline-block;
     }
 
-    ${({ isExpandable }) => isExpandable && ' background-color: transparent'};
+    // Middle bar fades out
+    background-color: currentColor;
+    opacity: ${({ isExpandable }) => (isExpandable ? '0' : '1')};
+    transition: opacity 0.3s ease-in-out;
 
     ::before,
     ::after {
@@ -62,18 +65,45 @@ const BurgerWrapper = styled(Link)`
       position: absolute;
       left: 0;
       background-color: currentColor;
-      transition: all 0.2s;
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
     }
 
+    // Top bar - hamburger state
     ::before {
       top: -0.5rem;
-      ${({ isExpandable }) => isExpandable && ' transform:rotate(135deg); top: 0;'};
     }
 
+    // Bottom bar - hamburger state
     ::after {
       top: 0.5rem;
-      ${({ isExpandable }) => isExpandable && ' transform:rotate(-135deg); top: 0;'};
     }
+  }
+
+  // Cross bars (only visible when expanded)
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: ${({ theme }) => theme.color('black')};
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -1.5px;
+    opacity: ${({ isExpandable }) => (isExpandable ? '1' : '0')};
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 // import './remove-extra-styles-in-preview.css';
 
@@ -18,52 +18,70 @@ const Header2026 = ({
   characterLimit = 60,
   showBoxShadow = false,
   ...rest
-}) => (
-  <Header2026Wrapper
-    data-testid="Header2026Wrapper"
-    navItems
-    showBoxShadow={showBoxShadow}
-    {...rest}
-  >
-    <InnerWrapper data-testid="InnerWrapper">
+}) => {
+  // const [isExpandable, setIsExpandable] = useState(false);
+  const [isExpandable, setIsExpandable] = useState(true);
 
-      <Brand data-testid="Brand">
-        <LogoNav2026
-          campaign={campaign}
-          logoWidth="100px"
-          logoWidthMd="180px"
-          animateRotate
-          data-testid="LogoNav2026"
+  return (
+    <Header2026Wrapper
+      data-testid="Header2026Wrapper"
+      navItems
+      showBoxShadow={showBoxShadow}
+      {...rest}
+    >
+      <InnerWrapper data-testid="InnerWrapper">
+
+        <Brand data-testid="Brand">
+          <LogoNav2026
+            campaign={campaign}
+            logoWidth="100px"
+            logoWidthMd="180px"
+            animateRotate
+            data-testid="LogoNav2026"
+          />
+        </Brand>
+
+        <NavLinks
+          navItems={navItems}
+          metaIcons={metaIcons}
+          donateButton={donateButton}
+          characterLimit={characterLimit}
+          data-testid="NavLinks"
+          isExpandable={isExpandable}
+          setIsExpandable={setIsExpandable}
         />
-      </Brand>
 
-      <NavLinks
-        navItems={navItems}
-        metaIcons={metaIcons}
-        donateButton={donateButton}
-        characterLimit={characterLimit}
-        data-testid="NavLinks"
-      />
+        <ButtonsAndIcons data-testid="ButtonsAndIcons">
+          <Header2026MetaIcons
+            isHeader
+            data-testid="meta-icons--desktop"
+          >
+            {metaIcons}
+          </Header2026MetaIcons>
 
-      <ButtonsAndIcons data-testid="ButtonsAndIcons">
-        <Header2026MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2026MetaIcons>
-        <DonateButtonWrapperTop data-testid="donate-button--desktop">
-          {donateButton || (
-            <Link
-              color="red"
-              type="button"
-              href="/donation"
-            >
-              Donate
-            </Link>
-          )
+          {!isExpandable
+            && (
+            <DonateButtonWrapperTop data-testid="donate-button--desktop">
+              {donateButton
+              || (
+              <Link
+                color="red"
+                type="button"
+                href="/donation"
+              >
+                Donate
+              </Link>
+              )
             }
-        </DonateButtonWrapperTop>
-      </ButtonsAndIcons>
+            </DonateButtonWrapperTop>
+            )
+          }
+        </ButtonsAndIcons>
 
-    </InnerWrapper>
-  </Header2026Wrapper>
-);
+      </InnerWrapper>
+    </Header2026Wrapper>
+  );
+};
 
 Header2026.propTypes = {
   navItems: PropTypes.shape({

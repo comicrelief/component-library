@@ -3,10 +3,11 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
+import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 // import MoreNav from './MoreNav';
-import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
+import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
@@ -17,11 +18,10 @@ import {
 } from './NavLinks.style';
 
 const NavLinks = ({
-  navItems = {}, metaIcons, donateButton = null, characterLimit
+  navItems = {}, metaIcons, donateButton = null, characterLimit,
+  isExpandable, setIsExpandable
 }) => {
   const { menuGroups } = navItems;
-  // const [isExpandable, setIsExpandable] = useState(false);
-  const [isExpandable, setIsExpandable] = useState(true);
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
@@ -61,7 +61,7 @@ const NavLinks = ({
 
   // Determine which nav we should use only once 'window' exists:
   useEffect(() => {
-    const notDesktop = window.innerWidth < breakpointValues.Nav;
+    const notDesktop = window.innerWidth < breakpointValues2026.L;
     setIsNotDesktop(notDesktop);
 
     // Use these flags to detemine if we render the More nav or not:
@@ -82,7 +82,7 @@ const NavLinks = ({
     const currentScreenWidth = typeof window !== 'undefined' ? window.innerWidth : null;
 
     // Compare to our breakpoint:
-    const isCurrentlyNotDesktop = currentScreenWidth < breakpointValues.Nav;
+    const isCurrentlyNotDesktop = currentScreenWidth < breakpointValues2026.L;
 
     // Only if the screen size has *changed*, update the state:
     if (currentScreenWidth !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
@@ -184,11 +184,25 @@ const NavLinks = ({
         <NavMetaIcons isHeader data-testid="meta-icons--mobile">
           {metaIcons}
         </NavMetaIcons>
-        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
-          {donateButton}
-          donate button
-        </DonateButtonWrapperBottom>
+
+        {isExpandable && (
+          <DonateButtonWrapperBottom data-testid="donate-button--mobile">
+            {donateButton
+              || (
+              <Link
+                color="red"
+                type="button"
+                href="/donation"
+              >
+                Donate
+              </Link>
+              )
+            }
+          </DonateButtonWrapperBottom>
+        )}
+
       </Nav>
+
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
       </BurgerMenu>
@@ -202,7 +216,9 @@ NavLinks.propTypes = {
   characterLimit: PropTypes.number,
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
-  donateButton: PropTypes.node
+  donateButton: PropTypes.node,
+  isExpandable: PropTypes.bool,
+  setIsExpandable: PropTypes.bool
 };
 
 export default NavLinks;

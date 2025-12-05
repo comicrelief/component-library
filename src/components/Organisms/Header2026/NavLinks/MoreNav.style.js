@@ -5,14 +5,14 @@ import {
 import Text from '../../../Atoms/Text/Text';
 
 const MoreSubNavMenu = styled(SubNavMenu)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     // Just extending this here to make a clean separation,
     // despite the fact no additional styles are needed right now
   }
 `;
 
 const MoreNavLabel = styled(Text)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     // Recreating 'NavLink' as a Text element
     position: relative;
     font-size: 15px;
@@ -34,28 +34,11 @@ const MoreNavLabel = styled(Text)`
       pointer-events: none;
     }:
   }
-
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
-    font-size: 1rem;
-
-    // Divider
-    :before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 70%;
-      top: 50%;
-      left: -21px;
-      transform: translateY(-50%);
-      border-left: 2px solid ${({ theme }) => theme.color('grey_medium')};
-      border-radius: 2px;
-    }:
-  }
 `;
 
 // Use for the 'More' link only
 const MoreNavItem = styled(StyledNavItem)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     margin-left: 22px;
     // Let it take up all the space to be a bigger target:
     display: flex;
@@ -107,14 +90,14 @@ const MoreNavItem = styled(StyledNavItem)`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
     margin-left: 20px;
   }
 `;
 
 // Clone Of SubNavMenu, NESTED menu
 const MoreNestedSubNavMenu = styled(SubNavMenu)`
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
     top: 0;
     left: -1px;
     border-radius: 0;
