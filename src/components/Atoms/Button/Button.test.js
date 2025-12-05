@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Button from "./Button";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Button from './Button';
 
-it("renders a standard styled link correctly", () => {
+it('renders a standard styled link correctly', () => {
   const tree = renderWithTheme(
     <Button type="submit">A standard link</Button>
   ).toJSON();
@@ -19,7 +19,7 @@ it("renders a standard styled link correctly", () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.125rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;

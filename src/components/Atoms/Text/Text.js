@@ -2,50 +2,40 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
 export const BaseText = styled.span`
-  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
-  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
-  font-size: ${({ size, theme }) => theme.fontSize(size)};
-  line-height: ${({ size, theme }) => theme.fontSize(size)};
+
+  // Use our helper function to streamline styling, laying the groundwork for the new styling:
+  ${({ as, theme }) => (as !== undefined && css`
+    ${fontHelper(theme, as)}
+  `)};
+
+  // Then, override with the pre-existing base styles *but only when props are provided.*
+  // Part of this new work is to phase-out usage of these 'customisation' props (so that 
+  // all tags will use the standardised styles set in fontHelper), but in order to 
+  // ensure things don't break/look bad accidentally, it'll require intentional prop removal.
+
+  // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
+  ${({ size, theme }) => (size && `line-height: ${theme.fontSize(size)}`)};
+  ${({ size, theme }) => (size && `font-size: ${theme.fontSize(size)}`)};
+
+  ${({ family, theme }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
+  ${({ weight }) => (weight && `font-weight: ${weight}`)};
+  ${({ height }) => (height && `line-height: ${height}`)};
+
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
-  ${({ weight }) => (weight ? `font-weight: ${weight}` : null)};
-  ${({ height }) => (height ? `line-height: ${height}` : null)};
-  ${({ as }) => (as === 'p' || as === 'span' ? 'line-height: normal;' : null)};
-  font-family: ${({ family, theme }) => (family
-    ? theme.fontFamilies(family)
-    : theme.fontFamilies(theme.font.regular))};
-  ${({ family }) => (family === 'Anton' ? 'letter-spacing: 0.03rem' : null)};
-  ${({ size, theme }) => (size === 'super'
-    ? css`
-          font-size: ${theme.fontSize('xxl')};
-          line-height: 3rem;
-          @media ${theme.allBreakpoints('M')} {
-            font-size: ${theme.fontSize('big')};
-            line-height: ${theme.fontSize('big')};
-            margin-bottom: 2rem;
-          }
-          @media ${theme.allBreakpoints('L')} {
-            font-size: ${theme.fontSize('super')};
-            line-height: ${theme.fontSize('super')};
-            margin-bottom: 2rem;
-          }
-        `
-    : null)};
+  
+  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
+
   ${({ mobileColor, theme }) => mobileColor && css`
-  @media (max-width: ${breakpointValues.L - 1}px) {
-    color: ${theme.color(mobileColor)};
-  }
-`};
-  ${({ size, theme }) => (size === 'm'
-    ? css`
-      font-size: ${theme.fontSize('s')};
-      @media ${theme.allBreakpoints('M')} {
-        font-size: ${theme.fontSize('m')};
-      }
-    `
-    : null)};
+    @media (max-width: ${breakpointValues.L - 1}px) {
+      color: ${theme.color(mobileColor)};
+    }
+  `};
 `;
 
 /** Text renders different elements based on the `tag` prop
@@ -53,12 +43,12 @@ export const BaseText = styled.span`
  */
 const Text = ({
   tag = 'span',
-  size = 's',
   color = 'inherit',
+  size = undefined,
   children = undefined,
-  uppercase = false,
   height = undefined,
   weight = undefined,
+  uppercase = false,
   family = null,
   mobileColor = null,
   textAlign = null,
@@ -81,22 +71,14 @@ const Text = ({
 );
 
 Text.propTypes = {
-  /** Text Align */
+  size: PropTypes.string, // To be deprecated eventually
+  height: PropTypes.string, // To be deprecated eventually
   textAlign: PropTypes.string,
-  /** Font family */
   family: PropTypes.string,
-  /** Font weight */
   weight: PropTypes.string,
-  /** Line height */
-  height: PropTypes.string,
-  /** Sets text transform to uppercase. */
   uppercase: PropTypes.bool,
-  /** Colors */
   color: PropTypes.string,
-  /** Tag type */
   tag: PropTypes.string,
-  /** Sizes */
-  size: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

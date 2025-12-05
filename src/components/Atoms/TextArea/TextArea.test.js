@@ -17,11 +17,15 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
     }
 
     .c0 {
@@ -81,6 +85,20 @@ it('renders correctly', () => {
       visibility: hidden;
     }
 
+    @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
     <label
       className="c0"
       htmlFor="Please leave your comment here"
@@ -93,7 +111,6 @@ it('renders correctly', () => {
             "__html": "Label",
           }
         }
-        size="s"
       />
       <textarea
         aria-describedby="Please leave your comment here"

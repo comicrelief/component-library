@@ -16,11 +16,15 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
     }
 
     .c4 {
@@ -134,6 +138,20 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
 
     }
 
@@ -144,7 +162,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c5 input {
         height: 100px;
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
 
@@ -173,7 +191,6 @@ it('renders correctly', () => {
                     "__html": "Search",
                   }
                 }
-                size="s"
               />
               <div
                 className="c8"

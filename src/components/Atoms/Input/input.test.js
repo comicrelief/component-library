@@ -17,11 +17,15 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
     }
 
     .c0 {
@@ -89,6 +93,20 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
 
     }
 
@@ -108,7 +126,6 @@ it('renders correctly', () => {
             "__html": "Label",
           }
         }
-        size="s"
       />
       <div
         className="c3"
@@ -149,11 +166,15 @@ it('renders with responsive max widths correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
     }
 
     .c0 {
@@ -221,6 +242,20 @@ it('renders with responsive max widths correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
       .c4 {
         max-width: 150px;
       }
@@ -244,7 +279,6 @@ it('renders with responsive max widths correctly', () => {
             "__html": "Responsive Width Input",
           }
         }
-        size="s"
       />
       <div
         className="c3"

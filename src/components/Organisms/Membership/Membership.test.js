@@ -26,35 +26,57 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
+      font-family: 'Anton',Impact,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.5rem;
       line-height: 1.5rem;
-      text-transform: inherit;
+      line-height: 1.5rem;
+      font-size: 1.5rem;
       font-weight: 800;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      text-transform: inherit;
     }
 
     .c7 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-transform: inherit;
     }
 
     .c12 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      text-transform: inherit;
     }
 
     .c22 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      font-weight: 500;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      text-transform: inherit;
     }
 
     .c1 {
@@ -142,7 +164,7 @@ it('renders correctly', () => {
     .c15 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
@@ -157,7 +179,7 @@ it('renders correctly', () => {
     .c20 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
@@ -324,7 +346,7 @@ it('renders correctly', () => {
     .c25 {
       width: 100%;
       color: #FFFFFF;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: bold;
       cursor: pointer;
       padding: 1rem 0.5rem;
@@ -337,6 +359,62 @@ it('renders correctly', () => {
     .c25:focus,
     .c25:hover {
       background-color: #961D35;
+    }
+
+    @media (min-width:740px) {
+      .c6 {
+        font-size: 1.875rem;
+        line-height: 1.875rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c7 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c12 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c12 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c22 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c22 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {
@@ -438,7 +516,6 @@ it('renders correctly', () => {
           <p
             className="c7"
             color="inherit"
-            size="s"
           >
             Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
           </p>
@@ -459,7 +536,6 @@ it('renders correctly', () => {
                 <h3
                   className="c12"
                   color="inherit"
-                  size="s"
                 >
                   Choose your monthly donation
                 </h3>
@@ -479,7 +555,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -517,7 +592,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -555,7 +629,6 @@ it('renders correctly', () => {
                         "__html": "",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
@@ -604,7 +677,6 @@ it('renders correctly', () => {
                         "__html": "£",
                       }
                     }
-                    size="s"
                   />
                   <div
                     className="c17"
