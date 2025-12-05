@@ -15,6 +15,7 @@ import {
   InnerWrapper,
   FooterLegalLine,
   TopSection,
+  TopSectionLeft,
   NewsletterSignUpWrapper,
   SocialIconWrapper,
   LogosContainer,
@@ -31,6 +32,7 @@ const Footer = ({
   campaign = 'Comic Relief',
   additionalLegalLine = '',
   showFundraisingRegulatorLogo = false,
+  showEmailSignup = true,
   showFacebookSocialIcon,
   showInstagramSocialIcon,
   showXSocialIcon,
@@ -80,34 +82,37 @@ const Footer = ({
             </Brand>
           </LogosContainer>
 
-          <TopSection>
-            <NewsletterSignUpWrapper>
-              <FormProvider {...formMethods}>
-                <form onSubmit={handleSubmit(handleNewsletterSubmit)} noValidate>
-                  <EmailSignUp formContext={formMethods} />
-                </form>
-              </FormProvider>
-            </NewsletterSignUpWrapper>
+          <TopSection $hasEmailSignup={showEmailSignup}>
+            <TopSectionLeft>
+              {showEmailSignup && (
+                <NewsletterSignUpWrapper>
+                  <FormProvider {...formMethods}>
+                    <form onSubmit={handleSubmit(handleNewsletterSubmit)} noValidate>
+                      <EmailSignUp formContext={formMethods} />
+                    </form>
+                  </FormProvider>
+                </NewsletterSignUpWrapper>
+              )}
+              <SocialIconWrapper $desktopOnly $inTopSection>
+                <SocialIcons
+                  campaign={campaignName}
+                  newStyle
+                  invertColor
+                  showFacebookSocialIcon={showFacebookSocialIcon}
+                  showInstagramSocialIcon={showInstagramSocialIcon}
+                  showXSocialIcon={showXSocialIcon}
+                  showTikTokSocialIcon={showTikTokSocialIcon}
+                  showYouTubeSocialIcon={showYouTubeSocialIcon}
+                />
+              </SocialIconWrapper>
+            </TopSectionLeft>
             <LogosContainer $desktopOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
                 <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
               </Brand>
-              {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover />}
+              {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
             </LogosContainer>
           </TopSection>
-
-          <SocialIconWrapper $desktopOnly>
-            <SocialIcons
-              campaign={campaignName}
-              newStyle
-              invertColor
-              showFacebookSocialIcon={showFacebookSocialIcon}
-              showInstagramSocialIcon={showInstagramSocialIcon}
-              showXSocialIcon={showXSocialIcon}
-              showTikTokSocialIcon={showTikTokSocialIcon}
-              showYouTubeSocialIcon={showYouTubeSocialIcon}
-            />
-          </SocialIconWrapper>
 
           <PrimaryNav navItems={primaryLinksList} {...rest} />
 
@@ -140,7 +145,7 @@ const Footer = ({
           </FooterCopyright>
 
           <LogosContainer $mobileOnly>
-            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
+            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo noMargin />}
           </LogosContainer>
         </InnerWrapper>
       </FooterWrapper>
@@ -183,6 +188,8 @@ Footer.propTypes = {
   additionalLegalLine: PropTypes.string,
   /** Show Fundraising Regulator logo */
   showFundraisingRegulatorLogo: PropTypes.bool,
+  /** Show/hide email signup component */
+  showEmailSignup: PropTypes.bool,
   /** Show/hide Facebook social icon */
   showFacebookSocialIcon: PropTypes.bool,
   /** Show/hide Instagram social icon */

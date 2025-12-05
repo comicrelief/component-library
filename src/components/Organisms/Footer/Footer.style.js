@@ -47,7 +47,18 @@ const TopSection = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: ${({ $hasEmailSignup }) => ($hasEmailSignup ? 'flex-start' : 'center')};
+  }
+`;
+
+const TopSectionLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${spacing('md')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: column;
+    flex: 0 0 auto;
   }
 `;
 
@@ -55,8 +66,7 @@ const NewsletterSignUpWrapper = styled.div`
   max-width: 100%;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    max-width: 45%;
-    flex: 0 0 45%;
+    max-width: 100%;
   }
 `;
 
@@ -71,10 +81,13 @@ gap: ${spacing('md')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
   box-sizing: border-box;
-    display: ${({ $mobileOnly }) => {
+    display: ${({ $mobileOnly, $inTopSection }) => {
     if ($mobileOnly) return 'none';
+    if ($inTopSection) return 'flex';
     return 'block';
   }};
+    margin-bottom: ${({ $inTopSection }) => ($inTopSection ? '0' : spacing('md'))};
+    align-items: center;
   }
 `;
 
@@ -181,6 +194,7 @@ const LogosContainer = styled.div`
   }};
     flex-direction: row;
     align-items: center;
+    justify-content: ${({ $desktopOnly }) => ($desktopOnly ? 'flex-end' : 'center')};
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -217,6 +231,7 @@ export {
   InnerWrapper,
   FooterLegalLine,
   TopSection,
+  TopSectionLeft,
   NewsletterSignUpWrapper,
   SocialIconWrapper,
   PrimaryNav,

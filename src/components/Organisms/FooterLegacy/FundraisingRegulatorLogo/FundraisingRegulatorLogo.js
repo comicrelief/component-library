@@ -7,7 +7,7 @@ import { springScaleAnimation } from '../../../../theme/shared/animations';
 const FundraisingRegulatorWrapper = styled.div`
   // Overriding the baked-in styles for ease of update
   width: 75%;
-  margin: ${spacing('lg')} 0;
+  margin: ${({ $noMargin }) => ($noMargin ? '0' : `${spacing('lg')} 0`)};
   max-width: 200px;
 
   img {
@@ -17,8 +17,8 @@ const FundraisingRegulatorWrapper = styled.div`
   ${({ animateOnHover }) => animateOnHover && springScaleAnimation(true)}
 `;
 
-const FundraisingRegulatorLogo = ({ animateOnHover = false }) => (
-  <FundraisingRegulatorWrapper animateOnHover={animateOnHover}>
+const FundraisingRegulatorLogo = ({ animateOnHover = false, noMargin = false }) => (
+  <FundraisingRegulatorWrapper animateOnHover={animateOnHover} $noMargin={noMargin}>
     {/* Code from https://www.fundraisingregulator.org.uk/ */}
     {/* eslint-disable-next-line react/jsx-no-target-blank */}
     <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank">
@@ -31,5 +31,7 @@ export default FundraisingRegulatorLogo;
 
 FundraisingRegulatorLogo.propTypes = {
   /** Animate the logo on hover with spring scale animation */
-  animateOnHover: PropTypes.bool
+  animateOnHover: PropTypes.bool,
+  /** Remove the default margin. The legacy footer needs it but new one does not. */
+  noMargin: PropTypes.bool
 };
