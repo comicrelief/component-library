@@ -7,7 +7,7 @@ import {
   SecondaryNavItem,
   SecondaryNavLink,
   SecondaryNavText
-} from '../Footer2026.style';
+} from '../Footer.style';
 
 const SecondaryNav = ({ navItems = [], ...rest }) => {
   if (!navItems || navItems.length === 0) {

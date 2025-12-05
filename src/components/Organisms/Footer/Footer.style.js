@@ -2,30 +2,16 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
+import { logoRotateAnimation } from '../../../theme/shared/animations';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
 }))`
-  text-align: center;
-  line-height: initial;
-  background: #222;
-  position: relative;
-  padding: ${spacing('md')} 0;
+  text-align: left;
+  background: ${({ theme }) => theme.color('grey_5')};
+  padding: ${spacing('l')} 0;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('l')};
-  }
-`;
-
-const Angle = styled.div`
-  width: 100%;
-  display: block;
-  clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-  height: 50px;
-  background: #222;
-  margin-bottom: 1rem;
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    clip-path: polygon(0 100%,100% 0,100% 101%,0 101%);
-    height: 95px;
+    padding: ${spacing('lg')} 0;
   }
 `;
 
@@ -36,41 +22,166 @@ const InnerWrapper = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 ${spacing('md')} ${spacing('l')};
+  padding: 0 ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: 0 ${spacing('md')} ${spacing('xl')};
+    padding: 0 ${spacing('md')}};
   }
 `;
 
-const FooterLegalLine = styled(Text)`
+const FooterLegalLine = styled(Text).attrs({
+  tag: 'p'
+})`
   text-align: left;
   margin-top: 1rem;
+  margin-bottom: ${spacing('md')};
   line-height: 1.5rem;
+  color: ${({ theme }) => theme.color('grey')};
 `;
 
-const FooterBranding = styled.div`
+const TopSection = styled.div`
   display: flex;
-  margin: ${spacing('lg')} 0 5rem;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: ${spacing('md')};
+  gap: ${spacing('md')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+const NewsletterSignUpWrapper = styled.div`
+  max-width: 100%;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    max-width: 45%;
+    flex: 0 0 45%;
+  }
+`;
+
+const SocialIconWrapper = styled.div`
+margin-bottom: ${spacing('md')};
+box-sizing: content-box;
+gap: ${spacing('md')};
+  display: ${({ $desktopOnly }) => {
+    if ($desktopOnly) return 'none';
+    return 'block';
+  }};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  box-sizing: border-box;
+    display: ${({ $mobileOnly }) => {
+    if ($mobileOnly) return 'none';
+    return 'block';
+  }};
+  }
+`;
+
+const PrimaryNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: ${spacing('md')} 0;
+  margin: 0 0 ${spacing('md')} 0;
+  gap: ${spacing('l')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: ${spacing('m')};
+  }
+`;
+
+const PrimaryNavItem = styled.li`
+  margin: 0;
+`;
+
+const PrimaryNavLink = styled(Link)`
+  color: ${({ theme }) => theme.color('white')};
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+`;
+
+const PrimaryNavText = styled(Text)`
+  color: ${({ theme }) => theme.color('white')};
+  font-weight: bold;
+`;
+
+const SecondaryNav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 ${spacing('md')} 0;
+  gap: ${spacing('sm')};
   align-items: center;
 `;
 
-const FooterCopyright = styled.div`
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  margin-top: 0;
+const SecondaryNavItem = styled.li`
+  margin: 0;
+  display: flex;
+  align-items: center;
 
-  p {
-    font-size: 15px;
-    line-height: 24px;
-    margin-bottom: 5px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    display: inline;
+  }
 
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      font-size: 16px;
-      line-height: 27px;
-    }
+  &:not(:last-child)::after {
+    content: '|';
+    margin-left: ${spacing('sm')};
+    color: ${({ theme }) => theme.color('grey')};
+  }
+`;
+
+const SecondaryNavLink = styled(Link)`
+  > span {
+  color: ${({ theme }) => theme.color('grey')};
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: ${({ theme }) => theme.fontSize('xs')};
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+`;
+
+const SecondaryNavText = styled(Text)`
+  color: ${({ theme }) => theme.color('white')};
+  font-weight: normal;
+`;
+
+const LogosContainer = styled.div`
+  display: ${({ $desktopOnly, $mobileOnly }) => {
+    if ($desktopOnly) return 'none';
+    if ($mobileOnly) return 'flex';
+    return 'flex';
+  }};
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: ${spacing('l')};
+  margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    display: ${({ $desktopOnly, $mobileOnly }) => {
+    if ($desktopOnly) return 'flex';
+    if ($mobileOnly) return 'none';
+    return 'flex';
+  }};
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-top: 0;
   }
 `;
 
@@ -80,17 +191,42 @@ const Brand = styled(Link)`
   :hover {
     border: 0;
   }
+
+  ${({ animateRotate }) => logoRotateAnimation(animateRotate)}
 `;
 
-const SocialIconWrapper = styled.div``;
+const FooterCopyright = styled.div`
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+`;
+
+const FooterCopyrightText = styled(Text).attrs({
+  tag: 'p'
+})`
+  color: ${({ theme }) => theme.color('grey')};
+  font-size: ${({ theme }) => theme.fontSize('xs')};
+  margin-bottom: ${spacing('sm')};
+`;
 
 export {
   FooterWrapper,
-  Angle,
   InnerWrapper,
   FooterLegalLine,
-  FooterCopyright,
-  FooterBranding,
+  TopSection,
+  NewsletterSignUpWrapper,
   SocialIconWrapper,
+  PrimaryNav,
+  PrimaryNavItem,
+  PrimaryNavLink,
+  PrimaryNavText,
+  SecondaryNav,
+  SecondaryNavItem,
+  SecondaryNavLink,
+  SecondaryNavText,
+  LogosContainer,
+  FooterCopyright,
+  FooterCopyrightText,
   Brand
 };

@@ -7,7 +7,7 @@ import {
   PrimaryNavItem,
   PrimaryNavLink,
   PrimaryNavText
-} from '../Footer2026.style';
+} from '../Footer.style';
 
 const PrimaryNav = ({ navItems = [], ...rest }) => {
   if (!navItems || navItems.length === 0) {

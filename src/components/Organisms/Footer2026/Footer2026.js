@@ -8,7 +8,7 @@ import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import EmailSignUp from '../../Molecules/EmailSignUp/EmailSignUp';
 import PrimaryNav from './Nav/PrimaryNav';
 import SecondaryNav from './Nav/SecondaryNav';
-import FundraisingRegulatorLogo from '../Footer/FundraisingRegulatorLogo/FundraisingRegulatorLogo';
+import FundraisingRegulatorLogo from '../FooterLegacy/FundraisingRegulatorLogo/FundraisingRegulatorLogo';
 
 import {
   FooterWrapper,
