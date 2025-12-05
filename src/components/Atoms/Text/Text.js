@@ -13,8 +13,9 @@ export const BaseText = styled.span`
   `)};
 
   // Then, override with the pre-existing base styles *but only when props are provided.*
-  // Part of this new work is to phase-out all usage of these 'customisation' props, 
-  // so that all tags will use the standardised styles set in fontHelper
+  // Part of this new work is to phase-out usage of these 'customisation' props (so that 
+  // all tags will use the standardised styles set in fontHelper), but in order to 
+  // ensure things don't break/look bad accidentally, it'll require intentional prop removal.
 
   // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
   ${({ size, theme }) => (size && `line-height: ${theme.fontSize(size)}`)};
@@ -45,9 +46,9 @@ const Text = ({
   color = 'inherit',
   size = undefined,
   children = undefined,
-  uppercase = false,
   height = undefined,
   weight = undefined,
+  uppercase = false,
   family = null,
   mobileColor = null,
   textAlign = null,

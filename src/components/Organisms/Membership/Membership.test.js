@@ -164,7 +164,7 @@ it('renders correctly', () => {
     .c15 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
@@ -179,7 +179,7 @@ it('renders correctly', () => {
     .c20 input {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
       -webkit-letter-spacing: -2px;
       -moz-letter-spacing: -2px;
       -ms-letter-spacing: -2px;
