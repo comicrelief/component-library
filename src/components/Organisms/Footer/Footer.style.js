@@ -175,91 +175,66 @@ const SecondaryNavText = styled(Text)`
 `;
 
 const LogosContainer = styled.div`
-  display: ${({ $desktopOnly, $mobileOnly }) => {
-    if ($desktopOnly) return 'none';
-    if ($mobileOnly) return 'flex';
-    return 'flex';
-  }};
+  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
   gap: ${spacing('l')};
+  justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
   margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
   margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
+  /* Hide desktop containers on mobile */
+  ${({ $desktopOnly }) => $desktopOnly && 'display: none;'}
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    display: ${({
-    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
-  }) => {
-    if ($mobileOnly && $showFundraiserAtBottom) {
-      // Show fundraiser logo at bottom for M-L range
-      return 'flex';
-    }
-    if ($mobileOnly) return 'none';
-    if ($desktopOnly && $showCRLogoOnly) {
-      // Show logo only for M-L range (will be hidden at L+)
-      return 'flex';
-    }
-    if ($desktopOnly && $showPairedLogos) {
-      // Hide paired logos in M-L range, show at L+
-      return 'none';
-    }
-    if ($desktopOnly) return 'none';
-    return 'flex';
-  }};
-    flex-direction: row;
-    align-items: center;
-    justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
-    if ($showFundraiserAtBottom) return 'flex-start';
-    if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
-    if ($desktopOnly) return 'flex-end';
-    return 'center';
-  }};
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+
+    display: ${({
+      $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+    }) => {
+      // Mobile containers
+      if ($mobileOnly && $showFundraiserAtBottom) return 'flex';
+      if ($mobileOnly) return 'none';
+
+      // Desktop containers
+      if ($desktopOnly && $showCRLogoOnly) return 'flex';
+      if ($desktopOnly && $showPairedLogos) return 'none';
+      if ($desktopOnly) return 'none';
+
+      return 'flex';
+    }};
+
+    justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
+      if ($showFundraiserAtBottom) return 'flex-start';
+      if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
+      if ($desktopOnly) return 'flex-end';
+      return 'center';
+    }};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} and (max-width: ${breakpointValues.L - 1}px) {
-    display: ${({ $desktopOnly, $showCRLogoOnly, $showPairedLogos }) => {
-    if ($desktopOnly && $showCRLogoOnly) {
-      // Ensure logo only shows in M-L range
-      return 'flex';
-    }
-    if ($desktopOnly && $showPairedLogos) {
-      // Ensure paired logos are hidden in M-L range
-      return 'none';
-    }
-    return undefined;
-  }};
-    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => {
-    if ($desktopOnly && $showCRLogoOnly) {
-      return spacing('l');
-    }
-    return '0';
-  }};
+    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) =>
+      ($desktopOnly && $showCRLogoOnly ? spacing('l') : '0')
+    };
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: ${({
-    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
-  }) => {
-    if ($mobileOnly && $showFundraiserAtBottom) {
-      // Hide fundraiser logo at bottom for L+ (it's in TopSection)
-      return 'none';
-    }
-    if ($mobileOnly) return 'none';
-    if ($desktopOnly && $showCRLogoOnly) {
-      // Hide logo-only container at L+
-      return 'none';
-    }
-    if ($desktopOnly && $showPairedLogos) {
-      // Show paired logos at L+
+      $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+    }) => {
+      // Hide fundraiser at bottom for L+ (it's in TopSection)
+      if ($mobileOnly && $showFundraiserAtBottom) return 'none';
+      if ($mobileOnly) return 'none';
+
+      // Desktop containers
+      if ($desktopOnly && $showCRLogoOnly) return 'none';
+      if ($desktopOnly && $showPairedLogos) return 'flex';
+      if ($desktopOnly) return 'none';
+
       return 'flex';
-    }
-    if ($desktopOnly) return 'none';
-    return 'flex';
-  }};
+    }};
   }
 `;
 
