@@ -9,9 +9,9 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
-  padding: ${spacing('l')} 0;
+  padding-top: ${spacing('xl')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('lg')} 0;
+    padding-bottom: ${spacing('lg')};
   }
 `;
 
@@ -168,9 +168,10 @@ const LogosContainer = styled.div`
   }};
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
   gap: ${spacing('l')};
   margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
+  margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     display: ${({ $desktopOnly, $mobileOnly }) => {
@@ -182,6 +183,7 @@ const LogosContainer = styled.div`
     align-items: center;
     flex: 0 0 auto;
     margin-top: 0;
+    margin-bottom: 0;
   }
 `;
 

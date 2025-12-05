@@ -74,6 +74,12 @@ const Footer = ({
             </FooterLegalLine>
           )}
 
+          <LogosContainer $mobileOnly>
+            <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+            </Brand>
+          </LogosContainer>
+
           <TopSection>
             <NewsletterSignUpWrapper>
               <FormProvider {...formMethods}>
@@ -134,9 +140,6 @@ const Footer = ({
           </FooterCopyright>
 
           <LogosContainer $mobileOnly>
-            <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-            </Brand>
             {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
           </LogosContainer>
         </InnerWrapper>
