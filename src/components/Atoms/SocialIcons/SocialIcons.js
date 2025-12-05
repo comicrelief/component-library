@@ -28,7 +28,6 @@ const StyledItem = styled.li`
   }
 `;
 
-/** Social media icons with customizable style linked to campaign social media accounts */
 const SocialIcons = ({
   target = 'blank',
   campaign,
@@ -43,7 +42,7 @@ const SocialIcons = ({
 }) => {
   const links = getLinks(campaign);
 
-  // Select icon set based on newStyle prop
+  // We've got two sets now - one better suited to the new footer design, and one for the legacy footer.
   const iconSet = newStyle ? standardIcons : circledIcons;
 
   // Map brand names to their show props
@@ -56,7 +55,6 @@ const SocialIcons = ({
     youtube: showYouTubeSocialIcon
   };
 
-  // Filter icons based on visibility props
   // If prop is explicitly false, hide; otherwise show
   // (for backward compatibility with the 'old' footer)
   const shouldShowIcon = brand => {
@@ -65,7 +63,7 @@ const SocialIcons = ({
   };
 
   // Get the list of brands to display
-  // For newStyle, include tiktok and use 'x' instead of 'twitter'
+  // For newStyle, include tiktok and use 'x' instead of twitter
   const brandsToShow = newStyle
     ? ['facebook', 'instagram', 'x', 'tiktok', 'youtube']
     : ['facebook', 'instagram', 'twitter', 'youtube'];
