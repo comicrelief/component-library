@@ -26,11 +26,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0 0;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -49,6 +49,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+    margin: 0 auto 0 0;
   }
 }
 
@@ -162,11 +163,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0 0;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -185,6 +186,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+    margin: 0 auto 0 0;
   }
 }
 
@@ -298,11 +300,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0 0;
   padding: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -321,6 +323,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+    margin: 0 auto 0 0;
   }
 }
 
