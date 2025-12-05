@@ -9,18 +9,18 @@ export default (theme, thisTag) => {
       font-weight: normal;
       letter-spacing: 0;
 
-      // Small ("mobile") breakpoint
+      // XS and S breakpoint ("mobile") 
       font-size: ${fontConfig[thisTag].small.fontSize};
       line-height: ${fontConfig[thisTag].small.lineHeight};
 
-      // Medium ("tablet") breakpoint
-      @media ${theme.allBreakpoints('M')} {
+      // Medium breakpoint ("tablet") 
+      @media ${theme.breakpoints2026('M')} {
         font-size: ${fontConfig[thisTag].medium.fontSize};
         line-height: ${fontConfig[thisTag].medium.lineHeight};
       }
 
-      // L & XL ("desktop") breakpoints
-      @media ${theme.allBreakpoints('L')} {
+      // L & XL breakpoints ("desktop") 
+      @media ${theme.breakpoints2026('L')} {
         font-size: ${fontConfig[thisTag].large.fontSize};
         line-height: ${fontConfig[thisTag].large.lineHeight};
       }

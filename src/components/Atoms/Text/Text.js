@@ -35,7 +35,6 @@ export const BaseText = styled.span`
       color: ${theme.color(mobileColor)};
     }
   `};
-
 `;
 
 /** Text renders different elements based on the `tag` prop
