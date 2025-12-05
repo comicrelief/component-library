@@ -230,6 +230,7 @@ const LogosContainer = styled.div`
       // Ensure paired logos are hidden in M-L range
       return 'none';
     }
+    return unset;
   }};
     padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => {
     if ($desktopOnly && $showCRLogoOnly) {
