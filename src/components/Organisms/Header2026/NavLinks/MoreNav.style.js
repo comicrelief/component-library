@@ -38,7 +38,7 @@ const MoreNavLabel = styled(Text)`
 
 // Use for the 'More' link only
 const MoreNavItem = styled(StyledNavItem)`
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin-left: 22px;
     // Let it take up all the space to be a bigger target:
     display: flex;
@@ -89,15 +89,11 @@ const MoreNavItem = styled(StyledNavItem)`
       }
     }
   }
-
-  @media ${({ theme }) => theme.breakpoints2026('NavWide')} {
-    margin-left: 20px;
-  }
 `;
 
 // Clone Of SubNavMenu, NESTED menu
 const MoreNestedSubNavMenu = styled(SubNavMenu)`
-  @media ${({ theme }) => theme.breakpoints2026('Nav')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     top: 0;
     left: -1px;
     border-radius: 0;
