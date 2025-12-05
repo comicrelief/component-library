@@ -3,6 +3,7 @@ import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
 import { logoRotateAnimation } from '../../../theme/shared/animations';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -187,17 +188,77 @@ const LogosContainer = styled.div`
   margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    display: ${({ $desktopOnly, $mobileOnly }) => {
-    if ($desktopOnly) return 'flex';
+    display: ${({
+    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+  }) => {
+    if ($mobileOnly && $showFundraiserAtBottom) {
+      // Show fundraiser logo at bottom for M-L range
+      return 'flex';
+    }
     if ($mobileOnly) return 'none';
+    if ($desktopOnly && $showCRLogoOnly) {
+      // Show logo only for M-L range (will be hidden at L+)
+      return 'flex';
+    }
+    if ($desktopOnly && $showPairedLogos) {
+      // Hide paired logos in M-L range, show at L+
+      return 'none';
+    }
+    if ($desktopOnly) return 'none';
     return 'flex';
   }};
     flex-direction: row;
     align-items: center;
-    justify-content: ${({ $desktopOnly }) => ($desktopOnly ? 'flex-end' : 'center')};
+    justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
+    if ($showFundraiserAtBottom) return 'flex-start';
+    if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
+    if ($desktopOnly) return 'flex-end';
+    return 'center';
+  }};
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} and (max-width: ${breakpointValues.L - 1}px) {
+    display: ${({ $desktopOnly, $showCRLogoOnly, $showPairedLogos }) => {
+    if ($desktopOnly && $showCRLogoOnly) {
+      // Ensure logo only shows in M-L range
+      return 'flex';
+    }
+    if ($desktopOnly && $showPairedLogos) {
+      // Ensure paired logos are hidden in M-L range
+      return 'none';
+    }
+  }};
+    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => {
+    if ($desktopOnly && $showCRLogoOnly) {
+      return spacing('l');
+    }
+    return '0';
+  }};
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    display: ${({
+    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+  }) => {
+    if ($mobileOnly && $showFundraiserAtBottom) {
+      // Hide fundraiser logo at bottom for L+ (it's in TopSection)
+      return 'none';
+    }
+    if ($mobileOnly) return 'none';
+    if ($desktopOnly && $showCRLogoOnly) {
+      // Hide logo-only container at L+
+      return 'none';
+    }
+    if ($desktopOnly && $showPairedLogos) {
+      // Show paired logos at L+
+      return 'flex';
+    }
+    if ($desktopOnly) return 'none';
+    return 'flex';
+  }};
   }
 `;
 

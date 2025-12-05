@@ -43,6 +43,7 @@ const InputWrapper = styled.div`
   overflow: visible;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: auto;
+    min-width: 360px;
   }
 `;
 

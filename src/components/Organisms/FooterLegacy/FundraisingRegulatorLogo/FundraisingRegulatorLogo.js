@@ -32,6 +32,6 @@ export default FundraisingRegulatorLogo;
 FundraisingRegulatorLogo.propTypes = {
   /** Animate the logo on hover with spring scale animation */
   animateOnHover: PropTypes.bool,
-  /** Remove the default margin. The legacy footer needs it but new one does not. */
+  /** Remove the default margin. The redesigned footer does not need it in some cases. */
   noMargin: PropTypes.bool
 };

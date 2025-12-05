@@ -106,7 +106,12 @@ const Footer = ({
                 />
               </SocialIconWrapper>
             </TopSectionLeft>
-            <LogosContainer $desktopOnly>
+            <LogosContainer $desktopOnly $showCRLogoOnly>
+              <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+              </Brand>
+            </LogosContainer>
+            <LogosContainer $desktopOnly $showPairedLogos>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
                 <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
               </Brand>
@@ -144,8 +149,8 @@ const Footer = ({
             )}
           </FooterCopyright>
 
-          <LogosContainer $mobileOnly>
-            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo noMargin />}
+          <LogosContainer $mobileOnly $showFundraiserAtBottom>
+            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
           </LogosContainer>
         </InnerWrapper>
       </FooterWrapper>
