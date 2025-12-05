@@ -1,0 +1,96 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { snakeCase } from 'lodash';
+import SingleCard from './SingleCard';
+import {
+  CardsContainer
+} from './CTAMultiCard.style';
+
+/**
+ * CTAMultiCard Component
+ *
+ * This component is a successor to the CardsDs component.
+ * Previously, the comicrelief-contentful frontend would map
+ * through data and create multiple CardsDs instances.
+ * Now CTAMultiCard handles the mapping internally, accepting
+ * a data object and rendering all cards.
+ */
+
+const CTAMultiCard = ({ data }) => {
+  const {
+    cards,
+    backgroundColour: bgCards,
+    layout,
+    carouselOfCards
+  } = data;
+
+  const cardsBackground = snakeCase(bgCards || 'white');
+
+  // Convert layout string to number (e.g., "3 columns"
+  // (that's how it comes through from Contentful) -> 3)
+  const columns = layout && layout.includes('3') ? 3 : 2;
+
+  if (!cards || !Array.isArray(cards) || cards.length === 0) {
+    return null;
+  }
+
+  return (
+    <CardsContainer
+      backgroundColor={cardsBackground}
+      columns={columns}
+      isCarousel={carouselOfCards}
+    >
+      {cards.map(card => (
+        <SingleCard
+          key={card.id}
+          card={card}
+          isCarousel={carouselOfCards}
+        />
+      ))}
+    </CardsContainer>
+  );
+};
+
+CTAMultiCard.propTypes = {
+  data: PropTypes.shape({
+    cards: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        body: PropTypes.oneOfType([
+          PropTypes.node,
+          PropTypes.string,
+          PropTypes.shape({
+            raw: PropTypes.string
+          })
+        ]),
+        image: PropTypes.shape({
+          description: PropTypes.string,
+          gatsbyImageData: PropTypes.shape({
+            placeholder: PropTypes.shape({
+              fallback: PropTypes.string
+            }),
+            images: PropTypes.shape({
+              fallback: PropTypes.shape({
+                src: PropTypes.string,
+                srcSet: PropTypes.string
+              }),
+              sources: PropTypes.arrayOf(
+                PropTypes.shape({
+                  srcSet: PropTypes.string
+                })
+              )
+            })
+          })
+        }),
+        backgroundColour: PropTypes.string,
+        link: PropTypes.string,
+        linkLabel: PropTypes.string
+      })
+    ).isRequired,
+    backgroundColour: PropTypes.string,
+    layout: PropTypes.string,
+    carouselOfCards: PropTypes.bool
+  }).isRequired
+};
+
+export default CTAMultiCard;
