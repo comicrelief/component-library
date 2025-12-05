@@ -192,49 +192,48 @@ const LogosContainer = styled.div`
     margin-bottom: 0;
 
     display: ${({
-      $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
-    }) => {
-      // Mobile containers
-      if ($mobileOnly && $showFundraiserAtBottom) return 'flex';
-      if ($mobileOnly) return 'none';
+    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+  }) => {
+    // Mobile containers
+    if ($mobileOnly && $showFundraiserAtBottom) return 'flex';
+    if ($mobileOnly) return 'none';
 
-      // Desktop containers
-      if ($desktopOnly && $showCRLogoOnly) return 'flex';
-      if ($desktopOnly && $showPairedLogos) return 'none';
-      if ($desktopOnly) return 'none';
+    // Desktop containers
+    if ($desktopOnly && $showCRLogoOnly) return 'flex';
+    if ($desktopOnly && $showPairedLogos) return 'none';
+    if ($desktopOnly) return 'none';
 
-      return 'flex';
-    }};
+    return 'flex';
+  }};
 
     justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
-      if ($showFundraiserAtBottom) return 'flex-start';
-      if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
-      if ($desktopOnly) return 'flex-end';
-      return 'center';
-    }};
+    if ($showFundraiserAtBottom) return 'flex-start';
+    if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
+    if ($desktopOnly) return 'flex-end';
+    return 'center';
+  }};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} and (max-width: ${breakpointValues.L - 1}px) {
-    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) =>
-      ($desktopOnly && $showCRLogoOnly ? spacing('l') : '0')
-    };
+    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => ($desktopOnly && $showCRLogoOnly ? spacing('l') : '0')
+};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: ${({
-      $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
-    }) => {
-      // Hide fundraiser at bottom for L+ (it's in TopSection)
-      if ($mobileOnly && $showFundraiserAtBottom) return 'none';
-      if ($mobileOnly) return 'none';
+    $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
+  }) => {
+    // Hide fundraiser at bottom for L+ (it's in TopSection)
+    if ($mobileOnly && $showFundraiserAtBottom) return 'none';
+    if ($mobileOnly) return 'none';
 
-      // Desktop containers
-      if ($desktopOnly && $showCRLogoOnly) return 'none';
-      if ($desktopOnly && $showPairedLogos) return 'flex';
-      if ($desktopOnly) return 'none';
+    // Desktop containers
+    if ($desktopOnly && $showCRLogoOnly) return 'none';
+    if ($desktopOnly && $showPairedLogos) return 'flex';
+    if ($desktopOnly) return 'none';
 
-      return 'flex';
-    }};
+    return 'flex';
+  }};
   }
 `;
 

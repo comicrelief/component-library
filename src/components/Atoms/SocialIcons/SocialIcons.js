@@ -42,7 +42,8 @@ const SocialIcons = ({
 }) => {
   const links = getLinks(campaign);
 
-  // We've got two sets now - one better suited to the new footer design, and one for the legacy footer.
+  // We've got two sets now - one better suited to the new footer design,
+  // and one for the legacy footer.
   const iconSet = newStyle ? standardIcons : circledIcons;
 
   // Map brand names to their show props
