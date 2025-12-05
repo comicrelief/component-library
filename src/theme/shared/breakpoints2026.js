@@ -14,8 +14,6 @@ export const breakpointValues2026 = {
   S: 320,
   M: 740,
   L: 1024,
-  Nav: 1150,
-  NavWide: 1350,
   XL: 1440
 };
 
