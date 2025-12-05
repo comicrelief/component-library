@@ -33,12 +33,17 @@ const colors = {
 
   grey_1: '#FFFFFF',
   grey_light: '#F4F3F5',
+  grey_medium: '#E1E2E3',
   grey_2: '#E1E2E3',
   // TODO: 'grey' is actually 'grey_3'. It is referenced in many places.
   // We need to rename it to 'grey_3' across all references.
   // Until then, we need to keep both names for backwards compatibility.
+  // Same story with 'grey_medium' - it should be grey_2, and
+  // grey_dark, should be grey_4.
+  // For the time being we need both of each. I will provision a separate PR.
   grey: '#969598',
   grey_3: '#969598',
+  grey_dark: '#222222',
   grey_4: '#222222',
   grey_4_hover: '#3A3A3A',
   grey_5: '#18181A',
