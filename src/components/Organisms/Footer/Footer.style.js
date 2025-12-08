@@ -119,6 +119,7 @@ const PrimaryNavLink = styled(Link)`
   &:hover,
   &:focus {
     text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.color('white')};
   }
 `;
 
@@ -155,16 +156,26 @@ const SecondaryNavItem = styled.li`
 `;
 
 const SecondaryNavLink = styled(Link)`
+  text-decoration: none;
+
   > span {
-  color: ${({ theme }) => theme.color('grey')};
-  text-decoration: underline;
-  font-weight: normal;
-  font-size: ${({ theme }) => theme.fontSize('xs')};
+    color: ${({ theme }) => theme.color('grey')};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.color('grey')};
+    font-weight: normal;
+    font-size: ${({ theme }) => theme.fontSize('xs')};
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    > span {
+      text-decoration: none;
+    }
   }
 
   &:hover,
   &:focus {
     text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.color('grey')};
   }
 
 `;
