@@ -440,6 +440,13 @@ const DonateButtonWrapperBottom = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }
+
+border: 1px solid green;
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+${zIndex('higher')};
 `;
 
 export {

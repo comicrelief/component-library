@@ -185,23 +185,39 @@ const NavLinks = ({
           {metaIcons}
         </NavMetaIcons>
 
-        {isExpandable && (
-          <DonateButtonWrapperBottom data-testid="donate-button--mobile">
-            {donateButton
-              || (
-              <Link
-                color="red"
-                type="button"
-                href="/donation"
-              >
-                Donate
-              </Link>
-              )
-            }
-          </DonateButtonWrapperBottom>
-        )}
+        {/* {isExpandable && ( */}
+        {/*   <DonateButtonWrapperBottom data-testid="donate-button--mobile"> */}
+        {/*     {donateButton */}
+        {/*       || ( */}
+        {/*       <Link */}
+        {/*         color="red" */}
+        {/*         type="button" */}
+        {/*         href="/donation" */}
+        {/*       > */}
+        {/*         Donate */}
+        {/*       </Link> */}
+        {/*       ) */}
+        {/*     } */}
+        {/*   </DonateButtonWrapperBottom> */}
+        {/* )} */}
 
       </Nav>
+
+      {isExpandable && (
+        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
+          {donateButton
+            || (
+            <Link
+              color="red"
+              type="button"
+              href="/donation"
+            >
+              Donate
+            </Link>
+            )
+          }
+        </DonateButtonWrapperBottom>
+      )}
 
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
