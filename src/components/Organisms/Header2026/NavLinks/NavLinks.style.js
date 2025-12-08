@@ -67,10 +67,6 @@ const Nav = styled.nav`
   top: 75px;
   left: 0;
   ${zIndex('higher')};
-  background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  overflow: hidden;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${zIndex('medium')};
@@ -86,6 +82,14 @@ const Nav = styled.nav`
   > h2 {
     ${hideVisually};
   }
+`;
+
+const NavMenuWrapper = styled.div`
+  background-color: ${({ theme }) => theme.color('white')};
+  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+
 `;
 
 /**
@@ -427,6 +431,7 @@ const DonateButtonWrapperBottom = styled.div`
     border-radius: 16px;
     width: calc(100% - 10px);
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+    font-family: Montserrat;
 
     &:hover,
     &:focus {
@@ -440,17 +445,11 @@ const DonateButtonWrapperBottom = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }
-
-border: 1px solid green;
-width: 100%;
-position: absolute;
-bottom: 0;
-left: 0;
-${zIndex('higher')};
 `;
 
 export {
   Nav,
+  NavMenuWrapper,
   NavMenu,
   StyledNavItem,
   NavLink,

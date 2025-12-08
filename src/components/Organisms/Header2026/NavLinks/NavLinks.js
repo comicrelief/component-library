@@ -14,7 +14,11 @@ import allowListed from '../../../../utils/allowListed';
 import NavItem from './NavItem';
 
 import {
-  Nav, NavMenu, NavMetaIcons, DonateButtonWrapperBottom
+  Nav,
+  NavMenuWrapper,
+  NavMenu,
+  NavMetaIcons,
+  DonateButtonWrapperBottom
 } from './NavLinks.style';
 
 const NavLinks = ({
@@ -124,8 +128,10 @@ const NavLinks = ({
           Main navigation
         </Text>
 
-        {/* Only render once we've processed the menu items: */}
-        {processedItems && (
+        <NavMenuWrapper>
+
+          {/* Only render once we've processed the menu items: */}
+          {processedItems && (
           // First level of the navigation (ul tag): Parent
           <NavMenu
             data-testid="NavMenu"
@@ -177,7 +183,8 @@ const NavLinks = ({
             {/* ) : null} */}
 
           </NavMenu>
-        )}
+          )}
+        </NavMenuWrapper>
 
         {/* These are only shown on the non-desktop view; the desktop nav renders
            these in the parent Header component to suit the design layout */}
@@ -185,39 +192,22 @@ const NavLinks = ({
           {metaIcons}
         </NavMetaIcons>
 
-        {/* {isExpandable && ( */}
-        {/*   <DonateButtonWrapperBottom data-testid="donate-button--mobile"> */}
-        {/*     {donateButton */}
-        {/*       || ( */}
-        {/*       <Link */}
-        {/*         color="red" */}
-        {/*         type="button" */}
-        {/*         href="/donation" */}
-        {/*       > */}
-        {/*         Donate */}
-        {/*       </Link> */}
-        {/*       ) */}
-        {/*     } */}
-        {/*   </DonateButtonWrapperBottom> */}
-        {/* )} */}
-
+        {isExpandable && (
+          <DonateButtonWrapperBottom data-testid="donate-button--mobile">
+            {donateButton
+              || (
+              <Link
+                color="red"
+                type="button"
+                href="/donation"
+              >
+                Donate
+              </Link>
+              )
+            }
+          </DonateButtonWrapperBottom>
+        )}
       </Nav>
-
-      {isExpandable && (
-        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
-          {donateButton
-            || (
-            <Link
-              color="red"
-              type="button"
-              href="/donation"
-            >
-              Donate
-            </Link>
-            )
-          }
-        </DonateButtonWrapperBottom>
-      )}
 
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
