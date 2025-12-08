@@ -33,7 +33,7 @@ const StyledLink = styled.a`
     }
 
     // No hover state for mobile, so targetting Medium+:
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
       &:hover,
       &:focus {
         img {

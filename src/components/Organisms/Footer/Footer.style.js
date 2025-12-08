@@ -3,7 +3,7 @@ import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
 import { logoRotateAnimation } from '../../../theme/shared/animations';
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import { breakpointValues2026 } from '../../../theme/shared/breakpoints2026';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -11,7 +11,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
   padding-top: ${spacing('xl')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-bottom: ${spacing('lg')};
   }
 `;
@@ -24,7 +24,7 @@ const InnerWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${spacing('md')};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 0 ${spacing('md')}};
   }
 `;
@@ -45,7 +45,7 @@ const TopSection = styled.div`
   margin-bottom: ${spacing('md')};
   gap: ${spacing('md')};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     justify-content: space-between;
     align-items: ${({ $hasEmailSignup }) => ($hasEmailSignup ? 'flex-start' : 'center')};
@@ -57,7 +57,7 @@ const TopSectionLeft = styled.div`
   flex-direction: column;
   gap: ${spacing('md')};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: column;
     flex: 0 0 auto;
   }
@@ -66,7 +66,7 @@ const TopSectionLeft = styled.div`
 const NewsletterSignUpWrapper = styled.div`
   max-width: 100%;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     max-width: 100%;
   }
 `;
@@ -80,7 +80,7 @@ gap: ${spacing('md')};
     return 'block';
   }};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
   box-sizing: border-box;
     display: ${({ $mobileOnly, $inTopSection }) => {
     if ($mobileOnly) return 'none';
@@ -100,7 +100,7 @@ const PrimaryNav = styled.nav`
   margin: 0 0 ${spacing('md')} 0;
   gap: ${spacing('l')};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     flex-wrap: wrap;
     gap: ${spacing('m')};
@@ -143,7 +143,7 @@ const SecondaryNavItem = styled.li`
   display: flex;
   align-items: center;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     display: inline;
   }
 
@@ -186,7 +186,7 @@ const LogosContainer = styled.div`
   /* Hide desktop containers on mobile */
   ${({ $desktopOnly }) => $desktopOnly && 'display: none;'}
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -214,12 +214,12 @@ const LogosContainer = styled.div`
   }};
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} and (max-width: ${breakpointValues.L - 1}px) {
+  @media ${({ theme }) => theme.breakpoints2026('M')} and (max-width: ${breakpointValues2026.L - 1}px) {
     padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => ($desktopOnly && $showCRLogoOnly ? spacing('l') : '0')
 };
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: ${({
     $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
   }) => {

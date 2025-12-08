@@ -6,7 +6,7 @@ import { springScaleAnimation } from '../../../theme/shared/animations';
 
 export const EmailSignUpWrapper = styled.div`
   margin-bottom: ${spacing('m')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin-bottom: ${spacing('m')};
   }
 `;
@@ -23,7 +23,7 @@ export const FormWrapper = styled.div`
   overflow: visible;
 
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     align-items: center;
     ${({ error }) => error && `
@@ -38,7 +38,7 @@ export const InputWrapper = styled.div`
   align-items: center;
   width: 100%;
   overflow: visible;
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: auto;
     min-width: 360px;
   }
@@ -50,7 +50,7 @@ export const StyledEmailInput = styled(Input)`
     font-size: ${({ theme }) => theme.fontSize('s')};
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${springScaleAnimation(true, 1.04, 1)}
   }
 
@@ -75,7 +75,7 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: auto;
   }
 `;
@@ -85,7 +85,7 @@ export const StyledEmailSignUpButton = styled(Button)`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   border-radius: 0.5rem;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${springScaleAnimation(true, 1.02, 1)}
     margin: 0;
   }

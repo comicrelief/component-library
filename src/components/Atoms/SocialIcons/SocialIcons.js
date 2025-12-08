@@ -14,7 +14,7 @@ const StyledList = styled.ul`
   padding: 0;
   align-items: center;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     justify-content: start;
      margin: ${({ newStyle }) => (newStyle ? `${spacing('sm')} 0` : '0 auto 0 0')};
   }
@@ -24,7 +24,7 @@ const StyledItem = styled.li`
   width: 48px;
   margin-right: ${({ newStyle }) => (newStyle ? '0' : spacing('m'))};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin-right: ${({ newStyle }) => (newStyle ? spacing('md') : spacing('m'))};
   }
 `;
