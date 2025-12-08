@@ -191,23 +191,16 @@ Footer.propTypes = {
   campaign: PropTypes.string,
   /** Optional legal line displayed at top of footer */
   additionalLegalLine: PropTypes.string,
-  /** Show Fundraising Regulator logo */
   showFundraisingRegulatorLogo: PropTypes.bool,
-  /** Show/hide email signup component */
   showEmailSignup: PropTypes.bool,
-  /** Show/hide Facebook social icon */
   showFacebookSocialIcon: PropTypes.bool,
-  /** Show/hide Instagram social icon */
   showInstagramSocialIcon: PropTypes.bool,
-  /** Show/hide X (Twitter) social icon */
   showXSocialIcon: PropTypes.bool,
-  /** Show/hide TikTok social icon */
   showTikTokSocialIcon: PropTypes.bool,
-  /** Show/hide YouTube social icon */
   showYouTubeSocialIcon: PropTypes.bool,
   /** Animate logo rotation on hover */
   animateRotate: PropTypes.bool,
-  /** Function to handle newsletter signup form submission */
+  /** Optional function to handle newsletter signup form submission */
   onNewsletterSubmit: PropTypes.func
 };
 
