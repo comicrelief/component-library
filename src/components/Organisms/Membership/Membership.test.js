@@ -38,8 +38,8 @@ it('renders correctly', () => {
     }
 
     .c6 {
-      line-height: 1.5rem !important;
-      font-size: 1.5rem !important;
+      line-height: 1.5rem;
+      font-size: 1.5rem;
       font-weight: 800;
     }
 
@@ -80,8 +80,8 @@ it('renders correctly', () => {
     }
 
     .c22 {
-      line-height: 1rem !important;
-      font-size: 1rem !important;
+      line-height: 1rem;
+      font-size: 1rem;
       font-weight: 500;
     }
 

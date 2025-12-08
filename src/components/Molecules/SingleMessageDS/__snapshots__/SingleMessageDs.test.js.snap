@@ -14,8 +14,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
-  line-height: 1rem !important;
-  font-size: 1rem !important;
+  line-height: 1rem;
+  font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: bold;
   color: #274084;

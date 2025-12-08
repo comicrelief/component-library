@@ -14,8 +14,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c0 {
-  line-height: 0.875rem !important;
-  font-size: 0.875rem !important;
+  line-height: 0.875rem;
+  font-size: 0.875rem;
   color: #E52630;
 }
 

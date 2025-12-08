@@ -14,8 +14,8 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 }
 
 .c6 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 
@@ -208,8 +208,8 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c6 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 
@@ -490,8 +490,8 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 .c6 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   color: #000000;
 }
 
@@ -733,8 +733,8 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c6 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 
@@ -1173,8 +1173,8 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 .c2 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 

@@ -14,8 +14,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  line-height: 3rem !important;
-  font-size: 3rem !important;
+  line-height: 3rem;
+  font-size: 3rem;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
