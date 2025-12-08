@@ -12,7 +12,7 @@ export const BaseText = styled.span`
     ${fontHelper(theme, as)}
 
     & {
-      // Then increaase specificity and override with the pre-existing base styles...
+      // Then increase specificity, and override with the pre-existing base styles...
       // * but only when the associated props are provided. *
       //
       // Part of this new work is to phase-out usage of these 'customisation' props (so that 
