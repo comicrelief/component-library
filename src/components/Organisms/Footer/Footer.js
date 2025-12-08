@@ -1,161 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useForm, FormProvider } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import Text from '../../Atoms/Text/Text';
 import Logo from '../../Atoms/Logo/Logo';
+import FooterNav from './Nav/Nav';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
-import EmailSignUp from '../../Molecules/EmailSignUp/EmailSignUp';
-import PrimaryNav from './Nav/PrimaryNav';
-import SecondaryNav from './Nav/SecondaryNav';
-import FundraisingRegulatorLogo from '../FooterLegacy/FundraisingRegulatorLogo/FundraisingRegulatorLogo';
+import FundraisingRegulatorLogo from './FundraisingRegulatorLogo/FundraisingRegulatorLogo';
 
 import {
   FooterWrapper,
   InnerWrapper,
   FooterLegalLine,
-  TopSection,
-  TopSectionLeft,
-  NewsletterSignUpWrapper,
-  SocialIconWrapper,
-  LogosContainer,
+  FooterBranding,
   FooterCopyright,
-  FooterCopyrightText,
+  SocialIconWrapper,
   Brand
 } from './Footer.style';
 
 const Footer = ({
-  legalText,
-  copyrightText,
-  showFacebookSocialIcon,
-  showInstagramSocialIcon,
-  showXSocialIcon,
-  showTikTokSocialIcon,
-  showYouTubeSocialIcon,
-  onNewsletterSubmit,
-  primaryLinksList = [],
-  secondaryLinksList = [],
-  campaign = 'Comic Relief',
-  additionalLegalLine = '',
-  showFundraisingRegulatorLogo = false,
-  showEmailSignup = true,
-  animateRotate = false,
-  ...rest
+  navItems = {}, footerCopy = '', campaign = 'Comic Relief', additionalLegalLine = '', overrideallowList = false, showFundraisingRegulatorLogo = false, ...rest
 }) => {
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
 
-  const currentYear = new Date().getFullYear();
-  const defaultCopyrightText = `© ${currentYear} Comic Relief`;
-  const displayCopyrightText = copyrightText !== undefined ? copyrightText : defaultCopyrightText;
-
-  const validationSchema = yup.object({
-    email: yup
-      .string()
-      .nullable()
-      .transform(value => (value === '' ? null : value))
-      .email('Please provide a valid email address')
-  });
-
-  const formMethods = useForm({
-    mode: 'onBlur',
-    resolver: yupResolver(validationSchema)
-  });
-
-  const { handleSubmit } = formMethods;
-
-  const handleNewsletterSubmit = data => {
-    if (onNewsletterSubmit) {
-      onNewsletterSubmit(data.email);
-    }
-  };
-
   return (
     <div>
-      <FooterWrapper {...rest}>
+      <FooterWrapper navItems {...rest}>
         <InnerWrapper>
-          {additionalLegalLine && (
-            <FooterLegalLine>
-              {additionalLegalLine}
-            </FooterLegalLine>
-          )}
+          {additionalLegalLine
+            && <FooterLegalLine tag="p" color="grey">{additionalLegalLine}</FooterLegalLine>
+          }
+          <FooterBranding>
+            <SocialIconWrapper>
+              <SocialIcons campaign={campaignName} />
+            </SocialIconWrapper>
 
-          <LogosContainer $mobileOnly>
-            <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+            <Brand href="/" title={`Go to ${campaign} homepage`}>
               <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
-          </LogosContainer>
+          </FooterBranding>
+          <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />
 
-          <TopSection $hasEmailSignup={showEmailSignup}>
-            <TopSectionLeft>
-              {showEmailSignup && (
-                <NewsletterSignUpWrapper>
-                  <FormProvider {...formMethods}>
-                    <form onSubmit={handleSubmit(handleNewsletterSubmit)} noValidate>
-                      <EmailSignUp formContext={formMethods} />
-                    </form>
-                  </FormProvider>
-                </NewsletterSignUpWrapper>
-              )}
-              <SocialIconWrapper $desktopOnly $inTopSection>
-                <SocialIcons
-                  campaign={campaignName}
-                  newStyle
-                  invertColor
-                  showFacebookSocialIcon={showFacebookSocialIcon}
-                  showInstagramSocialIcon={showInstagramSocialIcon}
-                  showXSocialIcon={showXSocialIcon}
-                  showTikTokSocialIcon={showTikTokSocialIcon}
-                  showYouTubeSocialIcon={showYouTubeSocialIcon}
-                />
-              </SocialIconWrapper>
-            </TopSectionLeft>
-            <LogosContainer $desktopOnly $showCRLogoOnly>
-              <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-              </Brand>
-            </LogosContainer>
-            <LogosContainer $desktopOnly $showPairedLogos>
-              <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
-              </Brand>
-              {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
-            </LogosContainer>
-          </TopSection>
-
-          <PrimaryNav navItems={primaryLinksList} {...rest} />
-
-          <SocialIconWrapper $mobileOnly>
-            <SocialIcons
-              campaign={campaignName}
-              newStyle
-              invertColor
-              showFacebookSocialIcon={showFacebookSocialIcon}
-              showInstagramSocialIcon={showInstagramSocialIcon}
-              showXSocialIcon={showXSocialIcon}
-              showTikTokSocialIcon={showTikTokSocialIcon}
-              showYouTubeSocialIcon={showYouTubeSocialIcon}
-            />
-          </SocialIconWrapper>
-
-          <SecondaryNav navItems={secondaryLinksList} {...rest} />
+          { showFundraisingRegulatorLogo && <FundraisingRegulatorLogo /> }
 
           <FooterCopyright>
-            {displayCopyrightText && (
-              <FooterCopyrightText>
-                {displayCopyrightText}
-              </FooterCopyrightText>
-            )}
-            {legalText && (
-              <FooterCopyrightText>
-                {legalText}
-              </FooterCopyrightText>
-            )}
+            <Text tag="p" color="grey">
+              {footerCopy}
+            </Text>
           </FooterCopyright>
-
-          <LogosContainer $mobileOnly $showFundraiserAtBottom>
-            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
-          </LogosContainer>
         </InnerWrapper>
       </FooterWrapper>
     </div>
@@ -163,49 +54,12 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  /** Array of primary navigation link objects */
-  primaryLinksList: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    path: PropTypes.string,
-    url: PropTypes.string,
-    reference: PropTypes.shape({
-      path: PropTypes.string
-    }),
-    internal: PropTypes.shape({
-      type: PropTypes.string
-    })
-  })),
-  /** Array of secondary navigation link objects */
-  secondaryLinksList: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    path: PropTypes.string,
-    url: PropTypes.string,
-    reference: PropTypes.shape({
-      path: PropTypes.string
-    }),
-    internal: PropTypes.shape({
-      type: PropTypes.string
-    })
-  })),
-  /** Legal text displayed at bottom of footer */
-  legalText: PropTypes.string.isRequired,
-  /** Optional copyright text displayed at bottom of footer */
-  copyrightText: PropTypes.string,
-  /** Campaign name, used for logo and social links */
+  navItems: PropTypes.objectOf(PropTypes.shape),
+  footerCopy: PropTypes.string,
   campaign: PropTypes.string,
-  /** Optional legal line displayed at top of footer */
+  overrideallowList: PropTypes.bool,
   additionalLegalLine: PropTypes.string,
-  showFundraisingRegulatorLogo: PropTypes.bool,
-  showEmailSignup: PropTypes.bool,
-  showFacebookSocialIcon: PropTypes.bool,
-  showInstagramSocialIcon: PropTypes.bool,
-  showXSocialIcon: PropTypes.bool,
-  showTikTokSocialIcon: PropTypes.bool,
-  showYouTubeSocialIcon: PropTypes.bool,
-  /** Animate logo rotation on hover */
-  animateRotate: PropTypes.bool,
-  /** Optional function to handle newsletter signup form submission */
-  onNewsletterSubmit: PropTypes.func
+  showFundraisingRegulatorLogo: PropTypes.bool
 };
 
 export default Footer;

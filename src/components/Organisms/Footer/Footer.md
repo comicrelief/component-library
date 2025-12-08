@@ -1,47 +1,29 @@
 # Footer
 
-## Footer with email signup
-
 ```js
 import Footer from './Footer';
-import footerCopy from '../FooterLegacy/data/footerCopy';
-import { primaryLinksList, secondaryLinksList } from './dev-data/data';
+import data from './data/data';
+import footerCopy from './data/footerCopy';
 
-<Footer
-  primaryLinksList={primaryLinksList}
-  secondaryLinksList={secondaryLinksList}
-  legalText={footerCopy.copy}
-  campaign="Comic Relief"
-  showFundraisingRegulatorLogo
-  showFacebookSocialIcon
-  showInstagramSocialIcon
-  showXSocialIcon
-  showTikTokSocialIcon
-  showYouTubeSocialIcon
-  animateRotate
-  onNewsletterSubmit={(email) => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
-/>
-```
+<>
+    <p>Standard footer</p>
+    <Footer navItems={data} footerCopy={footerCopy.copy} campaign="Comic Relief"  />
 
-## Footer without email signup
+    <p>Overrides allowList functionality for external usage</p>
+    <Footer
+      navItems={data}
+      footerCopy={footerCopy.copy}
+      campaign="Comic Relief"
+      overrideallowList
+    />
 
-```js
-import Footer from './Footer';
-import footerCopy from '../FooterLegacy/data/footerCopy';
-import { primaryLinksList, secondaryLinksList } from './dev-data/data';
-
-<Footer
-  primaryLinksList={primaryLinksList}
-  secondaryLinksList={secondaryLinksList}
-  legalText={footerCopy.copy}
-  campaign="Comic Relief"
-  showEmailSignup={false}
-  showFundraisingRegulatorLogo
-  showFacebookSocialIcon
-  showInstagramSocialIcon
-  showXSocialIcon
-  showTikTokSocialIcon
-  showYouTubeSocialIcon
-  animateRotate
-/>
+    <p>Adding an additionalLegalLine to the top of the footer, add FR logo</p>
+    <Footer
+      additionalLegalLine="CHICKEN RUN: DAWN OF THE NUGGET ™/ © Aardman. Netflix ™/© Netflix. Used with permission/Wallace & Gromit Ltd. All rights reserved/ Shaun the Sheep © & TM /Morph ©/TM Aardman Animations Ltd. All rights reserved."
+      navItems={data}
+      footerCopy={footerCopy.copy}
+      campaign="Comic Relief"
+      showFundraisingRegulatorLogo
+    />
+</>
 ```

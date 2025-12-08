@@ -1,0 +1,1416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c12 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  font-weight: bold;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c17 {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: inherit;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c6 {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.c5 {
+  display: inline-block;
+  z-index: 3;
+  width: 48px;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  vertical-align: bottom;
+}
+
+.c3 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c3:hover,
+.c3:focus {
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 3.125rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.c23 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c23:hover {
+  background-color: #969598;
+  color: #000000;
+}
+
+.c15 {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #000000;
+}
+
+.c15:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: 'Optional';
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+}
+
+.c18 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c19 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c20 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c21 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c21:focus {
+  border: 1px solid #666;
+}
+
+.c28 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  background-color: #222222;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+.c28:hover,
+.c28:focus {
+  opacity: 0.6;
+}
+
+.c28:hover,
+.c28:focus {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.c28:hover,
+.c28:focus {
+  background-color: #3A3A3A;
+  opacity: 1;
+}
+
+.c29 {
+  width: 100%;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 3rem 0;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 {
+  width: 32px;
+  margin-right: 1rem;
+}
+
+.c10 {
+  margin-bottom: 1.5rem;
+}
+
+.c11 {
+  margin-bottom: 1rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: visible;
+}
+
+.c14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.c16 {
+  overflow: visible;
+}
+
+.c16 input {
+  font-size: 1rem;
+}
+
+.c16 input {
+  background-color: #18181A;
+  border-color: transparent;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.c16 input::-webkit-input-placeholder {
+  color: #E1E2E3;
+}
+
+.c16 input::-moz-placeholder {
+  color: #E1E2E3;
+}
+
+.c16 input:-ms-input-placeholder {
+  color: #E1E2E3;
+}
+
+.c16 input::placeholder {
+  color: #E1E2E3;
+}
+
+.c16 input:hover,
+.c16 input:focus {
+  background-color: #3A3A3A;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c24 {
+  margin: 0;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  border-radius: 0.5rem;
+}
+
+.c24:hover,
+.c24:focus {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.c0 {
+  text-align: left;
+  background: #18181A;
+  padding-top: 4rem;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c9 {
+  max-width: 100%;
+}
+
+.c25 {
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  gap: 1rem;
+  display: none;
+}
+
+.c36 {
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  gap: 1rem;
+  display: block;
+}
+
+.c32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0 0 1rem 0;
+  gap: 2rem;
+}
+
+.c33 {
+  margin: 0;
+}
+
+.c34 {
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.c34:hover,
+.c34:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c35 {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  gap: 0.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.5rem;
+  color: #969598;
+}
+
+.c39 > span {
+  color: #969598;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+.c39:hover,
+.c39:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c40 {
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+}
+
+.c43 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.c4 {
+  color: transparent;
+  border: 0;
+}
+
+.c4:hover {
+  border: 0;
+}
+
+.c41 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.c42 {
+  color: #969598;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width:1150px) {
+  .c5 {
+    width: 72px;
+  }
+}
+
+@media (min-width:740px) {
+  .c23 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c23 {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:740px) {
+  .c26 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c27 {
+    width: 48px;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c13 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    width: auto;
+    min-width: 360px;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c16:hover,
+  .c16:focus {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+}
+
+@media (min-width:740px) {
+  .c22 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c24 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    margin: 0;
+  }
+
+  .c24:hover,
+  .c24:focus {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c25 {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:740px) {
+  .c36 {
+    box-sizing: border-box;
+    display: none;
+    margin-bottom: 1rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:740px) {
+  .c32 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c38 {
+    display: inline;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c2 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (min-width:740px) {
+  .c30 {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c30 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c30 {
+    display: none;
+  }
+}
+
+@media (min-width:740px) {
+  .c31 {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: none;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c31 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c31 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:740px) {
+  .c43 {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c43 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c43 {
+    display: none;
+  }
+}
+
+<div>
+  <footer
+    className="c0"
+    role="banner"
+  >
+    <div
+      className="c1"
+    >
+      
+      <div
+        className="c2"
+      >
+        <a
+          className="c3 c4"
+          color="red"
+          href="/"
+          target="_self"
+          title="Go to Comic Relief homepage"
+          type="standard"
+        >
+          <div
+            className="c5"
+            rotate={0}
+          >
+            <img
+              alt="Comic Relief logo"
+              className="c6"
+              src="mock.asset"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <form
+              noValidate={true}
+              onSubmit={[Function]}
+            >
+              <div
+                className="c10"
+              >
+                <div
+                  className="c11"
+                >
+                  <span
+                    className="c12"
+                    color="white"
+                    size="s"
+                  >
+                    Subscribe to our newsletter
+                  </span>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <div
+                    className="c14"
+                  >
+                    <label
+                      className="c15 c16"
+                      htmlFor="email-signup"
+                    >
+                      <span
+                        className="c17 c18"
+                        color="inherit"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "Email address",
+                          }
+                        }
+                        size="s"
+                      />
+                      <div
+                        className="c19"
+                      >
+                        
+                        <div
+                          className="c20"
+                        >
+                          <input
+                            aria-required={false}
+                            className="c21"
+                            id="email-signup"
+                            name="email"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Enter your email address"
+                            required={false}
+                            type="email"
+                          />
+                          
+                        </div>
+                      </div>
+                      
+                    </label>
+                  </div>
+                  <div
+                    className="c22"
+                  >
+                    <button
+                      className="c23 c24"
+                      color="white"
+                      disabled={false}
+                      type="submit"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            className="c25"
+          >
+            <ul
+              className="c26"
+            >
+              <li
+                className="c27"
+              >
+                <a
+                  className="c28"
+                  data-test="icon-facebook"
+                  href="https://www.facebook.com/comicrelief"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Check out our Facebook page"
+                >
+                  <img
+                    alt="facebook"
+                    className="c29"
+                    src="mock.asset"
+                  />
+                </a>
+              </li>
+              <li
+                className="c27"
+              >
+                <a
+                  className="c28"
+                  data-test="icon-instagram"
+                  href="https://www.instagram.com/comicrelief"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Check out our Instagram account"
+                >
+                  <img
+                    alt="instagram"
+                    className="c29"
+                    src="mock.asset"
+                  />
+                </a>
+              </li>
+              <li
+                className="c27"
+              >
+                <a
+                  className="c28"
+                  data-test="icon-x"
+                  href="https://x.com/comicrelief"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Check out our X account"
+                >
+                  <img
+                    alt="x"
+                    className="c29"
+                    src="mock.asset"
+                  />
+                </a>
+              </li>
+              <li
+                className="c27"
+              >
+                <a
+                  className="c28"
+                  data-test="icon-tiktok"
+                  href="https://www.tiktok.com/@comicrelief"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Check out our TikTok account"
+                >
+                  <img
+                    alt="tiktok"
+                    className="c29"
+                    src="mock.asset"
+                  />
+                </a>
+              </li>
+              <li
+                className="c27"
+              >
+                <a
+                  className="c28"
+                  data-test="icon-youtube"
+                  href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Check out our YouTube channel"
+                >
+                  <img
+                    alt="youtube"
+                    className="c29"
+                    src="mock.asset"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="c30"
+        >
+          <a
+            className="c3 c4"
+            color="red"
+            href="/"
+            target="_self"
+            title="Go to Comic Relief homepage"
+            type="standard"
+          >
+            <div
+              className="c5"
+              rotate={0}
+            >
+              <img
+                alt="Comic Relief logo"
+                className="c6"
+                src="mock.asset"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          className="c31"
+        >
+          <a
+            className="c3 c4"
+            color="red"
+            href="/"
+            target="_self"
+            title="Go to Comic Relief homepage"
+            type="standard"
+          >
+            <div
+              className="c5"
+              rotate={0}
+            >
+              <img
+                alt="Comic Relief logo"
+                className="c6"
+                src="mock.asset"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+      <nav
+        aria-label="Primary footer navigation"
+        className="c32"
+        role="navigation"
+      >
+        <li
+          className="c33"
+        >
+          <a
+            className="c3 c34"
+            color="red"
+            href="/contact-us"
+            target="_self"
+            type="standard"
+          >
+            <span
+              className="c17 c35"
+              color="inherit"
+              size="s"
+            >
+              Contact us
+            </span>
+          </a>
+        </li>
+        <li
+          className="c33"
+        >
+          <a
+            className="c3 c34"
+            color="red"
+            href="https://www.comicrelief.com/frequently-asked-questions"
+            target="_self"
+            type="standard"
+          >
+            <span
+              className="c17 c35"
+              color="inherit"
+              size="s"
+            >
+              FAQs
+            </span>
+          </a>
+        </li>
+      </nav>
+      <div
+        className="c36"
+      >
+        <ul
+          className="c26"
+        >
+          <li
+            className="c27"
+          >
+            <a
+              className="c28"
+              data-test="icon-facebook"
+              href="https://www.facebook.com/comicrelief"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Check out our Facebook page"
+            >
+              <img
+                alt="facebook"
+                className="c29"
+                src="mock.asset"
+              />
+            </a>
+          </li>
+          <li
+            className="c27"
+          >
+            <a
+              className="c28"
+              data-test="icon-instagram"
+              href="https://www.instagram.com/comicrelief"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Check out our Instagram account"
+            >
+              <img
+                alt="instagram"
+                className="c29"
+                src="mock.asset"
+              />
+            </a>
+          </li>
+          <li
+            className="c27"
+          >
+            <a
+              className="c28"
+              data-test="icon-x"
+              href="https://x.com/comicrelief"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Check out our X account"
+            >
+              <img
+                alt="x"
+                className="c29"
+                src="mock.asset"
+              />
+            </a>
+          </li>
+          <li
+            className="c27"
+          >
+            <a
+              className="c28"
+              data-test="icon-tiktok"
+              href="https://www.tiktok.com/@comicrelief"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Check out our TikTok account"
+            >
+              <img
+                alt="tiktok"
+                className="c29"
+                src="mock.asset"
+              />
+            </a>
+          </li>
+          <li
+            className="c27"
+          >
+            <a
+              className="c28"
+              data-test="icon-youtube"
+              href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Check out our YouTube channel"
+            >
+              <img
+                alt="youtube"
+                className="c29"
+                src="mock.asset"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav
+        aria-label="Secondary footer navigation"
+        className="c37"
+        role="navigation"
+      >
+        <li
+          className="c38"
+        >
+          <a
+            className="c3 c39"
+            color="red"
+            href="https://www.comicrelief.com/terms-of-use"
+            target="_self"
+            type="standard"
+          >
+            <span
+              className="c17 c40"
+              color="inherit"
+              size="s"
+            >
+              Terms of use
+            </span>
+          </a>
+        </li>
+        <li
+          className="c38"
+        >
+          <a
+            className="c3 c39"
+            color="red"
+            href="https://www.comicrelief.com/privacy-notice"
+            target="_self"
+            type="standard"
+          >
+            <span
+              className="c17 c40"
+              color="inherit"
+              size="s"
+            >
+              Privacy notice
+            </span>
+          </a>
+        </li>
+      </nav>
+      <div
+        className="c41"
+      >
+        <p
+          className="c17 c42"
+          color="inherit"
+          size="s"
+        >
+          © 2026 Comic Relief
+        </p>
+        <p
+          className="c17 c42"
+          color="inherit"
+          size="s"
+        >
+          Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
+        </p>
+      </div>
+      <div
+        className="c43"
+      />
+    </div>
+  </footer>
+</div>
+`;
