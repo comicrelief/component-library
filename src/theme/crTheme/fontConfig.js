@@ -1,6 +1,7 @@
 export default {
   h1: {
     family: 'Anton',
+    weight: 400,
     small: {
       fontSize: '2rem',
       lineHeight: '2rem'
@@ -16,6 +17,7 @@ export default {
   },
   h2: {
     family: 'Anton',
+    weight: 400,
     small: {
       fontSize: '1.5rem',
       lineHeight: '1.5rem'
@@ -31,6 +33,7 @@ export default {
   },
   h3: {
     family: 'Montserrat',
+    weight: 700,
     small: {
       fontSize: '1.25rem',
       lineHeight: '1.5rem'
@@ -46,6 +49,7 @@ export default {
   },
   h4: {
     family: 'Montserrat',
+    weight: 700,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -63,6 +67,7 @@ export default {
   // some config here to keep pre-existing usage happy:
   h5: {
     family: 'Montserrat',
+    weight: 700,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -78,6 +83,7 @@ export default {
   },
   h6: {
     family: 'Montserrat',
+    weight: 700,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -93,6 +99,7 @@ export default {
   },
   p: {
     family: 'Montserrat',
+    weight: 400,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -108,6 +115,7 @@ export default {
   },
   span: {
     family: 'Montserrat',
+    weight: 400,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -124,6 +132,7 @@ export default {
   // To be used directly (not via fontHelper), but makes sense to keep here:
   button: {
     family: 'Montserrat',
+    weight: 400,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -141,6 +150,7 @@ export default {
   // config objects made sense to keep it here all the same.
   formFieldLabel: {
     family: 'Montserrat',
+    weight: 400,
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -156,6 +166,7 @@ export default {
   },
   formFieldError: {
     family: 'Montserrat',
+    weight: 400,
     small: {
       fontSize: '0.875rem',
       lineHeight: '1.063rem'

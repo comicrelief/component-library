@@ -5,7 +5,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
   <Text
     tag="h1"
     mobileColor="blue"
-    // To be phased-out:
+    // To be phased out: tags to use the prescribed family always
     family="Anton"
   >
     <b style={{ width: "55px", display: "inline-block" }}>H1 </b>
@@ -39,8 +39,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
   <Text
     tag="h3"
     mobileColor="red"
-    // To be phased-out:
-    family="Anton"
+    family="Montserrat"
   >
     <b style={{ width: "55px", display: "inline-block" }}>H3 </b>
     <Text style={{ textTransform: "none" }} tag="span">
@@ -55,8 +54,9 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
 
   <Text
     tag="h4"
-    family="Anton"
+    family="Montserrat"
     weight="normal"
+    // To be phased out: text to always be rendered as typed
     uppercase>
     <b style={{ width: "55px", display: "inline-block" }}>H4 </b>
     <Text style={{ textTransform: "none" }} tag="span">
@@ -80,14 +80,14 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     </Text>
 
     <Text tag="p" style={{ marginTop: "55px", fontStyle: "italic"}}>
-      To be phased out:
+      Tags to be phased out:
     </Text>
 
     <Text 
     tag="h5"
-    // To be phased-out:
     family="Anton"
     uppercase
+    // To be phased-out
     weight="normal">
     <b style={{ width: "55px", display: "inline-block" }}>H5 </b>
     <Text style={{ textTransform: "none" }} tag="span">
@@ -101,7 +101,6 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
   
 
   <Text tag="h6" 
-    // To be phased-out:
     family="Anton" 
     uppercase
     weight="normal">

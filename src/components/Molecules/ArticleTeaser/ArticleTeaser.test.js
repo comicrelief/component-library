@@ -21,7 +21,7 @@ it('renders article teaser correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 400;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
@@ -36,7 +36,7 @@ it('renders article teaser correctly', () => {
 
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 700;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
@@ -311,7 +311,7 @@ it('renders press realese correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 400;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
@@ -326,7 +326,7 @@ it('renders press realese correctly', () => {
 
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 700;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;

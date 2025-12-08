@@ -3,7 +3,7 @@
 exports[`renders heavy heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -39,7 +39,7 @@ exports[`renders heavy heading correctly 1`] = `
 exports[`renders high heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -76,7 +76,7 @@ exports[`renders high heading correctly 1`] = `
 exports[`renders large heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -114,7 +114,7 @@ exports[`renders large heading correctly 1`] = `
 exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -153,7 +153,7 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;

@@ -6,7 +6,7 @@ export default (theme, thisTag) => {
     return `
       // General styles:
       font-family: ${theme.fontFamilies(fontConfig[thisTag].family)};
-      font-weight: normal;
+      font-weight: ${fontConfig[thisTag].weight};
       letter-spacing: 0;
 
       // XS and S breakpoint ("mobile") 

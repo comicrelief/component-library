@@ -15,7 +15,7 @@ it('renders correctly', () => {
     Array [
       .c2 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 400;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
@@ -119,7 +119,7 @@ it('renders correctly', () => {
       </label>,
       .c2 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: normal;
+      font-weight: 400;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;

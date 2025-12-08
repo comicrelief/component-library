@@ -3,7 +3,7 @@
 exports[`"Single Giving, No Money Buys, with overridden manual input value" renders correctly 1`] = `
 .c4 {
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -20,7 +20,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -35,7 +35,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c16 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -50,7 +50,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c20 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -761,7 +761,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 exports[`Monthly donation renders correctly 1`] = `
 .c4 {
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -778,7 +778,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -793,7 +793,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -808,7 +808,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c17 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -823,7 +823,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c21 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -1515,7 +1515,7 @@ exports[`Monthly donation renders correctly 1`] = `
 exports[`Single donation renders correctly 1`] = `
 .c4 {
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -1532,7 +1532,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -1547,7 +1547,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c10 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -1562,7 +1562,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c21 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -1577,7 +1577,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -2361,7 +2361,7 @@ exports[`Single donation renders correctly 1`] = `
 exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c4 {
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -2378,7 +2378,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -2393,7 +2393,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c10 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -2408,7 +2408,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;

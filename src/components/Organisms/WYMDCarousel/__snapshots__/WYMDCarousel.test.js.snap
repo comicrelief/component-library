@@ -343,7 +343,7 @@ exports[`renders correctly:
    1`] = `
 .c1 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -356,7 +356,7 @@ exports[`renders correctly:
 
 .c3 {
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
@@ -371,7 +371,7 @@ exports[`renders correctly:
 
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
