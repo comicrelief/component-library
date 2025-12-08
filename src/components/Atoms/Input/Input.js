@@ -6,7 +6,6 @@ import alertIcon from './assets/error-alert-icon-red.svg';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 import zIndex from '../../../theme/shared/zIndex';
-import fontHelper from '../../../theme/crTheme/fontHelper';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
 //  the element with JS)
