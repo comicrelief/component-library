@@ -19,7 +19,7 @@ it('renders a standard styled link correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1.125rem;
+      font-size: 1rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;

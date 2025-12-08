@@ -23,14 +23,17 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1rem;
-      font-size: 1rem;
+    }
+
+    .c8 {
+      line-height: 0.75rem !important;
+      font-size: 0.75rem !important;
       font-weight: bold;
     }
 
@@ -38,14 +41,17 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
-      line-height: 1.875rem;
-      font-size: 1.875rem;
+    }
+
+    .c10 {
+      line-height: 2rem !important;
+      font-size: 2rem !important;
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
@@ -314,14 +320,17 @@ it('renders press realese correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1rem;
-      font-size: 1rem;
+    }
+
+    .c8 {
+      line-height: 0.75rem !important;
+      font-size: 0.75rem !important;
       font-weight: bold;
     }
 
@@ -329,14 +338,17 @@ it('renders press realese correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
-      line-height: 1.875rem;
-      font-size: 1.875rem;
+    }
+
+    .c10 {
+      line-height: 2rem !important;
+      font-size: 2rem !important;
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;

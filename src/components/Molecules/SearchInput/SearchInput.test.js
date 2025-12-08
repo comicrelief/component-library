@@ -19,10 +19,10 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
     }
@@ -94,7 +94,7 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c10:focus {
@@ -162,7 +162,7 @@ it('renders correctly', () => {
     @media (min-width:740px) {
       .c5 input {
         height: 100px;
-        font-size: 2rem;
+        font-size: 3rem;
       }
     }
 

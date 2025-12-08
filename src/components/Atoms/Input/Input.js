@@ -6,6 +6,7 @@ import alertIcon from './assets/error-alert-icon-red.svg';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 import zIndex from '../../../theme/shared/zIndex';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
 //  the element with JS)
@@ -49,7 +50,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: ${theme.fontFamilies(theme.font.regular)};
+  font-family: inherit;
 
   :focus {
     border: 1px solid ${theme.color('grey_for_forms')};
@@ -86,7 +87,7 @@ const DescriptionWrapper = styled.div`
   margin-bottom: 0.5rem;
 
   * {
-    font-size: ${({ theme }) => theme.fontSize('xs')};
+    font-size: 0.875rem;
   }
 `;
 

@@ -20,10 +20,10 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
     }
@@ -43,7 +43,15 @@ it('renders correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
-      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c3 {
@@ -85,7 +93,7 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c5:focus {
@@ -103,6 +111,20 @@ it('renders correctly', () => {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
       }
     }
 
@@ -169,10 +191,10 @@ it('renders with responsive max widths correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
     }
@@ -192,7 +214,15 @@ it('renders with responsive max widths correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
-      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c3 {
@@ -234,7 +264,7 @@ it('renders with responsive max widths correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c5:focus {
@@ -252,6 +282,20 @@ it('renders with responsive max widths correctly', () => {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
       }
     }
 

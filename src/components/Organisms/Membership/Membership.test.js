@@ -29,14 +29,17 @@ it('renders correctly', () => {
       font-family: 'Anton',Impact,sans-serif;
       font-weight: 400;
       text-transform: uppercase;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.5rem;
       line-height: 1.5rem;
-      line-height: 1.5rem;
-      font-size: 1.5rem;
+    }
+
+    .c6 {
+      line-height: 1.5rem !important;
+      font-size: 1.5rem !important;
       font-weight: 800;
     }
 
@@ -44,10 +47,10 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
     }
@@ -56,10 +59,10 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
@@ -68,14 +71,17 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      line-height: 1.125rem;
-      font-size: 1.125rem;
+    }
+
+    .c22 {
+      line-height: 1rem !important;
+      font-size: 1rem !important;
       font-weight: 500;
     }
 
@@ -108,7 +114,15 @@ it('renders correctly', () => {
 
     .c16 {
       margin-bottom: 0.5rem;
-      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c17 {
@@ -150,7 +164,7 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c19:focus {
@@ -346,7 +360,7 @@ it('renders correctly', () => {
     .c25 {
       width: 100%;
       color: #FFFFFF;
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
       padding: 1rem 0.5rem;
@@ -414,6 +428,20 @@ it('renders correctly', () => {
       .c22 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c16 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c16 {
+        font-size: 1rem;
+        line-height: 1.25rem;
       }
     }
 

@@ -8,7 +8,7 @@ export default (theme, thisTag) => {
       font-family: ${theme.fontFamilies(fontConfig[thisTag].family)};
       font-weight: ${fontConfig[thisTag].weight};
       text-transform: ${fontConfig[thisTag].transform};
-      letter-spacing: normal;
+      letter-spacing: 0;
 
       // XS and S breakpoint ("mobile") 
       font-size: ${fontConfig[thisTag].small.fontSize};

@@ -5,14 +5,17 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 2rem;
-  font-size: 2rem;
+}
+
+.c6 {
+  line-height: 3rem !important;
+  font-size: 3rem !important;
   color: #FFFFFF;
 }
 
@@ -196,14 +199,17 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
-  line-height: 2rem;
-  font-size: 2rem;
+}
+
+.c6 {
+  line-height: 3rem !important;
+  font-size: 3rem !important;
   color: #FFFFFF;
 }
 
@@ -211,12 +217,15 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+
+.c7 {
   color: #FFFFFF;
 }
 
@@ -244,7 +253,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -472,14 +481,17 @@ exports[`renders Single Message with double image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 2rem;
-  font-size: 2rem;
+}
+
+.c6 {
+  line-height: 3rem !important;
+  font-size: 3rem !important;
   color: #000000;
 }
 
@@ -712,14 +724,17 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
-  line-height: 2rem;
-  font-size: 2rem;
+}
+
+.c6 {
+  line-height: 3rem !important;
+  font-size: 3rem !important;
   color: #FFFFFF;
 }
 
@@ -727,12 +742,15 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+
+.c7 {
   color: #FFFFFF;
 }
 
@@ -760,7 +778,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border-radius: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1146,14 +1164,17 @@ exports[`renders Single Message with no Image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  line-height: 2rem;
-  font-size: 2rem;
+}
+
+.c2 {
+  line-height: 3rem !important;
+  font-size: 3rem !important;
   color: #FFFFFF;
 }
 

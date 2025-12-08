@@ -174,6 +174,23 @@ export default {
       lineHeight: '1.25rem'
     }
   },
+  formFieldInput: {
+    family: 'Montserrat',
+    weight: 400,
+    transform: 'inherit',
+    small: {
+      fontSize: '1.25rem',
+      lineHeight: '1.25rem'
+    },
+    medium: {
+      fontSize: '1.25rem',
+      lineHeight: '1.25rem'
+    },
+    large: {
+      fontSize: '1.25rem',
+      lineHeight: '1.25rem'
+    }
+  },
   formFieldError: {
     family: 'Montserrat',
     weight: 400,

@@ -10,32 +10,34 @@ export const BaseText = styled.span`
   // Use our helper function to streamline styling, laying the groundwork for updated theme:
   ${({ as, theme }) => (as !== undefined && css`
     ${fontHelper(theme, as)}
-  `)};
 
-  // Then override with the pre-existing base styles *but only when the associated props are provided.*
-  // Part of this new work is to phase-out usage of these 'customisation' props (so that 
-  // all tags will use the standardised styles set in fontHelper), but, in order to 
-  // ensure things don't break/look bad accidentally, it'll require intentional, in-situ prop removal.
+    & {
+      // Then override with the pre-existing base styles *but only when the associated props are provided.*
+      // Part of this new work is to phase-out usage of these 'customisation' props (so that 
+      // all tags will use the standardised styles set in fontHelper), but, in order to 
+      // ensure things don't break/look bad accidentally, it'll require intentional, in-situ prop removal.
 
-  // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
-  ${({ size, theme }) => (size && `line-height: ${theme.fontSize(size)}`)};
-  ${({ size, theme }) => (size && `font-size: ${theme.fontSize(size)}`)};
+      // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
+      ${({ size }) => (size && `line-height: ${theme.fontSize(size)} !important`)};
+      ${({ size }) => (size && `font-size: ${theme.fontSize(size)} !important`)};
 
-  ${({ family, theme }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
-  ${({ weight }) => (weight && `font-weight: ${weight}`)};
-  ${({ height }) => (height && `line-height: ${height}`)};
-  
-  ${({ uppercase }) => (uppercase && 'text-transform: uppercase')};
+      ${({ family }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
+      ${({ weight }) => (weight && `font-weight: ${weight}`)};
+      ${({ height }) => (height && `line-height: ${height}`)};
+      ${({ uppercase }) => (uppercase && 'text-transform: uppercase')};
 
-  color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
+      color: ${({ color }) => (color ? theme.color(color) : 'inherit')};
 
-  ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
+      ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
-  ${({ mobileColor, theme }) => mobileColor && css`
-    @media (max-width: ${breakpointValues2026.L - 1}px) {
-      color: ${theme.color(mobileColor)};
+      ${({ mobileColor }) => mobileColor && css`
+        @media (max-width: ${breakpointValues2026.L - 1}px) {
+          color: ${theme.color(mobileColor)};
+        }
+      `};
     }
-  `};
+
+  `)};
 `;
 
 /** Text renders different elements based on the `tag` prop

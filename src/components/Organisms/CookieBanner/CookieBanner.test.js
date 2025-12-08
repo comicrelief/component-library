@@ -23,12 +23,15 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: normal;
-      -moz-letter-spacing: normal;
-      -ms-letter-spacing: normal;
-      letter-spacing: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+    }
+
+    .c1 {
       color: #FFFFFF;
     }
 
@@ -56,7 +59,7 @@ it('renders correctly', () => {
       -webkit-text-decoration: none;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1.125rem;
+      font-size: 1rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
