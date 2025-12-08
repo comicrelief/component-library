@@ -62,9 +62,9 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     <Text style={{ textTransform: "none" }} tag="span">
       <b>family:</b> {fontConfig['span'].family} -  
       <br/>
-      <b>font size (S / M / L breakpoints):</b> {fontConfig['span'].small.fontSize} / {fontConfig['span'].medium.fontSize} / {fontConfig['span'].large.fontSize} 
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h4'].small.fontSize} / {fontConfig['h4'].medium.fontSize} / {fontConfig['h4'].large.fontSize} 
       <br/>
-      <b>line height (S / M / L breakpoints):</b> {fontConfig['span'].small.lineHeight} / {fontConfig['span'].medium.lineHeight} / {fontConfig['span'].large.lineHeight} 
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h4'].small.lineHeight} / {fontConfig['h4'].medium.lineHeight} / {fontConfig['h4'].large.lineHeight} 
     </Text>
   </Text>
 
