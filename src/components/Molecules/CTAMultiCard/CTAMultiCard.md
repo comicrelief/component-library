@@ -4,6 +4,9 @@
 The component expects pre-rendered content to be passed in the `body` field of each card. The frontend should handle rich text rendering before passing data to this component.
 
 ### CTAMultiCard: Desktop Grid View (3 columns)
+
+**NB: In mobile view, this example displays as a carousel.**
+
 ```js
 import CTAMultiCard from './CTAMultiCard';
 import Text from '../../Atoms/Text/Text';
@@ -22,6 +25,7 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
 const data = {
   ...exampleData,
   cards: cardsWithRenderedBody,
+  carouselOfCards: true,
   backgroundColour: "transparent"
 };
 
@@ -32,7 +36,7 @@ const data = {
 
 ### CTAMultiCard: Desktop Grid View (2 columns)
 
-**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card.**
+**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel).**
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -64,73 +68,12 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
 const dataWithLongText = {
   ...exampleData,
   layout: "2 columns",
+  carouselOfCards: false,
   backgroundColour: "Transparent",
   cards: cardsWithRenderedBody
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
   <CTAMultiCard data={dataWithLongText} />
-</div>;
-```
-
-### CTAMultiCard: Mobile Carousel View
-
-**NB: These mobile views look janky if you're in desktop mode. Switch your browser to mobile view, or reduce the width of the viewport, to see them as they should look.**
-
-```js
-const exampleData = require('./example_data.json');
-import CTAMultiCard from './CTAMultiCard';
-import Text from '../../Atoms/Text/Text';
-
-// Map cards to include pre-rendered body content
-const cardsWithRenderedBody = exampleData.cards.map(card => ({
-  ...card,
-  body: (
-    <Text tag="p">
-      <strong>Load</strong> of text here
-    </Text>
-  )
-}));
-
-const data = {
-  ...exampleData,
-  cards: cardsWithRenderedBody,
-  carouselOfCards: true,
-  backgroundColour: "Transparent"
-};
-
-<div style={{ width: '350px', height: '400px', background: '#E1E2E3'}}>
-  <CTAMultiCard data={data} />
-</div>;
-```
-
-### CTAMultiCard: Mobile Stack View (Vertical)
-
-**NB: These mobile views look janky if you're in desktop mode. Switch your browser to mobile view, or reduce the width of the viewport, to see them as they should look.**
-
-```js
-const exampleData = require('./example_data.json');
-import CTAMultiCard from './CTAMultiCard';
-import Text from '../../Atoms/Text/Text';
-
-// Map cards to include pre-rendered body content
-const cardsWithRenderedBody = exampleData.cards.map(card => ({
-  ...card,
-  body: (
-    <Text tag="p">
-      <strong>Load</strong> of text here
-    </Text>
-  )
-}));
-
-const data = {
-  ...exampleData,
-  cards: cardsWithRenderedBody,
-  carouselOfCards: false,
-  backgroundColour: "Transparent"
-};
-
-<div style={{ width: '375px', padding: '1rem', background: '#E1E2E3' }}>
-  <CTAMultiCard data={data} />
 </div>;
 ```
