@@ -3,21 +3,34 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import CTAMultiCard from './CTAMultiCard';
 import exampleData from './example_data.json';
+import Text from '../../Atoms/Text/Text';
+
+// Map example data cards to include pre-rendered body content
+const cardsWithRenderedBody = exampleData.cards.map(card => ({
+  ...card,
+  body: (
+    <Text tag="p">
+      <strong>Load</strong> of text here
+    </Text>
+  )
+}));
 
 const mockData = {
   ...exampleData,
-  // Add a card without image for testing edge cases. This should not ever really happen in real life, but just in case...
   cards: [
-    ...exampleData.cards,
+    ...cardsWithRenderedBody,
+    // Add a card without image for testing edge cases. This should not ever really happen in real life, but just in case...
     {
       id: '6bc887c7-f939-5654-a0c5-1b2caf91de6c',
       title: 'Card no pic',
       backgroundColour: 'Blue Light',
       link: '/test-no-image',
       linkLabel: 'View card',
-      body: {
-        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Load of text here","marks":[],"data":{}}]}]}'
-      },
+      body: (
+        <Text tag="p">
+          Load of text here
+        </Text>
+      ),
       image: null
     }
   ]

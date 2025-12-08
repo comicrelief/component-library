@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { snakeCase } from 'lodash';
 import Picture from '../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
@@ -17,24 +16,6 @@ import {
 } from './CTAMultiCard.style';
 
 const isInternalUrl = url => allowListed(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
-
-// Convert Contentful rich text to React components
-const renderRichText = body => {
-  // If body is already a React node, return it as-is
-  if (React.isValidElement(body)) {
-    return body;
-  }
-
-  if (body && body.raw) {
-    try {
-      const parsed = JSON.parse(body.raw);
-      return documentToReactComponents(parsed);
-    } catch (e) {
-      return null;
-    }
-  }
-  return null;
-};
 
 const SingleCard = ({
   card,
@@ -59,8 +40,6 @@ const SingleCard = ({
   const isInternalLink = isInternalUrl(link);
   const target = isInternalLink ? 'self' : 'blank';
   const external = target === 'blank' ? 'noopener' : null;
-
-  const bodyContent = renderRichText(body);
 
   return (
     <CardWrapper key={id} isCarousel={isCarousel}>
@@ -88,7 +67,7 @@ const SingleCard = ({
         )}
         <CopyAndLinkSection backgroundColor={bgColour}>
           <Copy>
-            {bodyContent}
+            {body}
           </Copy>
           {linkLabel && (
             <CTA>
@@ -109,12 +88,7 @@ const SingleCard = ({
 SingleCard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    body: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.shape({
-        raw: PropTypes.string.isRequired
-      })
-    ]),
+    body: PropTypes.node,
     image: PropTypes.shape({
       description: PropTypes.string,
       gatsbyImageData: PropTypes.shape({

@@ -14,6 +14,10 @@ import {
  * through data and create multiple CardsDs instances.
  * Now CTAMultiCard handles the mapping internally, accepting
  * a data object and rendering all cards.
+ *
+ * Note: The component expects pre-rendered content in the `body`
+ * field of each card. The frontend should handle rich text rendering
+ * before passing data to this component.
  */
 
 const CTAMultiCard = ({ data }) => {
@@ -56,13 +60,7 @@ CTAMultiCard.propTypes = {
     cards: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
-        body: PropTypes.oneOfType([
-          PropTypes.node,
-          PropTypes.string,
-          PropTypes.shape({
-            raw: PropTypes.string
-          })
-        ]),
+        body: PropTypes.node,
         image: PropTypes.shape({
           description: PropTypes.string,
           gatsbyImageData: PropTypes.shape({

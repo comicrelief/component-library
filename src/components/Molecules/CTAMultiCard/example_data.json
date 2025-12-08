@@ -13,9 +13,6 @@
           "backgroundColour": "White",
           "link": "/test",
           "linkLabel": "test go",
-          "body": {
-            "raw": "{\"nodeType\":\"document\",\"data\":{},\"content\":[{\"nodeType\":\"paragraph\",\"data\":{},\"content\":[{\"nodeType\":\"text\",\"value\":\"Load\",\"marks\":[{\"type\":\"bold\"}],\"data\":{}},{\"nodeType\":\"text\",\"value\":\" of text here\",\"marks\":[],\"data\":{}}]}]}"
-          },
           "image": {
             "description": "",
             "gatsbyImageData": {
@@ -48,9 +45,6 @@
           "backgroundColour": "White",
           "link": "/test",
           "linkLabel": "test go",
-          "body": {
-            "raw": "{\"nodeType\":\"document\",\"data\":{},\"content\":[{\"nodeType\":\"paragraph\",\"data\":{},\"content\":[{\"nodeType\":\"text\",\"value\":\"Load\",\"marks\":[{\"type\":\"bold\"}],\"data\":{}},{\"nodeType\":\"text\",\"value\":\" of text here\",\"marks\":[],\"data\":{}}]}]}"
-          },
           "image": {
             "description": "",
             "gatsbyImageData": {
@@ -83,9 +77,6 @@
           "backgroundColour": "White",
           "link": "/test",
           "linkLabel": "test go",
-          "body": {
-            "raw": "{\"nodeType\":\"document\",\"data\":{},\"content\":[{\"nodeType\":\"paragraph\",\"data\":{},\"content\":[{\"nodeType\":\"text\",\"value\":\"Load\",\"marks\":[{\"type\":\"bold\"}],\"data\":{}},{\"nodeType\":\"text\",\"value\":\" of text here\",\"marks\":[],\"data\":{}}]}]}"
-          },
           "image": {
             "description": "",
             "gatsbyImageData": {
