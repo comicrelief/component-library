@@ -87,3 +87,37 @@ export const secondaryLinksList = [
     }
   }
 ];
+
+export const testPrimaryLinksList = [
+  {
+    title: 'Contact us',
+    path: 'contact-us',
+    internal: {
+      type: 'ContentfulPageLandingPage'
+    }
+  },
+  {
+    title: 'FAQs',
+    path: 'https://www.comicrelief.com/frequently-asked-questions',
+    internal: {
+      type: 'ContentfulPageLandingPage'
+    }
+  }
+];
+
+export const testSecondaryLinksList = [
+  {
+    title: 'Terms of use',
+    path: 'https://www.comicrelief.com/terms-of-use',
+    internal: {
+      type: 'ContentfulPageLandingPage'
+    }
+  },
+  {
+    title: 'Privacy notice',
+    path: 'https://www.comicrelief.com/privacy-notice',
+    internal: {
+      type: 'ContentfulPageLandingPage'
+    }
+  }
+];
