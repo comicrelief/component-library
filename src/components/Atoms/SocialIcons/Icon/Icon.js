@@ -121,8 +121,8 @@ const HelperText = styled.span`
 `;
 
 const Icon = ({
-  href, target, icon, brand, title, isHeader = false,
-  id, newStyle = false, invertColor = false, ...restProps
+  href, target, icon, brand, title, id,
+  isHeader = false, newStyle = false, invertColor = false, ...restProps
 }) => (
   <StyledLink
     href={href}

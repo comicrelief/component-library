@@ -16,7 +16,8 @@ const LogoLink = styled.a`
 `;
 
 const LogoLinked = ({
-  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', url = '/', animateRotate = false, sizeSm, sizeMd
+  sizeSm, sizeMd,
+  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', url = '/', animateRotate = false
 }) => {
   if (campaign === 'Sport Relief Gameon') {
     return (

@@ -25,21 +25,21 @@ import {
 } from './Footer.style';
 
 const Footer = ({
-  primaryLinksList = [],
-  secondaryLinksList = [],
   legalText,
   copyrightText,
-  campaign = 'Comic Relief',
-  additionalLegalLine = '',
-  showFundraisingRegulatorLogo = false,
-  showEmailSignup = true,
   showFacebookSocialIcon,
   showInstagramSocialIcon,
   showXSocialIcon,
   showTikTokSocialIcon,
   showYouTubeSocialIcon,
-  animateRotate = false,
   onNewsletterSubmit,
+  primaryLinksList = [],
+  secondaryLinksList = [],
+  campaign = 'Comic Relief',
+  additionalLegalLine = '',
+  showFundraisingRegulatorLogo = false,
+  showEmailSignup = true,
+  animateRotate = false,
   ...rest
 }) => {
   // Remove white space between words

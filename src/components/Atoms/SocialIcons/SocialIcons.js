@@ -34,14 +34,14 @@ const StyledIcon = styled(Icon)`
 `;
 
 const SocialIcons = ({
-  target = 'blank',
   campaign,
-  newStyle = false,
   showFacebookSocialIcon,
   showInstagramSocialIcon,
   showXSocialIcon,
   showTikTokSocialIcon,
   showYouTubeSocialIcon,
+  target = 'blank',
+  newStyle = false,
   invertColor = false,
   ...restProps
 }) => {
