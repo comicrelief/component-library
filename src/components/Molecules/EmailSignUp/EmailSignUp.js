@@ -38,7 +38,7 @@ const EmailSignUp = ({ formContext, ...rest }) => {
           />
         </InputWrapper>
         <ButtonWrapper>
-          <StyledEmailSignUpButton type="submit" color="white" disabled={!!errorMsg}>
+          <StyledEmailSignUpButton type="submit" color="white">
             Sign up
           </StyledEmailSignUpButton>
         </ButtonWrapper>
