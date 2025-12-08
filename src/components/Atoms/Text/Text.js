@@ -31,6 +31,22 @@ export const BaseText = styled.span`
 
       ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
+      ${({ size }) => (size === 'super'
+      && css`
+          font-size: ${theme.fontSize('xxl')};
+          line-height: 3rem;
+          @media ${theme.allBreakpoints('M')} {
+            font-size: ${theme.fontSize('big')};
+            line-height: ${theme.fontSize('big')};
+            margin-bottom: 2rem;
+          }
+          @media ${theme.allBreakpoints('L')} {
+            font-size: ${theme.fontSize('super')};
+            line-height: ${theme.fontSize('super')};
+            margin-bottom: 2rem;
+          }
+        `)};
+
       ${({ mobileColor }) => mobileColor && css`
         @media (max-width: ${breakpointValues2026.L - 1}px) {
           color: ${theme.color(mobileColor)};

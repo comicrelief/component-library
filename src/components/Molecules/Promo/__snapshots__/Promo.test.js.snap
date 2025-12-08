@@ -20,6 +20,8 @@ exports[`renders Promo correctly 1`] = `
   font-weight: normal;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .c8 {
@@ -161,6 +163,22 @@ exports[`renders Promo correctly 1`] = `
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -319,6 +337,8 @@ exports[`renders Promo correctly end position 1`] = `
   font-weight: normal;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .c8 {
@@ -463,6 +483,22 @@ exports[`renders Promo correctly end position 1`] = `
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
   }
 }
 
