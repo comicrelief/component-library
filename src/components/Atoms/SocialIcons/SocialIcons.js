@@ -21,11 +21,16 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  width: 32px;
-  margin-right: ${({ newStyle }) => (newStyle ? spacing('md') : spacing('m'))};
+  width: 48px;
+  margin-right: ${({ newStyle }) => (newStyle ? '0' : spacing('m'))};
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: 48px;
+    margin-right: ${({ newStyle }) => (newStyle ? spacing('md') : spacing('m'))};
   }
+`;
+
+const StyledIcon = styled(Icon)`
+  width: auto;
 `;
 
 const SocialIcons = ({
@@ -84,7 +89,7 @@ const SocialIcons = ({
           }
           return (
             <StyledItem key={brand} newStyle={newStyle}>
-              <Icon
+              <StyledIcon
                 target={target}
                 icon={icon}
                 href={linkData.url}
