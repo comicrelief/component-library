@@ -14,8 +14,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  line-height: undefined;
   font-size: undefined;
+  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -32,8 +32,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c3 {
-  line-height: 1rem;
   font-size: 1rem;
+  line-height: normal;
 }
 
 .c4 {

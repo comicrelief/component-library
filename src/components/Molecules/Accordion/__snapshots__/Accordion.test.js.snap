@@ -14,8 +14,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  line-height: 1.5rem;
   font-size: 1.5rem;
+  line-height: normal;
 }
 
 .c6 {

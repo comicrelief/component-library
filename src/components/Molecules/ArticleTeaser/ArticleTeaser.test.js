@@ -32,8 +32,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c8 {
-      line-height: 0.75rem;
       font-size: 0.75rem;
+      line-height: normal;
       font-weight: bold;
     }
 
@@ -50,8 +50,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      line-height: 2rem;
       font-size: 2rem;
+      line-height: normal;
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
@@ -329,8 +329,8 @@ it('renders press realese correctly', () => {
     }
 
     .c8 {
-      line-height: 0.75rem;
       font-size: 0.75rem;
+      line-height: normal;
       font-weight: bold;
     }
 
@@ -347,8 +347,8 @@ it('renders press realese correctly', () => {
     }
 
     .c10 {
-      line-height: 2rem;
       font-size: 2rem;
+      line-height: normal;
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;

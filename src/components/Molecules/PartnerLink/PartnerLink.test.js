@@ -30,8 +30,8 @@ it('renders correctly', () => {
     }
 
     .c4 {
-      line-height: 0.6875rem;
       font-size: 0.6875rem;
+      line-height: normal;
       color: #FFFFFF;
     }
 

@@ -37,8 +37,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c3 {
-      line-height: 1rem;
       font-size: 1rem;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: bold;
       color: #222222;
@@ -57,8 +57,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c7 {
-      line-height: 2rem;
       font-size: 2rem;
+      line-height: normal;
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
@@ -78,8 +78,8 @@ it('renders article teaser correctly', () => {
     }
 
     .c10 {
-      line-height: 0.75rem;
       font-size: 0.75rem;
+      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       color: #222222;

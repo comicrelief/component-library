@@ -93,8 +93,8 @@ exports[`renders large heading correctly 1`] = `
 }
 
 .c0 {
-  line-height: 1.5rem;
   font-size: 1.5rem;
+  line-height: normal;
 }
 
 @media (min-width:740px) {
@@ -134,8 +134,8 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 }
 
 .c0 {
-  line-height: 2rem;
   font-size: 2rem;
+  line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
 }
 
@@ -176,8 +176,8 @@ exports[`renders xl yellow paragraph correctly 1`] = `
 }
 
 .c0 {
-  line-height: 2rem;
   font-size: 2rem;
+  line-height: normal;
   color: #FFE400;
 }
 

@@ -14,8 +14,8 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c7 {
-  line-height: 5rem;
   font-size: 5rem;
+  line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -313,8 +313,8 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 .c7 {
-  line-height: 5rem;
   font-size: 5rem;
+  line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   text-transform: uppercase;

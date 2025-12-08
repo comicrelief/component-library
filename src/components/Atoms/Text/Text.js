@@ -19,9 +19,8 @@ export const BaseText = styled.span`
       // all tags will use the new standardised styles set in fontHelper), but, in order to ensure
       // things don't break/look bad accidentally, it'll require intentional, in-situ prop removal.
 
-      // (Not a typo; crummy old styles matched line-heights to font-sizes by design)
-      ${({ size }) => (size && `line-height: ${theme.fontSize(size)}`)};
       ${({ size }) => (size && `font-size: ${theme.fontSize(size)}`)};
+      ${({ size }) => (size && 'line-height: normal')};
 
       ${({ family }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
       ${({ weight }) => (weight && `font-weight: ${weight}`)};
