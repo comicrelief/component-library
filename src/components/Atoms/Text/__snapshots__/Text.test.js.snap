@@ -4,14 +4,14 @@ exports[`renders heavy heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 1000;
-  text-transform: inherit;
 }
 
 @media (min-width:740px) {
@@ -40,14 +40,14 @@ exports[`renders high heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
   line-height: 5;
-  text-transform: inherit;
 }
 
 @media (min-width:740px) {
@@ -77,15 +77,15 @@ exports[`renders large heading correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
   line-height: 1.5rem;
   font-size: 1.5rem;
-  text-transform: inherit;
 }
 
 @media (min-width:740px) {
@@ -115,16 +115,16 @@ exports[`renders xl paragraph with Anton font correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1rem;
   line-height: 1.25rem;
   line-height: 1.875rem;
   font-size: 1.875rem;
   font-family: 'Anton',Impact,sans-serif;
-  text-transform: inherit;
 }
 
 @media (min-width:740px) {
@@ -154,15 +154,15 @@ exports[`renders xl yellow paragraph correctly 1`] = `
 .c0 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1rem;
   line-height: 1.25rem;
   line-height: 1.875rem;
   font-size: 1.875rem;
-  text-transform: inherit;
   color: #FFE400;
 }
 

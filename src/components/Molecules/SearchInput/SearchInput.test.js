@@ -18,13 +18,13 @@ it('renders correctly', () => {
     .c6 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
-      text-transform: inherit;
     }
 
     .c4 {

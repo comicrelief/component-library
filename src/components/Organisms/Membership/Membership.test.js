@@ -28,55 +28,55 @@ it('renders correctly', () => {
     .c6 {
       font-family: 'Anton',Impact,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: uppercase;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1.5rem;
       line-height: 1.5rem;
       line-height: 1.5rem;
       font-size: 1.5rem;
       font-weight: 800;
-      text-transform: inherit;
     }
 
     .c7 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
-      text-transform: inherit;
     }
 
     .c12 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1.25rem;
       line-height: 1.5rem;
-      text-transform: inherit;
     }
 
     .c22 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
       line-height: 1.125rem;
       font-size: 1.125rem;
       font-weight: 500;
-      text-transform: inherit;
     }
 
     .c1 {

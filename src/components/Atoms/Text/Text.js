@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import { breakpointValues2026 } from '../../../theme/shared/breakpoints2026';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
 /** Text component */
@@ -24,15 +24,15 @@ export const BaseText = styled.span`
   ${({ family, theme }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
   ${({ weight }) => (weight && `font-weight: ${weight}`)};
   ${({ height }) => (height && `line-height: ${height}`)};
-
-  text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'inherit')};
   
+  ${({ uppercase }) => (uppercase && 'text-transform: uppercase')};
+
   color: ${({ color, theme }) => (color ? theme.color(color) : 'inherit')};
 
   ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
 
   ${({ mobileColor, theme }) => mobileColor && css`
-    @media (max-width: ${breakpointValues.L - 1}px) {
+    @media (max-width: ${breakpointValues2026.L - 1}px) {
       color: ${theme.color(mobileColor)};
     }
   `};

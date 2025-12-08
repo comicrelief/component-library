@@ -2,6 +2,7 @@ export default {
   h1: {
     family: 'Anton',
     weight: 400,
+    transform: 'uppercase',
     small: {
       fontSize: '2rem',
       lineHeight: '2rem'
@@ -18,6 +19,7 @@ export default {
   h2: {
     family: 'Anton',
     weight: 400,
+    transform: 'uppercase',
     small: {
       fontSize: '1.5rem',
       lineHeight: '1.5rem'
@@ -34,6 +36,7 @@ export default {
   h3: {
     family: 'Montserrat',
     weight: 700,
+    transform: 'inherit',
     small: {
       fontSize: '1.25rem',
       lineHeight: '1.5rem'
@@ -50,6 +53,7 @@ export default {
   h4: {
     family: 'Montserrat',
     weight: 700,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -68,6 +72,7 @@ export default {
   h5: {
     family: 'Montserrat',
     weight: 700,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -84,6 +89,7 @@ export default {
   h6: {
     family: 'Montserrat',
     weight: 700,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -100,6 +106,7 @@ export default {
   p: {
     family: 'Montserrat',
     weight: 400,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -116,6 +123,7 @@ export default {
   span: {
     family: 'Montserrat',
     weight: 400,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -133,6 +141,7 @@ export default {
   button: {
     family: 'Montserrat',
     weight: 400,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -151,6 +160,7 @@ export default {
   formFieldLabel: {
     family: 'Montserrat',
     weight: 400,
+    transform: 'inherit',
     small: {
       fontSize: '1rem',
       lineHeight: '1.25rem'
@@ -167,6 +177,7 @@ export default {
   formFieldError: {
     family: 'Montserrat',
     weight: 400,
+    transform: 'inherit',
     small: {
       fontSize: '0.875rem',
       lineHeight: '1.063rem'

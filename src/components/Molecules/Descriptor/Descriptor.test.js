@@ -27,27 +27,28 @@ it('renders article teaser correctly', () => {
     .c3 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
       line-height: 1.125rem;
       font-size: 1.125rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: bold;
-      text-transform: inherit;
       color: #222222;
     }
 
     .c7 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1.25rem;
       line-height: 1.5rem;
       line-height: 1.875rem;
@@ -61,17 +62,17 @@ it('renders article teaser correctly', () => {
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
       line-height: 1rem;
       font-size: 1rem;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
-      text-transform: inherit;
       color: #222222;
     }
 

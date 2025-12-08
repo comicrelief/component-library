@@ -22,25 +22,26 @@ it('renders article teaser correctly', () => {
     .c8 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
       line-height: 1rem;
       font-size: 1rem;
       font-weight: bold;
-      text-transform: inherit;
     }
 
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1.25rem;
       line-height: 1.5rem;
       line-height: 1.875rem;
@@ -312,25 +313,26 @@ it('renders press realese correctly', () => {
     .c8 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1rem;
       line-height: 1.25rem;
       line-height: 1rem;
       font-size: 1rem;
       font-weight: bold;
-      text-transform: inherit;
     }
 
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
-      letter-spacing: 0;
+      text-transform: inherit;
+      -webkit-letter-spacing: normal;
+      -moz-letter-spacing: normal;
+      -ms-letter-spacing: normal;
+      letter-spacing: normal;
       font-size: 1.25rem;
       line-height: 1.5rem;
       line-height: 1.875rem;

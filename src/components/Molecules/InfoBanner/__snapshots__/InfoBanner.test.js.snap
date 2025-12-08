@@ -4,10 +4,11 @@ exports[`renders correctly 1`] = `
 .c2 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
   line-height: undefined;
@@ -18,15 +19,15 @@ exports[`renders correctly 1`] = `
 .c3 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
+  text-transform: inherit;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   font-size: 1rem;
   line-height: 1.25rem;
   line-height: 1.125rem;
   font-size: 1.125rem;
-  text-transform: inherit;
 }
 
 .c4 {
