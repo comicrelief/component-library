@@ -23,7 +23,7 @@ it('renders correctly', () => {
       imageLeft
       linkIcon={<Download />}
     >
-      <Text tag="p">
+      <Text tag="p" size="s">
         Whatever you’ve got planned, the Sport Relief shop has everything you need
         to get you looking your best while you’re raising some cash. Also
         available in Sainsbury’s stores and online and in selected Argos stores.

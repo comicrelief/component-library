@@ -31,6 +31,11 @@ it('renders correctly', () => {
       font-weight: bold;
     }
 
+    .c2 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c0 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -130,6 +135,11 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: normal;
       font-weight: bold;
+    }
+
+    .c2 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {

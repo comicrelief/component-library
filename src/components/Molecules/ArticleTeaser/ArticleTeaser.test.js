@@ -37,6 +37,11 @@ it('renders article teaser correctly', () => {
       font-weight: bold;
     }
 
+    .c8 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
@@ -56,6 +61,11 @@ it('renders article teaser correctly', () => {
       font-weight: normal;
       line-height: 2rem;
       text-transform: uppercase;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c4 {
@@ -334,6 +344,11 @@ it('renders press realese correctly', () => {
       font-weight: bold;
     }
 
+    .c8 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
@@ -353,6 +368,11 @@ it('renders press realese correctly', () => {
       font-weight: normal;
       line-height: 2rem;
       text-transform: uppercase;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c4 {

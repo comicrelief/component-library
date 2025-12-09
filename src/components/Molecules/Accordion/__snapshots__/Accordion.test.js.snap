@@ -18,6 +18,11 @@ exports[`renders correctly 1`] = `
   line-height: normal;
 }
 
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -33,6 +38,11 @@ exports[`renders correctly 1`] = `
 .c6 {
   font-size: 1rem;
   line-height: normal;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {

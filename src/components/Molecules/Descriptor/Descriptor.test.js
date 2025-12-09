@@ -44,6 +44,11 @@ it('renders article teaser correctly', () => {
       color: #222222;
     }
 
+    .c3 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c7 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
@@ -65,6 +70,11 @@ it('renders article teaser correctly', () => {
       text-transform: uppercase;
     }
 
+    .c7 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c10 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
@@ -83,6 +93,11 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: normal;
       color: #222222;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {

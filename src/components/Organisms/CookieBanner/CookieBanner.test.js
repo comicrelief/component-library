@@ -35,6 +35,11 @@ it('renders correctly', () => {
       color: #FFFFFF;
     }
 
+    .c1 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c3 {
       position: relative;
       display: inline;

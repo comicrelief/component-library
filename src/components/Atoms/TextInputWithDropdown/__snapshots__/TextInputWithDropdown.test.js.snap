@@ -13,6 +13,11 @@ exports[`renders correctly with no value and no options 1`] = `
   line-height: 1.25rem;
 }
 
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c1 {
   width: 100%;
   position: relative;
@@ -182,6 +187,11 @@ exports[`renders correctly with value and no options 1`] = `
   line-height: 1.25rem;
 }
 
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c1 {
   width: 100%;
   position: relative;
@@ -349,6 +359,11 @@ exports[`renders correctly with value and options 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c1 {
