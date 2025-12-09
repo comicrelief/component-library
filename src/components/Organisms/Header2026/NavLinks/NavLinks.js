@@ -166,19 +166,6 @@ const NavLinks = ({
                 />
               );
             })}
-
-            {/* Only actually render 'More' nav stuff when we've got content */}
-            {/* {showMoreNav ? ( */}
-            {/*   <MoreNav */}
-            {/*     processedItems={processedItems} */}
-            {/*     openedSubMenu={openedSubMenu} */}
-            {/*     toggleSubMenu={toggleSubMenu} */}
-            {/*     navHelper={NavHelper} */}
-            {/*     allowListed={allowListed} */}
-            {/*     internalLinkHelper={InternalLinkHelper} */}
-            {/*   /> */}
-            {/* ) : null} */}
-
           </NavMenu>
           )}
         </NavMenuWrapper>

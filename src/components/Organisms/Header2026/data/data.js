@@ -1,5 +1,6 @@
 export default {
   title: 'Header',
+  showSearch: 'true',
   menuGroups: [
     {
       title: 'GROUP1',

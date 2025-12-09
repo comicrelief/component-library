@@ -1,6 +1,6 @@
+// import './remove-extra-styles-in-preview.css';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// import './remove-extra-styles-in-preview.css';
 
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
 import NavLinks from './NavLinks/NavLinks';
@@ -9,10 +9,11 @@ import {
   Brand, Header2026Wrapper, InnerWrapper,
   DonateButtonTopBarWrapper, Header2026MetaIcons, ButtonsAndIcons
 } from './Header2026.style';
+import searchIcon from './assets/icon--search--2023.svg';
+import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 
 const Header2026 = ({
-  navItems = {},
-  metaIcons,
+  data = {},
   campaign = 'Comic Relief',
   donateButton = null,
   characterLimit = 60,
@@ -25,7 +26,6 @@ const Header2026 = ({
   return (
     <Header2026Wrapper
       data-testid="Header2026Wrapper"
-      navItems
       showBoxShadow={showBoxShadow}
       {...rest}
     >
@@ -42,7 +42,7 @@ const Header2026 = ({
         </Brand>
 
         <NavLinks
-          navItems={navItems}
+          navItems={data}
           donateButton={donateButton}
           characterLimit={characterLimit}
           data-testid="NavLinks"
@@ -55,7 +55,19 @@ const Header2026 = ({
             isHeader
             data-testid="meta-icons--desktop"
           >
-            {metaIcons}
+            <div>
+              <Icon
+                icon={searchIcon}
+                title="Search"
+                target="self"
+                role="button"
+                href="/search"
+                brand="comicrelief"
+                tabIndex="0"
+                id="search"
+                isHeader
+              />
+            </div>
           </Header2026MetaIcons>
 
           {!isExpandable
@@ -83,7 +95,7 @@ const Header2026 = ({
 };
 
 Header2026.propTypes = {
-  navItems: PropTypes.shape({
+  data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     menuGroups: PropTypes.arrayOf(
       PropTypes.shape({
@@ -97,9 +109,6 @@ Header2026.propTypes = {
       })
     )
   }),
-  // NB: metaIcons no longer include the Donate button:
-  metaIcons: PropTypes.node.isRequired,
-  // ... and is supplied separately to allow more render control:
   donateButton: PropTypes.node,
   campaign: PropTypes.string,
   characterLimit: PropTypes.number,
