@@ -47,7 +47,7 @@
     "yup": "^1.4.0"
   },
   "resolutions": {
-    "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.6"
+    "react-scripts/workbox-webpack-plugin/workbox-build/@surma/rollup-plugin-off-main-thread/ejs": "3.1.7"
   },
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
@@ -62,7 +62,8 @@
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
     "build-pr": "rm -rf dist && NODE_ENV=development BABEL_ENV=development yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
-    "postinstall": "yarn build-pr"
+    "postinstall": "yarn build-pr",
+    "do-it": "yarn cache clean; rm -rf node_modules; yarn; yarn styleguide:build"
   },
   "browserslist": {
     "production": [
