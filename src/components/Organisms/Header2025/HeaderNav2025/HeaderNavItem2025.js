@@ -83,7 +83,7 @@ const HeaderNavItem2025 = (
           return (
             <SubNavItem key={`${index}-${thisSubUrl}`}>
               <SubNavLink href={thisSubUrl} inline role="menuitem">
-                <Text>{child.title}</Text>
+                <Text size="s">{child.title}</Text>
               </SubNavLink>
             </SubNavItem>
           );

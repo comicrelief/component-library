@@ -19,6 +19,11 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   background: #48276E;
 }

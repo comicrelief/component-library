@@ -21,6 +21,11 @@ exports[`renders correctly 1`] = `
   text-transform: uppercase;
 }
 
+.c1 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c4 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -31,6 +36,11 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c15 {

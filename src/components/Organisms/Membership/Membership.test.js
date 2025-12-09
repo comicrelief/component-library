@@ -43,6 +43,11 @@ it('renders correctly', () => {
       font-weight: 800;
     }
 
+    .c6 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c7 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
@@ -58,6 +63,11 @@ it('renders correctly', () => {
     .c7 {
       font-size: 1rem;
       line-height: normal;
+    }
+
+    .c7 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c12 {
@@ -77,6 +87,11 @@ it('renders correctly', () => {
       line-height: normal;
     }
 
+    .c12 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c16 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
@@ -87,6 +102,11 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+    }
+
+    .c16 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c23 {
@@ -105,6 +125,11 @@ it('renders correctly', () => {
       font-size: 1rem;
       line-height: normal;
       font-weight: 500;
+    }
+
+    .c23 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c1 {

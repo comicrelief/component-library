@@ -18,6 +18,11 @@ exports[`renders correctly 1`] = `
   line-height: normal;
 }
 
+.c12 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -37,6 +42,11 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
+.c15 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c20 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -55,6 +65,11 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
+.c20 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c25 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -71,6 +86,11 @@ exports[`renders correctly 1`] = `
   font-size: 1rem;
   line-height: normal;
   color: #969598;
+}
+
+.c25 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c10 {

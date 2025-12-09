@@ -19,6 +19,11 @@ exports[`renders correctly in minimalist form 1`] = `
   text-transform: uppercase;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -35,6 +40,11 @@ exports[`renders correctly in minimalist form 1`] = `
   font-size: 2rem;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -233,6 +243,11 @@ exports[`renders correctly with copy 1`] = `
   text-transform: uppercase;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -251,6 +266,11 @@ exports[`renders correctly with copy 1`] = `
   text-transform: uppercase;
 }
 
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c10 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -266,6 +286,11 @@ exports[`renders correctly with copy 1`] = `
 .c10 {
   font-size: 1.25rem;
   line-height: normal;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -484,6 +509,11 @@ exports[`renders correctly with date 1`] = `
   text-transform: uppercase;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -500,6 +530,11 @@ exports[`renders correctly with date 1`] = `
   font-size: 2rem;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -698,6 +733,11 @@ exports[`renders correctly with date and type 1`] = `
   text-transform: uppercase;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -714,6 +754,11 @@ exports[`renders correctly with date and type 1`] = `
   font-size: 2rem;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
