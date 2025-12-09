@@ -64,7 +64,7 @@ const ButtonsAndIcons = styled.div`
   display: flex;
 `;
 
-const DonateButtonWrapperTop = styled.div`
+const DonateButtonTopBarWrapper = styled.div`
   display: flex;
   justify-content: center;
 
@@ -139,6 +139,10 @@ const Header2026MetaIcons = styled.div`
 `;
 
 export {
-  Brand, Header2026Wrapper, InnerWrapper, DonateButtonWrapperTop,
-  Header2026MetaIcons, ButtonsAndIcons
+  Brand,
+  Header2026Wrapper,
+  InnerWrapper,
+  DonateButtonTopBarWrapper,
+  Header2026MetaIcons,
+  ButtonsAndIcons
 };

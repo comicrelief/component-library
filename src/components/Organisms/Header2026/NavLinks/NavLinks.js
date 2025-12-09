@@ -18,7 +18,7 @@ import {
   NavMenuWrapper,
   NavMenu,
   NavMetaIcons,
-  DonateButtonWrapperBottom
+  DonateButtonModalWrapper
 } from './NavLinks.style';
 
 const NavLinks = ({
@@ -128,7 +128,7 @@ const NavLinks = ({
           Main navigation
         </Text>
 
-        <NavMenuWrapper>
+        <NavMenuWrapper data-testid="NavMenuWrapper">
 
           {/* Only render once we've processed the menu items: */}
           {processedItems && (
@@ -193,7 +193,7 @@ const NavLinks = ({
         </NavMetaIcons>
 
         {isExpandable && (
-          <DonateButtonWrapperBottom data-testid="donate-button--mobile">
+          <DonateButtonModalWrapper data-testid="donate-button--mobile">
             {donateButton
               || (
               <Link
@@ -205,7 +205,7 @@ const NavLinks = ({
               </Link>
               )
             }
-          </DonateButtonWrapperBottom>
+          </DonateButtonModalWrapper>
         )}
       </Nav>
 

@@ -7,7 +7,7 @@ import NavLinks from './NavLinks/NavLinks';
 import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
-  DonateButtonWrapperTop, Header2026MetaIcons, ButtonsAndIcons
+  DonateButtonTopBarWrapper, Header2026MetaIcons, ButtonsAndIcons
 } from './Header2026.style';
 
 const Header2026 = ({
@@ -19,8 +19,8 @@ const Header2026 = ({
   showBoxShadow = false,
   ...rest
 }) => {
-  // const [isExpandable, setIsExpandable] = useState(false);
-  const [isExpandable, setIsExpandable] = useState(true);
+  const [isExpandable, setIsExpandable] = useState(false);
+  // const [isExpandable, setIsExpandable] = useState(true);
 
   return (
     <Header2026Wrapper
@@ -61,7 +61,7 @@ const Header2026 = ({
 
           {!isExpandable
             && (
-            <DonateButtonWrapperTop data-testid="donate-button--desktop">
+            <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
               {donateButton
               || (
               <Link
@@ -73,7 +73,7 @@ const Header2026 = ({
               </Link>
               )
             }
-            </DonateButtonWrapperTop>
+            </DonateButtonTopBarWrapper>
             )
           }
         </ButtonsAndIcons>

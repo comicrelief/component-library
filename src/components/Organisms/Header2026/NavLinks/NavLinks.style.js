@@ -79,6 +79,7 @@ const Nav = styled.nav`
     box-shadow: none;
   }
 
+  // Accessibility aid
   > h2 {
     ${hideVisually};
   }
@@ -90,6 +91,14 @@ const NavMenuWrapper = styled.div`
   border-radius: 16px;
   overflow: hidden;
 
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    box-shadow: none;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 /**
@@ -337,6 +346,9 @@ const ChevronWrapper = styled.div`
     width: 100%;
     display: block;
     height: auto;
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      transform: rotate(90deg);
+    }
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -420,7 +432,7 @@ const StyledText = styled(Text)`
   }
 `;
 
-const DonateButtonWrapperBottom = styled.div`
+const DonateButtonModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: inherit;
@@ -459,6 +471,6 @@ export {
   SubNavLink,
   ChevronWrapper,
   NavMetaIcons,
-  DonateButtonWrapperBottom,
+  DonateButtonModalWrapper,
   StyledText
 };
