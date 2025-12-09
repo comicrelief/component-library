@@ -2,21 +2,34 @@
 
 exports[`renders correctly 1`] = `
 .c12 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c12 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: bold;
+  color: #FFFFFF;
 }
 
 .c17 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c6 {
@@ -109,7 +122,7 @@ exports[`renders correctly 1`] = `
   top: 0;
   right: 0;
   content: 'Optional';
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
   font-size: 1rem;
 }
 
@@ -167,7 +180,7 @@ exports[`renders correctly 1`] = `
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c21:focus {
@@ -634,6 +647,34 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (min-width:1150px) {
   .c5 {
     width: 72px;
@@ -1037,7 +1078,6 @@ exports[`renders correctly 1`] = `
                             "__html": "Email address",
                           }
                         }
-                        size="s"
                       />
                       <div
                         className="c19"
@@ -1242,7 +1282,6 @@ exports[`renders correctly 1`] = `
             <span
               className="c17 c36"
               color="inherit"
-              size="s"
             >
               Contact us
             </span>
@@ -1261,7 +1300,6 @@ exports[`renders correctly 1`] = `
             <span
               className="c17 c36"
               color="inherit"
-              size="s"
             >
               FAQs
             </span>
@@ -1384,7 +1422,6 @@ exports[`renders correctly 1`] = `
             <span
               className="c17 c41"
               color="inherit"
-              size="s"
             >
               Terms of use
             </span>
@@ -1403,7 +1440,6 @@ exports[`renders correctly 1`] = `
             <span
               className="c17 c41"
               color="inherit"
-              size="s"
             >
               Privacy notice
             </span>
@@ -1416,14 +1452,12 @@ exports[`renders correctly 1`] = `
         <p
           className="c17 c43"
           color="inherit"
-          size="s"
         >
           © 2026 Comic Relief
         </p>
         <p
           className="c17 c43"
           color="inherit"
-          size="s"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c12 {
+.c13 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.c15 {
+.c16 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -25,12 +25,12 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c15 {
+.c16 {
   font-weight: bold;
   color: #FFFFFF;
 }
 
-.c20 {
+.c21 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -42,11 +42,11 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 {
+.c21 {
   color: #FFFFFF;
 }
 
-.c25 {
+.c26 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -58,7 +58,7 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c25 {
+.c26 {
   color: #969598;
 }
 
@@ -369,56 +369,56 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c13 {
     font-size: 1.875rem;
     line-height: 1.875rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c12 {
+  .c13 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c15 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c15 {
+  .c16 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c25 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c25 {
+  .c26 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -631,7 +631,7 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
-
+      
       <div
         className="c2"
       >
