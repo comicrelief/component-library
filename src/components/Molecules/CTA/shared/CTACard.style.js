@@ -178,12 +178,24 @@ const CopyAndLinkSection = styled.div`
   min-height: 0;
   border-radius: 0 0 1rem 1rem;
 
-  // Side-by-side layout: text section takes remaining width (2/3)
+  // Side-by-side layout: text section takes remaining width (2/3) with min/max constraints
   ${({ isSingleCard }) => isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       width: calc(200% / 3);
+      min-width: 384px;
+      max-width: 650px;
       flex: 1;
       border-radius: 0 1rem 1rem 0;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      min-width: 541px;
+      max-width: 790px;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('XL')} {
+      min-width: 789px;
+      max-width: 789px;
     }
   `}
 `;
