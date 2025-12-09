@@ -43,7 +43,6 @@ const Header2026 = ({
 
         <NavLinks
           navItems={navItems}
-          metaIcons={metaIcons}
           donateButton={donateButton}
           characterLimit={characterLimit}
           data-testid="NavLinks"

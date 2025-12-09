@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import Arrow from './arrow-right.png';
 import Text from '../../../Atoms/Text/Text';
 
 const transitionDuration = 0.2;
@@ -359,73 +358,6 @@ const ChevronWrapper = styled.div`
   }
 `;
 
-// This represents the 'non-desktop'/mobile nav icons:
-const NavMetaIcons = styled.div`
-  width: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: inherit;
-
-  > div {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
-
-    > a {
-      height: inherit;
-      width: 100%;
-      padding: 15px 20px;
-      position: relative;
-
-      // Arrow icon:
-      &:after {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        content: "";
-        width: 20px;
-        height: 20px;
-        background-image: url(${Arrow});
-        background-size: 100%;
-        background-repeat: no-repeat;
-      }
-
-      // Icon itself
-      img {
-        padding: 5px;
-        height: 35px;
-        width: 35px;
-      }
-
-      span {
-        transition: color 0.15s ease-out;
-      }
-
-      @media ${({ theme }) => theme.breakpoints2026('M')} {
-        &:focus,
-        &:hover {
-          span {
-            color: ${({ theme }) => theme.color('red')};
-          }
-        }
-      }
-    }
-
-    &:first-child {
-      margin-top: 20px;
-    }
-  }
-
-  // Hide these when using non-mobile nav,
-  // just leaving the Header version in place
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    display: none;
-  }
-`;
-
 const StyledText = styled(Text)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     font-size: 15px;
@@ -470,7 +402,6 @@ export {
   SubNavItem,
   SubNavLink,
   ChevronWrapper,
-  NavMetaIcons,
   DonateButtonModalWrapper,
   StyledText
 };

@@ -17,12 +17,11 @@ import {
   Nav,
   NavMenuWrapper,
   NavMenu,
-  NavMetaIcons,
   DonateButtonModalWrapper
 } from './NavLinks.style';
 
 const NavLinks = ({
-  navItems = {}, metaIcons, donateButton = null, characterLimit,
+  navItems = {}, donateButton = null, characterLimit,
   isExpandable, setIsExpandable
 }) => {
   const { menuGroups } = navItems;
@@ -124,9 +123,7 @@ const NavLinks = ({
         role="navigation"
         id="main-nav"
       >
-        <Text id="main-menu" tag="h2">
-          Main navigation
-        </Text>
+        <Text id="main-menu" tag="h2">Main navigation</Text>
 
         <NavMenuWrapper data-testid="NavMenuWrapper">
 
@@ -186,12 +183,6 @@ const NavLinks = ({
           )}
         </NavMenuWrapper>
 
-        {/* These are only shown on the non-desktop view; the desktop nav renders
-           these in the parent Header component to suit the design layout */}
-        <NavMetaIcons isHeader data-testid="meta-icons--mobile">
-          {metaIcons}
-        </NavMetaIcons>
-
         {isExpandable && (
           <DonateButtonModalWrapper data-testid="donate-button--mobile">
             {donateButton
@@ -218,7 +209,6 @@ const NavLinks = ({
 
 NavLinks.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  metaIcons: PropTypes.node.isRequired,
   characterLimit: PropTypes.number,
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
