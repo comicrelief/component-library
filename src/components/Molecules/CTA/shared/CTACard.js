@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
-import Picture from '../../Atoms/Picture/Picture';
+import Picture from '../../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
-import allowListed from '../../../utils/allowListed';
+import allowListed from '../../../../utils/allowListed';
 import {
   CardLink,
   ImageWrapper,
@@ -13,21 +13,26 @@ import {
   CTAText,
   ArrowIconWrapper,
   CardWrapper
-} from './CTAMultiCard.style';
+} from './CTACard.style';
 
 const isInternalUrl = url => allowListed(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
 
-const SingleCard = ({
+const CTACard = ({
   card,
-  isCarousel
+  isCarousel,
+  isFullWidth,
+  isSingleCard,
+  backgroundColour: propBackgroundColour
 }) => {
+  // isSingleCard implies isFullWidth - single cards are always full width
+  const effectiveIsFullWidth = isSingleCard || isFullWidth;
   const [isHovered, setIsHovered] = useState(false);
 
   const {
     id,
     body,
     image,
-    backgroundColour,
+    backgroundColour: cardBackgroundColour,
     link,
     linkLabel
   } = card;
@@ -35,25 +40,27 @@ const SingleCard = ({
   const fallback = image?.gatsbyImageData?.images?.fallback?.src;
   const imageLow = image?.gatsbyImageData?.placeholder?.fallback;
   const images = image?.gatsbyImageData?.images?.sources[0]?.srcSet;
-  const bgColour = snakeCase(backgroundColour || 'white');
+  // Use prop backgroundColour if provided, otherwise fall back to card's backgroundColour
+  const bgColour = snakeCase(propBackgroundColour || cardBackgroundColour || 'white');
   const description = image?.description ? image.description : '';
   const isInternalLink = isInternalUrl(link);
   const target = isInternalLink ? 'self' : 'blank';
   const external = target === 'blank' ? 'noopener' : null;
 
   return (
-    <CardWrapper key={id} isCarousel={isCarousel}>
+    <CardWrapper key={id} isCarousel={isCarousel} isFullWidth={effectiveIsFullWidth}>
       <CardLink
         href={link}
         target={target}
         rel={external}
         isCarousel={isCarousel}
+        isSingleCard={isSingleCard}
         backgroundColor={bgColour}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {imageLow && (
-          <ImageWrapper isHovered={isHovered}>
+          <ImageWrapper isHovered={isHovered} isSingleCard={isSingleCard}>
             <Picture
               alt={description}
               imageLow={imageLow}
@@ -65,7 +72,7 @@ const SingleCard = ({
             />
           </ImageWrapper>
         )}
-        <CopyAndLinkSection backgroundColor={bgColour}>
+        <CopyAndLinkSection backgroundColor={bgColour} isSingleCard={isSingleCard}>
           <Copy>
             {body}
           </Copy>
@@ -85,7 +92,7 @@ const SingleCard = ({
   );
 };
 
-SingleCard.propTypes = {
+CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
     body: PropTypes.node,
@@ -112,7 +119,10 @@ SingleCard.propTypes = {
     link: PropTypes.string.isRequired,
     linkLabel: PropTypes.string
   }).isRequired,
-  isCarousel: PropTypes.bool
+  isCarousel: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isSingleCard: PropTypes.bool,
+  backgroundColour: PropTypes.string
 };
 
-export default SingleCard;
+export default CTACard;

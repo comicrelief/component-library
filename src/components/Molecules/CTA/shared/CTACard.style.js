@@ -1,63 +1,6 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation, springScaleAnimation } from '../../../theme/shared/animations';
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
-
-const CardsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  gap: 1rem;
-
-  // Mobile carousel mode - horizontal scroll container (only on mobile, below M breakpoint)
-  ${({ isCarousel }) => isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      overflow-x: visible;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      padding: 0.75rem 0.5rem;
-      margin-left: 0.5rem;
-
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  `}
-
-  // Mobile stack mode - vertical layout (only on mobile, below M breakpoint)
-  ${({ isCarousel }) => !isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
-      flex-direction: column;
-      background: transparent;
-    }
-  `}
-
-  // Desktop flexbox layout - 2 columns with centered wrap
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  // Desktop grid layout for XL breakpoint - 3 columns
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
-    width: ${({ columns }) => (columns === 2 ? 'fit-content' : '100%')};
-    margin: ${({ columns }) => (columns === 2 ? '0 auto' : '0')};
-    max-width: 100%;
-  }
-`;
+import { bounceUpAnimation, springScaleAnimation } from '../../../../theme/shared/animations';
+import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
@@ -72,6 +15,21 @@ const CardLink = styled.a`
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
+
+  // Side-by-side layout for single card desktop view
+  ${({ isSingleCard }) => isSingleCard && css`
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
+      flex-direction: row;
+      align-items: stretch;
+      // the 4 rem below is to account for the padding of the CopyAndLinkSection
+      min-height: calc(219px - 4rem);
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      min-height: calc(272px - 4rem);
+    }
+  `}
 
   // Desktop-only hover effects
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -90,8 +48,26 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-self: stretch;
 
+  // Full width mode - always full width, no constraints
+  ${({ isFullWidth }) => isFullWidth && css`
+    width: 100%;
+    max-width: 100%;
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      flex-basis: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+      flex-basis: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  `}
+
   // Mobile carousel mode - cards at normal width in horizontal scroll (only on mobile, below M breakpoint)
-  ${({ isCarousel }) => isCarousel && css`
+  ${({ isCarousel, isFullWidth }) => isCarousel && !isFullWidth && css`
     @media (max-width: ${breakpointValues.M - 1}px) {
       scroll-snap-align: start;
       flex: 0 0 calc(100% - 1.5rem);
@@ -112,27 +88,29 @@ const CardWrapper = styled.div`
   `}
 
   // Mobile stack mode - cards at normal width in vertical stack (only on mobile, below M breakpoint)
-  ${({ isCarousel }) => !isCarousel && css`
+  ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
     @media (max-width: ${breakpointValues.M - 1}px) {
       width: 100%;
     }
   `}
 
-  // Desktop M breakpoint - 2 columns layout
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-basis: calc(50% - 1rem);
-    max-width: 564px;
-    height: 100%;
-    align-self: stretch;
-  }
+  // Desktop M breakpoint - 2 columns layout (only if not full width)
+  ${({ isFullWidth }) => !isFullWidth && css`
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      flex-basis: calc(50% - 1rem);
+      max-width: 564px;
+      height: 100%;
+      align-self: stretch;
+    }
 
-  // Desktop XL breakpoint - 3 columns layout
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    flex-basis: unset;
-    max-width: 564px;
-    height: 100%;
-    align-self: stretch;
-  }
+    // Desktop XL breakpoint - 3 columns layout
+    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+      flex-basis: unset;
+      max-width: 564px;
+      height: 100%;
+      align-self: stretch;
+    }
+  `}
 `;
 
 const ImageWrapper = styled.div`
@@ -140,12 +118,32 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   flex-shrink: 0;
   background: transparent;
+  border-radius: 1rem 1rem 0 0;
+
+  // Side-by-side layout: fixed proportion for image (1/3 width)
+  ${({ isSingleCard }) => isSingleCard && css`
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
+      width: calc(100% / 3);
+      flex-shrink: 0;
+      flex-grow: 0;
+      height: 100%;
+      border-radius: 1rem 0 0 1rem;
+    }
+  `}
 
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
+
+    // Side-by-side layout: image should fill height on desktop
+    ${({ isSingleCard }) => isSingleCard && css`
+      @media ${({ theme }) => theme.breakpoints2026('M')} {
+        height: 100%;
+        object-fit: cover;
+      }
+    `}
 
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -167,6 +165,15 @@ const CopyAndLinkSection = styled.div`
   flex: 1;
   min-height: 0;
   border-radius: 0 0 1rem 1rem;
+
+  // Side-by-side layout: text section takes remaining width (2/3)
+  ${({ isSingleCard }) => isSingleCard && css`
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
+      width: calc(200% / 3);
+      flex: 1;
+      border-radius: 0 1rem 1rem 0;
+    }
+  `}
 `;
 
 const Copy = styled.div`
@@ -219,6 +226,5 @@ export {
   CTA,
   CTAText,
   ArrowIconWrapper,
-  CardsContainer,
   CardWrapper
 };

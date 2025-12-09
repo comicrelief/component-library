@@ -63,6 +63,8 @@ export { default as Descriptor } from './components/Molecules/Descriptor/Descrip
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
+export { default as CTAMultiCard } from './components/Molecules/CTA/CTAMultiCard/CTAMultiCard';
+export { default as CTASingleCard } from './components/Molecules/CTA/CTASingleCard/CTASingleCard';
 
 /* Organisms */
 export {
