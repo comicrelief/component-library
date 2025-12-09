@@ -1,121 +1,118 @@
 ```js
+import fontConfig from  '../../../theme/crTheme/fontConfig';
+
 <div>
   <Text
     tag="h1"
-    family="Anton"
-    uppercase
-    weight="normal"
-    size="super"
     mobileColor="blue"
+    // To be phased out: tags to use the prescribed family always
+    family="Anton"
   >
-    <b style={{ width: "100px", display: "inline-block" }}>H1 </b>
+    <b style={{ width: "55px", display: "inline-block" }}>H1 </b>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 80px / 5rem / super <b>mobileColor:</b> blue
+      <b>family:</b> {fontConfig['h1'].family} -  
+      <b>mobileColor:</b> blue
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h1'].small.fontSize} / {fontConfig['h1'].medium.fontSize} / {fontConfig['h1'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h1'].small.lineHeight} / {fontConfig['h1'].medium.lineHeight} / {fontConfig['h1'].large.lineHeight}
+      
     </Text>
   </Text>
+  
   <Text
     tag="h2"
-    family="Anton"
-    uppercase
-    weight="normal"
-    size="big"
     mobileColor="green"
+    family="Anton"
   >
-    <b style={{ width: "100px", display: "inline-block" }}>H2 </b>
+    <b style={{ width: "55px", display: "inline-block" }}>H2 </b>
     <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 64px / 4rem / big
+      <b>family:</b> {fontConfig['h2'].family} - 
       <b>mobileColor:</b> green
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h2'].small.fontSize} / {fontConfig['h2'].medium.fontSize} / {fontConfig['h2'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h2'].small.lineHeight} / {fontConfig['h2'].medium.lineHeight} / {fontConfig['h2'].large.lineHeight} 
     </Text>
   </Text>
+
   <Text
     tag="h3"
+    mobileColor="red"
+    family="Montserrat"
+  >
+    <b style={{ width: "55px", display: "inline-block" }}>H3 </b>
+    <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> {fontConfig['h3'].family} -  
+      <b>mobileColor:</b> red
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h3'].small.fontSize} / {fontConfig['h3'].medium.fontSize} / {fontConfig['h3'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h3'].small.lineHeight} / {fontConfig['h3'].medium.lineHeight} / {fontConfig['h3'].large.lineHeight} 
+    </Text>
+  </Text>
+
+  <Text
+    tag="h4"
+    family="Montserrat"
+    weight="normal"
+    // To be phased out: text to always be rendered as typed
+    uppercase>
+    <b style={{ width: "55px", display: "inline-block" }}>H4 </b>
+    <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> {fontConfig['span'].family} -  
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h4'].small.fontSize} / {fontConfig['h4'].medium.fontSize} / {fontConfig['h4'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h4'].small.lineHeight} / {fontConfig['h4'].medium.lineHeight} / {fontConfig['h4'].large.lineHeight} 
+    </Text>
+  </Text>
+
+  <Text tag="p" size="m">
+    <span style={{ width: "55px", display: "inline-block" }}>Body</span>
+      <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> {fontConfig['p'].family} -  
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['p'].small.fontSize} / {fontConfig['p'].medium.fontSize} / {fontConfig['p'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['p'].small.lineHeight} / {fontConfig['p'].medium.lineHeight} / {fontConfig['p'].large.lineHeight} 
+      </Text>
+    </Text>
+
+    <Text tag="p" style={{ marginTop: "55px", fontStyle: "italic"}}>
+      Tags to be phased out:
+    </Text>
+
+    <Text 
+    tag="h5"
     family="Anton"
     uppercase
-    weight="normal"
-    size="xxl"
-    mobileColor="red"
-  >
-    <b style={{ width: "100px", display: "inline-block" }}>H3 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 48px / 3rem / xxl
-      <b>mobileColor:</b> red
+    // To be phased-out
+    weight="normal">
+    <b style={{ width: "55px", display: "inline-block" }}>H5 </b>
+    <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> {fontConfig['h5'].family} -  
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h5'].small.fontSize} / {fontConfig['h5'].medium.fontSize} / {fontConfig['h5'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h5'].small.lineHeight} / {fontConfig['h5'].medium.lineHeight} / {fontConfig['h5'].large.lineHeight} 
     </Text>
   </Text>
-  <Text tag="h1" family="Anton" uppercase weight="normal" size="super">
-    <b style={{ width: "100px", display: "inline-block" }}>H1 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 80px / 5rem /
-      super
-    </Text>
-  </Text>
-  <Text tag="h2" family="Anton" uppercase weight="normal" size="big">
-    <b style={{ width: "100px", display: "inline-block" }}>H2 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 64px / 4rem / big
-    </Text>
-  </Text>
-  <Text tag="h3" family="Anton" uppercase weight="normal" size="xxl">
-    <b style={{ width: "100px", display: "inline-block" }}>H3 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 48px / 3rem / xxl
-    </Text>
-  </Text>
-  <Text tag="h4" family="Anton" uppercase weight="normal" size="xl">
-    <b style={{ width: "100px", display: "inline-block" }}>H4 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 32px / 2rem / xl
-    </Text>
-  </Text>
-  <Text tag="h4" family="Anton" uppercase weight="normal" size="l">
-    <b style={{ width: "100px", display: "inline-block" }}>H5 </b>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Anton <b>weight:</b> Regular <b>size:</b> 24px / 1.5rem / l
-    </Text>
-  </Text>
-  <Text tag="p" size="m">
-    <span style={{ width: "100px", display: "inline-block" }}>Body1</span>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 20px /
-      1.25rem / m
-    </Text>
-  </Text>
-  <Text tag="p" size="s">
-    <span style={{ width: "100px", display: "inline-block" }}>Body2</span>
-    <Text style={{ textTransform: "none" }} tag="span" size="s">
-      <b>family:</b> Montserrat <b>weight:</b> Regular <b>size:</b> 16px / 1rem
-      / s
-    </Text>
-  </Text>
-</div>
-```
+  
 
-Sport Relief
-
-```js
-<div>
-  <Text tag="h1" family="Founders_bold" uppercase size="super">
-    Heading 1
+  <Text tag="h6" 
+    family="Anton" 
+    uppercase
+    weight="normal">
+    <b style={{ width: "55px", display: "inline-block" }}>H6</b>
+    <Text style={{ textTransform: "none" }} tag="span">
+      <b>family:</b> {fontConfig['h6'].family}
+      <br/>
+      <b>font size (S / M / L breakpoints):</b> {fontConfig['h6'].small.fontSize} / {fontConfig['h6'].medium.fontSize} / {fontConfig['h6'].large.fontSize} 
+      <br/>
+      <b>line height (S / M / L breakpoints):</b> {fontConfig['h6'].small.lineHeight} / {fontConfig['h6'].medium.lineHeight} / {fontConfig['h6'].large.lineHeight} 
+    </Text>
   </Text>
-  <Text tag="h2" family="Founders_bold" uppercase size="big">
-    Heading 2
-  </Text>
-  <Text tag="h3" family="Founders_bold" uppercase size="xxl">
-    Heading 3
-  </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="xl">
-    Heading 4
-  </Text>
-  <Text tag="h4" family="Founders_bold" uppercase size="l" textAlign="center">
-    Heading 5, textAlign prop
-  </Text>
-  <Text tag="p" family="Founders" size="m">
-    Body 1
-  </Text>
-  <Text tag="p" family="Founders" size="s">
-    Body 2
-  </Text>
-  <Text tag="p" family="Founders" size="s" weight="bold" uppercase>
-    Bold and Uppercase
-  </Text>
+  
 </div>
 ```

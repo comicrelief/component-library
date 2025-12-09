@@ -170,7 +170,7 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
     line-height: 40px;
-    font-weight: 800;
+    font-weight: 700;
 
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       font-size: 20px;
