@@ -85,7 +85,7 @@ const HeaderNav = ({
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
-        <Text id="main-menu" tag="h2">
+        <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
 
