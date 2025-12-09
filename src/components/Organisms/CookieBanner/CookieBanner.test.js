@@ -20,12 +20,19 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      color: #FFFFFF;
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c1 {
+      color: #FFFFFF;
     }
 
     .c3 {
@@ -112,6 +119,20 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
       .c5 {
         width: auto;
       }
@@ -153,7 +174,6 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
-        size="s"
       >
         Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
@@ -170,7 +190,6 @@ it('renders correctly', () => {
       <p
         className="c1 c2"
         color="white"
-        size="s"
       >
         <a
           className="c5 c6"

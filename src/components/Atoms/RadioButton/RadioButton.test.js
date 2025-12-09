@@ -14,12 +14,19 @@ it('renders correctly', () => {
   expect(tree).toMatchInlineSnapshot(`
     Array [
       .c2 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      font-weight: bold;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c2 {
+      font-weight: bold;
     }
 
     .c1 {
@@ -78,6 +85,20 @@ it('renders correctly', () => {
       -ms-flex-align: center;
       align-items: center;
       position: relative;
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     <label
@@ -95,18 +116,24 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Male
         </span>
       </label>,
       .c2 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      font-weight: bold;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c2 {
+      font-weight: bold;
     }
 
     .c1 {
@@ -167,6 +194,20 @@ it('renders correctly', () => {
       position: relative;
     }
 
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
     <label
         className="c0"
         htmlFor="female"
@@ -182,7 +223,6 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
-          size="s"
         >
           Female
         </span>
