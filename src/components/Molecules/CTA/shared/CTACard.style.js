@@ -120,14 +120,26 @@ const ImageWrapper = styled.div`
   background: transparent;
   border-radius: 1rem 1rem 0 0;
 
-  // Side-by-side layout: fixed proportion for image (1/3 width)
+  // Side-by-side layout: fixed proportion for image (1/3 width) with min/max constraints
   ${({ isSingleCard }) => isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       width: calc(100% / 3);
+      min-width: 292px;
+      max-width: 309px;
       flex-shrink: 0;
       flex-grow: 0;
       height: 100%;
       border-radius: 1rem 0 0 1rem;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      min-width: 355px;
+      max-width: 362px;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('XL')} {
+      min-width: 363px;
+      max-width: 363px;
     }
   `}
 
