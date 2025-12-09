@@ -28,14 +28,15 @@ const InnerWrapper = styled.div`
   height: 100%;
   cursor: pointer;
   max-width: ${containers.large};
-
   padding: 10px 20px 10px 10px;
+
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    padding: 10px 32px;
+    padding: 10px 16px;
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 0 auto;
+    gap: 24px;
   }
 `;
 
@@ -94,46 +95,23 @@ const DonateButtonTopBarWrapper = styled.div`
   }
 `;
 
-const Header2026MetaIcons = styled.div`
-  // Hide these when using the mobile navigation,
-  // now only rendered in the Header2026Nav
+const SearchIconWrapper = styled.div`
+  // Hide search when using the mobile navigation,
   display: none;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: auto;
-    align-items: center;
-
-    // Icons
-    > div {
-      height: 35px;
-      width: auto;
-      display: inline-block;
-
-      > a {
-        height: inherit;
-        width: inherit;
-        margin-right: 6px;
-
-        img {
-          padding: 5px 7px;
-          height: inherit;
-          width: inherit;
-        }
-      }
-    }
-
     position: relative;
     display: flex;
     align-items: center;
-    background-color: ${({ theme }) => theme.color('white')};
+    width: auto;
     margin-right: 0px;
     right: 0px;
-  }
+    background-color: ${({ theme }) => theme.color('white')};
 
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    // Icons
-    > div > a {
-      margin-right: 20px;
+    img {
+      margin-right: 15px;
+      height: inherit;
+      width: inherit;
     }
   }
 `;
@@ -143,6 +121,6 @@ export {
   Header2026Wrapper,
   InnerWrapper,
   DonateButtonTopBarWrapper,
-  Header2026MetaIcons,
+  SearchIconWrapper,
   ButtonsAndIcons
 };

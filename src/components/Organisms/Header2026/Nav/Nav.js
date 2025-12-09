@@ -14,13 +14,13 @@ import allowListed from '../../../../utils/allowListed';
 import NavItem from './NavItem';
 
 import {
-  Nav,
+  NavLinks,
   NavMenuWrapper,
   NavMenu,
   DonateButtonModalWrapper
-} from './NavLinks.style';
+} from './Nav.style';
 
-const NavLinks = ({
+const Nav = ({
   navItems = {}, donateButton = null, characterLimit,
   isExpandable, setIsExpandable
 }) => {
@@ -116,13 +116,14 @@ const NavLinks = ({
 
   return (
     <>
-      <Nav
+      <NavLinks
         data-testid="Nav"
         aria-label="main-menu"
         isExpandable={isExpandable}
         role="navigation"
         id="main-nav"
       >
+        {/* Unseen accessibility aid */}
         <Text id="main-menu" tag="h2">Main navigation</Text>
 
         <NavMenuWrapper data-testid="NavMenuWrapper">
@@ -166,6 +167,19 @@ const NavLinks = ({
                 />
               );
             })}
+
+            {/* Only actually render 'More' nav stuff when we've got content */}
+            {/* {showMoreNav ? ( */}
+            {/*   <MoreNav */}
+            {/*     processedItems={processedItems} */}
+            {/*     openedSubMenu={openedSubMenu} */}
+            {/*     toggleSubMenu={toggleSubMenu} */}
+            {/*     navHelper={NavHelper} */}
+            {/*     allowListed={allowListed} */}
+            {/*     internalLinkHelper={InternalLinkHelper} */}
+            {/*   /> */}
+            {/* ) : null} */}
+
           </NavMenu>
           )}
         </NavMenuWrapper>
@@ -185,7 +199,7 @@ const NavLinks = ({
             }
           </DonateButtonModalWrapper>
         )}
-      </Nav>
+      </NavLinks>
 
       <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
         Open
@@ -194,7 +208,7 @@ const NavLinks = ({
   );
 };
 
-NavLinks.propTypes = {
+Nav.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
   // As this is rendered in both the Header AND the Nav, just passing
@@ -204,4 +218,4 @@ NavLinks.propTypes = {
   setIsExpandable: PropTypes.bool
 };
 
-export default NavLinks;
+export default Nav;

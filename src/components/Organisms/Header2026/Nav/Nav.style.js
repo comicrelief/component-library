@@ -56,10 +56,7 @@ const NavLinkClass = styled(Link)`
   }
 `;
 
-/**
- * Navigation menu
- */
-const Nav = styled.nav`
+const NavLinks = styled.nav`
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
@@ -88,7 +85,6 @@ const NavMenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  overflow: hidden;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     box-shadow: none;
@@ -97,6 +93,27 @@ const NavMenuWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+`;
+
+/**
+ * First Level
+ */
+const NavMenu = styled.ul`
+  background-color: ${({ theme }) => theme.color('white')};
+  list-style: none outside;
+  padding: 0;
+  margin: 0;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+    background-color: ${({ theme }) => theme.color('white')};
   }
 `;
 
@@ -170,31 +187,9 @@ const SubNavLink = styled(NavLinkClass)`
 `;
 
 /**
- * Navigation Menu (first level)
- */
-const NavMenu = styled.ul`
-  background-color: ${({ theme }) => theme.color('white')};
-  list-style: none outside;
-  padding: 0;
-  margin: 0;
-
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: ${({ theme }) => theme.color('white')};
-    margin: 0 24px;
-  }
-`;
-
-/**
  * Menu item link
  */
 const NavLink = styled(NavLinkClass)`
-  display: flex;
-  gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
 
   ${({ isExpanded, theme }) => (isExpanded && css`
@@ -209,22 +204,12 @@ const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     height: auto;
 
-    padding: 10px 0px;
-    // Additional room for the chevron:
-    ${({ hasSubMenu }) => (hasSubMenu && css`
-      padding: 10px 14px 10px 0;
-    `)}
-
-    :hover,
-    :focus-within,
-    :focus {
+    :hover, :focus-within, :focus {
       + ${SubNavMenu} {
       display: flex;
       opacity: 1;
     }}
-  }
 
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${({ hasSubMenu }) => (hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
@@ -295,13 +280,9 @@ const StyledNavItem = styled.li`
 
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    border-bottom: none;
-    padding: 25px 0px;
-    margin: 0 22px 0 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    height: 100%;
+    display: flex;
+    align-items: center;
 
     :hover,
     :focus,
@@ -392,7 +373,7 @@ const DonateButtonModalWrapper = styled.div`
 `;
 
 export {
-  Nav,
+  NavLinks,
   NavMenuWrapper,
   NavMenu,
   StyledNavItem,

@@ -5,7 +5,7 @@ import Text from '../../../Atoms/Text/Text';
 import {
   StyledNavItem, NavLink, DesktopNavLink,
   SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
-} from './NavLinks.style';
+} from './Nav.style';
 
 import menuGroupIcon from './Menu-Group-Icon.svg';
 

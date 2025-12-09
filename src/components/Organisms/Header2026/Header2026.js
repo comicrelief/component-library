@@ -1,15 +1,15 @@
-// import './remove-extra-styles-in-preview.css';
+import './remove-extra-styles-in-preview.css';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
-import NavLinks from './NavLinks/NavLinks';
+import Nav from './Nav/Nav';
 import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
-  DonateButtonTopBarWrapper, Header2026MetaIcons, ButtonsAndIcons
+  DonateButtonTopBarWrapper, SearchIconWrapper, ButtonsAndIcons
 } from './Header2026.style';
-import searchIcon from './assets/icon--search--2023.svg';
+import searchIcon from './assets/search-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 
 const Header2026 = ({
@@ -41,52 +41,46 @@ const Header2026 = ({
           />
         </Brand>
 
-        <NavLinks
+        <Nav
           navItems={data}
           donateButton={donateButton}
           characterLimit={characterLimit}
-          data-testid="NavLinks"
+          data-testid="Nav"
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">
-          <Header2026MetaIcons
-            isHeader
-            data-testid="meta-icons--desktop"
-          >
-            <div>
-              <Icon
-                icon={searchIcon}
-                title="Search"
-                target="self"
-                role="button"
-                href="/search"
-                brand="comicrelief"
-                tabIndex="0"
-                id="search"
-                isHeader
-              />
-            </div>
-          </Header2026MetaIcons>
+          <SearchIconWrapper data-testid="meta-icons--desktop">
+            <Icon
+              icon={searchIcon}
+              title="Search"
+              target="self"
+              role="button"
+              href="/search"
+              brand="comicrelief"
+              tabIndex="0"
+              id="search"
+              isHeader
+            />
+          </SearchIconWrapper>
 
           {!isExpandable
             && (
-            <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
-              {donateButton
-              || (
-              <Link
-                color="red"
-                type="button"
-                href="/donation"
-              >
-                Donate
-              </Link>
-              )
-            }
-            </DonateButtonTopBarWrapper>
+              <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
+                {donateButton || (
+                  <Link
+                    color="red"
+                    type="button"
+                    href="/donation"
+                  >
+                    Donate
+                  </Link>
+                )
+                }
+              </DonateButtonTopBarWrapper>
             )
-          }
+              }
         </ButtonsAndIcons>
 
       </InnerWrapper>

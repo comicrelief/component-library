@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
-
-import { ChevronWrapper } from './NavLinks.style';
-
+import { ChevronWrapper } from './Nav.style';
 import menuGroupIcon from './Menu-Group-Icon.svg';
-
 import {
   MoreNavLabel,
   MoreSubNavMenu,

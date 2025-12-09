@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
   StyledNavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
-} from './NavLinks.style';
+} from './Nav.style';
 import Text from '../../../Atoms/Text/Text';
 
 const MoreSubNavMenu = styled(SubNavMenu)`
