@@ -13,6 +13,11 @@ exports[`renders correctly 1`] = `
   line-height: 1.5rem;
 }
 
+.c12 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -26,6 +31,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c15 {
+  font-size: 1rem;
+  line-height: normal;
   font-weight: bold;
   color: #FFFFFF;
 }
@@ -43,6 +50,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c20 {
+  font-size: 1rem;
+  line-height: normal;
   color: #FFFFFF;
 }
 
@@ -59,6 +68,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c25 {
+  font-size: 1rem;
+  line-height: normal;
   color: #969598;
 }
 
@@ -739,6 +750,7 @@ exports[`renders correctly 1`] = `
           className="c12"
           color="inherit"
           id="footer-menu"
+          size="s"
         >
           Footer navigation
         </h2>
@@ -753,6 +765,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               Hear from us
             </span>
@@ -775,6 +788,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Get the newsletter
                   </span>
@@ -794,6 +808,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     How we contact you
                   </span>
@@ -808,6 +823,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               Get in touch
             </span>
@@ -830,6 +846,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Contact us
                   </span>
@@ -849,6 +866,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Your Gift Aid
                   </span>
@@ -868,6 +886,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     FAQs
                   </span>
@@ -887,6 +906,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Red Nose Day 2019 FAQs
                   </span>
@@ -901,6 +921,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               About us
             </span>
@@ -923,6 +944,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Mission
                   </span>
@@ -942,6 +964,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Our history
                   </span>
@@ -961,6 +984,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Finances
                   </span>
@@ -980,6 +1004,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Partners
                   </span>
@@ -999,6 +1024,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Meet the team
                   </span>
@@ -1018,6 +1044,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Sport Relief
                   </span>
@@ -1032,6 +1059,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               Careers
             </span>
@@ -1054,6 +1082,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Working at Comic Relief
                   </span>
@@ -1073,6 +1102,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Open roles
                   </span>
@@ -1087,6 +1117,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               News
             </span>
@@ -1109,6 +1140,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     News
                   </span>
@@ -1128,6 +1160,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Press area
                   </span>
@@ -1142,6 +1175,7 @@ exports[`renders correctly 1`] = `
             <span
               className="c15"
               color="white"
+              size="s"
             >
               Legal
             </span>
@@ -1164,6 +1198,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Link comp with both URL and Ref
                   </span>
@@ -1183,6 +1218,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Link comp with only Ref
                   </span>
@@ -1202,6 +1238,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Link comp with only URL
                   </span>
@@ -1226,6 +1263,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Test allowListed external link
                   </span>
@@ -1245,6 +1283,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="c20"
                     color="white"
+                    size="s"
                   >
                     Test non-allowListed external link
                   </span>
@@ -1265,6 +1304,7 @@ exports[`renders correctly 1`] = `
         <p
           className="c25"
           color="grey"
+          size="s"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

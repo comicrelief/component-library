@@ -26,6 +26,8 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      font-size: 1rem;
+      line-height: normal;
       font-weight: bold;
     }
 
@@ -107,6 +109,7 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Tennis
         </span>
@@ -124,6 +127,8 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      font-size: 1rem;
+      line-height: normal;
       font-weight: bold;
     }
 
@@ -205,6 +210,7 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Handball
         </span>
