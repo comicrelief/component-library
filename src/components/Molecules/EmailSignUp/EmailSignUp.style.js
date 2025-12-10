@@ -1,18 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Button from '../../Atoms/Button/Button';
 import spacing from '../../../theme/shared/spacing';
 import { springScaleAnimation } from '../../../theme/shared/animations';
+import fontHelper from '../../../theme/crTheme/fontHelper';
+import fontConfig from '../../../theme/crTheme/fontConfig';
 
 export const EmailSignUpWrapper = styled.div`
   margin-bottom: ${spacing('m')};
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin-bottom: ${spacing('m')};
   }
+  color: ${({ theme }) => theme.color('white')};
 `;
 
 export const LabelWrapper = styled.div`
   margin-bottom: ${spacing('md')};
+`;
+
+export const StyledLabel = styled.span`
+  ${({ theme }) => css`
+    ${fontHelper(theme, 'p')}
+    font-weight: bold;
+  `}
 `;
 
 export const FormWrapper = styled.div`
@@ -46,27 +56,27 @@ export const InputWrapper = styled.div`
 
 export const StyledEmailInput = styled(Input)`
   overflow: visible;
-  input {
-    font-size: ${({ theme }) => theme.fontSize('s')};
-  }
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${springScaleAnimation(true, 1.04, 1)}
   }
 
   input {
-    background-color: ${({ theme }) => theme.color('grey_5')};
-    border-color: transparent;
-    transition: background-color 0.2s ease;
-    border: 1px solid ${({ theme }) => theme.color('white')};
-    color: ${({ theme }) => theme.color('white')};
-    &::placeholder {
-      color: ${({ theme }) => theme.color('grey_2')};
-    }
-    &:hover,
-    &:focus {
-      background-color: ${({ theme }) => theme.color('grey_4_hover')};
-    }
+    ${({ theme }) => css`
+      ${fontHelper(theme, 'p')}
+      background-color: ${theme.color('grey_5')};
+      border-color: transparent;
+      transition: background-color 0.2s ease;
+      border: 1px solid ${theme.color('white')};
+      color: ${theme.color('white')};
+      &::placeholder {
+        color: ${theme.color('grey_2')};
+      }
+      &:hover,
+      &:focus {
+        background-color: ${theme.color('grey_4_hover')};
+      }
+    `}
   }
 `;
 

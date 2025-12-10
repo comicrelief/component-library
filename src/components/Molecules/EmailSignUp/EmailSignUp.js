@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Text from '../../Atoms/Text/Text';
 import {
   EmailSignUpWrapper,
   LabelWrapper,
+  StyledLabel,
   FormWrapper,
   InputWrapper,
   StyledEmailInput,
@@ -18,9 +18,9 @@ const EmailSignUp = ({ formContext, ...rest }) => {
   return (
     <EmailSignUpWrapper>
       <LabelWrapper>
-        <Text weight="bold" color="white" size="s">
+        <StyledLabel>
           Subscribe to our newsletter
-        </Text>
+        </StyledLabel>
       </LabelWrapper>
       <FormWrapper error={!!errorMsg}>
         <InputWrapper>
