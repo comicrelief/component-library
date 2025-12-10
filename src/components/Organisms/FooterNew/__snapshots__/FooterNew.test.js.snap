@@ -1,30 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c12 {
-  font-size: 1rem;
-  line-height: normal;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.c12 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c17 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -283,10 +259,24 @@ exports[`renders correctly 1`] = `
 
 .c10 {
   margin-bottom: 1.5rem;
+  color: #FFFFFF;
 }
 
 .c11 {
   margin-bottom: 1rem;
+}
+
+.c12 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: bold;
 }
 
 .c13 {
@@ -326,10 +316,15 @@ exports[`renders correctly 1`] = `
 }
 
 .c16 input {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
-}
-
-.c16 input {
+  line-height: 1.25rem;
   background-color: #18181A;
   border-color: transparent;
   -webkit-transition: background-color 0.2s ease;
@@ -658,20 +653,6 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
   .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -736,6 +717,20 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c13 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -769,6 +764,20 @@ exports[`renders correctly 1`] = `
     -webkit-transform: scale(1.04);
     -ms-transform: scale(1.04);
     transform: scale(1.04);
+  }
+}
+
+@media (min-width:740px) {
+  .c16 input {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 input {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1064,8 +1073,6 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c12"
-                    color="white"
-                    size="s"
                   >
                     Subscribe to our newsletter
                   </span>
