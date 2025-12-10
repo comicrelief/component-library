@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { bounceUpAnimation, springScaleAnimation } from '../../../theme/shared/animations';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const CardsContainer = styled.div`
   display: flex;
@@ -177,9 +178,8 @@ const Copy = styled.div`
 `;
 
 const CTAText = styled.span`
+  ${({ theme }) => fontHelper(theme, 'span')}
   color: ${({ theme }) => theme.color('grey')};
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   font-weight: bold;
   text-decoration: none;
 
