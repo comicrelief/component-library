@@ -2,18 +2,49 @@
 
 exports[`renders correctly in minimalist form 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  text-transform: uppercase;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c8 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: normal;
   text-transform: uppercase;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -93,6 +124,34 @@ exports[`renders correctly in minimalist form 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -167,27 +226,71 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly with copy 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  text-transform: uppercase;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c8 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: normal;
   text-transform: uppercase;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c10 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
   font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-size: 1rem;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -270,8 +373,44 @@ exports[`renders correctly with copy 1`] = `
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
     font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -353,18 +492,49 @@ exports[`renders correctly with copy 1`] = `
 
 exports[`renders correctly with date 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  text-transform: uppercase;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c8 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: normal;
   text-transform: uppercase;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -444,6 +614,34 @@ exports[`renders correctly with date 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -518,18 +716,49 @@ exports[`renders correctly with date 1`] = `
 
 exports[`renders correctly with date and type 1`] = `
 .c7 {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  text-transform: uppercase;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c8 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: normal;
   text-transform: uppercase;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -609,6 +838,34 @@ exports[`renders correctly with date and type 1`] = `
 
 .c9 {
   margin: 0;
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
 }
 
 @media (min-width:740px) {

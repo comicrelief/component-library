@@ -2,27 +2,54 @@
 
 exports[`renders Promo correctly 1`] = `
 .c7 {
-  color: #FFFFFF;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c7 {
+  font-size: 5rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c2 {
@@ -139,6 +166,20 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:740px) {
   .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 2rem;
@@ -150,6 +191,20 @@ exports[`renders Promo correctly 1`] = `
     font-size: 5rem;
     line-height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -277,27 +332,54 @@ exports[`renders Promo correctly 1`] = `
 
 exports[`renders Promo correctly end position 1`] = `
 .c7 {
-  color: #FFFFFF;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c7 {
+  font-size: 5rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c2 {
@@ -417,6 +499,20 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:740px) {
   .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 2rem;
@@ -428,6 +524,20 @@ exports[`renders Promo correctly end position 1`] = `
     font-size: 5rem;
     line-height: 5rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

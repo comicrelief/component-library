@@ -32,7 +32,7 @@ const NavLinkClass = styled(Link)`
     :focus {
       color: ${({ theme }) => theme.color('red')};
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
-      font-weight: inherit;
+      font-weight: 700;
     }
 
     :focus-within {

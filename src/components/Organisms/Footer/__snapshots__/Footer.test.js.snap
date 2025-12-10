@@ -2,38 +2,95 @@
 
 exports[`renders correctly 1`] = `
 .c12 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c12 {
   font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  line-height: normal;
+}
+
+.c12 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c15 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: bold;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c15 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.c15 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c20 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c20 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c25 {
-  color: #969598;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c25 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #969598;
+}
+
+.c25 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c10 {
@@ -258,7 +315,7 @@ exports[`renders correctly 1`] = `
   background-color: inherit;
   font-size: 19px;
   line-height: 40px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .c14 a:after {
@@ -336,6 +393,62 @@ exports[`renders correctly 1`] = `
 
 .c8:hover {
   border: 0;
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:1150px) {

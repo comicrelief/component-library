@@ -2,43 +2,92 @@
 
 exports[`"Single Giving, No Money Buys, with overridden manual input value" renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c4 {
+  font-size: 4rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 {
+  font-size: 1.25rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c16 {
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+}
+
+.c16 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c20 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c18 {
@@ -56,7 +105,15 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 .c21 {
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c22 {
@@ -98,7 +155,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c24:focus {
@@ -426,8 +483,72 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width:740px) {
+  .c4 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -637,7 +758,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c22"
@@ -692,52 +812,115 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 exports[`Monthly donation renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c4 {
+  font-size: 4rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 {
+  font-size: 1.25rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c15 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 {
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
+  font-weight: bold;
+}
+
+.c15 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c17 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
   font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: 500;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.c17 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c21 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c19 {
@@ -755,7 +938,15 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c22 {
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c23 {
@@ -797,7 +988,7 @@ exports[`Monthly donation renders correctly 1`] = `
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c25:focus {
@@ -1090,8 +1281,86 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c4 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1304,7 +1573,6 @@ exports[`Monthly donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c23"
@@ -1358,52 +1626,115 @@ exports[`Monthly donation renders correctly 1`] = `
 
 exports[`Single donation renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c4 {
+  font-size: 4rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 {
+  font-size: 1.25rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c10 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
+  font-weight: bold;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c21 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c21 {
   font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  font-weight: 500;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.c21 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c14 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c12 {
@@ -1421,7 +1752,15 @@ exports[`Single donation renders correctly 1`] = `
 
 .c15 {
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c16 {
@@ -1463,7 +1802,7 @@ exports[`Single donation renders correctly 1`] = `
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c18:focus {
@@ -1742,8 +2081,86 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c4 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1939,7 +2356,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -1977,7 +2393,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2015,7 +2430,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2064,7 +2478,6 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"
@@ -2119,43 +2532,92 @@ exports[`Single donation renders correctly 1`] = `
 
 exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c4 {
-  color: #FFFFFF;
-  font-size: 4rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c4 {
+  font-size: 4rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c5 {
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 {
+  font-size: 1.25rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c10 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
-  font-weight: bold;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c14 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c12 {
@@ -2173,7 +2635,15 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c15 {
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c16 {
@@ -2215,7 +2685,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c18:focus {
@@ -2404,8 +2874,72 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c4 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
   .c5 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2561,7 +3095,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
-                size="s"
               />
               <div
                 className="c16"

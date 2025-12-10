@@ -80,7 +80,7 @@ const Checkbox = React.forwardRef(({
       checkboxBorderFocus={checkboxBorderFocus}
     />
     <span />
-    {label ? <Text weight="bold">{label}</Text> : children}
+    {label ? <Text weight="bold" size="s">{label}</Text> : children}
   </Label>
 ));
 

@@ -6,7 +6,7 @@ import Link from '../../Atoms/Link/Link';
 
 const LongLabel = () => (
   <div>
-    <Text tag="p">
+    <Text tag="p" size="s">
       I agree to the
       {' '}
       <Link target="blank" href="https://comicrelief.com/terms-of-use/">terms and conditions</Link>
@@ -15,7 +15,7 @@ const LongLabel = () => (
       {' '}
       <Link target="blank" href="https://comicrelief.com/privacy-notice/">privacy policy.</Link>
     </Text>
-    <Text tag="p">
+    <Text tag="p" size="s">
       For more information, please view our fundraising
       <Link target="blank" href="https://comicrelief.com/code-of-conduct/">code of conduct.</Link>
     </Text>

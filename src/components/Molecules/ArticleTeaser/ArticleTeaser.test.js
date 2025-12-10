@@ -20,25 +20,52 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      text-transform: inherit;
-      font-weight: bold;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c8 {
+      font-size: 0.75rem;
+      line-height: normal;
+      font-weight: bold;
+    }
+
+    .c8 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .c10 {
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c10 {
       font-size: 2rem;
-      line-height: 2rem;
-      text-transform: uppercase;
+      line-height: normal;
+      font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      -webkit-letter-spacing: 0.03rem;
-      -moz-letter-spacing: 0.03rem;
-      -ms-letter-spacing: 0.03rem;
-      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c4 {
@@ -152,6 +179,34 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @media (min-width:740px) {
+      .c8 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c8 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     @media (min-width:740px) {
@@ -272,25 +327,52 @@ it('renders press realese correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c8 {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      text-transform: inherit;
-      font-weight: bold;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c8 {
+      font-size: 0.75rem;
+      line-height: normal;
+      font-weight: bold;
+    }
+
+    .c8 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .c10 {
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c10 {
       font-size: 2rem;
-      line-height: 2rem;
-      text-transform: uppercase;
+      line-height: normal;
+      font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      -webkit-letter-spacing: 0.03rem;
-      -moz-letter-spacing: 0.03rem;
-      -ms-letter-spacing: 0.03rem;
-      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c4 {
@@ -409,6 +491,34 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+    }
+
+    @media (min-width:740px) {
+      .c8 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c8 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     @media (min-width:740px) {
