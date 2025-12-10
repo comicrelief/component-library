@@ -53,6 +53,12 @@ export const BaseText = styled.span`
           color: ${theme.color(mobileColor)};
         }
       `};
+      
+      // Ensure any *nested* content doesn't 
+      span {
+        font-size: inherit;
+        line-height: inherit;
+      }
     }
   `)};
 `;

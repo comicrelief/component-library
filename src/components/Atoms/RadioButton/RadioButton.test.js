@@ -26,7 +26,14 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      font-size: 1rem;
+      line-height: normal;
       font-weight: bold;
+    }
+
+    .c2 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c1 {
@@ -116,6 +123,7 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Male
         </span>
@@ -133,7 +141,14 @@ it('renders correctly', () => {
     }
 
     .c2 {
+      font-size: 1rem;
+      line-height: normal;
       font-weight: bold;
+    }
+
+    .c2 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c1 {
@@ -223,6 +238,7 @@ it('renders correctly', () => {
         <span
           className="c2"
           color="inherit"
+          size="s"
         >
           Female
         </span>

@@ -28,6 +28,11 @@ it('renders correctly', () => {
       line-height: 1.25rem;
     }
 
+    .c1 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c0 {
       width: 100%;
       position: relative;
@@ -197,6 +202,11 @@ it('renders with responsive max widths correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
+    }
+
+    .c1 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {

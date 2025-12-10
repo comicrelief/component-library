@@ -27,6 +27,11 @@ it('renders correctly', () => {
       line-height: 1.25rem;
     }
 
+    .c6 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c4 {
       width: 100%;
       position: relative;

@@ -43,7 +43,7 @@ const Membership = ({
         <Text tag="h2" size="l" weight="800">
           {title}
         </Text>
-        <Text tag="p">{subtitle}</Text>
+        <Text tag="p" size="s">{subtitle}</Text>
       </Header>
       <Form
         data={data}

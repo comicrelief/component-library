@@ -153,7 +153,7 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <Text tag="h3">Choose your monthly donation</Text>
+            <Text tag="h3" size="s">Choose your monthly donation</Text>
           </Legend>
           <MoneyBuys>{MoneyBoxes}</MoneyBuys>
           <FormFieldset>
