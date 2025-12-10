@@ -4,7 +4,6 @@ import Button from '../../Atoms/Button/Button';
 import spacing from '../../../theme/shared/spacing';
 import { springScaleAnimation } from '../../../theme/shared/animations';
 import fontHelper from '../../../theme/crTheme/fontHelper';
-import fontConfig from '../../../theme/crTheme/fontConfig';
 
 export const EmailSignUpWrapper = styled.div`
   margin-bottom: ${spacing('m')};
