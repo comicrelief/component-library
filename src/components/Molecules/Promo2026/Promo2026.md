@@ -25,7 +25,8 @@ import Link from '../../Atoms/Link/Link';
     Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Just a wee bit of text for now
+    Just a wee bit of text for now, 
+    but with lots more here so I can test things
   </Text>
   <span>
     <Link href="/" type="button" color="white">

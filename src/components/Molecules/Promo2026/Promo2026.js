@@ -7,7 +7,7 @@ import './annoying.css';
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, CopyWrapper, Copy, Media, Gradient
+  Container, CopyOuterWrapper, Copy, MediaWrapper, CopyInnerWrapper, OuterWrapper
 } from './Promo2026.style';
 
 const Promo2026 = ({
@@ -64,43 +64,46 @@ const Promo2026 = ({
 
   return (
     <Container backgroundColor={backgroundColor} position={position}>
-      <Media imageRight={copyLeft}>
-        {(hasImage && !hasVideo) && (
-        <Picture
-          alt={imageAltText}
-          imageLow={imageLow}
-          images={imageSet}
-          image={image}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-        />
-        )}
-        {/* If no poster image is supplied, it'll gracefully
-        fall back to the first frame, so only checking for a src here */}
-        {(hasVideo && thisVideoSrc) && (
-        <>
-          <PromoVideo
-            copyLeft={copyLeft}
-            behindTextGradient={behindTextGradient}
-            blackPlayButton={blackPlayButton}
-            thisVideoSrc={thisVideoSrc}
-            thisPoster={thisPoster}
-            showPosterAfterPlaying={showPosterAfterPlaying}
-            autoPlay={autoPlay}
-            loop={loop}
-          />
-        </>
-        )}
-      </Media>
+      <OuterWrapper className="OUTER-WRAPPER">
 
-      <CopyWrapper copyLeft={copyLeft}>
-        <Gradient hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft}>
-          <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
-            {children}
-          </Copy>
-        </Gradient>
-      </CopyWrapper>
+        <MediaWrapper imageRight={copyLeft} className="MEDIA-WRAPPER">
+          {(hasImage && !hasVideo) && (
+          <Picture
+            alt={imageAltText}
+            imageLow={imageLow}
+            images={imageSet}
+            image={image}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+          />
+          )}
+          {/* If no poster image is supplied, it'll gracefully
+        fall back to the first frame, so only checking for a src here */}
+          {(hasVideo && thisVideoSrc) && (
+          <>
+            <PromoVideo
+              copyLeft={copyLeft}
+              behindTextGradient={behindTextGradient}
+              blackPlayButton={blackPlayButton}
+              thisVideoSrc={thisVideoSrc}
+              thisPoster={thisPoster}
+              showPosterAfterPlaying={showPosterAfterPlaying}
+              autoPlay={autoPlay}
+              loop={loop}
+            />
+          </>
+          )}
+        </MediaWrapper>
+
+        <CopyOuterWrapper copyLeft={copyLeft} className="COPY-OUTER-WRAPPER">
+          <CopyInnerWrapper hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
+            <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient} className="COPY">
+              {children}
+            </Copy>
+          </CopyInnerWrapper>
+        </CopyOuterWrapper>
+      </OuterWrapper>
     </Container>
   );
 };
