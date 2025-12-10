@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PromoVideo from './_PromoVideo';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
+import './annoying.css';
 
 import Picture from '../../Atoms/Picture/Picture';
 
 import {
-  Container, Wrapper, Copy, Media, Gradient
+  Container, CopyWrapper, Copy, Media, Gradient
 } from './Promo2026.style';
 
 const Promo2026 = ({
@@ -93,13 +94,13 @@ const Promo2026 = ({
         )}
       </Media>
 
-      <Wrapper copyLeft={copyLeft}>
+      <CopyWrapper copyLeft={copyLeft}>
         <Gradient hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft}>
           <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
             {children}
           </Copy>
         </Gradient>
-      </Wrapper>
+      </CopyWrapper>
     </Container>
   );
 };

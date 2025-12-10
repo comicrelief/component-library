@@ -21,16 +21,11 @@ import Link from '../../Atoms/Link/Link';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -41,7 +36,7 @@ import Link from '../../Atoms/Link/Link';
   </span>
 </Promo2026>
 <br />
-<Text tag="h2" size="xl" color="black">
+<Text tag="h2" color="black">
   Promo2026 End
 </Text>
 <Promo2026
@@ -56,16 +51,11 @@ import Link from '../../Atoms/Link/Link';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -91,16 +81,11 @@ import Link from '../../Atoms/Link/Link';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -125,16 +110,11 @@ import Link from '../../Atoms/Link/Link';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -180,16 +160,11 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -221,16 +196,11 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -263,16 +233,11 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="black"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="black">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="black">
@@ -302,16 +267,11 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="white"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="white">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="white">
@@ -343,16 +303,12 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="black"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
+
   >
-    Curabitur pretium tincidunt lacus
+    Promo 2026
   </Text>
   <Text tag="p" color="black">
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
-    turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
+    Just a wee bit of text for now
   </Text>
   <span>
     <Link href="/" type="button" color="black">
@@ -383,10 +339,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   <Text
     tag="h1"
     color="black"
-    size="super"
-    family="Anton"
-    uppercase
-    weight="normal"
+
   >
     One-Line Special
   </Text>

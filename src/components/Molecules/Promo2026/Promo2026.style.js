@@ -11,31 +11,11 @@ const Container = styled.div`
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: row;
+    // flex-direction: row;
   }
-  ${({ position }) => position === 'upper' && css`
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-  `}
-  ${({ position }) => position === 'lower' && css`
-    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
-    }
-  `}
-  ${({ position }) => position === 'end' && css`
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 101%);
-    border-radius: 0 0 0 2rem;
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
-      border-radius: 0 0 0 4rem;
-    }
-  `}
 `;
 
-const Wrapper = styled.div`
+const CopyWrapper = styled.div`
   width: 100%;
   max-width: ${containers.medium};
   height: 100%;
@@ -45,22 +25,27 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  // NEW
+  position: absolute;
+  width: 50%;
+  height: auto;
+  // Roughing in some placeholder styles:
+  bottom: 25px; 
+  background-color: grey;
+  border-radius: 15px;
 
   ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    min-height: calc(100vh - 90px);
+    position: relative;
+    height: 100px;
+    // min-height: calc(100vh - 90px);
   }
 `;
 
 const Copy = styled.div`
   width: 100%;
-  padding: ${spacing('m')} ${spacing('m')} ${spacing('xl')};
+  padding: ${spacing('m')};
   ${zIndex('low')};
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 100%;
-    padding: ${spacing('xxl')} ${spacing('m')};
-  }
 
   ${({ position }) => position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
@@ -117,5 +102,5 @@ const Gradient = styled.div`
 `;
 
 export {
-  Container, Wrapper, Copy, Media, Video, Gradient
+  Container, CopyWrapper, Copy, Media, Video, Gradient
 };

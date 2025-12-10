@@ -33,7 +33,6 @@ export { default as External } from './components/Atoms/Icons/External';
 export { default as Internal } from './components/Atoms/Icons/Internal';
 
 /* Molecules */
-export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
