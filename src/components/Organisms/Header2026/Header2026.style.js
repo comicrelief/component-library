@@ -98,7 +98,7 @@ const DonateButtonTopBarWrapper = styled.div`
   }
 `;
 
-const SearchIconWrapper = styled.div`
+const SearchIconWrapperDesktop = styled.div`
   // Hide search when using the mobile navigation,
   display: none;
 
@@ -124,6 +124,6 @@ export {
   Header2026Wrapper,
   InnerWrapper,
   DonateButtonTopBarWrapper,
-  SearchIconWrapper,
+  SearchIconWrapperDesktop,
   ButtonsAndIcons
 };

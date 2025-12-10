@@ -7,7 +7,7 @@ import Nav from './Nav/Nav';
 import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
-  DonateButtonTopBarWrapper, SearchIconWrapper, ButtonsAndIcons
+  DonateButtonTopBarWrapper, SearchIconWrapperDesktop, ButtonsAndIcons
 } from './Header2026.style';
 import searchIcon from './assets/search-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
@@ -52,7 +52,7 @@ const Header2026 = ({
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">
-          <SearchIconWrapper data-testid="meta-icons--desktop">
+          <SearchIconWrapperDesktop data-testid="meta-icons--desktop">
             <Icon
               icon={searchIcon}
               title="Search"
@@ -64,7 +64,7 @@ const Header2026 = ({
               id="search"
               isHeader
             />
-          </SearchIconWrapper>
+          </SearchIconWrapperDesktop>
 
           {!isExpandable
             && (

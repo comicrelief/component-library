@@ -373,6 +373,40 @@ const DonateButtonModalWrapper = styled.div`
   }
 `;
 
+const SearchWrapperMobile = styled.div`
+  display: block;
+  width: 100%;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
+const SearchLinkMobile = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  width: 100%;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: ${({ theme }) => theme.color('black')};
+  transition: color ${transitionDuration}s ease;
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.color('red')};
+    background-color: ${({ theme }) => theme.color('grey_extra_light')};
+  }
+`;
+
+const SearchIconWrapperMobile = styled.div`
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
 export {
   NavLinks,
   NavMenuWrapper,
@@ -385,5 +419,8 @@ export {
   SubNavLink,
   ChevronWrapper,
   DonateButtonModalWrapper,
-  StyledText
+  StyledText,
+  SearchWrapperMobile,
+  SearchLinkMobile,
+  SearchIconWrapperMobile
 };

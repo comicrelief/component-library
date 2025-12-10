@@ -1,7 +1,7 @@
-# Header 2026 - Comic Relief
+# Header 2026 - Comic Relief test
 
 ```js
-import mockData from './mockData';
+import mockData from './mockData/mockData';
 
 <Header2026
   data={mockData}

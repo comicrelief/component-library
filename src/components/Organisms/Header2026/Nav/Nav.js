@@ -6,18 +6,23 @@ import PropTypes from 'prop-types';
 import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
+import Icon from '../../../Atoms/SocialIcons/Icon/Icon';
 // import MoreNav from './MoreNav';
 import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import NavItem from './NavItem';
+import searchIcon from '../assets/search-icon.svg';
 
 import {
   NavLinks,
   NavMenuWrapper,
   NavMenu,
-  DonateButtonModalWrapper
+  DonateButtonModalWrapper,
+  SearchWrapperMobile,
+  SearchLinkMobile,
+  SearchIconWrapperMobile
 } from './Nav.style';
 
 const Nav = ({
@@ -179,6 +184,25 @@ const Nav = ({
             {/*     internalLinkHelper={InternalLinkHelper} */}
             {/*   /> */}
             {/* ) : null} */}
+
+            <SearchWrapperMobile>
+              <SearchLinkMobile href="/search">
+                Search
+                <SearchIconWrapperMobile data-testid="SearchIconWrapperMobile">
+                  <Icon
+                    icon={searchIcon}
+                    title="Search"
+                    target="self"
+                    role="button"
+                    href="/search"
+                    brand="comicrelief"
+                    tabIndex="0"
+                    id="search"
+                    isHeader
+                  />
+                </SearchIconWrapperMobile>
+              </SearchLinkMobile>
+            </SearchWrapperMobile>
 
           </NavMenu>
           )}
