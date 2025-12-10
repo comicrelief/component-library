@@ -35,6 +35,11 @@ it('renders correctly', () => {
       color: #FFFFFF;
     }
 
+    .c4 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     .c2 {
       display: block;
       width: 100%;

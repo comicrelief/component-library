@@ -357,6 +357,11 @@ exports[`renders correctly:
   font-weight: bold;
 }
 
+.c1 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c3 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -376,6 +381,11 @@ exports[`renders correctly:
   color: #E52630;
 }
 
+.c3 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -386,6 +396,11 @@ exports[`renders correctly:
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c2 {

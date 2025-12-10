@@ -43,7 +43,7 @@ const Footer = ({
           { showFundraisingRegulatorLogo && <FundraisingRegulatorLogo /> }
 
           <FooterCopyright>
-            <Text tag="p" color="grey">
+            <Text tag="p" color="grey" size="s">
               {footerCopy}
             </Text>
           </FooterCopyright>

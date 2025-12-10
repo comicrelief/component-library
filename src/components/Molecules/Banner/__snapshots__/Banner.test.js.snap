@@ -14,7 +14,14 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
+  font-size: 1rem;
+  line-height: normal;
   color: #FFFFFF;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c0 {
@@ -63,6 +70,7 @@ exports[`renders correctly 1`] = `
     <p
       className="c2"
       color="white"
+      size="s"
     >
       Mental health issues affect 1 in 4 of us in the UK. Join now and with your help we can provide vital support for people like Jordan. You know what to do.
     </p>
