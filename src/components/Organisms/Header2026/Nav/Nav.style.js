@@ -45,15 +45,16 @@ const NavLinkClass = styled(Link)`
     }
   }
 
-  // Chevron icon:
-  > div {
-    height: auto;
-    transform: rotate(-90deg);
-    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-    ${({ isExpanded }) => (isExpanded && css`
-      transform: rotate(-180deg);
-    `)}
-  }
+  // Chevron icon????
+  // > div {
+  //     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+  //     @media ${({ theme }) => theme.allBreakpoints('L')} {
+  //       transform: rotate(90deg);
+  //       ${({ isExpanded }) => (isExpanded && css`
+  //         transform: rotate(-90deg);
+  //       `)}
+  //     }
+  // }
 `;
 
 const NavLinks = styled.nav`
@@ -85,6 +86,7 @@ const NavMenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
+  overflow: hidden;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     box-shadow: none;
@@ -93,6 +95,7 @@ const NavMenuWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
   }
 `;
 
@@ -100,7 +103,7 @@ const NavMenuWrapper = styled.div`
  * First Level
  */
 const NavMenu = styled.ul`
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: transparent;
   list-style: none outside;
   padding: 0;
   margin: 0;
@@ -316,11 +319,10 @@ const StyledNavItem = styled.li`
 `;
 
 const ChevronWrapper = styled.div`
-  width: 16px;
   position: absolute;
-  top: 20px;
-  right: 22px;
-  height: 16px;
+  top: 28px;
+  right: 30px;
+  width: 8px;
 
   img {
     width: 100%;
@@ -332,10 +334,9 @@ const ChevronWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    position: absolute;
-    top: 10px;
+    top: 12px;
     right: 0;
-    width: 10px;
+    width: 7px;
   }
 `;
 
@@ -349,7 +350,7 @@ const DonateButtonModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: inherit;
-  margin-top: 50px;
+  margin-top: 48px;
 
   // Donate button
   a {

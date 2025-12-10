@@ -201,7 +201,11 @@ const Nav = ({
         )}
       </NavLinks>
 
-      <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
+      <BurgerMenu
+        data-testid="BurgerMenu"
+        toggle={toggleBurgerMenu}
+        isExpandable={isExpandable}
+      >
         Open
       </BurgerMenu>
     </>

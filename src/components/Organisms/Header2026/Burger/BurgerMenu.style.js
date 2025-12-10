@@ -14,28 +14,22 @@ const BurgerBar = styled.span`
 `;
 
 const BurgerWrapper = styled(Link)`
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 36px;
   background-color: ${({ theme }) => theme.color('grey_light')};
   ${zIndex('medium')};
   border-radius: 8px;
   order: 50;
-  display: flex;
-  align-items: center;
-  position: relative;
-  text-indent: -9999px;
-  height: 36px;
-  width: 36px;
-  left: 10px;
-
-  @media ${({ theme }) => theme.breakpoints2026('S')} {
-    left: 12px;
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    left: 16px;
-  }
-
   cursor: pointer;
   transition: all 0.2s;
+
+  margin-left: 10px;
+  @media ${({ theme }) => theme.allBreakpoints('S')} {
+    margin-left: 12px;
+  }
 
   :hover {
     border: none;

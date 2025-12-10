@@ -6,6 +6,7 @@ import { BurgerBar, BurgerHiddenText, BurgerWrapper } from './BurgerMenu.style';
 
 const BurgerMenu = ({ toggle, isExpandable }) => (
   <BurgerWrapper
+    data-testid="BurgerWrapper"
     href="#"
     role="button"
     aria-haspopup="true"

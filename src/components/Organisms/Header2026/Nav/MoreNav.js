@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import { ChevronWrapper } from './Nav.style';
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import ChevronIcon from '../assets/chevron-icon.svg';
 import {
   MoreNavLabel,
   MoreSubNavMenu,
@@ -39,7 +39,7 @@ const MoreNav = ({
       >
         More
         <ChevronWrapper>
-          <img src={menuGroupIcon} alt="Chevron icon" />
+          <img src={ChevronIcon} alt="Chevron icon" />
         </ChevronWrapper>
       </MoreNavLabel>
 
@@ -78,7 +78,7 @@ const MoreNav = ({
 
                 {hasSubMenu && (
                 <ChevronWrapper>
-                  <img src={menuGroupIcon} alt="Chevron icon" />
+                  <img src={ChevronIcon} alt="Chevron icon" />
                 </ChevronWrapper>
                 )}
 

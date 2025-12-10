@@ -1,4 +1,4 @@
-import './remove-extra-styles-in-preview.css';
+// import './remove-extra-styles-in-preview.css';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -20,8 +20,8 @@ const Header2026 = ({
   showBoxShadow = false,
   ...rest
 }) => {
-  const [isExpandable, setIsExpandable] = useState(false);
-  // const [isExpandable, setIsExpandable] = useState(true);
+  // const [isExpandable, setIsExpandable] = useState(false);
+  const [isExpandable, setIsExpandable] = useState(true);
 
   return (
     <Header2026Wrapper
@@ -41,6 +41,7 @@ const Header2026 = ({
           />
         </Brand>
 
+        {/* Also burger menu */}
         <Nav
           navItems={data}
           donateButton={donateButton}

@@ -28,8 +28,11 @@ const InnerWrapper = styled.div`
   height: 100%;
   cursor: pointer;
   max-width: ${containers.large};
-  padding: 10px 20px 10px 10px;
 
+  padding: 10px;
+  @media ${({ theme }) => theme.breakpoints2026('S')} {
+    padding: 10px 16px 10px 14px;
+  }
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding: 10px 16px;
   }

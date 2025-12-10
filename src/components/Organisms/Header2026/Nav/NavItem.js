@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
-
+import ChevronIcon from '../assets/chevron-icon.svg';
 import {
   StyledNavItem, NavLink, DesktopNavLink,
   SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
 } from './Nav.style';
-
-import menuGroupIcon from './Menu-Group-Icon.svg';
 
 const NavItem = (
   {
@@ -41,7 +39,7 @@ const NavItem = (
           <ChevronWrapper
             data-testid="ChevronWrapper"
           >
-            <img src={menuGroupIcon} alt="chevron down icon" />
+            <img src={ChevronIcon} alt="chevron icon" />
           </ChevronWrapper>
         )}
       </NavLink>
@@ -65,7 +63,7 @@ const NavItem = (
                 <ChevronWrapper
                   data-testid="ChevronWrapper"
                 >
-                  <img src={menuGroupIcon} alt="chevron down icon" />
+                  <img src={ChevronIcon} alt="chevron down icon" />
                 </ChevronWrapper>
               )
             }
