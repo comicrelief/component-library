@@ -1,5 +1,5 @@
 # CardDs
-## Image and CTA are clickable and links user through to full content
+## Image and CTA are clickable and links user through to full content. Note that this component can now be considered legacy, as it is superseded by CTAMultiCard.
 
 ### CardDs:  Image, Text & Link
 ```js
