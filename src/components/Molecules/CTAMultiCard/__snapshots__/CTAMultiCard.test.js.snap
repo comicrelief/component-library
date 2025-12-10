@@ -2,11 +2,20 @@
 
 exports[`handles data structure correctly 1`] = `
 .c8 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -146,9 +155,16 @@ exports[`handles data structure correctly 1`] = `
 }
 
 .c10 {
-  color: #969598;
-  font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -195,6 +211,20 @@ exports[`handles data structure correctly 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (max-width:739px) {
@@ -309,6 +339,20 @@ exports[`handles data structure correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -354,7 +398,6 @@ exports[`handles data structure correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -433,7 +476,6 @@ exports[`handles data structure correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -512,7 +554,6 @@ exports[`handles data structure correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -569,7 +610,6 @@ exports[`handles data structure correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             Load of text here
           </p>
@@ -608,11 +648,20 @@ exports[`handles data structure correctly 1`] = `
 
 exports[`renders 2 columns layout correctly 1`] = `
 .c8 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -752,9 +801,16 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 .c10 {
-  color: #969598;
-  font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -801,6 +857,20 @@ exports[`renders 2 columns layout correctly 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (max-width:739px) {
@@ -917,6 +987,20 @@ exports[`renders 2 columns layout correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -962,7 +1046,6 @@ exports[`renders 2 columns layout correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1041,7 +1124,6 @@ exports[`renders 2 columns layout correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1120,7 +1202,6 @@ exports[`renders 2 columns layout correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1177,7 +1258,6 @@ exports[`renders 2 columns layout correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             Load of text here
           </p>
@@ -1216,11 +1296,20 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 exports[`renders carousel mode correctly 1`] = `
 .c8 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -1360,9 +1449,16 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 .c10 {
-  color: #969598;
-  font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1409,6 +1505,20 @@ exports[`renders carousel mode correctly 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (max-width:739px) {
@@ -1564,6 +1674,20 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -1609,7 +1733,6 @@ exports[`renders carousel mode correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1688,7 +1811,6 @@ exports[`renders carousel mode correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1767,7 +1889,6 @@ exports[`renders carousel mode correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -1824,7 +1945,6 @@ exports[`renders carousel mode correctly 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             Load of text here
           </p>
@@ -1863,11 +1983,20 @@ exports[`renders carousel mode correctly 1`] = `
 
 exports[`renders correctly with data prop 1`] = `
 .c8 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -2007,9 +2136,16 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c10 {
-  color: #969598;
-  font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2056,6 +2192,20 @@ exports[`renders correctly with data prop 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (max-width:739px) {
@@ -2170,6 +2320,20 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -2215,7 +2379,6 @@ exports[`renders correctly with data prop 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -2294,7 +2457,6 @@ exports[`renders correctly with data prop 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -2373,7 +2535,6 @@ exports[`renders correctly with data prop 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             <strong>
               Load
@@ -2430,7 +2591,6 @@ exports[`renders correctly with data prop 1`] = `
           <p
             className="c8"
             color="inherit"
-            size="s"
           >
             Load of text here
           </p>
