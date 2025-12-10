@@ -13,17 +13,17 @@ exports[`renders correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.c12 {
+.c13 {
   font-size: 1rem;
   line-height: normal;
 }
 
-.c12 span {
+.c13 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c15 {
+.c16 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -35,19 +35,19 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c15 {
+.c16 {
   font-size: 1rem;
   line-height: normal;
   font-weight: bold;
   color: #FFFFFF;
 }
 
-.c15 span {
+.c16 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c20 {
+.c21 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -59,18 +59,18 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 {
+.c21 {
   font-size: 1rem;
   line-height: normal;
   color: #FFFFFF;
 }
 
-.c20 span {
+.c21 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c25 {
+.c26 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -82,18 +82,18 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c25 {
+.c26 {
   font-size: 1rem;
   line-height: normal;
   color: #969598;
 }
 
-.c25 span {
+.c26 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c10 {
+.c11 {
   object-fit: cover;
   width: 100%;
   display: block;
@@ -662,7 +662,7 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
-
+      
       <div
         className="c2"
       >
