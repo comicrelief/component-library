@@ -130,6 +130,12 @@ exports[`renders Promo correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  bottom: 25px;
+  background-color: grey;
+  border-radius: 15px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -138,7 +144,7 @@ exports[`renders Promo correctly 1`] = `
 
 .c6 {
   width: 100%;
-  padding: 1.5rem 1.5rem 4rem;
+  padding: 1.5rem;
   z-index: 1;
 }
 
@@ -227,23 +233,13 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
+
 }
 
 @media (min-width:1024px) {
   .c4 {
-    min-height: calc(100vh - 90px);
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 100%;
-    padding: 8rem 1.5rem;
+    position: relative;
+    height: 100px;
   }
 }
 
@@ -442,9 +438,6 @@ exports[`renders Promo correctly end position 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #274084;
-  -webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 101%);
-  clip-path: polygon(0 0,100% 0,100% 90%,0 101%);
-  border-radius: 0 0 0 2rem;
 }
 
 .c4 {
@@ -463,6 +456,12 @@ exports[`renders Promo correctly end position 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  bottom: 25px;
+  background-color: grey;
+  border-radius: 15px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -471,7 +470,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c6 {
   width: 100%;
-  padding: 1.5rem 1.5rem 4rem;
+  padding: 1.5rem;
   z-index: 1;
 }
 
@@ -560,31 +559,13 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
 
-@media (min-width:1024px) {
-  .c0 {
-    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
-    clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
-    border-radius: 0 0 0 4rem;
-  }
 }
 
 @media (min-width:1024px) {
   .c4 {
-    min-height: calc(100vh - 90px);
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 100%;
-    padding: 8rem 1.5rem;
+    position: relative;
+    height: 100px;
   }
 }
 
