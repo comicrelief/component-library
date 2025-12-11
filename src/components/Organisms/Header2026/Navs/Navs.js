@@ -25,7 +25,7 @@ import {
   SearchIconWrapperMobile
 } from './Nav.style';
 
-const Nav = ({
+const Navs = ({
   navItems = {}, donateButton = null, characterLimit,
   isExpandable, setIsExpandable
 }) => {
@@ -236,14 +236,14 @@ const Nav = ({
   );
 };
 
-Nav.propTypes = {
+Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
-  // As this is rendered in both the Header AND the Nav, just passing
+  // As this is rendered in both the Header AND the Navs, just passing
   // the same prop through to here:
   donateButton: PropTypes.node,
   isExpandable: PropTypes.bool,
   setIsExpandable: PropTypes.bool
 };
 
-export default Nav;
+export default Navs;

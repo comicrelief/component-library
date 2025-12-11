@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
-import Nav from './Nav/Nav';
+import Navs from './Navs/Navs';
 import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
@@ -42,11 +42,11 @@ const Header2026 = ({
         </Brand>
 
         {/* Also burger menu */}
-        <Nav
+        <Navs
           navItems={data}
           donateButton={donateButton}
           characterLimit={characterLimit}
-          data-testid="Nav"
+          data-testid="Navs"
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
         />
