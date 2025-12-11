@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
+
 import {
   StyledNavItem,
   NavLink,
@@ -11,7 +12,7 @@ import {
   SubNavLink,
   ChevronWrapper,
   StyledText
-} from './Navs.style';
+} from './NavItem.style';
 
 const NavItem = (
   {

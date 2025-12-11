@@ -1,8 +1,14 @@
 import styled, { css } from 'styled-components';
-import {
-  StyledNavItem, SubNavMenu, NavLink, SubNavItem, SubNavLink, ChevronWrapper
-} from './Nav.style';
 import Text from '../../../Atoms/Text/Text';
+
+import {
+  StyledNavItem,
+  SubNavMenu,
+  NavLink,
+  SubNavItem,
+  SubNavLink,
+  ChevronWrapper
+} from './NavItem.style';
 
 const MoreSubNavMenu = styled(SubNavMenu)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {

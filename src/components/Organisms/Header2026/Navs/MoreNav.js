@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
-import { ChevronWrapper } from './Nav.style';
+import { ChevronWrapper } from './NavItem.style';
 import ChevronIcon from '../assets/chevron-icon.svg';
+
 import {
   MoreNavLabel,
   MoreSubNavMenu,
