@@ -39,7 +39,7 @@ const FooterNew = ({
   additionalLegalLine = '',
   showFundraisingRegulatorLogo = false,
   showEmailSignup = true,
-  animateRotate = false,
+  animateRotate = true,
   ...rest
 }) => {
   // Remove white space between words
@@ -112,12 +112,12 @@ const FooterNew = ({
             </TopSectionLeft>
             <LogosContainer $desktopOnly $showCRLogoOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+                <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
               </Brand>
             </LogosContainer>
             <LogosContainer $desktopOnly $showPairedLogos>
               <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-                <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+                <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
               </Brand>
               {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
             </LogosContainer>
