@@ -23,7 +23,7 @@ import {
   SearchWrapperMobile,
   SearchLinkMobile,
   SearchIconWrapperMobile
-} from './Nav.style';
+} from './Navs.style';
 
 const Navs = ({
   navItems = {}, donateButton = null, characterLimit,

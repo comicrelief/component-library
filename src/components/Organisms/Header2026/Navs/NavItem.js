@@ -5,7 +5,7 @@ import ChevronIcon from '../assets/chevron-icon.svg';
 import {
   StyledNavItem, NavLink, DesktopNavLink,
   SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
-} from './Nav.style';
+} from './Navs.style';
 
 const NavItem = (
   {
