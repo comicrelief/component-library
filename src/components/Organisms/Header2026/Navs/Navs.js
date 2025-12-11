@@ -16,7 +16,7 @@ import NavItem from './NavItem';
 import searchIcon from '../assets/search-icon.svg';
 
 import {
-  NavLinks,
+  Navigation,
   NavMenuWrapper,
   NavMenu,
   DonateButtonModalWrapper,
@@ -121,7 +121,7 @@ const Navs = ({
 
   return (
     <>
-      <NavLinks
+      <Navigation
         data-testid="Nav"
         aria-label="main-menu"
         isExpandable={isExpandable}
@@ -223,7 +223,7 @@ const Navs = ({
             }
           </DonateButtonModalWrapper>
         )}
-      </NavLinks>
+      </Navigation>
 
       <BurgerMenu
         data-testid="BurgerMenu"

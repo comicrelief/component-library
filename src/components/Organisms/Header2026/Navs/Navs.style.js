@@ -6,7 +6,7 @@ import zIndex from '../../../../theme/shared/zIndex';
 
 const transitionDuration = 0.2;
 
-const NavLinks = styled.nav`
+const Navigation = styled.nav`
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
@@ -29,7 +29,7 @@ const NavLinks = styled.nav`
   > h2 {
     ${hideVisually};
   }
-  border: 1px solid red;
+border: 1px solid blue;
 `;
 
 const NavMenuWrapper = styled.div`
@@ -47,6 +47,7 @@ const NavMenuWrapper = styled.div`
     align-items: center;
     overflow: visible;
   }
+border: 1px solid red;
 `;
 
 /**
@@ -68,6 +69,7 @@ const NavMenu = styled.ul`
     height: 100%;
     background-color: ${({ theme }) => theme.color('white')};
   }
+border: 1px solid green;
 `;
 
 const DonateButtonModalWrapper = styled.div`
@@ -132,7 +134,7 @@ const SearchIconWrapperMobile = styled.div`
 `;
 
 export {
-  NavLinks,
+  Navigation,
   NavMenuWrapper,
   NavMenu,
   DonateButtonModalWrapper,

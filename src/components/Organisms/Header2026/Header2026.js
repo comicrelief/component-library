@@ -41,7 +41,6 @@ const Header2026 = ({
           />
         </Brand>
 
-        {/* Also burger menu */}
         <Navs
           navItems={data}
           donateButton={donateButton}
