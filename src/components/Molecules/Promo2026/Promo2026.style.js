@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import containers from '../../../theme/shared/containers';
+// import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -26,10 +26,13 @@ const OuterWrapper = styled.div`
   width: 100%;
   max-width: none;
   position: relative;
+  display: flex;
+  align-items: center;
+
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: auto;
-    max-width: 1376px;
+    max-width: 1500px;
   }
 `;
 
@@ -42,11 +45,9 @@ const MediaWrapper = styled.div`
   }
     
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    max-width: 1376px;
+    max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
-    // height: auto
-    // position: 1376px;
   }
 `;
 
@@ -72,19 +73,22 @@ const CopyOuterWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
-    max-width: 1376px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 `;
 
 const Copy = styled.div`
-  width: 100%;
-  padding: ${spacing('m')};
+  width: 92%;
+  padding:  ${spacing('l')}; 
   ${zIndex('low')};
 
   // Roughing in some placeholder styles:
-  background-color: grey;
+  background-color: white;
   border-radius: 15px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -115,9 +119,10 @@ const CopyInnerWrapper = styled.div`
   align-items: center;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: calc(40%);
+
+    width: 50%;
     height: auto;
-    margin-left: 10%;
+    justify-content: end;
 
     // TODO LATER:
     // ${({ copyLeft }) => (!copyLeft) && css`

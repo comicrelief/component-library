@@ -20,16 +20,16 @@ import Link from '../../Atoms/Link/Link';
 >
   <Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now, 
     but with lots more here so I can test things
   </Text>
   <span>
-    <Link href="/" type="button" color="white">
+    <Link href="/" type="button" color="black">
       <Text>
         Show me this
       </Text>

@@ -121,6 +121,14 @@ exports[`renders Promo correctly 1`] = `
   width: 100%;
   max-width: none;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c2 {
@@ -147,10 +155,10 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c7 {
-  width: 100%;
-  padding: 1.5rem;
+  width: 92%;
+  padding: 2rem;
   z-index: 1;
-  background-color: grey;
+  background-color: white;
   border-radius: 15px;
 }
 
@@ -242,13 +250,13 @@ exports[`renders Promo correctly 1`] = `
 @media (min-width:1024px) {
   .c1 {
     width: auto;
-    max-width: 1376px;
+    max-width: 1500px;
   }
 }
 
 @media (min-width:1024px) {
   .c2 {
-    max-width: 1376px;
+    max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
   }
@@ -265,9 +273,21 @@ exports[`renders Promo correctly 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
-    max-width: 1376px;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -277,9 +297,12 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:1024px) {
   .c6 {
-    width: calc(40%);
+    width: 50%;
     height: auto;
-    margin-left: 10%;
+    -webkit-box-pack: end;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
 }
 
@@ -473,6 +496,14 @@ exports[`renders Promo correctly end position 1`] = `
   width: 100%;
   max-width: none;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c2 {
@@ -499,10 +530,10 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 .c7 {
-  width: 100%;
-  padding: 1.5rem;
+  width: 92%;
+  padding: 2rem;
   z-index: 1;
-  background-color: grey;
+  background-color: white;
   border-radius: 15px;
 }
 
@@ -594,13 +625,13 @@ exports[`renders Promo correctly end position 1`] = `
 @media (min-width:1024px) {
   .c1 {
     width: auto;
-    max-width: 1376px;
+    max-width: 1500px;
   }
 }
 
 @media (min-width:1024px) {
   .c2 {
-    max-width: 1376px;
+    max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
   }
@@ -617,9 +648,21 @@ exports[`renders Promo correctly end position 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
-    max-width: 1376px;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -629,9 +672,12 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:1024px) {
   .c6 {
-    width: calc(40%);
+    width: 50%;
     height: auto;
-    margin-left: 10%;
+    -webkit-box-pack: end;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
 }
 
