@@ -17,8 +17,8 @@ import searchIcon from '../assets/search-icon.svg';
 
 import {
   Navigation,
-  NavMenuWrapper,
-  NavMenu,
+  PrimaryMenuWrapper,
+  PrimaryMenu,
   DonateButtonModalWrapper,
   SearchWrapperMobile,
   SearchLinkMobile,
@@ -131,13 +131,13 @@ const Navs = ({
         {/* Unseen accessibility aid */}
         <Text id="main-menu" tag="h2">Main navigation</Text>
 
-        <NavMenuWrapper data-testid="NavMenuWrapper">
+        <PrimaryMenuWrapper data-testid="PrimaryMenuWrapper">
 
           {/* Only render once we've processed the menu items: */}
           {processedItems && (
           // First level of the navigation (ul tag): Parent
-          <NavMenu
-            data-testid="NavMenu"
+          <PrimaryMenu
+            data-testid="PrimaryMenu"
             role="menubar"
           >
             {theseGroups.map((group, index) => {
@@ -204,9 +204,9 @@ const Navs = ({
               </SearchLinkMobile>
             </SearchWrapperMobile>
 
-          </NavMenu>
+          </PrimaryMenu>
           )}
-        </NavMenuWrapper>
+        </PrimaryMenuWrapper>
 
         {isExpandable && (
           <DonateButtonModalWrapper data-testid="donate-button--mobile">

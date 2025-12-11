@@ -32,7 +32,7 @@ const Navigation = styled.nav`
 border: 1px solid blue;
 `;
 
-const NavMenuWrapper = styled.div`
+const PrimaryMenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
@@ -50,10 +50,7 @@ const NavMenuWrapper = styled.div`
 border: 1px solid red;
 `;
 
-/**
- * First Level
- */
-const NavMenu = styled.ul`
+const PrimaryMenu = styled.ul`
   background-color: transparent;
   list-style: none outside;
   padding: 0;
@@ -135,8 +132,8 @@ const SearchIconWrapperMobile = styled.div`
 
 export {
   Navigation,
-  NavMenuWrapper,
-  NavMenu,
+  PrimaryMenuWrapper,
+  PrimaryMenu,
   DonateButtonModalWrapper,
   SearchWrapperMobile,
   SearchLinkMobile,
