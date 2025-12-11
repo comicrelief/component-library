@@ -201,6 +201,7 @@ const LogosContainer = styled.div`
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: ${({ $desktopOnly }) => ($desktopOnly  ? spacing('l') : '0')};
 
     display: ${({
     $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
@@ -225,9 +226,7 @@ const LogosContainer = styled.div`
   }};
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} and (max-width: ${breakpointValues2026.L - 1}px) {
-    padding-top: ${({ $desktopOnly, $showCRLogoOnly }) => ($desktopOnly && $showCRLogoOnly ? spacing('l') : '0')
-};
+
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
