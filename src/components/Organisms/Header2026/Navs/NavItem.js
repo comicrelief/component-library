@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
 import {
-  StyledNavItem, NavLink, DesktopNavLink,
-  SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
+  StyledNavItem,
+  NavLink,
+  DesktopNavLink,
+  SubNavMenu,
+  SubNavItem,
+  SubNavLink,
+  ChevronWrapper,
+  StyledText
 } from './Navs.style';
 
 const NavItem = (
