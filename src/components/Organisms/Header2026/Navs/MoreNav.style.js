@@ -3,14 +3,14 @@ import Text from '../../../Atoms/Text/Text';
 
 import {
   StyledNavItem,
-  SubNavMenu,
+  SecondaryNavMenu,
   NavLink,
-  SubNavItem,
-  SubNavLink,
+  SecondaryNavItem,
+  SecondaryNavLink,
   ChevronWrapper
-} from './NavItem.style';
+} from './PrimaryNavItem.style';
 
-const MoreSubNavMenu = styled(SubNavMenu)`
+const MoreSubNavMenu = styled(SecondaryNavMenu)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     // Just extending this here to make a clean separation,
     // despite the fact no additional styles are needed right now
@@ -98,7 +98,7 @@ const MoreNavItem = styled(StyledNavItem)`
 `;
 
 // Clone Of SubNavMenu, NESTED menu
-const MoreNestedSubNavMenu = styled(SubNavMenu)`
+const MoreNestedSubNavMenu = styled(SecondaryNavMenu)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     top: 0;
     left: -1px;
@@ -118,7 +118,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
   }
 `;
 
-const MoreSubNavItem = styled(SubNavItem)`
+const MoreSubNavItem = styled(SecondaryNavItem)`
   // Chevron icon
   > a > ${ChevronWrapper} {
     position: absolute;
@@ -168,7 +168,7 @@ const MoreNavNestedLink = styled(NavLink)`
   `)};
 `;
 
-const MoreSubNavLink = styled(SubNavLink)`
+const MoreSubNavLink = styled(SecondaryNavLink)`
   // Just extending this here to make a clean separation,
   // despite the fact no additional styles are needed right now
 `;

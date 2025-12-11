@@ -7,14 +7,14 @@ import {
   StyledNavItem,
   NavLink,
   DesktopNavLink,
-  SubNavMenu,
-  SubNavItem,
-  SubNavLink,
+  SecondaryNavMenu,
+  SecondaryNavItem,
+  SecondaryNavLink,
   ChevronWrapper,
   StyledText
-} from './NavItem.style';
+} from './PrimaryNavItem.style';
 
-const NavItem = (
+const PrimaryNavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
@@ -81,7 +81,7 @@ const NavItem = (
     {/* Second level of the navigation (ul tag): Child(ren) */}
     {/* Used for BOTH nav types */}
     {hasSubMenu && (
-      <SubNavMenu
+      <SecondaryNavMenu
         role="list"
         isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
@@ -96,19 +96,19 @@ const NavItem = (
 
           // Otherwise, render out as usual:
           return (
-            <SubNavItem key={`${index}-${thisSubUrl}`}>
-              <SubNavLink href={thisSubUrl} inline role="menuitem">
+            <SecondaryNavItem key={`${index}-${thisSubUrl}`}>
+              <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
                 <Text>{child.title}</Text>
-              </SubNavLink>
-            </SubNavItem>
+              </SecondaryNavLink>
+            </SecondaryNavItem>
           );
         })}
-      </SubNavMenu>
+      </SecondaryNavMenu>
     )}
   </StyledNavItem>
 );
 
-NavItem.propTypes = {
+PrimaryNavItem.propTypes = {
   thisID: PropTypes.string.isRequired,
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
@@ -153,4 +153,4 @@ NavItem.propTypes = {
   relNoopener: PropTypes.string
 };
 
-export default NavItem;
+export default PrimaryNavItem;

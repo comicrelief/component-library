@@ -57,9 +57,9 @@ const NavLinkClass = styled(Link)`
 `;
 
 /**
- * Sub Navigation Menu (second level)
+ * Secondary Navigation Menu
  */
-const SubNavMenu = styled.ul`
+const SecondaryNavMenu = styled.ul`
   visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
   display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
@@ -91,9 +91,9 @@ const SubNavMenu = styled.ul`
 `;
 
 /**
- * Sub Menu list items
+ * Secondary Menu list items
  */
-const SubNavItem = styled.li`
+const SecondaryNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
@@ -111,9 +111,9 @@ const SubNavItem = styled.li`
 `;
 
 /**
- * Sub menu link item
+ * Secondary menu link item
  */
-const SubNavLink = styled(NavLinkClass)`
+const SecondaryNavLink = styled(NavLinkClass)`
   padding: 20px 25px 22px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
@@ -144,7 +144,7 @@ const NavLink = styled(NavLinkClass)`
     height: auto;
 
     :hover, :focus-within, :focus {
-      + ${SubNavMenu} {
+      + ${SecondaryNavMenu} {
       display: flex;
       opacity: 1;
     }}
@@ -226,7 +226,7 @@ const StyledNavItem = styled.li`
     :hover,
     :focus,
     :focus-within {
-      > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+      > ${SecondaryNavMenu}, :focus-within > ${SecondaryNavMenu} {
         visibility: visible;
         opacity: 1;
         display: flex;
@@ -244,7 +244,7 @@ const StyledNavItem = styled.li`
         padding-bottom: 2px;
       }
 
-      ${SubNavMenu} {
+      ${SecondaryNavMenu} {
         display: flex;
         opacity: 1;
         visibility: visible;
@@ -286,9 +286,9 @@ export {
   StyledNavItem,
   NavLink,
   DesktopNavLink,
-  SubNavMenu,
-  SubNavItem,
-  SubNavLink,
+  SecondaryNavMenu,
+  SecondaryNavItem,
+  SecondaryNavLink,
   ChevronWrapper,
   StyledText
 };

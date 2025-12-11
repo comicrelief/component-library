@@ -12,7 +12,7 @@ import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import NavItem from './NavItem';
+import PrimaryNavItem from './PrimaryNavItem';
 import searchIcon from '../assets/search-icon.svg';
 
 import {
@@ -154,7 +154,8 @@ const Navs = ({
               // Renders the first menugroup item to act as the parent; a button for the dropdown
               // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
-                <NavItem
+                // Secondary Menu is nested inside PrimaryNavItem
+                <PrimaryNavItem
                   thisID={thisID}
                   key={`${thisID}--item`}
                   index={index}
