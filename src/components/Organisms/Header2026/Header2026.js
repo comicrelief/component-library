@@ -20,8 +20,7 @@ const Header2026 = ({
   showBoxShadow = false,
   ...rest
 }) => {
-  // const [isExpandable, setIsExpandable] = useState(false);
-  const [isExpandable, setIsExpandable] = useState(true);
+  const [isExpandable, setIsExpandable] = useState(false);
 
   return (
     <Header2026Wrapper
