@@ -3,7 +3,6 @@ import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
 import { logoRotateAnimation } from '../../../theme/shared/animations';
-import { breakpointValues2026 } from '../../../theme/shared/breakpoints2026';
 
 const FooterWrapper = styled.footer.attrs(() => ({
   role: 'banner'
@@ -201,7 +200,7 @@ const LogosContainer = styled.div`
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: ${({ $desktopOnly }) => ($desktopOnly  ? spacing('l') : '0')};
+    padding-top: ${({ $desktopOnly }) => ($desktopOnly ? spacing('l') : '0')};
 
     display: ${({
     $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
