@@ -10,10 +10,10 @@ import Link from '../../Atoms/Link/Link';
   Promo2026 Upper
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
-  imageSet={defaultData.promoImage}
-  image={defaultData.promoImage}
-  imageLow={defaultData.promoImage}
+  backgroundColor="blue_light"
+  imageSet={defaultData.headerBannerLG}
+  image={defaultData.headerBannerLG}
+  imageLow={defaultData.headerBannerLG}
   imageAltText=""
   copyLeft={true}
   position="upper"
@@ -36,12 +36,13 @@ import Link from '../../Atoms/Link/Link';
     </Link>
   </span>
 </Promo2026>
+
 <br />
 <Text tag="h2" color="black">
   Promo2026 End
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -49,13 +50,13 @@ import Link from '../../Atoms/Link/Link';
   copyLeft={true}
   position="end"
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>
@@ -66,12 +67,14 @@ import Link from '../../Atoms/Link/Link';
     </Link>
   </span>
 </Promo2026>
+
 <br />
+
 <Text tag="h2" size="xl" color="black">
   Promo2026 Lower
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -79,13 +82,13 @@ import Link from '../../Atoms/Link/Link';
   copyLeft={true}
   position="lower"
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>
@@ -96,25 +99,27 @@ import Link from '../../Atoms/Link/Link';
     </Link>
   </span>
 </Promo2026>
+
 <br />
+
 <Text tag="h2" size="xl" color="black">
   Promo2026 None
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>
@@ -145,7 +150,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   Promo2026 Upper w/Video (autoplay and loop, black text gradient overlay)
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -158,13 +163,13 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   autoplay={true}
   behindTextGradient='black'
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>
@@ -182,7 +187,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   Promo2026 End w/Video (loop only, no text gradient overlay)
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -194,13 +199,13 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   loop={true}
   autoPlay={false}
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>
@@ -254,7 +259,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   Promo2026 None w/Video (no loop or autoplay, no text gradient overlay, copy right aligned)
 </Text>
 <Promo2026
-  backgroundColor="blue_dark"
+  backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
   imageLow={defaultData.promoImage}
@@ -265,13 +270,13 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   loop={false}
   autoPlay={false}
 >
-  <Text
+<Text
     tag="h1"
-    color="white"
+    color="black"
   >
     Promo 2026
   </Text>
-  <Text tag="p" color="white">
+  <Text tag="p" color="black">
     Just a wee bit of text for now
   </Text>
   <span>

@@ -9,13 +9,9 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   // overflow: hidden;
-  // TODO: set via prop still?
-  // background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)}; 
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)}; 
   justify-content: center; 
 
-  // "Row colour"
-  background-color: orange;
-  
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 32px;
     align-items: center;

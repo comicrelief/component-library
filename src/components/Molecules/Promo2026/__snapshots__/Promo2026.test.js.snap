@@ -110,11 +110,11 @@ exports[`renders Promo correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background: #274084;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: orange;
 }
 
 .c1 {
@@ -485,11 +485,11 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background: #274084;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: orange;
 }
 
 .c1 {
