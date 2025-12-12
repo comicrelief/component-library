@@ -165,7 +165,7 @@ const FooterNew = ({
 FooterNew.propTypes = {
   /** Array of primary navigation link objects */
   primaryLinksList: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     path: PropTypes.string,
     url: PropTypes.string,
     reference: PropTypes.shape({
@@ -177,7 +177,7 @@ FooterNew.propTypes = {
   })),
   /** Array of secondary navigation link objects */
   secondaryLinksList: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     path: PropTypes.string,
     url: PropTypes.string,
     reference: PropTypes.shape({
@@ -188,7 +188,7 @@ FooterNew.propTypes = {
     })
   })),
   /** Legal text displayed at bottom of footer */
-  legalText: PropTypes.string.isRequired,
+  legalText: PropTypes.string,
   /** Optional copyright text displayed at bottom of footer */
   copyrightText: PropTypes.string,
   /** Campaign name, used for logo and social links */
