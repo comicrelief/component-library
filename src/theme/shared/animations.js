@@ -14,7 +14,7 @@ const logoRotateAnimation = animateRotate => {
 
   return css`
     img {
-      transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+      transition: transform 0.6s cubic-bezier(0.41, 1.64, 0.41, 0.8);
     }
 
     &:hover,
