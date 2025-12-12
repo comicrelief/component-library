@@ -12,13 +12,12 @@ import {
 
 const Promo2026 = ({
   backgroundColor = 'white',
-  copyLeft = false,
+  copyLeft = true,
   imageSet = null,
   imageLow = null,
   image = null,
   imageAltText = '',
   children = null,
-  position = 'none',
   autoPlay = true,
   loop = true,
   poster = null,
@@ -26,7 +25,8 @@ const Promo2026 = ({
   videoSrc = null,
   mobileVideoSrc = null,
   showPosterAfterPlaying = true,
-  blackPlayButton = false
+  blackPlayButton = false,
+  variant = 'full-height'
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -62,10 +62,11 @@ const Promo2026 = ({
   }, [hasVideo, videoSrc, mobileVideoSrc, mobilePoster, poster]);
 
   return (
-    <Container backgroundColor={backgroundColor} position={position} className="CONTAINER">
-      <OuterWrapper className="OUTER-WRAPPER">
+    <Container backgroundColor={backgroundColor} className="CONTAINER">
 
-        <MediaWrapper imageRight={copyLeft} className="MEDIA-WRAPPER">
+      <OuterWrapper className="OUTER-WRAPPER" variant={variant}>
+
+        <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
           {(hasImage && !hasVideo) && (
           <Picture
             alt={imageAltText}
@@ -96,7 +97,7 @@ const Promo2026 = ({
 
         <CopyOuterWrapper copyLeft={copyLeft} className="COPY-OUTER-WRAPPER">
           <CopyInnerWrapper hasVideo={hasVideo} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
-            <Copy position={position} hasVideo={hasVideo} className="COPY">
+            <Copy hasVideo={hasVideo} className="COPY">
               {children}
             </Copy>
           </CopyInnerWrapper>
@@ -115,7 +116,6 @@ Promo2026.propTypes = {
   image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  position: PropTypes.oneOf(['upper', 'lower', 'end', 'none']),
   autoPlay: PropTypes.bool,
   loop: PropTypes.bool,
   videoSrc: PropTypes.string,
@@ -123,7 +123,8 @@ Promo2026.propTypes = {
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
-  blackPlayButton: PropTypes.bool
+  blackPlayButton: PropTypes.bool,
+  variant: PropTypes.oneOf(['full-height', 'half-height', 'text-banner'])
 };
 
 export default Promo2026;

@@ -25,29 +25,51 @@ const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 15px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 100%;
     max-width: 1500px;
-    // TODO: needs to factor in nav height, margins, padding, etc.
-    height: 75vh;
-    min-height: 600px;
-    max-height: 750px;
+    
+    ${({ variant }) => (variant === 'full-height'
+    ? css`
+      // TODO: needs to factor in nav height, margins, padding, etc.
+      height: 75vh;
+      min-height: 600px;
+      max-height: 750px;
+    `
+    : css`
+      height: auto;
+      min-height: 300px;
+      max-height: none;`
+  )};    
   }
 `;
 
 const MediaWrapper = styled.div`
   width: 100%;
   height: 100%;
-
-  img {
-    object-position: top center;
-  }
     
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+  }
+
+  img {
+    object-position: top center;
+
+    ${({ variant }) => (variant === 'full-height'
+    ? css`
+      height: 100%;
+    `
+    : css`
+      height: 450px
+    `
+  )};  
+
+
+
 
   }
 `;
@@ -74,10 +96,9 @@ const CopyOuterWrapper = styled.div`
     max-width: 1200px;
     display: flex;
     align-items: center;
-
-    justify-content: ${({ copyLeft }) => (copyLeft === true || copyLeft === undefined
+    justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-start;`
-    : css`flex-end;`
+    : css` flex-end;`
   )};    
   }
 `;
@@ -94,14 +115,6 @@ const Copy = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
      width: 92%;
   }
-
-  ${({ position }) => position === 'lower' && css`
-    padding: ${spacing('xl')} ${spacing('m')};
-    @media ${({ theme }) => theme.breakpoints2026('L')} {
-      // padding: 6rem ${spacing('m')};
-      // margin-top: 6rem;
-    }
-  `}
 `;
 
 const Video = styled.video.attrs(() => ({
@@ -121,18 +134,10 @@ const CopyInnerWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 50%;
     height: auto;
-    justify-content: ${({ copyLeft }) => (copyLeft === true || copyLeft === undefined
+    justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-end;`
-    : css`flex-start;`
+    : css` flex-start;`
   )};    
-
-    // TODO: Do we need this still?
-    //  - Nope.
-    // ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
-    //   overflow: hidden;
-    //   background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-    //   box-shadow: 0px 0px 50px 60px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-   `};
   }
 `;
 

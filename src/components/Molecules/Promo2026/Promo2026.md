@@ -13,7 +13,7 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.headerBannerLG}
   imageAltText=""
   copyLeft
-  position="upper"
+  variant="full-height"
 >
   <Text
     tag="h1"
@@ -22,8 +22,7 @@ import Link from '../../Atoms/Link/Link';
     Copy Left
   </Text>
   <Text tag="p" color="black">
-    Just a wee bit of text for now, 
-    but with lots more here so I can test things
+    Just a wee bit of text for now, but with lots more here so I can test things
   </Text>
   <span>
     <Link href="/" type="button" color="black">
@@ -43,7 +42,6 @@ import Link from '../../Atoms/Link/Link';
   imageLow={defaultData.headerBannerLG}
   imageAltText=""
   copyLeft={false}
-  position="upper"
 >
   <Text
     tag="h1"
@@ -52,8 +50,7 @@ import Link from '../../Atoms/Link/Link';
     Copy Right
   </Text>
   <Text tag="p" color="black">
-    Just a wee bit of text for now, 
-    but with lots more here so I can test things
+    Just a wee bit of text for now, but with lots more here so I can test things
   </Text>
   <span>
     <Link href="/" type="button" color="black">
@@ -64,28 +61,26 @@ import Link from '../../Atoms/Link/Link';
   </span>
 </Promo2026>
 
-<br />
 
 <Promo2026
-  backgroundColor="red"
-  imageSet={defaultData.promoImage}
-  image={defaultData.promoImage}
-  imageLow={defaultData.promoImage}
+  backgroundColor="blue_light"
+  imageSet={defaultData.headerBannerLG}
+  image={defaultData.headerBannerLG}
+  imageLow={defaultData.headerBannerLG}
   imageAltText=""
-  copyLeft={true}
-  position="end"
+  variant="half-height"
 >
-<Text
+  <Text
     tag="h1"
     color="black"
   >
-    Promo 2026
+    Half Height
   </Text>
   <Text tag="p" color="black">
-    Just a wee bit of text for now
+    Just a wee bit of text for now, but with lots more here so I can test things
   </Text>
   <span>
-    <Link href="/" type="button" color="white">
+    <Link href="/" type="button" color="black">
       <Text>
         Show me this
       </Text>
@@ -93,68 +88,6 @@ import Link from '../../Atoms/Link/Link';
   </span>
 </Promo2026>
 
-<br />
-
-<Text tag="h2" size="xl" color="black">
-  Promo2026 Lower
-</Text>
-<Promo2026
-  backgroundColor="red"
-  imageSet={defaultData.promoImage}
-  image={defaultData.promoImage}
-  imageLow={defaultData.promoImage}
-  imageAltText=""
-  copyLeft={true}
-  position="lower"
->
-<Text
-    tag="h1"
-    color="black"
-  >
-    Promo 2026
-  </Text>
-  <Text tag="p" color="black">
-    Just a wee bit of text for now
-  </Text>
-  <span>
-    <Link href="/" type="button" color="white">
-      <Text>
-        Show me this
-      </Text>
-    </Link>
-  </span>
-</Promo2026>
-
-<br />
-
-<Text tag="h2" size="xl" color="black">
-  Promo2026 None
-</Text>
-<Promo2026
-  backgroundColor="red"
-  imageSet={defaultData.promoImage}
-  image={defaultData.promoImage}
-  imageLow={defaultData.promoImage}
-  imageAltText=""
-  copyLeft={true}
->
-<Text
-    tag="h1"
-    color="black"
-  >
-    Promo 2026
-  </Text>
-  <Text tag="p" color="black">
-    Just a wee bit of text for now
-  </Text>
-  <span>
-    <Link href="/" type="button" color="white">
-      <Text>
-        Show me this
-      </Text>
-    </Link>
-  </span>
-</Promo2026>
 </div>
 ```
 
@@ -181,7 +114,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  position="upper"
   videoSrc={videoSrc}
   poster={poster}
   loop={true}
@@ -217,7 +149,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  position="end"
   videoSrc={videoSrc}
   poster={poster}
   loop={true}
@@ -253,7 +184,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   imageLow={defaultData.promoImage}
   imageAltText=""
   copyLeft={true}
-  position="lower"
   videoSrc={videoSrc}
   poster={poster}
   loop={false}

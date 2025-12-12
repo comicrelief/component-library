@@ -133,6 +133,7 @@ exports[`renders Promo correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 15px;
 }
 
 .c2 {
@@ -142,6 +143,7 @@ exports[`renders Promo correctly 1`] = `
 
 .c2 img {
   object-position: top center;
+  height: 100%;
 }
 
 .c5 {
@@ -516,6 +518,7 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 15px;
 }
 
 .c2 {
@@ -525,6 +528,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c2 img {
   object-position: top center;
+  height: 100%;
 }
 
 .c5 {
