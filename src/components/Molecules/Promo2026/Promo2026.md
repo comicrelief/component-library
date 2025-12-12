@@ -6,23 +6,20 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <div>
-<Text tag="h2" size="xl" color="black">
-  Promo2026 Upper
-</Text>
 <Promo2026
   backgroundColor="blue_light"
   imageSet={defaultData.headerBannerLG}
   image={defaultData.headerBannerLG}
   imageLow={defaultData.headerBannerLG}
   imageAltText=""
-  copyLeft={true}
+  copyLeft
   position="upper"
 >
   <Text
     tag="h1"
     color="black"
   >
-    Promo 2026
+    Copy Left
   </Text>
   <Text tag="p" color="black">
     Just a wee bit of text for now, 
@@ -38,9 +35,37 @@ import Link from '../../Atoms/Link/Link';
 </Promo2026>
 
 <br />
-<Text tag="h2" color="black">
-  Promo2026 End
-</Text>
+
+<Promo2026
+  backgroundColor="blue_light"
+  imageSet={defaultData.headerBannerLG}
+  image={defaultData.headerBannerLG}
+  imageLow={defaultData.headerBannerLG}
+  imageAltText=""
+  copyLeft={false}
+  position="upper"
+>
+  <Text
+    tag="h1"
+    color="black"
+  >
+    Copy Right
+  </Text>
+  <Text tag="p" color="black">
+    Just a wee bit of text for now, 
+    but with lots more here so I can test things
+  </Text>
+  <span>
+    <Link href="/" type="button" color="black">
+      <Text>
+        Show me this
+      </Text>
+    </Link>
+  </span>
+</Promo2026>
+
+<br />
+
 <Promo2026
   backgroundColor="red"
   imageSet={defaultData.promoImage}
@@ -161,7 +186,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   poster={poster}
   loop={true}
   autoplay={true}
-  behindTextGradient='black'
 >
 <Text
     tag="h1"
@@ -234,7 +258,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   poster={poster}
   loop={false}
   autoPlay={true}
-  behindTextGradient='white'
 >
   <Text
     tag="h1"
@@ -304,7 +327,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  behindTextGradient='white'
 >
   <Text
     tag="h1"
@@ -339,7 +361,6 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   mobilePoster={mobilePoster}
   loop={false}
   autoPlay={false}
-  behindTextGradient='white'
   blackPlayButton={true}
 >
   <Text

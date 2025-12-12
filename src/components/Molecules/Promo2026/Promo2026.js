@@ -26,7 +26,6 @@ const Promo2026 = ({
   videoSrc = null,
   mobileVideoSrc = null,
   showPosterAfterPlaying = true,
-  behindTextGradient = 'none',
   blackPlayButton = false
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
@@ -63,7 +62,7 @@ const Promo2026 = ({
   }, [hasVideo, videoSrc, mobileVideoSrc, mobilePoster, poster]);
 
   return (
-    <Container backgroundColor={backgroundColor} position={position}>
+    <Container backgroundColor={backgroundColor} position={position} className="CONTAINER">
       <OuterWrapper className="OUTER-WRAPPER">
 
         <MediaWrapper imageRight={copyLeft} className="MEDIA-WRAPPER">
@@ -84,7 +83,6 @@ const Promo2026 = ({
           <>
             <PromoVideo
               copyLeft={copyLeft}
-              behindTextGradient={behindTextGradient}
               blackPlayButton={blackPlayButton}
               thisVideoSrc={thisVideoSrc}
               thisPoster={thisPoster}
@@ -97,12 +95,13 @@ const Promo2026 = ({
         </MediaWrapper>
 
         <CopyOuterWrapper copyLeft={copyLeft} className="COPY-OUTER-WRAPPER">
-          <CopyInnerWrapper hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
-            <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient} className="COPY">
+          <CopyInnerWrapper hasVideo={hasVideo} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
+            <Copy position={position} hasVideo={hasVideo} className="COPY">
               {children}
             </Copy>
           </CopyInnerWrapper>
         </CopyOuterWrapper>
+
       </OuterWrapper>
     </Container>
   );
@@ -124,7 +123,6 @@ Promo2026.propTypes = {
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
-  behindTextGradient: PropTypes.oneOf(['black', 'white', 'none']),
   blackPlayButton: PropTypes.bool
 };
 

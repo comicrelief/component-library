@@ -102,6 +102,7 @@ exports[`renders Promo correctly 1`] = `
 
 .c0 {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,6 +126,9 @@ exports[`renders Promo correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -133,11 +137,11 @@ exports[`renders Promo correctly 1`] = `
 
 .c2 {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .c2 img {
-  object-position: center;
+  object-position: top center;
 }
 
 .c5 {
@@ -146,16 +150,15 @@ exports[`renders Promo correctly 1`] = `
   height: 100%;
   left: 0;
   right: 0;
-  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -32px;
+  margin: -32px auto 32px;
 }
 
 .c7 {
-  width: 92%;
+  width: 100%;
   padding: 2rem;
   z-index: 1;
   background-color: white;
@@ -249,8 +252,11 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    width: auto;
+    width: 100%;
     max-width: 1500px;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -284,6 +290,23 @@ exports[`renders Promo correctly 1`] = `
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: 92%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    width: 50%;
+    height: auto;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -291,23 +314,8 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 50%;
-    height: auto;
-    -webkit-box-pack: end;
-    -webkit-justify-content: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 CONTAINER"
 >
   <div
     className="c1 OUTER-WRAPPER"
@@ -477,6 +485,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c0 {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -500,6 +509,9 @@ exports[`renders Promo correctly end position 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -508,11 +520,11 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c2 {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .c2 img {
-  object-position: center;
+  object-position: top center;
 }
 
 .c5 {
@@ -521,16 +533,15 @@ exports[`renders Promo correctly end position 1`] = `
   height: 100%;
   left: 0;
   right: 0;
-  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -32px;
+  margin: -32px auto 32px;
 }
 
 .c7 {
-  width: 92%;
+  width: 100%;
   padding: 2rem;
   z-index: 1;
   background-color: white;
@@ -624,8 +635,11 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    width: auto;
+    width: 100%;
     max-width: 1500px;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -659,6 +673,23 @@ exports[`renders Promo correctly end position 1`] = `
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: 92%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    width: 50%;
+    height: auto;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -666,23 +697,8 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    width: 50%;
-    height: auto;
-    -webkit-box-pack: end;
-    -webkit-justify-content: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 CONTAINER"
 >
   <div
     className="c1 OUTER-WRAPPER"

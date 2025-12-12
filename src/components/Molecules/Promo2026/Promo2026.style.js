@@ -5,10 +5,10 @@ import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   width: 100%;
+  height: auto;
   display: flex;
   position: relative;
   flex-direction: column;
-  // overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)}; 
   justify-content: center; 
 
@@ -23,27 +23,32 @@ const OuterWrapper = styled.div`
   max-width: none;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
 
-
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: auto;
+    width: 100%;
     max-width: 1500px;
+    // TODO: needs to factor in nav height, margins, padding, etc.
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
 `;
 
 const MediaWrapper = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
 
   img {
-    object-position: center;
+    object-position: top center;
   }
     
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+
   }
 `;
 
@@ -53,13 +58,8 @@ const CopyOuterWrapper = styled.div`
   height: 100%;
   left: 0;
   right: 0;
-  margin: 0 auto;
   display: flex;
-  // align-items: center;
-  margin-top: -32px;
-
-  // TODO LATER
-  //${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
+  margin: -32px auto 32px;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: calc(100% - (2 * 32px)); // margins as per design
@@ -74,12 +74,16 @@ const CopyOuterWrapper = styled.div`
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+
+    justify-content: ${({ copyLeft }) => (copyLeft === true || copyLeft === undefined
+    ? css` flex-start;`
+    : css`flex-end;`
+  )};    
   }
 `;
 
 const Copy = styled.div`
-  width: 92%;
+  width: 100%;
   padding:  ${spacing('l')}; 
   ${zIndex('low')};
 
@@ -88,7 +92,7 @@ const Copy = styled.div`
   border-radius: 15px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-   // width: auto;
+     width: 92%;
   }
 
   ${({ position }) => position === 'lower' && css`
@@ -115,18 +119,15 @@ const CopyInnerWrapper = styled.div`
   align-items: center;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-
     width: 50%;
     height: auto;
-    justify-content: end;
-
-    // TODO LATER:
-    // ${({ copyLeft }) => (!copyLeft) && css`
-    //   left: auto;
-    //   right: 0;
-    // `};
+    justify-content: ${({ copyLeft }) => (copyLeft === true || copyLeft === undefined
+    ? css` flex-end;`
+    : css`flex-start;`
+  )};    
 
     // TODO: Do we need this still?
+    //  - Nope.
     // ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
     //   overflow: hidden;
     //   background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
