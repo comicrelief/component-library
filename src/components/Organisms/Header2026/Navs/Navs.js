@@ -7,7 +7,7 @@ import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import Icon from '../../../Atoms/SocialIcons/Icon/Icon';
-// import MoreNav from './MoreNav';
+import MoreNav from './MoreNav';
 import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
@@ -175,16 +175,16 @@ const Navs = ({
             })}
 
             {/* Only actually render 'More' nav stuff when we've got content */}
-            {/* {showMoreNav ? ( */}
-            {/*   <MoreNav */}
-            {/*     processedItems={processedItems} */}
-            {/*     openedSubMenu={openedSubMenu} */}
-            {/*     toggleSubMenu={toggleSubMenu} */}
-            {/*     navHelper={NavHelper} */}
-            {/*     allowListed={allowListed} */}
-            {/*     internalLinkHelper={InternalLinkHelper} */}
-            {/*   /> */}
-            {/* ) : null} */}
+            {showMoreNav ? (
+              <MoreNav
+                processedItems={processedItems}
+                openedSubMenu={openedSubMenu}
+                toggleSubMenu={toggleSubMenu}
+                navHelper={NavHelper}
+                allowListed={allowListed}
+                internalLinkHelper={InternalLinkHelper}
+              />
+            ) : null}
 
             <SearchWrapperMobile>
               <SearchLinkMobile href="/search">

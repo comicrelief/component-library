@@ -29,7 +29,6 @@ const Navigation = styled.nav`
   > h2 {
     ${hideVisually};
   }
-border: 1px solid blue;
 `;
 
 const PrimaryMenuWrapper = styled.div`
@@ -37,6 +36,7 @@ const PrimaryMenuWrapper = styled.div`
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   overflow: hidden;
+  position: static;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     box-shadow: none;
@@ -47,7 +47,6 @@ const PrimaryMenuWrapper = styled.div`
     align-items: center;
     overflow: visible;
   }
-border: 1px solid red;
 `;
 
 const PrimaryMenu = styled.ul`
@@ -55,6 +54,9 @@ const PrimaryMenu = styled.ul`
   list-style: none outside;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: relative;
@@ -66,6 +68,7 @@ const PrimaryMenu = styled.ul`
     height: 100%;
     background-color: ${({ theme }) => theme.color('white')};
   }
+
 border: 1px solid green;
 `;
 
