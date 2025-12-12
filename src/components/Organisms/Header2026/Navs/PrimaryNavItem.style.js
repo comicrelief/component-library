@@ -67,13 +67,10 @@ const SecondaryNavMenu = styled.ul`
   left: 0;
   top: 0;
 
-position: absolute;
-
-width: 100%;
-min-height: 100%;
-z-index: 9999;
-width: 100%;
-// height: 100%;
+  position: absolute;
+  width: 100%;
+  ${zIndex('higher')};
+  border: 1px solid red;
 
 
 
@@ -98,7 +95,6 @@ width: 100%;
     opacity: 0;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
   }
-border: 1px solid red;
 `;
 
 /**

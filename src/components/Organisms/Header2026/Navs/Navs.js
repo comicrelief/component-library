@@ -26,8 +26,9 @@ import {
 } from './Navs.style';
 
 const Navs = ({
-  navItems = {}, donateButton = null, characterLimit,
-  isExpandable, setIsExpandable
+  navItems = {}, donateButton = null,
+  characterLimit, isExpandable,
+  setIsExpandable
 }) => {
   const { menuGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});

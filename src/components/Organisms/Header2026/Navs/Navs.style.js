@@ -57,6 +57,7 @@ const PrimaryMenu = styled.ul`
   width: 100%;
   height: 100%;
   position: relative
+  border: 1px solid green;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: relative;
@@ -69,7 +70,6 @@ const PrimaryMenu = styled.ul`
     background-color: ${({ theme }) => theme.color('white')};
   }
 
-border: 1px solid green;
 `;
 
 const DonateButtonModalWrapper = styled.div`
