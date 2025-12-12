@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import Logo from '../../Atoms/Logo/Logo';
+import { logoRotateAnimation } from '../../../theme/shared/animations';
 
 const TitleLabel = styled.span`
   line-height: 0;
@@ -11,22 +12,12 @@ const TitleLabel = styled.span`
 `;
 
 const LogoLink = styled.a`
-  ${({ animateRotate }) => animateRotate && css`
-    img {
-      transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-    }
-
-    &:hover,
-    &:focus {
-      img {
-        transform: rotate(-14deg);
-      }
-    }
-  `}
+  ${({ animateRotate }) => logoRotateAnimation(animateRotate)}
 `;
 
 const LogoLinked = ({
-  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', url = '/', animateRotate = false, sizeSm, sizeMd
+  sizeSm, sizeMd,
+  campaign = 'Comic Relief', title = 'Go to Comic Relief homepage', url = '/', animateRotate = false
 }) => {
   if (campaign === 'Sport Relief Gameon') {
     return (
