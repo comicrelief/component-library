@@ -1,0 +1,156 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Text from '../../../Atoms/Text/Text';
+import ChevronIcon from '../assets/chevron-icon.svg';
+
+import {
+  StyledNavItem,
+  NavLink,
+  DesktopNavLink,
+  SecondaryNavMenu,
+  SecondaryNavItem,
+  SecondaryNavLink,
+  ChevronWrapper,
+  StyledText
+} from './PrimaryNavItem.style';
+
+const PrimaryNavItem = (
+  {
+    thisID, relNoopener, hasSubMenu, index, openedSubMenu,
+    isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
+    thisFirstChild, navHelper, internalLinkHelper, ...rest
+  }
+) => (
+  <StyledNavItem
+    data-testid="StyledNavItem"
+    role="none"
+    key={`${index}-${thisID}--item`}
+    index={index}
+    isSubMenuOpen={!!openedSubMenu}
+  >
+    {isNotDesktop ? (
+      <NavLink
+        data-testid="NavLink"
+        href={hasPopUp ? '#' : thisUrl}
+        inline
+        rel={relNoopener}
+        aria-expanded={!!openedSubMenu[thisID]}
+        aria-haspopup={hasPopUp}
+        onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
+        role="button"
+        key={`${index}-${thisID}--link`}
+        isExpanded={!!openedSubMenu[thisID]}
+      >
+        {thisFirstChild.title}
+        {hasSubMenu && (
+          <ChevronWrapper
+            data-testid="ChevronWrapper"
+          >
+            <img src={ChevronIcon} alt="chevron icon" />
+          </ChevronWrapper>
+        )}
+      </NavLink>
+    ) : (
+      <StyledText
+        data-testid="StyledText"
+      >
+        <DesktopNavLink
+          data-testid="DesktopNavLink"
+          href={thisUrl}
+          inline
+          rel={relNoopener}
+          aria-haspopup={hasPopUp}
+          key={`${index}-${thisID}`}
+          hasSubMenu={hasSubMenu}
+          {...rest}
+        >
+          {thisFirstChild.title}
+          {hasSubMenu
+              && (
+                <ChevronWrapper
+                  data-testid="ChevronWrapper"
+                >
+                  <img src={ChevronIcon} alt="chevron down icon" />
+                </ChevronWrapper>
+              )
+            }
+        </DesktopNavLink>
+      </StyledText>
+    )}
+
+    {/* Second level of the navigation (ul tag): Child(ren) */}
+    {/* Used for BOTH nav types */}
+    {hasSubMenu && (
+      <SecondaryNavMenu
+        role="list"
+        isSubMenuOpen={!!openedSubMenu[thisID]}
+        key={`${index}-${thisID}--sub-item`}
+      >
+        {group.links.map((child, childIndex) => {
+          let thisSubUrl = navHelper(child);
+          thisSubUrl = internalLinkHelper(thisSubUrl);
+
+          // Skip the very first child on desktop, since
+          // we've already made a 'button' version above:
+          if (childIndex === 0 && !isNotDesktop) return null;
+
+          // Otherwise, render out as usual:
+          return (
+            <SecondaryNavItem key={`${index}-${thisSubUrl}`}>
+              <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
+                <Text>{child.title}</Text>
+              </SecondaryNavLink>
+            </SecondaryNavItem>
+          );
+        })}
+      </SecondaryNavMenu>
+    )}
+  </StyledNavItem>
+);
+
+PrimaryNavItem.propTypes = {
+  thisID: PropTypes.string.isRequired,
+  index: PropTypes.number,
+  hasSubMenu: PropTypes.bool,
+  // Non-required fields as this isn't always populated
+  openedSubMenu: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    )
+  }),
+  toggleSubMenu: PropTypes.func.isRequired,
+  hasPopUp: PropTypes.string,
+  isNotDesktop: PropTypes.bool,
+  thisUrl: PropTypes.string.isRequired,
+  group: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string
+      })
+    )
+  }),
+  // Non-required fields as this isn't always populated
+  thisFirstChild: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    )
+  }),
+  navHelper: PropTypes.func.isRequired,
+  internalLinkHelper: PropTypes.func.isRequired,
+  relNoopener: PropTypes.string
+};
+
+export default PrimaryNavItem;
