@@ -72,7 +72,7 @@ const PrimaryMenu = styled.ul`
 
 `;
 
-const DonateButtonModalWrapper = styled.div`
+const DonateButtonMobileModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: inherit;
@@ -137,7 +137,7 @@ export {
   Navigation,
   PrimaryMenuWrapper,
   PrimaryMenu,
-  DonateButtonModalWrapper,
+  DonateButtonMobileModalWrapper,
   SearchWrapperMobile,
   SearchLinkMobile,
   SearchIconWrapperMobile

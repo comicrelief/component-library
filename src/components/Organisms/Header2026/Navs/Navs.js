@@ -19,14 +19,17 @@ import {
   Navigation,
   PrimaryMenuWrapper,
   PrimaryMenu,
-  DonateButtonModalWrapper,
+  DonateButtonMobileModalWrapper,
   SearchWrapperMobile,
   SearchLinkMobile,
   SearchIconWrapperMobile
 } from './Navs.style';
 
 const Navs = ({
-  navItems = {}, characterLimit, isExpandable, setIsExpandable
+  navItems = {},
+  characterLimit,
+  isExpandable,
+  setIsExpandable
 }) => {
   const { menuGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
@@ -209,7 +212,7 @@ const Navs = ({
         </PrimaryMenuWrapper>
 
         {isExpandable && (
-          <DonateButtonModalWrapper data-testid="donate-button--mobile">
+          <DonateButtonMobileModalWrapper data-testid="donate-button--mobile">
             <Link
               color="red"
               type="button"
@@ -217,7 +220,7 @@ const Navs = ({
             >
               Donate
             </Link>
-          </DonateButtonModalWrapper>
+          </DonateButtonMobileModalWrapper>
         )}
       </Navigation>
 

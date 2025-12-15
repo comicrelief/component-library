@@ -14,7 +14,6 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 
 const Header2026 = ({
   data = {},
-  campaign = 'Comic Relief',
   characterLimit = 60,
   showBoxShadow = false,
   ...rest
@@ -30,7 +29,7 @@ const Header2026 = ({
       <InnerWrapper data-testid="InnerWrapper">
 
         <Brand data-testid="Brand">
-          <LogoNav2026 data-testid="LogoNav2026"/>
+          <LogoNav2026 data-testid="LogoNav2026" />
         </Brand>
 
         <Navs
