@@ -36,6 +36,16 @@ exports[`renders correctly 1`] = `
   vertical-align: bottom;
 }
 
+.c32 {
+  display: inline-block;
+  z-index: 3;
+  width: 59px;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  vertical-align: bottom;
+}
+
 .c3 {
   position: relative;
   display: inline;
@@ -385,7 +395,7 @@ exports[`renders correctly 1`] = `
 .c0 {
   text-align: left;
   background: #18181A;
-  padding-top: 4rem;
+  padding-top: 6rem;
 }
 
 .c1 {
@@ -432,14 +442,14 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c37 {
+.c38 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: block;
 }
 
-.c33 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -453,31 +463,31 @@ exports[`renders correctly 1`] = `
   gap: 2rem;
 }
 
-.c34 {
+.c35 {
   margin: 0;
 }
 
-.c35 {
+.c36 {
   color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: bold;
 }
 
-.c35:hover,
-.c35:focus {
+.c36:hover,
+.c36:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
 }
 
-.c36 {
+.c37 {
   color: #FFFFFF;
   font-weight: bold;
 }
 
-.c38 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -498,7 +508,7 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c39 {
+.c40 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -510,18 +520,18 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c39:not(:last-child)::after {
+.c40:not(:last-child)::after {
   content: '|';
   margin-left: 0.5rem;
   color: #969598;
 }
 
-.c40 {
+.c41 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c40 > span {
+.c41 > span {
   color: #969598;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -531,15 +541,15 @@ exports[`renders correctly 1`] = `
   font-size: 0.75rem;
 }
 
-.c40:hover,
-.c40:focus {
+.c41:hover,
+.c41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-color: #969598;
   text-decoration-color: #969598;
 }
 
-.c41 {
+.c42 {
   color: #FFFFFF;
   font-weight: normal;
 }
@@ -587,7 +597,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,7 +619,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,14 +649,27 @@ exports[`renders correctly 1`] = `
   border: 0;
 }
 
-.c42 {
+.c4 img {
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
+  -webkit-transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
+  transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
+}
+
+.c4:hover img,
+.c4:focus img {
+  -webkit-transform: rotate(-14deg);
+  -ms-transform: rotate(-14deg);
+  transform: rotate(-14deg);
+}
+
+.c43 {
   display: block;
   width: 100%;
   height: 100%;
   text-align: left;
 }
 
-.c43 {
+.c44 {
   color: #969598;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
@@ -669,6 +692,12 @@ exports[`renders correctly 1`] = `
 @media (min-width:1150px) {
   .c5 {
     width: 72px;
+  }
+}
+
+@media (min-width:1150px) {
+  .c32 {
+    width: 59px;
   }
 }
 
@@ -867,7 +896,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c37 {
+  .c38 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
@@ -879,7 +908,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c33 {
+  .c34 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -891,13 +920,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c39 {
+  .c40 {
     display: inline;
   }
 }
 
 @media (min-width:740px) {
-  .c40 > span {
+  .c41 > span {
     -webkit-text-decoration: none;
     text-decoration: none;
   }
@@ -910,6 +939,7 @@ exports[`renders correctly 1`] = `
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
     display: none;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -918,12 +948,6 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) and (max-width:1023px) {
-  .c2 {
-    padding-top: 0;
-  }
-}
-
 @media (min-width:1024px) {
   .c2 {
     display: none;
@@ -937,20 +961,15 @@ exports[`renders correctly 1`] = `
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width:740px) and (max-width:1023px) {
-  .c31 {
     padding-top: 2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -961,12 +980,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c32 {
+  .c33 {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 2rem;
     display: none;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -975,14 +995,8 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) and (max-width:1023px) {
-  .c32 {
-    padding-top: 0;
-  }
-}
-
 @media (min-width:1024px) {
-  .c32 {
+  .c33 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -991,12 +1005,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c44 {
+  .c45 {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1008,14 +1023,8 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) and (max-width:1023px) {
-  .c44 {
-    padding-top: 0;
-  }
-}
-
 @media (min-width:1024px) {
-  .c44 {
+  .c45 {
     display: none;
   }
 }
@@ -1246,7 +1255,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c32"
               rotate={0}
             >
               <img
@@ -1258,7 +1267,7 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c32"
+          className="c33"
         >
           <a
             className="c3 c4"
@@ -1269,7 +1278,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c32"
               rotate={0}
             >
               <img
@@ -1283,21 +1292,21 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Primary footer navigation"
-        className="c33"
+        className="c34"
         role="navigation"
       >
         <li
-          className="c34"
+          className="c35"
         >
           <a
-            className="c3 c35"
+            className="c3 c36"
             color="red"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c36"
+              className="c17 c37"
               color="inherit"
             >
               Contact us
@@ -1305,17 +1314,17 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="c34"
+          className="c35"
         >
           <a
-            className="c3 c35"
+            className="c3 c36"
             color="red"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c36"
+              className="c17 c37"
               color="inherit"
             >
               FAQs
@@ -1324,7 +1333,7 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c37"
+        className="c38"
       >
         <ul
           className="c26"
@@ -1423,21 +1432,21 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Secondary footer navigation"
-        className="c38"
+        className="c39"
         role="navigation"
       >
         <li
-          className="c39"
+          className="c40"
         >
           <a
-            className="c3 c40"
+            className="c3 c41"
             color="red"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c41"
+              className="c17 c42"
               color="inherit"
             >
               Terms of use
@@ -1445,17 +1454,17 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="c39"
+          className="c40"
         >
           <a
-            className="c3 c40"
+            className="c3 c41"
             color="red"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c41"
+              className="c17 c42"
               color="inherit"
             >
               Privacy notice
@@ -1464,23 +1473,23 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c42"
+        className="c43"
       >
         <p
-          className="c17 c43"
+          className="c17 c44"
           color="inherit"
         >
           © 2026 Comic Relief
         </p>
         <p
-          className="c17 c43"
+          className="c17 c44"
           color="inherit"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
       </div>
       <div
-        className="c44"
+        className="c45"
       />
     </div>
   </footer>
