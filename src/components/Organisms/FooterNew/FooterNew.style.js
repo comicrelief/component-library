@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
-  padding-top: ${spacing('xl')};
+  padding-top: 6rem;
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-bottom: ${spacing('lg')};
   }
