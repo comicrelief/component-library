@@ -15,7 +15,6 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 const Header2026 = ({
   data = {},
   campaign = 'Comic Relief',
-  donateButton = null,
   characterLimit = 60,
   showBoxShadow = false,
   ...rest
@@ -31,26 +30,19 @@ const Header2026 = ({
       <InnerWrapper data-testid="InnerWrapper">
 
         <Brand data-testid="Brand">
-          <LogoNav2026
-            campaign={campaign}
-            logoWidth="100px"
-            logoWidthMd="180px"
-            animateRotate
-            data-testid="LogoNav2026"
-          />
+          <LogoNav2026 data-testid="LogoNav2026"/>
         </Brand>
 
         <Navs
-          navItems={data}
-          donateButton={donateButton}
-          characterLimit={characterLimit}
           data-testid="Navs"
+          navItems={data}
+          characterLimit={characterLimit}
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">
-          <SearchIconWrapperDesktop data-testid="meta-icons--desktop">
+          <SearchIconWrapperDesktop data-testid="SearchIconWrapperDesktop">
             <Icon
               icon={searchIcon}
               title="Search"
@@ -64,22 +56,13 @@ const Header2026 = ({
             />
           </SearchIconWrapperDesktop>
 
-          {!isExpandable
-            && (
-              <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
-                {donateButton || (
-                  <Link
-                    color="red"
-                    type="button"
-                    href="/donation"
-                  >
-                    Donate
-                  </Link>
-                )
-                }
-              </DonateButtonTopBarWrapper>
-            )
-              }
+          {!isExpandable && (
+            <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
+              <Link color="red" type="button" href="/donation">
+                Donate
+              </Link>
+            </DonateButtonTopBarWrapper>
+          )}
         </ButtonsAndIcons>
 
       </InnerWrapper>
@@ -102,7 +85,6 @@ Header2026.propTypes = {
       })
     )
   }),
-  donateButton: PropTypes.node,
   campaign: PropTypes.string,
   characterLimit: PropTypes.number,
   showBoxShadow: PropTypes.bool

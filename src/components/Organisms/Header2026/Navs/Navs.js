@@ -26,9 +26,7 @@ import {
 } from './Navs.style';
 
 const Navs = ({
-  navItems = {}, donateButton = null,
-  characterLimit, isExpandable,
-  setIsExpandable
+  navItems = {}, characterLimit, isExpandable, setIsExpandable
 }) => {
   const { menuGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
@@ -212,17 +210,13 @@ const Navs = ({
 
         {isExpandable && (
           <DonateButtonModalWrapper data-testid="donate-button--mobile">
-            {donateButton
-              || (
-              <Link
-                color="red"
-                type="button"
-                href="/donation"
-              >
-                Donate
-              </Link>
-              )
-            }
+            <Link
+              color="red"
+              type="button"
+              href="/donation"
+            >
+              Donate
+            </Link>
           </DonateButtonModalWrapper>
         )}
       </Navigation>
@@ -241,9 +235,6 @@ const Navs = ({
 Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
-  // As this is rendered in both the Header AND the Navs, just passing
-  // the same prop through to here:
-  donateButton: PropTypes.node,
   isExpandable: PropTypes.bool,
   setIsExpandable: PropTypes.bool
 };
