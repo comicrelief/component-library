@@ -597,15 +597,11 @@ it('renders correctly', () => {
         >
           <h2
             className="c6"
-            color="inherit"
-            size="l"
           >
             Help someone like Jordan see a better tomorrow
           </h2>
           <p
             className="c7"
-            color="inherit"
-            size="s"
           >
             Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
           </p>
@@ -625,8 +621,6 @@ it('renders correctly', () => {
               >
                 <h3
                   className="c12"
-                  color="inherit"
-                  size="s"
                 >
                   Choose your monthly donation
                 </h3>
@@ -640,7 +634,6 @@ it('renders correctly', () => {
                 >
                   <span
                     className="c16 c17"
-                    color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "",
@@ -677,7 +670,6 @@ it('renders correctly', () => {
                 >
                   <span
                     className="c16 c17"
-                    color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "",
@@ -714,7 +706,6 @@ it('renders correctly', () => {
                 >
                   <span
                     className="c16 c17"
-                    color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "",
@@ -751,8 +742,6 @@ it('renders correctly', () => {
               >
                 <span
                   className="c23 c24"
-                  color="inherit"
-                  size="s"
                 >
                   Other amount
                 </span>
@@ -762,7 +751,6 @@ it('renders correctly', () => {
                 >
                   <span
                     className="c16 c17"
-                    color="inherit"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "£",

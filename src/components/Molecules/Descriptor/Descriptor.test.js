@@ -249,8 +249,6 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c3 c4"
-            color="grey_dark"
-            size="s"
           >
             15/06/2020
           </span>
@@ -276,9 +274,6 @@ it('renders article teaser correctly', () => {
         </div>
         <h3
           className="c7 c8"
-          color="inherit"
-          height="2rem"
-          size="xl"
         >
           Title
         </h3>
@@ -287,29 +282,21 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag1
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag2
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag3
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag4
           </span>

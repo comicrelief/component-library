@@ -178,7 +178,6 @@ it('renders correctly', () => {
     >
       <p
         className="c1 c2"
-        color="white"
       >
         Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
@@ -194,7 +193,6 @@ it('renders correctly', () => {
       </p>
       <p
         className="c1 c2"
-        color="white"
       >
         <a
           className="c5 c6"
