@@ -206,15 +206,11 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <span
         className="c7"
-        color="inherit"
-        size="xs"
       >
          
       </span>
       <h3
         className="c8 c9"
-        color="inherit"
-        size="xl"
       >
         News article
       </h3>
@@ -466,22 +462,16 @@ exports[`renders correctly with copy 1`] = `
     >
       <span
         className="c7"
-        color="inherit"
-        size="xs"
       >
          
       </span>
       <h3
         className="c8 c9"
-        color="inherit"
-        size="xl"
       >
         News article
       </h3>
       <p
         className="c10"
-        color="inherit"
-        size="m"
       >
         News article copy
       </p>
@@ -696,15 +686,11 @@ exports[`renders correctly with date 1`] = `
     >
       <span
         className="c7"
-        color="inherit"
-        size="xs"
       >
          01 July 2019
       </span>
       <h3
         className="c8 c9"
-        color="inherit"
-        size="xl"
       >
         News article
       </h3>
@@ -920,15 +906,11 @@ exports[`renders correctly with date and type 1`] = `
     >
       <span
         className="c7"
-        color="inherit"
-        size="xs"
       >
          article | 01 July 2019
       </span>
       <h3
         className="c8 c9"
-        color="inherit"
-        size="xl"
       >
         News article
       </h3>

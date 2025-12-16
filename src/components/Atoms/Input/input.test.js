@@ -147,7 +147,6 @@ it('renders correctly', () => {
     >
       <span
         className="c1 c2"
-        color="inherit"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Label",
@@ -327,7 +326,6 @@ it('renders with responsive max widths correctly', () => {
     >
       <span
         className="c1 c2"
-        color="inherit"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Responsive Width Input",
