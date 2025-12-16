@@ -175,8 +175,6 @@ it('renders correctly', () => {
       </div>
       <span
         className="c4 c5 c6"
-        color="white"
-        size="xxs"
       >
         Find out more
       </span>

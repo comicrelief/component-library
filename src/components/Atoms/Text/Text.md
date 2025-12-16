@@ -8,7 +8,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     // To be phased out: tags to use the prescribed family always
     family="Anton"
   >
-    <span style={{ width: "55px", display: "inline-block" }}>H1 </span>
+    <span style={{ width: "55px"}}>H1 </span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['h1'].family} -  
@@ -25,7 +25,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     mobileColor="green"
     family="Anton"
   >
-    <span style={{ width: "55px", display: "inline-block" }}>H2 </span>
+    <span style={{ width: "55px"}}>H2 </span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['h2'].family} - 
@@ -41,7 +41,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     mobileColor="red"
     family="Montserrat"
   >
-    <span style={{ width: "55px", display: "inline-block" }}>H3 </span>
+    <span style={{ width: "55px"}}>H3 </span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['h3'].family} -  
@@ -58,7 +58,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     weight="normal"
     // To be phased out: text to always be rendered as typed
     uppercase>
-    <span style={{ width: "55px", display: "inline-block" }}>H4 </span>
+    <span style={{ width: "55px"}}>H4 </span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['span'].family} -  
@@ -70,8 +70,8 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
 
 
 
-  <Text tag="p" size="m" style={{ marginTop: "2rem"}}>
-    <span style={{ width: "55px", display: "inline-block" }}>Body</span>
+  <Text tag="p" size="m" style={{ marginTop: "2rem"}} height="100px" weight="500">
+    <span style={{ width: "55px"}}>P (body)</span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['p'].family} -  
@@ -91,7 +91,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     uppercase
     // To be phased-out
     weight="normal">
-    <span style={{ width: "55px", display: "inline-block" }}>H5 </span>
+    <span style={{ width: "55px"}}>H5 </span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['h5'].family} -  
@@ -105,7 +105,7 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
     family="Anton" 
     uppercase
     weight="normal">
-    <span style={{ width: "55px", display: "inline-block" }}>H6</span>
+    <span style={{ width: "55px"}}>H6</span>
   </Text>
   <Text style={{ textTransform: "none" }} tag="span" size="s">
     <b>family:</b> {fontConfig['h6'].family}

@@ -48,8 +48,6 @@ exports[`renders correctly 1`] = `
 
 <span
   className="c0"
-  color="red"
-  size="error"
 >
   <span
     className="c1"

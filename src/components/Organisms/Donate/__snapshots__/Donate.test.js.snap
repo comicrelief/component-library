@@ -665,15 +665,11 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
       >
         <h2
           className="c4"
-          color="white"
-          size="big"
         >
           Donate Now
         </h2>
         <p
           className="c5"
-          color="white"
-          size="m"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -737,8 +733,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           >
             <span
               className="c16"
-              color="inherit"
-              size="l"
             >
               Enter an amount to give
             </span>
@@ -752,7 +746,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             >
               <span
                 className="c20 c21"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "£",
@@ -1473,15 +1466,11 @@ exports[`Monthly donation renders correctly 1`] = `
       >
         <h2
           className="c4"
-          color="white"
-          size="big"
         >
           Donate Now
         </h2>
         <p
           className="c5"
-          color="white"
-          size="m"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -1545,8 +1534,6 @@ exports[`Monthly donation renders correctly 1`] = `
           >
             <span
               className="c15"
-              color="inherit"
-              size="l"
             >
               Choose an amount to give
             </span>
@@ -1556,8 +1543,6 @@ exports[`Monthly donation renders correctly 1`] = `
           >
             <span
               className="c17 c18"
-              color="inherit"
-              size="s"
             >
               Other amount
             </span>
@@ -1567,7 +1552,6 @@ exports[`Monthly donation renders correctly 1`] = `
             >
               <span
                 className="c21 c22"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "£",
@@ -2306,15 +2290,11 @@ exports[`Single donation renders correctly 1`] = `
       >
         <h2
           className="c4"
-          color="white"
-          size="big"
         >
           Donate Now
         </h2>
         <p
           className="c5"
-          color="white"
-          size="m"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -2335,8 +2315,6 @@ exports[`Single donation renders correctly 1`] = `
           >
             <span
               className="c10"
-              color="inherit"
-              size="l"
             >
               Choose an amount to give
             </span>
@@ -2350,7 +2328,6 @@ exports[`Single donation renders correctly 1`] = `
             >
               <span
                 className="c14 c15"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "",
@@ -2387,7 +2364,6 @@ exports[`Single donation renders correctly 1`] = `
             >
               <span
                 className="c14 c15"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "",
@@ -2424,7 +2400,6 @@ exports[`Single donation renders correctly 1`] = `
             >
               <span
                 className="c14 c15"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "",
@@ -2461,8 +2436,6 @@ exports[`Single donation renders correctly 1`] = `
           >
             <span
               className="c21 c22"
-              color="inherit"
-              size="s"
             >
               Other amount
             </span>
@@ -2472,7 +2445,6 @@ exports[`Single donation renders correctly 1`] = `
             >
               <span
                 className="c14 c15"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "£",
@@ -3045,15 +3017,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
       >
         <h2
           className="c4"
-          color="white"
-          size="big"
         >
           Donate Now
         </h2>
         <p
           className="c5"
-          color="white"
-          size="m"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -3074,8 +3042,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           >
             <span
               className="c10"
-              color="inherit"
-              size="l"
             >
               Overridden via the 'choose amount text' props
             </span>
@@ -3089,7 +3055,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             >
               <span
                 className="c14 c15"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "£",

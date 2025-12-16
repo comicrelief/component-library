@@ -9,6 +9,7 @@ export { default as allowListed } from './utils/allowListed';
 export { default as spacing } from './theme/shared/spacing';
 export { default as allBreakpoints } from './theme/shared/allBreakpoints';
 export { default as containers } from './theme/shared/containers';
+export { logoRotateAnimation, springScaleAnimation } from './theme/shared/animations';
 
 /* Atoms */
 export { default as Text } from './components/Atoms/Text/Text';
@@ -46,6 +47,7 @@ export { default as Donate } from './components/Organisms/Donate/Donate';
 export { default as DoubleCopy } from './components/Molecules/DoubleCopy/DoubleCopy';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Organisms/Footer/Footer';
+export { default as FooterNew } from './components/Organisms/FooterNew/FooterNew';
 export { default as SearchResult } from './components/Molecules/SearchResult/SearchResult';
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';

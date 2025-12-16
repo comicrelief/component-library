@@ -294,16 +294,11 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c8 c9"
-            color="inherit"
-            size="xs"
           >
              01 July 2019
           </span>
           <h3
             className="c10 c11"
-            color="inherit"
-            height="2rem"
-            size="xl"
           >
             News article
           </h3>
@@ -576,16 +571,11 @@ it('renders press realese correctly', () => {
         >
           <span
             className="c8 c9"
-            color="inherit"
-            size="xs"
           >
              01 July 2019
           </span>
           <h3
             className="c10 c11"
-            color="inherit"
-            height="2rem"
-            size="xl"
           >
             Press Release
           </h3>

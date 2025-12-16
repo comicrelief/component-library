@@ -132,7 +132,6 @@ it('renders correctly', () => {
     >
       <span
         className="c1 c2"
-        color="inherit"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Label",
