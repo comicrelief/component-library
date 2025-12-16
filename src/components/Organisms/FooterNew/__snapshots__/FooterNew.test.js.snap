@@ -333,7 +333,7 @@ exports[`renders correctly 1`] = `
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
   letter-spacing: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
   background-color: #18181A;
   border-color: transparent;
@@ -798,15 +798,15 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c16 input {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
   .c16 input {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1098,7 +1098,6 @@ exports[`renders correctly 1`] = `
                     >
                       <span
                         className="c17 c18"
-                        color="inherit"
                         dangerouslySetInnerHTML={
                           Object {
                             "__html": "Email address",
@@ -1307,7 +1306,6 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c17 c37"
-              color="inherit"
             >
               Contact us
             </span>
@@ -1325,7 +1323,6 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c17 c37"
-              color="inherit"
             >
               FAQs
             </span>
@@ -1447,7 +1444,6 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c17 c42"
-              color="inherit"
             >
               Terms of use
             </span>
@@ -1465,7 +1461,6 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c17 c42"
-              color="inherit"
             >
               Privacy notice
             </span>
@@ -1477,13 +1472,11 @@ exports[`renders correctly 1`] = `
       >
         <p
           className="c17 c44"
-          color="inherit"
         >
           © 2026 Comic Relief
         </p>
         <p
           className="c17 c44"
-          color="inherit"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

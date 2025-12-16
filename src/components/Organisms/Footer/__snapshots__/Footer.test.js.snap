@@ -662,7 +662,7 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
-
+      
       <div
         className="c2"
       >
@@ -772,7 +772,7 @@ exports[`renders correctly 1`] = `
         role="navigation"
       >
         <h2
-          className="c12"
+          className="c13"
           id="footer-menu"
         >
           Footer navigation
@@ -786,7 +786,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               Hear from us
             </span>
@@ -807,7 +807,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Get the newsletter
                   </span>
@@ -825,7 +825,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     How we contact you
                   </span>
@@ -838,7 +838,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               Get in touch
             </span>
@@ -859,7 +859,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Contact us
                   </span>
@@ -877,7 +877,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Your Gift Aid
                   </span>
@@ -895,7 +895,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     FAQs
                   </span>
@@ -913,7 +913,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Red Nose Day 2019 FAQs
                   </span>
@@ -926,7 +926,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               About us
             </span>
@@ -947,7 +947,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Mission
                   </span>
@@ -965,7 +965,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Our history
                   </span>
@@ -983,7 +983,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Finances
                   </span>
@@ -1001,7 +1001,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Partners
                   </span>
@@ -1019,7 +1019,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Meet the team
                   </span>
@@ -1037,7 +1037,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Sport Relief
                   </span>
@@ -1050,7 +1050,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               Careers
             </span>
@@ -1071,7 +1071,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Working at Comic Relief
                   </span>
@@ -1089,7 +1089,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Open roles
                   </span>
@@ -1102,7 +1102,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               News
             </span>
@@ -1123,7 +1123,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     News
                   </span>
@@ -1141,7 +1141,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Press area
                   </span>
@@ -1154,7 +1154,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c15"
+              className="c16"
             >
               Legal
             </span>
@@ -1175,7 +1175,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Link comp with both URL and Ref
                   </span>
@@ -1193,7 +1193,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Link comp with only Ref
                   </span>
@@ -1211,7 +1211,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Link comp with only URL
                   </span>
@@ -1234,7 +1234,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Test allowListed external link
                   </span>
@@ -1252,7 +1252,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c20"
+                    className="c21"
                   >
                     Test non-allowListed external link
                   </span>
@@ -1271,7 +1271,7 @@ exports[`renders correctly 1`] = `
         className="c25"
       >
         <p
-          className="c25"
+          className="c26"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
