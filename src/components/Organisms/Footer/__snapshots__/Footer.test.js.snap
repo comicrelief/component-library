@@ -662,7 +662,7 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
-      
+
       <div
         className="c2"
       >
@@ -772,10 +772,8 @@ exports[`renders correctly 1`] = `
         role="navigation"
       >
         <h2
-          className="c13"
-          color="inherit"
+          className="c12"
           id="footer-menu"
-          size="s"
         >
           Footer navigation
         </h2>
@@ -788,9 +786,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               Hear from us
             </span>
@@ -811,9 +807,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Get the newsletter
                   </span>
@@ -831,9 +825,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     How we contact you
                   </span>
@@ -846,9 +838,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               Get in touch
             </span>
@@ -869,9 +859,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Contact us
                   </span>
@@ -889,9 +877,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Your Gift Aid
                   </span>
@@ -909,9 +895,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     FAQs
                   </span>
@@ -929,9 +913,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Red Nose Day 2019 FAQs
                   </span>
@@ -944,9 +926,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               About us
             </span>
@@ -967,9 +947,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Mission
                   </span>
@@ -987,9 +965,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Our history
                   </span>
@@ -1007,9 +983,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Finances
                   </span>
@@ -1027,9 +1001,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Partners
                   </span>
@@ -1047,9 +1019,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Meet the team
                   </span>
@@ -1067,9 +1037,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Sport Relief
                   </span>
@@ -1082,9 +1050,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               Careers
             </span>
@@ -1105,9 +1071,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Working at Comic Relief
                   </span>
@@ -1125,9 +1089,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Open roles
                   </span>
@@ -1140,9 +1102,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               News
             </span>
@@ -1163,9 +1123,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     News
                   </span>
@@ -1183,9 +1141,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Press area
                   </span>
@@ -1198,9 +1154,7 @@ exports[`renders correctly 1`] = `
             role="none"
           >
             <span
-              className="c16"
-              color="white"
-              size="s"
+              className="c15"
             >
               Legal
             </span>
@@ -1221,9 +1175,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Link comp with both URL and Ref
                   </span>
@@ -1241,9 +1193,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Link comp with only Ref
                   </span>
@@ -1261,9 +1211,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Link comp with only URL
                   </span>
@@ -1286,9 +1234,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Test allowListed external link
                   </span>
@@ -1306,9 +1252,7 @@ exports[`renders correctly 1`] = `
                   type="standard"
                 >
                   <span
-                    className="c21"
-                    color="white"
-                    size="s"
+                    className="c20"
                   >
                     Test non-allowListed external link
                   </span>
@@ -1327,9 +1271,7 @@ exports[`renders correctly 1`] = `
         className="c25"
       >
         <p
-          className="c26"
-          color="grey"
-          size="s"
+          className="c25"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

@@ -122,8 +122,6 @@ it('renders correctly', () => {
         <span />
         <span
           className="c2"
-          color="inherit"
-          size="s"
         >
           Male
         </span>
@@ -237,8 +235,6 @@ it('renders correctly', () => {
         <span />
         <span
           className="c2"
-          color="inherit"
-          size="s"
         >
           Female
         </span>
