@@ -1,12 +1,14 @@
 /* Determine where to grab the URL, depending on the component type and values supplied */
 const NavHelper = navItem => {
-  /* Default url path location for 'Pages' */
+  if (!navItem) return '';
+
   let thisUrl = navItem.path;
 
-  if (navItem.internal.type === 'ContentfulComponentLink') {
-    thisUrl = navItem.reference && navItem.reference.path
-      ? navItem.reference.path
-      : navItem.url;
+  if (navItem.internal?.type === 'ContentfulComponentLink') {
+    thisUrl =
+      navItem.reference?.path ??
+      navItem.url ??
+      thisUrl;
   }
 
   return thisUrl;
