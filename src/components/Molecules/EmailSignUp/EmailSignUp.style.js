@@ -62,7 +62,7 @@ export const StyledEmailInput = styled(Input)`
 
   input {
     ${({ theme }) => css`
-      ${fontHelper(theme, 'p')}
+      ${fontHelper(theme, 'formFieldInput')}
       background-color: ${theme.color('grey_5')};
       border-color: transparent;
       transition: background-color 0.2s ease;
