@@ -1,14 +1,14 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Promo2026 from './Promo2026';
+import HeroBanner from './HeroBanner';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 const defaultData = require('../../../styleguide/data/data').defaultData;
 it('renders Promo correctly', () => {
   const tree = renderWithTheme(
-    <Promo2026
+    <HeroBanner
       backgroundColor="blue_dark"
       imageSet={defaultData.promoImage}
       image={defaultData.promoImage}
@@ -34,7 +34,7 @@ it('renders Promo correctly', () => {
           Show me this
         </Link>
       </span>
-    </Promo2026>
+    </HeroBanner>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -42,7 +42,7 @@ it('renders Promo correctly', () => {
 
 it('renders Promo correctly end position', () => {
   const tree = renderWithTheme(
-    <Promo2026
+    <HeroBanner
       backgroundColor="blue_dark"
       imageSet={defaultData.promoImage}
       image={defaultData.promoImage}
@@ -69,7 +69,7 @@ it('renders Promo correctly end position', () => {
           Show me this
         </Link>
       </span>
-    </Promo2026>
+    </HeroBanner>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-// import containers from '../../../theme/shared/containers';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -31,6 +30,7 @@ const OuterWrapper = styled.div`
     width: 100%;
     max-width: 1500px;
     
+    // TODO: need to factor in text-only variant with its own height
     ${({ variant }) => (variant === 'full-height'
     ? css`
       // TODO: needs to factor in nav height, margins, padding, etc.
@@ -67,10 +67,6 @@ const MediaWrapper = styled.div`
       height: 450px
     `
   )};  
-
-
-
-
   }
 `;
 
@@ -107,10 +103,8 @@ const Copy = styled.div`
   width: 100%;
   padding:  ${spacing('l')}; 
   ${zIndex('low')};
-
-  // Roughing in some placeholder styles:
-  background-color: white;
-  border-radius: 15px;
+  background-color: ${({ theme }) => theme.color('white')}; 
+  border-radius: 16px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
      width: 92%;

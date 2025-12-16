@@ -1,4 +1,4 @@
-Promo2026
+HeroBanner
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 <div>
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.headerBannerLG}
   image={defaultData.headerBannerLG}
@@ -31,11 +31,11 @@ import Link from '../../Atoms/Link/Link';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <br />
 
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.headerBannerLG}
   image={defaultData.headerBannerLG}
@@ -59,10 +59,10 @@ import Link from '../../Atoms/Link/Link';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.headerBannerLG}
   image={defaultData.headerBannerLG}
@@ -86,7 +86,7 @@ import Link from '../../Atoms/Link/Link';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 </div>
 ```
@@ -105,9 +105,9 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
 
 <div>
 <Text tag="h2" size="xl" color="black">
-  Promo2026 Upper w/Video (autoplay and loop, black text gradient overlay)
+  HeroBanner Upper w/Video (autoplay and loop, black text gradient overlay)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -135,14 +135,14 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo2026 End w/Video (loop only, no text gradient overlay)
+  HeroBanner End w/Video (loop only, no text gradient overlay)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -170,14 +170,14 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <br />
 
 <Text tag="h2" size="xl" color="black">
-  Promo2026 Lower w/Video (autoplay only, white text gradient overlay)
+  HeroBanner Lower w/Video (autoplay only, white text gradient overlay)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -205,13 +205,13 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <br />
 <Text tag="h2" size="xl" color="black">
-  Promo2026 None w/Video (no loop or autoplay, no text gradient overlay, copy right aligned)
+  HeroBanner None w/Video (no loop or autoplay, no text gradient overlay, copy right aligned)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="red"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -239,12 +239,12 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <Text tag="h2" size="xl" color="black">
-  Promo2026 None w/Video (no loop or autoplay, white text gradient overlay, different videos and posters for mobile and desktop)
+  HeroBanner None w/Video (no loop or autoplay, white text gradient overlay, different videos and posters for mobile and desktop)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -275,12 +275,12 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
       </Text>
     </Link>
   </span>
-</Promo2026>
+</HeroBanner>
 
 <Text tag="h2" size="xl" color="black">
-  Promo2026 None w/Video (no loop or autoplay, white text gradient overlay, mobile-only video and poster, black play button)
+  HeroBanner None w/Video (no loop or autoplay, white text gradient overlay, mobile-only video and poster, black play button)
 </Text>
-<Promo2026
+<HeroBanner
   backgroundColor="blue_light"
   imageSet={defaultData.promoImage}
   image={defaultData.promoImage}
@@ -300,7 +300,7 @@ let mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';
   >
     One-Line Special
   </Text>
-</Promo2026>
+</HeroBanner>
 
 </div>
 ```

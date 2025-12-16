@@ -163,8 +163,8 @@ exports[`renders Promo correctly 1`] = `
   width: 100%;
   padding: 2rem;
   z-index: 1;
-  background-color: white;
-  border-radius: 15px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
 }
 
 .c6 {
@@ -548,8 +548,8 @@ exports[`renders Promo correctly end position 1`] = `
   width: 100%;
   padding: 2rem;
   z-index: 1;
-  background-color: white;
-  border-radius: 15px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
 }
 
 .c6 {

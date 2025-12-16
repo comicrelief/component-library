@@ -8,9 +8,9 @@ import Picture from '../../Atoms/Picture/Picture';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper, CopyInnerWrapper, OuterWrapper
-} from './Promo2026.style';
+} from './HeroBanner.style';
 
-const Promo2026 = ({
+const HeroBanner = ({
   backgroundColor = 'white',
   copyLeft = true,
   imageSet = null,
@@ -108,7 +108,7 @@ const Promo2026 = ({
   );
 };
 
-Promo2026.propTypes = {
+HeroBanner.propTypes = {
   backgroundColor: PropTypes.string,
   copyLeft: PropTypes.bool,
   imageLow: PropTypes.string,
@@ -127,4 +127,4 @@ Promo2026.propTypes = {
   variant: PropTypes.oneOf(['full-height', 'half-height', 'text-banner'])
 };
 
-export default Promo2026;
+export default HeroBanner;

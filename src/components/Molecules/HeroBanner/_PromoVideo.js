@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Video } from './Promo2026.style';
+import { Video } from './HeroBanner.style';
 import PromoVideoButton from './_PromoVideoButton';
 
 const PromoVideo = ({
