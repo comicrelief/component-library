@@ -28,13 +28,13 @@ const CTAMultiCard = ({ data }) => {
     carouselOfCards
   } = data;
 
-  // Convert layout string to number (e.g., "3 columns"
-  // (that's how it comes through from Contentful) -> 3)
-  const columns = layout && layout.includes('3') ? 3 : 2;
-
   if (!cards || !Array.isArray(cards) || cards.length === 0) {
     return null;
   }
+
+  // Convert layout string to number (e.g., "3 columns"
+  // (that's how it comes through from Contentful) -> 3)
+  const columns = layout && layout.includes('3') ? 3 : 2;
 
   const cardsBackground = snakeCase(bgCards || 'white');
 
