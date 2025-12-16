@@ -2,13 +2,13 @@
 const NavHelper = navItem => {
   if (!navItem) return '';
 
+  /* Default url path location for 'Pages' */
   let thisUrl = navItem.path;
 
-  if (navItem.internal?.type === 'ContentfulComponentLink') {
-    thisUrl =
-      navItem.reference?.path ??
-      navItem.url ??
-      thisUrl;
+  if (navItem.internal.type === 'ContentfulComponentLink') {
+    thisUrl = navItem.reference && navItem.reference.path
+      ? navItem.reference.path
+      : navItem.url;
   }
 
   return thisUrl;
