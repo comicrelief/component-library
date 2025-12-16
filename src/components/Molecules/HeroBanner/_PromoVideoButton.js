@@ -6,7 +6,7 @@ import { PlayButtonWrapper, PlayButton, Icon } from './_PromoVideoButton.style';
 const PromoVideoButton = ({
   togglePlay, ...rest
 }) => (
-  <PlayButtonWrapper className="weewee">
+  <PlayButtonWrapper>
     <PlayButton
       onClick={() => { togglePlay(); }}
       {...rest}

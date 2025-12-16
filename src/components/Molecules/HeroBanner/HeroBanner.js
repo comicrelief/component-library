@@ -26,7 +26,7 @@ const HeroBanner = ({
   mobileVideoSrc = null,
   showPosterAfterPlaying = true,
   blackPlayButton = false,
-  variant = 'full-height'
+  variant = 'full_height_image_or_video'
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -124,7 +124,11 @@ HeroBanner.propTypes = {
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
   blackPlayButton: PropTypes.bool,
-  variant: PropTypes.oneOf(['full-height', 'half-height', 'text-banner'])
+  variant: PropTypes.oneOf([
+    'full_height_image_or_video',
+    'half_height_image_or_video',
+    'responsive_text'
+  ])
 };
 
 export default HeroBanner;

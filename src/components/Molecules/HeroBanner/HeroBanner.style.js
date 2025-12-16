@@ -2,6 +2,32 @@ import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 
+const handleVariant = variant => {
+  switch (variant) {
+    case 'full_height_image_or_video':
+      return `
+        height: 75vh;
+        min-height: 600px;
+        max-height: 750px;`;
+
+    case 'half_height_image_or_video':
+      return `
+        height: auto;
+        min-height: 300px;
+        max-height: none;`;
+
+    case 'responsive_text':
+      return `
+        // TODO
+      `;
+
+    // Required, but given that we set the variant prop default as full height
+    // when there's no value supplied, this should't ever be used
+    default:
+      return null;
+  }
+};
+
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -29,20 +55,8 @@ const OuterWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 100%;
     max-width: 1500px;
-    
-    // TODO: need to factor in text-only variant with its own height
-    ${({ variant }) => (variant === 'full-height'
-    ? css`
-      // TODO: needs to factor in nav height, margins, padding, etc.
-      height: 75vh;
-      min-height: 600px;
-      max-height: 750px;
-    `
-    : css`
-      height: auto;
-      min-height: 300px;
-      max-height: none;`
-  )};    
+
+    ${({ variant }) => { handleVariant(variant); }}
   }
 `;
 
@@ -59,14 +73,17 @@ const MediaWrapper = styled.div`
   img {
     object-position: top center;
 
-    ${({ variant }) => (variant === 'full-height'
-    ? css`
-      height: 100%;
-    `
-    : css`
-      height: 450px
-    `
-  )};  
+    ${({ variant }) => (
+    `${(variant === 'full_height_image_or_video'
+      ? 'height: 100%;'
+      // As the 'responsive_text' variant doesn't even render an image, there was
+      // no point in putting further logic around this, so this'll only
+      // be applied to 'half_height_image_or_video' in practice.
+      : 'height: 450px;'
+    )}`
+  )
+
+};  
   }
 `;
 

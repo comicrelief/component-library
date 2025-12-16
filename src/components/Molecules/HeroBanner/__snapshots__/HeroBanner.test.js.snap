@@ -256,9 +256,6 @@ exports[`renders Promo correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
-    height: 75vh;
-    min-height: 600px;
-    max-height: 750px;
   }
 }
 
@@ -641,9 +638,6 @@ exports[`renders Promo correctly end position 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
-    height: 75vh;
-    min-height: 600px;
-    max-height: 750px;
   }
 }
 
