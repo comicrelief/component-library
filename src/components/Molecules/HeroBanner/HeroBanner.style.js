@@ -15,7 +15,6 @@ const handleVariant = variant => {
       return `
         height: auto;
         min-height: 450px;
-        max-height: 750px;
       `;
     case 'responsive_text':
       return `
@@ -68,14 +67,12 @@ const MediaWrapper = styled.div`
   height: 100%;
     
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    max-width: 1500px;
-    border-radius: 15px;
-    overflow: hidden;
-
-    // REWORK
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 1500px;
+    border-radius: 15px;
+    overflow: hidden;
 
   img {
     object-position: top center;
@@ -107,9 +104,9 @@ const CopyOuterWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    top: auto;
+    left: auto;
     height: 100%;
     width: 100%;
     max-width: 1200px;
@@ -126,13 +123,6 @@ const CopyOuterWrapper = styled.div`
     ? css` flex-start;`
     : css` flex-end;`
   )};   
-  
-    // REWORK
-    position: relative;
-    top: auto;
-    left: auto;
-    height: 100%;
-    width: 100%;
   }
 `;
 
