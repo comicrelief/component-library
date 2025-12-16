@@ -12,21 +12,22 @@ import {
 
 const HeroBanner = ({
   backgroundColor = 'white',
+  variant = 'full_height_image_or_video',
   copyLeft = true,
+  showPosterAfterPlaying = true,
+  blackPlayButton = false,
+  autoPlay = true,
+  loop = true,
+  imageAltText = '',
   imageSet = null,
   imageLow = null,
   image = null,
-  imageAltText = '',
   children = null,
-  autoPlay = true,
-  loop = true,
   poster = null,
   mobilePoster = null,
   videoSrc = null,
-  mobileVideoSrc = null,
-  showPosterAfterPlaying = true,
-  blackPlayButton = false,
-  variant = 'full_height_image_or_video'
+  mobileVideoSrc = null
+
 }) => {
   // Store the appropriate prop in state, dependent on the breakpoint
   const [thisVideoSrc, setThisVideoSrc] = useState(null);
@@ -117,18 +118,19 @@ HeroBanner.propTypes = {
   imageAltText: PropTypes.string,
   children: PropTypes.node,
   autoPlay: PropTypes.bool,
+  variant: PropTypes.oneOf([
+    'full_height_image_or_video',
+    'half_height_image_or_video',
+    'responsive_text'
+  ]),
+  // Phase 2 video stuff:
   loop: PropTypes.bool,
   videoSrc: PropTypes.string,
   mobileVideoSrc: PropTypes.string,
   poster: PropTypes.string,
   mobilePoster: PropTypes.string,
   showPosterAfterPlaying: PropTypes.bool,
-  blackPlayButton: PropTypes.bool,
-  variant: PropTypes.oneOf([
-    'full_height_image_or_video',
-    'half_height_image_or_video',
-    'responsive_text'
-  ])
+  blackPlayButton: PropTypes.bool
 };
 
 export default HeroBanner;

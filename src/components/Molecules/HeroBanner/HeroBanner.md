@@ -77,7 +77,33 @@ import Link from '../../Atoms/Link/Link';
     Half Height
   </Text>
   <Text tag="p" color="black">
-    Just a wee bit of text for now, but with lots more here so I can test things
+    Just a wee bit of text for now
+  </Text>
+  <span>
+    <Link href="/" type="button" color="black">
+      <Text>
+        Show me this
+      </Text>
+    </Link>
+  </span>
+</HeroBanner>
+
+<HeroBanner
+  backgroundColor="blue_light"
+  imageSet={defaultData.headerBannerLG}
+  image={defaultData.headerBannerLG}
+  imageLow={defaultData.headerBannerLG}
+  imageAltText=""
+  variant="half_height_image_or_video"
+>
+  <Text
+    tag="h1"
+    color="black"
+  >
+    Half Height
+  </Text>
+  <Text tag="p" color="black">
+    Loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads of text
   </Text>
   <span>
     <Link href="/" type="button" color="black">

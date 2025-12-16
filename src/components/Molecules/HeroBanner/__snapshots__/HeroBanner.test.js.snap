@@ -141,11 +141,6 @@ exports[`renders Promo correctly 1`] = `
   height: 100%;
 }
 
-.c2 img {
-  object-position: top center;
-  height: 100%;
-}
-
 .c5 {
   position: relative;
   width: calc(100% - (2 * 16px));
@@ -256,6 +251,9 @@ exports[`renders Promo correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -264,6 +262,11 @@ exports[`renders Promo correctly 1`] = `
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+  }
+
+  .c2 img {
+    object-position: top center;
+    height: 100%;
   }
 }
 
@@ -519,11 +522,6 @@ exports[`renders Promo correctly end position 1`] = `
   height: 100%;
 }
 
-.c2 img {
-  object-position: top center;
-  height: 100%;
-}
-
 .c5 {
   position: relative;
   width: calc(100% - (2 * 16px));
@@ -634,6 +632,9 @@ exports[`renders Promo correctly end position 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -642,6 +643,11 @@ exports[`renders Promo correctly end position 1`] = `
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+  }
+
+  .c2 img {
+    object-position: top center;
+    height: 100%;
   }
 }
 

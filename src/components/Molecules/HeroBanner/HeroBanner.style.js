@@ -11,11 +11,10 @@ const handleVariant = variant => {
         max-height: 750px;`;
 
     case 'half_height_image_or_video':
+      //
       return `
-        height: auto;
-        min-height: 300px;
-        max-height: none;`;
-
+        height: 450px;
+      `;
     case 'responsive_text':
       return `
         // TODO
@@ -56,8 +55,10 @@ const OuterWrapper = styled.div`
     width: 100%;
     max-width: 1500px;
 
-    ${({ variant }) => { handleVariant(variant); }}
-  }
+    ${({ variant }) => (variant && css`
+      ${handleVariant(variant)}
+      `
+  )}
 `;
 
 const MediaWrapper = styled.div`
@@ -68,22 +69,20 @@ const MediaWrapper = styled.div`
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
-  }
 
   img {
     object-position: top center;
 
+    // As the 'responsive_text' variant doesn't even render an image, there was
+    // no point in putting further logic around this, so this'll only
+    // be applied to 'half_height_image_or_video' in practice.
     ${({ variant }) => (
     `${(variant === 'full_height_image_or_video'
       ? 'height: 100%;'
-      // As the 'responsive_text' variant doesn't even render an image, there was
-      // no point in putting further logic around this, so this'll only
-      // be applied to 'half_height_image_or_video' in practice.
-      : 'height: 450px;'
-    )}`
-  )
-
-};  
+      : `min-height: 300px; 
+         height: 100%;`
+    )}`)};  
+   }
   }
 `;
 
