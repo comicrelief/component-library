@@ -96,7 +96,7 @@ const HeroBanner = ({
           )}
         </MediaWrapper>
 
-        <CopyOuterWrapper copyLeft={copyLeft} className="COPY-OUTER-WRAPPER">
+        <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
           <CopyInnerWrapper hasVideo={hasVideo} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
             <Copy hasVideo={hasVideo} className="COPY">
               {children}

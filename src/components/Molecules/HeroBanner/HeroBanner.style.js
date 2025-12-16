@@ -13,7 +13,9 @@ const handleVariant = variant => {
     case 'half_height_image_or_video':
       //
       return `
-        height: 450px;
+        height: auto;
+        min-height: 450px;
+        max-height: 750px;
       `;
     case 'responsive_text':
       return `
@@ -70,6 +72,11 @@ const MediaWrapper = styled.div`
     border-radius: 15px;
     overflow: hidden;
 
+    // REWORK
+    position: absolute;
+    top: 0;
+    left: 0;
+
   img {
     object-position: top center;
 
@@ -103,15 +110,29 @@ const CopyOuterWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+
+    ${({ variant }) => (variant && css`
+      ${handleVariant(variant)}
+      `
+  )}
+
     justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-start;`
     : css` flex-end;`
-  )};    
+  )};   
+  
+    // REWORK
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100%;
+    width: 100%;
   }
 `;
 
@@ -124,6 +145,7 @@ const Copy = styled.div`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
      width: 92%;
+     // margin: 32px 0;
   }
 `;
 
@@ -144,6 +166,8 @@ const CopyInnerWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 50%;
     height: auto;
+    // TODO: check this
+    margin: 32px 0;
     justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-end;`
     : css` flex-start;`

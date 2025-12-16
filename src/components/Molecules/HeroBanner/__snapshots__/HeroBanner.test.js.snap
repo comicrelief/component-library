@@ -262,6 +262,9 @@ exports[`renders Promo correctly 1`] = `
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .c2 img {
@@ -281,7 +284,7 @@ exports[`renders Promo correctly 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     display: -webkit-box;
@@ -292,10 +295,19 @@ exports[`renders Promo correctly 1`] = `
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: 0 auto;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -309,6 +321,7 @@ exports[`renders Promo correctly 1`] = `
   .c6 {
     width: 50%;
     height: auto;
+    margin: 32px 0;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -643,6 +656,9 @@ exports[`renders Promo correctly end position 1`] = `
     max-width: 1500px;
     border-radius: 15px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .c2 img {
@@ -662,7 +678,7 @@ exports[`renders Promo correctly end position 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     display: -webkit-box;
@@ -673,10 +689,19 @@ exports[`renders Promo correctly end position 1`] = `
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: 0 auto;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -690,6 +715,7 @@ exports[`renders Promo correctly end position 1`] = `
   .c6 {
     width: 50%;
     height: auto;
+    margin: 32px 0;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
