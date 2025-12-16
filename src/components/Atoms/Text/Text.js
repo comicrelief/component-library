@@ -19,19 +19,19 @@ export const BaseText = styled.span`
       // all tags will use the new standardised styles set in fontHelper), but, in order to ensure
       // things don't break/look bad accidentally, it'll require intentional, in-situ prop removal.
 
-      ${({ size }) => (size && `font-size: ${theme.fontSize(size)}`)};
-      ${({ size }) => (size && 'line-height: normal')};
+      ${({ $size }) => ($size && `font-size: ${theme.fontSize($size)}`)};
+      ${({ $size }) => ($size && 'line-height: normal')};
 
-      ${({ family }) => (family && `font-family: ${theme.fontFamilies(family)}`)};
-      ${({ weight }) => (weight && `font-weight: ${weight}`)};
-      ${({ height }) => (height && `line-height: ${height}`)};
-      ${({ uppercase }) => (uppercase && 'text-transform: uppercase')};
+      ${({ $family }) => ($family && `font-family: ${theme.fontFamilies($family)}`)};
+      ${({ $weight }) => ($weight && `font-weight: ${$weight}`)};
+      ${({ $height }) => ($height && `line-height: ${$height}`)};
+      ${({ $uppercase }) => ($uppercase && 'text-transform: uppercase')};
 
-      color: ${({ color }) => (color ? theme.color(color) : 'inherit')};
+      color: ${({ $color }) => ($color ? theme.color($color) : 'inherit')};
 
-      ${({ textAlign }) => textAlign && `text-align: ${textAlign}`};
+      ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign}`};
 
-      ${({ size }) => (size === 'super' && css`
+      ${({ $size }) => ($size === 'super' && css`
         font-size: ${theme.fontSize('xxl')};
         line-height: 3rem;
 
@@ -48,9 +48,9 @@ export const BaseText = styled.span`
         }
       `)};
 
-      ${({ mobileColor }) => mobileColor && css`
+      ${({ $mobileColor }) => $mobileColor && css`
         @media (max-width: ${breakpointValues2026.L - 1}px) {
-          color: ${theme.color(mobileColor)};
+          color: ${theme.color($mobileColor)};
         }
       `};
       
@@ -82,14 +82,14 @@ const Text = ({
   <BaseText
     {...rest}
     as={tag}
-    color={color}
-    size={size}
-    uppercase={uppercase}
-    height={height}
-    weight={weight}
-    family={family}
-    mobileColor={mobileColor}
-    textAlign={textAlign}
+    $color={color}
+    $size={size}
+    $uppercase={uppercase}
+    $height={height}
+    $weight={weight}
+    $family={family}
+    $mobileColor={mobileColor}
+    $textAlign={textAlign}
   >
     {children}
   </BaseText>

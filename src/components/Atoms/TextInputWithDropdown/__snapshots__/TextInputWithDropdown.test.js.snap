@@ -140,7 +140,6 @@ exports[`renders correctly with no value and no options 1`] = `
   >
     <span
       className="c2 c3"
-      color="inherit"
       dangerouslySetInnerHTML={
         Object {
           "__html": "Search for bikes",
@@ -314,7 +313,6 @@ exports[`renders correctly with value and no options 1`] = `
   >
     <span
       className="c2 c3"
-      color="inherit"
       dangerouslySetInnerHTML={
         Object {
           "__html": "Search for bikes",
@@ -527,7 +525,6 @@ exports[`renders correctly with value and options 1`] = `
   >
     <span
       className="c2 c3"
-      color="inherit"
       dangerouslySetInnerHTML={
         Object {
           "__html": "Search for bikes",
@@ -577,7 +574,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          color="inherit"
         >
           Canyon
         </span>
@@ -593,7 +589,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          color="inherit"
         >
           Cannondale
         </span>
@@ -609,7 +604,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          color="inherit"
         >
           Condor
         </span>
@@ -625,7 +619,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          color="inherit"
         >
           Cube
         </span>

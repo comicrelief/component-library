@@ -140,15 +140,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Project Name
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       Hello There
     </p>
@@ -158,15 +154,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       End Date
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       1st June 2020
     </p>
@@ -176,15 +168,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Funding theme
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       <a
         className="c4"
@@ -202,15 +190,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Amount Awarded
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       £2,000,000
     </p>
@@ -220,15 +204,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Start Date
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       1st June 2010
     </p>
@@ -238,15 +218,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Beneficiary Country
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       Uk
     </p>
