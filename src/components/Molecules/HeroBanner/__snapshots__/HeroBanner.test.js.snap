@@ -304,10 +304,6 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-
-}
-
 @media (min-width:1024px) {
   .c7 {
     width: 92%;
@@ -693,10 +689,6 @@ exports[`renders Promo correctly end position 1`] = `
     min-height: 600px;
     max-height: 750px;
   }
-}
-
-@media (min-width:740px) {
-
 }
 
 @media (min-width:1024px) {

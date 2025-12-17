@@ -119,8 +119,8 @@ import variants from './consts';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="deep_violet"
-    textBannerCopyBackgroundColour="red"
+    pageBackgroundColour="grey_light"
+    textBannerCopyBackgroundColour="deep_violet"
     variant={variants.TEXT_BANNER}
   >
     <Text
@@ -130,7 +130,7 @@ import variants from './consts';
       Responsive Text
     </Text>
     <Text tag="p" color="white">
-      Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+      Body copy
     </Text>
     <span>
       <Link href="/" type="button" color="white">

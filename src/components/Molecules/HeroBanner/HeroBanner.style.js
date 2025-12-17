@@ -88,9 +88,7 @@ const CopyOuterWrapper = styled.div`
   display: flex;
   width: calc(100% - (2 * 16px)); 
 
-  ${({ variant }) => (
-    variant !== variants.TEXT_BANNER ? 'margin: -32px 16px 32px;' : 'margin: 32px 16px;'
-  )}
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -32px 16px 32px;' : 'margin: 32px 16px;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: calc(100% - 64px); 
@@ -114,7 +112,6 @@ const CopyOuterWrapper = styled.div`
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}`)}
- 
   }
 `;
 
@@ -122,20 +119,21 @@ const Copy = styled.div`
   width: 100%;
   ${zIndex('low')};
   border-radius: 16px;
-
   padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
-
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
     : theme.color('white')
   )};   
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    padding: ${({ variant }) => (variant === variants.TEXT_BANNER && '4rem 1.5rem')};   
-  }
+  ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
+    @media ${theme.breakpoints2026('M')} {
+      padding: 4rem 11%;
+    }
+  `)};
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};   
+    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
+    ${({ variant }) => (variant === variants.TEXT_BANNER && 'text-align: center;')};
   }
 `;
 
@@ -146,9 +144,13 @@ const CopyInnerWrapper = styled.div`
   align-items: center;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: 50%;
+  
+    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
+
     height: auto;
-    margin: 32px 0;
+
+    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 32px 0;`)};   
+
     justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-end;`
     : css` flex-start;`

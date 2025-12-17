@@ -42,7 +42,7 @@ const HeroBanner = ({
         )}
 
         <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
-          <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
+          <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
             <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
               {children}
             </Copy>
