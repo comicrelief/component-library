@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import PromoVideo from './_PromoVideo';
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import './annoying.css';
 
 import Picture from '../../Atoms/Picture/Picture';
@@ -12,55 +10,15 @@ import {
 
 const HeroBanner = ({
   backgroundColor = 'white',
-  variant = 'full_height_image_or_video',
+  variant = 'full_height_media',
   copyLeft = true,
-  showPosterAfterPlaying = true,
-  blackPlayButton = false,
-  autoPlay = true,
-  loop = true,
   imageAltText = '',
   imageSet = null,
   imageLow = null,
   image = null,
-  children = null,
-  poster = null,
-  mobilePoster = null,
-  videoSrc = null,
-  mobileVideoSrc = null
-
+  children = null
 }) => {
-  // Store the appropriate prop in state, dependent on the breakpoint
-  const [thisVideoSrc, setThisVideoSrc] = useState(null);
-  const [thisPoster, setThisPoster] = useState(null);
-
-  // Let either field define this, just in case
-  const hasVideo = Boolean(videoSrc || mobileVideoSrc);
-  // A 'video-y' Promo will override and ignore any 'non-Video' images;
-  // none of these fields are required so we have to handle them accordingly:
-  const hasImage = Boolean(imageSet && !hasVideo);
-
-  // Runs on initial load:
-  useEffect(() => {
-    if (hasVideo) {
-      // Checks size on load ONLY; don't want to mess about with listeners:
-      const isDesktop = window.innerWidth >= breakpointValues.Nav; // 1024+ px
-      let currentPoster; let currentSrc;
-
-      // If we've got both desktop AND mobile videos, let the
-      // *current* screen width define which video src to use:
-      if (videoSrc && mobileVideoSrc) {
-        currentSrc = isDesktop ? videoSrc : mobileVideoSrc;
-        currentPoster = isDesktop ? poster : mobilePoster;
-      } else {
-        // Else, pick whatever we DO actually have:
-        currentSrc = videoSrc || mobileVideoSrc;
-        currentPoster = poster || mobilePoster;
-      }
-
-      setThisVideoSrc(currentSrc);
-      setThisPoster(currentPoster);
-    }
-  }, [hasVideo, videoSrc, mobileVideoSrc, mobilePoster, poster]);
+  const hasImage = Boolean(imageSet);
 
   return (
     <Container backgroundColor={backgroundColor} className="CONTAINER">
@@ -68,7 +26,7 @@ const HeroBanner = ({
       <OuterWrapper className="OUTER-WRAPPER" variant={variant}>
 
         <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
-          {(hasImage && !hasVideo) && (
+          {(hasImage) && (
           <Picture
             alt={imageAltText}
             imageLow={imageLow}
@@ -79,26 +37,11 @@ const HeroBanner = ({
             height="100%"
           />
           )}
-          {/* If no poster image is supplied, it'll gracefully
-        fall back to the first frame, so only checking for a src here */}
-          {(hasVideo && thisVideoSrc) && (
-          <>
-            <PromoVideo
-              copyLeft={copyLeft}
-              blackPlayButton={blackPlayButton}
-              thisVideoSrc={thisVideoSrc}
-              thisPoster={thisPoster}
-              showPosterAfterPlaying={showPosterAfterPlaying}
-              autoPlay={autoPlay}
-              loop={loop}
-            />
-          </>
-          )}
         </MediaWrapper>
 
         <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
-          <CopyInnerWrapper hasVideo={hasVideo} copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
-            <Copy hasVideo={hasVideo} className="COPY">
+          <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
+            <Copy className="COPY">
               {children}
             </Copy>
           </CopyInnerWrapper>
@@ -117,20 +60,11 @@ HeroBanner.propTypes = {
   image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  autoPlay: PropTypes.bool,
   variant: PropTypes.oneOf([
-    'full_height_image_or_video',
-    'half_height_image_or_video',
-    'responsive_text'
-  ]),
-  // Phase 2 video stuff:
-  loop: PropTypes.bool,
-  videoSrc: PropTypes.string,
-  mobileVideoSrc: PropTypes.string,
-  poster: PropTypes.string,
-  mobilePoster: PropTypes.string,
-  showPosterAfterPlaying: PropTypes.bool,
-  blackPlayButton: PropTypes.bool
+    'full_height_media',
+    'half_height_media',
+    'text_banner'
+  ])
 };
 
 export default HeroBanner;

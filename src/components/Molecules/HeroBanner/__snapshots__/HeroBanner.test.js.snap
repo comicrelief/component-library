@@ -133,7 +133,6 @@ exports[`renders Promo correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 15px;
 }
 
 .c2 {
@@ -263,7 +262,7 @@ exports[`renders Promo correctly 1`] = `
     top: 0;
     left: 0;
     max-width: 1500px;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
   }
 
@@ -522,7 +521,6 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 15px;
 }
 
 .c2 {
@@ -652,7 +650,7 @@ exports[`renders Promo correctly end position 1`] = `
     top: 0;
     left: 0;
     max-width: 1500px;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
   }
 
