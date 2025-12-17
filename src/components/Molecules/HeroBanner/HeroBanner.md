@@ -8,7 +8,7 @@ import Link from '../../Atoms/Link/Link';
 <div>
 
   <HeroBanner
-    backgroundColor="blue_light"
+    pageBackgroundColour="blue_light"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
@@ -35,7 +35,7 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    backgroundColor="blue_light"
+    pageBackgroundColour="blue_light"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
@@ -62,7 +62,7 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    backgroundColor="blue_light"
+    pageBackgroundColour="blue_light"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
@@ -88,7 +88,7 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    backgroundColor="blue_light"
+    pageBackgroundColour="blue_light"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
@@ -118,11 +118,8 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    backgroundColor="blue_light"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
-    imageAltText="Image alt text"
+    pageBackgroundColour="blue_light"
+    componentBackgroundColour="blue_dark"
     variant="text_banner"
   >
     <Text

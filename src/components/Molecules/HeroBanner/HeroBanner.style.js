@@ -8,18 +8,15 @@ const handleVariant = variant => {
       return `
         height: 75vh;
         min-height: 600px;
-        max-height: 750px;
-      `;
+        max-height: 750px;`;
     case 'half_height_media':
       return `
         height: auto;
-        min-height: 450px;
-      `;
+        min-height: 450px;`;
     case 'text_banner':
       return `
-        background-color: orange;
+        // TO-DO  
       `;
-
     // Between strict mapping to the CMS field *and* a prop default value being set,
     // this shouldn't ever be actually used, but ESlint still demands it 🤷
     default:
@@ -33,7 +30,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)}; 
+  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -53,6 +50,9 @@ const OuterWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 100%;
     max-width: 1500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)}; 
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
@@ -68,20 +68,17 @@ const MediaWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 1500px;
-    border-radius: 16px;
-    overflow: hidden;
 
-  img {
-    object-position: top center;
+    img {
+      object-position: top center;
 
-    // As the 'text_banner' variant doesn't even render an image, there was no point in putting further 
-    // logic around this, so this'll only be applied to 'half_height_media' in practice.
-    ${({ variant }) => (
+      // As the 'text_banner' variant doesn't even render an image, there was no point in putting further 
+      // logic around this, so this'll only be applied to 'half_height_media' in practice.
+      ${({ variant }) => (
     variant === 'full_height_media'
       ? 'height: 100%;'
       : `min-height: 300px; 
-         height: 100%;`)};  
+          height: 100%;`)};  
    }
   }
 `;

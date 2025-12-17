@@ -9,7 +9,8 @@ import {
 } from './HeroBanner.style';
 
 const HeroBanner = ({
-  backgroundColor = 'white',
+  pageBackgroundColour = 'grey',
+  componentBackgroundColour = 'transparent',
   variant = 'full_height_media',
   copyLeft = true,
   imageAltText = '',
@@ -18,26 +19,26 @@ const HeroBanner = ({
   image = null,
   children = null
 }) => {
-  const hasImage = Boolean(imageSet);
+  const hasImage = Boolean(imageSet && variant !== 'text_banner');
 
   return (
-    <Container backgroundColor={backgroundColor} className="CONTAINER">
+    <Container pageBackgroundColour={pageBackgroundColour} className="CONTAINER">
 
-      <OuterWrapper className="OUTER-WRAPPER" variant={variant}>
+      <OuterWrapper className="OUTER-WRAPPER" variant={variant} componentBackgroundColour={componentBackgroundColour}>
 
-        <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
-          {(hasImage) && (
-          <Picture
-            alt={imageAltText}
-            imageLow={imageLow}
-            images={imageSet}
-            image={image}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-          />
-          )}
-        </MediaWrapper>
+        {(hasImage) && (
+          <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
+            <Picture
+              alt={imageAltText}
+              imageLow={imageLow}
+              images={imageSet}
+              image={image}
+              objectFit="cover"
+              width="100%"
+              height="100%"
+            />
+          </MediaWrapper>
+        )}
 
         <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
           <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER">
@@ -53,7 +54,8 @@ const HeroBanner = ({
 };
 
 HeroBanner.propTypes = {
-  backgroundColor: PropTypes.string,
+  pageBackgroundColour: PropTypes.string,
+  componentBackgroundColour: PropTypes.string,
   copyLeft: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,

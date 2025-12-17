@@ -111,7 +111,7 @@ exports[`renders Promo correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #274084;
+  background: #969598;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -250,6 +250,9 @@ exports[`renders Promo correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: transparent;
     height: 75vh;
     min-height: 600px;
     max-height: 750px;
@@ -261,9 +264,6 @@ exports[`renders Promo correctly 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 1500px;
-    border-radius: 16px;
-    overflow: hidden;
   }
 
   .c2 img {
@@ -499,7 +499,7 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #274084;
+  background: #969598;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -638,6 +638,9 @@ exports[`renders Promo correctly end position 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: transparent;
     height: 75vh;
     min-height: 600px;
     max-height: 750px;
@@ -649,9 +652,6 @@ exports[`renders Promo correctly end position 1`] = `
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 1500px;
-    border-radius: 16px;
-    overflow: hidden;
   }
 
   .c2 img {
