@@ -100,7 +100,7 @@ const CopyOuterWrapper = styled.div`
     left: auto;
     height: 100%;
     width: 100%;
-    max-width: 1200px;
+    ${({ variant }) => (variant !== variants.TEXT_BANNER && 'max-width: 1200px;')}
     display: flex;
     align-items: center;
     margin: 0 auto;
