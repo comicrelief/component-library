@@ -4,16 +4,18 @@ HeroBanner
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
+import variants from './consts';
+
 
 <div>
 
   <HeroBanner
-    pageBackgroundColour="blue_light"
+    pageBackgroundColour="teal_light"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
     imageAltText="Image alt text"
-    variant="full_height_media"
+    variant={variants.FULL_HEIGHT}
     copyLeft
   >
     <Text
@@ -35,7 +37,7 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="blue_light"
+    pageBackgroundColour="blue_dark"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
@@ -47,7 +49,6 @@ import Link from '../../Atoms/Link/Link';
       color="black"
     >
       Full Height: Copy Right (default variant prop value)
-
     </Text>
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -62,12 +63,12 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="blue_light"
+    pageBackgroundColour="orange"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
     imageAltText="Image alt text"
-    variant="half_height_media"
+    variant={variants.HALF_HEIGHT}
   >
     <Text
       tag="h1"
@@ -88,12 +89,12 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="blue_light"
+    pageBackgroundColour="teal"
     imageSet={defaultData.headerBannerLG}
     image={defaultData.headerBannerLG}
     imageLow={defaultData.headerBannerLG}
     imageAltText="Image alt text"
-    variant="half_height_media"
+    variant={variants.HALF_HEIGHT}
   >
     <Text
       tag="h1"
@@ -118,21 +119,21 @@ import Link from '../../Atoms/Link/Link';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="blue_light"
-    componentBackgroundColour="blue_dark"
-    variant="text_banner"
+    pageBackgroundColour="deep_violet"
+    textBannerCopyBackgroundColour="red"
+    variant={variants.TEXT_BANNER}
   >
     <Text
       tag="h1"
-      color="black"
+      color="white"
     >
       Responsive Text
     </Text>
-    <Text tag="p" color="black">
-      Just a wee bit of text for now
+    <Text tag="p" color="white">
+      Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
     </Text>
     <span>
-      <Link href="/" type="button" color="black">
+      <Link href="/" type="button" color="white">
         <Text>
           CTA label
         </Text>

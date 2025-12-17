@@ -1,21 +1,21 @@
 import styled, { css } from 'styled-components';
-import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
+import variants from './consts';
 
 const handleVariant = variant => {
   switch (variant) {
-    case 'full_height_media':
+    case variants.FULL_HEIGHT:
       return `
         height: 75vh;
         min-height: 600px;
         max-height: 750px;`;
-    case 'half_height_media':
+    case variants.HALF_HEIGHT:
       return `
         height: auto;
         min-height: 450px;`;
-    case 'text_banner':
+    case variants.TEXT_BANNER:
       return `
-        // TO-DO  
+        // TO-DO... ?
       `;
     // Between strict mapping to the CMS field *and* a prop default value being set,
     // this shouldn't ever be actually used, but ESlint still demands it 🤷
@@ -52,7 +52,6 @@ const OuterWrapper = styled.div`
     max-width: 1500px;
     border-radius: 16px;
     overflow: hidden;
-    background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)}; 
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
@@ -71,29 +70,30 @@ const MediaWrapper = styled.div`
 
     img {
       object-position: top center;
+      height: 100%;
 
       // As the 'text_banner' variant doesn't even render an image, there was no point in putting further 
       // logic around this, so this'll only be applied to 'half_height_media' in practice.
-      ${({ variant }) => (
-    variant === 'full_height_media'
-      ? 'height: 100%;'
-      : `min-height: 300px; 
-          height: 100%;`)};  
+      // TO-DO: do I need this anymore?
+      ${({ variant }) => (variant !== variants.FULL_HEIGHT && 'min-height: 450px;')};  
    }
   }
 `;
 
 const CopyOuterWrapper = styled.div`
   position: relative;
-  width: calc(100% - (2 * 16px)); // margins as per design
   height: 100%;
   left: 0;
   right: 0;
   display: flex;
-  margin: -32px auto 32px;
+  width: calc(100% - (2 * 16px)); 
+
+  ${({ variant }) => (
+    variant !== variants.TEXT_BANNER ? 'margin: -32px 16px 32px;' : 'margin: 32px 16px;'
+  )}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: calc(100% - (2 * 32px)); // margins as per design
+    width: calc(100% - 64px); 
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -107,25 +107,36 @@ const CopyOuterWrapper = styled.div`
     align-items: center;
     margin: 0 auto;
 
+    justify-content: ${({ variant, copyLeft }) => {
+    if (variant === variants.TEXT_BANNER) return 'center';
+    return copyLeft ? 'flex-start' : 'flex-end';
+  }};
+
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}`)}
-
-    justify-content: ${({ copyLeft }) => (copyLeft
-    ? css` flex-start;`
-    : css` flex-end;`
-  )};   
+ 
   }
 `;
 
 const Copy = styled.div`
   width: 100%;
-  padding:  ${spacing('l')}; 
   ${zIndex('low')};
-  background-color: ${({ theme }) => theme.color('white')}; 
   border-radius: 16px;
 
+  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
+
+  background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
+    ? theme.color(textBannerCopyBackgroundColour)
+    : theme.color('white')
+  )};   
+
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    padding: ${({ variant }) => (variant === variants.TEXT_BANNER && '4rem 1.5rem')};   
+  }
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-     width: 92%;
+    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};   
   }
 `;
 
