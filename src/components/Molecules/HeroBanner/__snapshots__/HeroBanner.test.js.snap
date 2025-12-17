@@ -111,7 +111,7 @@ exports[`renders Promo correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #969598;
+  background: #F4F3F5;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -142,7 +142,6 @@ exports[`renders Promo correctly 1`] = `
 
 .c5 {
   position: relative;
-  width: calc(100% - (2 * 16px));
   height: 100%;
   left: 0;
   right: 0;
@@ -150,15 +149,16 @@ exports[`renders Promo correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: -32px auto 32px;
+  width: calc(100% - (2 * 16px));
+  margin: -32px 16px 32px;
 }
 
 .c7 {
   width: 100%;
-  padding: 2rem;
   z-index: 1;
-  background-color: #FFFFFF;
   border-radius: 16px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
 }
 
 .c6 {
@@ -252,7 +252,6 @@ exports[`renders Promo correctly 1`] = `
     max-width: 1500px;
     border-radius: 16px;
     overflow: hidden;
-    background-color: transparent;
     height: 75vh;
     min-height: 600px;
     max-height: 750px;
@@ -274,7 +273,7 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    width: calc(100% - (2 * 32px));
+    width: calc(100% - 64px);
   }
 }
 
@@ -295,14 +294,18 @@ exports[`renders Promo correctly 1`] = `
     -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
-    height: 75vh;
-    min-height: 600px;
-    max-height: 750px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:1024px) {
@@ -499,7 +502,7 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #969598;
+  background: #F4F3F5;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -530,7 +533,6 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c5 {
   position: relative;
-  width: calc(100% - (2 * 16px));
   height: 100%;
   left: 0;
   right: 0;
@@ -538,15 +540,16 @@ exports[`renders Promo correctly end position 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: -32px auto 32px;
+  width: calc(100% - (2 * 16px));
+  margin: -32px 16px 32px;
 }
 
 .c7 {
   width: 100%;
-  padding: 2rem;
   z-index: 1;
-  background-color: #FFFFFF;
   border-radius: 16px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
 }
 
 .c6 {
@@ -640,7 +643,6 @@ exports[`renders Promo correctly end position 1`] = `
     max-width: 1500px;
     border-radius: 16px;
     overflow: hidden;
-    background-color: transparent;
     height: 75vh;
     min-height: 600px;
     max-height: 750px;
@@ -662,7 +664,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    width: calc(100% - (2 * 32px));
+    width: calc(100% - 64px);
   }
 }
 
@@ -683,14 +685,18 @@ exports[`renders Promo correctly end position 1`] = `
     -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
-    height: 75vh;
-    min-height: 600px;
-    max-height: 750px;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
   }
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:1024px) {

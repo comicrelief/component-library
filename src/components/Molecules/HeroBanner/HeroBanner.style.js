@@ -130,7 +130,6 @@ const Copy = styled.div`
     : theme.color('white')
   )};   
 
-
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding: ${({ variant }) => (variant === variants.TEXT_BANNER && '4rem 1.5rem')};   
   }
