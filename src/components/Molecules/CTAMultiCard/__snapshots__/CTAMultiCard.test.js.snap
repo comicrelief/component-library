@@ -330,12 +330,19 @@ exports[`handles data structure correctly 1`] = `
 
 @media (min-width:740px) {
   .c3 img {
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+  }
+
+  .c3 img:hover,
+  .c3 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
   }
 }
 
@@ -397,7 +404,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -475,7 +481,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -553,7 +558,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -609,7 +613,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             Load of text here
           </p>
@@ -978,12 +981,19 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 @media (min-width:740px) {
   .c3 img {
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+  }
+
+  .c3 img:hover,
+  .c3 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
   }
 }
 
@@ -1045,7 +1055,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1123,7 +1132,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1201,7 +1209,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1257,7 +1264,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             Load of text here
           </p>
@@ -1665,12 +1671,19 @@ exports[`renders carousel mode correctly 1`] = `
 
 @media (min-width:740px) {
   .c3 img {
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+  }
+
+  .c3 img:hover,
+  .c3 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
   }
 }
 
@@ -1732,7 +1745,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1810,7 +1822,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1888,7 +1899,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -1944,7 +1954,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             Load of text here
           </p>
@@ -2311,12 +2320,19 @@ exports[`renders correctly with data prop 1`] = `
 
 @media (min-width:740px) {
   .c3 img {
-    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    -webkit-transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
-    transition: transform 0.3s cubic-bezier(0.68,0,0.265,1.4);
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+  }
+
+  .c3 img:hover,
+  .c3 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
   }
 }
 
@@ -2378,7 +2394,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -2456,7 +2471,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -2534,7 +2548,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             <strong>
               Load
@@ -2590,7 +2603,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <p
             className="c8"
-            color="inherit"
           >
             Load of text here
           </p>
