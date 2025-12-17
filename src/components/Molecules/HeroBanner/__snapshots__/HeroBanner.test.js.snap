@@ -259,12 +259,12 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    max-width: 1500px;
-    border-radius: 15px;
-    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 1500px;
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   .c2 img {
@@ -281,9 +281,9 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:1024px) {
   .c5 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    top: auto;
+    left: auto;
     height: 100%;
     width: 100%;
     max-width: 1200px;
@@ -303,11 +303,6 @@ exports[`renders Promo correctly 1`] = `
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    position: relative;
-    top: auto;
-    left: auto;
-    height: 100%;
-    width: 100%;
   }
 }
 
@@ -653,12 +648,12 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    max-width: 1500px;
-    border-radius: 15px;
-    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 1500px;
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   .c2 img {
@@ -675,9 +670,9 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:1024px) {
   .c5 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    top: auto;
+    left: auto;
     height: 100%;
     width: 100%;
     max-width: 1200px;
@@ -697,11 +692,6 @@ exports[`renders Promo correctly end position 1`] = `
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    position: relative;
-    top: auto;
-    left: auto;
-    height: 100%;
-    width: 100%;
   }
 }
 
