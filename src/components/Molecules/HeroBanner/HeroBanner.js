@@ -1,58 +1,101 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import './annoying.css';
+import variants from './_variants';
 
-import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 
-const Container = styled.section`
-  min-height: 200px;
-  position: relative;
-  background: ${props => (props.background ? props.background : 'transparent')};
-  color: ${props => props.theme.color('red')};
-`;
+import {
+  Container, CopyOuterWrapper, Copy, MediaWrapper,
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink
+} from './HeroBanner.style';
 
-const Image = styled.img.attrs(() => ({
-  alt: ''
-}))`
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  height: 100%;
-  opacity: 0.5;
-`;
+const HeroBanner = ({
+  pageBackgroundColour = 'grey_light',
+  textBannerCopyBackgroundColour = 'deep_violet',
+  variant = variants.FULL_HEIGHT,
+  copyLeft = true,
+  imageAltText = '',
+  imageSet = null,
+  imageLow = null,
+  image = null,
+  children = null,
+  ctaLink = null,
+  ctaLabel = null
+}) => {
+  const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
+  const hasCTA = Boolean(ctaLink) && Boolean(ctaLink);
 
-const Title = styled.h1`
-  position: absolute;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  text-align: center;
-`;
+  const copySection = (
+    <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
+      <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
+        <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+          {children}
 
-/**
- * Hero Banner to be used as Header of landing pages.
- */
+          {(ctaLabel && ctaLink) && (
+          <CTAWrapper>
+            {ctaLabel}
+            :
+            {ctaLink}
+          </CTAWrapper>
+          )}
+        </Copy>
+      </CopyInnerWrapper>
+    </CopyOuterWrapper>
+  );
 
-const HeroBanner = ({ url, title, background }) => (
-  <Container background={background}>
-    <Image src={url} />
-    <Title>
-      <Text size="xxl" color="white">
-        {title}
-      </Text>
-    </Title>
-  </Container>
-);
+  return (
+    <Container pageBackgroundColour={pageBackgroundColour} className="CONTAINER">
+
+      <OuterWrapper className="OUTER-WRAPPER" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+
+        {(hasImage) && (
+          <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
+            <Picture
+              alt={imageAltText}
+              imageLow={imageLow}
+              images={imageSet}
+              image={image}
+              objectFit="cover"
+              width="100%"
+              height="100%"
+            />
+          </MediaWrapper>
+        )}
+
+        {hasCTA ? (
+          <HeroBannerLink href={ctaLink} target="blank">
+            { copySection }
+          </HeroBannerLink>
+        ) : (
+          <>
+            { copySection }
+          </>
+        )}
+
+        { copySection }
+
+      </OuterWrapper>
+    </Container>
+  );
+};
 
 HeroBanner.propTypes = {
-  /** Image url */
-  url: PropTypes.string.isRequired,
-  /** Header Title */
-  title: PropTypes.string.isRequired,
-  /** Background Color */
-  background: PropTypes.string.isRequired
+  pageBackgroundColour: PropTypes.string,
+  textBannerCopyBackgroundColour: PropTypes.string,
+  copyLeft: PropTypes.bool,
+  imageLow: PropTypes.string,
+  imageSet: PropTypes.string,
+  image: PropTypes.string,
+  imageAltText: PropTypes.string,
+  children: PropTypes.node,
+  ctaLink: PropTypes.string,
+  ctaLabel: PropTypes.string,
+  variant: PropTypes.oneOf([
+    variants.FULL_HEIGHT,
+    variants.HALF_HEIGHT,
+    variants.TEXT_BANNER
+  ])
 };
 
 export default HeroBanner;

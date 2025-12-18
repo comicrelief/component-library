@@ -1,9 +1,111 @@
-Hero Banner Example:
+HeroBanner
 
 ```js
-<HeroBanner
-  url="https://images.ctfassets.net/as2n6w3kqeta/01qmTki8GM1SvgR0NFzIoz/3b7c1e8a86c3d16a7ef3e5f24b8c0aab/changeplease_image_2_2048x1029.jpg"
-  title="Change Please"
-  background="red"
-/>
+const defaultData = require('../../../styleguide/data/data').defaultData;
+import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import variants from './_variants';
+
+<div>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.headerBannerLG}
+    image={defaultData.headerBannerLG}
+    imageLow={defaultData.headerBannerLG}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft
+    ctaLabel="Test CTA Label"
+    ctaLink="http://www.google.com"
+  >
+    <Text
+      tag="h1"
+      color="black"
+    >
+      Full Height: Copy Left
+    </Text>
+    <Text tag="p" color="black">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="blue_dark"
+    imageSet={defaultData.headerBannerLG}
+    image={defaultData.headerBannerLG}
+    imageLow={defaultData.headerBannerLG}
+    imageAltText="Image alt text"
+    copyLeft={false}
+  >
+    <Text
+      tag="h1"
+      color="black"
+    >
+      Full Height: Copy Right (default variant prop value)
+    </Text>
+    <Text tag="p" color="black">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="orange"
+    imageSet={defaultData.headerBannerLG}
+    image={defaultData.headerBannerLG}
+    imageLow={defaultData.headerBannerLG}
+    imageAltText="Image alt text"
+    variant={variants.HALF_HEIGHT}
+  >
+    <Text
+      tag="h1"
+      color="black"
+    >
+      Half Height: min height
+    </Text>
+    <Text tag="p" color="black">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal"
+    imageSet={defaultData.headerBannerLG}
+    image={defaultData.headerBannerLG}
+    imageLow={defaultData.headerBannerLG}
+    imageAltText="Image alt text"
+    variant={variants.HALF_HEIGHT}
+  >
+    <Text
+      tag="h1"
+      color="black"
+    >
+      Half Height: adapting to content
+    </Text>
+    <Text tag="p" color="black">
+      Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    </Text>
+
+    <Text tag="p" color="black">
+      Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="grey_light"
+    textBannerCopyBackgroundColour="deep_violet"
+    variant={variants.TEXT_BANNER}
+  >
+    <Text
+      tag="h1"
+      color="white"
+    >
+      Responsive Text
+    </Text>
+    <Text tag="p" color="white">
+      Body copy
+    </Text>
+  </HeroBanner>
+
+</div>
 ```
