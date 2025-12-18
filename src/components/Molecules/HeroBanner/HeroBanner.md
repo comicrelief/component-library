@@ -4,8 +4,7 @@ HeroBanner
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import variants from './consts';
-
+import variants from './_variants';
 
 <div>
 
@@ -17,6 +16,8 @@ import variants from './consts';
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     copyLeft
+    ctaLabel="Test CTA Label"
+    ctaLink="http://www.google.com"
   >
     <Text
       tag="h1"
@@ -27,13 +28,6 @@ import variants from './consts';
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
-    <span>
-      <Link href="/" type="button" color="black">
-        <Text>
-          CTA label
-        </Text>
-      </Link>
-    </span>
   </HeroBanner>
 
   <HeroBanner
@@ -53,13 +47,6 @@ import variants from './consts';
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
-    <span>
-      <Link href="/" type="button" color="black">
-        <Text>
-          CTA label
-        </Text>
-      </Link>
-    </span>
   </HeroBanner>
 
   <HeroBanner
@@ -79,13 +66,6 @@ import variants from './consts';
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
-    <span>
-      <Link href="/" type="button" color="black">
-        <Text>
-          CTA label
-        </Text>
-      </Link>
-    </span>
   </HeroBanner>
 
   <HeroBanner
@@ -109,13 +89,6 @@ import variants from './consts';
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
     </Text>
-    <span>
-      <Link href="/" type="button" color="black">
-        <Text>
-          CTA label
-        </Text>
-      </Link>
-    </span>
   </HeroBanner>
 
   <HeroBanner
@@ -132,13 +105,6 @@ import variants from './consts';
     <Text tag="p" color="white">
       Body copy
     </Text>
-    <span>
-      <Link href="/" type="button" color="white">
-        <Text>
-          CTA label
-        </Text>
-      </Link>
-    </span>
   </HeroBanner>
 
 </div>

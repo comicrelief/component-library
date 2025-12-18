@@ -13,12 +13,6 @@ const handleVariant = variant => {
       return `
         height: auto;
         min-height: 450px;`;
-    case variants.TEXT_BANNER:
-      return `
-        // TO-DO... ?
-      `;
-    // Between strict mapping to the CMS field *and* a prop default value being set,
-    // this shouldn't ever be actually used, but ESlint still demands it 🤷
     default:
       return null;
   }
@@ -32,6 +26,12 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
+
+  :hover {
+    > a {
+    translateX(50px);
+    }
+  }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 32px;
@@ -126,14 +126,24 @@ const Copy = styled.div`
   )};   
 
   ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
+    text-align: center;
+
     @media ${theme.breakpoints2026('M')} {
       padding: 4rem 11%;
     }
   `)};
 
+  ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
+    text-align: center;
+    
+    @media ${theme.breakpoints2026('M')} {
+      padding: 4rem 11%;
+    }
+  `)};
+
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
-    ${({ variant }) => (variant === variants.TEXT_BANNER && 'text-align: center;')};
   }
 `;
 
@@ -158,6 +168,15 @@ const CopyInnerWrapper = styled.div`
   }
 `;
 
+const CTAWrapper = styled.div`
+  // background: blue;
+`;
+
+const HeroBannerLink = styled.a`
+  text-decoration: none;
+`;
+
 export {
-  Container, CopyOuterWrapper, Copy, MediaWrapper, CopyInnerWrapper, OuterWrapper
+  Container, CopyOuterWrapper, Copy, MediaWrapper,
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink
 };
