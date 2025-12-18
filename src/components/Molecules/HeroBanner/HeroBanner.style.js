@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
-import variants from './consts';
+import variants from './_variants';
 
 const handleVariant = variant => {
   switch (variant) {
