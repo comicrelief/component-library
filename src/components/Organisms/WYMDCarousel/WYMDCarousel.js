@@ -111,13 +111,13 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
                 <div className="all-text-wrapper">
                   <AmountWrapper>
-                    <Text tag="h1" family="Anton" uppercase weight="normal">
+                    <Text tag="h1" family="Anton" uppercase weight="normal" size="s">
                       {theseItems[key].amount}
                     </Text>
                   </AmountWrapper>
 
                   <CopyWrapper>
-                    <Text tag="p">
+                    <Text tag="p" size="s">
                       {theseItems[key].copy}
                     </Text>
                   </CopyWrapper>

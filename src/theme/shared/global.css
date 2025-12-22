@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton%7CMontserrat:400,500,600,700&display=swap');
 
 @font-face {
   font-family: 'Founders-GroteskXCondensed-Bold';
@@ -66,6 +66,8 @@ button {
 }
 
 h2 {
+  text-transform: uppercase;
+  font-family: 'Anton', Impact, sans-serif;
   margin-bottom: 2rem;
 }
 

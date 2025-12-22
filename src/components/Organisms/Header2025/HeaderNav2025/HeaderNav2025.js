@@ -113,7 +113,7 @@ const HeaderNav2025 = ({
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation" id="main-nav">
-        <Text id="main-menu" tag="h2">
+        <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
 

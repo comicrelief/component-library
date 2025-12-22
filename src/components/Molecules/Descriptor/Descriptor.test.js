@@ -25,36 +25,79 @@ it('renders article teaser correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c3 {
-      color: #222222;
-      font-size: 1rem;
-      line-height: 1rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
       text-transform: inherit;
-      font-weight: bold;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c3 {
+      font-size: 1rem;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: bold;
+      color: #222222;
+    }
+
+    .c3 span {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .c7 {
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
 
     .c7 {
       font-size: 2rem;
-      line-height: 2rem;
-      text-transform: uppercase;
+      line-height: normal;
+      font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
-      font-family: 'Anton',Impact,sans-serif;
-      -webkit-letter-spacing: 0.03rem;
-      -moz-letter-spacing: 0.03rem;
-      -ms-letter-spacing: 0.03rem;
-      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+    }
+
+    .c7 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c10 {
-      color: #222222;
-      font-size: 0.75rem;
-      line-height: 0.75rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
       text-transform: inherit;
-      font-weight: normal;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c10 {
+      font-size: 0.75rem;
       line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: normal;
+      color: #222222;
+    }
+
+    .c10 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
@@ -153,6 +196,48 @@ it('renders article teaser correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
     }
 
+    @media (min-width:740px) {
+      .c3 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c3 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c7 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c7 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c10 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c10 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
     <article
       className="c0"
     >
@@ -164,8 +249,6 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c3 c4"
-            color="grey_dark"
-            size="s"
           >
             15/06/2020
           </span>
@@ -191,9 +274,6 @@ it('renders article teaser correctly', () => {
         </div>
         <h3
           className="c7 c8"
-          color="inherit"
-          height="2rem"
-          size="xl"
         >
           Title
         </h3>
@@ -202,29 +282,21 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag1
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag2
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag3
           </span>
           <span
             className="c10 c11"
-            color="grey_dark"
-            size="xs"
           >
             tag4
           </span>

@@ -17,11 +17,20 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c1 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
@@ -39,7 +48,15 @@ it('renders correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
-      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c3 {
@@ -81,11 +98,39 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c5:focus {
       border: 1px solid #666;
+    }
+
+    @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
     }
 
     @media (min-width:740px) {
@@ -102,13 +147,11 @@ it('renders correctly', () => {
     >
       <span
         className="c1 c2"
-        color="inherit"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Label",
           }
         }
-        size="s"
       />
       <div
         className="c3"
@@ -149,11 +192,20 @@ it('renders with responsive max widths correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c1 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
@@ -171,7 +223,15 @@ it('renders with responsive max widths correctly', () => {
 
     .c2 {
       margin-bottom: 0.5rem;
-      font-weight: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c3 {
@@ -213,11 +273,39 @@ it('renders with responsive max widths correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c5:focus {
       border: 1px solid #666;
+    }
+
+    @media (min-width:740px) {
+      .c1 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
     }
 
     @media (min-width:740px) {
@@ -238,13 +326,11 @@ it('renders with responsive max widths correctly', () => {
     >
       <span
         className="c1 c2"
-        color="inherit"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Responsive Width Input",
           }
         }
-        size="s"
       />
       <div
         className="c3"

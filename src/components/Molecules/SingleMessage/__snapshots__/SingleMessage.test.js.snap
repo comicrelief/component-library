@@ -2,12 +2,26 @@
 
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
-  font-size: 3rem;
-  line-height: 3rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c3 {
@@ -63,6 +77,20 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -162,8 +190,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   >
     <p
       className="c6"
-      color="white"
-      size="xxl"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>
@@ -173,20 +199,49 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 
 exports[`renders Single Message with Image correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c6 {
   font-size: 3rem;
-  line-height: 3rem;
-  text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c7 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c3 {
@@ -276,6 +331,34 @@ exports[`renders Single Message with Image correctly 1`] = `
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -384,15 +467,11 @@ exports[`renders Single Message with Image correctly 1`] = `
   >
     <h1
       className="c6"
-      color="white"
-      size="xxl"
     >
       title
     </h1>
     <p
       className="c7"
-      color="white"
-      size="s"
     >
       description
     </p>
@@ -411,12 +490,26 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 exports[`renders Single Message with double image correctly 1`] = `
 .c6 {
-  color: #000000;
-  font-size: 3rem;
-  line-height: 3rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c3 {
@@ -480,6 +573,20 @@ exports[`renders Single Message with double image correctly 1`] = `
   height: 100%;
   height: 50%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -620,8 +727,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   >
     <p
       className="c6"
-      color="black"
-      size="xxl"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>
@@ -631,20 +736,49 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 exports[`renders Single Message with full width correctly 1`] = `
 .c6 {
-  color: #FFFFFF;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c6 {
   font-size: 3rem;
-  line-height: 3rem;
-  text-transform: inherit;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c7 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c3 {
@@ -734,6 +868,34 @@ exports[`renders Single Message with full width correctly 1`] = `
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -865,15 +1027,11 @@ exports[`renders Single Message with full width correctly 1`] = `
   >
     <h1
       className="c6"
-      color="white"
-      size="xxl"
     >
       title
     </h1>
     <p
       className="c7"
-      color="white"
-      size="s"
     >
       description
     </p>
@@ -1027,12 +1185,26 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 
 exports[`renders Single Message with no Image correctly 1`] = `
 .c2 {
-  color: #FFFFFF;
-  font-size: 3rem;
-  line-height: 3rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c2 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c0 {
@@ -1064,6 +1236,20 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 2rem;
   margin: auto;
   padding: 1rem;
+}
+
+@media (min-width:740px) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width:740px) {
@@ -1145,8 +1331,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
   >
     <p
       className="c2"
-      color="white"
-      size="xxl"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>

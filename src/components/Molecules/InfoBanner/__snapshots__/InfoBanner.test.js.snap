@@ -2,16 +2,48 @@
 
 exports[`renders correctly 1`] = `
 .c2 {
-  text-transform: uppercase;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c2 {
+  font-size: undefined;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c3 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c3 {
   font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
   line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c3 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
@@ -59,6 +91,34 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -80,15 +140,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Project Name
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       Hello There
     </p>
@@ -98,15 +154,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       End Date
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       1st June 2020
     </p>
@@ -116,15 +168,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Funding theme
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       <a
         className="c4"
@@ -142,15 +190,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Amount Awarded
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       £2,000,000
     </p>
@@ -160,15 +204,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Start Date
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       1st June 2010
     </p>
@@ -178,15 +218,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      color="inherit"
-      size="md"
     >
       Beneficiary Country
     </h3>
     <p
       className="c3"
-      color="inherit"
-      size="s"
     >
       Uk
     </p>

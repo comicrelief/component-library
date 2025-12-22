@@ -52,7 +52,7 @@ const SubNavMenu = styled.ul`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     max-height: none;
     height: auto;
 
@@ -74,7 +74,7 @@ const SubNavItem = styled.li`
   background-color: inherit;
   padding: 8px 0;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     height: auto;
     margin-top: 12px;
     padding: 0;
@@ -100,7 +100,7 @@ const SubNavItem = styled.li`
     }
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
   }
 `;
@@ -123,7 +123,7 @@ const NavMenu = styled.ul`
   padding: 0 0  ${spacing('xl')};
   border-bottom: 1px solid ${({ theme }) => theme.color('white')};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -146,12 +146,12 @@ const NavItem = styled.li`
   margin: 0;
   margin-bottom: 1rem;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex: 0 0 30%;
     margin: 0;
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     /* Minus 9% to remove 3 x 1.5% margins from previous rule */
     flex: 0 0 calc(25% - 1rem);
     margin-right: 1rem;
@@ -170,9 +170,9 @@ const NavItem = styled.li`
     background-color: inherit;
     font-size: 19px;
     line-height: 40px;
-    font-weight: 800;
+    font-weight: 700;
 
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
       font-size: 20px;
       line-height: 40px;
     }
@@ -193,7 +193,7 @@ const NavItem = styled.li`
       right: -25px;
     }
 
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
       cursor: default;
       display: inline;
 

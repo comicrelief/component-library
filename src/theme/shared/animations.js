@@ -1,39 +1,59 @@
 import { css } from 'styled-components';
 
 /**
- * Spring scale animation transition
- * Applies a smooth spring-like scale transition. Use this for the transition CSS,
- * then apply the scale transform separately (via hover, focus, or props).
- * @param {boolean} animateScale - Whether to enable the scale animation
- * @param {number} duration - Duration of the transition in seconds (default 0.3)
- * @param {number} bezierX1 - First X value for cubic-bezier (default 0.68)
- * @param {number} bezierY1 - First Y value for cubic-bezier (default 0)
- * @param {number} bezierX2 - Second X value for cubic-bezier (default 0.265)
- * @param {number} bezierY2 - Second Y value for cubic-bezier (default 1.4)
- * @param {boolean} includeHoverFocus - Whether to include :hover and :focus
- * selectors with scale transform (default: false)
- * @param {number} scaleFactor - Scale factor to apply on hover/focus (default
- * 1.1 = 10%, only used if includeHoverFocus is true)
+ * Logo rotation animation on hover
+ * Applies a rotation transition that rotates the logo (or whatever else)
+ * -14deg on hover/focus
+ * @param {boolean} animateRotate - Whether to enable the rotation animation
  * @returns {css} template literal for the animation
  */
-const springScaleAnimation = (animateScale, duration = 0.3, bezierX1 = 0.68, bezierY1 = 0,
-  bezierX2 = 0.265, bezierY2 = 1.4, includeHoverFocus = false, scaleFactor = 1.1) => {
+const logoRotateAnimation = animateRotate => {
+  if (!animateRotate) {
+    return css``;
+  }
+
+  return css`
+    img {
+      transition: transform 0.6s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: rotate(-14deg);
+      }
+    }
+  `;
+};
+
+/**
+ * Spring scale animation on hover
+ * Applies a smooth spring-like scale transition that expands the element on hover/focus
+ * @param {boolean} animateScale - Whether to enable the scale animation
+ * @param {number} scaleFactor - Scale factor to apply on hover (default 8%)
+ * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
+ * @returns {css} template literal for the animation
+ */
+const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity = 1) => {
   if (!animateScale) {
     return css``;
   }
 
-  const easing = `cubic-bezier(${bezierX1}, ${bezierY1}, ${bezierX2}, ${bezierY2})`;
+  // More negative pull-back and higher overshoot = more bounce
+  // Default intensity (1) gives: cubic-bezier(0.68, -0.85, 0.265, 1.95)
+  // Higher intensity = more pronounced bounce effect
+  const pullBack = -0.55 - (bounceIntensity * 0.3);
+  const overshoot = 1.55 + (bounceIntensity * 0.4);
+  const duration = 0.2 + (bounceIntensity * 0.1);
 
   return css`
-    transition: transform ${duration}s ${easing};
+    transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
     transform-origin: center;
 
-    ${includeHoverFocus && css`
-      &:hover,
-      &:focus {
-        transform: scale(${scaleFactor});
-      }
-    `}
+    &:hover,
+    &:focus {
+      transform: scale(${scaleFactor});
+    }
   `;
 };
 
@@ -67,4 +87,4 @@ const bounceUpAnimation = (animateUp, moveFactor = 0.02, bounceIntensity = 1) =>
   `;
 };
 
-export { springScaleAnimation, bounceUpAnimation };
+export { logoRotateAnimation, springScaleAnimation, bounceUpAnimation };

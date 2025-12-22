@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
 import Picture from '../../../Atoms/Picture/Picture';
@@ -34,18 +34,15 @@ const CTACard = ({
     image,
     backgroundColour: cardBackgroundColour,
     link,
-    linkLabel
+    linkLabel,
+    fallback,
+    imageLow,
+    images,
+    bgColour,
+    description,
+    target,
+    external
   } = card;
-
-  const fallback = image?.gatsbyImageData?.images?.fallback?.src;
-  const imageLow = image?.gatsbyImageData?.placeholder?.fallback;
-  const images = image?.gatsbyImageData?.images?.sources[0]?.srcSet;
-  // Use prop backgroundColour if provided, otherwise fall back to card's backgroundColour
-  const bgColour = snakeCase(propBackgroundColour || cardBackgroundColour || 'white');
-  const description = image?.description ? image.description : '';
-  const isInternalLink = isInternalUrl(link);
-  const target = isInternalLink ? 'self' : 'blank';
-  const external = target === 'blank' ? 'noopener' : null;
 
   return (
     <CardWrapper key={id} isCarousel={isCarousel} isFullWidth={effectiveIsFullWidth}>
@@ -56,11 +53,9 @@ const CTACard = ({
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
         backgroundColor={bgColour}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {imageLow && (
-          <ImageWrapper isHovered={isHovered} isSingleCard={isSingleCard}>
+          <ImageWrapper isSingleCard={isSingleCard}>
             <Picture
               alt={description}
               imageLow={imageLow}
@@ -78,11 +73,11 @@ const CTACard = ({
           </Copy>
           {linkLabel && (
             <CTA>
-              <CTAText isHovered={isHovered}>
+              <CTAText>
                 {linkLabel}
               </CTAText>
-              <ArrowIconWrapper isHovered={isHovered}>
-                <ArrowIcon isHovered={isHovered} />
+              <ArrowIconWrapper>
+                <ArrowIcon />
               </ArrowIconWrapper>
             </CTA>
           )}
@@ -96,28 +91,15 @@ CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
     body: PropTypes.node,
-    image: PropTypes.shape({
-      description: PropTypes.string,
-      gatsbyImageData: PropTypes.shape({
-        placeholder: PropTypes.shape({
-          fallback: PropTypes.string
-        }),
-        images: PropTypes.shape({
-          fallback: PropTypes.shape({
-            src: PropTypes.string,
-            srcSet: PropTypes.string
-          }),
-          sources: PropTypes.arrayOf(
-            PropTypes.shape({
-              srcSet: PropTypes.string
-            })
-          )
-        })
-      })
-    }),
-    backgroundColour: PropTypes.string,
     link: PropTypes.string.isRequired,
-    linkLabel: PropTypes.string
+    linkLabel: PropTypes.string,
+    fallback: PropTypes.string,
+    imageLow: PropTypes.string,
+    images: PropTypes.string,
+    bgColour: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    target: PropTypes.string.isRequired,
+    external: PropTypes.string
   }).isRequired,
   isCarousel: PropTypes.bool,
   isFullWidth: PropTypes.bool,
