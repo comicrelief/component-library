@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { snakeCase } from 'lodash';
 import Picture from '../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
-import allowListed from '../../../utils/allowListed';
 import {
   CardLink,
   ImageWrapper,
@@ -15,8 +13,6 @@ import {
   CardWrapper
 } from './CTAMultiCard.style';
 
-const isInternalUrl = url => allowListed(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
-
 const SingleCard = ({
   card,
   isCarousel
@@ -26,20 +22,16 @@ const SingleCard = ({
   const {
     id,
     body,
-    image,
-    backgroundColour,
     link,
-    linkLabel
+    linkLabel,
+    fallback,
+    imageLow,
+    images,
+    bgColour,
+    description,
+    target,
+    external
   } = card;
-
-  const fallback = image?.gatsbyImageData?.images?.fallback?.src;
-  const imageLow = image?.gatsbyImageData?.placeholder?.fallback;
-  const images = image?.gatsbyImageData?.images?.sources[0]?.srcSet;
-  const bgColour = snakeCase(backgroundColour || 'white');
-  const description = image?.description ? image.description : '';
-  const isInternalLink = isInternalUrl(link);
-  const target = isInternalLink ? 'self' : 'blank';
-  const external = target === 'blank' ? 'noopener' : null;
 
   return (
     <CardWrapper key={id} isCarousel={isCarousel}>
@@ -89,28 +81,15 @@ SingleCard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
     body: PropTypes.node,
-    image: PropTypes.shape({
-      description: PropTypes.string,
-      gatsbyImageData: PropTypes.shape({
-        placeholder: PropTypes.shape({
-          fallback: PropTypes.string
-        }),
-        images: PropTypes.shape({
-          fallback: PropTypes.shape({
-            src: PropTypes.string,
-            srcSet: PropTypes.string
-          }),
-          sources: PropTypes.arrayOf(
-            PropTypes.shape({
-              srcSet: PropTypes.string
-            })
-          )
-        })
-      })
-    }),
-    backgroundColour: PropTypes.string,
     link: PropTypes.string.isRequired,
-    linkLabel: PropTypes.string
+    linkLabel: PropTypes.string,
+    fallback: PropTypes.string,
+    imageLow: PropTypes.string,
+    images: PropTypes.string,
+    bgColour: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    target: PropTypes.string.isRequired,
+    external: PropTypes.string
   }).isRequired,
   isCarousel: PropTypes.bool
 };
