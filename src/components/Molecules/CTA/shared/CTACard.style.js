@@ -65,6 +65,30 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   flex-shrink: 0;
   background: transparent;
+  border-radius: 1rem 1rem 0 0;
+
+  // Side-by-side layout: fixed proportion for image (1/3 width) with min/max constraints
+  ${({ isSingleCard }) => isSingleCard && css`
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
+      width: calc(100% / 3);
+      min-width: 292px;
+      max-width: 309px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      height: 100%;
+      border-radius: 1rem 0 0 1rem;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      min-width: 355px;
+      max-width: 362px;
+    }
+
+    @media ${({ theme }) => theme.breakpoints2026('XL')} {
+      min-width: 363px;
+      max-width: 363px;
+    }
+  `}
 
   img {
     width: 100%;
@@ -72,9 +96,21 @@ const ImageWrapper = styled.div`
     object-fit: cover;
     display: block;
 
+    // Side-by-side layout: image should fill height on desktop
+    ${({ isSingleCard }) => isSingleCard && css`
+      @media ${({ theme }) => theme.breakpoints2026('M')} {
+        height: 100%;
+        object-fit: cover;
+      }
+    `}
+
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       ${springScaleAnimation(true)}
+
+      ${({ isHovered }) => isHovered && css`
+        transform: scale(1.1);
+      `}
     }
   }
 `;
@@ -222,61 +258,6 @@ const CardWrapper = styled.div`
   `}
 `;
 
-const ImageWrapper = styled.div`
-  width: 100%;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: transparent;
-  border-radius: 1rem 1rem 0 0;
-
-  // Side-by-side layout: fixed proportion for image (1/3 width) with min/max constraints
-  ${({ isSingleCard }) => isSingleCard && css`
-    @media ${({ theme }) => theme.breakpoints2026('M')} {
-      width: calc(100% / 3);
-      min-width: 292px;
-      max-width: 309px;
-      flex-shrink: 0;
-      flex-grow: 0;
-      height: 100%;
-      border-radius: 1rem 0 0 1rem;
-    }
-
-    @media ${({ theme }) => theme.breakpoints2026('L')} {
-      min-width: 355px;
-      max-width: 362px;
-    }
-
-    @media ${({ theme }) => theme.breakpoints2026('XL')} {
-      min-width: 363px;
-      max-width: 363px;
-    }
-  `}
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-
-    // Side-by-side layout: image should fill height on desktop
-    ${({ isSingleCard }) => isSingleCard && css`
-      @media ${({ theme }) => theme.breakpoints2026('M')} {
-        height: 100%;
-        object-fit: cover;
-      }
-    `}
-
-    // Desktop-only image zoom animation on card hover
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      ${springScaleAnimation(true)}
-
-      ${({ isHovered }) => isHovered && css`
-        transform: scale(1.1);
-      `}
-    }
-  }
-`;
-
 const CopyAndLinkSection = styled.div`
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
@@ -328,6 +309,7 @@ const CTA = styled.div`
 
 export {
   CardLink,
+  CardsContainer,
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
