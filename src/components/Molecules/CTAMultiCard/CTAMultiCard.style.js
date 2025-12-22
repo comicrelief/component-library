@@ -60,6 +60,43 @@ const CardsContainer = styled.div`
   }
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+
+    // Desktop-only image zoom animation on card hover
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      ${springScaleAnimation(true)}
+    }
+  }
+`;
+
+const CTAText = styled.span`
+  ${({ theme }) => fontHelper(theme, 'span')}
+  color: ${({ theme }) => theme.color('grey')};
+  font-weight: bold;
+  text-decoration: none;
+`;
+
+const ArrowIconWrapper = styled.div`
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.color('grey')};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+`;
+
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -80,6 +117,20 @@ const CardLink = styled.a`
 
     &:hover {
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+
+      ${ImageWrapper} img {
+        transform: scale(1.1);
+      }
+
+      ${CTAText} {
+        color: ${({ theme }) => theme.color('red')};
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      ${ArrowIconWrapper} {
+        background: ${({ theme }) => theme.color('red')};
+      }
     }
   }
 `;
@@ -136,29 +187,6 @@ const CardWrapper = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
-  width: 100%;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: transparent;
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-
-    // Desktop-only image zoom animation on card hover
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      ${springScaleAnimation(true)}
-
-      ${({ isHovered }) => isHovered && css`
-        transform: scale(1.1);
-      `}
-    }
-  }
-`;
-
 const CopyAndLinkSection = styled.div`
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
@@ -177,19 +205,6 @@ const Copy = styled.div`
   min-height: 0;
 `;
 
-const CTAText = styled.span`
-  ${({ theme }) => fontHelper(theme, 'span')}
-  color: ${({ theme }) => theme.color('grey')};
-  font-weight: bold;
-  text-decoration: none;
-
-  ${({ isHovered, theme }) => isHovered && css`
-    color: ${theme.color('red')};
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    `}
-`;
-
 const CTA = styled.div`
   width: 100%;
   display: flex;
@@ -198,17 +213,6 @@ const CTA = styled.div`
   justify-content: space-between;
   margin-top: auto;
   padding-top: 1rem;
-`;
-
-const ArrowIconWrapper = styled.div`
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: ${({ theme, isHovered }) => (isHovered ? theme.color('red') : theme.color('grey'))};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
 `;
 
 export {

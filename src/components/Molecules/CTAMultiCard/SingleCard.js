@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
@@ -17,8 +17,6 @@ const SingleCard = ({
   card,
   isCarousel
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const {
     id,
     body,
@@ -41,11 +39,9 @@ const SingleCard = ({
         rel={external}
         isCarousel={isCarousel}
         backgroundColor={bgColour}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {imageLow && (
-          <ImageWrapper isHovered={isHovered}>
+          <ImageWrapper>
             <Picture
               alt={description}
               imageLow={imageLow}
@@ -63,11 +59,11 @@ const SingleCard = ({
           </Copy>
           {linkLabel && (
             <CTA>
-              <CTAText isHovered={isHovered}>
+              <CTAText>
                 {linkLabel}
               </CTAText>
-              <ArrowIconWrapper isHovered={isHovered}>
-                <ArrowIcon isHovered={isHovered} />
+              <ArrowIconWrapper>
+                <ArrowIcon />
               </ArrowIconWrapper>
             </CTA>
           )}
