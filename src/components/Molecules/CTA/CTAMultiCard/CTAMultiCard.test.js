@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import CTAMultiCard from './CTAMultiCard';
 import exampleData from './example_data.json';
-import Text from '../../Atoms/Text/Text';
+import Text from '../../../Atoms/Text/Text';
 
 // Map example data cards to include pre-rendered body content
 const cardsWithRenderedBody = exampleData.cards.map(card => ({

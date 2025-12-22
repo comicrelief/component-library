@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
-import SingleCard from './SingleCard';
-import {
-  CardsContainer
-} from './CTAMultiCard.style';
+import CTACard from '../shared/CTACard';
+import CardsContainer from './CTAMultiCard.style';
 
 /**
  * CTAMultiCard Component
@@ -45,7 +43,7 @@ const CTAMultiCard = ({ data }) => {
       isCarousel={carouselOfCards}
     >
       {cards.map(card => (
-        <SingleCard
+        <CTACard
           key={card.id}
           card={card}
           isCarousel={carouselOfCards}

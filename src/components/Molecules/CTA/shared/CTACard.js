@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Picture from '../../Atoms/Picture/Picture';
+import Picture from '../../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
+
 import {
   CardLink,
   ImageWrapper,
@@ -11,12 +12,17 @@ import {
   CTAText,
   ArrowIconWrapper,
   CardWrapper
-} from './CTAMultiCard.style';
+} from './CTACard.style';
 
-const SingleCard = ({
+const CTACard = ({
   card,
-  isCarousel
+  isCarousel,
+  isFullWidth,
+  isSingleCard
 }) => {
+  // isSingleCard implies isFullWidth - single cards are always full width
+  const effectiveIsFullWidth = isSingleCard || isFullWidth;
+
   const {
     id,
     body,
@@ -32,16 +38,17 @@ const SingleCard = ({
   } = card;
 
   return (
-    <CardWrapper key={id} isCarousel={isCarousel}>
+    <CardWrapper key={id} isCarousel={isCarousel} isFullWidth={effectiveIsFullWidth}>
       <CardLink
         href={link}
         target={target}
         rel={external}
         isCarousel={isCarousel}
+        isSingleCard={isSingleCard}
         backgroundColor={bgColour}
       >
         {imageLow && (
-          <ImageWrapper>
+          <ImageWrapper isSingleCard={isSingleCard}>
             <Picture
               alt={description}
               imageLow={imageLow}
@@ -53,7 +60,7 @@ const SingleCard = ({
             />
           </ImageWrapper>
         )}
-        <CopyAndLinkSection backgroundColor={bgColour}>
+        <CopyAndLinkSection backgroundColor={bgColour} isSingleCard={isSingleCard}>
           <Copy>
             {body}
           </Copy>
@@ -73,7 +80,7 @@ const SingleCard = ({
   );
 };
 
-SingleCard.propTypes = {
+CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
     body: PropTypes.node,
@@ -87,7 +94,9 @@ SingleCard.propTypes = {
     target: PropTypes.string.isRequired,
     external: PropTypes.string
   }).isRequired,
-  isCarousel: PropTypes.bool
+  isCarousel: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isSingleCard: PropTypes.bool
 };
 
-export default SingleCard;
+export default CTACard;
