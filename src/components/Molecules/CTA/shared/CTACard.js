@@ -19,7 +19,6 @@ const CTACard = ({
   isCarousel,
   isFullWidth,
   isSingleCard
-  // backgroundColour: propBackgroundColour
 }) => {
   // isSingleCard implies isFullWidth - single cards are always full width
   const effectiveIsFullWidth = isSingleCard || isFullWidth;
@@ -27,8 +26,6 @@ const CTACard = ({
   const {
     id,
     body,
-    // image,
-    // backgroundColour: cardBackgroundColour,
     link,
     linkLabel,
     fallback,
@@ -48,7 +45,7 @@ const CTACard = ({
         rel={external}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
-        // backgroundColor={bgColour}
+        backgroundColor={bgColour}
       >
         {imageLow && (
           <ImageWrapper isSingleCard={isSingleCard}>
@@ -100,7 +97,6 @@ CTACard.propTypes = {
   isCarousel: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isSingleCard: PropTypes.bool
-  // backgroundColour: PropTypes.string
 };
 
 export default CTACard;

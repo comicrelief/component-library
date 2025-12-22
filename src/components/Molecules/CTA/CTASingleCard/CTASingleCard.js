@@ -15,7 +15,7 @@ import SingleCardContainer from './CTASingleCard.style';
  * before passing data to this component.
  */
 
-const CTASingleCard = ({ card, backgroundColour }) => {
+const CTASingleCard = ({ card }) => {
   if (!card) {
     return null;
   }
@@ -26,7 +26,6 @@ const CTASingleCard = ({ card, backgroundColour }) => {
         card={card}
         isCarousel={false}
         isSingleCard
-        backgroundColour={backgroundColour}
       />
     </SingleCardContainer>
   );
@@ -58,8 +57,7 @@ CTASingleCard.propTypes = {
     backgroundColour: PropTypes.string,
     link: PropTypes.string.isRequired,
     linkLabel: PropTypes.string
-  }).isRequired,
-  backgroundColour: PropTypes.string
+  }).isRequired
 };
 
 export default CTASingleCard;
