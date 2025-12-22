@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { snakeCase } from 'lodash';
 import Picture from '../../../Atoms/Picture/Picture';
 import ArrowIcon from './ArrowIcon';
-import allowListed from '../../../../utils/allowListed';
+
 import {
   CardLink,
   ImageWrapper,
@@ -15,24 +14,21 @@ import {
   CardWrapper
 } from './CTACard.style';
 
-const isInternalUrl = url => allowListed(url) || url.charAt(0) === '/' || url.charAt(0) === '#';
-
 const CTACard = ({
   card,
   isCarousel,
   isFullWidth,
-  isSingleCard,
-  backgroundColour: propBackgroundColour
+  isSingleCard
+  // backgroundColour: propBackgroundColour
 }) => {
   // isSingleCard implies isFullWidth - single cards are always full width
   const effectiveIsFullWidth = isSingleCard || isFullWidth;
-  const [isHovered, setIsHovered] = useState(false);
 
   const {
     id,
     body,
-    image,
-    backgroundColour: cardBackgroundColour,
+    // image,
+    // backgroundColour: cardBackgroundColour,
     link,
     linkLabel,
     fallback,
@@ -52,7 +48,7 @@ const CTACard = ({
         rel={external}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
-        backgroundColor={bgColour}
+        // backgroundColor={bgColour}
       >
         {imageLow && (
           <ImageWrapper isSingleCard={isSingleCard}>
@@ -103,8 +99,8 @@ CTACard.propTypes = {
   }).isRequired,
   isCarousel: PropTypes.bool,
   isFullWidth: PropTypes.bool,
-  isSingleCard: PropTypes.bool,
-  backgroundColour: PropTypes.string
+  isSingleCard: PropTypes.bool
+  // backgroundColour: PropTypes.string
 };
 
 export default CTACard;

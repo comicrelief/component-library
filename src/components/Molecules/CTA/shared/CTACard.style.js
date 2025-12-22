@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { bounceUpAnimation, springScaleAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import fontHelper from '../../../theme/crTheme/fontHelper';
+import fontHelper from '../../../../theme/crTheme/fontHelper';
 
 const CardsContainer = styled.div`
   display: flex;
