@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handles data structure correctly 1`] = `
-.c8 {
+.c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -13,26 +13,12 @@ exports[`handles data structure correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 span {
+.c5 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c12 {
+.c11 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -49,6 +35,44 @@ exports[`handles data structure correctly 1`] = `
   width: 100%;
   background: #FFFFFF;
   gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .c2 {
@@ -90,87 +114,37 @@ exports[`handles data structure correctly 1`] = `
 
 .c3 {
   width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-.c3 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .c6 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c13 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c7 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -191,37 +165,15 @@ exports[`handles data structure correctly 1`] = `
   padding-top: 1rem;
 }
 
-.c11 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 @media (min-width:740px) {
-  .c8 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -275,6 +227,20 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c2 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -293,6 +259,17 @@ exports[`handles data structure correctly 1`] = `
 
   .c2:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .c2:hover .c9 {
+    background: #E52630;
   }
 }
 
@@ -328,38 +305,6 @@ exports[`handles data structure correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c3 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c3 img:hover,
-  .c3 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -369,41 +314,15 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -412,18 +331,18 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -446,41 +365,15 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -489,18 +382,18 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -523,41 +416,15 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -566,18 +433,18 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -600,36 +467,32 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
-        className="c13"
+        className="c3"
       >
         <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             View card
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -650,7 +513,7 @@ exports[`handles data structure correctly 1`] = `
 `;
 
 exports[`renders 2 columns layout correctly 1`] = `
-.c8 {
+.c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -662,26 +525,12 @@ exports[`renders 2 columns layout correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 span {
+.c5 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c12 {
+.c11 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -698,6 +547,44 @@ exports[`renders 2 columns layout correctly 1`] = `
   width: 100%;
   background: transparent;
   gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .c2 {
@@ -739,87 +626,37 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 .c3 {
   width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-.c3 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .c6 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c13 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c7 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -840,37 +677,15 @@ exports[`renders 2 columns layout correctly 1`] = `
   padding-top: 1rem;
 }
 
-.c11 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 @media (min-width:740px) {
-  .c8 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -926,6 +741,20 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c2 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -944,6 +773,17 @@ exports[`renders 2 columns layout correctly 1`] = `
 
   .c2:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .c2:hover .c9 {
+    background: #E52630;
   }
 }
 
@@ -979,38 +819,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c3 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c3 img:hover,
-  .c3 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -1020,41 +828,15 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1063,18 +845,18 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1097,41 +879,15 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1140,18 +896,18 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1174,41 +930,15 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1217,18 +947,18 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1251,36 +981,32 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
-        className="c13"
+        className="c3"
       >
         <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             View card
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1301,7 +1027,7 @@ exports[`renders 2 columns layout correctly 1`] = `
 `;
 
 exports[`renders carousel mode correctly 1`] = `
-.c8 {
+.c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1313,26 +1039,12 @@ exports[`renders carousel mode correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 span {
+.c5 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c12 {
+.c11 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -1349,6 +1061,44 @@ exports[`renders carousel mode correctly 1`] = `
   width: 100%;
   background: transparent;
   gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .c2 {
@@ -1390,87 +1140,37 @@ exports[`renders carousel mode correctly 1`] = `
 
 .c3 {
   width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-.c3 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .c6 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c13 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c7 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1491,37 +1191,15 @@ exports[`renders carousel mode correctly 1`] = `
   padding-top: 1rem;
 }
 
-.c11 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 @media (min-width:740px) {
-  .c8 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -1595,6 +1273,20 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c2 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -1613,6 +1305,17 @@ exports[`renders carousel mode correctly 1`] = `
 
   .c2:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .c2:hover .c9 {
+    background: #E52630;
   }
 }
 
@@ -1669,38 +1372,6 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c3 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c3 img:hover,
-  .c3 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -1710,41 +1381,15 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1753,18 +1398,18 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1787,41 +1432,15 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1830,18 +1449,18 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1864,41 +1483,15 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -1907,18 +1500,18 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1941,36 +1534,32 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
-        className="c13"
+        className="c3"
       >
         <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             View card
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1991,7 +1580,7 @@ exports[`renders carousel mode correctly 1`] = `
 `;
 
 exports[`renders correctly with data prop 1`] = `
-.c8 {
+.c5 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -2003,26 +1592,12 @@ exports[`renders correctly with data prop 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 span {
+.c5 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c12 {
+.c11 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -2039,6 +1614,44 @@ exports[`renders correctly with data prop 1`] = `
   width: 100%;
   background: transparent;
   gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .c2 {
@@ -2080,87 +1693,37 @@ exports[`renders correctly with data prop 1`] = `
 
 .c3 {
   width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
-.c3 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .c6 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c13 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c7 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2181,37 +1744,15 @@ exports[`renders correctly with data prop 1`] = `
   padding-top: 1rem;
 }
 
-.c11 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 @media (min-width:740px) {
-  .c8 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -2265,6 +1806,20 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c2 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -2283,6 +1838,17 @@ exports[`renders correctly with data prop 1`] = `
 
   .c2:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .c2:hover .c9 {
+    background: #E52630;
   }
 }
 
@@ -2318,38 +1884,6 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c3 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c3 img:hover,
-  .c3 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -2359,41 +1893,15 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -2402,18 +1910,18 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2436,41 +1944,15 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -2479,18 +1961,18 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2513,41 +1995,15 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
         className="c3"
       >
         <div
-          className="c4 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c5 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
-            height="100%"
-            src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             <strong>
               Load
@@ -2556,18 +2012,18 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             test go
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2590,36 +2046,32 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test-no-image"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      rel={null}
-      target="self"
     >
       <div
-        className="c13"
+        className="c3"
       >
         <div
-          className="c7"
+          className="c4"
         >
           <p
-            className="c8"
+            className="c5"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c9"
+          className="c6"
         >
           <span
-            className="c10"
+            className="c7 c8"
           >
             View card
           </span>
           <div
-            className="c11"
+            className="c9 c10"
           >
             <svg
-              className="c12"
+              className="c11"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
