@@ -11,7 +11,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -19,6 +18,26 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   mobileImages={mobilePictures.images}
   data={data}
   mbshipID="mship-1"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  paddingOption="upper_off"
+/>;
+```
+
+## Form align right, full width when no images are provided
+
+```js
+import data from './dev-data/data';
+
+<Donate
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  formAlignRight={true}
+  data={data}
+  mbshipID="mship-1-no-images"
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
@@ -36,7 +55,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -64,7 +82,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -91,7 +108,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -217,7 +233,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   mobileBackgroundColor="transparent"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
@@ -247,7 +262,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="transparent"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -272,7 +286,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -297,7 +310,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -321,7 +333,6 @@ import data from './dev-data/data-single';
 
 <Donate
   desktopOverlayColor="blue_dark"
-  submitButtonColor="blue_donate"
   mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   data={data}
@@ -346,7 +357,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   mobileBackgroundColor="red"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
@@ -375,7 +385,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -404,7 +413,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -432,7 +440,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -460,7 +467,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -488,7 +494,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -515,7 +520,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -543,7 +547,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -574,7 +577,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -605,7 +607,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}

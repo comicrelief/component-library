@@ -223,15 +223,6 @@ const Signup = ({
 
   return (
     <FormWrapper>
-      {showGivingSelector && (
-        <GivingSelector
-          givingType={givingType}
-          changeGivingType={data => changeGivingType(data)}
-          setPopOpen={setPopOpen}
-          mbshipID={mbshipID}
-        />
-      )}
-
       { popOpen && <PopUpComponent PopUpText={PopUpText} setPopOpen={setPopOpen} /> }
 
       <Form
@@ -251,6 +242,14 @@ const Signup = ({
               {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
             </Text>
           </Legend>
+          {showGivingSelector && (
+            <GivingSelector
+              givingType={givingType}
+              changeGivingType={data => changeGivingType(data)}
+              setPopOpen={setPopOpen}
+              mbshipID={mbshipID}
+            />
+          )}
           {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
@@ -269,7 +268,7 @@ const Signup = ({
           <FormFieldset>
             {!noMoneyBuys && (
               <Label size="s" weight="500">
-                Other amount
+                Enter another amount
               </Label>
             )}
             <AmountField
@@ -277,7 +276,7 @@ const Signup = ({
               name="membership_amount"
               type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
-              label="£"
+              prefix="£"
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel

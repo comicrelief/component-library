@@ -125,6 +125,7 @@ const Form = styled.form`
 `;
 
 const OuterFieldset = styled.fieldset`
+  color: ${({ theme }) => theme.color('black')};
   padding: 0 ${spacing('md')} ${spacing('md')};
   margin: 0;
   border: none;
@@ -167,12 +168,13 @@ const MoneyBuys = styled.div`
 
 const FormFieldset = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const Label = styled(Text)`
-  margin-right: ${spacing('sm')};
+  margin-bottom: ${spacing('sm')};
 `;
 
 const AmountField = styled(Input)`
@@ -200,13 +202,13 @@ const AmountField = styled(Input)`
 
   input {
     height: 48px;
-    border: 2px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     background: ${({ theme }) => theme.color('grey_light')};
     border-radius: 0.5rem;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     &:focus {
       outline: none;
-      border: 2px solid ${({ theme }) => theme.color('grey')};
+      border: 1px solid ${({ theme }) => theme.color('grey')};
     }
   }
 `;
@@ -218,7 +220,7 @@ const Copy = styled(Text)`
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('l')} 0 ${spacing('l')};
+  margin: ${spacing('sm')} 0 ${spacing('sm')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
@@ -226,9 +228,8 @@ const Button = styled.button`
   min-height: 48px;
   background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   appearance: none;
   :active,
   :focus,
