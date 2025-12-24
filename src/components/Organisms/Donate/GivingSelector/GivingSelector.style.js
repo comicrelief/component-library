@@ -7,14 +7,11 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 const Switch = styled.span`
   width: 50%;
   height: 48px;
-  border-radius: 2rem;
   ${zIndex('low')};
   display: block;
   position: absolute;
   transition: left 0.15s ease-out;
-  background-color: ${({ theme }) => theme.color('blue_donate')};
-  left: 2px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+  background-color: ${({ theme }) => theme.color('red')};
 `;
 
 const Wrapper = styled.div`
@@ -24,25 +21,22 @@ const Wrapper = styled.div`
 
 const MoneyBox = styled.div`
   width: 100%;
-  padding: 2px;
   position: relative;
   display: flex;
   flex-direction: row;
   margin: ${spacing('md')} 0;
-  border-radius: 2rem;
-  background: ${({ theme }) => theme.color('blue_light')};
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid ${({ theme }) => theme.color('grey')};
+  background: ${({ theme }) => theme.color('white')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: 450px;
     margin: 0 auto;
   }
   .give-monthly:checked ~ ${Switch} {
-    left: calc(50% - 2px);
+    left: calc(50%);
   }
   input {
     ${hideVisually}
-  }
-  input:focus:not(:checked) + label {
-    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue_donate')};
   }
 `;
 
@@ -68,7 +62,7 @@ const Label = styled.label`
   &:focus {
     border: none;
     outline: none;
-    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue_donate')};
+    box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('red')};
   }
 `;
 
