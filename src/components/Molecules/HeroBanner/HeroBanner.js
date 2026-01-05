@@ -73,8 +73,6 @@ const HeroBanner = ({
           </>
         )}
 
-        { copySection }
-
       </OuterWrapper>
     </Container>
   );

@@ -313,35 +313,6 @@ exports[`renders HeroBanner correctly 1`] = `
         </div>
       </div>
     </a>
-    <div
-      className="c6 COPY-OUTER-WRAPPER"
-    >
-      <div
-        className="c7 COPY-INNER-WRAPPER"
-      >
-        <div
-          className="c8 COPY"
-        >
-          <h1
-            className="c9"
-          >
-            Curabitur pretium tincidunt lacus
-          </h1>
-          <p
-            className="c10"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div
-            className=""
-          >
-            Test CTA Label
-            :
-            http://www.google.com
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 `;
