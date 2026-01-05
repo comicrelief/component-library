@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
+import { bounceUpAnimation } from '../../../theme/shared/animations';
 
 const handleVariant = variant => {
   switch (variant) {
@@ -26,12 +27,6 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
-
-  :hover {
-    > a {
-    // translateX(50px);
-    }
-  }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 32px;
@@ -135,12 +130,11 @@ const Copy = styled.div`
 
   ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
     text-align: center;
-    
+
     @media ${theme.breakpoints2026('M')} {
       padding: 4rem 11%;
     }
   `)};
-
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
@@ -174,6 +168,15 @@ const CTAWrapper = styled.div`
 
 const HeroBannerLink = styled.a`
   text-decoration: none;
+  ${bounceUpAnimation(true, 10, 2)}
+  
+  // As the link is now wrapping the content, it'll take over width duties from 'Copy':
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export {

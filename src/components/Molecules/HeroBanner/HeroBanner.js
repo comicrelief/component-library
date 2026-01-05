@@ -27,21 +27,17 @@ const HeroBanner = ({
   const hasCTA = Boolean(ctaLink) && Boolean(ctaLink);
 
   const copySection = (
-    <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
-      <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
-        <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
-          {children}
+    <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+      {children}
 
-          {(ctaLabel && ctaLink) && (
-          <CTAWrapper>
-            {ctaLabel}
-            :
-            {ctaLink}
-          </CTAWrapper>
-          )}
-        </Copy>
-      </CopyInnerWrapper>
-    </CopyOuterWrapper>
+      {(ctaLabel && ctaLink) && (
+        <CTAWrapper>
+          {ctaLabel}
+          {' >>> '}
+          {ctaLink}
+        </CTAWrapper>
+      )}
+    </Copy>
   );
 
   return (
@@ -63,15 +59,21 @@ const HeroBanner = ({
           </MediaWrapper>
         )}
 
-        {hasCTA ? (
-          <HeroBannerLink href={ctaLink} target="blank">
-            { copySection }
-          </HeroBannerLink>
-        ) : (
-          <>
-            { copySection }
-          </>
-        )}
+        <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
+          <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
+
+            {hasCTA ? (
+              <HeroBannerLink href={ctaLink} target="blank" className="hero-banner-link">
+                { copySection }
+              </HeroBannerLink>
+            ) : (
+              <>
+                { copySection }
+              </>
+            )}
+          </CopyInnerWrapper>
+
+        </CopyOuterWrapper>
 
       </OuterWrapper>
     </Container>

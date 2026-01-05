@@ -97,7 +97,7 @@ exports[`renders HeroBanner correctly 1`] = `
   height: 100%;
 }
 
-.c6 {
+.c5 {
   position: relative;
   height: 100%;
   left: 0;
@@ -118,7 +118,7 @@ exports[`renders HeroBanner correctly 1`] = `
   background-color: #FFFFFF;
 }
 
-.c7 {
+.c6 {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -131,9 +131,22 @@ exports[`renders HeroBanner correctly 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c7 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+.c7:hover,
+.c7:focus {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 @media (min-width:740px) {
@@ -200,13 +213,13 @@ exports[`renders HeroBanner correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c6 {
+  .c5 {
     width: calc(100% - 64px);
   }
 }
 
 @media (min-width:1024px) {
-  .c6 {
+  .c5 {
     position: relative;
     top: auto;
     left: auto;
@@ -239,7 +252,7 @@ exports[`renders HeroBanner correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c6 {
     width: 50%;
     height: auto;
     margin: 32px 0;
@@ -247,6 +260,16 @@ exports[`renders HeroBanner correctly 1`] = `
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: 92%;
+  }
+
+  .c7 > div {
+    width: 100%;
   }
 }
 
@@ -278,16 +301,16 @@ exports[`renders HeroBanner correctly 1`] = `
         />
       </div>
     </div>
-    <a
-      className="c5"
-      href="http://www.google.com"
-      target="blank"
+    <div
+      className="c5 COPY-OUTER-WRAPPER"
     >
       <div
-        className="c6 COPY-OUTER-WRAPPER"
+        className="c6 COPY-INNER-WRAPPER"
       >
-        <div
-          className="c7 COPY-INNER-WRAPPER"
+        <a
+          className="c7 hero-banner-link"
+          href="http://www.google.com"
+          target="blank"
         >
           <div
             className="c8 COPY"
@@ -306,13 +329,13 @@ exports[`renders HeroBanner correctly 1`] = `
               className=""
             >
               Test CTA Label
-              :
+               &gt;&gt;&gt; 
               http://www.google.com
             </div>
           </div>
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
