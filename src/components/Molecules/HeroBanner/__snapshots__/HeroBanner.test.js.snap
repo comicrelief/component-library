@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders HeroBanner correctly 1`] = `
+.c9 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c9 {
+  color: #000000;
+}
+
+.c9 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c10 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c10 {
+  color: #000000;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #86E4E9;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  position: relative;
+  height: 100%;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - (2 * 16px));
+  margin: -32px 16px 32px;
+}
+
+.c8 {
+  width: 100%;
+  z-index: 1;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+}
+
+.c7 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width:740px) {
+  .c9 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding: 32px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .c2 img {
+    object-position: top center;
+    height: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: 92%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: 50%;
+    height: auto;
+    margin: 32px 0;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+<div
+  className="c0 CONTAINER"
+>
+  <div
+    className="c1 OUTER-WRAPPER"
+  >
+    <div
+      className="c2 MEDIA-WRAPPER"
+    >
+      <div
+        className="c3 lazyload"
+        height="100%"
+        width="100%"
+      >
+        <img
+          alt="Image alt text"
+          className="c4 lazyload"
+          data-lowsrc="../PromoLW2.jpg"
+          data-sizes="auto"
+          data-src="../PromoLW2.jpg"
+          data-srcset="../PromoLW2.jpg"
+          height="100%"
+          src="../PromoLW2.jpg"
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
+        />
+      </div>
+    </div>
+    <a
+      className="c5"
+      href="http://www.google.com"
+      target="blank"
+    >
+      <div
+        className="c6 COPY-OUTER-WRAPPER"
+      >
+        <div
+          className="c7 COPY-INNER-WRAPPER"
+        >
+          <div
+            className="c8 COPY"
+          >
+            <h1
+              className="c9"
+            >
+              Curabitur pretium tincidunt lacus
+            </h1>
+            <p
+              className="c10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div
+              className=""
+            >
+              Test CTA Label
+              :
+              http://www.google.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div
+      className="c6 COPY-OUTER-WRAPPER"
+    >
+      <div
+        className="c7 COPY-INNER-WRAPPER"
+      >
+        <div
+          className="c8 COPY"
+        >
+          <h1
+            className="c9"
+          >
+            Curabitur pretium tincidunt lacus
+          </h1>
+          <p
+            className="c10"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div
+            className=""
+          >
+            Test CTA Label
+            :
+            http://www.google.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

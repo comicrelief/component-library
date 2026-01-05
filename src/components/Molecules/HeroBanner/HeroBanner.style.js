@@ -29,7 +29,7 @@ const Container = styled.div`
 
   :hover {
     > a {
-    translateX(50px);
+    // translateX(50px);
     }
   }
 
