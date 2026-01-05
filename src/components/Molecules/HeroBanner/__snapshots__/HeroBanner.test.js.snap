@@ -209,6 +209,15 @@ exports[`renders HeroBanner correctly 1`] = `
   .c2 img {
     object-position: top center;
     height: 100%;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c2:has(+ div a:hover) > div > img {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
   }
 }
 

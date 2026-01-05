@@ -1,3 +1,4 @@
+import { over } from 'lodash';
 import { css } from 'styled-components';
 
 /**
@@ -58,7 +59,7 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
 };
 
 /**
- * TranslateY animation on hover
+ * bounceUpAnimation animation on hover
  * Applies a smooth spring-like scale transition that expands the element on hover/focus
  * @param {boolean} animateScale - Whether to enable the scale animation
  * @param {number} pixelMovement - Scale factor to apply on hover (default 8%)

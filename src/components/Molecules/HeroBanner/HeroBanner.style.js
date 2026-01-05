@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
-import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation, springScaleAnimation } from '../../../theme/shared/animations';
 
 const handleVariant = variant => {
   switch (variant) {
@@ -66,12 +66,21 @@ const MediaWrapper = styled.div`
     img {
       object-position: top center;
       height: 100%;
+      // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
+      transform: scale(1.02);
+      transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
 
       // As the 'text_banner' variant doesn't even render an image, there was no point in putting further 
       // logic around this, so this'll only be applied to 'half_height_media' in practice.
       // TO-DO: do I need this anymore?
       ${({ variant }) => (variant !== variants.FULL_HEIGHT && 'min-height: 450px;')};  
    }
+
+    &:has(+ div a:hover) {
+      > div > img {
+        transform: scale(1.04);
+      }
+    }
   }
 `;
 
