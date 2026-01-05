@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import renderWithTheme from '../../../../../tests/hoc/shallowWithTheme';
 import CTAMultiCard from './CTAMultiCard';
 import exampleData from './example_data.json';
 import Text from '../../../Atoms/Text/Text';
