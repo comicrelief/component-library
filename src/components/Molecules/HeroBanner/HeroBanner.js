@@ -5,15 +5,22 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 import './annoying.css';
+// PLACEHOLDER:
+import facebookCircled from '../../Atoms/SocialIcons/assets/circled/facebook.svg';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIcon
 } from './HeroBanner.style';
 
 const HeroBanner = ({
   pageBackgroundColour = 'grey_light',
   textBannerCopyBackgroundColour = 'deep_violet',
+  // Defaults to be overriden via the logic within comicrelief-contentful:
+  CtaColour = 'red',
+  textBannerCtaColour = 'white',
+  copyColour = 'black',
+  //
   variant = variants.FULL_HEIGHT,
   copyLeft = true,
   imageAltText = '',
@@ -29,23 +36,25 @@ const HeroBanner = ({
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
 
   const copySection = (
-    <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+    <Copy className="COPY" variant={variant} copyColour={copyColour} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
       {children}
 
       {(hasCTA) && (
-        <CTAWrapper variant={variant}>
+        <CTAWrapper variant={variant} CtaColour={CtaColour}>
           {(variant !== variants.TEXT_BANNER) ? (
             <Text className="cta">
               {ctaText}
+              <CtaIcon src={facebookCircled}>
+                {/* TODO: Arrow icon here */}
+              </CtaIcon>
             </Text>
           ) : (
             <Text className="buttony">
               <Link
-              // TODO: need to be able to pass this via props:
-                color="red"
                 href={ctaUrl}
-                ctaTextarget={ctaNewTab ? 'blank' : 'self'}
                 type="button"
+                color={textBannerCtaColour}
+                ctaTextarget={ctaNewTab ? 'blank' : 'self'}
               >
                 {ctaText}
               </Link>
@@ -103,6 +112,9 @@ const HeroBanner = ({
 HeroBanner.propTypes = {
   pageBackgroundColour: PropTypes.string,
   textBannerCopyBackgroundColour: PropTypes.string,
+  textBannerCtaColour: PropTypes.string,
+  CtaColour: PropTypes.string,
+  copyColour: PropTypes.string,
   copyLeft: PropTypes.bool,
   imageLow: PropTypes.string,
   imageSet: PropTypes.string,

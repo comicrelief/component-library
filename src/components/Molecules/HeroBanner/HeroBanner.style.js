@@ -127,7 +127,9 @@ const Copy = styled.div`
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
     : theme.color('white')
-  )};   
+  )};
+
+    color: ${({ theme, copyColour }) => theme.color(copyColour)};
 
   ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
     text-align: center;
@@ -169,25 +171,24 @@ const CTAWrapper = styled.div`
   position: relative;
   padding: 10px 0;
 
-  ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
+  ${({ variant, CtaColour }) => (variant !== variants.TEXT_BANNER && css`
     span {
       font-weight: bold;
-      color: ${({ theme }) => theme.color('red')};
-
-      // TODO: arrow icon
-      &:after {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        content: "";
-        background-color: red;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
+      color: ${({ theme }) => theme.color(CtaColour)};
     }
   `)}
+`;
+
+const CtaIcon = styled.img`
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  content: "";
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 `;
 
 const HeroBannerLink = styled.a`
@@ -215,5 +216,5 @@ const HeroBannerLink = styled.a`
 
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIcon
 };

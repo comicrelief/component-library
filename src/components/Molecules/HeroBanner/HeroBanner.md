@@ -42,7 +42,6 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="black"
     >
       Full Height: Copy Left w/CTA, New Tab
     </Text>
@@ -64,7 +63,6 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="black"
     >
       Full Height: Copy Left w/CTA, Same Tab
     </Text>
@@ -137,15 +135,16 @@ import variants from './_variants';
   <HeroBanner
     pageBackgroundColour="grey_light"
     textBannerCopyBackgroundColour="deep_violet"
+    // Will be provided as an override within comicrelief-contentful
+    copyColour="white"
     variant={variants.TEXT_BANNER}
   >
     <Text
       tag="h1"
-      color="white"
     >
       Responsive Text
     </Text>
-    <Text tag="p" color="white">
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
   </HeroBanner>
@@ -153,6 +152,8 @@ import variants from './_variants';
     <HeroBanner
     pageBackgroundColour="grey_light"
     textBannerCopyBackgroundColour="deep_violet"
+    // Will be provided as an override within comicrelief-contentful
+    copyColour="white"
     variant={variants.TEXT_BANNER}
     ctaText="Register"
     ctaUrl="http://www.comicrelief.com/register"
@@ -160,11 +161,10 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="white"
     >
       Responsive Text w/CTA, New Tab
     </Text>
-    <Text tag="p" color="white">
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
   </HeroBanner>

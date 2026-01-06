@@ -116,6 +116,7 @@ exports[`renders HeroBanner correctly 1`] = `
   border-radius: 16px;
   padding: 1.5rem;
   background-color: #FFFFFF;
+  color: #000000;
 }
 
 .c6 {
