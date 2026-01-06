@@ -1,4 +1,3 @@
-/* eslint-disable */
 query MyQuery {
   allContentfulHeaderMenu {
     edges {
@@ -71,6 +70,20 @@ query MyQuery {
                 class
               }
             }
+          }
+          column3PageCards {
+            pageName
+            pageDescription
+            image {
+              title
+              description
+              url
+            }
+            pageSelector {
+              title
+              path
+            }
+            primaryPageUrlIfExternal
           }
         }
       }
