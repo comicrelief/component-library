@@ -44,7 +44,7 @@ import variants from './_variants';
       tag="h1"
       color="black"
     >
-      Full Height: Copy Left w/Link, New Tab
+      Full Height: Copy Left w/CTA, New Tab
     </Text>
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -66,7 +66,7 @@ import variants from './_variants';
       tag="h1"
       color="black"
     >
-      Full Height: Copy Left w/Link, Same Tab
+      Full Height: Copy Left w/CTA, Same Tab
     </Text>
     <Text tag="p" color="black">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -146,7 +146,26 @@ import variants from './_variants';
       Responsive Text
     </Text>
     <Text tag="p" color="white">
-      Body copy
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    </Text>
+  </HeroBanner>
+
+    <HeroBanner
+    pageBackgroundColour="grey_light"
+    textBannerCopyBackgroundColour="deep_violet"
+    variant={variants.TEXT_BANNER}
+    ctaText="Register"
+    ctaUrl="http://www.comicrelief.com/register"
+    ctaNewTab
+  >
+    <Text
+      tag="h1"
+      color="white"
+    >
+      Responsive Text w/CTA, New Tab
+    </Text>
+    <Text tag="p" color="white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
   </HeroBanner>
 

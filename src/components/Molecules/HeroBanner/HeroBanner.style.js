@@ -137,14 +137,6 @@ const Copy = styled.div`
     }
   `)};
 
-  ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
-    text-align: center;
-
-    @media ${theme.breakpoints2026('M')} {
-      padding: 4rem 11%;
-    }
-  `)};
-
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
   }
@@ -176,44 +168,47 @@ const CTAWrapper = styled.div`
   height: auto;
   position: relative;
   padding: 10px 0;
-  
-  span {
-    font-weight: bold;
-    color: ${({ theme }) => theme.color('red')};
 
-    // TODO: arrow icon
-    &:after {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      content: "";
-      background-color: red;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+  ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
+    span {
+      font-weight: bold;
+      color: ${({ theme }) => theme.color('red')};
+
+      // TODO: arrow icon
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        content: "";
+        background-color: red;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
     }
-  }
+  `)}
 `;
 
 const HeroBannerLink = styled.a`
   text-decoration: none;
-  ${bounceUpAnimation(true, 10, 2)}
-
-  &:hover {
-    // Having to use a class to ensure other spans within this large anchor aren't targeted:
-    span.cta {
-      // TODO: needs proper underline graphic thing:
-      text-decoration: underline;
-      
-    }
-  }
   
-  // As the link is now wrapping the content, it'll take over width duties from 'Copy':
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+    // As the link is now wrapping the content, it'll take over width duties from 'Copy':
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
+    
     > div {
       width: 100%;
+    }
+
+    ${bounceUpAnimation(true, 10, 2)}
+
+    &:hover {
+      // Need to use a class to ensure any other spans coming from the Richtext field arent being targeted:
+      span.cta {
+        // TODO: needs proper underline graphic thing:
+        text-decoration: underline;
+      }
     }
   }
 `;

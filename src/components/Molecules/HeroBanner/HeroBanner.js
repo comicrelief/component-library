@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
 import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 import './annoying.css';
 
@@ -31,13 +32,27 @@ const HeroBanner = ({
     <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
       {children}
 
-      {hasCTA && (
-        <CTAWrapper>
-          <Text className="cta">
-            {ctaText}
-          </Text>
+      {(hasCTA) && (
+        <CTAWrapper variant={variant}>
+          {(variant !== variants.TEXT_BANNER) ? (
+            <Text className="cta">
+              {ctaText}
+            </Text>
+          ) : (
+            <Link
+              // TODO: need to be able to pass this via props:
+              color="red"
+              href={ctaUrl}
+              ctaTextarget={ctaNewTab ? 'blank' : 'self'}
+              type="button"
+            >
+              {ctaText}
+            </Link>
+          )
+        }
         </CTAWrapper>
       )}
+
     </Copy>
   );
 
@@ -63,7 +78,8 @@ const HeroBanner = ({
         <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
           <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
 
-            {hasCTA ? (
+            {/* Wraps the 'cards' in a link for non-Text Banners (which use CTA buttons) */}
+            {hasCTA && variant !== variants.TEXT_BANNER ? (
               <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>
                 { copySection }
               </HeroBannerLink>
