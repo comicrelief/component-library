@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import mockData from './mockData/mockData.json';
+
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
 import Navs from './Navs/Navs';
 import Link from '../../Atoms/Link/Link';
@@ -19,6 +21,8 @@ const Header2026 = ({
   ...rest
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
+
+  console.log(mockData);
 
   return (
     <Header2026Wrapper

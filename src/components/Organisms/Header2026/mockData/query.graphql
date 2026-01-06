@@ -1,0 +1,79 @@
+/* eslint-disable */
+query MyQuery {
+  allContentfulHeaderMenu {
+    edges {
+      node {
+        menuName
+        showSearch
+        headerPageGroups {
+          primaryPageName
+          primaryPageUrlIfExternal
+          primaryPageComponent {
+            path
+            title
+          }
+          column1PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            class
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+                class
+              }
+            }
+          }
+          column2PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            class
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+                class
+              }
+            }
+          }
+          column3PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            class
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+                class
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
