@@ -734,19 +734,16 @@ exports[`renders correctly:
 >
   <p
     className="c1 c2"
-    color="inherit"
   >
     Over the past two years, we’ve supported
   </p>
   <h1
     className="c3 c4"
-    color="red"
   >
     11.7 million people
   </h1>
   <p
     className="c5 c6"
-    color="inherit"
   >
     including...
   </p>

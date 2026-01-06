@@ -342,8 +342,6 @@ exports[`renders correctly 1`] = `
   >
     <h2
       className="c1 c2"
-      color="inherit"
-      size="xxl"
     >
       sign up letter
     </h2>
@@ -352,7 +350,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        color="inherit"
       >
         <div
           className="c5"
@@ -376,7 +373,6 @@ exports[`renders correctly 1`] = `
         >
           <span
             className="c4 c10"
-            color="inherit"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "First Name",
@@ -412,7 +408,6 @@ exports[`renders correctly 1`] = `
         >
           <span
             className="c4 c10"
-            color="inherit"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Last Name",
@@ -449,7 +444,6 @@ exports[`renders correctly 1`] = `
       >
         <span
           className="c4 c10"
-          color="inherit"
           dangerouslySetInnerHTML={
             Object {
               "__html": "Email Address",
@@ -490,7 +484,6 @@ exports[`renders correctly 1`] = `
         >
           <span
             className="c4"
-            color="inherit"
           >
             Subscribe
           </span>
@@ -505,7 +498,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        color="inherit"
       >
         <div
           className="c5"
