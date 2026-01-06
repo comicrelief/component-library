@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { keyframes, css } from 'styled-components';
 
 const pulseIn = keyframes`
@@ -39,12 +38,6 @@ const pulseOutAnimation = css`
   ${pulseInAnimation}
   animation-name: ${pulseOut};
 `;
-
-export {
-  pulseInAnimation, pulseOutAnimation
-};
-=======
-import { css } from 'styled-components';
 
 /**
  * Logo rotation animation on hover
@@ -103,5 +96,6 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
   `;
 };
 
-export { logoRotateAnimation, springScaleAnimation };
->>>>>>> e7d4a07b8b46a4ff0da9234d9e4489bfbc525985
+export {
+  pulseInAnimation, pulseOutAnimation, logoRotateAnimation, springScaleAnimation
+};
