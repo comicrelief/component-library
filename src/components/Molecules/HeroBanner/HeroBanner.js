@@ -39,15 +39,18 @@ const HeroBanner = ({
               {ctaText}
             </Text>
           ) : (
-            <Link
+            <Text className="buttony">
+              <Link
               // TODO: need to be able to pass this via props:
-              color="red"
-              href={ctaUrl}
-              ctaTextarget={ctaNewTab ? 'blank' : 'self'}
-              type="button"
-            >
-              {ctaText}
-            </Link>
+                color="red"
+                href={ctaUrl}
+                ctaTextarget={ctaNewTab ? 'blank' : 'self'}
+                type="button"
+              >
+                {ctaText}
+              </Link>
+            </Text>
+
           )
         }
         </CTAWrapper>
