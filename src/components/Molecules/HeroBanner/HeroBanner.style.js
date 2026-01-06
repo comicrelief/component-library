@@ -172,12 +172,42 @@ const CopyInnerWrapper = styled.div`
 `;
 
 const CTAWrapper = styled.div`
-  // background: blue;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 10px 0;
+  
+  span {
+    font-weight: bold;
+    color: ${({ theme }) => theme.color('red')};
+
+    // TODO: arrow icon
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: "";
+      background-color: red;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
 `;
 
 const HeroBannerLink = styled.a`
   text-decoration: none;
   ${bounceUpAnimation(true, 10, 2)}
+
+  &:hover {
+    // Having to use a class to ensure other spans within this large anchor aren't targeted:
+    span.cta {
+      // TODO: needs proper underline graphic thing:
+      text-decoration: underline;
+      
+    }
+  }
   
   // As the link is now wrapping the content, it'll take over width duties from 'Copy':
   @media ${({ theme }) => theme.breakpoints2026('L')} {

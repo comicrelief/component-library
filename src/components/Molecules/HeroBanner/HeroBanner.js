@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './annoying.css';
-import variants from './_variants';
-
 import Picture from '../../Atoms/Picture/Picture';
+import Text from '../../Atoms/Text/Text';
+import variants from './_variants';
+import './annoying.css';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
@@ -16,25 +16,26 @@ const HeroBanner = ({
   variant = variants.FULL_HEIGHT,
   copyLeft = true,
   imageAltText = '',
+  ctaNewTab = false,
   imageSet = null,
   imageLow = null,
   image = null,
   children = null,
-  ctaLink = null,
-  ctaLabel = null
+  ctaUrl = null,
+  ctaText = null
 }) => {
   const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
-  const hasCTA = Boolean(ctaLink) && Boolean(ctaLink);
+  const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
 
   const copySection = (
     <Copy className="COPY" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
       {children}
 
-      {(ctaLabel && ctaLink) && (
+      {hasCTA && (
         <CTAWrapper>
-          {ctaLabel}
-          {' >>> '}
-          {ctaLink}
+          <Text className="cta">
+            {ctaText}
+          </Text>
         </CTAWrapper>
       )}
     </Copy>
@@ -63,7 +64,7 @@ const HeroBanner = ({
           <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
 
             {hasCTA ? (
-              <HeroBannerLink href={ctaLink} target="blank" className="hero-banner-link">
+              <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>
                 { copySection }
               </HeroBannerLink>
             ) : (
@@ -89,8 +90,9 @@ HeroBanner.propTypes = {
   image: PropTypes.string,
   imageAltText: PropTypes.string,
   children: PropTypes.node,
-  ctaLink: PropTypes.string,
-  ctaLabel: PropTypes.string,
+  ctaUrl: PropTypes.string,
+  ctaText: PropTypes.string,
+  ctaNewTab: PropTypes.bool,
   variant: PropTypes.oneOf([
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,

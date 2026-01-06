@@ -18,7 +18,7 @@ it('renders HeroBanner correctly', () => {
       imageAltText="Image alt text"
       variant={variants.FULL_HEIGHT}
       copyLeft
-      ctaLabel="Test CTA Label"
+      ctaText="Test CTA Label"
       ctaLink="http://www.google.com"
     >
     <Text

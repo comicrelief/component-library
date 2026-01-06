@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders HeroBanner correctly 1`] = `
-.c9 {
+.c8 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -13,16 +13,16 @@ exports[`renders HeroBanner correctly 1`] = `
   line-height: 2rem;
 }
 
-.c9 {
+.c8 {
   color: #000000;
 }
 
-.c9 span {
+.c8 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c10 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -34,11 +34,11 @@ exports[`renders HeroBanner correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c10 {
+.c9 {
   color: #000000;
 }
 
-.c10 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
 }
@@ -110,7 +110,7 @@ exports[`renders HeroBanner correctly 1`] = `
   margin: -32px 16px 32px;
 }
 
-.c8 {
+.c7 {
   width: 100%;
   z-index: 1;
   border-radius: 16px;
@@ -131,47 +131,29 @@ exports[`renders HeroBanner correctly 1`] = `
   align-items: center;
 }
 
-.c7 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-}
-
-.c7:hover,
-.c7:focus {
-  -webkit-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  transform: translateY(-10px);
-}
-
 @media (min-width:740px) {
-  .c9 {
+  .c8 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c9 {
+  .c8 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c10 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -258,7 +240,7 @@ exports[`renders HeroBanner correctly 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c7 {
     width: 92%;
   }
 }
@@ -272,16 +254,6 @@ exports[`renders HeroBanner correctly 1`] = `
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-  }
-}
-
-@media (min-width:1024px) {
-  .c7 {
-    width: 92%;
-  }
-
-  .c7 > div {
-    width: 100%;
   }
 }
 
@@ -319,33 +291,20 @@ exports[`renders HeroBanner correctly 1`] = `
       <div
         className="c6 COPY-INNER-WRAPPER"
       >
-        <a
-          className="c7 hero-banner-link"
-          href="http://www.google.com"
-          target="blank"
+        <div
+          className="c7 COPY"
         >
-          <div
-            className="c8 COPY"
+          <h1
+            className="c8"
           >
-            <h1
-              className="c9"
-            >
-              Curabitur pretium tincidunt lacus
-            </h1>
-            <p
-              className="c10"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div
-              className=""
-            >
-              Test CTA Label
-               &gt;&gt;&gt; 
-              http://www.google.com
-            </div>
-          </div>
-        </a>
+            Curabitur pretium tincidunt lacus
+          </h1>
+          <p
+            className="c9"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
       </div>
     </div>
   </div>
