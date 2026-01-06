@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
-import { bounceUpAnimation, springScaleAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation } from '../../../theme/shared/animations';
 
 const handleVariant = variant => {
   switch (variant) {

@@ -1,4 +1,3 @@
-import { over } from 'lodash';
 import { css } from 'styled-components';
 
 /**
