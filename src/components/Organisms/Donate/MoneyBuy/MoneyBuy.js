@@ -15,12 +15,11 @@ const MoneyBuyButton = styled(Input)`
     font-family: ${({ theme }) => theme.fontFamilies('Anton')};
     font-weight: normal;
     border-radius: 0.5rem;
-    padding: ${spacing('s')};
-    height: auto;
+    height: 4rem;
     border: 1px solid ${({ theme }) => theme.color('grey')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
-      padding: ${spacing('m')};
+      height: 5rem;
     }
     &:focus {
       border: 1px solid ${({ theme }) => theme.color('red')};

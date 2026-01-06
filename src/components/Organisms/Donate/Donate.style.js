@@ -152,6 +152,7 @@ const MoneyBuys = styled.div`
   margin-bottom: ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
+    margin-top: ${spacing('m')};
   }
   label {
     flex: 0 0 30%;
@@ -161,7 +162,7 @@ const MoneyBuys = styled.div`
     }
     input {
       cursor: pointer;
-      padding: ${spacing('m')}  ${spacing('sm')};
+      padding: ${spacing('sm')}  ${spacing('m')};
     }
   }
 `;
