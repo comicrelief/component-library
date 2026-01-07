@@ -30,7 +30,7 @@ const Container = styled.div`
   justify-content: center; 
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 32px;
+    ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
     align-items: center;
   }
 `;
@@ -46,7 +46,7 @@ const OuterWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     width: 100%;
     max-width: 1500px;
-    border-radius: 16px;
+    border-radius: 1rem;
     overflow: hidden;
 
     ${({ variant }) => (variant && css`
@@ -67,6 +67,7 @@ const MediaWrapper = styled.div`
     img {
       object-position: top center;
       height: 100%;
+
       // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
       transform: scale(1.02);
       transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
@@ -88,12 +89,12 @@ const CopyOuterWrapper = styled.div`
   left: 0;
   right: 0;
   display: flex;
-  width: calc(100% - (2 * 16px)); 
+  width: calc(100% - (2 * 1rem)); 
 
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -32px 16px 32px;' : 'margin: 32px 16px;')}
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 2rem 1rem;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: calc(100% - 64px); 
+    width: calc(100% - 4rem); 
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -120,7 +121,7 @@ const CopyOuterWrapper = styled.div`
 const Copy = styled.div`
   width: 100%;
   ${zIndex('low')};
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
@@ -162,7 +163,7 @@ const CopyInnerWrapper = styled.div`
 
     height: auto;
 
-    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 32px 0;`)};   
+    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};   
 
     justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-end;`

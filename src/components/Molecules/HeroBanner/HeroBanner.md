@@ -37,11 +37,13 @@ import variants from './_variants';
     copyLeft={false}
     ctaText="Register to fundraise but longer"
     ctaUrl="http://www.comicrelief.com/register"
+    paddingTop="0"
+
   >
     <Text
       tag="h1"
     >
-      Full Height: Copy Right w/CTA, Same Tab
+      Full Height:  No Top Padding, Copy Right w/CTA, Same Tab
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -118,12 +120,13 @@ import variants from './_variants';
     imageAltText="Image alt text"
     variant={variants.HALF_HEIGHT}
     copyLeft={false}
+    paddingBottom="0"
   >
     <Text
       tag="h1"
       
     >
-      Half Height: adapting to content
+      Half Height: adapting to content,  no bottom paddding
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
@@ -160,11 +163,13 @@ import variants from './_variants';
     ctaText="Register"
     ctaUrl="http://www.comicrelief.com/register"
     ctaNewTab
+    paddingTop="0"
+    paddingBottom="0"
   >
     <Text
       tag="h1"
     >
-      Responsive Text w/CTA, New Tab
+      Responsive Text w/CTA, New Tab, no top and bottom padding
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua

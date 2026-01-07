@@ -25,6 +25,8 @@ const HeroBanner = ({
   copyLeft = true,
   imageAltText = '',
   ctaNewTab = false,
+  paddingTop = '2rem',
+  paddingBottom = '2rem',
   imageSet = null,
   imageLow = null,
   image = null,
@@ -77,7 +79,7 @@ const HeroBanner = ({
   );
 
   return (
-    <Container pageBackgroundColour={pageBackgroundColour} className="CONTAINER">
+    <Container pageBackgroundColour={pageBackgroundColour} paddingTop={paddingTop} paddingBottom={paddingBottom} className="CONTAINER">
 
       <OuterWrapper className="OUTER-WRAPPER" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
 
@@ -129,6 +131,8 @@ HeroBanner.propTypes = {
   ctaUrl: PropTypes.string,
   ctaText: PropTypes.string,
   ctaNewTab: PropTypes.bool,
+  paddingTop: PropTypes.string,
+  paddingBottom: PropTypes.string,
   variant: PropTypes.oneOf([
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,

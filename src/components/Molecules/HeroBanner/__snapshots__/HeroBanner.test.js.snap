@@ -106,14 +106,14 @@ exports[`renders HeroBanner correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% - (2 * 16px));
-  margin: -32px 16px 32px;
+  width: calc(100% - (2 * 1rem));
+  margin: -2rem 1rem 2rem;
 }
 
 .c7 {
   width: 100%;
   z-index: 1;
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: 1.5rem;
   background-color: #FFFFFF;
   color: #000000;
@@ -162,7 +162,7 @@ exports[`renders HeroBanner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c0 {
-    padding: 32px;
+    padding: 2rem 2rem 2rem;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -174,7 +174,7 @@ exports[`renders HeroBanner correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 1500px;
-    border-radius: 16px;
+    border-radius: 1rem;
     overflow: hidden;
     height: 75vh;
     min-height: 600px;
@@ -209,7 +209,7 @@ exports[`renders HeroBanner correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    width: calc(100% - 64px);
+    width: calc(100% - 4rem);
   }
 }
 
@@ -256,7 +256,7 @@ exports[`renders HeroBanner correctly 1`] = `
   .c6 {
     width: 50%;
     height: auto;
-    margin: 32px 0;
+    margin: 2rem 0;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
