@@ -5,15 +5,12 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 import { CtaArrow } from '../../Atoms/Icons/index';
-
+import altCtaUnderline from './assets/alt_cta_underline.svg';
 import './annoying.css';
-
-// PLACEHOLDER:
-// import facebookCircled from '../../Atoms/SocialIcons/assets/circled/facebook.svg';
-
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper, CtaText
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
+  CtaIconWrapper, CtaText, CtaTextUnderline
 } from './HeroBanner.style';
 
 const HeroBanner = ({
@@ -53,6 +50,7 @@ const HeroBanner = ({
             <>
               <CtaText className="cta">
                 {ctaText}
+                <CtaTextUnderline src={altCtaUnderline} alt="" className="cta-text-underline" />
               </CtaText>
 
               <CtaIconWrapper CtaColour={CtaColour}>
@@ -66,17 +64,15 @@ const HeroBanner = ({
                 href={ctaUrl}
                 type="button"
                 color={textBannerCtaColour}
-                ctaTextarget={ctaNewTab ? 'blank' : 'self'}
+                target={ctaNewTab ? 'blank' : 'self'}
               >
                 {ctaText}
               </Link>
             </Text>
-
           )
         }
         </CTAWrapper>
       )}
-
     </Copy>
   );
 
@@ -101,7 +97,6 @@ const HeroBanner = ({
 
         <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
           <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
-
             {/* Wraps the 'cards' in a link for non-Text Banners (which use CTA buttons) */}
             {hasCTA && variant !== variants.TEXT_BANNER ? (
               <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>
@@ -113,9 +108,7 @@ const HeroBanner = ({
               </>
             )}
           </CopyInnerWrapper>
-
         </CopyOuterWrapper>
-
       </OuterWrapper>
     </Container>
   );

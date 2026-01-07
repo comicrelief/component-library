@@ -19,11 +19,31 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="black"
     >
       Full Height: Copy Left
     </Text>
-    <Text tag="p" color="black">
+    <Text tag="p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.headerBannerLG}
+    image={defaultData.headerBannerLG}
+    imageLow={defaultData.headerBannerLG}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    ctaText="Register to fundraise but longer"
+    ctaUrl="http://www.comicrelief.com/register"
+  >
+    <Text
+      tag="h1"
+    >
+      Full Height: Copy Right w/CTA, Same Tab
+    </Text>
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
   </HeroBanner>
@@ -45,31 +65,12 @@ import variants from './_variants';
     >
       Full Height: Copy Left w/CTA, New Tab
     </Text>
-    <Text tag="p" color="black">
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
   </HeroBanner>
 
-      <HeroBanner
-    pageBackgroundColour="teal_light"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
-    imageAltText="Image alt text"
-    variant={variants.FULL_HEIGHT}
-    copyLeft
-    ctaText="Register to fundraise but longer"
-    ctaUrl="http://www.comicrelief.com/register"
-  >
-    <Text
-      tag="h1"
-    >
-      Full Height: Copy Left w/CTA, Same Tab
-    </Text>
-    <Text tag="p" color="black">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Text>
-  </HeroBanner>
+
 
   <HeroBanner
     pageBackgroundColour="blue_dark"
@@ -81,11 +82,11 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="black"
+      
     >
       Full Height: Copy Right (default variant prop value)
     </Text>
-    <Text tag="p" color="black">
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
   </HeroBanner>
@@ -100,11 +101,11 @@ import variants from './_variants';
   >
     <Text
       tag="h1"
-      color="black"
+      
     >
       Half Height: min height
     </Text>
-    <Text tag="p" color="black">
+    <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
   </HeroBanner>
@@ -116,18 +117,19 @@ import variants from './_variants';
     imageLow={defaultData.headerBannerLG}
     imageAltText="Image alt text"
     variant={variants.HALF_HEIGHT}
+    copyLeft={false}
   >
     <Text
       tag="h1"
-      color="black"
+      
     >
       Half Height: adapting to content
     </Text>
-    <Text tag="p" color="black">
+    <Text tag="p">
       Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
     </Text>
 
-    <Text tag="p" color="black">
+    <Text tag="p">
       Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
     </Text>
   </HeroBanner>
@@ -167,6 +169,30 @@ import variants from './_variants';
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
+  </HeroBanner>
+
+      <HeroBanner
+    pageBackgroundColour="grey_light"
+    textBannerCopyBackgroundColour="deep_violet"
+    // Will be provided as an override within comicrelief-contentful
+    copyColour="white"
+    variant={variants.TEXT_BANNER}
+    ctaText="Register"
+    ctaUrl="http://www.comicrelief.com/register"
+  >
+    <Text
+      tag="h1"
+    >
+      Responsive Text w/CTA, Same Tab
+    </Text>
+    <Text tag="p">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</Text>
+
+        <Text tag="p">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</Text>
+
+        <Text tag="p">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</Text>
   </HeroBanner>
 
 </div>

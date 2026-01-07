@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
-import altCtaUnderline from './assets/alt_cta_underline.svg';
 import Text from '../../Atoms/Text/Text';
 
 const handleVariant = variant => {
@@ -72,10 +71,7 @@ const MediaWrapper = styled.div`
       transform: scale(1.02);
       transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
 
-      // As the 'text_banner' variant doesn't even render an image, there was no point in putting further 
-      // logic around this, so this'll only be applied to 'half_height_media' in practice.
-      // TO-DO: do I need this anymore?
-      ${({ variant }) => (variant !== variants.FULL_HEIGHT && 'min-height: 450px;')};  
+      ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};  
    }
 
     &:has(+ div a:hover) {
@@ -197,10 +193,27 @@ const CtaIconWrapper = styled.div`
   content: "";
 `;
 
+const CtaText = styled(Text)`
+  position: relative;
+`;
+
+const CtaTextUnderline = styled.img`
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+`;
+
 const HeroBannerLink = styled.a`
   text-decoration: none;
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+
+    ${bounceUpAnimation(true, 10, 2)}
+
     // As the link is now wrapping the content, it'll take over width duties from 'Copy':
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
     
@@ -208,34 +221,17 @@ const HeroBannerLink = styled.a`
       width: 100%;
     }
 
-    ${bounceUpAnimation(true, 10, 2)}
-
+    // Fade in the 'Alt CTA' style squiggle underline:
     &:hover {
-      // Need to use a class to ensure any other spans coming from the Richtext field aren't targeted:
-      span.cta {
-        position: relative;
-
-        &:after {
-          position: absolute;
-          content: "";
-          bottom: -10px;
-          left: 0;
-          width: 100%;
-          height: 10px;
-          background: url(${altCtaUnderline}) no-repeat;
-          background-size: contain;
-          background-position: top;
-        }
+      img.cta-text-underline {
+        opacity: 1;
       }
     }
   }
 `;
 
-const CtaText = styled(Text)`
-    //
-`;
-
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper, CtaText
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
+  CtaIconWrapper, CtaText, CtaTextUnderline
 };
