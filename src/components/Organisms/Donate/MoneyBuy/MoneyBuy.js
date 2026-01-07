@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
-import spacing from '../../../../theme/shared/spacing';
 
 const MoneyBuyButton = styled(Input)`
   display: block;
