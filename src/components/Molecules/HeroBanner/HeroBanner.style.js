@@ -179,16 +179,17 @@ const CTAWrapper = styled.div`
   `)}
 `;
 
-const CtaIcon = styled.img`
+const CtaIconWrapper = styled.div`
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   content: "";
-  background-color: red;
-  width: 40px;
-  height: 40px;
+  background-color: ${({ theme, CtaColour }) => theme.color(CtaColour)};
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
+  // padding: 5px;
 `;
 
 const HeroBannerLink = styled.a`
@@ -216,5 +217,5 @@ const HeroBannerLink = styled.a`
 
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIcon
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper
 };

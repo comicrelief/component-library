@@ -4,19 +4,22 @@ import Picture from '../../Atoms/Picture/Picture';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
+import { CtaArrow } from '../../Atoms/Icons/index';
+
 import './annoying.css';
+
 // PLACEHOLDER:
-import facebookCircled from '../../Atoms/SocialIcons/assets/circled/facebook.svg';
+// import facebookCircled from '../../Atoms/SocialIcons/assets/circled/facebook.svg';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIcon
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper
 } from './HeroBanner.style';
 
 const HeroBanner = ({
   pageBackgroundColour = 'grey_light',
   textBannerCopyBackgroundColour = 'deep_violet',
-  // Defaults to be overriden via the logic within comicrelief-contentful:
+  // Defaults, but will be overriden via the logic within comicrelief-contentful:
   CtaColour = 'red',
   textBannerCtaColour = 'white',
   copyColour = 'black',
@@ -44,12 +47,14 @@ const HeroBanner = ({
           {(variant !== variants.TEXT_BANNER) ? (
             <Text className="cta">
               {ctaText}
-              <CtaIcon src={facebookCircled}>
-                {/* TODO: Arrow icon here */}
-              </CtaIcon>
+
+              <CtaIconWrapper CtaColour={CtaColour}>
+                <CtaArrow colour="white" direction="right" size={50} />
+              </CtaIconWrapper>
+
             </Text>
           ) : (
-            <Text className="buttony">
+            <Text>
               <Link
                 href={ctaUrl}
                 type="button"
