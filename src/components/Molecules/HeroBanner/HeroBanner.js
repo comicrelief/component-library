@@ -13,7 +13,7 @@ import './annoying.css';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper, CtaText
 } from './HeroBanner.style';
 
 const HeroBanner = ({
@@ -39,20 +39,27 @@ const HeroBanner = ({
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
 
   const copySection = (
-    <Copy className="COPY" variant={variant} copyColour={copyColour} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+    <Copy
+      className="COPY"
+      variant={variant}
+      copyColour={copyColour}
+      textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+    >
       {children}
 
       {(hasCTA) && (
         <CTAWrapper variant={variant} CtaColour={CtaColour}>
           {(variant !== variants.TEXT_BANNER) ? (
-            <Text className="cta">
-              {ctaText}
+            <>
+              <CtaText className="cta">
+                {ctaText}
+              </CtaText>
 
               <CtaIconWrapper CtaColour={CtaColour}>
-                <CtaArrow colour="white" direction="right" size={50} />
+                <CtaArrow />
               </CtaIconWrapper>
+            </>
 
-            </Text>
           ) : (
             <Text>
               <Link

@@ -242,6 +242,12 @@ exports[`renders HeroBanner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
+    padding: 2rem 2rem 1.75rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
     width: 92%;
   }
 }

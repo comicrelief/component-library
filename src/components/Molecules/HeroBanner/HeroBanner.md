@@ -58,7 +58,7 @@ import variants from './_variants';
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     copyLeft
-    ctaText="Register to fundraise"
+    ctaText="Register to fundraise but longer"
     ctaUrl="http://www.comicrelief.com/register"
   >
     <Text

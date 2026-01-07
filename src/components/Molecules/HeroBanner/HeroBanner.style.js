@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
+import altCtaUnderline from './assets/alt_cta_underline.svg';
+import Text from '../../Atoms/Text/Text';
 
 const handleVariant = variant => {
   switch (variant) {
@@ -129,7 +131,15 @@ const Copy = styled.div`
     : theme.color('white')
   )};
 
-    color: ${({ theme, copyColour }) => theme.color(copyColour)};
+  color: ${({ theme, copyColour }) => theme.color(copyColour)};
+  
+  ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
+    @media ${theme.breakpoints2026('L')} {
+      padding: 2rem 2rem 1.75rem;
+    }
+  `)};
+
+
 
   ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
     text-align: center;
@@ -185,11 +195,6 @@ const CtaIconWrapper = styled.div`
   right: 0;
   transform: translateY(-50%);
   content: "";
-  background-color: ${({ theme, CtaColour }) => theme.color(CtaColour)};
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  // padding: 5px;
 `;
 
 const HeroBannerLink = styled.a`
@@ -206,16 +211,31 @@ const HeroBannerLink = styled.a`
     ${bounceUpAnimation(true, 10, 2)}
 
     &:hover {
-      // Need to use a class to ensure any other spans coming from the Richtext field arent being targeted:
+      // Need to use a class to ensure any other spans coming from the Richtext field aren't targeted:
       span.cta {
-        // TODO: needs proper underline graphic thing:
-        text-decoration: underline;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          background: url(${altCtaUnderline}) no-repeat;
+          background-size: contain;
+          background-position: top;
+        }
       }
     }
   }
 `;
 
+const CtaText = styled(Text)`
+    //
+`;
+
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, CtaIconWrapper, CtaText
 };

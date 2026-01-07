@@ -74,7 +74,7 @@ const Link = ({
 
 Link.propTypes = {
   /** Link styling. See linkStyles in theme. */
-  type: PropTypes.oneOf(['button', 'standard', 'standard_white']),
+  type: PropTypes.oneOf(['button', 'standard', 'standard_white', 'alt']), // TODO: alt styles based on Hero Banner
   /** Color for button style link. See buttonColors in theme */
   color: PropTypes.string,
   mobileColour: PropTypes.string,
