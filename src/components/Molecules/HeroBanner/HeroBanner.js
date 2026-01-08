@@ -6,7 +6,8 @@ import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 import { CtaArrow } from '../../Atoms/Icons/index';
 import altCtaUnderline from './assets/alt_cta_underline.svg';
-import './annoying.css';
+import './local-preview-layout-fixes.css';
+
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
