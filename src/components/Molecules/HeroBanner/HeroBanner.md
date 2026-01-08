@@ -35,10 +35,10 @@ import variants from './_variants';
     copyLeft={false}
     ctaText="Register to fundraise"
     ctaUrl="http://www.comicrelief.com/register"
-    paddingTop="0"
+    paddingTop="2rem"
   >
     <Text tag="h1">
-      Full Height:  No Top Padding, Copy Right w/CTA, Same Tab
+      Full Height:  Additional Top Padding, Copy Right w/CTA, Same Tab
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -142,7 +142,6 @@ import variants from './_variants';
     ctaText="Register"
     copyColour="white"
     paddingBottom="0"
-    paddingTop="0"
     ctaNewTab
   >
     <Text tag="h1">

@@ -162,7 +162,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c0 {
-    padding: 2rem 2rem 2rem;
+    padding: 0rem 2rem 2rem;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -480,7 +480,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c0 {
-    padding: 2rem 2rem 2rem;
+    padding: 0rem 2rem 2rem;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -779,7 +779,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c0 {
-    padding: 2rem 2rem 2rem;
+    padding: 0rem 2rem 2rem;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;

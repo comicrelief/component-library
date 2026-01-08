@@ -23,7 +23,7 @@ const HeroBanner = ({
   copyLeft = true,
   imageAltText = '',
   ctaNewTab = false,
-  paddingTop = '2rem',
+  paddingTop = '0rem',
   paddingBottom = '2rem',
   // Text Banner variant
   textBannerCopyBackgroundColour = 'deep_violet',
