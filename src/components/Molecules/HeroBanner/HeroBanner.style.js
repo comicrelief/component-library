@@ -175,7 +175,8 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding: 10px 0;
+  padding: 0.5rem 0;
+  margin-top: 1.25rem;
 
   ${({ variant, CtaColour }) => (variant !== variants.TEXT_BANNER && css`
     span {
@@ -186,6 +187,7 @@ const CTAWrapper = styled.div`
 `;
 
 const CtaIconWrapper = styled.div`
+  height: 2rem;
   position: absolute;
   top: 50%;
   right: 0;
