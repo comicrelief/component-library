@@ -85,8 +85,7 @@ const Donate = ({
     monthlyOther,
     monthlyPrimaryTitleText,
     additionalSingleCopy,
-    additionalMonthlyCopy
-  );
+    additionalMonthlyCopy);
 
   return (
     <Container
