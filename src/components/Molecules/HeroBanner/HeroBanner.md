@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 
-<div>
+<div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
 
   <HeroBanner
     pageBackgroundColour="teal_light"
@@ -132,7 +132,6 @@ import variants from './_variants';
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     </Text>
   </HeroBanner>
-  
 
   <HeroBanner
     pageBackgroundColour="grey_light"
