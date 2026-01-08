@@ -16,10 +16,6 @@ const MoneyBuyButton = styled(Input)`
     border-radius: 0.5rem;
     height: 4rem;
     border: 1px solid ${({ theme }) => theme.color('grey')};
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      font-size: ${({ theme }) => theme.fontSize('xl')};
-      height: 5rem;
-    }
     &:focus {
       border: 1px solid ${({ theme }) => theme.color('red')};
     }

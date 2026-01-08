@@ -24,7 +24,7 @@ const MoneyBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: ${spacing('md')} 0;
+  margin: ${spacing('sm')} 0;
   overflow: hidden;
   border-radius: 0.5rem;
   border: 1px solid ${({ theme }) => theme.color('grey')};
