@@ -140,16 +140,31 @@ const OuterFieldset = styled.fieldset`
 
 const Legend = styled.legend`
   margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')};
+  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
   display: block;
   width: 100%;
+`;
+
+const PrimaryTitleText = styled(Text)`
+  display: block;
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: 700;
+`;
+
+const SecondaryTitleText = styled(Text)`
+  display: block;
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  line-height: 1.5;
+  margin-top: ${spacing('sm')};
 `;
 
 const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-bottom: ${spacing('l')};
+  margin-bottom: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
     margin-top: ${spacing('m')};
@@ -261,5 +276,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend
+  Legend,
+  PrimaryTitleText,
+  SecondaryTitleText
 };

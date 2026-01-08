@@ -37,7 +37,8 @@ const Donate = ({
   subtitle = '',
   noMoneyBuys = false,
   PopUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
-  chooseAmountText = '',
+  primaryTitleText = null,
+  secondaryTitleText = null,
   isDesktopOverride = null,
   otherAmountValue = null,
   title = null,
@@ -50,7 +51,7 @@ const Donate = ({
   clientID,
   paddingOption = null,
   donateLink,
-  monthlyChooseAmountText: monthlyChoose = '',
+  monthlyPrimaryTitleText = '',
   monthlyOtherAmountText: monthlyOther = ''
 }) => {
   let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
@@ -77,8 +78,8 @@ const Donate = ({
 
   const {
     thisOtherAmountText,
-    thisChooseAmountText
-  } = handleCopy(givingType, otherAmountText, chooseAmountText, monthlyOther, monthlyChoose);
+    thisPrimaryTitleText
+  } = handleCopy(givingType, otherAmountText, primaryTitleText, monthlyOther, monthlyPrimaryTitleText);
 
   return (
     <Container
@@ -151,7 +152,8 @@ const Donate = ({
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
           PopUpText={PopUpText}
-          chooseAmountText={thisChooseAmountText}
+          primaryTitleText={thisPrimaryTitleText}
+          secondaryTitleText={secondaryTitleText}
           submitButtonColor={submitButtonColor}
           otherAmountValue={otherAmountValue}
           additionalSingleCopy={additionalSingleCopy}
@@ -189,7 +191,8 @@ Donate.propTypes = {
   mbshipID: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
   PopUpText: PropTypes.string,
-  chooseAmountText: PropTypes.string,
+  primaryTitleText: PropTypes.string,
+  secondaryTitleText: PropTypes.string,
   isDesktopOverride: PropTypes.bool,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
@@ -197,7 +200,7 @@ Donate.propTypes = {
   defaultGivingType: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  monthlyChooseAmountText: PropTypes.string,
+  monthlyPrimaryTitleText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
   paddingOption: PropTypes.string
 };

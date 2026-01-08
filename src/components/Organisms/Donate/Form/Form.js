@@ -4,7 +4,6 @@ import React, {
 import PropTypes from 'prop-types';
 
 import PopUpComponent from './PopUpComponent';
-import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
@@ -22,7 +21,9 @@ import {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend
+  Legend,
+  PrimaryTitleText,
+  SecondaryTitleText
 } from '../Donate.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -35,7 +36,8 @@ const Signup = ({
   mbshipID,
   noMoneyBuys = false,
   PopUpText,
-  chooseAmountText,
+  primaryTitleText = null,
+  secondaryTitleText = null,
   submitButtonColor,
   otherAmountValue = null,
   additionalSingleCopy = null,
@@ -238,9 +240,15 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <Text tag="span" size="l" weight="bold">
-              {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
-            </Text>
+            <PrimaryTitleText tag="span">
+              {primaryTitleText
+                || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
+            </PrimaryTitleText>
+            {secondaryTitleText && (
+              <SecondaryTitleText tag="span">
+                {secondaryTitleText}
+              </SecondaryTitleText>
+            )}
           </Legend>
           {showGivingSelector && (
             <GivingSelector
@@ -338,7 +346,8 @@ Signup.propTypes = {
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   PopUpText: PropTypes.string.isRequired,
-  chooseAmountText: PropTypes.string.isRequired,
+  primaryTitleText: PropTypes.string,
+  secondaryTitleText: PropTypes.string,
   submitButtonColor: PropTypes.string.isRequired,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,
