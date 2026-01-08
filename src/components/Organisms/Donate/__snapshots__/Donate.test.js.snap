@@ -298,6 +298,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   flex-grow: 0;
   font-weight: 400;
   display: block;
+  margin-top: 0.5rem;
 }
 
 .c20 span {
@@ -2790,6 +2791,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   flex-grow: 0;
   font-weight: 400;
   display: block;
+  margin-top: 0.5rem;
 }
 
 .c14 span {

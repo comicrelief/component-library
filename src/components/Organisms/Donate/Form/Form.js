@@ -280,6 +280,7 @@ const Signup = ({
               </Label>
             )}
             <AmountField
+              $noMoneyBuys={noMoneyBuys}
               step="0.01"
               name="membership_amount"
               type="string"

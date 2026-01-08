@@ -201,6 +201,10 @@ const AmountField = styled(Input)`
   font-weight: 400;
   display: block;
 
+  ${({ $noMoneyBuys }) => $noMoneyBuys === true && css`
+    margin-top: ${spacing('sm')};
+  `}
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-basis: 60%;
   }
