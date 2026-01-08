@@ -153,10 +153,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="grey_light"
-    textBannerCopyBackgroundColour="deep_violet"
-    // Will be provided as an override within comicrelief-contentful
-    copyColour="white"
+    textBannerCopyBackgroundColour="blue_light"
     variant={variants.TEXT_BANNER}
+    textBannerCtaColour="red"
     ctaText="Register"
     ctaUrl="http://www.comicrelief.com/register"
   >

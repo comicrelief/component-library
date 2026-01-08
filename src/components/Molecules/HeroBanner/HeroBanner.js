@@ -17,7 +17,6 @@ import {
 const HeroBanner = ({
   // All variants:
   copyColour = 'black',
-  CtaColour = 'red',
   pageBackgroundColour = 'grey_light',
   variant = variants.FULL_HEIGHT,
   copyLeft = true,
@@ -49,7 +48,7 @@ const HeroBanner = ({
       {children}
 
       {(hasCTA) && (
-        <CTAWrapper variant={variant} CtaColour={CtaColour}>
+        <CTAWrapper variant={variant}>
           {(variant !== variants.TEXT_BANNER) ? (
             <>
               <CtaText className="cta">
@@ -57,7 +56,7 @@ const HeroBanner = ({
                 <CtaTextUnderline src={altCtaUnderline} alt="" className="cta-text-underline" />
               </CtaText>
 
-              <CtaIconWrapper CtaColour={CtaColour}>
+              <CtaIconWrapper>
                 <CtaArrow />
               </CtaIconWrapper>
             </>
@@ -129,7 +128,6 @@ HeroBanner.propTypes = {
   pageBackgroundColour: PropTypes.string,
   textBannerCopyBackgroundColour: PropTypes.string,
   textBannerCtaColour: PropTypes.string,
-  CtaColour: PropTypes.string,
   copyColour: PropTypes.string,
   copyLeft: PropTypes.bool,
   imageLow: PropTypes.string,

@@ -178,10 +178,10 @@ const CTAWrapper = styled.div`
   padding: 0.5rem 0;
   margin-top: 1.25rem;
 
-  ${({ variant, CtaColour }) => (variant !== variants.TEXT_BANNER && css`
+  ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
     span {
       font-weight: bold;
-      color: ${({ theme }) => theme.color(CtaColour)};
+      color: ${({ theme }) => theme.color('red')};
     }
   `)}
 `;
