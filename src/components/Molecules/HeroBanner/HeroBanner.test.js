@@ -12,9 +12,9 @@ it('renders "Full Height Media" Hero Banner correctly', () => {
   const tree = renderWithTheme(
     <HeroBanner
       pageBackgroundColour="teal_light"
-      imageSet={defaultData.headerBannerLG}
-      image={defaultData.headerBannerLG}
-      imageLow={defaultData.headerBannerLG}
+      imageSet={defaultData.heroBannerImage}
+      image={defaultData.heroBannerImage}
+      imageLow={defaultData.heroBannerImage}
       imageAltText="Image alt text"
       variant={variants.FULL_HEIGHT}
       ctaText="Test CTA Label"
@@ -40,9 +40,9 @@ it('renders "Half Height Media" Hero Banner correctly', () => {
   const tree = renderWithTheme(
     <HeroBanner
       pageBackgroundColour="teal_light"
-      imageSet={defaultData.headerBannerLG}
-      image={defaultData.headerBannerLG}
-      imageLow={defaultData.headerBannerLG}
+      imageSet={defaultData.heroBannerImage}
+      image={defaultData.heroBannerImage}
+      imageLow={defaultData.heroBannerImage}
       imageAltText="Image alt text"
       variant={variants.HALF_HEIGHT}
       ctaText="Test CTA Label"

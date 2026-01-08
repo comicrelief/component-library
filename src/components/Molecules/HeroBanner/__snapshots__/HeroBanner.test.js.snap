@@ -281,12 +281,12 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
         <img
           alt="Image alt text"
           className="c4 lazyload"
-          data-lowsrc="../PromoLW2.jpg"
+          data-lowsrc="../PromoLW.jpg"
           data-sizes="auto"
-          data-src="../PromoLW2.jpg"
-          data-srcset="../PromoLW2.jpg"
+          data-src="../PromoLW.jpg"
+          data-srcset="../PromoLW.jpg"
           height="100%"
-          src="../PromoLW2.jpg"
+          src="../PromoLW.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
@@ -598,12 +598,12 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
         <img
           alt="Image alt text"
           className="c4 lazyload"
-          data-lowsrc="../PromoLW2.jpg"
+          data-lowsrc="../PromoLW.jpg"
           data-sizes="auto"
-          data-src="../PromoLW2.jpg"
-          data-srcset="../PromoLW2.jpg"
+          data-src="../PromoLW.jpg"
+          data-srcset="../PromoLW.jpg"
           height="100%"
-          src="../PromoLW2.jpg"
+          src="../PromoLW.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />

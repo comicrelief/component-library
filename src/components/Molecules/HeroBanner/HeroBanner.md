@@ -10,9 +10,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="teal_light"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     copyLeft
@@ -27,9 +27,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="teal_light"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     copyLeft={false}
@@ -47,9 +47,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="teal_light"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     ctaText="Register to fundraise but longer"
@@ -67,9 +67,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="blue_dark"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     copyLeft={false}
   >
@@ -83,9 +83,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="orange"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.HALF_HEIGHT}
   >
@@ -99,9 +99,9 @@ import variants from './_variants';
 
   <HeroBanner
     pageBackgroundColour="teal"
-    imageSet={defaultData.headerBannerLG}
-    image={defaultData.headerBannerLG}
-    imageLow={defaultData.headerBannerLG}
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.HALF_HEIGHT}
     paddingBottom="0"

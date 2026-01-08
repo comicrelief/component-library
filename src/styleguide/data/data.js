@@ -9,9 +9,7 @@ const defaultData = {
   },
   ctaText: 'Find out how',
   promoImage: '../promo.jpg',
-  headerBannerSM: '../PromoSW.jpg',
-  headerBannerMD: '../PromoMW.jpg',
-  headerBannerLG: '../PromoLW2.jpg',
+  heroBannerImage: '../PromoLW.jpg',
   imageLow:
     'http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100',
   image:
