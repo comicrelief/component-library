@@ -14,22 +14,24 @@ import {
 } from './HeroBanner.style';
 
 const HeroBanner = ({
-  pageBackgroundColour = 'grey_light',
-  textBannerCopyBackgroundColour = 'deep_violet',
-  // Defaults, but will be overriden via the logic within comicrelief-contentful:
-  CtaColour = 'red',
-  textBannerCtaColour = 'white',
+  // All variants:
   copyColour = 'black',
-  //
+  CtaColour = 'red',
+  pageBackgroundColour = 'grey_light',
   variant = variants.FULL_HEIGHT,
   copyLeft = true,
   imageAltText = '',
   ctaNewTab = false,
   paddingTop = '2rem',
   paddingBottom = '2rem',
+  // Text Banner variant
+  textBannerCopyBackgroundColour = 'deep_violet',
+  textBannerCtaColour = 'white',
+  // 'Media' variants:
   imageSet = null,
   imageLow = null,
   image = null,
+  // All variants:
   children = null,
   ctaUrl = null,
   ctaText = null
@@ -39,7 +41,6 @@ const HeroBanner = ({
 
   const copySection = (
     <Copy
-      className="COPY"
       variant={variant}
       copyColour={copyColour}
       textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
@@ -79,12 +80,19 @@ const HeroBanner = ({
   );
 
   return (
-    <Container pageBackgroundColour={pageBackgroundColour} paddingTop={paddingTop} paddingBottom={paddingBottom} className="CONTAINER">
+    <Container
+      pageBackgroundColour={pageBackgroundColour}
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
+    >
 
-      <OuterWrapper className="OUTER-WRAPPER" variant={variant} textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}>
+      <OuterWrapper
+        variant={variant}
+        textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+      >
 
         {(hasImage) && (
-          <MediaWrapper imageRight={copyLeft} variant={variant} className="MEDIA-WRAPPER">
+          <MediaWrapper imageRight={copyLeft} variant={variant}>
             <Picture
               alt={imageAltText}
               imageLow={imageLow}
@@ -97,8 +105,8 @@ const HeroBanner = ({
           </MediaWrapper>
         )}
 
-        <CopyOuterWrapper copyLeft={copyLeft} variant={variant} className="COPY-OUTER-WRAPPER">
-          <CopyInnerWrapper copyLeft={copyLeft} className="COPY-INNER-WRAPPER" variant={variant}>
+        <CopyOuterWrapper copyLeft={copyLeft} variant={variant}>
+          <CopyInnerWrapper copyLeft={copyLeft} variant={variant}>
             {/* Wraps the 'cards' in a link for non-Text Banners (which use CTA buttons) */}
             {hasCTA && variant !== variants.TEXT_BANNER ? (
               <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>

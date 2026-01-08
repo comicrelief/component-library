@@ -115,8 +115,8 @@ exports[`renders HeroBanner correctly 1`] = `
   z-index: 1;
   border-radius: 1rem;
   padding: 1.5rem;
-  background-color: #FFFFFF;
   color: #000000;
+  background-color: #FFFFFF;
 }
 
 .c6 {
@@ -254,8 +254,8 @@ exports[`renders HeroBanner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c6 {
-    width: 50%;
     height: auto;
+    width: 50%;
     margin: 2rem 0;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -265,13 +265,13 @@ exports[`renders HeroBanner correctly 1`] = `
 }
 
 <div
-  className="c0 CONTAINER"
+  className="c0"
 >
   <div
-    className="c1 OUTER-WRAPPER"
+    className="c1"
   >
     <div
-      className="c2 MEDIA-WRAPPER"
+      className="c2"
     >
       <div
         className="c3 lazyload"
@@ -293,13 +293,13 @@ exports[`renders HeroBanner correctly 1`] = `
       </div>
     </div>
     <div
-      className="c5 COPY-OUTER-WRAPPER"
+      className="c5"
     >
       <div
-        className="c6 COPY-INNER-WRAPPER"
+        className="c6"
       >
         <div
-          className="c7 COPY"
+          className="c7"
         >
           <h1
             className="c8"

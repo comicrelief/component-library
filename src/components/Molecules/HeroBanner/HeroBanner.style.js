@@ -4,6 +4,7 @@ import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import Text from '../../Atoms/Text/Text';
 
+// Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
   switch (variant) {
     case variants.FULL_HEIGHT:
@@ -15,6 +16,7 @@ const handleVariant = variant => {
       return `
         height: auto;
         min-height: 450px;`;
+    // No tweaks needed for the remaining 'text_banner' variant:
     default:
       return null;
   }
@@ -51,8 +53,7 @@ const OuterWrapper = styled.div`
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
-      `
-  )}
+    `)}
 `;
 
 const MediaWrapper = styled.div`
@@ -114,7 +115,8 @@ const CopyOuterWrapper = styled.div`
   }};
 
     ${({ variant }) => (variant && css`
-      ${handleVariant(variant)}`)}
+      ${handleVariant(variant)}
+    `)}
   }
 `;
 
@@ -123,12 +125,13 @@ const Copy = styled.div`
   ${zIndex('low')};
   border-radius: 1rem;
   padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
+  color: ${({ theme, copyColour }) => theme.color(copyColour)};
+
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
     : theme.color('white')
   )};
 
-  color: ${({ theme, copyColour }) => theme.color(copyColour)};
   
   ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
@@ -136,11 +139,8 @@ const Copy = styled.div`
     }
   `)};
 
-
-
   ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
     text-align: center;
-
     @media ${theme.breakpoints2026('M')} {
       padding: 4rem 11%;
     }
@@ -158,10 +158,9 @@ const CopyInnerWrapper = styled.div`
   align-items: center;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-  
-    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
-
     height: auto;
+
+    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
 
     ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};   
 
@@ -222,7 +221,7 @@ const HeroBannerLink = styled.a`
       width: 100%;
     }
 
-    // Fade in the 'Alt CTA' style squiggle underline:
+    // Fade in the 'Alt CTA'-style squiggley underline:
     &:hover {
       img.cta-text-underline {
         opacity: 1;
