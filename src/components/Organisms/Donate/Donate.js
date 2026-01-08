@@ -79,7 +79,14 @@ const Donate = ({
   const {
     thisOtherAmountText,
     thisPrimaryTitleText
-  } = handleCopy(givingType, otherAmountText, primaryTitleText, monthlyOther, monthlyPrimaryTitleText);
+  } = handleCopy(givingType,
+    otherAmountText,
+    primaryTitleText,
+    monthlyOther,
+    monthlyPrimaryTitleText,
+    additionalSingleCopy,
+    additionalMonthlyCopy
+  );
 
   return (
     <Container
