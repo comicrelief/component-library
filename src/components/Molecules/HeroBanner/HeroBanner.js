@@ -28,7 +28,7 @@ const HeroBanner = ({
   // Text Banner variant
   textBannerCopyBackgroundColour = 'deep_violet',
   textBannerCtaColour = 'white',
-  // 'Media' variants:
+  // 'Media' variants (fallbacks to be provided in the CRcom integration, just in case):
   imageSet = null,
   imageLow = null,
   image = null,
@@ -136,7 +136,7 @@ HeroBanner.propTypes = {
   imageSet: PropTypes.string,
   image: PropTypes.string,
   imageAltText: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   ctaUrl: PropTypes.string,
   ctaText: PropTypes.string,
   ctaNewTab: PropTypes.bool,
