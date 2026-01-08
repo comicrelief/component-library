@@ -23,7 +23,9 @@ const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle
   };
 };
 
-const handleCopy = (gType, otherAmount, primaryTitleText, monthlyOtherAmount, monthlyPrimaryTitleText) => {
+const handleCopy = (gType,
+  otherAmount, primaryTitleText, monthlyOtherAmount, monthlyPrimaryTitleText
+) => {
   // Only use any monthly overrides for the appropriate givingType
   const thisOtherAmountText = (gType === 'monthly' && Boolean(monthlyOtherAmount) ? monthlyOtherAmount : otherAmount);
   const thisPrimaryTitleText = (gType === 'monthly' && Boolean(monthlyPrimaryTitleText) ? monthlyPrimaryTitleText : primaryTitleText);
