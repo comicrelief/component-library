@@ -111,6 +111,12 @@ const CardLink = styled.a`
   overflow: hidden;
   cursor: pointer;
 
+  img {
+    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
+    transform: scale(1.02);
+    transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
+   }
+
   // Desktop-only hover effects
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${bounceUpAnimation(true, 0.02, 1)};
