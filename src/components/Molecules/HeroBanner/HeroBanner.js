@@ -53,7 +53,11 @@ const HeroBanner = ({
             <>
               <CtaText className="cta">
                 {ctaText}
-                <CtaTextUnderline src={altCtaUnderline} alt="" className="cta-text-underline" />
+                <CtaTextUnderline
+                  src={altCtaUnderline}
+                  alt={ctaText}
+                  className="cta-text-underline"
+                />
               </CtaText>
 
               <CtaIconWrapper>
