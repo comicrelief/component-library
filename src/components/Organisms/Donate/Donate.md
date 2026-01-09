@@ -29,28 +29,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Form align right, full width when no images are provided
-
-```js
-import data from './dev-data/data';
-
-<Donate
-  mobileBackgroundColor="deep_violet_dark"
-  desktopOverlayColor="red"
-  formAlignRight={true}
-  data={data}
-  mbshipID="mship-1-no-images"
-  donateLink="https://donation.comicrelief.com/"
-  clientID="donate"
-  cartID="default-comicrelief"
-  title="Donate Now"
-  subtitle="Please help us fund life-changing projects in the UK and around the world."
-  primaryTitleText="You could change a world..."
-  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
-  paddingOption="upper_off"
-/>;
-```
-
 ## Form align left, with custom message after choosing an "Other amount" to donate, high value cart, and 'no bottom padding' option
 ```js
 import data from './dev-data/data-high-value';
@@ -666,5 +644,27 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   monthlyOtherAmountText="monthlyOtherAmountText here"
   primaryTitleText="You could change a world..."
   secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
+/>;
+```
+
+## Form align right, full width when no images are provided
+
+```js
+import data from './dev-data/data';
+
+<Donate
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  formAlignRight={true}
+  data={data}
+  mbshipID="mship-1-no-images"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
+  paddingOption="upper_off"
 />;
 ```
