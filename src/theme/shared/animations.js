@@ -70,9 +70,6 @@ const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1
     return css``;
   }
 
-  // More negative pull-back and higher overshoot = more bounce
-  // Default intensity (1) gives: cubic-bezier(0.68, -0.85, 0.265, 1.95)
-  // Higher intensity = more pronounced bounce effect
   const pullBack = -0.55 - (bounceIntensity * 0.3);
   const overshoot = 1.55 + (bounceIntensity * 0.4);
   const duration = 0.2 + (bounceIntensity * 0.1);
