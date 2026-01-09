@@ -7,7 +7,7 @@ query MyQuery {
         headerPageGroups {
           primaryPageName
           primaryPageUrlIfExternal
-          primaryPageComponent {
+          primaryPageSelector {
             path
             title
           }
@@ -15,7 +15,6 @@ query MyQuery {
             pageName
             pageUrlIfExternal
             pageLevel
-            class
             pageSelector {
               title
               path
@@ -27,7 +26,6 @@ query MyQuery {
                 }
                 pageUrlIfExternal
                 pageLevel
-                class
               }
             }
           }
@@ -35,7 +33,6 @@ query MyQuery {
             pageName
             pageUrlIfExternal
             pageLevel
-            class
             pageSelector {
               title
               path
@@ -47,7 +44,6 @@ query MyQuery {
                 }
                 pageUrlIfExternal
                 pageLevel
-                class
               }
             }
           }
@@ -55,7 +51,6 @@ query MyQuery {
             pageName
             pageUrlIfExternal
             pageLevel
-            class
             pageSelector {
               title
               path
@@ -67,7 +62,6 @@ query MyQuery {
                 }
                 pageUrlIfExternal
                 pageLevel
-                class
               }
             }
           }
