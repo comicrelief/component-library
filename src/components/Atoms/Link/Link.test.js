@@ -203,7 +203,6 @@ it('renders link styled as button correctly', () => {
       padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
@@ -219,6 +218,16 @@ it('renders link styled as button correctly', () => {
       -ms-flex-align: center;
       align-items: center;
       cursor: pointer;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
       background-color: #FFE400;
       color: #000000;
     }
@@ -226,6 +235,20 @@ it('renders link styled as button correctly', () => {
     .c0:hover {
       background-color: #FEFD5A;
       color: #000000;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c0 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {
