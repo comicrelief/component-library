@@ -84,6 +84,19 @@ const CTAText = styled.span`
   color: ${({ theme }) => theme.color('grey')};
   font-weight: bold;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+`;
+
+const CTATextUnderline = styled.img`
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
 `;
 
 const ArrowIconWrapper = styled.div`
@@ -130,8 +143,11 @@ const CardLink = styled.a`
 
       ${CTAText} {
         color: ${({ theme }) => theme.color('red')};
-        text-decoration: underline;
-        text-underline-offset: 4px;
+        text-decoration: none;
+      }
+
+      ${CTATextUnderline} {
+        opacity: 1;
       }
 
       ${ArrowIconWrapper} {
@@ -228,6 +244,7 @@ export {
   Copy,
   CTA,
   CTAText,
+  CTATextUnderline,
   ArrowIconWrapper,
   CardsContainer,
   CardWrapper

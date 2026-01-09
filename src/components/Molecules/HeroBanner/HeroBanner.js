@@ -5,7 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
 import { CtaArrow } from '../../Atoms/Icons/index';
-import altCtaUnderline from './assets/alt_cta_underline.svg';
+import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 import './local-preview-layout-fixes.css';
 
 import {
