@@ -63,7 +63,6 @@ it('renders correctly', () => {
       padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
@@ -79,6 +78,16 @@ it('renders correctly', () => {
       -ms-flex-align: center;
       align-items: center;
       cursor: pointer;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-weight: 700;
       background-color: #FFFFFF;
       color: #000000;
     }
@@ -132,6 +141,20 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c1 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c5 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c5 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
