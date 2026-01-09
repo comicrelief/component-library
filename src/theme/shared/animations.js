@@ -58,23 +58,21 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
 };
 
 /**
- * Bounce up animation on hover
- * Applies a smooth spring-like upward movement with bounce effect (no scaling)
- * @param {boolean} animateUp - Whether to enable the animation
- * @param {number} moveFactor - Factor/percentage for how far up to move (default 0.02 = 2%)
+ * bounceUpAnimation animation on hover
+ * Applies a smooth spring-like position transition that moves the element up on hover/focus
+ * @param {boolean} animateScale - Whether to enable the scale animation
+ * @param {number} pixelMovement - Amount of movement to apply on hover
  * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
  * @returns {css} template literal for the animation
  */
-const bounceUpAnimation = (animateUp, moveFactor = 0.02, bounceIntensity = 1) => {
-  if (!animateUp) {
+const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1) => {
+  if (!animateScale) {
     return css``;
   }
 
   const pullBack = -0.55 - (bounceIntensity * 0.3);
   const overshoot = 1.55 + (bounceIntensity * 0.4);
   const duration = 0.2 + (bounceIntensity * 0.1);
-  // Convert factor to percentage for translateY (negative moves up)
-  const translateY = -(moveFactor * 100);
 
   return css`
     transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
@@ -82,7 +80,7 @@ const bounceUpAnimation = (animateUp, moveFactor = 0.02, bounceIntensity = 1) =>
 
     &:hover,
     &:focus {
-      transform: translateY(${translateY}%);
+      transform: translateY(-${pixelMovement}px);
     }
   `;
 };
