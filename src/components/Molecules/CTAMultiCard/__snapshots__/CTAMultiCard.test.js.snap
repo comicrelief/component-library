@@ -18,7 +18,7 @@ exports[`handles data structure correctly 1`] = `
   line-height: inherit;
 }
 
-.c11 {
+.c13 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -51,9 +51,23 @@ exports[`handles data structure correctly 1`] = `
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -93,6 +107,15 @@ exports[`handles data structure correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
 }
 
 .c1 {
@@ -252,9 +275,9 @@ exports[`handles data structure correctly 1`] = `
 
   .c2:hover,
   .c2:focus {
-    -webkit-transform: translateY(-2%);
-    -ms-transform: translateY(-2%);
-    transform: translateY(-2%);
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
   }
 
   .c2:hover {
@@ -263,12 +286,15 @@ exports[`handles data structure correctly 1`] = `
 
   .c2:hover .c7 {
     color: #E52630;
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 
   .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
     background: #E52630;
   }
 }
@@ -337,12 +363,18 @@ exports[`handles data structure correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -388,12 +420,18 @@ exports[`handles data structure correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -439,12 +477,18 @@ exports[`handles data structure correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -487,12 +531,18 @@ exports[`handles data structure correctly 1`] = `
             className="c7 c8"
           >
             View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -530,7 +580,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   line-height: inherit;
 }
 
-.c11 {
+.c13 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -563,9 +613,23 @@ exports[`renders 2 columns layout correctly 1`] = `
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -605,6 +669,15 @@ exports[`renders 2 columns layout correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
 }
 
 .c1 {
@@ -766,9 +839,9 @@ exports[`renders 2 columns layout correctly 1`] = `
 
   .c2:hover,
   .c2:focus {
-    -webkit-transform: translateY(-2%);
-    -ms-transform: translateY(-2%);
-    transform: translateY(-2%);
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
   }
 
   .c2:hover {
@@ -777,12 +850,15 @@ exports[`renders 2 columns layout correctly 1`] = `
 
   .c2:hover .c7 {
     color: #E52630;
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 
   .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
     background: #E52630;
   }
 }
@@ -851,12 +927,18 @@ exports[`renders 2 columns layout correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -902,12 +984,18 @@ exports[`renders 2 columns layout correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -953,12 +1041,18 @@ exports[`renders 2 columns layout correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1001,12 +1095,18 @@ exports[`renders 2 columns layout correctly 1`] = `
             className="c7 c8"
           >
             View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1044,7 +1144,7 @@ exports[`renders carousel mode correctly 1`] = `
   line-height: inherit;
 }
 
-.c11 {
+.c13 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -1077,9 +1177,23 @@ exports[`renders carousel mode correctly 1`] = `
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1119,6 +1233,15 @@ exports[`renders carousel mode correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
 }
 
 .c1 {
@@ -1298,9 +1421,9 @@ exports[`renders carousel mode correctly 1`] = `
 
   .c2:hover,
   .c2:focus {
-    -webkit-transform: translateY(-2%);
-    -ms-transform: translateY(-2%);
-    transform: translateY(-2%);
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
   }
 
   .c2:hover {
@@ -1309,12 +1432,15 @@ exports[`renders carousel mode correctly 1`] = `
 
   .c2:hover .c7 {
     color: #E52630;
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 
   .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
     background: #E52630;
   }
 }
@@ -1404,12 +1530,18 @@ exports[`renders carousel mode correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1455,12 +1587,18 @@ exports[`renders carousel mode correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1506,12 +1644,18 @@ exports[`renders carousel mode correctly 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1554,12 +1698,18 @@ exports[`renders carousel mode correctly 1`] = `
             className="c7 c8"
           >
             View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1597,7 +1747,7 @@ exports[`renders correctly with data prop 1`] = `
   line-height: inherit;
 }
 
-.c11 {
+.c13 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -1630,9 +1780,23 @@ exports[`renders correctly with data prop 1`] = `
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 
 .c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1672,6 +1836,15 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
 }
 
 .c1 {
@@ -1831,9 +2004,9 @@ exports[`renders correctly with data prop 1`] = `
 
   .c2:hover,
   .c2:focus {
-    -webkit-transform: translateY(-2%);
-    -ms-transform: translateY(-2%);
-    transform: translateY(-2%);
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
   }
 
   .c2:hover {
@@ -1842,12 +2015,15 @@ exports[`renders correctly with data prop 1`] = `
 
   .c2:hover .c7 {
     color: #E52630;
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 
   .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
     background: #E52630;
   }
 }
@@ -1916,12 +2092,18 @@ exports[`renders correctly with data prop 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1967,12 +2149,18 @@ exports[`renders correctly with data prop 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2018,12 +2206,18 @@ exports[`renders correctly with data prop 1`] = `
             className="c7 c8"
           >
             test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2066,12 +2260,18 @@ exports[`renders correctly with data prop 1`] = `
             className="c7 c8"
           >
             View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
           </span>
           <div
-            className="c9 c10"
+            className="c11 c12"
           >
             <svg
-              className="c11"
+              className="c13"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
