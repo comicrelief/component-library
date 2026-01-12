@@ -91,8 +91,10 @@ const CopyOuterWrapper = styled.div`
   right: 0;
   display: flex;
   width: calc(100% - (2 * 1rem)); 
-
+    
   ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 2rem 1rem;')}
+  // Is this actually correct?
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: calc(100% - 4rem); 
