@@ -302,8 +302,7 @@ const CopyAndLinkSection = styled.div`
     }
 
     @media ${({ theme }) => theme.breakpoints2026('XL')} {
-      min-width: 789px;
-      max-width: 789px;
+      width: 789px;
     }
   `}
 `;
