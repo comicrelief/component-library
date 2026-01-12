@@ -211,6 +211,7 @@ const CtaTextUnderline = styled.img`
 
 const HeroBannerLink = styled.a`
   text-decoration: none;
+  width: 100%;
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
