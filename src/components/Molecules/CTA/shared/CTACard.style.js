@@ -107,10 +107,6 @@ const ImageWrapper = styled.div`
     // Desktop-only image zoom animation on card hover
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       ${springScaleAnimation(true)}
-
-      ${({ isHovered }) => isHovered && css`
-        transform: scale(1.1);
-      `}
     }
   }
 `;
