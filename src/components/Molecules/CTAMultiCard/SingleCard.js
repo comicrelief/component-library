@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
-import ArrowIcon from './ArrowIcon';
+import ArrowIcon from '../CTA/shared/ArrowIcon';
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 import {
   CardLink,
