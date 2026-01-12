@@ -322,8 +322,7 @@ exports[`renders correctly with backgroundColour prop 1`] = `
 
 @media (min-width:1440px) {
   .c3 {
-    min-width: 789px;
-    max-width: 789px;
+    width: 789px;
   }
 }
 
@@ -712,8 +711,7 @@ exports[`renders correctly with card prop 1`] = `
 
 @media (min-width:1440px) {
   .c3 {
-    min-width: 789px;
-    max-width: 789px;
+    width: 789px;
   }
 }
 
@@ -1102,8 +1100,7 @@ exports[`renders correctly without image 1`] = `
 
 @media (min-width:1440px) {
   .c3 {
-    min-width: 789px;
-    max-width: 789px;
+    width: 789px;
   }
 }
 
