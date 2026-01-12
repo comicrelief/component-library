@@ -108,6 +108,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
   display: flex;
   width: calc(100% - (2 * 1rem));
   margin: -2rem 1rem 2rem;
+  margin: -2rem 1rem 2rem;
 }
 
 .c7 {
@@ -426,6 +427,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
   display: flex;
   width: calc(100% - (2 * 1rem));
   margin: -2rem 1rem 2rem;
+  margin: -2rem 1rem 2rem;
 }
 
 .c7 {
@@ -694,6 +696,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0rem 1rem 2rem;
 }
 
 .c1 {
@@ -724,6 +727,8 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
   display: flex;
   width: calc(100% - (2 * 1rem));
   margin: 2rem 1rem;
+  margin: 0;
+  width: 100%;
 }
 
 .c4 {

@@ -31,6 +31,11 @@ const Container = styled.div`
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
 
+  // Is this actually correct?
+  ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
+    padding: ${paddingTop} 1rem ${paddingBottom};
+`)};
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
     align-items: center;
@@ -94,7 +99,7 @@ const CopyOuterWrapper = styled.div`
     
   ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 2rem 1rem;')}
   // Is this actually correct?
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0;')}
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: calc(100% - 4rem); 
