@@ -120,6 +120,19 @@ const CTAText = styled.span`
   color: ${({ theme }) => theme.color('grey')};
   font-weight: bold;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+`;
+
+const CTATextUnderline = styled.img`
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
 `;
 
 const ArrowIconWrapper = styled.div`
@@ -162,6 +175,12 @@ const CardLink = styled.a`
     }
   `}
 
+  img {
+    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
+    transform: scale(1.02);
+    transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
+   }
+
   // Desktop-only hover effects
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${bounceUpAnimation(true, 0.02, 1)};
@@ -175,8 +194,11 @@ const CardLink = styled.a`
 
       ${CTAText} {
         color: ${({ theme }) => theme.color('red')};
-        text-decoration: underline;
-        text-underline-offset: 4px;
+        text-decoration: none;
+      }
+
+      ${CTATextUnderline} {
+        opacity: 1;
       }
 
       ${ArrowIconWrapper} {
@@ -315,6 +337,7 @@ export {
   Copy,
   CTA,
   CTAText,
+  CTATextUnderline,
   ArrowIconWrapper,
   CardWrapper
 };
