@@ -115,6 +115,7 @@ const PrimaryNavLink = styled(Link)`
   color: ${({ theme }) => theme.color('white')};
   text-decoration: none;
   font-weight: bold;
+  font-size: ${({ theme }) => theme.fontSize('s')};
 
   &:hover,
   &:focus {
