@@ -272,7 +272,7 @@ const FooterCopyrightText = styled(Text).attrs({
 })`
   color: ${({ theme }) => theme.color('white')};
   opacity: 0.8;
-  font-size: ${({ theme }) => theme.fontSize('xs')};
+  font-size: 0.875rem;
   margin-bottom: ${spacing('sm')};
 `;
 
