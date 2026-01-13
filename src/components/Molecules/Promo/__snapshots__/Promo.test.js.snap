@@ -91,7 +91,7 @@ exports[`renders Promo correctly 1`] = `
   align-items: center;
   cursor: pointer;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -440,7 +440,7 @@ exports[`renders Promo correctly end position 1`] = `
   align-items: center;
   cursor: pointer;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;

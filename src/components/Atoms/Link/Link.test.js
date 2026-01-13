@@ -219,7 +219,7 @@ it('renders link styled as button correctly', () => {
       align-items: center;
       cursor: pointer;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;

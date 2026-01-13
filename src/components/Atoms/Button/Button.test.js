@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Button from "./Button";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Button from './Button';
 
-it("renders a standard styled link correctly", () => {
+it('renders a standard styled link correctly', () => {
   const tree = renderWithTheme(
     <Button type="submit">A standard link</Button>
   ).toJSON();
@@ -37,6 +37,17 @@ it("renders a standard styled link correctly", () => {
       cursor: pointer;
       background-color: #E52630;
       color: #FFFFFF;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
     }
 
     .c0 > a {
@@ -47,6 +58,20 @@ it("renders a standard styled link correctly", () => {
     .c0:hover {
       background-color: #890B11;
       color: #FFFFFF;
+    }
+
+    @media (min-width:740px) {
+      .c0 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c0 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
     }
 
     @media (min-width:740px) {

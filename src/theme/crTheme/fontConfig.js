@@ -140,7 +140,7 @@ export default {
   // To be used directly (not via fontHelper), but makes sense to keep here:
   button: {
     family: 'Montserrat',
-    weight: 400,
+    weight: 700,
     transform: 'inherit',
     small: {
       fontSize: '1rem',

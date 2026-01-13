@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -18,10 +19,17 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
+
   > a {
     text-decoration: none;
   }
+
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+
+  // NEW STUFF:
+  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
