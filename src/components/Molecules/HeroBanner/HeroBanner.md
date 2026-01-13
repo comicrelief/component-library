@@ -145,13 +145,11 @@ import variants from './_variants';
   </HeroBanner>
 
   <HeroBanner
-    pageBackgroundColour="grey"
-    textBannerCopyBackgroundColour="deep_violet"
     variant={variants.TEXT_BANNER}
     copyColour="white"
   >
     <Text tag="h1">
-      Responsive Text Banner, default padding
+      Responsive Text Banner, default padding and colours
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
