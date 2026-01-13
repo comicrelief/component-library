@@ -16,6 +16,7 @@ import variants from './_variants';
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
     copyLeft
+    paddingTop="2rem"
   >
     <Text tag="h1">
       Full Height: Copy Left
@@ -38,7 +39,7 @@ import variants from './_variants';
     paddingTop="2rem"
   >
     <Text tag="h1">
-      Full Height:  Additional Top Padding, Copy Right w/CTA, Same Tab
+      Full Height: Copy Right w/CTA, Same Tab
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -56,6 +57,7 @@ import variants from './_variants';
     ctaUrl="http://www.comicrelief.com/register"
     ctaNewTab
     copyLeft
+    paddingTop="2rem"
   >
     <Text tag="h1">
       Full Height: Copy Left w/CTA, New Tab
@@ -96,7 +98,7 @@ import variants from './_variants';
     copyLeft={false}
   >
     <Text tag="h1">
-      Full Height: Copy Right (default variant prop value)
+      Full Height: Copy Right (default variant and padding prop values)
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -110,6 +112,7 @@ import variants from './_variants';
     imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.HALF_HEIGHT}
+    paddingTop="2rem"
   >
     <Text tag="h1">
       Half Height: min height
@@ -148,7 +151,7 @@ import variants from './_variants';
     copyColour="white"
   >
     <Text tag="h1">
-      Responsive Text Banner
+      Responsive Text Banner, default padding
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -180,9 +183,11 @@ import variants from './_variants';
     textBannerCtaColour="red"
     ctaText="Register"
     ctaUrl="http://www.comicrelief.com/register"
+    paddingTop="2rem"
+    paddingBotton="2rem"
   >
     <Text tag="h1">
-      Responsive Text w/CTA, Same Tab
+      Responsive Text w/CTA, Same Tab, 2rem padding top and bottom
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
