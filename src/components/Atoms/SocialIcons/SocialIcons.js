@@ -8,8 +8,10 @@ import spacing from '../../../theme/shared/spacing';
 
 const StyledList = styled.ul`
   display: flex;
+  flex-wrap: ${({ newStyle }) => (newStyle ? 'wrap' : 'nowrap')};
+  gap: ${({ newStyle }) => (newStyle ? '16px' : '0')};
   list-style-type: none;
-  justify-content: ${newStyle => (newStyle ? 'space-around' : 'center')};
+  justify-content: ${newStyle => (newStyle ? 'flex-start' : 'center')};
   margin: ${({ newStyle }) => (newStyle ? `${spacing('lg')} 0` : '0 auto 0 0')};
   padding: 0;
   align-items: center;
@@ -21,7 +23,9 @@ const StyledList = styled.ul`
 `;
 
 const StyledItem = styled.li`
-  width: 48px;
+  width: ${({ newStyle }) => (newStyle ? '54px' : '48px')};
+  height: ${({ newStyle }) => (newStyle ? '54px' : 'auto')};
+  flex: 0 0 ${({ newStyle }) => (newStyle ? '54px' : '48px')};
   margin-right: ${({ newStyle }) => (newStyle ? '0' : spacing('m'))};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
