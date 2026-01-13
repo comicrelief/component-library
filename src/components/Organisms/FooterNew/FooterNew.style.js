@@ -165,7 +165,7 @@ const SecondaryNavLink = styled(Link)`
     text-decoration: underline;
     text-decoration-color: ${({ theme }) => theme.color('white')};
     font-weight: normal;
-    font-size: ${({ theme }) => theme.fontSize('xs')};
+    font-size: 0.875rem;
   }
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
