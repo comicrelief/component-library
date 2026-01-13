@@ -22,7 +22,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 ${spacing('md')};
+  padding: 0 ${spacing('l')};
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 0 ${spacing('md')}};
   }
