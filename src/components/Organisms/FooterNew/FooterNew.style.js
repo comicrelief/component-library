@@ -9,9 +9,14 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
-  padding-top: 6rem;
+  padding-top: 4.5rem; // Rather than using lg spacing like below, this needs a bit more space so that it sits 'under' the main content of the page, which has rounded corners behind which you see the black of this footer.
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-bottom: ${spacing('lg')};
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
   }
 `;
 
@@ -24,7 +29,7 @@ const InnerWrapper = styled.div`
   margin: 0 auto;
   padding: 0 ${spacing('l')};
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 0 ${spacing('md')}};
+    padding: 0 9rem;
   }
 `;
 
@@ -266,6 +271,11 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+  margin-bottom: ${spacing('l')};
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    margin-bottom: 0;
+  }
 `;
 
 const FooterCopyrightText = styled(Text).attrs({

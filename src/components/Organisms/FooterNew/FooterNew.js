@@ -154,7 +154,7 @@ const FooterNew = ({
           </FooterCopyright>
 
           <LogosContainer $mobileOnly $showFundraiserAtBottom>
-            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo />}
+            {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo noMargin />}
           </LogosContainer>
         </InnerWrapper>
       </FooterWrapper>
