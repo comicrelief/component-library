@@ -35,7 +35,8 @@ const FooterLegalLine = styled(Text).attrs({
   margin-top: 1rem;
   margin-bottom: ${spacing('md')};
   line-height: 1.5rem;
-  color: ${({ theme }) => theme.color('grey')};
+  color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
 `;
 
 const TopSection = styled.div`
@@ -150,7 +151,8 @@ const SecondaryNavItem = styled.li`
   &:not(:last-child)::after {
     content: '|';
     margin-left: ${spacing('sm')};
-    color: ${({ theme }) => theme.color('grey')};
+    color: ${({ theme }) => theme.color('white')};
+    opacity: 0.8;
   }
 `;
 
@@ -158,9 +160,10 @@ const SecondaryNavLink = styled(Link)`
   text-decoration: none;
 
   > span {
-    color: ${({ theme }) => theme.color('grey')};
+    color: ${({ theme }) => theme.color('white')};
+    opacity: 0.8;
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.color('grey')};
+    text-decoration-color: ${({ theme }) => theme.color('white')};
     font-weight: normal;
     font-size: ${({ theme }) => theme.fontSize('xs')};
   }
@@ -174,13 +177,14 @@ const SecondaryNavLink = styled(Link)`
   &:hover,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.color('grey')};
+    text-decoration-color: ${({ theme }) => theme.color('white')};
   }
 
 `;
 
 const SecondaryNavText = styled(Text)`
   color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
   font-weight: normal;
 `;
 
@@ -266,7 +270,8 @@ const FooterCopyright = styled.div`
 const FooterCopyrightText = styled(Text).attrs({
   tag: 'p'
 })`
-  color: ${({ theme }) => theme.color('grey')};
+  color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
   font-size: ${({ theme }) => theme.fontSize('xs')};
   margin-bottom: ${spacing('sm')};
 `;
