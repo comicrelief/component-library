@@ -269,9 +269,9 @@ exports[`renders Single Message with Image correctly 1`] = `
   text-decoration: none;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 2.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -283,6 +283,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -292,8 +294,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-color: #FFFFFF;
-  color: #000000;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .c8:hover,
@@ -301,7 +303,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .c8:disabled {
@@ -378,6 +380,26 @@ exports[`renders Single Message with Image correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c8 {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .c8:hover,
+  .c8:focus,
+  .c8:focus-within,
+  .c8:focus-visible {
+    background-color: #E1E2E3;
+    outline-offset: 3px;
+  }
+
+  .c8:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width:740px) {
   .c8 {
     font-size: 1rem;
@@ -400,21 +422,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 
 @media (min-width:1024px) {
   .c8 {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-
-  .c8:hover,
-  .c8:focus,
-  .c8:focus-within,
-  .c8:focus-visible {
-    background-color: #E1E2E3;
-    outline-offset: 2px;
-  }
-
-  .c8:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    width: auto;
   }
 }
 
@@ -845,9 +853,9 @@ exports[`renders Single Message with full width correctly 1`] = `
   text-decoration: none;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 2.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -859,6 +867,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -868,8 +878,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-color: #FFFFFF;
-  color: #000000;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .c8:hover,
@@ -877,7 +887,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .c8:disabled {
@@ -954,6 +964,26 @@ exports[`renders Single Message with full width correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c8 {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .c8:hover,
+  .c8:focus,
+  .c8:focus-within,
+  .c8:focus-visible {
+    background-color: #E1E2E3;
+    outline-offset: 3px;
+  }
+
+  .c8:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width:740px) {
   .c8 {
     font-size: 1rem;
@@ -976,21 +1006,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 
 @media (min-width:1024px) {
   .c8 {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-
-  .c8:hover,
-  .c8:focus,
-  .c8:focus-within,
-  .c8:focus-visible {
-    background-color: #E1E2E3;
-    outline-offset: 2px;
-  }
-
-  .c8:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    width: auto;
   }
 }
 
@@ -1176,6 +1192,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   z-index: 1;
 }
 
+@media (min-width:1024px) {
+
+}
+
 @media (min-width:740px) {
 
 }
@@ -1336,6 +1356,10 @@ exports[`renders Single Message with no Image correctly 1`] = `
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
+}
+
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:740px) {

@@ -85,9 +85,9 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 2.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -99,6 +99,8 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: #2042AD;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -108,8 +110,8 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-color: #2042AD;
-  color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .c11:hover,
@@ -117,7 +119,7 @@ exports[`renders correctly 1`] = `
 .c11:focus-within,
 .c11:focus-visible {
   background-color: #274084;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .c11:disabled {
@@ -235,6 +237,26 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c11 {
+    background-color: #2042AD;
+    color: #FFFFFF;
+  }
+
+  .c11:hover,
+  .c11:focus,
+  .c11:focus-within,
+  .c11:focus-visible {
+    background-color: #274084;
+    outline-offset: 3px;
+  }
+
+  .c11:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width:740px) {
   .c11 {
     font-size: 1rem;
@@ -257,21 +279,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c11 {
-    background-color: #2042AD;
-    color: #FFFFFF;
-  }
-
-  .c11:hover,
-  .c11:focus,
-  .c11:focus-within,
-  .c11:focus-visible {
-    background-color: #274084;
-    outline-offset: 2px;
-  }
-
-  .c11:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    width: auto;
   }
 }
 

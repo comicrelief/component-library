@@ -65,9 +65,9 @@ it('renders correctly', () => {
       text-decoration: none;
       font-size: 1rem;
       border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      height: 2.5em;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      min-height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -79,6 +79,8 @@ it('renders correctly', () => {
       align-items: center;
       border: none;
       cursor: pointer;
+      background-color: #FFFFFF;
+      color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
@@ -88,8 +90,8 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      background-color: #FFFFFF;
-      color: #000000;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
     }
 
     .c5:hover,
@@ -97,7 +99,7 @@ it('renders correctly', () => {
     .c5:focus-within,
     .c5:focus-visible {
       background-color: #E1E2E3;
-      outline-offset: 2px;
+      outline-offset: 3px;
     }
 
     .c5:disabled {
@@ -154,6 +156,26 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c5 {
+        background-color: #FFFFFF;
+        color: #000000;
+      }
+
+      .c5:hover,
+      .c5:focus,
+      .c5:focus-within,
+      .c5:focus-visible {
+        background-color: #E1E2E3;
+        outline-offset: 3px;
+      }
+
+      .c5:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+
     @media (min-width:740px) {
       .c5 {
         font-size: 1rem;
@@ -176,21 +198,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c5 {
-        background-color: #FFFFFF;
-        color: #000000;
-      }
-
-      .c5:hover,
-      .c5:focus,
-      .c5:focus-within,
-      .c5:focus-visible {
-        background-color: #E1E2E3;
-        outline-offset: 2px;
-      }
-
-      .c5:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
+        width: auto;
       }
     }
 

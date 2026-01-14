@@ -1,6 +1,5 @@
 import { css } from 'styled-components';
 import color from './colors';
-// import buttonTypes from './buttonTypes';
 
 const buttonColors = {
   // "Primary - red"
@@ -199,7 +198,6 @@ export default (colorName, buttonType) => {
   let style = 'inherit';
   if (colorName) {
     style = css`
-    
       background-color: ${buttonColors[colorName].background};
       color: ${buttonColors[colorName].textColour};
 
@@ -209,7 +207,7 @@ export default (colorName, buttonType) => {
       &:focus-visible {
         background-color: ${buttonColors[colorName].hoverBackground};
         color: ${buttonColors[colorName].hoverColor};
-        outline-offset: 2px;
+        outline-offset: 3px;
       }
 
       &:disabled {

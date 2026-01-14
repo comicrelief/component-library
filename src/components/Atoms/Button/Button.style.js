@@ -7,11 +7,10 @@ const StyledButton = styled.button`
   position: relative;
   padding: 0.5rem 1.25rem;
   text-decoration: none;
-  font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
   transition: all 0.2s;
-  height: 2.5em;
+  min-height: 2.5em;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -34,8 +33,11 @@ const StyledButton = styled.button`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
+    // TODO: Do we need this again?
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
-    margin: 0 auto ${spacing('l')};
+
+    // TODO: check with Curtis
+    // margin: 0 auto ${spacing('l')};
   }
 `;
 

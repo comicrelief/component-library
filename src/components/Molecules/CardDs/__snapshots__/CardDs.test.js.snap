@@ -38,9 +38,9 @@ exports[`renders Column view correctly 1`] = `
   text-decoration: none;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 2.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -52,6 +52,8 @@ exports[`renders Column view correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -61,8 +63,8 @@ exports[`renders Column view correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-color: #E52630;
-  color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .c7:hover,
@@ -70,7 +72,7 @@ exports[`renders Column view correctly 1`] = `
 .c7:focus-within,
 .c7:focus-visible {
   background-color: #890B11;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .c7:disabled {
@@ -144,6 +146,26 @@ exports[`renders Column view correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c7 {
+    background-color: #E52630;
+    color: #FFFFFF;
+  }
+
+  .c7:hover,
+  .c7:focus,
+  .c7:focus-within,
+  .c7:focus-visible {
+    background-color: #890B11;
+    outline-offset: 3px;
+  }
+
+  .c7:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width:740px) {
   .c7 {
     font-size: 1rem;
@@ -166,21 +188,7 @@ exports[`renders Column view correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover,
-  .c7:focus,
-  .c7:focus-within,
-  .c7:focus-visible {
-    background-color: #890B11;
-    outline-offset: 2px;
-  }
-
-  .c7:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    width: auto;
   }
 }
 
@@ -335,9 +343,9 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
   font-size: 1rem;
   border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 2.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -349,6 +357,8 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: #E52630;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -358,8 +368,8 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-color: #E52630;
-  color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .c7:hover,
@@ -367,7 +377,7 @@ exports[`renders correctly 1`] = `
 .c7:focus-within,
 .c7:focus-visible {
   background-color: #890B11;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .c7:disabled {
@@ -441,6 +451,26 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c7 {
+    background-color: #E52630;
+    color: #FFFFFF;
+  }
+
+  .c7:hover,
+  .c7:focus,
+  .c7:focus-within,
+  .c7:focus-visible {
+    background-color: #890B11;
+    outline-offset: 3px;
+  }
+
+  .c7:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
 @media (min-width:740px) {
   .c7 {
     font-size: 1rem;
@@ -463,21 +493,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover,
-  .c7:focus,
-  .c7:focus-within,
-  .c7:focus-visible {
-    background-color: #890B11;
-    outline-offset: 2px;
-  }
-
-  .c7:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    width: auto;
   }
 }
 

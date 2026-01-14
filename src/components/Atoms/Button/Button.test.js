@@ -18,12 +18,11 @@ it('renders a standard styled link correctly', () => {
       padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
-      height: 2.5em;
+      min-height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -60,7 +59,7 @@ it('renders a standard styled link correctly', () => {
     .c0:focus-within,
     .c0:focus-visible {
       background-color: #890B11;
-      outline-offset: 2px;
+      outline-offset: 3px;
     }
 
     .c0:disabled {
@@ -91,7 +90,6 @@ it('renders a standard styled link correctly', () => {
     @media (min-width:1024px) {
       .c0 {
         width: auto;
-        margin: 0 auto 2rem;
       }
     }
 

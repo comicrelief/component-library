@@ -10,31 +10,42 @@ const buttonStyle = () => css`
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
-  transition: all 0.3s;
-  height: 2.5em;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
 
-  ${({ theme }) => css`
-    ${fontHelper(theme, 'button')}
-  `}
-
-  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+  ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
 
   // Override with mobile-specific colours where available:
-  ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
+  ${({ mobileColour, theme, buttonType }) => (mobileColour ? theme.buttonColors(mobileColour, buttonType) : null)};
+
+  // Reinstate general styles for 'desktop':
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
+  }
+
+  // NEW STUFF:
+  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
+
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
-  // Reinstate general styles for 'desktop':
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+    // TODO: check with Curtis
+    // margin: 0 auto ${spacing('l')};
   }
+
+
+  
 `;
 
 const linkStyle = () => css`
