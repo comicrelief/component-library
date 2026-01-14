@@ -217,7 +217,7 @@ export default (colorName, buttonType) => {
         opacity: 0.5;
       }
 
-      // 'Secondary' buttonType tweaks
+      // 'Secondary' and 'Tertiary' buttonType tweaks
       ${({ theme }) => ((buttonType === theme.buttonTypes.SECONDARY || buttonType === theme.buttonTypes.TERTIARY) && css`
         background-color: transparent;
         color: ${buttonColors[colorName].background};

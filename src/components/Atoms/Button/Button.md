@@ -17,11 +17,11 @@
     <Button type="button" color="black" disabled>Primary black button: disabled</Button>
 </div>
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white">Primary white button</Button>
 </div>
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white" disabled>Primary white button: disabled</Button>
 </div>
 
@@ -46,11 +46,11 @@
 </div>
 
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white" buttonType="secondary" buttonType="secondary">Secondary white button</Button>
 </div>
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white" buttonType="secondary" disabled>Secondary white button: disabled</Button>
 </div>
 
@@ -74,11 +74,11 @@
 </div>
 
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white" buttonType="tertiary" buttonType="tertiary">Tertiary white button</Button>
 </div>
 
-<div style={{backgroundColor:"#ddd", padding: "10px"}}>
+<div style={{backgroundColor:"#222222", padding: "10px"}}>
     <Button type="button" color="white" buttonType="tertiary" disabled>Tertiary white button: disabled</Button>
 </div>
 
