@@ -65,9 +65,16 @@ exports[`renders Column view correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c7:hover {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c9 {
@@ -162,9 +169,16 @@ exports[`renders Column view correctly 1`] = `
     color: #FFFFFF;
   }
 
-  .c7:hover {
+  .c7:hover,
+  .c7:focus,
+  .c7:focus-within,
+  .c7:focus-visible {
     background-color: #890B11;
-    color: #FFFFFF;
+  }
+
+  .c7:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
@@ -346,9 +360,16 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c7:hover {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c9 {
@@ -443,9 +464,16 @@ exports[`renders correctly 1`] = `
     color: #FFFFFF;
   }
 
-  .c7:hover {
+  .c7:hover,
+  .c7:focus,
+  .c7:focus-within,
+  .c7:focus-visible {
     background-color: #890B11;
-    color: #FFFFFF;
+  }
+
+  .c7:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 

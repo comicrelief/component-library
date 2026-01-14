@@ -112,9 +112,16 @@ exports[`renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c11:hover {
+.c11:hover,
+.c11:focus,
+.c11:focus-within,
+.c11:focus-visible {
   background-color: #274084;
-  color: #FFFFFF;
+}
+
+.c11:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c13 {
@@ -253,9 +260,16 @@ exports[`renders correctly 1`] = `
     color: #FFFFFF;
   }
 
-  .c11:hover {
+  .c11:hover,
+  .c11:focus,
+  .c11:focus-within,
+  .c11:focus-visible {
     background-color: #274084;
-    color: #FFFFFF;
+  }
+
+  .c11:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 

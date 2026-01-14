@@ -89,9 +89,16 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c15:hover {
+.c15:hover,
+.c15:focus,
+.c15:focus-within,
+.c15:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+}
+
+.c15:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c8 {
@@ -172,7 +179,7 @@ exports[`renders correctly 1`] = `
 
 .c16:disabled {
   cursor: not-allowed;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -312,7 +319,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c15 {
     width: auto;
-    padding: 1rem 2rem;
     margin: 0 auto 2rem;
   }
 }

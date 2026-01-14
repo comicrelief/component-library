@@ -55,9 +55,16 @@ it('renders a standard styled link correctly', () => {
       text-decoration: none;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus,
+    .c0:focus-within,
+    .c0:focus-visible {
       background-color: #890B11;
-      color: #FFFFFF;
+    }
+
+    .c0:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     @media (min-width:740px) {
@@ -83,7 +90,6 @@ it('renders a standard styled link correctly', () => {
     @media (min-width:1024px) {
       .c0 {
         width: auto;
-        padding: 1rem 2rem;
         margin: 0 auto 2rem;
       }
     }

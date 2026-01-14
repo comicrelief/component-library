@@ -104,9 +104,16 @@ exports[`renders Promo correctly 1`] = `
   color: #000000;
 }
 
-.c9:hover {
+.c9:hover,
+.c9:focus,
+.c9:focus-within,
+.c9:focus-visible {
   background-color: #969598;
-  color: #000000;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -243,9 +250,16 @@ exports[`renders Promo correctly 1`] = `
     color: #000000;
   }
 
-  .c9:hover {
+  .c9:hover,
+  .c9:focus,
+  .c9:focus-within,
+  .c9:focus-visible {
     background-color: #969598;
-    color: #000000;
+  }
+
+  .c9:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
@@ -453,9 +467,16 @@ exports[`renders Promo correctly end position 1`] = `
   color: #000000;
 }
 
-.c9:hover {
+.c9:hover,
+.c9:focus,
+.c9:focus-within,
+.c9:focus-visible {
   background-color: #969598;
-  color: #000000;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -595,9 +616,16 @@ exports[`renders Promo correctly end position 1`] = `
     color: #000000;
   }
 
-  .c9:hover {
+  .c9:hover,
+  .c9:focus,
+  .c9:focus-within,
+  .c9:focus-visible {
     background-color: #969598;
-    color: #000000;
+  }
+
+  .c9:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 

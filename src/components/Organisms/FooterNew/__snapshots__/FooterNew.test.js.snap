@@ -86,8 +86,8 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #E52630;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -106,9 +106,16 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c23:hover {
-  background-color: #969598;
-  color: #000000;
+.c23:hover,
+.c23:focus,
+.c23:focus-within,
+.c23:focus-visible {
+  background-color: #890B11;
+}
+
+.c23:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c15 {
@@ -735,7 +742,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c23 {
     width: auto;
-    padding: 1rem 2rem;
     margin: 0 auto 2rem;
   }
 }

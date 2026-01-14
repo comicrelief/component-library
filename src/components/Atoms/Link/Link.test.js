@@ -232,9 +232,16 @@ it('renders link styled as button correctly', () => {
       color: #000000;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus,
+    .c0:focus-within,
+    .c0:focus-visible {
       background-color: #FEFD5A;
-      color: #000000;
+    }
+
+    .c0:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     @media (min-width:740px) {
@@ -263,9 +270,16 @@ it('renders link styled as button correctly', () => {
         color: #000000;
       }
 
-      .c0:hover {
+      .c0:hover,
+      .c0:focus,
+      .c0:focus-within,
+      .c0:focus-visible {
         background-color: #FEFD5A;
-        color: #000000;
+      }
+
+      .c0:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
       }
     }
 

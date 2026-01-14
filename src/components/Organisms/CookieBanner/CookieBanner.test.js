@@ -92,9 +92,16 @@ it('renders correctly', () => {
       color: #000000;
     }
 
-    .c5:hover {
+    .c5:hover,
+    .c5:focus,
+    .c5:focus-within,
+    .c5:focus-visible {
       background-color: #969598;
-      color: #000000;
+    }
+
+    .c5:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     .c0 {
@@ -172,9 +179,16 @@ it('renders correctly', () => {
         color: #000000;
       }
 
-      .c5:hover {
+      .c5:hover,
+      .c5:focus,
+      .c5:focus-within,
+      .c5:focus-visible {
         background-color: #969598;
-        color: #000000;
+      }
+
+      .c5:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
       }
     }
 

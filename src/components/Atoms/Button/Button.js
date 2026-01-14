@@ -24,7 +24,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+  ${({ colour, theme }) => (theme.buttonColors(colour))};
 
   // NEW STUFF:
   ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
@@ -37,15 +37,14 @@ const StyledButton = styled.button`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
-    padding: ${spacing('md')} ${spacing('l')};
     margin: 0 auto ${spacing('l')};
   }
 `;
 
 const Button = React.forwardRef(({
-  children, wrapper = false, fullWidth = false, ...rest
+  children, colour = 'red', wrapper = false, fullWidth = false, ...rest
 }, ref) => (
-  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref} fullWidth={fullWidth}>
+  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref} fullWidth={fullWidth} colour={colour}>
     {children}
   </StyledButton>
 ));
@@ -53,7 +52,8 @@ const Button = React.forwardRef(({
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   wrapper: PropTypes.bool, // Buttons as span
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  colour: PropTypes.string
 };
 
 export default Button;
