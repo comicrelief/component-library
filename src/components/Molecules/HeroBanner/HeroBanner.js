@@ -88,6 +88,7 @@ const HeroBanner = ({
       pageBackgroundColour={pageBackgroundColour}
       paddingTop={paddingTop}
       paddingBottom={paddingBottom}
+      variant={variant}
     >
 
       <OuterWrapper
