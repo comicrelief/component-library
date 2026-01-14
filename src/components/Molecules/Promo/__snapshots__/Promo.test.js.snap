@@ -108,7 +108,7 @@ exports[`renders Promo correctly 1`] = `
 .c9:focus,
 .c9:focus-within,
 .c9:focus-visible {
-  background-color: #969598;
+  background-color: #E1E2E3;
 }
 
 .c9:disabled {
@@ -254,7 +254,7 @@ exports[`renders Promo correctly 1`] = `
   .c9:focus,
   .c9:focus-within,
   .c9:focus-visible {
-    background-color: #969598;
+    background-color: #E1E2E3;
   }
 
   .c9:disabled {
@@ -471,7 +471,7 @@ exports[`renders Promo correctly end position 1`] = `
 .c9:focus,
 .c9:focus-within,
 .c9:focus-visible {
-  background-color: #969598;
+  background-color: #E1E2E3;
 }
 
 .c9:disabled {
@@ -620,7 +620,7 @@ exports[`renders Promo correctly end position 1`] = `
   .c9:focus,
   .c9:focus-within,
   .c9:focus-visible {
-    background-color: #969598;
+    background-color: #E1E2E3;
   }
 
   .c9:disabled {

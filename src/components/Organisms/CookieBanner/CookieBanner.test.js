@@ -96,7 +96,7 @@ it('renders correctly', () => {
     .c5:focus,
     .c5:focus-within,
     .c5:focus-visible {
-      background-color: #969598;
+      background-color: #E1E2E3;
     }
 
     .c5:disabled {
@@ -183,7 +183,7 @@ it('renders correctly', () => {
       .c5:focus,
       .c5:focus-within,
       .c5:focus-visible {
-        background-color: #969598;
+        background-color: #E1E2E3;
       }
 
       .c5:disabled {

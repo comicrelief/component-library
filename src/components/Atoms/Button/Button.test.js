@@ -23,7 +23,7 @@ it('renders a standard styled link correctly', () => {
       border-radius: 2rem;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
-      height: 3.125rem;
+      height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;

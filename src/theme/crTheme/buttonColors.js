@@ -12,16 +12,16 @@ const buttonColors = {
   },
   // "Primary - black"
   black: {
-    background: color('black'),
+    background: color('grey_dark'),
     textColour: color('white'),
-    hoverBackground: color('grey'),
+    hoverBackground: color('black'),
     hovertextColour: color('white')
   },
   // "Primary - white"
   white: {
     background: color('white'),
     textColour: color('black'),
-    hoverBackground: color('grey'),
+    hoverBackground: color('grey_medium'),
     hovertextColour: color('black')
   },
   // To be phased out:
@@ -202,15 +202,17 @@ export default colorName => {
       background-color: ${buttonColors[colorName].background};
       color: ${buttonColors[colorName].textColour};
 
-      &:hover,
-      &:focus,
-      &:focus-within,
-      &:focus-visible {
-        background-color: ${buttonColors[colorName].hoverBackground};
-        color: ${buttonColors[colorName].hoverColor};
-      }
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          background-color: ${buttonColors[colorName].hoverBackground};
+          color: ${buttonColors[colorName].hoverColor};
+        }
+
 
       &:disabled {
+        // pointer-events: none;
         cursor: not-allowed;
         opacity: 0.5;
       }
