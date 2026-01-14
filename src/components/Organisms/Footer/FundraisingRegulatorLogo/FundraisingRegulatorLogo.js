@@ -14,7 +14,7 @@ const FundraisingRegulatorWrapper = styled.div`
     display: block;
   }
 
-  ${({ animateOnHover }) => animateOnHover && springScaleAnimation(true)}
+  ${({ animateOnHover }) => animateOnHover && springScaleAnimation(true, 1.03, 1)}
 `;
 
 const FundraisingRegulatorLogo = ({ animateOnHover = false, noMargin = false }) => (
