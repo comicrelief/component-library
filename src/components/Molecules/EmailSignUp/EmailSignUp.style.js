@@ -62,7 +62,11 @@ export const StyledEmailInput = styled(Input)`
 
   input {
     ${({ theme }) => css`
-      ${fontHelper(theme, 'formFieldInput')}
+      // Here we're not using the fontHelper because we want to override the font size. It's a special case where we don't
+      // want the default size for the formFieldInput field type.
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-family: ${theme.fontFamilies('Montserrat')};
       background-color: ${theme.color('grey_5')};
       border-color: transparent;
       transition: background-color 0.2s ease;
