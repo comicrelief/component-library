@@ -8,7 +8,7 @@ const FundraisingRegulatorWrapper = styled.div`
   // Overriding the baked-in styles for ease of update
   width: 75%;
   margin: ${({ $noMargin }) => ($noMargin ? '0' : `${spacing('lg')} 0`)};
-  max-width: 200px;
+  max-width: 166px;
 
   img {
     display: block;
