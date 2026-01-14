@@ -142,7 +142,6 @@ const Copy = styled.div`
     : theme.color('white')
   )};
 
-  
   ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
       padding: 2rem 2rem 1.75rem;
