@@ -218,12 +218,11 @@ export default (colorName, buttonType) => {
       }
 
       // 'Secondary' buttonType tweaks
-      ${({ theme }) => ((buttonType === theme.buttonTypes.SECONDARY || buttonType === theme.buttonTypes.TERTIARY) && `
+      ${({ theme }) => ((buttonType === theme.buttonTypes.SECONDARY || buttonType === theme.buttonTypes.TERTIARY) && css`
         background-color: transparent;
         color: ${buttonColors[colorName].background};
 
         ${buttonType === theme.buttonTypes.SECONDARY && css`
-          // Why does this mangle the var??
           box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].background} inset;
         `};
 
@@ -233,7 +232,10 @@ export default (colorName, buttonType) => {
         &:focus-visible {
           color: ${buttonColors[colorName].hoverBackground};
           background-color: transparent;
-          box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].hoverBackground} inset;
+
+          ${buttonType === theme.buttonTypes.SECONDARY && css`
+            box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].hoverBackground} inset;
+          `};
         }
       `)};
     `;
