@@ -24,7 +24,10 @@ const StyledButton = styled.button`
   ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
 
   // NEW STUFF:
-  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
+  ${({ theme }) => css`
+    ${fontHelper(theme, 'button')}
+  `}
+  
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
 

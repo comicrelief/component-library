@@ -23,13 +23,15 @@ const buttonStyle = () => css`
   // Override with mobile-specific colours where available:
   ${({ mobileColour, theme, buttonType }) => (mobileColour ? theme.buttonColors(mobileColour, buttonType) : null)};
 
-  // Reinstate general styles for 'desktop':
+  // Reinstate the standard colours for 'desktop':
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
   }
 
   // NEW STUFF:
-  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
+  ${({ theme }) => css`
+    ${fontHelper(theme, 'button')}
+  `}
 
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
@@ -43,9 +45,6 @@ const buttonStyle = () => css`
     // TODO: check with Curtis
     // margin: 0 auto ${spacing('l')};
   }
-
-
-  
 `;
 
 const linkStyle = () => css`
@@ -61,29 +60,30 @@ export const IconWrapper = styled.span`
   margin-left: ${spacing('md')};
   align-self: center;
   right: ${spacing('m')};
-  ${({ type }) => type === 'standard'
-    && css`
+
+  ${({ type }) => type === 'standard' && css`
+    position: absolute;
+    right: -2rem;
+    top: 0;
+    bottom: 0;
+  `};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    width: auto;
+    right: auto;
+    position: relative;
+    ${({ type }) => type === 'standard' && css`
       position: absolute;
       right: -2rem;
       top: 0;
       bottom: 0;
     `};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: auto;
-    right: auto;
-    position: relative;
-    ${({ type }) => type === 'standard'
-      && css`
-        position: absolute;
-        right: -2rem;
-        top: 0;
-        bottom: 0;
-      `};
   }
 `;
 
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
+
   ${({ iconFirst }) => iconFirst
     && css`
       flex-direction: row-reverse;
