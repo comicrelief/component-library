@@ -58,7 +58,7 @@ import buttonTypes from '../../../theme/crTheme/buttonTypes';
       Link as button (secondary)
     </Link>
   </div>
-  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+  <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.SECONDARY}>
       Link as button (secondary)
     </Link>
@@ -74,7 +74,7 @@ import buttonTypes from '../../../theme/crTheme/buttonTypes';
       Link as button (tertiary)
     </Link>
   </div>
-  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+  <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.TERTIARY}>
       Link as button (tertiary)
     </Link>
