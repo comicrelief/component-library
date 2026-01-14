@@ -82,7 +82,7 @@ const FooterNew = ({
 
           <LogosContainer $mobileOnly>
             <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
-              <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
+              <Logo sizeSm="59px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </LogosContainer>
 
