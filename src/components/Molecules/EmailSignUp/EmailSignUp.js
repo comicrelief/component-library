@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Arrow from '../../Atoms/Icons/Arrow';
 import {
   EmailSignUpWrapper,
   LabelWrapper,
@@ -39,7 +40,12 @@ const EmailSignUp = ({ formContext, ...rest }) => {
         </InputWrapper>
         <ButtonWrapper>
           <StyledEmailSignUpButton type="submit" color="white">
-            Sign up
+            <span className="emailSignUpButtonContent">
+              <span className="emailSignUpButtonLabel">Sign up</span>
+              <span className="emailSignUpButtonArrow" aria-hidden="true">
+                <Arrow direction="right" colour="white" size={18} />
+              </span>
+            </span>
           </StyledEmailSignUpButton>
         </ButtonWrapper>
       </FormWrapper>

@@ -58,6 +58,29 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
 };
 
 /**
+ * formFieldInputAnimation on hover / focus-within
+ * Slides the text inside an input a few pixels to the right.
+ * @param {number} shiftPx - Pixel amount to indent the text (default: 4)
+ * @returns {css}
+ */
+const formFieldInputAnimation = (shiftPx = 4) => {
+  return css`
+    input,
+    textarea {
+      text-indent: 0;
+      transition: text-indent 0.18s ease;
+    }
+
+    &:hover input,
+    &:hover textarea,
+    &:focus-within input,
+    &:focus-within textarea {
+      text-indent: ${shiftPx}px;
+    }
+  `;
+};
+
+/**
  * bounceUpAnimation animation on hover
  * Applies a smooth spring-like position transition that moves the element up on hover/focus
  * @param {boolean} animateScale - Whether to enable the scale animation
@@ -85,4 +108,9 @@ const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1
   `;
 };
 
-export { logoRotateAnimation, springScaleAnimation, bounceUpAnimation };
+export {
+  logoRotateAnimation,
+  springScaleAnimation,
+  formFieldInputAnimation,
+  bounceUpAnimation
+};
