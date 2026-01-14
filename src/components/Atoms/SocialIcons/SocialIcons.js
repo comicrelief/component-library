@@ -9,7 +9,7 @@ import spacing from '../../../theme/shared/spacing';
 const StyledList = styled.ul`
   display: flex;
   flex-wrap: ${({ newStyle }) => (newStyle ? 'wrap' : 'nowrap')};
-  gap: ${({ newStyle }) => (newStyle ? '16px' : '0')};
+  gap: ${({ newStyle }) => (newStyle ? `${spacing('l')}` : '0')};
   list-style-type: none;
   justify-content: ${newStyle => (newStyle ? 'flex-start' : 'center')};
   margin: ${({ newStyle }) => (newStyle ? `${spacing('lg')} 0` : '0 auto 0 0')};
@@ -29,7 +29,7 @@ const StyledItem = styled.li`
   margin-right: ${({ newStyle }) => (newStyle ? '0' : spacing('m'))};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    margin-right: ${({ newStyle }) => (newStyle ? spacing('md') : spacing('m'))};
+    margin-right: ${({ newStyle }) => (newStyle ? 0 : spacing('m'))};
   }
 `;
 
