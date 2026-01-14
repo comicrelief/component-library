@@ -73,6 +73,7 @@ const StyledLink = styled.a`
     background-color: ${({ theme }) => theme.color('grey_4')};
     border-radius: 0.5rem;
     padding: 0.5rem;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
