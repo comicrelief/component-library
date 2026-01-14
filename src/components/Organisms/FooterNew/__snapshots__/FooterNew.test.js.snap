@@ -86,8 +86,8 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
-  background-color: #E52630;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
@@ -110,7 +110,7 @@ exports[`renders correctly 1`] = `
 .c23:focus,
 .c23:focus-within,
 .c23:focus-visible {
-  background-color: #890B11;
+  background-color: #E1E2E3;
 }
 
 .c23:disabled {

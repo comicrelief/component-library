@@ -11,17 +11,16 @@ const buttonStyle = () => css`
   font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
   transition: all 0.3s;
-  height: 3.125rem;
+  height: 2.5em;
   width: 100%;
   justify-content: center;
   align-items: center;
+  border: none;
   cursor: pointer;
 
   ${({ theme }) => css`
     ${fontHelper(theme, 'button')}
   `}
-
-  font-weight: 700;
 
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
 

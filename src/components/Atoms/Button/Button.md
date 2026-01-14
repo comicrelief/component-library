@@ -9,19 +9,19 @@
 </div>
 
 <div style={{backgroundColor:"#F4F3F5", padding: "10px"}}>
-    <Button type="button" colour="black">Primary black button</Button>
+    <Button type="button" color="black">Primary black button</Button>
 </div>
 
 <div style={{backgroundColor:"#F4F3F5", padding: "10px"}}>
-    <Button type="button" colour="black" disabled>Primary black button: disabled</Button>
+    <Button type="button" color="black" disabled>Primary black button: disabled</Button>
 </div>
 
 <div style={{backgroundColor:"#F4F3F5", padding: "10px"}}>
-    <Button type="button" colour="white">Primary white button</Button>
+    <Button type="button" color="white">Primary white button</Button>
 </div>
 
 <div style={{backgroundColor:"#F4F3F5", padding: "10px"}}>
-    <Button type="button" colour="white" disabled>Primary white button: disabled</Button>
+    <Button type="button" color="white" disabled>Primary white button: disabled</Button>
 </div>
 
 ```

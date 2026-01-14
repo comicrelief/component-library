@@ -96,6 +96,7 @@ it('renders a standard styled link correctly', () => {
 
     <button
       className="c0"
+      color="red"
       type="submit"
     >
       A standard link

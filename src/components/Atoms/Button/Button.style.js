@@ -22,7 +22,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  ${({ colour, theme }) => (theme.buttonColors(colour))};
+  ${({ color, theme }) => (theme.buttonColors(color))};
 
   // NEW STUFF:
   ${({ theme }) => css` ${fontHelper(theme, 'button')}`}

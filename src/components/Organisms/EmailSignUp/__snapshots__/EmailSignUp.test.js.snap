@@ -509,6 +509,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           className="c15 c16"
+          color="red"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
