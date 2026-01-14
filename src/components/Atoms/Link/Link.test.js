@@ -237,6 +237,7 @@ it('renders link styled as button correctly', () => {
     .c0:focus-within,
     .c0:focus-visible {
       background-color: #FEFD5A;
+      outline-offset: 2px;
     }
 
     .c0:disabled {
@@ -275,6 +276,7 @@ it('renders link styled as button correctly', () => {
       .c0:focus-within,
       .c0:focus-visible {
         background-color: #FEFD5A;
+        outline-offset: 2px;
       }
 
       .c0:disabled {

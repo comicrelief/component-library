@@ -301,6 +301,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
+  outline-offset: 2px;
 }
 
 .c8:disabled {
@@ -408,6 +409,7 @@ exports[`renders Single Message with Image correctly 1`] = `
   .c8:focus-within,
   .c8:focus-visible {
     background-color: #E1E2E3;
+    outline-offset: 2px;
   }
 
   .c8:disabled {
@@ -875,6 +877,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
+  outline-offset: 2px;
 }
 
 .c8:disabled {
@@ -982,6 +985,7 @@ exports[`renders Single Message with full width correctly 1`] = `
   .c8:focus-within,
   .c8:focus-visible {
     background-color: #E1E2E3;
+    outline-offset: 2px;
   }
 
   .c8:disabled {

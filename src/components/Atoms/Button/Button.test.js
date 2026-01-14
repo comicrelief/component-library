@@ -21,8 +21,8 @@ it('renders a standard styled link correctly', () => {
       font-weight: 700;
       font-size: 1rem;
       border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
       height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
@@ -60,6 +60,7 @@ it('renders a standard styled link correctly', () => {
     .c0:focus-within,
     .c0:focus-visible {
       background-color: #890B11;
+      outline-offset: 2px;
     }
 
     .c0:disabled {

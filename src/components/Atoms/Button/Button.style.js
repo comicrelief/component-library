@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
   height: 2.5em;
   width: 100%;
   justify-content: center;
@@ -22,7 +22,7 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  ${({ color, theme }) => (theme.buttonColors(color))};
+  ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
 
   // NEW STUFF:
   ${({ theme }) => css` ${fontHelper(theme, 'button')}`}

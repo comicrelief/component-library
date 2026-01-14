@@ -97,6 +97,7 @@ it('renders correctly', () => {
     .c5:focus-within,
     .c5:focus-visible {
       background-color: #E1E2E3;
+      outline-offset: 2px;
     }
 
     .c5:disabled {
@@ -184,6 +185,7 @@ it('renders correctly', () => {
       .c5:focus-within,
       .c5:focus-visible {
         background-color: #E1E2E3;
+        outline-offset: 2px;
       }
 
       .c5:disabled {

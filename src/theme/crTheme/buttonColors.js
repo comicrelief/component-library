@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import color from './colors';
+// import buttonTypes from './buttonTypes';
 
-// TODO: are we limiting colours?
 const buttonColors = {
   // "Primary - red"
   red: {
@@ -195,27 +195,47 @@ const buttonColors = {
   }
 };
 
-export default colorName => {
+export default (colorName, buttonType) => {
   let style = 'inherit';
   if (colorName) {
     style = css`
+    
       background-color: ${buttonColors[colorName].background};
       color: ${buttonColors[colorName].textColour};
+
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        background-color: ${buttonColors[colorName].hoverBackground};
+        color: ${buttonColors[colorName].hoverColor};
+        outline-offset: 2px;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      // 'Secondary' buttonType tweaks
+      ${({ theme }) => ((buttonType === theme.buttonTypes.SECONDARY || buttonType === theme.buttonTypes.TERTIARY) && `
+        background-color: transparent;
+        color: ${buttonColors[colorName].background};
+
+        ${buttonType === theme.buttonTypes.SECONDARY && css`
+          // Why does this mangle the var??
+          box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].background} inset;
+        `};
 
         &:hover,
         &:focus,
         &:focus-within,
         &:focus-visible {
-          background-color: ${buttonColors[colorName].hoverBackground};
-          color: ${buttonColors[colorName].hoverColor};
+          color: ${buttonColors[colorName].hoverBackground};
+          background-color: transparent;
+          box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].hoverBackground} inset;
         }
-
-
-      &:disabled {
-        // pointer-events: none;
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
+      `)};
     `;
   }
   return style;
