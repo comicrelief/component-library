@@ -63,8 +63,7 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
  * @param {number} shiftPx - Pixel amount to indent the text (default: 4)
  * @returns {css}
  */
-const formFieldInputAnimation = (shiftPx = 4) => {
-  return css`
+const formFieldInputAnimation = (shiftPx = 4) => css`
     input,
     textarea {
       text-indent: 0;
@@ -78,7 +77,6 @@ const formFieldInputAnimation = (shiftPx = 4) => {
       text-indent: ${shiftPx}px;
     }
   `;
-};
 
 /**
  * bounceUpAnimation animation on hover
