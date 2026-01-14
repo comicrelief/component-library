@@ -200,7 +200,6 @@ const LogosContainer = styled.div`
   align-items: center;
   gap: ${spacing('l')};
   justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
-  margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
   margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
   /* Hide desktop containers on mobile */
