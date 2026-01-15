@@ -28,6 +28,9 @@ import buttonTypes from '../../../theme/crTheme/buttonTypes';
         <Button type="button" color="white" disabled>Primary white button: disabled</Button>
     </div>
 
+    <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+        <Button type="button" color="non-existent-colour">Trying to use a non-existent colour, will default to red</Button>
+    </div>
 
     <br/>
     <h1>Secondary</h1>

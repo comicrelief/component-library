@@ -196,17 +196,21 @@ const buttonColors = {
 
 export default (colorName, buttonType) => {
   let style = 'inherit';
+
+  // Add a fallback, just in case someone is trying to use a non-existent colour:
+  const thisColourName = buttonColors[colorName] ? colorName : 'red';
+
   if (colorName) {
     style = css`
-      background-color: ${buttonColors[colorName].background};
-      color: ${buttonColors[colorName].textColour};
+      background-color: ${buttonColors[thisColourName].background};
+      color: ${buttonColors[thisColourName].textColour};
 
       &:hover,
       &:focus,
       &:focus-within,
       &:focus-visible {
-        background-color: ${buttonColors[colorName].hoverBackground};
-        color: ${buttonColors[colorName].hoverColor};
+        background-color: ${buttonColors[thisColourName].hoverBackground};
+        color: ${buttonColors[thisColourName].hoverColor};
         outline-offset: 3px;
       }
 
@@ -218,21 +222,21 @@ export default (colorName, buttonType) => {
       // 'Secondary' and 'Tertiary' buttonType tweaks
       ${({ theme }) => ((buttonType === theme.buttonTypes.SECONDARY || buttonType === theme.buttonTypes.TERTIARY) && css`
         background-color: transparent;
-        color: ${buttonColors[colorName].background};
+        color: ${buttonColors[thisColourName].background};
 
         ${buttonType === theme.buttonTypes.SECONDARY && css`
-          box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].background} inset;
+          box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].background} inset;
         `};
 
         &:hover,
         &:focus,
         &:focus-within,
         &:focus-visible {
-          color: ${buttonColors[colorName].hoverBackground};
+          color: ${buttonColors[thisColourName].hoverBackground};
           background-color: transparent;
 
           ${buttonType === theme.buttonTypes.SECONDARY && css`
-            box-shadow: 0px 0px 0px 2px ${buttonColors[colorName].hoverBackground} inset;
+            box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].hoverBackground} inset;
           `};
         }
       `)};
