@@ -15,11 +15,8 @@ it('renders a standard styled link correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-size: 1rem;
-      border-radius: 2rem;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
       min-height: 2.5em;
@@ -34,6 +31,8 @@ it('renders a standard styled link correctly', () => {
       align-items: center;
       border: none;
       cursor: pointer;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
       background-color: #E52630;
       color: #FFFFFF;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -45,8 +44,6 @@ it('renders a standard styled link correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      padding: 0.6rem 1rem;
-      border-radius: 0.5rem;
     }
 
     .c0 > a {

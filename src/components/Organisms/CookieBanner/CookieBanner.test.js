@@ -60,11 +60,8 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-size: 1rem;
-      border-radius: 2rem;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
       min-height: 2.5em;
@@ -79,6 +76,8 @@ it('renders correctly', () => {
       align-items: center;
       border: none;
       cursor: pointer;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
       background-color: #FFFFFF;
       color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -90,8 +89,6 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      padding: 0.6rem 1rem;
-      border-radius: 0.5rem;
     }
 
     .c5:hover,
@@ -153,26 +150,6 @@ it('renders correctly', () => {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c5 {
-        background-color: #FFFFFF;
-        color: #000000;
-      }
-
-      .c5:hover,
-      .c5:focus,
-      .c5:focus-within,
-      .c5:focus-visible {
-        background-color: #E1E2E3;
-        outline-offset: 3px;
-      }
-
-      .c5:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
       }
     }
 

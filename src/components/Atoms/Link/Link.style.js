@@ -6,10 +6,7 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   text-decoration: none;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  border-radius: 2rem;
   transition: all 0.2s;
   min-height: 2.5em;
   width: 100%;
@@ -18,32 +15,32 @@ const buttonStyle = () => css`
   border: none;
   cursor: pointer;
 
+  // NEW
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+
   ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
+
+  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
 
   // Override with mobile-specific colours where available:
   ${({ mobileColour, theme, buttonType }) => (mobileColour ? theme.buttonColors(mobileColour, buttonType) : null)};
-
-  // Reinstate the standard colours for 'desktop':
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
-  }
-
-  // NEW STUFF:
-  ${({ theme }) => css`
-    ${fontHelper(theme, 'button')}
-  `}
-
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
+    // I don't *believe* this needs to be reinstated, but leaving in
+    // place for now, just to avoid breaking anything downstream...
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
-    // TODO: check with Curtis
-    // margin: 0 auto ${spacing('l')};
+
+    // Reinstate standard colours for desktop where appropriate:
+    ${({
+    mobileColour, theme, buttonType, color
+  }) => (
+    mobileColour && theme.buttonColors(color, buttonType)
+  )};
   }
 `;
 

@@ -5,10 +5,7 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 const StyledButton = styled.button`
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   text-decoration: none;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  border-radius: 2rem;
   transition: all 0.2s;
   min-height: 2.5em;
   width: 100%;
@@ -17,30 +14,27 @@ const StyledButton = styled.button`
   border: none;
   cursor: pointer;
 
+  // NEW
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+
+
   > a {
     text-decoration: none;
   }
 
   ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
 
-  // NEW STUFF:
-  ${({ theme }) => css`
-    ${fontHelper(theme, 'button')}
-  `}
+  ${({ theme }) => css`${fontHelper(theme, 'button')}`}
   
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    // TODO: Do we need this again?
+    // I don't *believe* this needs to be reinstated, but leaving in
+    // place for now, just to avoid breaking anything downstream...
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
-
-    // TODO: check with Curtis
-    // margin: 0 auto ${spacing('l')};
   }
 `;
 
