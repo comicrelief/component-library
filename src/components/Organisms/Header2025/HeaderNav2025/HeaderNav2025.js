@@ -17,7 +17,7 @@ import {
 } from './HeaderNav2025.style';
 
 const HeaderNav2025 = ({
-  navItems = {}, metaIcons, donateButton = null, characterLimit
+  navItems = {}, metaIcons = null, donateButton = null, characterLimit
 }) => {
   const { menuGroups } = navItems;
   const [isExpandable, setIsExpandable] = useState(false);
@@ -171,9 +171,11 @@ const HeaderNav2025 = ({
 
         {/* These are only shown on the non-desktop view; the desktop nav renders
            these in the parent Header component to suit the design layout */}
-        <NavMetaIcons isHeader data-testid="meta-icons--mobile">
-          {metaIcons}
-        </NavMetaIcons>
+        {metaIcons &&
+          <NavMetaIcons isHeader data-testid="meta-icons--mobile">
+            {metaIcons}
+          </NavMetaIcons>
+        }
         <DonateButtonWrapperBottom data-testid="donate-button--mobile">
           {donateButton}
         </DonateButtonWrapperBottom>
@@ -187,7 +189,7 @@ const HeaderNav2025 = ({
 
 HeaderNav2025.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  metaIcons: PropTypes.node.isRequired,
+  metaIcons: PropTypes.node,
   characterLimit: PropTypes.number,
   // As this is rendered in both the Header AND the Nav, just passing
   // the same prop through to here:
