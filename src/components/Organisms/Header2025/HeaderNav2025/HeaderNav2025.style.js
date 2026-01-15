@@ -436,7 +436,7 @@ const DonateButtonWrapperBottom = styled.div`
   // Donate button
   a {
     width: calc(100% - 10px);
-    transition: all 0.2s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+    transition: all 0.3s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 
     &:hover,
     &:focus {
