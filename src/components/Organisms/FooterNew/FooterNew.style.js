@@ -9,9 +9,14 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
-  padding-top: 6rem;
+  padding-top: 4.5rem; // Rather than using lg spacing like below, this needs a bit more space so that it sits 'under' the main content of the page, which has rounded corners behind which you see the black of this footer.
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-bottom: ${spacing('lg')};
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
   }
 `;
 
@@ -22,9 +27,9 @@ const InnerWrapper = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 ${spacing('md')};
+  padding: 0 ${spacing('l')};
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 0 ${spacing('md')}};
+    padding: 0 9rem;
   }
 `;
 
@@ -35,7 +40,8 @@ const FooterLegalLine = styled(Text).attrs({
   margin-top: 1rem;
   margin-bottom: ${spacing('md')};
   line-height: 1.5rem;
-  color: ${({ theme }) => theme.color('grey')};
+  color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
 `;
 
 const TopSection = styled.div`
@@ -114,6 +120,7 @@ const PrimaryNavLink = styled(Link)`
   color: ${({ theme }) => theme.color('white')};
   text-decoration: none;
   font-weight: bold;
+  font-size: ${({ theme }) => theme.fontSize('s')};
 
   &:hover,
   &:focus {
@@ -150,7 +157,8 @@ const SecondaryNavItem = styled.li`
   &:not(:last-child)::after {
     content: '|';
     margin-left: ${spacing('sm')};
-    color: ${({ theme }) => theme.color('grey')};
+    color: ${({ theme }) => theme.color('white')};
+    opacity: 0.8;
   }
 `;
 
@@ -158,11 +166,12 @@ const SecondaryNavLink = styled(Link)`
   text-decoration: none;
 
   > span {
-    color: ${({ theme }) => theme.color('grey')};
+    color: ${({ theme }) => theme.color('white')};
+    opacity: 0.8;
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.color('grey')};
+    text-decoration-color: ${({ theme }) => theme.color('white')};
     font-weight: normal;
-    font-size: ${({ theme }) => theme.fontSize('xs')};
+    font-size: 0.875rem;
   }
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
@@ -174,13 +183,14 @@ const SecondaryNavLink = styled(Link)`
   &:hover,
   &:focus {
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.color('grey')};
+    text-decoration-color: ${({ theme }) => theme.color('white')};
   }
 
 `;
 
 const SecondaryNavText = styled(Text)`
   color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
   font-weight: normal;
 `;
 
@@ -190,7 +200,6 @@ const LogosContainer = styled.div`
   align-items: center;
   gap: ${spacing('l')};
   justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
-  margin-top: ${({ $mobileOnly }) => ($mobileOnly ? spacing('md') : '0')};
   margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
   /* Hide desktop containers on mobile */
@@ -261,13 +270,19 @@ const FooterCopyright = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+  margin-bottom: ${spacing('l')};
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    margin-bottom: 0;
+  }
 `;
 
 const FooterCopyrightText = styled(Text).attrs({
   tag: 'p'
 })`
-  color: ${({ theme }) => theme.color('grey')};
-  font-size: ${({ theme }) => theme.fontSize('xs')};
+  color: ${({ theme }) => theme.color('white')};
+  opacity: 0.8;
+  font-size: 0.875rem;
   margin-bottom: ${spacing('sm')};
 `;
 

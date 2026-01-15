@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Button from '../../Atoms/Button/Button';
 import spacing from '../../../theme/shared/spacing';
-import { springScaleAnimation } from '../../../theme/shared/animations';
+import { formFieldInputAnimation } from '../../../theme/shared/animations';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
 export const EmailSignUpWrapper = styled.div`
@@ -57,15 +57,20 @@ export const StyledEmailInput = styled(Input)`
   overflow: visible;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    ${springScaleAnimation(true, 1.04, 1)}
+    ${formFieldInputAnimation(4)}
   }
 
   input {
     ${({ theme }) => css`
-      ${fontHelper(theme, 'formFieldInput')}
+      // Here we're not using the fontHelper because we want to override the font size. It's a special case where we don't
+      // want the default size for the formFieldInput field type.
+      font-size: 1rem;
+      line-height: 1.25rem;
+      font-family: ${theme.fontFamilies('Montserrat')};
       background-color: ${theme.color('grey_5')};
       border-color: transparent;
-      transition: background-color 0.2s ease;
+      padding-left: 18px;
+      transition: background-color 0.2s ease, text-indent 0.18s ease;
       border: 1px solid ${theme.color('white')};
       color: ${theme.color('white')};
       &::placeholder {
@@ -92,16 +97,61 @@ export const ButtonWrapper = styled.div`
 export const StyledEmailSignUpButton = styled(Button)`
   margin: 0;
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  padding: ${spacing('md')};
   border-radius: 0.5rem;
+  overflow: hidden;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    ${springScaleAnimation(true, 1.02, 1)}
     margin: 0;
+  }
+
+  .emailSignUpButtonContent {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 18px;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .emailSignUpButtonLabel {
+    display: inline-block;
+    /* Counterbalance the reserved arrow slot so the label is centered at rest */
+    transform: translateX(13px);
+    transition: transform 0.22s ease;
+    will-change: transform;
+  }
+
+  .emailSignUpButtonArrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    /* Start from the midpoint between the label and the arrow slot */
+    transform: translateX(-13px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    will-change: transform, opacity;
+
+    svg {
+      fill: currentColor !important;
+    }
   }
 
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.color('white')};
+    background-color: ${({ theme }) => theme.color('grey_2')};
     color: ${({ theme }) => theme.color('black')};
+
+    .emailSignUpButtonLabel {
+      transform: translateX(0);
+    }
+
+    .emailSignUpButtonArrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `;
