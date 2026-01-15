@@ -121,6 +121,9 @@ const Navs = ({
   // uses the divided-up versions:
   if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 
+  // console.log("theseGroups", theseGroups);
+  // console.log("navItems", navItems);
+
   return (
     <>
       <Navigation
@@ -159,7 +162,7 @@ const Navs = ({
                 // Secondary Menu is nested inside PrimaryNavItem
                 <PrimaryNavItem
                   thisID={thisID}
-                  key={`${thisID}--item`}
+                  key={`${thisID}-${thisUrl}-item`}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
@@ -239,7 +242,7 @@ Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
   isExpandable: PropTypes.bool,
-  setIsExpandable: PropTypes.bool
+  setIsExpandable: PropTypes.func
 };
 
 export default Navs;

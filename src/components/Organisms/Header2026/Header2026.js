@@ -21,8 +21,9 @@ const Header2026 = ({
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
 
-  console.log(data);
-  console.log(newData);
+  console.log('test');
+  console.log('data', data);
+  console.log('newData', newData);
 
   return (
     <Header2026Wrapper
@@ -39,6 +40,7 @@ const Header2026 = ({
         <Navs
           data-testid="Navs"
           navItems={data}
+          // navItems={newData}
           characterLimit={characterLimit}
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
