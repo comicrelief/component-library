@@ -109,7 +109,7 @@ const Lookup = ({
         loadingText="Searching"
         data-test="lookupButton"
         buttonType="secondary"
-        color="white"
+        color="black"
       >
         {buttonText}
       </ButtonWithStates>
