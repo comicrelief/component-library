@@ -14,8 +14,6 @@ const buttonStyle = () => css`
   align-items: center;
   border: none;
   cursor: pointer;
-
-  // NEW
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
 

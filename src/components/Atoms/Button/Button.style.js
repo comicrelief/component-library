@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import spacing from '../../../theme/shared/spacing';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const StyledButton = styled.button`
@@ -13,11 +12,8 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
-
-  // NEW
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
-
 
   > a {
     text-decoration: none;
