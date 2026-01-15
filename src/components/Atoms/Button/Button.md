@@ -29,7 +29,7 @@ import buttonTypes from '../../../theme/crTheme/buttonTypes';
     </div>
 
     <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
-        <Button type="button" color="non-existent-colour">Trying to use a non-existent colour, will default to red</Button>
+        <Button type="button" color="non-existent-colour">Using a non-existent colour will default to red</Button>
     </div>
 
     <br/>
