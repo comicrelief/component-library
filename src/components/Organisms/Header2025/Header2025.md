@@ -478,7 +478,7 @@ const [success, setSuccess] = React.useState(false);
 
 <>
 <Header2025
-  showBoxShadow="true"
+  showBoxShadow={true}
   characterLimit={50}
   navItems={data}
   rotate="true"
@@ -590,7 +590,7 @@ const [success, setSuccess] = React.useState(false);
 
 <>
 <Header2025
-  showBoxShadow="true"
+  showBoxShadow={true}
   characterLimit={50}
   navItems={data}
   rotate="true"
