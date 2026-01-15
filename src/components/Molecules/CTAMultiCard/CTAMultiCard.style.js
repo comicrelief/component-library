@@ -10,9 +10,9 @@ const CardsContainer = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   gap: 1rem;
 
-  // Mobile carousel mode - horizontal scroll container (only on mobile, below M breakpoint)
+  // Carousel mode - horizontal scroll container (Medium and below)
   ${({ isCarousel }) => isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
+    @media (max-width: ${breakpointValues.L - 1}px) {
       flex-direction: row;
       flex-wrap: nowrap;
       overflow-x: visible;
@@ -39,7 +39,8 @@ const CardsContainer = styled.div`
   `}
 
   // Desktop flexbox layout - 2 columns with centered wrap
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  // - when isCarousel is true we only switch to "desktop" layout at L and above
+  @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -164,9 +165,9 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-self: stretch;
 
-  // Mobile carousel mode - cards at normal width in horizontal scroll (only on mobile, below M breakpoint)
+  // Carousel mode - cards at normal width in horizontal scroll (Medium and below)
   ${({ isCarousel }) => isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
+    @media (max-width: ${breakpointValues.L - 1}px) {
       scroll-snap-align: start;
       flex: 0 0 calc(100% - 1.5rem);
       min-width: calc(100% - 1.5rem);
@@ -193,7 +194,8 @@ const CardWrapper = styled.div`
   `}
 
   // Desktop M breakpoint - 2 columns layout
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  // - when isCarousel is true we only switch to "desktop" layout at L and above
+  @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
     height: 100%;

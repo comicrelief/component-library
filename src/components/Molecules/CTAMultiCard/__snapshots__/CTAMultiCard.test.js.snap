@@ -1328,7 +1328,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (max-width:739px) {
+@media (max-width:1023px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1357,7 +1357,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1445,7 +1445,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (max-width:739px) {
+@media (max-width:1023px) {
   .c1 {
     -webkit-scroll-snap-align: start;
     -moz-scroll-snap-align: start;
@@ -1472,7 +1472,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width:1024px) {
   .c1 {
     -webkit-flex-basis: calc(50% - 1rem);
     -ms-flex-preferred-size: calc(50% - 1rem);
