@@ -1,21 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
-
-const StyledButton = styled(ButtonWithStates)`${({ theme }) => css`
-  color: ${theme.color('grey_dark')};
-  border: 2px solid ${theme.color('grey_dark')};
-  background-color: ${theme.color('white')};
-  padding-left: ${spacing('lg')};
-  padding-right: ${spacing('lg')};
-  &:hover {
-    color: ${theme.color('grey_dark')};
-    background-color: ${theme.color('white')};
-  }
-`}`;
 
 const KEY_CODE_ENTER = 13;
 
@@ -114,16 +101,18 @@ const Lookup = ({
         errorMsg={errorMessage}
         dropdownInstruction={dropdownInstruction}
       />
-      <StyledButton
+      <ButtonWithStates
         type="button"
         onClick={() => handler()}
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
         data-test="lookupButton"
+        buttonType="secondary"
+        color="white"
       >
         {buttonText}
-      </StyledButton>
+      </ButtonWithStates>
     </div>
   );
 };

@@ -513,11 +513,7 @@ exports[`renders correctly 1`] = `
           disabled={true}
           type="submit"
         >
-          <span
-            className="c4"
-          >
-            Subscribe
-          </span>
+          Subscribe
           <div
             className=""
           />
