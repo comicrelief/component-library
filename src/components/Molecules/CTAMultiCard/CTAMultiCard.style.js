@@ -44,8 +44,7 @@ const CardsContainer = styled.div`
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
-      padding: 0.75rem 0.5rem;
-      margin-left: 0.5rem;
+      padding: 0.75rem 1rem;
 
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -61,10 +60,19 @@ const CardsContainer = styled.div`
       display: grid;
       justify-content: center;
       align-items: stretch;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       width: 100%;
-      margin: 0;
+      margin: 0 auto;
       max-width: 100%;
+
+      /*
+      Above 1724px (3 * 564px which is the card max-width + 2 * 1rem), this is to stop the visible "gaps" growing
+      between the cards on really wide screens (so the only space between cards is the gap (1rem)).
+       */
+      @media (min-width: 1724px) {
+        grid-template-columns: repeat(3, 564px);
+        width: fit-content;
+      }
     `}
   }
 `;
@@ -181,16 +189,6 @@ const CardWrapper = styled.div`
       min-width: calc(100% - 1.5rem);
       max-width: calc(100% - 1.5rem);
       flex-shrink: 0;
-      margin-right: 0.5rem;
-
-      &:first-child {
-        padding-left: 0.5rem;
-      }
-
-      &:last-child {
-        margin-right: 0;
-        padding-right: 0.5rem;
-      }
     }
   `}
 

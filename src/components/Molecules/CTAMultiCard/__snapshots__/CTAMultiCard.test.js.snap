@@ -250,9 +250,9 @@ exports[`handles data structure correctly 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,minmax(0,1fr));
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%;
   }
 }
@@ -1374,8 +1374,7 @@ exports[`renders carousel mode correctly 1`] = `
     -moz-scroll-snap-type: x mandatory;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
-    padding: 0.75rem 0.5rem;
-    margin-left: 0.5rem;
+    padding: 0.75rem 1rem;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
     -ms-scrollbar-width: none;
@@ -1399,9 +1398,9 @@ exports[`renders carousel mode correctly 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,minmax(0,1fr));
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%;
   }
 }
@@ -1470,16 +1469,6 @@ exports[`renders carousel mode correctly 1`] = `
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    margin-right: 0.5rem;
-  }
-
-  .c1:first-child {
-    padding-left: 0.5rem;
-  }
-
-  .c1:last-child {
-    margin-right: 0;
-    padding-right: 0.5rem;
   }
 }
 
@@ -1988,9 +1977,9 @@ exports[`renders correctly with data prop 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,minmax(0,1fr));
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%;
   }
 }
