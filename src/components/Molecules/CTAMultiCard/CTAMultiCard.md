@@ -48,7 +48,7 @@ const data = {
   paddingBelow: '0rem'
 };
 
-<div style={{ padding: '0px', background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3' }}>
   <CTAMultiCard data={data} />
 </div>;
 ```
@@ -102,7 +102,7 @@ const dataWithLongText = {
   paddingBelow: '4rem'
 };
 
-<div style={{ padding: '64px', background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3' }}>
   <CTAMultiCard data={dataWithLongText} />
 </div>;
 ```
