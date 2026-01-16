@@ -19,7 +19,7 @@ it('renders a standard styled link correctly', () => {
       text-decoration: none;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
-      min-height: 2.5em;
+      min-height: 2.5rem;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
