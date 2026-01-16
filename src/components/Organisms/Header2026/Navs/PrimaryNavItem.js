@@ -95,8 +95,9 @@ const PrimaryNavItem = (
           if (childIndex === 0 && !isNotDesktop) return null;
 
           // Otherwise, render out as usual:
+          /* eslint-disable-next-line react/no-array-index-key */
           return (
-            <SecondaryNavItem key={`${thisID}-${childIndex}-${thisSubUrl}`}>
+            <SecondaryNavItem key={`${thisID}-${child.title}-${child.path}`}>
               <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
                 <Text>{child.title}</Text>
               </SecondaryNavLink>
