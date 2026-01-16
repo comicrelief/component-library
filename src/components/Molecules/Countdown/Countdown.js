@@ -7,7 +7,7 @@ import { Wrapper, Digits } from './Countdown.style';
 const Countdown = ({
   endDate, color = 'black', endMessage = null, introMessage = null
 }) => {
-  const [thisEndDate, setThisEndDate] = useState({});
+  const [thisEndDate, setThisEndDate] = useState(null);
   const [countdownHasEnded, setCountdownHasEnded] = useState(false);
   const [countdownTime, setCountdownTime] = useState({
     days: '00',
