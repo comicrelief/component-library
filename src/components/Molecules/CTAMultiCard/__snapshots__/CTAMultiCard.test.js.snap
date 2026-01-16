@@ -25,8 +25,6 @@ exports[`handles data structure correctly 1`] = `
 }
 
 .c0 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -593,8 +591,6 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 .c0 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1147,8 +1143,6 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 .c0 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1752,8 +1746,6 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c0 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
