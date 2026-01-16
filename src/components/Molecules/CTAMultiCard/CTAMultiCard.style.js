@@ -4,8 +4,8 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const CardsContainer = styled.div`
-  padding-top: ${({ paddingAbove }) => paddingAbove || '2rem'};
-  padding-bottom: ${({ paddingBelow }) => paddingBelow || '2rem'};
+  padding-top: ${({ paddingAbove }) => paddingAbove};
+  padding-bottom: ${({ paddingBelow }) => paddingBelow};
   display: flex;
   flex-direction: column;
   width: 100%;
