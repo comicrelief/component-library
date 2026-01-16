@@ -141,6 +141,7 @@ const ItalicText = styled(Text).attrs({weight: 'normal'})`
   <>
     <h4>Input with Description:</h4>
     <Input
+      name="input-with-description"
       placeholder="I have a description"
       type="text"
       label="My Great Input"
