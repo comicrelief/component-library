@@ -1,28 +1,23 @@
 ```js
 import { External, Download, Favourite, Internal } from '../Icons/index';
+
 <div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link href="#anchor" target="blank" type="standard">
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link href="#anchor" target="blank">
       Link standard
     </Link>
   </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       href="#anchor"
       target="blank"
-      type="standard"
       icon={<Download colour="black" />}
     >
       Link standard icon
     </Link>
   </div>
   <div
-    style={{
-      display: 'block',
-      padding: '10px',
-      marginBottom: '10px',
-      backgroundColor: '#000'
-    }}
+    style={{backgroundColor:"#000", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}
   >
     <Link href="#anchor" type="standard_white">
       Link standard white
@@ -31,13 +26,78 @@ import { External, Download, Favourite, Internal } from '../Icons/index';
 </div>;
 ```
 
-## Iconography
+```js
 
+import buttonTypes from '../../../theme/crTheme/buttonTypes';
+
+<div>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="black" href="#anchor" target="self" type="button">
+      Link as button
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="red" href="/test" target="self" type="button">
+      Link as button
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="yellow" href="/test" target="blank" type="button">
+      Link as button
+    </Link>
+  </div>
+
+
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="red" href="#anchor" target="self" type="button" buttonType={buttonTypes.SECONDARY}>
+      Link as button (secondary)
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="black" href="/test" target="self" type="button"buttonType={buttonTypes.SECONDARY}>
+      Link as button (secondary)
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.SECONDARY}>
+      Link as button (secondary)
+    </Link>
+  </div>
+
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="red" href="#anchor" target="self" type="button" buttonType={buttonTypes.TERTIARY}>
+      Link as button (tertiary)
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="black" href="/test" target="self" type="button"buttonType={buttonTypes.TERTIARY}>
+      Link as button (tertiary)
+    </Link>
+  </div>
+  <div style={{backgroundColor:"#222222", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+    <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.TERTIARY}>
+      Link as button (tertiary)
+    </Link>
+  </div>
+
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
+
+    <div style={{ display: 'block', marginTop: '10px' }}>
+      <Link color="red" href="/test" target="blank" type="button" fullWidth>
+        Link as full-width red button
+      </Link>
+    </div>
+  </div>
+</div>
+```
+
+
+## Iconography
 ```js
 import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from '../Icons/index';
 
 <div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       mobileColour="blue"
@@ -50,7 +110,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="blue"
       mobileColour="black"
@@ -63,7 +123,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -75,7 +135,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -87,7 +147,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-    <div style={{ display: 'block', marginBottom: '10px' }}>
+    <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -99,7 +159,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -111,7 +171,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -123,7 +183,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -135,7 +195,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -148,7 +208,7 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 
-  <div style={{ display: 'block', marginBottom: '10px' }}>
+  <div style={{backgroundColor:"#ddd", padding: "15px", marginBottom: "10px", borderRadius: "5px"}}>
     <Link
       color="red"
       href="#anchor"
@@ -160,61 +220,4 @@ import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from 
     </Link>
   </div>
 </div>;
-```
-
-```js
-<div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="black" href="#anchor" target="self" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="red" href="/test" target="self" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="yellow" href="/test" target="blank" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="yellow_light" href="/test" target="blank" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div style={{ display: 'block', marginBottom: '10px' }}>
-    <Link color="yellow_dark" href="/test" target="blank" type="button">
-      Link as button
-    </Link>
-  </div>
-  <div
-    style={{
-      display: 'block',
-      padding: '10px',
-      marginBottom: '10px',
-      backgroundColor: '#22CFD8'
-    }}
-  >
-    <div style={{ display: 'block', marginBottom: '10px' }}>
-      <Link color="grey" href="/test" target="blank" type="button">
-        Link as button
-      </Link>
-    </div>
-    <Link color="transparent" href="/test" target="blank" type="button">
-      Link as transparent button
-    </Link>
-    <div style={{ display: 'block', marginTop: '10px' }}>
-      <Link color="white" href="/test" target="blank" type="button">
-        White button
-      </Link>
-    </div>
-    <div style={{ display: 'block', marginTop: '10px' }}>
-      <Link color="red" href="/test" target="blank" type="button" fullWidth>
-        Full-width red button
-      </Link>
-    </div>
-  </div>
-</div>
 ```

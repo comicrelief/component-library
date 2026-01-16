@@ -33,14 +33,11 @@ exports[`renders Column view correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -50,9 +47,14 @@ exports[`renders Column view correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -60,14 +62,19 @@ exports[`renders Column view correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 700;
-  background-color: #E52630;
-  color: #FFFFFF;
 }
 
-.c7:hover {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+  outline-offset: 3px;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c9 {
@@ -158,13 +165,7 @@ exports[`renders Column view correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover {
-    background-color: #890B11;
-    color: #FFFFFF;
+    width: auto;
   }
 }
 
@@ -213,7 +214,7 @@ exports[`renders Column view correctly 1`] = `
   <a
     aria-hidden="true"
     className="c1"
-    data-image-cta-copy="find out more"
+    data-image-cta-copy="Find out more"
     href="/home"
     tabIndex="-1"
     target="_blank"
@@ -252,13 +253,13 @@ exports[`renders Column view correctly 1`] = `
     <a
       className="c7"
       color="red"
-      data-button-cta-copy="find out more"
+      data-button-cta-copy="Find out more"
       href="/home"
       rel={null}
       target="_self"
       type="button"
     >
-      find out more
+      Find out more
       <span
         className="c8"
         type="button"
@@ -314,14 +315,11 @@ exports[`renders correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  min-height: 2.5em;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -331,9 +329,14 @@ exports[`renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -341,14 +344,19 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 700;
-  background-color: #E52630;
-  color: #FFFFFF;
 }
 
-.c7:hover {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+  outline-offset: 3px;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c9 {
@@ -439,13 +447,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    background-color: #E52630;
-    color: #FFFFFF;
-  }
-
-  .c7:hover {
-    background-color: #890B11;
-    color: #FFFFFF;
+    width: auto;
   }
 }
 

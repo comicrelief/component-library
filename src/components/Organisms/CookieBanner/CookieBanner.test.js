@@ -60,14 +60,11 @@ it('renders correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-size: 1rem;
-      border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      height: 3.125rem;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      min-height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -77,9 +74,14 @@ it('renders correctly', () => {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      border: none;
       cursor: pointer;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      background-color: #FFFFFF;
+      color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
@@ -87,14 +89,19 @@ it('renders correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      font-weight: 700;
-      background-color: #FFFFFF;
-      color: #000000;
     }
 
-    .c5:hover {
-      background-color: #969598;
-      color: #000000;
+    .c5:hover,
+    .c5:focus,
+    .c5:focus-within,
+    .c5:focus-visible {
+      background-color: #E1E2E3;
+      outline-offset: 3px;
+    }
+
+    .c5:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     .c0 {
@@ -168,13 +175,7 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c5 {
-        background-color: #FFFFFF;
-        color: #000000;
-      }
-
-      .c5:hover {
-        background-color: #969598;
-        color: #000000;
+        width: auto;
       }
     }
 

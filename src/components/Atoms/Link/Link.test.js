@@ -200,14 +200,11 @@ it('renders link styled as button correctly', () => {
       display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      padding: 0.5rem 1.25rem;
       -webkit-text-decoration: none;
       text-decoration: none;
-      font-size: 1rem;
-      border-radius: 2rem;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      height: 3.125rem;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      min-height: 2.5em;
       width: 100%;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -217,9 +214,14 @@ it('renders link styled as button correctly', () => {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      border: none;
       cursor: pointer;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      background-color: #FFE400;
+      color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: inherit;
       -webkit-letter-spacing: 0;
       -moz-letter-spacing: 0;
@@ -227,14 +229,19 @@ it('renders link styled as button correctly', () => {
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
-      font-weight: 700;
-      background-color: #FFE400;
-      color: #000000;
     }
 
-    .c0:hover {
+    .c0:hover,
+    .c0:focus,
+    .c0:focus-within,
+    .c0:focus-visible {
       background-color: #FEFD5A;
-      color: #000000;
+      outline-offset: 3px;
+    }
+
+    .c0:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     @media (min-width:740px) {
@@ -259,13 +266,7 @@ it('renders link styled as button correctly', () => {
 
     @media (min-width:1024px) {
       .c0 {
-        background-color: #FFE400;
-        color: #000000;
-      }
-
-      .c0:hover {
-        background-color: #FEFD5A;
-        color: #000000;
+        width: auto;
       }
     }
 

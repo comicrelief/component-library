@@ -137,10 +137,9 @@ export default {
       lineHeight: '1.375rem'
     }
   },
-  // To be used directly (not via fontHelper), but makes sense to keep here:
   button: {
     family: 'Montserrat',
-    weight: 400,
+    weight: 700,
     transform: 'inherit',
     small: {
       fontSize: '1rem',
@@ -155,8 +154,8 @@ export default {
       lineHeight: '1.375rem'
     }
   },
-  // Admittedly, while the same for each breakpoint, these 2
-  // config objects made sense to keep it here all the same.
+  // Admittedly, while these values are identical for each breakpoint,
+  // it still made sense to keep it here all here for parity:
   formFieldLabel: {
     family: 'Montserrat',
     weight: 400,

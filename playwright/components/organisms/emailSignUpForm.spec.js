@@ -101,7 +101,7 @@ test.describe('Email Signup Form component', () => {
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').type('email-signup@email.sls.comicrelief.com');
 
     // submit the ESU form
-    await page.locator('[data-testid="EmailSignUpForm-example-1"] button[type="submit"] > span').click();
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] button[type="submit"]').click();
 
     await page.close();
   });
