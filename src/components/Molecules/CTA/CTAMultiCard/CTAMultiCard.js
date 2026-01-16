@@ -23,7 +23,9 @@ const CTAMultiCard = ({ data }) => {
     cards,
     backgroundColour: bgCards,
     layout,
-    carouselOfCards
+    carouselOfCards,
+    paddingAbove,
+    paddingBelow
   } = data;
 
   if (!cards || !Array.isArray(cards) || cards.length === 0) {
@@ -41,6 +43,8 @@ const CTAMultiCard = ({ data }) => {
       backgroundColor={cardsBackground}
       columns={columns}
       isCarousel={carouselOfCards}
+      paddingAbove={paddingAbove}
+      paddingBelow={paddingBelow}
     >
       {cards.map(card => (
         <CTACard
@@ -85,7 +89,9 @@ CTAMultiCard.propTypes = {
     ).isRequired,
     backgroundColour: PropTypes.string,
     layout: PropTypes.string,
-    carouselOfCards: PropTypes.bool
+    carouselOfCards: PropTypes.bool,
+    paddingAbove: PropTypes.string,
+    paddingBelow: PropTypes.string
   }).isRequired
 };
 
