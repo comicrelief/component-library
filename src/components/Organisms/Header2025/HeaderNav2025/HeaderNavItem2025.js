@@ -81,7 +81,7 @@ const HeaderNavItem2025 = (
 
           // Otherwise, render out as usual:
           return (
-            <SubNavItem key={`${thisID}-${childIndex}-${thisSubUrl}`}>
+            <SubNavItem key={`${index}-${thisSubUrl}`}>
               <SubNavLink href={thisSubUrl} inline role="menuitem">
                 <Text size="s">{child.title}</Text>
               </SubNavLink>
