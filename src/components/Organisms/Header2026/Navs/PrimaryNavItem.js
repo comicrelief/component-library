@@ -96,7 +96,7 @@ const PrimaryNavItem = (
 
           // Otherwise, render out as usual:
           return (
-            <SecondaryNavItem key={`${index}-${thisSubUrl}`}>
+            <SecondaryNavItem key={`${thisID}-${childIndex}-${thisSubUrl}`}>
               <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
                 <Text>{child.title}</Text>
               </SecondaryNavLink>
