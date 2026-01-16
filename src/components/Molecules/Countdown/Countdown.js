@@ -7,6 +7,7 @@ import { Wrapper, Digits } from './Countdown.style';
 const Countdown = ({
   endDate, color = 'black', endMessage = null, introMessage = null
 }) => {
+  const [thisEndDate, setThisEndDate] = useState(null);
   const [countdownHasEnded, setCountdownHasEnded] = useState(false);
   const [countdownTime, setCountdownTime] = useState({
     days: '00',
@@ -15,12 +16,15 @@ const Countdown = ({
     seconds: '00'
   });
 
-  const countDownDate = moment(endDate);
+  useEffect(() => {
+    const isoEndDate = new Date(endDate).toISOString();
+    setThisEndDate(moment(isoEndDate));
+  }, [endDate]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       const now = moment();
-      const timeRemaining = moment(countDownDate - now);
+      const timeRemaining = moment(thisEndDate - now);
 
       const days = timeRemaining.format('DDD');
       const hours = timeRemaining.format('HH');
@@ -34,14 +38,17 @@ const Countdown = ({
         seconds
       });
 
-      if (countDownDate.diff(now, 'seconds') < 1) {
+      if (thisEndDate.diff(now, 'seconds') < 1) {
+        clearInterval(interval);
         setCountdownHasEnded(true);
       }
     }, 1000);
     return () => clearInterval(interval);
-  }, [countDownDate]);
+  }, [thisEndDate]);
 
-  if (countdownHasEnded) return endMessage;
+  if (countdownHasEnded) {
+    return endMessage;
+  }
 
   return (
     <>

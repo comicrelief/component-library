@@ -31,6 +31,14 @@ const Container = styled.div`
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
 
+  ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
+    padding: ${paddingTop} 1rem ${paddingBottom};
+
+    @media ${({ theme }) => theme.breakpoints2026('M')} {
+      padding-left: 2rem; padding-right: 2rem;
+    }
+  `)};
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
     align-items: center;
@@ -91,11 +99,13 @@ const CopyOuterWrapper = styled.div`
   right: 0;
   display: flex;
   width: calc(100% - (2 * 1rem)); 
-
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 2rem 1rem;')}
+  
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: calc(100% - 4rem); 
+    ${({ variant }) => (variant !== variants.TEXT_BANNER
+    ? 'margin: -2rem 2rem 2rem; width: calc(100% - (2 * 2rem));'
+    : 'margin: 0; width: 100%;')}
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -132,7 +142,6 @@ const Copy = styled.div`
     : theme.color('white')
   )};
 
-  
   ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
       padding: 2rem 2rem 1.75rem;
@@ -211,6 +220,7 @@ const CtaTextUnderline = styled.img`
 
 const HeroBannerLink = styled.a`
   text-decoration: none;
+  width: 100%;
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
