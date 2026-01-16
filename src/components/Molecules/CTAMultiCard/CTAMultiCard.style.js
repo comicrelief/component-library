@@ -12,11 +12,34 @@ const CardsContainer = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   gap: 1rem;
 
-  // Carousel mode - horizontal scroll container (Medium and below)
+  // Mobile stack mode - vertical layout (only on mobile, below M breakpoint)
+  ${({ isCarousel }) => !isCarousel && css`
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      flex-direction: column;
+      background: transparent;
+    }
+  `}
+
+  // Non-mobile layout (M and above) - consistent across carousel/non-carousel, as above M we only do stacked mode.
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  // Carousel mode - horizontal scroll container (M and below)
   ${({ isCarousel }) => isCarousel && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
       flex-direction: row;
       flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
       overflow-x: visible;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
@@ -32,34 +55,17 @@ const CardsContainer = styled.div`
     }
   `}
 
-  // Mobile stack mode - vertical layout (only on mobile, below M breakpoint)
-  ${({ isCarousel }) => !isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
-      flex-direction: column;
-      background: transparent;
-    }
-  `}
-
-  // Desktop flexbox layout - 2 columns with centered wrap
-  // - when isCarousel is true we only switch to "desktop" layout at L and above
-  @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
   // Desktop grid layout for XL breakpoint - 3 columns
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
-    width: ${({ columns }) => (columns === 2 ? 'fit-content' : '100%')};
-    margin: ${({ columns }) => (columns === 2 ? '0 auto' : '0')};
-    max-width: 100%;
+    ${({ columns }) => columns === 3 && css`
+      display: grid;
+      justify-content: center;
+      align-items: stretch;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+    `}
   }
 `;
 
@@ -119,7 +125,7 @@ const CardLink = styled.a`
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
@@ -200,7 +206,6 @@ const CardWrapper = styled.div`
   @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
-    height: 100%;
     align-self: stretch;
   }
 
@@ -208,7 +213,6 @@ const CardWrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     flex-basis: unset;
     max-width: 564px;
-    height: 100%;
     align-self: stretch;
   }
 `;
