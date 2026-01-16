@@ -30,7 +30,7 @@ const Header2025 = ({
       />
       <ButtonsAndIcons>
         { metaIcons && (
-        <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
+          <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
         )}
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
