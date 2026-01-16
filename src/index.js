@@ -34,11 +34,11 @@ export { default as External } from './components/Atoms/Icons/External';
 export { default as Internal } from './components/Atoms/Icons/Internal';
 
 /* Molecules */
-export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
+export { default as CTAMultiCard } from './components/Molecules/CTAMultiCard/CTAMultiCard';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Organisms/Header/Header';
@@ -65,6 +65,7 @@ export { default as Descriptor } from './components/Molecules/Descriptor/Descrip
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
+export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
 
 /* Organisms */
 export {

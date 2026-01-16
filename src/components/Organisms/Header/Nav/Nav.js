@@ -77,10 +77,11 @@ const MainNav = ({ navItems = {} }) => {
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
-            const relNoopener = !allowListed(thisUrl) ? 'noopener' : undefined;
+            const relNoopener = !allowListed(thisUrl) ? 'noopener' : 'false';
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
+
             return (
               <NavItem
                 role="none"

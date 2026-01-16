@@ -96,6 +96,60 @@ const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity 
   `;
 };
 
+/**
+ * formFieldInputAnimation on hover / focus-within
+ * Slides the text inside an input a few pixels to the right.
+ * @param {number} shiftPx - Pixel amount to indent the text (default: 4)
+ * @returns {css}
+ */
+const formFieldInputAnimation = (shiftPx = 4) => css`
+    input,
+    textarea {
+      text-indent: 0;
+      transition: text-indent 0.18s ease;
+    }
+
+    &:hover input,
+    &:hover textarea,
+    &:focus-within input,
+    &:focus-within textarea {
+      text-indent: ${shiftPx}px;
+    }
+  `;
+
+/**
+ * bounceUpAnimation animation on hover
+ * Applies a smooth spring-like position transition that moves the element up on hover/focus
+ * @param {boolean} animateScale - Whether to enable the scale animation
+ * @param {number} pixelMovement - Amount of movement to apply on hover
+ * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
+ * @returns {css} template literal for the animation
+ */
+const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1) => {
+  if (!animateScale) {
+    return css``;
+  }
+
+  const pullBack = -0.55 - (bounceIntensity * 0.3);
+  const overshoot = 1.55 + (bounceIntensity * 0.4);
+  const duration = 0.2 + (bounceIntensity * 0.1);
+
+  return css`
+    transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
+    transform-origin: center;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-${pixelMovement}px);
+    }
+  `;
+};
+
 export {
-  pulseInAnimation, pulseOutAnimation, logoRotateAnimation, springScaleAnimation
+  logoRotateAnimation,
+  springScaleAnimation,
+  formFieldInputAnimation,
+  bounceUpAnimation,
+  pulseInAnimation,
+  pulseOutAnimation
 };

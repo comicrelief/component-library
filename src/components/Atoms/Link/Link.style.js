@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
   padding: 0.5rem 1.25rem;
   text-decoration: none;
-  font-weight: 700;
   font-size: ${({ theme }) => theme.fontSize('s')};
   border-radius: 2rem;
   transition: all 0.3s;
@@ -16,6 +16,13 @@ const buttonStyle = () => css`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  ${({ theme }) => css`
+    ${fontHelper(theme, 'button')}
+  `}
+
+  font-weight: 700;
+
   ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
 
   // Override with mobile-specific colours where available:

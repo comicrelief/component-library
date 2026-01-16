@@ -9,7 +9,7 @@ import {
 } from './Header2025.style';
 
 const Header2025 = ({
-  navItems = {}, metaIcons = null, campaign = 'Comic Relief', donateButton = null,
+  navItems = {}, metaIcons = undefined, campaign = 'Comic Relief', donateButton = null,
   characterLimit = 60, showBoxShadow = false, ...rest
 }) => (
   <Header2025Wrapper navItems showBoxShadow={showBoxShadow} {...rest}>
@@ -29,7 +29,9 @@ const Header2025 = ({
         characterLimit={characterLimit}
       />
       <ButtonsAndIcons>
-        <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
+        { metaIcons && (
+          <Header2025MetaIcons isHeader data-testid="meta-icons--desktop">{metaIcons}</Header2025MetaIcons>
+        )}
         <DonateButtonWrapperTop data-testid="donate-button--desktop">{donateButton}</DonateButtonWrapperTop>
       </ButtonsAndIcons>
 
