@@ -1,0 +1,86 @@
+query MyQuery {
+  allContentfulHeaderMenu {
+    edges {
+      node {
+        menuName
+        showSearch
+        headerPageGroups {
+          primaryPageName
+          primaryPageUrlIfExternal
+          primaryPageSelector {
+            path
+            title
+          }
+          column1PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+              }
+            }
+          }
+          column2PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+              }
+            }
+          }
+          column3PageLinks {
+            pageName
+            pageUrlIfExternal
+            pageLevel
+            pageSelector {
+              title
+              path
+              header_page_link {
+                pageName
+                pageSelector {
+                  path
+                  title
+                }
+                pageUrlIfExternal
+                pageLevel
+              }
+            }
+          }
+          column3PageCards {
+            pageName
+            pageDescription
+            image {
+              title
+              description
+              url
+            }
+            pageSelector {
+              title
+              path
+            }
+            primaryPageUrlIfExternal
+          }
+        }
+      }
+    }
+  }
+}

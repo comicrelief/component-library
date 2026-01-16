@@ -1,5 +1,7 @@
 /* Determine where to grab the URL, depending on the component type and values supplied */
 const NavHelper = navItem => {
+  if (!navItem) return '';
+
   /* Default url path location for 'Pages' */
   let thisUrl = navItem.path;
 

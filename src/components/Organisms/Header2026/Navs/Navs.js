@@ -3,24 +3,35 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
+import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
+import Icon from '../../../Atoms/SocialIcons/Icon/Icon';
 import MoreNav from './MoreNav';
-import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
+import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import HeaderNavItem2025 from './HeaderNavItem2025';
+import PrimaryNavItem from './PrimaryNavItem';
+import searchIcon from '../assets/search-icon.svg';
 
 import {
-  Nav, NavMenu, NavMetaIcons, DonateButtonWrapperBottom
-} from './HeaderNav2025.style';
+  Navigation,
+  PrimaryMenuWrapper,
+  PrimaryMenu,
+  DonateButtonMobileModalWrapper,
+  SearchWrapperMobile,
+  SearchLinkMobile,
+  SearchIconWrapperMobile
+} from './Navs.style';
 
-const HeaderNav2025 = ({
-  navItems = {}, metaIcons = null, donateButton = null, characterLimit
+const Navs = ({
+  navItems = {},
+  characterLimit,
+  isExpandable,
+  setIsExpandable
 }) => {
   const { menuGroups } = navItems;
-  const [isExpandable, setIsExpandable] = useState(false);
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
@@ -60,7 +71,7 @@ const HeaderNav2025 = ({
 
   // Determine which nav we should use only once 'window' exists:
   useEffect(() => {
-    const notDesktop = window.innerWidth < breakpointValues.Nav;
+    const notDesktop = window.innerWidth < breakpointValues2026.L;
     setIsNotDesktop(notDesktop);
 
     // Use these flags to detemine if we render the More nav or not:
@@ -81,7 +92,7 @@ const HeaderNav2025 = ({
     const currentScreenWidth = typeof window !== 'undefined' ? window.innerWidth : null;
 
     // Compare to our breakpoint:
-    const isCurrentlyNotDesktop = currentScreenWidth < breakpointValues.Nav;
+    const isCurrentlyNotDesktop = currentScreenWidth < breakpointValues2026.L;
 
     // Only if the screen size has *changed*, update the state:
     if (currentScreenWidth !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
@@ -110,17 +121,30 @@ const HeaderNav2025 = ({
   // uses the divided-up versions:
   if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
 
+  // console.log("theseGroups", theseGroups);
+  // console.log("navItems", navItems);
+
   return (
     <>
-      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation" id="main-nav">
-        <Text id="main-menu" tag="h2" size="s">
-          Main navigation
-        </Text>
+      <Navigation
+        data-testid="Nav"
+        aria-label="main-menu"
+        isExpandable={isExpandable}
+        role="navigation"
+        id="main-nav"
+      >
+        {/* Unseen accessibility aid */}
+        <Text id="main-menu" tag="h2">Main navigation</Text>
 
-        {/* Only render once we've processed the menu items: */}
-        {processedItems && (
+        <PrimaryMenuWrapper data-testid="PrimaryMenuWrapper">
+
+          {/* Only render once we've processed the menu items: */}
+          {processedItems && (
           // First level of the navigation (ul tag): Parent
-          <NavMenu role="menubar">
+          <PrimaryMenu
+            data-testid="PrimaryMenu"
+            role="menubar"
+          >
             {theseGroups.map((group, index) => {
               /* Grab the first links properties to use for our parent/button */
               const thisFirstChild = group.links[0];
@@ -135,9 +159,10 @@ const HeaderNav2025 = ({
               // Renders the first menugroup item to act as the parent; a button for the dropdown
               // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
-                <HeaderNavItem2025
+                // Secondary Menu is nested inside PrimaryNavItem
+                <PrimaryNavItem
                   thisID={thisID}
-                  key={`${thisID}--item`}
+                  key={`${thisID}-${thisUrl}-item`}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
@@ -166,35 +191,58 @@ const HeaderNav2025 = ({
               />
             ) : null}
 
-          </NavMenu>
-        )}
+            <SearchWrapperMobile>
+              <SearchLinkMobile href="/search">
+                Search
+                <SearchIconWrapperMobile data-testid="SearchIconWrapperMobile">
+                  <Icon
+                    icon={searchIcon}
+                    title="Search"
+                    target="self"
+                    role="button"
+                    href="/search"
+                    brand="comicrelief"
+                    tabIndex="0"
+                    id="search"
+                    isHeader
+                  />
+                </SearchIconWrapperMobile>
+              </SearchLinkMobile>
+            </SearchWrapperMobile>
 
-        {/* These are only shown on the non-desktop view; the desktop nav renders
-           these in the parent Header component to suit the design layout */}
-        {metaIcons && (
-          <NavMetaIcons isHeader data-testid="meta-icons--mobile">
-            {metaIcons}
-          </NavMetaIcons>
-        )}
+          </PrimaryMenu>
+          )}
+        </PrimaryMenuWrapper>
 
-        <DonateButtonWrapperBottom data-testid="donate-button--mobile">
-          {donateButton}
-        </DonateButtonWrapperBottom>
-      </Nav>
-      <BurgerMenu toggle={toggleBurgerMenu} isExpandable={isExpandable}>
+        {isExpandable && (
+          <DonateButtonMobileModalWrapper data-testid="donate-button--mobile">
+            <Link
+              color="red"
+              type="button"
+              href="/donation"
+            >
+              Donate
+            </Link>
+          </DonateButtonMobileModalWrapper>
+        )}
+      </Navigation>
+
+      <BurgerMenu
+        data-testid="BurgerMenu"
+        toggle={toggleBurgerMenu}
+        isExpandable={isExpandable}
+      >
         Open
       </BurgerMenu>
     </>
   );
 };
 
-HeaderNav2025.propTypes = {
+Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
-  metaIcons: PropTypes.node,
   characterLimit: PropTypes.number,
-  // As this is rendered in both the Header AND the Nav, just passing
-  // the same prop through to here:
-  donateButton: PropTypes.node
+  isExpandable: PropTypes.bool,
+  setIsExpandable: PropTypes.func
 };
 
-export default HeaderNav2025;
+export default Navs;
