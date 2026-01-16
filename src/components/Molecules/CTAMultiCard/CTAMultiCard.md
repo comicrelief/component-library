@@ -14,7 +14,7 @@ The component expects pre-rendered content to be passed in the `body` field of e
 
 ### CTAMultiCard: Desktop Grid View (3 columns)
 
-**NB: In mobile view, this example displays as a carousel.**
+**NB: In mobile view, this example displays as a carousel. This example also demonstrates no vertical padding via `paddingAbove` / `paddingBelow` set to `0rem`, so it will sit flush to the surrounding container.**
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -43,17 +43,19 @@ const data = {
   ...exampleData,
   cards: cardsWithRenderedBody,
   carouselOfCards: true,
-  backgroundColour: "transparent"
+  backgroundColour: "transparent",
+  paddingAbove: '0rem',
+  paddingBelow: '0rem'
 };
 
-<div style={{ padding: '2rem', background: '#E1E2E3' }}>
+<div style={{ padding: '0px', background: '#E1E2E3' }}>
   <CTAMultiCard data={data} />
 </div>;
 ```
 
 ### CTAMultiCard: Desktop Grid View (2 columns)
 
-**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel).**
+**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel). This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -95,10 +97,12 @@ const dataWithLongText = {
   layout: "2 columns",
   carouselOfCards: false,
   backgroundColour: "Transparent",
-  cards: cardsWithRenderedBody
+  cards: cardsWithRenderedBody,
+  paddingAbove: '4rem',
+  paddingBelow: '4rem'
 };
 
-<div style={{ padding: '2rem', background: '#E1E2E3' }}>
+<div style={{ padding: '64px', background: '#E1E2E3' }}>
   <CTAMultiCard data={dataWithLongText} />
 </div>;
 ```
