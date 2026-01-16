@@ -20,7 +20,7 @@ export default {
       links: [
         {
           title: 'Red Nose Day',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#5',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
