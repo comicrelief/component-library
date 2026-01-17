@@ -11,7 +11,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -24,6 +23,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   paddingOption="upper_off"
 />;
 ```
@@ -36,7 +37,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -50,6 +50,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   otherAmountText="Overridden via the 'Other amount text' prop"
   paddingOption="lower_off"
 />;
@@ -64,7 +66,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -78,6 +79,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   paddingOption="both_off"
 />;
 ```
@@ -91,7 +94,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="blue_dark"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
@@ -106,6 +108,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   noMoneyBuys
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -141,6 +145,8 @@ setTimeout(()=>{
   title="Donate Now"
   noMoneyBuys
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   otherAmountValue={amountDonate}
   otherAmountText="Here's an otherAmountText override"
 
@@ -177,6 +183,8 @@ setTimeout(()=>{
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   otherAmountValue={amountDonate}
 />;
 ```
@@ -202,6 +210,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
   otherAmountText="Overridden via the 'Other amount text' prop"
 />;
 ```
@@ -217,7 +227,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   mobileBackgroundColor="transparent"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="transparent"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
@@ -232,9 +241,10 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   // Directly omiting values for these to centre-align
   title=""
   subtitle=""
-  chooseAmountText=""
   monthlyTitle=""
   monthlySubtitle=""
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -247,7 +257,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="transparent"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -260,6 +269,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle=""
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -272,7 +283,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -285,6 +295,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle=""
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -297,7 +309,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 
 <Donate
   mobileBackgroundColor="blue_dark"
-  submitButtonColor="blue_donate"
   formAlignRight={false}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -311,17 +322,18 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   noMoneyBuys
   subtitle=""
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
-## Single Giving "No Money Buys", no background image, blue background; overriding 'choose amount' text
+## Single Giving "No Money Buys", no background image, blue background
 
 ```js
 import data from './dev-data/data-single';
 
 <Donate
   desktopOverlayColor="blue_dark"
-  submitButtonColor="blue_donate"
   mobileBackgroundColor="blue_dark"
   formAlignRight={false}
   data={data}
@@ -332,7 +344,8 @@ import data from './dev-data/data-single';
   title="Donate Now"
   noMoneyBuys
   subtitle=""
-  chooseAmountText="Overridden via the 'choose amount text' prop"
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -346,7 +359,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 <Donate
   alt="Background image"
   mobileBackgroundColor="red"
-  submitButtonColor="blue_donate"
   desktopOverlayColor="red"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
@@ -361,6 +373,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   isDesktopOverride={false}
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -375,7 +389,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -390,6 +403,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
   additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -404,7 +419,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -418,6 +432,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -432,7 +448,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -446,6 +461,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -460,7 +477,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -474,6 +490,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   defaultGivingType="monthly"
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -488,7 +506,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -501,6 +518,8 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   cartID="default-comicrelief"
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -515,7 +534,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -529,10 +547,12 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   title="Donate Now"
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   noMoneyBuys
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
-## Monthly 'Choose Amount' and 'Other Amount' copy overrides
+## Monthly 'Primary Title' and 'Other Amount' copy overrides
 
 ```js
 import data from './dev-data/data';
@@ -543,7 +563,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -554,12 +573,13 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
-  title="Standard title here"
-  subtitle="Standard subtitle here"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Here's an otherAmountText override"
-  chooseAmountText="Here's an chooseAmountText override"
-  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyPrimaryTitleText="You could change a world..."
   monthlyOtherAmountText="monthlyOtherAmountText here"
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -574,7 +594,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -585,12 +604,13 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
-  title="Standard title here"
-  subtitle="Standard subtitle here"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Here's an otherAmountText override"
-  chooseAmountText="Here's an chooseAmountText override"
   monthlyTitle="Monthly Title here"
   monthlySubtitle="Monthly Subtitle here"
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
 />;
 ```
 
@@ -605,7 +625,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   alt="Background image"
   mobileBackgroundColor="deep_violet_dark"
   desktopOverlayColor="red"
-  submitButtonColor="blue_donate"
   formAlignRight={true}
   imageLow={desktopPictures.imageLow}
   images={desktopPictures.images}
@@ -616,13 +635,36 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   donateLink="https://donation.comicrelief.com/"
   clientID="donate"
   cartID="default-comicrelief"
-  title="Standard title here"
-  subtitle="Standard subtitle here"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
   otherAmountText="Here's an otherAmountText override"
-  chooseAmountText="Here's an chooseAmountText override"
   monthlyTitle="Monthly Title here"
   monthlySubtitle="Monthly Subtitle here"
-  monthlyChooseAmountText="monthlyChooseAmountText here"
+  monthlyPrimaryTitleText="You could change a world..."
   monthlyOtherAmountText="monthlyOtherAmountText here"
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
+/>;
+```
+
+## Form align right, full width when no images are provided
+
+```js
+import data from './dev-data/data';
+
+<Donate
+  mobileBackgroundColor="deep_violet_dark"
+  desktopOverlayColor="red"
+  formAlignRight={true}
+  data={data}
+  mbshipID="mship-1-no-images"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+  primaryTitleText="You could change a world..."
+  secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
+  paddingOption="upper_off"
 />;
 ```
