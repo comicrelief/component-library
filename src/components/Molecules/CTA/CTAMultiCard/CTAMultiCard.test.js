@@ -5,9 +5,27 @@ import CTAMultiCard from './CTAMultiCard';
 import exampleData from './example_data.json';
 import Text from '../../../Atoms/Text/Text';
 
+const makeProcessedCard = (card) => {
+  const fallback = card?.image?.gatsbyImageData?.images?.fallback?.src;
+  const imageLow = card?.image?.gatsbyImageData?.placeholder?.fallback;
+  const images = card?.image?.gatsbyImageData?.images?.sources?.[0]?.srcSet;
+
+  return {
+    ...card,
+    fallback,
+    imageLow,
+    images,
+    // tests focus on layout; use a stable processed value here
+    bgColour: 'white',
+    description: card?.image?.description || '',
+    target: 'self',
+    external: null
+  };
+};
+
 // Map example data cards to include pre-rendered body content
 const cardsWithRenderedBody = exampleData.cards.map(card => ({
-  ...card,
+  ...makeProcessedCard(card),
   body: (
     <Text tag="p">
       <strong>Load</strong> of text here
@@ -26,6 +44,9 @@ const mockData = {
       backgroundColour: 'Blue Light',
       link: '/test-no-image',
       linkLabel: 'View card',
+      bgColour: 'blue_light',
+      target: 'self',
+      external: null,
       body: (
         <Text tag="p">
           Load of text here

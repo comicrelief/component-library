@@ -4,6 +4,23 @@ import renderWithTheme from '../../../../../tests/hoc/shallowWithTheme';
 import CTASingleCard from './CTASingleCard';
 import Text from '../../../Atoms/Text/Text';
 
+const makeProcessedCard = (card) => {
+  const fallback = card?.image?.gatsbyImageData?.images?.fallback?.src;
+  const imageLow = card?.image?.gatsbyImageData?.placeholder?.fallback;
+  const images = card?.image?.gatsbyImageData?.images?.sources?.[0]?.srcSet;
+
+  return {
+    ...card,
+    fallback,
+    imageLow,
+    images,
+    bgColour: 'white',
+    description: card?.image?.description || '',
+    target: 'self',
+    external: null
+  };
+};
+
 const exampleCard = {
   id: 'single-card-1',
   body: (
@@ -56,7 +73,7 @@ const cardWithoutImage = {
 
 it('renders correctly with data prop', () => {
   const tree = renderWithTheme(
-    <CTASingleCard data={{ card: exampleCard, paddingAbove: '1rem', paddingBelow: '2rem' }} />
+    <CTASingleCard data={{ card: makeProcessedCard(exampleCard), paddingAbove: '1rem', paddingBelow: '2rem' }} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -64,7 +81,7 @@ it('renders correctly with data prop', () => {
 
 it('renders correctly without image', () => {
   const tree = renderWithTheme(
-    <CTASingleCard data={{ card: cardWithoutImage, paddingAbove: '1rem', paddingBelow: '2rem' }} />
+    <CTASingleCard data={{ card: makeProcessedCard(cardWithoutImage), paddingAbove: '1rem', paddingBelow: '2rem' }} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
