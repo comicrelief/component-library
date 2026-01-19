@@ -5,6 +5,15 @@ This component displays a single card, full-width across the page. It looks and 
 
 The component expects pre-rendered content to be passed in the `body` field of the card. The frontend should handle rich text rendering before passing data to this component.
 
+### Props
+
+`CTASingleCard` takes a single required prop:
+
+- `data`: an object containing:
+  - `card`: the processed card object (see below)
+  - `paddingAbove`: CSS value for top padding (e.g. `"1rem"`, `"32px"`)
+  - `paddingBelow`: CSS value for bottom padding (e.g. `"2rem"`, `"32px"`)
+
 **Note:** The frontend is responsible for processing image data, link targets, and background colors. The card object should include the following processed fields:
 - `fallback`: The fallback image src from `image.gatsbyImageData.images.fallback.src`
 - `imageLow`: The placeholder image from `image.gatsbyImageData.placeholder.fallback`
@@ -39,11 +48,11 @@ const exampleCard = {
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
-  <CTASingleCard card={exampleCard} />
+  <CTASingleCard data={{ card: exampleCard, paddingAbove: '1rem', paddingBelow: '2rem' }} />
 </div>;
 ```
 
-### CTASingleCard: With Different Background Colour
+### CTASingleCard: With Different Card Background Colour
 
 ```js
 import CTASingleCard from './CTASingleCard';
@@ -68,7 +77,7 @@ const exampleCard = {
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
-  <CTASingleCard card={exampleCard} />
+  <CTASingleCard data={{ card: exampleCard, paddingAbove: '1rem', paddingBelow: '2rem' }} />
 </div>;
 ```
 
@@ -110,6 +119,6 @@ const exampleCardWithLongText = {
 };
 
 <div style={{ padding: '2rem', background: '#E1E2E3' }}>
-  <CTASingleCard card={exampleCardWithLongText} />
+  <CTASingleCard data={{ card: exampleCardWithLongText, paddingAbove: '1rem', paddingBelow: '2rem' }} />
 </div>;
 ```
