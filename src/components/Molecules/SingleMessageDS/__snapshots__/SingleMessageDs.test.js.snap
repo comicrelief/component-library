@@ -149,7 +149,6 @@ exports[`renders correctly 1`] = `
   -moz-letter-spacing: 0.03em;
   -ms-letter-spacing: 0.03em;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .c2 {

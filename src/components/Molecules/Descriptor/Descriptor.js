@@ -124,7 +124,6 @@ const TagWrapper = styled.div`
 
 const Tag = styled(Text)`
   position: relative;
-  text-transform: uppercase;
 `;
 
 const Description = styled.div`
@@ -172,7 +171,6 @@ const Descriptor = ({
           tag="h3"
           height="2rem"
           weight="normal"
-          uppercase
           family="Anton"
         >
           {title}
