@@ -5,13 +5,47 @@ const NavHelper = navItem => {
   /* Default url path location for 'Pages' */
   let thisUrl = navItem.path;
 
-  if (navItem.internal.type === 'ContentfulComponentLink') {
+  if (navItem.internal && navItem.internal.type === 'ContentfulComponentLink') {
     thisUrl = navItem.reference && navItem.reference.path
       ? navItem.reference.path
       : navItem.url;
   }
 
   return thisUrl;
+};
+
+/* NavHelper for new Contentful data structure (headerPageGroups format) */
+const NavHelperNew = pageLink => {
+  if (!pageLink) return '';
+
+  // External URL takes priority
+  if (pageLink.pageUrlIfExternal) {
+    return pageLink.pageUrlIfExternal;
+  }
+
+  // Otherwise use the pageSelector path
+  if (pageLink.pageSelector && pageLink.pageSelector.path) {
+    return `/${pageLink.pageSelector.path}`;
+  }
+
+  return '';
+};
+
+/* Get URL for primary page in new data structure */
+const NavHelperPrimary = group => {
+  if (!group) return '';
+
+  // External URL takes priority
+  if (group.primaryPageUrlIfExternal) {
+    return group.primaryPageUrlIfExternal;
+  }
+
+  // Otherwise use the primaryPageSelector path
+  if (group.primaryPageSelector && group.primaryPageSelector.path) {
+    return `/${group.primaryPageSelector.path}`;
+  }
+
+  return '';
 };
 
 const MoreNavPreProcess = (menuGroups, characterLimit) => {
@@ -37,4 +71,48 @@ const MoreNavPreProcess = (menuGroups, characterLimit) => {
   return { standardGroups, moreNavGroups };
 };
 
-export { NavHelper, MoreNavPreProcess };
+/* MoreNavPreProcess for new Contentful data structure */
+const MoreNavPreProcessNew = (headerPageGroups, characterLimit) => {
+  let characterCount = 0;
+  const overLimit = false;
+  const standardGroups = [];
+  const moreNavGroups = [];
+
+  headerPageGroups.map(group => {
+    // Use primaryPageName for character count
+    characterCount += group.primaryPageName.length;
+
+    // Assign groups to the relevant array if we're over the limit
+    return characterCount > characterLimit !== overLimit
+      ? moreNavGroups.push(group)
+      : standardGroups.push(group);
+  });
+
+  return { standardGroups, moreNavGroups };
+};
+
+/* Combine all column links into a single array for submenu rendering */
+const getColumnLinks = group => {
+  const links = [];
+
+  if (group.column1PageLinks) {
+    links.push(...group.column1PageLinks);
+  }
+  if (group.column2PageLinks) {
+    links.push(...group.column2PageLinks);
+  }
+  if (group.column3PageLinks) {
+    links.push(...group.column3PageLinks);
+  }
+
+  return links;
+};
+
+export {
+  NavHelper,
+  NavHelperNew,
+  NavHelperPrimary,
+  MoreNavPreProcess,
+  MoreNavPreProcessNew,
+  getColumnLinks
+};

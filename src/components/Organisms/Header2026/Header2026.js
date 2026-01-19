@@ -14,16 +14,11 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 
 const Header2026 = ({
   data = {},
-  newData = {},
   characterLimit = 60,
   showBoxShadow = false,
   ...rest
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
-
-  console.log('test');
-  console.log('data', data);
-  console.log('newData', newData);
 
   return (
     <Header2026Wrapper
@@ -40,7 +35,6 @@ const Header2026 = ({
         <Navs
           data-testid="Navs"
           navItems={data}
-          // navItems={newData}
           characterLimit={characterLimit}
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
@@ -100,21 +94,7 @@ export const pageLinksPropTypes = PropTypes.arrayOf(
 
 Header2026.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    menuGroups: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        links: PropTypes.arrayOf(
-          PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string
-          })
-        )
-      })
-    )
-  }),
-  newData: PropTypes.shape({
-    menuName: PropTypes.string.isRequired,
+    menuName: PropTypes.string,
     showSearch: PropTypes.bool,
     headerPageGroups: PropTypes.arrayOf(
       PropTypes.shape({
@@ -144,8 +124,8 @@ Header2026.propTypes = {
           })
         )
       })
-    ).isRequired
-  }).isRequired,
+    )
+  }),
   campaign: PropTypes.string,
   characterLimit: PropTypes.number,
   showBoxShadow: PropTypes.bool

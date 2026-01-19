@@ -9,7 +9,10 @@ import BurgerMenu from '../Burger/BurgerMenu';
 import Icon from '../../../Atoms/SocialIcons/Icon/Icon';
 import MoreNav from './MoreNav';
 import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
-import { NavHelper, MoreNavPreProcess } from '../../../../utils/navHelper';
+import {
+  NavHelperNew, NavHelperPrimary, MoreNavPreProcessNew, getColumnLinks
+} from '../../../../utils/navHelper';
+// NavHelperPrimary and getColumnLinks are also passed to MoreNav component
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import PrimaryNavItem from './PrimaryNavItem';
@@ -31,7 +34,7 @@ const Navs = ({
   isExpandable,
   setIsExpandable
 }) => {
-  const { menuGroups } = navItems;
+  const { headerPageGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
@@ -64,10 +67,11 @@ const Navs = ({
 
   // Process the nav items on initial mount:
   useMemo(() => {
+    if (!headerPageGroups) return;
     // Divide up nav items accordingly
-    const theseItems = MoreNavPreProcess(menuGroups, characterLimit);
+    const theseItems = MoreNavPreProcessNew(headerPageGroups, characterLimit);
     setProcessedItems(theseItems);
-  }, [menuGroups, characterLimit]);
+  }, [headerPageGroups, characterLimit]);
 
   // Determine which nav we should use only once 'window' exists:
   useEffect(() => {
@@ -117,12 +121,9 @@ const Navs = ({
   }, [screenResizeNav]);
 
   // Once we've processed the items, assign according to breakpoint; sub-desktop 'Nav'
-  // breakpoints use 'raw' unprocessed menu groups, Desktop ('Nav' breakpoint and up)
+  // breakpoints use 'raw' unprocessed header page groups, Desktop ('Nav' breakpoint and up)
   // uses the divided-up versions:
-  if (processedItems) theseGroups = isNotDesktop ? menuGroups : processedItems.standardGroups;
-
-  // console.log("theseGroups", theseGroups);
-  // console.log("navItems", navItems);
+  if (processedItems) theseGroups = isNotDesktop ? headerPageGroups : processedItems.standardGroups;
 
   return (
     <>
@@ -146,17 +147,18 @@ const Navs = ({
             role="menubar"
           >
             {theseGroups.map((group, index) => {
-              /* Grab the first links properties to use for our parent/button */
-              const thisFirstChild = group.links[0];
-              const thisID = group.id;
+              /* Generate an ID from the primary page name */
+              const thisID = group.primaryPageName.toLowerCase().replace(/\s+/g, '-');
               /* Determine which field represents our url path */
-              let thisUrl = NavHelper(thisFirstChild);
+              let thisUrl = NavHelperPrimary(group);
               const relNoopener = (!allowListed(thisUrl) && 'noopener') || undefined;
-              const hasSubMenu = group.links && group.links.length > 1;
+              /* Get all column links for submenu */
+              const columnLinks = getColumnLinks(group);
+              const hasSubMenu = columnLinks.length > 0;
               const hasPopUp = hasSubMenu ? 'true' : null;
               thisUrl = InternalLinkHelper(thisUrl);
 
-              // Renders the first menugroup item to act as the parent; a button for the dropdown
+              // Renders the primary page as the parent; a button for the dropdown
               // on mobile, a clickable LINK on desktop but hover to reveal the submenu:
               return (
                 // Secondary Menu is nested inside PrimaryNavItem
@@ -171,8 +173,8 @@ const Navs = ({
                   isNotDesktop={isNotDesktop}
                   thisUrl={thisUrl}
                   group={group}
-                  thisFirstChild={thisFirstChild}
-                  navHelper={NavHelper}
+                  columnLinks={columnLinks}
+                  navHelperNew={NavHelperNew}
                   internalLinkHelper={InternalLinkHelper}
                   relNoopener={relNoopener}
                 />
@@ -185,7 +187,9 @@ const Navs = ({
                 processedItems={processedItems}
                 openedSubMenu={openedSubMenu}
                 toggleSubMenu={toggleSubMenu}
-                navHelper={NavHelper}
+                navHelperNew={NavHelperNew}
+                navHelperPrimary={NavHelperPrimary}
+                getColumnLinks={getColumnLinks}
                 allowListed={allowListed}
                 internalLinkHelper={InternalLinkHelper}
               />

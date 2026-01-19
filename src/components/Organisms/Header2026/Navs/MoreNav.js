@@ -17,7 +17,7 @@ import {
 
 const MoreNav = ({
   processedItems, openedSubMenu,
-  toggleSubMenu, navHelper, allowListed, internalLinkHelper
+  toggleSubMenu, navHelperNew, navHelperPrimary, getColumnLinks, allowListed, internalLinkHelper
 }) => {
   const handleNestedLinkClick = (e, childID, hasPopUp) => {
     if (hasPopUp) {
@@ -53,16 +53,18 @@ const MoreNav = ({
 
         {/* For each item in this menu group:  */}
         {processedItems.moreNavGroups.map(child => {
-        /* Grab the first links properties to use for our parent/button */
-          const thisFirstChild = child.links[0];
-          let thisUrl = navHelper(thisFirstChild);
+          /* Generate an ID from the primary page name */
+          const childID = child.primaryPageName.toLowerCase().replace(/\s+/g, '-');
+          let thisUrl = navHelperPrimary(child);
           const relNoopener = (!allowListed(thisUrl) && 'noopener') || null;
-          const hasSubMenu = child.links && child.links.length > 1;
+          /* Get all column links for submenu */
+          const columnLinks = getColumnLinks(child);
+          const hasSubMenu = columnLinks.length > 0;
           const hasPopUp = hasSubMenu ? 'true' : null;
           thisUrl = internalLinkHelper(thisUrl);
 
           return (
-            <MoreSubNavItem key={child.title}>
+            <MoreSubNavItem key={child.primaryPageName}>
               {/* Either the Direct link (for a one-link menu item)
                 or a 'button' to show the submenu: */}
               <MoreNavNestedLink
@@ -71,11 +73,11 @@ const MoreNav = ({
                 rel={relNoopener}
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
-                onClick={e => handleNestedLinkClick(e, child.id, hasPopUp)}
-                isSubMenuOpen={Boolean(openedSubMenu[child.id])}
-                aria-expanded={Boolean(openedSubMenu[child.id])}
+                onClick={e => handleNestedLinkClick(e, childID, hasPopUp)}
+                isSubMenuOpen={Boolean(openedSubMenu[childID])}
+                aria-expanded={Boolean(openedSubMenu[childID])}
               >
-                {thisFirstChild.title}
+                {child.primaryPageName}
 
                 {hasSubMenu && (
                 <ChevronWrapper>
@@ -89,25 +91,25 @@ const MoreNav = ({
                 {hasSubMenu && (
                 <MoreNestedSubNavMenu
                   role="list"
-                  isSubMenuOpen={Boolean(openedSubMenu[child.id])}
+                  isSubMenuOpen={Boolean(openedSubMenu[childID])}
                 >
-                  {child.links.map(subChild => {
-                    let thisSubUrl = navHelper(subChild);
+                  {columnLinks.map((subChild, subIndex) => {
+                    let thisSubUrl = navHelperNew(subChild);
                     thisSubUrl = internalLinkHelper(thisSubUrl);
 
                     return (
                       // 'More Nav' sub item:
-                      <MoreNavSubItem key={thisSubUrl}>
+                      <MoreNavSubItem key={`${subChild.pageName}-${subIndex}`}>
                         <MoreSubNavLink
                           href={thisSubUrl}
                           inline
                           role="menuitem"
                           // Allows us to avoid using the 'display:none'
                           // approach so we can animate properly:
-                          tabIndex={openedSubMenu[child.id] ? '0' : '-1'}
+                          tabIndex={openedSubMenu[childID] ? '0' : '-1'}
                         >
                           <Text>
-                            {subChild.title}
+                            {subChild.pageName}
                           </Text>
                         </MoreSubNavLink>
                       </MoreNavSubItem>
@@ -125,46 +127,29 @@ const MoreNav = ({
   );
 };
 
+const headerPageGroupShape = PropTypes.shape({
+  primaryPageName: PropTypes.string.isRequired,
+  primaryPageUrlIfExternal: PropTypes.string,
+  primaryPageSelector: PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string
+  }),
+  column1PageLinks: PropTypes.array,
+  column2PageLinks: PropTypes.array,
+  column3PageLinks: PropTypes.array
+});
+
 MoreNav.propTypes = {
   processedItems: PropTypes.shape({
-    moreNavGroups: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        links: PropTypes.arrayOf(
-          PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string
-          })
-        )
-      })
-    ),
-    standardGroups: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        links: PropTypes.arrayOf(
-          PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string
-          })
-        )
-      })
-    )
+    moreNavGroups: PropTypes.arrayOf(headerPageGroupShape),
+    standardGroups: PropTypes.arrayOf(headerPageGroupShape)
   }),
   // Non-required fields as this isn't always populated
-  openedSubMenu: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        url: PropTypes.string
-      })
-    )
-  }),
+  openedSubMenu: PropTypes.shape({}),
   toggleSubMenu: PropTypes.func.isRequired,
-  navHelper: PropTypes.func.isRequired,
+  navHelperNew: PropTypes.func.isRequired,
+  navHelperPrimary: PropTypes.func.isRequired,
+  getColumnLinks: PropTypes.func.isRequired,
   allowListed: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired
 };

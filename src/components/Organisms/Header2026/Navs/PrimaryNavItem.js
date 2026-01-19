@@ -18,7 +18,7 @@ const PrimaryNavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
-    thisFirstChild, navHelper, internalLinkHelper, ...rest
+    columnLinks, navHelperNew, internalLinkHelper, ...rest
   }
 ) => (
   <StyledNavItem
@@ -41,7 +41,7 @@ const PrimaryNavItem = (
         key={`${index}-${thisID}--link`}
         isExpanded={!!openedSubMenu[thisID]}
       >
-        {thisFirstChild.title}
+        {group.primaryPageName}
         {hasSubMenu && (
           <ChevronWrapper
             data-testid="ChevronWrapper"
@@ -64,7 +64,7 @@ const PrimaryNavItem = (
           hasSubMenu={hasSubMenu}
           {...rest}
         >
-          {thisFirstChild.title}
+          {group.primaryPageName}
           {hasSubMenu
               && (
                 <ChevronWrapper
@@ -86,20 +86,16 @@ const PrimaryNavItem = (
         isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
       >
-        {group.links.map((child, childIndex) => {
-          let thisSubUrl = navHelper(child);
+        {columnLinks.map((child, childIndex) => {
+          let thisSubUrl = navHelperNew(child);
           thisSubUrl = internalLinkHelper(thisSubUrl);
-
-          // Skip the very first child on desktop, since
-          // we've already made a 'button' version above:
-          if (childIndex === 0 && !isNotDesktop) return null;
 
           // Otherwise, render out as usual:
           /* eslint-disable-next-line react/no-array-index-key */
           return (
-            <SecondaryNavItem key={`${thisID}-${child.title}-${child.path}`}>
+            <SecondaryNavItem key={`${thisID}-${child.pageName}-${childIndex}`}>
               <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
-                <Text>{child.title}</Text>
+                <Text>{child.pageName}</Text>
               </SecondaryNavLink>
             </SecondaryNavItem>
           );
@@ -114,42 +110,31 @@ PrimaryNavItem.propTypes = {
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
   // Non-required fields as this isn't always populated
-  openedSubMenu: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        url: PropTypes.string
-      })
-    )
-  }),
+  openedSubMenu: PropTypes.shape({}),
   toggleSubMenu: PropTypes.func.isRequired,
   hasPopUp: PropTypes.string,
   isNotDesktop: PropTypes.bool,
   thisUrl: PropTypes.string.isRequired,
   group: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        url: PropTypes.string
-      })
-    )
+    primaryPageName: PropTypes.string.isRequired,
+    primaryPageUrlIfExternal: PropTypes.string,
+    primaryPageSelector: PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string
+    })
   }),
-  // Non-required fields as this isn't always populated
-  thisFirstChild: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
+  columnLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      pageName: PropTypes.string.isRequired,
+      pageUrlIfExternal: PropTypes.string,
+      pageLevel: PropTypes.bool,
+      pageSelector: PropTypes.shape({
         title: PropTypes.string,
-        url: PropTypes.string
+        path: PropTypes.string
       })
-    )
-  }),
-  navHelper: PropTypes.func.isRequired,
+    })
+  ),
+  navHelperNew: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
   relNoopener: PropTypes.string
 };
