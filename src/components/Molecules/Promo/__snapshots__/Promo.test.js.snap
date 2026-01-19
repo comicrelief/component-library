@@ -76,7 +76,7 @@ exports[`renders Promo correctly 1`] = `
   text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  min-height: 2.5em;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -426,7 +426,7 @@ exports[`renders Promo correctly end position 1`] = `
   text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  min-height: 2.5em;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;

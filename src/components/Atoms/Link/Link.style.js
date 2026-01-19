@@ -8,7 +8,7 @@ const buttonStyle = () => css`
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  min-height: 2.5em;
+  height: 2.5rem;
   width: 100%;
   justify-content: center;
   align-items: center;

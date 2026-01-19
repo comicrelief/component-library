@@ -18,7 +18,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   color: #FFFFFF;
 }
 
@@ -821,7 +820,6 @@ exports[`Monthly donation renders correctly 1`] = `
   line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   color: #FFFFFF;
 }
 
@@ -1626,7 +1624,6 @@ exports[`Single donation renders correctly 1`] = `
   line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   color: #FFFFFF;
 }
 
@@ -2520,7 +2517,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   color: #FFFFFF;
 }
 

@@ -179,7 +179,6 @@ const ArticleTeaser = ({
           tag="h3"
           height="2rem"
           weight="normal"
-          uppercase
           family={family}
         >
           {title}

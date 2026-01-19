@@ -377,7 +377,6 @@ exports[`renders correctly:
 .c3 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   color: #E52630;
 }
 

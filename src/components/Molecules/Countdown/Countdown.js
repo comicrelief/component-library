@@ -58,7 +58,7 @@ const Countdown = ({
           <Text color={color} family="Anton" size="xl">
             {countdownTime.days}
           </Text>
-          <Text color={color} size="xs" uppercase>
+          <Text color={color} size="xs">
             days
           </Text>
         </Digits>
@@ -69,7 +69,7 @@ const Countdown = ({
           <Text color={color} family="Anton" size="xl">
             {countdownTime.hours}
           </Text>
-          <Text color={color} size="xs" uppercase>
+          <Text color={color} size="xs">
             hours
           </Text>
         </Digits>
@@ -80,7 +80,7 @@ const Countdown = ({
           <Text color={color} family="Anton" size="xl">
             {countdownTime.minutes}
           </Text>
-          <Text color={color} size="xs" uppercase>
+          <Text color={color} size="xs">
             minutes
           </Text>
         </Digits>
@@ -88,7 +88,7 @@ const Countdown = ({
           <Text color={color} family="Anton" size="xl">
             {countdownTime.seconds}
           </Text>
-          <Text color={color} size="xs" uppercase>
+          <Text color={color} size="xs">
             seconds
           </Text>
         </Digits>
