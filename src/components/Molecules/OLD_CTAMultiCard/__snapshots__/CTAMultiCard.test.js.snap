@@ -317,6 +317,7 @@ exports[`handles data structure correctly 1`] = `
     -ms-flex-preferred-size: calc(50% - 1rem);
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -329,6 +330,7 @@ exports[`handles data structure correctly 1`] = `
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -869,6 +871,7 @@ exports[`renders 2 columns layout correctly 1`] = `
     -ms-flex-preferred-size: calc(50% - 1rem);
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -881,6 +884,7 @@ exports[`renders 2 columns layout correctly 1`] = `
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -1472,6 +1476,7 @@ exports[`renders carousel mode correctly 1`] = `
     -ms-flex-preferred-size: calc(50% - 1rem);
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -1484,6 +1489,7 @@ exports[`renders carousel mode correctly 1`] = `
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -2038,6 +2044,7 @@ exports[`renders correctly with data prop 1`] = `
     -ms-flex-preferred-size: calc(50% - 1rem);
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
@@ -2050,6 +2057,7 @@ exports[`renders correctly with data prop 1`] = `
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
     max-width: 564px;
+    height: 100%;
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
