@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 const ButtonWithDisabledState = styled(Button)`
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.75;
+    opacity: 0.5;
   }
 `;
 
