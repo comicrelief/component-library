@@ -19,7 +19,6 @@ const Container = styled.div`
 
 const Subtitle = styled(Text)`
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 `;
 
 const Image = styled.div`

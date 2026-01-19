@@ -60,7 +60,6 @@ it('renders article teaser correctly', () => {
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
-      text-transform: uppercase;
     }
 
     .c10 span {
@@ -362,7 +361,6 @@ it('renders press realese correctly', () => {
       font-family: 'Anton',Impact,sans-serif;
       font-weight: normal;
       line-height: 2rem;
-      text-transform: uppercase;
     }
 
     .c10 span {

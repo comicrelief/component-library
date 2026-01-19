@@ -30,7 +30,7 @@ const ImpactSlider = ({
   return (
     <OuterWrapper backgroundColour={backgroundColour} id={rowID}>
       <InnerWrapper>
-        <Text tag="h1" family="Anton" uppercase weight="normal" size="xl">{heading}</Text>
+        <Text tag="h1" family="Anton" weight="normal" size="xl">{heading}</Text>
         <Copy>
           {children}
         </Copy>

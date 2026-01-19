@@ -50,7 +50,7 @@ const EmailSignUp = ({
       containerPadding={containerPadding}
       {...rest}
     >
-      <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
+      <Title tag="h2" size="xxl" weight="400" family="Anton">
         {title}
       </Title>
       {!isSubmitted ? (

@@ -84,7 +84,7 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  min-height: 2.5em;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -149,7 +149,6 @@ exports[`renders correctly 1`] = `
   -moz-letter-spacing: 0.03em;
   -ms-letter-spacing: 0.03em;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .c2 {
