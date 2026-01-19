@@ -18,7 +18,7 @@ import { Internal } from '../../Atoms/Icons/index';
   <CardDs
     target="_blank"
     link="/home"
-    linkLabel="find out more"
+    linkLabel="Find out more"
     imageLow={defaultData.image}
     images={defaultData.images}
     imageAltText="Happy man going to work"
@@ -66,7 +66,7 @@ import { Download } from '../../Atoms/Icons/index';
   <CardDs
     target="blank"
     link="/home"
-    linkLabel="find out more"
+    linkLabel="Find out more"
     backgroundColor="white"
     height="auto"
     icon={<Download colour="white" />}
@@ -149,7 +149,7 @@ import { Internal } from '../../Atoms/Icons/index';
   <CardDs
     target="_blank"
     link="/home"
-    linkLabel="find out more"
+    linkLabel="Find out more"
     imageLow={defaultData.image}
     images={defaultData.images}
     imageAltText="Happy man going to work"

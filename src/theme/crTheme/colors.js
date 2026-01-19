@@ -10,7 +10,7 @@
 
 const colors = {
 
-  /* CAMPAIGN COLOURS */
+  /* RND25 CAMPAIGN COLOURS */
   rnd_25_ruby_red: '#AE001B',
   rnd_25_glitzy_grape: '#A20C51',
   rnd_25_glitzy_blue: '#0F1953',
@@ -19,6 +19,19 @@ const colors = {
   rnd_25_party_pink: '#FF9DEC',
   rnd_25_party_blue: '#004EFF',
   rnd_25_party_lilac: '#B07FEA',
+
+  /* RND26 CAMPAIGN COLOURS */
+  rnd_26_dark_purple: '#7953E8',
+  rnd_26_deep_indigo: '#341A7E',
+  rnd_26_light_purple: '#BA9DFC',
+  rnd_26_teal: '#036D7C',
+  rnd_26_deep_teal: '#024042',
+  rnd_26_green: '#7FFB73',
+  rnd_26_magenta: '#A7268C',
+  rnd_26_deep_magenta: '#601151',
+  rnd_26_yellow: '#F8F440',
+  rnd_26_vibrant_pink: '#E948D5',
+  rnd_26_light_pink: '#FE80EB',
 
   /* GREYSCALE COLOURS */
   black: '#000000',

@@ -106,7 +106,7 @@ const EmailSignUp = ({
               loadingText="Submitting..."
               data-test="subscribe-button"
             >
-              <Text>{normalisedButtonText}</Text>
+              {normalisedButtonText}
             </ButtonWithStates>
           </ButtonWrapper>
         </FormInner>
