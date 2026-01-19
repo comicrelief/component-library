@@ -250,15 +250,14 @@ const CardWrapper = styled.div`
 
     @media (min-width: ${breakpointValues.M}px) and (max-width: ${breakpointValues.L - 1}px) {
       align-self: stretch;
-      ${({ columns }) =>
-        (columns === 3
-          ? css`
+      ${({ columns }) => (columns === 3
+    ? css`
               flex: 0 0 100%;
               max-width: 309px;
               margin-left: auto;
               margin-right: auto;
             `
-          : css`
+    : css`
               flex: 0 0 345px;
               max-width: 345px;
               margin-left: 0;
@@ -271,18 +270,18 @@ const CardWrapper = styled.div`
   ${({ isFullWidth }) => !isFullWidth && css`
     @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
       ${({ columns }) => (
-        columns === 3
-          ? css`
+    columns === 3
+      ? css`
               flex-basis: calc(33.333% - 1rem);
               min-width: 286px;
               max-width: 371px;
             `
-          : css`
+      : css`
               flex-basis: calc(50% - 1rem);
               min-width: 443px;
               max-width: 564px;
             `
-      )}
+  )}
       align-self: stretch;
     }
 
