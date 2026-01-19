@@ -70,7 +70,8 @@ const DonateButtonWrapperTop = styled.div`
   a {
     width: 100%;
     height: inherit;
-    transition: width 0.4s cubic-bezier(0.5, 1.5, 0.5, 0.80);
+    transition: all 0.3s cubic-bezier(0.5, 1.5, 0.5, 0.80);
+    
     &:hover,
     &:focus {
       width: 100%;
