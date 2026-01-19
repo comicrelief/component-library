@@ -127,6 +127,29 @@ const MoreNav = ({
   );
 };
 
+export const pageLinksPropTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    pageName: PropTypes.string.isRequired,
+    pageUrlIfExternal: PropTypes.string,
+    pageLevel: PropTypes.bool.isRequired,
+    pageSelector: PropTypes.shape({
+      title: PropTypes.string,
+      path: PropTypes.string,
+      header_page_link: PropTypes.arrayOf(
+        PropTypes.shape({
+          pageName: PropTypes.string.isRequired,
+          pageSelector: PropTypes.shape({
+            path: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired
+          }).isRequired,
+          pageUrlIfExternal: PropTypes.string,
+          pageLevel: PropTypes.bool.isRequired
+        })
+      )
+    })
+  })
+);
+
 const headerPageGroupShape = PropTypes.shape({
   primaryPageName: PropTypes.string.isRequired,
   primaryPageUrlIfExternal: PropTypes.string,
@@ -134,9 +157,9 @@ const headerPageGroupShape = PropTypes.shape({
     path: PropTypes.string,
     title: PropTypes.string
   }),
-  column1PageLinks: PropTypes.array,
-  column2PageLinks: PropTypes.array,
-  column3PageLinks: PropTypes.array
+  column1PageLinks: pageLinksPropTypes,
+  column2PageLinks: pageLinksPropTypes,
+  column3PageLinks: pageLinksPropTypes
 });
 
 MoreNav.propTypes = {
