@@ -229,36 +229,67 @@ const CardWrapper = styled.div`
     }
   `}
 
-  // Carousel mode - cards at normal width in horizontal scroll (Medium and below)
+  // Carousel mode - fixed card width in horizontal scroll (L and below)
   ${({ isCarousel, isFullWidth }) => isCarousel && !isFullWidth && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
       scroll-snap-align: start;
-      flex: 0 0 calc(100% - 1.5rem);
-      min-width: calc(100% - 1.5rem);
-      max-width: calc(100% - 1.5rem);
+      flex: 0 0 309px;
+      width: 309px;
       flex-shrink: 0;
-
-  `}
-
-  // Mobile stack mode - cards at normal width in vertical stack (only on mobile, below M breakpoint)
-  ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
-      width: 100%;
     }
   `}
 
-  // Desktop M breakpoint - 2 columns layout (only if not full width)
+  // Below L: max-width rules vary by layout
+  ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
+    /* Below M: stacked cards, keep them centred */
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      max-width: ${({ columns }) => (columns === 3 ? '309px' : '345px')};
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: ${breakpointValues.M}px) and (max-width: ${breakpointValues.L - 1}px) {
+      align-self: stretch;
+      ${({ columns }) =>
+        (columns === 3
+          ? css`
+              flex: 0 0 100%;
+              max-width: 309px;
+              margin-left: auto;
+              margin-right: auto;
+            `
+          : css`
+              flex: 0 0 345px;
+              max-width: 345px;
+              margin-left: 0;
+              margin-right: 0;
+            `)}
+    }
+  `}
+
+  // L breakpoint: min/max rules vary by layout
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
-      flex-basis: calc(50% - 1rem);
-      max-width: 564px;
+    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
+      ${({ columns }) => (
+        columns === 3
+          ? css`
+              flex-basis: calc(33.333% - 1rem);
+              min-width: 286px;
+              max-width: 371px;
+            `
+          : css`
+              flex-basis: calc(50% - 1rem);
+              min-width: 443px;
+              max-width: 564px;
+            `
+      )}
       align-self: stretch;
     }
 
-    // Desktop XL breakpoint - 3 columns layout
+    // XL breakpoint and above: fixed widths vary by layout
     @media ${({ theme }) => theme.allBreakpoints('XL')} {
       flex-basis: unset;
-      max-width: ${({ columns }) => (columns === 3 ? '371px' : '564px')};
+      width: ${({ columns }) => (columns === 3 ? '371px' : '564px')};
       align-self: stretch;
     }
   `}
