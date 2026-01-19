@@ -118,7 +118,7 @@ const exampleCardWithLongText = {
   external: null
 };
 
-<div style={{ padding: '2rem', background: '#E1E2E3' }}>
-  <CTASingleCard data={{ card: exampleCardWithLongText, paddingAbove: '1rem', paddingBelow: '2rem' }} />
+<div style={{ background: '#E1E2E3' }}>
+  <CTASingleCard data={{ card: exampleCardWithLongText, paddingAbove: '4rem', paddingBelow: '4rem' }} />
 </div>;
 ```
