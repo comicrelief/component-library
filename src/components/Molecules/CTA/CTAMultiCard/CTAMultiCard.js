@@ -50,6 +50,7 @@ const CTAMultiCard = ({ data }) => {
         <CTACard
           key={card.id}
           card={card}
+          columns={columns}
           isCarousel={carouselOfCards}
         />
       ))}

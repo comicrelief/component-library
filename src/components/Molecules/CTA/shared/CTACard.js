@@ -17,6 +17,7 @@ import {
 
 const CTACard = ({
   card,
+  columns,
   isCarousel,
   isFullWidth,
   isSingleCard
@@ -39,7 +40,12 @@ const CTACard = ({
   } = card;
 
   return (
-    <CardWrapper key={id} isCarousel={isCarousel} isFullWidth={effectiveIsFullWidth}>
+    <CardWrapper
+      key={id}
+      isCarousel={isCarousel}
+      isFullWidth={effectiveIsFullWidth}
+      columns={columns}
+    >
       <CardLink
         href={link}
         target={target}
@@ -100,6 +106,7 @@ CTACard.propTypes = {
     target: PropTypes.string.isRequired,
     external: PropTypes.string
   }).isRequired,
+  columns: PropTypes.oneOf([2, 3]),
   isCarousel: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isSingleCard: PropTypes.bool

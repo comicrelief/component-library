@@ -258,7 +258,7 @@ const CardWrapper = styled.div`
     // Desktop XL breakpoint - 3 columns layout
     @media ${({ theme }) => theme.allBreakpoints('XL')} {
       flex-basis: unset;
-      max-width: 564px;
+      max-width: ${({ columns }) => (columns === 3 ? '371px' : '564px')};
       align-self: stretch;
     }
   `}

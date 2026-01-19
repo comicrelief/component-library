@@ -58,19 +58,10 @@ const CardsContainer = styled.div`
       display: grid;
       justify-content: center;
       align-items: stretch;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 371px));
       width: 100%;
       margin: 0 auto;
       max-width: 100%;
-
-      /*
-      Above 1724px (3 * 564px which is the card max-width + 2 * 1rem), this is to stop the visible "gaps" growing
-      between the cards on really wide screens (so the only space between cards is the gap (1rem)).
-       */
-      @media (min-width: 1724px) {
-        grid-template-columns: repeat(3, 564px);
-        width: fit-content;
-      }
     `}
   }
 `;
