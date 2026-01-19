@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { snakeCase } from 'lodash';
 
 const SingleCardContainer = styled.div`
+  padding-top: ${({ paddingAbove }) => paddingAbove};
+  padding-bottom: ${({ paddingBelow }) => paddingBelow};
   display: flex;
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
-  background: ${({ theme, backgroundColor }) => (
-    backgroundColor ? theme.color(snakeCase(backgroundColor)) : 'transparent'
-  )};
+  background: transparent;
 
   img {
     // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues

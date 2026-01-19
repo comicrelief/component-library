@@ -15,13 +15,18 @@ import SingleCardContainer from './CTASingleCard.style';
  * before passing data to this component.
  */
 
-const CTASingleCard = ({ card }) => {
+const CTASingleCard = ({ data }) => {
+  const { card, paddingAbove, paddingBelow } = data || {};
+
   if (!card) {
     return null;
   }
 
   return (
-    <SingleCardContainer>
+    <SingleCardContainer
+      paddingAbove={paddingAbove}
+      paddingBelow={paddingBelow}
+    >
       <CTACard
         card={card}
         isCarousel={false}
@@ -32,31 +37,35 @@ const CTASingleCard = ({ card }) => {
 };
 
 CTASingleCard.propTypes = {
-  card: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    body: PropTypes.node,
-    image: PropTypes.shape({
-      description: PropTypes.string,
-      gatsbyImageData: PropTypes.shape({
-        placeholder: PropTypes.shape({
-          fallback: PropTypes.string
-        }),
-        images: PropTypes.shape({
-          fallback: PropTypes.shape({
-            src: PropTypes.string,
-            srcSet: PropTypes.string
+  data: PropTypes.shape({
+    card: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      body: PropTypes.node,
+      image: PropTypes.shape({
+        description: PropTypes.string,
+        gatsbyImageData: PropTypes.shape({
+          placeholder: PropTypes.shape({
+            fallback: PropTypes.string
           }),
-          sources: PropTypes.arrayOf(
-            PropTypes.shape({
+          images: PropTypes.shape({
+            fallback: PropTypes.shape({
+              src: PropTypes.string,
               srcSet: PropTypes.string
-            })
-          )
+            }),
+            sources: PropTypes.arrayOf(
+              PropTypes.shape({
+                srcSet: PropTypes.string
+              })
+            )
+          })
         })
-      })
+      }),
+      backgroundColour: PropTypes.string,
+      link: PropTypes.string.isRequired,
+      linkLabel: PropTypes.string
     }),
-    backgroundColour: PropTypes.string,
-    link: PropTypes.string.isRequired,
-    linkLabel: PropTypes.string
+    paddingAbove: PropTypes.string,
+    paddingBelow: PropTypes.string
   }).isRequired
 };
 

@@ -54,9 +54,9 @@ const cardWithoutImage = {
   image: null
 };
 
-it('renders correctly with card prop', () => {
+it('renders correctly with data prop', () => {
   const tree = renderWithTheme(
-    <CTASingleCard card={exampleCard} />
+    <CTASingleCard data={{ card: exampleCard, paddingAbove: '1rem', paddingBelow: '2rem' }} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -64,15 +64,7 @@ it('renders correctly with card prop', () => {
 
 it('renders correctly without image', () => {
   const tree = renderWithTheme(
-    <CTASingleCard card={cardWithoutImage} />
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
-
-it('renders correctly with backgroundColour prop', () => {
-  const tree = renderWithTheme(
-    <CTASingleCard card={exampleCard} backgroundColour="Transparent" />
+    <CTASingleCard data={{ card: cardWithoutImage, paddingAbove: '1rem', paddingBelow: '2rem' }} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -80,7 +72,7 @@ it('renders correctly with backgroundColour prop', () => {
 
 it('returns null when card is not provided', () => {
   const tree = renderWithTheme(
-    <CTASingleCard card={null} />
+    <CTASingleCard data={{ card: null, paddingAbove: '1rem', paddingBelow: '2rem' }} />
   ).toJSON();
 
   expect(tree).toBeNull();
