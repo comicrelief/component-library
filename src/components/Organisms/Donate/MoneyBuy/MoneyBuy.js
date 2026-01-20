@@ -38,10 +38,10 @@ const MoneyBuy = ({
 }) => (
   <MoneyBuyButton
     {...rest}
-    aria-label={description}
+    label={description}
+    showLabel={false}
     value={`${currency} ${amount}`}
     type="button"
-    label=""
     errorMsg=""
     onClick={setOtherAmount}
   />

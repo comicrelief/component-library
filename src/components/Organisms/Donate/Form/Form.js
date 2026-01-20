@@ -286,9 +286,10 @@ const Signup = ({
               type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
               prefix="£"
+              label={noMoneyBuys ? 'Donation amount' : 'Other donation amount'}
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}
-              showLabel
+              showLabel={false}
               {...rest}
               max="25000"
               min="1"
@@ -296,7 +297,6 @@ const Signup = ({
               pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
               placeholder="0.00"
               onChange={e => setAmountDonate(e.target.value.trim())}
-              aria-label="Input a different amount"
               ref={amountRef}
             />
           </FormFieldset>
