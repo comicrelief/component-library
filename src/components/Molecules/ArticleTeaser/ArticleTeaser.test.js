@@ -54,14 +54,6 @@ it('renders article teaser correctly', () => {
       line-height: 1.5rem;
     }
 
-    .c10 {
-      font-size: 2rem;
-      line-height: normal;
-      font-family: 'Anton',Impact,sans-serif;
-      font-weight: normal;
-      line-height: 2rem;
-    }
-
     .c10 span {
       font-size: inherit;
       line-height: inherit;
@@ -353,14 +345,6 @@ it('renders press realese correctly', () => {
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
-    }
-
-    .c10 {
-      font-size: 2rem;
-      line-height: normal;
-      font-family: 'Anton',Impact,sans-serif;
-      font-weight: normal;
-      line-height: 2rem;
     }
 
     .c10 span {

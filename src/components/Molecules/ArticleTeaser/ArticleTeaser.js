@@ -141,7 +141,6 @@ const ArticleTeaser = ({
   alt = '',
   category = null,
   logoSize = null,
-  family = 'Anton',
   time = null
 }) => (
   <Wrapper>
@@ -175,11 +174,7 @@ const ArticleTeaser = ({
         </Date>
         <Title
           time={time}
-          size="xl"
           tag="h3"
-          height="2rem"
-          weight="normal"
-          family={family}
         >
           {title}
         </Title>
