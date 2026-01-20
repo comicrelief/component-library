@@ -167,11 +167,7 @@ const Descriptor = ({
           <IconWrapper>{icons}</IconWrapper>
         </Header>
         <Title
-          size="xl"
           tag="h3"
-          height="2rem"
-          weight="normal"
-          family="Anton"
         >
           {title}
         </Title>
