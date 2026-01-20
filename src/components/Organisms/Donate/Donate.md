@@ -1,6 +1,6 @@
 # Donate
 
-## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button and 'no top padding' option
+## Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button
 
 ```js
 import data from './dev-data/data';
@@ -25,7 +25,6 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
   subtitle="Please help us fund life-changing projects in the UK and around the world."
   primaryTitleText="You could change a world..."
   secondaryTitleText="Your support could help people that are facing the toughest times of their lives, here in the UK and internationally."
-  paddingOption="upper_off"
 />;
 ```
 
@@ -647,7 +646,7 @@ const desktopPictures = require('../../../styleguide/data/data').defaultData;
 />;
 ```
 
-## Form align right, full width when no images are provided
+## Form align right, full width when no images are provided, with 'no top padding' option
 
 ```js
 import data from './dev-data/data';
