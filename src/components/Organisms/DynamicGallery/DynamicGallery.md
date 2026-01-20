@@ -1,0 +1,6 @@
+# Dynamic Gallery
+
+```js
+<DynamicGallery
+/>
+```
