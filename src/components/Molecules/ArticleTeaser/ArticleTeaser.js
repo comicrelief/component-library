@@ -193,7 +193,6 @@ ArticleTeaser.propTypes = {
   image: PropTypes.string,
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
-  family: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string,
   date: PropTypes.string.isRequired,
