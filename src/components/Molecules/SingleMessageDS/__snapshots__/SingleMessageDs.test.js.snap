@@ -80,14 +80,11 @@ exports[`renders correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -97,9 +94,14 @@ exports[`renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #2042AD;
+  color: #FFFFFF;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: inherit;
   -webkit-letter-spacing: 0;
   -moz-letter-spacing: 0;
@@ -107,14 +109,19 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 700;
-  background-color: #2042AD;
-  color: #FFFFFF;
 }
 
-.c11:hover {
+.c11:hover,
+.c11:focus,
+.c11:focus-within,
+.c11:focus-visible {
   background-color: #274084;
-  color: #FFFFFF;
+  outline-offset: 3px;
+}
+
+.c11:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c13 {
@@ -142,7 +149,6 @@ exports[`renders correctly 1`] = `
   -moz-letter-spacing: 0.03em;
   -ms-letter-spacing: 0.03em;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .c2 {
@@ -249,13 +255,7 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c11 {
-    background-color: #2042AD;
-    color: #FFFFFF;
-  }
-
-  .c11:hover {
-    background-color: #274084;
-    color: #FFFFFF;
+    width: auto;
   }
 }
 

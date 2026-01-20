@@ -18,7 +18,6 @@ exports[`renders correctly 1`] = `
   line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
 }
 
 .c1 span {
@@ -49,15 +48,11 @@ exports[`renders correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -69,8 +64,19 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 > a {
@@ -78,9 +84,17 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c15:hover {
+.c15:hover,
+.c15:focus,
+.c15:focus-within,
+.c15:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+  outline-offset: 3px;
+}
+
+.c15:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c8 {
@@ -161,7 +175,7 @@ exports[`renders correctly 1`] = `
 
 .c16:disabled {
   cursor: not-allowed;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -280,6 +294,20 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
     width: auto;
   }
 }
@@ -287,8 +315,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c15 {
     width: auto;
-    padding: 1rem 2rem;
-    margin: 0 auto 2rem;
   }
 }
 
@@ -478,15 +504,12 @@ exports[`renders correctly 1`] = `
       >
         <button
           className="c15 c16"
+          color="red"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
         >
-          <span
-            className="c4"
-          >
-            Subscribe
-          </span>
+          Subscribe
           <div
             className=""
           />

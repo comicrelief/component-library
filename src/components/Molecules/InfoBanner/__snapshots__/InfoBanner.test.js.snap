@@ -16,7 +16,6 @@ exports[`renders correctly 1`] = `
 .c2 {
   font-size: undefined;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c2 span {

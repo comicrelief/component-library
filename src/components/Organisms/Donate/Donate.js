@@ -136,7 +136,7 @@ const Donate = ({
                 size="big"
                 family="Anton"
                 weight="normal"
-                uppercase
+
               >
                 {thisTitle}
               </Text>
