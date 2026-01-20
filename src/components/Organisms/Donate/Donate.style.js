@@ -70,6 +70,7 @@ const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  padding-bottom: ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     padding: ${spacing('xl')};
