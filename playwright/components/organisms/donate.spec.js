@@ -9,14 +9,15 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-1"]')).toBeVisible();
 
     // moneybuy 1
+    // defaults to the 2nd moneybuy amount for the selected giving type
     await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('50');
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£25.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('25');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£12.10"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('12.10');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £25 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £12.10 now');
 
     // moneybuy 2
     await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£50.00"]').click();

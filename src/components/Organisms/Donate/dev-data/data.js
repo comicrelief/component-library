@@ -5,7 +5,7 @@ export default {
       {
         description:
           'could help pay for a child refugee to attend a youth group session to build language skills and feel less alone as they adapt to life in a new community',
-        value: '25'
+        value: '12.10'
       },
       {
         description:
