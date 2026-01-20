@@ -3,7 +3,6 @@ import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import CloseCross from '../assets/close.svg';
-import spacing from '../../../../theme/shared/spacing';
 
 const closeDuration = 0.6;
 
