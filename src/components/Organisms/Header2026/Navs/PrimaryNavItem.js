@@ -87,14 +87,13 @@ const PrimaryNavItem = (
         isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
       >
-        {columnLinks.map((child, childIndex) => {
+        {columnLinks.map(child => {
           let thisSubUrl = navHelperNew(child);
           thisSubUrl = internalLinkHelper(thisSubUrl);
 
           // Otherwise, render out as usual:
-          /* eslint-disable-next-line react/no-array-index-key */
           return (
-            <SecondaryNavItem key={`${thisID}-${child.pageName}-${childIndex}`}>
+            <SecondaryNavItem key={child.id}>
               <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
                 <Text>{child.pageName}</Text>
               </SecondaryNavLink>

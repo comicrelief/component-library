@@ -66,7 +66,7 @@ const MoreNav = ({
           thisUrl = internalLinkHelper(thisUrl);
 
           return (
-            <MoreSubNavItem key={child.primaryPageName}>
+            <MoreSubNavItem key={child.id}>
               {/* Either the Direct link (for a one-link menu item)
                 or a 'button' to show the submenu: */}
               <MoreNavNestedLink
@@ -95,13 +95,13 @@ const MoreNav = ({
                   role="list"
                   isSubMenuOpen={Boolean(openedSubMenu[childID])}
                 >
-                  {columnLinks.map((subChild, subIndex) => {
+                  {columnLinks.map(subChild => {
                     let thisSubUrl = navHelperNew(subChild);
                     thisSubUrl = internalLinkHelper(thisSubUrl);
 
                     return (
                       // 'More Nav' sub item:
-                      <MoreNavSubItem key={`${subChild.pageName}-${subIndex}`}>
+                      <MoreNavSubItem key={subChild.id}>
                         <MoreSubNavLink
                           href={prependBaseUrl(thisSubUrl, devMode)}
                           inline

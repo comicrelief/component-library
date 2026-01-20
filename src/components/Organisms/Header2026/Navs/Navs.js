@@ -166,7 +166,7 @@ const Navs = ({
                 // Secondary Menu is nested inside PrimaryNavItem
                 <PrimaryNavItem
                   thisID={thisID}
-                  key={`${thisID}-${thisUrl}-item`}
+                  key={group.id}
                   index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
