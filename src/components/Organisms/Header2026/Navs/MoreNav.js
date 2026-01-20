@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import { ChevronWrapper } from './PrimaryNavItem.style';
 import ChevronIcon from '../assets/chevron-icon.svg';
+import prependBaseUrl from '../utils/urlHelper';
 
 import {
   MoreNavLabel,
@@ -17,7 +18,8 @@ import {
 
 const MoreNav = ({
   processedItems, openedSubMenu,
-  toggleSubMenu, navHelperNew, navHelperPrimary, getColumnLinks, allowListed, internalLinkHelper
+  toggleSubMenu, navHelperNew, navHelperPrimary, getColumnLinks, allowListed, internalLinkHelper,
+  devMode = false
 }) => {
   const handleNestedLinkClick = (e, childID, hasPopUp) => {
     if (hasPopUp) {
@@ -68,7 +70,7 @@ const MoreNav = ({
               {/* Either the Direct link (for a one-link menu item)
                 or a 'button' to show the submenu: */}
               <MoreNavNestedLink
-                href={hasPopUp ? '#' : thisUrl}
+                href={hasPopUp ? '#' : prependBaseUrl(thisUrl, devMode)}
                 inline
                 rel={relNoopener}
                 aria-haspopup={hasPopUp}
@@ -101,7 +103,7 @@ const MoreNav = ({
                       // 'More Nav' sub item:
                       <MoreNavSubItem key={`${subChild.pageName}-${subIndex}`}>
                         <MoreSubNavLink
-                          href={thisSubUrl}
+                          href={prependBaseUrl(thisSubUrl, devMode)}
                           inline
                           role="menuitem"
                           // Allows us to avoid using the 'display:none'
@@ -174,7 +176,8 @@ MoreNav.propTypes = {
   navHelperPrimary: PropTypes.func.isRequired,
   getColumnLinks: PropTypes.func.isRequired,
   allowListed: PropTypes.func.isRequired,
-  internalLinkHelper: PropTypes.func.isRequired
+  internalLinkHelper: PropTypes.func.isRequired,
+  devMode: PropTypes.bool
 };
 
 export default MoreNav;

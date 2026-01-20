@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
+import prependBaseUrl from '../utils/urlHelper';
 
 import {
   StyledNavItem,
@@ -18,7 +19,7 @@ const PrimaryNavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
-    columnLinks, navHelperNew, internalLinkHelper, ...rest
+    columnLinks, navHelperNew, internalLinkHelper, devMode = false, ...rest
   }
 ) => (
   <StyledNavItem
@@ -31,7 +32,7 @@ const PrimaryNavItem = (
     {isNotDesktop ? (
       <NavLink
         data-testid="NavLink"
-        href={hasPopUp ? '#' : thisUrl}
+        href={hasPopUp ? '#' : prependBaseUrl(thisUrl, devMode)}
         inline
         rel={relNoopener}
         aria-expanded={!!openedSubMenu[thisID]}
@@ -56,7 +57,7 @@ const PrimaryNavItem = (
       >
         <DesktopNavLink
           data-testid="DesktopNavLink"
-          href={thisUrl}
+          href={prependBaseUrl(thisUrl, devMode)}
           inline
           rel={relNoopener}
           aria-haspopup={hasPopUp}
@@ -94,7 +95,7 @@ const PrimaryNavItem = (
           /* eslint-disable-next-line react/no-array-index-key */
           return (
             <SecondaryNavItem key={`${thisID}-${child.pageName}-${childIndex}`}>
-              <SecondaryNavLink href={thisSubUrl} inline role="menuitem">
+              <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
                 <Text>{child.pageName}</Text>
               </SecondaryNavLink>
             </SecondaryNavItem>
@@ -136,7 +137,8 @@ PrimaryNavItem.propTypes = {
   ),
   navHelperNew: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
-  relNoopener: PropTypes.string
+  relNoopener: PropTypes.string,
+  devMode: PropTypes.bool
 };
 
 export default PrimaryNavItem;

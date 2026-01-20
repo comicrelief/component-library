@@ -11,11 +11,13 @@ import {
 } from './Header2026.style';
 import searchIcon from './assets/search-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
+import prependBaseUrl from './utils/urlHelper';
 
 const Header2026 = ({
   data = {},
   characterLimit = 60,
   showBoxShadow = false,
+  devMode = false,
   ...rest
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
@@ -38,6 +40,7 @@ const Header2026 = ({
           characterLimit={characterLimit}
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
+          devMode={devMode}
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">
@@ -47,7 +50,7 @@ const Header2026 = ({
               title="Search"
               target="self"
               role="button"
-              href="/search"
+              href={prependBaseUrl('/search', devMode)}
               brand="comicrelief"
               tabIndex="0"
               id="search"
@@ -57,7 +60,7 @@ const Header2026 = ({
 
           {!isExpandable && (
             <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
-              <Link color="red" type="button" href="/donation">
+              <Link color="red" type="button" href={prependBaseUrl('/donation', devMode)}>
                 Donate
               </Link>
             </DonateButtonTopBarWrapper>
@@ -128,7 +131,8 @@ Header2026.propTypes = {
   }),
   campaign: PropTypes.string,
   characterLimit: PropTypes.number,
-  showBoxShadow: PropTypes.bool
+  showBoxShadow: PropTypes.bool,
+  devMode: PropTypes.bool
 };
 
 export default Header2026;

@@ -17,6 +17,7 @@ import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import PrimaryNavItem from './PrimaryNavItem';
 import searchIcon from '../assets/search-icon.svg';
+import prependBaseUrl from '../utils/urlHelper';
 
 import {
   Navigation,
@@ -32,7 +33,8 @@ const Navs = ({
   navItems = {},
   characterLimit,
   isExpandable,
-  setIsExpandable
+  setIsExpandable,
+  devMode = false
 }) => {
   const { headerPageGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
@@ -177,6 +179,7 @@ const Navs = ({
                   navHelperNew={NavHelperNew}
                   internalLinkHelper={InternalLinkHelper}
                   relNoopener={relNoopener}
+                  devMode={devMode}
                 />
               );
             })}
@@ -192,11 +195,12 @@ const Navs = ({
                 getColumnLinks={getColumnLinks}
                 allowListed={allowListed}
                 internalLinkHelper={InternalLinkHelper}
+                devMode={devMode}
               />
             ) : null}
 
             <SearchWrapperMobile>
-              <SearchLinkMobile href="/search">
+              <SearchLinkMobile href={prependBaseUrl('/search', devMode)}>
                 Search
                 <SearchIconWrapperMobile data-testid="SearchIconWrapperMobile">
                   <Icon
@@ -204,7 +208,7 @@ const Navs = ({
                     title="Search"
                     target="self"
                     role="button"
-                    href="/search"
+                    href={prependBaseUrl('/search', devMode)}
                     brand="comicrelief"
                     tabIndex="0"
                     id="search"
@@ -223,7 +227,7 @@ const Navs = ({
             <Link
               color="red"
               type="button"
-              href="/donation"
+              href={prependBaseUrl('/donation', devMode)}
             >
               Donate
             </Link>
@@ -246,7 +250,8 @@ Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
   isExpandable: PropTypes.bool,
-  setIsExpandable: PropTypes.func
+  setIsExpandable: PropTypes.func,
+  devMode: PropTypes.bool
 };
 
 export default Navs;
