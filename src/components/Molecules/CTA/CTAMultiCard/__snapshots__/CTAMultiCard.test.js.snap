@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handles data structure correctly 1`] = `
-.c5 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -13,31 +13,49 @@ exports[`handles data structure correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c5 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c13 {
+.c5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c4 {
   width: 100%;
-  background: #FFFFFF;
-  gap: 1rem;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.c8 {
+.c4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c12 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -55,7 +73,7 @@ exports[`handles data structure correctly 1`] = `
   display: inline-block;
 }
 
-.c10 {
+.c14 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -67,7 +85,7 @@ exports[`handles data structure correctly 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c16 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -109,6 +127,7 @@ exports[`handles data structure correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .c2 img {
@@ -137,9 +156,9 @@ exports[`handles data structure correctly 1`] = `
   align-self: stretch;
 }
 
-.c3 {
+.c7 {
   width: 100%;
-  background: inherit;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +174,25 @@ exports[`handles data structure correctly 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c4 {
+.c18 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -169,7 +206,7 @@ exports[`handles data structure correctly 1`] = `
   min-height: 0;
 }
 
-.c6 {
+.c10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,17 +227,151 @@ exports[`handles data structure correctly 1`] = `
   padding-top: 1rem;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: #FFFFFF;
+  gap: 1rem;
+}
+
 @media (min-width:740px) {
-  .c5 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 img {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c4 img:hover,
+  .c4 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c3 img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .c2:hover .c11 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c13 {
+    opacity: 1;
+  }
+
+  .c2:hover .c15 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    max-width: 309px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c1 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 309px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1439px) {
+  .c1 {
+    -webkit-flex-basis: calc(33.333% - 1rem);
+    -ms-flex-preferred-size: calc(33.333% - 1rem);
+    flex-basis: calc(33.333% - 1rem);
+    min-width: 286px;
+    max-width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
@@ -248,90 +419,10 @@ exports[`handles data structure correctly 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3,minmax(0,371px));
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c7 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c9 {
-    opacity: 1;
-  }
-
-  .c2:hover .c11 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    -webkit-flex-basis: calc(50% - 1rem);
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
   }
 }
 
@@ -344,15 +435,39 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -361,24 +476,24 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -401,15 +516,39 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -418,24 +557,24 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -458,15 +597,39 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -475,24 +638,24 @@ exports[`handles data structure correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -515,38 +678,40 @@ exports[`handles data structure correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c18"
       >
         <div
-          className="c4"
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             View card
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -567,7 +732,7 @@ exports[`handles data structure correctly 1`] = `
 `;
 
 exports[`renders 2 columns layout correctly 1`] = `
-.c5 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -579,31 +744,49 @@ exports[`renders 2 columns layout correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c5 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c13 {
+.c5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c4 {
   width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   background: transparent;
-  gap: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.c8 {
+.c4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c12 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -621,7 +804,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   display: inline-block;
 }
 
-.c10 {
+.c14 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -633,7 +816,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c16 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -675,6 +858,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .c2 img {
@@ -703,9 +887,9 @@ exports[`renders 2 columns layout correctly 1`] = `
   align-self: stretch;
 }
 
-.c3 {
+.c7 {
   width: 100%;
-  background: inherit;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -721,7 +905,25 @@ exports[`renders 2 columns layout correctly 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c4 {
+.c18 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -735,7 +937,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   min-height: 0;
 }
 
-.c6 {
+.c10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -756,17 +958,151 @@ exports[`renders 2 columns layout correctly 1`] = `
   padding-top: 1rem;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
 @media (min-width:740px) {
-  .c5 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 img {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c4 img:hover,
+  .c4 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c3 img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .c2:hover .c11 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c13 {
+    opacity: 1;
+  }
+
+  .c2:hover .c15 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c1 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    -webkit-flex: 0 0 345px;
+    -ms-flex: 0 0 345px;
+    flex: 0 0 345px;
+    max-width: 345px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1439px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    min-width: 443px;
+    max-width: 564px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    width: 564px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
@@ -807,86 +1143,6 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 }
 
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c7 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c9 {
-    opacity: 1;
-  }
-
-  .c2:hover .c11 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    -webkit-flex-basis: calc(50% - 1rem);
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
 <div
   className="c0"
 >
@@ -896,15 +1152,39 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -913,24 +1193,24 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -953,15 +1233,39 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -970,24 +1274,24 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1010,15 +1314,39 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -1027,24 +1355,24 @@ exports[`renders 2 columns layout correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1067,38 +1395,40 @@ exports[`renders 2 columns layout correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c18"
       >
         <div
-          className="c4"
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             View card
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1119,7 +1449,7 @@ exports[`renders 2 columns layout correctly 1`] = `
 `;
 
 exports[`renders carousel mode correctly 1`] = `
-.c5 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1131,31 +1461,49 @@ exports[`renders carousel mode correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c5 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c13 {
+.c5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c4 {
   width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   background: transparent;
-  gap: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.c8 {
+.c4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c12 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1173,7 +1521,7 @@ exports[`renders carousel mode correctly 1`] = `
   display: inline-block;
 }
 
-.c10 {
+.c14 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -1185,7 +1533,7 @@ exports[`renders carousel mode correctly 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c16 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1227,6 +1575,7 @@ exports[`renders carousel mode correctly 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .c2 img {
@@ -1255,9 +1604,9 @@ exports[`renders carousel mode correctly 1`] = `
   align-self: stretch;
 }
 
-.c3 {
+.c7 {
   width: 100%;
-  background: inherit;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1273,7 +1622,25 @@ exports[`renders carousel mode correctly 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c4 {
+.c18 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1287,7 +1654,7 @@ exports[`renders carousel mode correctly 1`] = `
   min-height: 0;
 }
 
-.c6 {
+.c10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1308,17 +1675,145 @@ exports[`renders carousel mode correctly 1`] = `
   padding-top: 1rem;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
 @media (min-width:740px) {
-  .c5 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 img {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c4 img:hover,
+  .c4 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c3 img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .c2:hover .c11 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c13 {
+    opacity: 1;
+  }
+
+  .c2:hover .c15 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:1023px) {
+  .c1 {
+    -webkit-scroll-snap-align: start;
+    -moz-scroll-snap-align: start;
+    -ms-scroll-snap-align: start;
+    scroll-snap-align: start;
+    -webkit-flex: 0 0 309px;
+    -ms-flex: 0 0 309px;
+    flex: 0 0 309px;
+    width: 309px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1439px) {
+  .c1 {
+    -webkit-flex-basis: calc(33.333% - 1rem);
+    -ms-flex-preferred-size: calc(33.333% - 1rem);
+    flex-basis: calc(33.333% - 1rem);
+    min-width: 286px;
+    max-width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
@@ -1392,101 +1887,10 @@ exports[`renders carousel mode correctly 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3,minmax(0,371px));
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c7 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c9 {
-    opacity: 1;
-  }
-
-  .c2:hover .c11 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:1023px) {
-  .c1 {
-    -webkit-scroll-snap-align: start;
-    -moz-scroll-snap-align: start;
-    -ms-scroll-snap-align: start;
-    scroll-snap-align: start;
-    -webkit-flex: 0 0 calc(100% - 1.5rem);
-    -ms-flex: 0 0 calc(100% - 1.5rem);
-    flex: 0 0 calc(100% - 1.5rem);
-    min-width: calc(100% - 1.5rem);
-    max-width: calc(100% - 1.5rem);
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    -webkit-flex-basis: calc(50% - 1rem);
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
   }
 }
 
@@ -1499,15 +1903,39 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -1516,24 +1944,24 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1556,15 +1984,39 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -1573,24 +2025,24 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1613,15 +2065,39 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -1630,24 +2106,24 @@ exports[`renders carousel mode correctly 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1670,38 +2146,40 @@ exports[`renders carousel mode correctly 1`] = `
     <a
       className="c2"
       href="/test-no-image"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c18"
       >
         <div
-          className="c4"
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             View card
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -1722,7 +2200,7 @@ exports[`renders carousel mode correctly 1`] = `
 `;
 
 exports[`renders correctly with data prop 1`] = `
-.c5 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1734,31 +2212,49 @@ exports[`renders correctly with data prop 1`] = `
   line-height: 1.25rem;
 }
 
-.c5 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c13 {
+.c5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c17 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c4 {
   width: 100%;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   background: transparent;
-  gap: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.c8 {
+.c4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c12 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1776,7 +2272,7 @@ exports[`renders correctly with data prop 1`] = `
   display: inline-block;
 }
 
-.c10 {
+.c14 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -1788,7 +2284,7 @@ exports[`renders correctly with data prop 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c16 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1830,6 +2326,7 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .c2 img {
@@ -1858,9 +2355,9 @@ exports[`renders correctly with data prop 1`] = `
   align-self: stretch;
 }
 
-.c3 {
+.c7 {
   width: 100%;
-  background: inherit;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1876,7 +2373,25 @@ exports[`renders correctly with data prop 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c4 {
+.c18 {
+  width: 100%;
+  background: #BECCF9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1890,7 +2405,7 @@ exports[`renders correctly with data prop 1`] = `
   min-height: 0;
 }
 
-.c6 {
+.c10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1911,17 +2426,151 @@ exports[`renders correctly with data prop 1`] = `
   padding-top: 1rem;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
 @media (min-width:740px) {
-  .c5 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 img {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c4 img:hover,
+  .c4 img:focus {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c3 img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .c2:hover .c11 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c13 {
+    opacity: 1;
+  }
+
+  .c2:hover .c15 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    max-width: 309px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c1 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 309px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1439px) {
+  .c1 {
+    -webkit-flex-basis: calc(33.333% - 1rem);
+    -ms-flex-preferred-size: calc(33.333% - 1rem);
+    flex-basis: calc(33.333% - 1rem);
+    min-width: 286px;
+    max-width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    width: 371px;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 }
 
@@ -1969,90 +2618,10 @@ exports[`renders correctly with data prop 1`] = `
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3,minmax(0,371px));
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c7 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c9 {
-    opacity: 1;
-  }
-
-  .c2:hover .c11 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    -webkit-flex-basis: calc(50% - 1rem);
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
   }
 }
 
@@ -2065,15 +2634,39 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -2082,24 +2675,24 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2122,15 +2715,39 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -2139,24 +2756,24 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2179,15 +2796,39 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c3 c4"
       >
         <div
-          className="c4"
+          className="c5 lazyload"
+          height="100%"
+          width="100%"
+        >
+          <img
+            alt=""
+            className="c6 lazyload"
+            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+            data-sizes="auto"
+            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+            height="100%"
+            src="@component-library/src/styleguide/assets/challenge-1.jpg"
+            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             <strong>
               Load
@@ -2196,24 +2837,24 @@ exports[`renders correctly with data prop 1`] = `
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             test go
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"
@@ -2236,38 +2877,40 @@ exports[`renders correctly with data prop 1`] = `
     <a
       className="c2"
       href="/test-no-image"
+      rel={null}
+      target="self"
     >
       <div
-        className="c3"
+        className="c18"
       >
         <div
-          className="c4"
+          className="c8"
         >
           <p
-            className="c5"
+            className="c9"
           >
             Load of text here
           </p>
         </div>
         <div
-          className="c6"
+          className="c10"
         >
           <span
-            className="c7 c8"
+            className="c11 c12"
           >
             View card
             <img
               alt=""
               aria-hidden="true"
-              className="c9 c10"
+              className="c13 c14"
               src="mock.asset"
             />
           </span>
           <div
-            className="c11 c12"
+            className="c15 c16"
           >
             <svg
-              className="c13"
+              className="c17"
               fill="none"
               height="13"
               viewBox="0 0 15 13"

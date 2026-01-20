@@ -1,0 +1,2296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles data structure correctly 1`] = `
+.c5 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c13 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: #FFFFFF;
+  gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: transparent;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders 2 columns layout correctly 1`] = `
+.c5 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c13 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: transparent;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders carousel mode correctly 1`] = `
+.c5 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c13 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:1023px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: visible;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scroll-snap-type: x mandatory;
+    -moz-scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    padding: 0.75rem 1rem;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c0::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:1023px) {
+  .c1 {
+    -webkit-scroll-snap-align: start;
+    -moz-scroll-snap-align: start;
+    -ms-scroll-snap-align: start;
+    scroll-snap-align: start;
+    -webkit-flex: 0 0 calc(100% - 1.5rem);
+    -ms-flex: 0 0 calc(100% - 1.5rem);
+    flex: 0 0 calc(100% - 1.5rem);
+    min-width: calc(100% - 1.5rem);
+    max-width: calc(100% - 1.5rem);
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with data prop 1`] = `
+.c5 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c5 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c13 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  gap: 1rem;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #969598;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c10 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transition: opacity 0.15s 0.1s;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c12 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #969598;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c2 img {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+}
+
+.c1 {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c3 {
+  width: 100%;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:739px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: transparent;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .c2:hover,
+  .c2:focus {
+    -webkit-transform: translateY(-0.02px);
+    -ms-transform: translateY(-0.02px);
+    transform: translateY(-0.02px);
+  }
+
+  .c2:hover {
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+  }
+
+  .c2:hover .c7 {
+    color: #E52630;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+  }
+
+  .c2:hover .c9 {
+    opacity: 1;
+  }
+
+  .c2:hover .c11 {
+    background: #E52630;
+  }
+}
+
+@media (max-width:739px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 {
+    -webkit-flex-basis: calc(50% - 1rem);
+    -ms-flex-preferred-size: calc(50% - 1rem);
+    flex-basis: calc(50% - 1rem);
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    -webkit-flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+    flex-basis: unset;
+    max-width: 564px;
+    height: 100%;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            <strong>
+              Load
+            </strong>
+             of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            test go
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/test-no-image"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Load of text here
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            View card
+            <img
+              alt=""
+              aria-hidden="true"
+              className="c9 c10"
+              src="mock.asset"
+            />
+          </span>
+          <div
+            className="c11 c12"
+          >
+            <svg
+              className="c13"
+              fill="none"
+              height="13"
+              viewBox="0 0 15 13"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
