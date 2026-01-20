@@ -3,6 +3,7 @@ import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import CloseCross from '../assets/close.svg';
+import spacing from '../../../../theme/shared/spacing';
 
 const closeDuration = 0.6;
 
@@ -44,11 +45,16 @@ const StyledPopUp = styled.div`
   background-color: ${({ theme }) => theme.color('blue_light')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
+  margin-top: ${spacing('m')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: 450px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    margin-top: 0;
   }
 `;
 
