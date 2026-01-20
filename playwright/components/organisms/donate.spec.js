@@ -9,32 +9,32 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-1"]')).toBeVisible();
 
     // moneybuy 1
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£12.10"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('12.10');
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('50');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£25.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('25');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £12.10 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £25 now');
 
     // moneybuy 2
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£20.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£50.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('50');
 
     const moneybuyTwoButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyTwoButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £20 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £50 now');
 
     // moneybuy 3
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£30.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('30');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£100.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('100');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £30 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £100 now');
 
     // amount field validation
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
@@ -68,13 +68,13 @@ test.describe('donate component', () => {
     await page.locator('[data-testid="Donate-example-1"] [for="give-monthly--mship-1"]').click();
 
     // moneybuy 1
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£5.50"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('5.50');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£5.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('5');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £5.50 monthly');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £5 monthly');
 
     // moneybuy 2
     await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£10.00"]').click();
@@ -86,13 +86,13 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £10 monthly');
 
     // moneybuy 3
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£20.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£25.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('25');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £20 monthly');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £25 monthly');
 
     // amount field validation
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');

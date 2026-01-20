@@ -4,18 +4,18 @@ export default {
     moneybuys: [
       {
         description:
-          'a pregnant woman in Uganda to have access to a birth kit so she can have a clean, safe delivery.',
-        value: '12.10'
+          'could help pay for a child refugee to attend a youth group session to build language skills and feel less alone as they adapt to life in a new community',
+        value: '25'
       },
       {
         description:
-          'a support worker to visit 10 isolated young mums with postnatal depression in the UK.',
-        value: '20'
+          'could fund a specialist therapy session for a young person who has experienced or is at risk of homelessness',
+        value: '50'
       },
       {
         description:
-          'clothes for a child who has had to leave their possessions behind while escaping domestic abuse.',
-        value: '30'
+          'could keep a food delivery van on the road for an entire day, delivering hundreds of meals to people in need',
+        value: '100'
       }
     ]
   },
@@ -23,18 +23,18 @@ export default {
     moneybuys: [
       {
         description:
-          'a regular supply of toiletries for someone living in a refugee camp in Serbia.',
-        value: '5.50'
+          'a month could help pay for a vulnerable young person in the UK to go to an after-school club throughout the month, allowing them to socialise, build friendships, and improve mental wellbeing',
+        value: '5'
       },
       {
         description:
-          'a potentially lifesaving call for a man at risk of suicide in the UK.',
+          'a month could buy phone credit for a refugee in the UK to stay in touch with loved ones',
         value: '10'
       },
       {
         description:
-          'the distribution of enough surplus food for a school breakfast club to feed 80 children.',
-        value: '20'
+          'a month could help run parent support groups in Kenya that tackle stigma, ensuring children with a disability aren’t excluded from school',
+        value: '25'
       }
     ]
   }
