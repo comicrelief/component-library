@@ -16,7 +16,6 @@ exports[`renders correctly in minimalist form 1`] = `
 .c7 {
   font-size: 0.75rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c7 span {
@@ -39,7 +38,6 @@ exports[`renders correctly in minimalist form 1`] = `
 .c8 {
   font-size: 2rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c8 span {
@@ -236,7 +234,6 @@ exports[`renders correctly with copy 1`] = `
 .c7 {
   font-size: 0.75rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c7 span {
@@ -259,7 +256,6 @@ exports[`renders correctly with copy 1`] = `
 .c8 {
   font-size: 2rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c8 span {
@@ -496,7 +492,6 @@ exports[`renders correctly with date 1`] = `
 .c7 {
   font-size: 0.75rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c7 span {
@@ -519,7 +514,6 @@ exports[`renders correctly with date 1`] = `
 .c8 {
   font-size: 2rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c8 span {
@@ -716,7 +710,6 @@ exports[`renders correctly with date and type 1`] = `
 .c7 {
   font-size: 0.75rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c7 span {
@@ -739,7 +732,6 @@ exports[`renders correctly with date and type 1`] = `
 .c8 {
   font-size: 2rem;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .c8 span {

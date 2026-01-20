@@ -141,7 +141,6 @@ const ArticleTeaser = ({
   alt = '',
   category = null,
   logoSize = null,
-  family = 'Anton',
   time = null
 }) => (
   <Wrapper>
@@ -175,12 +174,7 @@ const ArticleTeaser = ({
         </Date>
         <Title
           time={time}
-          size="xl"
           tag="h3"
-          height="2rem"
-          weight="normal"
-          uppercase
-          family={family}
         >
           {title}
         </Title>
@@ -199,7 +193,6 @@ ArticleTeaser.propTypes = {
   image: PropTypes.string,
   imageLow: PropTypes.string,
   logoSize: PropTypes.string,
-  family: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string,
   date: PropTypes.string.isRequired,

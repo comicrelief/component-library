@@ -18,8 +18,8 @@ The component expects pre-rendered content to be passed in the `body` field of e
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
-import Text from '../../Atoms/Text/Text';
-import challengeExampleImage from '../../../styleguide/assets/challenge-1.jpg';
+import Text from '../../../Atoms/Text/Text';
+import challengeExampleImage from '../../../../styleguide/assets/challenge-1.jpg';
 const exampleData = require('./example_data.json');
 
 // Map cards to include pre-rendered body content and processed image/link data
@@ -59,8 +59,8 @@ const data = {
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
-import Text from '../../Atoms/Text/Text';
-import challengeExampleImage from '../../../styleguide/assets/challenge-1.jpg';
+import Text from '../../../Atoms/Text/Text';
+import challengeExampleImage from '../../../../styleguide/assets/challenge-1.jpg';
 const exampleData = require('./example_data.json');
 
 // Map cards to include pre-rendered body content and processed image/link data

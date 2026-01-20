@@ -204,6 +204,7 @@ const CardWrapper = styled.div`
   @media ${({ theme, isCarousel }) => theme.allBreakpoints(isCarousel ? 'L' : 'M')} {
     flex-basis: calc(50% - 1rem);
     max-width: 564px;
+    height: 100%;
     align-self: stretch;
   }
 
@@ -211,6 +212,7 @@ const CardWrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     flex-basis: unset;
     max-width: 564px;
+    height: 100%;
     align-self: stretch;
   }
 `;

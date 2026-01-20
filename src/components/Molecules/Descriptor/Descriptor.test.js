@@ -61,15 +61,6 @@ it('renders article teaser correctly', () => {
       line-height: 1.5rem;
     }
 
-    .c7 {
-      font-size: 2rem;
-      line-height: normal;
-      font-family: 'Anton',Impact,sans-serif;
-      font-weight: normal;
-      line-height: 2rem;
-      text-transform: uppercase;
-    }
-
     .c7 span {
       font-size: inherit;
       line-height: inherit;
@@ -189,7 +180,6 @@ it('renders article teaser correctly', () => {
 
     .c11 {
       position: relative;
-      text-transform: uppercase;
     }
 
     .c12 {

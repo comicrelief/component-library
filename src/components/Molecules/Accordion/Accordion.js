@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
+import Text from '../../Atoms/Text/Text';
 
 import spacing from '../../../theme/shared/spacing';
 import { Chevron } from '../../Atoms/Icons/index';
@@ -72,6 +73,10 @@ const Copy = styled.div`
   `)}
 `;
 
+const StyledText = styled(Text)`
+    margin-bottom: 0;
+`;
+
 const Accordion = ({
   children, title, contentBottomPadding, ...rest
 }) => {
@@ -84,7 +89,9 @@ const Accordion = ({
   return (
     <Container {...rest}>
       <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes} type="button">
-        {title}
+        <StyledText tag="h3">
+          {title}
+        </StyledText>
         <Icon>
           <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
         </Icon>

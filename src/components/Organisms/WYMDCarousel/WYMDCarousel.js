@@ -67,7 +67,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
         { data.headerCopy}
       </Heading>
 
-      <PeopleHelpedText tag="h1" family="Anton" uppercase weight="normal" color="red">
+      <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
         { data.peopleHelpedText}
       </PeopleHelpedText>
 
@@ -111,7 +111,7 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
 
                 <div className="all-text-wrapper">
                   <AmountWrapper>
-                    <Text tag="h1" family="Anton" uppercase weight="normal" size="s">
+                    <Text tag="h1" family="Anton" weight="normal" size="s">
                       {theseItems[key].amount}
                     </Text>
                   </AmountWrapper>
