@@ -18,8 +18,7 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
  * Now CTAMultiCard handles the mapping internally, accepting
  * a data object and rendering all cards.
  *
- * Where a carousel is requested (carouselOfCards is true), the component will
- * use the Splide library to create it.
+ * Where a carousel is requested (carouselOfCards is true), the component will use the Splide library to create it.
  *
  * Note: The component expects pre-rendered content in the `body`
  * field of each card. The frontend should handle rich text rendering
