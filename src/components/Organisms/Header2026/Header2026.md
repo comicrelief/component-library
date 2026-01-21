@@ -1,8 +1,6 @@
 # Header 2026 - Comic Relief
 
-## Dev Mode
-
-When `devMode` is enabled, all paths will be prepended with `https://www.comicrelief.com`. This is useful when viewing the component library in isolation and you want links to navigate to the live site.
+#### Dev Mode - prepends `https://www.comicrelief.com` to page links
 
 ```js
 import mockData from './mockData/mockData.json';
