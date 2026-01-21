@@ -46,9 +46,9 @@ const CTAMultiCard = ({ data }) => {
       paddingAbove={paddingAbove}
       paddingBelow={paddingBelow}
     >
-      {cards.map(card => (
+      {cards.map((card, index) => (
         <CTACard
-          key={card.id}
+          key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}
           card={card}
           columns={columns}
           isCarousel={carouselOfCards}
