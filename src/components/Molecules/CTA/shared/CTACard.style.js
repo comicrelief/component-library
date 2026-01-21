@@ -244,8 +244,7 @@ const CardWrapper = styled.div`
     /* Below M: stacked cards, keep them centred */
     @media (max-width: ${breakpointValues.M - 1}px) {
       max-width: ${({ columns }) => (columns === 3 ? '309px' : '345px')};
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0;
     }
 
     @media (min-width: ${breakpointValues.M}px) and (max-width: ${breakpointValues.L - 1}px) {
@@ -254,14 +253,10 @@ const CardWrapper = styled.div`
     ? css`
               flex: 0 0 100%;
               max-width: 309px;
-              margin-left: auto;
-              margin-right: auto;
             `
     : css`
               flex: 0 0 345px;
               max-width: 345px;
-              margin-left: 0;
-              margin-right: 0;
             `)}
     }
   `}
