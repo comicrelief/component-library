@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
 import {
   Card,
-  CardImage,
   CardImageContainer,
   CardTitle,
   CardAgeGroup,
