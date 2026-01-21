@@ -3155,7 +3155,38 @@
                     "id": "link-25"
                   }
                 ],
-                "column3PageCards": null,
+                "column3PageCards": [
+                  {
+                    "id": "card-1",
+                    "pageName": "Start Fundraising",
+                    "pageDescription": "Get started with your own fundraising activities and make a real difference in your community.",
+                    "image": {
+                      "title": "fundraising-group",
+                      "description": "",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/4bP4ojwlWfxwbdkl9xB95P/a3705d6bd25f4c8871861d582575b33c/hands.jpg"
+                    },
+                    "pageSelector": {
+                      "title": "Start Fundraising",
+                      "path": "start-fundraising"
+                    },
+                    "primaryPageUrlIfExternal": null
+                  },
+                  {
+                    "id": "card-2",
+                    "pageName": "Host an Event",
+                    "pageDescription": "Plan your own Red Nose Day event and bring your community together for a great cause.",
+                    "image": {
+                      "title": "community-event",
+                      "description": "",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/2UKzJQ8BiWFOHgzowwNRO9/288ccdd4384a987b15a937e6a1ed6da1/email-icon.jpg"
+                    },
+                    "pageSelector": {
+                      "title": "Host an Event",
+                      "path": "host-an-event"
+                    },
+                    "primaryPageUrlIfExternal": null
+                  }
+                ],
                 "id": "group-1"
               },
               {
@@ -17425,7 +17456,38 @@
                     "id": "link-63"
                   }
                 ],
-                "column3PageCards": null,
+                "column3PageCards": [
+                  {
+                    "id": "card-1",
+                    "pageName": "Our History",
+                    "pageDescription": "Discover Comic Relief's journey from 1985 to today and the impact we've made together.",
+                    "image": {
+                      "title": "comic-relief-history",
+                      "description": "",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/64pt0z6a7yVYPxHuOlDh6M/b285dd8ce3beebc768d3428f9658c702/noses-on-fingers.jpg"
+                    },
+                    "pageSelector": {
+                      "title": "Our History",
+                      "path": "our-history"
+                    },
+                    "primaryPageUrlIfExternal": null
+                  },
+                  {
+                    "id": "card-2",
+                    "pageName": "Contact Us",
+                    "pageDescription": "Get in touch with our team. We'd love to hear from you about how you can help.",
+                    "image": {
+                      "title": "contact-team",
+                      "description": "",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/1jzpA0U5JjABWkETVvDbfG/bb1347b74cc6e9793fdf7dbba1a94018/IntegrateUK-Bristol-032020-MK-0947.jpg"
+                    },
+                    "pageSelector": {
+                      "title": "Contact Us",
+                      "path": "contact-us"
+                    },
+                    "primaryPageUrlIfExternal": "https://www.comicrelief.com/contact"
+                  }
+                ],
                 "id": "group-5"
               }
             ]
