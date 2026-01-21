@@ -32,42 +32,23 @@ const CardsContainer = styled.div`
   // Carousel mode - horizontal scroll container (M and below)
   ${({ isCarousel }) => isCarousel && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
-      ${({ useSplideCarousel }) => (useSplideCarousel ? css`
-        display: block;
-        cursor: grab;
-        width: 100%;
-        margin: 0;
-        max-width: 100%;
-        padding: 0.75rem 1rem;
-        gap: 0;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      overflow-x: visible;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding: 0.75rem 1rem;
 
-        .splide__list {
-          align-items: stretch;
-        }
-
-        .splide__slide {
-          display: flex;
-          height: auto;
-        }
-      ` : css`
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        width: 100%;
-        margin: 0;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        padding: 0.75rem 1rem;
-
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      `)}
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   `}
 
