@@ -1850,8 +1850,8 @@ exports[`renders carousel mode correctly 1`] = `
     width: 100%;
     margin: 0;
     max-width: 100%;
-    overflow-x: visible;
-    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -webkit-scroll-snap-type: x mandatory;
     -moz-scroll-snap-type: x mandatory;
