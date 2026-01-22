@@ -61,14 +61,6 @@ it('renders article teaser correctly', () => {
       line-height: 1.5rem;
     }
 
-    .c7 {
-      font-size: 2rem;
-      line-height: normal;
-      font-family: 'Anton',Impact,sans-serif;
-      font-weight: normal;
-      line-height: 2rem;
-    }
-
     .c7 span {
       font-size: inherit;
       line-height: inherit;
