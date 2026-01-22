@@ -67,7 +67,6 @@ const DonateBanner = ({
   const topImage = isMedium ? imageM : imageS;
   const shouldRenderTopImage = shouldShowTopImage
     && topImage && (topImage.images || topImage.image);
-  const widgetTextColor = donateWidgetIsTextOnly ? textColor : 'black';
 
   return (
     <Container
@@ -138,7 +137,7 @@ const DonateBanner = ({
           monthlyChooseAmountText={monthlyChooseAmountText}
           submitButtonColor={submitButtonColor}
           donateWidgetIsTextOnly={donateWidgetIsTextOnly}
-          widgetTextColor={widgetTextColor}
+          textColor={textColor}
           componentBackgroundColour={componentBackgroundColour}
           givingType={givingType}
           changeGivingType={setGivingType}

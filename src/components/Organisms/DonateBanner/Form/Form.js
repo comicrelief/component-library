@@ -39,7 +39,7 @@ const Signup = ({
   monthlyChooseAmountText = null,
   submitButtonColor = 'red',
   donateWidgetIsTextOnly = false,
-  widgetTextColor = 'black',
+  textColor = 'black',
   componentBackgroundColour = 'white',
   changeGivingType,
   givingType = null,
@@ -223,7 +223,7 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <PrimaryTitleText tag="span" color={widgetTextColor}>
+            <PrimaryTitleText tag="span" color={textColor}>
               {thisChooseAmountText}
             </PrimaryTitleText>
           </Legend>
@@ -252,7 +252,7 @@ const Signup = ({
           )}
           <FormFieldset>
             {!noMoneyBuys && (
-              <Label size="s" weight="500" color={widgetTextColor}>
+              <Label size="s" weight="500" color={textColor}>
                 Enter another amount
               </Label>
             )}
@@ -278,7 +278,7 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy as="p" color={widgetTextColor}>
+            <Copy as="p" color={textColor}>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
@@ -320,7 +320,7 @@ Signup.propTypes = {
   monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,
   donateWidgetIsTextOnly: PropTypes.bool,
-  widgetTextColor: PropTypes.string,
+  textColor: PropTypes.string,
   componentBackgroundColour: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string
