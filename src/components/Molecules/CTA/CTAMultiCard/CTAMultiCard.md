@@ -27,7 +27,7 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
   ...card,
   body: (
     <Text tag="p">
-      <strong>Load</strong> of text here
+      {card.body}
     </Text>
   ),
   fallback: challengeExampleImage,
@@ -80,7 +80,7 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
     </>
   ) : (
     <Text tag="p">
-      <strong>Load</strong> of text here
+      {card.body}
     </Text>
   ),
   fallback: challengeExampleImage,
