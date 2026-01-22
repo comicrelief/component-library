@@ -28,6 +28,7 @@ const PrimaryNavItem = (
     key={`${index}-${thisID}--item`}
     index={index}
     isSubMenuOpen={!!openedSubMenu}
+    style={{ border: '1px solid red' }}
   >
     {isNotDesktop ? (
       <NavLink
