@@ -24,15 +24,28 @@ const Header2026 = ({
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isTertiaryMenuOpen, setIsTertiaryMenuOpen] = useState(false);
+  const [tertiaryParentName, setTertiaryParentName] = useState(null);
   const closeSubMenusRef = useRef(null);
+  const closeTertiaryRef = useRef(null);
 
   const handleSubMenuChange = useCallback((isOpen, closeFunction) => {
     setIsSubMenuOpen(isOpen);
     closeSubMenusRef.current = closeFunction;
   }, []);
 
+  const handleTertiaryMenuChange = useCallback((isOpen, parentName, closeFunction) => {
+    setIsTertiaryMenuOpen(isOpen);
+    setTertiaryParentName(parentName);
+    closeTertiaryRef.current = closeFunction;
+  }, []);
+
   const handleBackClick = () => {
-    if (closeSubMenusRef.current) {
+    if (isTertiaryMenuOpen && closeTertiaryRef.current) {
+      closeTertiaryRef.current();
+      setIsTertiaryMenuOpen(false);
+      setTertiaryParentName(null);
+    } else if (closeSubMenusRef.current) {
       closeSubMenusRef.current();
     }
   };
@@ -45,17 +58,17 @@ const Header2026 = ({
     >
       <InnerWrapper data-testid="InnerWrapper">
 
-        {isSubMenuOpen ? (
+        {isSubMenuOpen || isTertiaryMenuOpen ? (
           <MobileBackHeader
             data-testid="MobileBackHeader"
             onClick={handleBackClick}
             type="button"
-            aria-label="Go back to main menu"
+            aria-label={isTertiaryMenuOpen ? `Go back to ${tertiaryParentName}` : 'Go back to main menu'}
           >
             <BackChevron>
               <img src={chevronIcon} alt="" />
             </BackChevron>
-            Main menu
+            {isTertiaryMenuOpen ? tertiaryParentName : 'Main menu'}
           </MobileBackHeader>
         ) : (
           <Brand data-testid="Brand">
@@ -71,6 +84,7 @@ const Header2026 = ({
           setIsExpandable={setIsExpandable}
           devMode={devMode}
           onSubMenuChange={handleSubMenuChange}
+          onTertiaryMenuChange={handleTertiaryMenuChange}
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">

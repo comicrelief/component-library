@@ -82,6 +82,15 @@ const SecondaryNavMenu = styled.ul`
   visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
   border-radius: 16px;
 
+  /* When tertiary menu is open, maintain height and hide secondary items */
+  ${({ isTertiaryOpen }) => isTertiaryOpen && css`
+    min-height: 100vh;
+
+    > li {
+      display: none;
+    }
+  `}
+
   // DESKTOP:
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: flex;
@@ -296,43 +305,38 @@ const StyledText = styled(Text)`
  * Column 1 Nav Item - Red border
  */
 const Column1NavItem = styled(SecondaryNavItem)`
-  border-left: 4px solid ${({ theme }) => theme.color('red')};
+  // border-left: 4px solid ${({ theme }) => theme.color('red')};
 `;
 
 /**
  * Column 2 Nav Item - Blue border
  */
 const Column2NavItem = styled(SecondaryNavItem)`
-  border-left: 4px solid ${({ theme }) => theme.color('blue')};
+  // border-left: 4px solid ${({ theme }) => theme.color('blue')};
 `;
 
 /**
  * Column 3 Nav Item - Green border
  */
 const Column3NavItem = styled(SecondaryNavItem)`
-  border-left: 4px solid ${({ theme }) => theme.color('green')};
+  // border-left: 4px solid ${({ theme }) => theme.color('green')};
 `;
 
 /**
  * Tertiary Navigation Menu (3rd level) - covers the secondary menu completely
  */
 const TertiaryNavMenu = styled.ul`
-  display: flex;
+  display: block;
   padding: 0;
   list-style: none outside;
   left: 0;
   top: 0;
-  bottom: 0;
-  right: 0;
 
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   ${zIndex('higher')};
 
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   background-color: ${({ theme }) => theme.color('white')};
 
   /* Mobile slide-in animation */
@@ -352,8 +356,9 @@ const TertiaryNavMenu = styled.ul`
  */
 const TertiaryNavItem = styled.li`
   padding: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
+  flex: 0 0 auto;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
   position: relative;
   transition: background-color ${transitionDuration}s ease;

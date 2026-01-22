@@ -35,13 +35,15 @@ const Navs = ({
   isExpandable,
   setIsExpandable,
   devMode = false,
-  onSubMenuChange = () => {}
+  onSubMenuChange = () => {},
+  onTertiaryMenuChange = () => {}
 }) => {
   const { headerPageGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
+  const [tertiaryCloseRef, setTertiaryCloseRef] = useState(null);
   let theseGroups = null;
 
   // Check if any submenu is currently open
@@ -51,6 +53,12 @@ const Navs = ({
   const closeSubMenus = useCallback(() => {
     setOpenedSubMenu({});
   }, []);
+
+  // Handle tertiary menu changes from PrimaryNavItem
+  const handleTertiaryMenuChange = useCallback((isOpen, parentName, closeFunction) => {
+    setTertiaryCloseRef(() => closeFunction);
+    onTertiaryMenuChange(isOpen && isNotDesktop, parentName, closeFunction);
+  }, [isNotDesktop, onTertiaryMenuChange]);
 
   // Notify parent when submenu state changes, passing close function
   useEffect(() => {
@@ -194,6 +202,7 @@ const Navs = ({
                   internalLinkHelper={InternalLinkHelper}
                   relNoopener={relNoopener}
                   devMode={devMode}
+                  onTertiaryMenuChange={handleTertiaryMenuChange}
                 />
               );
             })}
@@ -266,7 +275,8 @@ Navs.propTypes = {
   isExpandable: PropTypes.bool,
   setIsExpandable: PropTypes.func,
   devMode: PropTypes.bool,
-  onSubMenuChange: PropTypes.func
+  onSubMenuChange: PropTypes.func,
+  onTertiaryMenuChange: PropTypes.func
 };
 
 export default Navs;

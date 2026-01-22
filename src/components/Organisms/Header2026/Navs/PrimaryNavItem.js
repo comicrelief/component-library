@@ -26,14 +26,25 @@ const PrimaryNavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
-    columnLinks, navHelperNew, internalLinkHelper, devMode = false, ...rest
+    columnLinks, navHelperNew, internalLinkHelper, devMode = false,
+    onTertiaryMenuChange, ...rest
   }
 ) => {
   const [openTertiaryMenu, setOpenTertiaryMenu] = useState(null);
+  const [tertiaryParentName, setTertiaryParentName] = useState(null);
 
-  const handleTertiaryToggle = (e, linkId) => {
+  const handleTertiaryToggle = (e, linkId, parentName) => {
     e.preventDefault();
-    setOpenTertiaryMenu(openTertiaryMenu === linkId ? null : linkId);
+    const isOpening = openTertiaryMenu !== linkId;
+    setOpenTertiaryMenu(isOpening ? linkId : null);
+    setTertiaryParentName(isOpening ? parentName : null);
+
+    if (onTertiaryMenuChange) {
+      onTertiaryMenuChange(isOpening, isOpening ? parentName : null, () => {
+        setOpenTertiaryMenu(null);
+        setTertiaryParentName(null);
+      });
+    }
   };
 
   // Helper to check if a link has nested children
@@ -68,7 +79,7 @@ const PrimaryNavItem = (
               href="#"
               inline
               role="menuitem"
-              onClick={e => handleTertiaryToggle(e, linkId)}
+              onClick={e => handleTertiaryToggle(e, linkId, child.pageName)}
             >
               <Text>{child.pageName}</Text>
               <SecondaryChevronWrapper>
@@ -149,6 +160,7 @@ const PrimaryNavItem = (
       <SecondaryNavMenu
         role="list"
         isSubMenuOpen={!!openedSubMenu[thisID]}
+        isTertiaryOpen={openTertiaryMenu !== null}
         key={`${index}-${thisID}--sub-item`}
       >
         {/* Column 1 Page Links - red border guide */}
@@ -233,7 +245,8 @@ PrimaryNavItem.propTypes = {
   navHelperNew: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
   relNoopener: PropTypes.string,
-  devMode: PropTypes.bool
+  devMode: PropTypes.bool,
+  onTertiaryMenuChange: PropTypes.func
 };
 
 export default PrimaryNavItem;
