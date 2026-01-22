@@ -5,7 +5,6 @@ import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
-import handlePadding from '../../../utils/_utils';
 
 const Container = styled.div`
   position: relative;
@@ -13,18 +12,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  background-color: ${({ theme, mobileBackgroundColor }) => theme.color(mobileBackgroundColor)};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: row;
-    align-items: center;
-    justify-content: inherit;
-    background-color: ${({ theme, desktopOverlayColor }) => theme.color(desktopOverlayColor)};
-  }
-`;
-
-const PopUp = styled.div`
-  background: green;
-  height: 100px;
+  padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
+  background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
 `;
 
 const BgImage = styled(Picture)`
@@ -43,13 +32,9 @@ const Wrapper = styled.div`
   position: relative;
   text-align: center;
   padding: ${spacing('l')} ${spacing('md')};
-  flex-direction: row;
   align-items: center;
   display: block;
   width: 100%;
-  // TO-DO: this condition is WRONG and needs fixing (should be 'false'), but deploy this change will
-  // require a lot of content updates down the line in order to bring the pages back to the desired layout
-  flex-direction: ${({ formAlignRight }) => (formAlignRight === true ? 'row-reverse' : 'row')};
 
   ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
     justify-content: center;
@@ -62,7 +47,7 @@ const Wrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('xl')} 0;
-    ${({ paddingOption }) => handlePadding(paddingOption)};
+    flex-direction: ${({ donateOrientation }) => (donateOrientation === 'left' ? 'row-reverse' : 'row')};
   }
 `;
 
@@ -101,7 +86,9 @@ const Error = styled(Text)`
 const Form = styled.form`
   position: relative;
   width: 100%;
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: ${({ theme, donateWidgetIsTextOnly, componentBackgroundColour }) => (
+    donateWidgetIsTextOnly ? theme.color(componentBackgroundColour) : theme.color('white')
+  )};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   margin-top: ${spacing('md')};
@@ -269,7 +256,6 @@ export {
   Button,
   Copy,
   Container,
-  PopUp,
   Error,
   FormFieldset,
   FormWrapper,
