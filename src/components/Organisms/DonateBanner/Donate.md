@@ -43,7 +43,7 @@ const imageS = {
 />;
 ```
 
-## Image banner (widget left), monthly title/subtitle + choose amount overrides
+## Image banner (widget left), monthly title/subtitle + choose amount text overrides
 
 ```js
 import data from './dev-data/data';

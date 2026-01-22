@@ -1,28 +1,45 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import Donate from './Donate';
+import DonateBanner from './Donate';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
 it('Monthly donation renders correctly', () => {
+  const imageL = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageM = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageS = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+
   const tree = renderWithTheme(
-    <Donate
-      alt="Background image"
-      backgroundColor="blue_dark"
-      formAlignRight
-      imageLow={defaultData.pictures.imageLow}
-      images={defaultData.pictures.images}
+    <DonateBanner
+      pageBackgroundColour="grey_light"
+      paddingAbove="0rem"
+      paddingBelow="2rem"
+      donateOrientation="right"
+      imageL={imageL}
+      imageM={imageM}
+      imageS={imageS}
       data={data}
-      mbshipID="mship-1"
+      mbshipID="mbship-1"
       donateLink="https://donation.comicrelief.com/"
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
       subtitle="Please help us fund life-changing projects in the UK and around the world."
-      otherDescription="will help us fund amazing projects in the UK and around the world."
     />
   ).toJSON();
 
@@ -30,20 +47,38 @@ it('Monthly donation renders correctly', () => {
 });
 
 it('Single donation renders correctly', () => {
+  const imageL = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageM = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageS = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+
   const tree = renderWithTheme(
-    <Donate
-      backgroundColor="blue_dark"
-      formAlignRight={false}
-      imageLow={defaultData.pictures.imageLow}
-      images={defaultData.pictures.images}
+    <DonateBanner
+      pageBackgroundColour="grey_light"
+      paddingAbove="2rem"
+      paddingBelow="2rem"
+      donateOrientation="left"
+      imageL={imageL}
+      imageM={imageM}
+      imageS={imageS}
       data={singleData}
-      mbshipID="mship-1"
+      mbshipID="mbship-1"
       donateLink="https://donation.comicrelief.com/"
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
       subtitle="Please help us fund life-changing projects in the UK and around the world."
-      otherDescription="will help us fund amazing projects in the UK and around the world."
     />
   ).toJSON();
 
@@ -51,45 +86,65 @@ it('Single donation renders correctly', () => {
 });
 
 it('Single donation with no Money Buys renders correctly', () => {
+  const imageL = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageM = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+  const imageS = {
+    images: defaultData.pictures.images,
+    imageLow: defaultData.pictures.imageLow,
+    alt: 'Background image'
+  };
+
   const tree = renderWithTheme(
-    <Donate
-      backgroundColor="blue_dark"
-      formAlignRight={false}
-      imageLow={defaultData.pictures.imageLow}
-      images={defaultData.pictures.images}
+    <DonateBanner
+      pageBackgroundColour="grey_light"
+      paddingAbove="0rem"
+      paddingBelow="0rem"
+      donateOrientation="right"
+      imageL={imageL}
+      imageM={imageM}
+      imageS={imageS}
       data={singleData}
-      mbshipID="mship-1"
+      mbshipID="mbship-1"
       donateLink="https://donation.comicrelief.com/"
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
       noMoneyBuys
       subtitle="Please help us fund life-changing projects in the UK and around the world."
-      otherDescription="will help us fund amazing projects in the UK and around the world."
-      primaryTitleText="Overridden via the 'primary title text' prop"
+      chooseAmountText="Overridden choose amount text"
     />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
 
-it('"Single Giving, No Money Buys, with overridden manual input value" renders correctly', () => {
+it('Text-only donate widget renders correctly', () => {
   const tree = renderWithTheme(
-    <Donate
-      mobileBackgroundColor="blue_dark"
-      desktopOverlayColor="blue_dark"
-      formAlignRight={false}
-      imageLow={defaultData.pictures.imageLow}
-      images={defaultData.pictures.images}
+    <DonateBanner
+      donateWidgetIsTextOnly
+      pageBackgroundColour="grey_light"
+      componentBackgroundColour="deep_violet_dark"
+      textColor="white"
+      paddingAbove="2rem"
+      paddingBelow="2rem"
+      donateOrientation="right"
       data={data}
-      mbshipID="mship-4"
+      mbshipID="mbship-4"
       donateLink="https://donation.comicrelief.com/"
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
       noMoneyBuys
       subtitle="Please help us fund life-changing projects in the UK and around the world."
-      otherAmountValue={345.67}
+      chooseAmountText="Enter an amount to give"
     />
   ).toJSON();
 
