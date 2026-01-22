@@ -23,9 +23,6 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  ${({ backgroundColor }) => backgroundColor !== 'transparent' && `
-    opacity: 0.4;
-  `}
 `;
 
 const Wrapper = styled.div`
