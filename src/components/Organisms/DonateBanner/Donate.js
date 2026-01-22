@@ -6,7 +6,7 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
-import { handleTitles, handleCopy } from './_utils';
+import { handleTitles, handleOtherAmountText } from './_utils';
 
 import {
   BgImage,
@@ -16,59 +16,38 @@ import {
   Wrapper
 } from './Donate.style';
 
-const Donate = ({
-  alt = '',
-  data = {},
-  formAlignRight = true,
-  imageLow = null,
-  image = null,
-  images = null,
-  mobileImageLow = null,
-  mobileImage = null,
-  mobileImages = null,
-  mobileAlt = '',
-  desktopOverlayColor = 'transparent',
-  mobileBackgroundColor = 'blue_dark',
-  submitButtonColor = 'red',
-  textColor = 'white',
-  mbshipID = null,
-  otherAmountText =
-  'will help us fund amazing projects in the UK and around the world.',
-  subtitle = '',
-  noMoneyBuys = false,
-  PopUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
-  primaryTitleText = null,
-  secondaryTitleText = null,
-  isDesktopOverride = null,
-  otherAmountValue = null,
+const DonateBanner = ({
+  donateWidgetIsTextOnly = false,
+  donateOrientation = 'right',
+  paddingAbove = '0rem',
+  paddingBelow = '0rem',
+  pageBackgroundColour = 'transparent',
+  componentBackgroundColour = 'white',
   title = null,
-  additionalSingleCopy = null,
-  additionalMonthlyCopy = null,
-  defaultGivingType = null,
+  subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
+  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
+  chooseAmountText = null,
+  monthlyChooseAmountText = null,
+  otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
+  monthlyOtherAmountText = '',
+  noMoneyBuys = false,
+  textColor = 'white',
+  imageL = null,
+  imageM = null,
+  imageS = null,
+  data = {},
   cartID,
   clientID,
-  paddingOption = null,
   donateLink,
-  monthlyPrimaryTitleText = '',
-  monthlyOtherAmountText: monthlyOther = ''
+  mbshipID,
+  submitButtonColor = 'red'
 }) => {
-  let isDesktop = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
-
-  // To let us store any updated override, and force a re-render
-  const [overrideValue, setOverrideValue] = useState(null);
+  const isLarge = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
+  const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
   const [givingType, setGivingType] = useState();
 
-  // Store the updated override value
-  useEffect(() => {
-    setOverrideValue(isDesktopOverride);
-  }, [isDesktopOverride]);
-
-  // If a boolean value has been passed, let it replace our 'internal' value
-  isDesktop = overrideValue !== null ? overrideValue : isDesktop;
-
-  // Handy helper functions to process copy, based on givingType
   const {
     showCopy,
     thisTitle,
@@ -77,56 +56,51 @@ const Donate = ({
   } = handleTitles(givingType, title, subtitle, monthlyTitle, monthlySubtitle);
 
   const {
-    thisOtherAmountText,
-    thisPrimaryTitleText
-  } = handleCopy(givingType,
-    otherAmountText,
-    primaryTitleText,
-    monthlyOther,
-    monthlyPrimaryTitleText,
-    additionalSingleCopy,
-    additionalMonthlyCopy);
+    thisOtherAmountText
+  } = handleOtherAmountText(givingType, otherAmountText, monthlyOtherAmountText);
+
+  const shouldShowImage = donateWidgetIsTextOnly === false;
+  const shouldShowDesktopImage = shouldShowImage && isLarge && imageL && (imageL.images || imageL.image);
+  const shouldShowTopImage = shouldShowImage && !isLarge;
+  const topImage = isMedium ? imageM : imageS;
+  const shouldRenderTopImage = shouldShowTopImage && topImage && (topImage.images || topImage.image);
+  const widgetTextColor = donateWidgetIsTextOnly ? textColor : 'black';
 
   return (
     <Container
-      mobileBackgroundColor={mobileBackgroundColor}
-      desktopOverlayColor={desktopOverlayColor}
+      paddingAbove={paddingAbove}
+      paddingBelow={paddingBelow}
+      pageBackgroundColour={pageBackgroundColour}
       id={mbshipID}
-      key={overrideValue}
     >
-      {!isDesktop && mobileImages ? (
+      {shouldRenderTopImage ? (
         <Picture
-          backgroundColor={mobileBackgroundColor}
-          image={mobileImage}
-          images={mobileImages}
-          imageLow={mobileImageLow}
+          image={topImage.image}
+          images={topImage.images}
+          imageLow={topImage.imageLow}
           objectFit="cover"
           width="100%"
           height="100%"
-          alt={mobileAlt}
+          alt={topImage.alt || ''}
         />
       ) : null}
 
-      {isDesktop && images ? (
+      {shouldShowDesktopImage ? (
         <BgImage
-          backgroundColor={desktopOverlayColor}
-          image={image}
-          images={images}
-          imageLow={imageLow}
+          image={imageL.image}
+          images={imageL.images}
+          imageLow={imageL.imageLow}
           objectFit="cover"
           width="100%"
           height="100%"
-          alt={alt}
+          alt={imageL.alt || ''}
           isBackgroundImage
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll} paddingOption={paddingOption}>
-
-        {/* Only render if there is SOME title copy; otherwise,
-        we need to the space to centre-align the form */}
-        { !noTitlesAtAll && (
-        <TitleWrapperOuter formAlignRight={formAlignRight}>
+      <Wrapper donateOrientation={donateOrientation} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
+        {!noTitlesAtAll && (
+        <TitleWrapperOuter donateOrientation={donateOrientation}>
           <TitleWrapperInner>
             {showCopy && (
             <>
@@ -136,7 +110,6 @@ const Donate = ({
                 size="big"
                 family="Anton"
                 weight="normal"
-
               >
                 {thisTitle}
               </Text>
@@ -157,14 +130,13 @@ const Donate = ({
           mbshipID={mbshipID}
           donateLink={donateLink}
           noMoneyBuys={noMoneyBuys}
-          PopUpText={PopUpText}
-          primaryTitleText={thisPrimaryTitleText}
-          secondaryTitleText={secondaryTitleText}
+          popUpText={popUpText}
+          chooseAmountText={chooseAmountText}
+          monthlyChooseAmountText={monthlyChooseAmountText}
           submitButtonColor={submitButtonColor}
-          otherAmountValue={otherAmountValue}
-          additionalSingleCopy={additionalSingleCopy}
-          additionalMonthlyCopy={additionalMonthlyCopy}
-          defaultGivingType={defaultGivingType}
+          donateWidgetIsTextOnly={donateWidgetIsTextOnly}
+          widgetTextColor={widgetTextColor}
+          componentBackgroundColour={componentBackgroundColour}
           givingType={givingType}
           changeGivingType={setGivingType}
         />
@@ -173,42 +145,48 @@ const Donate = ({
   );
 };
 
-Donate.propTypes = {
-  alt: PropTypes.string,
-  cartID: PropTypes.string.isRequired,
-  data: PropTypes.objectOf(PropTypes.shape),
-  clientID: PropTypes.string.isRequired,
-  donateLink: PropTypes.string.isRequired,
+DonateBanner.propTypes = {
+  donateWidgetIsTextOnly: PropTypes.bool,
+  donateOrientation: PropTypes.oneOf(['left', 'right']),
+  paddingAbove: PropTypes.string,
+  paddingBelow: PropTypes.string,
+  pageBackgroundColour: PropTypes.string,
+  componentBackgroundColour: PropTypes.string,
   title: PropTypes.string,
-  otherAmountText: PropTypes.string,
   subtitle: PropTypes.string,
-  formAlignRight: PropTypes.bool,
-  imageLow: PropTypes.string,
-  image: PropTypes.string,
-  images: PropTypes.string,
-  mobileImageLow: PropTypes.string,
-  mobileImage: PropTypes.string,
-  mobileImages: PropTypes.string,
-  mobileAlt: PropTypes.string,
-  mobileBackgroundColor: PropTypes.string,
-  desktopOverlayColor: PropTypes.string,
-  submitButtonColor: PropTypes.string,
-  textColor: PropTypes.string,
-  mbshipID: PropTypes.string,
-  noMoneyBuys: PropTypes.bool,
-  PopUpText: PropTypes.string,
-  primaryTitleText: PropTypes.string,
-  secondaryTitleText: PropTypes.string,
-  isDesktopOverride: PropTypes.bool,
-  otherAmountValue: PropTypes.number,
-  additionalSingleCopy: PropTypes.string,
-  additionalMonthlyCopy: PropTypes.string,
-  defaultGivingType: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  monthlyPrimaryTitleText: PropTypes.string,
+  popUpText: PropTypes.string,
+  chooseAmountText: PropTypes.string,
+  monthlyChooseAmountText: PropTypes.string,
+  otherAmountText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
-  paddingOption: PropTypes.string
+  noMoneyBuys: PropTypes.bool,
+  textColor: PropTypes.string,
+  imageL: PropTypes.shape({
+    images: PropTypes.string,
+    imageLow: PropTypes.string,
+    image: PropTypes.string,
+    alt: PropTypes.string
+  }),
+  imageM: PropTypes.shape({
+    images: PropTypes.string,
+    imageLow: PropTypes.string,
+    image: PropTypes.string,
+    alt: PropTypes.string
+  }),
+  imageS: PropTypes.shape({
+    images: PropTypes.string,
+    imageLow: PropTypes.string,
+    image: PropTypes.string,
+    alt: PropTypes.string
+  }),
+  data: PropTypes.objectOf(PropTypes.shape),
+  cartID: PropTypes.string.isRequired,
+  clientID: PropTypes.string.isRequired,
+  donateLink: PropTypes.string.isRequired,
+  mbshipID: PropTypes.string.isRequired,
+  submitButtonColor: PropTypes.string
 };
 
-export default Donate;
+export default DonateBanner;

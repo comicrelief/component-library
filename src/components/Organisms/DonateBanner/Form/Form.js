@@ -35,14 +35,13 @@ const Signup = ({
   cartID,
   mbshipID,
   noMoneyBuys = false,
-  PopUpText,
-  primaryTitleText = null,
-  secondaryTitleText = null,
-  submitButtonColor,
-  otherAmountValue = null,
-  additionalSingleCopy = null,
-  additionalMonthlyCopy = null,
-  defaultGivingType = null,
+  popUpText,
+  chooseAmountText = null,
+  monthlyChooseAmountText = null,
+  submitButtonColor = 'red',
+  donateWidgetIsTextOnly = false,
+  widgetTextColor = 'black',
+  componentBackgroundColour = 'white',
   changeGivingType,
   givingType = null,
   ...rest
@@ -56,11 +55,7 @@ const Signup = ({
   const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
-    // If a specific 'other amount' has been passed down, use it,
-    // otherwise assign based on the associated moneybuys:
-    if (otherAmountValue) {
-      setAmountDonate(otherAmountValue);
-    } else if (givingType) {
+    if (givingType) {
       const givingData = givingType === 'single' ? singleGiving : regularGiving;
 
       // Check the 2nd moneybuy exists before using it;
@@ -74,7 +69,7 @@ const Signup = ({
     }
     // Pass givingType up to parent for copy-switching logic:
     changeGivingType(givingType);
-  }, [givingType, singleGiving, regularGiving, otherAmountValue, changeGivingType]);
+  }, [givingType, singleGiving, regularGiving, changeGivingType]);
 
   useEffect(() => {
     if (givingType) {
@@ -125,12 +120,7 @@ const Signup = ({
   useEffect(() => {
     let newGivingType;
     // Use any explicit setting
-    if (defaultGivingType) {
-      newGivingType = defaultGivingType;
-    } else {
-      // Else, use whatever's available
-      newGivingType = singleGiving !== null ? 'single' : 'monthly';
-    }
+    newGivingType = singleGiving !== null ? 'single' : 'monthly';
 
     changeGivingType(newGivingType);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -160,13 +150,6 @@ const Signup = ({
       setMoneyBuyCopy(false);
     }
   };
-
-  // Update the local state if the prop has been set and changed
-  useEffect(() => {
-    if (otherAmountValue) {
-      setAmountDonate(otherAmountValue);
-    }
-  }, [otherAmountValue, setAmountDonate]);
 
   // Create money buy boxes
   const givingData = givingType === 'single' ? singleGiving : regularGiving;
@@ -219,15 +202,18 @@ const Signup = ({
     return `Donate £${amountDonate} monthly`;
   };
 
-  const showAdditionalSingleCopy = givingType === 'single' && additionalSingleCopy;
-  const showAdditionalMonthlyCopy = givingType === 'monthly' && additionalMonthlyCopy;
-  const additionalCopy = showAdditionalSingleCopy || showAdditionalMonthlyCopy;
+  const defaultChooseAmountText = `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`;
+  const thisChooseAmountText = givingType === 'monthly' && monthlyChooseAmountText
+    ? monthlyChooseAmountText
+    : (chooseAmountText || defaultChooseAmountText);
 
   return (
     <FormWrapper>
-      { popOpen && <PopUpComponent PopUpText={PopUpText} setPopOpen={setPopOpen} /> }
+      { popOpen && <PopUpComponent popUpText={popUpText} setPopOpen={setPopOpen} /> }
 
       <Form
+        donateWidgetIsTextOnly={donateWidgetIsTextOnly}
+        componentBackgroundColour={componentBackgroundColour}
         onSubmit={e => submitDonation(
           e,
           amountDonate,
@@ -240,15 +226,9 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <PrimaryTitleText tag="span">
-              {primaryTitleText
-                || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
+            <PrimaryTitleText tag="span" color={widgetTextColor}>
+              {thisChooseAmountText}
             </PrimaryTitleText>
-            {secondaryTitleText && (
-              <SecondaryTitleText tag="span">
-                {secondaryTitleText}
-              </SecondaryTitleText>
-            )}
           </Legend>
           {showGivingSelector && (
             <GivingSelector
@@ -275,7 +255,7 @@ const Signup = ({
           )}
           <FormFieldset>
             {!noMoneyBuys && (
-              <Label size="s" weight="500">
+              <Label size="s" weight="500" color={widgetTextColor}>
                 Enter another amount
               </Label>
             )}
@@ -301,7 +281,7 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy as="p">
+            <Copy as="p" color={widgetTextColor}>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
@@ -312,14 +292,6 @@ const Signup = ({
             Please enter an amount between £1 and £25000 and up to 2 decimal
             places
           </Error>
-          )}
-
-          {additionalCopy && (
-          <p className="additional-copy">
-            <strong>
-              {additionalCopy}
-            </strong>
-          </p>
           )}
 
           <Button
@@ -346,14 +318,13 @@ Signup.propTypes = {
   mbshipID: PropTypes.string.isRequired,
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  PopUpText: PropTypes.string.isRequired,
-  primaryTitleText: PropTypes.string,
-  secondaryTitleText: PropTypes.string,
-  submitButtonColor: PropTypes.string.isRequired,
-  otherAmountValue: PropTypes.number,
-  additionalSingleCopy: PropTypes.string,
-  additionalMonthlyCopy: PropTypes.string,
-  defaultGivingType: PropTypes.string,
+  popUpText: PropTypes.string.isRequired,
+  chooseAmountText: PropTypes.string,
+  monthlyChooseAmountText: PropTypes.string,
+  submitButtonColor: PropTypes.string,
+  donateWidgetIsTextOnly: PropTypes.bool,
+  widgetTextColor: PropTypes.string,
+  componentBackgroundColour: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string
 };
