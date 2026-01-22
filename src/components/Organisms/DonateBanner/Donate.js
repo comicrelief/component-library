@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
@@ -19,8 +19,8 @@ import {
 const DonateBanner = ({
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
-  paddingAbove = '0rem',
-  paddingBelow = '0rem',
+  paddingAbove = '2rem',
+  paddingBelow = '2rem',
   pageBackgroundColour = 'transparent',
   componentBackgroundColour = 'white',
   title = null,
@@ -60,10 +60,13 @@ const DonateBanner = ({
   } = handleOtherAmountText(givingType, otherAmountText, monthlyOtherAmountText);
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
-  const shouldShowDesktopImage = shouldShowImage && isLarge && imageL && (imageL.images || imageL.image);
+  const shouldShowDesktopImage = shouldShowImage
+    && isLarge && imageL
+    && (imageL.images || imageL.image);
   const shouldShowTopImage = shouldShowImage && !isLarge;
   const topImage = isMedium ? imageM : imageS;
-  const shouldRenderTopImage = shouldShowTopImage && topImage && (topImage.images || topImage.image);
+  const shouldRenderTopImage = shouldShowTopImage
+    && topImage && (topImage.images || topImage.image);
   const widgetTextColor = donateWidgetIsTextOnly ? textColor : 'black';
 
   return (
