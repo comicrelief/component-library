@@ -22,8 +22,7 @@ import {
   AmountField,
   OuterFieldset,
   Legend,
-  PrimaryTitleText,
-  SecondaryTitleText
+  PrimaryTitleText
 } from '../Donate.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -118,9 +117,7 @@ const Signup = ({
 
   // On load, determine what should actually be the default giving type
   useEffect(() => {
-    let newGivingType;
-    // Use any explicit setting
-    newGivingType = singleGiving !== null ? 'single' : 'monthly';
+    const newGivingType = singleGiving !== null ? 'single' : 'monthly';
 
     changeGivingType(newGivingType);
   // eslint-disable-next-line react-hooks/exhaustive-deps
