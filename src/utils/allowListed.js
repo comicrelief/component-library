@@ -6,7 +6,8 @@ const allowList = [
   'https://app.beapplied.com/org/comic-relief',
   'stories.comicrelief.com',
   'https://form.typeform.com',
-  'https://interfaces.zapier.com'
+  // Required for the HHoF form:
+  'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'
 ];
 
 const allowListed = url => {
