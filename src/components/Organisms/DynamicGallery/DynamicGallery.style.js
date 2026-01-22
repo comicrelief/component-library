@@ -11,7 +11,6 @@ export const Container = styled.div`
 export const ImageGrid = styled.div`
   display: flex;
   gap: 1rem;
-  background: #eeeeee;
 `;
 
 export const Column = styled.div`
@@ -19,7 +18,6 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: #eeeeee;
 `;
 
 export const EmptyMessage = styled.div`
@@ -30,12 +28,25 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background: #dddddd;
+  cursor: pointer;
+  border-radius: 0.5rem;
+
+  &:focus-visible {
+    outline: 2px solid #000000;
+  }
+  & div:first-child {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
 `;
 
 export const CardImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
+  border-radius: 0.5rem;
 `;
 
 export const CardImage = styled.img`
@@ -44,13 +55,24 @@ export const CardImage = styled.img`
   object-fit: cover;
 `;
 
-export const CardTitle = styled.div`
-  font-size: 1.2rem;
-  font-weight: 600;
+export const CardDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 8px;
 `;
 
-export const CardAgeGroup = styled.div`
-  font-size: 0.8rem;
+export const CardTitle = styled.span`
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-family: ${({ theme }) => theme.font.regular};
+  color: ${({ theme }) => theme.color('black')};
+`;
+
+export const CardAgeGroup = styled.span`
+  font-size: ${({ theme }) => theme.fontSize('xs')};
+  font-family: ${({ theme }) => theme.font.regular};
+  color: ${({ theme }) => theme.color('grey')};
+  line-height: 1;
 `;
 
 export const Lightbox = styled.a``;

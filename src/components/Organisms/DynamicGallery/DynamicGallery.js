@@ -1,6 +1,12 @@
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useContext
+} from 'react';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
 import {
   Card,
@@ -10,12 +16,15 @@ import {
   Column,
   Container,
   EmptyMessage,
-  ImageGrid
+  ImageGrid,
+  CardDetails
 } from './DynamicGallery.style';
 import Picture from '../../Atoms/Picture/Picture';
+import Lightbox, { LightboxContext } from './Lightbox';
 
 /**
- * Dynamic Gallery is a component that displays a grid of images.
+ * the Dynamic Gallery component displays a grid of images,
+ * by default using dynamic heights per image to create an more organic look
  */
 const DynamicGallery = ({
   // options
@@ -76,24 +85,51 @@ const DynamicGallery = ({
     };
   }, [updateColumnCount]);
 
+  // handle selected card
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  function handleNextCard(card) {
+    const cardIndex = cards.indexOf(card);
+    const nextCardIndex = (cardIndex + 1) % cards.length;
+    setSelectedCard(cards[nextCardIndex]);
+  }
+
+  function handlePreviousCard(card) {
+    const cardIndex = cards.indexOf(card);
+    const previousCardIndex = (cardIndex - 1 + cards.length) % cards.length;
+    setSelectedCard(cards[previousCardIndex]);
+  }
+
   return (
     <Container>
-      <ImageGrid>
-        {/* eslint-disable-next-line operator-linebreak */}
-        {hasCards &&
-          Array(columnCount)
-            .fill(null)
-            .map((column, columnIndex) => {
-              const columnCards = cards?.filter(
-                (_, cardIndex) => cardIndex % columnCount === columnIndex
-              );
-              // disabling the lint rule here as we're chunking an array and have no unique keys
-              // eslint-disable-next-line react/no-array-index-key
-              return <ColumnComponent key={columnIndex} cards={columnCards} />;
-            })}
+      <LightboxContext.Provider
+        value={{
+          selectedCard,
+          setSelectedCard,
+          nextCard: handleNextCard,
+          previousCard: handlePreviousCard
+        }}
+      >
+        <ImageGrid>
+          {/* eslint-disable-next-line operator-linebreak */}
+          {hasCards &&
+            Array(columnCount)
+              .fill(null)
+              .map((column, columnIndex) => {
+                const columnCards = cards?.filter(
+                  (_, cardIndex) => cardIndex % columnCount === columnIndex
+                );
+                return (
+                  // disabling the lint rule here as we're chunking an array and have no unique keys
+                  // eslint-disable-next-line react/no-array-index-key
+                  <ColumnComponent key={columnIndex} cards={columnCards} />
+                );
+              })}
 
-        <EmptyMessage isEmpty={!hasCards}>No cards to display</EmptyMessage>
-      </ImageGrid>
+          <EmptyMessage isEmpty={!hasCards}>No cards to display</EmptyMessage>
+        </ImageGrid>
+        <Lightbox />
+      </LightboxContext.Provider>
       {/* <Button onClick={handleLoadMore}>Load more</Button> */}
     </Container>
   );
@@ -149,12 +185,31 @@ function ColumnComponent({ cards }) {
     };
   }, [updateMinMaxHeight]);
 
+  // handle selected card
+  const { setSelectedCard } = useContext(LightboxContext);
+
+  function handleSelectCard(card) {
+    setSelectedCard(card);
+  }
+
+  function handleKeyDown(event, card) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setSelectedCard(card);
+    }
+  }
+
   return (
     <Column ref={elRef}>
       {cards.map((card, cardIndex) => (
-        // disabling the lint rule here as we're chunking an array and have no unique keys
-        // eslint-disable-next-line react/no-array-index-key
-        <Card key={cardIndex}>
+        <Card
+          // disabling the lint rule here as we're chunking an array and have no unique keys
+          // eslint-disable-next-line react/no-array-index-key
+          key={cardIndex}
+          onPointerUp={() => handleSelectCard(card)}
+          onKeyDown={event => handleKeyDown(event, card)}
+          tabIndex={0}
+        >
           <CardImageContainer style={{ minHeight, maxHeight }}>
             <Picture
               alt={card.title}
@@ -163,9 +218,11 @@ function ColumnComponent({ cards }) {
               objectFit="cover"
             />
           </CardImageContainer>
-          <CardTitle>{card.title}</CardTitle>
-          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-          <CardAgeGroup>Age group: {card.ageGroup}</CardAgeGroup>
+          <CardDetails>
+            <CardTitle>{card.title}</CardTitle>
+            {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+            <CardAgeGroup>Age group: {card.ageGroup}</CardAgeGroup>
+          </CardDetails>
         </Card>
       ))}
     </Column>
