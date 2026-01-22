@@ -68,7 +68,7 @@ const DonateBanner = ({
   const topImage = isMedium ? imageM : imageS;
   const shouldRenderTopImage = shouldShowTopImage
     && topImage && (topImage.images || topImage.image);
-  const shouldShowTitleSection = noTitlesAtAll === false && (isLarge && donateWidgetIsTextOnly);
+  const shouldShowTitleSection = noTitlesAtAll === false && (isLarge || donateWidgetIsTextOnly);
 
   return (
     <Container
