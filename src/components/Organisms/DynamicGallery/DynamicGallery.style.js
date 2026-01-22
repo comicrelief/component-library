@@ -35,6 +35,7 @@ export const Card = styled.div`
 
 export const CardImageContainer = styled.div`
   width: 100%;
+  overflow: hidden;
 `;
 
 export const CardImage = styled.img`

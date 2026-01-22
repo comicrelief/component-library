@@ -1,6 +1,6 @@
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
 import {
   Card,
@@ -42,30 +42,39 @@ const DynamicGallery = ({
    */
   const [columnCount, setColumnCount] = useState(maxColumns);
 
+  const updateColumnCount = useCallback(() => {
+    let newColumnCount = 1;
+    switch (true) {
+      case window.innerWidth < breakpointValues.S:
+        newColumnCount = 1;
+        break;
+      case window.innerWidth < breakpointValues.M:
+        newColumnCount = 2;
+        break;
+      default:
+        newColumnCount = maxColumns;
+        break;
+    }
+    setColumnCount(newColumnCount);
+  }, [maxColumns, setColumnCount]);
+
+  // call once on initialisation
+  const isInitialised = useRef(false);
+  if (!isInitialised.current) {
+    updateColumnCount();
+    isInitialised.current = true;
+  }
+
+  // call repeatedly on window resize
   useEffect(() => {
-    const handleWindowResize = throttle(() => {
-      let newColumnCount = 1;
-      switch (true) {
-        case window.innerWidth < breakpointValues.S:
-          newColumnCount = 1;
-          break;
-        case window.innerWidth < breakpointValues.M:
-          newColumnCount = 2;
-          break;
-        default:
-          newColumnCount = maxColumns;
-          break;
-      }
-      setColumnCount(newColumnCount);
-    }, 250);
+    const handleWindowResize = throttle(updateColumnCount, 250);
 
     window.addEventListener('resize', handleWindowResize);
-    handleWindowResize.flush();
 
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, [maxColumns, setColumnCount]);
+  }, [updateColumnCount]);
 
   return (
     <Container>
@@ -113,26 +122,32 @@ function ColumnComponent({ cards }) {
   const [maxHeight, setMaxHeight] = useState();
   const elRef = useRef(null);
 
+  const updateMinMaxHeight = useCallback(() => {
+    if (!elRef.current) return;
+    const columnWidth = elRef.current.clientWidth;
+    const maxAspectRatio = 9 / 16;
+    const minAspectRatio = 2.35 / 1;
+    setMinHeight(columnWidth / minAspectRatio);
+    setMaxHeight(columnWidth / maxAspectRatio);
+  }, [setMinHeight, setMaxHeight]);
+
+  // call repeatedly on column resize
   useEffect(() => {
     // when the column width changes, recalculate the min/max height for images
-    const handleWindowResize = throttle(() => {
-      if (!elRef.current) return;
-      const columnWidth = elRef.current.clientWidth;
-      const maxAspectRatio = 9 / 16;
-      const minAspectRatio = 2.35 / 1;
-      setMinHeight(columnWidth / minAspectRatio);
-      setMaxHeight(columnWidth / maxAspectRatio);
+    const handleResize = throttle(() => {
+      updateMinMaxHeight();
     }, 250);
 
-    // could be a resize observer but window resize seems to
-    // sync better with the column width changes
-    window.addEventListener('resize', handleWindowResize);
-    handleWindowResize.flush();
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(elRef.current);
+
+    // call once on initial mount
+    updateMinMaxHeight();
 
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
+      resizeObserver.disconnect();
     };
-  }, []);
+  }, [updateMinMaxHeight]);
 
   return (
     <Column ref={elRef}>
@@ -141,7 +156,12 @@ function ColumnComponent({ cards }) {
         // eslint-disable-next-line react/no-array-index-key
         <Card key={cardIndex}>
           <CardImageContainer style={{ minHeight, maxHeight }}>
-            <Picture alt={card.title} image={card.image} />
+            <Picture
+              alt={card.title}
+              image={card.image}
+              height="100%"
+              objectFit="cover"
+            />
           </CardImageContainer>
           <CardTitle>{card.title}</CardTitle>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}

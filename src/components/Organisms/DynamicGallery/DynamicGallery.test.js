@@ -5,9 +5,8 @@ import DynamicGallery from './DynamicGallery';
 
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
-it('renders a Dynamic Gallery with no options set', () => {
+it('renders an empty Dynamic Gallery with no options set', () => {
   const tree = renderWithTheme(<DynamicGallery />).toJSON();
-
   expect(tree).toMatchSnapshot();
 });
 
