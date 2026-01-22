@@ -78,7 +78,7 @@ const Button = styled.button`
   }
 `;
 
-const PopUpComponent = ({ PopUpText, setPopOpen }) => {
+const PopUpComponent = ({ popUpText, setPopOpen }) => {
   const [isClosed, setIsClosed] = useState(false);
 
   // Only update centralised state - which renders
@@ -96,14 +96,14 @@ const PopUpComponent = ({ PopUpText, setPopOpen }) => {
         <img src={CloseCross} alt="Close cross icon" />
       </Button>
       <TextWrapper>
-        <Text>{ PopUpText }</Text>
+        <Text>{ popUpText }</Text>
       </TextWrapper>
     </StyledPopUp>
   );
 };
 
 PopUpComponent.propTypes = {
-  PopUpText: PropTypes.string.isRequired,
+  popUpText: PropTypes.string.isRequired,
   setPopOpen: PropTypes.func.isRequired
 };
 
