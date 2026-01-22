@@ -9,10 +9,12 @@ import {
   NavLink,
   DesktopNavLink,
   SecondaryNavMenu,
-  SecondaryNavItem,
   SecondaryNavLink,
   ChevronWrapper,
-  StyledText
+  StyledText,
+  Column1NavItem,
+  Column2NavItem,
+  Column3NavItem
 } from './PrimaryNavItem.style';
 
 const PrimaryNavItem = (
@@ -28,7 +30,6 @@ const PrimaryNavItem = (
     key={`${index}-${thisID}--item`}
     index={index}
     isSubMenuOpen={!!openedSubMenu}
-    style={{ border: '1px solid red' }}
   >
     {isNotDesktop ? (
       <NavLink
@@ -88,17 +89,45 @@ const PrimaryNavItem = (
         isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
       >
-        {columnLinks.map(child => {
+        {/* Column 1 Page Links - red border guide */}
+        {group.column1PageLinks && group.column1PageLinks.map(child => {
           let thisSubUrl = navHelperNew(child);
           thisSubUrl = internalLinkHelper(thisSubUrl);
 
-          // Otherwise, render out as usual:
           return (
-            <SecondaryNavItem key={child.id}>
+            <Column1NavItem key={child.id}>
               <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
                 <Text>{child.pageName}</Text>
               </SecondaryNavLink>
-            </SecondaryNavItem>
+            </Column1NavItem>
+          );
+        })}
+
+        {/* Column 2 Page Links - blue border guide */}
+        {group.column2PageLinks && group.column2PageLinks.map(child => {
+          let thisSubUrl = navHelperNew(child);
+          thisSubUrl = internalLinkHelper(thisSubUrl);
+
+          return (
+            <Column2NavItem key={child.id}>
+              <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
+                <Text>{child.pageName}</Text>
+              </SecondaryNavLink>
+            </Column2NavItem>
+          );
+        })}
+
+        {/* Column 3 Page Links - green border guide */}
+        {group.column3PageLinks && group.column3PageLinks.map(child => {
+          let thisSubUrl = navHelperNew(child);
+          thisSubUrl = internalLinkHelper(thisSubUrl);
+
+          return (
+            <Column3NavItem key={child.id}>
+              <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
+                <Text>{child.pageName}</Text>
+              </SecondaryNavLink>
+            </Column3NavItem>
           );
         })}
       </SecondaryNavMenu>
@@ -122,7 +151,25 @@ PrimaryNavItem.propTypes = {
     primaryPageSelector: PropTypes.shape({
       path: PropTypes.string,
       title: PropTypes.string
-    })
+    }),
+    column1PageLinks: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        pageName: PropTypes.string
+      })
+    ),
+    column2PageLinks: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        pageName: PropTypes.string
+      })
+    ),
+    column3PageLinks: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        pageName: PropTypes.string
+      })
+    )
   }),
   columnLinks: PropTypes.arrayOf(
     PropTypes.shape({

@@ -289,6 +289,27 @@ const StyledText = styled(Text)`
   }
 `;
 
+/**
+ * Column 1 Nav Item - Red border
+ */
+const Column1NavItem = styled(SecondaryNavItem)`
+  border-left: 4px solid ${({ theme }) => theme.color('red')};
+`;
+
+/**
+ * Column 2 Nav Item - Blue border
+ */
+const Column2NavItem = styled(SecondaryNavItem)`
+  border-left: 4px solid ${({ theme }) => theme.color('blue')};
+`;
+
+/**
+ * Column 3 Nav Item - Green border
+ */
+const Column3NavItem = styled(SecondaryNavItem)`
+  border-left: 4px solid ${({ theme }) => theme.color('green')};
+`;
+
 export {
   StyledNavItem,
   NavLink,
@@ -297,5 +318,8 @@ export {
   SecondaryNavItem,
   SecondaryNavLink,
   ChevronWrapper,
-  StyledText
+  StyledText,
+  Column1NavItem,
+  Column2NavItem,
+  Column3NavItem
 };
