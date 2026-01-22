@@ -45,6 +45,7 @@ export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/A
 export { default as Header } from './components/Organisms/Header/Header';
 export { default as Header2025 } from './components/Organisms/Header2025/Header2025';
 export { default as Donate } from './components/Organisms/Donate/Donate';
+export { default as DonateBanner } from './components/Organisms/DonateBanner/Donate';
 export { default as DoubleCopy } from './components/Molecules/DoubleCopy/DoubleCopy';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Organisms/Footer/Footer';
