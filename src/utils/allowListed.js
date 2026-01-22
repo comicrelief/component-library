@@ -5,7 +5,8 @@ const allowList = [
   'https://www.sportrelief.com',
   'https://app.beapplied.com/org/comic-relief',
   'stories.comicrelief.com',
-  'https://form.typeform.com'
+  'https://form.typeform.com',
+  'https://interfaces.zapier.com'
 ];
 
 const allowListed = url => {
