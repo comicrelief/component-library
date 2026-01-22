@@ -70,6 +70,7 @@ const TitleWrapperOuter = styled.div`
   width: 100%;
   display: flex;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  padding-bottom: ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     width: 50%;
     padding: ${spacing('xl')};
@@ -125,6 +126,7 @@ const Form = styled.form`
 `;
 
 const OuterFieldset = styled.fieldset`
+  color: ${({ theme }) => theme.color('black')};
   padding: 0 ${spacing('md')} ${spacing('md')};
   margin: 0;
   border: none;
@@ -139,40 +141,57 @@ const OuterFieldset = styled.fieldset`
 
 const Legend = styled.legend`
   margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')};
+  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
   display: block;
   width: 100%;
+`;
+
+const PrimaryTitleText = styled(Text)`
+  display: block;
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: 700;
+`;
+
+const SecondaryTitleText = styled(Text)`
+  display: block;
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  line-height: 1.5;
+  margin-top: ${spacing('sm')};
 `;
 
 const MoneyBuys = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-bottom: ${spacing('l')};
+  margin-bottom: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
+    margin-top: ${spacing('m')};
   }
   label {
-    flex: 0 0 30%;
+    flex: 0 0 31%;
     margin-bottom: ${spacing('sm')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-bottom: 0;
     }
     input {
       cursor: pointer;
-      padding: ${spacing('m')}  ${spacing('sm')};
+      padding: ${spacing('sm')}  ${spacing('m')};
     }
   }
 `;
 
 const FormFieldset = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const Label = styled(Text)`
-  margin-right: ${spacing('sm')};
+  margin-bottom: ${spacing('sm')};
 `;
 
 const AmountField = styled(Input)`
@@ -182,6 +201,10 @@ const AmountField = styled(Input)`
   flex-grow: 0;
   font-weight: 400;
   display: block;
+
+  ${({ $noMoneyBuys }) => $noMoneyBuys === true && css`
+    margin-top: ${spacing('sm')};
+  `}
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-basis: 60%;
@@ -200,13 +223,13 @@ const AmountField = styled(Input)`
 
   input {
     height: 48px;
-    border: 2px solid ${({ theme }) => theme.color('grey')};
+    border: 1px solid ${({ theme }) => theme.color('grey')};
     background: ${({ theme }) => theme.color('grey_light')};
     border-radius: 0.5rem;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     &:focus {
       outline: none;
-      border: 2px solid ${({ theme }) => theme.color('grey')};
+      border: 1px solid ${({ theme }) => theme.color('grey')};
     }
   }
 `;
@@ -218,7 +241,7 @@ const Copy = styled(Text)`
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('l')} 0 ${spacing('l')};
+  margin: ${spacing('sm')} 0 ${spacing('sm')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
@@ -226,9 +249,8 @@ const Button = styled.button`
   min-height: 48px;
   background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   appearance: none;
   :active,
   :focus,
@@ -259,5 +281,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend
+  Legend,
+  PrimaryTitleText,
+  SecondaryTitleText
 };

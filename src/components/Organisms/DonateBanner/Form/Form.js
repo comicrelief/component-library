@@ -4,7 +4,6 @@ import React, {
 import PropTypes from 'prop-types';
 
 import PopUpComponent from './PopUpComponent';
-import Text from '../../../Atoms/Text/Text';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
@@ -22,7 +21,9 @@ import {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend
+  Legend,
+  PrimaryTitleText,
+  SecondaryTitleText
 } from '../Donate.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -35,7 +36,8 @@ const Signup = ({
   mbshipID,
   noMoneyBuys = false,
   PopUpText,
-  chooseAmountText,
+  primaryTitleText = null,
+  secondaryTitleText = null,
   submitButtonColor,
   otherAmountValue = null,
   additionalSingleCopy = null,
@@ -223,15 +225,6 @@ const Signup = ({
 
   return (
     <FormWrapper>
-      {showGivingSelector && (
-        <GivingSelector
-          givingType={givingType}
-          changeGivingType={data => changeGivingType(data)}
-          setPopOpen={setPopOpen}
-          mbshipID={mbshipID}
-        />
-      )}
-
       { popOpen && <PopUpComponent PopUpText={PopUpText} setPopOpen={setPopOpen} /> }
 
       <Form
@@ -247,10 +240,24 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <Text tag="span" size="l" weight="bold">
-              {chooseAmountText || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
-            </Text>
+            <PrimaryTitleText tag="span">
+              {primaryTitleText
+                || `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`}
+            </PrimaryTitleText>
+            {secondaryTitleText && (
+              <SecondaryTitleText tag="span">
+                {secondaryTitleText}
+              </SecondaryTitleText>
+            )}
           </Legend>
+          {showGivingSelector && (
+            <GivingSelector
+              givingType={givingType}
+              changeGivingType={data => changeGivingType(data)}
+              setPopOpen={setPopOpen}
+              mbshipID={mbshipID}
+            />
+          )}
           {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
@@ -269,26 +276,27 @@ const Signup = ({
           <FormFieldset>
             {!noMoneyBuys && (
               <Label size="s" weight="500">
-                Other amount
+                Enter another amount
               </Label>
             )}
             <AmountField
+              $noMoneyBuys={noMoneyBuys}
               step="0.01"
               name="membership_amount"
               type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
-              label="£"
+              prefix="£"
+              label={noMoneyBuys ? 'Donation amount' : 'Other donation amount'}
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}
-              showLabel
+              showLabel={false}
               {...rest}
               max="25000"
               min="1"
               value={amountDonate}
-              pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
+              pattern="^[0-9]+([,.][0-9]{0,2})?$" // this only applies on submit
               placeholder="0.00"
               onChange={e => setAmountDonate(e.target.value.trim())}
-              aria-label="Input a different amount"
               ref={amountRef}
             />
           </FormFieldset>
@@ -339,7 +347,8 @@ Signup.propTypes = {
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   PopUpText: PropTypes.string.isRequired,
-  chooseAmountText: PropTypes.string.isRequired,
+  primaryTitleText: PropTypes.string,
+  secondaryTitleText: PropTypes.string,
   submitButtonColor: PropTypes.string.isRequired,
   otherAmountValue: PropTypes.number,
   additionalSingleCopy: PropTypes.string,

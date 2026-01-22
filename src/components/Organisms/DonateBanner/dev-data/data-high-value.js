@@ -1,21 +1,21 @@
 export default {
-  cartId: 'test-sept2019-C365',
+  cartId: '1-4-the-high-rollers',
   singleGiving: {
     moneybuys: [
       {
         description:
           'a pregnant woman in Uganda to have access to a birth kit so she can have a clean, safe delivery.',
-        value: '12.10'
+        value: 7777
       },
       {
         description:
           'a support worker to visit 10 isolated young mums with postnatal depression in the UK.',
-        value: '20'
+        value: 8888
       },
       {
         description:
           'clothes for a child who has had to leave their possessions behind while escaping domestic abuse.',
-        value: '30'
+        value: 9999
       }
     ]
   },
@@ -24,17 +24,17 @@ export default {
       {
         description:
           'a regular supply of toiletries for someone living in a refugee camp in Serbia.',
-        value: '5.50'
+        value: 1111
       },
       {
         description:
           'a potentially lifesaving call for a man at risk of suicide in the UK.',
-        value: '10'
+        value: 2222
       },
       {
         description:
           'the distribution of enough surplus food for a school breakfast club to feed 80 children.',
-        value: '20'
+        value: 3333
       }
     ]
   }
