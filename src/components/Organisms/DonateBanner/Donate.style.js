@@ -21,6 +21,10 @@ const InnerContainer = styled.div`
   position: relative;
   background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
   border-radius: 1rem;
+  overflow: hidden;
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding: ${spacing('l')};
+  }
 `;
 
 const BgImage = styled(Picture)`
@@ -40,17 +44,19 @@ const Wrapper = styled.div`
   display: block;
   width: 100%;
 
+  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+    padding: 0;
+  `}
+
   ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
     justify-content: center;
   `};
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('xl')} ${spacing('md')};
-  }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('xl')} 0;
+    gap: ${spacing('l')};
     flex-direction: ${({ donateOrientation }) => (donateOrientation === 'left' ? 'row-reverse' : 'row')};
   }
 `;
@@ -61,8 +67,9 @@ const TitleWrapperOuter = styled.div`
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   padding-bottom: ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 50%;
-    padding: ${spacing('xl')};
+    flex: 1 1 0;
+    width: auto;
+    padding: 0;
     align-items: center;
   }
 `;
@@ -76,7 +83,9 @@ const FormWrapper = styled.div`
   position: relative;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 50%;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
   }
 `;
 
@@ -92,8 +101,13 @@ const Form = styled.form`
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 0.5rem;
-  margin-top: ${spacing('md')};
+
+  margin-left: auto;
+  margin-right: auto;
+
+  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+    margin-top: 0;
+  `}
 
   h3 {
     margin-top: ${spacing('md')};
@@ -108,9 +122,16 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: 450px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    margin-top: ${spacing('md')};
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
   }
 `;
 

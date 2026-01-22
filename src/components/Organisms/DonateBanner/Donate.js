@@ -68,6 +68,7 @@ const DonateBanner = ({
   const topImage = isMedium ? imageM : imageS;
   const shouldRenderTopImage = shouldShowTopImage
     && topImage && (topImage.images || topImage.image);
+  const shouldShowTitleSection = noTitlesAtAll === false && (isLarge || donateWidgetIsTextOnly);
 
   return (
     <Container
@@ -102,8 +103,14 @@ const DonateBanner = ({
           />
         ) : null}
 
-        <Wrapper donateOrientation={donateOrientation} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
-          {!noTitlesAtAll && (
+        <Wrapper
+          donateOrientation={donateOrientation}
+          aria-live="polite"
+          noTitlesAtAll={noTitlesAtAll}
+          hasTopImage={shouldRenderTopImage}
+          shouldShowTitleSection={shouldShowTitleSection}
+        >
+          {shouldShowTitleSection && (
           <TitleWrapperOuter donateOrientation={donateOrientation}>
             <TitleWrapperInner>
               {showCopy && (
@@ -139,6 +146,8 @@ const DonateBanner = ({
             monthlyChooseAmountText={monthlyChooseAmountText}
             submitButtonColor={submitButtonColor}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
+            hasTopImage={shouldRenderTopImage}
+            shouldShowTitleSection={shouldShowTitleSection}
             givingType={givingType}
             changeGivingType={setGivingType}
           />
