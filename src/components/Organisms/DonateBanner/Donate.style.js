@@ -12,8 +12,15 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
+  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  padding: 2rem;
+`;
+
+const InnerContainer = styled.div`
+  position: relative;
+  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
+  border-radius: 1rem;
 `;
 
 const BgImage = styled(Picture)`
@@ -83,9 +90,7 @@ const Error = styled(Text)`
 const Form = styled.form`
   position: relative;
   width: 100%;
-  background-color: ${({ theme, donateWidgetIsTextOnly, componentBackgroundColour }) => (
-    donateWidgetIsTextOnly ? theme.color(componentBackgroundColour) : theme.color('white')
-  )};
+  background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   margin-top: ${spacing('md')};
@@ -253,6 +258,7 @@ export {
   Button,
   Copy,
   Container,
+  InnerContainer,
   Error,
   FormFieldset,
   FormWrapper,
