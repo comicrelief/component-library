@@ -43,7 +43,6 @@ const Navs = ({
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
-  const [tertiaryCloseRef, setTertiaryCloseRef] = useState(null);
   let theseGroups = null;
 
   // Check if any submenu is currently open
@@ -56,7 +55,6 @@ const Navs = ({
 
   // Handle tertiary menu changes from PrimaryNavItem
   const handleTertiaryMenuChange = useCallback((isOpen, parentName, closeFunction) => {
-    setTertiaryCloseRef(() => closeFunction);
     onTertiaryMenuChange(isOpen && isNotDesktop, parentName, closeFunction);
   }, [isNotDesktop, onTertiaryMenuChange]);
 

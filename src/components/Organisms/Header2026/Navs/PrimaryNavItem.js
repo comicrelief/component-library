@@ -31,18 +31,15 @@ const PrimaryNavItem = (
   }
 ) => {
   const [openTertiaryMenu, setOpenTertiaryMenu] = useState(null);
-  const [tertiaryParentName, setTertiaryParentName] = useState(null);
 
   const handleTertiaryToggle = (e, linkId, parentName) => {
     e.preventDefault();
     const isOpening = openTertiaryMenu !== linkId;
     setOpenTertiaryMenu(isOpening ? linkId : null);
-    setTertiaryParentName(isOpening ? parentName : null);
 
     if (onTertiaryMenuChange) {
       onTertiaryMenuChange(isOpening, isOpening ? parentName : null, () => {
         setOpenTertiaryMenu(null);
-        setTertiaryParentName(null);
       });
     }
   };
