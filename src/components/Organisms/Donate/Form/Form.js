@@ -294,7 +294,7 @@ const Signup = ({
               max="25000"
               min="1"
               value={amountDonate}
-              pattern="[^[0-9]+([,.][0-9]+)?$]" // this only applies on submit
+              pattern="^[0-9]+([,.][0-9]{0,2})?$" // this only applies on submit
               placeholder="0.00"
               onChange={e => setAmountDonate(e.target.value.trim())}
               ref={amountRef}
