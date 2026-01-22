@@ -119,11 +119,47 @@ const SearchIconWrapperDesktop = styled.div`
   }
 `;
 
+const MobileBackHeader = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: ${({ theme }) => theme.color('black')};
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
+const BackChevron = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8px;
+  transform: rotate(180deg);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+`;
+
 export {
   Brand,
   Header2026Wrapper,
   InnerWrapper,
   DonateButtonTopBarWrapper,
   SearchIconWrapperDesktop,
-  ButtonsAndIcons
+  ButtonsAndIcons,
+  MobileBackHeader,
+  BackChevron
 };

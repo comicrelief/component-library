@@ -1,5 +1,5 @@
 // import remove-extra-styles-in-preview from '../../../utils/remove-extra-styles-in-preview.css';
-import React, { useState } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
@@ -7,9 +7,11 @@ import Navs from './Navs/Navs';
 import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
-  DonateButtonTopBarWrapper, SearchIconWrapperDesktop, ButtonsAndIcons
+  DonateButtonTopBarWrapper, SearchIconWrapperDesktop, ButtonsAndIcons,
+  MobileBackHeader, BackChevron
 } from './Header2026.style';
 import searchIcon from './assets/search-icon.svg';
+import chevronIcon from './assets/chevron-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import prependBaseUrl from './utils/urlHelper';
 
@@ -21,6 +23,19 @@ const Header2026 = ({
   ...rest
 }) => {
   const [isExpandable, setIsExpandable] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const closeSubMenusRef = useRef(null);
+
+  const handleSubMenuChange = useCallback((isOpen, closeFunction) => {
+    setIsSubMenuOpen(isOpen);
+    closeSubMenusRef.current = closeFunction;
+  }, []);
+
+  const handleBackClick = () => {
+    if (closeSubMenusRef.current) {
+      closeSubMenusRef.current();
+    }
+  };
 
   return (
     <Header2026Wrapper
@@ -30,9 +45,23 @@ const Header2026 = ({
     >
       <InnerWrapper data-testid="InnerWrapper">
 
-        <Brand data-testid="Brand">
-          <LogoNav2026 data-testid="LogoNav2026" />
-        </Brand>
+        {isSubMenuOpen ? (
+          <MobileBackHeader
+            data-testid="MobileBackHeader"
+            onClick={handleBackClick}
+            type="button"
+            aria-label="Go back to main menu"
+          >
+            <BackChevron>
+              <img src={chevronIcon} alt="" />
+            </BackChevron>
+            Main menu
+          </MobileBackHeader>
+        ) : (
+          <Brand data-testid="Brand">
+            <LogoNav2026 data-testid="LogoNav2026" />
+          </Brand>
+        )}
 
         <Navs
           data-testid="Navs"
@@ -41,6 +70,7 @@ const Header2026 = ({
           isExpandable={isExpandable}
           setIsExpandable={setIsExpandable}
           devMode={devMode}
+          onSubMenuChange={handleSubMenuChange}
         />
 
         <ButtonsAndIcons data-testid="ButtonsAndIcons">

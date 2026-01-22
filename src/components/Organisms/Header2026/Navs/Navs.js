@@ -34,7 +34,8 @@ const Navs = ({
   characterLimit,
   isExpandable,
   setIsExpandable,
-  devMode = false
+  devMode = false,
+  onSubMenuChange = () => {}
 }) => {
   const { headerPageGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
@@ -42,6 +43,19 @@ const Navs = ({
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
   let theseGroups = null;
+
+  // Check if any submenu is currently open
+  const isSubMenuOpen = Object.values(openedSubMenu).some(v => v);
+
+  // Close all submenus (used by back button in header)
+  const closeSubMenus = useCallback(() => {
+    setOpenedSubMenu({});
+  }, []);
+
+  // Notify parent when submenu state changes, passing close function
+  useEffect(() => {
+    onSubMenuChange(isSubMenuOpen && isNotDesktop, closeSubMenus);
+  }, [isSubMenuOpen, isNotDesktop, onSubMenuChange, closeSubMenus]);
 
   const toggleBurgerMenu = e => {
     e.preventDefault();
@@ -251,7 +265,8 @@ Navs.propTypes = {
   characterLimit: PropTypes.number,
   isExpandable: PropTypes.bool,
   setIsExpandable: PropTypes.func,
-  devMode: PropTypes.bool
+  devMode: PropTypes.bool,
+  onSubMenuChange: PropTypes.func
 };
 
 export default Navs;
