@@ -60,8 +60,7 @@ const NavLinkClass = styled(Link)`
  * Secondary Navigation Menu
  */
 const SecondaryNavMenu = styled.ul`
-  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  display: flex;
   padding: 0;
   list-style: none outside;
   left: 0;
@@ -70,16 +69,18 @@ const SecondaryNavMenu = styled.ul`
   position: absolute;
   width: 100%;
   ${zIndex('higher')};
-  border: 1px solid red;
-
-
 
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.color('white')};
-  // overflow: hidden;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+
+  /* Mobile slide-in animation */
+  transform: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.15s ease-out;
+  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
+  border-radius: 16px;
 
   // DESKTOP:
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -92,7 +93,9 @@ const SecondaryNavMenu = styled.ul`
     left: -29px;
     border-radius: 0 0 25px 25px;
     transition: opacity ${transitionDuration}s linear;
+    transform: none;
     opacity: 0;
+    visibility: hidden;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
   }
 `;
@@ -310,6 +313,94 @@ const Column3NavItem = styled(SecondaryNavItem)`
   border-left: 4px solid ${({ theme }) => theme.color('green')};
 `;
 
+/**
+ * Tertiary Navigation Menu (3rd level) - covers the secondary menu completely
+ */
+const TertiaryNavMenu = styled.ul`
+  display: flex;
+  padding: 0;
+  list-style: none outside;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  ${zIndex('higher')};
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: ${({ theme }) => theme.color('white')};
+
+  /* Mobile slide-in animation */
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.15s ease-out;
+  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  border-radius: 16px;
+
+  // DESKTOP - hide on desktop for now
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
+/**
+ * Tertiary Nav Item
+ */
+const TertiaryNavItem = styled.li`
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  position: relative;
+  transition: background-color ${transitionDuration}s ease;
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  span {
+    font-weight: 100;
+  }
+`;
+
+/**
+ * Tertiary menu link item
+ */
+const TertiaryNavLink = styled(NavLinkClass)`
+  padding: 20px 25px 22px 42px;
+  color: ${({ theme }) => theme.color('black')};
+  height: auto;
+  position: relative;
+`;
+
+/**
+ * Secondary link with nested children - adds chevron styling
+ */
+const SecondaryNavLinkWithChildren = styled(SecondaryNavLink)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+`;
+
+/**
+ * Chevron for secondary nav items with children
+ */
+const SecondaryChevronWrapper = styled.div`
+  width: 8px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+`;
+
 export {
   StyledNavItem,
   NavLink,
@@ -317,9 +408,14 @@ export {
   SecondaryNavMenu,
   SecondaryNavItem,
   SecondaryNavLink,
+  SecondaryNavLinkWithChildren,
+  SecondaryChevronWrapper,
   ChevronWrapper,
   StyledText,
   Column1NavItem,
   Column2NavItem,
-  Column3NavItem
+  Column3NavItem,
+  TertiaryNavMenu,
+  TertiaryNavItem,
+  TertiaryNavLink
 };
