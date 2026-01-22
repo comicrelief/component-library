@@ -38,9 +38,6 @@ const Signup = ({
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   submitButtonColor = 'red',
-  donateWidgetIsTextOnly = false,
-  textColor = 'black',
-  componentBackgroundColour = 'white',
   changeGivingType,
   givingType = null,
   ...rest
@@ -209,8 +206,6 @@ const Signup = ({
       { popOpen && <PopUpComponent popUpText={popUpText} setPopOpen={setPopOpen} /> }
 
       <Form
-        donateWidgetIsTextOnly={donateWidgetIsTextOnly}
-        componentBackgroundColour={componentBackgroundColour}
         onSubmit={e => submitDonation(
           e,
           amountDonate,
@@ -223,7 +218,7 @@ const Signup = ({
       >
         <OuterFieldset>
           <Legend>
-            <PrimaryTitleText tag="span" color={textColor}>
+            <PrimaryTitleText tag="span" color="black">
               {thisChooseAmountText}
             </PrimaryTitleText>
           </Legend>
@@ -252,7 +247,7 @@ const Signup = ({
           )}
           <FormFieldset>
             {!noMoneyBuys && (
-              <Label size="s" weight="500" color={textColor}>
+              <Label size="s" weight="500" color="black">
                 Enter another amount
               </Label>
             )}
@@ -278,7 +273,7 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy as="p" color={textColor}>
+            <Copy tag="p" color="black">
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>
@@ -319,9 +314,6 @@ Signup.propTypes = {
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,
-  donateWidgetIsTextOnly: PropTypes.bool,
-  textColor: PropTypes.string,
-  componentBackgroundColour: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string
 };

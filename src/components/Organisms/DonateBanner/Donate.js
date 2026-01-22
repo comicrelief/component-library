@@ -11,6 +11,7 @@ import { handleTitles, handleOtherAmountText } from './_utils';
 import {
   BgImage,
   Container,
+  InnerContainer,
   TitleWrapperInner,
   TitleWrapperOuter,
   Wrapper
@@ -75,74 +76,74 @@ const DonateBanner = ({
       pageBackgroundColour={pageBackgroundColour}
       id={mbshipID}
     >
-      {shouldRenderTopImage ? (
-        <Picture
-          image={topImage.image}
-          images={topImage.images}
-          imageLow={topImage.imageLow}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-          alt={topImage.alt || ''}
-        />
-      ) : null}
+      <InnerContainer componentBackgroundColour={componentBackgroundColour}>
+        {shouldRenderTopImage ? (
+          <Picture
+            image={topImage.image}
+            images={topImage.images}
+            imageLow={topImage.imageLow}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+            alt={topImage.alt || ''}
+          />
+        ) : null}
 
-      {shouldShowDesktopImage ? (
-        <BgImage
-          image={imageL.image}
-          images={imageL.images}
-          imageLow={imageL.imageLow}
-          objectFit="cover"
-          width="100%"
-          height="100%"
-          alt={imageL.alt || ''}
-          isBackgroundImage
-        />
-      ) : null}
+        {shouldShowDesktopImage ? (
+          <BgImage
+            image={imageL.image}
+            images={imageL.images}
+            imageLow={imageL.imageLow}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+            alt={imageL.alt || ''}
+            isBackgroundImage
+          />
+        ) : null}
 
-      <Wrapper donateOrientation={donateOrientation} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
-        {!noTitlesAtAll && (
-        <TitleWrapperOuter donateOrientation={donateOrientation}>
-          <TitleWrapperInner>
-            {showCopy && (
-            <>
-              <Text
-                tag="h2"
-                color={textColor}
-                size="big"
-                family="Anton"
-                weight="normal"
-              >
-                {thisTitle}
-              </Text>
-              <Text tag="p" color={textColor} size="m">
-                {thisSubtitle}
-              </Text>
-            </>
-            )}
-          </TitleWrapperInner>
-        </TitleWrapperOuter>
-        )}
+        <Wrapper donateOrientation={donateOrientation} aria-live="polite" noTitlesAtAll={noTitlesAtAll}>
+          {!noTitlesAtAll && (
+          <TitleWrapperOuter donateOrientation={donateOrientation}>
+            <TitleWrapperInner>
+              {showCopy && (
+              <>
+                <Text
+                  tag="h2"
+                  color={textColor}
+                  size="big"
+                  family="Anton"
+                  weight="normal"
+                >
+                  {thisTitle}
+                </Text>
+                <Text tag="p" color={textColor} size="m">
+                  {thisSubtitle}
+                </Text>
+              </>
+              )}
+            </TitleWrapperInner>
+          </TitleWrapperOuter>
+          )}
 
-        <Form
-          data={data}
-          otherAmountText={thisOtherAmountText}
-          cartID={cartID}
-          clientID={clientID}
-          mbshipID={mbshipID}
-          donateLink={donateLink}
-          noMoneyBuys={noMoneyBuys}
-          popUpText={popUpText}
-          chooseAmountText={chooseAmountText}
-          monthlyChooseAmountText={monthlyChooseAmountText}
-          submitButtonColor={submitButtonColor}
-          donateWidgetIsTextOnly={donateWidgetIsTextOnly}
-          textColor={textColor}
-          componentBackgroundColour={componentBackgroundColour}
-          givingType={givingType}
-          changeGivingType={setGivingType}
-        />
-      </Wrapper>
+          <Form
+            data={data}
+            otherAmountText={thisOtherAmountText}
+            cartID={cartID}
+            clientID={clientID}
+            mbshipID={mbshipID}
+            donateLink={donateLink}
+            noMoneyBuys={noMoneyBuys}
+            popUpText={popUpText}
+            chooseAmountText={chooseAmountText}
+            monthlyChooseAmountText={monthlyChooseAmountText}
+            submitButtonColor={submitButtonColor}
+            donateWidgetIsTextOnly={donateWidgetIsTextOnly}
+            givingType={givingType}
+            changeGivingType={setGivingType}
+          />
+        </Wrapper>
+      </InnerContainer>
     </Container>
   );
 };
