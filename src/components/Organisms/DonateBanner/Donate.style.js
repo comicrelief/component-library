@@ -22,6 +22,7 @@ const InnerContainer = styled.div`
   background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
   border-radius: 1rem;
   overflow: hidden;
+  padding: none;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')};
   }
@@ -39,7 +40,6 @@ const BgImage = styled(Picture)`
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  padding: ${spacing('l')} ${spacing('md')};
   align-items: center;
   display: block;
   width: 100%;
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    padding: ${spacing('xl')} 0;
+    padding: ${spacing('l')} ${spacing('md')};
     gap: ${spacing('l')};
     flex-direction: ${({ donateOrientation }) => (donateOrientation === 'left' ? 'row-reverse' : 'row')};
   }
