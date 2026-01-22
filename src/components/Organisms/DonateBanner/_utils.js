@@ -11,7 +11,7 @@ const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle
   // Apply the override if we've got monthly content AND giving type:
   if (showMonthlyCopy) {
     thisTitle = monthlyTitle;
-    thisSubtitle = monthlyTitle;
+    thisSubtitle = monthlySubtitle;
   } else if (showCopy) {
     // Else, fall back to the default, after checking it's appropriate
     thisTitle = title;
@@ -23,12 +23,12 @@ const handleTitles = (givingType, title, subtitle, monthlyTitle, monthlySubtitle
   };
 };
 
-const handleCopy = (gType,
-  otherAmount, primaryTitleText, monthlyOtherAmount, monthlyPrimaryTitleText) => {
-  const thisOtherAmountText = (gType === 'monthly' && Boolean(monthlyOtherAmount) ? monthlyOtherAmount : otherAmount);
-  const thisPrimaryTitleText = (gType === 'monthly' && Boolean(monthlyPrimaryTitleText) ? monthlyPrimaryTitleText : primaryTitleText);
+const handleOtherAmountText = (givingType, otherAmountText, monthlyOtherAmountText) => {
+  const thisOtherAmountText = givingType === 'monthly' && Boolean(monthlyOtherAmountText)
+    ? monthlyOtherAmountText
+    : otherAmountText;
 
-  return { thisOtherAmountText, thisPrimaryTitleText };
+  return { thisOtherAmountText };
 };
 
-export { handleTitles, handleCopy };
+export { handleTitles, handleOtherAmountText };
