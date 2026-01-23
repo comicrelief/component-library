@@ -33,6 +33,7 @@ const Signup = ({
   clientID,
   cartID,
   mbshipID,
+  donateOrientation = 'right',
   noMoneyBuys = false,
   popUpText,
   chooseAmountText = null,
@@ -40,6 +41,8 @@ const Signup = ({
   submitButtonColor = 'red',
   changeGivingType,
   givingType = null,
+  hasTopImage = false,
+  shouldShowTitleSection = false,
   ...rest
 }) => {
   const [errorMsg, setErrorMsg] = useState(false);
@@ -201,10 +204,16 @@ const Signup = ({
     : (chooseAmountText || defaultChooseAmountText);
 
   return (
-    <FormWrapper>
+    <FormWrapper
+      donateOrientation={donateOrientation}
+      shouldShowTitleSection={shouldShowTitleSection}
+    >
       { popOpen && <PopUpComponent popUpText={popUpText} setPopOpen={setPopOpen} /> }
 
       <Form
+        donateOrientation={donateOrientation}
+        hasTopImage={hasTopImage}
+        shouldShowTitleSection={shouldShowTitleSection}
         onSubmit={e => submitDonation(
           e,
           amountDonate,
@@ -307,6 +316,7 @@ Signup.propTypes = {
   donateLink: PropTypes.string.isRequired,
   otherAmountText: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
+  donateOrientation: PropTypes.oneOf(['left', 'right']),
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   popUpText: PropTypes.string.isRequired,
@@ -314,7 +324,9 @@ Signup.propTypes = {
   monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
-  givingType: PropTypes.string
+  givingType: PropTypes.string,
+  hasTopImage: PropTypes.bool,
+  shouldShowTitleSection: PropTypes.bool
 };
 
 export default Signup;

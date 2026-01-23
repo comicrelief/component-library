@@ -29,6 +29,14 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')};
+    ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
+    `}
+  }
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    padding-left: ${spacing('xxl')};
+    padding-right: ${spacing('xxl')};
   }
   max-width: 1500px;
 `;
@@ -62,7 +70,7 @@ const Wrapper = styled.div`
     display: flex;
     padding: ${spacing('l')} ${spacing('md')};
     gap: ${spacing('l')};
-    flex-direction: ${({ donateOrientation }) => (donateOrientation === 'left' ? 'row-reverse' : 'row')};
+    flex-direction: row;
   }
 `;
 
@@ -76,6 +84,7 @@ const TitleWrapperOuter = styled.div`
     width: auto;
     padding: 0;
     align-items: center;
+    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 2 : 1)};
   }
 `;
 
@@ -91,6 +100,11 @@ const FormWrapper = styled.div`
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    display: flex;
+    justify-content: ${({ donateOrientation }) => (
+      donateOrientation === 'left' ? 'flex-start' : 'flex-end'
+    )};
+    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 1 : 2)};
   }
 `;
 
@@ -137,6 +151,9 @@ const Form = styled.form`
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
+    /* Alignment is handled by the outer wrapper on desktop. */
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 

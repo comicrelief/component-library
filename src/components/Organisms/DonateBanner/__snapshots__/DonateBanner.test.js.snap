@@ -176,9 +176,14 @@ exports[`Monthly donation renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: auto;
   margin: 0rem 0 2rem;
   background-color: #F4F3F5;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -188,6 +193,9 @@ exports[`Monthly donation renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -497,6 +505,13 @@ exports[`Monthly donation renders correctly 1`] = `
   }
 }
 
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 @media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
@@ -518,6 +533,17 @@ exports[`Monthly donation renders correctly 1`] = `
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
@@ -535,6 +561,8 @@ exports[`Monthly donation renders correctly 1`] = `
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -954,9 +982,14 @@ exports[`Single donation renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: auto;
   margin: 2rem 0 2rem;
   background-color: #F4F3F5;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -966,6 +999,9 @@ exports[`Single donation renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -1208,6 +1244,13 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 @media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
@@ -1216,14 +1259,10 @@ exports[`Single donation renders correctly 1`] = `
     display: flex;
     padding: 2rem 1rem;
     gap: 2rem;
-    -webkit-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
-}
-
-@media (min-width:1024px) {
-
 }
 
 @media (min-width:1024px) {
@@ -1233,7 +1272,22 @@ exports[`Single donation renders correctly 1`] = `
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
+}
+
+@media (min-width:1024px) {
+
 }
 
 @media (min-width:740px) {
@@ -1250,6 +1304,8 @@ exports[`Single donation renders correctly 1`] = `
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1658,9 +1714,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: auto;
   margin: 0rem 0 0rem;
   background-color: #F4F3F5;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -1670,6 +1731,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -1868,6 +1932,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   }
 }
 
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 @media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
@@ -1889,6 +1960,17 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
@@ -1906,6 +1988,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -2180,9 +2264,14 @@ exports[`Text-only donate widget renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: auto;
   margin: 2rem 0 2rem;
   background-color: #F4F3F5;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -2192,6 +2281,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -2520,10 +2612,23 @@ exports[`Text-only donate widget renders correctly 1`] = `
 @media (min-width:1024px) {
   .c1 {
     padding: 2rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
 @media (min-width:1024px) {
+
+}
+
+@media (min-width:1440px) {
 
 }
 
@@ -2548,6 +2653,17 @@ exports[`Text-only donate widget renders correctly 1`] = `
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
@@ -2565,6 +2681,8 @@ exports[`Text-only donate widget renders correctly 1`] = `
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

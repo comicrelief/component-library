@@ -83,7 +83,10 @@ const DonateBanner = ({
       pageBackgroundColour={pageBackgroundColour}
       id={mbshipID}
     >
-      <InnerContainer componentBackgroundColour={componentBackgroundColour}>
+      <InnerContainer
+        componentBackgroundColour={componentBackgroundColour}
+        $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
+      >
         {shouldRenderTopImage ? (
           <Picture
             image={topImage.image}
@@ -156,6 +159,7 @@ const DonateBanner = ({
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
             hasTopImage={shouldRenderTopImage}
             shouldShowTitleSection={shouldShowTitleSection}
+            donateOrientation={donateOrientation}
             givingType={givingType}
             changeGivingType={setGivingType}
           />
