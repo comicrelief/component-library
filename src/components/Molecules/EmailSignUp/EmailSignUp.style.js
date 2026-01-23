@@ -125,6 +125,8 @@ export const StyledEmailSignUpButton = styled(Button)`
 
   .emailSignUpButtonLabel {
     display: inline-block;
+    font-size: 16px;
+    line-height: 1;
     /* Counterbalance the reserved arrow slot so the label is centered at rest */
     transform: translateX(13px);
     transition: transform 0.22s ease;
