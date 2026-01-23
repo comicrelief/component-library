@@ -11,9 +11,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: auto;
   margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  width: 100%;
   padding: 2rem;
 `;
 
@@ -23,9 +25,12 @@ const InnerContainer = styled.div`
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
+  width: 100%;
+  box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')};
   }
+  max-width: 1500px;
 `;
 
 const BgImage = styled(Picture)`
