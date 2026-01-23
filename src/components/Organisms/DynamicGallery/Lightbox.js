@@ -8,8 +8,13 @@ import {
   CardTitle,
   Container,
   Dialog,
-  CardNavButton
+  ScreenReaderOnly,
+  CloseButton,
+  PreviousButton,
+  NextButton
 } from './Lightbox.style';
+import Arrow from '../../Atoms/Icons/Arrow';
+import Cross from '../../Atoms/Icons/Cross';
 
 /**
  * lightbox context:
@@ -137,7 +142,7 @@ const Lightbox = () => {
 
   return (
     <Container isOpen={hasCard}>
-      <Backdrop onClick={() => handleBackdropClick()} />
+      <Backdrop onPointerUp={() => handleBackdropClick()} />
       <Dialog
         ref={dialogRef}
         aria-labelledby="lightboxTitle"
@@ -152,27 +157,28 @@ const Lightbox = () => {
                 image={selectedCard?.image}
                 width="100%"
                 height="100%"
-                objectFit="contain"
+                objectFit="cover"
               />
             )}
+            <CloseButton type="button" onClick={() => setSelectedCard(null)}>
+              <ScreenReaderOnly>Close</ScreenReaderOnly>
+              <Cross colour="black" size={16} />
+            </CloseButton>
+            <PreviousButton type="button" onClick={() => previousCard(selectedCard)}>
+              <ScreenReaderOnly>Previous</ScreenReaderOnly>
+              <Arrow direction="left" colour="black" size={16} />
+            </PreviousButton>
+            <NextButton type="button" onClick={() => nextCard(selectedCard)}>
+              <ScreenReaderOnly>Next</ScreenReaderOnly>
+              <Arrow direction="right" colour="black" size={16} />
+            </NextButton>
           </CardImage>
           <CardTitle id="lightboxTitle">{selectedCard?.title}</CardTitle>
           <CardAgeGroup id="lightboxDescription">
-            {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-            Age group: {selectedCard?.ageGroup}
+            Age group:
+            {' '}
+            {selectedCard?.ageGroup}
           </CardAgeGroup>
-          <CardNavButton type="button" onClick={() => setSelectedCard(null)}>
-            Close
-          </CardNavButton>
-          <CardNavButton
-            type="button"
-            onClick={() => previousCard(selectedCard)}
-          >
-            Previous
-          </CardNavButton>
-          <CardNavButton type="button" onClick={() => nextCard(selectedCard)}>
-            Next
-          </CardNavButton>
         </Card>
       </Dialog>
     </Container>

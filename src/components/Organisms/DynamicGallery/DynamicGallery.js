@@ -111,18 +111,22 @@ const DynamicGallery = ({
         }}
       >
         <ImageGrid>
-          {/* eslint-disable-next-line operator-linebreak */}
-          {hasCards &&
-            Array(columnCount)
+          {hasCards
+            && Array(columnCount)
               .fill(null)
               .map((column, columnIndex) => {
                 const columnCards = cards?.filter(
                   (_, cardIndex) => cardIndex % columnCount === columnIndex
                 );
                 return (
-                  // disabling the lint rule here as we're chunking an array and have no unique keys
-                  // eslint-disable-next-line react/no-array-index-key
-                  <ColumnComponent key={columnIndex} cards={columnCards} />
+                  <ColumnComponent
+                    // disabling the lint rule here
+                    // as we're chunking an array and have no unique keys
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={columnIndex}
+                    columnIndex={columnIndex}
+                    cards={columnCards}
+                  />
                 );
               })}
 
@@ -220,8 +224,13 @@ function ColumnComponent({ cards }) {
           </CardImageContainer>
           <CardDetails>
             <CardTitle>{card.title}</CardTitle>
-            {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-            <CardAgeGroup>Age group: {card.ageGroup}</CardAgeGroup>
+            {card.ageGroup && (
+              <CardAgeGroup>
+                Age group:
+                {' '}
+                {card.ageGroup}
+              </CardAgeGroup>
+            )}
           </CardDetails>
         </Card>
       ))}

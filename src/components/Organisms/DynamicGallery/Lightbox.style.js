@@ -27,7 +27,8 @@ export const Backdrop = styled.div`
 
 export const Dialog = styled.dialog`
   display: block;
-  position: relative;
+  background: transparent;
+  border: none;
   z-index: 1;
 `;
 
@@ -37,27 +38,89 @@ export const Card = styled.div`
   gap: 1rem;
   padding: 1rem;
   background: #ffffff;
+  border-radius: 0.5rem;
 `;
 
 export const CardImage = styled.div`
+  position: relative;
   & img {
     max-width: 80vw;
-    max-height: 80vh;
+    max-height: 70vh;
   }
 `;
 
 export const CardTitle = styled.div`
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-family: ${({ theme }) => theme.font.regular};
+  color: ${({ theme }) => theme.color('black')};
 `;
 
 export const CardAgeGroup = styled.div`
-  font-size: 0.8rem;
+  font-size: ${({ theme }) => theme.fontSize('xs')};
+  font-family: ${({ theme }) => theme.font.regular};
+  color: ${({ theme }) => theme.color('grey')};
+  line-height: 1;
 `;
 
 export const CardNavButton = styled.button`
-  &:focus,
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  svg {
+    transition: all 0.1s ease-out;
+  }
+
+  &:hover {
+    svg {
+      fill: ${({ theme }) => theme.color('red')};
+    }
+  }
+
   &:focus-visible {
     outline: 2px solid #000000;
   }
+`;
+
+export const CloseButton = styled(CardNavButton)`
+  top: 0;
+  right: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+`;
+
+export const PreviousButton = styled(CardNavButton)`
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+`;
+
+export const NextButton = styled(CardNavButton)`
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+`;
+
+export const ScreenReaderOnly = styled.span`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 `;

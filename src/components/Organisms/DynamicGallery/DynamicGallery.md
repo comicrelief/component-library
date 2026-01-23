@@ -10,7 +10,7 @@
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import { createCards } from './_utils';
+import createCards from './_utils';
 <DynamicGallery cards={createCards(25)} />;
 ```
 
@@ -18,7 +18,7 @@ import { createCards } from './_utils';
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import { createCards } from './_utils';
+import createCards from './_utils';
 <DynamicGallery maxColumns={4} cards={createCards(4)} />;
 ```
 
@@ -26,6 +26,6 @@ import { createCards } from './_utils';
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import { createCards } from './_utils';
+import createCards from './_utils';
 <DynamicGallery maxColumns={5} cards={createCards(5)} />;
 ```
