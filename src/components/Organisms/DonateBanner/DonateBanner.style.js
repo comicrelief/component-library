@@ -102,8 +102,8 @@ const FormWrapper = styled.div`
     width: auto;
     display: flex;
     justify-content: ${({ donateOrientation }) => (
-      donateOrientation === 'left' ? 'flex-start' : 'flex-end'
-    )};
+    donateOrientation === 'left' ? 'flex-start' : 'flex-end'
+  )};
     order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 1 : 2)};
   }
 `;
