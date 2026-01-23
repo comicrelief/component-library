@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
 import { useMediaQuery } from 'react-responsive';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-// Line below imports the built CSS directly because Jest needs it
-import '@splidejs/splide/dist/css/splide.min.css';
+// Vendor copy pinned to the Splide version compatible with our react-splide version.
+// If you bump @splidejs/react-splide, update `src/vendor/splide/splide.min.css` too.
+import '../../../../vendor/splide/splide.min.css';
 import CTACard from '../shared/CTACard';
 import CardsContainer from './CTAMultiCard.style';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
