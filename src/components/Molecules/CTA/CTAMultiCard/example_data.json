@@ -10,6 +10,7 @@
         {
           "id": "fd8ef3fc-7d0d-531b-b2d2-9ac5f40d3d14",
           "title": "Full Card Oooh Chilly",
+          "body": "Load of text here",
           "backgroundColour": "White",
           "link": "/test",
           "linkLabel": "test go",
@@ -42,9 +43,8 @@
         {
           "id": "fd8ef3fc-7d0d-531b-b2d2-9ac5f40d3d14-2",
           "title": "Full Card Oooh Chilly",
+          "body": "I don't have a link",
           "backgroundColour": "White",
-          "link": "/test",
-          "linkLabel": "test go",
           "image": {
             "description": "",
             "gatsbyImageData": {
@@ -74,6 +74,7 @@
         {
           "id": "fd8ef3fc-7d0d-531b-b2d2-9ac5f40d3d14-3",
           "title": "Full Card Oooh Chilly",
+          "body": "Third card",
           "backgroundColour": "White",
           "link": "/test",
           "linkLabel": "test go",

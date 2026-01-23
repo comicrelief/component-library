@@ -96,7 +96,7 @@ CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
     body: PropTypes.node,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     linkLabel: PropTypes.string,
     fallback: PropTypes.string,
     imageLow: PropTypes.string,
