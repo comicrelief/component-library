@@ -106,10 +106,10 @@ export const StyledEmailSignUpButton = styled(Button)`
   overflow: hidden;
   min-width: max-content;
   width: 100%;
-  max-width: 123px;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin: 0;
+    max-width: 123px;
   }
 
   .emailSignUpButtonContent {
