@@ -14,6 +14,7 @@ import {
   SecondaryChevronWrapper,
   ChevronWrapper,
   StyledText,
+  ColumnWrapper,
   Column1NavItem,
   Column2NavItem,
   Column3NavItem,
@@ -161,13 +162,19 @@ const PrimaryNavItem = (
         key={`${index}-${thisID}--sub-item`}
       >
         {/* Column 1 Page Links - red border guide */}
-        {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
+        <ColumnWrapper>
+          {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
+        </ColumnWrapper>
 
         {/* Column 2 Page Links - blue border guide */}
-        {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
+        <ColumnWrapper>
+          {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
+        </ColumnWrapper>
 
         {/* Column 3 Page Links - green border guide */}
-        {renderColumnLinks(group.column3PageLinks, Column3NavItem)}
+        <ColumnWrapper>
+          {renderColumnLinks(group.column3PageLinks, Column3NavItem)}
+        </ColumnWrapper>
 
         {/* Third level modal - covers the secondary menu */}
         {isNotDesktop && (

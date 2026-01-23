@@ -30,7 +30,7 @@ const NavLinkClass = styled(Link)`
     :focus {
       color: ${({ theme }) => theme.color('red')};
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
-      font-weight: inherit;
+      font-weight: 700;
     }
 
     :focus-within {
@@ -93,8 +93,10 @@ const SecondaryNavMenu = styled.ul`
 
   // DESKTOP:
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    display: flex;
-    width: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    min-width: 600px;
     height: auto;
     padding: 0;
     position: absolute;
@@ -106,6 +108,19 @@ const SecondaryNavMenu = styled.ul`
     opacity: 0;
     visibility: hidden;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
+    align-items: start;
+  }
+`;
+
+/**
+ * Column wrapper for grouping links in desktop 3-column layout
+ */
+const ColumnWrapper = styled.div`
+  display: contents;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -210,7 +225,8 @@ const StyledNavItem = styled.li`
 
   // Chevron icon:
   span > a > div {
-    transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    opacity: 0.6;
+    transition: opacity 0.3s ease-out;
   }
 
   :hover,
@@ -228,6 +244,7 @@ const StyledNavItem = styled.li`
       color: ${({ theme }) => theme.color('red')};
       > div {
         transform: rotate(-180deg);
+        opacity: 1;
         img {
           // Use fancy filter to colour 'img' version of SVG
           filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
@@ -241,6 +258,7 @@ const StyledNavItem = styled.li`
     height: 100%;
     display: flex;
     align-items: center;
+    border-bottom: none;
 
     :hover,
     :focus,
@@ -248,7 +266,7 @@ const StyledNavItem = styled.li`
       > ${SecondaryNavMenu}, :focus-within > ${SecondaryNavMenu} {
         visibility: visible;
         opacity: 1;
-        display: flex;
+        display: grid;
       }
     }
 
@@ -264,10 +282,9 @@ const StyledNavItem = styled.li`
       }
 
       ${SecondaryNavMenu} {
-        display: flex;
+        display: grid;
         opacity: 1;
         visibility: visible;
-        flex-direction: column;
       }
     }
   }
@@ -305,21 +322,27 @@ const StyledText = styled(Text)`
  * Column 1 Nav Item - Red border
  */
 const Column1NavItem = styled(SecondaryNavItem)`
-  // border-left: 4px solid ${({ theme }) => theme.color('red')};
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    border-left: 4px solid ${({ theme }) => theme.color('red')};
+  }
 `;
 
 /**
  * Column 2 Nav Item - Blue border
  */
 const Column2NavItem = styled(SecondaryNavItem)`
-  // border-left: 4px solid ${({ theme }) => theme.color('blue')};
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    border-left: 4px solid ${({ theme }) => theme.color('blue')};
+  }
 `;
 
 /**
  * Column 3 Nav Item - Green border
  */
 const Column3NavItem = styled(SecondaryNavItem)`
-  // border-left: 4px solid ${({ theme }) => theme.color('green')};
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    border-left: 4px solid ${({ theme }) => theme.color('green')};
+  }
 `;
 
 /**
@@ -417,6 +440,7 @@ export {
   SecondaryChevronWrapper,
   ChevronWrapper,
   StyledText,
+  ColumnWrapper,
   Column1NavItem,
   Column2NavItem,
   Column3NavItem,
