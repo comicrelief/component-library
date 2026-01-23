@@ -61,13 +61,17 @@ const DonateBanner = ({
   } = handleOtherAmountText(givingType, otherAmountText, monthlyOtherAmountText);
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
+
   const shouldShowDesktopImage = shouldShowImage
     && isLarge && imageL
     && (imageL.images || imageL.image);
+
   const shouldShowTopImage = shouldShowImage && !isLarge;
   const topImage = isMedium ? imageM : imageS;
+
   const shouldRenderTopImage = shouldShowTopImage
     && topImage && (topImage.images || topImage.image);
+
   const shouldShowTitleSection = noTitlesAtAll === false && (isLarge || donateWidgetIsTextOnly);
 
   return (
@@ -87,6 +91,8 @@ const DonateBanner = ({
             width="100%"
             height="100%"
             alt={topImage.alt || ''}
+            // Force React to re-render with any updated image details
+            key={topImage.imageLow}
           />
         ) : null}
 
