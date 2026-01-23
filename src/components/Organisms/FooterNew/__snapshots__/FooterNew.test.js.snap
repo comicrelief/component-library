@@ -362,7 +362,8 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: #18181A;
   border-color: transparent;
-  padding-left: 18px;
+  height: 44px;
+  padding: 12px 2.4rem 12px 18px;
   -webkit-transition: background-color 0.2s ease,text-indent 0.18s ease;
   transition: background-color 0.2s ease,text-indent 0.18s ease;
   border: 1px solid #FFFFFF;
@@ -409,9 +410,15 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c24 {
   margin: 0;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  padding: 1rem;
+  height: 44px;
+  padding: 0 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 100%;
+  max-width: 123px;
 }
 
 .c24 .emailSignUpButtonContent {
@@ -429,10 +436,13 @@ exports[`does not render copyright text when not supplied 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonLabel {
   display: inline-block;
+  font-size: 16px;
+  line-height: 1;
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
@@ -440,6 +450,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-transition: transform 0.22s ease;
   transition: transform 0.22s ease;
   will-change: transform;
+  white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonArrow {
@@ -503,9 +514,9 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1488px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .c7 {
@@ -572,7 +583,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .c37:hover,
@@ -586,6 +597,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c38 {
   color: #FFFFFF;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .c40 {
@@ -636,8 +648,8 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c42 > span {
   color: #FFFFFF;
   opacity: 0.8;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
   font-weight: normal;
@@ -675,7 +687,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .c32 {
@@ -695,7 +707,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 0;
+  padding-bottom: 0;
   display: none;
 }
 
@@ -716,7 +728,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 0;
+  padding-bottom: 0;
   display: none;
 }
 
@@ -737,7 +749,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .c4 {
@@ -893,8 +905,8 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 @media (min-width:740px) {
   .c14 {
-    width: auto;
-    min-width: 360px;
+    width: 100%;
+    max-width: 364px;
   }
 }
 
@@ -916,7 +928,11 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 @media (min-width:740px) {
   .c22 {
-    width: auto;
+    width: 100%;
+    max-width: 123px;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 }
 
@@ -939,6 +955,12 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c1 {
+    padding: 0 2rem;
+  }
+}
+
 @media (min-width:1024px) {
   .c1 {
     padding: 0 9rem;
@@ -954,6 +976,8 @@ exports[`does not render copyright text when not supplied 1`] = `
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-column-gap: 3rem;
+    column-gap: 3rem;
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -966,9 +990,10 @@ exports[`does not render copyright text when not supplied 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
@@ -1020,13 +1045,6 @@ exports[`does not render copyright text when not supplied 1`] = `
 @media (min-width:740px) {
   .c41 {
     display: inline;
-  }
-}
-
-@media (min-width:740px) {
-  .c42 > span {
-    -webkit-text-decoration: none;
-    text-decoration: none;
   }
 }
 
@@ -1977,7 +1995,8 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: #18181A;
   border-color: transparent;
-  padding-left: 18px;
+  height: 44px;
+  padding: 12px 2.4rem 12px 18px;
   -webkit-transition: background-color 0.2s ease,text-indent 0.18s ease;
   transition: background-color 0.2s ease,text-indent 0.18s ease;
   border: 1px solid #FFFFFF;
@@ -2024,9 +2043,15 @@ exports[`renders correctly 1`] = `
 .c24 {
   margin: 0;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  padding: 1rem;
+  height: 44px;
+  padding: 0 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 100%;
+  max-width: 123px;
 }
 
 .c24 .emailSignUpButtonContent {
@@ -2044,10 +2069,13 @@ exports[`renders correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonLabel {
   display: inline-block;
+  font-size: 16px;
+  line-height: 1;
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
@@ -2055,6 +2083,7 @@ exports[`renders correctly 1`] = `
   -webkit-transition: transform 0.22s ease;
   transition: transform 0.22s ease;
   will-change: transform;
+  white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonArrow {
@@ -2118,9 +2147,9 @@ exports[`renders correctly 1`] = `
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1488px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .c7 {
@@ -2187,7 +2216,7 @@ exports[`renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .c37:hover,
@@ -2201,6 +2230,7 @@ exports[`renders correctly 1`] = `
 .c38 {
   color: #FFFFFF;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .c40 {
@@ -2251,8 +2281,8 @@ exports[`renders correctly 1`] = `
 .c42 > span {
   color: #FFFFFF;
   opacity: 0.8;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
   font-weight: normal;
@@ -2290,7 +2320,7 @@ exports[`renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .c32 {
@@ -2310,7 +2340,7 @@ exports[`renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 0;
+  padding-bottom: 0;
   display: none;
 }
 
@@ -2331,7 +2361,7 @@ exports[`renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 0;
+  padding-bottom: 0;
   display: none;
 }
 
@@ -2352,7 +2382,7 @@ exports[`renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .c4 {
@@ -2508,8 +2538,8 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c14 {
-    width: auto;
-    min-width: 360px;
+    width: 100%;
+    max-width: 364px;
   }
 }
 
@@ -2531,7 +2561,11 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c22 {
-    width: auto;
+    width: 100%;
+    max-width: 123px;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 }
 
@@ -2554,6 +2588,12 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width:740px) {
+  .c1 {
+    padding: 0 2rem;
+  }
+}
+
 @media (min-width:1024px) {
   .c1 {
     padding: 0 9rem;
@@ -2569,6 +2609,8 @@ exports[`renders correctly 1`] = `
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-column-gap: 3rem;
+    column-gap: 3rem;
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -2581,9 +2623,10 @@ exports[`renders correctly 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
@@ -2635,13 +2678,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c41 {
     display: inline;
-  }
-}
-
-@media (min-width:740px) {
-  .c42 > span {
-    -webkit-text-decoration: none;
-    text-decoration: none;
   }
 }
 
