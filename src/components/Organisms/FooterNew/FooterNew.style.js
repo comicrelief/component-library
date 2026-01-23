@@ -176,16 +176,10 @@ const SecondaryNavLink = styled(Link)`
   > span {
     color: ${({ theme }) => theme.color('white')};
     opacity: 0.8;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: ${({ theme }) => theme.color('white')};
     font-weight: normal;
     font-size: 0.875rem;
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    > span {
-      text-decoration: none;
-    }
   }
 
   &:hover,
