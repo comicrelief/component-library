@@ -42,7 +42,6 @@ const Signup = ({
   givingType = null,
   ...rest
 }) => {
-  // const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
