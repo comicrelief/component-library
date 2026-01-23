@@ -1,16 +1,13 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('donate component', () => {
-  const AMOUNT_ERROR_MESSAGE = 'Please enter an amount between £1 and £25000 and up to 2 decimal places';
-
   test('Donate-example-1 - Single Donation', async ({ page }) => {
     await page.goto('/#donate');
 
     await expect(page.locator('[data-testid="Donate-example-1"]')).toBeVisible();
 
     // moneybuy 1
-    // defaults to the 2nd moneybuy amount for the selected giving type
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('50');
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
     await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£12.10"]').click();
     await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('12.10');
 
@@ -20,34 +17,34 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £12.10 now');
 
     // moneybuy 2
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£50.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('50');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£20.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
 
     const moneybuyTwoButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyTwoButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £50 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £20 now');
 
     // moneybuy 3
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£100.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('100');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£30.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('30');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £100 now');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £30 now');
 
     // amount field validation
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-1"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-1"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-1"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-1"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
@@ -69,13 +66,13 @@ test.describe('donate component', () => {
     await page.locator('[data-testid="Donate-example-1"] [for="give-monthly--mship-1"]').click();
 
     // moneybuy 1
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£5.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('5');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box1"][aria-label="£5.50"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('5.50');
 
     const moneybuyOneButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyOneButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £5 monthly');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £5.50 monthly');
 
     // moneybuy 2
     await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box2"][aria-label="£10.00"]').click();
@@ -87,25 +84,25 @@ test.describe('donate component', () => {
     await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £10 monthly');
 
     // moneybuy 3
-    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£25.00"]').click();
-    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('25');
+    await page.locator('[data-testid="Donate-example-1"] input[id$="moneyBuy-box3"][aria-label="£20.00"]').click();
+    await expect(page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]')).toHaveValue('20');
 
     const moneybuyThreeButtonText = await page.locator('[data-testid="Donate-example-1"] button[type="submit"]').textContent();
     console.log('buttonText:', moneybuyThreeButtonText);
 
-    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £25 monthly');
+    await expect(page.locator('[data-testid="Donate-example-1"] button[type="submit"]')).toContainText('Donate £20 monthly');
 
     // amount field validation
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-1"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-1"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-1"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-1"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-1"] input[name="membership_amount"]').fill('');
@@ -155,12 +152,12 @@ test.describe('donate component', () => {
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-3"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-3"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-3"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-3"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-3"] input[name="membership_amount"]').fill('');
@@ -210,12 +207,12 @@ test.describe('donate component', () => {
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-5"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-5"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-5"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-5"] p:nth-child(4)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-5"] input[name="membership_amount"]').fill('');
@@ -240,12 +237,12 @@ test.describe('donate component', () => {
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-7"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-7"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-7"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-7"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-7"] input[name="membership_amount"]').fill('');
@@ -270,12 +267,12 @@ test.describe('donate component', () => {
 
     // enter amount 0 should show error message
     await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').type('0');
-    await expect(page.locator('[data-testid="Donate-example-9"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-9"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter amount 25001 should show error message
     await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').fill('');
     await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').type('25001');
-    await expect(page.locator('[data-testid="Donate-example-9"] .error--amount')).toContainText(AMOUNT_ERROR_MESSAGE);
+    await expect(page.locator('[data-testid="Donate-example-9"] p:nth-child(3)')).toContainText('Please enter an amount between £1 and £25000 and up to 2 decimal places');
 
     // enter own amount in decimals should not show error message
     await page.locator('[data-testid="Donate-example-9"] input[name="membership_amount"]').fill('');
