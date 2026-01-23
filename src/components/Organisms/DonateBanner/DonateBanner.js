@@ -72,7 +72,9 @@ const DonateBanner = ({
   const shouldRenderTopImage = shouldShowTopImage
     && topImage && (topImage.images || topImage.image);
 
-  const shouldShowTitleSection = noTitlesAtAll === false && (isLarge || donateWidgetIsTextOnly);
+  // For text-only variants, we hide the title area on non-desktop widths
+  // (M and below), so only the form is shown.
+  const shouldShowTitleSection = noTitlesAtAll === false && isLarge && donateWidgetIsTextOnly;
 
   return (
     <Container
