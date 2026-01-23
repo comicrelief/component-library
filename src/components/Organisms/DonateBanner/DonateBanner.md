@@ -116,6 +116,29 @@ import data from './dev-data/data-single';
 />;
 ```
 
+## Text-only widget (no image), with the usual moneybuys, standard colours
+
+```js
+import data from './dev-data/data';
+
+<DonateBanner
+  donateWidgetIsTextOnly
+  pageBackgroundColour="grey_light"
+  componentBackgroundColour="white"
+  textColor="black"
+  paddingAbove="2rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  data={data}
+  mbshipID="mbship-3b"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate now"
+  subtitle="Choose an amount or pick a moneybuy."
+/>;
+```
+
 ## Different “Other amount” copy for single vs monthly
 
 ```js
