@@ -2,25 +2,25 @@ import React, { useContext, useEffect, useRef } from 'react';
 import Picture from '../../Atoms/Picture/Picture';
 import {
   Backdrop,
-  Card,
-  CardAgeGroup,
-  CardImage,
-  CardTitle,
+  LightboxContent,
+  LightboxImage,
   Container,
   Dialog,
   ScreenReaderOnly,
   CloseButton,
   PreviousButton,
-  NextButton
+  NextButton,
+  Title,
+  Caption
 } from './_Lightbox.style';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
 
 /**
  * lightbox context:
- * - selectedCard: the card that is currently selected
- * - setSelectedCard:  set the selected card
- * - nextCard/previousCard: navigate to the next/previous card
+ * - selectedNode: the node that is currently selected
+ * - setSelectedNode:  set the selected node
+ * - nextNode/previousNode: navigate to the next/previous node
  */
 export const LightboxContext = React.createContext(null);
 
@@ -37,13 +37,13 @@ export const LightboxContext = React.createContext(null);
  */
 const Lightbox = () => {
   const {
-    selectedCard,
-    setSelectedCard,
-    nextCard,
-    previousCard
+    selectedNode,
+    setSelectedNode,
+    nextNode,
+    previousNode
   } = useContext(LightboxContext);
 
-  const hasCard = !!selectedCard;
+  const hasNode = !!selectedNode;
   const dialogRef = useRef(null);
   const previousFocusRef = useRef(null);
 
@@ -65,7 +65,7 @@ const Lightbox = () => {
   useEffect(() => {
     // trap focus within the dialog
     function handleTabKey(event) {
-      if (!hasCard) return;
+      if (!hasNode) return;
 
       const focusableElements = getFocusableElements();
       if (focusableElements.length === 0) return;
@@ -89,7 +89,7 @@ const Lightbox = () => {
       // TODO: add other key handling here
       switch (event.key) {
         case 'Escape':
-          setSelectedCard(null);
+          setSelectedNode(null);
           break;
         case 'Tab':
           handleTabKey(event);
@@ -99,18 +99,18 @@ const Lightbox = () => {
       }
     }
 
-    if (hasCard) {
+    if (hasNode) {
       window.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [hasCard, setSelectedCard]);
+  }, [hasNode, setSelectedNode]);
 
   // handle focus management when dialog opens/closes
   useEffect(() => {
-    if (hasCard) {
+    if (hasNode) {
       // store the previously focused element
       previousFocusRef.current = document.activeElement;
       // prevent body scroll
@@ -134,52 +134,50 @@ const Lightbox = () => {
         previousFocusRef.current = null;
       }
     }
-  }, [hasCard]);
+  }, [hasNode]);
 
   function handleBackdropClick() {
-    setSelectedCard(null);
+    setSelectedNode(null);
   }
 
   return (
-    <Container isOpen={hasCard}>
+    <Container isOpen={hasNode}>
       <Backdrop onPointerUp={() => handleBackdropClick()} />
       <Dialog
         ref={dialogRef}
         aria-labelledby="lightboxTitle"
         aria-describedby="lightboxDescription"
       >
-        <Card>
-          <CardImage>
-            {hasCard && (
+        <LightboxContent>
+          <LightboxImage>
+            {hasNode && (
               <Picture
-                key={selectedCard?.image}
-                alt={selectedCard?.title}
-                image={selectedCard?.image}
+                key={selectedNode?.image}
+                alt={selectedNode?.title}
+                image={selectedNode?.image}
                 width="100%"
                 height="100%"
                 objectFit="cover"
               />
             )}
-            <CloseButton type="button" onClick={() => setSelectedCard(null)}>
+            <CloseButton type="button" onClick={() => setSelectedNode(null)}>
               <ScreenReaderOnly>Close</ScreenReaderOnly>
               <Cross colour="black" size={16} />
             </CloseButton>
-            <PreviousButton type="button" onClick={() => previousCard(selectedCard)}>
+            <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
               <ScreenReaderOnly>Previous</ScreenReaderOnly>
               <Arrow direction="left" colour="black" size={16} />
             </PreviousButton>
-            <NextButton type="button" onClick={() => nextCard(selectedCard)}>
+            <NextButton type="button" onClick={() => nextNode(selectedNode)}>
               <ScreenReaderOnly>Next</ScreenReaderOnly>
               <Arrow direction="right" colour="black" size={16} />
             </NextButton>
-          </CardImage>
-          <CardTitle id="lightboxTitle">{selectedCard?.title}</CardTitle>
-          <CardAgeGroup id="lightboxDescription">
-            Age group:
-            {' '}
-            {selectedCard?.ageGroup}
-          </CardAgeGroup>
-        </Card>
+          </LightboxImage>
+          <Title id="lightboxTitle">{selectedNode?.title}</Title>
+          <Caption id="lightboxDescription">
+            {selectedNode?.ageGroup}
+          </Caption>
+        </LightboxContent>
       </Dialog>
     </Container>
   );

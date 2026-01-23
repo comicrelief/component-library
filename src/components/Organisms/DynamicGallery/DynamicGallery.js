@@ -9,19 +9,18 @@ import React, {
 } from 'react';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
 import {
-  Card,
-  CardImageContainer,
-  CardTitle,
-  CardAgeGroup,
+  GalleryNode,
+  ImageContainer,
   Column,
   Container,
+  Details,
   EmptyMessage,
   ImageGrid,
-  CardDetails
+  Title,
+  Caption
 } from './DynamicGallery.style';
 import Picture from '../../Atoms/Picture/Picture';
 import Lightbox, { LightboxContext } from './_Lightbox';
- 
 
 /**
  * the Dynamic Gallery component displays a grid of images,
@@ -32,10 +31,10 @@ const DynamicGallery = ({
   maxColumns = 3,
   // dynamicImageHeights = false,
   // content
-  cards
+  nodes
   // ...rest
 }) => {
-  const hasCards = cards?.length > 0;
+  const hasNodes = nodes?.length > 0;
 
   /**
    * handle column counts;
@@ -45,7 +44,7 @@ const DynamicGallery = ({
    * - for large and xl screens we use the maxColumns prop which defaults to 3
    * .
    * we need to use JS here rather than CSS because our columns are created dynamically;
-   * this is to allow us to assign cards in the natural "horizontal" order rather than "vertically"
+   * this is to allow us to assign nodes in the natural "horizontal" order rather than "vertically"
    * .
    * the resize listener is throttled to allow resizing to happen as the window size changes
    * without being too expensive
@@ -86,38 +85,38 @@ const DynamicGallery = ({
     };
   }, [updateColumnCount]);
 
-  // handle selected card
-  const [selectedCard, setSelectedCard] = useState(null);
+  // handle selected node
+  const [selectedNode, setSelectedNode] = useState(null);
 
-  function handleNextCard(card) {
-    const cardIndex = cards.indexOf(card);
-    const nextCardIndex = (cardIndex + 1) % cards.length;
-    setSelectedCard(cards[nextCardIndex]);
+  function handleNextNode(node) {
+    const nodeIndex = nodes.indexOf(node);
+    const nextNodeIndex = (nodeIndex + 1) % nodes.length;
+    setSelectedNode(nodes[nextNodeIndex]);
   }
 
-  function handlePreviousCard(card) {
-    const cardIndex = cards.indexOf(card);
-    const previousCardIndex = (cardIndex - 1 + cards.length) % cards.length;
-    setSelectedCard(cards[previousCardIndex]);
+  function handlePreviousNode(node) {
+    const nodeIndex = nodes.indexOf(node);
+    const previousNodeIndex = (nodeIndex - 1 + nodes.length) % nodes.length;
+    setSelectedNode(nodes[previousNodeIndex]);
   }
 
   return (
     <Container>
       <LightboxContext.Provider
         value={{
-          selectedCard,
-          setSelectedCard,
-          nextCard: handleNextCard,
-          previousCard: handlePreviousCard
+          selectedNode,
+          setSelectedNode,
+          nextNode: handleNextNode,
+          previousNode: handlePreviousNode
         }}
       >
         <ImageGrid>
-          {hasCards
+          {hasNodes
             && Array(columnCount)
               .fill(null)
               .map((column, columnIndex) => {
-                const columnCards = cards?.filter(
-                  (_, cardIndex) => cardIndex % columnCount === columnIndex
+                const columnNodes = nodes?.filter(
+                  (_, nodeIndex) => nodeIndex % columnCount === columnIndex
                 );
                 return (
                   <ColumnComponent
@@ -126,12 +125,12 @@ const DynamicGallery = ({
                     // eslint-disable-next-line react/no-array-index-key
                     key={columnIndex}
                     columnIndex={columnIndex}
-                    cards={columnCards}
+                    nodes={columnNodes}
                   />
                 );
               })}
 
-          <EmptyMessage isEmpty={!hasCards}>No cards to display</EmptyMessage>
+          <EmptyMessage isEmpty={!hasNodes}>No images to display</EmptyMessage>
         </ImageGrid>
         <Lightbox />
       </LightboxContext.Provider>
@@ -143,7 +142,7 @@ const DynamicGallery = ({
 DynamicGallery.propTypes = {
   maxColumns: PropTypes.oneOf([2, 3, 4, 5]),
   // dynamicImageHeights: PropTypes.bool,
-  cards: PropTypes.arrayOf(
+  nodes: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string.isRequired,
       title: PropTypes.string,
@@ -158,7 +157,7 @@ export default DynamicGallery;
  * a separate component to handle columns of images;
  * this component handles aspect ratio calculations to enfore a min/max ratio for its images
  */
-function ColumnComponent({ cards }) {
+function ColumnComponent({ nodes }) {
   const [minHeight, setMinHeight] = useState();
   const [maxHeight, setMaxHeight] = useState();
   const elRef = useRef(null);
@@ -190,56 +189,54 @@ function ColumnComponent({ cards }) {
     };
   }, [updateMinMaxHeight]);
 
-  // handle selected card
-  const { setSelectedCard } = useContext(LightboxContext);
+  // handle selected node
+  const { setSelectedNode } = useContext(LightboxContext);
 
-  function handleSelectCard(card) {
-    setSelectedCard(card);
+  function handlePointerUp(node) {
+    setSelectedNode(node);
   }
 
-  function handleKeyDown(event, card) {
+  function handleKeyDown(event, node) {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      setSelectedCard(card);
+      setSelectedNode(node);
     }
   }
 
   return (
     <Column ref={elRef}>
-      {cards.map((card, cardIndex) => (
-        <Card
+      {nodes.map((node, nodeIndex) => (
+        <GalleryNode
           // disabling the lint rule here as we're chunking an array and have no unique keys
           // eslint-disable-next-line react/no-array-index-key
-          key={cardIndex}
-          onPointerUp={() => handleSelectCard(card)}
-          onKeyDown={event => handleKeyDown(event, card)}
+          key={nodeIndex}
+          onPointerUp={() => handlePointerUp(node)}
+          onKeyDown={event => handleKeyDown(event, node)}
           tabIndex={0}
         >
-          <CardImageContainer style={{ minHeight, maxHeight }}>
+          <ImageContainer style={{ minHeight, maxHeight }}>
             <Picture
-              alt={card.title}
-              image={card.image}
+              alt={node.title}
+              image={node.image}
               height="100%"
               objectFit="cover"
             />
-          </CardImageContainer>
-          <CardDetails>
-            <CardTitle>{card.title}</CardTitle>
-            {card.ageGroup && (
-              <CardAgeGroup>
-                Age group:
-                {' '}
-                {card.ageGroup}
-              </CardAgeGroup>
+          </ImageContainer>
+          <Details>
+            <Title>{node.title}</Title>
+            {node.caption && (
+              <Caption>
+                {node.caption}
+              </Caption>
             )}
-          </CardDetails>
-        </Card>
+          </Details>
+        </GalleryNode>
       ))}
     </Column>
   );
 }
 ColumnComponent.propTypes = {
-  cards: PropTypes.arrayOf(
+  nodes: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string.isRequired,
       title: PropTypes.string,

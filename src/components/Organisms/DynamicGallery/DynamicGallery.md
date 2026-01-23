@@ -10,22 +10,22 @@
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import createCards from './_utils';
-<DynamicGallery cards={createCards(25)} />;
+import createMockGalleryNodes from './_utils';
+<DynamicGallery nodes={createMockGalleryNodes(25)} />;
 ```
 
 ### Gallery with max 4 columns
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import createCards from './_utils';
-<DynamicGallery maxColumns={4} cards={createCards(4)} />;
+import createMockGalleryNodes from './_utils';
+<DynamicGallery maxColumns={4} nodes={createMockGalleryNodes(4)} />;
 ```
 
 ### Gallery with max 5 columns
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-import createCards from './_utils';
-<DynamicGallery maxColumns={5} cards={createCards(5)} />;
+import createMockGalleryNodes from './_utils';
+<DynamicGallery maxColumns={5} nodes={createMockGalleryNodes(5)} />;
 ```

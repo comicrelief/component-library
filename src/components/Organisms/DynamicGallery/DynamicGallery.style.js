@@ -24,7 +24,7 @@ export const EmptyMessage = styled.div`
   display: ${({ isEmpty }) => (isEmpty ? 'block' : 'none')};
 `;
 
-export const Card = styled.div`
+export const GalleryNode = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -43,32 +43,26 @@ export const Card = styled.div`
   }
 `;
 
-export const CardImageContainer = styled.div`
+export const ImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
   border-radius: 0.5rem;
 `;
 
-export const CardImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-export const CardDetails = styled.div`
+export const Details = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 8px;
 `;
 
-export const CardTitle = styled.span`
+export const Title = styled.span`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('black')};
 `;
 
-export const CardAgeGroup = styled.span`
+export const Caption = styled.span`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('grey')};

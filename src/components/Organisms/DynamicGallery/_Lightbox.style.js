@@ -32,7 +32,7 @@ export const Dialog = styled.dialog`
   z-index: 1;
 `;
 
-export const Card = styled.div`
+export const LightboxContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -41,7 +41,7 @@ export const Card = styled.div`
   border-radius: 0.5rem;
 `;
 
-export const CardImage = styled.div`
+export const LightboxImage = styled.div`
   position: relative;
   & img {
     max-width: 80vw;
@@ -49,20 +49,21 @@ export const CardImage = styled.div`
   }
 `;
 
-export const CardTitle = styled.div`
+
+export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('black')};
 `;
 
-export const CardAgeGroup = styled.div`
+export const Caption = styled.div`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('grey')};
   line-height: 1;
 `;
 
-export const CardNavButton = styled.button`
+export const NavButton = styled.button`
   position: absolute;
   display: flex;
   align-items: center;
@@ -88,7 +89,7 @@ export const CardNavButton = styled.button`
   }
 `;
 
-export const CloseButton = styled(CardNavButton)`
+export const CloseButton = styled(NavButton)`
   top: 0;
   right: 0;
   border-top-left-radius: 0;
@@ -96,7 +97,7 @@ export const CloseButton = styled(CardNavButton)`
   border-bottom-right-radius: 0;
 `;
 
-export const PreviousButton = styled(CardNavButton)`
+export const PreviousButton = styled(NavButton)`
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
@@ -104,7 +105,7 @@ export const PreviousButton = styled(CardNavButton)`
   border-bottom-left-radius: 0;
 `;
 
-export const NextButton = styled(CardNavButton)`
+export const NextButton = styled(NavButton)`
   top: 50%;
   right: 0;
   transform: translate(0, -50%);

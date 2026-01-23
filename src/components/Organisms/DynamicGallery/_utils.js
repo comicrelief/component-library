@@ -1,9 +1,9 @@
 import { defaultData } from '../../../styleguide/data/data';
 
 /**
- * mocking function to create cards for the dynamic gallery
+ * mocking function to create nodes for the dynamic gallery
  */
-export default function createCards(cardCount = 10) {
+export default function createMockGalleryNodes(nodeCount = 10) {
   const images = [
     defaultData.pictures.small,
     defaultData.pictures.medium,
@@ -15,13 +15,13 @@ export default function createCards(cardCount = 10) {
     'wide.jpg'
   ];
 
-  const cards = [];
-  for (let i = 0; i < cardCount; i += 1) {
-    cards.push({
+  const nodes = [];
+  for (let i = 0; i < nodeCount; i += 1) {
+    nodes.push({
       image: images[Math.floor(Math.random() * images.length)],
       title: `image ${i}`,
       ageGroup: '0-10'
     });
   }
-  return cards;
+  return nodes;
 }
