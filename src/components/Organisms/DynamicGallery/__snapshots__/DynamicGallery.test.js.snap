@@ -103,10 +103,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   position: relative;
 }
 
-.c7 > div {
-  min-height: 128px;
-}
-
 .c7 img {
   max-width: 80vw;
   max-height: 70vh;
@@ -156,7 +152,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   fill: #E52630;
 }
 
-.c8:focus,
 .c8:focus-visible {
   outline: 2px solid #000000;
 }
