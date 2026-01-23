@@ -12,7 +12,7 @@ The component expects pre-rendered content to be passed in the `body` field of e
 - `target`: The link target ('self' for internal links, 'blank' for external)
 - `external`: The rel attribute ('noopener' for external links, null for internal)
 
-### CTAMultiCard: Desktop Grid View (3 columns)
+### CTAMultiCard: Desktop Grid View (3 columns), carousel when in mobile view
 
 **NB: In mobile view, this example displays as a carousel. This example also demonstrates no vertical padding via `paddingAbove` / `paddingBelow` set to `0rem`, so it will sit flush to the surrounding container.**
 
@@ -42,8 +42,9 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
 const data = {
   ...exampleData,
   cards: cardsWithRenderedBody,
+  layout: "3 columns",
   carouselOfCards: true,
-  backgroundColour: "transparent",
+  backgroundColour: "grey_medium",
   paddingAbove: '0rem',
   paddingBelow: '0rem'
 };
@@ -53,7 +54,7 @@ const data = {
 </div>;
 ```
 
-### CTAMultiCard: Desktop Grid View (2 columns)
+### CTAMultiCard: Desktop Grid View (2 columns) with large padding
 
 **NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel). This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
 
