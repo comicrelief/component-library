@@ -127,7 +127,7 @@ const PrimaryNavLink = styled(Link)`
   color: ${({ theme }) => theme.color('white')};
   text-decoration: none;
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-size: 16px;
 
   &:hover,
   &:focus {
@@ -139,6 +139,7 @@ const PrimaryNavLink = styled(Link)`
 const PrimaryNavText = styled(Text)`
   color: ${({ theme }) => theme.color('white')};
   font-weight: bold;
+  font-size: 16px;
 `;
 
 const SecondaryNav = styled.nav`
