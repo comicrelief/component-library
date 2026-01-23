@@ -2,6 +2,23 @@
 
 exports[`renders correctly 1`] = `
 .c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -13,17 +30,17 @@ exports[`renders correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.c2 {
+.c4 {
   font-size: 1.5rem;
   line-height: normal;
 }
 
-.c2 span {
+.c4 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c6 {
+.c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -35,17 +52,17 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c6 {
+.c8 {
   font-size: 1rem;
   line-height: normal;
 }
 
-.c6 span {
+.c8 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c4 {
+.c6 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -95,7 +112,7 @@ exports[`renders correctly 1`] = `
   animation-duration: 0.4s;
 }
 
-.c3 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +126,7 @@ exports[`renders correctly 1`] = `
   align-content: center;
 }
 
-.c5 {
+.c7 {
   overflow: hidden;
   height: 0;
   visibility: none;
@@ -118,36 +135,54 @@ exports[`renders correctly 1`] = `
   padding: 0 2rem;
 }
 
+.c3 {
+  margin-bottom: 0;
+}
+
 @media (min-width:740px) {
   .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
     font-size: 1.875rem;
     line-height: 1.875rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c2 {
+  .c4 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c6 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c6 {
+  .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c6 {
     fill: #000000;
   }
 }
@@ -159,7 +194,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c7 {
     padding: 0 3rem;
   }
 }
@@ -173,16 +208,20 @@ exports[`renders correctly 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <h2
-      className="c2"
+    <h3
+      className="c2 c3"
     >
-      I am the title
-    </h2>
+      <h2
+        className="c4"
+      >
+        I am the title
+      </h2>
+    </h3>
     <div
-      className="c3"
+      className="c5"
     >
       <svg
-        className="c4"
+        className="c6"
         direction="down"
         fill="#000000"
         height={24}
@@ -197,10 +236,10 @@ exports[`renders correctly 1`] = `
     </div>
   </button>
   <div
-    className="c5"
+    className="c7"
   >
     <p
-      className="c6"
+      className="c8"
     >
       Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
     </p>

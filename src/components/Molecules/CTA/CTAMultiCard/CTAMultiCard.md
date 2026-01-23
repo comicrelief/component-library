@@ -12,7 +12,7 @@ The component expects pre-rendered content to be passed in the `body` field of e
 - `target`: The link target ('self' for internal links, 'blank' for external)
 - `external`: The rel attribute ('noopener' for external links, null for internal)
 
-### CTAMultiCard: Desktop Grid View (3 columns)
+### CTAMultiCard: Desktop Grid View (3 columns), carousel when in mobile view
 
 **NB: In mobile view, this example displays as a carousel. This example also demonstrates no vertical padding via `paddingAbove` / `paddingBelow` set to `0rem`, so it will sit flush to the surrounding container.**
 
@@ -27,7 +27,7 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
   ...card,
   body: (
     <Text tag="p">
-      <strong>Load</strong> of text here
+      {card.body}
     </Text>
   ),
   fallback: challengeExampleImage,
@@ -42,8 +42,9 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
 const data = {
   ...exampleData,
   cards: cardsWithRenderedBody,
+  layout: "3 columns",
   carouselOfCards: true,
-  backgroundColour: "transparent",
+  backgroundColour: "grey_medium",
   paddingAbove: '0rem',
   paddingBelow: '0rem'
 };
@@ -53,7 +54,7 @@ const data = {
 </div>;
 ```
 
-### CTAMultiCard: Desktop Grid View (2 columns)
+### CTAMultiCard: Desktop Grid View (2 columns) with large padding
 
 **NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel). This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
 
@@ -80,7 +81,7 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
     </>
   ) : (
     <Text tag="p">
-      <strong>Load</strong> of text here
+      {card.body}
     </Text>
   ),
   fallback: challengeExampleImage,
@@ -104,5 +105,45 @@ const dataWithLongText = {
 
 <div style={{ background: '#E1E2E3' }}>
   <CTAMultiCard data={dataWithLongText} />
+</div>;
+```
+
+### CTAMultiCard: Wrap behaviour (3 columns, non-carousel)
+
+```js
+import CTAMultiCard from './CTAMultiCard';
+import Text from '../../../Atoms/Text/Text';
+import challengeExampleImage from '../../../../styleguide/assets/challenge-1.jpg';
+const exampleData = require('./example_data.json');
+
+const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
+  ...card,
+  id: `wrap-example-${index}`,
+  body: (
+    <Text tag="p">
+      Short body text
+    </Text>
+  ),
+  fallback: challengeExampleImage,
+  imageLow: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z",
+  images: `${challengeExampleImage} 678w`,
+  bgColour: "white",
+  description: "",
+  target: "self",
+  external: null
+}));
+
+const dataWrapExample = {
+  ...exampleData,
+  layout: "3 columns",
+  carouselOfCards: false,
+  backgroundColour: "Transparent",
+  cards: cardsWithRenderedBody,
+  paddingAbove: '2rem',
+  paddingBelow: '2rem'
+};
+
+<div style={{ background: '#E1E2E3'}}>
+  <CTAMultiCard data={dataWrapExample} />
 </div>;
 ```
