@@ -58,6 +58,7 @@ const TopSection = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     justify-content: space-between;
+    column-gap: ${spacing('lg')};
     align-items: ${({ $hasEmailSignup }) => ($hasEmailSignup ? 'flex-start' : 'center')};
   }
 `;
@@ -69,7 +70,8 @@ const TopSectionLeft = styled.div`
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: column;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 `;
 

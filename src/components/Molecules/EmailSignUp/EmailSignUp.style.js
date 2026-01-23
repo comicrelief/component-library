@@ -48,8 +48,8 @@ export const InputWrapper = styled.div`
   width: 100%;
   overflow: visible;
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: auto;
-    min-width: 360px;
+    width: 100%;
+    max-width: 364px;
   }
 `;
 
@@ -91,7 +91,9 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   width: 100%;
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    width: auto;
+  width: 100%;
+  max-width: 123px;
+  flex: 0 0 auto;
   }
 `;
 
@@ -102,6 +104,9 @@ export const StyledEmailSignUpButton = styled(Button)`
   padding: 0 ${spacing('md')};
   border-radius: 0.5rem;
   overflow: hidden;
+  min-width: max-content;
+  width: 100%;
+  max-width: 123px;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin: 0;
@@ -115,6 +120,7 @@ export const StyledEmailSignUpButton = styled(Button)`
     align-items: center;
     justify-content: center;
     line-height: 1;
+    white-space: nowrap;
   }
 
   .emailSignUpButtonLabel {
@@ -123,6 +129,7 @@ export const StyledEmailSignUpButton = styled(Button)`
     transform: translateX(13px);
     transition: transform 0.22s ease;
     will-change: transform;
+    white-space: nowrap;
   }
 
   .emailSignUpButtonArrow {
