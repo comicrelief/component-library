@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import DonateBanner from './Donate';
+import DonateBanner from './DonateBanner';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 

@@ -23,7 +23,7 @@ import {
   OuterFieldset,
   Legend,
   PrimaryTitleText
-} from '../Donate.style';
+} from '../DonateBanner.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
 const Signup = ({

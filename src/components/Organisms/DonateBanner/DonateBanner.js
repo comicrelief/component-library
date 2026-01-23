@@ -15,7 +15,7 @@ import {
   TitleWrapperInner,
   TitleWrapperOuter,
   Wrapper
-} from './Donate.style';
+} from './DonateBanner.style';
 
 const DonateBanner = ({
   donateWidgetIsTextOnly = false,
