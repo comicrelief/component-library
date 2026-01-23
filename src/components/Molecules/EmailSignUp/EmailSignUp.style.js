@@ -69,7 +69,8 @@ export const StyledEmailInput = styled(Input)`
       font-family: ${theme.fontFamilies('Montserrat')};
       background-color: ${theme.color('grey_5')};
       border-color: transparent;
-      padding-left: 18px;
+      height: 44px;
+      padding: 12px 2.4rem 12px 18px;
       transition: background-color 0.2s ease, text-indent 0.18s ease;
       border: 1px solid ${theme.color('white')};
       color: ${theme.color('white')};
@@ -97,7 +98,8 @@ export const ButtonWrapper = styled.div`
 export const StyledEmailSignUpButton = styled(Button)`
   margin: 0;
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  padding: ${spacing('md')};
+  height: 44px;
+  padding: 0 ${spacing('md')};
   border-radius: 0.5rem;
   overflow: hidden;
 
