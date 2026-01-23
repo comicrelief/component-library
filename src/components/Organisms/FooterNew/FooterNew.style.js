@@ -25,7 +25,7 @@ const InnerWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1488px; // 1200 + 144px padding on each side
+  max-width: 1424px; // 1200 + 64px padding on each side
   margin: 0 auto;
   padding: 0 ${spacing('md')};
 
@@ -34,7 +34,7 @@ const InnerWrapper = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 0 9rem;
+    padding: 0 ${spacing('xl')};
   }
 `;
 
