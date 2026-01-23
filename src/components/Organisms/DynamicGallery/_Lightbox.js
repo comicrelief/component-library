@@ -12,7 +12,7 @@ import {
   CloseButton,
   PreviousButton,
   NextButton
-} from './Lightbox.style';
+} from './_Lightbox.style';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
 

@@ -20,7 +20,8 @@ import {
   CardDetails
 } from './DynamicGallery.style';
 import Picture from '../../Atoms/Picture/Picture';
-import Lightbox, { LightboxContext } from './Lightbox';
+import Lightbox, { LightboxContext } from './_Lightbox';
+ 
 
 /**
  * the Dynamic Gallery component displays a grid of images,
