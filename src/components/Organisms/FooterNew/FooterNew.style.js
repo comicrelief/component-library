@@ -25,7 +25,7 @@ const InnerWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1488px; // 1200 + 144px padding on each side
   margin: 0 auto;
   padding: 0 ${spacing('md')};
 
