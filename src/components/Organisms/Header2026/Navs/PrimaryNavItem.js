@@ -71,13 +71,14 @@ const PrimaryNavItem = (
       const linkId = child.id;
 
       return (
-        <ColumnComponent key={child.id}>
+        <ColumnComponent key={child.id} $isSecondary={child.pageLevel}>
           {hasNested && isNotDesktop ? (
             <SecondaryNavLinkWithChildren
               href="#"
               inline
               role="menuitem"
               onClick={e => handleTertiaryToggle(e, linkId, child.pageName)}
+              $isSecondary={child.pageLevel}
             >
               <Text>{child.pageName}</Text>
               <SecondaryChevronWrapper>
@@ -85,7 +86,7 @@ const PrimaryNavItem = (
               </SecondaryChevronWrapper>
             </SecondaryNavLinkWithChildren>
           ) : (
-            <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem">
+            <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem" $isSecondary={child.pageLevel}>
               <Text>{child.pageName}</Text>
             </SecondaryNavLink>
           )}

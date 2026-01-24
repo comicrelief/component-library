@@ -16,7 +16,7 @@ const Navigation = styled.nav`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     ${zIndex('medium')};
-    position: relative;
+    position: static;
     top: 0;
     display: block;
     margin: 0;
@@ -60,7 +60,7 @@ const PrimaryMenu = styled.ul`
   border: 1px solid green;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    position: relative;
+    position: static;
     display: flex;
     justify-content: center;
     align-items: center;

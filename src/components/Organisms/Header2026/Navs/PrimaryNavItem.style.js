@@ -1,10 +1,47 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import zIndex from '../../../../theme/shared/zIndex';
 import Text from '../../../Atoms/Text/Text';
 
 const transitionDuration = 0.2;
+
+const bounceIn = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  70% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+`;
+
+const bounceOut = keyframes`
+  0% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  70% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -95,20 +132,31 @@ const SecondaryNavMenu = styled.ul`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: auto;
-    min-width: 600px;
+    width: 100%;
     height: auto;
     padding: 0;
     position: absolute;
-    top: 86px;
-    left: -29px;
+    top: 100%;
+    left: 0;
     border-radius: 0 0 25px 25px;
-    transition: opacity ${transitionDuration}s linear;
-    transform: none;
+    transition: opacity 0.4s linear, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scaleY(0);
+    transform-origin: top;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
     align-items: start;
+
+    // Invisible bridge above dropdown to maintain hover state
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: transparent;
+    }
   }
 `;
 
@@ -121,6 +169,14 @@ const ColumnWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: flex;
     flex-direction: column;
+    border-right: 1px solid ${({ theme }) => theme.color('grey_medium')};
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out 0.15s, transform 0.3s ease-out 0.15s;
+
+    &:last-of-type {
+      border-right: none;
+    }
   }
 `;
 
@@ -142,6 +198,18 @@ const SecondaryNavItem = styled.li`
   span {
     font-weight: 100;
   }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    border-top: none;
+
+    ${({ $isSecondary }) => $isSecondary && css`
+      border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+
+      &:first-of-type {
+        border-top: none;
+      }
+    `}
+  }
 `;
 
 /**
@@ -153,8 +221,46 @@ const SecondaryNavLink = styled(NavLinkClass)`
   height: auto;
   position: relative;
 
+  ${({ $isSecondary }) => $isSecondary && css`
+    span {
+      font-weight: 700;
+    }
+  `}
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 20px 30px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    transform: translateX(0);
+    transition: transform 0.7s ease-out;
+
+    span {
+      font-size: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      animation: ${bounceIn} 0.4s ease-out forwards;
+    }
+
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: opacity 0.15s ease-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+    }
   }
 
 `;
@@ -225,7 +331,7 @@ const StyledNavItem = styled.li`
 
   // Chevron icon:
   span > a > div {
-    opacity: 0.6;
+    opacity: 1;
     transition: opacity 0.3s ease-out;
   }
 
@@ -259,6 +365,7 @@ const StyledNavItem = styled.li`
     display: flex;
     align-items: center;
     border-bottom: none;
+    position: static;
 
     :hover,
     :focus,
@@ -267,6 +374,30 @@ const StyledNavItem = styled.li`
         visibility: visible;
         opacity: 1;
         display: grid;
+        transform: scaleY(1);
+
+        ${ColumnWrapper} {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    // Base state for span with pseudo-element border at bottom of header
+    > span {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: ${({ theme }) => theme.color('red')};
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease-out;
       }
     }
 
@@ -276,15 +407,27 @@ const StyledNavItem = styled.li`
       background-color: transparent;
       ${zIndex('high')};
 
-      span {
-        border-bottom: 2px solid ${({ theme }) => theme.color('black')};
-        padding-bottom: 2px;
+      > span::after {
+        transform: scaleX(1);
+        transition: transform 0s ease-out 0.5s;
       }
+    }
+
+    // When hovering the dropdown menu, hide the primary link border
+    &:has(${SecondaryNavMenu}:hover) > span::after {
+      transform: scaleX(0);
+      transition: transform 0.3s ease-out;
 
       ${SecondaryNavMenu} {
         display: grid;
         opacity: 1;
         visibility: visible;
+        transform: scaleY(1);
+
+        ${ColumnWrapper} {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -302,6 +445,7 @@ const ChevronWrapper = styled.div`
     height: auto;
     @media ${({ theme }) => theme.breakpoints2026('L')} {
       transform: rotate(90deg);
+      filter: brightness(0);
     }
   }
 
@@ -314,36 +458,24 @@ const ChevronWrapper = styled.div`
 
 const StyledText = styled(Text)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-size: 15px;
+    font-size: 1rem;
   }
 `;
 
 /**
- * Column 1 Nav Item - Red border
+ * Column 1 Nav Item
  */
-const Column1NavItem = styled(SecondaryNavItem)`
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    border-left: 4px solid ${({ theme }) => theme.color('red')};
-  }
-`;
+const Column1NavItem = styled(SecondaryNavItem)``;
 
 /**
- * Column 2 Nav Item - Blue border
+ * Column 2 Nav Item
  */
-const Column2NavItem = styled(SecondaryNavItem)`
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    border-left: 4px solid ${({ theme }) => theme.color('blue')};
-  }
-`;
+const Column2NavItem = styled(SecondaryNavItem)``;
 
 /**
- * Column 3 Nav Item - Green border
+ * Column 3 Nav Item
  */
-const Column3NavItem = styled(SecondaryNavItem)`
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    border-left: 4px solid ${({ theme }) => theme.color('green')};
-  }
-`;
+const Column3NavItem = styled(SecondaryNavItem)``;
 
 /**
  * Tertiary Navigation Menu (3rd level) - covers the secondary menu completely
