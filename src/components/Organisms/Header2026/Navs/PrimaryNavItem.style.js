@@ -30,7 +30,7 @@ const NavLinkClass = styled(Link)`
   padding: 25px;
   line-height: 1rem;
   height: auto;
-  font-weight: 700;
+  font-weight: 600;
   width: 100%;
   color: ${({ theme }) => theme.color('black')};
   transition: color ${transitionDuration}s ease;
@@ -60,6 +60,10 @@ const NavLinkClass = styled(Link)`
         background-color: ${({ theme }) => theme.color('grey_extra_light')};
       }
     }
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    font-weight: 700;
   }
 
   // Chevron icon????
@@ -99,6 +103,12 @@ const SecondaryNavMenu = styled.ul`
   transition: transform 0.15s ease-out;
   visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
   border-radius: 16px;
+  overflow: hidden;
+
+  /* Remove border from first item only on mobile */
+  > div:first-of-type > li:first-of-type {
+    border-top: none;
+  }
 
   /* When tertiary menu is open, maintain height and hide secondary items */
   ${({ isTertiaryOpen }) => isTertiaryOpen && css`
@@ -120,6 +130,7 @@ const SecondaryNavMenu = styled.ul`
     top: 100%;
     left: 0;
     border-radius: 0 0 25px 25px;
+    overflow: visible;
     transition: opacity 0.4s linear, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     transform: scaleY(0);
     transform-origin: top;
@@ -172,16 +183,12 @@ const SecondaryNavItem = styled.li`
   position: relative;
   transition: background-color ${transitionDuration}s ease;
 
-  &:first-of-type {
-    border-top: none;
-  }
-
-  span {
-    font-weight: 100;
-  }
-
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     border-top: none;
+
+    span {
+      font-weight: 100;
+    }
 
     ${({ $isSecondary }) => $isSecondary && css`
       border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
@@ -202,11 +209,9 @@ const SecondaryNavLink = styled(NavLinkClass)`
   height: auto;
   position: relative;
 
-  ${({ $isSecondary }) => $isSecondary && css`
-    span {
-      font-weight: 700;
-    }
-  `}
+  span {
+    font-weight: 600;
+  }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     padding: 20px 30px 22px;
@@ -219,6 +224,7 @@ const SecondaryNavLink = styled(NavLinkClass)`
 
     span {
       font-size: 1rem;
+      font-weight: 100;
     }
 
     &:hover,
@@ -480,6 +486,7 @@ const TertiaryNavMenu = styled.ul`
   transition: transform 0.15s ease-out;
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
   border-radius: 16px;
+  overflow: hidden;
 
   // DESKTOP - hide on desktop for now
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -503,8 +510,10 @@ const TertiaryNavItem = styled.li`
     border-top: none;
   }
 
-  span {
-    font-weight: 100;
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    span {
+      font-weight: 100;
+    }
   }
 `;
 
@@ -516,6 +525,10 @@ const TertiaryNavLink = styled(NavLinkClass)`
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
+
+  span {
+    font-weight: 600;
+  }
 `;
 
 /**
