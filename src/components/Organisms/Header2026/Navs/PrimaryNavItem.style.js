@@ -24,25 +24,6 @@ const bounceIn = keyframes`
   }
 `;
 
-const bounceOut = keyframes`
-  0% {
-    transform: translateX(5px);
-  }
-  30% {
-    transform: translateX(-3px);
-  }
-  50% {
-    transform: translateX(2px);
-  }
-  70% {
-    transform: translateX(-1px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
-
-
 const NavLinkClass = styled(Link)`
   display: inline-block;
   border: 0;
