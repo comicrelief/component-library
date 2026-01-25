@@ -204,6 +204,7 @@ const Navs = ({
                   devMode={devMode}
                   onTertiaryMenuChange={handleTertiaryMenuChange}
                   isTertiaryOpenGlobal={isTertiaryOpen}
+                  isSubMenuOpenGlobal={isSubMenuOpen}
                 />
               );
             })}

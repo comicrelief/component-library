@@ -95,7 +95,7 @@ const SecondaryNavMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: green;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   /* Mobile slide-in animation */
@@ -117,6 +117,7 @@ const SecondaryNavMenu = styled.ul`
 
   // DESKTOP:
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+    background-color: ${({ theme }) => theme.color('white')};
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
@@ -473,7 +474,7 @@ const TertiaryNavMenu = styled.ul`
   width: 100%;
   ${zIndex('higher')};
 
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: pink;
 
   /* When closed: absolute and off-screen. When open: relative for dynamic height */
   position: ${({ isOpen }) => (isOpen ? 'relative' : 'absolute')};

@@ -33,7 +33,8 @@ const PrimaryNavItem = (
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
     columnLinks, navHelperNew, internalLinkHelper, devMode = false,
-    onTertiaryMenuChange, isTertiaryOpenGlobal = false, ...rest
+    onTertiaryMenuChange, isTertiaryOpenGlobal = false,
+    isSubMenuOpenGlobal = false, ...rest
   }
 ) => {
   const [openTertiaryMenu, setOpenTertiaryMenu] = useState(null);
@@ -132,9 +133,9 @@ const PrimaryNavItem = (
 
   // Determine what to render for the primary nav link
   const renderPrimaryLink = () => {
-    // Mobile: Show NavLink only when tertiary menu is not open
+    // Mobile: Hide NavLink when secondary or tertiary menu is open
     if (isNotDesktop) {
-      if (isTertiaryOpenGlobal) {
+      if (isTertiaryOpenGlobal || isSubMenuOpenGlobal) {
         return null;
       }
       return (
@@ -329,7 +330,8 @@ PrimaryNavItem.propTypes = {
   relNoopener: PropTypes.string,
   devMode: PropTypes.bool,
   onTertiaryMenuChange: PropTypes.func,
-  isTertiaryOpenGlobal: PropTypes.bool
+  isTertiaryOpenGlobal: PropTypes.bool,
+  isSubMenuOpenGlobal: PropTypes.bool
 };
 
 export default PrimaryNavItem;

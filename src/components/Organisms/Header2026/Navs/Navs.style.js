@@ -32,13 +32,14 @@ const Navigation = styled.nav`
 `;
 
 const PrimaryMenuWrapper = styled.div`
-  background-color: ${({ theme }) => theme.color('white')};
+  background-color: blue;
   box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   overflow: hidden;
   position: static;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+    background-color: ${({ theme }) => theme.color('white')};
     box-shadow: none;
     border-radius: 0;
     height: 100%;
