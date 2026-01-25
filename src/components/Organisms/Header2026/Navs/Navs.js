@@ -250,7 +250,7 @@ const Navs = ({
           )}
         </PrimaryMenuWrapper>
 
-        {isExpandable && (
+        {isExpandable && !isTertiaryOpen && (
           <DonateButtonMobileModalWrapper data-testid="donate-button--mobile">
             <Link
               color="red"
