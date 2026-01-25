@@ -527,7 +527,7 @@ const TertiaryNavLink = styled(NavLinkClass)`
   position: relative;
 
   span {
-    font-weight: 600;
+    font-weight: 400;
   }
 `;
 

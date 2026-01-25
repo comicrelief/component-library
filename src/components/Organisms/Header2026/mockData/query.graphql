@@ -8,81 +8,34 @@ query MyQuery {
           id
           primaryPageName
           primaryPageUrlIfExternal
-          primaryPageSelector {
-            path
-            title
-          }
           column1PageLinks {
             id
+            pageLevel
             pageName
             pageUrlIfExternal
-            pageLevel
-            pageSelector {
-              title
-              path
-              header_page_link {
-                pageName
-                pageSelector {
-                  path
-                  title
-                }
-                pageUrlIfExternal
-                pageLevel
-              }
-            }
           }
           column2PageLinks {
             id
+            pageLevel
             pageName
             pageUrlIfExternal
-            pageLevel
-            pageSelector {
-              title
-              path
-              header_page_link {
-                pageName
-                pageSelector {
-                  path
-                  title
-                }
-                pageUrlIfExternal
-                pageLevel
-              }
-            }
           }
           column3PageLinks {
             id
+            pageLevel
             pageName
             pageUrlIfExternal
-            pageLevel
-            pageSelector {
-              title
-              path
-              header_page_link {
-                pageName
-                pageSelector {
-                  path
-                  title
-                }
-                pageUrlIfExternal
-                pageLevel
-              }
-            }
           }
           column3PageCards {
             id
             pageName
             pageDescription
+            primaryPageUrlIfExternal
             image {
               title
-              description
               url
+              id
             }
-            pageSelector {
-              title
-              path
-            }
-            primaryPageUrlIfExternal
           }
         }
       }
