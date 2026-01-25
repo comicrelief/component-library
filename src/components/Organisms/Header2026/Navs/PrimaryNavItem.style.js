@@ -137,7 +137,7 @@ const SecondaryNavMenu = styled.ul`
     opacity: 0;
     visibility: hidden;
     box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
-    align-items: start;
+    align-items: stretch;
 
     // Invisible bridge above dropdown to maintain hover state
     &::before {
@@ -161,6 +161,7 @@ const ColumnWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     border-right: 1px solid ${({ theme }) => theme.color('grey_medium')};
     opacity: 0;
     transform: translateY(-10px);
@@ -184,6 +185,7 @@ const SecondaryNavItem = styled.li`
   transition: background-color ${transitionDuration}s ease;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+    height: auto;
     border-top: none;
 
     span {
@@ -473,10 +475,11 @@ const TertiaryNavMenu = styled.ul`
   list-style: none outside;
   left: 0;
   top: 0;
+  bottom: 0;
 
   position: absolute;
   width: 100%;
-  height: auto;
+  min-height: 100%;
   ${zIndex('higher')};
 
   background-color: ${({ theme }) => theme.color('white')};
@@ -555,6 +558,67 @@ const SecondaryChevronWrapper = styled.div`
   }
 `;
 
+/**
+ * Nav Card for column 3 (desktop only)
+ */
+const NavCard = styled.a`
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    text-decoration: none;
+    color: ${({ theme }) => theme.color('black')};
+    padding: 16px 20px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.color('grey_extra_light')};
+    }
+  }
+`;
+
+const NavCardImage = styled.div`
+  flex-shrink: 0;
+  width: 80px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+`;
+
+const NavCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+const NavCardTitle = styled.span`
+  display: block;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: ${({ theme }) => theme.color('black')};
+`;
+
+const NavCardDescription = styled.span`
+  display: block;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: ${({ theme }) => theme.color('grey_dark')};
+  line-height: 1.4;
+`;
+
 export {
   StyledNavItem,
   NavLink,
@@ -572,5 +636,10 @@ export {
   Column3NavItem,
   TertiaryNavMenu,
   TertiaryNavItem,
-  TertiaryNavLink
+  TertiaryNavLink,
+  NavCard,
+  NavCardImage,
+  NavCardContent,
+  NavCardTitle,
+  NavCardDescription
 };

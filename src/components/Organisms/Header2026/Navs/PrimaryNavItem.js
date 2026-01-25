@@ -20,7 +20,12 @@ import {
   Column3NavItem,
   TertiaryNavMenu,
   TertiaryNavItem,
-  TertiaryNavLink
+  TertiaryNavLink,
+  NavCard,
+  NavCardImage,
+  NavCardContent,
+  NavCardTitle,
+  NavCardDescription
 } from './PrimaryNavItem.style';
 
 const PrimaryNavItem = (
@@ -35,6 +40,7 @@ const PrimaryNavItem = (
 
   const handleTertiaryToggle = (e, linkId, parentName) => {
     e.preventDefault();
+    e.stopPropagation();
     const isOpening = openTertiaryMenu !== linkId;
     setOpenTertiaryMenu(isOpening ? linkId : null);
 
@@ -45,34 +51,59 @@ const PrimaryNavItem = (
     }
   };
 
-  // Helper to check if a link has nested children
-  const hasNestedLinks = child => child?.pageSelector?.header_page_link?.length > 1;
+  // Helper to group tertiary links (pageLevel: false)
+  // so that they sit under their parent secondary links (pageLevel: true)
+  const groupTertiaryLinks = links => {
+    if (!links) return {};
+    const groups = {};
+    let currentSecondaryId = null;
 
-  // Collect all links with nested children for rendering tertiary menus
-  const allLinks = [
-    ...(group.column1PageLinks || []),
-    ...(group.column2PageLinks || []),
-    ...(group.column3PageLinks || [])
-  ];
-  const linksWithChildren = allLinks.filter(hasNestedLinks);
+    links.forEach(link => {
+      if (link.pageLevel) {
+        // This is a secondary link - start a new group
+        currentSecondaryId = link.id;
+        groups[currentSecondaryId] = [];
+      } else if (currentSecondaryId) {
+        // This is a tertiary link - add to current group
+        groups[currentSecondaryId].push(link);
+      }
+    });
+
+    return groups;
+  };
+
+  // Group tertiary links for all columns
+  const tertiaryGroups = {
+    ...groupTertiaryLinks(group.column1PageLinks),
+    ...groupTertiaryLinks(group.column2PageLinks),
+    ...groupTertiaryLinks(group.column3PageLinks)
+  };
+
+  // Check if a secondary link has tertiary children
+  const hasTertiaryChildren = linkId => tertiaryGroups[linkId]?.length > 0;
 
   // Get the currently active tertiary menu data
-  const activeTertiaryLink = linksWithChildren.find(link => link.id === openTertiaryMenu);
-  const activeTertiaryLinks = activeTertiaryLink?.pageSelector?.header_page_link || [];
+  const activeTertiaryLinks = tertiaryGroups[openTertiaryMenu] || [];
 
   // Helper to render a column's links
   const renderColumnLinks = (links, ColumnComponent) => {
     if (!links) return null;
 
     return links.map(child => {
+      // On mobile, only show secondary links (pageLevel: true)
+      // Tertiary links (pageLevel: false) will be shown in the third modal
+      if (isNotDesktop && !child.pageLevel) {
+        return null;
+      }
+
       let thisSubUrl = navHelperNew(child);
       thisSubUrl = internalLinkHelper(thisSubUrl);
-      const hasNested = hasNestedLinks(child);
       const linkId = child.id;
+      const hasChildren = hasTertiaryChildren(linkId);
 
       return (
         <ColumnComponent key={child.id} $isSecondary={child.pageLevel}>
-          {hasNested && isNotDesktop ? (
+          {hasChildren && isNotDesktop ? (
             <SecondaryNavLinkWithChildren
               href="#"
               inline
@@ -172,22 +203,44 @@ const PrimaryNavItem = (
           {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
         </ColumnWrapper>
 
-        {/* Column 3 Page Links - green border guide */}
+        {/* Column 3 - Cards on desktop (if available), Links on mobile */}
         <ColumnWrapper>
-          {renderColumnLinks(group.column3PageLinks, Column3NavItem)}
+          {/* Desktop: Show cards if available, otherwise show links */}
+          {!isNotDesktop && group.column3PageCards?.length > 0 ? (
+            group.column3PageCards.map(card => (
+              <NavCard
+                key={card.id}
+                href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
+              >
+                {card.image?.url && (
+                  <NavCardImage>
+                    <img src={card.image.url} alt={card.image.title || card.pageName} />
+                  </NavCardImage>
+                )}
+                <NavCardContent>
+                  <NavCardTitle>{card.pageName}</NavCardTitle>
+                  {card.pageDescription && (
+                    <NavCardDescription>{card.pageDescription}</NavCardDescription>
+                  )}
+                </NavCardContent>
+              </NavCard>
+            ))
+          ) : (
+            renderColumnLinks(group.column3PageLinks, Column3NavItem)
+          )}
         </ColumnWrapper>
 
         {/* Third level modal - covers the secondary menu */}
         {isNotDesktop && (
           <TertiaryNavMenu isOpen={openTertiaryMenu !== null}>
-            {activeTertiaryLinks.map(nestedChild => {
-              let nestedUrl = navHelperNew(nestedChild);
-              nestedUrl = internalLinkHelper(nestedUrl);
+            {activeTertiaryLinks.map(tertiaryLink => {
+              let tertiaryUrl = navHelperNew(tertiaryLink);
+              tertiaryUrl = internalLinkHelper(tertiaryUrl);
 
               return (
-                <TertiaryNavItem key={nestedChild.pageSelector?.path || nestedChild.pageName}>
-                  <TertiaryNavLink href={prependBaseUrl(nestedUrl, devMode)} inline role="menuitem">
-                    <Text>{nestedChild.pageName}</Text>
+                <TertiaryNavItem key={tertiaryLink.id}>
+                  <TertiaryNavLink href={prependBaseUrl(tertiaryUrl, devMode)} inline role="menuitem">
+                    <Text>{tertiaryLink.pageName}</Text>
                   </TertiaryNavLink>
                 </TertiaryNavItem>
               );
@@ -233,6 +286,19 @@ PrimaryNavItem.propTypes = {
       PropTypes.shape({
         id: PropTypes.string,
         pageName: PropTypes.string
+      })
+    ),
+    column3PageCards: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        pageName: PropTypes.string,
+        pageDescription: PropTypes.string,
+        primaryPageUrlIfExternal: PropTypes.string,
+        image: PropTypes.shape({
+          title: PropTypes.string,
+          url: PropTypes.string,
+          id: PropTypes.string
+        })
       })
     )
   }),
