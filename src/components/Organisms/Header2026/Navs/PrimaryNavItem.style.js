@@ -95,7 +95,7 @@ const SecondaryNavMenu = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  background-color: ${({ theme }) => theme.color('white')};
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   /* Mobile slide-in animation */
@@ -297,7 +297,6 @@ const StyledNavItem = styled.li`
   ${zIndex('medium')};
   position: static;
   font-weight: 700;
-  border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   li {
     span {
@@ -474,7 +473,7 @@ const TertiaryNavMenu = styled.ul`
   width: 100%;
   ${zIndex('higher')};
 
-  background-color: pink;
+  background-color: ${({ theme }) => theme.color('white')};
 
   /* When closed: absolute and off-screen. When open: relative for dynamic height */
   position: ${({ isOpen }) => (isOpen ? 'relative' : 'absolute')};
