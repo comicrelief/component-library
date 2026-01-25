@@ -43,6 +43,7 @@ const Navs = ({
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
   const [showMoreNav, setShowMoreNav] = useState(false);
+  const [isTertiaryOpen, setIsTertiaryOpen] = useState(false);
   let theseGroups = null;
 
   // Check if any submenu is currently open
@@ -55,6 +56,7 @@ const Navs = ({
 
   // Handle tertiary menu changes from PrimaryNavItem
   const handleTertiaryMenuChange = useCallback((isOpen, parentName, closeFunction) => {
+    setIsTertiaryOpen(isOpen);
     onTertiaryMenuChange(isOpen && isNotDesktop, parentName, closeFunction);
   }, [isNotDesktop, onTertiaryMenuChange]);
 
@@ -201,6 +203,7 @@ const Navs = ({
                   relNoopener={relNoopener}
                   devMode={devMode}
                   onTertiaryMenuChange={handleTertiaryMenuChange}
+                  isTertiaryOpenGlobal={isTertiaryOpen}
                 />
               );
             })}
@@ -220,24 +223,27 @@ const Navs = ({
               />
             ) : null}
 
-            <SearchWrapperMobile>
-              <SearchLinkMobile href={prependBaseUrl('/search', devMode)}>
-                Search
-                <SearchIconWrapperMobile data-testid="SearchIconWrapperMobile">
-                  <Icon
-                    icon={searchIcon}
-                    title="Search"
-                    target="self"
-                    role="button"
-                    href={prependBaseUrl('/search', devMode)}
-                    brand="comicrelief"
-                    tabIndex="0"
-                    id="search"
-                    isHeader
-                  />
-                </SearchIconWrapperMobile>
-              </SearchLinkMobile>
-            </SearchWrapperMobile>
+            {/* Hide search on mobile when secondary or tertiary modals are open */}
+            {!isSubMenuOpen && !isTertiaryOpen && (
+              <SearchWrapperMobile>
+                <SearchLinkMobile href={prependBaseUrl('/search', devMode)}>
+                  Search
+                  <SearchIconWrapperMobile data-testid="SearchIconWrapperMobile">
+                    <Icon
+                      icon={searchIcon}
+                      title="Search"
+                      target="self"
+                      role="button"
+                      href={prependBaseUrl('/search', devMode)}
+                      brand="comicrelief"
+                      tabIndex="0"
+                      id="search"
+                      isHeader
+                    />
+                  </SearchIconWrapperMobile>
+                </SearchLinkMobile>
+              </SearchWrapperMobile>
+            )}
 
           </PrimaryMenu>
           )}

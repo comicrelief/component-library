@@ -110,13 +110,9 @@ const SecondaryNavMenu = styled.ul`
     border-top: none;
   }
 
-  /* When tertiary menu is open, maintain height and hide secondary items */
+  /* When tertiary menu is open, hide the entire secondary menu on mobile */
   ${({ isTertiaryOpen }) => isTertiaryOpen && css`
-    min-height: 100vh;
-
-    > li {
-      display: none;
-    }
+    display: none;
   `}
 
   // DESKTOP:
@@ -467,22 +463,22 @@ const Column2NavItem = styled(SecondaryNavItem)``;
 const Column3NavItem = styled(SecondaryNavItem)``;
 
 /**
- * Tertiary Navigation Menu (3rd level) - covers the secondary menu completely
+ * Tertiary Navigation Menu (3rd level) - separate sibling to SecondaryNavMenu
  */
 const TertiaryNavMenu = styled.ul`
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   list-style: none outside;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  position: absolute;
   width: 100%;
-  min-height: 100%;
   ${zIndex('higher')};
 
   background-color: ${({ theme }) => theme.color('white')};
+
+  /* When closed: absolute and off-screen. When open: relative for dynamic height */
+  position: ${({ isOpen }) => (isOpen ? 'relative' : 'absolute')};
+  left: 0;
+  top: 0;
 
   /* Mobile slide-in animation */
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
@@ -490,6 +486,7 @@ const TertiaryNavMenu = styled.ul`
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
   border-radius: 16px;
   overflow: hidden;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   // DESKTOP - hide on desktop for now
   @media ${({ theme }) => theme.breakpoints2026('L')} {

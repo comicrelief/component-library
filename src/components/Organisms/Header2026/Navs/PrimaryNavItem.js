@@ -33,7 +33,7 @@ const PrimaryNavItem = (
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
     columnLinks, navHelperNew, internalLinkHelper, devMode = false,
-    onTertiaryMenuChange, ...rest
+    onTertiaryMenuChange, isTertiaryOpenGlobal = false, ...rest
   }
 ) => {
   const [openTertiaryMenu, setOpenTertiaryMenu] = useState(null);
@@ -46,7 +46,11 @@ const PrimaryNavItem = (
 
     if (onTertiaryMenuChange) {
       onTertiaryMenuChange(isOpening, isOpening ? parentName : null, () => {
+        // Close function: reset local state AND notify parent that tertiary is closed
         setOpenTertiaryMenu(null);
+        if (onTertiaryMenuChange) {
+          onTertiaryMenuChange(false, null, null);
+        }
       });
     }
   };
@@ -126,15 +130,14 @@ const PrimaryNavItem = (
     });
   };
 
-  return (
-    <StyledNavItem
-      data-testid="StyledNavItem"
-      role="none"
-      key={`${index}-${thisID}--item`}
-      index={index}
-      isSubMenuOpen={!!openedSubMenu}
-    >
-      {isNotDesktop ? (
+  // Determine what to render for the primary nav link
+  const renderPrimaryLink = () => {
+    // Mobile: Show NavLink only when tertiary menu is not open
+    if (isNotDesktop) {
+      if (isTertiaryOpenGlobal) {
+        return null;
+      }
+      return (
         <NavLink
           data-testid="NavLink"
           href={hasPopUp ? '#' : prependBaseUrl(thisUrl, devMode)}
@@ -149,105 +152,113 @@ const PrimaryNavItem = (
         >
           {group.primaryPageName}
           {hasSubMenu && (
-          <ChevronWrapper
-            data-testid="ChevronWrapper"
-          >
-            <img src={ChevronIcon} alt="chevron icon" />
-          </ChevronWrapper>
+            <ChevronWrapper data-testid="ChevronWrapper">
+              <img src={ChevronIcon} alt="chevron icon" />
+            </ChevronWrapper>
           )}
         </NavLink>
-      ) : (
-        <StyledText
-          data-testid="StyledText"
+      );
+    }
+
+    // Desktop: Always show StyledText with DesktopNavLink
+    return (
+      <StyledText data-testid="StyledText">
+        <DesktopNavLink
+          data-testid="DesktopNavLink"
+          href={prependBaseUrl(thisUrl, devMode)}
+          inline
+          rel={relNoopener}
+          aria-haspopup={hasPopUp}
+          key={`${index}-${thisID}`}
+          hasSubMenu={hasSubMenu}
+          {...rest}
         >
-          <DesktopNavLink
-            data-testid="DesktopNavLink"
-            href={prependBaseUrl(thisUrl, devMode)}
-            inline
-            rel={relNoopener}
-            aria-haspopup={hasPopUp}
-            key={`${index}-${thisID}`}
-            hasSubMenu={hasSubMenu}
-            {...rest}
-          >
-            {group.primaryPageName}
-            {hasSubMenu
-              && (
-                <ChevronWrapper
-                  data-testid="ChevronWrapper"
-                >
-                  <img src={ChevronIcon} alt="chevron down icon" />
-                </ChevronWrapper>
-              )
-            }
-          </DesktopNavLink>
-        </StyledText>
-      )}
+          {group.primaryPageName}
+          {hasSubMenu && (
+            <ChevronWrapper data-testid="ChevronWrapper">
+              <img src={ChevronIcon} alt="chevron down icon" />
+            </ChevronWrapper>
+          )}
+        </DesktopNavLink>
+      </StyledText>
+    );
+  };
+
+  return (
+    <StyledNavItem
+      data-testid="StyledNavItem"
+      role="none"
+      key={`${index}-${thisID}--item`}
+      index={index}
+      isSubMenuOpen={!!openedSubMenu}
+      isTertiaryOpen={isTertiaryOpenGlobal}
+    >
+      {renderPrimaryLink()}
 
       {/* Second level of the navigation (ul tag): Child(ren) */}
       {/* Used for BOTH nav types */}
       {hasSubMenu && (
-      <SecondaryNavMenu
-        role="list"
-        isSubMenuOpen={!!openedSubMenu[thisID]}
-        isTertiaryOpen={openTertiaryMenu !== null}
-        key={`${index}-${thisID}--sub-item`}
-      >
-        {/* Column 1 Page Links - red border guide */}
-        <ColumnWrapper>
-          {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
-        </ColumnWrapper>
+        <SecondaryNavMenu
+          role="list"
+          isSubMenuOpen={!!openedSubMenu[thisID]}
+          isTertiaryOpen={isTertiaryOpenGlobal}
+          key={`${index}-${thisID}--sub-item`}
+        >
+          {/* Column 1 Page Links - red border guide */}
+          <ColumnWrapper>
+            {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
+          </ColumnWrapper>
 
-        {/* Column 2 Page Links - blue border guide */}
-        <ColumnWrapper>
-          {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
-        </ColumnWrapper>
+          {/* Column 2 Page Links - blue border guide */}
+          <ColumnWrapper>
+            {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
+          </ColumnWrapper>
 
-        {/* Column 3 - Cards on desktop (if available), Links on mobile */}
-        <ColumnWrapper>
-          {/* Desktop: Show cards if available, otherwise show links */}
-          {!isNotDesktop && group.column3PageCards?.length > 0 ? (
-            group.column3PageCards.map(card => (
-              <NavCard
-                key={card.id}
-                href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
-              >
-                {card.image?.url && (
-                  <NavCardImage>
-                    <img src={card.image.url} alt={card.image.title || card.pageName} />
-                  </NavCardImage>
-                )}
-                <NavCardContent>
-                  <NavCardTitle>{card.pageName}</NavCardTitle>
-                  {card.pageDescription && (
-                    <NavCardDescription>{card.pageDescription}</NavCardDescription>
+          {/* Column 3 - Cards on desktop (if available), Links on mobile */}
+          <ColumnWrapper>
+            {/* Desktop: Show cards if available, otherwise show links */}
+            {!isNotDesktop && group.column3PageCards?.length > 0 ? (
+              group.column3PageCards.map(card => (
+                <NavCard
+                  key={card.id}
+                  href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
+                >
+                  {card.image?.url && (
+                    <NavCardImage>
+                      <img src={card.image.url} alt={card.image.title || card.pageName} />
+                    </NavCardImage>
                   )}
-                </NavCardContent>
-              </NavCard>
-            ))
-          ) : (
-            renderColumnLinks(group.column3PageLinks, Column3NavItem)
-          )}
-        </ColumnWrapper>
+                  <NavCardContent>
+                    <NavCardTitle>{card.pageName}</NavCardTitle>
+                    {card.pageDescription && (
+                      <NavCardDescription>{card.pageDescription}</NavCardDescription>
+                    )}
+                  </NavCardContent>
+                </NavCard>
+              ))
+            ) : (
+              renderColumnLinks(group.column3PageLinks, Column3NavItem)
+            )}
+          </ColumnWrapper>
+        </SecondaryNavMenu>
+      )}
 
-        {/* Third level modal - covers the secondary menu */}
-        {isNotDesktop && (
-          <TertiaryNavMenu isOpen={openTertiaryMenu !== null}>
-            {activeTertiaryLinks.map(tertiaryLink => {
-              let tertiaryUrl = navHelperNew(tertiaryLink);
-              tertiaryUrl = internalLinkHelper(tertiaryUrl);
+      {/* Third level modal - separate from secondary menu for independent visibility */}
+      {hasSubMenu && isNotDesktop && (
+        <TertiaryNavMenu isOpen={openTertiaryMenu !== null}>
+          {activeTertiaryLinks.map(tertiaryLink => {
+            let tertiaryUrl = navHelperNew(tertiaryLink);
+            tertiaryUrl = internalLinkHelper(tertiaryUrl);
 
-              return (
-                <TertiaryNavItem key={tertiaryLink.id}>
-                  <TertiaryNavLink href={prependBaseUrl(tertiaryUrl, devMode)} inline role="menuitem">
-                    <Text>{tertiaryLink.pageName}</Text>
-                  </TertiaryNavLink>
-                </TertiaryNavItem>
-              );
-            })}
-          </TertiaryNavMenu>
-        )}
-      </SecondaryNavMenu>
+            return (
+              <TertiaryNavItem key={tertiaryLink.id}>
+                <TertiaryNavLink href={prependBaseUrl(tertiaryUrl, devMode)} inline role="menuitem">
+                  <Text>{tertiaryLink.pageName}</Text>
+                </TertiaryNavLink>
+              </TertiaryNavItem>
+            );
+          })}
+        </TertiaryNavMenu>
       )}
     </StyledNavItem>
   );
@@ -317,7 +328,8 @@ PrimaryNavItem.propTypes = {
   internalLinkHelper: PropTypes.func.isRequired,
   relNoopener: PropTypes.string,
   devMode: PropTypes.bool,
-  onTertiaryMenuChange: PropTypes.func
+  onTertiaryMenuChange: PropTypes.func,
+  isTertiaryOpenGlobal: PropTypes.bool
 };
 
 export default PrimaryNavItem;
