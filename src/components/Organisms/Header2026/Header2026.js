@@ -1,4 +1,4 @@
-// import remove-extra-styles-in-preview from '../../../utils/remove-extra-styles-in-preview.css';
+import '../../../utils/remove-extra-styles-in-preview.css';
 import React, { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
