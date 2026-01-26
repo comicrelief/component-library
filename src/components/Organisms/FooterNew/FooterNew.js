@@ -45,9 +45,7 @@ const FooterNew = ({
   // Remove white space between words
   const campaignName = campaign.replace(/\s/g, '').toLowerCase();
 
-  const currentYear = new Date().getFullYear();
-  const defaultCopyrightText = `© ${currentYear} Comic Relief`;
-  const displayCopyrightText = copyrightText !== undefined ? copyrightText : defaultCopyrightText;
+  const displayCopyrightText = typeof copyrightText === 'string' ? copyrightText.trim() : '';
 
   const validationSchema = yup.object({
     email: yup
@@ -141,7 +139,7 @@ const FooterNew = ({
           <SecondaryNav navItems={secondaryLinksList} {...rest} />
 
           <FooterCopyright>
-            {displayCopyrightText && (
+            {displayCopyrightText.length > 0 && (
               <FooterCopyrightText>
                 {displayCopyrightText}
               </FooterCopyrightText>

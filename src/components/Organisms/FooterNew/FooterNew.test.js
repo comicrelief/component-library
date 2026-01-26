@@ -22,3 +22,15 @@ it('renders correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('does not render copyright text when not supplied', () => {
+  const tree = renderWithTheme(
+    <FooterNew
+      primaryLinksList={testPrimaryLinksList}
+      secondaryLinksList={testSecondaryLinksList}
+      legalText={footerCopy.copy}
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
