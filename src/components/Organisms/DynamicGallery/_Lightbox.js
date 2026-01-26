@@ -11,7 +11,8 @@ import {
   PreviousButton,
   NextButton,
   Title,
-  Caption
+  Caption,
+  Body
 } from './_Lightbox.style';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
@@ -174,9 +175,16 @@ const Lightbox = () => {
             </NextButton>
           </LightboxImage>
           <Title id="lightboxTitle">{selectedNode?.title}</Title>
-          <Caption id="lightboxDescription">
-            {selectedNode?.ageGroup}
-          </Caption>
+          {selectedNode?.caption && (
+            <Caption id="lightboxDescription">
+              {selectedNode?.caption}
+            </Caption>
+          )}
+          {selectedNode?.body && (
+            <Body>
+              {selectedNode.body}
+            </Body>
+          )}
         </LightboxContent>
       </Dialog>
     </Container>

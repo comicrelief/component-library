@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +6,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 1rem;
   max-width: 1500px;
+  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
 `;
 
 export const ImageGrid = styled.div`
@@ -24,23 +26,43 @@ export const EmptyMessage = styled.div`
   display: ${({ isEmpty }) => (isEmpty ? 'block' : 'none')};
 `;
 
-export const GalleryNode = styled.div`
+const GalleryNodeBase = css`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  cursor: pointer;
   border-radius: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 
-  &:focus-visible {
-    outline: 2px solid #000000;
-  }
   & div:first-child {
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-
-    &:hover {
-      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
-    }
   }
+`;
+
+export const GalleryNode = styled.div`
+  ${GalleryNodeBase}
+`;
+
+export const InteractiveGalleryNode = styled.button`
+  ${GalleryNodeBase}
+  cursor: pointer;
+
+  & div:first-child {
+    transition: all 0.1s ease-out;
+  }
+
+    &:focus-visible {
+      outline: 2px solid #000000;
+    }
+
+    & div:first-child {
+      &:hover {
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+      }
+    }
 `;
 
 export const ImageContainer = styled.div`

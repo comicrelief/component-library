@@ -19,7 +19,7 @@ import createMockGalleryNodes from './_utils';
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import createMockGalleryNodes from './_utils';
-<DynamicGallery maxColumns={4} nodes={createMockGalleryNodes(4)} />;
+<DynamicGallery gridWidth={4} nodes={createMockGalleryNodes(4)} pageBackgroundColour="blue" paddingTop="6rem" paddingBottom="6rem" useLightbox={false} />;
 ```
 
 ### Gallery with max 5 columns
@@ -27,5 +27,5 @@ import createMockGalleryNodes from './_utils';
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import createMockGalleryNodes from './_utils';
-<DynamicGallery maxColumns={5} nodes={createMockGalleryNodes(5)} />;
+<DynamicGallery gridWidth={5} nodes={createMockGalleryNodes(5)} />;
 ```

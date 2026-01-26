@@ -49,7 +49,6 @@ export const LightboxImage = styled.div`
   }
 `;
 
-
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
@@ -61,6 +60,12 @@ export const Caption = styled.div`
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('grey')};
   line-height: 1;
+`;
+
+export const Body = styled.span`
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-family: ${({ theme }) => theme.font.regular};
+  color: ${({ theme }) => theme.color('black')};
 `;
 
 export const NavButton = styled.button`

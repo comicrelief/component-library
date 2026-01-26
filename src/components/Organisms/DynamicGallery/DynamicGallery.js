@@ -17,22 +17,28 @@ import {
   EmptyMessage,
   ImageGrid,
   Title,
-  Caption
+  Caption,
+  InteractiveGalleryNode
 } from './DynamicGallery.style';
 import Picture from '../../Atoms/Picture/Picture';
 import Lightbox, { LightboxContext } from './_Lightbox';
 
+// MARK: Gallery
 /**
  * the Dynamic Gallery component displays a grid of images,
  * by default using dynamic heights per image to create an more organic look
  */
 const DynamicGallery = ({
   // options
-  maxColumns = 3,
-  // dynamicImageHeights = false,
-  // content
-  nodes
-  // ...rest
+  pageBackgroundColour = 'transparent',
+  gridWidth = 3,
+  // loadingBehaviour = 'lazy',
+  // displayOrder = 'ascending',
+  // imageRatio = 'dynamic',
+  useLightbox = true,
+  nodes = [],
+  paddingTop = '0rem',
+  paddingBottom = '2rem'
 }) => {
   const hasNodes = nodes?.length > 0;
 
@@ -49,7 +55,7 @@ const DynamicGallery = ({
    * the resize listener is throttled to allow resizing to happen as the window size changes
    * without being too expensive
    */
-  const [columnCount, setColumnCount] = useState(maxColumns);
+  const [columnCount, setColumnCount] = useState(gridWidth);
 
   const updateColumnCount = useCallback(() => {
     let newColumnCount = 1;
@@ -61,11 +67,11 @@ const DynamicGallery = ({
         newColumnCount = 2;
         break;
       default:
-        newColumnCount = maxColumns;
+        newColumnCount = gridWidth;
         break;
     }
     setColumnCount(newColumnCount);
-  }, [maxColumns, setColumnCount]);
+  }, [gridWidth, setColumnCount]);
 
   // call once on initialisation
   const isInitialised = useRef(false);
@@ -93,7 +99,6 @@ const DynamicGallery = ({
     const nextNodeIndex = (nodeIndex + 1) % nodes.length;
     setSelectedNode(nodes[nextNodeIndex]);
   }
-
   function handlePreviousNode(node) {
     const nodeIndex = nodes.indexOf(node);
     const previousNodeIndex = (nodeIndex - 1 + nodes.length) % nodes.length;
@@ -101,9 +106,14 @@ const DynamicGallery = ({
   }
 
   return (
-    <Container>
+    <Container
+      pageBackgroundColour={pageBackgroundColour}
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
+    >
       <LightboxContext.Provider
         value={{
+          useLightbox,
           selectedNode,
           setSelectedNode,
           nextNode: handleNextNode,
@@ -139,20 +149,41 @@ const DynamicGallery = ({
   );
 };
 
+// MARK: Gallery Props
+const GalleryNodeType = PropTypes.shape({
+  title: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  caption: PropTypes.string,
+  centredText: PropTypes.bool
+});
+
 DynamicGallery.propTypes = {
-  maxColumns: PropTypes.oneOf([2, 3, 4, 5]),
-  // dynamicImageHeights: PropTypes.bool,
-  nodes: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      title: PropTypes.string,
-      ageGroup: PropTypes.string
-    })
-  )
+  // title: PropTypes.string,
+  pageBackgroundColour: PropTypes.string,
+  gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
+  // loadingBehaviour: PropTypes.oneOf([
+  //   'lazy',
+  //   'eager'
+  // ]),
+  // displayOrder: PropTypes.oneOf([
+  //   'random',
+  //   'ascending',
+  //   'descending'
+  // ]),
+  // imageRatio: PropTypes.oneOf([
+  //   'dynamic',
+  //   'locked'
+  // ]),
+  useLightbox: PropTypes.bool,
+  nodes: PropTypes.arrayOf(GalleryNodeType),
+  paddingTop: PropTypes.string,
+  paddingBottom: PropTypes.string
 };
 
 export default DynamicGallery;
 
+// MARK: Column
 /**
  * a separate component to handle columns of images;
  * this component handles aspect ratio calculations to enfore a min/max ratio for its images
@@ -189,34 +220,57 @@ function ColumnComponent({ nodes }) {
     };
   }, [updateMinMaxHeight]);
 
-  // handle selected node
-  const { setSelectedNode } = useContext(LightboxContext);
+  const { useLightbox, setSelectedNode } = useContext(LightboxContext);
 
+  // on click, open the image in the lightbox;
+  // conditionally enabled depending on the gallery settings
   function handlePointerUp(node) {
     setSelectedNode(node);
   }
 
+  // handle keydown events,
+  // including image opening and tabbing
   function handleKeyDown(event, node) {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       setSelectedNode(node);
     }
+    switch (event.key) {
+      // if the lightbox is enabled, open the image in the lightbox when the user presses enter
+      case 'Enter': {
+        if (useLightbox) {
+          event.preventDefault();
+          setSelectedNode(node);
+        }
+        break;
+      }
+      // TODO handle tabbing between images
+      default:
+        break;
+    }
   }
 
+  const NodeComponent = useLightbox ? InteractiveGalleryNode : GalleryNode;
+
+  // TODO: a better layout? https://mui.com/material-ui/react-masonry/
+
   return (
-    <Column ref={elRef}>
+    <Column ref={elRef} className="gallery-column">
       {nodes.map((node, nodeIndex) => (
-        <GalleryNode
+        <NodeComponent
+          className="gallery-node"
+          title={node.title}
+          aria-label={node.title}
           // disabling the lint rule here as we're chunking an array and have no unique keys
           // eslint-disable-next-line react/no-array-index-key
           key={nodeIndex}
-          onPointerUp={() => handlePointerUp(node)}
+          onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
           onKeyDown={event => handleKeyDown(event, node)}
           tabIndex={0}
         >
           <ImageContainer style={{ minHeight, maxHeight }}>
             <Picture
-              alt={node.title}
+              // no alt text here as we set the title on the containing button
               image={node.image}
               height="100%"
               objectFit="cover"
@@ -230,17 +284,13 @@ function ColumnComponent({ nodes }) {
               </Caption>
             )}
           </Details>
-        </GalleryNode>
+        </NodeComponent>
       ))}
     </Column>
   );
 }
+
+// MARK: Column Props
 ColumnComponent.propTypes = {
-  nodes: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      title: PropTypes.string,
-      ageGroup: PropTypes.string
-    })
-  )
+  nodes: PropTypes.arrayOf(GalleryNodeType)
 };

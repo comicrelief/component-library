@@ -1,5 +1,572 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
+.c5 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c21 {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  fill: #000000;
+}
+
+.c23 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #000000;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1500px;
+  background: transparent;
+  padding: 0rem 2rem 2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c10 {
+  display: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 div:first-child {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+}
+
+.c3 div:first-child {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.c3:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.c3 div:first-child:hover {
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+}
+
+.c4 {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 8px;
+}
+
+.c8 {
+  font-size: 1rem;
+  font-family: Montserrat;
+  color: #000000;
+}
+
+.c9 {
+  font-size: 0.75rem;
+  font-family: Montserrat;
+  color: #969598;
+  line-height: 1;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 0;
+}
+
+.c13 {
+  display: block;
+  background: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c15 img {
+  max-width: 80vw;
+  max-height: 70vh;
+}
+
+.c24 {
+  font-size: 1rem;
+  font-family: Montserrat;
+  color: #000000;
+}
+
+.c16 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.c16 svg {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.c16:hover svg {
+  fill: #E52630;
+}
+
+.c16:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.c17 {
+  top: 0;
+  right: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c20 {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c22 {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c18 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.c19 {
+  fill: #000000;
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c23 {
+    fill: #000000;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 gallery-column"
+    >
+      <button
+        aria-label="Image 1"
+        className="c3 gallery-node"
+        onKeyDown={[Function]}
+        onPointerUp={[Function]}
+        tabIndex={0}
+        title="Image 1"
+      >
+        <div
+          className="c4"
+          style={
+            Object {
+              "maxHeight": undefined,
+              "minHeight": undefined,
+            }
+          }
+        >
+          <div
+            className="c5"
+            height="100%"
+            width="100%"
+          >
+            <img
+              alt=""
+              className="c6 lazyload"
+              data-src="image1.jpg"
+              height="100%"
+              width="100%"
+            />
+          </div>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Image 1
+          </span>
+          <span
+            className="c9"
+          >
+            Caption 1
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="c2 gallery-column"
+    >
+      <button
+        aria-label="Image 2"
+        className="c3 gallery-node"
+        onKeyDown={[Function]}
+        onPointerUp={[Function]}
+        tabIndex={0}
+        title="Image 2"
+      >
+        <div
+          className="c4"
+          style={
+            Object {
+              "maxHeight": undefined,
+              "minHeight": undefined,
+            }
+          }
+        >
+          <div
+            className="c5"
+            height="100%"
+            width="100%"
+          >
+            <img
+              alt=""
+              className="c6 lazyload"
+              data-src="image2.jpg"
+              height="100%"
+              width="100%"
+            />
+          </div>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Image 2
+          </span>
+          <span
+            className="c9"
+          >
+            Caption 2
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="c2 gallery-column"
+    >
+      <button
+        aria-label="Image 3"
+        className="c3 gallery-node"
+        onKeyDown={[Function]}
+        onPointerUp={[Function]}
+        tabIndex={0}
+        title="Image 3"
+      >
+        <div
+          className="c4"
+          style={
+            Object {
+              "maxHeight": undefined,
+              "minHeight": undefined,
+            }
+          }
+        >
+          <div
+            className="c5"
+            height="100%"
+            width="100%"
+          >
+            <img
+              alt=""
+              className="c6 lazyload"
+              data-src="image3.jpg"
+              height="100%"
+              width="100%"
+            />
+          </div>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Image 3
+          </span>
+          <span
+            className="c9"
+          >
+            Caption 3
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      className="c10"
+    >
+      No images to display
+    </div>
+  </div>
+  <div
+    className="c11"
+  >
+    <div
+      className="c12"
+      onPointerUp={[Function]}
+    />
+    <dialog
+      aria-describedby="lightboxDescription"
+      aria-labelledby="lightboxTitle"
+      className="c13"
+    >
+      <div
+        className="c14"
+      >
+        <div
+          className="c15"
+        >
+          <button
+            className="c16 c17"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="c18"
+            >
+              Close
+            </span>
+            <svg
+              className="c19"
+              height={16}
+              viewBox="0 0 96 96"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                points="85.48 17.59 78.41 10.52 48 40.93 17.59 10.52 10.52 17.59 40.93 48 10.52 78.41 17.59 85.48 48 55.07 78.41 85.48 85.48 78.41 55.07 48 85.48 17.59"
+              />
+            </svg>
+          </button>
+          <button
+            className="c16 c20"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="c18"
+            >
+              Previous
+            </span>
+            <svg
+              className="c21"
+              direction="left"
+              height={16}
+              viewBox="0 0 96 96"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              />
+            </svg>
+          </button>
+          <button
+            className="c16 c22"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="c18"
+            >
+              Next
+            </span>
+            <svg
+              className="c23"
+              direction="right"
+              height={16}
+              viewBox="0 0 96 96"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c24"
+          id="lightboxTitle"
+        />
+      </div>
+    </dialog>
+  </div>
+</div>
+`;
+
 exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 .c13 {
   -webkit-transform: rotate(0);
@@ -29,6 +596,8 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   align-items: center;
   gap: 1rem;
   max-width: 1500px;
+  background: transparent;
+  padding: 0rem 2rem 2rem;
 }
 
 .c1 {
@@ -112,13 +681,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   font-size: 1rem;
   font-family: Montserrat;
   color: #000000;
-}
-
-.c17 {
-  font-size: 0.75rem;
-  font-family: Montserrat;
-  color: #969598;
-  line-height: 1;
 }
 
 .c8 {
@@ -224,7 +786,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
     <div
       className="c2"
     >
-      No cards to display
+      No images to display
     </div>
   </div>
   <div
@@ -322,13 +884,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           className="c16"
           id="lightboxTitle"
         />
-        <div
-          className="c17"
-          id="lightboxDescription"
-        >
-          Age group:
-           
-        </div>
       </div>
     </dialog>
   </div>
