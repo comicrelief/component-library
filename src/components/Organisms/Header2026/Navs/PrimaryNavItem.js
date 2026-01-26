@@ -205,17 +205,17 @@ const PrimaryNavItem = (
           isTertiaryOpen={isTertiaryOpenGlobal}
           key={`${index}-${thisID}--sub-item`}
         >
-          {/* Column 1 Page Links - red border guide */}
+          {/* Column 1 */}
           <ColumnWrapper>
             {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
           </ColumnWrapper>
 
-          {/* Column 2 Page Links - blue border guide */}
+          {/* Column 2 */}
           <ColumnWrapper>
             {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
           </ColumnWrapper>
 
-          {/* Column 3 - Cards on desktop (if available), Links on mobile */}
+          {/* Column 3 - Cards if available (desktop only), otherwise 3rd column of Links */}
           <ColumnWrapper>
             {/* Desktop: Show cards if available, otherwise show links */}
             {!isNotDesktop && group.column3PageCards?.length > 0 ? (

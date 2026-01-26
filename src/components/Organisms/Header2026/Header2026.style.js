@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
@@ -20,10 +20,6 @@ const Header2026Wrapper = styled.header.attrs(() => ({
       border-radius: 16px 16px 0 0;
     }
   }
-
-  ${({ showBoxShadow }) => showBoxShadow && css`
-    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
-  `};
 `;
 
 const InnerWrapper = styled.div`
@@ -32,8 +28,8 @@ const InnerWrapper = styled.div`
   height: 100%;
   cursor: pointer;
   max-width: ${containers.large};
-
   padding: 10px;
+
   @media ${({ theme }) => theme.breakpoints2026('S')} {
     padding: 10px 16px 10px 14px;
   }

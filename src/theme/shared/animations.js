@@ -145,11 +145,30 @@ const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1
   `;
 };
 
+const bounceIn = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  70% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+`;
+
 export {
   logoRotateAnimation,
   springScaleAnimation,
   formFieldInputAnimation,
   bounceUpAnimation,
   pulseInAnimation,
-  pulseOutAnimation
+  pulseOutAnimation,
+  bounceIn
 };

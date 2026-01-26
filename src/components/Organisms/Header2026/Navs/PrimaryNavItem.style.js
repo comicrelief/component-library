@@ -1,28 +1,11 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Link from '../../../Atoms/Link/Link';
 import zIndex from '../../../../theme/shared/zIndex';
 import Text from '../../../Atoms/Text/Text';
+import { bounceIn } from '../../../../theme/shared/animations';
 
 const transitionDuration = 0.2;
-
-const bounceIn = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(8px);
-  }
-  50% {
-    transform: translateX(3px);
-  }
-  70% {
-    transform: translateX(6px);
-  }
-  100% {
-    transform: translateX(5px);
-  }
-`;
 
 const NavLinkClass = styled(Link)`
   display: inline-block;
@@ -42,7 +25,6 @@ const NavLinkClass = styled(Link)`
     border: 0;
   }
 
-  // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     :hover,
     :focus {
@@ -61,26 +43,8 @@ const NavLinkClass = styled(Link)`
       }
     }
   }
-
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-weight: 700;
-  }
-
-  // Chevron icon????
-  // > div {
-  //     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-  //     @media ${({ theme }) => theme.allBreakpoints('L')} {
-  //       transform: rotate(90deg);
-  //       ${({ isExpanded }) => (isExpanded && css`
-  //         transform: rotate(-90deg);
-  //       `)}
-  //     }
-  // }
 `;
 
-/**
- * Secondary Navigation Menu
- */
 const SecondaryNavMenu = styled.ul`
   display: flex;
   padding: 0;
@@ -149,9 +113,6 @@ const SecondaryNavMenu = styled.ul`
   }
 `;
 
-/**
- * Column wrapper for grouping links in desktop 3-column layout
- */
 const ColumnWrapper = styled.div`
   display: contents;
 
@@ -170,9 +131,6 @@ const ColumnWrapper = styled.div`
   }
 `;
 
-/**
- * Secondary Menu list items
- */
 const SecondaryNavItem = styled.li`
   padding: 0;
   height: 100%;
@@ -199,9 +157,6 @@ const SecondaryNavItem = styled.li`
   }
 `;
 
-/**
- * Secondary menu link item
- */
 const SecondaryNavLink = styled(NavLinkClass)`
   padding: 20px 25px 22px 42px;
   color: ${({ theme }) => theme.color('black')};
@@ -251,9 +206,6 @@ const SecondaryNavLink = styled(NavLinkClass)`
 
 `;
 
-/**
- * Menu item link
- */
 const NavLink = styled(NavLinkClass)`
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
 
@@ -290,9 +242,6 @@ const DesktopNavLink = styled(NavLink)`
   }
 `;
 
-/**
- * Menu list items
- */
 const StyledNavItem = styled.li`
   ${zIndex('medium')};
   position: static;
@@ -488,7 +437,7 @@ const TertiaryNavMenu = styled.ul`
   overflow: hidden;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
-  // DESKTOP - hide on desktop for now
+  // hide on desktop
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
   }

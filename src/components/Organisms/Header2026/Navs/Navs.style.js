@@ -4,8 +4,6 @@ import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 
-const transitionDuration = 0.2;
-
 const Navigation = styled.nav`
   display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
   width: 100%;
@@ -118,7 +116,7 @@ const SearchLinkMobile = styled(Link)`
   font-family: Montserrat;
   font-weight: 700;
   color: ${({ theme }) => theme.color('black')};
-  transition: color ${transitionDuration}s ease;
+  transition: color 0.2s ease;
 
   &:hover,
   &:focus {

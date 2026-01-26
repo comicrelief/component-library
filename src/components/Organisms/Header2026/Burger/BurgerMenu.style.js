@@ -25,8 +25,8 @@ const BurgerWrapper = styled(Link)`
   order: 50;
   cursor: pointer;
   transition: all 0.2s;
-
   margin-left: 10px;
+
   @media ${({ theme }) => theme.allBreakpoints('S')} {
     margin-left: 12px;
   }

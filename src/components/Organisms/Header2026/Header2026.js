@@ -18,7 +18,6 @@ import prependBaseUrl from './utils/urlHelper';
 const Header2026 = ({
   data = {},
   characterLimit = 60,
-  showBoxShadow = false,
   devMode = false,
   ...rest
 }) => {
@@ -53,7 +52,6 @@ const Header2026 = ({
   return (
     <Header2026Wrapper
       data-testid="Header2026Wrapper"
-      showBoxShadow={showBoxShadow}
       {...rest}
     >
       <InnerWrapper data-testid="InnerWrapper">
@@ -66,7 +64,7 @@ const Header2026 = ({
             aria-label={isTertiaryMenuOpen ? `Go back to ${tertiaryParentName}` : 'Go back to main menu'}
           >
             <BackChevron>
-              <img src={chevronIcon} alt="" />
+              <img src={chevronIcon} alt="chevron icon" />
             </BackChevron>
             {isTertiaryMenuOpen ? tertiaryParentName : 'Main menu'}
           </MobileBackHeader>
@@ -103,8 +101,8 @@ const Header2026 = ({
           </SearchIconWrapperDesktop>
 
           {!isExpandable && (
-            <DonateButtonTopBarWrapper data-testid="donate-button--desktop">
-              <Link color="red" type="button" href={prependBaseUrl('/donation', devMode)}>
+            <DonateButtonTopBarWrapper data-testid="DonateButtonTopBarWrapper">
+              <Link color="red" type="button" href="https://donation.comicrelief.com/">
                 Donate
               </Link>
             </DonateButtonTopBarWrapper>
@@ -175,7 +173,6 @@ Header2026.propTypes = {
   }),
   campaign: PropTypes.string,
   characterLimit: PropTypes.number,
-  showBoxShadow: PropTypes.bool,
   devMode: PropTypes.bool
 };
 
