@@ -11,6 +11,7 @@ import { primaryLinksList, secondaryLinksList } from './dev-data/data';
   primaryLinksList={primaryLinksList}
   secondaryLinksList={secondaryLinksList}
   legalText={footerCopy.copy}
+  copyrightText="© 2026 Comic Relief"
   campaign="Comic Relief"
   showFundraisingRegulatorLogo
   showFacebookSocialIcon

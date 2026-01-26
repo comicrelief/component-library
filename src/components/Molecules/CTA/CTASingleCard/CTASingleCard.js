@@ -61,7 +61,7 @@ CTASingleCard.propTypes = {
         })
       }),
       backgroundColour: PropTypes.string,
-      link: PropTypes.string.isRequired,
+      link: PropTypes.string,
       linkLabel: PropTypes.string
     }),
     paddingAbove: PropTypes.string,

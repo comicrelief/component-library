@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
+import { useMediaQuery } from 'react-responsive';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+// Vendor copy pinned to the Splide version compatible with our react-splide version.
+// If you bump @splidejs/react-splide, update `src/vendor/splide/splide.min.css` too.
+import '../../../../vendor/splide/splide.min.css';
 import CTACard from '../shared/CTACard';
 import CardsContainer from './CTAMultiCard.style';
+import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 
 /**
  * CTAMultiCard Component
@@ -12,6 +18,9 @@ import CardsContainer from './CTAMultiCard.style';
  * through data and create multiple CardsDs instances.
  * Now CTAMultiCard handles the mapping internally, accepting
  * a data object and rendering all cards.
+ *
+ * Where a carousel is requested (carouselOfCards is true), the component
+ * will use the Splide library to create it.
  *
  * Note: The component expects pre-rendered content in the `body`
  * field of each card. The frontend should handle rich text rendering
@@ -28,6 +37,9 @@ const CTAMultiCard = ({ data }) => {
     paddingBelow
   } = data;
 
+  const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
+  const useSplideCarousel = Boolean(carouselOfCards && isBelowL);
+
   if (!cards || !Array.isArray(cards) || cards.length === 0) {
     return null;
   }
@@ -43,17 +55,42 @@ const CTAMultiCard = ({ data }) => {
       backgroundColor={cardsBackground}
       columns={columns}
       isCarousel={carouselOfCards}
+      useSplideCarousel={useSplideCarousel}
       paddingAbove={paddingAbove}
       paddingBelow={paddingBelow}
     >
-      {cards.map(card => (
-        <CTACard
-          key={card.id}
-          card={card}
-          columns={columns}
-          isCarousel={carouselOfCards}
-        />
-      ))}
+      {useSplideCarousel ? (
+        <Splide
+          options={{
+            arrows: false,
+            pagination: false,
+            drag: true,
+            dragMinThreshold: 10,
+            gap: '1rem',
+            fixedWidth: '309px',
+            padding: { left: '0px', right: '0px' }
+          }}
+        >
+          {cards.map((card, index) => (
+            <SplideSlide key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}>
+              <CTACard
+                card={card}
+                columns={columns}
+                isCarousel
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
+      ) : (
+        cards.map((card, index) => (
+          <CTACard
+            key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}
+            card={card}
+            columns={columns}
+            isCarousel={carouselOfCards}
+          />
+        ))
+      )}
     </CardsContainer>
   );
 };
