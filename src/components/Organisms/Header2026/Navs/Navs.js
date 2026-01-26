@@ -7,12 +7,10 @@ import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import BurgerMenu from '../Burger/BurgerMenu';
 import Icon from '../../../Atoms/SocialIcons/Icon/Icon';
-import MoreNav from './MoreNav';
 import { breakpointValues2026 } from '../../../../theme/shared/breakpoints2026';
 import {
   NavHelperNew, NavHelperPrimary, MoreNavPreProcessNew, getColumnLinks
 } from '../../../../utils/navHelper';
-// NavHelperPrimary and getColumnLinks are also passed to MoreNav component
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import PrimaryNavItem from './PrimaryNavItem';
@@ -124,7 +122,6 @@ const Navs = ({
 
     // Only if the screen size has *changed*, update the state:
     if (currentScreenWidth !== null && (isNotDesktop !== isCurrentlyNotDesktop)) {
-      // If we've changed from desktop to not, remove any previously-attached MoreNav event
       // listeners, BEFORE we update the flag that'd remove the elements from the DOM:
       if (isCurrentlyNotDesktop && processedItems.moreNavGroups.length) {
         document.getElementById('more-nav-ul').removeEventListener('mouseleave', resetMoreNavMouse);
@@ -208,21 +205,6 @@ const Navs = ({
                 />
               );
             })}
-
-            {/* Only actually render 'More' nav stuff when we've got content */}
-            {showMoreNav ? (
-              <MoreNav
-                processedItems={processedItems}
-                openedSubMenu={openedSubMenu}
-                toggleSubMenu={toggleSubMenu}
-                navHelperNew={NavHelperNew}
-                navHelperPrimary={NavHelperPrimary}
-                getColumnLinks={getColumnLinks}
-                allowListed={allowListed}
-                internalLinkHelper={InternalLinkHelper}
-                devMode={devMode}
-              />
-            ) : null}
 
             {/* Hide search on mobile when secondary or tertiary modals are open */}
             {!isSubMenuOpen && !isTertiaryOpen && (
