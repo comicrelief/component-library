@@ -25,11 +25,16 @@ const InnerWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1424px; // 1200 + 64px padding on each side
   margin: 0 auto;
-  padding: 0 ${spacing('l')};
+  padding: 0 ${spacing('md')};
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    padding: 0 ${spacing('l')};
+  }
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 0 9rem;
+    padding: 0 ${spacing('xl')};
   }
 `;
 
@@ -53,6 +58,7 @@ const TopSection = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     justify-content: space-between;
+    column-gap: ${spacing('lg')};
     align-items: ${({ $hasEmailSignup }) => ($hasEmailSignup ? 'flex-start' : 'center')};
   }
 `;
@@ -64,7 +70,8 @@ const TopSectionLeft = styled.div`
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: column;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 `;
 
@@ -120,7 +127,7 @@ const PrimaryNavLink = styled(Link)`
   color: ${({ theme }) => theme.color('white')};
   text-decoration: none;
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-size: 16px;
 
   &:hover,
   &:focus {
@@ -132,6 +139,7 @@ const PrimaryNavLink = styled(Link)`
 const PrimaryNavText = styled(Text)`
   color: ${({ theme }) => theme.color('white')};
   font-weight: bold;
+  font-size: 16px;
 `;
 
 const SecondaryNav = styled.nav`
@@ -168,16 +176,10 @@ const SecondaryNavLink = styled(Link)`
   > span {
     color: ${({ theme }) => theme.color('white')};
     opacity: 0.8;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: ${({ theme }) => theme.color('white')};
     font-weight: normal;
     font-size: 0.875rem;
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    > span {
-      text-decoration: none;
-    }
   }
 
   &:hover,
@@ -200,7 +202,7 @@ const LogosContainer = styled.div`
   align-items: center;
   gap: ${spacing('l')};
   justify-content: ${({ $mobileOnly }) => ($mobileOnly ? 'flex-start' : 'center')};
-  margin-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
+  padding-bottom: ${({ $mobileOnly }) => ($mobileOnly ? spacing('l') : '0')};
 
   /* Hide desktop containers on mobile */
   ${({ $desktopOnly }) => $desktopOnly && 'display: none;'}
