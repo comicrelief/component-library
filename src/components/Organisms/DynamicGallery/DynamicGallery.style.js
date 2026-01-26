@@ -31,16 +31,22 @@ const GalleryNodeBase = css`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-radius: 0.5rem;
-  background: none;
-  border: none;
   padding: 0;
   margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
   text-align: left;
 
-  & div:first-child {
-  background: ${({ theme }) => theme.color('grey_2')};
+  & > div:first-child {
+    display: flex;
+    height: auto;
+    background: ${({ theme }) => theme.color('grey_2')};
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+
+    img {
+      height: 100%;
+    }
   }
 `;
 

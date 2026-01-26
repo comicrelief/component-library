@@ -4,28 +4,32 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 .c5 {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 
 .c6 {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
 }
 
-.c21 {
+.c23 {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   fill: #000000;
 }
 
-.c23 {
+.c25 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  fill: #000000;
+}
+
+.c21 {
   fill: #000000;
 }
 
@@ -80,27 +84,51 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.5rem;
+  max-width: 1024px;
+  max-height: 1024px;
 }
 
 .c15 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 32px;
 }
 
 .c15 img {
-  max-width: 80vw;
   max-height: 70vh;
 }
 
-.c24 {
+.c16 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c17 {
   font-size: 1rem;
   font-family: Montserrat;
   color: #000000;
 }
 
-.c16 {
+.c18 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -120,22 +148,23 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border: none;
   background-color: white;
   cursor: pointer;
+  z-index: 10;
 }
 
-.c16 svg {
+.c18 svg {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c16:hover svg {
+.c18:hover svg {
   fill: #E52630;
 }
 
-.c16:focus-visible {
+.c18:focus-visible {
   outline: 2px solid #000000;
 }
 
-.c17 {
+.c19 {
   top: 0;
   right: 0;
   border-top-left-radius: 0;
@@ -143,7 +172,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c20 {
+.c22 {
   top: 50%;
   left: 0;
   -webkit-transform: translate(0,-50%);
@@ -153,7 +182,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c22 {
+.c24 {
   top: 50%;
   right: 0;
   -webkit-transform: translate(0,-50%);
@@ -163,7 +192,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c18 {
+.c20 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -176,10 +205,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.c19 {
-  fill: #000000;
 }
 
 .c0 {
@@ -236,18 +261,27 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
-  border-radius: 0.5rem;
-  background: none;
-  border: none;
   padding: 0;
   margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
   text-align: left;
   cursor: pointer;
 }
 
-.c3 div:first-child {
+.c3 > div:first-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
   background: #E1E2E3;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+}
+
+.c3 > div:first-child img {
+  height: 100%;
 }
 
 .c3 div:first-child {
@@ -295,14 +329,20 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c21 {
+  .c23 {
     fill: #000000;
   }
 }
 
 @media (min-width:1024px) {
-  .c23 {
+  .c25 {
     fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c18 {
+    position: fixed;
   }
 }
 
@@ -335,14 +375,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="100%"
+            height="auto"
             width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
-              height="100%"
+              height="auto"
               width="100%"
             />
           </div>
@@ -385,14 +425,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="100%"
+            height="auto"
             width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
-              height="100%"
+              height="auto"
               width="100%"
             />
           </div>
@@ -435,14 +475,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="100%"
+            height="auto"
             width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
-              height="100%"
+              height="auto"
               width="100%"
             />
           </div>
@@ -487,83 +527,100 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c15"
         >
-          <button
-            className="c16 c17"
-            onClick={[Function]}
-            type="button"
+          <div
+            className="c16"
           >
             <span
-              className="c18"
+              className="css-1xdhyk6"
             >
-              Close
-            </span>
-            <svg
-              className="c19"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon
-                points="85.48 17.59 78.41 10.52 48 40.93 17.59 10.52 10.52 17.59 40.93 48 10.52 78.41 17.59 85.48 48 55.07 78.41 85.48 85.48 78.41 55.07 48 85.48 17.59"
+              <span
+                className="css-1fr62ah"
               />
-            </svg>
-          </button>
-          <button
-            className="c16 c20"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="c18"
-            >
-              Previous
-            </span>
-            <svg
-              className="c21"
-              direction="left"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
-                id="svg_1"
-                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              <span
+                className="css-1q1fqtl"
               />
-            </svg>
-          </button>
-          <button
-            className="c16 c22"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="c18"
-            >
-              Next
-            </span>
-            <svg
-              className="c23"
-              direction="right"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
-                id="svg_1"
-                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              <span
+                className="css-1v7m6ew"
               />
-            </svg>
-          </button>
+            </span>
+          </div>
         </div>
         <div
-          className="c24"
+          className="c17"
           id="lightboxTitle"
         />
+        <button
+          className="c18 c19"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c20"
+          >
+            Close
+          </span>
+          <svg
+            className="c21"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="85.48 17.59 78.41 10.52 48 40.93 17.59 10.52 10.52 17.59 40.93 48 10.52 78.41 17.59 85.48 48 55.07 78.41 85.48 85.48 78.41 55.07 48 85.48 17.59"
+            />
+          </svg>
+        </button>
+        <button
+          className="c18 c22"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c20"
+          >
+            Previous
+          </span>
+          <svg
+            className="c23"
+            direction="left"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+              id="svg_1"
+              transform="rotate(-180 47.998626708984375,48.00019836425781) "
+            />
+          </svg>
+        </button>
+        <button
+          className="c18 c24"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c20"
+          >
+            Next
+          </span>
+          <svg
+            className="c25"
+            direction="right"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+              id="svg_1"
+              transform="rotate(-180 47.998626708984375,48.00019836425781) "
+            />
+          </svg>
+        </button>
       </div>
     </dialog>
   </div>
@@ -575,17 +632,21 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 `;
 
 exports[`renders an empty Dynamic Gallery with no options set 1`] = `
-.c13 {
+.c15 {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   fill: #000000;
 }
 
-.c15 {
+.c17 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  fill: #000000;
+}
+
+.c13 {
   fill: #000000;
 }
 
@@ -640,27 +701,51 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.5rem;
+  max-width: 1024px;
+  max-height: 1024px;
 }
 
 .c7 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 32px;
 }
 
 .c7 img {
-  max-width: 80vw;
   max-height: 70vh;
 }
 
-.c16 {
+.c8 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c9 {
   font-size: 1rem;
   font-family: Montserrat;
   color: #000000;
 }
 
-.c8 {
+.c10 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -680,22 +765,23 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border: none;
   background-color: white;
   cursor: pointer;
+  z-index: 10;
 }
 
-.c8 svg {
+.c10 svg {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c8:hover svg {
+.c10:hover svg {
   fill: #E52630;
 }
 
-.c8:focus-visible {
+.c10:focus-visible {
   outline: 2px solid #000000;
 }
 
-.c9 {
+.c11 {
   top: 0;
   right: 0;
   border-top-left-radius: 0;
@@ -703,7 +789,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c12 {
+.c14 {
   top: 50%;
   left: 0;
   -webkit-transform: translate(0,-50%);
@@ -713,7 +799,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c14 {
+.c16 {
   top: 50%;
   right: 0;
   -webkit-transform: translate(0,-50%);
@@ -723,7 +809,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c10 {
+.c12 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -736,10 +822,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.c11 {
-  fill: #000000;
 }
 
 .c0 {
@@ -774,14 +856,20 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c13 {
+  .c15 {
     fill: #000000;
   }
 }
 
 @media (min-width:1024px) {
-  .c15 {
+  .c17 {
     fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    position: fixed;
   }
 }
 
@@ -816,83 +904,100 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
         <div
           className="c7"
         >
-          <button
-            className="c8 c9"
-            onClick={[Function]}
-            type="button"
+          <div
+            className="c8"
           >
             <span
-              className="c10"
+              className="css-1xdhyk6"
             >
-              Close
-            </span>
-            <svg
-              className="c11"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon
-                points="85.48 17.59 78.41 10.52 48 40.93 17.59 10.52 10.52 17.59 40.93 48 10.52 78.41 17.59 85.48 48 55.07 78.41 85.48 85.48 78.41 55.07 48 85.48 17.59"
+              <span
+                className="css-1fr62ah"
               />
-            </svg>
-          </button>
-          <button
-            className="c8 c12"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="c10"
-            >
-              Previous
-            </span>
-            <svg
-              className="c13"
-              direction="left"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
-                id="svg_1"
-                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              <span
+                className="css-1q1fqtl"
               />
-            </svg>
-          </button>
-          <button
-            className="c8 c14"
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="c10"
-            >
-              Next
-            </span>
-            <svg
-              className="c15"
-              direction="right"
-              height={16}
-              viewBox="0 0 96 96"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
-                id="svg_1"
-                transform="rotate(-180 47.998626708984375,48.00019836425781) "
+              <span
+                className="css-1v7m6ew"
               />
-            </svg>
-          </button>
+            </span>
+          </div>
         </div>
         <div
-          className="c16"
+          className="c9"
           id="lightboxTitle"
         />
+        <button
+          className="c10 c11"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c12"
+          >
+            Close
+          </span>
+          <svg
+            className="c13"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="85.48 17.59 78.41 10.52 48 40.93 17.59 10.52 10.52 17.59 40.93 48 10.52 78.41 17.59 85.48 48 55.07 78.41 85.48 85.48 78.41 55.07 48 85.48 17.59"
+            />
+          </svg>
+        </button>
+        <button
+          className="c10 c14"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c12"
+          >
+            Previous
+          </span>
+          <svg
+            className="c15"
+            direction="left"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+              id="svg_1"
+              transform="rotate(-180 47.998626708984375,48.00019836425781) "
+            />
+          </svg>
+        </button>
+        <button
+          className="c10 c16"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="c12"
+          >
+            Next
+          </span>
+          <svg
+            className="c17"
+            direction="right"
+            height={16}
+            viewBox="0 0 96 96"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+              id="svg_1"
+              transform="rotate(-180 47.998626708984375,48.00019836425781) "
+            />
+          </svg>
+        </button>
       </div>
     </dialog>
   </div>

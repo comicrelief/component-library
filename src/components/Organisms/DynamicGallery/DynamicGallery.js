@@ -91,7 +91,7 @@ const DynamicGallery = ({
   // starting from top-left and working downwards in a natural order
   const containerRef = useRef(null);
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       if (containerRef.current) {
         const galleryNodes = containerRef.current.querySelectorAll('.gallery-node');
         const sortedNodes = orderBy(galleryNodes, node => {
@@ -103,7 +103,8 @@ const DynamicGallery = ({
           galleryNode.setAttribute('data-order', String(index));
         });
       }
-    }, 1000);
+    }, 3000);
+    return () => clearTimeout(timeout);
   }, [columnCount]);
 
   // handle keydown events,
@@ -320,13 +321,13 @@ function ColumnComponent({
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
         .map((node, nodeIndex) => (
           <NodeComponent
+            // disabling the lint rule here as we're chunking an array and have no unique keys
+            // eslint-disable-next-line react/no-array-index-key
+            key={nodeIndex}
             className="gallery-node"
             title={node.title}
             aria-label={node.title}
             data-node-index={nodeIndex}
-            // disabling the lint rule here as we're chunking an array and have no unique keys
-            // eslint-disable-next-line react/no-array-index-key
-            key={nodeIndex}
             onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
             tabIndex={0}
           >
@@ -334,7 +335,7 @@ function ColumnComponent({
               <Picture
                 // no alt text here as we set the title on the containing button
                 image={node.image}
-                height="100%"
+                // height="100%"
                 objectFit="cover"
               />
             </ImageContainer>
