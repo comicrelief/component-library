@@ -11,15 +11,14 @@
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import createMockGalleryNodes from './_utils';
-<DynamicGallery nodes={createMockGalleryNodes(25)} />;
+<DynamicGallery nodes={createMockGalleryNodes(10)} />;
 ```
 
-### Gallery with max 4 columns
-
+### Customised gallery with multiple options
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import createMockGalleryNodes from './_utils';
-<DynamicGallery gridWidth={4} nodes={createMockGalleryNodes(4)} pageBackgroundColour="blue" paddingTop="6rem" paddingBottom="6rem" useLightbox={false} />;
+<DynamicGallery gridWidth={4} nodes={createMockGalleryNodes(4)} imageRatio="4:3" pageBackgroundColour="blue" paddingTop="6rem" paddingBottom="6rem" useLightbox={false} />;
 ```
 
 ### Gallery with max 5 columns

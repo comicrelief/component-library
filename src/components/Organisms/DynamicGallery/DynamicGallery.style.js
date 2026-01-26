@@ -13,6 +13,7 @@ export const Container = styled.div`
 export const ImageGrid = styled.div`
   display: flex;
   gap: 1rem;
+  width: 100%;
 `;
 
 export const Column = styled.div`
@@ -38,6 +39,7 @@ const GalleryNodeBase = css`
   text-align: left;
 
   & div:first-child {
+  background: ${({ theme }) => theme.color('grey_2')};
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
   }
 `;
