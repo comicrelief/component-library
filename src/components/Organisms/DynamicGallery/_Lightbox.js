@@ -1,21 +1,23 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import PulseLoader from 'react-spinners/PulseLoader';
+import Arrow from '../../Atoms/Icons/Arrow';
+import Cross from '../../Atoms/Icons/Cross';
 import Picture from '../../Atoms/Picture/Picture';
 import {
   Backdrop,
-  LightboxContent,
-  LightboxImage,
+  Body,
+  Caption,
+  CloseButton,
   Container,
   Dialog,
-  ScreenReaderOnly,
-  CloseButton,
-  PreviousButton,
+  LightboxContent,
+  LightboxImage,
+  LightboxSpinner,
   NextButton,
-  Title,
-  Caption,
-  Body
+  PreviousButton,
+  ScreenReaderOnly,
+  Title
 } from './_Lightbox.style';
-import Arrow from '../../Atoms/Icons/Arrow';
-import Cross from '../../Atoms/Icons/Cross';
 
 /**
  * lightbox context:
@@ -95,6 +97,12 @@ const Lightbox = () => {
         case 'Tab':
           handleTabKey(event);
           break;
+        case 'ArrowLeft':
+          previousNode(selectedNode);
+          break;
+        case 'ArrowRight':
+          nextNode(selectedNode);
+          break;
         default:
           break;
       }
@@ -107,7 +115,7 @@ const Lightbox = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [hasNode, setSelectedNode]);
+  }, [hasNode, selectedNode, setSelectedNode, previousNode, nextNode]);
 
   // handle focus management when dialog opens/closes
   useEffect(() => {
@@ -151,6 +159,9 @@ const Lightbox = () => {
       >
         <LightboxContent>
           <LightboxImage>
+            <LightboxSpinner>
+              <PulseLoader height={16} width={2} color="#E1E2E3" />
+            </LightboxSpinner>
             {hasNode && (
               <Picture
                 key={selectedNode?.image}
@@ -161,18 +172,6 @@ const Lightbox = () => {
                 objectFit="cover"
               />
             )}
-            <CloseButton type="button" onClick={() => setSelectedNode(null)}>
-              <ScreenReaderOnly>Close</ScreenReaderOnly>
-              <Cross colour="black" size={16} />
-            </CloseButton>
-            <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
-              <ScreenReaderOnly>Previous</ScreenReaderOnly>
-              <Arrow direction="left" colour="black" size={16} />
-            </PreviousButton>
-            <NextButton type="button" onClick={() => nextNode(selectedNode)}>
-              <ScreenReaderOnly>Next</ScreenReaderOnly>
-              <Arrow direction="right" colour="black" size={16} />
-            </NextButton>
           </LightboxImage>
           <Title id="lightboxTitle">{selectedNode?.title}</Title>
           {selectedNode?.caption && (
@@ -185,6 +184,18 @@ const Lightbox = () => {
               {selectedNode.body}
             </Body>
           )}
+          <CloseButton type="button" onClick={() => setSelectedNode(null)}>
+            <ScreenReaderOnly>Close</ScreenReaderOnly>
+            <Cross colour="black" size={16} />
+          </CloseButton>
+          <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
+            <ScreenReaderOnly>Previous</ScreenReaderOnly>
+            <Arrow direction="left" colour="black" size={16} />
+          </PreviousButton>
+          <NextButton type="button" onClick={() => nextNode(selectedNode)}>
+            <ScreenReaderOnly>Next</ScreenReaderOnly>
+            <Arrow direction="right" colour="black" size={16} />
+          </NextButton>
         </LightboxContent>
       </Dialog>
     </Container>

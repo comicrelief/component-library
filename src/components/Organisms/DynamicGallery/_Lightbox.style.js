@@ -36,17 +36,31 @@ export const LightboxContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.5rem;
+  max-width: 1024px;
+  max-height: 1024px;
 `;
 
 export const LightboxImage = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  
   & img {
-    max-width: 80vw;
     max-height: 70vh;
   }
+`;
+
+export const LightboxSpinner = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Title = styled.div`
@@ -79,6 +93,7 @@ export const NavButton = styled.button`
   border: none;
   background-color: white;
   cursor: pointer;
+  z-index: 10;
   svg {
     transition: all 0.1s ease-out;
   }
@@ -91,6 +106,11 @@ export const NavButton = styled.button`
 
   &:focus-visible {
     outline: 2px solid #000000;
+  }
+
+  
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    position: fixed;
   }
 `;
 
