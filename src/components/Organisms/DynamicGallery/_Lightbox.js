@@ -7,8 +7,6 @@ import Cross from '../../Atoms/Icons/Cross';
 import Picture from '../../Atoms/Picture/Picture';
 import {
   Backdrop,
-  Body,
-  Caption,
   CloseButton,
   Container,
   Dialog,
@@ -18,8 +16,7 @@ import {
   LightboxSpinner,
   NextButton,
   PreviousButton,
-  ScreenReaderOnly,
-  Title
+  ScreenReaderOnly
 } from './_Lightbox.style';
 
 /**
@@ -212,16 +209,16 @@ const Lightbox = () => {
             )}
           </LightboxImage>
           <LightboxDetails>
-            <Title id="lightboxTitle">{selectedNode?.title}</Title>
+            <div id="lightboxTitle">{selectedNode?.title}</div>
             {selectedNode?.caption && (
-              <Caption id="lightboxDescription">
+              <div id="lightboxDescription">
                 {selectedNode?.caption}
-              </Caption>
+              </div>
             )}
             {selectedNode?.body && (
-              <Body>
+              <div>
                 {selectedNode.body}
-              </Body>
+              </div>
             )}
           </LightboxDetails>
           <CloseButton type="button" onClick={() => setSelectedNode(null)}>

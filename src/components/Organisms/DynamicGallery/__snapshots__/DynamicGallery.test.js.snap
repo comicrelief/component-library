@@ -15,21 +15,21 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   object-fit: cover;
 }
 
-.c24 {
+.c23 {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   fill: #000000;
 }
 
-.c26 {
+.c25 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #000000;
 }
 
-.c22 {
+.c21 {
   fill: #000000;
 }
 
@@ -114,11 +114,27 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   overflow: hidden;
 }
 
+.c15 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
+}
+
 .c15 img {
-  max-height: 60vh;
   opacity: 0;
-  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out,opacity 0.1s ease-in-out;
-  transition: width 0.3s ease-in-out,height 0.3s ease-in-out,opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-out 0.3s;
+  transition: opacity 0.1s ease-out 0.3s;
 }
 
 .c16 {
@@ -146,12 +162,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c18 {
-  font-size: 1rem;
-  font-family: Montserrat;
-  color: #000000;
-}
-
-.c19 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -174,25 +184,25 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   z-index: 10;
 }
 
-.c19 svg {
+.c18 svg {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c19:hover svg {
+.c18:hover svg {
   fill: #E52630;
 }
 
-.c19:focus-visible {
+.c18:focus-visible {
   outline: 2px solid #000000;
 }
 
-.c20 {
+.c19 {
   top: 0;
   right: 0;
 }
 
-.c23 {
+.c22 {
   top: 30%;
   left: 0;
   -webkit-transform: translate(0,-50%);
@@ -202,7 +212,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c25 {
+.c24 {
   top: 30%;
   right: 0;
   -webkit-transform: translate(0,-50%);
@@ -212,7 +222,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c21 {
+.c20 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -288,6 +298,9 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border: none;
   border-radius: 0.5rem;
   text-align: left;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -314,7 +327,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   outline: 2px solid #000000;
 }
 
-.c3 div:first-child:hover {
+.c3 > div:first-child:hover {
   box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
 }
 
@@ -336,42 +349,35 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   padding: 0 8px;
 }
 
-.c8 {
-  font-size: 1rem;
-  font-family: Montserrat;
-}
-
 .c8:first-child {
   margin-bottom: 0;
 }
 
 .c9 {
-  font-size: 0.75rem;
-  font-family: Montserrat;
   line-height: 1;
 }
 
 @media (min-width:1024px) {
-  .c24 {
-    fill: #000000;
-  }
-}
-
-@media (min-width:1024px) {
-  .c26 {
-    fill: #000000;
-  }
-}
-
-@media (min-width:1024px) {
   .c23 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c22 {
     position: fixed;
     top: 50%;
   }
 }
 
 @media (min-width:1024px) {
-  .c25 {
+  .c24 {
     position: fixed;
     top: 50%;
   }
@@ -414,6 +420,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
+              onLoad={[Function]}
               width="100%"
             />
           </div>
@@ -421,16 +428,16 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c7"
         >
-          <p
+          <div
             className="c8"
           >
             Image 1
-          </p>
-          <p
+          </div>
+          <div
             className="c9"
           >
             Caption 1
-          </p>
+          </div>
         </div>
       </button>
     </div>
@@ -464,6 +471,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
+              onLoad={[Function]}
               width="100%"
             />
           </div>
@@ -471,16 +479,16 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c7"
         >
-          <p
+          <div
             className="c8"
           >
             Image 2
-          </p>
-          <p
+          </div>
+          <div
             className="c9"
           >
             Caption 2
-          </p>
+          </div>
         </div>
       </button>
     </div>
@@ -514,6 +522,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
+              onLoad={[Function]}
               width="100%"
             />
           </div>
@@ -521,16 +530,16 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c7"
         >
-          <p
+          <div
             className="c8"
           >
             Image 3
-          </p>
-          <p
+          </div>
+          <div
             className="c9"
           >
             Caption 3
-          </p>
+          </div>
         </div>
       </button>
     </div>
@@ -579,23 +588,22 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c17"
         >
-          <p
-            className="c18"
+          <div
             id="lightboxTitle"
           />
         </div>
         <button
-          className="c19 c20"
+          className="c18 c19"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c21"
+            className="c20"
           >
             Close
           </span>
           <svg
-            className="c22"
+            className="c21"
             height={16}
             viewBox="0 0 96 96"
             width={16}
@@ -607,17 +615,17 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </svg>
         </button>
         <button
-          className="c19 c23"
+          className="c18 c22"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c21"
+            className="c20"
           >
             Previous
           </span>
           <svg
-            className="c24"
+            className="c23"
             direction="left"
             height={16}
             viewBox="0 0 96 96"
@@ -632,17 +640,17 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </svg>
         </button>
         <button
-          className="c19 c25"
+          className="c18 c24"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c21"
+            className="c20"
           >
             Next
           </span>
           <svg
-            className="c26"
+            className="c25"
             direction="right"
             height={16}
             viewBox="0 0 96 96"
@@ -667,21 +675,21 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 `;
 
 exports[`renders an empty Dynamic Gallery with no options set 1`] = `
-.c16 {
+.c15 {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   fill: #000000;
 }
 
-.c18 {
+.c17 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #000000;
 }
 
-.c14 {
+.c13 {
   fill: #000000;
 }
 
@@ -766,11 +774,27 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   overflow: hidden;
 }
 
+.c7 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
+}
+
 .c7 img {
-  max-height: 60vh;
   opacity: 0;
-  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out,opacity 0.1s ease-in-out;
-  transition: width 0.3s ease-in-out,height 0.3s ease-in-out,opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-out 0.3s;
+  transition: opacity 0.1s ease-out 0.3s;
 }
 
 .c8 {
@@ -798,12 +822,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c10 {
-  font-size: 1rem;
-  font-family: Montserrat;
-  color: #000000;
-}
-
-.c11 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -826,25 +844,25 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   z-index: 10;
 }
 
-.c11 svg {
+.c10 svg {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c11:hover svg {
+.c10:hover svg {
   fill: #E52630;
 }
 
-.c11:focus-visible {
+.c10:focus-visible {
   outline: 2px solid #000000;
 }
 
-.c12 {
+.c11 {
   top: 0;
   right: 0;
 }
 
-.c15 {
+.c14 {
   top: 30%;
   left: 0;
   -webkit-transform: translate(0,-50%);
@@ -854,7 +872,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c17 {
+.c16 {
   top: 30%;
   right: 0;
   -webkit-transform: translate(0,-50%);
@@ -864,7 +882,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c13 {
+.c12 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -912,26 +930,26 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c16 {
-    fill: #000000;
-  }
-}
-
-@media (min-width:1024px) {
-  .c18 {
-    fill: #000000;
-  }
-}
-
-@media (min-width:1024px) {
   .c15 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
     position: fixed;
     top: 50%;
   }
 }
 
 @media (min-width:1024px) {
-  .c17 {
+  .c16 {
     position: fixed;
     top: 50%;
   }
@@ -989,23 +1007,22 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
         <div
           className="c9"
         >
-          <p
-            className="c10"
+          <div
             id="lightboxTitle"
           />
         </div>
         <button
-          className="c11 c12"
+          className="c10 c11"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c13"
+            className="c12"
           >
             Close
           </span>
           <svg
-            className="c14"
+            className="c13"
             height={16}
             viewBox="0 0 96 96"
             width={16}
@@ -1017,17 +1034,17 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </svg>
         </button>
         <button
-          className="c11 c15"
+          className="c10 c14"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c13"
+            className="c12"
           >
             Previous
           </span>
           <svg
-            className="c16"
+            className="c15"
             direction="left"
             height={16}
             viewBox="0 0 96 96"
@@ -1042,17 +1059,17 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </svg>
         </button>
         <button
-          className="c11 c17"
+          className="c10 c16"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c13"
+            className="c12"
           >
             Next
           </span>
           <svg
-            className="c18"
+            className="c17"
             direction="right"
             height={16}
             viewBox="0 0 96 96"

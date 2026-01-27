@@ -11,7 +11,7 @@
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 import createMockGalleryNodes from './_utils';
-<DynamicGallery nodes={createMockGalleryNodes(10)} />;
+<DynamicGallery nodes={createMockGalleryNodes(100)} />;
 ```
 
 ### Customised gallery with multiple options

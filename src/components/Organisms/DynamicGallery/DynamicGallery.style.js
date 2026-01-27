@@ -38,6 +38,8 @@ const GalleryNodeBase = css`
   border: none;
   border-radius: 0.5rem;
   text-align: left;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 
   & > div:first-child {
     display: flex;
@@ -67,7 +69,7 @@ export const InteractiveGalleryNode = styled.button`
       outline: 2px solid #000000;
     }
 
-    & div:first-child {
+    & > div:first-child {
       &:hover {
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
       }
@@ -87,18 +89,13 @@ export const Details = styled.div`
   padding: 0 8px;
 `;
 
-export const Title = styled.p`
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-family: ${({ theme }) => theme.font.regular};
-
+export const Title = styled.div`
   &:first-child {
     margin-bottom: 0;
   }
 `;
 
-export const Caption = styled.p`
-  font-size: ${({ theme }) => theme.fontSize('xs')};
-  font-family: ${({ theme }) => theme.font.regular};
+export const Caption = styled.div`
   line-height: 1;
 `;
 

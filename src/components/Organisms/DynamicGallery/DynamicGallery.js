@@ -1,4 +1,4 @@
-import { throttle, orderBy, floor } from 'lodash';
+import { floor, orderBy, throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React, {
   useCallback,
@@ -9,6 +9,7 @@ import React, {
 } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
+import Button from '../../Atoms/Button/Button';
 import Picture from '../../Atoms/Picture/Picture';
 import Lightbox, { LightboxContext } from './_Lightbox';
 import {
@@ -35,7 +36,7 @@ const DynamicGallery = ({
   textColour = 'black',
   gridWidth = 3,
   maxWidth = '1500px',
-  // loadingBehaviour = 'lazy',
+  loadingBehaviour = '25',
   // displayOrder = 'ascending',
   imageRatio = 'dynamic',
   useLightbox = true,
@@ -44,6 +45,17 @@ const DynamicGallery = ({
   paddingBottom = '2rem'
 }) => {
   const hasNodes = nodes?.length > 0;
+
+  // handle loading behaviour;
+  // if we're in chunk mode, display images a chunk at a time
+  // or display all images at once
+  const isChunked = loadingBehaviour !== 'all';
+  const imageChunkSize = +loadingBehaviour;
+  const [imageCount, setImageCount] = useState(isChunked ? imageChunkSize : nodes.length);
+
+  function handleLoadMore() {
+    setImageCount(imageCount + imageChunkSize);
+  }
 
   /**
    * handle column counts;
@@ -58,6 +70,7 @@ const DynamicGallery = ({
   const [columnCount, setColumnCount] = useState(gridWidth);
   const isSmall = useMediaQuery({ maxWidth: breakpointValues.S });
   const isMedium = useMediaQuery({ maxWidth: breakpointValues.M });
+  const containerRef = useRef(null);
 
   useEffect(() => {
     let newColumnCount;
@@ -75,39 +88,20 @@ const DynamicGallery = ({
     setColumnCount(newColumnCount);
   }, [isSmall, isMedium, gridWidth, setColumnCount]);
 
-  // handle selected node
+  // handle selected gallery node
   const [selectedNode, setSelectedNode] = useState(null);
 
+  // handle next/previous node events from the lightbox
   function handleNextNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const nextNodeIndex = (nodeIndex + 1) % nodes.length;
+    const nextNodeIndex = (nodeIndex + 1) % imageCount;
     setSelectedNode(nodes[nextNodeIndex]);
   }
   function handlePreviousNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const previousNodeIndex = (nodeIndex - 1 + nodes.length) % nodes.length;
+    const previousNodeIndex = (nodeIndex - 1 + nodes.length) % imageCount;
     setSelectedNode(nodes[previousNodeIndex]);
   }
-
-  // assign a manual tabbing order to gallery images based on their position in the DOM,
-  // starting from top-left and working downwards in a natural order
-  const containerRef = useRef(null);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (containerRef.current) {
-        const galleryNodes = containerRef.current.querySelectorAll('.gallery-node');
-        const sortedNodes = orderBy(galleryNodes, node => {
-          const { top, left } = node.getBoundingClientRect();
-          return floor(top, -2) + Math.floor(left) / 1000;
-        }, 'asc');
-
-        sortedNodes.forEach((galleryNode, index) => {
-          galleryNode.setAttribute('data-order', String(index));
-        });
-      }
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, [columnCount]);
 
   // handle keydown events,
   // including image opening and tabbing
@@ -170,6 +164,26 @@ const DynamicGallery = ({
     }
   }
 
+  // assign a manual tabbing order to gallery images based on their position in the DOM,
+  // starting from top-left and working downwards in a natural order
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (containerRef.current) {
+        const galleryNodes = containerRef.current.querySelectorAll('.gallery-node');
+        const sortedNodes = orderBy(galleryNodes, node => {
+          const { top, left } = node.getBoundingClientRect();
+          return floor(top, -2) + Math.floor(left) / 1000;
+        }, 'asc');
+
+        sortedNodes.forEach((galleryNode, index) => {
+          galleryNode.setAttribute('data-order', String(index));
+        });
+      }
+      // timeout to let images load; unlikely we'll immediately need tab ordering
+    }, 5000);
+    return () => clearTimeout(timeout);
+  }, [columnCount, imageCount]);
+
   return (
     <Container
       className="gallery-container"
@@ -201,7 +215,7 @@ const DynamicGallery = ({
                 key={columnIndex}
                 columnIndex={columnIndex}
                 columnCount={columnCount}
-                nodes={nodes}
+                nodes={nodes.slice(0, imageCount)}
                 imageRatio={imageRatio}
               />
             ))}
@@ -212,7 +226,7 @@ const DynamicGallery = ({
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
         <div className="gallery-focus-trap" tabIndex={0} />
       </LightboxContext.Provider>
-      {/* <Button onClick={handleLoadMore}>Load more</Button> */}
+      {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Load more</Button>}
     </Container>
   );
 };
@@ -232,10 +246,10 @@ DynamicGallery.propTypes = {
   textColour: PropTypes.string,
   gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
   maxWidth: PropTypes.string,
-  // loadingBehaviour: PropTypes.oneOf([
-  //   'lazy',
-  //   'eager'
-  // ]),
+  loadingBehaviour: PropTypes.oneOf([
+    'all',
+    '25'
+  ]),
   // displayOrder: PropTypes.oneOf([
   //   'random',
   //   'ascending',
@@ -341,8 +355,10 @@ function ColumnComponent({
               <Picture
                 // no alt text here as we set the title on the containing button
                 image={node.image}
-                // height="100%"
                 objectFit="cover"
+                onLoad={event => {
+                  event.target.closest('.gallery-node').style.setProperty('opacity', '1');
+                }}
               />
             </ImageContainer>
             <Details>

@@ -80,24 +80,6 @@ export const LightboxDetails = styled.div`
   width: 100%;
 `;
 
-export const Title = styled.p`
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-family: ${({ theme }) => theme.font.regular};
-  color: ${({ theme }) => theme.color('black')};
-`;
-
-export const Caption = styled.p`
-  font-size: ${({ theme }) => theme.fontSize('xs')};
-  font-family: ${({ theme }) => theme.font.regular};
-  line-height: 1;
-`;
-
-export const Body = styled.p`
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-family: ${({ theme }) => theme.font.regular};
-  color: ${({ theme }) => theme.color('black')};
-`;
-
 export const NavButton = styled.button`
   position: absolute;
   display: flex;
