@@ -48,6 +48,10 @@ const CardsContainer = styled.div`
     margin: 0 auto;
   }
 
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    column-gap: 2rem;
+  }
+
   // Carousel mode - horizontal scroll container (M and below)
   ${({ isCarousel }) => isCarousel && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
@@ -96,7 +100,7 @@ const CardsContainer = styled.div`
       display: grid;
       justify-content: center;
       align-items: stretch;
-      grid-template-columns: repeat(3, minmax(0, 371px));
+      grid-template-columns: repeat(3, minmax(0, 363px));
       width: 100%;
       margin: 0 auto;
       max-width: 100%;
