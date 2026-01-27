@@ -129,7 +129,7 @@ const CardLink = styled.a`
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
       ${ImageWrapper} img {
-        transform: scale(1.2);
+        transform: scale(1.11);
       }
 
       ${CTAText} {
