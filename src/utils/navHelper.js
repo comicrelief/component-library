@@ -18,14 +18,14 @@ const NavHelper = navItem => {
 const NavHelperNew = pageLink => {
   if (!pageLink) return '';
 
-  // External URL takes priority
-  if (pageLink.pageUrlIfExternal) {
-    return pageLink.pageUrlIfExternal;
-  }
-
-  // Otherwise use the pageSelector path
+  // pageSelector path takes priority
   if (pageLink.pageSelector && pageLink.pageSelector.path) {
     return `/${pageLink.pageSelector.path}`;
+  }
+
+  // Otherwise use external URL
+  if (pageLink.pageUrlIfExternal) {
+    return pageLink.pageUrlIfExternal;
   }
 
   return '';
@@ -35,14 +35,14 @@ const NavHelperNew = pageLink => {
 const NavHelperPrimary = group => {
   if (!group) return '';
 
-  // External URL takes priority
-  if (group.primaryPageUrlIfExternal) {
-    return group.primaryPageUrlIfExternal;
-  }
-
-  // Otherwise use the primaryPageSelector path
+  // primaryPageSelector path takes priority
   if (group.primaryPageSelector && group.primaryPageSelector.path) {
     return `/${group.primaryPageSelector.path}`;
+  }
+
+  // Otherwise use external URL
+  if (group.primaryPageUrlIfExternal) {
+    return group.primaryPageUrlIfExternal;
   }
 
   return '';
