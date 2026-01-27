@@ -3,8 +3,10 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import spacing from '../../../../theme/shared/spacing';
 
 export const CardsQueryWrapper = styled.div`
-  /* Container for CQ-based “single card per row” sizing.
-     Keep this off the flex container itself to avoid layout side-effects. */
+  /* Container for “single card per row” sizing.
+     Keep this off the flex container itself to avoid layout side-effects.
+     As using inline-size makes it go wild if you try there.
+     */
   container-type: inline-size;
   container-name: cta-multi-card;
   width: 100%;
