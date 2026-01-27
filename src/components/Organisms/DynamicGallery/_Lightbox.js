@@ -161,10 +161,8 @@ const Lightbox = () => {
     setSelectedNode(null);
   }
 
-  /**
-   * handle transitions between images nicely;
-   */
-  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+  // handle transitions between images nicely;
+  const [imageDimensions, setImageDimensions] = useState({ width: '0px', height: '0px' });
 
   /**
    * when the image loads, check to see how best we can fit it on screen,
@@ -182,7 +180,9 @@ const Lightbox = () => {
     const scale = Math.min(scaleX, scaleY);
     const width = imageWidth * scale;
     const height = imageHeight * scale;
-    setImageDimensions({ width, height });
+
+    // set the width and height on the image element, and make it visible
+    setImageDimensions({ width: `${width}px`, height: `${height}px` });
     target.style.opacity = '1';
   }
 

@@ -42,8 +42,6 @@ export const LightboxContent = styled.div`
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.5rem;
-  // max-width: 1024px;
-  // max-height: 1024px;
 `;
 
 export const LightboxImage = styled.div`
@@ -54,11 +52,17 @@ export const LightboxImage = styled.div`
   min-height: 32px;
   border-radius: 0.4rem;
   overflow: hidden;
-  
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+
   & img {
-    max-height: 60vh;
     opacity: 0;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-out 0.3s;
   }
 `;
 
