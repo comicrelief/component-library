@@ -25,7 +25,9 @@ import {
   NavCardImage,
   NavCardContent,
   NavCardTitle,
-  NavCardDescription
+  NavCardDescription,
+  SecondaryMenuPrimaryLink,
+  SecondaryMenuPrimaryLinkAnchor
 } from './PrimaryNavItem.style';
 
 const PrimaryNavItem = (
@@ -39,14 +41,15 @@ const PrimaryNavItem = (
 ) => {
   const [openTertiaryMenu, setOpenTertiaryMenu] = useState(null);
 
-  const handleTertiaryToggle = (e, linkId, parentName) => {
+  const handleTertiaryToggle = (e, linkId) => {
     e.preventDefault();
     e.stopPropagation();
     const isOpening = openTertiaryMenu !== linkId;
     setOpenTertiaryMenu(isOpening ? linkId : null);
 
     if (onTertiaryMenuChange) {
-      onTertiaryMenuChange(isOpening, isOpening ? parentName : null, () => {
+      // Use primary page name (e.g., "Get Involved") for the back button text on 3rd modal
+      onTertiaryMenuChange(isOpening, isOpening ? group.primaryPageName : null, () => {
         // Close function: reset local state AND notify parent that tertiary is closed
         setOpenTertiaryMenu(null);
         if (onTertiaryMenuChange) {
@@ -90,6 +93,19 @@ const PrimaryNavItem = (
   // Get the currently active tertiary menu data
   const activeTertiaryLinks = tertiaryGroups[openTertiaryMenu] || [];
 
+  // Find the parent link (pageLevel: true) for the currently open tertiary menu
+  const findParentLink = linkId => {
+    if (!linkId) return null;
+    const allLinks = [
+      ...(group.column1PageLinks || []),
+      ...(group.column2PageLinks || []),
+      ...(group.column3PageLinks || [])
+    ];
+    return allLinks.find(link => link.id === linkId);
+  };
+
+  const activeParentLink = findParentLink(openTertiaryMenu);
+
   // Helper to render a column's links
   const renderColumnLinks = (links, ColumnComponent) => {
     if (!links) return null;
@@ -113,7 +129,7 @@ const PrimaryNavItem = (
               href="#"
               inline
               role="menuitem"
-              onClick={e => handleTertiaryToggle(e, linkId, child.pageName)}
+              onClick={e => handleTertiaryToggle(e, linkId)}
               $isSecondary={child.pageLevel}
             >
               <Text>{child.pageName}</Text>
@@ -205,6 +221,19 @@ const PrimaryNavItem = (
           isTertiaryOpen={isTertiaryOpenGlobal}
           key={`${index}-${thisID}--sub-item`}
         >
+          {/* Mobile: Show primary link at top of 2nd modal */}
+          {isNotDesktop && (
+            <SecondaryMenuPrimaryLink>
+              <SecondaryMenuPrimaryLinkAnchor
+                href={prependBaseUrl(thisUrl, devMode)}
+                inline
+                role="menuitem"
+              >
+                <Text>{group.primaryPageName}</Text>
+              </SecondaryMenuPrimaryLinkAnchor>
+            </SecondaryMenuPrimaryLink>
+          )}
+
           {/* Column 1 */}
           <ColumnWrapper>
             {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
@@ -247,6 +276,18 @@ const PrimaryNavItem = (
       {/* Third level modal - separate from secondary menu for independent visibility */}
       {hasSubMenu && isNotDesktop && (
         <TertiaryNavMenu isOpen={openTertiaryMenu !== null}>
+          {/* Show parent link (pageLevel: true) at the top */}
+          {activeParentLink && (() => {
+            let parentUrl = navHelperNew(activeParentLink);
+            parentUrl = internalLinkHelper(parentUrl);
+            return (
+              <TertiaryNavItem key={activeParentLink.id} $isParent>
+                <TertiaryNavLink href={prependBaseUrl(parentUrl, devMode)} inline role="menuitem" $isParent>
+                  <Text>{activeParentLink.pageName}</Text>
+                </TertiaryNavLink>
+              </TertiaryNavItem>
+            );
+          })()}
           {activeTertiaryLinks.map(tertiaryLink => {
             let tertiaryUrl = navHelperNew(tertiaryLink);
             tertiaryUrl = internalLinkHelper(tertiaryUrl);

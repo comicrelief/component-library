@@ -459,6 +459,11 @@ const TertiaryNavItem = styled.li`
     border-top: none;
   }
 
+  /* Parent item styling (pageLevel: true shown at top) */
+  ${({ $isParent }) => $isParent && css`
+    border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  `}
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     span {
       font-weight: 100;
@@ -476,7 +481,7 @@ const TertiaryNavLink = styled(NavLinkClass)`
   position: relative;
 
   span {
-    font-weight: 400;
+    font-weight: ${({ $isParent }) => ($isParent ? 600 : 400)};
   }
 `;
 
@@ -565,6 +570,31 @@ const NavCardDescription = styled.span`
   line-height: 1.4;
 `;
 
+/**
+ * Primary link shown at top of secondary menu (mobile only)
+ */
+const SecondaryMenuPrimaryLink = styled.li`
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  display: block;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
+const SecondaryMenuPrimaryLinkAnchor = styled(NavLinkClass)`
+  padding: 20px 25px 22px 42px;
+  color: ${({ theme }) => theme.color('black')};
+  height: auto;
+  position: relative;
+
+  span {
+    font-weight: 600;
+  }
+`;
+
 export {
   StyledNavItem,
   NavLink,
@@ -587,5 +617,7 @@ export {
   NavCardImage,
   NavCardContent,
   NavCardTitle,
-  NavCardDescription
+  NavCardDescription,
+  SecondaryMenuPrimaryLink,
+  SecondaryMenuPrimaryLinkAnchor
 };
