@@ -15,9 +15,7 @@ import {
   ChevronWrapper,
   StyledText,
   ColumnWrapper,
-  Column1NavItem,
-  Column2NavItem,
-  Column3NavItem,
+  SecondaryNavItem,
   TertiaryNavMenu,
   TertiaryNavItem,
   TertiaryNavLink,
@@ -236,12 +234,12 @@ const PrimaryNavItem = (
 
           {/* Column 1 */}
           <ColumnWrapper>
-            {renderColumnLinks(group.column1PageLinks, Column1NavItem)}
+            {renderColumnLinks(group.column1PageLinks, SecondaryNavItem)}
           </ColumnWrapper>
 
           {/* Column 2 */}
           <ColumnWrapper>
-            {renderColumnLinks(group.column2PageLinks, Column2NavItem)}
+            {renderColumnLinks(group.column2PageLinks, SecondaryNavItem)}
           </ColumnWrapper>
 
           {/* Column 3 - Cards if available (desktop only), otherwise 3rd column of Links */}
@@ -267,7 +265,7 @@ const PrimaryNavItem = (
                 </NavCard>
               ))
             ) : (
-              renderColumnLinks(group.column3PageLinks, Column3NavItem)
+              renderColumnLinks(group.column3PageLinks, SecondaryNavItem)
             )}
           </ColumnWrapper>
         </SecondaryNavMenu>

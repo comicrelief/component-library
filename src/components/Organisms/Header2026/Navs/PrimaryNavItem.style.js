@@ -397,21 +397,6 @@ const StyledText = styled(Text)`
 `;
 
 /**
- * Column 1 Nav Item
- */
-const Column1NavItem = styled(SecondaryNavItem)``;
-
-/**
- * Column 2 Nav Item
- */
-const Column2NavItem = styled(SecondaryNavItem)``;
-
-/**
- * Column 3 Nav Item
- */
-const Column3NavItem = styled(SecondaryNavItem)``;
-
-/**
  * Tertiary Navigation Menu (3rd level) - separate sibling to SecondaryNavMenu
  */
 const TertiaryNavMenu = styled.ul`
@@ -607,9 +592,6 @@ export {
   ChevronWrapper,
   StyledText,
   ColumnWrapper,
-  Column1NavItem,
-  Column2NavItem,
-  Column3NavItem,
   TertiaryNavMenu,
   TertiaryNavItem,
   TertiaryNavLink,
