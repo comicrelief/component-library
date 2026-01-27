@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
-const SingleCardContainer = styled.div`
+export const SingleCardSection = styled.div`
   padding-top: ${({ paddingAbove }) => paddingAbove};
   padding-bottom: ${({ paddingBelow }) => paddingBelow};
+  width: 100%;
+  background: transparent;
+`;
+
+export const SingleCardInner = styled.div`
   display: flex;
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
-  background: transparent;
 
   img {
     // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
@@ -16,4 +20,4 @@ const SingleCardContainer = styled.div`
    }
 `;
 
-export default SingleCardContainer;
+export default SingleCardSection;

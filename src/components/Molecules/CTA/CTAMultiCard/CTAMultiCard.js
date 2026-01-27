@@ -7,7 +7,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 // If you bump @splidejs/react-splide, update `src/vendor/splide/splide.min.css` too.
 import '../../../../vendor/splide/splide.min.css';
 import CTACard from '../shared/CTACard';
-import CardsContainer, { CardsQueryWrapper } from './CTAMultiCard.style';
+import CardsContainer, { CardsInner, CardsQueryWrapper, CardsSection } from './CTAMultiCard.style';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 
 /**
@@ -52,47 +52,53 @@ const CTAMultiCard = ({ data }) => {
 
   return (
     <CardsQueryWrapper>
-      <CardsContainer
+      <CardsSection
         backgroundColor={cardsBackground}
-        columns={columns}
-        isCarousel={carouselOfCards}
-        useSplideCarousel={useSplideCarousel}
         paddingAbove={paddingAbove}
         paddingBelow={paddingBelow}
+        isCarousel={carouselOfCards}
       >
-        {useSplideCarousel ? (
-          <Splide
-            options={{
-              arrows: false,
-              pagination: false,
-              drag: true,
-              dragMinThreshold: 10,
-              gap: '1rem',
-              fixedWidth: '309px',
-              padding: { left: '0px', right: '0px' }
-            }}
+        <CardsInner isCarousel={carouselOfCards}>
+          <CardsContainer
+            columns={columns}
+            isCarousel={carouselOfCards}
+            useSplideCarousel={useSplideCarousel}
           >
-            {cards.map((card, index) => (
-              <SplideSlide key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}>
+            {useSplideCarousel ? (
+              <Splide
+                options={{
+                  arrows: false,
+                  pagination: false,
+                  drag: true,
+                  dragMinThreshold: 10,
+                  gap: '1rem',
+                  fixedWidth: '309px',
+                  padding: { left: '0px', right: '0px' }
+                }}
+              >
+                {cards.map((card, index) => (
+                  <SplideSlide key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}>
+                    <CTACard
+                      card={card}
+                      columns={columns}
+                      isCarousel
+                    />
+                  </SplideSlide>
+                ))}
+              </Splide>
+            ) : (
+              cards.map((card, index) => (
                 <CTACard
+                  key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}
                   card={card}
                   columns={columns}
-                  isCarousel
+                  isCarousel={carouselOfCards}
                 />
-              </SplideSlide>
-            ))}
-          </Splide>
-        ) : (
-          cards.map((card, index) => (
-            <CTACard
-              key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}
-              card={card}
-              columns={columns}
-              isCarousel={carouselOfCards}
-            />
-          ))
-        )}
-      </CardsContainer>
+              ))
+            )}
+          </CardsContainer>
+        </CardsInner>
+      </CardsSection>
     </CardsQueryWrapper>
   );
 };

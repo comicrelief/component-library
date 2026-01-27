@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CTACard from '../shared/CTACard';
-import SingleCardContainer from './CTASingleCard.style';
+import SingleCardWrapper, { SingleCardInner } from './CTASingleCard.style';
 
 /**
  * CTASingleCard Component
@@ -23,16 +23,18 @@ const CTASingleCard = ({ data }) => {
   }
 
   return (
-    <SingleCardContainer
+    <SingleCardWrapper
       paddingAbove={paddingAbove}
       paddingBelow={paddingBelow}
     >
-      <CTACard
-        card={card}
-        isCarousel={false}
-        isSingleCard
-      />
-    </SingleCardContainer>
+      <SingleCardInner>
+        <CTACard
+          card={card}
+          isCarousel={false}
+          isSingleCard
+        />
+      </SingleCardInner>
+    </SingleCardWrapper>
   );
 };
 

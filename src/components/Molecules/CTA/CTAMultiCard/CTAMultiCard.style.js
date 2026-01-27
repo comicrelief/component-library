@@ -10,26 +10,32 @@ export const CardsQueryWrapper = styled.div`
   width: 100%;
 `;
 
-const CardsContainer = styled.div`
-  padding-top: ${({ paddingAbove }) => paddingAbove};
-  padding-bottom: ${({ paddingBelow }) => paddingBelow};
-  display: flex;
-  flex-direction: column;
+export const CardsSection = styled.div`
   width: 100%;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  gap: 1rem;
+  padding-top: ${({ paddingAbove }) => paddingAbove};
+  padding-bottom: ${({ paddingBelow }) => paddingBelow};
+`;
 
-  // Mobile stack mode - vertical layout (only on mobile, below M breakpoint)
+export const CardsInner = styled.div`
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+
+  /* Provide mobile gutters for non-carousel stack mode. */
   ${({ isCarousel }) => !isCarousel && css`
     @media (max-width: ${breakpointValues.M - 1}px) {
-      flex-direction: column;
-      background: transparent;
-      padding-top: ${spacing('l')};
-      padding-bottom: ${spacing('l')};
       padding-left: ${spacing('md')};
       padding-right: ${spacing('md')};
     }
   `}
+`;
+
+const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
 
   // Non-mobile layout (M and above) - consistent across carousel/non-carousel, as above M we only do stacked mode.
   @media ${({ theme }) => theme.allBreakpoints('M')} {
