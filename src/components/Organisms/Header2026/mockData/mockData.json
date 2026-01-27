@@ -16,25 +16,45 @@
                     "id": "bc3d7525-1b7b-58d4-a1f9-1b44e7e58fad",
                     "pageLevel": true,
                     "pageName": "Red Nose Day",
-                    "pageUrlIfExternal": "placeholder"
+                    "pageUrlIfExternal": "placeholder",
+                    "pageSelector": {
+                      "id": "9dbb2dbd-22d3-5719-bc9d-53319db9eaa3",
+                      "path": "rednoseday",
+                      "title": "Red Nose Day"
+                    }
                   },
                   {
                     "id": "6977b07e-b46c-5734-9de4-5446e85df22d",
                     "pageLevel": false,
                     "pageName": "The Red Noses",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "9dba46a7-d1e9-544b-ae04-6bb3ef995448",
+                      "path": "rednoseday/noses",
+                      "title": "The Red Noses"
+                    }
                   },
                   {
                     "id": "0b3c5811-95ab-5121-b28a-fda0828a961f",
                     "pageLevel": true,
                     "pageName": "Sport Relief",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "6244b603-c9ba-5acc-9d79-353234b1fe14",
+                      "path": "sportrelief",
+                      "title": "Sport Relief"
+                    }
                   },
                   {
                     "id": "53748359-cff9-5c56-b93d-111bac0d906e",
                     "pageLevel": true,
                     "pageName": "Winter Appeal",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "14ffecb6-aeed-5b7e-8268-c06b2c04aea1",
+                      "path": "winterappeal",
+                      "title": "Winter Appeal"
+                    }
                   }
                 ],
                 "column2PageLinks": [
@@ -42,49 +62,81 @@
                     "id": "e464497d-3c95-5323-9395-e129372f0a0e",
                     "pageLevel": true,
                     "pageName": "Fundraise for us",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Fundraising Ideas",
+                      "path": "rednoseday/fundraise",
+                      "id": "35d9588f-9079-58ba-80aa-4d8193b80a7c"
+                    }
                   },
                   {
                     "id": "431ab7c9-6ad6-58c9-b801-ed59ada32c0d",
                     "pageLevel": false,
                     "pageName": "Register to Fundraise",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": null
                   },
                   {
                     "id": "d4ce7a6b-e502-50ce-a8d1-b32eb0343ac0",
                     "pageLevel": false,
                     "pageName": "Ideas & Resources",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Fundraising Resources",
+                      "path": "rednoseday/fundraise/resources",
+                      "id": "fa78cc64-f70c-5b36-a7b8-e283754d55de"
+                    }
                   },
                   {
                     "id": "38e53010-8a99-577b-a7ab-e3157293bf50",
                     "pageLevel": false,
                     "pageName": "Running Events",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/404/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/404/",
+                    "pageSelector": null
                   },
                   {
                     "id": "5bf77c5f-a39c-5c3e-a461-ef4606b2357d",
                     "pageLevel": false,
                     "pageName": "Schools",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Schools",
+                      "path": "rednoseday/fundraise/schools",
+                      "id": "da16a3c3-6d10-5a8d-b480-84dddae13953"
+                    }
                   },
                   {
                     "id": "e650419d-af22-5cfc-b8a1-273d41f22c10",
                     "pageLevel": false,
                     "pageName": "Workplaces",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Fundraise at work",
+                      "path": "rednoseday/fundraise/fundraise-at-work-old",
+                      "id": "abc0b959-8067-5cd7-b929-94219db3e172"
+                    }
                   },
                   {
                     "id": "966ec56d-6e9c-513c-88df-2411e98607a6",
                     "pageLevel": false,
                     "pageName": "Share your fundraising story",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "We want your Red Nose Day fundraising stories",
+                      "path": "rednoseday/fundraise/stories",
+                      "id": "ee31be93-a630-5130-a42a-ceae1cfc221b"
+                    }
                   },
                   {
                     "id": "75026502-87f3-59a7-b12b-cd378fcd377e",
                     "pageLevel": false,
                     "pageName": "Pay in Your Fundraising",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "How to pay in your fundraising money ",
+                      "path": "getinvolved/fundraise/pay-in-your-money",
+                      "id": "72e07e7d-8090-5112-b123-8e87bc56f591"
+                    }
                   }
                 ],
                 "column3PageLinks": [
@@ -92,49 +144,77 @@
                     "id": "04359a7c-7737-558a-855c-3c229c4cd8b0",
                     "pageLevel": true,
                     "pageName": "Ways to Give",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/404/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/404/",
+                    "pageSelector": null
                   },
                   {
                     "id": "5169af50-a2f4-5d0b-97ac-2ccc111a0752",
                     "pageLevel": false,
                     "pageName": "Make a donation",
-                    "pageUrlIfExternal": "https://donation.comicrelief.com/"
+                    "pageUrlIfExternal": "https://donation.comicrelief.com/",
+                    "pageSelector": null
                   },
                   {
                     "id": "89632fe0-a703-5370-8f34-4c700daff882",
                     "pageLevel": false,
                     "pageName": "Give Regularly",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "d55f5579-4d6e-5d29-b6df-ed0b21ee608a",
+                      "path": "regular-donation",
+                      "title": "Regular Donations"
+                    }
                   },
                   {
                     "id": "a54ded73-df85-525e-a62e-974cfb25ee9f",
                     "pageLevel": false,
                     "pageName": "Adopt a Red Nose",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "e0159e67-e62e-575a-967c-502c58660938",
+                      "path": "getinvolved/adopt-a-red-nose",
+                      "title": "Adopt A Red Nose"
+                    }
                   },
                   {
                     "id": "e5c547e9-15df-5c55-b995-784d08d89fa1",
                     "pageLevel": false,
                     "pageName": "Leave a gift in your will",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "7fd28ba0-fffb-5fa1-b4cb-7ccfa026b519",
+                      "path": "getinvolved/yourwill",
+                      "title": "Your Will and Comic Relief"
+                    }
                   },
                   {
                     "id": "1188362d-56f5-59d5-9db9-b73c37126974",
                     "pageLevel": false,
                     "pageName": "Philanthropy",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "12b1a3ef-11c2-5a0f-a13f-51a4b262c61b",
+                      "path": "getinvolved/philanthropy",
+                      "title": "Philanthropy"
+                    }
                   },
                   {
                     "id": "f1f737f6-86b3-51be-98f2-c2b9d8e56abe",
                     "pageLevel": true,
                     "pageName": "Prizes",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/prizes/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/prizes/",
+                    "pageSelector": null
                   },
                   {
                     "id": "b47bbd0c-25e2-5d4a-b7cf-20ea846ba961",
                     "pageLevel": true,
                     "pageName": "Partner with us",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "34ae1900-3d00-5ef4-9ebf-9ffd8e156f8c",
+                      "path": "working-with-us/our-partners",
+                      "title": "Our partners"
+                    }
                   }
                 ],
                 "column3PageCards": null
@@ -148,13 +228,15 @@
                     "id": "65e1f1a6-405c-5751-a5ce-b3c142b2f2e7",
                     "pageLevel": true,
                     "pageName": "Impact Story: Dingley's Promise",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/dingleys-promise/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/dingleys-promise/",
+                    "pageSelector": null
                   },
                   {
                     "id": "a0588e3c-ca26-58a9-a251-3524776e184d",
                     "pageLevel": true,
                     "pageName": "Impact Story: Keren's story",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/keren/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/keren/",
+                    "pageSelector": null
                   }
                 ],
                 "column2PageLinks": [
@@ -162,13 +244,15 @@
                     "id": "80b4dcc5-e11f-5aef-ae74-2240de9c4372",
                     "pageLevel": true,
                     "pageName": "Impact Story: Sarah's story",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/sarah/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/sarah/",
+                    "pageSelector": null
                   },
                   {
                     "id": "eb388f17-f317-5c79-8f46-d5a10ba42122",
                     "pageLevel": true,
                     "pageName": "Impact Story: The Lighthouse Project",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/the-lighthouse-project/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/what-your-money-does/the-lighthouse-project/",
+                    "pageSelector": null
                   }
                 ],
                 "column3PageLinks": null,
@@ -180,9 +264,10 @@
                     "primaryPageUrlIfExternal": "https://www.comicrelief.com/404/",
                     "image": {
                       "title": "grey small",
-                      "url": "https://placedog.net/300/200",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/7jKN7DijPQ1uMqGZ8GgOTR/59ca9b3e9d576358041fbec956122337/Image_Placeholder.png",
                       "id": "9ce427e6-90d5-58b0-8cec-13ecaa8b1095"
-                    }
+                    },
+                    "pageSelector": null
                   }
                 ]
               },
@@ -195,31 +280,36 @@
                     "id": "309a7059-5e43-5c94-9aca-4bb4db3b47cd",
                     "pageLevel": true,
                     "pageName": "Red Nose Day Shop",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   },
                   {
                     "id": "3640a345-98d7-5138-95e8-62fbcc59078e",
                     "pageLevel": false,
                     "pageName": "The Red Nose",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   },
                   {
                     "id": "8e74649a-5c11-5d64-a637-405c5e264d84",
                     "pageLevel": false,
                     "pageName": "T-Shirts & Sweaters",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   },
                   {
                     "id": "0224bbfe-9fa9-5881-a8c7-f928d96dd532",
                     "pageLevel": false,
                     "pageName": "Fundraising Packs",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   },
                   {
                     "id": "b6861dc9-f6eb-5412-af9d-2d6a58fe72b3",
                     "pageLevel": false,
                     "pageName": "Accesories",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   }
                 ],
                 "column2PageLinks": [
@@ -227,7 +317,8 @@
                     "id": "88613809-646a-5f83-a860-191368f116f2",
                     "pageLevel": true,
                     "pageName": "Delivey and FAQs",
-                    "pageUrlIfExternal": "http://shop.comicrelief.com/"
+                    "pageUrlIfExternal": "http://shop.comicrelief.com/",
+                    "pageSelector": null
                   }
                 ],
                 "column3PageLinks": null,
@@ -239,9 +330,10 @@
                     "primaryPageUrlIfExternal": "http://shop.comicrelief.com/",
                     "image": {
                       "title": "grey small",
-                      "url": "https://placedog.net/300/200",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/7jKN7DijPQ1uMqGZ8GgOTR/59ca9b3e9d576358041fbec956122337/Image_Placeholder.png",
                       "id": "9ce427e6-90d5-58b0-8cec-13ecaa8b1095"
-                    }
+                    },
+                    "pageSelector": null
                   },
                   {
                     "id": "e13b108e-d637-5ed0-9484-6d462caa28cf",
@@ -250,9 +342,10 @@
                     "primaryPageUrlIfExternal": "http://shop.comicrelief.com/",
                     "image": {
                       "title": "grey small",
-                      "url": "https://placedog.net/300/200",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/7jKN7DijPQ1uMqGZ8GgOTR/59ca9b3e9d576358041fbec956122337/Image_Placeholder.png",
                       "id": "9ce427e6-90d5-58b0-8cec-13ecaa8b1095"
-                    }
+                    },
+                    "pageSelector": null
                   }
                 ]
               },
@@ -265,37 +358,63 @@
                     "id": "3c6031f6-04eb-56ec-aa89-0b71c530ba6d",
                     "pageLevel": true,
                     "pageName": "What we fund",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/404/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/404/",
+                    "pageSelector": null
                   },
                   {
                     "id": "6f6408ad-9bcd-5dfa-b743-37da61e5dccf",
                     "pageLevel": false,
                     "pageName": "Alleviating poverty’s consequences",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "35feceb5-7eb5-5e20-994b-1e0c3fa24b7e",
+                      "path": "funding/alleviating-the-consequences-of-poverty",
+                      "title": "Strategic Programme | Alleviating the Consequences of Poverty"
+                    }
                   },
                   {
                     "id": "7dd26f92-3ea8-5e2c-90d0-0b97899adb10",
                     "pageLevel": false,
                     "pageName": "Tackling Injustices",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "3e6ab1e3-bd83-5205-a984-283aebac3db0",
+                      "path": "funding/tackling-injustices",
+                      "title": "Strategic Programme | Tackling Injustices"
+                    }
                   },
                   {
                     "id": "24e3024a-a103-59f8-be8d-dee141a637de",
                     "pageLevel": false,
                     "pageName": "Climate Change",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "bdd0a67c-752b-55eb-bed4-e95b1a483b86",
+                      "path": "funding/climate-justice",
+                      "title": "Strategic Programme | Climate Justice"
+                    }
                   },
                   {
                     "id": "5499117b-3272-5544-98f4-dffe71262f6f",
                     "pageLevel": false,
                     "pageName": "Pop Culture for Social Change",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "9fadda2d-ea80-5186-90e4-20897c59b9df",
+                      "path": "funding/pop-culture-for-social-change",
+                      "title": "Approach | Pop Culture for Social Change"
+                    }
                   },
                   {
                     "id": "cd9f9a05-241e-5bca-a6dc-51bde0a613f4",
                     "pageLevel": false,
                     "pageName": "Sport for Change",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "72447296-971c-556e-9d41-4afb8ac687aa",
+                      "path": "funding/sport-for-change",
+                      "title": "Approach | Sport for change"
+                    }
                   }
                 ],
                 "column2PageLinks": [
@@ -303,19 +422,34 @@
                     "id": "234fdab6-056f-587d-ac66-c89f4354bacd",
                     "pageLevel": true,
                     "pageName": "Our Funding Practice",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Our Funding Practice",
+                      "path": "funding/our-funding-practice",
+                      "id": "7cdd22ab-3754-5c70-8f40-98e11263960d"
+                    }
                   },
                   {
                     "id": "bb63cc98-72dd-5fae-ba85-1ede556a1f8b",
                     "pageLevel": false,
                     "pageName": "Funding Opportunities",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Funding opportunities",
+                      "path": "funding/funding-opportunities",
+                      "id": "4dba06d9-192d-5e07-80d4-3e011ba4db7d"
+                    }
                   },
                   {
                     "id": "851694a3-3421-58a9-b6cf-f1b1c07bd2a7",
                     "pageLevel": false,
                     "pageName": "Managing Your Funding",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Managing your funding",
+                      "path": "funding/managing-your-funding",
+                      "id": "9e886283-fe43-574e-9e66-a9c5ab8866c7"
+                    }
                   }
                 ],
                 "column3PageLinks": null,
@@ -327,9 +461,10 @@
                     "primaryPageUrlIfExternal": "https://www.comicrelief.com/news/funding-breakdown-alleviating-povertys-consequences-and-grip-on-peoples/",
                     "image": {
                       "title": "grey small",
-                      "url": "https://placedog.net/300/200",
+                      "url": "https://images.ctfassets.net/zsfivwzfgl3t/7jKN7DijPQ1uMqGZ8GgOTR/59ca9b3e9d576358041fbec956122337/Image_Placeholder.png",
                       "id": "9ce427e6-90d5-58b0-8cec-13ecaa8b1095"
-                    }
+                    },
+                    "pageSelector": null
                   }
                 ]
               },
@@ -342,19 +477,30 @@
                     "id": "c6d82d97-6797-5777-b601-79091772c65a",
                     "pageLevel": true,
                     "pageName": "Careers",
-                    "pageUrlIfExternal": "placeholder"
+                    "pageUrlIfExternal": "placeholder",
+                    "pageSelector": {
+                      "id": "1ede45a8-0d7e-5ca4-9448-fbbfa5ec7e86",
+                      "path": "careers",
+                      "title": "Work at Comic Relief"
+                    }
                   },
                   {
                     "id": "ff5449f1-92ba-5279-b549-7e85a85fab5d",
                     "pageLevel": false,
                     "pageName": "Meet The Team",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "5d469570-2321-5204-b3f5-05d2e81daec5",
+                      "path": "meet-the-team",
+                      "title": "Meet the Team"
+                    }
                   },
                   {
                     "id": "f81586e0-08ff-577f-9870-92ed6789ddf1",
                     "pageLevel": false,
                     "pageName": "Open Roles",
-                    "pageUrlIfExternal": "https://app.beapplied.com/org/comic-relief"
+                    "pageUrlIfExternal": "https://app.beapplied.com/org/comic-relief",
+                    "pageSelector": null
                   }
                 ],
                 "column2PageLinks": [
@@ -362,31 +508,40 @@
                     "id": "6d63f35f-2742-5836-b115-1f632a797acb",
                     "pageLevel": true,
                     "pageName": "News & Publications",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/news/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/news/",
+                    "pageSelector": null
                   },
                   {
                     "id": "e3e04212-1550-5c24-8f67-758b43600b05",
                     "pageLevel": false,
                     "pageName": "News",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/news/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/news/",
+                    "pageSelector": null
                   },
                   {
                     "id": "e0cd3a76-9098-5a14-8a7b-ae671dff10cd",
                     "pageLevel": false,
                     "pageName": "Press releases",
-                    "pageUrlIfExternal": "https://www.comicrelief.com/press-releases/"
+                    "pageUrlIfExternal": "https://www.comicrelief.com/press-releases/",
+                    "pageSelector": null
                   },
                   {
                     "id": "a83269cd-8056-511d-9036-ace83570eb24",
                     "pageLevel": false,
                     "pageName": "Reports & Publications",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "title": "Reports & Publications",
+                      "path": "funding/reports-and-publications",
+                      "id": "fb21932f-649d-508d-9c11-5dde806e6707"
+                    }
                   },
                   {
                     "id": "45b27c0d-b3ad-5bc8-bcc3-652595b7d54d",
                     "pageLevel": false,
                     "pageName": "Finances",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": null
                   }
                 ],
                 "column3PageLinks": [
@@ -394,7 +549,12 @@
                     "id": "4c788a06-5be9-5181-8d9a-9b28a569e3eb",
                     "pageLevel": true,
                     "pageName": "Our Partners",
-                    "pageUrlIfExternal": null
+                    "pageUrlIfExternal": null,
+                    "pageSelector": {
+                      "id": "34ae1900-3d00-5ef4-9ebf-9ffd8e156f8c",
+                      "path": "working-with-us/our-partners",
+                      "title": "Our partners"
+                    }
                   }
                 ],
                 "column3PageCards": null

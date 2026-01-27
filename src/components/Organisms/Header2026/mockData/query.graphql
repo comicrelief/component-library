@@ -13,18 +13,33 @@ query MyQuery {
             pageLevel
             pageName
             pageUrlIfExternal
+            pageSelector {
+              id
+              path
+              title
+            }
           }
           column2PageLinks {
             id
             pageLevel
             pageName
             pageUrlIfExternal
+            pageSelector {
+              title
+              path
+              id
+            }
           }
           column3PageLinks {
             id
             pageLevel
             pageName
             pageUrlIfExternal
+            pageSelector {
+              id
+              path
+              title
+            }
           }
           column3PageCards {
             id
@@ -35,6 +50,11 @@ query MyQuery {
               title
               url
               id
+            }
+            pageSelector {
+              id
+              path
+              title
             }
           }
         }
