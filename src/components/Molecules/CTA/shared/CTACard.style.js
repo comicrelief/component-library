@@ -51,7 +51,7 @@ const ImageWrapper = styled.div`
 
 const CTAText = styled.span`
   ${({ theme }) => fontHelper(theme, 'span')}
-  color: ${({ theme }) => theme.color('grey')};
+  color: #757575; // TODO: Replace with theme colour once Curtis gives this a name
   font-weight: bold;
   text-decoration: none;
   position: relative;
