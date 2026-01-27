@@ -51,7 +51,11 @@ const ImageWrapper = styled.div`
 
 const CTAText = styled.span`
   ${({ theme }) => fontHelper(theme, 'span')}
-  color: #757575; // TODO: Replace with theme colour once Curtis gives this a name
+  color: ${({ theme }) => theme.color('red')};
+
+  @media (min-width: ${breakpointValues.L}px) {
+    color: #757575; // TODO: Replace with theme colour once Curtis gives this a name
+  }
   font-weight: bold;
   text-decoration: none;
   position: relative;
@@ -73,7 +77,11 @@ const ArrowIconWrapper = styled.div`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.color('grey')};
+  background: ${({ theme }) => theme.color('red')};
+
+  @media (min-width: ${breakpointValues.L}px) {
+    background: #757575; // TODO: Replace with theme colour once Curtis gives this a name
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,8 +133,10 @@ const CardLink = styled.a`
       }
 
       ${CTAText} {
-        color: ${({ theme }) => theme.color('red')};
         text-decoration: none;
+        @media (min-width: ${breakpointValues.L}px) {
+          color: ${({ theme }) => theme.color('red')};
+        }
       }
 
       ${CTATextUnderline} {
@@ -134,7 +144,9 @@ const CardLink = styled.a`
       }
 
       ${ArrowIconWrapper} {
-        background: ${({ theme }) => theme.color('red')};
+        @media (min-width: ${breakpointValues.L}px) {
+          background: ${({ theme }) => theme.color('red')};
+        }
       }
     }
   }
