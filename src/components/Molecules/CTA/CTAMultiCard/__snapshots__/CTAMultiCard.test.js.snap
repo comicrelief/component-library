@@ -1,2790 +1,1141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handles data structure correctly 1`] = `
-.c9 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c9 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c5 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c6 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c17 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
-}
-
-.c4 {
-  width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.c4 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
-.c14 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c16 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  background: transparent;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.c2 img {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-}
-
-.c1 {
-  width: 100%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-}
-
-.c7 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c18 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 1rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  background: #FFFFFF;
-  gap: 1rem;
-}
-
-@media (min-width:740px) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c4 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c4 img:hover,
-  .c4 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c3 img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .c2:hover .c11 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c13 {
-    opacity: 1;
-  }
-
-  .c2:hover .c15 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    max-width: 309px;
-    margin: 0;
-  }
-}
-
-@media (min-width:740px) and (max-width:1023px) {
-  .c1 {
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 309px;
-  }
-}
-
-@media (min-width:1024px) and (max-width:1439px) {
-  .c1 {
-    -webkit-flex-basis: calc(33.333% - 1rem);
-    -ms-flex-preferred-size: calc(33.333% - 1rem);
-    flex-basis: calc(33.333% - 1rem);
-    min-width: 286px;
-    max-width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (max-width:739px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: transparent;
-  }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width:1440px) {
-  .c0 {
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,371px));
-    width: 100%;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-}
-
 <div
-  className="c0"
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="c1"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 ehBqzi"
   >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 bvGqKF"
     >
       <div
-        className="c3 c4"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 dneGvf"
       >
         <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
         >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
           >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test-no-image"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c18"
-      >
         <div
-          className="c8"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
         >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            rel={null}
+            target="self"
           >
-            Load of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            View card
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test-no-image"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
 
 exports[`renders 2 columns layout correctly 1`] = `
-.c9 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c9 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c5 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c6 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c17 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
-}
-
-.c4 {
-  width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.c4 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
-.c14 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c16 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  background: transparent;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.c2 img {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-}
-
-.c1 {
-  width: 100%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-}
-
-.c7 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c18 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 1rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  background: transparent;
-  gap: 1rem;
-}
-
-@media (min-width:740px) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c4 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c4 img:hover,
-  .c4 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c3 img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .c2:hover .c11 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c13 {
-    opacity: 1;
-  }
-
-  .c2:hover .c15 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    max-width: 345px;
-    margin: 0;
-  }
-}
-
-@media (min-width:740px) and (max-width:1023px) {
-  .c1 {
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-    -webkit-flex: 0 0 345px;
-    -ms-flex: 0 0 345px;
-    flex: 0 0 345px;
-    max-width: 345px;
-  }
-}
-
-@media (min-width:1024px) and (max-width:1439px) {
-  .c1 {
-    -webkit-flex-basis: calc(50% - 1rem);
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-    min-width: 443px;
-    max-width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    width: 564px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (max-width:739px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: transparent;
-  }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width:1440px) {
-
-}
-
 <div
-  className="c0"
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="c1"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 bvGqKF"
     >
       <div
-        className="c3 c4"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 jZvayd"
       >
         <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iBfhjM"
         >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
           >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test-no-image"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c18"
-      >
         <div
-          className="c8"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iBfhjM"
         >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            rel={null}
+            target="self"
           >
-            Load of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            View card
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iBfhjM"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iBfhjM"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test-no-image"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
 
 exports[`renders carousel mode correctly 1`] = `
-.c9 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c9 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c5 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c6 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c17 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
-}
-
-.c4 {
-  width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.c4 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
-.c14 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c16 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  background: transparent;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.c2 img {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-}
-
-.c1 {
-  width: 100%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-}
-
-.c7 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c18 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 1rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  background: transparent;
-  gap: 1rem;
-}
-
-@media (min-width:740px) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c4 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c4 img:hover,
-  .c4 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c3 img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .c2:hover .c11 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c13 {
-    opacity: 1;
-  }
-
-  .c2:hover .c15 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:1023px) {
-  .c1 {
-    -webkit-scroll-snap-align: start;
-    -moz-scroll-snap-align: start;
-    -ms-scroll-snap-align: start;
-    scroll-snap-align: start;
-    -webkit-flex: 0 0 309px;
-    -ms-flex: 0 0 309px;
-    flex: 0 0 309px;
-    width: 309px;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width:1024px) and (max-width:1439px) {
-  .c1 {
-    -webkit-flex-basis: calc(33.333% - 1rem);
-    -ms-flex-preferred-size: calc(33.333% - 1rem);
-    flex-basis: calc(33.333% - 1rem);
-    min-width: 286px;
-    max-width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width:1023px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0;
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    -webkit-scroll-snap-type: x mandatory;
-    -moz-scroll-snap-type: x mandatory;
-    -ms-scroll-snap-type: x mandatory;
-    scroll-snap-type: x mandatory;
-    padding: 0.75rem 1rem;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .c0::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@media (min-width:1440px) {
-  .c0 {
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,371px));
-    width: 100%;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-}
-
 <div
-  className="c0"
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="c1"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 bDNuWh"
     >
       <div
-        className="c3 c4"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 gPXAnw"
       >
         <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 hIVGPb"
         >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
           >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test-no-image"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c18"
-      >
         <div
-          className="c8"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 hIVGPb"
         >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            rel={null}
+            target="self"
           >
-            Load of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            View card
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 hIVGPb"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 hIVGPb"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test-no-image"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
 
 exports[`renders correctly with data prop 1`] = `
-.c9 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c9 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c5 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c6 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.c17 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
-}
-
-.c4 {
-  width: 100%;
-  overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: transparent;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.c4 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #969598;
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
-.c14 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.c16 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #969598;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  background: transparent;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.c2 img {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-}
-
-.c1 {
-  width: 100%;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-}
-
-.c7 {
-  width: 100%;
-  background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c18 {
-  width: 100%;
-  background: #BECCF9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 0;
-  border-radius: 0 0 1rem 1rem;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.c10 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 1rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  background: transparent;
-  gap: 1rem;
-}
-
-@media (min-width:740px) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c4 img {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c4 img:hover,
-  .c4 img:focus {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
-  }
-}
-
-@media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c2 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .c2:hover,
-  .c2:focus {
-    -webkit-transform: translateY(-0.02px);
-    -ms-transform: translateY(-0.02px);
-    transform: translateY(-0.02px);
-  }
-
-  .c2:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
-  }
-
-  .c2:hover .c3 img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-
-  .c2:hover .c11 {
-    color: #E52630;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-  }
-
-  .c2:hover .c13 {
-    opacity: 1;
-  }
-
-  .c2:hover .c15 {
-    background: #E52630;
-  }
-}
-
-@media (max-width:739px) {
-  .c1 {
-    max-width: 309px;
-    margin: 0;
-  }
-}
-
-@media (min-width:740px) and (max-width:1023px) {
-  .c1 {
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 309px;
-  }
-}
-
-@media (min-width:1024px) and (max-width:1439px) {
-  .c1 {
-    -webkit-flex-basis: calc(33.333% - 1rem);
-    -ms-flex-preferred-size: calc(33.333% - 1rem);
-    flex-basis: calc(33.333% - 1rem);
-    min-width: 286px;
-    max-width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    -webkit-flex-basis: unset;
-    -ms-flex-preferred-size: unset;
-    flex-basis: unset;
-    width: 371px;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-}
-
-@media (max-width:739px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: transparent;
-  }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width:1440px) {
-  .c0 {
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    grid-template-columns: repeat(3,minmax(0,371px));
-    width: 100%;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-}
-
 <div
-  className="c0"
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="c1"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 bvGqKF"
     >
       <div
-        className="c3 c4"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 dneGvf"
       >
         <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
         >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
           >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c3 c4"
-      >
-        <div
-          className="c5 lazyload"
-          height="100%"
-          width="100%"
-        >
-          <img
-            alt=""
-            className="c6 lazyload"
-            data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
-            data-sizes="auto"
-            data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-            height="100%"
-            src="@component-library/src/styleguide/assets/challenge-1.jpg"
-            srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            width="100%"
-          />
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <p
-            className="c9"
-          >
-            <strong>
-              Load
-            </strong>
-             of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            test go
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </a>
-  </div>
-  <div
-    className="c1"
-  >
-    <a
-      className="c2"
-      href="/test-no-image"
-      rel={null}
-      target="self"
-    >
-      <div
-        className="c18"
-      >
         <div
-          className="c8"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
         >
-          <p
-            className="c9"
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            rel={null}
+            target="self"
           >
-            Load of text here
-          </p>
-        </div>
-        <div
-          className="c10"
-        >
-          <span
-            className="c11 c12"
-          >
-            View card
-            <img
-              alt=""
-              aria-hidden="true"
-              className="c13 c14"
-              src="mock.asset"
-            />
-          </span>
-          <div
-            className="c15 c16"
-          >
-            <svg
-              className="c17"
-              fill="none"
-              height="13"
-              viewBox="0 0 15 13"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
             >
-              <path
-                d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iHfpaV"
+        >
+          <a
+            className="CTACardstyle__CardLink-sc-si8xx1-4 chfHMN"
+            href="/test-no-image"
+            rel={null}
+            target="self"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-6 lfZISm"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-7 fEOMnm"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-9 jMJgoR"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CTACardstyle__ArrowIconWrapper-sc-si8xx1-3 cRsJKs"
+                >
+                  <svg
+                    className="_ArrowIcon__StyledArrowIcon-sc-mqq2gw-0 eyuoan"
+                    fill="none"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.58496 0.349976C9.1395 -0.116662 8.40641 -0.116634 7.96094 0.349976C7.52803 0.803486 7.5281 1.53021 7.96094 1.98376L11.1582 5.33337H1.13672C0.48748 5.33337 0 5.87822 0 6.50037C2.15408e-05 7.1225 0.487494 7.66736 1.13672 7.66736H11.1582L7.96094 11.017C7.52806 11.4705 7.52899 12.1972 7.96191 12.6508C8.18163 12.8803 8.47556 13.0004 8.77344 13.0004C9.07114 13.0002 9.36533 12.8808 9.58496 12.6508L14.6758 7.31677L14.6748 7.3158L14.6875 7.3031L14.6865 7.30212C14.6954 7.29215 14.7044 7.28482 14.71 7.27771C14.7117 7.27545 14.7133 7.27285 14.7148 7.27087C14.7485 7.23203 14.7824 7.18925 14.8135 7.14099L14.8154 7.13806C14.8354 7.10658 14.8493 7.07842 14.8564 7.06384L14.8652 7.04626L14.8662 7.04431L14.8672 7.04333C14.8672 7.04333 14.868 7.04057 14.8691 7.03845C14.8709 7.03512 14.8758 7.02671 14.8799 7.01892L14.8802 7.01839C14.8888 7.002 14.9034 6.97423 14.917 6.93982V6.93787C14.9303 6.90375 14.9391 6.87285 14.9443 6.85388C14.9469 6.84458 14.9498 6.83567 14.9512 6.83044C14.9527 6.82454 14.9535 6.8228 14.9541 6.82068C14.9541 6.82068 14.9542 6.81753 14.9551 6.81482L14.958 6.80603L14.9586 6.80422C14.9631 6.78961 14.9718 6.76119 14.9785 6.72693V6.72498C15.0066 6.57705 15.0066 6.4246 14.9785 6.27673V6.27478L14.958 6.19568L14.9551 6.18591L14.9531 6.18005L14.9512 6.17224C14.9497 6.1664 14.9481 6.15677 14.9453 6.14685C14.9398 6.12695 14.9307 6.09654 14.917 6.06189C14.9032 6.02688 14.8885 5.99813 14.8799 5.98181C14.8758 5.97402 14.8709 5.96562 14.8691 5.96228L14.8564 5.93689C14.849 5.92177 14.8351 5.89372 14.8154 5.86267L14.8145 5.86072L14.7529 5.7738C14.7316 5.74659 14.7094 5.72129 14.6875 5.69763C14.6837 5.69341 14.6802 5.68854 14.6758 5.68396L9.58496 0.349976Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
