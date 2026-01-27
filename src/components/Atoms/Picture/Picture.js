@@ -75,7 +75,7 @@ const Picture = ({
   isBackgroundImage = false,
   smallBreakpointRowLayout = null,
   mediumBreakpointRowLayout = null,
-  onLoad = null,
+  onLoad,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
