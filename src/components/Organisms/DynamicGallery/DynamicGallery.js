@@ -32,6 +32,7 @@ import {
 const DynamicGallery = ({
   // options
   pageBackgroundColour = 'transparent',
+  textColour = 'black',
   gridWidth = 3,
   // loadingBehaviour = 'lazy',
   // displayOrder = 'ascending',
@@ -173,6 +174,7 @@ const DynamicGallery = ({
       className="gallery-container"
       ref={containerRef}
       pageBackgroundColour={pageBackgroundColour}
+      textColour={textColour}
       paddingTop={paddingTop}
       paddingBottom={paddingBottom}
     >
@@ -225,6 +227,7 @@ const GalleryNodeType = PropTypes.shape({
 DynamicGallery.propTypes = {
   // title: PropTypes.string,
   pageBackgroundColour: PropTypes.string,
+  textColour: PropTypes.string,
   gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
   // loadingBehaviour: PropTypes.oneOf([
   //   'lazy',

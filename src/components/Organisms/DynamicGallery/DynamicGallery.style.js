@@ -8,6 +8,7 @@ export const Container = styled.div`
   max-width: 1500px;
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
+  color: ${({ theme, textColour }) => theme.color(textColour)};
 `;
 
 export const ImageGrid = styled.div`
@@ -89,13 +90,11 @@ export const Details = styled.div`
 export const Title = styled.span`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
-  color: ${({ theme }) => theme.color('black')};
 `;
 
 export const Caption = styled.span`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   font-family: ${({ theme }) => theme.font.regular};
-  color: ${({ theme }) => theme.color('grey')};
   line-height: 1;
 `;
 
