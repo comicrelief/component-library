@@ -186,7 +186,9 @@ const CardWrapper = styled.div`
   ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
     /* Below M: stacked cards, keep them centred */
     @media (max-width: ${breakpointValues.M - 1}px) {
-      max-width: ${({ columns }) => (columns === 3 ? '309px' : '345px')};
+      /* In mobile stack view we want cards to fill the container width */
+      width: 100%;
+      max-width: 100%;
       margin: 0;
     }
 
@@ -202,6 +204,26 @@ const CardWrapper = styled.div`
               max-width: 345px;
             `)}
     }
+
+    /* If the CTA container is too narrow for 2 cards (<= 705px),
+       force a single card to span full width. */
+    ${({ columns }) => (columns === 3
+    ? css`
+          /* 3-col cards: 2-up needs 2*309 + 16 gap (1rem) = 634px full width at <= 633px */
+          @container cta-multi-card (max-width: 633px) {
+            width: 100%;
+            max-width: 100%;
+            flex: 1 1 100%;
+          }
+        `
+    : css`
+          /* 2-col cards: 2-up needs 2*345 + 16 gap (1rem) = 706px full width at <= 705px */
+          @container cta-multi-card (max-width: 705px) {
+            width: 100%;
+            max-width: 100%;
+            flex: 1 1 100%;
+          }
+        `)}
   `}
 
   // L breakpoint: min/max rules vary by layout

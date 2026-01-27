@@ -49,7 +49,7 @@ const data = {
   paddingBelow: '0rem'
 };
 
-<div style={{ background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3', width: '100%', maxWidth: '1152px' }}>
   <CTAMultiCard data={data} />
 </div>;
 ```
@@ -103,7 +103,7 @@ const dataWithLongText = {
   paddingBelow: '4rem'
 };
 
-<div style={{ background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3', width: '100%', maxWidth: '1152px' }}>
   <CTAMultiCard data={dataWithLongText} />
 </div>;
 ```
@@ -143,7 +143,7 @@ const dataWrapExample = {
   paddingBelow: '2rem'
 };
 
-<div style={{ background: '#E1E2E3'}}>
+<div style={{ background: '#E1E2E3', width: '100%', maxWidth: '1152px'}}>
   <CTAMultiCard data={dataWrapExample} />
 </div>;
 ```

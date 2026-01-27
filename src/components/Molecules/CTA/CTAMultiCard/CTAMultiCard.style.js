@@ -1,5 +1,14 @@
 import styled, { css } from 'styled-components';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
+import spacing from '../../../../theme/shared/spacing';
+
+export const CardsQueryWrapper = styled.div`
+  /* Container for CQ-based “single card per row” sizing.
+     Keep this off the flex container itself to avoid layout side-effects. */
+  container-type: inline-size;
+  container-name: cta-multi-card;
+  width: 100%;
+`;
 
 const CardsContainer = styled.div`
   padding-top: ${({ paddingAbove }) => paddingAbove};
@@ -15,6 +24,10 @@ const CardsContainer = styled.div`
     @media (max-width: ${breakpointValues.M - 1}px) {
       flex-direction: column;
       background: transparent;
+      padding-top: ${spacing('l')};
+      padding-bottom: ${spacing('l')};
+      padding-left: ${spacing('md')};
+      padding-right: ${spacing('md')};
     }
   `}
 
