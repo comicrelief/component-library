@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation, springScaleAnimation } from '../../../../theme/shared/animations';
+import { bounceUpAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 
@@ -46,11 +46,6 @@ const ImageWrapper = styled.div`
         object-fit: cover;
       }
     `}
-
-    // Desktop-only image zoom animation on card hover
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      ${springScaleAnimation(true)}
-    }
   }
 `;
 
@@ -115,20 +110,18 @@ const CardLink = styled.a`
   `}
 
   img {
-    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
-    transform: scale(1.02);
-    transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
    }
 
   // Desktop-only hover effects
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${bounceUpAnimation(true, 0.02, 1)};
+    ${bounceUpAnimation(true, 10, 1)};
 
     &:hover {
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
       ${ImageWrapper} img {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
 
       ${CTAText} {
