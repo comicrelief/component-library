@@ -52,7 +52,7 @@ export const LightboxImage = styled.div`
   min-height: 32px;
   
   & img {
-    max-height: 70vh;
+    max-height: 60vh;
   }
 `;
 
@@ -107,11 +107,6 @@ export const NavButton = styled.button`
   &:focus-visible {
     outline: 2px solid #000000;
   }
-
-  
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    position: fixed;
-  }
 `;
 
 export const CloseButton = styled(NavButton)`
@@ -128,6 +123,10 @@ export const PreviousButton = styled(NavButton)`
   transform: translate(0, -50%);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    position: fixed;
+  }
 `;
 
 export const NextButton = styled(NavButton)`
@@ -136,6 +135,10 @@ export const NextButton = styled(NavButton)`
   transform: translate(0, -50%);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    position: fixed;
+  }
 `;
 
 export const ScreenReaderOnly = styled.span`
