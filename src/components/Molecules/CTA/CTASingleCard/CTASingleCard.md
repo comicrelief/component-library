@@ -31,6 +31,7 @@ import Text from '../../../Atoms/Text/Text';
 
 const exampleCard = {
   id: 'single-card-1',
+  label: 'Example Label',
   body: (
     <Text tag="p">
       <strong>Single Card</strong> content here
@@ -59,6 +60,7 @@ import Text from '../../../Atoms/Text/Text';
 
 const exampleCard = {
   id: 'single-card-2',
+  label: 'Example Label',
   body: (
     <Text tag="p">
       Single card with background colour set on the full-width section
@@ -89,6 +91,7 @@ import Text from '../../../Atoms/Text/Text';
 
 const exampleCardWithLongText = {
   id: 'single-card-long-text',
+  label: 'Example Label',
   body: (
     <>
       <Text tag="p">

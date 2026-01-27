@@ -297,6 +297,13 @@ const Copy = styled.div`
   min-height: 0;
 `;
 
+const CardLabel = styled.div`
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  font-size: 14px;
+  color: ${({ theme }) => theme.color('grey_3')};
+  margin-bottom: 1rem;
+`;
+
 const CTA = styled.div`
   width: 100%;
   display: flex;
@@ -313,6 +320,7 @@ export {
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
+  CardLabel,
   CTA,
   CTAText,
   CTATextUnderline,

@@ -8,6 +8,7 @@ import {
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
+  CardLabel,
   CTA,
   CTAText,
   CTATextUnderline,
@@ -27,6 +28,7 @@ const CTACard = ({
 
   const {
     id,
+    label,
     body,
     link,
     linkLabel,
@@ -67,6 +69,11 @@ const CTACard = ({
         )}
         <CopyAndLinkSection isSingleCard={isSingleCard}>
           <Copy>
+            {isSingleCard && label && (
+              <CardLabel>
+                {label}
+              </CardLabel>
+            )}
             {body}
           </Copy>
           {linkLabel && (
@@ -93,6 +100,7 @@ const CTACard = ({
 CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
+    label: PropTypes.string,
     body: PropTypes.node,
     link: PropTypes.string,
     linkLabel: PropTypes.string,

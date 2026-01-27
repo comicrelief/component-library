@@ -51,6 +51,7 @@ CTASingleCard.propTypes = {
   data: PropTypes.shape({
     card: PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
       body: PropTypes.node,
       image: PropTypes.shape({
         description: PropTypes.string,
