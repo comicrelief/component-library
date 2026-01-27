@@ -113,7 +113,7 @@ const CardLink = styled.a`
     }
 
     @media ${({ theme }) => theme.breakpoints2026('L')} {
-      min-height: calc(272px - 4rem);
+      min-height: 272px;
     }
   `}
 
