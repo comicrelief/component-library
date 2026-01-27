@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-width: 1500px;
+  max-width: ${({ maxWidth }) => maxWidth};
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
   color: ${({ theme, textColour }) => theme.color(textColour)};

@@ -34,6 +34,7 @@ const DynamicGallery = ({
   pageBackgroundColour = 'transparent',
   textColour = 'black',
   gridWidth = 3,
+  maxWidth = '1500px',
   // loadingBehaviour = 'lazy',
   // displayOrder = 'ascending',
   imageRatio = 'dynamic',
@@ -173,6 +174,7 @@ const DynamicGallery = ({
     <Container
       className="gallery-container"
       ref={containerRef}
+      maxWidth={maxWidth}
       pageBackgroundColour={pageBackgroundColour}
       textColour={textColour}
       paddingTop={paddingTop}
@@ -229,6 +231,7 @@ DynamicGallery.propTypes = {
   pageBackgroundColour: PropTypes.string,
   textColour: PropTypes.string,
   gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
+  maxWidth: PropTypes.string,
   // loadingBehaviour: PropTypes.oneOf([
   //   'lazy',
   //   'eager'
