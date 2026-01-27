@@ -256,7 +256,7 @@ const CardWrapper = styled.div`
 
 const CopyAndLinkSection = styled.div`
   width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme }) => theme.color('white')};
   display: flex;
   flex-direction: column;
   padding: 2rem;

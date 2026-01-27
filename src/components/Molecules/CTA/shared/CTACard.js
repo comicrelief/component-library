@@ -33,7 +33,6 @@ const CTACard = ({
     fallback,
     imageLow,
     images,
-    bgColour,
     description,
     target,
     external
@@ -52,7 +51,6 @@ const CTACard = ({
         rel={external}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
-        backgroundColor={bgColour}
       >
         {imageLow && (
           <ImageWrapper isSingleCard={isSingleCard}>
@@ -67,7 +65,7 @@ const CTACard = ({
             />
           </ImageWrapper>
         )}
-        <CopyAndLinkSection backgroundColor={bgColour} isSingleCard={isSingleCard}>
+        <CopyAndLinkSection isSingleCard={isSingleCard}>
           <Copy>
             {body}
           </Copy>
@@ -101,7 +99,6 @@ CTACard.propTypes = {
     fallback: PropTypes.string,
     imageLow: PropTypes.string,
     images: PropTypes.string,
-    bgColour: PropTypes.string.isRequired,
     description: PropTypes.string,
     target: PropTypes.string.isRequired,
     external: PropTypes.string

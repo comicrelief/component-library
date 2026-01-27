@@ -128,7 +128,6 @@ CTAMultiCard.propTypes = {
             })
           })
         }),
-        backgroundColour: PropTypes.string,
         link: PropTypes.string,
         linkLabel: PropTypes.string
       })
