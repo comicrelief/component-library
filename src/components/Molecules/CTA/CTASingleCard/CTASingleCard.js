@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { snakeCase } from 'lodash';
 import CTACard from '../shared/CTACard';
 import SingleCardWrapper, { SingleCardInner } from './CTASingleCard.style';
 
@@ -16,16 +17,24 @@ import SingleCardWrapper, { SingleCardInner } from './CTASingleCard.style';
  */
 
 const CTASingleCard = ({ data }) => {
-  const { card, paddingAbove, paddingBelow } = data || {};
+  const {
+    card,
+    backgroundColour,
+    paddingAbove,
+    paddingBelow
+  } = data || {};
 
   if (!card) {
     return null;
   }
 
+  const sectionBackgroundColour = snakeCase(backgroundColour || 'transparent');
+
   return (
     <SingleCardWrapper
       paddingAbove={paddingAbove}
       paddingBelow={paddingBelow}
+      backgroundColor={sectionBackgroundColour}
     >
       <SingleCardInner>
         <CTACard
@@ -62,10 +71,10 @@ CTASingleCard.propTypes = {
           })
         })
       }),
-      backgroundColour: PropTypes.string,
       link: PropTypes.string,
       linkLabel: PropTypes.string
     }),
+    backgroundColour: PropTypes.string,
     paddingAbove: PropTypes.string,
     paddingBelow: PropTypes.string
   }).isRequired

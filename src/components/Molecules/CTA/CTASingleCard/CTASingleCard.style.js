@@ -4,7 +4,7 @@ export const SingleCardSection = styled.div`
   padding-top: ${({ paddingAbove }) => paddingAbove};
   padding-bottom: ${({ paddingBelow }) => paddingBelow};
   width: 100%;
-  background: transparent;
+  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 `;
 
 export const SingleCardInner = styled.div`
