@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, {
+  useContext, useEffect, useRef, useState
+} from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
@@ -12,6 +14,7 @@ import {
   Dialog,
   LightboxContent,
   LightboxImage,
+  LightboxDetails,
   LightboxSpinner,
   NextButton,
   PreviousButton,
@@ -65,6 +68,12 @@ const Lightbox = () => {
     return Array.from(dialogRef.current.querySelectorAll(focusableSelectors));
   }
 
+  /**
+  * handle keyboard events within the lightbox;
+  * - trapped focus between UI elements
+  * - navigation between images
+  * - closing the lightbox
+   */
   useEffect(() => {
     // trap focus within the dialog
     function handleTabKey(event) {
@@ -145,8 +154,36 @@ const Lightbox = () => {
     }
   }, [hasNode]);
 
+  /**
+   * close the lightbox when the backdrop is clicked
+   */
   function handleBackdropClick() {
     setSelectedNode(null);
+  }
+
+  /**
+   * handle transitions between images nicely;
+   */
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+
+  /**
+   * when the image loads, check to see how best we can fit it on screen,
+   * then set width and height on the element;
+   * this lets us transition nicely to the new size
+   */
+  function onLoad(event) {
+    const { target } = event;
+    const imageWidth = target.naturalWidth;
+    const imageHeight = target.naturalHeight;
+    const maxWidth = Math.min.apply(null, [imageWidth, 1024, window.innerWidth * 0.85]);
+    const maxHeight = Math.min.apply(null, [imageHeight, 1024, window.innerHeight * 0.6]);
+    const scaleX = maxWidth / imageWidth;
+    const scaleY = maxHeight / imageHeight;
+    const scale = Math.min(scaleX, scaleY);
+    const width = imageWidth * scale;
+    const height = imageHeight * scale;
+    setImageDimensions({ width, height });
+    target.style.opacity = '1';
   }
 
   return (
@@ -158,7 +195,7 @@ const Lightbox = () => {
         aria-describedby="lightboxDescription"
       >
         <LightboxContent>
-          <LightboxImage>
+          <LightboxImage className="lightbox-image">
             <LightboxSpinner>
               <PulseLoader height={16} width={2} color="#E1E2E3" />
             </LightboxSpinner>
@@ -167,23 +204,26 @@ const Lightbox = () => {
                 key={selectedNode?.image}
                 alt={selectedNode?.title}
                 image={selectedNode?.image}
-                width="100%"
-                height="100%"
-                objectFit="cover"
+                width={imageDimensions.width}
+                height={imageDimensions.height}
+                objectFit="contain"
+                onLoad={event => onLoad(event)}
               />
             )}
           </LightboxImage>
-          <Title id="lightboxTitle">{selectedNode?.title}</Title>
-          {selectedNode?.caption && (
-            <Caption id="lightboxDescription">
-              {selectedNode?.caption}
-            </Caption>
-          )}
-          {selectedNode?.body && (
-            <Body>
-              {selectedNode.body}
-            </Body>
-          )}
+          <LightboxDetails>
+            <Title id="lightboxTitle">{selectedNode?.title}</Title>
+            {selectedNode?.caption && (
+              <Caption id="lightboxDescription">
+                {selectedNode?.caption}
+              </Caption>
+            )}
+            {selectedNode?.body && (
+              <Body>
+                {selectedNode.body}
+              </Body>
+            )}
+          </LightboxDetails>
           <CloseButton type="button" onClick={() => setSelectedNode(null)}>
             <ScreenReaderOnly>Close</ScreenReaderOnly>
             <Cross colour="black" size={16} />

@@ -221,7 +221,7 @@ const DynamicGallery = ({
 const GalleryNodeType = PropTypes.shape({
   title: PropTypes.string,
   image: PropTypes.string.isRequired,
-  body: PropTypes.string,
+  body: PropTypes.node,
   caption: PropTypes.string,
   centredText: PropTypes.bool
 });

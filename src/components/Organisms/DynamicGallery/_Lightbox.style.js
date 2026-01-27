@@ -27,6 +27,7 @@ export const Backdrop = styled.div`
 
 export const Dialog = styled.dialog`
   display: block;
+  padding: 0.5rem;
   background: transparent;
   border: none;
   z-index: 1;
@@ -35,13 +36,14 @@ export const Dialog = styled.dialog`
 export const LightboxContent = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   position: relative;
   padding: 1rem;
   background: #ffffff;
   border-radius: 0.5rem;
-  max-width: 1024px;
-  max-height: 1024px;
+  // max-width: 1024px;
+  // max-height: 1024px;
 `;
 
 export const LightboxImage = styled.div`
@@ -50,9 +52,13 @@ export const LightboxImage = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 32px;
+  border-radius: 0.4rem;
+  overflow: hidden;
   
   & img {
     max-height: 60vh;
+    opacity: 0;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.1s ease-in-out;
   }
 `;
 
@@ -63,20 +69,26 @@ export const LightboxSpinner = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export const Title = styled.div`
+export const LightboxDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+`;
+
+export const Title = styled.p`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('black')};
 `;
 
-export const Caption = styled.div`
+export const Caption = styled.p`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   font-family: ${({ theme }) => theme.font.regular};
-  color: ${({ theme }) => theme.color('grey')};
   line-height: 1;
 `;
 
-export const Body = styled.span`
+export const Body = styled.p`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
   color: ${({ theme }) => theme.color('black')};
@@ -94,6 +106,7 @@ export const NavButton = styled.button`
   background-color: white;
   cursor: pointer;
   z-index: 10;
+
   svg {
     transition: all 0.1s ease-out;
   }
@@ -112,13 +125,10 @@ export const NavButton = styled.button`
 export const CloseButton = styled(NavButton)`
   top: 0;
   right: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 `;
 
 export const PreviousButton = styled(NavButton)`
-  top: 50%;
+  top: 30%;
   left: 0;
   transform: translate(0, -50%);
   border-top-left-radius: 0;
@@ -126,11 +136,12 @@ export const PreviousButton = styled(NavButton)`
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
+    top: 50%;
   }
 `;
 
 export const NextButton = styled(NavButton)`
-  top: 50%;
+  top: 30%;
   right: 0;
   transform: translate(0, -50%);
   border-top-right-radius: 0;
@@ -138,6 +149,7 @@ export const NextButton = styled(NavButton)`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
+   top: 50%;
   }
 `;
 

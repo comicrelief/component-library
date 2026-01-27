@@ -87,12 +87,16 @@ export const Details = styled.div`
   padding: 0 8px;
 `;
 
-export const Title = styled.span`
+export const Title = styled.p`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.font.regular};
+
+  &:first-child {
+    margin-bottom: 0;
+  }
 `;
 
-export const Caption = styled.span`
+export const Caption = styled.p`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   font-family: ${({ theme }) => theme.font.regular};
   line-height: 1;
