@@ -54,7 +54,7 @@ const CTAText = styled.span`
   color: ${({ theme }) => theme.color('red')};
 
   @media (min-width: ${breakpointValues.L}px) {
-    color: #757575; // TODO: Replace with theme colour once Curtis gives this a name
+    color: ${({ theme }) => theme.color('grey_4')};
   }
   font-weight: bold;
   text-decoration: none;
@@ -80,7 +80,7 @@ const ArrowIconWrapper = styled.div`
   background: ${({ theme }) => theme.color('red')};
 
   @media (min-width: ${breakpointValues.L}px) {
-    background: #757575; // TODO: Replace with theme colour once Curtis gives this a name
+    background: ${({ theme }) => theme.color('grey_4')};
   }
   display: flex;
   align-items: center;
