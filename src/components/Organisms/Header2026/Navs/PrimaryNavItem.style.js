@@ -143,7 +143,7 @@ const SecondaryNavItem = styled.li`
     border-top: none;
 
     span {
-      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 400)};
+      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 500)};
     }
 
     ${({ $isSecondary }) => $isSecondary && css`
@@ -177,7 +177,7 @@ const SecondaryNavLink = styled(NavLinkClass)`
 
     span {
       font-size: 1rem;
-      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 400)};
+      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 500)};
     }
 
     &:hover,
@@ -466,7 +466,7 @@ const TertiaryNavLink = styled(NavLinkClass)`
   position: relative;
 
   span {
-    font-weight: ${({ $isParent }) => ($isParent ? 600 : 400)};
+    font-weight: ${({ $isParent }) => ($isParent ? 600 : 500)};
   }
 `;
 
