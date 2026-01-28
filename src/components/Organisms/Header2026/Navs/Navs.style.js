@@ -82,6 +82,8 @@ const DonateButtonMobileModalWrapper = styled.div`
     width: calc(100% - 10px);
     transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
     font-family: Montserrat;
+    height: auto;
+    padding: 18px 0;
 
     &:hover,
     &:focus {
