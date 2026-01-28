@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import zIndex from '../../../../theme/shared/zIndex';
 import Text from '../../../Atoms/Text/Text';
-import { bounceIn } from '../../../../theme/shared/animations';
 
 const transitionDuration = 0.2;
 
@@ -174,7 +173,7 @@ const SecondaryNavLink = styled(NavLinkClass)`
     justify-content: space-between;
     font-size: 1rem;
     transform: translateX(0);
-    transition: transform 0.7s ease-out;
+    transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
 
     span {
       font-size: 1rem;
@@ -184,7 +183,8 @@ const SecondaryNavLink = styled(NavLinkClass)`
     &:hover,
     &:focus {
       background-color: transparent;
-      animation: ${bounceIn} 0.4s ease-out forwards;
+      transform: translateX(5px);
+      transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
     }
 
     &::after {
