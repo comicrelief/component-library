@@ -239,16 +239,12 @@ const CardWrapper = styled.div`
       ${({ columns }) => (
     columns === 3
       ? css`
-              flex: 0 1 calc((100% - 4rem) / 3);
-              width: min(100%, 363px);
-              min-width: 286px;
-              max-width: 363px;
+              flex: 0 1 auto;
+              width: clamp(286px, calc((100% - 4rem) / 3), 363px);
             `
       : css`
-              flex: 0 1 calc((100% - 2rem) / 2);
-              width: min(100%, 560px);
-              min-width: 443px;
-              max-width: 560px;
+              flex: 0 1 auto;
+              width: clamp(443px, calc((100% - 2rem) / 2), 560px);
             `
   )}
       align-self: stretch;
