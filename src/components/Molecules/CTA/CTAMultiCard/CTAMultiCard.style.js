@@ -58,13 +58,20 @@ const CardsContainer = styled.div`
     @media (min-width: ${breakpointValues.L}px) {
       display: grid;
       grid-template-columns: repeat(2, minmax(443px, 560px));
-      justify-content: start;
+      justify-content: center;
       align-items: stretch;
       column-gap: 2rem;
-      row-gap: 1rem;
+      row-gap: 2rem;
       width: 100%;
       max-width: 100%;
       margin: 0;
+
+      /* if there's an odd "orphan" card on the last row, center it. */
+      & > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(100%, 560px);
+      }
     }
   `}
 
