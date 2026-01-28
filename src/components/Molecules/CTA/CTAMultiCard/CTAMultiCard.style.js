@@ -25,8 +25,13 @@ export const CardsInner = styled.div`
 
   ${({ isCarousel }) => !isCarousel && css`
     padding-inline: 1rem;
-
     @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding-inline: 2rem;
+    }
+  `}
+
+  ${({ isCarousel }) => isCarousel && css`
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding-inline: 2rem;
     }
   `}
