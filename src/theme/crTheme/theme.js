@@ -6,7 +6,6 @@ import linkStyles from './linkStyles';
 import fontSize from './fontSizes';
 import allBreakpoints from '../shared/allBreakpoints';
 import breakpoints2026 from '../shared/breakpoints2026';
-
 import fontFamilies from '../shared/fontFamilies';
 
 export default {
