@@ -133,6 +133,15 @@ const CardsContainer = styled.div`
       width: 100%;
       margin: 0 auto;
       max-width: 100%;
+
+      /*
+       * Orphan handling: if we have a 3-column grid but the last row contains
+       * a single card (e.g. 4 cards total), center that last card.
+       */
+      & > *:last-child:nth-child(3n + 1) {
+        grid-column: 2;
+        justify-self: center;
+      }
     `}
   }
 `;
