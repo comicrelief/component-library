@@ -155,7 +155,7 @@ const CardLink = styled.a`
 `;
 
 const CardWrapper = styled.div`
-  width: 100%;
+  width: auto;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -265,7 +265,7 @@ const CardWrapper = styled.div`
 
 const CopyAndLinkSection = styled.div`
   width: 100%;
-  background: ${({ theme }) => theme.color('white')};
+  background: ${({ theme }) => theme.color('red')};
   display: flex;
   flex-direction: column;
   padding: 2rem;
