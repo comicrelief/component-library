@@ -167,7 +167,7 @@ const SecondaryNavLink = styled(NavLinkClass)`
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    padding: 20px 30px 22px;
+    padding: 12px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
