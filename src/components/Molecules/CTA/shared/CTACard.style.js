@@ -207,12 +207,12 @@ const CardWrapper = styled.div`
               max-width: 309px;
             `
     : css`
-              flex: 0 0 345px;
-              max-width: 345px;
+              flex: 0 0 330px;
+              max-width: 330px;
             `)}
     }
 
-    /* If the CTA container is too narrow for 2 cards (<= 705px),
+    /* If the CTA container is too narrow for 2 cards (<= 675px),
        force a single card to span full width. */
     ${({ columns }) => (columns === 3
     ? css`
@@ -224,8 +224,8 @@ const CardWrapper = styled.div`
           }
         `
     : css`
-          /* 2-col cards: 2-up needs 2*345 + 16 gap (1rem) = 706px full width at <= 705px */
-          @container cta-multi-card (max-width: 705px) {
+          /* 2-col cards: 2-up needs 2*330 + 16 gap (1rem) = 676px full width at <= 675px */
+          @container cta-multi-card (max-width: 675px) {
             width: 100%;
             max-width: 100%;
             flex: 1 1 100%;
