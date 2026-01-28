@@ -58,8 +58,9 @@ const CardsContainer = styled.div`
     column-gap: 2rem;
   }
 
-  /* Ensure 2-column layout behaves itself at L+ */
-  ${({ isCarousel, columns }) => !isCarousel && columns === 2 && css`
+  /* Ensure 2-column layout behaves itself at L+.
+     This should apply regardless of isCarousel (since we only use Splide below L). */
+  ${({ columns, useSplideCarousel }) => !useSplideCarousel && columns === 2 && css`
     @media (min-width: ${breakpointValues.L}px) {
       display: grid;
       grid-template-columns: repeat(2, minmax(443px, 560px));
@@ -132,6 +133,15 @@ const CardsContainer = styled.div`
       width: 100%;
       margin: 0 auto;
       max-width: 100%;
+
+      /*
+       * Orphan handling: if we have a 3-column grid but the last row contains
+       * a single card (e.g. 4 cards total), center that last card.
+       */
+      & > *:last-child:nth-child(3n + 1) {
+        grid-column: 2;
+        justify-self: center;
+      }
     `}
   }
 `;

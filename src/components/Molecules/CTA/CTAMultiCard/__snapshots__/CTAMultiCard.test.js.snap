@@ -291,13 +291,13 @@ exports[`renders 2 columns layout correctly 1`] = `
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 jdzsUU"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 fEcgRr"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 kZJZoQ"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 epripS"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 ipBvGj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iRkOWX"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
@@ -378,7 +378,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 ipBvGj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iRkOWX"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-4 lbrljd"
@@ -424,7 +424,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 ipBvGj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iRkOWX"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
@@ -505,7 +505,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 ipBvGj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 iRkOWX"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
@@ -857,13 +857,13 @@ exports[`renders correctly with data prop 1`] = `
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 jdzsUU"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 fEcgRr"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 cVaqKX"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 dhfXac"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 zWgWI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 kgXkPu"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
@@ -944,7 +944,7 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 zWgWI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 kgXkPu"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-4 lbrljd"
@@ -990,7 +990,7 @@ exports[`renders correctly with data prop 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 zWgWI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 kgXkPu"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
@@ -1071,7 +1071,7 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-5 zWgWI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-5 kgXkPu"
         >
           <a
             className="CTACardstyle__CardLink-sc-si8xx1-4 cQAxla"
