@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import spacing from '../../../../theme/shared/spacing';
 
 export const CardsQueryWrapper = styled.div`
   /* Container for “single card per row” sizing.
@@ -24,11 +23,16 @@ export const CardsInner = styled.div`
   max-width: 1152px;
   margin: 0 auto;
 
-  /* Provide mobile gutters for non-carousel stack mode. */
   ${({ isCarousel }) => !isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
-      padding-left: ${spacing('md')};
-      padding-right: ${spacing('md')};
+    padding-inline: 1rem;
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding-inline: 2rem;
+    }
+  `}
+
+  ${({ isCarousel }) => isCarousel && css`
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      padding-inline: 2rem;
     }
   `}
 `;
@@ -45,7 +49,7 @@ const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -53,6 +57,28 @@ const CardsContainer = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     column-gap: 2rem;
   }
+
+  /* Ensure 2-column layout behaves itself at L+ */
+  ${({ isCarousel, columns }) => !isCarousel && columns === 2 && css`
+    @media (min-width: ${breakpointValues.L}px) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(443px, 560px));
+      justify-content: center;
+      align-items: stretch;
+      column-gap: 2rem;
+      row-gap: 2rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+
+      /* if there's an odd "orphan" card on the last row, center it. */
+      & > *:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(100%, 560px);
+      }
+    }
+  `}
 
   // Carousel mode - horizontal scroll container (M and below)
   ${({ isCarousel }) => isCarousel && css`

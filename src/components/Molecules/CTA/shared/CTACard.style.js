@@ -155,7 +155,7 @@ const CardLink = styled.a`
 `;
 
 const CardWrapper = styled.div`
-  width: 100%;
+  width: auto;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -233,30 +233,31 @@ const CardWrapper = styled.div`
         `)}
   `}
 
-  // L breakpoint: min/max rules vary by layout
   ${({ isFullWidth }) => !isFullWidth && css`
     @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
-              flex-basis: calc(33.333% - 1rem);
-              min-width: 286px;
-              max-width: 363px;
+              flex: 0 1 auto;
+              width: clamp(286px, calc((100% - 4rem) / 3), 363px);
             `
       : css`
-              flex-basis: calc(50% - 1rem);
-              min-width: 443px;
-              max-width: 560px;
+              flex: 0 1 auto;
+              /*
+               * In 2-col mode at L+, the parent container uses CSS grid to enforce 2-up.
+               * See the multi card style file.
+               */
+              width: 100%;
             `
   )}
       align-self: stretch;
     }
 
-    // XL breakpoint and above: fixed widths vary by layout
     @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      flex-basis: unset;
-      width: ${({ columns }) => (columns === 3 ? '363px' : '560px')};
-      align-self: stretch;
+      ${({ columns }) => columns === 3 && css`
+        width: 100%;
+        max-width: 363px;
+      `}
     }
   `}
 `;
@@ -303,7 +304,6 @@ const CardLabel = styled.div`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   font-size: 14px;
   color: ${({ theme }) => theme.color('grey_3')};
-  margin-bottom: 1rem;
 `;
 
 const CTA = styled.div`
