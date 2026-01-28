@@ -56,7 +56,7 @@ const data = {
 
 ### CTAMultiCard: Desktop Grid View (2 columns) with large padding
 
-**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel). This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
+**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a carousel. This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -96,7 +96,7 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
 const dataWithLongText = {
   ...exampleData,
   layout: "2 columns",
-  carouselOfCards: false,
+  carouselOfCards: true,
   backgroundColour: "Transparent",
   cards: cardsWithRenderedBody,
   paddingAbove: '4rem',
@@ -108,7 +108,7 @@ const dataWithLongText = {
 </div>;
 ```
 
-### CTAMultiCard: Wrap behaviour (3 columns, non-carousel)
+### CTAMultiCard: Wrap behaviour (3 columns)
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -136,7 +136,7 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
 const dataWrapExample = {
   ...exampleData,
   layout: "3 columns",
-  carouselOfCards: false,
+  carouselOfCards: true,
   backgroundColour: "rnd_26_light_pink",
   cards: cardsWithRenderedBody,
   paddingAbove: '2rem',
