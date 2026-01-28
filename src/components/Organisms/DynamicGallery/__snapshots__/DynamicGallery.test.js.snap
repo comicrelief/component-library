@@ -53,9 +53,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   align-items: center;
   z-index: 1000;
   visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .c12 {
@@ -109,6 +106,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-width: 128px;
   min-height: 32px;
   border-radius: 0.4rem;
   overflow: hidden;
@@ -298,24 +296,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border: none;
   border-radius: 0.5rem;
   text-align: left;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
   cursor: pointer;
-}
-
-.c3 > div:first-child {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  background: #E1E2E3;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
-}
-
-.c3 > div:first-child img {
-  height: 100%;
+  color: inherit;
 }
 
 .c3 div:first-child {
@@ -332,9 +314,23 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
   width: 100%;
   overflow: hidden;
   border-radius: 0.5rem;
+  background: rgba(0,0,0,0.05);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+}
+
+.c4 img {
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-out 0.3s;
+  transition: opacity 0.1s ease-out 0.3s;
 }
 
 .c7 {
@@ -402,7 +398,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         title="Image 1"
       >
         <div
-          className="c4"
+          className="c4 gallery-node-image"
           style={
             Object {
               "maxHeight": undefined,
@@ -453,7 +449,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         title="Image 2"
       >
         <div
-          className="c4"
+          className="c4 gallery-node-image"
           style={
             Object {
               "maxHeight": undefined,
@@ -504,7 +500,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         title="Image 3"
       >
         <div
-          className="c4"
+          className="c4 gallery-node-image"
           style={
             Object {
               "maxHeight": undefined,
@@ -586,7 +582,10 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </div>
         </div>
         <div
+          aria-atomic="true"
+          aria-live="polite"
           className="c17"
+          id="lightboxDescription"
         >
           <div
             id="lightboxTitle"
@@ -713,9 +712,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   align-items: center;
   z-index: 1000;
   visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .c4 {
@@ -769,6 +765,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-width: 128px;
   min-height: 32px;
   border-radius: 0.4rem;
   overflow: hidden;
@@ -1005,7 +1002,10 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </div>
         </div>
         <div
+          aria-atomic="true"
+          aria-live="polite"
           className="c9"
+          id="lightboxDescription"
         >
           <div
             id="lightboxTitle"

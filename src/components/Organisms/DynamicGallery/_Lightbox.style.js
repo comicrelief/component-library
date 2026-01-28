@@ -11,8 +11,8 @@ export const Container = styled.div`
   align-items: center;
   z-index: 1000;
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
-  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  transition: opacity 0.3s ease-in-out;
+  // opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  // transition: opacity 0.3s ease-in-out;
 `;
 
 export const Backdrop = styled.div`
@@ -49,6 +49,7 @@ export const LightboxImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 128px;
   min-height: 32px;
   border-radius: 0.4rem;
   overflow: hidden;

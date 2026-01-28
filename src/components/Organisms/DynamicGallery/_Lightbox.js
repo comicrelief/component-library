@@ -208,10 +208,10 @@ const Lightbox = () => {
               />
             )}
           </LightboxImage>
-          <LightboxDetails>
+          <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
             <div id="lightboxTitle">{selectedNode?.title}</div>
             {selectedNode?.caption && (
-              <div id="lightboxDescription">
+              <div>
                 {selectedNode?.caption}
               </div>
             )}

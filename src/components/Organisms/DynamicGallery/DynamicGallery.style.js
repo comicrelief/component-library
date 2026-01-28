@@ -38,18 +38,9 @@ const GalleryNodeBase = css`
   border: none;
   border-radius: 0.5rem;
   text-align: left;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 
   & > div:first-child {
-    display: flex;
-    height: auto;
-    background: ${({ theme }) => theme.color('grey_2')};
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-
-    img {
-      height: 100%;
-    }
+   
   }
 `;
 
@@ -60,6 +51,7 @@ export const GalleryNode = styled.div`
 export const InteractiveGalleryNode = styled.button`
   ${GalleryNodeBase}
   cursor: pointer;
+  color: inherit;
 
   & div:first-child {
     transition: all 0.1s ease-out;
@@ -77,9 +69,19 @@ export const InteractiveGalleryNode = styled.button`
 `;
 
 export const ImageContainer = styled.div`
+ display: flex;
+  height: auto;
   width: 100%;
   overflow: hidden;
   border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+
+  img {
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.1s ease-out 0.3s;
+  }
 `;
 
 export const Details = styled.div`
@@ -98,5 +100,3 @@ export const Title = styled.div`
 export const Caption = styled.div`
   line-height: 1;
 `;
-
-export const Lightbox = styled.a``;

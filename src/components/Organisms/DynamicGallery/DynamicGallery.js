@@ -45,17 +45,36 @@ const DynamicGallery = ({
   paddingBottom = '2rem'
 }) => {
   const hasNodes = nodes?.length > 0;
+  const containerRef = useRef(null);
 
   // handle loading behaviour;
   // if we're in chunk mode, display images a chunk at a time
+  // (or the total number of images if less than the chunk size)
   // or display all images at once
   const isChunked = loadingBehaviour !== 'all';
   const imageChunkSize = +loadingBehaviour;
-  const [imageCount, setImageCount] = useState(isChunked ? imageChunkSize : nodes.length);
+  const [imageCount, setImageCount] = useState(isChunked
+    ? Math.min(imageChunkSize, nodes.length) : nodes.length);
 
   function handleLoadMore() {
     setImageCount(imageCount + imageChunkSize);
   }
+
+  // assign a manual tabbing order to gallery images based on their position in the DOM,
+  // starting from top-left and working downwards in a natural order
+  function updateTabOrder() {
+    if (!containerRef.current) return;
+    const galleryNodes = containerRef.current.querySelectorAll('.gallery-node');
+    const sortedNodes = orderBy(galleryNodes, node => {
+      const { top, left } = node.getBoundingClientRect();
+      return floor(top, -2) + Math.floor(left) / 1000;
+    }, 'asc');
+    sortedNodes.forEach((galleryNode, index) => {
+      galleryNode.setAttribute('data-order', String(index));
+    });
+  }
+  // create a throttled version of the updateTabOrder function
+  const throttledUpdateTabOrder = useRef(throttle(updateTabOrder, 2000));
 
   /**
    * handle column counts;
@@ -70,7 +89,6 @@ const DynamicGallery = ({
   const [columnCount, setColumnCount] = useState(gridWidth);
   const isSmall = useMediaQuery({ maxWidth: breakpointValues.S });
   const isMedium = useMediaQuery({ maxWidth: breakpointValues.M });
-  const containerRef = useRef(null);
 
   useEffect(() => {
     let newColumnCount;
@@ -86,6 +104,7 @@ const DynamicGallery = ({
         break;
     }
     setColumnCount(newColumnCount);
+    throttledUpdateTabOrder.current();
   }, [isSmall, isMedium, gridWidth, setColumnCount]);
 
   // handle selected gallery node
@@ -99,7 +118,7 @@ const DynamicGallery = ({
   }
   function handlePreviousNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const previousNodeIndex = (nodeIndex - 1 + nodes.length) % imageCount;
+    const previousNodeIndex = (nodeIndex - 1 + imageCount) % imageCount;
     setSelectedNode(nodes[previousNodeIndex]);
   }
 
@@ -144,7 +163,7 @@ const DynamicGallery = ({
         } else {
           // tab: move to the next image
           newNodeIndex = nodeIndex + 1;
-          if (newNodeIndex >= nodes.length) {
+          if (newNodeIndex >= imageCount) {
             // if we're on the last image, move to the focus trap
             // before allowing the tab event to continue to the next natural element;
             // this is a bit hacky but is needed for when the "last" image isn't in the last column;
@@ -163,26 +182,6 @@ const DynamicGallery = ({
         break;
     }
   }
-
-  // assign a manual tabbing order to gallery images based on their position in the DOM,
-  // starting from top-left and working downwards in a natural order
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (containerRef.current) {
-        const galleryNodes = containerRef.current.querySelectorAll('.gallery-node');
-        const sortedNodes = orderBy(galleryNodes, node => {
-          const { top, left } = node.getBoundingClientRect();
-          return floor(top, -2) + Math.floor(left) / 1000;
-        }, 'asc');
-
-        sortedNodes.forEach((galleryNode, index) => {
-          galleryNode.setAttribute('data-order', String(index));
-        });
-      }
-      // timeout to let images load; unlikely we'll immediately need tab ordering
-    }, 5000);
-    return () => clearTimeout(timeout);
-  }, [columnCount, imageCount]);
 
   return (
     <Container
@@ -217,6 +216,7 @@ const DynamicGallery = ({
                 columnCount={columnCount}
                 nodes={nodes.slice(0, imageCount)}
                 imageRatio={imageRatio}
+                updateTabOrder={throttledUpdateTabOrder.current}
               />
             ))}
 
@@ -273,6 +273,7 @@ export default DynamicGallery;
  * this component handles aspect ratio calculations to enfore a min/max ratio for its images
  */
 function ColumnComponent({
+  updateTabOrder,
   nodes,
   imageRatio,
   columnIndex,
@@ -351,13 +352,20 @@ function ColumnComponent({
             onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
             tabIndex={0}
           >
-            <ImageContainer style={{ minHeight, maxHeight }}>
+            <ImageContainer className="gallery-node-image" style={{ minHeight, maxHeight }}>
               <Picture
                 // no alt text here as we set the title on the containing button
                 image={node.image}
                 objectFit="cover"
+                // animate image in on load
                 onLoad={event => {
-                  event.target.closest('.gallery-node').style.setProperty('opacity', '1');
+                  event.target
+                    .closest('.gallery-node-image')
+                    .querySelector('img')
+                    .style.setProperty('opacity', '1');
+
+                  // update tab order once the image has loaded
+                  updateTabOrder();
                 }}
               />
             </ImageContainer>
@@ -379,5 +387,6 @@ ColumnComponent.propTypes = {
     '4:3'
   ]),
   columnIndex: PropTypes.number,
-  columnCount: PropTypes.number
+  columnCount: PropTypes.number,
+  updateTabOrder: PropTypes.func
 };
