@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
-import spacing from '../../../../theme/shared/spacing';
 
 export const CardsQueryWrapper = styled.div`
   /* Container for “single card per row” sizing.
@@ -25,9 +24,10 @@ export const CardsInner = styled.div`
   margin: 0 auto;
 
   ${({ isCarousel }) => !isCarousel && css`
-    @media (max-width: ${breakpointValues.XL - 1}px) {
-      padding-left: ${spacing('md')};
-      padding-right: ${spacing('md')};
+    padding-inline: 1rem;
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      padding-inline: 2rem;
     }
   `}
 `;
@@ -52,6 +52,21 @@ const CardsContainer = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     column-gap: 2rem;
   }
+
+  /* Ensure 2-column layout behaves itself at L+ */
+  ${({ isCarousel, columns }) => !isCarousel && columns === 2 && css`
+    @media (min-width: ${breakpointValues.L}px) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(443px, 560px));
+      justify-content: start;
+      align-items: stretch;
+      column-gap: 2rem;
+      row-gap: 1rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  `}
 
   // Carousel mode - horizontal scroll container (M and below)
   ${({ isCarousel }) => isCarousel && css`

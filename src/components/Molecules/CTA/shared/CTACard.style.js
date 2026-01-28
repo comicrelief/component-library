@@ -233,9 +233,8 @@ const CardWrapper = styled.div`
         `)}
   `}
 
-  // L breakpoint: min/max rules vary by layout
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media (min-width: ${breakpointValues.L}px) {
+    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
@@ -244,17 +243,28 @@ const CardWrapper = styled.div`
             `
       : css`
               flex: 0 1 auto;
-              width: clamp(443px, calc((100% - 2rem) / 2), 560px);
+              /*
+               * In 2-col mode at L+, the parent container uses CSS grid to enforce 2-up.
+               * See the multi card style file.
+               */
+              width: 100%;
             `
   )}
       align-self: stretch;
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+      ${({ columns }) => columns === 3 && css`
+        width: 100%;
+        max-width: 363px;
+      `}
     }
   `}
 `;
 
 const CopyAndLinkSection = styled.div`
   width: 100%;
-  background: ${({ theme }) => theme.color('red')};
+  background: ${({ theme }) => theme.color('white')};
   display: flex;
   flex-direction: column;
   padding: 2rem;
