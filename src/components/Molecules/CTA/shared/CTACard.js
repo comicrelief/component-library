@@ -40,6 +40,8 @@ const CTACard = ({
     external
   } = card;
 
+  const hasLink = Boolean(link);
+
   return (
     <CardWrapper
       key={id}
@@ -48,11 +50,11 @@ const CTACard = ({
       columns={columns}
     >
       <CardLink
-        href={link}
-        target={target}
-        rel={external}
+        as={hasLink ? 'a' : 'div'}
+        {...(hasLink ? { href: link, target, rel: external } : {})}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
+        isInteractive={hasLink}
       >
         {imageLow && (
           <ImageWrapper isSingleCard={isSingleCard}>

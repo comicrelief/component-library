@@ -100,7 +100,7 @@ const CardLink = styled.a`
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   text-decoration: none;
   overflow: hidden;
-  cursor: pointer;
+  cursor: ${({ isInteractive }) => (isInteractive ? 'pointer' : 'default')};
   box-sizing: border-box;
 
   // Side-by-side layout for single card desktop view
@@ -117,39 +117,41 @@ const CardLink = styled.a`
     }
   `}
 
-  img {
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-   }
+  ${({ isInteractive }) => isInteractive && css`
+    img {
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-  // Desktop-only hover effects
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${bounceUpAnimation(true, 10, 1)};
+    // Desktop-only hover effects
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      ${bounceUpAnimation(true, 10, 1)};
 
-    &:hover {
-      box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+      &:hover {
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
-      ${ImageWrapper} img {
-        transform: scale(1.11);
-      }
-
-      ${CTAText} {
-        text-decoration: none;
-        @media (min-width: ${breakpointValues.L}px) {
-          color: ${({ theme }) => theme.color('red')};
+        ${ImageWrapper} img {
+          transform: scale(1.11);
         }
-      }
 
-      ${CTATextUnderline} {
-        opacity: 1;
-      }
+        ${CTAText} {
+          text-decoration: none;
+          @media (min-width: ${breakpointValues.L}px) {
+            color: ${({ theme }) => theme.color('red')};
+          }
+        }
 
-      ${ArrowIconWrapper} {
-        @media (min-width: ${breakpointValues.L}px) {
-          background: ${({ theme }) => theme.color('red')};
+        ${CTATextUnderline} {
+          opacity: 1;
+        }
+
+        ${ArrowIconWrapper} {
+          @media (min-width: ${breakpointValues.L}px) {
+            background: ${({ theme }) => theme.color('red')};
+          }
         }
       }
     }
-  }
+  `}
 `;
 
 const CardWrapper = styled.div`
