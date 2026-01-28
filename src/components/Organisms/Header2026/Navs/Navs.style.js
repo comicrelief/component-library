@@ -116,7 +116,7 @@ const SearchLinkMobile = styled(Link)`
   width: 100%;
   text-decoration: none;
   font-family: Montserrat;
-  font-weight: 700;
+  font-weight: 600;
   color: ${({ theme }) => theme.color('black')};
   transition: color 0.2s ease;
 
