@@ -5,6 +5,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
 import Picture from '../../Atoms/Picture/Picture';
+import {RemoveScrollBar} from 'react-remove-scroll-bar';
 import {
   Backdrop,
   CloseButton,
@@ -185,6 +186,7 @@ const Lightbox = () => {
 
   return (
     <Container isOpen={hasNode}>
+      {hasNode && <RemoveScrollBar />}
       <Backdrop onPointerUp={() => handleBackdropClick()} />
       <Dialog
         ref={dialogRef}
