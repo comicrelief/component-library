@@ -47,7 +47,7 @@ const exampleCard = {
   external: null
 };
 
-<div style={{ padding: '2rem', background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3' }}>
   <CTASingleCard data={{ card: exampleCard, backgroundColour: 'Transparent', paddingAbove: '1rem', paddingBelow: '2rem' }} />
 </div>;
 ```
@@ -76,7 +76,7 @@ const exampleCard = {
   external: null
 };
 
-<div style={{ padding: '2rem', background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3' }}>
   <CTASingleCard data={{ card: exampleCard, backgroundColour: 'grey_medium', paddingAbove: '1rem', paddingBelow: '2rem' }} />
 </div>;
 ```
