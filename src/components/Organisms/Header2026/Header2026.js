@@ -58,60 +58,60 @@ const Header2026 = ({
       >
         <InnerWrapper data-testid="InnerWrapper">
 
-        {isSubMenuOpen || isTertiaryMenuOpen ? (
-          <MobileBackHeader
-            data-testid="MobileBackHeader"
-            onClick={handleBackClick}
-            type="button"
-            aria-label={isTertiaryMenuOpen ? `Go back to ${tertiaryParentName}` : 'Go back to main menu'}
-          >
-            <BackChevron>
-              <img src={chevronIcon} alt="chevron icon" />
-            </BackChevron>
-            {isTertiaryMenuOpen ? tertiaryParentName : 'Main menu'}
-          </MobileBackHeader>
-        ) : (
-          <Brand data-testid="Brand">
-            <LogoNav2026 data-testid="LogoNav2026" />
-          </Brand>
-        )}
+          {isSubMenuOpen || isTertiaryMenuOpen ? (
+            <MobileBackHeader
+              data-testid="MobileBackHeader"
+              onClick={handleBackClick}
+              type="button"
+              aria-label={isTertiaryMenuOpen ? `Go back to ${tertiaryParentName}` : 'Go back to main menu'}
+            >
+              <BackChevron>
+                <img src={chevronIcon} alt="chevron icon" />
+              </BackChevron>
+              {isTertiaryMenuOpen ? tertiaryParentName : 'Main menu'}
+            </MobileBackHeader>
+          ) : (
+            <Brand data-testid="Brand">
+              <LogoNav2026 data-testid="LogoNav2026" />
+            </Brand>
+          )}
 
-        <Navs
-          data-testid="Navs"
-          navItems={data}
-          characterLimit={characterLimit}
-          isExpandable={isExpandable}
-          setIsExpandable={setIsExpandable}
-          devMode={devMode}
-          onSubMenuChange={handleSubMenuChange}
-          onTertiaryMenuChange={handleTertiaryMenuChange}
-        />
+          <Navs
+            data-testid="Navs"
+            navItems={data}
+            characterLimit={characterLimit}
+            isExpandable={isExpandable}
+            setIsExpandable={setIsExpandable}
+            devMode={devMode}
+            onSubMenuChange={handleSubMenuChange}
+            onTertiaryMenuChange={handleTertiaryMenuChange}
+          />
 
-        <ButtonsAndIcons data-testid="ButtonsAndIcons">
-          <SearchIconWrapperDesktop data-testid="SearchIconWrapperDesktop">
-            <Icon
-              icon={searchIcon}
-              title="Search"
-              target="self"
-              role="button"
-              href={prependBaseUrl('/search', devMode)}
-              brand="comicrelief"
-              tabIndex="0"
-              id="search"
-              isHeader
-            />
-          </SearchIconWrapperDesktop>
+          <ButtonsAndIcons data-testid="ButtonsAndIcons">
+            <SearchIconWrapperDesktop data-testid="SearchIconWrapperDesktop">
+              <Icon
+                icon={searchIcon}
+                title="Search"
+                target="self"
+                role="button"
+                href={prependBaseUrl('/search', devMode)}
+                brand="comicrelief"
+                tabIndex="0"
+                id="search"
+                isHeader
+              />
+            </SearchIconWrapperDesktop>
 
-          {!isExpandable && (
+            {!isExpandable && (
             <DonateButtonTopBarWrapper data-testid="DonateButtonTopBarWrapper">
               <Link color="red" type="button" href="https://donation.comicrelief.com/">
                 Donate
               </Link>
             </DonateButtonTopBarWrapper>
-          )}
-        </ButtonsAndIcons>
+            )}
+          </ButtonsAndIcons>
 
-      </InnerWrapper>
+        </InnerWrapper>
       </Header2026Wrapper>
     </>
   );
