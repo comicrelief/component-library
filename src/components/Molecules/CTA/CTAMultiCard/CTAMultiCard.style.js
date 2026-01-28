@@ -24,9 +24,8 @@ export const CardsInner = styled.div`
   max-width: 1152px;
   margin: 0 auto;
 
-  /* Provide mobile gutters for non-carousel stack mode. */
   ${({ isCarousel }) => !isCarousel && css`
-    @media (max-width: ${breakpointValues.M - 1}px) {
+    @media (max-width: ${breakpointValues.XL - 1}px) {
       padding-left: ${spacing('md')};
       padding-right: ${spacing('md')};
     }
@@ -45,7 +44,7 @@ const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
   }
