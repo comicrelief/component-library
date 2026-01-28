@@ -67,9 +67,11 @@ const Navs = ({
     e.preventDefault();
     setIsExpandable(!isExpandable);
 
-    // If we've just closed the nav, collapse any open submenus:
+    // If we've just closed the nav, collapse any open submenus and reset tertiary state:
     if (isExpandable) {
       setOpenedSubMenu({});
+      setIsTertiaryOpen(false);
+      onTertiaryMenuChange(false, null, null);
     }
   };
 

@@ -343,7 +343,7 @@ const StyledNavItem = styled.li`
 
       > span::after {
         transform: scaleX(1);
-        transition: transform 0s ease-out 0.5s;
+        transition: transform 0.15s ease-out;
       }
     }
 

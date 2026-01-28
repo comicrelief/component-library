@@ -8,6 +8,7 @@ const Header2026Wrapper = styled.header.attrs(() => ({
   role: 'banner'
 }))`
   position: relative;
+  z-index: 2;
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid ${({ theme }) => theme.color('grey_light')};
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
@@ -29,6 +30,8 @@ const InnerWrapper = styled.div`
   cursor: pointer;
   max-width: ${containers.large};
   padding: 10px;
+  position: relative;
+  z-index: 2;
 
   @media ${({ theme }) => theme.breakpoints2026('S')} {
     padding: 10px 16px 10px 14px;
@@ -153,6 +156,21 @@ const BackChevron = styled.span`
   }
 `;
 
+const MobileMenuOverlay = styled.div`
+  display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${({ theme }) => theme.color('grey_light')};
+  z-index: 1;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    display: none;
+  }
+`;
+
 export {
   Brand,
   Header2026Wrapper,
@@ -161,5 +179,6 @@ export {
   SearchIconWrapperDesktop,
   ButtonsAndIcons,
   MobileBackHeader,
-  BackChevron
+  BackChevron,
+  MobileMenuOverlay
 };

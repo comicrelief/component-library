@@ -8,7 +8,7 @@ import Link from '../../Atoms/Link/Link';
 import {
   Brand, Header2026Wrapper, InnerWrapper,
   DonateButtonTopBarWrapper, SearchIconWrapperDesktop, ButtonsAndIcons,
-  MobileBackHeader, BackChevron
+  MobileBackHeader, BackChevron, MobileMenuOverlay
 } from './Header2026.style';
 import searchIcon from './assets/search-icon.svg';
 import chevronIcon from './assets/chevron-icon.svg';
@@ -50,11 +50,13 @@ const Header2026 = ({
   };
 
   return (
-    <Header2026Wrapper
-      data-testid="Header2026Wrapper"
-      {...rest}
-    >
-      <InnerWrapper data-testid="InnerWrapper">
+    <>
+      <MobileMenuOverlay isVisible={isExpandable} />
+      <Header2026Wrapper
+        data-testid="Header2026Wrapper"
+        {...rest}
+      >
+        <InnerWrapper data-testid="InnerWrapper">
 
         {isSubMenuOpen || isTertiaryMenuOpen ? (
           <MobileBackHeader
@@ -110,7 +112,8 @@ const Header2026 = ({
         </ButtonsAndIcons>
 
       </InnerWrapper>
-    </Header2026Wrapper>
+      </Header2026Wrapper>
+    </>
   );
 };
 
