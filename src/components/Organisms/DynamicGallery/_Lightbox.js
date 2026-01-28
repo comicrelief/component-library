@@ -1,7 +1,6 @@
 import React, {
   useContext, useEffect, useRef, useState
 } from 'react';
-import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
@@ -186,7 +185,6 @@ const Lightbox = () => {
 
   return (
     <Container isOpen={hasNode}>
-      {hasNode && <RemoveScrollBar />}
       <Backdrop onPointerUp={() => handleBackdropClick()} />
       <Dialog
         ref={dialogRef}
