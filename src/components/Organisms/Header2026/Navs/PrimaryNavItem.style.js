@@ -519,7 +519,7 @@ const NavCard = styled.a`
 const NavCardImage = styled.div`
   flex-shrink: 0;
   width: 80px;
-  height: 60px;
+  height: 80px;
   border-radius: 6px;
   overflow: hidden;
 
@@ -539,18 +539,18 @@ const NavCardContent = styled.div`
 
 const NavCardTitle = styled.span`
   display: block;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  font-family: Montserrat, sans-serif;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 16px;
   margin-bottom: 4px;
   color: ${({ theme }) => theme.color('black')};
 `;
 
 const NavCardDescription = styled.span`
   display: block;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 14px;
   color: ${({ theme }) => theme.color('grey_dark')};
   line-height: 1.4;
 `;
