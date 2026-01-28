@@ -1,19 +1,19 @@
 import React, {
   useContext, useEffect, useRef, useState
 } from 'react';
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
 import Picture from '../../Atoms/Picture/Picture';
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
 import {
   Backdrop,
   CloseButton,
   Container,
   Dialog,
   LightboxContent,
-  LightboxImage,
   LightboxDetails,
+  LightboxImage,
   LightboxSpinner,
   NextButton,
   PreviousButton,
