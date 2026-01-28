@@ -235,7 +235,7 @@ const CardWrapper = styled.div`
 
   // L breakpoint: min/max rules vary by layout
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
+    @media (min-width: ${breakpointValues.L}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
@@ -247,13 +247,6 @@ const CardWrapper = styled.div`
               width: clamp(443px, calc((100% - 2rem) / 2), 560px);
             `
   )}
-      align-self: stretch;
-    }
-
-    // XL breakpoint and above: fixed widths vary by layout
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      flex-basis: unset;
-      width: ${({ columns }) => (columns === 3 ? '363px' : '560px')};
       align-self: stretch;
     }
   `}
