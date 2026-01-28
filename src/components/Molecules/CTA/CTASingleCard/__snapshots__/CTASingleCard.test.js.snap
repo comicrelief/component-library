@@ -191,7 +191,6 @@ exports[`renders correctly with data prop 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
-  margin-bottom: 1rem;
 }
 
 .c12 {
@@ -218,6 +217,7 @@ exports[`renders correctly with data prop 1`] = `
 .c0 {
   padding-top: 1rem;
   padding-bottom: 2rem;
+  padding-inline: 1rem;
   width: 100%;
   background: transparent;
 }
@@ -408,6 +408,18 @@ exports[`renders correctly with data prop 1`] = `
 @media (min-width:1440px) {
   .c8 {
     width: 789px;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding-inline: 4rem;
   }
 }
 
@@ -667,7 +679,6 @@ exports[`renders correctly without image 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
-  margin-bottom: 1rem;
 }
 
 .c8 {
@@ -694,6 +705,7 @@ exports[`renders correctly without image 1`] = `
 .c0 {
   padding-top: 1rem;
   padding-bottom: 2rem;
+  padding-inline: 1rem;
   width: 100%;
   background: transparent;
 }
@@ -840,6 +852,18 @@ exports[`renders correctly without image 1`] = `
 @media (min-width:1440px) {
   .c4 {
     width: 789px;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding-inline: 4rem;
   }
 }
 
