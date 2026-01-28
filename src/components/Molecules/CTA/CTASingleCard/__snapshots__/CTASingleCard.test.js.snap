@@ -137,7 +137,7 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c2 {
-  width: 100%;
+  width: auto;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -625,7 +625,7 @@ exports[`renders correctly without image 1`] = `
 }
 
 .c2 {
-  width: 100%;
+  width: auto;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
