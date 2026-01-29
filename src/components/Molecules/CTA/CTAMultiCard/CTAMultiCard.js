@@ -56,9 +56,8 @@ const CTAMultiCard = ({ data }) => {
         backgroundColor={cardsBackground}
         paddingAbove={paddingAbove}
         paddingBelow={paddingBelow}
-        isCarousel={carouselOfCards}
       >
-        <CardsInner isCarousel={carouselOfCards}>
+        <CardsInner>
           <CardsContainer
             columns={columns}
             isCarousel={carouselOfCards}
