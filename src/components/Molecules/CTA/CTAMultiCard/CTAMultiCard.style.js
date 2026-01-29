@@ -34,6 +34,11 @@ export const CardsInner = styled.div`
     @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding-inline: 2rem;
     }
+
+    /* At XL, remove only the horizontal padding so 3-col cards can grow to their max width of up to 363px */
+    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+      padding-inline: 0;
+    }
   `}
 `;
 
@@ -58,8 +63,7 @@ const CardsContainer = styled.div`
     column-gap: 2rem;
   }
 
-  /* Ensure 2-column layout behaves itself at L+.
-     This should apply regardless of isCarousel (since we only use Splide below L). */
+  /* Ensure 2-column layout behaves itself at L+. Applies when Splide is not active. */
   ${({ columns, useSplideCarousel }) => !useSplideCarousel && columns === 2 && css`
     @media (min-width: ${breakpointValues.L}px) {
       display: grid;
@@ -123,26 +127,5 @@ const CardsContainer = styled.div`
     }
   `}
 
-  // Desktop grid layout for XL breakpoint - 3 columns
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    ${({ columns }) => columns === 3 && css`
-      display: grid;
-      justify-content: center;
-      align-items: stretch;
-      grid-template-columns: repeat(3, minmax(0, 363px));
-      width: 100%;
-      margin: 0 auto;
-      max-width: 100%;
-
-      /*
-       * Orphan handling: if we have a 3-column grid but the last row contains
-       * a single card (e.g. 4 cards total), center that last card.
-       */
-      & > *:last-child:nth-child(3n + 1) {
-        grid-column: 2;
-        justify-self: center;
-      }
-    `}
-  }
 `;
 export default CardsContainer;

@@ -229,7 +229,7 @@ const CardWrapper = styled.div`
   `}
 
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
+    @media (min-width: ${breakpointValues.L}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
@@ -246,13 +246,6 @@ const CardWrapper = styled.div`
             `
   )}
       align-self: stretch;
-    }
-
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      ${({ columns }) => columns === 3 && css`
-        width: 100%;
-        max-width: 363px;
-      `}
     }
   `}
 `;
