@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import zIndex from '../../../../theme/shared/zIndex';
 import Text from '../../../Atoms/Text/Text';
+import arrowIcon from '../assets/arrow-icon.svg';
 
 const transitionDuration = 0.2;
 
@@ -189,11 +190,17 @@ const SecondaryNavLink = styled(NavLinkClass)`
 
     &::after {
       content: '';
-      width: 8px;
-      height: 8px;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
+      width: 12px;
+      height: 12px;
+      mask-image: url(${arrowIcon});
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-image: url(${arrowIcon});
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      background-color: ${({ theme }) => theme.color('red')};
       opacity: 0;
       transition: opacity 0.15s ease-out;
     }
