@@ -26,7 +26,8 @@ const Image = styled.img`
 
 const MobileLogo = styled(Image)`
   ${zIndex('high')}
-  width: 50px;
+  width: 49px;
+  height: 32px;
   display: block;
   @media ${({ theme }) => theme.breakpoints2026('S')} {
     display: none
