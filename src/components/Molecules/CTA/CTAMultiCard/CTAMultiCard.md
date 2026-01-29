@@ -39,9 +39,23 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
   external: null
 }));
 
+const cardsFour = [
+  ...cardsWithRenderedBody,
+  {
+    ...cardsWithRenderedBody[0],
+    id: 'example-4th-card',
+    title: 'Fourth card',
+    body: (
+      <Text tag="p">
+        Fourth card (added for layout testing)
+      </Text>
+    )
+  }
+];
+
 const data = {
   ...exampleData,
-  cards: cardsWithRenderedBody,
+  cards: cardsFour,
   layout: "3 columns",
   carouselOfCards: true,
   backgroundColour: "grey_medium",
@@ -133,12 +147,36 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
   external: null
 }));
 
+const cardsFive = [
+  ...cardsWithRenderedBody,
+  {
+    ...cardsWithRenderedBody[0],
+    id: 'wrap-example-3',
+    title: 'Fourth card',
+    body: (
+      <Text tag="p">
+        Short body text (4)
+      </Text>
+    )
+  },
+  {
+    ...cardsWithRenderedBody[1],
+    id: 'wrap-example-4',
+    title: 'Fifth card',
+    body: (
+      <Text tag="p">
+        Short body text (5)
+      </Text>
+    )
+  }
+];
+
 const dataWrapExample = {
   ...exampleData,
   layout: "3 columns",
   carouselOfCards: true,
   backgroundColour: "rnd_26_light_pink",
-  cards: cardsWithRenderedBody,
+  cards: cardsFive,
   paddingAbove: '2rem',
   paddingBelow: '2rem'
 };
