@@ -68,6 +68,48 @@ const data = {
 </div>;
 ```
 
+### CTAMultiCard: Carousel with just 2 cards (2 columns layout)
+
+```js
+import CTAMultiCard from './CTAMultiCard';
+import Text from '../../../Atoms/Text/Text';
+import challengeExampleImage from '../../../../styleguide/assets/challenge-1.jpg';
+const exampleData = require('./example_data.json');
+
+// Map cards to include pre-rendered body content and processed image/link data
+const cardsWithRenderedBody = exampleData.cards.map(card => ({
+  ...card,
+  body: (
+    <Text tag="p">
+      {card.body}
+    </Text>
+  ),
+  fallback: challengeExampleImage,
+  imageLow: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z",
+  images: `${challengeExampleImage} 678w`,
+  bgColour: "white",
+  description: "",
+  target: "self",
+  external: null
+}));
+
+const cardsTwo = cardsWithRenderedBody.slice(0, 2);
+
+const dataTwoCards = {
+  ...exampleData,
+  cards: cardsTwo,
+  layout: "2 columns",
+  carouselOfCards: true,
+  backgroundColour: "grey_medium",
+  paddingAbove: '0rem',
+  paddingBelow: '0rem'
+};
+
+<div style={{ background: '#E1E2E3', width: '100%' }}>
+  <CTAMultiCard data={dataTwoCards} />
+</div>;
+```
+
 ### CTAMultiCard: Desktop Grid View (2 columns) with large padding
 
 **NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a carousel. This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
