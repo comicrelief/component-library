@@ -116,8 +116,20 @@ const SearchIconWrapperDesktop = styled.div`
 
     img {
       margin-right: 15px;
-      height: inherit;
-      width: inherit;
+      width: 18px;
+      height: 18px;
+      transition: transform 0.2s ease;
+      transform-origin: center;
+    }
+
+    a {
+      overflow: visible;
+      display: block;
+    }
+
+    &:hover img,
+    &:focus-within img {
+      transform: scale(1.33);
     }
   }
 `;
