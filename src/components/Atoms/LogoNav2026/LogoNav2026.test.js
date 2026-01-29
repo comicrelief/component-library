@@ -35,7 +35,6 @@ it('renders correctly', () => {
 
     .c3 {
       z-index: 3;
-      width: 115px;
       display: none;
     }
 
@@ -48,12 +47,15 @@ it('renders correctly', () => {
     @media (min-width:320px) {
       .c3 {
         display: block;
+        width: 132px;
+        height: 20px;
       }
     }
 
     @media (min-width:740px) {
       .c3 {
         width: 162px;
+        height: 25px;
       }
     }
 
