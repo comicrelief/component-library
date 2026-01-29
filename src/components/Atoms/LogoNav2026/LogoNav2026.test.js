@@ -29,7 +29,8 @@ it('renders correctly', () => {
 
     .c2 {
       z-index: 3;
-      width: 50px;
+      width: 49px;
+      height: 32px;
       display: block;
     }
 
