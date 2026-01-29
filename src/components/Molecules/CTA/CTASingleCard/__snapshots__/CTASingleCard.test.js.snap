@@ -131,9 +131,9 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c3 img {
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.22,1,0.36,1);
-  -webkit-transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
 
 .c2 {
@@ -337,6 +337,9 @@ exports[`renders correctly with data prop 1`] = `
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
   .c3:hover,
@@ -351,9 +354,9 @@ exports[`renders correctly with data prop 1`] = `
   }
 
   .c3:hover .c4 img {
-    -webkit-transform: scale(1.11);
-    -ms-transform: scale(1.11);
-    transform: scale(1.11);
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    transform: scale(1.06);
   }
 
   .c3:hover .c13 {
@@ -619,9 +622,9 @@ exports[`renders correctly without image 1`] = `
 }
 
 .c3 img {
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.22,1,0.36,1);
-  -webkit-transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
 
 .c2 {
@@ -787,6 +790,9 @@ exports[`renders correctly without image 1`] = `
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
   .c3:hover,

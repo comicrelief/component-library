@@ -31,8 +31,12 @@ export const CardsInner = styled.div`
   `}
 
   ${({ isCarousel }) => isCarousel && css`
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
       padding-inline: 2rem;
+    }
+
+    @media (min-width: ${breakpointValues.XL}px) {
+      padding-inline: 0;
     }
   `}
 `;
@@ -58,8 +62,8 @@ const CardsContainer = styled.div`
     column-gap: 2rem;
   }
 
-  /* Ensure 2-column layout behaves itself at L+ */
-  ${({ isCarousel, columns }) => !isCarousel && columns === 2 && css`
+  /* Ensure 2-column layout behaves itself at L+. Applies when Splide is not active. */
+  ${({ columns, useSplideCarousel }) => !useSplideCarousel && columns === 2 && css`
     @media (min-width: ${breakpointValues.L}px) {
       display: grid;
       grid-template-columns: repeat(2, minmax(443px, 560px));
@@ -92,6 +96,12 @@ const CardsContainer = styled.div`
         padding: 0.75rem 1rem;
         gap: 0;
 
+        /* We need this so that the box shadows of the cards are not clipped off */
+        .splide,
+        .splide__track {
+          overflow: visible
+        }
+
         .splide__list {
           align-items: stretch;
         }
@@ -108,7 +118,7 @@ const CardsContainer = styled.div`
         margin: 0;
         max-width: 100%;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         padding: 0.75rem 1rem;
@@ -122,17 +132,5 @@ const CardsContainer = styled.div`
     }
   `}
 
-  // Desktop grid layout for XL breakpoint - 3 columns
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    ${({ columns }) => columns === 3 && css`
-      display: grid;
-      justify-content: center;
-      align-items: stretch;
-      grid-template-columns: repeat(3, minmax(0, 363px));
-      width: 100%;
-      margin: 0 auto;
-      max-width: 100%;
-    `}
-  }
 `;
 export default CardsContainer;

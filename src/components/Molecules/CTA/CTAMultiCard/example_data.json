@@ -5,7 +5,7 @@
   "layout": "3 columns",
   "columnsOnMd": false,
   "paddingOptions": "Both Off",
-  "carouselOfCards": false,
+  "carouselOfCards": true,
   "cards": [
         {
           "id": "fd8ef3fc-7d0d-531b-b2d2-9ac5f40d3d14",
