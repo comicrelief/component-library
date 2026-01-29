@@ -170,7 +170,7 @@ const Lightbox = () => {
     const imageWidth = target.naturalWidth;
     const imageHeight = target.naturalHeight;
     const maxWidth = Math.min.apply(null, [imageWidth, 1024, window.innerWidth * 0.85]);
-    const maxHeight = Math.min.apply(null, [imageHeight, 1024, window.innerHeight * 0.6]);
+    const maxHeight = Math.min.apply(null, [imageHeight, 1024, window.innerHeight * 0.5]);
     const scaleX = maxWidth / imageWidth;
     const scaleY = maxHeight / imageHeight;
     const scale = Math.min(scaleX, scaleY);

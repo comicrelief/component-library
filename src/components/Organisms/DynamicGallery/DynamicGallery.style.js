@@ -15,13 +15,21 @@ export const ImageGrid = styled.div`
   display: flex;
   gap: 1rem;
   width: 100%;
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    gap: 2rem;
+  }
 `;
 
 export const Column = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    gap: 2rem;
+  }
 `;
 
 export const EmptyMessage = styled.div`
@@ -31,12 +39,11 @@ export const EmptyMessage = styled.div`
 const GalleryNodeBase = css`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
   padding: 0;
   margin: 0;
   background: none;
   border: none;
-  border-radius: 0.5rem;
   text-align: left;
 `;
 
@@ -71,7 +78,7 @@ export const ImageContainer = styled.div`
   min-height: ${({ minHeight }) => minHeight};
   max-height: ${({ maxHeight }) => maxHeight};
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
 
@@ -86,7 +93,7 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 8px;
+  padding: 0 1rem;
 `;
 
 export const Title = styled.div`

@@ -11,8 +11,6 @@ export const Container = styled.div`
   align-items: center;
   z-index: 2000;
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
-  // opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  // transition: opacity 0.3s ease-in-out;
 `;
 
 export const Backdrop = styled.div`
@@ -46,7 +44,7 @@ export const LightboxContent = styled.div`
   position: relative;
   padding: 1rem;
   background: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 `;
 
 export const LightboxImage = styled.div`
@@ -56,7 +54,7 @@ export const LightboxImage = styled.div`
   justify-content: center;
   min-width: 128px;
   min-height: 32px;
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
   overflow: hidden;
 
   & > div {
@@ -85,6 +83,7 @@ export const LightboxDetails = styled.div`
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
+  padding: 0 1rem;
 `;
 
 export const NavButton = styled.button`

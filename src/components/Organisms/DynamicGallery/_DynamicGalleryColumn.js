@@ -92,7 +92,6 @@ export default function DynamicGalleryColumn({
     <Column ref={elRef} className="gallery-column">
       {nodes
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
-        .filter(node => Boolean(node))
         .map((node, nodeIndex) => (
           <NodeComponent
             key={String(nodeIndex) + node.title}
@@ -105,8 +104,10 @@ export default function DynamicGalleryColumn({
           >
             <ImageContainer
               className="gallery-node-image"
-              minHeight={minHeight}
-              maxHeight={maxHeight}
+              // eslint-disable-next-line prefer-template
+              minHeight={String(minHeight) + 'px'}
+              // eslint-disable-next-line prefer-template
+              maxHeight={String(maxHeight) + 'px'}
             >
               <Picture
                 image={node.image}
