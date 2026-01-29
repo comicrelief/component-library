@@ -8,6 +8,6 @@ export const GalleryNodeType = PropTypes.shape({
   title: PropTypes.string,
   image: PropTypes.string.isRequired,
   body: PropTypes.node,
-  caption: PropTypes.string,
+  caption: PropTypes.node,
   centredText: PropTypes.bool
 });
