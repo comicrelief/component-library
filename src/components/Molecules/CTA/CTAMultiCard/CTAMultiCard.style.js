@@ -60,6 +60,7 @@ const CardsContainer = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   /* Ensure 2-column layout behaves itself at L+. Applies when Splide is not active. */
