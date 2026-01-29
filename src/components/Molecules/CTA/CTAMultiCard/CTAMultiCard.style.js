@@ -94,7 +94,6 @@ const CardsContainer = styled.div`
         width: 100%;
         margin: 0;
         max-width: 100%;
-        padding: 0.75rem 1rem;
         gap: 0;
 
         /* We need this so that the box shadows of the cards are not clipped off */
