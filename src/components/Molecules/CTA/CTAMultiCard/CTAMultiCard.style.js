@@ -32,7 +32,7 @@ export const CardsInner = styled.div`
 
   ${({ isCarousel }) => isCarousel && css`
     @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
-      padding-inline: 2rem;
+      padding-inline: 4rem;
     }
 
     @media (min-width: ${breakpointValues.XL}px) {

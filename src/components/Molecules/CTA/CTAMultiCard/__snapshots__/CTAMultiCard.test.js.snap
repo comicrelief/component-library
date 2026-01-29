@@ -291,7 +291,7 @@ exports[`renders 2 columns layout correctly 1`] = `
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kWPYyq"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 llVjZQ"
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 bWeGAp"
@@ -574,7 +574,7 @@ exports[`renders carousel mode correctly 1`] = `
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kWPYyq"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 llVjZQ"
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 eomXiE"
@@ -857,7 +857,7 @@ exports[`renders correctly with data prop 1`] = `
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kWPYyq"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 llVjZQ"
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 eomXiE"
