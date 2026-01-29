@@ -97,6 +97,12 @@ const CardsContainer = styled.div`
         padding: 0.75rem 1rem;
         gap: 0;
 
+        /* We need this so that the box shadows of the cards are not clipped off */
+        .splide,
+        .splide__track {
+          overflow: visible
+        }
+
         .splide__list {
           align-items: stretch;
         }
@@ -113,7 +119,7 @@ const CardsContainer = styled.div`
         margin: 0;
         max-width: 100%;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         padding: 0.75rem 1rem;
