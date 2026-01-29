@@ -92,6 +92,12 @@ const CardsContainer = styled.div`
           align-items: stretch;
         }
 
+        /* Center slides when there is no overflow (e.g. only 1–2 cards in
+        a gap where we'd probably fit 3 or more). */
+        .splide:not(.is-overflow) .splide__list {
+          justify-content: center;
+        }
+
         .splide__slide {
           display: flex;
           height: auto;
