@@ -31,12 +31,11 @@ export const CardsInner = styled.div`
   `}
 
   ${({ isCarousel }) => isCarousel && css`
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
       padding-inline: 2rem;
     }
 
-    /* At L, remove only the horizontal padding so 3-col cards can grow to their max width of up to 363px */
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    @media (min-width: ${breakpointValues.XL}px) {
       padding-inline: 0;
     }
   `}
