@@ -41,14 +41,14 @@ export default function ScrollFix() {
     }
 
     // check that the page content is longer than the viewport
-    if (document.documentElement.scrollHeight > window.innerHeight) {
+    if (document.documentElement.scrollHeight <= window.innerHeight) {
+      resetScrollbar();
+    } else {
       document.documentElement.style.setProperty('overflow', 'hidden');
       document.documentElement.style.setProperty(
         'padding-right',
         `${scrollPadding}px`
       );
-    } else {
-      resetScrollbar();
     }
 
     return () => {
