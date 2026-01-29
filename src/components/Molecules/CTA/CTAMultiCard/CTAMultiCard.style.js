@@ -35,8 +35,8 @@ export const CardsInner = styled.div`
       padding-inline: 2rem;
     }
 
-    /* At XL, remove only the horizontal padding so 3-col cards can grow to their max width of up to 363px */
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    /* At L, remove only the horizontal padding so 3-col cards can grow to their max width of up to 363px */
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding-inline: 0;
     }
   `}
