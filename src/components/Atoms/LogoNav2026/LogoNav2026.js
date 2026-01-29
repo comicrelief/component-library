@@ -35,13 +35,15 @@ const MobileLogo = styled(Image)`
 
 const DesktopLogo = styled(Image)`
   ${zIndex('high')}
-  width: 115px;
   display: none;
   @media ${({ theme }) => theme.breakpoints2026('S')} {
-    display: block
+    display: block;
+    width: 132px;
+    height: 20px;
   }
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     width: 162px;
+    height: 25px;
   }
 `;
 
