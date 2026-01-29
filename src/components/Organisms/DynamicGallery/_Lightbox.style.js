@@ -82,7 +82,7 @@ export const LightboxSpinner = styled.div`
 export const LightboxDetails = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: stretch;
   width: 100%;
 `;
 

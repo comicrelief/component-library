@@ -92,12 +92,10 @@ export default function DynamicGalleryColumn({
     <Column ref={elRef} className="gallery-column">
       {nodes
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
+        .filter(node => Boolean(node))
         .map((node, nodeIndex) => (
           <NodeComponent
-            // now using index + title as key,
-            // but keeping the ignore rule as linter is still complaining :(
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${nodeIndex}-${node.title}`}
+            key={String(nodeIndex) + node.title}
             className="gallery-node"
             title={node.title}
             aria-label={node.title}
