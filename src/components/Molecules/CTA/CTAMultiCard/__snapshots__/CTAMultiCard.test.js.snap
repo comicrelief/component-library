@@ -5,13 +5,13 @@ exports[`handles data structure correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 ehBqzi"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCDlNQ"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 jdzsUU"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 icRtAH"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 gAuYUa"
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-5 jZEwGJ"
@@ -288,13 +288,13 @@ exports[`renders 2 columns layout correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kjrrbi"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 bWeGAp"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 jrSYsC"
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-5 xdzCi"
@@ -571,13 +571,13 @@ exports[`renders carousel mode correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kjrrbi"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 eomXiE"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-5 eieQSs"
@@ -854,13 +854,13 @@ exports[`renders correctly with data prop 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 eznbgX"
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 kjrrbi"
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 eomXiE"
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-5 eieQSs"
