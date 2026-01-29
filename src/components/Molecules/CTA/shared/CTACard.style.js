@@ -119,18 +119,20 @@ const CardLink = styled.a`
 
   ${({ isInteractive }) => isInteractive && css`
     img {
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
     }
 
     // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       ${bounceUpAnimation(true, 10, 1)};
+      /* override the bounceUpAnimation transition */
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       &:hover {
         box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
         ${ImageWrapper} img {
-          transform: scale(1.11);
+          transform: scale(1.06);
         }
 
         ${CTAText} {
@@ -210,31 +212,26 @@ const CardWrapper = styled.div`
               flex: 0 0 345px;
               max-width: 345px;
             `)}
-    }
 
-    /* If the CTA container is too narrow for 2 cards (<= 705px),
-       force a single card to span full width. */
-    ${({ columns }) => (columns === 3
-    ? css`
-          /* 3-col cards: 2-up needs 2*309 + 16 gap (1rem) = 634px full width at <= 633px */
-          @container cta-multi-card (max-width: 633px) {
-            width: 100%;
-            max-width: 100%;
-            flex: 1 1 100%;
-          }
-        `
-    : css`
-          /* 2-col cards: 2-up needs 2*345 + 16 gap (1rem) = 706px full width at <= 705px */
-          @container cta-multi-card (max-width: 705px) {
-            width: 100%;
-            max-width: 100%;
-            flex: 1 1 100%;
-          }
-        `)}
+      /*
+       * In 2 column mode, if the CTA container is too narrow to display 2-up,
+       * fall back to 1-per-row while keeping the card width constrained (not full-width).
+       * This matches the 3-col behaviour (1-per-row, centered), and avoids
+       * the nightmare of "full width column" cards
+       */
+      ${({ columns }) => columns === 2 && css`
+        @container cta-multi-card (max-width: 705px) {
+          flex: 0 0 100%;
+          width: min(100%, 345px);
+          max-width: 345px;
+          margin-inline: auto;
+        }
+      `}
+    }
   `}
 
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
+    @media (min-width: ${breakpointValues.L}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
@@ -251,13 +248,6 @@ const CardWrapper = styled.div`
             `
   )}
       align-self: stretch;
-    }
-
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      ${({ columns }) => columns === 3 && css`
-        width: 100%;
-        max-width: 363px;
-      `}
     }
   `}
 `;
