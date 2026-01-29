@@ -119,18 +119,20 @@ const CardLink = styled.a`
 
   ${({ isInteractive }) => isInteractive && css`
     img {
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
     }
 
     // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       ${bounceUpAnimation(true, 10, 1)};
+      /* override the bounceUpAnimation transition */
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       &:hover {
         box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
         ${ImageWrapper} img {
-          transform: scale(1.11);
+          transform: scale(1.06);
         }
 
         ${CTAText} {
