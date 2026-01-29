@@ -18,6 +18,7 @@ import {
   PreviousButton,
   ScreenReaderOnly
 } from './_Lightbox.style';
+import ScrollFix from './_ScrollFix';
 
 /**
  * lightbox context:
@@ -125,11 +126,11 @@ const Lightbox = () => {
 
   // handle focus management when dialog opens/closes
   useEffect(() => {
+    // when the lightbox is opened, store the previously focused element
+    // and move focus to the first focusable element in the dialog
     if (hasNode) {
       // store the previously focused element
       previousFocusRef.current = document.activeElement;
-      // prevent body scroll
-      document.body.style.overflow = 'hidden';
       // move focus to the first focusable element in the dialog
       setTimeout(() => {
         const focusableElements = getFocusableElements();
@@ -137,17 +138,16 @@ const Lightbox = () => {
           focusableElements[0].focus();
         }
       }, 0);
-    } else {
-      // restore body scroll
-      document.body.style.overflow = 'auto';
-      // return focus to the previously focused element
-      if (
-        previousFocusRef.current
-        && typeof previousFocusRef.current.focus === 'function'
-      ) {
-        previousFocusRef.current.focus();
-        previousFocusRef.current = null;
-      }
+      return;
+    }
+
+    // when the lightbox is closed, restore focus to the previously focused element
+    if (
+      previousFocusRef.current
+      && typeof previousFocusRef.current.focus === 'function'
+    ) {
+      previousFocusRef.current.focus();
+      previousFocusRef.current = null;
     }
   }, [hasNode]);
 
@@ -191,6 +191,7 @@ const Lightbox = () => {
         aria-labelledby="lightboxTitle"
         aria-describedby="lightboxDescription"
       >
+        {hasNode && <ScrollFix />}
         <LightboxContent>
           <LightboxImage className="lightbox-image">
             <LightboxSpinner>

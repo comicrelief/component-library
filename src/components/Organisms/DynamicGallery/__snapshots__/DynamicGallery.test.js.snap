@@ -51,7 +51,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   visibility: hidden;
 }
 
@@ -710,7 +710,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   visibility: hidden;
 }
 
