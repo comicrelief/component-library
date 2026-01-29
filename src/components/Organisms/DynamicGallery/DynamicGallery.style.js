@@ -68,6 +68,8 @@ export const ImageContainer = styled.div`
  display: flex;
   height: auto;
   width: 100%;
+  min-height: ${({ minHeight }) => minHeight};
+  max-height: ${({ maxHeight }) => maxHeight};
   overflow: hidden;
   border-radius: 0.5rem;
   background: rgba(0, 0, 0, 0.05);

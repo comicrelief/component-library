@@ -94,9 +94,10 @@ export default function DynamicGalleryColumn({
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
         .map((node, nodeIndex) => (
           <NodeComponent
-            // disabling the lint rule here as we're chunking an array and have no unique keys
+            // now using index + title as key,
+            // but keeping the ignore rule as linter is still complaining :(
             // eslint-disable-next-line react/no-array-index-key
-            key={nodeIndex}
+            key={`${nodeIndex}-${node.title}`}
             className="gallery-node"
             title={node.title}
             aria-label={node.title}
@@ -106,12 +107,13 @@ export default function DynamicGalleryColumn({
           >
             <ImageContainer
               className="gallery-node-image"
-              style={{ minHeight, maxHeight }}
+              minHeight={minHeight}
+              maxHeight={maxHeight}
             >
               <Picture
-                // no alt text here as we set the title on the containing button
                 image={node.image}
                 objectFit="cover"
+                alt={node.title}
                 // animate image in on load
                 onLoad={event => {
                   event.target

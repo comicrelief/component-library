@@ -193,7 +193,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c18:focus-visible {
-  outline: 2px solid #000000;
+  outline: 2px solid #E52630;
 }
 
 .c19 {
@@ -406,12 +406,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       >
         <div
           className="c4 gallery-node-image"
-          style={
-            Object {
-              "maxHeight": undefined,
-              "minHeight": undefined,
-            }
-          }
         >
           <div
             className="c5"
@@ -419,7 +413,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt=""
+              alt="Image 1"
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
@@ -457,12 +451,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       >
         <div
           className="c4 gallery-node-image"
-          style={
-            Object {
-              "maxHeight": undefined,
-              "minHeight": undefined,
-            }
-          }
         >
           <div
             className="c5"
@@ -470,7 +458,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt=""
+              alt="Image 2"
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
@@ -508,12 +496,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       >
         <div
           className="c4 gallery-node-image"
-          style={
-            Object {
-              "maxHeight": undefined,
-              "minHeight": undefined,
-            }
-          }
         >
           <div
             className="c5"
@@ -521,7 +503,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt=""
+              alt="Image 3"
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
@@ -859,7 +841,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c10:focus-visible {
-  outline: 2px solid #000000;
+  outline: 2px solid #E52630;
 }
 
 .c11 {

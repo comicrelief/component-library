@@ -28,6 +28,21 @@ import ScrollFix from './_ScrollFix';
  */
 export const LightboxContext = React.createContext(null);
 
+// get all focusable elements within the dialog
+function getFocusableElements(element) {
+  if (!(element instanceof Element)) return [];
+
+  const focusableSelectors = [
+    'button:not([disabled])',
+    '[href]',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(', ');
+  return Array.from(element.querySelectorAll(focusableSelectors));
+}
+
 /**
  * the Lightbox component is a modal that displays a single image,
  * along with UI to navigate through the gallery
@@ -51,21 +66,6 @@ const Lightbox = () => {
   const dialogRef = useRef(null);
   const previousFocusRef = useRef(null);
 
-  // get all focusable elements within the dialog
-  function getFocusableElements() {
-    if (!dialogRef.current) return [];
-
-    const focusableSelectors = [
-      'button:not([disabled])',
-      '[href]',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])'
-    ].join(', ');
-    return Array.from(dialogRef.current.querySelectorAll(focusableSelectors));
-  }
-
   /**
   * handle keyboard events within the lightbox;
   * - trapped focus between UI elements
@@ -77,7 +77,7 @@ const Lightbox = () => {
     function handleTabKey(event) {
       if (!hasNode) return;
 
-      const focusableElements = getFocusableElements();
+      const focusableElements = getFocusableElements(dialogRef.current);
       if (focusableElements.length === 0) return;
 
       const firstElement = focusableElements[0];
@@ -96,7 +96,6 @@ const Lightbox = () => {
     }
 
     function handleKeyDown(event) {
-      // TODO: add other key handling here
       switch (event.key) {
         case 'Escape':
           setSelectedNode(null);
@@ -133,7 +132,7 @@ const Lightbox = () => {
       previousFocusRef.current = document.activeElement;
       // move focus to the first focusable element in the dialog
       setTimeout(() => {
-        const focusableElements = getFocusableElements();
+        const focusableElements = getFocusableElements(dialogRef.current);
         if (focusableElements.length > 0) {
           focusableElements[0].focus();
         }
