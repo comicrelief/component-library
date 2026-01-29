@@ -23,6 +23,7 @@ const makeProcessedCard = (card) => {
 
 const exampleCard = {
   id: 'single-card-1',
+  label: 'Example Label',
   body: (
     <Text tag="p">
       <strong>Single Card</strong> content here
@@ -60,6 +61,7 @@ const exampleCard = {
 
 const cardWithoutImage = {
   id: 'single-card-no-image',
+  label: 'Example Label',
   body: (
     <Text tag="p">
       Card without image

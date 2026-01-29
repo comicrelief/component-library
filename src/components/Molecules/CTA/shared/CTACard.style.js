@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation, springScaleAnimation } from '../../../../theme/shared/animations';
+import { bounceUpAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 
@@ -46,17 +46,16 @@ const ImageWrapper = styled.div`
         object-fit: cover;
       }
     `}
-
-    // Desktop-only image zoom animation on card hover
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      ${springScaleAnimation(true)}
-    }
   }
 `;
 
 const CTAText = styled.span`
   ${({ theme }) => fontHelper(theme, 'span')}
-  color: ${({ theme }) => theme.color('grey')};
+  color: ${({ theme }) => theme.color('red')};
+
+  @media (min-width: ${breakpointValues.L}px) {
+    color: ${({ theme }) => theme.color('grey_4')};
+  }
   font-weight: bold;
   text-decoration: none;
   position: relative;
@@ -78,7 +77,11 @@ const ArrowIconWrapper = styled.div`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.color('grey')};
+  background: ${({ theme }) => theme.color('red')};
+
+  @media (min-width: ${breakpointValues.L}px) {
+    background: ${({ theme }) => theme.color('grey_4')};
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +100,7 @@ const CardLink = styled.a`
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   text-decoration: none;
   overflow: hidden;
-  cursor: pointer;
+  cursor: ${({ isInteractive }) => (isInteractive ? 'pointer' : 'default')};
   box-sizing: border-box;
 
   // Side-by-side layout for single card desktop view
@@ -110,45 +113,51 @@ const CardLink = styled.a`
     }
 
     @media ${({ theme }) => theme.breakpoints2026('L')} {
-      min-height: calc(272px - 4rem);
+      min-height: 272px;
     }
   `}
 
-  img {
-    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
-    transform: scale(1.02);
-    transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
-   }
+  ${({ isInteractive }) => isInteractive && css`
+    img {
+      transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
+    }
 
-  // Desktop-only hover effects
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${bounceUpAnimation(true, 0.02, 1)};
+    // Desktop-only hover effects
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      ${bounceUpAnimation(true, 10, 1)};
+      /* override the bounceUpAnimation transition */
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
-    &:hover {
-      box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+      &:hover {
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
 
-      ${ImageWrapper} img {
-        transform: scale(1.1);
-      }
+        ${ImageWrapper} img {
+          transform: scale(1.06);
+        }
 
-      ${CTAText} {
-        color: ${({ theme }) => theme.color('red')};
-        text-decoration: none;
-      }
+        ${CTAText} {
+          text-decoration: none;
+          @media (min-width: ${breakpointValues.L}px) {
+            color: ${({ theme }) => theme.color('red')};
+          }
+        }
 
-      ${CTATextUnderline} {
-        opacity: 1;
-      }
+        ${CTATextUnderline} {
+          opacity: 1;
+        }
 
-      ${ArrowIconWrapper} {
-        background: ${({ theme }) => theme.color('red')};
+        ${ArrowIconWrapper} {
+          @media (min-width: ${breakpointValues.L}px) {
+            background: ${({ theme }) => theme.color('red')};
+          }
+        }
       }
     }
-  }
+  `}
 `;
 
 const CardWrapper = styled.div`
-  width: 100%;
+  width: auto;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -186,7 +195,9 @@ const CardWrapper = styled.div`
   ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
     /* Below M: stacked cards, keep them centred */
     @media (max-width: ${breakpointValues.M - 1}px) {
-      max-width: ${({ columns }) => (columns === 3 ? '309px' : '345px')};
+      /* In mobile stack view we want cards to fill the container width */
+      width: 100%;
+      max-width: 100%;
       margin: 0;
     }
 
@@ -201,32 +212,41 @@ const CardWrapper = styled.div`
               flex: 0 0 345px;
               max-width: 345px;
             `)}
+
+      /*
+       * In 2 column mode, if the CTA container is too narrow to display 2-up,
+       * fall back to 1-per-row while keeping the card width constrained (not full-width).
+       * This matches the 3-col behaviour (1-per-row, centered), and avoids
+       * the nightmare of "full width column" cards
+       */
+      ${({ columns }) => columns === 2 && css`
+        @container cta-multi-card (max-width: 705px) {
+          flex: 0 0 100%;
+          width: min(100%, 345px);
+          max-width: 345px;
+          margin-inline: auto;
+        }
+      `}
     }
   `}
 
-  // L breakpoint: min/max rules vary by layout
   ${({ isFullWidth }) => !isFullWidth && css`
-    @media (min-width: ${breakpointValues.L}px) and (max-width: ${breakpointValues.XL - 1}px) {
+    @media (min-width: ${breakpointValues.L}px) {
       ${({ columns }) => (
     columns === 3
       ? css`
-              flex-basis: calc(33.333% - 1rem);
-              min-width: 286px;
-              max-width: 371px;
+              flex: 0 1 auto;
+              width: clamp(286px, calc((100% - 4rem) / 3), 363px);
             `
       : css`
-              flex-basis: calc(50% - 1rem);
-              min-width: 443px;
-              max-width: 564px;
+              flex: 0 1 auto;
+              /*
+               * In 2-col mode at L+, the parent container uses CSS grid to enforce 2-up.
+               * See the multi card style file.
+               */
+              width: 100%;
             `
   )}
-      align-self: stretch;
-    }
-
-    // XL breakpoint and above: fixed widths vary by layout
-    @media ${({ theme }) => theme.allBreakpoints('XL')} {
-      flex-basis: unset;
-      width: ${({ columns }) => (columns === 3 ? '371px' : '564px')};
       align-self: stretch;
     }
   `}
@@ -234,7 +254,7 @@ const CardWrapper = styled.div`
 
 const CopyAndLinkSection = styled.div`
   width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme }) => theme.color('white')};
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -270,6 +290,12 @@ const Copy = styled.div`
   min-height: 0;
 `;
 
+const CardLabel = styled.div`
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
+  font-size: 14px;
+  color: ${({ theme }) => theme.color('grey_3')};
+`;
+
 const CTA = styled.div`
   width: 100%;
   display: flex;
@@ -286,6 +312,7 @@ export {
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
+  CardLabel,
   CTA,
   CTAText,
   CTATextUnderline,
