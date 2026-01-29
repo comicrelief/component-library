@@ -253,6 +253,15 @@ const StyledNavItem = styled.li`
   ${zIndex('medium')};
   position: static;
   font-weight: 700;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    border-top: none;
+  }
 
   li {
     span {
