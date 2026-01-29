@@ -31,6 +31,11 @@ export const Dialog = styled.dialog`
   background: transparent;
   border: none;
   z-index: 1;
+  margin-top: 72px;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    margin-top: 84px;
+  }
 `;
 
 export const LightboxContent = styled.div`

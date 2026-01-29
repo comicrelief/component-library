@@ -71,6 +71,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   background: transparent;
   border: none;
   z-index: 1;
+  margin-top: 72px;
 }
 
 .c14 {
@@ -362,6 +363,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 @media (min-width:1024px) {
   .c25 {
     fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c13 {
+    margin-top: 84px;
   }
 }
 
@@ -730,6 +737,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   background: transparent;
   border: none;
   z-index: 1;
+  margin-top: 72px;
 }
 
 .c6 {
@@ -935,6 +943,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 @media (min-width:1024px) {
   .c17 {
     fill: #000000;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    margin-top: 84px;
   }
 }
 
