@@ -46,7 +46,7 @@ const Lightbox = () => {
     previousNode
   } = useContext(LightboxContext);
 
-  const hasNode = !!selectedNode;
+  const hasNode = Boolean(selectedNode);
   const dialogRef = useRef(null);
   const previousFocusRef = useRef(null);
 

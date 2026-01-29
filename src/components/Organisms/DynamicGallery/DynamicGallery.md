@@ -9,9 +9,9 @@
 ### Basic gallery
 
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../styleguide/data/data').defaultData;       
 import createMockGalleryNodes from './_utils';
-<DynamicGallery nodes={createMockGalleryNodes(100)} />;
+<DynamicGallery nodes={createMockGalleryNodes(50)} />;
 ```
 
 ### Customised gallery with multiple options

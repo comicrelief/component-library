@@ -38,10 +38,6 @@ const GalleryNodeBase = css`
   border: none;
   border-radius: 0.5rem;
   text-align: left;
-
-  & > div:first-child {
-   
-  }
 `;
 
 export const GalleryNode = styled.div`

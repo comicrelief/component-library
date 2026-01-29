@@ -21,7 +21,7 @@ export default function createMockGalleryNodes(nodeCount = 10) {
       image: images[Math.floor(Math.random() * images.length)],
       title: `image ${i}`,
       caption: 'Age group: 0-10',
-      body: 'This is the body of the image. It can be used to display additional information about the image.',
+      body: `This is the body for image ${i}. It can be used to display additional information about the image.`,
       centredText: false
     });
   }

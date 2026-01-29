@@ -1,8 +1,6 @@
 import { floor, orderBy, throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React, {
-  useCallback,
-  useContext,
   useEffect,
   useRef,
   useState
@@ -10,34 +8,25 @@ import React, {
 import { useMediaQuery } from 'react-responsive';
 import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/breakpoints2026';
 import Button from '../../Atoms/Button/Button';
-import Picture from '../../Atoms/Picture/Picture';
 import Lightbox, { LightboxContext } from './_Lightbox';
 import {
-  Caption,
-  Column,
   Container,
-  Details,
   EmptyMessage,
-  GalleryNode,
-  ImageContainer,
-  ImageGrid,
-  InteractiveGalleryNode,
-  Title
+  ImageGrid
 } from './DynamicGallery.style';
+import DynamicGalleryColumn from './_DynamicGalleryColumn';
+import { GalleryNodeType } from './_types';
 
-// MARK: Gallery
 /**
  * the Dynamic Gallery component displays a grid of images,
  * by default using dynamic heights per image to create an more organic look
  */
 const DynamicGallery = ({
-  // options
   pageBackgroundColour = 'transparent',
   textColour = 'black',
   gridWidth = 3,
   maxWidth = '1500px',
   loadingBehaviour = '25',
-  // displayOrder = 'ascending',
   imageRatio = 'dynamic',
   useLightbox = true,
   nodes = [],
@@ -207,7 +196,7 @@ const DynamicGallery = ({
           && Array(columnCount)
             .fill(null)
             .map((column, columnIndex) => (
-              <ColumnComponent
+              <DynamicGalleryColumn
                 // disabling the lint rule here
                 // as we're chunking an array and have no unique keys
                 // eslint-disable-next-line react/no-array-index-key
@@ -231,15 +220,6 @@ const DynamicGallery = ({
   );
 };
 
-// MARK: Gallery Props
-const GalleryNodeType = PropTypes.shape({
-  title: PropTypes.string,
-  image: PropTypes.string.isRequired,
-  body: PropTypes.node,
-  caption: PropTypes.string,
-  centredText: PropTypes.bool
-});
-
 DynamicGallery.propTypes = {
   // title: PropTypes.string,
   pageBackgroundColour: PropTypes.string,
@@ -250,11 +230,6 @@ DynamicGallery.propTypes = {
     'all',
     '25'
   ]),
-  // displayOrder: PropTypes.oneOf([
-  //   'random',
-  //   'ascending',
-  //   'descending'
-  // ]),
   imageRatio: PropTypes.oneOf([
     'dynamic',
     '4:3'
@@ -266,127 +241,3 @@ DynamicGallery.propTypes = {
 };
 
 export default DynamicGallery;
-
-// MARK: Column
-/**
- * a separate component to handle columns of images;
- * this component handles aspect ratio calculations to enfore a min/max ratio for its images
- */
-function ColumnComponent({
-  updateTabOrder,
-  nodes,
-  imageRatio,
-  columnIndex,
-  columnCount
-}) {
-  const [minHeight, setMinHeight] = useState();
-  const [maxHeight, setMaxHeight] = useState();
-  const elRef = useRef(null);
-
-  const updateMinMaxHeight = useCallback(() => {
-    if (!elRef.current) return;
-
-    let minAspectRatio;
-    let maxAspectRatio;
-
-    // handle aspect ratio;
-    // for dynamic aspect ratio, we use a min/max ratio of 2.35:1 and 9:16
-    // but if a specific aspect ratio is provided, use that instead
-    switch (imageRatio) {
-      case '4:3':
-        minAspectRatio = 4 / 3;
-        maxAspectRatio = 4 / 3;
-        break;
-      default:
-        minAspectRatio = 2.35 / 1;
-        maxAspectRatio = 9 / 16;
-        break;
-    }
-
-    const columnWidth = elRef.current.clientWidth;
-    setMinHeight(columnWidth / minAspectRatio);
-    setMaxHeight(columnWidth / maxAspectRatio);
-  }, [imageRatio, setMinHeight, setMaxHeight]);
-
-  // call repeatedly on column resize
-  useEffect(() => {
-    // when the column width changes, recalculate the min/max height for images
-    const handleResize = throttle(() => {
-      updateMinMaxHeight();
-    }, 250);
-
-    const resizeObserver = new ResizeObserver(handleResize);
-    resizeObserver.observe(elRef.current);
-
-    // call once on initial mount
-    updateMinMaxHeight();
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, [updateMinMaxHeight]);
-
-  const { useLightbox, setSelectedNode } = useContext(LightboxContext);
-
-  // on click, open the image in the lightbox;
-  // conditionally enabled depending on the gallery settings
-  function handlePointerUp(node) {
-    setSelectedNode(node);
-  }
-
-  const NodeComponent = useLightbox ? InteractiveGalleryNode : GalleryNode;
-
-  return (
-    <Column ref={elRef} className="gallery-column">
-      {nodes
-        ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
-        .map((node, nodeIndex) => (
-          <NodeComponent
-            // disabling the lint rule here as we're chunking an array and have no unique keys
-            // eslint-disable-next-line react/no-array-index-key
-            key={nodeIndex}
-            className="gallery-node"
-            title={node.title}
-            aria-label={node.title}
-            data-node-index={nodeIndex}
-            onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
-            tabIndex={0}
-          >
-            <ImageContainer className="gallery-node-image" style={{ minHeight, maxHeight }}>
-              <Picture
-                // no alt text here as we set the title on the containing button
-                image={node.image}
-                objectFit="cover"
-                // animate image in on load
-                onLoad={event => {
-                  event.target
-                    .closest('.gallery-node-image')
-                    .querySelector('img')
-                    .style.setProperty('opacity', '1');
-
-                  // update tab order once the image has loaded
-                  updateTabOrder();
-                }}
-              />
-            </ImageContainer>
-            <Details>
-              <Title>{node.title}</Title>
-              {node.caption && <Caption>{node.caption}</Caption>}
-            </Details>
-          </NodeComponent>
-        ))}
-    </Column>
-  );
-}
-
-// MARK: Column Props
-ColumnComponent.propTypes = {
-  nodes: PropTypes.arrayOf(GalleryNodeType),
-  imageRatio: PropTypes.oneOf([
-    'dynamic',
-    '4:3'
-  ]),
-  columnIndex: PropTypes.number,
-  columnCount: PropTypes.number,
-  updateTabOrder: PropTypes.func
-};
