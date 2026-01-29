@@ -10,7 +10,7 @@ const transitionDuration = 0.2;
 const NavLinkClass = styled(Link)`
   display: inline-block;
   border: 0;
-  padding: 25px;
+  padding: 20px 25px;
   line-height: 1rem;
   height: auto;
   font-weight: 600;
@@ -158,7 +158,7 @@ const SecondaryNavItem = styled.li`
 `;
 
 const SecondaryNavLink = styled(NavLinkClass)`
-  padding: 20px 25px 22px 42px;
+  padding: 20px 25px 20px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
@@ -476,7 +476,7 @@ const TertiaryNavItem = styled.li`
  * Tertiary menu link item
  */
 const TertiaryNavLink = styled(NavLinkClass)`
-  padding: 20px 25px 22px 42px;
+  padding: 20px 25px 20px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
@@ -586,7 +586,7 @@ const SecondaryMenuPrimaryLink = styled.li`
 `;
 
 const SecondaryMenuPrimaryLinkAnchor = styled(NavLinkClass)`
-  padding: 20px 25px 22px 42px;
+  padding: 20px 25px 20px 42px;
   color: ${({ theme }) => theme.color('black')};
   height: auto;
   position: relative;
