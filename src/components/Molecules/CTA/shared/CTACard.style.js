@@ -236,7 +236,7 @@ const CardWrapper = styled.div`
     columns === 3
       ? css`
               flex: 0 1 auto;
-              width: clamp(286px, calc((100% - 4rem) / 3), 363px);
+              width: clamp(261px, calc((100% - 4rem) / 3), 363px);
             `
       : css`
               flex: 0 1 auto;
