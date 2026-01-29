@@ -69,7 +69,11 @@ const CTAMultiCard = ({ data }) => {
                   arrows: false,
                   pagination: false,
                   drag: true,
-                  dragMinThreshold: 10,
+                  // Reduce swipe "throw" as Matt felt the defaults are too much
+                  // See https://splidejs.com/guides/options/
+                  flickPower: 350,
+                  flickMaxPages: 2,
+                  dragMinThreshold: { mouse: 18, touch: 18 },
                   gap: '1rem',
                   fixedWidth: '309px',
                   padding: { left: '0px', right: '0px' }
