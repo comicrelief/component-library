@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
   // opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   // transition: opacity 0.3s ease-in-out;
