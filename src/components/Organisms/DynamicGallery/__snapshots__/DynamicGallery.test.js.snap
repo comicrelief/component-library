@@ -302,13 +302,15 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   color: inherit;
 }
 
+.c3:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
+}
+
 .c3 div:first-child {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
-
-.c3:focus-visible {
-  outline: 2px solid;
 }
 
 .c3 > div:first-child:hover {

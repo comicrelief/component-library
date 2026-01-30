@@ -45,6 +45,12 @@ const GalleryNodeBase = css`
   background: none;
   border: none;
   text-align: left;
+
+  &:focus-visible {
+    outline: 2px solid ${({ focusOutlineColour }) => focusOutlineColour};
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
+  }
 `;
 
 export const GalleryNode = styled.div`
@@ -59,10 +65,6 @@ export const InteractiveGalleryNode = styled.button`
   & div:first-child {
     transition: all 0.1s ease-out;
   }
-
-    &:focus-visible {
-      outline: 2px solid ${({ focusOutlineColour }) => focusOutlineColour};
-    }
 
     & > div:first-child {
       &:hover {
