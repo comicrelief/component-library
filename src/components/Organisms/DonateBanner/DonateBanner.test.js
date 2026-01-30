@@ -132,7 +132,6 @@ it('Text-only donate widget renders correctly', () => {
       donateWidgetIsTextOnly
       pageBackgroundColour="grey_light"
       componentBackgroundColour="deep_violet_dark"
-      textColor="white"
       paddingAbove="2rem"
       paddingBelow="2rem"
       donateOrientation="right"

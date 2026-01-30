@@ -100,7 +100,6 @@ import data from './dev-data/data-single';
   donateWidgetIsTextOnly
   pageBackgroundColour="rnd_25_glitzy_grape"
   componentBackgroundColour="deep_violet_dark"
-  textColor="blue"
   paddingAbove="2rem"
   paddingBelow="2rem"
   donateOrientation="right"
@@ -125,7 +124,6 @@ import data from './dev-data/data';
   donateWidgetIsTextOnly
   pageBackgroundColour="grey_light"
   componentBackgroundColour="white"
-  textColor="black"
   paddingAbove="2rem"
   paddingBelow="2rem"
   donateOrientation="right"

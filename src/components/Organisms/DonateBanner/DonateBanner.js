@@ -17,6 +17,8 @@ import {
   Wrapper
 } from './DonateBanner.style';
 
+const DEFAULT_POPUP_TEXT = 'Help us deliver long-term impact by converting your single donation into a monthly gift.';
+
 const DonateBanner = ({
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
@@ -28,13 +30,12 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
+  popUpText = DEFAULT_POPUP_TEXT,
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
   monthlyOtherAmountText = '',
   noMoneyBuys = false,
-  textColor = 'white',
   imageL = null,
   imageM = null,
   imageS = null,
@@ -59,6 +60,10 @@ const DonateBanner = ({
   const {
     thisOtherAmountText
   } = handleOtherAmountText(givingType, otherAmountText, monthlyOtherAmountText);
+
+  // Treat `null` the same as "not provided" so defaults apply.
+  // Use nullish coalescing so empty string ('') is respected if explicitly passed.
+  const resolvedPopUpText = popUpText ?? DEFAULT_POPUP_TEXT;
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
@@ -128,14 +133,13 @@ const DonateBanner = ({
               <>
                 <Text
                   tag="h2"
-                  color={textColor}
                   size="big"
                   family="Anton"
                   weight="normal"
                 >
                   {thisTitle}
                 </Text>
-                <Text tag="p" color={textColor} size="m">
+                <Text tag="p" size="m">
                   {thisSubtitle}
                 </Text>
               </>
@@ -152,7 +156,7 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             noMoneyBuys={noMoneyBuys}
-            popUpText={popUpText}
+            popUpText={resolvedPopUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
             submitButtonColor={submitButtonColor}
@@ -186,7 +190,6 @@ DonateBanner.propTypes = {
   otherAmountText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
   noMoneyBuys: PropTypes.bool,
-  textColor: PropTypes.string,
   imageL: PropTypes.shape({
     images: PropTypes.string,
     imageLow: PropTypes.string,
