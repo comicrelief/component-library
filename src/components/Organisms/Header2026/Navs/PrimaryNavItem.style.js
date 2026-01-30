@@ -47,7 +47,7 @@ const NavLinkClass = styled(Link)`
 
 const SecondaryNavMenu = styled.ul`
   display: flex;
-  padding: 0;
+  padding: 8px 0;
   list-style: none outside;
   left: 0;
   top: 0;
@@ -418,7 +418,7 @@ const StyledText = styled(Text)`
 const TertiaryNavMenu = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 8px 0;
   list-style: none outside;
   width: 100%;
   ${zIndex('higher')};
