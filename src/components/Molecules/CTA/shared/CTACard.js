@@ -8,6 +8,7 @@ import {
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
+  CardLabel,
   CTA,
   CTAText,
   CTATextUnderline,
@@ -27,17 +28,19 @@ const CTACard = ({
 
   const {
     id,
+    label,
     body,
     link,
     linkLabel,
     fallback,
     imageLow,
     images,
-    bgColour,
     description,
     target,
     external
   } = card;
+
+  const hasLink = Boolean(link);
 
   return (
     <CardWrapper
@@ -47,12 +50,11 @@ const CTACard = ({
       columns={columns}
     >
       <CardLink
-        href={link}
-        target={target}
-        rel={external}
+        as={hasLink ? 'a' : 'div'}
+        {...(hasLink ? { href: link, target, rel: external } : {})}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
-        backgroundColor={bgColour}
+        isInteractive={hasLink}
       >
         {imageLow && (
           <ImageWrapper isSingleCard={isSingleCard}>
@@ -67,8 +69,13 @@ const CTACard = ({
             />
           </ImageWrapper>
         )}
-        <CopyAndLinkSection backgroundColor={bgColour} isSingleCard={isSingleCard}>
+        <CopyAndLinkSection isSingleCard={isSingleCard}>
           <Copy>
+            {isSingleCard && label && (
+              <CardLabel>
+                {label}
+              </CardLabel>
+            )}
             {body}
           </Copy>
           {linkLabel && (
@@ -95,13 +102,13 @@ const CTACard = ({
 CTACard.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.string.isRequired,
+    label: PropTypes.string,
     body: PropTypes.node,
     link: PropTypes.string,
     linkLabel: PropTypes.string,
     fallback: PropTypes.string,
     imageLow: PropTypes.string,
     images: PropTypes.string,
-    bgColour: PropTypes.string.isRequired,
     description: PropTypes.string,
     target: PropTypes.string.isRequired,
     external: PropTypes.string

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { snakeCase } from 'lodash';
 import CTACard from '../shared/CTACard';
-import SingleCardContainer from './CTASingleCard.style';
+import SingleCardWrapper, { SingleCardInner } from './CTASingleCard.style';
 
 /**
  * CTASingleCard Component
@@ -16,23 +17,33 @@ import SingleCardContainer from './CTASingleCard.style';
  */
 
 const CTASingleCard = ({ data }) => {
-  const { card, paddingAbove, paddingBelow } = data || {};
+  const {
+    card,
+    backgroundColour,
+    paddingAbove,
+    paddingBelow
+  } = data || {};
 
   if (!card) {
     return null;
   }
 
+  const sectionBackgroundColour = snakeCase(backgroundColour || 'transparent');
+
   return (
-    <SingleCardContainer
+    <SingleCardWrapper
       paddingAbove={paddingAbove}
       paddingBelow={paddingBelow}
+      backgroundColor={sectionBackgroundColour}
     >
-      <CTACard
-        card={card}
-        isCarousel={false}
-        isSingleCard
-      />
-    </SingleCardContainer>
+      <SingleCardInner>
+        <CTACard
+          card={card}
+          isCarousel={false}
+          isSingleCard
+        />
+      </SingleCardInner>
+    </SingleCardWrapper>
   );
 };
 
@@ -40,6 +51,7 @@ CTASingleCard.propTypes = {
   data: PropTypes.shape({
     card: PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
       body: PropTypes.node,
       image: PropTypes.shape({
         description: PropTypes.string,
@@ -60,10 +72,10 @@ CTASingleCard.propTypes = {
           })
         })
       }),
-      backgroundColour: PropTypes.string,
       link: PropTypes.string,
       linkLabel: PropTypes.string
     }),
+    backgroundColour: PropTypes.string,
     paddingAbove: PropTypes.string,
     paddingBelow: PropTypes.string
   }).isRequired

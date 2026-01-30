@@ -39,9 +39,23 @@ const cardsWithRenderedBody = exampleData.cards.map(card => ({
   external: null
 }));
 
+const cardsFour = [
+  ...cardsWithRenderedBody,
+  {
+    ...cardsWithRenderedBody[0],
+    id: 'example-4th-card',
+    title: 'Fourth card',
+    body: (
+      <Text tag="p">
+        Fourth card (added for layout testing)
+      </Text>
+    )
+  }
+];
+
 const data = {
   ...exampleData,
-  cards: cardsWithRenderedBody,
+  cards: cardsFour,
   layout: "3 columns",
   carouselOfCards: true,
   backgroundColour: "grey_medium",
@@ -49,14 +63,56 @@ const data = {
   paddingBelow: '0rem'
 };
 
-<div style={{ background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3', width: '100%' }}>
   <CTAMultiCard data={data} />
+</div>;
+```
+
+### CTAMultiCard: Carousel with just 2 cards (2 columns layout)
+
+```js
+import CTAMultiCard from './CTAMultiCard';
+import Text from '../../../Atoms/Text/Text';
+import challengeExampleImage from '../../../../styleguide/assets/challenge-1.jpg';
+const exampleData = require('./example_data.json');
+
+// Map cards to include pre-rendered body content and processed image/link data
+const cardsWithRenderedBody = exampleData.cards.map(card => ({
+  ...card,
+  body: (
+    <Text tag="p">
+      {card.body}
+    </Text>
+  ),
+  fallback: challengeExampleImage,
+  imageLow: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z",
+  images: `${challengeExampleImage} 678w`,
+  bgColour: "white",
+  description: "",
+  target: "self",
+  external: null
+}));
+
+const cardsTwo = cardsWithRenderedBody.slice(0, 2);
+
+const dataTwoCards = {
+  ...exampleData,
+  cards: cardsTwo,
+  layout: "2 columns",
+  carouselOfCards: true,
+  backgroundColour: "grey_medium",
+  paddingAbove: '0rem',
+  paddingBelow: '0rem'
+};
+
+<div style={{ background: '#E1E2E3', width: '100%' }}>
+  <CTAMultiCard data={dataTwoCards} />
 </div>;
 ```
 
 ### CTAMultiCard: Desktop Grid View (2 columns) with large padding
 
-**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a vertical stack (non-carousel). This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
+**NB: One card contains a lot of lorem ipsum text to demonstrate that all cards will match the height of the tallest sibling card. In mobile view, this example displays as a carousel. This example also demonstrates larger vertical padding via `paddingAbove` / `paddingBelow` set to `4rem`, so it will appear with more space above and below the cards.**
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -96,19 +152,19 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
 const dataWithLongText = {
   ...exampleData,
   layout: "2 columns",
-  carouselOfCards: false,
+  carouselOfCards: true,
   backgroundColour: "Transparent",
   cards: cardsWithRenderedBody,
   paddingAbove: '4rem',
   paddingBelow: '4rem'
 };
 
-<div style={{ background: '#E1E2E3' }}>
+<div style={{ background: '#E1E2E3', width: '100%' }}>
   <CTAMultiCard data={dataWithLongText} />
 </div>;
 ```
 
-### CTAMultiCard: Wrap behaviour (3 columns, non-carousel)
+### CTAMultiCard: Wrap behaviour (3 columns)
 
 ```js
 import CTAMultiCard from './CTAMultiCard';
@@ -133,17 +189,41 @@ const cardsWithRenderedBody = exampleData.cards.map((card, index) => ({
   external: null
 }));
 
+const cardsFive = [
+  ...cardsWithRenderedBody,
+  {
+    ...cardsWithRenderedBody[0],
+    id: 'wrap-example-3',
+    title: 'Fourth card',
+    body: (
+      <Text tag="p">
+        Short body text (4)
+      </Text>
+    )
+  },
+  {
+    ...cardsWithRenderedBody[1],
+    id: 'wrap-example-4',
+    title: 'Fifth card',
+    body: (
+      <Text tag="p">
+        Short body text (5)
+      </Text>
+    )
+  }
+];
+
 const dataWrapExample = {
   ...exampleData,
   layout: "3 columns",
-  carouselOfCards: false,
-  backgroundColour: "Transparent",
-  cards: cardsWithRenderedBody,
+  carouselOfCards: true,
+  backgroundColour: "rnd_26_light_pink",
+  cards: cardsFive,
   paddingAbove: '2rem',
   paddingBelow: '2rem'
 };
 
-<div style={{ background: '#E1E2E3'}}>
+<div style={{ background: '#E1E2E3', width: '100%' }}>
   <CTAMultiCard data={dataWrapExample} />
 </div>;
 ```
