@@ -174,7 +174,7 @@ const Lightbox = () => {
     target.style.opacity = '1';
   }
 
-  const body = extractNodeText(selectedNode?.lightboxBody);
+  const bodyText = extractNodeText(selectedNode?.lightboxBody);
 
   return (
     <Container isOpen={hasNode}>
@@ -195,7 +195,7 @@ const Lightbox = () => {
             {hasNode && (
               <Picture
                 key={selectedNode?.image}
-                alt={body}
+                alt={bodyText}
                 image={selectedNode?.image}
                 width={imageDimensions.width}
                 height={imageDimensions.height}
@@ -210,9 +210,9 @@ const Lightbox = () => {
                 {selectedNode.lightboxBody}
               </div>
             )}
-            {selectedNode?.caption && (
+            {selectedNode?.lightboxCaption && (
               <div>
-                {selectedNode?.caption}
+                {selectedNode?.lightboxCaption}
               </div>
             )}
           </LightboxDetails>

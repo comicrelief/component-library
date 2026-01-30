@@ -433,11 +433,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div>
-            Caption 1
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div
@@ -471,11 +467,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div>
-            Caption 2
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div
@@ -509,11 +501,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div>
-            Caption 3
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 // so lives here to avoid circular dependencies
 // eslint-disable-next-line import/prefer-default-export
 export const GalleryNodeType = PropTypes.shape({
-  title: PropTypes.node,
   image: PropTypes.string.isRequired,
   gridBody: PropTypes.node,
+  gridCaption: PropTypes.node,
   lightboxBody: PropTypes.node,
-  caption: PropTypes.node
+  lightboxCaption: PropTypes.node
 });

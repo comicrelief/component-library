@@ -24,7 +24,8 @@ export default function createMockGalleryNodes(nodeCount = 10) {
         <p>
           {`image ${i}`}
         </p>),
-      caption: <p>Group age: 0-10</p>,
+      gridCaption: <p>Grid: Group age: 0-10</p>,
+      lightboxCaption: <p>Lightbox: Group age: 0-10</p>,
       gridBody: (
         <p>
           {/* eslint-disable-next-line */}
