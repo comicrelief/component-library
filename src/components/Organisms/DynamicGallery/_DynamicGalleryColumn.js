@@ -26,6 +26,7 @@ import { extractNodeText } from './_utils';
  * this component handles aspect ratio calculations to enfore a min/max ratio for its images
  */
 export default function DynamicGalleryColumn({
+  focusOutlineColour,
   updateTabOrder,
   nodes,
   imageRatio,
@@ -103,6 +104,7 @@ export default function DynamicGalleryColumn({
               title={title}
               aria-label={title}
               data-node-index={nodeIndex}
+              focusOutlineColour={focusOutlineColour}
               onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
               tabIndex={0}
             >
@@ -146,5 +148,6 @@ DynamicGalleryColumn.propTypes = {
   imageRatio: PropTypes.oneOf(['dynamic', '4:3']),
   columnIndex: PropTypes.number,
   columnCount: PropTypes.number,
-  updateTabOrder: PropTypes.func
+  updateTabOrder: PropTypes.func,
+  focusOutlineColour: PropTypes.string
 };

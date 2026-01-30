@@ -61,7 +61,7 @@ export const InteractiveGalleryNode = styled.button`
   }
 
     &:focus-visible {
-      outline: 2px solid #000000;
+      outline: 2px solid ${({ focusOutlineColour }) => focusOutlineColour};
     }
 
     & > div:first-child {

@@ -24,6 +24,7 @@ import { GalleryNodeType } from './_types';
 const DynamicGallery = ({
   pageBackgroundColour = 'transparent',
   textColour = 'black',
+  focusOutlineColour,
   gridWidth = 3,
   maxWidth = '1500px',
   loadingBehaviour = '25',
@@ -211,6 +212,7 @@ const DynamicGallery = ({
                 nodes={nodes.slice(0, imageCount)}
                 imageRatio={imageRatio}
                 updateTabOrder={throttledUpdateTabOrder.current}
+                focusOutlineColour={focusOutlineColour}
               />
             ))}
 
@@ -229,6 +231,7 @@ DynamicGallery.propTypes = {
   // title: PropTypes.string,
   pageBackgroundColour: PropTypes.string,
   textColour: PropTypes.string,
+  focusOutlineColour: PropTypes.string,
   gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
   maxWidth: PropTypes.string,
   loadingBehaviour: PropTypes.oneOf([
