@@ -406,12 +406,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 1"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 1"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -422,7 +422,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 1"
+              alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
@@ -435,9 +435,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           className="c7"
         >
           <div>
-            Body 1
-          </div>
-          <div>
             Caption 1
           </div>
         </div>
@@ -447,12 +444,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 2"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 2"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -463,7 +460,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 2"
+              alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
@@ -476,9 +473,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           className="c7"
         >
           <div>
-            Body 2
-          </div>
-          <div>
             Caption 2
           </div>
         </div>
@@ -488,12 +482,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 3"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 3"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -504,7 +498,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 3"
+              alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
@@ -516,9 +510,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           className="c7"
         >
-          <div>
-            Body 3
-          </div>
           <div>
             Caption 3
           </div>

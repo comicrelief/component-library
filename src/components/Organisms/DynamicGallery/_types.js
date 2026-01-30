@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 export const GalleryNodeType = PropTypes.shape({
   title: PropTypes.node,
   image: PropTypes.string.isRequired,
-  body: PropTypes.node,
+  gridBody: PropTypes.node,
+  lightboxBody: PropTypes.node,
   caption: PropTypes.node
 });

@@ -93,14 +93,15 @@ export default function DynamicGalleryColumn({
       {nodes
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
         .map((node, nodeIndex) => {
-          const title = extractNodeText(node.title);
-          const key = String(nodeIndex) + title;
+          const body = extractNodeText(node.gridBody);
+          const key = String(nodeIndex) + body;
           return (
             <NodeComponent
               key={key}
               className="gallery-node"
-              title={title}
-              aria-label={title}
+              caption={body}
+              aria-label={body}
+              title={body}
               data-node-index={nodeIndex}
               focusOutlineColour={focusOutlineColour}
               onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
@@ -117,7 +118,7 @@ export default function DynamicGalleryColumn({
                 <Picture
                   image={node.image}
                   objectFit="cover"
-                  alt={title}
+                  alt={body}
                   // animate image in on load
                   onLoad={event => {
                     event.target
@@ -131,7 +132,7 @@ export default function DynamicGalleryColumn({
                 />
               </ImageContainer>
               <Details>
-                {node.body && <div>{node.body}</div>}
+                {node.gridBody && <div>{node.gridBody}</div>}
                 {node.caption && <div>{node.caption}</div>}
               </Details>
             </NodeComponent>

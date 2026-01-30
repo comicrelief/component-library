@@ -25,10 +25,16 @@ export default function createMockGalleryNodes(nodeCount = 10) {
           {`image ${i}`}
         </p>),
       caption: <p>Group age: 0-10</p>,
-      body: (
+      gridBody: (
         <p>
           {/* eslint-disable-next-line */}
-          This is the body for image {i}. It can be used to display additional information about the image.
+          Grid: This is the body for image {i}. It can be used to display additional information about the image.
+        </p>
+      ),
+      lightboxBody: (
+        <p>
+          {/* eslint-disable-next-line */}
+          Lightbox: This is the body for image {i}. It can be used to display additional information about the image.
         </p>
       )
     });
