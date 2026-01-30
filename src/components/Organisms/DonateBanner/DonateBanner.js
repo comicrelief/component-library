@@ -41,8 +41,7 @@ const DonateBanner = ({
   cartID,
   clientID,
   donateLink,
-  mbshipID,
-  submitButtonColor = 'red'
+  mbshipID
 }) => {
   const isLarge = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
@@ -153,7 +152,6 @@ const DonateBanner = ({
             popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
-            submitButtonColor={submitButtonColor}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
             hasTopImage={shouldRenderTopImage}
             shouldShowTitleSection={shouldShowTitleSection}
@@ -207,7 +205,6 @@ DonateBanner.propTypes = {
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
-  submitButtonColor: PropTypes.string
 };
 
 export default DonateBanner;
