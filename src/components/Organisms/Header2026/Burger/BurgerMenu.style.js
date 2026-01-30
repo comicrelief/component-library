@@ -19,7 +19,7 @@ const BurgerWrapper = styled(Link)`
   align-items: center;
   height: 36px;
   width: 36px;
-  background-color: ${({ theme }) => theme.color('grey_light')};
+  background-color: ${({ theme }) => theme.color('grey_medium')};
   ${zIndex('medium')};
   border-radius: 8px;
   order: 50;

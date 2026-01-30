@@ -175,7 +175,7 @@ const MobileMenuOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${({ theme }) => theme.color('grey_light')};
+  background-color: ${({ theme }) => theme.color('grey_medium')};
   z-index: 1;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
