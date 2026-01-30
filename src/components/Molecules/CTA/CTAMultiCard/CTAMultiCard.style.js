@@ -16,29 +16,19 @@ export const CardsSection = styled.div`
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   padding-top: ${({ paddingAbove }) => paddingAbove};
   padding-bottom: ${({ paddingBelow }) => paddingBelow};
+  padding-inline: 1rem;
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    padding-inline: 2rem;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    padding-inline: 4rem;
+  }
 `;
 
 export const CardsInner = styled.div`
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
-
-  ${({ isCarousel }) => !isCarousel && css`
-    padding-inline: 1rem;
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding-inline: 2rem;
-    }
-  `}
-
-  ${({ isCarousel }) => isCarousel && css`
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding-inline: 2rem;
-    }
-
-    @media (min-width: ${breakpointValues.XL}px) {
-      padding-inline: 0;
-    }
-  `}
 `;
 
 const CardsContainer = styled.div`
@@ -53,13 +43,11 @@ const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   /* Ensure 2-column layout behaves itself at L+. Applies when Splide is not active. */
@@ -91,19 +79,23 @@ const CardsContainer = styled.div`
         display: block;
         cursor: grab;
         width: 100%;
-        margin: 0;
         max-width: 100%;
-        padding: 0.75rem 1rem;
         gap: 0;
 
         /* We need this so that the box shadows of the cards are not clipped off */
         .splide,
         .splide__track {
-          overflow: visible
+          overflow: visible;
         }
 
         .splide__list {
           align-items: stretch;
+        }
+
+        /* Center slides when there is no overflow (e.g. only 1–2 cards in
+        a gap where we'd probably fit 3 or more). */
+        .splide:not(.is-overflow) .splide__list {
+          justify-content: center;
         }
 
         .splide__slide {
@@ -115,13 +107,11 @@ const CardsContainer = styled.div`
         flex-wrap: nowrap;
         justify-content: flex-start;
         width: 100%;
-        margin: 0;
         max-width: 100%;
         overflow-x: auto;
         overflow-y: visible;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        padding: 0.75rem 1rem;
 
         scrollbar-width: none;
         -ms-overflow-style: none;
