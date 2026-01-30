@@ -98,6 +98,7 @@ const DynamicGallery = ({
 
   // handle selected gallery node
   const [selectedNode, setSelectedNode] = useState(null);
+  const [focusedNode, setFocusedNode] = useState(null);
 
   // handle next/previous node events from the lightbox
   function handleNextNode(node) {
@@ -122,6 +123,8 @@ const DynamicGallery = ({
           const nodeIndex = +event.target.dataset.nodeIndex;
           if (Number.isNaN(nodeIndex)) return;
           setSelectedNode(nodes[nodeIndex]);
+          // also store the focused node for focus restoration when the lightbox closes
+          setFocusedNode(event.target.closest('.gallery-node'));
         }
         break;
       }
@@ -188,7 +191,9 @@ const DynamicGallery = ({
           selectedNode,
           setSelectedNode,
           nextNode: handleNextNode,
-          previousNode: handlePreviousNode
+          previousNode: handlePreviousNode,
+          focusedNode,
+          setFocusedNode
         }}
       >
         <ImageGrid className="gallery-grid" onKeyDown={event => handleKeyDown(event)}>
