@@ -19,6 +19,7 @@ import {
   ScreenReaderOnly
 } from './_Lightbox.style';
 import ScrollFix from './_ScrollFix';
+import { extractNodeText } from './_utils';
 
 /**
  * lightbox context:
@@ -182,6 +183,8 @@ const Lightbox = () => {
     target.style.opacity = '1';
   }
 
+  const title = extractNodeText(selectedNode?.title);
+
   return (
     <Container isOpen={hasNode}>
       <Backdrop onPointerUp={() => handleBackdropClick()} />
@@ -199,7 +202,7 @@ const Lightbox = () => {
             {hasNode && (
               <Picture
                 key={selectedNode?.image}
-                alt={selectedNode?.title}
+                alt={title}
                 image={selectedNode?.image}
                 width={imageDimensions.width}
                 height={imageDimensions.height}

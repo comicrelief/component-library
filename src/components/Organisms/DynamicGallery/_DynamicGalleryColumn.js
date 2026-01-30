@@ -19,6 +19,7 @@ import {
   Title
 } from './DynamicGallery.style';
 import { GalleryNodeType } from './_types';
+import { extractNodeText } from './_utils';
 
 /**
  * a separate component to handle columns of images;
@@ -92,45 +93,50 @@ export default function DynamicGalleryColumn({
     <Column ref={elRef} className="gallery-column">
       {nodes
         ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
-        .map((node, nodeIndex) => (
-          <NodeComponent
-            key={String(nodeIndex) + node.title}
-            className="gallery-node"
-            title={node.title}
-            aria-label={node.title}
-            data-node-index={nodeIndex}
-            onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
-            tabIndex={0}
-          >
-            <ImageContainer
-              className="gallery-node-image"
-              // eslint-disable-next-line prefer-template
-              minHeight={String(minHeight) + 'px'}
-              // eslint-disable-next-line prefer-template
-              maxHeight={String(maxHeight) + 'px'}
+        .map((node, nodeIndex) => {
+          const title = extractNodeText(node.title);
+          const key = String(nodeIndex) + title;
+          return (
+            <NodeComponent
+              key={key}
+              className="gallery-node"
+              title={title}
+              aria-label={title}
+              data-node-index={nodeIndex}
+              onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
+              tabIndex={0}
             >
-              <Picture
-                image={node.image}
-                objectFit="cover"
-                alt={node.title}
-                // animate image in on load
-                onLoad={event => {
-                  event.target
-                    .closest('.gallery-node-image')
-                    .querySelector('img')
-                    .style.setProperty('opacity', '1');
+              <ImageContainer
+                className="gallery-node-image"
+                // eslint prefers template literals for strings, but they break the compiler
+                // eslint-disable-next-line prefer-template
+                minHeight={String(minHeight) + 'px'}
+                // eslint-disable-next-line prefer-template
+                maxHeight={String(maxHeight) + 'px'}
+              >
+                <Picture
+                  image={node.image}
+                  objectFit="cover"
+                  alt={title}
+                  // animate image in on load
+                  onLoad={event => {
+                    event.target
+                      .closest('.gallery-node-image')
+                      .querySelector('img')
+                      .style.setProperty('opacity', '1');
 
-                  // update tab order once the image has loaded
-                  updateTabOrder();
-                }}
-              />
-            </ImageContainer>
-            <Details>
-              <Title>{node.title}</Title>
-              {node.caption && <Caption>{node.caption}</Caption>}
-            </Details>
-          </NodeComponent>
-        ))}
+                    // update tab order once the image has loaded
+                    updateTabOrder();
+                  }}
+                />
+              </ImageContainer>
+              <Details>
+                <Title>{node.title}</Title>
+                {node.caption && <Caption>{node.caption}</Caption>}
+              </Details>
+            </NodeComponent>
+          );
+        })}
     </Column>
   );
 }
