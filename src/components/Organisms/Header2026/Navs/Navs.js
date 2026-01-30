@@ -251,9 +251,7 @@ const Navs = ({
         data-testid="BurgerMenu"
         toggle={toggleBurgerMenu}
         isExpandable={isExpandable}
-      >
-        Open
-      </BurgerMenu>
+      />
     </>
   );
 };

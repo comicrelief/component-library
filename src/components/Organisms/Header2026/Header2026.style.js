@@ -15,7 +15,8 @@ const Header2026Wrapper = styled.header.attrs(() => ({
   border-radius: 16px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    height: 86px;
+    height: 66px;
+    margin-top: 18px;
 
     &:has(li:hover), &:has(li:focus-within) {
       border-radius: 16px 16px 0 0;
