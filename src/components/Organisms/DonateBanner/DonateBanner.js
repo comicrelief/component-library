@@ -17,8 +17,6 @@ import {
   Wrapper
 } from './DonateBanner.style';
 
-const DEFAULT_POPUP_TEXT = 'Help us deliver long-term impact by converting your single donation into a monthly gift.';
-
 const DonateBanner = ({
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
@@ -30,7 +28,7 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  popUpText = DEFAULT_POPUP_TEXT,
+  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
@@ -60,10 +58,6 @@ const DonateBanner = ({
   const {
     thisOtherAmountText
   } = handleOtherAmountText(givingType, otherAmountText, monthlyOtherAmountText);
-
-  // Treat `null` the same as "not provided" so defaults apply.
-  // Use nullish coalescing so empty string ('') is respected if explicitly passed.
-  const resolvedPopUpText = popUpText ?? DEFAULT_POPUP_TEXT;
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
@@ -156,7 +150,7 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             noMoneyBuys={noMoneyBuys}
-            popUpText={resolvedPopUpText}
+            popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
             submitButtonColor={submitButtonColor}
