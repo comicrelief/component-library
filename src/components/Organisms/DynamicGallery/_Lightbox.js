@@ -205,15 +205,14 @@ const Lightbox = () => {
             )}
           </LightboxImage>
           <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
-            <div id="lightboxTitle">{selectedNode?.title}</div>
+            {selectedNode?.body && (
+              <div id="lightboxTitle">
+                {selectedNode.body}
+              </div>
+            )}
             {selectedNode?.caption && (
               <div>
                 {selectedNode?.caption}
-              </div>
-            )}
-            {selectedNode?.body && (
-              <div>
-                {selectedNode.body}
               </div>
             )}
           </LightboxDetails>

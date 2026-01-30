@@ -39,7 +39,7 @@ export const EmptyMessage = styled.div`
 const GalleryNodeBase = css`
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
   padding: 0;
   margin: 0;
   background: none;
@@ -94,14 +94,4 @@ export const Details = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 1rem;
-`;
-
-export const Title = styled.div`
-  &:first-child {
-    margin-bottom: 0;
-  }
-`;
-
-export const Caption = styled.div`
-  line-height: 1;
 `;

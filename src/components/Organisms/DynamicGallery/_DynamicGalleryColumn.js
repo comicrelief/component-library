@@ -10,13 +10,11 @@ import React, {
 import Picture from '../../Atoms/Picture/Picture';
 import { LightboxContext } from './_Lightbox';
 import {
-  Caption,
   Column,
   Details,
   GalleryNode,
   ImageContainer,
-  InteractiveGalleryNode,
-  Title
+  InteractiveGalleryNode
 } from './DynamicGallery.style';
 import { GalleryNodeType } from './_types';
 import { extractNodeText } from './_utils';
@@ -133,8 +131,8 @@ export default function DynamicGalleryColumn({
                 />
               </ImageContainer>
               <Details>
-                <Title>{node.title}</Title>
-                {node.caption && <Caption>{node.caption}</Caption>}
+                {node.body && <div>{node.body}</div>}
+                {node.caption && <div>{node.caption}</div>}
               </Details>
             </NodeComponent>
           );
