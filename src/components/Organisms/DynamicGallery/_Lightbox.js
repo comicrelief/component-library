@@ -19,6 +19,7 @@ import {
   ScreenReaderOnly
 } from './_Lightbox.style';
 import ScrollFix from './_ScrollFix';
+import { extractNodeText } from './_utils';
 
 /**
  * lightbox context:
@@ -59,12 +60,13 @@ const Lightbox = () => {
     selectedNode,
     setSelectedNode,
     nextNode,
-    previousNode
+    previousNode,
+    focusedNode,
+    setFocusedNode
   } = useContext(LightboxContext);
 
   const hasNode = Boolean(selectedNode);
   const dialogRef = useRef(null);
-  const previousFocusRef = useRef(null);
 
   /**
   * handle keyboard events within the lightbox;
@@ -125,30 +127,20 @@ const Lightbox = () => {
 
   // handle focus management when dialog opens/closes
   useEffect(() => {
-    // when the lightbox is opened, store the previously focused element
-    // and move focus to the first focusable element in the dialog
     if (hasNode) {
-      // store the previously focused element
-      previousFocusRef.current = document.activeElement;
-      // move focus to the first focusable element in the dialog
+      // move focus to the first focusable element in the dialog when it opens
       setTimeout(() => {
         const focusableElements = getFocusableElements(dialogRef.current);
         if (focusableElements.length > 0) {
           focusableElements[0].focus();
         }
       }, 0);
-      return;
+    } else {
+      // restore focus to the previously focused element when lightbox closes
+      focusedNode?.focus();
+      setFocusedNode(null);
     }
-
-    // when the lightbox is closed, restore focus to the previously focused element
-    if (
-      previousFocusRef.current
-      && typeof previousFocusRef.current.focus === 'function'
-    ) {
-      previousFocusRef.current.focus();
-      previousFocusRef.current = null;
-    }
-  }, [hasNode]);
+  }, [hasNode, focusedNode, setFocusedNode]);
 
   /**
    * close the lightbox when the backdrop is clicked
@@ -182,9 +174,13 @@ const Lightbox = () => {
     target.style.opacity = '1';
   }
 
+  const title = extractNodeText(selectedNode?.title);
+
   return (
     <Container isOpen={hasNode}>
-      <Backdrop onPointerUp={() => handleBackdropClick()} />
+      <Backdrop
+        onPointerUp={() => handleBackdropClick()}
+      />
       <Dialog
         ref={dialogRef}
         aria-labelledby="lightboxTitle"
@@ -199,7 +195,7 @@ const Lightbox = () => {
             {hasNode && (
               <Picture
                 key={selectedNode?.image}
-                alt={selectedNode?.title}
+                alt={title}
                 image={selectedNode?.image}
                 width={imageDimensions.width}
                 height={imageDimensions.height}
@@ -209,15 +205,14 @@ const Lightbox = () => {
             )}
           </LightboxImage>
           <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
-            <div id="lightboxTitle">{selectedNode?.title}</div>
+            {selectedNode?.body && (
+              <div id="lightboxTitle">
+                {selectedNode.body}
+              </div>
+            )}
             {selectedNode?.caption && (
               <div>
                 {selectedNode?.caption}
-              </div>
-            )}
-            {selectedNode?.body && (
-              <div>
-                {selectedNode.body}
               </div>
             )}
           </LightboxDetails>

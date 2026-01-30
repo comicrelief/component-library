@@ -24,6 +24,7 @@ import { GalleryNodeType } from './_types';
 const DynamicGallery = ({
   pageBackgroundColour = 'transparent',
   textColour = 'black',
+  focusOutlineColour,
   gridWidth = 3,
   maxWidth = '1500px',
   loadingBehaviour = '25',
@@ -98,6 +99,7 @@ const DynamicGallery = ({
 
   // handle selected gallery node
   const [selectedNode, setSelectedNode] = useState(null);
+  const [focusedNode, setFocusedNode] = useState(null);
 
   // handle next/previous node events from the lightbox
   function handleNextNode(node) {
@@ -122,6 +124,8 @@ const DynamicGallery = ({
           const nodeIndex = +event.target.dataset.nodeIndex;
           if (Number.isNaN(nodeIndex)) return;
           setSelectedNode(nodes[nodeIndex]);
+          // also store the focused node for focus restoration when the lightbox closes
+          setFocusedNode(event.target.closest('.gallery-node'));
         }
         break;
       }
@@ -188,7 +192,9 @@ const DynamicGallery = ({
           selectedNode,
           setSelectedNode,
           nextNode: handleNextNode,
-          previousNode: handlePreviousNode
+          previousNode: handlePreviousNode,
+          focusedNode,
+          setFocusedNode
         }}
       >
         <ImageGrid className="gallery-grid" onKeyDown={event => handleKeyDown(event)}>
@@ -206,6 +212,7 @@ const DynamicGallery = ({
                 nodes={nodes.slice(0, imageCount)}
                 imageRatio={imageRatio}
                 updateTabOrder={throttledUpdateTabOrder.current}
+                focusOutlineColour={focusOutlineColour}
               />
             ))}
 
@@ -215,7 +222,7 @@ const DynamicGallery = ({
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
         <div className="gallery-focus-trap" tabIndex={0} />
       </LightboxContext.Provider>
-      {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Load more</Button>}
+      {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Show more</Button>}
     </Container>
   );
 };
@@ -224,6 +231,7 @@ DynamicGallery.propTypes = {
   // title: PropTypes.string,
   pageBackgroundColour: PropTypes.string,
   textColour: PropTypes.string,
+  focusOutlineColour: PropTypes.string,
   gridWidth: PropTypes.oneOf([2, 3, 4, 5]),
   maxWidth: PropTypes.string,
   loadingBehaviour: PropTypes.oneOf([
