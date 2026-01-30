@@ -215,7 +215,7 @@ const DynamicGallery = ({
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
         <div className="gallery-focus-trap" tabIndex={0} />
       </LightboxContext.Provider>
-      {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Load more</Button>}
+      {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Show more</Button>}
     </Container>
   );
 };
