@@ -33,7 +33,7 @@ const DonateBanner = ({
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
   monthlyOtherAmountText = '',
-  noMoneyBuys = false,
+  hideMoneyBuys = false,
   imageL = null,
   imageM = null,
   imageS = null,
@@ -148,7 +148,7 @@ const DonateBanner = ({
             clientID={clientID}
             mbshipID={mbshipID}
             donateLink={donateLink}
-            noMoneyBuys={noMoneyBuys}
+            hideMoneyBuys={hideMoneyBuys}
             popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
@@ -181,7 +181,7 @@ DonateBanner.propTypes = {
   monthlyChooseAmountText: PropTypes.string,
   otherAmountText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
-  noMoneyBuys: PropTypes.bool,
+  hideMoneyBuys: PropTypes.bool,
   imageL: PropTypes.shape({
     images: PropTypes.string,
     imageLow: PropTypes.string,
