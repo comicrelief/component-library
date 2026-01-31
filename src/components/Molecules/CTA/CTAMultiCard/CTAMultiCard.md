@@ -45,6 +45,7 @@ const cardsFour = [
     ...cardsWithRenderedBody[0],
     id: 'example-4th-card',
     title: 'Fourth card',
+    linkLabel: "quite a long link label text here long text isn't it",
     body: (
       <Text tag="p">
         Fourth card (added for layout testing)
