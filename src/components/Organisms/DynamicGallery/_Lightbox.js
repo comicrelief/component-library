@@ -68,6 +68,20 @@ const Lightbox = () => {
   const hasNode = Boolean(selectedNode);
   const dialogRef = useRef(null);
 
+  // handle interaction type
+  const interactionTypeRef = useRef('keyboard');
+
+  useEffect(() => {
+    function handlePointerDown() {
+      interactionTypeRef.current = 'pointer';
+      document.removeEventListener('pointerdown', handlePointerDown);
+    }
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, []);
+
   /**
   * handle keyboard events within the lightbox;
   * - trapped focus between UI elements
@@ -128,13 +142,15 @@ const Lightbox = () => {
   // handle focus management when dialog opens/closes
   useEffect(() => {
     if (hasNode) {
-      // move focus to the first focusable element in the dialog when it opens
-      setTimeout(() => {
-        const focusableElements = getFocusableElements(dialogRef.current);
-        if (focusableElements.length > 0) {
-          focusableElements[0].focus();
+      // when the lightbox opens, optionally focus the close button,
+      // but only if the user is interacting via the keyboard;
+      // we check interaction type because although focus-visible should handle this,
+      // Safari on iOS always shows the focus ring
+      requestAnimationFrame(() => {
+        if (interactionTypeRef.current === 'keyboard') {
+          dialogRef.current.querySelector('.close-button').focus();
         }
-      }, 0);
+      });
     } else {
       // restore focus to the previously focused element when lightbox closes
       focusedNode?.focus();
@@ -225,7 +241,7 @@ const Lightbox = () => {
               </div>
             )}
           </LightboxDetails>
-          <CloseButton type="button" onClick={() => setSelectedNode(null)}>
+          <CloseButton className="close-button" type="button" onClick={() => setSelectedNode(null)}>
             <ScreenReaderOnly>Close</ScreenReaderOnly>
             <Cross colour="black" size={16} />
           </CloseButton>

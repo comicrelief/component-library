@@ -158,6 +158,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
+  max-width: 1024px;
   padding: 0 1rem;
 }
 
@@ -187,10 +188,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 .c15 svg {
   -webkit-transition: fill 0.1s ease-out;
   transition: fill 0.1s ease-out;
-}
-
-.c15:hover svg {
-  fill: #E52630;
 }
 
 .c15:focus-visible {
@@ -361,6 +358,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 @media (min-width:1024px) {
   .c11 {
     margin-top: 84px;
+  }
+}
+
+@media (hover:hover) {
+  .c15:hover svg {
+    fill: #E52630;
   }
 }
 
@@ -604,7 +607,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           id="lightboxDescription"
         />
         <button
-          className="c15 c22"
+          className="c15 c22 close-button"
           onClick={[Function]}
           type="button"
         >
@@ -779,6 +782,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
+  max-width: 1024px;
   padding: 0 1rem;
 }
 
@@ -808,10 +812,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 .c9 svg {
   -webkit-transition: fill 0.1s ease-out;
   transition: fill 0.1s ease-out;
-}
-
-.c9:hover svg {
-  fill: #E52630;
 }
 
 .c9:focus-visible {
@@ -901,6 +901,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 @media (min-width:1024px) {
   .c5 {
     margin-top: 84px;
+  }
+}
+
+@media (hover:hover) {
+  .c9:hover svg {
+    fill: #E52630;
   }
 }
 
@@ -1036,7 +1042,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           id="lightboxDescription"
         />
         <button
-          className="c9 c16"
+          className="c9 c16 close-button"
           onClick={[Function]}
           type="button"
         >

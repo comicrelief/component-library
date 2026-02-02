@@ -82,6 +82,7 @@ export const LightboxDetails = styled.div`
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
+  max-width: 1024px;
   padding: 0 1rem;
 `;
 
@@ -102,13 +103,15 @@ export const NavButton = styled.button`
     transition: fill 0.1s ease-out;
   }
 
-  &:hover {
-    svg {
-      fill: ${({ theme }) => theme.color('red')};
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        fill: ${({ theme }) => theme.color('red')};
+      }
     }
   }
 
-  &:focus-visible {
+  :focus-visible {
     outline: 2px solid ${({ theme }) => theme.color('red')};
   }
 `;
