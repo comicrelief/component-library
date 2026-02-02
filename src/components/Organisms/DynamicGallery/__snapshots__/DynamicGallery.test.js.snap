@@ -245,7 +245,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   gap: 1rem;
   max-width: 1500px;
   background: transparent;
-  padding: 0rem 2rem 2rem;
+  padding: 0rem 1rem 2rem;
   color: #000000;
 }
 
@@ -384,6 +384,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     -ms-transform: translate(-1rem,-50%);
     transform: translate(-1rem,-50%);
     top: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    gap: 1rem;
   }
 }
 
@@ -869,7 +875,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   gap: 1rem;
   max-width: 1500px;
   background: transparent;
-  padding: 0rem 2rem 2rem;
+  padding: 0rem 1rem 2rem;
   color: #000000;
 }
 
@@ -927,6 +933,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
     -ms-transform: translate(-1rem,-50%);
     transform: translate(-1rem,-50%);
     top: 50%;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    gap: 1rem;
   }
 }
 

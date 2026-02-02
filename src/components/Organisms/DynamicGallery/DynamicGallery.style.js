@@ -7,8 +7,12 @@ export const Container = styled.div`
   gap: 1rem;
   max-width: ${({ maxWidth }) => maxWidth};
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
-  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
   color: ${({ theme, textColour }) => theme.color(textColour)};
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    gap: 1rem;
+  }
 `;
 
 export const ImageGrid = styled.div`
