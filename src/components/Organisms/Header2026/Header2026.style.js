@@ -116,7 +116,7 @@ const SearchIconWrapperDesktop = styled.div`
     background-color: ${({ theme }) => theme.color('white')};
 
     img {
-      margin-right: 15px;
+      margin-right: 24px;
       width: 18px;
       height: 18px;
       transition: transform 0.2s ease;

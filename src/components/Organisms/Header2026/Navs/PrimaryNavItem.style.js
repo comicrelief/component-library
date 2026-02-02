@@ -386,7 +386,8 @@ const StyledNavItem = styled.li`
 
 const ChevronWrapper = styled.div`
   position: absolute;
-  top: 28px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 30px;
   width: 8px;
 
@@ -402,6 +403,7 @@ const ChevronWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     top: 12px;
+    transform: none;
     right: 0;
     width: 7px;
   }
