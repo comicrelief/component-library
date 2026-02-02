@@ -204,7 +204,7 @@ DonateBanner.propTypes = {
   cartID: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
-  mbshipID: PropTypes.string.isRequired,
+  mbshipID: PropTypes.string.isRequired
 };
 
 export default DonateBanner;
