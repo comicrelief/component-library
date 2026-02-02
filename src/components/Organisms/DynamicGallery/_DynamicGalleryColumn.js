@@ -91,8 +91,12 @@ export default function DynamicGalleryColumn({
   return (
     <Column ref={elRef} className="gallery-column">
       {nodes
-        ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
         .map((node, nodeIndex) => {
+          // only render nodes that are in the current column;
+          // this lets us assign a unique index to each node
+          const columnNodeIndex = nodeIndex % columnCount;
+          if (columnNodeIndex !== columnIndex) return null;
+
           const bodyText = extractNodeText(node.gridBody);
           const key = String(nodeIndex) + bodyText;
           return (

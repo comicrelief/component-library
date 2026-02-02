@@ -58,8 +58,9 @@ const DynamicGallery = ({
       const { top, left } = node.getBoundingClientRect();
       return floor(top, -2) + Math.floor(left) / 1000;
     }, 'asc');
+
     sortedNodes.forEach((galleryNode, index) => {
-      galleryNode.setAttribute('data-order', String(index));
+      galleryNode.setAttribute('data-tab-order', String(index));
     });
   }
   // create a throttled version of the updateTabOrder function
@@ -100,16 +101,30 @@ const DynamicGallery = ({
   const [selectedNode, setSelectedNode] = useState(null);
   const [focusedNode, setFocusedNode] = useState(null);
 
-  // handle next/previous node events from the lightbox
+  // handle next/previous node events from the lightbox;
+  // slightly complicated because we need to use the data-tab-order attribute
+  // to navigate between nodes rather than the node index;
+  // this reflects the tab ordering in the DOM, rather than the order of the nodes in the array,
+  // because the dynamic image heights can confuse the normal order
   function handleNextNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const nextNodeIndex = (nodeIndex + 1) % imageCount;
-    setSelectedNode(nodes[nextNodeIndex]);
+    const nodeEl = containerRef.current.querySelector(`[data-node-index="${nodeIndex}"]`);
+    const tabOrder = nodeEl.getAttribute('data-tab-order');
+    const nextTabOrder = (+tabOrder + 1) % imageCount;
+    const nextNodeEl = containerRef.current.querySelector(`[data-tab-order="${nextTabOrder}"]`);
+    const nextNodeIndex = nextNodeEl.getAttribute('data-node-index');
+    const nextNode = nodes[nextNodeIndex];
+    setSelectedNode(nextNode);
   }
   function handlePreviousNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const previousNodeIndex = (nodeIndex - 1 + imageCount) % imageCount;
-    setSelectedNode(nodes[previousNodeIndex]);
+    const nodeEl = containerRef.current.querySelector(`[data-node-index="${nodeIndex}"]`);
+    const tabOrder = nodeEl.getAttribute('data-tab-order');
+    const previousTabOrder = (+tabOrder - 1 + imageCount) % imageCount;
+    const previousNodeEl = containerRef.current.querySelector(`[data-tab-order="${previousTabOrder}"]`);
+    const previousNodeIndex = previousNodeEl.getAttribute('data-node-index');
+    const previousNode = nodes[previousNodeIndex];
+    setSelectedNode(previousNode);
   }
 
   // handle keydown events,
@@ -151,7 +166,7 @@ const DynamicGallery = ({
           newNodeIndex = nodeIndex - 1;
           if (newNodeIndex < 0) return;
           event.preventDefault();
-          galleryContainer.querySelector(`[data-order="${newNodeIndex}"]`).focus();
+          galleryContainer.querySelector(`[data-tab-order="${newNodeIndex}"]`).focus();
         } else {
           // tab: move to the next image
           newNodeIndex = nodeIndex + 1;
@@ -166,7 +181,7 @@ const DynamicGallery = ({
             return;
           }
           event.preventDefault();
-          galleryContainer.querySelector(`[data-order="${newNodeIndex}"]`).focus();
+          galleryContainer.querySelector(`[data-tab-order="${newNodeIndex}"]`).focus();
         }
         break;
       }

@@ -452,7 +452,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       <button
         aria-label=""
         className="c3 gallery-node"
-        data-node-index={0}
+        data-node-index={1}
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
@@ -486,7 +486,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       <button
         aria-label=""
         className="c3 gallery-node"
-        data-node-index={0}
+        data-node-index={2}
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
