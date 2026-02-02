@@ -22,7 +22,8 @@ import {
   AmountField,
   OuterFieldset,
   Legend,
-  PrimaryTitleText
+  PrimaryTitleText,
+  SecondaryTitleText,
 } from '../DonateBanner.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -43,6 +44,12 @@ const Signup = ({
   givingType = null,
   hasTopImage = false,
   shouldShowTitleSection = false,
+  donateWidgetIsTextOnly = false,
+  thisTitle = null,
+  thisSubtitle = null,
+  showCopy = false,
+  isLargeBreakpoint = false,
+  isMediumBreakpoint = false,
   ...rest
 }) => {
   const [errorMsg, setErrorMsg] = useState(false);
@@ -203,6 +210,13 @@ const Signup = ({
     ? monthlyChooseAmountText
     : (chooseAmountText || defaultChooseAmountText);
 
+  const shouldShowTitleInForm = showCopy && (
+    !donateWidgetIsTextOnly || (donateWidgetIsTextOnly && !isLargeBreakpoint)
+  );
+
+  // Use h1 tag for text-only version, p tag for image version
+  const titleTag = donateWidgetIsTextOnly ? 'h1' : 'p';
+
   return (
     <FormWrapper
       donateOrientation={donateOrientation}
@@ -225,11 +239,22 @@ const Signup = ({
         }
       >
         <OuterFieldset>
-          <Legend>
-            <PrimaryTitleText tag="span" color="black">
-              {thisChooseAmountText}
-            </PrimaryTitleText>
-          </Legend>
+          {shouldShowTitleInForm ? (
+            <Legend>
+              <PrimaryTitleText tag={titleTag} $donateWidgetIsTextOnly={donateWidgetIsTextOnly}>
+                {thisTitle}
+              </PrimaryTitleText>
+              {thisSubtitle && (
+                <SecondaryTitleText 
+                  tag="p"
+                  $showGivingSelector={showGivingSelector}
+                  $isMediumBreakpoint={isMediumBreakpoint}
+                >
+                  {thisSubtitle}
+                </SecondaryTitleText>
+              )}
+            </Legend>
+          ) : null}
           {showGivingSelector && (
             <GivingSelector
               givingType={givingType}
@@ -326,7 +351,13 @@ Signup.propTypes = {
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string,
   hasTopImage: PropTypes.bool,
-  shouldShowTitleSection: PropTypes.bool
+  shouldShowTitleSection: PropTypes.bool,
+  donateWidgetIsTextOnly: PropTypes.bool,
+  thisTitle: PropTypes.string,
+  thisSubtitle: PropTypes.string,
+  showCopy: PropTypes.bool,
+  isLargeBreakpoint: PropTypes.bool,
+  isMediumBreakpoint: PropTypes.bool
 };
 
 export default Signup;

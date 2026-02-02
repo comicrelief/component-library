@@ -181,8 +181,8 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
+  margin-bottom: ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly ? '1rem !important' : '0.5rem !important'};
 `;
 
 const SecondaryTitleText = styled(Text)`
@@ -191,6 +191,11 @@ const SecondaryTitleText = styled(Text)`
   font-size: ${({ theme }) => theme.fontSize('s')};
   line-height: 1.5;
   margin-top: ${spacing('sm')};
+  ${({ $showGivingSelector, $isMediumBreakpoint }) =>
+    !$showGivingSelector && !$isMediumBreakpoint && css`
+      margin-bottom: 1rem !important;
+    `
+  }
 `;
 
 const MoneyBuys = styled.div`
@@ -316,5 +321,5 @@ export {
   OuterFieldset,
   Legend,
   PrimaryTitleText,
-  SecondaryTitleText
+  SecondaryTitleText,
 };
