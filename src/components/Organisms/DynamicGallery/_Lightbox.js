@@ -166,8 +166,8 @@ const Lightbox = () => {
     const scaleX = maxWidth / imageWidth;
     const scaleY = maxHeight / imageHeight;
     const scale = Math.min(scaleX, scaleY);
-    const width = imageWidth * scale;
-    const height = imageHeight * scale;
+    const width = Math.round(imageWidth * scale);
+    const height = Math.round(imageHeight * scale);
 
     // set the width and height on the image element, and make it visible
     setImageDimensions({ width: `${width}px`, height: `${height}px` });
@@ -201,8 +201,17 @@ const Lightbox = () => {
                 height={imageDimensions.height}
                 objectFit="contain"
                 onLoad={event => onLoad(event)}
+                style={{ borderRadius: '0.6rem', overflow: 'hidden' }}
               />
             )}
+            <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
+              <ScreenReaderOnly>Previous</ScreenReaderOnly>
+              <Arrow direction="left" colour="black" size={16} />
+            </PreviousButton>
+            <NextButton type="button" onClick={() => nextNode(selectedNode)}>
+              <ScreenReaderOnly>Next</ScreenReaderOnly>
+              <Arrow direction="right" colour="black" size={16} />
+            </NextButton>
           </LightboxImage>
           <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
             {selectedNode?.lightboxBody && (
@@ -220,14 +229,6 @@ const Lightbox = () => {
             <ScreenReaderOnly>Close</ScreenReaderOnly>
             <Cross colour="black" size={16} />
           </CloseButton>
-          <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
-            <ScreenReaderOnly>Previous</ScreenReaderOnly>
-            <Arrow direction="left" colour="black" size={16} />
-          </PreviousButton>
-          <NextButton type="button" onClick={() => nextNode(selectedNode)}>
-            <ScreenReaderOnly>Next</ScreenReaderOnly>
-            <Arrow direction="right" colour="black" size={16} />
-          </NextButton>
         </LightboxContent>
       </Dialog>
     </Container>

@@ -54,8 +54,7 @@ export const LightboxImage = styled.div`
   justify-content: center;
   min-width: 128px;
   min-height: 32px;
-  border-radius: 0.6rem;
-  overflow: hidden;
+  width: 100%;
 
   & > div {
     display: flex;
@@ -100,7 +99,7 @@ export const NavButton = styled.button`
   z-index: 10;
 
   svg {
-    transition: all 0.1s ease-out;
+    transition: fill 0.1s ease-out;
   }
 
   &:hover {
@@ -120,28 +119,26 @@ export const CloseButton = styled(NavButton)`
 `;
 
 export const PreviousButton = styled(NavButton)`
-  top: 30%;
+  top: 50%;
   left: 0;
-  transform: translate(0, -50%);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  transform: translate(-1rem, -50%);
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
+    transform: translate(1rem, -50%);
     top: 50%;
   }
 `;
 
 export const NextButton = styled(NavButton)`
-  top: 30%;
+  top: 50%;
   right: 0;
-  transform: translate(0, -50%);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  transform: translate(1rem, -50%);
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
-   top: 50%;
+    transform: translate(-1rem, -50%);
+    top: 50%;
   }
 `;
 
