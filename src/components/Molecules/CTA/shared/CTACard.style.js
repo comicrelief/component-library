@@ -88,6 +88,13 @@ const ArrowIconWrapper = styled.div`
   flex-shrink: 0;
 `;
 
+const ArrowIconOuter = styled.div`
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -316,6 +323,7 @@ export {
   CTA,
   CTAText,
   CTATextUnderline,
+  ArrowIconOuter,
   ArrowIconWrapper,
   CardWrapper
 };

@@ -12,6 +12,7 @@ import {
   CTA,
   CTAText,
   CTATextUnderline,
+  ArrowIconOuter,
   ArrowIconWrapper,
   CardWrapper
 } from './CTACard.style';
@@ -88,9 +89,11 @@ const CTACard = ({
                   aria-hidden="true"
                 />
               </CTAText>
-              <ArrowIconWrapper>
-                <ArrowIcon />
-              </ArrowIconWrapper>
+              <ArrowIconOuter>
+                <ArrowIconWrapper>
+                  <ArrowIcon />
+                </ArrowIconWrapper>
+              </ArrowIconOuter>
             </CTA>
           )}
         </CopyAndLinkSection>
