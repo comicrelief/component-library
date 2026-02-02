@@ -15,25 +15,25 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   object-fit: cover;
 }
 
-.c23 {
+.c21 {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
   fill: #000000;
 }
 
-.c25 {
+.c23 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #000000;
 }
 
-.c21 {
+.c19 {
   fill: #000000;
 }
 
-.c11 {
+.c9 {
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +55,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   visibility: hidden;
 }
 
-.c12 {
+.c10 {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,7 +65,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   z-index: 0;
 }
 
-.c13 {
+.c11 {
   display: block;
   padding: 0.5rem;
   background: transparent;
@@ -74,7 +74,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   margin-top: 72px;
 }
 
-.c14 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +93,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-radius: 1rem;
 }
 
-.c15 {
+.c13 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,7 +113,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   overflow: hidden;
 }
 
-.c15 > div {
+.c13 > div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,13 +130,13 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
 }
 
-.c15 img {
+.c13 img {
   opacity: 0;
   -webkit-transition: opacity 0.1s ease-out 0.3s;
   transition: opacity 0.1s ease-out 0.3s;
 }
 
-.c16 {
+.c14 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,7 +145,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   transform: translate(-50%,-50%);
 }
 
-.c17 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,7 +162,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   padding: 0 1rem;
 }
 
-.c18 {
+.c16 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,25 +185,25 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   z-index: 10;
 }
 
-.c18 svg {
+.c16 svg {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c18:hover svg {
+.c16:hover svg {
   fill: #E52630;
 }
 
-.c18:focus-visible {
+.c16:focus-visible {
   outline: 2px solid #E52630;
 }
 
-.c19 {
+.c17 {
   top: 0;
   right: 0;
 }
 
-.c22 {
+.c20 {
   top: 30%;
   left: 0;
   -webkit-transform: translate(0,-50%);
@@ -213,7 +213,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c24 {
+.c22 {
   top: 30%;
   right: 0;
   -webkit-transform: translate(0,-50%);
@@ -223,7 +223,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.c20 {
+.c18 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -280,7 +280,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   gap: 1.1rem;
 }
 
-.c10 {
+.c8 {
   display: none;
 }
 
@@ -292,7 +292,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
   padding: 0;
   margin: 0;
   background: none;
@@ -302,13 +302,15 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   color: inherit;
 }
 
+.c3:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
+}
+
 .c3 div:first-child {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
-
-.c3:focus-visible {
-  outline: 2px solid #000000;
 }
 
 .c3 > div:first-child:hover {
@@ -349,12 +351,10 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   padding: 0 1rem;
 }
 
-.c8:first-child {
-  margin-bottom: 0;
-}
-
-.c9 {
-  line-height: 1;
+@media (min-width:1024px) {
+  .c21 {
+    fill: #000000;
+  }
 }
 
 @media (min-width:1024px) {
@@ -364,26 +364,20 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c25 {
-    fill: #000000;
-  }
-}
-
-@media (min-width:1024px) {
-  .c13 {
+  .c11 {
     margin-top: 84px;
   }
 }
 
 @media (min-width:1024px) {
-  .c22 {
+  .c20 {
     position: fixed;
     top: 50%;
   }
 }
 
 @media (min-width:1024px) {
-  .c24 {
+  .c22 {
     position: fixed;
     top: 50%;
   }
@@ -412,12 +406,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 1"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 1"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -428,7 +422,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 1"
+              alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
@@ -439,30 +433,19 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div
-            className="c8"
-          >
-            Image 1
-          </div>
-          <div
-            className="c9"
-          >
-            Caption 1
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 2"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 2"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -473,7 +456,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 2"
+              alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
@@ -484,30 +467,19 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div
-            className="c8"
-          >
-            Image 2
-          </div>
-          <div
-            className="c9"
-          >
-            Caption 2
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div
       className="c2 gallery-column"
     >
       <button
-        aria-label="Image 3"
+        aria-label=""
         className="c3 gallery-node"
         data-node-index={0}
         onPointerUp={[Function]}
         tabIndex={0}
-        title="Image 3"
+        title=""
       >
         <div
           className="c4 gallery-node-image"
@@ -518,7 +490,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             width="100%"
           >
             <img
-              alt="Image 3"
+              alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
@@ -529,46 +501,35 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         </div>
         <div
           className="c7"
-        >
-          <div
-            className="c8"
-          >
-            Image 3
-          </div>
-          <div
-            className="c9"
-          >
-            Caption 3
-          </div>
-        </div>
+        />
       </button>
     </div>
     <div
-      className="c10"
+      className="c8"
     >
       No images to display
     </div>
   </div>
   <div
-    className="c11"
+    className="c9"
   >
     <div
-      className="c12"
+      className="c10"
       onPointerUp={[Function]}
     />
     <dialog
       aria-describedby="lightboxDescription"
       aria-labelledby="lightboxTitle"
-      className="c13"
+      className="c11"
     >
       <div
-        className="c14"
+        className="c12"
       >
         <div
-          className="c15 lightbox-image"
+          className="c13 lightbox-image"
         >
           <div
-            className="c16"
+            className="c14"
           >
             <span
               className="css-1xdhyk6"
@@ -588,25 +549,21 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         <div
           aria-atomic="true"
           aria-live="polite"
-          className="c17"
+          className="c15"
           id="lightboxDescription"
-        >
-          <div
-            id="lightboxTitle"
-          />
-        </div>
+        />
         <button
-          className="c18 c19"
+          className="c16 c17"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c20"
+            className="c18"
           >
             Close
           </span>
           <svg
-            className="c21"
+            className="c19"
             height={16}
             viewBox="0 0 96 96"
             width={16}
@@ -618,17 +575,17 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </svg>
         </button>
         <button
-          className="c18 c22"
+          className="c16 c20"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c20"
+            className="c18"
           >
             Previous
           </span>
           <svg
-            className="c23"
+            className="c21"
             direction="left"
             height={16}
             viewBox="0 0 96 96"
@@ -643,17 +600,17 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </svg>
         </button>
         <button
-          className="c18 c24"
+          className="c16 c22"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="c20"
+            className="c18"
           >
             Next
           </span>
           <svg
-            className="c25"
+            className="c23"
             direction="right"
             height={16}
             viewBox="0 0 96 96"
@@ -1025,11 +982,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           aria-live="polite"
           className="c9"
           id="lightboxDescription"
-        >
-          <div
-            id="lightboxTitle"
-          />
-        </div>
+        />
         <button
           className="c10 c11"
           onClick={[Function]}
