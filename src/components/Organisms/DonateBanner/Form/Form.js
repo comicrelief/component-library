@@ -281,7 +281,7 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy tag="p" color="black">
+            <Copy>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
             </Copy>

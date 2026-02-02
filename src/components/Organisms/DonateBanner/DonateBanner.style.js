@@ -266,9 +266,10 @@ const AmountField = styled(Input)`
   }
 `;
 
-const Copy = styled(Text)`
+const Copy = styled.p`
   line-height: 1.5;
   margin-top: ${spacing('l')};
+  color: ${({ theme }) => theme.color('black')};
 `;
 
 const Button = styled.button`
