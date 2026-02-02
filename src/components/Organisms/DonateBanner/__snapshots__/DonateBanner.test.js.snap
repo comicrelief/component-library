@@ -328,6 +328,7 @@ exports[`Monthly donation renders correctly 1`] = `
 .c25 {
   line-height: 1.5;
   margin-top: 2rem;
+  color: #000000;
 }
 
 .c26 {
@@ -718,7 +719,7 @@ exports[`Monthly donation renders correctly 1`] = `
               </label>
             </div>
             <p
-              className="c7 c25"
+              className="c25"
             >
               <strong>
                 £10 
@@ -1161,6 +1162,7 @@ exports[`Single donation renders correctly 1`] = `
 .c24 {
   line-height: 1.5;
   margin-top: 2rem;
+  color: #000000;
 }
 
 .c25 {
@@ -1540,7 +1542,7 @@ exports[`Single donation renders correctly 1`] = `
               </label>
             </div>
             <p
-              className="c7 c24"
+              className="c24"
             >
               <strong>
                 £20 
@@ -1584,7 +1586,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c12 {
+.c10 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1596,12 +1598,36 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c12 span {
+.c10 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 500;
+  color: #000000;
+}
+
+.c10 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c10 {
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c12 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -1614,7 +1640,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   color: #000000;
 }
 
-.c13 {
+.c15 {
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -1629,12 +1655,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   width: 1px;
 }
 
-.c14 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c16 {
+.c18 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -1651,7 +1677,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c19 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1672,11 +1698,11 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c17:focus {
+.c19:focus {
   border: 1px solid #666;
 }
 
-.c15 {
+.c17 {
   position: absolute;
   left: 0;
   top: 0;
@@ -1818,6 +1844,10 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c11 {
+  margin-bottom: 0.5rem;
+}
+
+.c13 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -1831,10 +1861,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   flex-grow: 0;
   font-weight: 400;
   display: block;
-  margin-top: 0.5rem;
 }
 
-.c11 span {
+.c13 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -1847,7 +1876,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   z-index: 3;
 }
 
-.c11 input {
+.c13 input {
   height: 48px;
   border: 1px solid #969598;
   background: #F4F3F5;
@@ -1855,17 +1884,18 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c11 input:focus {
+.c13 input:focus {
   outline: none;
   border: 1px solid #969598;
 }
 
-.c18 {
+.c20 {
   line-height: 1.5;
   margin-top: 2rem;
+  color: #000000;
 }
 
-.c19 {
+.c21 {
   width: 100%;
   margin: 0.5rem 0 0.5rem;
   color: #FFFFFF;
@@ -1883,9 +1913,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c19:active,
-.c19:focus,
-.c19:hover {
+.c21:active,
+.c21:focus,
+.c21:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1905,14 +1935,28 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c12 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c12 {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -2000,7 +2044,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c11 {
+  .c13 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -2008,7 +2052,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 {
+  .c21 {
     padding: 1rem 2rem;
   }
 }
@@ -2046,32 +2090,37 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             <div
               className="c9"
             >
-              <label
+              <span
                 className="c10 c11"
+              >
+                Enter another amount
+              </span>
+              <label
+                className="c12 c13"
                 htmlFor="mbship-1--MoneyBuy-userInput"
               >
                 <span
-                  className="c12 c13"
+                  className="c14 c15"
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "Donation amount",
+                      "__html": "Other donation amount",
                     }
                   }
                 />
                 <div
-                  className="c14"
+                  className="c16"
                 >
                   <div
-                    className="c15"
+                    className="c17"
                   >
                     £
                   </div>
                   <div
-                    className="c16"
+                    className="c18"
                   >
                     <input
                       aria-required={false}
-                      className="c17"
+                      className="c19"
                       id="mbship-1--MoneyBuy-userInput"
                       max="25000"
                       min="1"
@@ -2091,14 +2140,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               </label>
             </div>
             <p
-              className="c7 c18"
+              className="c20"
             >
               <strong>
                 £10 
               </strong>
             </p>
             <button
-              className="c19 Button_DonateWidget"
+              className="c21 Button_DonateWidget"
               color="red"
               type="submit"
             >
@@ -2130,6 +2179,30 @@ exports[`Text-only donate widget renders correctly 1`] = `
 }
 
 .c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c25 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c25 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 500;
+  color: #000000;
+}
+
+.c25 span {
   font-size: inherit;
   line-height: inherit;
 }
@@ -2184,7 +2257,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   font-size: 1.25rem;
 }
 
-.c22 {
+.c21 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -2201,7 +2274,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   align-items: center;
 }
 
-.c23 {
+.c29 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -2222,11 +2295,35 @@ exports[`Text-only donate widget renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c23:focus {
+.c29:focus {
   border: 1px solid #666;
 }
 
-.c21 {
+.c22 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.c22:focus {
+  border: 1px solid #666;
+}
+
+.c28 {
   position: absolute;
   left: 0;
   top: 0;
@@ -2249,6 +2346,49 @@ exports[`Text-only donate widget renders correctly 1`] = `
   font-weight: 700;
   font-size: inherit;
   margin-left: 2px;
+}
+
+.c23 {
+  display: block;
+}
+
+.c23 input {
+  border: none;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 0.5rem;
+  height: 4rem;
+  border: 1px solid #969598;
+  background-color: #E52630;
+  border: 1px solid #E52630;
+  color: #FFFFFF;
+}
+
+.c23 input:focus {
+  border: 1px solid #E52630;
+}
+
+.c17 {
+  display: block;
+}
+
+.c17 input {
+  border: none;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  border-radius: 0.5rem;
+  height: 4rem;
+  border: 1px solid #969598;
+}
+
+.c17 input:focus {
+  border: 1px solid #E52630;
 }
 
 .c0 {
@@ -2354,6 +2494,33 @@ exports[`Text-only donate widget renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.c15 label {
+  -webkit-flex: 0 0 31%;
+  -ms-flex: 0 0 31%;
+  flex: 0 0 31%;
+  margin-bottom: 0.5rem;
+}
+
+.c15 label input {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2367,7 +2534,11 @@ exports[`Text-only donate widget renders correctly 1`] = `
   justify-content: flex-start;
 }
 
-.c17 {
+.c26 {
+  margin-bottom: 0.5rem;
+}
+
+.c27 {
   position: relative;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -2381,10 +2552,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   flex-grow: 0;
   font-weight: 400;
   display: block;
-  margin-top: 0.5rem;
 }
 
-.c17 span {
+.c27 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -2397,7 +2567,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   z-index: 3;
 }
 
-.c17 input {
+.c27 input {
   height: 48px;
   border: 1px solid #969598;
   background: #F4F3F5;
@@ -2405,17 +2575,18 @@ exports[`Text-only donate widget renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c17 input:focus {
+.c27 input:focus {
   outline: none;
   border: 1px solid #969598;
 }
 
-.c24 {
+.c30 {
   line-height: 1.5;
   margin-top: 2rem;
+  color: #000000;
 }
 
-.c25 {
+.c31 {
   width: 100%;
   margin: 0.5rem 0 0.5rem;
   color: #FFFFFF;
@@ -2433,9 +2604,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   appearance: none;
 }
 
-.c25:active,
-.c25:focus,
-.c25:hover {
+.c31:active,
+.c31:focus,
+.c31:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -2588,6 +2759,20 @@ exports[`Text-only donate widget renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c18 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -2693,7 +2878,22 @@ exports[`Text-only donate widget renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c17 {
+  .c15 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c27 {
     -webkit-flex-basis: 60%;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
@@ -2701,7 +2901,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c25 {
+  .c31 {
     padding: 1rem 2rem;
   }
 }
@@ -2790,13 +2990,127 @@ exports[`Text-only donate widget renders correctly 1`] = `
             >
               <label
                 className="c16 c17"
+                htmlFor="mbship-4--moneyBuy-box1"
+              >
+                <span
+                  className="c18 c19"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "£12.10",
+                    }
+                  }
+                />
+                <div
+                  className="c20"
+                >
+                  
+                  <div
+                    className="c21"
+                  >
+                    <input
+                      aria-required={false}
+                      className="c22"
+                      id="mbship-4--moneyBuy-box1"
+                      name="mbship-4--moneyBuy1"
+                      onClick={[Function]}
+                      placeholder=""
+                      required={false}
+                      type="button"
+                      value="£ 12.10"
+                    />
+                    
+                  </div>
+                </div>
+                
+              </label>
+              <label
+                className="c16 c23"
+                htmlFor="mbship-4--moneyBuy-box2"
+              >
+                <span
+                  className="c18 c19"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "£50.00",
+                    }
+                  }
+                />
+                <div
+                  className="c20"
+                >
+                  
+                  <div
+                    className="c21"
+                  >
+                    <input
+                      aria-required={false}
+                      className="c22"
+                      id="mbship-4--moneyBuy-box2"
+                      name="mbship-4--moneyBuy2"
+                      onClick={[Function]}
+                      placeholder=""
+                      required={false}
+                      type="button"
+                      value="£ 50"
+                    />
+                    
+                  </div>
+                </div>
+                
+              </label>
+              <label
+                className="c16 c17"
+                htmlFor="mbship-4--moneyBuy-box3"
+              >
+                <span
+                  className="c18 c19"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "£100.00",
+                    }
+                  }
+                />
+                <div
+                  className="c20"
+                >
+                  
+                  <div
+                    className="c21"
+                  >
+                    <input
+                      aria-required={false}
+                      className="c22"
+                      id="mbship-4--moneyBuy-box3"
+                      name="mbship-4--moneyBuy3"
+                      onClick={[Function]}
+                      placeholder=""
+                      required={false}
+                      type="button"
+                      value="£ 100"
+                    />
+                    
+                  </div>
+                </div>
+                
+              </label>
+            </div>
+            <div
+              className="c24"
+            >
+              <span
+                className="c25 c26"
+              >
+                Enter another amount
+              </span>
+              <label
+                className="c16 c27"
                 htmlFor="mbship-4--MoneyBuy-userInput"
               >
                 <span
                   className="c18 c19"
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "Donation amount",
+                      "__html": "Other donation amount",
                     }
                   }
                 />
@@ -2804,16 +3118,16 @@ exports[`Text-only donate widget renders correctly 1`] = `
                   className="c20"
                 >
                   <div
-                    className="c21"
+                    className="c28"
                   >
                     £
                   </div>
                   <div
-                    className="c22"
+                    className="c21"
                   >
                     <input
                       aria-required={false}
-                      className="c23"
+                      className="c29"
                       id="mbship-4--MoneyBuy-userInput"
                       max="25000"
                       min="1"
@@ -2833,15 +3147,15 @@ exports[`Text-only donate widget renders correctly 1`] = `
               </label>
             </div>
             <p
-              className="c7 c24"
+              className="c30"
             >
               <strong>
                 £50 
               </strong>
-              will help us fund amazing projects in the UK and around the world.
+              could fund a specialist therapy session for a young person who has experienced or is at risk of homelessness
             </p>
             <button
-              className="c25 Button_DonateWidget"
+              className="c31 Button_DonateWidget"
               color="red"
               type="submit"
             >
