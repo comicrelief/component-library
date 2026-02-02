@@ -184,7 +184,7 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2.5rem 0 0;
   margin-top: 1.25rem;
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
