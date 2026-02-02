@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
@@ -56,6 +56,13 @@ const PrimaryNavItem = (
       });
     }
   };
+
+  // Reset tertiary menu state when the secondary submenu closes
+  useEffect(() => {
+    if (!openedSubMenu[thisID]) {
+      setOpenTertiaryMenu(null);
+    }
+  }, [openedSubMenu, thisID]);
 
   // Helper to group tertiary links (pageLevel: false)
   // so that they sit under their parent secondary links (pageLevel: true)
