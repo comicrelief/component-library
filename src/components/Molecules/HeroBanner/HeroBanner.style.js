@@ -136,6 +136,7 @@ const Copy = styled.div`
   border-radius: 1rem;
   padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
   color: ${({ theme, copyColour }) => theme.color(copyColour)};
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
 
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
@@ -165,6 +166,7 @@ const CopyInnerWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  border-radius: 1rem;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     height: auto;
@@ -184,7 +186,7 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2.5rem 0 0;
   margin-top: 1.25rem;
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
@@ -221,7 +223,18 @@ const CtaTextUnderline = styled.img`
 const HeroBannerLink = styled.a`
   text-decoration: none;
   width: 100%;
-  
+
+  > div {
+    transition: box-shadow 0.35s;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
+  }
+
+  &:hover {
+    > div {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1.5rem;
+    }
+  }
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
     ${bounceUpAnimation(true, 10, 2)}

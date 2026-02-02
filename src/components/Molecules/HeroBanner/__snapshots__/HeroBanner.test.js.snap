@@ -116,6 +116,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
   border-radius: 1rem;
   padding: 1.5rem;
   color: #000000;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
   background-color: #FFFFFF;
 }
 
@@ -130,6 +131,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 1rem;
 }
 
 @media (min-width:740px) {
@@ -435,6 +437,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
   border-radius: 1rem;
   padding: 1.5rem;
   color: #000000;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
   background-color: #FFFFFF;
 }
 
@@ -449,6 +452,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 1rem;
 }
 
 @media (min-width:740px) {
@@ -736,6 +740,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
   border-radius: 1rem;
   padding: 3rem 1.5rem;
   color: #000000;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
   background-color: #2C0230;
   text-align: center;
 }
@@ -751,6 +756,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 1rem;
 }
 
 @media (min-width:740px) {
