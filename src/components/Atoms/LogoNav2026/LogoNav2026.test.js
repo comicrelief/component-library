@@ -60,6 +60,14 @@ it('renders correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c3 {
+        width: 162px;
+        min-width: 162px;
+        height: 46px;
+      }
+    }
+
     <a
       className="c0"
       data-testid="LogoLink"
