@@ -39,12 +39,18 @@ export const EmptyMessage = styled.div`
 const GalleryNodeBase = css`
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
   padding: 0;
   margin: 0;
   background: none;
   border: none;
   text-align: left;
+
+  &:focus-visible {
+    outline: 2px solid ${({ focusOutlineColour }) => focusOutlineColour};
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
+  }
 `;
 
 export const GalleryNode = styled.div`
@@ -59,10 +65,6 @@ export const InteractiveGalleryNode = styled.button`
   & div:first-child {
     transition: all 0.1s ease-out;
   }
-
-    &:focus-visible {
-      outline: 2px solid #000000;
-    }
 
     & > div:first-child {
       &:hover {
@@ -94,14 +96,4 @@ export const Details = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 1rem;
-`;
-
-export const Title = styled.div`
-  &:first-child {
-    margin-bottom: 0;
-  }
-`;
-
-export const Caption = styled.div`
-  line-height: 1;
 `;
