@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../../Atoms/Picture/Picture';
+import Link from '../../../Atoms/Link/Link';
 import ArrowIcon from './_ArrowIcon';
 import altCtaUnderline from '../../../../theme/shared/assets/alt_cta_underline.svg';
 import {
@@ -51,7 +52,7 @@ const CTACard = ({
       columns={columns}
     >
       <CardLink
-        as={hasLink ? 'a' : 'div'}
+        as={hasLink ? Link : 'div'}
         {...(hasLink ? { href: link, target, rel: external } : {})}
         isCarousel={isCarousel}
         isSingleCard={isSingleCard}
