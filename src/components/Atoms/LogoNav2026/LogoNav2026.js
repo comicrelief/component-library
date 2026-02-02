@@ -46,6 +46,11 @@ const DesktopLogo = styled(Image)`
     width: 162px;
     height: 25px;
   }
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    width: 162px;
+    min-width: 162px;
+    height: 46px;
+  }
 `;
 
 const LogoNav2026 = () => (
