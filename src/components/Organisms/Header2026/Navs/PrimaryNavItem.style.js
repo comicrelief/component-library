@@ -124,6 +124,7 @@ const ColumnWrapper = styled.div`
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease-out 0.15s, transform 0.3s ease-out 0.15s;
+    overflow: hidden;
 
     &:last-of-type {
       border-right: none;
@@ -524,10 +525,12 @@ const NavCard = styled.a`
     text-decoration: none;
     color: ${({ theme }) => theme.color('black')};
     padding: 16px 20px;
-    transition: background-color 0.2s ease;
+    transform: translateX(0);
+    transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
 
-    &:hover {
-      background-color: ${({ theme }) => theme.color('grey_extra_light')};
+    &:hover,
+    &:focus {
+      transform: translateX(5px);
     }
   }
 `;
