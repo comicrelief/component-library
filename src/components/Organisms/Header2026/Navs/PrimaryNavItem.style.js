@@ -463,10 +463,6 @@ const TertiaryNavItem = styled.li`
     border-top: none;
   }
 
-  /* Parent item styling (pageLevel: true shown at top) */
-  ${({ $isParent }) => $isParent && css`
-    border-bottom: 1px solid ${({ theme }) => theme.color('grey_medium')};
-  `}
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     span {
