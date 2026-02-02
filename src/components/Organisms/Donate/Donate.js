@@ -8,6 +8,11 @@ import Picture from '../../Atoms/Picture/Picture';
 import Form from './Form/Form';
 import { handleTitles, handleCopy } from './_utils';
 
+// NB this is now our 'old' Donate widget, which is being replaced by the DonateBanner component
+// This component is now deprecated and will be removed in a future release.
+
+// TODO: Remove this component in a future release.
+
 import {
   BgImage,
   Container,
