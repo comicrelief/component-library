@@ -154,7 +154,7 @@ const DynamicGallery = ({
       // - flex-column+order > no gaps but complex (https://mui.com/material-ui/react-masonry/)
       // - columns + custom tabbing > what we're doing here
       case 'Tab': {
-        const nodeIndex = +event.target.dataset.order;
+        const nodeIndex = +event.target.dataset.tabOrder;
         if (Number.isNaN(nodeIndex)) return;
         const galleryContainer = event.target.closest('.gallery-container');
         if (!galleryContainer) return;
