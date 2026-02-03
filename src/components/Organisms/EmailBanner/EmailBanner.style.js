@@ -1,0 +1,244 @@
+import styled, { css } from 'styled-components';
+
+import Text from '../../Atoms/Text/Text';
+import spacing from '../../../theme/shared/spacing';
+import Picture from '../../Atoms/Picture/Picture';
+
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
+  background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  width: 100%;
+  padding: 2rem;
+`;
+
+const InnerContainer = styled.div`
+  position: relative;
+  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding: ${spacing('l')};
+    ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
+    `}
+  }
+  @media ${({ theme }) => theme.allBreakpoints('XL')} {
+    padding-left: ${spacing('xxl')};
+    padding-right: ${spacing('xxl')};
+  }
+  max-width: 1500px;
+`;
+
+const BgImage = styled(Picture)`
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+
+  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+    padding: 0;
+  `}
+
+  ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
+    justify-content: center;
+  `};
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    display: flex;
+    padding: ${spacing('l')} ${spacing('md')};
+    gap: ${spacing('l')};
+    flex-direction: row;
+  }
+`;
+
+const TitleWrapperOuter = styled.div`
+  width: 100%;
+  display: flex;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  padding-bottom: ${spacing('l')};
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    flex: 1 1 0;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    order: ${({ orientation }) => (orientation === 'left' ? 2 : 1)};
+  }
+`;
+
+const TitleWrapperInner = styled.div`
+  position: relative;
+  text-align: left;
+`;
+
+const FormWrapper = styled.div`
+  position: relative;
+  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    display: flex;
+    justify-content: ${({ orientation }) => (
+    orientation === 'left' ? 'flex-start' : 'flex-end'
+  )};
+    order: ${({ orientation }) => (orientation === 'left' ? 1 : 2)};
+  }
+`;
+
+const Error = styled(Text)`
+  color: ${({ theme }) => theme.color('red')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: 500;
+  margin-top: ${spacing('l')};
+`;
+
+const Form = styled.form`
+  position: relative;
+  width: 100%;
+  background-color: ${({ theme }) => theme.color('white')};
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+    margin-top: 0;
+  `}
+
+  input {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    margin-top: ${spacing('md')};
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+`;
+
+const OuterFieldset = styled.fieldset`
+  color: ${({ theme }) => theme.color('black')};
+  padding: 0 ${spacing('md')} ${spacing('md')};
+  margin: 0;
+  border: none;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    padding: 0 ${spacing('l')} ${spacing('l')};
+  }
+`;
+
+const Legend = styled.legend`
+  margin: 0;
+  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
+  display: block;
+  width: 100%;
+`;
+
+const PrimaryTitleText = styled(Text)`
+  display: block;
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-weight: 700;
+`;
+
+const FormFieldset = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+const NameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    justify-content: start;
+    flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
+    gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
+  }
+`;
+
+const InputField = styled.div`
+  width: 100%;
+  margin-bottom: ${spacing('md')};
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    max-width: ${({ $isNameField }) => ($isNameField ? 'calc(50% - 0.5rem)' : '100%')};
+  }
+`;
+
+const BodyCopyWrapper = styled.div`
+  padding: 0 ${spacing('sm')} ${spacing('md')};
+  color: ${({ theme }) => theme.color('black')};
+`;
+
+const PrivacyCopyWrapper = styled.div`
+  padding: ${spacing('md')} ${spacing('sm')} 0;
+  color: ${({ theme }) => theme.color('black')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
+  line-height: ${({ theme }) => theme.fontSize('xl')};
+`;
+
+const SuccessCopyWrapper = styled.div`
+  padding: 0 ${spacing('sm')} ${spacing('md')};
+  color: ${({ theme }) => theme.color('black')};
+`;
+
+const ButtonWrapper = styled.div`
+  padding: 0 ${spacing('sm')};
+  margin-top: ${spacing('md')};
+`;
+
+export {
+  BgImage,
+  Container,
+  InnerContainer,
+  Error,
+  FormFieldset,
+  FormWrapper,
+  TitleWrapperInner,
+  TitleWrapperOuter,
+  Wrapper,
+  Form,
+  OuterFieldset,
+  Legend,
+  PrimaryTitleText,
+  NameWrapper,
+  InputField,
+  BodyCopyWrapper,
+  PrivacyCopyWrapper,
+  SuccessCopyWrapper,
+  ButtonWrapper
+};

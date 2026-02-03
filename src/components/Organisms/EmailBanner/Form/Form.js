@@ -1,0 +1,177 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import {
+  FormWrapper,
+  Form,
+  OuterFieldset,
+  Legend,
+  PrimaryTitleText,
+  FormFieldset,
+  NameWrapper,
+  InputField,
+  BodyCopyWrapper,
+  PrivacyCopyWrapper,
+  SuccessCopyWrapper,
+  ButtonWrapper
+} from '../EmailBanner.style';
+import TextInput from '../../shared/emailSignup/TextInput';
+import ButtonWithStates from '../../../Atoms/ButtonWithStates/ButtonWithStates';
+import ErrorText from '../../../Atoms/ErrorText/ErrorText';
+import Confetti from '../../../Atoms/Confetti/Confetti';
+import RichText from '../../../Atoms/RichText/RichText';
+import { ESU_FIELDS } from '../../shared/emailSignup/emailSignupConfig';
+
+const EmailForm = ({
+  title,
+  bodyCopy,
+  privacyCopy,
+  successCopy,
+  ctaText = 'Sign up',
+  orientation = 'right',
+  hasTopImage = false,
+  shouldShowTitleSection = false,
+  emailWidgetIsTextOnly = false,
+  formContext,
+  onSubmit
+}) => {
+  const {
+    formState: {
+      isValid,
+      isSubmitting,
+      isSubmitted,
+      isSubmitSuccessful,
+      errors
+    }
+  } = formContext;
+
+  const shouldShowTitleInForm = (title || bodyCopy) && (
+    !emailWidgetIsTextOnly || (emailWidgetIsTextOnly && !shouldShowTitleSection)
+  );
+
+  return (
+    <FormWrapper
+      orientation={orientation}
+      shouldShowTitleSection={shouldShowTitleSection}
+    >
+      {isSubmitSuccessful && <Confetti trigger={isSubmitSuccessful} />}
+
+      <Form
+        orientation={orientation}
+        hasTopImage={hasTopImage}
+        shouldShowTitleSection={shouldShowTitleSection}
+        onSubmit={onSubmit ? formContext.handleSubmit(onSubmit) : undefined}
+        noValidate
+      >
+        <OuterFieldset>
+          {shouldShowTitleInForm && (
+            <Legend>
+              <PrimaryTitleText tag="span" color="black">
+                {title}
+              </PrimaryTitleText>
+            </Legend>
+          )}
+
+          {shouldShowTitleInForm && bodyCopy && (
+            <BodyCopyWrapper>
+              {typeof bodyCopy === 'string' ? (
+                <RichText markup={bodyCopy} />
+              ) : (
+                bodyCopy
+              )}
+            </BodyCopyWrapper>
+          )}
+
+          {isSubmitSuccessful ? (
+            <SuccessCopyWrapper>
+              {typeof successCopy === 'string' ? (
+                <RichText markup={successCopy} />
+              ) : (
+                successCopy
+              )}
+            </SuccessCopyWrapper>
+          ) : (
+            <>
+              <FormFieldset>
+                <NameWrapper>
+                  <InputField $isNameField>
+                    <TextInput
+                      fieldName={ESU_FIELDS.FIRST_NAME}
+                      id="first-name"
+                      type="text"
+                      label="First name"
+                      placeholder="Enter your first name"
+                      formContext={formContext}
+                    />
+                  </InputField>
+                  <InputField $isNameField>
+                    <TextInput
+                      fieldName={ESU_FIELDS.LAST_NAME}
+                      id="last-name"
+                      type="text"
+                      label="Last name"
+                      placeholder="Enter your last name"
+                      formContext={formContext}
+                    />
+                  </InputField>
+                </NameWrapper>
+                <InputField>
+                  <TextInput
+                    fieldName={ESU_FIELDS.EMAIL}
+                    id="email"
+                    type="email"
+                    label="Email address"
+                    placeholder="example@youremail.com"
+                    formContext={formContext}
+                  />
+                </InputField>
+              </FormFieldset>
+
+              {isSubmitted && !isSubmitSuccessful && errors.formError && (
+                <ErrorText size="error">{errors.formError.message}</ErrorText>
+              )}
+
+              <ButtonWrapper>
+                <ButtonWithStates
+                  type="submit"
+                  disabled={!isValid || isSubmitting}
+                  loading={isSubmitting}
+                  loadingText="Submitting..."
+                  data-test="subscribe-button"
+                >
+                  {ctaText}
+                </ButtonWithStates>
+              </ButtonWrapper>
+            </>
+          )}
+
+          {privacyCopy && (
+            <PrivacyCopyWrapper>
+              {typeof privacyCopy === 'string' ? (
+                <RichText markup={privacyCopy} />
+              ) : (
+                privacyCopy
+              )}
+            </PrivacyCopyWrapper>
+          )}
+        </OuterFieldset>
+      </Form>
+    </FormWrapper>
+  );
+};
+
+EmailForm.propTypes = {
+  title: PropTypes.string,
+  bodyCopy: PropTypes.node,
+  privacyCopy: PropTypes.node,
+  successCopy: PropTypes.node,
+  ctaText: PropTypes.string,
+  orientation: PropTypes.oneOf(['left', 'right']),
+  hasTopImage: PropTypes.bool,
+  shouldShowTitleSection: PropTypes.bool,
+  emailWidgetIsTextOnly: PropTypes.bool,
+  formContext: PropTypes.shape().isRequired,
+  onSubmit: PropTypes.func
+};
+
+export default EmailForm;
