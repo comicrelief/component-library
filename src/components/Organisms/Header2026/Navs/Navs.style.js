@@ -104,6 +104,7 @@ const DonateButtonMobileModalWrapper = styled.div`
 const SearchWrapperMobile = styled.div`
   display: block;
   width: 100%;
+  border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: none;
