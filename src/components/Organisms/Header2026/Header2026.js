@@ -98,7 +98,6 @@ const Header2026 = ({
                 brand="comicrelief"
                 tabIndex="0"
                 id="search"
-                isHeader
               />
             </SearchIconWrapperDesktop>
 
