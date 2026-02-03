@@ -117,6 +117,7 @@ const Form = styled.form`
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  text-align: left;
 
   margin-left: auto;
   margin-right: auto;
@@ -148,7 +149,7 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('md')};
+  padding: 0 ${spacing('md')} ${spacing('m')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -168,6 +169,7 @@ const PrimaryTitleText = styled(Text)`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
+  margin-bottom: ${spacing('sm')};
 `;
 
 const FormFieldset = styled.div`
@@ -182,21 +184,11 @@ const NameWrapper = styled.div`
   flex-direction: column;
   gap: 0;
   width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    justify-content: start;
-    flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
-    gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
-  }
 `;
 
 const InputField = styled.div`
   width: 100%;
   margin-bottom: ${spacing('md')};
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    max-width: ${({ $isNameField }) => ($isNameField ? 'calc(50% - 0.5rem)' : '100%')};
-  }
 `;
 
 const BodyCopyWrapper = styled.div`
@@ -208,7 +200,7 @@ const PrivacyCopyWrapper = styled.div`
   padding: ${spacing('md')} ${spacing('sm')} 0;
   color: ${({ theme }) => theme.color('black')};
   font-size: ${({ theme }) => theme.fontSize('s')};
-  line-height: ${({ theme }) => theme.fontSize('xl')};
+  line-height: normal;
 `;
 
 const SuccessCopyWrapper = styled.div`
@@ -217,8 +209,11 @@ const SuccessCopyWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  padding: 0 ${spacing('sm')};
-  margin-top: ${spacing('md')};
+  margin-top: ${spacing('sm')};
+
+  button {
+    width: 100%;
+  }
 `;
 
 export {

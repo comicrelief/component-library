@@ -51,7 +51,7 @@ const EmailBanner = ({
 
   const noTitlesAtAll = !title && !bodyCopy;
   const shouldShowTitleSection = noTitlesAtAll === false
-    && (isLargeBreakpoint || !emailWidgetIsTextOnly);
+    && isLargeBreakpoint && emailWidgetIsTextOnly;
 
   return (
     <Container
