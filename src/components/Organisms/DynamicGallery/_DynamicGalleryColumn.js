@@ -91,10 +91,16 @@ export default function DynamicGalleryColumn({
   return (
     <Column ref={elRef} className="gallery-column">
       {nodes
-        ?.filter((_, nodeIndex) => nodeIndex % columnCount === columnIndex)
         .map((node, nodeIndex) => {
+          // only render nodes that are in the current column;
+          // this lets us assign a unique index to each node
+          const columnNodeIndex = nodeIndex % columnCount;
+          if (columnNodeIndex !== columnIndex) return null;
+
           const bodyText = extractNodeText(node.gridBody);
-          const key = String(nodeIndex) + bodyText;
+          // eslint prefers template literals for strings, but they break the compiler
+          // eslint-disable-next-line prefer-template
+          const key = String(nodeIndex) + ':' + bodyText + ':' + node.image;
           return (
             <NodeComponent
               key={key}
@@ -109,7 +115,6 @@ export default function DynamicGalleryColumn({
             >
               <ImageContainer
                 className="gallery-node-image"
-                // eslint prefers template literals for strings, but they break the compiler
                 // eslint-disable-next-line prefer-template
                 minHeight={String(minHeight) + 'px'}
                 // eslint-disable-next-line prefer-template

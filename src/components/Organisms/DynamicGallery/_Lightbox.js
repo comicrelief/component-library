@@ -15,9 +15,9 @@ import {
   LightboxImage,
   LightboxSpinner,
   NextButton,
-  PreviousButton,
-  ScreenReaderOnly
+  PreviousButton
 } from './_Lightbox.style';
+import { ScreenReaderOnly } from './DynamicGallery.style';
 import ScrollFix from './_ScrollFix';
 import { extractNodeText } from './_utils';
 
@@ -67,6 +67,20 @@ const Lightbox = () => {
 
   const hasNode = Boolean(selectedNode);
   const dialogRef = useRef(null);
+
+  // handle interaction type
+  const interactionTypeRef = useRef('keyboard');
+
+  useEffect(() => {
+    function handlePointerDown() {
+      interactionTypeRef.current = 'pointer';
+      document.removeEventListener('pointerdown', handlePointerDown);
+    }
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, []);
 
   /**
   * handle keyboard events within the lightbox;
@@ -128,13 +142,15 @@ const Lightbox = () => {
   // handle focus management when dialog opens/closes
   useEffect(() => {
     if (hasNode) {
-      // move focus to the first focusable element in the dialog when it opens
-      setTimeout(() => {
-        const focusableElements = getFocusableElements(dialogRef.current);
-        if (focusableElements.length > 0) {
-          focusableElements[0].focus();
+      // when the lightbox opens, optionally focus the close button,
+      // but only if the user is interacting via the keyboard;
+      // we check interaction type because although focus-visible should handle this,
+      // Safari on iOS always shows the focus ring
+      requestAnimationFrame(() => {
+        if (interactionTypeRef.current === 'keyboard') {
+          dialogRef.current.querySelector('.close-button').focus();
         }
-      }, 0);
+      });
     } else {
       // restore focus to the previously focused element when lightbox closes
       focusedNode?.focus();
@@ -166,8 +182,8 @@ const Lightbox = () => {
     const scaleX = maxWidth / imageWidth;
     const scaleY = maxHeight / imageHeight;
     const scale = Math.min(scaleX, scaleY);
-    const width = imageWidth * scale;
-    const height = imageHeight * scale;
+    const width = Math.round(imageWidth * scale);
+    const height = Math.round(imageHeight * scale);
 
     // set the width and height on the image element, and make it visible
     setImageDimensions({ width: `${width}px`, height: `${height}px` });
@@ -201,8 +217,17 @@ const Lightbox = () => {
                 height={imageDimensions.height}
                 objectFit="contain"
                 onLoad={event => onLoad(event)}
+                style={{ borderRadius: '0.6rem', overflow: 'hidden' }}
               />
             )}
+            <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
+              <ScreenReaderOnly>Previous</ScreenReaderOnly>
+              <Arrow direction="left" colour="black" size={16} />
+            </PreviousButton>
+            <NextButton type="button" onClick={() => nextNode(selectedNode)}>
+              <ScreenReaderOnly>Next</ScreenReaderOnly>
+              <Arrow direction="right" colour="black" size={16} />
+            </NextButton>
           </LightboxImage>
           <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
             {selectedNode?.lightboxBody && (
@@ -216,18 +241,10 @@ const Lightbox = () => {
               </div>
             )}
           </LightboxDetails>
-          <CloseButton type="button" onClick={() => setSelectedNode(null)}>
+          <CloseButton className="close-button" type="button" onClick={() => setSelectedNode(null)}>
             <ScreenReaderOnly>Close</ScreenReaderOnly>
             <Cross colour="black" size={16} />
           </CloseButton>
-          <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
-            <ScreenReaderOnly>Previous</ScreenReaderOnly>
-            <Arrow direction="left" colour="black" size={16} />
-          </PreviousButton>
-          <NextButton type="button" onClick={() => nextNode(selectedNode)}>
-            <ScreenReaderOnly>Next</ScreenReaderOnly>
-            <Arrow direction="right" colour="black" size={16} />
-          </NextButton>
         </LightboxContent>
       </Dialog>
     </Container>
