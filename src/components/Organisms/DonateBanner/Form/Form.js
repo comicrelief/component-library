@@ -23,7 +23,7 @@ import {
   OuterFieldset,
   Legend,
   PrimaryTitleText,
-  SecondaryTitleText,
+  SecondaryTitleText
 } from '../DonateBanner.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -37,8 +37,6 @@ const Signup = ({
   donateOrientation = 'right',
   noMoneyBuys = false,
   popUpText,
-  chooseAmountText = null,
-  monthlyChooseAmountText = null,
   submitButtonColor = 'red',
   changeGivingType,
   givingType = null,
@@ -205,11 +203,6 @@ const Signup = ({
     return `Donate £${amountDonate} monthly`;
   };
 
-  const defaultChooseAmountText = `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`;
-  const thisChooseAmountText = givingType === 'monthly' && monthlyChooseAmountText
-    ? monthlyChooseAmountText
-    : (chooseAmountText || defaultChooseAmountText);
-
   const shouldShowTitleInForm = showCopy && (
     !donateWidgetIsTextOnly || (donateWidgetIsTextOnly && !isLargeBreakpoint)
   );
@@ -245,7 +238,7 @@ const Signup = ({
                 {thisTitle}
               </PrimaryTitleText>
               {thisSubtitle && (
-                <SecondaryTitleText 
+                <SecondaryTitleText
                   tag="p"
                   $showGivingSelector={showGivingSelector}
                   $isMediumBreakpoint={isMediumBreakpoint}
