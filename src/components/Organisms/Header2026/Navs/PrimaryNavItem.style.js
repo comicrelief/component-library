@@ -68,6 +68,7 @@ const SecondaryNavMenu = styled.ul`
   visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
 
   /* Remove border from first item only on mobile */
   > div:first-of-type > li:first-of-type {
@@ -78,6 +79,18 @@ const SecondaryNavMenu = styled.ul`
   ${({ isTertiaryOpen }) => isTertiaryOpen && css`
     display: none;
   `}
+
+  /* Extend first link's hover area into top padding */
+  > li:first-of-type > a {
+    margin-top: -8px;
+    padding-top: 28px;
+  }
+
+  /* Extend last link's hover area into bottom padding */
+  > div:last-of-type > li:last-of-type > a {
+    margin-bottom: -8px;
+    padding-bottom: 28px;
+  }
 
   // DESKTOP:
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -97,7 +110,7 @@ const SecondaryNavMenu = styled.ul`
     transform-origin: top;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 0px 13px 15px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
     align-items: stretch;
 
     // Invisible bridge above dropdown to maintain hover state
@@ -145,7 +158,7 @@ const SecondaryNavItem = styled.li`
     border-top: none;
 
     span {
-      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 500)};
+      font-weight: ${({ $isSecondary }) => ($isSecondary ? 700 : 500)};
     }
 
     ${({ $isSecondary }) => $isSecondary && css`
@@ -179,7 +192,7 @@ const SecondaryNavLink = styled(NavLinkClass)`
 
     span {
       font-size: 1rem;
-      font-weight: ${({ $isSecondary }) => ($isSecondary ? 600 : 500)};
+      font-weight: ${({ $isSecondary }) => ($isSecondary ? 700 : 500)};
     }
 
     &:hover,
@@ -440,6 +453,19 @@ const TertiaryNavMenu = styled.ul`
   border-radius: 16px;
   overflow: hidden;
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+
+  /* Extend first link's hover area into top padding */
+  > li:first-of-type > a {
+    margin-top: -8px;
+    padding-top: 28px;
+  }
+
+  /* Extend last link's hover area into bottom padding */
+  > li:last-of-type > a {
+    margin-bottom: -8px;
+    padding-bottom: 28px;
+  }
 
   // hide on desktop
   @media ${({ theme }) => theme.breakpoints2026('L')} {

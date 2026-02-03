@@ -89,7 +89,7 @@ const DonateButtonTopBarWrapper = styled.div`
     &:hover,
     &:focus {
       width: 100%;
-      box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
       ${pulseInAnimation};
     }
     @media ${({ theme }) => theme.breakpoints2026('S')} {

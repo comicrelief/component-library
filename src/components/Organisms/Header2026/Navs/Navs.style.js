@@ -31,7 +31,7 @@ const Navigation = styled.nav`
 
 const PrimaryMenuWrapper = styled.div`
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   overflow: hidden;
   position: static;
@@ -90,7 +90,8 @@ const DonateButtonMobileModalWrapper = styled.div`
 
     &:hover,
     &:focus {
-      box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
+      width: 100%;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
     }
   }
 
