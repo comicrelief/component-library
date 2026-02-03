@@ -99,7 +99,7 @@ const SecondaryNavMenu = styled.ul`
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 8px 0 0 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -163,9 +163,13 @@ const SecondaryNavItem = styled.li`
 
     ${({ $isSecondary }) => $isSecondary && css`
       border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
+      margin-top: 8px;
+      padding-top: 8px;
 
       &:first-of-type {
         border-top: none;
+        margin-top: 0;
+        padding-top: 0;
       }
     `}
   }
