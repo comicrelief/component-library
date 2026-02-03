@@ -12,7 +12,8 @@ import Lightbox, { LightboxContext } from './_Lightbox';
 import {
   Container,
   EmptyMessage,
-  ImageGrid
+  ImageGrid,
+  FocusTrap
 } from './DynamicGallery.style';
 import DynamicGalleryColumn from './_DynamicGalleryColumn';
 import { GalleryNodeType } from './_types';
@@ -234,7 +235,9 @@ const DynamicGallery = ({
         </ImageGrid>
         <Lightbox />
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <div className="gallery-focus-trap" tabIndex={0} />
+        <FocusTrap className="gallery-focus-trap" tabIndex={0}>
+          <span>End of gallery</span>
+        </FocusTrap>
       </LightboxContext.Provider>
       {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Show more</Button>}
     </Container>

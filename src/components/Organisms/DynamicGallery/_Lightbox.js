@@ -15,9 +15,9 @@ import {
   LightboxImage,
   LightboxSpinner,
   NextButton,
-  PreviousButton,
-  ScreenReaderOnly
+  PreviousButton
 } from './_Lightbox.style';
+import { ScreenReaderOnly } from './DynamicGallery.style';
 import ScrollFix from './_ScrollFix';
 import { extractNodeText } from './_utils';
 
