@@ -216,20 +216,25 @@ const DynamicGallery = ({
           {hasNodes
           && Array(columnCount)
             .fill(null)
-            .map((column, columnIndex) => (
-              <DynamicGalleryColumn
-                // disabling the lint rule here
-                // as we're chunking an array and have no unique keys
-                // eslint-disable-next-line react/no-array-index-key
-                key={columnIndex}
-                columnIndex={columnIndex}
-                columnCount={columnCount}
-                nodes={nodes.slice(0, imageCount)}
-                imageRatio={imageRatio}
-                updateTabOrder={throttledUpdateTabOrder.current}
-                focusOutlineColour={textColour}
-              />
-            ))}
+            .map((column, columnIndex) => {
+              // eslint prefers template literals for strings, but they break the compiler
+              // eslint-disable-next-line prefer-template
+              const key = String(columnIndex) + ':' + nodes.length;
+              return (
+                <DynamicGalleryColumn
+                  // disabling the lint rule here
+                  // as we're chunking an array and have no unique keys
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={key}
+                  columnIndex={columnIndex}
+                  columnCount={columnCount}
+                  nodes={nodes.slice(0, imageCount)}
+                  imageRatio={imageRatio}
+                  updateTabOrder={throttledUpdateTabOrder.current}
+                  focusOutlineColour={textColour}
+                />
+              );
+            })}
 
           <EmptyMessage isEmpty={!hasNodes}>No images to display</EmptyMessage>
         </ImageGrid>

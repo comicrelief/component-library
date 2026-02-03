@@ -98,7 +98,9 @@ export default function DynamicGalleryColumn({
           if (columnNodeIndex !== columnIndex) return null;
 
           const bodyText = extractNodeText(node.gridBody);
-          const key = String(nodeIndex) + bodyText;
+          // eslint prefers template literals for strings, but they break the compiler
+          // eslint-disable-next-line prefer-template
+          const key = String(nodeIndex) + ':' + bodyText + ':' + node.image;
           return (
             <NodeComponent
               key={key}
@@ -113,7 +115,6 @@ export default function DynamicGalleryColumn({
             >
               <ImageContainer
                 className="gallery-node-image"
-                // eslint prefers template literals for strings, but they break the compiler
                 // eslint-disable-next-line prefer-template
                 minHeight={String(minHeight) + 'px'}
                 // eslint-disable-next-line prefer-template
