@@ -71,23 +71,25 @@ const PrimaryMenu = styled.ul`
 `;
 
 const DonateButtonMobileModalWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  display: block;
   background-color: inherit;
   margin-top: 48px;
+  width: 100%;
 
   // Donate button
   a {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
     border-radius: 16px;
-    width: calc(100% - 10px);
-    transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+    width: 100%;
+    margin: 0;
     font-family: Montserrat;
     height: auto;
     padding: 18px 0;
 
     &:hover,
     &:focus {
-      width: 100%;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px 0;
     }
   }
