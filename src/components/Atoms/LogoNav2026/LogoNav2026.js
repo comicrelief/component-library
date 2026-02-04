@@ -56,7 +56,7 @@ const DesktopLogo = styled(Image)`
 const LogoNav2026 = () => (
   <LogoLink
     data-testid="LogoLink"
-    href="https://www.comicrelief.com/"
+    href="/"
     title="Go to Comic Relief homepage"
   >
     <MobileLogo
