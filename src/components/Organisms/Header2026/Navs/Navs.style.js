@@ -123,6 +123,7 @@ const SearchLinkMobile = styled(Link)`
   font-weight: 600;
   color: ${({ theme }) => theme.color('black')};
   transition: color 0.2s ease;
+  outline-offset: -3px;
 
   &:hover,
   &:focus {

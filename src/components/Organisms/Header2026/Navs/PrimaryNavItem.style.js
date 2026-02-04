@@ -18,6 +18,11 @@ const NavLinkClass = styled(Link)`
   color: ${({ theme }) => theme.color('black')};
   transition: color ${transitionDuration}s ease;
   text-decoration: none;
+  outline-offset: -3px;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    outline-offset: 0;
+  }
 
   :hover,
   :focus,
@@ -199,11 +204,14 @@ const SecondaryNavLink = styled(NavLinkClass)`
       font-weight: ${({ $isSecondary }) => ($isSecondary ? 700 : 500)};
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: transparent;
       transform: translateX(5px);
       transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
+    }
+
+    &:focus {
+      background-color: transparent;
     }
 
     &::after {
