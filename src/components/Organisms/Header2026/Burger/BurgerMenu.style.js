@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import hideVisually from '../../../../theme/shared/hideVisually';
-import Link from '../../../Atoms/Link/Link';
 import Text from '../../../Atoms/Text/Text';
 import zIndex from '../../../../theme/shared/zIndex';
 
@@ -13,7 +12,7 @@ const BurgerBar = styled.span`
   margin: 0 auto;
 `;
 
-const BurgerWrapper = styled(Link)`
+const BurgerWrapper = styled.button`
   position: relative;
   display: flex;
   align-items: center;
@@ -22,18 +21,15 @@ const BurgerWrapper = styled(Link)`
   background-color: ${({ theme }) => theme.color('grey_medium')};
   ${zIndex('medium')};
   border-radius: 8px;
+  border: none;
   order: 50;
   cursor: pointer;
   transition: all 0.2s;
   margin-left: 10px;
+  padding: 0;
 
   @media ${({ theme }) => theme.breakpoints2026('XS')} {
     margin-left: 12px;
-  }
-
-  :hover {
-    border: none;
-    font-weight: inherit;
   }
 
   ${BurgerBar} {

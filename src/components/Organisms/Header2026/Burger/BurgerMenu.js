@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,12 +6,10 @@ import { BurgerBar, BurgerHiddenText, BurgerWrapper } from './BurgerMenu.style';
 const BurgerMenu = ({ toggle, isExpandable }) => (
   <BurgerWrapper
     data-testid="BurgerWrapper"
-    href="#"
-    role="button"
+    type="button"
     aria-haspopup="true"
+    aria-expanded={isExpandable}
     aria-label="Open and close Navigation Menu"
-    inline
-    underline={false}
     onClick={toggle}
     isExpandable={isExpandable}
   >
