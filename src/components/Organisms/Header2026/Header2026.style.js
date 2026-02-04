@@ -4,9 +4,7 @@ import zIndex from '../../../theme/shared/zIndex';
 import containers from '../../../theme/shared/containers';
 import { pulseInAnimation, pulseOutAnimation } from '../../../theme/shared/animations';
 
-const Header2026Wrapper = styled.header.attrs(() => ({
-  role: 'banner'
-}))`
+const Header2026Wrapper = styled.header`
   position: relative;
   z-index: 2;
   background-color: ${({ theme }) => theme.color('white')};

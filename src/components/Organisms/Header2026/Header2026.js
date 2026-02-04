@@ -54,6 +54,7 @@ const Header2026 = ({
       <MobileMenuOverlay isVisible={isExpandable} />
       <Header2026Wrapper
         data-testid="Header2026Wrapper"
+        role="banner"
         {...rest}
       >
         <InnerWrapper data-testid="InnerWrapper">
