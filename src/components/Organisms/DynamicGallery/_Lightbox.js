@@ -4,13 +4,13 @@ import React, {
 import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
-import Picture from '../../Atoms/Picture/Picture';
 import {
   Backdrop,
   CloseButton,
   Container,
   Dialog,
   LightboxContent,
+  LightboxPicture,
   LightboxDetails,
   LightboxImage,
   LightboxSpinner,
@@ -209,7 +209,7 @@ const Lightbox = () => {
               <PulseLoader height={16} width={2} color="#E1E2E3" />
             </LightboxSpinner>
             {hasNode && (
-              <Picture
+              <LightboxPicture
                 key={selectedNode?.image}
                 alt={bodyText}
                 image={selectedNode?.image}
@@ -217,7 +217,7 @@ const Lightbox = () => {
                 height={imageDimensions.height}
                 objectFit="contain"
                 onLoad={event => onLoad(event)}
-                style={{ borderRadius: '0.6rem', overflow: 'hidden' }}
+                // style={{ borderRadius: '0.6rem', overflow: 'hidden' }}
               />
             )}
             <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
