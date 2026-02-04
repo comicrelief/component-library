@@ -71,7 +71,7 @@ it('renders correctly', () => {
     <a
       className="c0"
       data-testid="LogoLink"
-      href="https://www.comicrelief.com/"
+      href="/"
       title="Go to Comic Relief homepage"
     >
       <img
