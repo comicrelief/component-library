@@ -13,7 +13,7 @@ import {
 import searchIcon from './assets/search-icon.svg';
 import chevronIcon from './assets/chevron-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
-import prependBaseUrl from './utils/urlHelper';
+import prependBaseUrl from '../../../utils/urlHelper';
 
 const Header2026 = ({
   data = {},

@@ -15,7 +15,7 @@ import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
 import PrimaryNavItem from './PrimaryNavItem';
 import searchIcon from '../assets/search-icon.svg';
-import prependBaseUrl from '../utils/urlHelper';
+import prependBaseUrl from '../../../../utils/urlHelper';
 
 import {
   Navigation,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
-import prependBaseUrl from '../utils/urlHelper';
+import prependBaseUrl from '../../../../utils/urlHelper';
 
 import {
   StyledNavItem,
