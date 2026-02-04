@@ -24,7 +24,7 @@ const Image = styled.img`
   max-width: 100%; // prevents overflow
 `;
 
-const MobileLogo = styled(Image)`
+const MobileNavLogo = styled(Image)`
   ${zIndex('high')}
   width: 49px;
   height: 32px;
@@ -34,7 +34,7 @@ const MobileLogo = styled(Image)`
   }
 `;
 
-const DesktopLogo = styled(Image)`
+const DesktopNavLogo = styled(Image)`
   ${zIndex('high')}
   display: none;
   @media ${({ theme }) => theme.breakpoints2026('S')} {
@@ -59,12 +59,12 @@ const LogoNav2026 = () => (
     href="/"
     title="Go to Comic Relief homepage"
   >
-    <MobileLogo
+    <MobileNavLogo
       data-testid="MobileImage"
       src={crLogoMobSvg}
       alt="Comic Relief logo"
     />
-    <DesktopLogo
+    <DesktopNavLogo
       data-testid="DesktopImage"
       src={crLogoSvg}
       alt="Comic Relief logo"
