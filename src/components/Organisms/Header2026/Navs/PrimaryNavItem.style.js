@@ -143,6 +143,7 @@ const ColumnWrapper = styled.div`
     transform: translateY(-10px);
     transition: opacity 0.3s ease-out 0.15s, transform 0.3s ease-out 0.15s;
     overflow: hidden;
+    padding-top: 3px;
 
     &:last-of-type {
       border-right: none;
@@ -204,14 +205,15 @@ const SecondaryNavLink = styled(NavLinkClass)`
       font-weight: ${({ $isSecondary }) => ($isSecondary ? 700 : 500)};
     }
 
-    &:hover {
+    &:hover:not(:focus-visible) {
       background-color: transparent;
       transform: translateX(5px);
       transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
     }
 
-    &:focus {
+    &:focus-visible {
       background-color: transparent;
+      transform: translateX(0);
     }
 
     &::after {
@@ -561,12 +563,16 @@ const NavCard = styled.a`
     text-decoration: none;
     color: ${({ theme }) => theme.color('black')};
     padding: 16px 20px;
+    outline-offset: -3px;
     transform: translateX(0);
     transition: transform 0.35s cubic-bezier(0.34, 2.12, 0.64, 1);
 
-    &:hover,
-    &:focus {
+    &:hover:not(:focus-visible) {
       transform: translateX(5px);
+    }
+
+    &:focus-visible {
+      transform: translateX(0);
     }
   }
 `;
