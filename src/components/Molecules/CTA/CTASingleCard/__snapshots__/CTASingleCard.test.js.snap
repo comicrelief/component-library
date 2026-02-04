@@ -241,7 +241,7 @@ exports[`renders correctly with data prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .c0 {
@@ -768,7 +768,7 @@ exports[`renders correctly without image 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .c0 {
