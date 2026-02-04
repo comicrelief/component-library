@@ -2,7 +2,7 @@ import '../../../utils/remove-extra-styles-in-preview.css';
 import React, { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import LogoNav2026 from '../../Atoms/LogoNav2026/LogoNav2026';
+import LogoNav2026 from '../../Atoms/LogoNav2026/_LogoNav2026';
 import Navs from './Navs/Navs';
 import Link from '../../Atoms/Link/Link';
 import {

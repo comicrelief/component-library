@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
-import LogoNav2026 from './LogoNav2026';
+import LogoNav2026 from './_LogoNav2026';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(<LogoNav2026 rotate />).toJSON();
