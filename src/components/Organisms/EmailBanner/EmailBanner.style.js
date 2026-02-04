@@ -26,6 +26,7 @@ const InnerContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
+    height: 724px;
     padding: ${spacing('l')};
     ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
       padding-top: 7.5rem;
