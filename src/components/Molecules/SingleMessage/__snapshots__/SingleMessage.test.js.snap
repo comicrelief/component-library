@@ -49,6 +49,8 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .c0 iframe {
@@ -64,7 +66,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .c1 {
@@ -122,7 +124,7 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
@@ -130,10 +132,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   .c5 {
     width: 50%;
   }
-}
-
-@media (min-width:1024px) {
-
 }
 
 @media (min-width:740px) {
@@ -319,6 +317,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .c0 iframe {
@@ -334,7 +334,7 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .c1 {
@@ -425,7 +425,7 @@ exports[`renders Single Message with Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
@@ -433,10 +433,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   .c5 {
     width: 50%;
   }
-}
-
-@media (min-width:1024px) {
-
 }
 
 @media (min-width:740px) {
@@ -561,6 +557,8 @@ exports[`renders Single Message with double image correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #FFE400;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .c0 iframe {
@@ -576,7 +574,7 @@ exports[`renders Single Message with double image correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .c1 {
@@ -639,7 +637,7 @@ exports[`renders Single Message with double image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
@@ -649,19 +647,11 @@ exports[`renders Single Message with double image correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-
-}
-
 @media (min-width:740px) {
 
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
 
 }
 
@@ -880,6 +870,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .c0 iframe {
@@ -895,7 +887,7 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c5 {
   width: 100%;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .c1 {
@@ -993,7 +985,7 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
@@ -1014,10 +1006,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   .c5 {
     width: 50%;
   }
-}
-
-@media (min-width:1024px) {
-
 }
 
 @media (min-width:740px) {
@@ -1122,6 +1110,8 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .c0 iframe {
@@ -1179,10 +1169,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
 
 }
 
@@ -1274,6 +1260,8 @@ exports[`renders Single Message with no Image correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .c0 iframe {
@@ -1289,7 +1277,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
 .c1 {
   width: 100%;
   z-index: 1;
-  padding: 2rem;
+  padding: 0 2rem;
   margin: auto;
   padding: 1rem;
 }
@@ -1333,6 +1321,10 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
   .c1 {
     height: auto;
     display: -webkit-box;
@@ -1346,7 +1338,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
@@ -1354,23 +1346,15 @@ exports[`renders Single Message with no Image correctly 1`] = `
   .c1 {
     width: 100%;
     max-width: 880px;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 
-@media (min-width:1024px) {
-
-}
-
 @media (min-width:740px) {
 
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
 
 }
 

@@ -31,11 +31,17 @@ const SingleMessage = ({
   vhFull = false,
   videoID = null,
   landscapeVideo = false,
-  paddingOption = null
+  paddingTop = '2rem',
+  paddingBottom = '2rem'
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
   const hasVideo = Boolean(videoID !== null && videoID !== '');
+
+  // While the Content Team don't use image or video Single Msgs any more, this just keeps
+  // things looking nice in the CL; only using the new props where they want 'em:
+  const thisPaddingTop = hasImage || hasVideo ? '0rem' : paddingTop;
+  const thisPaddingBottom = hasImage || hasVideo ? '0rem' : paddingBottom;
 
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
@@ -139,6 +145,8 @@ const SingleMessage = ({
           landscapeVideo={landscapeVideo}
           fullImage={fullImage}
           ref={thisRef}
+          paddingTop={thisPaddingTop}
+          paddingBottom={thisPaddingBottom}
         >
           {imageSet || imageSet2 ? (
             <>
@@ -210,7 +218,8 @@ const SingleMessage = ({
               copyFirst={copyFirst}
               hasVideo={hasVideo}
               vhFull={vhFull}
-              paddingOption={paddingOption}
+              paddingTop={paddingTop}
+              paddingBottom={paddingBottom}
             >
               {children}
             </Copy>
@@ -239,7 +248,9 @@ SingleMessage.propTypes = {
   vhFull: PropTypes.bool,
   videoID: PropTypes.string,
   landscapeVideo: PropTypes.bool,
-  paddingOption: PropTypes.string
+  paddingTop: PropTypes.string,
+  paddingBottom: PropTypes.string
+
 };
 
 export default SingleMessage;
