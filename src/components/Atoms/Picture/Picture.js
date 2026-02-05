@@ -109,6 +109,7 @@ const Picture = ({
         {...rest}
       >
         <Image
+          key={image}
           alt={alt}
           height={height}
           width={width}

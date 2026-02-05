@@ -54,8 +54,7 @@ export const LightboxImage = styled.div`
   justify-content: center;
   min-width: 128px;
   min-height: 32px;
-  border-radius: 0.6rem;
-  overflow: hidden;
+  width: 100%;
 
   & > div {
     display: flex;
@@ -83,6 +82,7 @@ export const LightboxDetails = styled.div`
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
+  max-width: 1024px;
   padding: 0 1rem;
 `;
 
@@ -100,16 +100,18 @@ export const NavButton = styled.button`
   z-index: 10;
 
   svg {
-    transition: all 0.1s ease-out;
+    transition: fill 0.1s ease-out;
   }
 
-  &:hover {
-    svg {
-      fill: ${({ theme }) => theme.color('red')};
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        fill: ${({ theme }) => theme.color('red')};
+      }
     }
   }
 
-  &:focus-visible {
+  :focus-visible {
     outline: 2px solid ${({ theme }) => theme.color('red')};
   }
 `;
@@ -120,40 +122,25 @@ export const CloseButton = styled(NavButton)`
 `;
 
 export const PreviousButton = styled(NavButton)`
-  top: 30%;
+  top: 50%;
   left: 0;
-  transform: translate(0, -50%);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  transform: translate(-1rem, -50%);
   
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
+    transform: translate(1rem, -50%);
     top: 50%;
   }
 `;
 
 export const NextButton = styled(NavButton)`
-  top: 30%;
+  top: 50%;
   right: 0;
-  transform: translate(0, -50%);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  transform: translate(1rem, -50%);
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: fixed;
-   top: 50%;
+    transform: translate(-1rem, -50%);
+    top: 50%;
   }
-`;
-
-export const ScreenReaderOnly = styled.span`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 `;

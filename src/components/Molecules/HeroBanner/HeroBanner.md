@@ -74,7 +74,7 @@ import variants from './_variants';
     imageLow={defaultData.heroBannerImage}
     imageAltText="Image alt text"
     variant={variants.FULL_HEIGHT}
-    ctaText="Register to fundraise but longer"
+    ctaText="Register to fundraise but very very very very long oh it's a big link this one"
     ctaUrl="http://www.comicrelief.com/register"
     ctaNewTab
     copyLeft

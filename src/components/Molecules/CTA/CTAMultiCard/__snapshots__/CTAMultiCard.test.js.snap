@@ -17,10 +17,12 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -60,7 +62,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -148,10 +150,12 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -191,7 +195,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -233,10 +237,12 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test-no-image"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-7 cCIYkv"
@@ -251,7 +257,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -312,10 +318,12 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -355,7 +363,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -443,10 +451,12 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -486,7 +496,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -528,10 +538,12 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test-no-image"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-7 cCIYkv"
@@ -546,7 +558,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -607,10 +619,12 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -650,7 +664,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -738,10 +752,12 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -781,7 +797,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -823,10 +839,12 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test-no-image"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-7 cCIYkv"
@@ -841,7 +859,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -902,10 +920,12 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -945,7 +965,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -1033,10 +1053,12 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -1076,7 +1098,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -1118,10 +1140,12 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            color="red"
             href="/test-no-image"
             rel={null}
-            target="self"
+            target="_self"
+            type="standard"
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-7 cCIYkv"
@@ -1136,7 +1160,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"

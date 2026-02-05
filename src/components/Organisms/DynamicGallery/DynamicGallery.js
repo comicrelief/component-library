@@ -12,7 +12,8 @@ import Lightbox, { LightboxContext } from './_Lightbox';
 import {
   Container,
   EmptyMessage,
-  ImageGrid
+  ImageGrid,
+  FocusTrap
 } from './DynamicGallery.style';
 import DynamicGalleryColumn from './_DynamicGalleryColumn';
 import { GalleryNodeType } from './_types';
@@ -58,8 +59,9 @@ const DynamicGallery = ({
       const { top, left } = node.getBoundingClientRect();
       return floor(top, -2) + Math.floor(left) / 1000;
     }, 'asc');
+
     sortedNodes.forEach((galleryNode, index) => {
-      galleryNode.setAttribute('data-order', String(index));
+      galleryNode.setAttribute('data-tab-order', String(index));
     });
   }
   // create a throttled version of the updateTabOrder function
@@ -100,16 +102,30 @@ const DynamicGallery = ({
   const [selectedNode, setSelectedNode] = useState(null);
   const [focusedNode, setFocusedNode] = useState(null);
 
-  // handle next/previous node events from the lightbox
+  // handle next/previous node events from the lightbox;
+  // slightly complicated because we need to use the data-tab-order attribute
+  // to navigate between nodes rather than the node index;
+  // this reflects the tab ordering in the DOM, rather than the order of the nodes in the array,
+  // because the dynamic image heights can confuse the normal order
   function handleNextNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const nextNodeIndex = (nodeIndex + 1) % imageCount;
-    setSelectedNode(nodes[nextNodeIndex]);
+    const nodeEl = containerRef.current.querySelector(`[data-node-index="${nodeIndex}"]`);
+    const tabOrder = nodeEl.getAttribute('data-tab-order');
+    const nextTabOrder = (+tabOrder + 1) % imageCount;
+    const nextNodeEl = containerRef.current.querySelector(`[data-tab-order="${nextTabOrder}"]`);
+    const nextNodeIndex = nextNodeEl.getAttribute('data-node-index');
+    const nextNode = nodes[nextNodeIndex];
+    setSelectedNode(nextNode);
   }
   function handlePreviousNode(node) {
     const nodeIndex = nodes.indexOf(node);
-    const previousNodeIndex = (nodeIndex - 1 + imageCount) % imageCount;
-    setSelectedNode(nodes[previousNodeIndex]);
+    const nodeEl = containerRef.current.querySelector(`[data-node-index="${nodeIndex}"]`);
+    const tabOrder = nodeEl.getAttribute('data-tab-order');
+    const previousTabOrder = (+tabOrder - 1 + imageCount) % imageCount;
+    const previousNodeEl = containerRef.current.querySelector(`[data-tab-order="${previousTabOrder}"]`);
+    const previousNodeIndex = previousNodeEl.getAttribute('data-node-index');
+    const previousNode = nodes[previousNodeIndex];
+    setSelectedNode(previousNode);
   }
 
   // handle keydown events,
@@ -139,7 +155,7 @@ const DynamicGallery = ({
       // - flex-column+order > no gaps but complex (https://mui.com/material-ui/react-masonry/)
       // - columns + custom tabbing > what we're doing here
       case 'Tab': {
-        const nodeIndex = +event.target.dataset.order;
+        const nodeIndex = +event.target.dataset.tabOrder;
         if (Number.isNaN(nodeIndex)) return;
         const galleryContainer = event.target.closest('.gallery-container');
         if (!galleryContainer) return;
@@ -151,7 +167,7 @@ const DynamicGallery = ({
           newNodeIndex = nodeIndex - 1;
           if (newNodeIndex < 0) return;
           event.preventDefault();
-          galleryContainer.querySelector(`[data-order="${newNodeIndex}"]`).focus();
+          galleryContainer.querySelector(`[data-tab-order="${newNodeIndex}"]`).focus();
         } else {
           // tab: move to the next image
           newNodeIndex = nodeIndex + 1;
@@ -166,7 +182,7 @@ const DynamicGallery = ({
             return;
           }
           event.preventDefault();
-          galleryContainer.querySelector(`[data-order="${newNodeIndex}"]`).focus();
+          galleryContainer.querySelector(`[data-tab-order="${newNodeIndex}"]`).focus();
         }
         break;
       }
@@ -200,26 +216,33 @@ const DynamicGallery = ({
           {hasNodes
           && Array(columnCount)
             .fill(null)
-            .map((column, columnIndex) => (
-              <DynamicGalleryColumn
-                // disabling the lint rule here
-                // as we're chunking an array and have no unique keys
-                // eslint-disable-next-line react/no-array-index-key
-                key={columnIndex}
-                columnIndex={columnIndex}
-                columnCount={columnCount}
-                nodes={nodes.slice(0, imageCount)}
-                imageRatio={imageRatio}
-                updateTabOrder={throttledUpdateTabOrder.current}
-                focusOutlineColour={textColour}
-              />
-            ))}
+            .map((column, columnIndex) => {
+              // eslint prefers template literals for strings, but they break the compiler
+              // eslint-disable-next-line prefer-template
+              const key = String(columnIndex) + ':' + nodes.length;
+              return (
+                <DynamicGalleryColumn
+                  // disabling the lint rule here
+                  // as we're chunking an array and have no unique keys
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={key}
+                  columnIndex={columnIndex}
+                  columnCount={columnCount}
+                  nodes={nodes.slice(0, imageCount)}
+                  imageRatio={imageRatio}
+                  updateTabOrder={throttledUpdateTabOrder.current}
+                  focusOutlineColour={textColour}
+                />
+              );
+            })}
 
           <EmptyMessage isEmpty={!hasNodes}>No images to display</EmptyMessage>
         </ImageGrid>
         <Lightbox />
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <div className="gallery-focus-trap" tabIndex={0} />
+        <FocusTrap className="gallery-focus-trap" tabIndex={0}>
+          <span>End of gallery</span>
+        </FocusTrap>
       </LightboxContext.Provider>
       {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Show more</Button>}
     </Container>

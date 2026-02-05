@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with data prop 1`] = `
-.c11 {
+.c12 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -13,32 +13,46 @@ exports[`renders correctly with data prop 1`] = `
   line-height: 1.25rem;
 }
 
-.c11 span {
+.c12 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c6 {
+.c7 {
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.c7 {
+.c8 {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.c19 {
+.c3 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c3:hover,
+.c3:focus {
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   overflow: hidden;
   -webkit-flex-shrink: 0;
@@ -48,14 +62,14 @@ exports[`renders correctly with data prop 1`] = `
   border-radius: 1rem 1rem 0 0;
 }
 
-.c5 img {
+.c6 img {
   width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
 }
 
-.c14 {
+.c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -73,7 +87,7 @@ exports[`renders correctly with data prop 1`] = `
   display: inline-block;
 }
 
-.c16 {
+.c17 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -85,7 +99,7 @@ exports[`renders correctly with data prop 1`] = `
   pointer-events: none;
 }
 
-.c18 {
+.c19 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -107,7 +121,7 @@ exports[`renders correctly with data prop 1`] = `
   flex-shrink: 0;
 }
 
-.c17 {
+.c18 {
   padding-left: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -123,7 +137,7 @@ exports[`renders correctly with data prop 1`] = `
   justify-content: flex-end;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,7 +160,7 @@ exports[`renders correctly with data prop 1`] = `
   box-sizing: border-box;
 }
 
-.c3 img {
+.c4 img {
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
@@ -171,7 +185,7 @@ exports[`renders correctly with data prop 1`] = `
   max-width: 100%;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   background: #FFFFFF;
   display: -webkit-box;
@@ -189,7 +203,7 @@ exports[`renders correctly with data prop 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c9 {
+.c10 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -203,13 +217,13 @@ exports[`renders correctly with data prop 1`] = `
   min-height: 0;
 }
 
-.c10 {
+.c11 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
 }
 
-.c12 {
+.c13 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -227,7 +241,7 @@ exports[`renders correctly with data prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .c0 {
@@ -249,21 +263,21 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:740px) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c11 {
+  .c12 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c6 {
     width: calc(100% / 3);
     min-width: 292px;
     max-width: 309px;
@@ -280,54 +294,54 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c6 {
     min-width: 355px;
     max-width: 362px;
   }
 }
 
 @media (min-width:1440px) {
-  .c5 {
+  .c6 {
     min-width: 363px;
     max-width: 363px;
   }
 }
 
 @media (min-width:740px) {
-  .c5 img {
+  .c6 img {
     height: 100%;
     object-fit: cover;
   }
 }
 
 @media (min-width:740px) {
-  .c14 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c14 {
+  .c15 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c14 {
+  .c15 {
     color: #222222;
   }
 }
 
 @media (min-width:1024px) {
-  .c18 {
+  .c19 {
     background: #222222;
   }
 }
 
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -340,13 +354,13 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c4 {
     min-height: 272px;
   }
 }
 
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -358,29 +372,29 @@ exports[`renders correctly with data prop 1`] = `
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
-  .c3:hover,
-  .c3:focus {
+  .c4:hover,
+  .c4:focus {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 
-  .c3:hover {
+  .c4:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
   }
 
-  .c3:hover .c4 img {
+  .c4:hover .c5 img {
     -webkit-transform: scale(1.06);
     -ms-transform: scale(1.06);
     transform: scale(1.06);
   }
 
-  .c3:hover .c13 {
+  .c4:hover .c14 {
     -webkit-text-decoration: none;
     text-decoration: none;
   }
 
-  .c3:hover .c15 {
+  .c4:hover .c16 {
     opacity: 1;
   }
 }
@@ -406,7 +420,7 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:740px) {
-  .c8 {
+  .c9 {
     width: calc(200% / 3);
     min-width: 384px;
     max-width: 650px;
@@ -418,14 +432,14 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c9 {
     min-width: 541px;
     max-width: 790px;
   }
 }
 
 @media (min-width:1440px) {
-  .c8 {
+  .c9 {
     width: 789px;
   }
 }
@@ -452,22 +466,24 @@ exports[`renders correctly with data prop 1`] = `
       className="c2"
     >
       <a
-        className="c3"
+        className="c3 c4"
+        color="red"
         href="/test"
         rel={null}
-        target="self"
+        target="_self"
+        type="standard"
       >
         <div
-          className="c4 c5"
+          className="c5 c6"
         >
           <div
-            className="c6 lazyload"
+            className="c7 lazyload"
             height="100%"
             width="100%"
           >
             <img
               alt="Example image"
-              className="c7 lazyload"
+              className="c8 lazyload"
               data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
               data-sizes="auto"
               data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
@@ -480,18 +496,18 @@ exports[`renders correctly with data prop 1`] = `
           </div>
         </div>
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
           >
             <div
-              className="c10"
+              className="c11"
             >
               Example Label
             </div>
             <p
-              className="c11"
+              className="c12"
             >
               <strong>
                 Single Card
@@ -500,27 +516,27 @@ exports[`renders correctly with data prop 1`] = `
             </p>
           </div>
           <div
-            className="c12"
+            className="c13"
           >
             <span
-              className="c13 c14"
+              className="c14 c15"
             >
               Learn more
               <img
                 alt=""
                 aria-hidden="true"
-                className="c15 c16"
+                className="c16 c17"
                 src="mock.asset"
               />
             </span>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <svg
-                  className="c19"
+                  className="c20"
                   fill="none"
                   height="13"
                   viewBox="0 0 15 13"
@@ -543,7 +559,7 @@ exports[`renders correctly with data prop 1`] = `
 `;
 
 exports[`renders correctly without image 1`] = `
-.c7 {
+.c8 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -555,18 +571,32 @@ exports[`renders correctly without image 1`] = `
   line-height: 1.25rem;
 }
 
-.c7 span {
+.c8 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c15 {
+.c3 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c3:hover,
+.c3:focus {
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c16 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c10 {
+.c11 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -584,7 +614,7 @@ exports[`renders correctly without image 1`] = `
   display: inline-block;
 }
 
-.c12 {
+.c13 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -596,7 +626,7 @@ exports[`renders correctly without image 1`] = `
   pointer-events: none;
 }
 
-.c14 {
+.c15 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -618,7 +648,7 @@ exports[`renders correctly without image 1`] = `
   flex-shrink: 0;
 }
 
-.c13 {
+.c14 {
   padding-left: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -634,7 +664,7 @@ exports[`renders correctly without image 1`] = `
   justify-content: flex-end;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -657,7 +687,7 @@ exports[`renders correctly without image 1`] = `
   box-sizing: border-box;
 }
 
-.c3 img {
+.c4 img {
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
@@ -682,7 +712,7 @@ exports[`renders correctly without image 1`] = `
   max-width: 100%;
 }
 
-.c4 {
+.c5 {
   width: 100%;
   background: #FFFFFF;
   display: -webkit-box;
@@ -700,7 +730,7 @@ exports[`renders correctly without image 1`] = `
   border-radius: 0 0 1rem 1rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -714,13 +744,13 @@ exports[`renders correctly without image 1`] = `
   min-height: 0;
 }
 
-.c6 {
+.c7 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -738,7 +768,7 @@ exports[`renders correctly without image 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .c0 {
@@ -760,47 +790,47 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c10 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c10 {
+  .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c10 {
+  .c11 {
     color: #222222;
   }
 }
 
 @media (min-width:1024px) {
-  .c14 {
+  .c15 {
     background: #222222;
   }
 }
 
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -813,13 +843,13 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c4 {
     min-height: 272px;
   }
 }
 
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
@@ -831,23 +861,23 @@ exports[`renders correctly without image 1`] = `
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
-  .c3:hover,
-  .c3:focus {
+  .c4:hover,
+  .c4:focus {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 
-  .c3:hover {
+  .c4:hover {
     box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
   }
 
-  .c3:hover .c9 {
+  .c4:hover .c10 {
     -webkit-text-decoration: none;
     text-decoration: none;
   }
 
-  .c3:hover .c11 {
+  .c4:hover .c12 {
     opacity: 1;
   }
 }
@@ -873,7 +903,7 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c5 {
     width: calc(200% / 3);
     min-width: 384px;
     max-width: 650px;
@@ -885,14 +915,14 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c5 {
     min-width: 541px;
     max-width: 790px;
   }
 }
 
 @media (min-width:1440px) {
-  .c4 {
+  .c5 {
     width: 789px;
   }
 }
@@ -919,50 +949,52 @@ exports[`renders correctly without image 1`] = `
       className="c2"
     >
       <a
-        className="c3"
+        className="c3 c4"
+        color="red"
         href="/test-no-image"
         rel={null}
-        target="self"
+        target="_self"
+        type="standard"
       >
         <div
-          className="c4"
+          className="c5"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
             >
               Example Label
             </div>
             <p
-              className="c7"
+              className="c8"
             >
               Card without image
             </p>
           </div>
           <div
-            className="c8"
+            className="c9"
           >
             <span
-              className="c9 c10"
+              className="c10 c11"
             >
               View card
               <img
                 alt=""
                 aria-hidden="true"
-                className="c11 c12"
+                className="c12 c13"
                 src="mock.asset"
               />
             </span>
             <div
-              className="c13"
+              className="c14"
             >
               <div
-                className="c14"
+                className="c15"
               >
                 <svg
-                  className="c15"
+                  className="c16"
                   fill="none"
                   height="13"
                   viewBox="0 0 15 13"
