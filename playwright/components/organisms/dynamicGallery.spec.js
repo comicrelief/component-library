@@ -13,6 +13,7 @@ function hexToRgb(hex) {
 }
 
 test.describe('dynamic gallery component', () => {
+  // MARK: smoke test
   test('smoke test', async ({ page }) => {
     await page.goto('/#dynamicgallery');
 
@@ -28,6 +29,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: responsive columns
   test('responsive gallery columns', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -49,6 +51,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: chunk mode
   test('chunk mode test', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -67,6 +70,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: non-chunk mode
   test('non-chunk mode test', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
@@ -79,6 +83,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: tabbing
   test('gallery tabbing', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -104,6 +109,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: tabbing out
   test('gallery tabbing should allow tabbing out of the gallery', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
@@ -126,6 +132,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: colours
   test('custom page background and text colour', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
@@ -140,6 +147,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: lightbox mode
   test('check lightbox mode', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -166,6 +174,29 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: lightbox focus
+  test('check lightbox auto-focus', async ({ page }) => {
+    await page.goto('/#!/DynamicGallery/3');
+
+    // find the first gallery node
+    const galleryNode = page.locator('.gallery-node').first();
+
+    // click it
+    await galleryNode.click();
+
+    // the close button should not be focused after opening the lightbox with the mouse
+    await expect(page.locator('.close-button')).not.toBeFocused();
+    await page.keyboard.press('Escape');
+
+    // the close button should be focused after opening the lightbox with the keyboard
+    await galleryNode.focus();
+    await page.keyboard.press('Enter');
+    await expect(page.locator('.close-button')).toBeFocused();
+
+    await page.close();
+  });
+
+  // MARK: lightbox navigation
   test('lightbox navigation', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -188,6 +219,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: lightbox pointer close
   test('lightbox pointer close', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
@@ -206,6 +238,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
+  // MARK: non-lightbox mode
   test('check non-lightbox mode', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 

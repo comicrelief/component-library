@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Picture from '../../Atoms/Picture/Picture';
 
 export const Container = styled.div`
   position: fixed;
@@ -45,6 +46,11 @@ export const LightboxContent = styled.div`
   padding: 1rem;
   background: #ffffff;
   border-radius: 1rem;
+`;
+
+export const LightboxPicture = styled(Picture)`
+  overflow: hidden;
+  border-radius: 0.6rem;
 `;
 
 export const LightboxImage = styled.div`
