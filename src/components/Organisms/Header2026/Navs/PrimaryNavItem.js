@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import ChevronIcon from '../assets/chevron-icon.svg';
@@ -85,12 +85,23 @@ const PrimaryNavItem = (
     return groups;
   };
 
-  // Group tertiary links for all columns
-  const tertiaryGroups = {
-    ...groupTertiaryLinks(group.column1PageLinks),
-    ...groupTertiaryLinks(group.column2PageLinks),
-    ...groupTertiaryLinks(group.column3PageLinks)
-  };
+  // Collect all column links into a single array for iteration
+  const allColumnLinks = useMemo(() => [
+    group.column1PageLinks,
+    group.column2PageLinks,
+    group.column3PageLinks
+  ], [group.column1PageLinks, group.column2PageLinks, group.column3PageLinks]);
+
+  // Group tertiary links for all columns (run once per data change)
+  const tertiaryGroups = useMemo(() => allColumnLinks.reduce(
+    (acc, links) => ({ ...acc, ...groupTertiaryLinks(links) }), {}
+  ), [allColumnLinks]);
+
+  // All links flattened (run once per data change)
+  const allLinks = useMemo(
+    () => allColumnLinks.flatMap(links => links || []),
+    [allColumnLinks]
+  );
 
   // Check if a secondary link has tertiary children
   const hasTertiaryChildren = linkId => tertiaryGroups[linkId]?.length > 0;
@@ -99,17 +110,10 @@ const PrimaryNavItem = (
   const activeTertiaryLinks = tertiaryGroups[openTertiaryMenu] || [];
 
   // Find the parent link (pageLevel: true) for the currently open tertiary menu
-  const findParentLink = linkId => {
-    if (!linkId) return null;
-    const allLinks = [
-      ...(group.column1PageLinks || []),
-      ...(group.column2PageLinks || []),
-      ...(group.column3PageLinks || [])
-    ];
-    return allLinks.find(link => link.id === linkId);
-  };
-
-  const activeParentLink = findParentLink(openTertiaryMenu);
+  const activeParentLink = useMemo(
+    () => (openTertiaryMenu ? allLinks.find(link => link.id === openTertiaryMenu) : null),
+    [openTertiaryMenu, allLinks]
+  );
 
   // Helper to render a column's links
   const renderColumnLinks = (links, ColumnComponent) => {
@@ -239,42 +243,34 @@ const PrimaryNavItem = (
             </SecondaryMenuPrimaryLink>
           )}
 
-          {/* Column 1 */}
-          <ColumnWrapper>
-            {renderColumnLinks(group.column1PageLinks, SecondaryNavItem)}
-          </ColumnWrapper>
-
-          {/* Column 2 */}
-          <ColumnWrapper>
-            {renderColumnLinks(group.column2PageLinks, SecondaryNavItem)}
-          </ColumnWrapper>
-
-          {/* Column 3 - Cards if available (desktop only), otherwise 3rd column of Links */}
-          <ColumnWrapper>
-            {/* Desktop: Show cards if available, otherwise show links */}
-            {!isNotDesktop && group.column3PageCards?.length > 0 ? (
-              group.column3PageCards.map(card => (
-                <NavCard
-                  key={card.id}
-                  href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
-                >
-                  {card.image?.url && (
-                    <NavCardImage>
-                      <img src={card.image.url} alt={card.image.title || card.pageName} />
-                    </NavCardImage>
-                  )}
-                  <NavCardContent>
-                    <NavCardTitle>{card.pageName}</NavCardTitle>
-                    {card.pageDescription && (
-                      <NavCardDescription>{card.pageDescription}</NavCardDescription>
+          {allColumnLinks.map((links, colIndex) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <ColumnWrapper key={colIndex}>
+              {/* Column 3: Cards if available (desktop only), otherwise links */}
+              {colIndex === 2 && !isNotDesktop && group.column3PageCards?.length > 0 ? (
+                group.column3PageCards.map(card => (
+                  <NavCard
+                    key={card.id}
+                    href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
+                  >
+                    {card.image?.url && (
+                      <NavCardImage>
+                        <img src={card.image.url} alt={card.image.title || card.pageName} />
+                      </NavCardImage>
                     )}
-                  </NavCardContent>
-                </NavCard>
-              ))
-            ) : (
-              renderColumnLinks(group.column3PageLinks, SecondaryNavItem)
-            )}
-          </ColumnWrapper>
+                    <NavCardContent>
+                      <NavCardTitle>{card.pageName}</NavCardTitle>
+                      {card.pageDescription && (
+                        <NavCardDescription>{card.pageDescription}</NavCardDescription>
+                      )}
+                    </NavCardContent>
+                  </NavCard>
+                ))
+              ) : (
+                renderColumnLinks(links, SecondaryNavItem)
+              )}
+            </ColumnWrapper>
+          ))}
         </SecondaryNavMenu>
       )}
 
