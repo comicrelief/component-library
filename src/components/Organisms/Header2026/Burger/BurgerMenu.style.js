@@ -22,7 +22,7 @@ const BurgerWrapper = styled.button`
   ${zIndex('medium')};
   border-radius: 8px;
   border: none;
-  order: 50;
+  order: 1;
   cursor: pointer;
   transition: all 0.2s;
   margin-left: 10px;
