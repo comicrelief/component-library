@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 import { BurgerBar, BurgerHiddenText, BurgerWrapper } from './BurgerMenu.style';
 
-const BurgerMenu = ({ toggle, isExpandable }) => (
+const BurgerMenu = ({ toggle, isMenuOpen }) => (
   <BurgerWrapper
     data-testid="BurgerWrapper"
     type="button"
     aria-haspopup="true"
-    aria-expanded={isExpandable}
+    aria-expanded={isMenuOpen}
     aria-label="Open and close Navigation Menu"
     onClick={toggle}
-    isExpandable={isExpandable}
+    isMenuOpen={isMenuOpen}
   >
     <BurgerHiddenText>Open and close nav menu</BurgerHiddenText>
     <BurgerBar />
@@ -20,7 +20,7 @@ const BurgerMenu = ({ toggle, isExpandable }) => (
 
 BurgerMenu.propTypes = {
   toggle: PropTypes.func.isRequired,
-  isExpandable: PropTypes.bool.isRequired
+  isMenuOpen: PropTypes.bool.isRequired
 };
 
 export default BurgerMenu;

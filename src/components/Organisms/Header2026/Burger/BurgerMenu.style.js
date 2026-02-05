@@ -46,7 +46,7 @@ const BurgerWrapper = styled.button`
 
     // Middle bar fades out
     background-color: currentColor;
-    opacity: ${({ isExpandable }) => (isExpandable ? '0' : '1')};
+    opacity: ${({ isMenuOpen }) => (isMenuOpen ? '0' : '1')};
     transition: opacity 0.3s ease-in-out;
 
     ::before,
@@ -83,7 +83,7 @@ const BurgerWrapper = styled.button`
     top: 50%;
     margin-left: -12px;
     margin-top: -1.5px;
-    opacity: ${({ isExpandable }) => (isExpandable ? '1' : '0')};
+    opacity: ${({ isMenuOpen }) => (isMenuOpen ? '1' : '0')};
     transition: opacity 0.2s ease-in-out;
     pointer-events: none;
   }

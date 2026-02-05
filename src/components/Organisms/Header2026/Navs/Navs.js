@@ -30,8 +30,8 @@ import {
 const Navs = ({
   navItems = {},
   characterLimit,
-  isExpandable,
-  setIsExpandable,
+  isMenuOpen,
+  setIsMenuOpen,
   devMode = false,
   onSubMenuChange = () => {},
   onTertiaryMenuChange = () => {}
@@ -40,7 +40,6 @@ const Navs = ({
   const [openedSubMenu, setOpenedSubMenu] = useState({});
   const [isNotDesktop, setIsNotDesktop] = useState(false);
   const [processedItems, setProcessedItems] = useState(null);
-  const [showMoreNav, setShowMoreNav] = useState(false);
   const [isTertiaryOpen, setIsTertiaryOpen] = useState(false);
   let theseGroups = null;
 
@@ -65,10 +64,10 @@ const Navs = ({
 
   const toggleBurgerMenu = e => {
     e.preventDefault();
-    setIsExpandable(!isExpandable);
+    setIsMenuOpen(!isMenuOpen);
 
     // If we've just closed the nav, collapse any open submenus and reset tertiary state:
-    if (isExpandable) {
+    if (isMenuOpen) {
       setOpenedSubMenu({});
       setIsTertiaryOpen(false);
       onTertiaryMenuChange(false, null, null);
@@ -97,23 +96,6 @@ const Navs = ({
     setProcessedItems(theseItems);
   }, [headerPageGroups, characterLimit]);
 
-  // Determine which nav we should use only once 'window' exists:
-  useEffect(() => {
-    const notDesktop = window.innerWidth < breakpointValues2026.L;
-    setIsNotDesktop(notDesktop);
-
-    // Use these flags to detemine if we render the More nav or not:
-    setShowMoreNav(!notDesktop && processedItems.moreNavGroups.length);
-  }, [processedItems]);
-
-  // Attach eventListener on mount and after potential changes
-  // to showMoreNav triggered by a window resize:
-  useEffect(() => {
-    if (processedItems && showMoreNav) {
-      document.getElementById('more-nav-ul').addEventListener('mouseleave', resetMoreNavMouse);
-    }
-  }, [processedItems, showMoreNav]);
-
   // Custom function to let us update the nav dynamically:
   const screenResizeNav = useCallback(() => {
     // Grab the current width:
@@ -131,10 +113,6 @@ const Navs = ({
 
       // Update our desktop flag to prevent any further calls:
       setIsNotDesktop(isCurrentlyNotDesktop);
-
-      // And since we've changed breakpoints, use these flags
-      // to determine if we should render the More nav or not,
-      setShowMoreNav(Boolean(!isCurrentlyNotDesktop && processedItems.moreNavGroups.length));
     }
   }, [isNotDesktop, processedItems]);
 
@@ -153,7 +131,7 @@ const Navs = ({
       <Navigation
         data-testid="Nav"
         aria-label="main-menu"
-        isExpandable={isExpandable}
+        isMenuOpen={isMenuOpen}
         role="navigation"
         id="main-nav"
       >
@@ -234,7 +212,7 @@ const Navs = ({
           )}
         </PrimaryMenuWrapper>
 
-        {isExpandable && !isTertiaryOpen && (
+        {isMenuOpen && !isTertiaryOpen && (
           <DonateButtonMobileModalWrapper data-testid="donate-button--mobile">
             <Link
               color="red"
@@ -250,7 +228,7 @@ const Navs = ({
       <BurgerMenu
         data-testid="BurgerMenu"
         toggle={toggleBurgerMenu}
-        isExpandable={isExpandable}
+        isMenuOpen={isMenuOpen}
       />
     </>
   );
@@ -259,8 +237,8 @@ const Navs = ({
 Navs.propTypes = {
   navItems: PropTypes.objectOf(PropTypes.shape),
   characterLimit: PropTypes.number,
-  isExpandable: PropTypes.bool,
-  setIsExpandable: PropTypes.func,
+  isMenuOpen: PropTypes.bool,
+  setIsMenuOpen: PropTypes.func,
   devMode: PropTypes.bool,
   onSubMenuChange: PropTypes.func,
   onTertiaryMenuChange: PropTypes.func

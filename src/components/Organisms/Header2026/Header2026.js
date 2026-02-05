@@ -24,7 +24,7 @@ const Header2026 = ({
   devMode = false,
   ...rest
 }) => {
-  const [isExpandable, setIsExpandable] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isTertiaryMenuOpen, setIsTertiaryMenuOpen] = useState(false);
   const [tertiaryParentName, setTertiaryParentName] = useState(null);
@@ -49,7 +49,7 @@ const Header2026 = ({
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         if (window.innerWidth >= breakpointValues2026.L) {
-          setIsExpandable(false);
+          setIsMenuOpen(false);
           setIsSubMenuOpen(false);
           setIsTertiaryMenuOpen(false);
           setTertiaryParentName(null);
@@ -76,7 +76,7 @@ const Header2026 = ({
 
   return (
     <>
-      <MobileMenuOverlay isVisible={isExpandable} />
+      <MobileMenuOverlay isVisible={isMenuOpen} />
       <Header2026Wrapper
         data-testid="Header2026Wrapper"
         role="banner"
@@ -106,8 +106,8 @@ const Header2026 = ({
             data-testid="Navs"
             navItems={data}
             characterLimit={characterLimit}
-            isExpandable={isExpandable}
-            setIsExpandable={setIsExpandable}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
             devMode={devMode}
             onSubMenuChange={handleSubMenuChange}
             onTertiaryMenuChange={handleTertiaryMenuChange}
@@ -127,7 +127,7 @@ const Header2026 = ({
               />
             </SearchIconWrapperDesktop>
 
-            {!isExpandable && (
+            {!isMenuOpen && (
             <DonateButtonTopBarWrapper data-testid="DonateButtonTopBarWrapper">
               <Link color="red" type="button" href="https://donation.comicrelief.com/">
                 Donate

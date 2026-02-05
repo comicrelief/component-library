@@ -5,7 +5,7 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
 
 const Navigation = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
