@@ -1,5 +1,7 @@
 import '../../../utils/remove-extra-styles-in-preview.css';
-import React, { useState, useCallback, useRef } from 'react';
+import React, {
+  useState, useCallback, useRef, useEffect
+} from 'react';
 import PropTypes from 'prop-types';
 
 import LogoNav2026 from '../../Atoms/LogoNav2026/_LogoNav2026';
@@ -14,6 +16,7 @@ import searchIcon from './assets/search-icon.svg';
 import chevronIcon from './assets/chevron-icon.svg';
 import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import prependBaseUrl from '../../../utils/urlHelper';
+import { breakpointValues2026 } from '../../../theme/shared/breakpoints2026';
 
 const Header2026 = ({
   data = {},
@@ -37,6 +40,20 @@ const Header2026 = ({
     setIsTertiaryMenuOpen(isOpen);
     setTertiaryParentName(parentName);
     closeTertiaryRef.current = closeFunction;
+  }, []);
+
+  // Reset mobile nav state when resizing to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= breakpointValues2026.L) {
+        setIsExpandable(false);
+        setIsSubMenuOpen(false);
+        setIsTertiaryMenuOpen(false);
+        setTertiaryParentName(null);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleBackClick = () => {
