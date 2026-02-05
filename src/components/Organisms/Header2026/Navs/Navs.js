@@ -38,7 +38,12 @@ const Navs = ({
 }) => {
   const { headerPageGroups } = navItems;
   const [openedSubMenu, setOpenedSubMenu] = useState({});
-  const [isNotDesktop, setIsNotDesktop] = useState(false);
+  const [isNotDesktop, setIsNotDesktop] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < breakpointValues2026.L;
+    }
+    return false;
+  });
   const [processedItems, setProcessedItems] = useState(null);
   const [isTertiaryOpen, setIsTertiaryOpen] = useState(false);
   let theseGroups = null;
@@ -174,7 +179,6 @@ const Navs = ({
                   isNotDesktop={isNotDesktop}
                   thisUrl={thisUrl}
                   group={group}
-                  columnLinks={columnLinks}
                   navHelperNew={NavHelperNew}
                   internalLinkHelper={InternalLinkHelper}
                   relNoopener={relNoopener}

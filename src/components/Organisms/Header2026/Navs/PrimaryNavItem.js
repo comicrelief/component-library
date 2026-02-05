@@ -28,11 +28,30 @@ import {
   SecondaryMenuPrimaryLinkAnchor
 } from './PrimaryNavItem.style';
 
+// Helper to group tertiary links (pageLevel: false)
+// so that they sit under their parent secondary links (pageLevel: true)
+const groupTertiaryLinks = links => {
+  if (!links) return {};
+  const groups = {};
+  let currentSecondaryId = null;
+
+  links.forEach(link => {
+    if (link.pageLevel) {
+      currentSecondaryId = link.id;
+      groups[currentSecondaryId] = [];
+    } else if (currentSecondaryId) {
+      groups[currentSecondaryId].push(link);
+    }
+  });
+
+  return groups;
+};
+
 const PrimaryNavItem = (
   {
     thisID, relNoopener, hasSubMenu, index, openedSubMenu,
     isNotDesktop, hasPopUp, thisUrl, toggleSubMenu, group,
-    columnLinks, navHelperNew, internalLinkHelper, devMode = false,
+    navHelperNew, internalLinkHelper, devMode = false,
     onTertiaryMenuChange, isTertiaryOpenGlobal = false,
     isSubMenuOpenGlobal = false, ...rest
   }
@@ -46,13 +65,9 @@ const PrimaryNavItem = (
     setOpenTertiaryMenu(isOpening ? linkId : null);
 
     if (onTertiaryMenuChange) {
-      // Use primary page name (e.g., "Get Involved") for the back button text on 3rd modal
       onTertiaryMenuChange(isOpening, isOpening ? group.primaryPageName : null, () => {
-        // Close function: reset local state AND notify parent that tertiary is closed
         setOpenTertiaryMenu(null);
-        if (onTertiaryMenuChange) {
-          onTertiaryMenuChange(false, null, null);
-        }
+        onTertiaryMenuChange(false, null, null);
       });
     }
   };
@@ -63,27 +78,6 @@ const PrimaryNavItem = (
       setOpenTertiaryMenu(null);
     }
   }, [openedSubMenu, thisID]);
-
-  // Helper to group tertiary links (pageLevel: false)
-  // so that they sit under their parent secondary links (pageLevel: true)
-  const groupTertiaryLinks = links => {
-    if (!links) return {};
-    const groups = {};
-    let currentSecondaryId = null;
-
-    links.forEach(link => {
-      if (link.pageLevel) {
-        // This is a secondary link - start a new group
-        currentSecondaryId = link.id;
-        groups[currentSecondaryId] = [];
-      } else if (currentSecondaryId) {
-        // This is a tertiary link - add to current group
-        groups[currentSecondaryId].push(link);
-      }
-    });
-
-    return groups;
-  };
 
   // Collect all column links into a single array for iteration
   const allColumnLinks = useMemo(() => [
@@ -115,6 +109,15 @@ const PrimaryNavItem = (
     [openTertiaryMenu, allLinks]
   );
 
+  // Pre-process URLs for all links (run once per data change)
+  const processedLinkUrls = useMemo(() => {
+    const urls = {};
+    allLinks.forEach(link => {
+      urls[link.id] = internalLinkHelper(navHelperNew(link));
+    });
+    return urls;
+  }, [allLinks, navHelperNew, internalLinkHelper]);
+
   // Helper to render a column's links
   const renderColumnLinks = (links, ColumnComponent) => {
     if (!links) return null;
@@ -126,8 +129,6 @@ const PrimaryNavItem = (
         return null;
       }
 
-      let thisSubUrl = navHelperNew(child);
-      thisSubUrl = internalLinkHelper(thisSubUrl);
       const linkId = child.id;
       const hasChildren = hasTertiaryChildren(linkId);
 
@@ -147,7 +148,7 @@ const PrimaryNavItem = (
               </SecondaryChevronWrapper>
             </SecondaryNavLinkWithChildren>
           ) : (
-            <SecondaryNavLink href={prependBaseUrl(thisSubUrl, devMode)} inline role="menuitem" $isSecondary={child.pageLevel}>
+            <SecondaryNavLink href={prependBaseUrl(processedLinkUrls[linkId], devMode)} inline role="menuitem" $isSecondary={child.pageLevel}>
               <Text>{child.pageName}</Text>
             </SecondaryNavLink>
           )}
@@ -173,7 +174,6 @@ const PrimaryNavItem = (
           aria-haspopup={hasPopUp}
           onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
           role="button"
-          key={`${index}-${thisID}--link`}
           isExpanded={!!openedSubMenu[thisID]}
         >
           {group.primaryPageName}
@@ -195,7 +195,6 @@ const PrimaryNavItem = (
           inline
           rel={relNoopener}
           aria-haspopup={hasPopUp}
-          key={`${index}-${thisID}`}
           hasSubMenu={hasSubMenu}
           {...rest}
         >
@@ -214,7 +213,6 @@ const PrimaryNavItem = (
     <StyledNavItem
       data-testid="StyledNavItem"
       role="none"
-      key={`${index}-${thisID}--item`}
       index={index}
       isSubMenuOpen={!!openedSubMenu}
       isTertiaryOpen={isTertiaryOpenGlobal}
@@ -222,13 +220,11 @@ const PrimaryNavItem = (
       {renderPrimaryLink()}
 
       {/* Second level of the navigation (ul tag): Child(ren) */}
-      {/* Used for BOTH nav types */}
       {hasSubMenu && (
         <SecondaryNavMenu
           role="list"
           isSubMenuOpen={!!openedSubMenu[thisID]}
           isTertiaryOpen={isTertiaryOpenGlobal}
-          key={`${index}-${thisID}--sub-item`}
         >
           {/* Mobile: Show primary link at top of 2nd modal */}
           {isNotDesktop && (
@@ -277,30 +273,21 @@ const PrimaryNavItem = (
       {/* Third level modal - separate from secondary menu for independent visibility */}
       {hasSubMenu && isNotDesktop && (
         <TertiaryNavMenu isOpen={openTertiaryMenu !== null}>
-          {/* Show parent link (pageLevel: true) at the top */}
-          {activeParentLink && (() => {
-            let parentUrl = navHelperNew(activeParentLink);
-            parentUrl = internalLinkHelper(parentUrl);
-            return (
-              <TertiaryNavItem key={activeParentLink.id} $isParent>
-                <TertiaryNavLink href={prependBaseUrl(parentUrl, devMode)} inline role="menuitem" $isParent>
-                  <Text>{activeParentLink.pageName}</Text>
-                </TertiaryNavLink>
-              </TertiaryNavItem>
-            );
-          })()}
-          {activeTertiaryLinks.map(tertiaryLink => {
-            let tertiaryUrl = navHelperNew(tertiaryLink);
-            tertiaryUrl = internalLinkHelper(tertiaryUrl);
-
-            return (
-              <TertiaryNavItem key={tertiaryLink.id}>
-                <TertiaryNavLink href={prependBaseUrl(tertiaryUrl, devMode)} inline role="menuitem">
-                  <Text>{tertiaryLink.pageName}</Text>
-                </TertiaryNavLink>
-              </TertiaryNavItem>
-            );
-          })}
+          {/* Show parent link at the top */}
+          {activeParentLink && (
+            <TertiaryNavItem $isParent>
+              <TertiaryNavLink href={prependBaseUrl(processedLinkUrls[activeParentLink.id], devMode)} inline role="menuitem" $isParent>
+                <Text>{activeParentLink.pageName}</Text>
+              </TertiaryNavLink>
+            </TertiaryNavItem>
+          )}
+          {activeTertiaryLinks.map(tertiaryLink => (
+            <TertiaryNavItem key={tertiaryLink.id}>
+              <TertiaryNavLink href={prependBaseUrl(processedLinkUrls[tertiaryLink.id], devMode)} inline role="menuitem">
+                <Text>{tertiaryLink.pageName}</Text>
+              </TertiaryNavLink>
+            </TertiaryNavItem>
+          ))}
         </TertiaryNavMenu>
       )}
     </StyledNavItem>
@@ -311,7 +298,6 @@ PrimaryNavItem.propTypes = {
   thisID: PropTypes.string.isRequired,
   index: PropTypes.number,
   hasSubMenu: PropTypes.bool,
-  // Non-required fields as this isn't always populated
   openedSubMenu: PropTypes.shape({}),
   toggleSubMenu: PropTypes.func.isRequired,
   hasPopUp: PropTypes.string,
@@ -356,17 +342,6 @@ PrimaryNavItem.propTypes = {
       })
     )
   }),
-  columnLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      pageName: PropTypes.string.isRequired,
-      pageUrlIfExternal: PropTypes.string,
-      pageLevel: PropTypes.bool,
-      pageSelector: PropTypes.shape({
-        title: PropTypes.string,
-        path: PropTypes.string
-      })
-    })
-  ),
   navHelperNew: PropTypes.func.isRequired,
   internalLinkHelper: PropTypes.func.isRequired,
   relNoopener: PropTypes.string,
