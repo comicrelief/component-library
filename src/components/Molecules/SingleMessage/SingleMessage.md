@@ -71,7 +71,7 @@ import Link from '../../Atoms/Link/Link';
 />;
 ```
 
-Single Message with no Image
+Single Message with no Image (default padding)
 
 ```js
 import Text from '../../Atoms/Text/Text';
@@ -84,12 +84,12 @@ import Text from '../../Atoms/Text/Text';
 </SingleMessage>;
 ```
 
-Single Message with no Image - padding unmodified
+Single Message with no Image (no padding)
 
 ```js
 import Text from '../../Atoms/Text/Text';
 
-<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="both_on">
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingTop="0rem" paddingBottom="0rem">
   <Text tag="p" color="white" size="xxl">
     “The creativity that goes into helping people have a better life is
     extraordinary.”
@@ -97,39 +97,12 @@ import Text from '../../Atoms/Text/Text';
 </SingleMessage>;
 ```
 
-Single Message with no Image - no bottom padding
+Single Message with no Image (big padding)
 
 ```js
 import Text from '../../Atoms/Text/Text';
 
-<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="lower_off">
-  <Text tag="p" color="white" size="xxl">
-    “The creativity that goes into helping people have a better life is
-    extraordinary.”
-  </Text>
-</SingleMessage>;
-```
-
-
-Single Message with no Image - no top padding
-
-```js
-import Text from '../../Atoms/Text/Text';
-
-<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="upper_off">
-  <Text tag="p" color="white" size="xxl">
-    “The creativity that goes into helping people have a better life is
-    extraordinary.”
-  </Text>
-</SingleMessage>;
-```
-
-Single Message with no Image - no top and bottom padding
-
-```js
-import Text from '../../Atoms/Text/Text';
-
-<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingOption="both_off">
+<SingleMessage backgroundColor="purple_dark" copyFirst={false} paddingTop="4rem" paddingBottom="4rem">
   <Text tag="p" color="white" size="xxl">
     “The creativity that goes into helping people have a better life is
     extraordinary.”
