@@ -44,16 +44,24 @@ const Header2026 = ({
 
   // Reset mobile nav state when resizing to desktop
   useEffect(() => {
+    let timeoutId;
     const handleResize = () => {
-      if (window.innerWidth >= breakpointValues2026.L) {
-        setIsExpandable(false);
-        setIsSubMenuOpen(false);
-        setIsTertiaryMenuOpen(false);
-        setTertiaryParentName(null);
-      }
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        if (window.innerWidth >= breakpointValues2026.L) {
+          setIsExpandable(false);
+          setIsSubMenuOpen(false);
+          setIsTertiaryMenuOpen(false);
+          setTertiaryParentName(null);
+        }
+      }, 150); // Wait 150ms after resize stops before calling function again
     };
+
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const handleBackClick = () => {
