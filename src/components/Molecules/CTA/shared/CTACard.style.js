@@ -310,7 +310,7 @@ const CTA = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 `;
 
 export {
