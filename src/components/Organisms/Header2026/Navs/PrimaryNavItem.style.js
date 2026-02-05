@@ -323,14 +323,12 @@ const StyledNavItem = styled.li`
       }
     }
 
-    // Chevron icon:
+    // Chevron icon colour:
     span > a {
       color: ${({ theme }) => theme.color('red')};
       > div {
-        transform: rotate(-180deg);
         opacity: 1;
         img {
-          // Use fancy filter to colour 'img' version of SVG
           filter: invert(0.5) sepia(1) saturate(100) hue-rotate(20deg);
         }
       }
@@ -339,6 +337,15 @@ const StyledNavItem = styled.li`
 
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
+
+    // Chevron icon rotation - desktop only:
+    :hover,
+    :focus,
+    :focus-within {
+      span > a > div {
+        transform: rotate(-180deg);
+      }
+    }
     height: 100%;
     display: flex;
     align-items: center;
