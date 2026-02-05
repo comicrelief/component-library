@@ -33,7 +33,7 @@ const exampleCard = {
   id: 'single-card-1',
   label: 'Example Label',
   body: (
-    <Text tag="p">
+    <Text tag="p" style={{ marginTop: '22px' }}>
       <strong>Single Card</strong> content here
     </Text>
   ),
@@ -62,7 +62,7 @@ const exampleCard = {
   id: 'single-card-2',
   label: 'Example Label',
   body: (
-    <Text tag="p">
+    <Text tag="p" style={{ marginTop: '22px' }}>
       Single card
     </Text>
   ),
