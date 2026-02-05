@@ -1,10 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import Picture from '../../Atoms/Picture/Picture';
-import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
   position: relative;
@@ -30,7 +28,7 @@ const InnerContainer = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 724px;
     padding: ${spacing('l')};
-    ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
+    ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
       padding-top: 7.5rem;
       padding-bottom: 7.5rem;
     `}
@@ -66,7 +64,6 @@ const Wrapper = styled.div`
     justify-content: center;
   `};
 
-
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('l')} ${spacing('md')};
@@ -85,7 +82,7 @@ const TitleWrapperOuter = styled.div`
     width: auto;
     padding: 0;
     align-items: center;
-    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 2 : 1)};
+    order: ${({ orientation }) => (orientation === 'left' ? 2 : 1)};
   }
 `;
 
@@ -102,10 +99,10 @@ const FormWrapper = styled.div`
     min-width: 0;
     width: auto;
     display: flex;
-    justify-content: ${({ donateOrientation }) => (
-    donateOrientation === 'left' ? 'flex-start' : 'flex-end'
+    justify-content: ${({ orientation }) => (
+    orientation === 'left' ? 'flex-start' : 'flex-end'
   )};
-    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 1 : 2)};
+    order: ${({ orientation }) => (orientation === 'left' ? 1 : 2)};
   }
 `;
 
@@ -121,6 +118,7 @@ const Form = styled.form`
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  text-align: left;
 
   margin-left: auto;
   margin-right: auto;
@@ -129,16 +127,9 @@ const Form = styled.form`
     margin-top: 0;
   `}
 
-  h3 {
-    margin-top: ${spacing('md')};
-  }
-
   input {
     max-width: 100%;
     margin: 0;
-  }
-  input[type='submit'] {
-    margin: ${spacing('l')} 0;
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -152,7 +143,6 @@ const Form = styled.form`
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
-    /* Alignment is handled by the outer wrapper on desktop. */
     margin-left: 0;
     margin-right: 0;
   }
@@ -160,15 +150,11 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('md')};
+  padding: 0 ${spacing('md')} ${spacing('m')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('l')} ${spacing('l')};
-  }
-
-  input[type='submit'] {
-    margin-bottom: 0;
   }
 `;
 
@@ -184,36 +170,7 @@ const PrimaryTitleText = styled(Text)`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
-`;
-
-const SecondaryTitleText = styled(Text)`
-  display: block;
-  text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  line-height: 1.5;
-  margin-top: ${spacing('sm')};
-`;
-
-const MoneyBuys = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: ${spacing('md')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-    margin-top: ${spacing('m')};
-  }
-  label {
-    flex: 0 0 31%;
-    margin-bottom: ${spacing('sm')};
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-      margin-bottom: 0;
-    }
-    input {
-      cursor: pointer;
-      padding: ${spacing('sm')}  ${spacing('m')};
-    }
-  }
+  margin-bottom: ${spacing('sm')};
 `;
 
 const FormFieldset = styled.div`
@@ -223,85 +180,45 @@ const FormFieldset = styled.div`
   justify-content: flex-start;
 `;
 
-const Label = styled(Text)`
-  margin-bottom: ${spacing('sm')};
+const NameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
 `;
 
-const AmountField = styled(Input)`
-  position: relative;
-  flex-basis: 50%;
-  flex-shrink: 0;
-  flex-grow: 0;
-  font-weight: 400;
-  display: block;
-
-  ${({ $noMoneyBuys }) => $noMoneyBuys === true && css`
-    margin-top: ${spacing('sm')};
-  `}
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-basis: 60%;
-  }
-
-  span {
-    position: absolute;
-    font-size: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0px;
-    font-weight: 500;
-    padding: 0px 15px;
-    ${zIndex('high')};
-  }
-
-  input {
-    height: 48px;
-    border: 1px solid ${({ theme }) => theme.color('grey')};
-    background: ${({ theme }) => theme.color('grey_light')};
-    border-radius: 0.5rem;
-    padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
-    &:focus {
-      outline: none;
-      border: 1px solid ${({ theme }) => theme.color('grey')};
-    }
-  }
+const InputField = styled.div`
+  width: 100%;
+  margin-bottom: ${spacing('md')};
 `;
 
-const Copy = styled.p`
-  line-height: 1.5;
-  margin-top: ${spacing('l')};
+const BodyCopyWrapper = styled.div`
+  padding: 0 ${spacing('sm')} ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
 `;
 
-const Button = styled.button`
-  width: 100%;
-  margin: ${spacing('sm')} 0 ${spacing('sm')};
-  color: ${({ theme }) => theme.color('white')};
+const PrivacyCopyWrapper = styled.div`
+  padding: ${spacing('md')} ${spacing('sm')} 0;
+  color: ${({ theme }) => theme.color('black')};
   font-size: ${({ theme }) => theme.fontSize('s')};
-  font-weight: bold;
-  cursor: pointer;
-  min-height: 48px;
-  background: ${({ theme, color }) => theme.color(color)};
-  text-decoration: none;
-  border-radius: 0.5rem;
-  border: none;
-  appearance: none;
-  :active,
-  :focus,
-  :hover {
-    outline: none;
-    background-color: ${({ theme }) => theme.color('coral_dark')};
-  }
+  line-height: normal;
+`;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('md')} ${spacing('l')};
+const SuccessCopyWrapper = styled.div`
+  padding: 0 ${spacing('sm')} ${spacing('md')};
+  color: ${({ theme }) => theme.color('black')};
+`;
+
+const ButtonWrapper = styled.div`
+  margin-top: ${spacing('sm')};
+
+  button {
+    width: 100%;
   }
 `;
 
 export {
   BgImage,
-  Button,
-  Copy,
   Container,
   InnerContainer,
   Error,
@@ -309,13 +226,15 @@ export {
   FormWrapper,
   TitleWrapperInner,
   TitleWrapperOuter,
-  Label,
   Wrapper,
   Form,
-  MoneyBuys,
-  AmountField,
   OuterFieldset,
   Legend,
   PrimaryTitleText,
-  SecondaryTitleText
+  NameWrapper,
+  InputField,
+  BodyCopyWrapper,
+  PrivacyCopyWrapper,
+  SuccessCopyWrapper,
+  ButtonWrapper
 };

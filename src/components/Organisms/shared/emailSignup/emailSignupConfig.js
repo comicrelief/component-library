@@ -1,3 +1,8 @@
+/**
+ * Shared email signup configuration and validation schema.
+ * Currently shared between EmailBanner and EmailSignUp components.
+ */
+
 import { merge } from 'lodash';
 import * as yup from 'yup';
 
