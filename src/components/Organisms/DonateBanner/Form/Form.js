@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
-import PopUpComponent from './PopUpComponent';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
@@ -36,7 +35,6 @@ const Signup = ({
   mbshipID,
   donateOrientation = 'right',
   noMoneyBuys = false,
-  popUpText,
   submitButtonColor = 'red',
   changeGivingType,
   givingType = null,
@@ -53,9 +51,6 @@ const Signup = ({
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
-  const [popOpen, setPopOpen] = useState(false);
-  // In order to keep track of whether the user has ever been shown the popup
-  const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
     if (givingType) {
@@ -113,12 +108,6 @@ const Signup = ({
     noMoneyBuys
   ]);
 
-  // Updates our flag that differentiates between the popup
-  // being *currently* open and it *ever* having been shown to user
-  useEffect(() => {
-    if (popOpen && !popUpShown) setPopUpShown(true);
-  }, [popOpen, popUpShown]);
-
   // On load, determine what should actually be the default giving type
   useEffect(() => {
     const newGivingType = singleGiving !== null ? 'single' : 'monthly';
@@ -144,7 +133,7 @@ const Signup = ({
         mbshipId,
         donateURL,
         givingType,
-        popUpShown
+        null
       );
     } else {
       setErrorMsg(true);
@@ -215,8 +204,6 @@ const Signup = ({
       donateOrientation={donateOrientation}
       shouldShowTitleSection={shouldShowTitleSection}
     >
-      { popOpen && <PopUpComponent popUpText={popUpText} setPopOpen={setPopOpen} /> }
-
       <Form
         donateOrientation={donateOrientation}
         hasTopImage={hasTopImage}
@@ -252,7 +239,6 @@ const Signup = ({
             <GivingSelector
               givingType={givingType}
               changeGivingType={data => changeGivingType(data)}
-              setPopOpen={setPopOpen}
               mbshipID={mbshipID}
             />
           )}
@@ -337,7 +323,6 @@ Signup.propTypes = {
   donateOrientation: PropTypes.oneOf(['left', 'right']),
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  popUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,

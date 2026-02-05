@@ -87,7 +87,6 @@ const imageS = {
   monthlySubtitle="A regular gift helps fund long-term impact."
   chooseAmountText="Choose a one-off amount"
   monthlyChooseAmountText="Choose a monthly amount"
-  popUpText="Switching to a single gift means less predictable funding."
 />;
 ```
 

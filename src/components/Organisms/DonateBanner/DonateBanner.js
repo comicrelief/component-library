@@ -28,7 +28,6 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
@@ -150,7 +149,6 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             hideMoneyBuys={hideMoneyBuys}
-            popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
@@ -182,7 +180,6 @@ DonateBanner.propTypes = {
   subtitle: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  popUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   otherAmountText: PropTypes.string,
