@@ -125,8 +125,7 @@ const DonateBanner = ({
               {showCopy && (
               <>
                 <Text
-                  tag="h2"
-                  size="big"
+                  tag="h1"
                   family="Anton"
                   weight="normal"
                 >

@@ -181,7 +181,6 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
 `;
 
