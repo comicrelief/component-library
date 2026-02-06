@@ -266,15 +266,19 @@ const AmountField = styled(Input)`
   }
 `;
 
-const Copy = styled.p`
+const MoneybuyCopy = styled.p`
   line-height: 1.5;
   margin-top: ${spacing('l')};
   color: ${({ theme }) => theme.color('black')};
+  margin: ${spacing('md')} 0 ${spacing('sm')};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin: ${spacing('m')} 0 ${spacing('md')};
+  }
 `;
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('sm')} 0 ${spacing('sm')};
+  margin: ${spacing('md')} 0 ${spacing('sm')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
@@ -291,16 +295,12 @@ const Button = styled.button`
     outline: none;
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 12px ${spacing('l')};
-  }
 `;
 
 export {
   BgImage,
   Button,
-  Copy,
+  MoneybuyCopy,
   Container,
   InnerContainer,
   Error,

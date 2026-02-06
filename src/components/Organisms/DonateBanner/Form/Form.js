@@ -11,7 +11,7 @@ import {
 } from '../../../../utils/Membership';
 import {
   Button,
-  Copy,
+  MoneybuyCopy,
   Error,
   FormFieldset,
   FormWrapper,
@@ -285,10 +285,10 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy>
+            <MoneybuyCopy>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
-            </Copy>
+            </MoneybuyCopy>
           )}
 
           {errorMsg && (
