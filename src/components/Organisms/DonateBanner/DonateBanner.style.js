@@ -28,7 +28,6 @@ const InnerContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    height: 724px;
     padding: ${spacing('l')};
     ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
       padding-top: 7.5rem;
@@ -182,8 +181,8 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
+  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
-  margin-bottom: ${({ $donateWidgetIsTextOnly }) => ($donateWidgetIsTextOnly ? '1rem !important' : '0.5rem !important')};
 `;
 
 const SecondaryTitleText = styled(Text)`
@@ -192,10 +191,6 @@ const SecondaryTitleText = styled(Text)`
   font-size: ${({ theme }) => theme.fontSize('s')};
   line-height: 1.5;
   margin-top: ${spacing('sm')};
-  ${({ $showGivingSelector, $isMediumBreakpoint }) => !$showGivingSelector && !$isMediumBreakpoint && css`
-      margin-bottom: 1rem !important;
-    `
-}
 `;
 
 const MoneyBuys = styled.div`
@@ -283,8 +278,8 @@ const Button = styled.button`
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
+  min-height: 44px;
   cursor: pointer;
-  min-height: 48px;
   background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
   border-radius: 0.5rem;
@@ -298,7 +293,7 @@ const Button = styled.button`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('md')} ${spacing('l')};
+    padding: 12px ${spacing('l')};
   }
 `;
 
