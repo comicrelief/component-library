@@ -189,7 +189,7 @@ const SecondaryTitleText = styled(Text)`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   line-height: 1.5;
-  margin-top: ${spacing('sm')};
+  margin: ${spacing('sm')} 0 !important;
 `;
 
 const MoneyBuys = styled.div`
