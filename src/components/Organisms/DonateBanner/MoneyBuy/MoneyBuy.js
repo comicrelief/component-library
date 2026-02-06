@@ -14,10 +14,18 @@ const MoneyBuyButton = styled(Input)`
     font-family: ${({ theme }) => theme.fontFamilies('Anton')};
     font-weight: normal;
     border-radius: 0.5rem;
-    height: 4rem;
+    height: 3.75rem;
     border: 1px solid ${({ theme }) => theme.color('grey')};
     &:focus {
       border: 1px solid ${({ theme }) => theme.color('red')};
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      height: 4.5rem;
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      height: 3.4375rem;
     }
 
     ${({ isSelected }) => isSelected

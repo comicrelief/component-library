@@ -28,7 +28,6 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
@@ -43,7 +42,7 @@ const DonateBanner = ({
   donateLink,
   mbshipID
 }) => {
-  const isLarge = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
+  const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
   const [givingType, setGivingType] = useState();
 
@@ -61,10 +60,10 @@ const DonateBanner = ({
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
   const shouldShowDesktopImage = shouldShowImage
-    && isLarge && imageL
+    && isLargeBreakpoint && imageL
     && (imageL.images || imageL.image);
 
-  const shouldShowTopImage = shouldShowImage && !isLarge;
+  const shouldShowTopImage = shouldShowImage && !isLargeBreakpoint;
   const topImage = isMedium ? imageM : imageS;
 
   const shouldRenderTopImage = shouldShowTopImage
@@ -72,7 +71,8 @@ const DonateBanner = ({
 
   // For text-only variants, we hide the title area on non-desktop widths
   // (M and below), so only the form is shown.
-  const shouldShowTitleSection = noTitlesAtAll === false && isLarge && donateWidgetIsTextOnly;
+  const shouldShowTitleSection = noTitlesAtAll === false
+    && isLargeBreakpoint && donateWidgetIsTextOnly;
 
   return (
     <Container
@@ -125,8 +125,7 @@ const DonateBanner = ({
               {showCopy && (
               <>
                 <Text
-                  tag="h2"
-                  size="big"
+                  tag="h1"
                   family="Anton"
                   weight="normal"
                 >
@@ -149,7 +148,6 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             hideMoneyBuys={hideMoneyBuys}
-            popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
@@ -158,6 +156,11 @@ const DonateBanner = ({
             donateOrientation={donateOrientation}
             givingType={givingType}
             changeGivingType={setGivingType}
+            thisTitle={thisTitle}
+            thisSubtitle={thisSubtitle}
+            showCopy={showCopy}
+            isLargeBreakpoint={isLargeBreakpoint}
+            isMediumBreakpoint={isMedium}
           />
         </Wrapper>
       </InnerContainer>
@@ -176,7 +179,6 @@ DonateBanner.propTypes = {
   subtitle: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  popUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   otherAmountText: PropTypes.string,
