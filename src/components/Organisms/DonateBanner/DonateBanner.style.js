@@ -277,7 +277,7 @@ const MoneybuyCopy = styled.p`
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('md')} 0 ${spacing('sm')};
+  margin-top: ${spacing('md')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
