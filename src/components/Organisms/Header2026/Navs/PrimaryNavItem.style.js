@@ -380,7 +380,7 @@ const StyledNavItem = styled.li`
       &::after {
         content: '';
         position: absolute;
-        bottom: -24px;
+        bottom: -14px;
         left: 0;
         width: 100%;
         height: 2px;
@@ -400,24 +400,6 @@ const StyledNavItem = styled.li`
       > span::after {
         transform: scaleX(1);
         transition: transform 0.15s ease-out;
-      }
-    }
-
-    // When hovering the dropdown menu, hide the primary link border
-    &:has(${SecondaryNavMenu}:hover) > span::after {
-      transform: scaleX(0);
-      transition: transform 0.3s ease-out;
-
-      ${SecondaryNavMenu} {
-        display: grid;
-        opacity: 1;
-        visibility: visible;
-        transform: scaleY(1);
-
-        ${ColumnWrapper} {
-          opacity: 1;
-          transform: translateY(0);
-        }
       }
     }
   }
