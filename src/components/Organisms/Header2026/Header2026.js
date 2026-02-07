@@ -42,6 +42,14 @@ const Header2026 = ({
     closeTertiaryRef.current = closeFunction;
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   // Reset mobile nav state when resizing to desktop
   useEffect(() => {
     let timeoutId;
@@ -54,7 +62,7 @@ const Header2026 = ({
           setIsTertiaryMenuOpen(false);
           setTertiaryParentName(null);
         }
-      }, 150); // Wait 150ms after resize stops before calling function again
+      }, 150);
     };
 
     window.addEventListener('resize', handleResize);
