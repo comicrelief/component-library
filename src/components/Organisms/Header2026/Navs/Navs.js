@@ -221,7 +221,7 @@ const Navs = ({
             <Link
               color="red"
               type="button"
-              href={prependBaseUrl('/donation', devMode)}
+              href="https://donation.comicrelief.com/"
             >
               Donate
             </Link>
