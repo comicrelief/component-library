@@ -35,7 +35,6 @@ const PrimaryMenuWrapper = styled.div`
   border-radius: 16px;
   overflow: hidden;
   position: static;
-  padding-top: 3px;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     box-shadow: none;
@@ -45,7 +44,6 @@ const PrimaryMenuWrapper = styled.div`
     justify-content: center;
     align-items: center;
     overflow: visible;
-    padding-top: 0;
   }
 `;
 

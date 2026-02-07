@@ -30,29 +30,27 @@ const NavLinkClass = styled(Link)`
     border: 0;
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    :hover,
-    :focus {
-      color: ${({ theme }) => theme.color('red')};
+  :hover,
+  :focus {
+    color: ${({ theme }) => theme.color('red')};
+    background-color: ${({ theme }) => theme.color('grey_extra_light')};
+    font-weight: 600;
+  }
+
+  :focus-within {
+    // Reset the colour of a parent...
+    background-color: ${({ theme }) => theme.color('white')};
+
+    // ...unless it's also being hovered
+    &:hover {
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
-      font-weight: 600;
-    }
-
-    :focus-within {
-      // Reset the colour of a parent...
-      background-color: ${({ theme }) => theme.color('white')};
-
-      // ...unless it's also being hovered
-      &:hover {
-        background-color: ${({ theme }) => theme.color('grey_extra_light')};
-      }
     }
   }
 `;
 
 const SecondaryNavMenu = styled.ul`
   display: flex;
-  padding: 8px 0;
+  padding: 0;
   list-style: none outside;
   left: 0;
   top: 0;
@@ -85,16 +83,14 @@ const SecondaryNavMenu = styled.ul`
     display: none;
   `}
 
-  /* Extend first link's hover area into top padding */
+  /* First link rounded corners to match menu */
   > li:first-of-type > a {
-    margin-top: -8px;
-    padding-top: 28px;
+    border-radius: 16px 16px 0 0;
   }
 
-  /* Extend last link's hover area into bottom padding */
+  /* Last link rounded corners to match menu */
   > div:last-of-type > li:last-of-type > a {
-    margin-bottom: -8px;
-    padding-bottom: 28px;
+    border-radius: 0 0 16px 16px;
   }
 
   // DESKTOP:
@@ -285,10 +281,19 @@ const StyledNavItem = styled.li`
 
   &:first-of-type {
     border-top: none;
+
+    /* First link rounded corners to match menu */
+    > a {
+      border-radius: 16px 16px 0 0;
+    }
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     border-top: none;
+
+    &:first-of-type > a {
+      border-radius: 0;
+    }
   }
 
   li {
@@ -455,7 +460,7 @@ const StyledText = styled(Text)`
 const TertiaryNavMenu = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
+  padding: 0;
   list-style: none outside;
   width: 100%;
   ${zIndex('higher')};
@@ -476,16 +481,14 @@ const TertiaryNavMenu = styled.ul`
   border-top: 1px solid ${({ theme }) => theme.color('grey_medium')};
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
 
-  /* Extend first link's hover area into top padding */
+  /* First link rounded corners to match menu */
   > li:first-of-type > a {
-    margin-top: -8px;
-    padding-top: 28px;
+    border-radius: 16px 16px 0 0;
   }
 
-  /* Extend last link's hover area into bottom padding */
+  /* Last link rounded corners to match menu */
   > li:last-of-type > a {
-    margin-bottom: -8px;
-    padding-bottom: 28px;
+    border-radius: 0 0 16px 16px;
   }
 
   // hide on desktop
