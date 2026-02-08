@@ -1,5 +1,5 @@
 import React, {
-  useState, useEffect, useCallback, useMemo
+  useState, useEffect, useCallback
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -94,12 +94,12 @@ const Navs = ({
   };
 
   // Process the nav items on initial mount:
-  useMemo(() => {
+  useEffect(() => {
     if (!headerPageGroups) return;
-    // Divide up nav items accordingly
-    const theseItems = MoreNavPreProcessNew(headerPageGroups, characterLimit);
+    const theseItems = MoreNavPreProcessNew(headerPageGroups,
+      characterLimit);
     setProcessedItems(theseItems);
-  }, [headerPageGroups, characterLimit]);
+  }, [headerPageGroups, characterLimit, isNotDesktop]);
 
   // Custom function to let us update the nav dynamically:
   const screenResizeNav = useCallback(() => {
@@ -123,7 +123,9 @@ const Navs = ({
 
   // Hook into browser's own onresize event to call our custom wrapper function:
   useEffect(() => {
-    if (typeof window !== 'undefined') window.onresize = screenResizeNav;
+    if (typeof window === 'undefined') return undefined;
+    window.addEventListener('resize', screenResizeNav);
+    return () => window.removeEventListener('resize', screenResizeNav);
   }, [screenResizeNav]);
 
   // Once we've processed the items, assign according to breakpoint; sub-desktop 'Nav'
