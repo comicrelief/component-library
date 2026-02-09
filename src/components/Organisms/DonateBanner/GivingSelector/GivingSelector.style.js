@@ -37,6 +37,10 @@ const MoneyBox = styled.div`
   input {
     ${hideVisually}
   }
+  input:focus-visible + label {
+    ${zIndex('high')};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.color('blue_donate')}, inset 0 0 0 2px ${({ theme }) => theme.color('blue_donate')};
+  }
 `;
 
 const Label = styled.label`
@@ -75,7 +79,6 @@ const Label = styled.label`
   }
   &:focus {
     border: none;
-    outline: none;
     box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('red')};
   }
 `;
