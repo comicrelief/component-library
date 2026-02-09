@@ -8,11 +8,11 @@ import MockPageContent from './_MockPageContent';
 
 const headerMenuNode = mockData.data.allContentfulHeaderMenu.edges[0].node;
 
-<>
+<div style={{ background: 'pink' }}>
   <Header2026
     data={headerMenuNode}
     devMode
   />
   <MockPageContent />
-</>;
+</div>;
 ```

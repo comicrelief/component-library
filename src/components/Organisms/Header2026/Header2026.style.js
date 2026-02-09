@@ -8,6 +8,8 @@ const Header2026Wrapper = styled.header`
   position: sticky;
   top: 0;
   z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid ${({ theme }) => theme.color('grey_light')};
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
