@@ -17,7 +17,6 @@ const Header2026Wrapper = styled.header`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     height: 66px;
-    margin-top: 18px;
 
     &:has(li:hover), &:has(li:focus-within) {
       border-radius: 16px 16px 0 0;
@@ -45,6 +44,7 @@ const InnerWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 0 auto;
     gap: 24px;
+    position: static;
   }
 `;
 
