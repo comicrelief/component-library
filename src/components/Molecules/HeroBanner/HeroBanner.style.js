@@ -30,6 +30,7 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
+  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 0 ${paddingBottom};`}
 
   ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
     padding: ${paddingTop} 1rem ${paddingBottom};
@@ -100,7 +101,7 @@ const CopyOuterWrapper = styled.div`
   display: flex;
   width: calc(100% - (2 * 1rem)); 
   
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0; width: 100%;')}
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 0;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${({ variant }) => (variant !== variants.TEXT_BANNER
@@ -237,7 +238,7 @@ const HeroBannerLink = styled.a`
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
-    ${bounceUpAnimation(true, 10, 2)}
+    ${bounceUpAnimation(true, 10, 2, true)}
 
     // As the link is now wrapping the content, it'll take over width duties from 'Copy':
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};

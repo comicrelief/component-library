@@ -73,6 +73,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0rem 0 2rem;
 }
 
 .c1 {
@@ -107,7 +108,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: calc(100% - (2 * 1rem));
-  margin: -2rem 1rem 2rem;
+  margin: -2rem 1rem 0;
 }
 
 .c7 {
@@ -394,6 +395,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0rem 0 2rem;
 }
 
 .c1 {
@@ -428,7 +430,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: calc(100% - (2 * 1rem));
-  margin: -2rem 1rem 2rem;
+  margin: -2rem 1rem 0;
 }
 
 .c7 {
@@ -700,6 +702,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 0rem 0 2rem;
   padding: 0rem 1rem 2rem;
 }
 
