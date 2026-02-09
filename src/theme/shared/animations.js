@@ -123,9 +123,14 @@ const formFieldInputAnimation = (shiftPx = 4) => css`
  * @param {boolean} animateScale - Whether to enable the scale animation
  * @param {number} pixelMovement - Amount of movement to apply on hover
  * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
+ * @param {boolean} targetChild - Where to apply the transform
+
  * @returns {css} template literal for the animation
  */
-const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1) => {
+const bounceUpAnimation = (animateScale,
+  pixelMovement = 10,
+  bounceIntensity = 1,
+  targetChild = false) => {
   if (!animateScale) {
     return css``;
   }
@@ -133,6 +138,24 @@ const bounceUpAnimation = (animateScale, pixelMovement = 10, bounceIntensity = 1
   const pullBack = -0.55 - (bounceIntensity * 0.3);
   const overshoot = 1.55 + (bounceIntensity * 0.4);
   const duration = 0.2 + (bounceIntensity * 0.1);
+
+  // The Hero Banner requires us to apply the transform inside
+  // the anchor, in order to address the 'infinity bounce' bug
+  if (targetChild) {
+    return css`
+    > div {
+      transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
+      transform-origin: center;
+    }
+
+    &:hover,
+    &:focus {
+      > div {
+        transform: translateY(-${pixelMovement}px);
+      }
+    }
+  `;
+  }
 
   return css`
     transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
