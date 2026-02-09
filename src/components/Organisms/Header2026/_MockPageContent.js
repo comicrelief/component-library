@@ -10,7 +10,14 @@ const cards = [
 ];
 
 const MockPageContent = () => (
-  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', background: 'transparent'}}>
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '40px 20px',
+    background: 'transparent',
+    border: '1px solid green'
+  }}
+  >
     <div style={{
       display: 'flex',
       alignItems: 'center',

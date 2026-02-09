@@ -5,14 +5,23 @@
 ```js
 import mockData from './mockData/mockData.json';
 import MockPageContent from './_MockPageContent';
+import Wrapper from './_Wrapper';
 
 const headerMenuNode = mockData.data.allContentfulHeaderMenu.edges[0].node;
 
+// mock page
 <div style={{ background: 'pink' }}>
-  <Header2026
-    data={headerMenuNode}
-    devMode
-  />
-  <MockPageContent />
+
+    {/* wrapper that will sit in CR.com */}
+    <Wrapper>
+        <Header2026
+        data={headerMenuNode}
+        devMode
+        />
+    </Wrapper>
+
+    <Wrapper>
+        <MockPageContent />
+    </Wrapper>
 </div>;
 ```
