@@ -5,7 +5,7 @@
 ```js
 import mockData from './mockData/mockData.json';
 import MockPageContent from './_MockPageContent';
-import Wrapper from './_Wrapper';
+import { Wrapper, Wrapper2 } from './_MockWrappers';
 
 const headerMenuNode = mockData.data.allContentfulHeaderMenu.edges[0].node;
 
@@ -13,15 +13,15 @@ const headerMenuNode = mockData.data.allContentfulHeaderMenu.edges[0].node;
 <div style={{ background: 'pink' }}>
 
     {/* wrapper that will sit in CR.com */}
-    <Wrapper>
+    <Wrapper dataId="Wrapper">
         <Header2026
         data={headerMenuNode}
         devMode
         />
     </Wrapper>
 
-    <Wrapper>
+    <Wrapperw dataId="Wrapper2">
         <MockPageContent />
-    </Wrapper>
+    </Wrapper2>
 </div>;
 ```
