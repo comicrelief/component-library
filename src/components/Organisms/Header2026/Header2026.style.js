@@ -5,7 +5,8 @@ import containers from '../../../theme/shared/containers';
 import { pulseInAnimation, pulseOutAnimation } from '../../../theme/shared/animations';
 
 const Header2026Wrapper = styled.header`
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 2;
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid ${({ theme }) => theme.color('grey_light')};
