@@ -4,11 +4,15 @@
 
 ```js
 import mockData from './mockData/mockData.json';
+import MockPageContent from './_MockPageContent';
 
 const headerMenuNode = mockData.data.allContentfulHeaderMenu.edges[0].node;
 
-<Header2026
-  data={headerMenuNode}
-  devMode
-/>;
+<>
+  <Header2026
+    data={headerMenuNode}
+    devMode
+  />
+  <MockPageContent />
+</>;
 ```
