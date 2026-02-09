@@ -105,7 +105,7 @@ const CopyOuterWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${({ variant }) => (variant !== variants.TEXT_BANNER
-    ? 'margin: -2rem 2rem 2rem; width: calc(100% - (2 * 2rem));'
+    ? 'margin: -2rem 2rem 0rem; width: calc(100% - (2 * 2rem));'
     : 'margin: 0; width: 100%;')}
   }
 

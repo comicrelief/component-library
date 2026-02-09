@@ -212,7 +212,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    margin: -2rem 2rem 2rem;
+    margin: -2rem 2rem 0rem;
     width: calc(100% - (2 * 2rem));
   }
 }
@@ -534,7 +534,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    margin: -2rem 2rem 2rem;
+    margin: -2rem 2rem 0rem;
     width: calc(100% - (2 * 2rem));
   }
 }
