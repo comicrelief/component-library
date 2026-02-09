@@ -398,6 +398,11 @@ exports[`Monthly donation renders correctly 1`] = `
   width: 1px;
 }
 
+.c11 input:focus-visible + label {
+  z-index: 3;
+  box-shadow: 0 0 0 2px #2042AD,inset 0 0 0 2px #2042AD;
+}
+
 .c12 {
   font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -446,7 +451,6 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c12:focus {
   border: none;
-  outline: none;
   box-shadow: inset 0 0 0 4px #E52630;
 }
 
@@ -2643,6 +2647,11 @@ exports[`Text-only donate widget renders correctly 1`] = `
   width: 1px;
 }
 
+.c12 input:focus-visible + label {
+  z-index: 3;
+  box-shadow: 0 0 0 2px #2042AD,inset 0 0 0 2px #2042AD;
+}
+
 .c14 {
   font-size: 1rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -2691,7 +2700,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c14:focus {
   border: none;
-  outline: none;
   box-shadow: inset 0 0 0 4px #E52630;
 }
 
@@ -2743,7 +2751,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c13:focus {
   border: none;
-  outline: none;
   box-shadow: inset 0 0 0 4px #E52630;
 }
 
