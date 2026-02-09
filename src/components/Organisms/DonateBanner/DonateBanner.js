@@ -66,8 +66,10 @@ const DonateBanner = ({
   const shouldShowTopImage = shouldShowImage && !isLargeBreakpoint;
   const topImage = isMedium ? imageM : imageS;
 
-  const shouldRenderTopImage = shouldShowTopImage
-    && topImage && (topImage.images || topImage.image);
+  const shouldRenderTopImage = !!(
+    shouldShowTopImage
+    && topImage && (topImage.images || topImage.image)
+  );
 
   // For text-only variants, we hide the title area on non-desktop widths
   // (M and below), so only the form is shown.
