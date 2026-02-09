@@ -137,7 +137,7 @@ const Header2026 = ({
 
             {!isMenuOpen && (
             <DonateButtonTopBarWrapper data-testid="DonateButtonTopBarWrapper">
-              <Link color="red" type="button" href="https://donation.comicrelief.com/">
+              <Link color="red" type="button" href="https://donation.comicrelief.com/" target="blank">
                 Donate
               </Link>
             </DonateButtonTopBarWrapper>

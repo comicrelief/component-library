@@ -224,6 +224,7 @@ const Navs = ({
               color="red"
               type="button"
               href="https://donation.comicrelief.com/"
+              target="blank"
             >
               Donate
             </Link>
