@@ -24,7 +24,7 @@ const MockPageContent = () => (
           Together we can change lives through the power of laughing gas.
         </Text>
         <Text tag="p" color="grey_dark" size="md">
-          Comic Relief changes lives in the UK and around the world. Please please give us some money.
+          Comic Relief changes lives - Please please give us some money.
         </Text>
       </div>
       <div style={{
