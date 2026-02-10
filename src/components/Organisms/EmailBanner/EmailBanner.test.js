@@ -9,7 +9,7 @@ import { buildEsuValidationSchema } from '../shared/emailSignup/emailSignupConfi
 
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
-const DummyFormProvider = ({ children }) => {
+const EmailBannerWithFormContext = (props) => {
   const validationSchema = buildEsuValidationSchema({});
   const formMethods = useForm({
     mode: 'onBlur',
@@ -18,7 +18,7 @@ const DummyFormProvider = ({ children }) => {
 
   return (
     <FormProvider {...formMethods}>
-      {children}
+      <EmailBanner {...props} formContext={formMethods} />
     </FormProvider>
   );
 };
@@ -41,23 +41,20 @@ it('Image banner renders correctly', () => {
   };
 
   const tree = renderWithTheme(
-    <DummyFormProvider>
-      <EmailBanner
-        pageBackgroundColour="grey_light"
-        paddingAbove="0rem"
-        paddingBelow="2rem"
-        orientation="right"
-        imageL={imageL}
-        imageM={imageM}
-        imageS={imageS}
-        title="Stay in the know!"
-        bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
-        privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
-        successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
-        ctaText="Sign up"
-        formContext={useForm()}
-      />
-    </DummyFormProvider>
+    <EmailBannerWithFormContext
+      pageBackgroundColour="grey_light"
+      paddingAbove="0rem"
+      paddingBelow="2rem"
+      orientation="right"
+      imageL={imageL}
+      imageM={imageM}
+      imageS={imageS}
+      title="Stay in the know!"
+      bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
+      privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
+      successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
+      ctaText="Sign up"
+    />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -81,23 +78,20 @@ it('Image banner left orientation renders correctly', () => {
   };
 
   const tree = renderWithTheme(
-    <DummyFormProvider>
-      <EmailBanner
-        pageBackgroundColour="grey_light"
-        paddingAbove="2rem"
-        paddingBelow="2rem"
-        orientation="left"
-        imageL={imageL}
-        imageM={imageM}
-        imageS={imageS}
-        title="Stay in the know!"
-        bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
-        privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
-        successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
-        ctaText="Sign up"
-        formContext={useForm()}
-      />
-    </DummyFormProvider>
+    <EmailBannerWithFormContext
+      pageBackgroundColour="grey_light"
+      paddingAbove="2rem"
+      paddingBelow="2rem"
+      orientation="left"
+      imageL={imageL}
+      imageM={imageM}
+      imageS={imageS}
+      title="Stay in the know!"
+      bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
+      privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
+      successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
+      ctaText="Sign up"
+    />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -105,22 +99,19 @@ it('Image banner left orientation renders correctly', () => {
 
 it('Text-only email widget renders correctly', () => {
   const tree = renderWithTheme(
-    <DummyFormProvider>
-      <EmailBanner
-        emailWidgetIsTextOnly
-        pageBackgroundColour="grey_light"
-        componentBackgroundColour="white"
-        paddingAbove="2rem"
-        paddingBelow="2rem"
-        orientation="right"
-        title="Stay in the know!"
-        bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
-        privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
-        successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
-        ctaText="Sign up"
-        formContext={useForm()}
-      />
-    </DummyFormProvider>
+    <EmailBannerWithFormContext
+      emailWidgetIsTextOnly
+      pageBackgroundColour="grey_light"
+      componentBackgroundColour="white"
+      paddingAbove="2rem"
+      paddingBelow="2rem"
+      orientation="right"
+      title="Stay in the know!"
+      bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
+      privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
+      successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
+      ctaText="Sign up"
+    />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
