@@ -39,7 +39,7 @@ const MoneyBox = styled.div`
   }
   input:focus-visible + label {
     ${zIndex('high')};
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.color('blue_donate')}, inset 0 0 0 2px ${({ theme }) => theme.color('blue_donate')};
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color('blue_donate')}};
   }
 `;
 
