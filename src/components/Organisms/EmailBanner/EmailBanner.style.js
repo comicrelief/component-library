@@ -150,7 +150,7 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('m')};
+  padding: 0 ${spacing('md')} ${spacing('md')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -210,10 +210,17 @@ const SuccessCopyWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: ${spacing('sm')};
+  margin: ${spacing('sm')} 0;
 
   button {
     width: 100%;
+    min-height: 48px;
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    button {
+      padding: ${spacing('md')} ${spacing('l')};
+    }
   }
 `;
 
