@@ -27,6 +27,7 @@ const InnerContainer = styled.div`
   padding: none;
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 724px;
     padding: ${spacing('l')};
@@ -149,7 +150,7 @@ const Form = styled.form`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     margin-top: ${spacing('md')};
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     /* Alignment is handled by the outer wrapper on desktop. */
@@ -160,7 +161,7 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('md')};
+  padding: ${spacing('m')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -182,7 +183,6 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
 `;
 
@@ -191,7 +191,7 @@ const SecondaryTitleText = styled(Text)`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   line-height: 1.5;
-  margin-top: ${spacing('sm')};
+  margin: ${spacing('sm')} 0 !important;
 `;
 
 const MoneyBuys = styled.div`
@@ -267,20 +267,24 @@ const AmountField = styled(Input)`
   }
 `;
 
-const Copy = styled.p`
+const MoneybuyCopy = styled.p`
   line-height: 1.5;
   margin-top: ${spacing('l')};
   color: ${({ theme }) => theme.color('black')};
+  margin: ${spacing('md')} 0 ${spacing('sm')};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin: ${spacing('m')} 0 ${spacing('md')};
+  }
 `;
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('sm')} 0 ${spacing('sm')};
+  margin-top: ${spacing('md')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
+  min-height: 44px;
   cursor: pointer;
-  min-height: 48px;
   background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
   border-radius: 0.5rem;
@@ -292,16 +296,12 @@ const Button = styled.button`
     outline: none;
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('md')} ${spacing('l')};
-  }
 `;
 
 export {
   BgImage,
   Button,
-  Copy,
+  MoneybuyCopy,
   Container,
   InnerContainer,
   Error,
