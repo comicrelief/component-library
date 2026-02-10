@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
-import PopUpComponent from './PopUpComponent';
 import MoneyBuy from '../MoneyBuy/MoneyBuy';
 import {
   handleDonateSubmission,
@@ -12,7 +11,7 @@ import {
 } from '../../../../utils/Membership';
 import {
   Button,
-  Copy,
+  MoneybuyCopy,
   Error,
   FormFieldset,
   FormWrapper,
@@ -22,7 +21,8 @@ import {
   AmountField,
   OuterFieldset,
   Legend,
-  PrimaryTitleText
+  PrimaryTitleText,
+  SecondaryTitleText
 } from '../DonateBanner.style';
 import GivingSelector from '../GivingSelector/GivingSelector';
 
@@ -35,22 +35,22 @@ const Signup = ({
   mbshipID,
   donateOrientation = 'right',
   noMoneyBuys = false,
-  popUpText,
-  chooseAmountText = null,
-  monthlyChooseAmountText = null,
   submitButtonColor = 'red',
   changeGivingType,
   givingType = null,
   hasTopImage = false,
   shouldShowTitleSection = false,
+  donateWidgetIsTextOnly = false,
+  thisTitle = null,
+  thisSubtitle = null,
+  showCopy = false,
+  isLargeBreakpoint = false,
+  isMediumBreakpoint = false,
   ...rest
 }) => {
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
-  const [popOpen, setPopOpen] = useState(false);
-  // In order to keep track of whether the user has ever been shown the popup
-  const [popUpShown, setPopUpShown] = useState(false);
 
   useEffect(() => {
     if (givingType) {
@@ -108,12 +108,6 @@ const Signup = ({
     noMoneyBuys
   ]);
 
-  // Updates our flag that differentiates between the popup
-  // being *currently* open and it *ever* having been shown to user
-  useEffect(() => {
-    if (popOpen && !popUpShown) setPopUpShown(true);
-  }, [popOpen, popUpShown]);
-
   // On load, determine what should actually be the default giving type
   useEffect(() => {
     const newGivingType = singleGiving !== null ? 'single' : 'monthly';
@@ -139,7 +133,7 @@ const Signup = ({
         mbshipId,
         donateURL,
         givingType,
-        popUpShown
+        null
       );
     } else {
       setErrorMsg(true);
@@ -198,18 +192,18 @@ const Signup = ({
     return `Donate £${amountDonate} monthly`;
   };
 
-  const defaultChooseAmountText = `${noMoneyBuys ? 'Enter' : 'Choose'} an amount to give`;
-  const thisChooseAmountText = givingType === 'monthly' && monthlyChooseAmountText
-    ? monthlyChooseAmountText
-    : (chooseAmountText || defaultChooseAmountText);
+  const shouldShowTitleInForm = showCopy && (
+    !donateWidgetIsTextOnly || (donateWidgetIsTextOnly && !isLargeBreakpoint)
+  );
+
+  // Use h1 tag for text-only version, p tag for image version
+  const titleTag = donateWidgetIsTextOnly ? 'h1' : 'p';
 
   return (
     <FormWrapper
       donateOrientation={donateOrientation}
       shouldShowTitleSection={shouldShowTitleSection}
     >
-      { popOpen && <PopUpComponent popUpText={popUpText} setPopOpen={setPopOpen} /> }
-
       <Form
         donateOrientation={donateOrientation}
         hasTopImage={hasTopImage}
@@ -225,16 +219,26 @@ const Signup = ({
         }
       >
         <OuterFieldset>
-          <Legend>
-            <PrimaryTitleText tag="span" color="black">
-              {thisChooseAmountText}
-            </PrimaryTitleText>
-          </Legend>
+          {shouldShowTitleInForm ? (
+            <Legend>
+              <PrimaryTitleText tag={titleTag} $donateWidgetIsTextOnly={donateWidgetIsTextOnly}>
+                {thisTitle}
+              </PrimaryTitleText>
+              {thisSubtitle && (
+                <SecondaryTitleText
+                  tag="p"
+                  $showGivingSelector={showGivingSelector}
+                  $isMediumBreakpoint={isMediumBreakpoint}
+                >
+                  {thisSubtitle}
+                </SecondaryTitleText>
+              )}
+            </Legend>
+          ) : null}
           {showGivingSelector && (
             <GivingSelector
               givingType={givingType}
               changeGivingType={data => changeGivingType(data)}
-              setPopOpen={setPopOpen}
               mbshipID={mbshipID}
             />
           )}
@@ -281,10 +285,10 @@ const Signup = ({
             />
           </FormFieldset>
           {amountDonate >= 1 && moneyBuyCopy && (
-            <Copy>
+            <MoneybuyCopy>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
-            </Copy>
+            </MoneybuyCopy>
           )}
 
           {errorMsg && (
@@ -319,14 +323,19 @@ Signup.propTypes = {
   donateOrientation: PropTypes.oneOf(['left', 'right']),
   noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  popUpText: PropTypes.string.isRequired,
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string,
   hasTopImage: PropTypes.bool,
-  shouldShowTitleSection: PropTypes.bool
+  shouldShowTitleSection: PropTypes.bool,
+  donateWidgetIsTextOnly: PropTypes.bool,
+  thisTitle: PropTypes.string,
+  thisSubtitle: PropTypes.string,
+  showCopy: PropTypes.bool,
+  isLargeBreakpoint: PropTypes.bool,
+  isMediumBreakpoint: PropTypes.bool
 };
 
 export default Signup;

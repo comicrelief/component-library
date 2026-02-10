@@ -87,7 +87,6 @@ const imageS = {
   monthlySubtitle="A regular gift helps fund long-term impact."
   chooseAmountText="Choose a one-off amount"
   monthlyChooseAmountText="Choose a monthly amount"
-  popUpText="Switching to a single gift means less predictable funding."
 />;
 ```
 
@@ -137,7 +136,30 @@ import data from './dev-data/data';
 />;
 ```
 
-## Different “Other amount” copy for single vs monthly
+## Text-only widget (no image), with giving selector (single vs monthly)
+
+```js
+import data from './dev-data/data';
+
+<DonateBanner
+  donateWidgetIsTextOnly
+  pageBackgroundColour="grey_light"
+  paddingAbove="2rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  data={data}
+  mbshipID="mbship-3c"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate now"
+  subtitle="Choose between a one-off or monthly gift."
+  monthlyTitle="Give monthly"
+  monthlySubtitle="A regular gift helps fund long-term impact."
+/>;
+```
+
+## Different "Other amount" copy for single vs monthly
 
 ```js
 import data from './dev-data/data';

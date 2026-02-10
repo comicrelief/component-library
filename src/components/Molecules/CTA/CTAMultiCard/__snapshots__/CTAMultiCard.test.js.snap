@@ -62,7 +62,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -195,7 +195,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -257,7 +257,7 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -363,7 +363,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -496,7 +496,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -558,7 +558,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -664,7 +664,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -797,7 +797,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -859,7 +859,7 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -965,7 +965,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -1098,7 +1098,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
@@ -1160,7 +1160,7 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-10 eOIMHN"
+                className="CTACardstyle__CTA-sc-si8xx1-10 noohS"
               >
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
