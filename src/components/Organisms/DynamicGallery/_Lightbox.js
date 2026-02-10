@@ -4,13 +4,13 @@ import React, {
 import PulseLoader from 'react-spinners/PulseLoader';
 import Arrow from '../../Atoms/Icons/Arrow';
 import Cross from '../../Atoms/Icons/Cross';
-import Picture from '../../Atoms/Picture/Picture';
 import {
   Backdrop,
   CloseButton,
   Container,
   Dialog,
   LightboxContent,
+  LightboxPicture,
   LightboxDetails,
   LightboxImage,
   LightboxSpinner,
@@ -68,20 +68,6 @@ const Lightbox = () => {
   const hasNode = Boolean(selectedNode);
   const dialogRef = useRef(null);
 
-  // handle interaction type
-  const interactionTypeRef = useRef('keyboard');
-
-  useEffect(() => {
-    function handlePointerDown() {
-      interactionTypeRef.current = 'pointer';
-      document.removeEventListener('pointerdown', handlePointerDown);
-    }
-    document.addEventListener('pointerdown', handlePointerDown);
-    return () => {
-      document.removeEventListener('pointerdown', handlePointerDown);
-    };
-  }, []);
-
   /**
   * handle keyboard events within the lightbox;
   * - trapped focus between UI elements
@@ -138,6 +124,28 @@ const Lightbox = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [hasNode, selectedNode, setSelectedNode, previousNode, nextNode]);
+
+  // when the user interacts with the page, check the interaction type.
+  // this is used to determine whether to focus the close button when the lightbox opens;
+  // for keyboard interaction, we focus the close button automatically.
+  // ideally we could just use focus-visible, but Safari on iOS always shows the focus ring.
+  const interactionTypeRef = useRef('keyboard');
+
+  useEffect(() => {
+    function handlePointerDown() {
+      interactionTypeRef.current = 'pointer';
+    }
+    function handleKeyDown() {
+      interactionTypeRef.current = 'keyboard';
+    }
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   // handle focus management when dialog opens/closes
   useEffect(() => {
@@ -209,7 +217,7 @@ const Lightbox = () => {
               <PulseLoader height={16} width={2} color="#E1E2E3" />
             </LightboxSpinner>
             {hasNode && (
-              <Picture
+              <LightboxPicture
                 key={selectedNode?.image}
                 alt={bodyText}
                 image={selectedNode?.image}
@@ -217,7 +225,6 @@ const Lightbox = () => {
                 height={imageDimensions.height}
                 objectFit="contain"
                 onLoad={event => onLoad(event)}
-                style={{ borderRadius: '0.6rem', overflow: 'hidden' }}
               />
             )}
             <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
