@@ -15,6 +15,13 @@ const StyledVideo = styled.video.attrs(() => ({
   object-fit: cover;
 `;
 
+const FallbackImg = styled.img`
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+`;
+
 // Normalise webpack module object ({ default }) or string to video URL
 const normaliseSrc = value => (typeof value === 'string' ? value : value?.default);
 
@@ -38,7 +45,11 @@ const AmbientVideo = ({
       loop={loop}
       muted
     >
-      Your browser does not support video.
+      {effectivePoster ? (
+        <FallbackImg src={effectivePoster} alt="Video playback not supported" />
+      ) : (
+        'Your browser does not support video.'
+      )}
     </StyledVideo>
   );
 };
