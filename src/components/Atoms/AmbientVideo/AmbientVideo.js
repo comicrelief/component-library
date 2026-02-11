@@ -16,21 +16,24 @@ const StyledVideo = styled.video.attrs(() => ({
 `;
 
 // Normalise webpack module object ({ default }) or string to video URL
-const toVideoSrc = value => (typeof value === 'string' ? value : value?.default);
+const normaliseSrc = value => (typeof value === 'string' ? value : value?.default);
 
 const AmbientVideo = ({
   src,
   srcMobile,
+  poster,
   showControls = false,
   loop = true
 }) => {
   const isBelowM = useMediaQuery({ maxWidth: breakpointValues.M - 1 });
   const rawSrc = srcMobile && isBelowM ? srcMobile : src;
-  const effectiveSrc = toVideoSrc(rawSrc);
+  const effectiveSrc = normaliseSrc(rawSrc);
+  const effectivePoster = poster ? normaliseSrc(poster) : undefined;
 
   return (
     <StyledVideo
       src={effectiveSrc}
+      poster={effectivePoster}
       controls={showControls}
       loop={loop}
       muted
@@ -48,6 +51,7 @@ const srcPropType = PropTypes.oneOfType([
 AmbientVideo.propTypes = {
   src: srcPropType.isRequired,
   srcMobile: srcPropType,
+  poster: srcPropType,
   showControls: PropTypes.bool,
   loop: PropTypes.bool
 };
