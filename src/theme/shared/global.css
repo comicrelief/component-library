@@ -44,65 +44,38 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+/* Resets to override browsers' user agent stylesheets */
+h1, h2 {
   text-transform: uppercase;
   font-family: 'Anton', Impact, sans-serif;
-  margin-bottom: 1rem;
 }
 
-h1:only-child,
-h2:only-child {
-  margin: 0;
+h1, h2, h3, h4, h5, h6, p {
+  word-break: break-word;
+  margin: 0 0 1rem 0;
 }
 
-h2,
-h3,
-h4,
-h5,
-p,
-a,
-button {
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child
+h6:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+
+h2, h3, h4, h5, h6, p, a, button {
   font-family: inherit;
 }
 
-h2 {
-  text-transform: uppercase;
-  font-family: 'Anton', Impact, sans-serif;
-  margin-bottom: 1rem;
-}
-
-h3, h4, h5 {
-  margin-bottom: 1rem;
-}
-
-p,
-a,
-button {
+p, a, button {
   margin-top: 0;
 }
 
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  word-break: break-word;
-}
-
-p:first-child {
-  margin-bottom: 1rem;
-}
-
-p:last-child {
-  margin-bottom: 0;
+p + h1,
+p + h2 {
+  margin-top: 2rem;
 }
 
 table {

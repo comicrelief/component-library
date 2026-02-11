@@ -221,6 +221,7 @@ exports[`renders correctly with data prop 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
+  margin-bottom: 14px;
 }
 
 .c13 {
@@ -748,6 +749,7 @@ exports[`renders correctly without image 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #969598;
+  margin-bottom: 14px;
 }
 
 .c9 {
