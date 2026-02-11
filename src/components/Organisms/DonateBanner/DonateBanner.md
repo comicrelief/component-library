@@ -166,3 +166,28 @@ const imageL = {
   monthlyOtherAmountText="each month can help provide long-term support."
 />;
 ```
+
+## Video banner (AmbientVideo instead of images)
+
+```js
+import data from './dev-data/data';
+import TemporaryDonateBannerVideoCopy from './TemporaryDonateBannerVideoCopy';
+const videoTop = require('../../Atoms/AmbientVideo/Jellyfish_720_10s_2MB.mp4');
+const videoDesktop = require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4');
+
+<TemporaryDonateBannerVideoCopy
+  pageBackgroundColour="grey_light"
+  paddingAbove="0rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  videoTop={videoTop}
+  videoDesktop={videoDesktop}
+  data={data}
+  mbshipID="mbship-video"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+/>
+```
