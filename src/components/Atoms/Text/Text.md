@@ -147,6 +147,23 @@ import fontConfig from  '../../../theme/crTheme/fontConfig';
       <p>Paragraph</p>
       <p>Paragraph, last child</p>
     </div>
+
+    <div style={{backgroundColor: 'aquamarine', padding: '1rem', margin: "1rem 0 1rem"}}>
+      <p>A preceding paragraph</p>
+      <p>A preceding paragraph</p>
+      <h1>H1 with an added margin-top as it follows a p tag</h1>
+      <p>Proceeding paragraph</p>
+      <p>Paragraph, last child</p>
+    </div>
+
+    <div style={{backgroundColor: 'aquamarine', padding: '1rem', margin: "1rem 0 1rem"}}>
+      <p>A preceding paragraph</p>
+      <p>A preceding paragraph</p>
+      <h1>H2 with an added margin-top as it follows a p tag</h1>
+      <p>Proceeding paragraph</p>
+      <p>Paragraph, last child</p>
+    </div>
+
   </div>
 </>
 ```

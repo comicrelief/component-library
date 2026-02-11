@@ -73,6 +73,11 @@ p, a, button {
   margin-top: 0;
 }
 
+p + h1,
+p + h2 {
+  margin-top: 2rem;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
