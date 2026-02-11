@@ -1,0 +1,6 @@
+# Quote slice
+
+```js
+<QuoteSlice
+/>;
+```
