@@ -39,7 +39,7 @@ Responsive: 1080p above M breakpoint (740px), 480p below. Resize the browser to 
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
-const video480 = require('./Jellyfish_720_10s_2MB.mp4');
+const video480 = require('./big-buck-bunny-480p-30sec.mp4');
 const video1080 = require('./big-buck-bunny-1080p-30sec.mp4');
 
 <div style={{ width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden' }}>
