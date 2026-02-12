@@ -4,6 +4,12 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
 const StyledVideo = styled.video.attrs(() => ({
   playsInline: true,
   autoPlay: true,
@@ -13,6 +19,10 @@ const StyledVideo = styled.video.attrs(() => ({
   height: 100%;
   display: block;
   object-fit: cover;
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
 `;
 
 const FallbackImg = styled.img`
@@ -20,6 +30,29 @@ const FallbackImg = styled.img`
   height: 100%;
   display: block;
   object-fit: cover;
+`;
+
+const ReducedMotionPoster = styled.img`
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media (prefers-reduced-motion: reduce) {
+    display: block;
+  }
+`;
+
+const ReducedMotionFallback = styled.div`
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  @media (prefers-reduced-motion: reduce) {
+    display: block;
+  }
 `;
 
 // Normalise webpack module object ({ default }) or string to video URL
@@ -38,19 +71,26 @@ const AmbientVideo = ({
   const effectivePoster = poster ? normaliseSrc(poster) : undefined;
 
   return (
-    <StyledVideo
-      src={effectiveSrc}
-      poster={effectivePoster}
-      controls={showControls}
-      loop={loop}
-      muted
-    >
+    <Wrapper>
+      <StyledVideo
+        src={effectiveSrc}
+        poster={effectivePoster}
+        controls={showControls}
+        loop={loop}
+        muted
+      >
+        {effectivePoster ? (
+          <FallbackImg src={effectivePoster} alt="Video playback not supported" />
+        ) : (
+          'Your browser does not support video.'
+        )}
+      </StyledVideo>
       {effectivePoster ? (
-        <FallbackImg src={effectivePoster} alt="Video playback not supported" />
+        <ReducedMotionPoster src={effectivePoster} alt="" />
       ) : (
-        'Your browser does not support video.'
+        <ReducedMotionFallback>Video playback not supported</ReducedMotionFallback>
       )}
-    </StyledVideo>
+    </Wrapper>
   );
 };
 
