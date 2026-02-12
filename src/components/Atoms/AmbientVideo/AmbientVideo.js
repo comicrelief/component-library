@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 import {
   Wrapper,
+  WrapperWithHover,
   StyledVideo,
   FallbackImg,
   ReducedMotionPoster,
-  ReducedMotionFallback
+  ReducedMotionFallback,
+  PlayPauseButton
 } from './AmbientVideo.style';
 
 // Normalise webpack module object ({ default }) or string to video URL
@@ -18,9 +20,12 @@ const AmbientVideo = ({
   src,
   srcMobile,
   poster,
-  showControls = false,
+  showFullControls = false,
+  showPlayPause = false,
   loop = true
 }) => {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
   const isBelowM = useMediaQuery({ maxWidth: breakpointValues.M - 1 });
   const rawSrc = srcMobile && isBelowM ? srcMobile : src;
   const effectiveSrc = normaliseSrc(rawSrc);
@@ -35,18 +40,40 @@ const AmbientVideo = ({
       const video = e.target;
       video.load();
       video.pause();
+      setIsPlaying(false);
     }
   };
 
+  const handlePlayPauseClick = useCallback(() => {
+    const videoPlayingRef = videoRef.current;
+    if (!videoPlayingRef) return;
+
+    if (videoPlayingRef.paused) {
+      videoPlayingRef.play();
+      setIsPlaying(true);
+    } else {
+      videoPlayingRef.pause();
+      setIsPlaying(false);
+    }
+  }, []);
+
+  const handlePlay = () => setIsPlaying(true);
+  const handlePause = () => setIsPlaying(false);
+
+  const VideoWrapper = showPlayPause ? WrapperWithHover : Wrapper;
+
   return (
-    <Wrapper>
+    <VideoWrapper>
       <StyledVideo
+        ref={videoRef}
         src={effectiveSrc}
         poster={effectivePoster}
-        controls={showControls}
+        controls={showFullControls}
         loop={loop}
         muted
         onEnded={handleEnded}
+        onPlay={handlePlay}
+        onPause={handlePause}
       >
         {effectivePoster ? (
           <FallbackImg src={effectivePoster} alt="Video playback not supported" />
@@ -59,7 +86,12 @@ const AmbientVideo = ({
       ) : (
         <ReducedMotionFallback>Video playback not supported</ReducedMotionFallback>
       )}
-    </Wrapper>
+      {showPlayPause && (
+        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'}>
+          {isPlaying ? 'Y' : 'X'}
+        </PlayPauseButton>
+      )}
+    </VideoWrapper>
   );
 };
 
@@ -72,7 +104,8 @@ AmbientVideo.propTypes = {
   src: srcPropType.isRequired,
   srcMobile: srcPropType,
   poster: srcPropType,
-  showControls: PropTypes.bool,
+  showFullControls: PropTypes.bool,
+  showPlayPause: PropTypes.bool,
   loop: PropTypes.bool
 };
 

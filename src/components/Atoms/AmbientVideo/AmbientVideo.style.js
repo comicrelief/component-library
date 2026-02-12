@@ -51,10 +51,41 @@ const ReducedMotionFallback = styled.div`
   }
 `;
 
+const PlayPauseButton = styled.button`
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: ${({ theme }) => theme.color('grey_4')};
+  color: ${({ theme }) => theme.color('white')};
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
+`;
+
+const WrapperWithHover = styled(Wrapper)`
+  &:hover ${PlayPauseButton} {
+    opacity: 1;
+  }
+`;
+
 export {
   Wrapper,
+  WrapperWithHover,
   StyledVideo,
   FallbackImg,
   ReducedMotionPoster,
-  ReducedMotionFallback
+  ReducedMotionFallback,
+  PlayPauseButton
 };

@@ -13,14 +13,25 @@ const video480 = require('./big-buck-bunny-480p-30sec.mp4');
 </div>
 ```
 
-With controls.
+With full controls.
 
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 const video480 = require('./big-buck-bunny-480p-30sec.mp4');
 
 <div style={{ width: '100%', maxWidth: '600px', aspectRatio: '16/9', overflow: 'hidden' }}>
-  <AmbientVideo src={video480} poster={defaultData.image} showControls />
+  <AmbientVideo src={video480} poster={defaultData.image} showFullControls />
+</div>
+```
+
+With play/pause button (hover to reveal).
+
+```js
+const defaultData = require('../../../styleguide/data/data').defaultData;
+const video480 = require('./big-buck-bunny-480p-30sec.mp4');
+
+<div style={{ width: '100%', maxWidth: '600px', aspectRatio: '16/9', overflow: 'hidden' }}>
+  <AmbientVideo src={video480} poster={defaultData.image} showPlayPause />
 </div>
 ```
 
