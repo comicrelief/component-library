@@ -26,6 +26,18 @@ const AmbientVideo = ({
   const effectiveSrc = normaliseSrc(rawSrc);
   const effectivePoster = poster ? normaliseSrc(poster) : undefined;
 
+  const handleEnded = e => {
+    if (!loop && effectivePoster) {
+      // If the video is not looping and there is a poster,
+      // Show the poster by loading the video again and immediately pausing it
+      // This is a workaround to avoid the video from restarting automatically
+      // It will default to the poster image.
+      const video = e.target;
+      video.load();
+      video.pause();
+    }
+  };
+
   return (
     <Wrapper>
       <StyledVideo
@@ -34,6 +46,7 @@ const AmbientVideo = ({
         controls={showControls}
         loop={loop}
         muted
+        onEnded={handleEnded}
       >
         {effectivePoster ? (
           <FallbackImg src={effectivePoster} alt="Video playback not supported" />
