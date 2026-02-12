@@ -12,8 +12,8 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  padding-top: ${({ paddingTop }) => paddingTop};
-  padding-bottom: ${({ paddingBottom }) => paddingBottom};
+  padding-top: ${({ smPaddingTop }) => smPaddingTop};
+  padding-bottom: ${({ smPaddingBottom }) => smPaddingBottom};
 
   iframe {
     height: 100%;
@@ -27,6 +27,8 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
     ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
+    padding-top: ${({ paddingTop }) => paddingTop};
+    padding-bottom: ${({ paddingBottom }) => paddingBottom};
   }
 `;
 
@@ -64,19 +66,21 @@ const Copy = styled.div`
     `};
 
   ${props => (props.hasImage
-    ? css`@media ${({ theme }) => theme.allBreakpoints('M')} {
-            width: 50%;
-          }
-        `
+    ? css`
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        width: 50%;
+      }
+    `
     : css`
-          @media ${({ theme }) => theme.allBreakpoints('M')} {
-            width: 100%;
-            max-width ${containers.small};
-            padding: 0 ${spacing('xl')};
-          }
-          margin: auto;
-          padding: ${spacing('md')};
-        `)};
+      margin: auto;
+      padding: 0 ${spacing('md')};
+      
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        width: 100%;
+        max-width ${containers.small};
+        padding: 0 ${spacing('xl')};
+      }
+    `)};
 `;
 
 const Media = styled.div`
