@@ -50,7 +50,7 @@ const EmailBanner = ({
     && topImage && (topImage.images || topImage.image);
 
   const noTitlesAtAll = !title && !bodyCopy;
-  const shouldShowTitleSection = noTitlesAtAll === false
+  const showTitleSection = noTitlesAtAll === false
     && isLargeBreakpoint && emailWidgetIsTextOnly;
 
   return (
@@ -94,9 +94,9 @@ const EmailBanner = ({
           aria-live="polite"
           noTitlesAtAll={noTitlesAtAll}
           hasTopImage={shouldRenderTopImage}
-          shouldShowTitleSection={shouldShowTitleSection}
+          showTitleSection={showTitleSection}
         >
-          {shouldShowTitleSection && (
+          {showTitleSection && (
           <TitleWrapperOuter orientation={orientation}>
             <TitleWrapperInner>
               {title && (
@@ -128,7 +128,7 @@ const EmailBanner = ({
             ctaText={ctaText}
             orientation={orientation}
             hasTopImage={shouldRenderTopImage}
-            shouldShowTitleSection={shouldShowTitleSection}
+            showTitleSection={showTitleSection}
             emailWidgetIsTextOnly={emailWidgetIsTextOnly}
             formContext={formContext}
             onSubmit={onSubmit}

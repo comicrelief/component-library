@@ -56,7 +56,7 @@ const Wrapper = styled.div`
   display: block;
   width: 100%;
 
-  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+  ${({ hasTopImage, showTitleSection }) => hasTopImage && !showTitleSection && css`
     padding: 0;
   `}
 
@@ -123,7 +123,7 @@ const Form = styled.form`
   margin-left: auto;
   margin-right: auto;
 
-  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+  ${({ hasTopImage, showTitleSection }) => hasTopImage && !showTitleSection && css`
     margin-top: 0;
   `}
 

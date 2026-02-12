@@ -31,7 +31,7 @@ const EmailForm = ({
   ctaText = 'Sign up',
   orientation = 'right',
   hasTopImage = false,
-  shouldShowTitleSection = false,
+  showTitleSection = false,
   emailWidgetIsTextOnly = false
 }) => {
   const {
@@ -39,26 +39,27 @@ const EmailForm = ({
       isSubmitting,
       isSubmitted,
       isSubmitSuccessful,
-      errors
+      errors,
+      handleSubmit
     }
   } = formContext;
 
   const shouldShowTitleInForm = (title || bodyCopy) && (
-    !emailWidgetIsTextOnly || (emailWidgetIsTextOnly && !shouldShowTitleSection)
+    !emailWidgetIsTextOnly || (emailWidgetIsTextOnly && !showTitleSection)
   );
 
   return (
     <FormWrapper
       orientation={orientation}
-      shouldShowTitleSection={shouldShowTitleSection}
+      showTitleSection={showTitleSection}
     >
       {isSubmitSuccessful && <Confetti trigger={isSubmitSuccessful} />}
 
       <Form
         orientation={orientation}
         hasTopImage={hasTopImage}
-        shouldShowTitleSection={shouldShowTitleSection}
-        onSubmit={onSubmit ? formContext.handleSubmit(onSubmit) : undefined}
+        showTitleSection={showTitleSection}
+        onSubmit={onSubmit ? handleSubmit(onSubmit) : undefined}
         noValidate
       >
         <OuterFieldset>
@@ -164,7 +165,7 @@ EmailForm.propTypes = {
   ctaText: PropTypes.string,
   orientation: PropTypes.oneOf(['left', 'right']),
   hasTopImage: PropTypes.bool,
-  shouldShowTitleSection: PropTypes.bool,
+  showTitleSection: PropTypes.bool,
   emailWidgetIsTextOnly: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   onSubmit: PropTypes.func
