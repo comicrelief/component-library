@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image banner left orientation renders correctly 1`] = `
-.c7 {
+.c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -13,16 +13,16 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c7 {
+.c6 {
   color: #000000;
 }
 
-.c7 span {
+.c6 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c15 {
+.c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -34,12 +34,12 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c15 span {
+.c14 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c21 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -76,25 +76,25 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 > a {
+.c20 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c14 {
+.c13 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -107,7 +107,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   color: #000000;
 }
 
-.c16 {
+.c15 {
   margin-bottom: 0.5rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -120,12 +120,12 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c17 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c18 {
+.c17 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -142,7 +142,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -162,15 +162,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c19:focus {
+.c18:focus {
   border: 1px solid #666;
 }
 
-.c10 {
+.c9 {
   text-align: left;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -243,27 +243,21 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 0 1rem 1rem;
+  padding: 1.5rem;
   margin: 0;
   border: none;
 }
 
-.c6 {
-  margin: 0;
-  padding: 2rem 0.5rem 0 0.5rem;
+.c7 {
   display: block;
   width: 100%;
-}
-
-.c8 {
-  display: block;
+  margin-bottom: 0.5rem;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,7 +275,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   justify-content: flex-start;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -293,43 +287,83 @@ exports[`Image banner left orientation renders correctly 1`] = `
   width: 100%;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.c9 {
-  padding: 0 0.5rem 1rem;
+.c8 {
+  padding-bottom: 1rem;
   color: #000000;
 }
 
-.c23 {
+.c22 {
   padding: 1rem 0.5rem 0;
   color: #000000;
   font-size: 1rem;
   line-height: normal;
 }
 
-.c20 {
+.c19 {
   margin: 0.5rem 0;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
   }
 }
 
@@ -342,46 +376,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -465,12 +459,12 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -498,20 +492,16 @@ exports[`Image banner left orientation renders correctly 1`] = `
           <fieldset
             className="c5"
           >
-            <legend
-              className="c6"
+            <span
+              className="c6 c7"
             >
-              <span
-                className="c7 c8"
-              >
-                Stay in the know!
-              </span>
-            </legend>
+              Stay in the know!
+            </span>
             <div
-              className="c9"
+              className="c8"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
@@ -520,20 +510,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
               />
             </div>
             <div
-              className="c11"
+              className="c10"
             >
               <div
-                className="c12"
+                className="c11"
               >
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="first-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "First name",
@@ -541,15 +531,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
@@ -565,14 +555,14 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   </label>
                 </div>
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="last-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Last name",
@@ -580,15 +570,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
@@ -605,14 +595,14 @@ exports[`Image banner left orientation renders correctly 1`] = `
                 </div>
               </div>
               <div
-                className="c13"
+                className="c12"
               >
                 <label
-                  className="c14"
+                  className="c13"
                   htmlFor="email"
                 >
                   <span
-                    className="c15 c16"
+                    className="c14 c15"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "Email address",
@@ -620,15 +610,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     }
                   />
                   <div
-                    className="c17"
+                    className="c16"
                   >
                     
                     <div
-                      className="c18"
+                      className="c17"
                     >
                       <input
                         aria-required={true}
-                        className="c19"
+                        className="c18"
                         id="email"
                         name="email"
                         onBlur={[Function]}
@@ -645,13 +635,13 @@ exports[`Image banner left orientation renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 color="red"
                 data-test="subscribe-button"
-                disabled={true}
+                disabled={false}
                 type="submit"
               >
                 Sign up
@@ -661,10 +651,10 @@ exports[`Image banner left orientation renders correctly 1`] = `
               </button>
             </div>
             <div
-              className="c23"
+              className="c22"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
@@ -681,7 +671,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 `;
 
 exports[`Image banner renders correctly 1`] = `
-.c7 {
+.c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -693,16 +683,16 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c7 {
+.c6 {
   color: #000000;
 }
 
-.c7 span {
+.c6 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c15 {
+.c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -714,12 +704,12 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c15 span {
+.c14 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c21 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -756,25 +746,25 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 > a {
+.c20 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c14 {
+.c13 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -787,7 +777,7 @@ exports[`Image banner renders correctly 1`] = `
   color: #000000;
 }
 
-.c16 {
+.c15 {
   margin-bottom: 0.5rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -800,12 +790,12 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c17 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c18 {
+.c17 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -822,7 +812,7 @@ exports[`Image banner renders correctly 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -842,15 +832,15 @@ exports[`Image banner renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c19:focus {
+.c18:focus {
   border: 1px solid #666;
 }
 
-.c10 {
+.c9 {
   text-align: left;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -923,27 +913,21 @@ exports[`Image banner renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 0 1rem 1rem;
+  padding: 1.5rem;
   margin: 0;
   border: none;
 }
 
-.c6 {
-  margin: 0;
-  padding: 2rem 0.5rem 0 0.5rem;
+.c7 {
   display: block;
   width: 100%;
-}
-
-.c8 {
-  display: block;
+  margin-bottom: 0.5rem;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -961,7 +945,7 @@ exports[`Image banner renders correctly 1`] = `
   justify-content: flex-start;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -973,43 +957,83 @@ exports[`Image banner renders correctly 1`] = `
   width: 100%;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.c9 {
-  padding: 0 0.5rem 1rem;
+.c8 {
+  padding-bottom: 1rem;
   color: #000000;
 }
 
-.c23 {
+.c22 {
   padding: 1rem 0.5rem 0;
   color: #000000;
   font-size: 1rem;
   line-height: normal;
 }
 
-.c20 {
+.c19 {
   margin: 0.5rem 0;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
   }
 }
 
@@ -1022,46 +1046,6 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -1145,12 +1129,12 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -1178,20 +1162,16 @@ exports[`Image banner renders correctly 1`] = `
           <fieldset
             className="c5"
           >
-            <legend
-              className="c6"
+            <span
+              className="c6 c7"
             >
-              <span
-                className="c7 c8"
-              >
-                Stay in the know!
-              </span>
-            </legend>
+              Stay in the know!
+            </span>
             <div
-              className="c9"
+              className="c8"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
@@ -1200,20 +1180,20 @@ exports[`Image banner renders correctly 1`] = `
               />
             </div>
             <div
-              className="c11"
+              className="c10"
             >
               <div
-                className="c12"
+                className="c11"
               >
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="first-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "First name",
@@ -1221,15 +1201,15 @@ exports[`Image banner renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
@@ -1245,14 +1225,14 @@ exports[`Image banner renders correctly 1`] = `
                   </label>
                 </div>
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="last-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Last name",
@@ -1260,15 +1240,15 @@ exports[`Image banner renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
@@ -1285,14 +1265,14 @@ exports[`Image banner renders correctly 1`] = `
                 </div>
               </div>
               <div
-                className="c13"
+                className="c12"
               >
                 <label
-                  className="c14"
+                  className="c13"
                   htmlFor="email"
                 >
                   <span
-                    className="c15 c16"
+                    className="c14 c15"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "Email address",
@@ -1300,15 +1280,15 @@ exports[`Image banner renders correctly 1`] = `
                     }
                   />
                   <div
-                    className="c17"
+                    className="c16"
                   >
                     
                     <div
-                      className="c18"
+                      className="c17"
                     >
                       <input
                         aria-required={true}
-                        className="c19"
+                        className="c18"
                         id="email"
                         name="email"
                         onBlur={[Function]}
@@ -1325,13 +1305,13 @@ exports[`Image banner renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 color="red"
                 data-test="subscribe-button"
-                disabled={true}
+                disabled={false}
                 type="submit"
               >
                 Sign up
@@ -1341,10 +1321,10 @@ exports[`Image banner renders correctly 1`] = `
               </button>
             </div>
             <div
-              className="c23"
+              className="c22"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
@@ -1361,7 +1341,7 @@ exports[`Image banner renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget renders correctly 1`] = `
-.c7 {
+.c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1373,16 +1353,16 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c7 {
+.c6 {
   color: #000000;
 }
 
-.c7 span {
+.c6 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c15 {
+.c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1394,12 +1374,12 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c15 span {
+.c14 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c21 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1436,25 +1416,25 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 > a {
+.c20 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c14 {
+.c13 {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -1467,7 +1447,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   color: #000000;
 }
 
-.c16 {
+.c15 {
   margin-bottom: 0.5rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1480,12 +1460,12 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c17 {
+.c16 {
   position: relative;
   font-size: 1.25rem;
 }
 
-.c18 {
+.c17 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -1502,7 +1482,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1522,15 +1502,15 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c19:focus {
+.c18:focus {
   border: 1px solid #666;
 }
 
-.c10 {
+.c9 {
   text-align: left;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -1603,27 +1583,21 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 0 1rem 1rem;
+  padding: 1.5rem;
   margin: 0;
   border: none;
 }
 
-.c6 {
-  margin: 0;
-  padding: 2rem 0.5rem 0 0.5rem;
+.c7 {
   display: block;
   width: 100%;
-}
-
-.c8 {
-  display: block;
+  margin-bottom: 0.5rem;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1641,7 +1615,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   justify-content: flex-start;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1653,43 +1627,83 @@ exports[`Text-only email widget renders correctly 1`] = `
   width: 100%;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.c9 {
-  padding: 0 0.5rem 1rem;
+.c8 {
+  padding-bottom: 1rem;
   color: #000000;
 }
 
-.c23 {
+.c22 {
   padding: 1rem 0.5rem 0;
   color: #000000;
   font-size: 1rem;
   line-height: normal;
 }
 
-.c20 {
+.c19 {
   margin: 0.5rem 0;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
   }
 }
 
@@ -1702,46 +1716,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -1827,12 +1801,12 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c5 {
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -1860,20 +1834,16 @@ exports[`Text-only email widget renders correctly 1`] = `
           <fieldset
             className="c5"
           >
-            <legend
-              className="c6"
+            <span
+              className="c6 c7"
             >
-              <span
-                className="c7 c8"
-              >
-                Stay in the know!
-              </span>
-            </legend>
+              Stay in the know!
+            </span>
             <div
-              className="c9"
+              className="c8"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
@@ -1882,20 +1852,20 @@ exports[`Text-only email widget renders correctly 1`] = `
               />
             </div>
             <div
-              className="c11"
+              className="c10"
             >
               <div
-                className="c12"
+                className="c11"
               >
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="first-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "First name",
@@ -1903,15 +1873,15 @@ exports[`Text-only email widget renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
@@ -1927,14 +1897,14 @@ exports[`Text-only email widget renders correctly 1`] = `
                   </label>
                 </div>
                 <div
-                  className="c13"
+                  className="c12"
                 >
                   <label
-                    className="c14"
+                    className="c13"
                     htmlFor="last-name"
                   >
                     <span
-                      className="c15 c16"
+                      className="c14 c15"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "Last name",
@@ -1942,15 +1912,15 @@ exports[`Text-only email widget renders correctly 1`] = `
                       }
                     />
                     <div
-                      className="c17"
+                      className="c16"
                     >
                       
                       <div
-                        className="c18"
+                        className="c17"
                       >
                         <input
                           aria-required={true}
-                          className="c19"
+                          className="c18"
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
@@ -1967,14 +1937,14 @@ exports[`Text-only email widget renders correctly 1`] = `
                 </div>
               </div>
               <div
-                className="c13"
+                className="c12"
               >
                 <label
-                  className="c14"
+                  className="c13"
                   htmlFor="email"
                 >
                   <span
-                    className="c15 c16"
+                    className="c14 c15"
                     dangerouslySetInnerHTML={
                       Object {
                         "__html": "Email address",
@@ -1982,15 +1952,15 @@ exports[`Text-only email widget renders correctly 1`] = `
                     }
                   />
                   <div
-                    className="c17"
+                    className="c16"
                   >
                     
                     <div
-                      className="c18"
+                      className="c17"
                     >
                       <input
                         aria-required={true}
-                        className="c19"
+                        className="c18"
                         id="email"
                         name="email"
                         onBlur={[Function]}
@@ -2007,13 +1977,13 @@ exports[`Text-only email widget renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 color="red"
                 data-test="subscribe-button"
-                disabled={true}
+                disabled={false}
                 type="submit"
               >
                 Sign up
@@ -2023,10 +1993,10 @@ exports[`Text-only email widget renders correctly 1`] = `
               </button>
             </div>
             <div
-              className="c23"
+              className="c22"
             >
               <div
-                className="c10"
+                className="c9"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
