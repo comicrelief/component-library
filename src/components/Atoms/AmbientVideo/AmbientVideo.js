@@ -1,59 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
-const StyledVideo = styled.video.attrs(() => ({
-  playsInline: true,
-  autoPlay: true,
-  muted: true
-}))`
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-
-  @media (prefers-reduced-motion: reduce) {
-    display: none;
-  }
-`;
-
-const FallbackImg = styled.img`
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-`;
-
-const ReducedMotionPoster = styled.img`
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  @media (prefers-reduced-motion: reduce) {
-    display: block;
-  }
-`;
-
-const ReducedMotionFallback = styled.div`
-  display: none;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-
-  @media (prefers-reduced-motion: reduce) {
-    display: block;
-  }
-`;
+import {
+  Wrapper,
+  StyledVideo,
+  FallbackImg,
+  ReducedMotionPoster,
+  ReducedMotionFallback
+} from './AmbientVideo.style';
 
 // Normalise webpack module object ({ default }) or string to video URL
 const normaliseSrc = value => (typeof value === 'string' ? value : value?.default);
