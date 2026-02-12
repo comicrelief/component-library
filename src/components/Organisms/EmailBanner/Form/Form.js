@@ -36,7 +36,6 @@ const EmailForm = ({
 }) => {
   const {
     formState: {
-      isValid,
       isSubmitting,
       isSubmitted,
       isSubmitSuccessful,
@@ -131,7 +130,7 @@ const EmailForm = ({
               <ButtonWrapper>
                 <ButtonWithStates
                   type="submit"
-                  disabled={!isValid || isSubmitting}
+                  disabled={isSubmitting}
                   loading={isSubmitting}
                   loadingText="Submitting..."
                   data-test="subscribe-button"
