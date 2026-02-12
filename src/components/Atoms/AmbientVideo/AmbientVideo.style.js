@@ -65,7 +65,6 @@ const PlayPauseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
   opacity: 0;
   transition: opacity 0.2s ease;
 
