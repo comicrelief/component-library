@@ -26,13 +26,13 @@ const EmailForm = ({
   bodyCopy,
   privacyCopy,
   successCopy,
+  formContext,
+  onSubmit,
   ctaText = 'Sign up',
   orientation = 'right',
   hasTopImage = false,
   shouldShowTitleSection = false,
-  emailWidgetIsTextOnly = false,
-  formContext,
-  onSubmit
+  emailWidgetIsTextOnly = false
 }) => {
   const {
     formState: {
