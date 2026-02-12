@@ -150,27 +150,21 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('md')};
+  padding: ${spacing('m')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 0 ${spacing('l')} ${spacing('l')};
+    padding: ${spacing('l')};
   }
-`;
-
-const Legend = styled.legend`
-  margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
-  display: block;
-  width: 100%;
 `;
 
 const PrimaryTitleText = styled(Text)`
   display: block;
+  width: 100%;
+  margin-bottom: ${spacing('sm')};
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: 700;
-  margin-bottom: ${spacing('sm')};
 `;
 
 const FormFieldset = styled.div`
@@ -193,7 +187,7 @@ const InputField = styled.div`
 `;
 
 const BodyCopyWrapper = styled.div`
-  padding: 0 ${spacing('sm')} ${spacing('md')};
+  padding-bottom: ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
 `;
 
@@ -236,7 +230,6 @@ export {
   Wrapper,
   Form,
   OuterFieldset,
-  Legend,
   PrimaryTitleText,
   NameWrapper,
   InputField,

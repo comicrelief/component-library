@@ -5,7 +5,6 @@ import {
   FormWrapper,
   Form,
   OuterFieldset,
-  Legend,
   PrimaryTitleText,
   FormFieldset,
   NameWrapper,
@@ -65,11 +64,9 @@ const EmailForm = ({
       >
         <OuterFieldset>
           {shouldShowTitleInForm && (
-            <Legend>
-              <PrimaryTitleText tag="span" color="black">
-                {title}
-              </PrimaryTitleText>
-            </Legend>
+            <PrimaryTitleText tag="span" color="black">
+              {title}
+            </PrimaryTitleText>
           )}
 
           {shouldShowTitleInForm && bodyCopy && (
