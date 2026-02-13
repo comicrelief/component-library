@@ -487,6 +487,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
         <form
           className="c4"
           noValidate={true}
+          onSubmit={[Function]}
           orientation="left"
         >
           <fieldset
@@ -1157,6 +1158,7 @@ exports[`Image banner renders correctly 1`] = `
         <form
           className="c4"
           noValidate={true}
+          onSubmit={[Function]}
           orientation="right"
         >
           <fieldset
@@ -1829,6 +1831,7 @@ exports[`Text-only email widget renders correctly 1`] = `
         <form
           className="c4"
           noValidate={true}
+          onSubmit={[Function]}
           orientation="right"
         >
           <fieldset

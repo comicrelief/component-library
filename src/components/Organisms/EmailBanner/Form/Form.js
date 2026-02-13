@@ -35,12 +35,12 @@ const EmailForm = ({
   emailWidgetIsTextOnly = false
 }) => {
   const {
+    handleSubmit,
     formState: {
       isSubmitting,
       isSubmitted,
       isSubmitSuccessful,
-      errors,
-      handleSubmit
+      errors
     }
   } = formContext;
 
@@ -59,7 +59,7 @@ const EmailForm = ({
         orientation={orientation}
         hasTopImage={hasTopImage}
         showTitleSection={showTitleSection}
-        onSubmit={onSubmit ? handleSubmit(onSubmit) : undefined}
+        onSubmit={handleSubmit(onSubmit)}
         noValidate
       >
         <OuterFieldset>
@@ -168,7 +168,7 @@ EmailForm.propTypes = {
   showTitleSection: PropTypes.bool,
   emailWidgetIsTextOnly: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
-  onSubmit: PropTypes.func
+  onSubmit: PropTypes.func.isRequired
 };
 
 export default EmailForm;

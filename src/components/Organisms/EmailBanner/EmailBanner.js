@@ -170,7 +170,7 @@ EmailBanner.propTypes = {
     alt: PropTypes.string
   }),
   formContext: PropTypes.shape().isRequired,
-  onSubmit: PropTypes.func
+  onSubmit: PropTypes.func.isRequired
 };
 
 export default EmailBanner;

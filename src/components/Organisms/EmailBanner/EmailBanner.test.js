@@ -54,6 +54,7 @@ it('Image banner renders correctly', () => {
       privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
       successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
       ctaText="Sign up"
+      onSubmit={() => {}}
     />
   ).toJSON();
 
@@ -91,6 +92,7 @@ it('Image banner left orientation renders correctly', () => {
       privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
       successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
       ctaText="Sign up"
+      onSubmit={() => {}}
     />
   ).toJSON();
 
@@ -111,6 +113,7 @@ it('Text-only email widget renders correctly', () => {
       privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
       successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
       ctaText="Sign up"
+      onSubmit={() => {}}
     />
   ).toJSON();
 
