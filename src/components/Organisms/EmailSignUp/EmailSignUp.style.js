@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import TextInput from './_TextInput';
+import TextInput from '../shared/emailSignup/TextInput';
 import Text from '../../Atoms/Text/Text';
 
 const ESUWrapper = styled.div`
