@@ -73,6 +73,7 @@ const AmbientVideo = ({
         src={effectiveSrc}
         poster={effectivePoster}
         controls={showFullControls}
+        controlsList={showFullControls ? 'nodownload nofullscreen noremoteplayback' : undefined}
         loop={loop}
         muted
         onEnded={handleEnded}
