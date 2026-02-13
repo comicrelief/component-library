@@ -90,7 +90,8 @@ const PlayPauseButton = styled.button`
 `;
 
 const WrapperWithHover = styled(Wrapper)`
-  &:hover ${PlayPauseButton} {
+  &:hover ${PlayPauseButton},
+  &:focus-within ${PlayPauseButton} {
     opacity: 0.8;
     transition-delay: 0s;
   }
