@@ -10,6 +10,8 @@ const defaultData = {
   ctaText: 'Find out how',
   promoImage: '../promo.jpg',
   heroBannerImage: '../PromoLW.jpg',
+  // TODO: replace
+  heroBannerLogoImage: 'https://images.ctfassets.net/zsfivwzfgl3t/28sKInxW6EsmvOTahWdm8E/3fb8e1488f95bac6a3087b133ae7ce9f/ImpactSliderMoneybuy1.png',
   imageLow:
     'http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100',
   image:

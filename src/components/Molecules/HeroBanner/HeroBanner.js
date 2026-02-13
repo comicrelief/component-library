@@ -11,7 +11,7 @@ import './local-preview-layout-fixes.css';
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 } from './HeroBanner.style';
 
 const HeroBanner = ({
@@ -31,6 +31,9 @@ const HeroBanner = ({
   imageSet = null,
   imageLow = null,
   image = null,
+  // TODO: presumably this'll only used on 'Media' variants too?
+  logoImage = null,
+  logoImageAltText = null,
   // All variants:
   children = null,
   ctaUrl = null,
@@ -124,6 +127,16 @@ const HeroBanner = ({
             )}
           </CopyInnerWrapper>
         </CopyOuterWrapper>
+
+        {(logoImage) && (
+        <LogoImageWrapper imageLeft={copyLeft}>
+          <LogoImage
+            alt={logoImageAltText}
+            image={logoImage}
+            objectFit="contain"
+          />
+        </LogoImageWrapper>
+        )}
       </OuterWrapper>
     </Container>
   );
@@ -145,6 +158,8 @@ HeroBanner.propTypes = {
   ctaNewTab: PropTypes.bool,
   paddingTop: PropTypes.string,
   paddingBottom: PropTypes.string,
+  logoImage: PropTypes.string,
+  logoImageAltText: PropTypes.string,
   variant: PropTypes.oneOf([
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,
