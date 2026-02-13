@@ -3,6 +3,7 @@ import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
@@ -256,8 +257,37 @@ const HeroBannerLink = styled.a`
   }
 `;
 
+const LogoImageWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+
+  // TODO: Check with Curtis re: functionality here
+  ${({ imageLeft }) => (imageLeft
+    ? css` left: 0`
+    : css` right: 0`
+  )};    
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    margin: 2rem;
+  }
+`;
+
+const LogoImage = styled(Picture)`
+  // Just to make things a bit less intrusive for now
+  max-width: 100px;
+  opacity: 0.75;
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    max-width: 100px;
+  }
+`;
+
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 };
