@@ -51,22 +51,38 @@ const ReducedMotionFallback = styled.div`
   }
 `;
 
+const PlayPauseIcon = styled.span`
+  width: 24px;
+  height: 24px;
+  background-image: url(${({ $icon }) => $icon});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+`;
+
 const PlayPauseButton = styled.button`
   position: absolute;
   bottom: 15px;
   left: 15px;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: none;
-  background: ${({ theme }) => theme.color('grey_4')};
-  color: ${({ theme }) => theme.color('white')};
+  background: ${({ theme }) => theme.color('white')};
+  color: ${({ theme }) => theme.color('grey_4')};
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease 1s;
+
+  // Play icon is shifted to the right slightly as it
+  // doesn't look quite right when centered normally
+  &[data-icon='play'] ${PlayPauseIcon} {
+    transform: translateX(2px);
+  }
 
   @media (prefers-reduced-motion: reduce) {
     display: none;
@@ -75,7 +91,8 @@ const PlayPauseButton = styled.button`
 
 const WrapperWithHover = styled(Wrapper)`
   &:hover ${PlayPauseButton} {
-    opacity: 1;
+    opacity: 0.8;
+    transition-delay: 0s;
   }
 `;
 
@@ -86,5 +103,6 @@ export {
   FallbackImg,
   ReducedMotionPoster,
   ReducedMotionFallback,
-  PlayPauseButton
+  PlayPauseButton,
+  PlayPauseIcon
 };
