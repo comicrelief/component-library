@@ -46,8 +46,8 @@ const EmailBanner = ({
 
   const topImage = isMedium ? imageM : imageS;
 
-  const shouldRenderTopImage = (shouldShowImage && !isLargeBreakpoint)
-    && topImage && (topImage.images || topImage.image);
+  const shouldRenderTopImage = Boolean((shouldShowImage && !isLargeBreakpoint)
+    && topImage && (topImage.images || topImage.image));
 
   const noTitlesAtAll = !title && !bodyCopy;
   const showTitleSection = noTitlesAtAll === false
