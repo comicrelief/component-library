@@ -30,8 +30,8 @@ const AmbientVideo = ({
 }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const isBelowM = useMediaQuery({ maxWidth: breakpointValues.M - 1 });
-  const rawSrc = srcMobile && isBelowM ? srcMobile : src;
+  const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
+  const rawSrc = srcMobile && isBelowL ? srcMobile : src;
   const effectiveSrc = normaliseSrc(rawSrc);
   const effectivePoster = poster ? normaliseSrc(poster) : undefined;
 
