@@ -26,7 +26,7 @@ const AmbientVideo = ({
   poster,
   posterMobile,
   showFullControls = false,
-  showPlayPause = false,
+  showPlayPause = true,
   loop = true
 }) => {
   const videoRef = useRef(null);
