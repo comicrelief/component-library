@@ -24,6 +24,7 @@ const AmbientVideo = ({
   src,
   srcMobile,
   poster,
+  posterMobile,
   showFullControls = false,
   showPlayPause = false,
   loop = true
@@ -33,7 +34,8 @@ const AmbientVideo = ({
   const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
   const rawSrc = srcMobile && isBelowL ? srcMobile : src;
   const effectiveSrc = normaliseSrc(rawSrc);
-  const effectivePoster = poster ? normaliseSrc(poster) : undefined;
+  const rawPoster = posterMobile && isBelowL ? posterMobile : poster;
+  const effectivePoster = rawPoster ? normaliseSrc(rawPoster) : undefined;
 
   const handleEnded = e => {
     if (!loop && effectivePoster) {
@@ -109,6 +111,7 @@ AmbientVideo.propTypes = {
   src: srcPropType.isRequired,
   srcMobile: srcPropType,
   poster: srcPropType,
+  posterMobile: srcPropType,
   showFullControls: PropTypes.bool,
   showPlayPause: PropTypes.bool,
   loop: PropTypes.bool
