@@ -208,8 +208,8 @@ import variants from './_variants';
     variant={variants.FULL_HEIGHT}
     copyLeft
     paddingTop="2rem"
-    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4')}
-    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4')}
+    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
     videoLoop
   >
     <Text tag="h1">
@@ -228,8 +228,8 @@ import variants from './_variants';
     variant={variants.FULL_HEIGHT}
     copyLeft={false}
     paddingTop="2rem"
-    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4')}
-    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4')}
+    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
     videoLoop={false}
   >
     <Text tag="h1">
