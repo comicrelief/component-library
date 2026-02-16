@@ -115,57 +115,53 @@ const DonateBanner = ({
         componentBackgroundColour={componentBackgroundColour}
         $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
       >
-        {shouldRenderTopImage ? (
-          useVideoTop ? (
+        {shouldRenderTopImage && (useVideoTop ? (
+          <AmbientVideo
+            src={videoDesktop}
+            srcMobile={videoMobile}
+            poster={posterTop}
+            posterMobile={posterMobileTop}
+            loop={videoLoop}
+            showFullControls={videoShowFullControls}
+            showPlayPause={videoShowPlayPause}
+          />
+        ) : (
+          <Picture
+            image={topImage.image}
+            images={topImage.images}
+            imageLow={topImage.imageLow}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+            alt={topImage.alt || ''}
+            key={topImage.imageLow}
+          />
+        ))}
+
+        {shouldShowDesktopImage && (useVideoDesktop ? (
+          <BgVideo>
             <AmbientVideo
               src={videoDesktop}
               srcMobile={videoMobile}
-              poster={posterTop}
-              posterMobile={posterMobileTop}
+              poster={posterDesktopBg}
+              posterMobile={posterMobileDesktopBg}
               loop={videoLoop}
               showFullControls={videoShowFullControls}
               showPlayPause={videoShowPlayPause}
             />
-          ) : (
-            <Picture
-              image={topImage.image}
-              images={topImage.images}
-              imageLow={topImage.imageLow}
-              objectFit="cover"
-              width="100%"
-              height="100%"
-              alt={topImage.alt || ''}
-              key={topImage.imageLow}
-            />
-          )
-        ) : null}
-
-        {shouldShowDesktopImage ? (
-          useVideoDesktop ? (
-            <BgVideo>
-              <AmbientVideo
-                src={videoDesktop}
-                srcMobile={videoMobile}
-                poster={posterDesktopBg}
-                posterMobile={posterMobileDesktopBg}
-                loop={videoLoop}
-                showFullControls={videoShowFullControls}
-                showPlayPause={videoShowPlayPause}
-              />
-            </BgVideo>
-          ) : (
-            <BgImage
-              image={imageL.image}
-              images={imageL.images}
-              imageLow={imageL.imageLow}
-              objectFit="cover"
-              width="100%"
-              height="100%"
-              alt={imageL.alt || ''}
-              isBackgroundImage
-            />
-          )
-        ) : null}
+          </BgVideo>
+        ) : (
+          <BgImage
+            image={imageL.image}
+            images={imageL.images}
+            imageLow={imageL.imageLow}
+            objectFit="cover"
+            width="100%"
+            height="100%"
+            alt={imageL.alt || ''}
+            isBackgroundImage
+          />
+        ))}
 
         <Wrapper
           donateOrientation={donateOrientation}
