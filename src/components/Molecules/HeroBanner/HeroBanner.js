@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../Atoms/Picture/Picture';
+import AmbientVideo from '../../Atoms/AmbientVideo/AmbientVideo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
@@ -31,6 +32,13 @@ const HeroBanner = ({
   imageSet = null,
   imageLow = null,
   image = null,
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
   // All variants:
   children = null,
   ctaUrl = null,
@@ -38,6 +46,14 @@ const HeroBanner = ({
 }) => {
   const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
+
+  // AmbientVideo is used instead of Picture when all four video props are present,
+  // Higher & Lower res images AND videos
+  const useVideo = Boolean(
+    hasImage && imageSet && imageLow && videoDesktop && videoMobile
+  );
+  const poster = posterDesktop || imageSet;
+  const posterMobileResolved = posterMobile || imageLow;
 
   const copySection = (
     <Copy
@@ -98,15 +114,27 @@ const HeroBanner = ({
 
         {(hasImage) && (
           <MediaWrapper imageRight={copyLeft} variant={variant}>
-            <Picture
-              alt={imageAltText}
-              imageLow={imageLow}
-              images={imageSet}
-              image={image}
-              objectFit="cover"
-              width="100%"
-              height="100%"
-            />
+            {useVideo ? (
+              <AmbientVideo
+                src={videoDesktop}
+                srcMobile={videoMobile}
+                poster={poster}
+                posterMobile={posterMobileResolved}
+                loop={videoLoop}
+                showFullControls={videoShowFullControls}
+                showPlayPause={videoShowPlayPause}
+              />
+            ) : (
+              <Picture
+                alt={imageAltText}
+                imageLow={imageLow}
+                images={imageSet}
+                image={image}
+                objectFit="cover"
+                width="100%"
+                height="100%"
+              />
+            )}
           </MediaWrapper>
         )}
 
@@ -149,7 +177,14 @@ HeroBanner.propTypes = {
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,
     variants.TEXT_BANNER
-  ])
+  ]),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool
 };
 
 export default HeroBanner;
