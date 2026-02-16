@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
+import AmbientVideo from '../../Atoms/AmbientVideo/AmbientVideo';
 import Form from './Form/Form';
 import { handleTitles, handleOtherAmountText } from './_utils';
 
 import {
   BgImage,
+  BgVideo,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -36,6 +38,13 @@ const DonateBanner = ({
   imageL = null,
   imageM = null,
   imageS = null,
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
   data = {},
   cartID,
   clientID,
@@ -71,6 +80,25 @@ const DonateBanner = ({
     && topImage && (topImage.images || topImage.image)
   );
 
+  const useVideoTop = Boolean(
+    shouldRenderTopImage
+    && topImage.images
+    && topImage.imageLow
+    && videoDesktop
+    && videoMobile
+  );
+  const useVideoDesktop = Boolean(
+    shouldShowDesktopImage
+    && imageL.images
+    && imageL.imageLow
+    && videoDesktop
+    && videoMobile
+  );
+  const posterTop = posterDesktop || topImage?.images || topImage?.imageLow;
+  const posterMobileTop = posterMobile || topImage?.imageLow;
+  const posterDesktopBg = posterDesktop || imageL?.images || imageL?.imageLow;
+  const posterMobileDesktopBg = posterMobile || imageL?.imageLow;
+
   // For text-only variants, we hide the title area on non-desktop widths
   // (M and below), so only the form is shown.
   const shouldShowTitleSection = noTitlesAtAll === false
@@ -88,30 +116,55 @@ const DonateBanner = ({
         $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
       >
         {shouldRenderTopImage ? (
-          <Picture
-            image={topImage.image}
-            images={topImage.images}
-            imageLow={topImage.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={topImage.alt || ''}
-            // Force React to re-render with any updated image details
-            key={topImage.imageLow}
-          />
+          useVideoTop ? (
+            <AmbientVideo
+              src={videoDesktop}
+              srcMobile={videoMobile}
+              poster={posterTop}
+              posterMobile={posterMobileTop}
+              loop={videoLoop}
+              showFullControls={videoShowFullControls}
+              showPlayPause={videoShowPlayPause}
+            />
+          ) : (
+            <Picture
+              image={topImage.image}
+              images={topImage.images}
+              imageLow={topImage.imageLow}
+              objectFit="cover"
+              width="100%"
+              height="100%"
+              alt={topImage.alt || ''}
+              key={topImage.imageLow}
+            />
+          )
         ) : null}
 
         {shouldShowDesktopImage ? (
-          <BgImage
-            image={imageL.image}
-            images={imageL.images}
-            imageLow={imageL.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={imageL.alt || ''}
-            isBackgroundImage
-          />
+          useVideoDesktop ? (
+            <BgVideo>
+              <AmbientVideo
+                src={videoDesktop}
+                srcMobile={videoMobile}
+                poster={posterDesktopBg}
+                posterMobile={posterMobileDesktopBg}
+                loop={videoLoop}
+                showFullControls={videoShowFullControls}
+                showPlayPause={videoShowPlayPause}
+              />
+            </BgVideo>
+          ) : (
+            <BgImage
+              image={imageL.image}
+              images={imageL.images}
+              imageLow={imageL.imageLow}
+              objectFit="cover"
+              width="100%"
+              height="100%"
+              alt={imageL.alt || ''}
+              isBackgroundImage
+            />
+          )
         ) : null}
 
         <Wrapper
@@ -204,6 +257,13 @@ DonateBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   cartID: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,

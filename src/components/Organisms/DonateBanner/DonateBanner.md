@@ -188,3 +188,97 @@ const imageL = {
   monthlyOtherAmountText="each month can help provide long-term support."
 />;
 ```
+
+## Image banner with Ambient Video (looping)
+
+When imageL/imageM/imageS have images & imageLow and videoDesktop & videoMobile are provided, DonateBanner uses AmbientVideo instead of Picture.
+
+```js
+import data from './dev-data/data';
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
+
+<DonateBanner
+  pageBackgroundColour="grey_light"
+  paddingAbove="0rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  imageL={imageL}
+  imageM={imageM}
+  imageS={imageS}
+  videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+  videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+  videoLoop
+  data={data}
+  mbshipID="mbship-5"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+/>;
+```
+
+## Image banner with Ambient Video (no loop)
+
+```js
+import data from './dev-data/data';
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
+
+<DonateBanner
+  pageBackgroundColour="grey_light"
+  paddingAbove="0rem"
+  paddingBelow="2rem"
+  donateOrientation="left"
+  imageL={imageL}
+  imageM={imageM}
+  imageS={imageS}
+  videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+  videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+  videoLoop={false}
+  data={data}
+  mbshipID="mbship-6"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate today"
+  subtitle="Your support can help people facing the toughest times."
+/>;
+```

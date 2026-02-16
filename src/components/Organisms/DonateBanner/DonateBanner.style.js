@@ -51,6 +51,21 @@ const BgImage = styled(Picture)`
   height: 100%;
 `;
 
+const BgVideo = styled.div`
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+
+  img,
+  video {
+    object-position: top center;
+    height: 100%;
+  }
+`;
+
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
@@ -299,6 +314,7 @@ const Button = styled.button`
 
 export {
   BgImage,
+  BgVideo,
   Button,
   MoneybuyCopy,
   Container,
