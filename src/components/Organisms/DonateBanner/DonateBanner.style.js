@@ -29,17 +29,15 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')};
+    padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
     ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
       padding-top: 7.5rem;
       padding-bottom: 7.5rem;
     `}
   }
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    padding-left: ${spacing('xxl')};
-    padding-right: ${spacing('xxl')};
-  }
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BgImage = styled(Picture)`
@@ -57,6 +55,9 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
 
   ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
     padding: 0;
