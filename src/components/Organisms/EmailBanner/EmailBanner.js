@@ -24,6 +24,7 @@ const EmailBanner = ({
   paddingBelow = '2rem',
   pageBackgroundColour = 'transparent',
   componentBackgroundColour = 'white',
+  copyColor = 'black',
   title = null,
   bodyCopy = null,
   privacyCopy = null,
@@ -98,7 +99,7 @@ const EmailBanner = ({
         >
           {showTitleSection && (
           <TitleWrapperOuter orientation={orientation}>
-            <TitleWrapperInner>
+            <TitleWrapperInner $copyColor={copyColor}>
               {title && (
                 <Text
                   tag="h2"
@@ -146,6 +147,7 @@ EmailBanner.propTypes = {
   paddingBelow: PropTypes.string,
   pageBackgroundColour: PropTypes.string,
   componentBackgroundColour: PropTypes.string,
+  copyColor: PropTypes.string,
   title: PropTypes.string,
   bodyCopy: PropTypes.node,
   privacyCopy: PropTypes.node,

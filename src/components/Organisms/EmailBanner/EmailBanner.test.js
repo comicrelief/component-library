@@ -119,3 +119,25 @@ it('Text-only email widget renders correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('Text-only email widget with copyColor renders correctly', () => {
+  const tree = renderWithTheme(
+    <EmailBannerWithFormContext
+      emailWidgetIsTextOnly
+      pageBackgroundColour="rnd_25_glitzy_grape"
+      componentBackgroundColour="deep_violet_dark"
+      copyColor="white"
+      paddingAbove="2rem"
+      paddingBelow="2rem"
+      orientation="right"
+      title="Stay in the know!"
+      bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
+      privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
+      successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
+      ctaText="Sign up"
+      onSubmit={() => {}}
+    />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

@@ -89,6 +89,7 @@ const TitleWrapperOuter = styled.div`
 const TitleWrapperInner = styled.div`
   position: relative;
   text-align: left;
+  ${({ $copyColor, theme }) => $copyColor && `color: ${theme.color($copyColor)};`}
 `;
 
 const FormWrapper = styled.div`
