@@ -6,7 +6,13 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 
 const Switch = styled.span`
   width: 50%;
-  height: 48px;
+  height: 50px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    height: 52px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    height: 40px;
+  }
   ${zIndex('low')};
   display: block;
   position: absolute;
@@ -24,7 +30,6 @@ const MoneyBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: ${spacing('sm')} 0;
   overflow: hidden;
   border-radius: 0.5rem;
   background: ${({ theme }) => theme.color('white')};
@@ -47,7 +52,13 @@ const Label = styled.label`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   font-weight: bold;
-  min-height: 48px;
+  min-height: 50px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    min-height: 52px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    min-height: 40px;
+  }
   align-items: center;
   justify-content: center;
   display: flex;
