@@ -149,7 +149,6 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    margin-top: ${spacing('md')};
     border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
