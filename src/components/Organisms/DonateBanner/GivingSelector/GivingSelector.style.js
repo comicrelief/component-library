@@ -16,7 +16,7 @@ const Switch = styled.span`
 
 const Wrapper = styled.div`
   display: flex;
-  margin: ${spacing('md')} 0;
+  margin-bottom: ${spacing('m')};
 `;
 
 const MoneyBox = styled.div`

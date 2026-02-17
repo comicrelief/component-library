@@ -164,7 +164,7 @@ const OuterFieldset = styled.fieldset`
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 0 ${spacing('l')} ${spacing('l')};
+    padding: ${spacing('l')};
   }
 
   input[type='submit'] {
@@ -200,7 +200,6 @@ const MoneyBuys = styled.div`
   margin-bottom: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
-    margin-top: ${spacing('m')};
   }
   label {
     flex: 0 0 31%;
