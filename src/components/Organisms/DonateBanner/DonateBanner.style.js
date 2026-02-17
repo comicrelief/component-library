@@ -182,7 +182,7 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-weight: 700;
+  font-weight: ${({ $donateWidgetIsTextOnly }) => ($donateWidgetIsTextOnly ? 400 : 700)};
   margin: 0;
 `;
 
