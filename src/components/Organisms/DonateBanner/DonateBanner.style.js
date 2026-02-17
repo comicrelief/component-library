@@ -172,9 +172,9 @@ const OuterFieldset = styled.fieldset`
   }
 `;
 
-const Legend = styled.legend`
+const BannerTitleText = styled.div`
   margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
+  padding: ${spacing('sm')} ${spacing('sm')} ${spacing('md')};
   display: block;
   width: 100%;
 `;
@@ -314,7 +314,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend,
+  BannerTitleText as Legend,
   PrimaryTitleText,
   SecondaryTitleText
 };
