@@ -204,7 +204,7 @@ const MoneyBuys = styled.div`
   }
   label {
     flex: 0 0 31%;
-    margin-bottom: ${spacing('sm')};
+    margin-bottom: ${spacing('md')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-bottom: 0;
     }
