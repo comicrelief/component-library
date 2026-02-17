@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: auto;
-  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
+  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow} 0`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   width: 100%;
   padding: 2rem;
@@ -26,11 +26,10 @@ const InnerContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    height: 724px;
     padding: ${spacing('l')};
     ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
-      padding-top: 7.5rem;
-      padding-bottom: 7.5rem;
+      padding-top: 7rem;
+      padding-bottom: 7rem;
     `}
   }
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
@@ -66,7 +65,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    padding: ${spacing('l')} ${spacing('md')};
+    max-width: 1152px;
     gap: ${spacing('l')};
     flex-direction: row;
   }

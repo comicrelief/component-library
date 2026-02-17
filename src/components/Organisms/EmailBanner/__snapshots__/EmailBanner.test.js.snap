@@ -193,7 +193,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
   padding: 2rem;
@@ -391,7 +391,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    height: 724px;
     padding: 2rem;
   }
 }
@@ -409,7 +408,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem 1rem;
+    max-width: 1152px;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -864,7 +863,7 @@ exports[`Image banner renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 0rem 0 2rem;
+  margin: 0rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
   padding: 2rem;
@@ -1062,7 +1061,6 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    height: 724px;
     padding: 2rem;
   }
 }
@@ -1080,7 +1078,7 @@ exports[`Image banner renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem 1rem;
+    max-width: 1152px;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1535,7 +1533,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
   padding: 2rem;
@@ -1733,10 +1731,9 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    height: 724px;
     padding: 2rem;
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -1753,7 +1750,7 @@ exports[`Text-only email widget renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem 1rem;
+    max-width: 1152px;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -2208,7 +2205,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0 2rem 0;
   background-color: #A20C51;
   width: 100%;
   padding: 2rem;
@@ -2406,10 +2403,9 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    height: 724px;
     padding: 2rem;
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -2426,7 +2422,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 2rem 1rem;
+    max-width: 1152px;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
