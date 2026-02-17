@@ -183,6 +183,7 @@ const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
   font-weight: 700;
+  margin: 0;
 `;
 
 const SecondaryTitleText = styled(Text)`
