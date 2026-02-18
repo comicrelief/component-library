@@ -30,9 +30,12 @@ const InnerContainer = styled.div`
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
+    min-height: 600px;
+    max-height: 750px;
     ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
-      padding-top: 7.5rem;
-      padding-bottom: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     `}
   }
   max-width: 1500px;
