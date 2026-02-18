@@ -259,9 +259,10 @@ const HeroBannerLink = styled.a`
 
 const LogoImageWrapper = styled.div`
   position: absolute;
-  margin: 1.5rem;
-  height: 60px;
+  margin: 1rem;
+  height: 100px;
   width: auto;
+  max-width: 100px;
   top: 0;
 
   // TODO: Check with Curtis re: functionality here
@@ -271,24 +272,30 @@ const LogoImageWrapper = styled.div`
   )};    
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    // margin: 2rem;
-    // width: calc(100% - 4rem);
+    margin: 1.5rem;
+    max-width: 200px;
   }
 `;
 
 const LogoImage = styled(Picture)`
-  height: 60px;
+  height: 100px;
   width: auto;
   // CHECK W/CURTIS
-  opacity: 0.75;
+  // opacity: 0.75;
+  max-width: 100px;
 
   img {
-    height: 60px;
-    width: auto;
+    height: inherit;
+    width: inherit;
+    max-width: 100px;
   }
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    max-width: 100px;
+    max-width: 200px;
+
+    img { 
+      max-width: 200px;
+    }
   }
 `;
 

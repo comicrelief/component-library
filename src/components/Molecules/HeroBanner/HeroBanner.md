@@ -209,17 +209,17 @@ import variants from './_variants';
     variant={variants.FULL_HEIGHT}
     copyLeft
     paddingTop="2rem"
-    logoImage={defaultData.heroBannerLogoImage}
+    logoImage={defaultData.heroBannerLogoImageSquare}
   >
     <Text tag="h1">
-      Full Height: Copy Left w/Logo
+      Full Height: Copy Left w/Logo (Left)
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </Text>
   </HeroBanner>
 
-    <HeroBanner
+  <HeroBanner
     pageBackgroundColour="teal_light"
     imageSet={defaultData.heroBannerImage}
     image={defaultData.heroBannerImage}
@@ -228,10 +228,29 @@ import variants from './_variants';
     variant={variants.FULL_HEIGHT}
     copyLeft={false}
     paddingTop="2rem"
-    logoImage={defaultData.heroBannerLogoImage}
+    logoImage={defaultData.heroBannerLogoImageSquare}
   >
     <Text tag="h1">
-      Full Height: Copy Right w/Logo
+      Full Height: Copy Right w/Logo Right
+    </Text>
+    <Text tag="p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageWide}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right w/Logo Right
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
