@@ -29,11 +29,20 @@ const MoneyBuyButton = styled(Input)`
     }
 
     ${({ isSelected }) => isSelected
-      && css`
-        background-color: ${({ theme }) => theme.color('red')};
-        border: 1px solid ${({ theme }) => theme.color('red')};
-        color: ${({ theme }) => theme.color('white')};
-      `}
+      ? css`
+          background-color: ${({ theme }) => theme.color('red')};
+          border: 1px solid ${({ theme }) => theme.color('red')};
+          color: ${({ theme }) => theme.color('white')};
+          &:hover {
+            background-color: ${({ theme }) => theme.color('red_dark')};
+            border-color: ${({ theme }) => theme.color('red_dark')};
+          }
+        `
+      : css`
+          &:hover {
+            background-color: ${({ theme }) => theme.color('grey_medium')};
+          }
+        `}
   }
 `;
 

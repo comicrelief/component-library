@@ -68,6 +68,10 @@ const Label = styled.label`
   ${zIndex('medium')};
   cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
   color: ${({ active, theme }) => (active === true ? theme.color('white') : theme.color('black'))};
+  background-color: ${({ active, theme }) => (active === true ? theme.color('red') : 'transparent')};
+  &:hover {
+    background-color: ${({ active, theme }) => (active === true ? theme.color('red_dark') : theme.color('grey_medium'))};
+  }
 
   /* All this long winded border CSS below is to ensure that the border
   of the 'selected' giving type is red, rather than a grey line around
