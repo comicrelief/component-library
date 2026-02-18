@@ -258,28 +258,34 @@ const HeroBannerLink = styled.a`
 `;
 
 const LogoImageWrapper = styled.div`
-  width: 100%;
-  height: auto;
   position: absolute;
+  margin: 1.5rem;
+  height: 60px;
+  width: auto;
   top: 0;
-  margin: 1rem;
-  width: calc(100% - 2rem);
 
   // TODO: Check with Curtis re: functionality here
-  ${({ imageLeft }) => (imageLeft
-    ? css` left: 0`
-    : css` right: 0`
+  ${({ imageRight }) => (imageRight
+    ? css` right: 0;`
+    : css` left: 0;`
   )};    
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    margin: 2rem;
+    // margin: 2rem;
+    // width: calc(100% - 4rem);
   }
 `;
 
 const LogoImage = styled(Picture)`
-  // Just to make things a bit less intrusive for now
-  max-width: 100px;
+  height: 60px;
+  width: auto;
+  // CHECK W/CURTIS
   opacity: 0.75;
+
+  img {
+    height: 60px;
+    width: auto;
+  }
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     max-width: 100px;

@@ -31,13 +31,12 @@ const HeroBanner = ({
   imageSet = null,
   imageLow = null,
   image = null,
-  // TODO: presumably this'll only used on 'Media' variants too?
-  logoImage = null,
-  logoImageAltText = null,
   // All variants:
   children = null,
   ctaUrl = null,
-  ctaText = null
+  ctaText = null,
+  logoImage = null,
+  logoImageAltText = ''
 }) => {
   const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
@@ -100,7 +99,7 @@ const HeroBanner = ({
       >
 
         {(hasImage) && (
-          <MediaWrapper imageRight={copyLeft} variant={variant}>
+          <MediaWrapper variant={variant}>
             <Picture
               alt={imageAltText}
               imageLow={imageLow}
@@ -129,7 +128,7 @@ const HeroBanner = ({
         </CopyOuterWrapper>
 
         {(logoImage) && (
-        <LogoImageWrapper imageLeft={copyLeft}>
+        <LogoImageWrapper imageRight={copyLeft}>
           <LogoImage
             alt={logoImageAltText}
             image={logoImage}

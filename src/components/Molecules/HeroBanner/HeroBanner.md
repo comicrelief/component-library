@@ -200,7 +200,7 @@ import variants from './_variants';
     </Text>
   </HeroBanner>
 
-    <HeroBanner
+  <HeroBanner
     pageBackgroundColour="teal_light"
     imageSet={defaultData.heroBannerImage}
     image={defaultData.heroBannerImage}
@@ -213,6 +213,25 @@ import variants from './_variants';
   >
     <Text tag="h1">
       Full Height: Copy Left w/Logo
+    </Text>
+    <Text tag="p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </Text>
+  </HeroBanner>
+
+    <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImage}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right w/Logo
     </Text>
     <Text tag="p">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
