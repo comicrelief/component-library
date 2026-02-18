@@ -81,12 +81,22 @@ const Label = styled.label`
     border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-radius: 0.5rem 0 0 0.5rem;
+    &:hover {
+      border-left: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+    }
   }
   &:last-of-type {
     border-right: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-radius: 0 0.5rem 0.5rem 0;
+    &:hover {
+      border-right: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+    }
   }
 
   &:active:focus {
