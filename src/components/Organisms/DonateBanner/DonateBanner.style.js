@@ -317,7 +317,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  BannerTitleText as Legend,
+  BannerTitleText,
   PrimaryTitleText,
   SecondaryTitleText
 };
