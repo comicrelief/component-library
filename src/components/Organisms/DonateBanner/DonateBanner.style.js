@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 
 const Container = styled.div`
@@ -41,30 +40,6 @@ const InnerContainer = styled.div`
     padding-right: ${spacing('xxl')};
   }
   max-width: 1500px;
-`;
-
-const BgImage = styled(Picture)`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-`;
-
-const BgVideo = styled.div`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-
-  img,
-  video {
-    object-position: top center;
-    height: 100%;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -314,8 +289,6 @@ const Button = styled.button`
 `;
 
 export {
-  BgImage,
-  BgVideo,
   Button,
   MoneybuyCopy,
   Container,

@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`
   position: relative;
@@ -42,24 +41,6 @@ const InnerContainer = styled.div`
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-`;
-
-const BgImage = styled(Picture)`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-`;
-
-const BgVideo = styled.div`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
 `;
 
 const Wrapper = styled.div`
@@ -232,8 +213,6 @@ const ButtonWrapper = styled.div`
 `;
 
 export {
-  BgImage,
-  BgVideo,
   Container,
   InnerContainer,
   Error,

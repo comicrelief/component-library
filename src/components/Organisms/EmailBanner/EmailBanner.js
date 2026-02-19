@@ -4,14 +4,11 @@ import PropTypes from 'prop-types';
 
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
-import AmbientVideo from '../../Atoms/AmbientVideo/AmbientVideo';
+import PictureOrVideo from '../../Molecules/PictureOrVideo/PictureOrVideo';
 import RichText from '../../Atoms/RichText/RichText';
 import Form from './Form/Form';
 
 import {
-  BgImage,
-  BgVideo,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -59,25 +56,6 @@ const EmailBanner = ({
   const shouldRenderTopImage = Boolean((shouldShowImage && !isLargeBreakpoint)
     && topImage && (topImage.images || topImage.image));
 
-  const useVideoTop = Boolean(
-    shouldRenderTopImage
-    && topImage?.images
-    && topImage?.imageLow
-    && videoDesktop
-    && videoMobile
-  );
-  const useVideoDesktop = Boolean(
-    shouldShowDesktopImage
-    && imageL?.images
-    && imageL?.imageLow
-    && videoDesktop
-    && videoMobile
-  );
-  const posterTop = posterDesktop || topImage?.images || topImage?.imageLow;
-  const posterMobileTop = posterMobile || topImage?.imageLow;
-  const posterDesktopBg = posterDesktop || imageL?.images || imageL?.imageLow;
-  const posterMobileDesktopBg = posterMobile || imageL?.imageLow;
-
   const noTitlesAtAll = !title && !bodyCopy;
   const showTitleSection = noTitlesAtAll === false
     && isLargeBreakpoint && emailWidgetIsTextOnly;
@@ -92,53 +70,25 @@ const EmailBanner = ({
         componentBackgroundColour={componentBackgroundColour}
         $emailWidgetIsTextOnly={emailWidgetIsTextOnly}
       >
-        {shouldRenderTopImage && (useVideoTop ? (
-          <AmbientVideo
-            src={videoDesktop}
-            srcMobile={videoMobile}
-            poster={posterTop}
-            posterMobile={posterMobileTop}
-            loop={videoLoop}
-            showFullControls={videoShowFullControls}
-            showPlayPause={videoShowPlayPause}
-          />
-        ) : (
-          <Picture
-            image={topImage.image}
-            images={topImage.images}
-            imageLow={topImage.imageLow}
+        {(shouldRenderTopImage || shouldShowDesktopImage) && (
+          <PictureOrVideo
+            image={shouldShowDesktopImage ? imageL : topImage}
+            alt={shouldShowDesktopImage ? (imageL?.alt || '') : (topImage?.alt || '')}
+            videoDesktop={videoDesktop}
+            videoMobile={videoMobile}
+            posterDesktop={posterDesktop}
+            posterMobile={posterMobile}
+            videoLoop={videoLoop}
+            videoShowFullControls={videoShowFullControls}
+            videoShowPlayPause={videoShowPlayPause}
+            asBackground={shouldShowDesktopImage}
             objectFit="cover"
             width="100%"
             height="100%"
-            alt={topImage.alt || ''}
-            key={topImage.imageLow}
+            isBackgroundImage={shouldShowDesktopImage}
+            key={shouldShowDesktopImage ? imageL.imageLow : topImage.imageLow}
           />
-        ))}
-
-        {shouldShowDesktopImage && (useVideoDesktop ? (
-          <BgVideo>
-            <AmbientVideo
-              src={videoDesktop}
-              srcMobile={videoMobile}
-              poster={posterDesktopBg}
-              posterMobile={posterMobileDesktopBg}
-              loop={videoLoop}
-              showFullControls={videoShowFullControls}
-              showPlayPause={videoShowPlayPause}
-            />
-          </BgVideo>
-        ) : (
-          <BgImage
-            image={imageL.image}
-            images={imageL.images}
-            imageLow={imageL.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={imageL.alt || ''}
-            isBackgroundImage
-          />
-        ))}
+        )}
 
         <Wrapper
           orientation={orientation}
