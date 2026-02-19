@@ -1,3 +1,6 @@
+// DEPRECATED: This component is deprecated and will be removed in a future version.
+// Please use EmailBanner instead, which provides the same functionality with improved design.
+//
 // EmailSignUpForm.js is just a wrapper for viewing in the CL
 // The email sign up component that is used/exported is _EmailSignUp.js
 import React from 'react';
