@@ -212,10 +212,11 @@ import variants from './_variants';
     logoImage={defaultData.heroBannerLogoImageSquare}
   >
     <Text tag="h1">
-      Full Height: Copy Left w/Logo (Left)
+      Full Height: Copy Left w/Logo (Right on L+)
     </Text>
     <Text tag="p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
     </Text>
   </HeroBanner>
 
@@ -231,10 +232,11 @@ import variants from './_variants';
     logoImage={defaultData.heroBannerLogoImageSquare}
   >
     <Text tag="h1">
-      Full Height: Copy Right w/Logo Right
+      Full Height: Copy Right w/Logo (Left on L+)
     </Text>
     <Text tag="p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
     </Text>
   </HeroBanner>
 
@@ -250,10 +252,11 @@ import variants from './_variants';
     logoImage={defaultData.heroBannerLogoImageWide}
   >
     <Text tag="h1">
-      Full Height: Copy Right w/Logo Right
+      Full Height: Copy Right, w/Logo (Left on L+)
     </Text>
     <Text tag="p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
     </Text>
   </HeroBanner>
 

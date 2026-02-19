@@ -259,43 +259,33 @@ const HeroBannerLink = styled.a`
 
 const LogoImageWrapper = styled.div`
   position: absolute;
-  margin: 1rem;
-  height: 100px;
-  width: auto;
   max-width: 100px;
-  top: 0;
+  max-height: 100px;
+  margin: 1rem;
 
-  // TODO: Check with Curtis re: functionality here
-  ${({ imageRight }) => (imageRight
-    ? css` right: 0;`
-    : css` left: 0;`
-  )};    
+  // Top-right by design; S and M images will be picked to suit this:
+  top: 0;
+  right: 0;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     margin: 1.5rem;
-    max-width: 200px;
+    max-width: 130px;
+    max-height: 130px;
+
+    ${({ imageRight }) => (imageRight
+    ? css` right: 0;`
+    : css` left: 0;`
+  )};   
   }
 `;
 
 const LogoImage = styled(Picture)`
-  height: 100px;
-  width: auto;
-  // CHECK W/CURTIS
-  // opacity: 0.75;
-  max-width: 100px;
-
-  img {
-    height: inherit;
-    width: inherit;
-    max-width: 100px;
-  }
+    // max-width: inherit;
+    // max-height: inherit;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    max-width: 200px;
-
-    img { 
-      max-width: 200px;
-    }
+    // max-width: 130px;
+    // max-height: 130px;
   }
 `;
 
