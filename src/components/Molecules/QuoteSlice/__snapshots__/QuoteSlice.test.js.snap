@@ -168,6 +168,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+  font-family: 'Anton',Impact,sans-serif;
 }
 
 .c6 {
