@@ -37,16 +37,11 @@ StatsSlice.propTypes = {
   stats: PropTypes.arrayOf(PropTypes.shape(StatPropTypes))
 };
 
-function StatComponent({
-    prefix,
-    value,
-    suffix,
-    description
-}) {
+function StatComponent({ prefix, value, suffix, description }) {
   return (
     <StatContainer>
       <StatValue>
-        <AnimatedString value={value} type="number" />
+        <AnimatedString value={value} />
         {/* {prefix}
         {value}
         {suffix} */}
@@ -58,21 +53,29 @@ function StatComponent({
 
 StatComponent.propTypes = StatPropTypes;
 
+function getValueType(value) {
+  return Number.isNaN(parseInt(value, 10)) ? 'string' : 'number';
+}
+
 function AnimatedString({ value, delay }) {
   const totalDelay = String(value).length * 100;
+
   return (
     <div style={{ display: 'flex' }}>
       {String(value)
         .split('')
-        .map((character, index) => (
-          <AnimatedCharacter
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
-            value={character}
-            type="number"
-            delay={totalDelay - index * 100}
-          />
-        ))}
+        .map((character, index) => {
+          const type = getValueType(character);
+          return (
+            <AnimatedCharacter
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              value={character}
+              type={type}
+              delay={totalDelay - index * 100}
+            />
+          );
+        })}
     </div>
   );
 }
