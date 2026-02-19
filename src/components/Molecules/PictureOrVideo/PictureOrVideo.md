@@ -57,25 +57,3 @@ const imageObj = {
   height="100%"
 />
 ```
-
-## As background (positioned wrapper)
-
-```js
-const defaultData = require('../../../styleguide/data/data').defaultData;
-
-<div style={{ position: 'relative', height: '300px' }}>
-  <PictureOrVideo
-    image={{
-      images: defaultData.heroBannerImage,
-      imageLow: defaultData.heroBannerImage,
-      alt: 'Video poster'
-    }}
-    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4')}
-    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4')}
-    asBackground
-    objectFit="cover"
-    width="100%"
-    height="100%"
-  />
-</div>
-```
