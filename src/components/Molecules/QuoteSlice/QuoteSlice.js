@@ -54,7 +54,7 @@ const QuoteSlice = ({
           </MediaQuery>
         </PictureWrapper>
         <TextWrapper>
-          {heading && <Heading>{heading}</Heading>}
+          {heading && <Heading tag="h2">{heading}</Heading>}
           {body && <Body textAlign="center">{body}</Body>}
           {hasLink && (
             <CTAButton type="button" href={ctaUrl} color={textColour} fullWidth={false}>

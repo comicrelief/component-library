@@ -53,15 +53,13 @@ const TextWrapper = styled.div`
   padding: 2rem;
 `;
 
-const Heading = styled.h2`
+const Heading = styled(Text)`
   font-size: 2rem;
-  font-weight: 400;
   margin-bottom: 0;
   max-width: 500px;
   line-height: 1;
   text-align: center;
   text-wrap: balance;
-  font-family: ${({ theme }) => theme.fontFamilies('Anton')};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     font-size: 2.5rem;
