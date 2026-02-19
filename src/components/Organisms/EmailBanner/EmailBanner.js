@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
+import AmbientVideo from '../../Atoms/AmbientVideo/AmbientVideo';
 import RichText from '../../Atoms/RichText/RichText';
 import Form from './Form/Form';
 
 import {
   BgImage,
+  BgVideo,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -18,6 +20,8 @@ import {
 } from './EmailBanner.style';
 
 const EmailBanner = ({
+  formContext,
+  onSubmit,
   emailWidgetIsTextOnly = false,
   orientation = 'right',
   paddingAbove = '2rem',
@@ -33,8 +37,13 @@ const EmailBanner = ({
   imageL = null,
   imageM = null,
   imageS = null,
-  formContext,
-  onSubmit
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true
 }) => {
   const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
@@ -50,6 +59,25 @@ const EmailBanner = ({
   const shouldRenderTopImage = Boolean((shouldShowImage && !isLargeBreakpoint)
     && topImage && (topImage.images || topImage.image));
 
+  const useVideoTop = Boolean(
+    shouldRenderTopImage
+    && topImage?.images
+    && topImage?.imageLow
+    && videoDesktop
+    && videoMobile
+  );
+  const useVideoDesktop = Boolean(
+    shouldShowDesktopImage
+    && imageL?.images
+    && imageL?.imageLow
+    && videoDesktop
+    && videoMobile
+  );
+  const posterTop = posterDesktop || topImage?.images || topImage?.imageLow;
+  const posterMobileTop = posterMobile || topImage?.imageLow;
+  const posterDesktopBg = posterDesktop || imageL?.images || imageL?.imageLow;
+  const posterMobileDesktopBg = posterMobile || imageL?.imageLow;
+
   const noTitlesAtAll = !title && !bodyCopy;
   const showTitleSection = noTitlesAtAll === false
     && isLargeBreakpoint && emailWidgetIsTextOnly;
@@ -64,7 +92,17 @@ const EmailBanner = ({
         componentBackgroundColour={componentBackgroundColour}
         $emailWidgetIsTextOnly={emailWidgetIsTextOnly}
       >
-        {shouldRenderTopImage ? (
+        {shouldRenderTopImage && (useVideoTop ? (
+          <AmbientVideo
+            src={videoDesktop}
+            srcMobile={videoMobile}
+            poster={posterTop}
+            posterMobile={posterMobileTop}
+            loop={videoLoop}
+            showFullControls={videoShowFullControls}
+            showPlayPause={videoShowPlayPause}
+          />
+        ) : (
           <Picture
             image={topImage.image}
             images={topImage.images}
@@ -75,9 +113,21 @@ const EmailBanner = ({
             alt={topImage.alt || ''}
             key={topImage.imageLow}
           />
-        ) : null}
+        ))}
 
-        {shouldShowDesktopImage ? (
+        {shouldShowDesktopImage && (useVideoDesktop ? (
+          <BgVideo>
+            <AmbientVideo
+              src={videoDesktop}
+              srcMobile={videoMobile}
+              poster={posterDesktopBg}
+              posterMobile={posterMobileDesktopBg}
+              loop={videoLoop}
+              showFullControls={videoShowFullControls}
+              showPlayPause={videoShowPlayPause}
+            />
+          </BgVideo>
+        ) : (
           <BgImage
             image={imageL.image}
             images={imageL.images}
@@ -88,7 +138,7 @@ const EmailBanner = ({
             alt={imageL.alt || ''}
             isBackgroundImage
           />
-        ) : null}
+        ))}
 
         <Wrapper
           orientation={orientation}
@@ -171,6 +221,13 @@ EmailBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   onSubmit: PropTypes.func.isRequired
 };

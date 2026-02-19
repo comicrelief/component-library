@@ -53,6 +53,15 @@ const BgImage = styled(Picture)`
   height: 100%;
 `;
 
+const BgVideo = styled.div`
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+`;
+
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
@@ -224,6 +233,7 @@ const ButtonWrapper = styled.div`
 
 export {
   BgImage,
+  BgVideo,
   Container,
   InnerContainer,
   Error,
