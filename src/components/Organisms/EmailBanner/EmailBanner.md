@@ -120,6 +120,71 @@ const handleSubscribe = (data) => {
 </FormProvider>
 ```
 
+## Image banner with Ambient Video (looping)
+
+When imageL/imageM/imageS have images & imageLow and videoDesktop & videoMobile are provided, EmailBanner uses AmbientVideo instead of Picture.
+
+```js
+import { useForm, FormProvider } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import RichText from '../../Atoms/RichText/RichText';
+import EmailBanner from './EmailBanner';
+import { buildEsuValidationSchema } from '../shared/emailSignup/emailSignupConfig';
+
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
+
+const validationSchema = buildEsuValidationSchema({});
+const formMethods = useForm({
+  mode: 'onBlur',
+  resolver: yupResolver(validationSchema)
+});
+
+const handleSubscribe = (data) => {
+  console.log(data);
+};
+
+<FormProvider {...formMethods}>
+  <EmailBanner
+    pageBackgroundColour="grey_light"
+    paddingAbove="0rem"
+    paddingBelow="2rem"
+    orientation="right"
+    imageL={imageL}
+    imageM={imageM}
+    imageS={imageS}
+    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4')}
+    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4')}
+    videoLoop
+    title="Stay in the know!"
+    bodyCopy={<RichText markup="<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>" />}
+    privacyCopy={<RichText markup='<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>' />}
+    successCopy={<RichText markup="<p>Thanks! Your first email will be with you shortly.</p>" />}
+    ctaText="Sign up"
+    formContext={formMethods}
+    onSubmit={handleSubscribe}
+  />
+</FormProvider>
+```
+
 ## Text-only widget (no image), custom widget background + text colour
 
 ```js
