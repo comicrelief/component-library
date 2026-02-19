@@ -26,10 +26,13 @@ const InnerContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')};
+    padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
+    min-height: 600px;
+    max-height: 750px;
     ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
-      padding-top: 7rem;
-      padding-bottom: 7rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     `}
   }
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
@@ -37,6 +40,8 @@ const InnerContainer = styled.div`
     padding-right: ${spacing('xxl')};
   }
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BgImage = styled(Picture)`
@@ -139,7 +144,6 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    margin-top: ${spacing('md')};
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
