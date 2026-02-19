@@ -20,6 +20,10 @@ import {
 } from './DonateBanner.style';
 
 const DonateBanner = ({
+  cartID,
+  clientID,
+  donateLink,
+  mbshipID,
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
   paddingAbove = '2rem',
@@ -45,11 +49,7 @@ const DonateBanner = ({
   videoLoop = true,
   videoShowFullControls = false,
   videoShowPlayPause = true,
-  data = {},
-  cartID,
-  clientID,
-  donateLink,
-  mbshipID
+  data = {}
 }) => {
   const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
