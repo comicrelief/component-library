@@ -218,7 +218,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -1021,7 +1021,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -1782,7 +1782,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -2443,7 +2443,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
