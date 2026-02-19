@@ -244,24 +244,27 @@ const PrimaryNavItem = (
             <ColumnWrapper key={colIndex}>
               {/* Column 3: Cards if available (desktop only), otherwise links */}
               {colIndex === 2 && !isNotDesktop && group.column3PageCards?.length > 0 ? (
-                group.column3PageCards.map(card => (
-                  <NavCard
-                    key={card.id}
-                    href={prependBaseUrl(card.primaryPageUrlIfExternal || '', devMode)}
-                  >
-                    {card.image?.url && (
+                group.column3PageCards.map(card => {
+                  const thisCardUrl = card?.primaryPageUrlIfExternal || card?.pageSelector.path;
+                  return (
+                    <NavCard
+                      key={card.id}
+                      href={prependBaseUrl(thisCardUrl || '', devMode)}
+                    >
+                      {card.image?.url && (
                       <NavCardImage>
                         <img src={card.image.url} alt={card.image.title || card.pageName} />
                       </NavCardImage>
-                    )}
-                    <NavCardContent>
-                      <NavCardTitle>{card.pageName}</NavCardTitle>
-                      {card.pageDescription && (
-                        <NavCardDescription>{card.pageDescription}</NavCardDescription>
                       )}
-                    </NavCardContent>
-                  </NavCard>
-                ))
+                      <NavCardContent>
+                        <NavCardTitle>{card.pageName}</NavCardTitle>
+                        {card.pageDescription && (
+                        <NavCardDescription>{card.pageDescription}</NavCardDescription>
+                        )}
+                      </NavCardContent>
+                    </NavCard>
+                  );
+                })
               ) : (
                 renderColumnLinks(links, SecondaryNavItem)
               )}
