@@ -208,6 +208,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
   width: 100%;
   box-sizing: border-box;
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c2 {
@@ -391,7 +393,9 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem;
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -447,7 +451,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    margin-top: 1rem;
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
@@ -878,6 +881,8 @@ exports[`Image banner renders correctly 1`] = `
   width: 100%;
   box-sizing: border-box;
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c2 {
@@ -1061,7 +1066,9 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem;
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
   }
 }
 
@@ -1117,7 +1124,6 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    margin-top: 1rem;
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
@@ -1548,6 +1554,8 @@ exports[`Text-only email widget renders correctly 1`] = `
   width: 100%;
   box-sizing: border-box;
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c2 {
@@ -1731,9 +1739,20 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -1789,7 +1808,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    margin-top: 1rem;
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
@@ -2220,6 +2238,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   width: 100%;
   box-sizing: border-box;
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c2 {
@@ -2403,9 +2423,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -2461,7 +2492,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    margin-top: 1rem;
     border-radius: 0.5rem;
     max-width: 461px;
     min-width: 400px;
