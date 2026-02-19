@@ -29,6 +29,7 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   @media ${({ theme }) => theme.allBreakpoints('L')} {
+    height: 724px;
     padding: ${spacing('l')};
     ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
       padding-top: 7.5rem;
