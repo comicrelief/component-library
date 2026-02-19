@@ -61,6 +61,7 @@ const Heading = styled.h2`
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+  font-family: ${({ theme }) => theme.fontFamilies('Anton')};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     font-size: 2.5rem;
