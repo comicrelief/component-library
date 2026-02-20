@@ -40,6 +40,12 @@ const InnerContainer = styled.div`
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
+
+  &:hover button[data-play-pause],
+  &:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    transition-delay: 0s;
+  }
 `;
 
 const Wrapper = styled.div`
