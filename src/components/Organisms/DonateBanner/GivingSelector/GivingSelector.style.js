@@ -6,7 +6,13 @@ import hideVisually from '../../../../theme/shared/hideVisually';
 
 const Switch = styled.span`
   width: 50%;
-  height: 48px;
+  height: 50px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    height: 52px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    height: 40px;
+  }
   ${zIndex('low')};
   display: block;
   position: absolute;
@@ -16,7 +22,7 @@ const Switch = styled.span`
 
 const Wrapper = styled.div`
   display: flex;
-  margin: ${spacing('md')} 0;
+  margin-bottom: ${spacing('m')};
 `;
 
 const MoneyBox = styled.div`
@@ -24,7 +30,6 @@ const MoneyBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: ${spacing('sm')} 0;
   overflow: hidden;
   border-radius: 0.5rem;
   background: ${({ theme }) => theme.color('white')};
@@ -47,7 +52,13 @@ const Label = styled.label`
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   font-weight: bold;
-  min-height: 48px;
+  min-height: 50px;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    min-height: 52px;
+  }
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    min-height: 40px;
+  }
   align-items: center;
   justify-content: center;
   display: flex;
@@ -57,6 +68,10 @@ const Label = styled.label`
   ${zIndex('medium')};
   cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
   color: ${({ active, theme }) => (active === true ? theme.color('white') : theme.color('black'))};
+  background-color: ${({ active, theme }) => (active === true ? theme.color('red') : 'transparent')};
+  &:hover {
+    background-color: ${({ active, theme }) => (active === true ? theme.color('red_dark') : theme.color('grey_medium'))};
+  }
 
   /* All this long winded border CSS below is to ensure that the border
   of the 'selected' giving type is red, rather than a grey line around
@@ -66,12 +81,22 @@ const Label = styled.label`
     border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-radius: 0.5rem 0 0 0.5rem;
+    &:hover {
+      border-left: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+    }
   }
   &:last-of-type {
     border-right: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red') : theme.color('grey'))};
     border-radius: 0 0.5rem 0.5rem 0;
+    &:hover {
+      border-right: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-top: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+      border-bottom: 1px solid ${({ active, theme }) => (active ? theme.color('red_dark') : theme.color('grey'))};
+    }
   }
 
   &:active:focus {
