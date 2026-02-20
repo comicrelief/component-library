@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import Arrow from './arrow.svg';
+import Arrow from './arrow-right.png';
 
 const transitionDuration = 0.2;
 
@@ -313,7 +313,7 @@ const NavMetaIcons = styled.div`
         position: absolute;
         right: 20px;
         top: 50%;
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%);
         content: "";
         width: 20px;
         height: 20px;
