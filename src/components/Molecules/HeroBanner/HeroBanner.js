@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Picture from '../../Atoms/Picture/Picture';
+import PictureOrVideo from '../PictureOrVideo/PictureOrVideo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
@@ -31,6 +31,13 @@ const HeroBanner = ({
   imageSet = null,
   imageLow = null,
   image = null,
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
   // All variants:
   children = null,
   ctaUrl = null,
@@ -98,11 +105,18 @@ const HeroBanner = ({
 
         {(hasImage) && (
           <MediaWrapper imageRight={copyLeft} variant={variant}>
-            <Picture
-              alt={imageAltText}
-              imageLow={imageLow}
+            <PictureOrVideo
               images={imageSet}
+              imageLow={imageLow}
               image={image}
+              alt={imageAltText}
+              videoDesktop={videoDesktop}
+              videoMobile={videoMobile}
+              posterDesktop={posterDesktop}
+              posterMobile={posterMobile}
+              videoLoop={videoLoop}
+              videoShowFullControls={videoShowFullControls}
+              videoShowPlayPause={videoShowPlayPause}
               objectFit="cover"
               width="100%"
               height="100%"
@@ -149,7 +163,14 @@ HeroBanner.propTypes = {
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,
     variants.TEXT_BANNER
-  ])
+  ]),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool
 };
 
 export default HeroBanner;

@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
+import PictureOrVideo from '../../Molecules/PictureOrVideo/PictureOrVideo';
 import Form from './Form/Form';
 import { handleTitles, handleOtherAmountText } from './_utils';
 
 import {
-  BgImage,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -18,6 +17,10 @@ import {
 } from './DonateBanner.style';
 
 const DonateBanner = ({
+  cartID,
+  clientID,
+  donateLink,
+  mbshipID,
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
   paddingAbove = '2rem',
@@ -36,11 +39,14 @@ const DonateBanner = ({
   imageL = null,
   imageM = null,
   imageS = null,
-  data = {},
-  cartID,
-  clientID,
-  donateLink,
-  mbshipID
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
+  data = {}
 }) => {
   const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
@@ -59,9 +65,9 @@ const DonateBanner = ({
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
-  const shouldShowDesktopImage = shouldShowImage
+  const shouldShowDesktopImage = Boolean(shouldShowImage
     && isLargeBreakpoint && imageL
-    && (imageL.images || imageL.image);
+    && (imageL.images || imageL.image));
 
   const shouldShowTopImage = shouldShowImage && !isLargeBreakpoint;
   const topImage = isMedium ? imageM : imageS;
@@ -87,32 +93,25 @@ const DonateBanner = ({
         componentBackgroundColour={componentBackgroundColour}
         $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
       >
-        {shouldRenderTopImage ? (
-          <Picture
-            image={topImage.image}
-            images={topImage.images}
-            imageLow={topImage.imageLow}
+        {(shouldRenderTopImage || shouldShowDesktopImage) && (
+          <PictureOrVideo
+            image={shouldShowDesktopImage ? imageL : topImage}
+            alt={shouldShowDesktopImage ? (imageL?.alt || '') : (topImage?.alt || '')}
+            videoDesktop={videoDesktop}
+            videoMobile={videoMobile}
+            posterDesktop={posterDesktop}
+            posterMobile={posterMobile}
+            videoLoop={videoLoop}
+            videoShowFullControls={videoShowFullControls}
+            videoShowPlayPause={videoShowPlayPause}
+            asBackground={shouldShowDesktopImage}
             objectFit="cover"
             width="100%"
             height="100%"
-            alt={topImage.alt || ''}
-            // Force React to re-render with any updated image details
-            key={topImage.imageLow}
+            isBackgroundImage={shouldShowDesktopImage}
+            key={shouldShowDesktopImage ? imageL.imageLow : topImage.imageLow}
           />
-        ) : null}
-
-        {shouldShowDesktopImage ? (
-          <BgImage
-            image={imageL.image}
-            images={imageL.images}
-            imageLow={imageL.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={imageL.alt || ''}
-            isBackgroundImage
-          />
-        ) : null}
+        )}
 
         <Wrapper
           donateOrientation={donateOrientation}
@@ -204,6 +203,19 @@ DonateBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
+  videoDesktop: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  videoMobile: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   cartID: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,

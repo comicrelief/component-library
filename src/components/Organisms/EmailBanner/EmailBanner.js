@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
+import PictureOrVideo from '../../Molecules/PictureOrVideo/PictureOrVideo';
 import RichText from '../../Atoms/RichText/RichText';
 import Form from './Form/Form';
 
 import {
-  BgImage,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -18,6 +17,8 @@ import {
 } from './EmailBanner.style';
 
 const EmailBanner = ({
+  formContext,
+  onSubmit,
   emailWidgetIsTextOnly = false,
   orientation = 'right',
   paddingAbove = '2rem',
@@ -33,17 +34,22 @@ const EmailBanner = ({
   imageL = null,
   imageM = null,
   imageS = null,
-  formContext,
-  onSubmit
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true
 }) => {
   const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
 
   const shouldShowImage = emailWidgetIsTextOnly === false;
 
-  const shouldShowDesktopImage = shouldShowImage
+  const shouldShowDesktopImage = Boolean(shouldShowImage
     && isLargeBreakpoint && imageL
-    && (imageL.images || imageL.image);
+    && (imageL.images || imageL.image));
 
   const topImage = isMedium ? imageM : imageS;
 
@@ -64,31 +70,25 @@ const EmailBanner = ({
         componentBackgroundColour={componentBackgroundColour}
         $emailWidgetIsTextOnly={emailWidgetIsTextOnly}
       >
-        {shouldRenderTopImage ? (
-          <Picture
-            image={topImage.image}
-            images={topImage.images}
-            imageLow={topImage.imageLow}
+        {(shouldRenderTopImage || shouldShowDesktopImage) && (
+          <PictureOrVideo
+            image={shouldShowDesktopImage ? imageL : topImage}
+            alt={shouldShowDesktopImage ? (imageL?.alt || '') : (topImage?.alt || '')}
+            videoDesktop={videoDesktop}
+            videoMobile={videoMobile}
+            posterDesktop={posterDesktop}
+            posterMobile={posterMobile}
+            videoLoop={videoLoop}
+            videoShowFullControls={videoShowFullControls}
+            videoShowPlayPause={videoShowPlayPause}
+            asBackground={shouldShowDesktopImage}
             objectFit="cover"
             width="100%"
             height="100%"
-            alt={topImage.alt || ''}
-            key={topImage.imageLow}
+            isBackgroundImage={shouldShowDesktopImage}
+            key={shouldShowDesktopImage ? imageL.imageLow : topImage.imageLow}
           />
-        ) : null}
-
-        {shouldShowDesktopImage ? (
-          <BgImage
-            image={imageL.image}
-            images={imageL.images}
-            imageLow={imageL.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={imageL.alt || ''}
-            isBackgroundImage
-          />
-        ) : null}
+        )}
 
         <Wrapper
           orientation={orientation}
@@ -171,6 +171,19 @@ EmailBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
+  videoDesktop: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  videoMobile: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool,
   formContext: PropTypes.shape().isRequired,
   onSubmit: PropTypes.func.isRequired
 };

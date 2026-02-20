@@ -200,5 +200,45 @@ import variants from './_variants';
     </Text>
   </HeroBanner>
 
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Video poster"
+    variant={variants.FULL_HEIGHT}
+    copyLeft
+    paddingTop="2rem"
+    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+    videoLoop
+  >
+    <Text tag="h1">
+      Full Height with Ambient Video (looping)
+    </Text>
+    <Text tag="p">
+      When imageSet, imageLow, videoDesktop and videoMobile are all provided, the HeroBanner uses AmbientVideo instead of Picture. This example loops continuously.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Video poster"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+    videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+    videoLoop={false}
+  >
+    <Text tag="h1">
+      Full Height with Ambient Video (no loop)
+    </Text>
+    <Text tag="p">
+      Same video setup but with videoLoop=false. The video plays once then shows the poster image.
+    </Text>
+  </HeroBanner>
+
 </div>
 ```

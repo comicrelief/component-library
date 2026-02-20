@@ -63,6 +63,12 @@ const OuterWrapper = styled.div`
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
     `)}
+
+  &:hover button[data-play-pause],
+  &:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    transition-delay: 0s;
+  }
 `;
 
 const MediaWrapper = styled.div`
