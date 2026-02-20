@@ -183,6 +183,13 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
     min-height: 600px;
     max-height: 750px;
   }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 
 @media (min-width:1024px) {
@@ -504,6 +511,13 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
     height: auto;
     min-height: 450px;
   }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 
 @media (min-width:1024px) {
@@ -813,6 +827,13 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+  }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
   }
 }
 

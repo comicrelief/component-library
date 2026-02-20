@@ -66,7 +66,7 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   transition: opacity 0.2s ease 1s;
 }
 
-.c6[data-icon='play'] .c7 {
+.c6[data-play-pause='play'] .c7 {
   -webkit-transform: translateX(2px);
   -ms-transform: translateX(2px);
   transform: translateX(2px);
@@ -127,7 +127,7 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   <button
     aria-label="Pause"
     className="c5 c6"
-    data-icon="pause"
+    data-play-pause="pause"
     onClick={[Function]}
     type="button"
   >
