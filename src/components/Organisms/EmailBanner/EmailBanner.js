@@ -47,9 +47,9 @@ const EmailBanner = ({
 
   const shouldShowImage = emailWidgetIsTextOnly === false;
 
-  const shouldShowDesktopImage = shouldShowImage
+  const shouldShowDesktopImage = Boolean(shouldShowImage
     && isLargeBreakpoint && imageL
-    && (imageL.images || imageL.image);
+    && (imageL.images || imageL.image));
 
   const topImage = isMedium ? imageM : imageS;
 
@@ -171,8 +171,14 @@ EmailBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
-  videoDesktop: PropTypes.string,
-  videoMobile: PropTypes.string,
+  videoDesktop: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  videoMobile: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
   posterDesktop: PropTypes.string,
   posterMobile: PropTypes.string,
   videoLoop: PropTypes.bool,

@@ -65,9 +65,9 @@ const DonateBanner = ({
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
-  const shouldShowDesktopImage = shouldShowImage
+  const shouldShowDesktopImage = Boolean(shouldShowImage
     && isLargeBreakpoint && imageL
-    && (imageL.images || imageL.image);
+    && (imageL.images || imageL.image));
 
   const shouldShowTopImage = shouldShowImage && !isLargeBreakpoint;
   const topImage = isMedium ? imageM : imageS;
@@ -203,8 +203,14 @@ DonateBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
-  videoDesktop: PropTypes.string,
-  videoMobile: PropTypes.string,
+  videoDesktop: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  videoMobile: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
   posterDesktop: PropTypes.string,
   posterMobile: PropTypes.string,
   videoLoop: PropTypes.bool,
