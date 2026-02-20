@@ -20,7 +20,7 @@ import {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend,
+  BannerTitleText,
   PrimaryTitleText,
   SecondaryTitleText
 } from '../DonateBanner.style';
@@ -220,7 +220,7 @@ const Signup = ({
       >
         <OuterFieldset>
           {shouldShowTitleInForm ? (
-            <Legend>
+            <BannerTitleText>
               <PrimaryTitleText tag={titleTag} $donateWidgetIsTextOnly={donateWidgetIsTextOnly}>
                 {thisTitle}
               </PrimaryTitleText>
@@ -233,7 +233,7 @@ const Signup = ({
                   {thisSubtitle}
                 </SecondaryTitleText>
               )}
-            </Legend>
+            </BannerTitleText>
           ) : null}
           {showGivingSelector && (
             <GivingSelector
