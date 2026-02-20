@@ -259,18 +259,18 @@ const HeroBannerLink = styled.a`
 
 const LogoImageWrapper = styled.div`
   position: absolute;
-  max-width: 100px;
-  max-height: 100px;
   margin: 1rem;
+  width: 100px;
+  height: 100px;
 
   // Top-right by design; S and M images will be picked to suit this:
   top: 0;
   right: 0;
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 1.5rem;
-    max-width: 130px;
-    max-height: 130px;
+    width: 130px;
+    height: 130px;
 
     ${({ imageRight }) => (imageRight
     ? css` right: 0;`
@@ -280,12 +280,17 @@ const LogoImageWrapper = styled.div`
 `;
 
 const LogoImage = styled(Picture)`
-    // max-width: inherit;
-    // max-height: inherit;
+  width: 100%;
+  height: 100%;
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    // max-width: 130px;
-    // max-height: 130px;
+  img {
+    width: inherit;
+    height: inherit;
+    object-position: top right;
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      ${({ imageRight }) => (!imageRight && css`object-position: top left;`)};
+    }
   }
 `;
 

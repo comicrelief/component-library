@@ -281,6 +281,26 @@ import variants from './_variants';
     </Text>
   </HeroBanner>
 
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={true}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageTall}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right, w/Logo (Right on L+)
+    </Text>
+    <Text tag="p">
+       TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
 
 </div>
 ```

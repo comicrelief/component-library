@@ -130,6 +130,7 @@ const HeroBanner = ({
         {(logoImage) && (
         <LogoImageWrapper imageRight={copyLeft}>
           <LogoImage
+            imageRight={copyLeft}
             alt={logoImageAltText}
             image={logoImage}
             objectFit="contain"
