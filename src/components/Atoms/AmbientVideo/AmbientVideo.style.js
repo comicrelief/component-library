@@ -80,7 +80,7 @@ const PlayPauseButton = styled.button`
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
-  &[data-icon='play'] ${PlayPauseIcon} {
+  &[data-play-pause='play'] ${PlayPauseIcon} {
     transform: translateX(2px);
   }
 

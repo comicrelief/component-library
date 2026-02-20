@@ -94,7 +94,7 @@ const AmbientVideo = ({
         <ReducedMotionFallback>Video playback not supported</ReducedMotionFallback>
       )}
       {showPlayPause && (
-        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-icon={isPlaying ? 'pause' : 'play'}>
+        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-play-pause={isPlaying ? 'pause' : 'play'}>
           <PlayPauseIcon $icon={normaliseSrc(isPlaying ? PauseIcon : PlayIcon)} aria-hidden />
         </PlayPauseButton>
       )}
