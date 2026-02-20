@@ -261,13 +261,17 @@
                     "id": "9d038936-e041-5b97-9785-352d2c3a6def",
                     "pageName": "Sign up for more stories",
                     "pageDescription": "Sign up to recieve our stories and get brand new stories delivered to your inbox",
-                    "primaryPageUrlIfExternal": "https://www.comicrelief.com/404/",
+                    "primaryPageUrlIfExternal": null,
                     "image": {
                       "title": "grey small",
                       "url": "https://images.ctfassets.net/zsfivwzfgl3t/7jKN7DijPQ1uMqGZ8GgOTR/59ca9b3e9d576358041fbec956122337/Image_Placeholder.png",
                       "id": "9ce427e6-90d5-58b0-8cec-13ecaa8b1095"
                     },
-                    "pageSelector": null
+                    "pageSelector": {
+                      "id": "3e6ab1e3-bd83-5205-a984-283aebac3db0",
+                      "path": "newsletter-sign-up",
+                      "title": "Sign up to our newsletter"
+                    }
                   }
                 ]
               },

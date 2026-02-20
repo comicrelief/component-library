@@ -29,17 +29,18 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')};
+    padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
+    min-height: 600px;
+    max-height: 750px;
     ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
-      padding-top: 7.5rem;
-      padding-bottom: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     `}
   }
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    padding-left: ${spacing('xxl')};
-    padding-right: ${spacing('xxl')};
-  }
   max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BgImage = styled(Picture)`
@@ -57,6 +58,9 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
 
   ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
     padding: 0;
@@ -148,7 +152,6 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    margin-top: ${spacing('md')};
     border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
@@ -160,11 +163,11 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: ${spacing('m')};
+  padding: ${spacing('l')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 0 ${spacing('l')} ${spacing('l')};
+    padding: ${spacing('l')};
   }
 
   input[type='submit'] {
@@ -172,9 +175,9 @@ const OuterFieldset = styled.fieldset`
   }
 `;
 
-const Legend = styled.legend`
+const BannerTitleText = styled.div`
   margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
+  padding: ${spacing('sm')} 0 ${spacing('md')};
   display: block;
   width: 100%;
 `;
@@ -182,7 +185,8 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-weight: 700;
+  font-weight: ${({ $donateWidgetIsTextOnly }) => ($donateWidgetIsTextOnly ? 400 : 700)};
+  margin: 0;
 `;
 
 const SecondaryTitleText = styled(Text)`
@@ -200,11 +204,10 @@ const MoneyBuys = styled.div`
   margin-bottom: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
-    margin-top: ${spacing('m')};
   }
   label {
     flex: 0 0 31%;
-    margin-bottom: ${spacing('sm')};
+    margin-bottom: ${spacing('md')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-bottom: 0;
     }
@@ -314,7 +317,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend,
+  BannerTitleText,
   PrimaryTitleText,
   SecondaryTitleText
 };
