@@ -3,6 +3,7 @@ import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
@@ -256,8 +257,45 @@ const HeroBannerLink = styled.a`
   }
 `;
 
+const LogoImageWrapper = styled.div`
+  position: absolute;
+  margin: 1rem;
+  width: 100px;
+  height: 100px;
+
+  // Top-right by design; S and M images will be picked to suit this:
+  top: 0;
+  right: 0;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    margin: 1.5rem;
+    width: 130px;
+    height: 130px;
+
+    ${({ imageRight }) => (imageRight
+    ? css` right: 0;`
+    : css` left: 0;`
+  )};   
+  }
+`;
+
+const LogoImage = styled(Picture)`
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: inherit;
+    height: inherit;
+    object-position: top right;
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      ${({ imageRight }) => (!imageRight && css`object-position: top left;`)};
+    }
+  }
+`;
+
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 };
