@@ -415,7 +415,6 @@ const NavMetaIcons = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
   }
-border: 1px solid red;
 `;
 
 const StyledText = styled(Text)`
