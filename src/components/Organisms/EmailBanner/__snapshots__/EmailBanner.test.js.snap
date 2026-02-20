@@ -252,7 +252,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -932,7 +932,7 @@ exports[`Image banner renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -1612,7 +1612,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }
@@ -2303,7 +2303,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c5 {
   color: #000000;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0;
   border: none;
 }

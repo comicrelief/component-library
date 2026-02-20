@@ -159,7 +159,7 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: ${spacing('m')};
+  padding: ${spacing('l')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
