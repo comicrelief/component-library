@@ -1,0 +1,2715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image banner left orientation renders correctly 1`] = `
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c13 {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #000000;
+}
+
+.c15 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c17 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c9 {
+  text-align: left;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+  background-color: #F4F3F5;
+  width: 100%;
+  padding: 2rem;
+}
+
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c2 {
+  position: relative;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c4 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c5 {
+  color: #000000;
+  padding: 1.5rem;
+  margin: 0;
+  border: none;
+}
+
+.c7 {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.c12 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.c8 {
+  padding-bottom: 1rem;
+  color: #000000;
+}
+
+.c22 {
+  padding: 1rem 0.5rem 0;
+  color: #000000;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c19 {
+  margin: 0.5rem 0;
+}
+
+.c19 button {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1152px;
+    gap: 2rem;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 button {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      aria-live="polite"
+      className="c2"
+      orientation="left"
+    >
+      <div
+        className="c3"
+        orientation="left"
+      >
+        <form
+          className="c4"
+          noValidate={true}
+          onSubmit={[Function]}
+          orientation="left"
+        >
+          <fieldset
+            className="c5"
+          >
+            <span
+              className="c6 c7"
+            >
+              Stay in the know!
+            </span>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c10"
+            >
+              <div
+                className="c11"
+              >
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="first-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "First name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="first-name"
+                          name="firstName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your first name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="last-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Last name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="last-name"
+                          name="lastName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your last name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+              </div>
+              <div
+                className="c12"
+              >
+                <label
+                  className="c13"
+                  htmlFor="email"
+                >
+                  <span
+                    className="c14 c15"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Email address",
+                      }
+                    }
+                  />
+                  <div
+                    className="c16"
+                  >
+                    
+                    <div
+                      className="c17"
+                    >
+                      <input
+                        aria-required={true}
+                        className="c18"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="example@youremail.com"
+                        required={false}
+                        type="email"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </label>
+              </div>
+            </div>
+            <div
+              className="c19"
+            >
+              <button
+                className="c20 c21"
+                color="red"
+                data-test="subscribe-button"
+                disabled={false}
+                type="submit"
+              >
+                Sign up
+                <div
+                  className=""
+                />
+              </button>
+            </div>
+            <div
+              className="c22"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Image banner renders correctly 1`] = `
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c13 {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #000000;
+}
+
+.c15 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c17 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c9 {
+  text-align: left;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  margin: 0rem 0 2rem 0;
+  background-color: #F4F3F5;
+  width: 100%;
+  padding: 2rem;
+}
+
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c2 {
+  position: relative;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c4 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c5 {
+  color: #000000;
+  padding: 1.5rem;
+  margin: 0;
+  border: none;
+}
+
+.c7 {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.c12 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.c8 {
+  padding-bottom: 1rem;
+  color: #000000;
+}
+
+.c22 {
+  padding: 1rem 0.5rem 0;
+  color: #000000;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c19 {
+  margin: 0.5rem 0;
+}
+
+.c19 button {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1152px;
+    gap: 2rem;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 button {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      aria-live="polite"
+      className="c2"
+      orientation="right"
+    >
+      <div
+        className="c3"
+        orientation="right"
+      >
+        <form
+          className="c4"
+          noValidate={true}
+          onSubmit={[Function]}
+          orientation="right"
+        >
+          <fieldset
+            className="c5"
+          >
+            <span
+              className="c6 c7"
+            >
+              Stay in the know!
+            </span>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c10"
+            >
+              <div
+                className="c11"
+              >
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="first-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "First name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="first-name"
+                          name="firstName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your first name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="last-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Last name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="last-name"
+                          name="lastName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your last name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+              </div>
+              <div
+                className="c12"
+              >
+                <label
+                  className="c13"
+                  htmlFor="email"
+                >
+                  <span
+                    className="c14 c15"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Email address",
+                      }
+                    }
+                  />
+                  <div
+                    className="c16"
+                  >
+                    
+                    <div
+                      className="c17"
+                    >
+                      <input
+                        aria-required={true}
+                        className="c18"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="example@youremail.com"
+                        required={false}
+                        type="email"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </label>
+              </div>
+            </div>
+            <div
+              className="c19"
+            >
+              <button
+                className="c20 c21"
+                color="red"
+                data-test="subscribe-button"
+                disabled={false}
+                type="submit"
+              >
+                Sign up
+                <div
+                  className=""
+                />
+              </button>
+            </div>
+            <div
+              className="c22"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Text-only email widget renders correctly 1`] = `
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c13 {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #000000;
+}
+
+.c15 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c17 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c9 {
+  text-align: left;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+  background-color: #F4F3F5;
+  width: 100%;
+  padding: 2rem;
+}
+
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c2 {
+  position: relative;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c4 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c5 {
+  color: #000000;
+  padding: 1.5rem;
+  margin: 0;
+  border: none;
+}
+
+.c7 {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.c12 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.c8 {
+  padding-bottom: 1rem;
+  color: #000000;
+}
+
+.c22 {
+  padding: 1rem 0.5rem 0;
+  color: #000000;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c19 {
+  margin: 0.5rem 0;
+}
+
+.c19 button {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1152px;
+    gap: 2rem;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 button {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      aria-live="polite"
+      className="c2"
+      orientation="right"
+    >
+      <div
+        className="c3"
+        orientation="right"
+      >
+        <form
+          className="c4"
+          noValidate={true}
+          onSubmit={[Function]}
+          orientation="right"
+        >
+          <fieldset
+            className="c5"
+          >
+            <span
+              className="c6 c7"
+            >
+              Stay in the know!
+            </span>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c10"
+            >
+              <div
+                className="c11"
+              >
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="first-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "First name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="first-name"
+                          name="firstName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your first name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="last-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Last name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="last-name"
+                          name="lastName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your last name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+              </div>
+              <div
+                className="c12"
+              >
+                <label
+                  className="c13"
+                  htmlFor="email"
+                >
+                  <span
+                    className="c14 c15"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Email address",
+                      }
+                    }
+                  />
+                  <div
+                    className="c16"
+                  >
+                    
+                    <div
+                      className="c17"
+                    >
+                      <input
+                        aria-required={true}
+                        className="c18"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="example@youremail.com"
+                        required={false}
+                        type="email"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </label>
+              </div>
+            </div>
+            <div
+              className="c19"
+            >
+              <button
+                className="c20 c21"
+                color="red"
+                data-test="subscribe-button"
+                disabled={false}
+                type="submit"
+              >
+                Sign up
+                <div
+                  className=""
+                />
+              </button>
+            </div>
+            <div
+              className="c22"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Text-only email widget with copyColor renders correctly 1`] = `
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c20 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c13 {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #000000;
+}
+
+.c15 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+.c17 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 1rem 2.4rem 1rem 1.5rem;
+  background-color: #F4F3F5;
+  border: 1px solid;
+  border-color: #969598;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.c18:focus {
+  border: 1px solid #666;
+}
+
+.c9 {
+  text-align: left;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+  background-color: #A20C51;
+  width: 100%;
+  padding: 2rem;
+}
+
+.c1 {
+  position: relative;
+  background-color: #2C0230;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c2 {
+  position: relative;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c4 {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c4 input {
+  max-width: 100%;
+  margin: 0;
+}
+
+.c5 {
+  color: #000000;
+  padding: 1.5rem;
+  margin: 0;
+  border: none;
+}
+
+.c7 {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.c12 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.c8 {
+  padding-bottom: 1rem;
+  color: #000000;
+}
+
+.c22 {
+  padding: 1rem 0.5rem 0;
+  color: #000000;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c19 {
+  margin: 0.5rem 0;
+}
+
+.c19 button {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c20 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding: 2rem clamp(2rem,3%,8rem);
+    min-height: 600px;
+    max-height: 750px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1440px) {
+  .c1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1152px;
+    gap: 2rem;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    border-radius: 0.5rem;
+    max-width: 461px;
+    min-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c19 button {
+    padding: 1rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      aria-live="polite"
+      className="c2"
+      orientation="right"
+    >
+      <div
+        className="c3"
+        orientation="right"
+      >
+        <form
+          className="c4"
+          noValidate={true}
+          onSubmit={[Function]}
+          orientation="right"
+        >
+          <fieldset
+            className="c5"
+          >
+            <span
+              className="c6 c7"
+            >
+              Stay in the know!
+            </span>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c10"
+            >
+              <div
+                className="c11"
+              >
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="first-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "First name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="first-name"
+                          name="firstName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your first name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+                <div
+                  className="c12"
+                >
+                  <label
+                    className="c13"
+                    htmlFor="last-name"
+                  >
+                    <span
+                      className="c14 c15"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Last name",
+                        }
+                      }
+                    />
+                    <div
+                      className="c16"
+                    >
+                      
+                      <div
+                        className="c17"
+                      >
+                        <input
+                          aria-required={true}
+                          className="c18"
+                          id="last-name"
+                          name="lastName"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Enter your last name"
+                          required={false}
+                          type="text"
+                        />
+                        
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+              </div>
+              <div
+                className="c12"
+              >
+                <label
+                  className="c13"
+                  htmlFor="email"
+                >
+                  <span
+                    className="c14 c15"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Email address",
+                      }
+                    }
+                  />
+                  <div
+                    className="c16"
+                  >
+                    
+                    <div
+                      className="c17"
+                    >
+                      <input
+                        aria-required={true}
+                        className="c18"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="example@youremail.com"
+                        required={false}
+                        type="email"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </label>
+              </div>
+            </div>
+            <div
+              className="c19"
+            >
+              <button
+                className="c20 c21"
+                color="red"
+                data-test="subscribe-button"
+                disabled={false}
+                type="submit"
+              >
+                Sign up
+                <div
+                  className=""
+                />
+              </button>
+            </div>
+            <div
+              className="c22"
+            >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
