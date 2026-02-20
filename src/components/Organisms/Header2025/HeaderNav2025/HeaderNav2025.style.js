@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Link from '../../../Atoms/Link/Link';
 import hideVisually from '../../../../theme/shared/hideVisually';
 import zIndex from '../../../../theme/shared/zIndex';
-import Arrow from '../../Header2026/Navs/arrow.svg';
+import Arrow from './arrow.svg';
 import Text from '../../../Atoms/Text/Text';
 
 const transitionDuration = 0.2;
