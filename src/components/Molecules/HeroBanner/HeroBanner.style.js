@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import Text from '../../Atoms/Text/Text';
