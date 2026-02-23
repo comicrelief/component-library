@@ -66,8 +66,6 @@ function AnimatedText({ value, delay }) {
     };
   });
 
-  console.log(characters);
-
   return (
     <div style={{ display: 'flex' }}>
       {characters
@@ -95,6 +93,8 @@ function AnimatedString({ value, delay }) {
     const transform = `translateY(-50%)`;
     digitRef.current?.style.setProperty('transform', transform);
   }, [value]);
+
+  // TODO add more characters?
 
   return (
     <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -139,11 +139,6 @@ function AnimatedNumber({ value, delay }) {
     </div>
   );
 }
-
-export const ValueTypes = {
-  String: 'string',
-  Number: 'number'
-};
 
 AnimatedNumber.propTypes = {
   value: PropTypes.number.isRequired,
