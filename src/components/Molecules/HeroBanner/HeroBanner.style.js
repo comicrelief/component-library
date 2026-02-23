@@ -188,8 +188,8 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding: 0.5rem 2.5rem 0 0;
-  margin-top: 1.25rem;
+  padding-right: 2.5rem;
+  margin-top: 2rem;
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
     span {
