@@ -10,9 +10,7 @@
 
 ```js
 <StatsSlice stats={[{
-    prefix: "£",
     value: 1234567890,
-    suffix: "bn",
     description: "We raised a lot of cash"
 }]}  />
 ```
@@ -21,20 +19,15 @@
 
 ```js
 <StatsSlice stats={[{
-    prefix: "£",
-    value: 1234.56,
-    suffix: "bn",
+    value: "£1234.56",
     description: "We raised a lot of cash"
 },
 {
-    prefix: "over ",
-    value: 456,
-    suffix: "bn",
+    value: "456 people",
     description: "We raised a lot of cash"
 },
 {
-    value: 800,
-    suffix: " people",
+    value: "over $800bn",
     description: "We raised a lot of cash"
 }]}  />
 ```
