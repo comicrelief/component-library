@@ -69,6 +69,7 @@ export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
+export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
 
 /* Organisms */
 export {
@@ -77,6 +78,7 @@ export {
   ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
+export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export {
   MarketingPreferencesDS,
