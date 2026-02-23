@@ -134,9 +134,8 @@ const CopyOuterWrapper = styled.div`
 
 const Copy = styled.div`
   width: 100%;
-  ${zIndex('low')};
   border-radius: 1rem;
-  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
+  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 2rem' : '2rem')};
   color: ${({ theme, copyColour }) => theme.color(copyColour)};
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
 
@@ -147,7 +146,7 @@ const Copy = styled.div`
 
   ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
-      padding: 2rem 2rem 1.75rem;
+      padding: 2rem;
     }
   `)};
 
@@ -188,10 +187,11 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding-right: 2.5rem;
   margin-top: 2rem;
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
+    padding-right: 2.5rem;
+    
     span {
       font-weight: bold;
       color: ${({ theme }) => theme.color('red')};
