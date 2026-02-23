@@ -62,7 +62,6 @@ const EmailBanner = ({
     >
       <InnerContainer
         componentBackgroundColour={componentBackgroundColour}
-        $emailWidgetIsTextOnly={emailWidgetIsTextOnly}
       >
         {shouldRenderTopImage ? (
           <Picture

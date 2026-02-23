@@ -27,13 +27,10 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
-    min-height: 600px;
-    max-height: 750px;
-    ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    `}
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     padding-left: ${spacing('xxl')};
