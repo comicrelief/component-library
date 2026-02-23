@@ -260,17 +260,18 @@ const HeroBannerLink = styled.a`
 const LogoImageWrapper = styled.div`
   position: absolute;
   margin: 1rem;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 80px;
 
-  // Top-right by design; S and M images will be picked to suit this:
+  // Logo aligned top-right by design; the images for these
+  // S and M breakpoints will be picked to suit this:
   top: 0;
   right: 0;
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     margin: 1.5rem;
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 100px;
 
     ${({ imageRight }) => (imageRight
     ? css` right: 0;`
