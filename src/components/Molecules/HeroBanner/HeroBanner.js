@@ -127,7 +127,7 @@ const HeroBanner = ({
           </CopyInnerWrapper>
         </CopyOuterWrapper>
 
-        {(logoImage) && (
+        {(logoImage && variant !== variants.TEXT_BANNER) && (
         <LogoImageWrapper imageRight={copyLeft}>
           <LogoImage
             imageRight={copyLeft}
