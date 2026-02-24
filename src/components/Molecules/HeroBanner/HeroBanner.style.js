@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
+
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 
@@ -136,7 +138,7 @@ const Copy = styled.div`
   border-radius: 1rem;
   padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 2rem' : '2rem')};
   color: ${({ theme, copyColour }) => theme.color(copyColour)};
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
+  ${defaultBoxShadow()}
 
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
@@ -227,12 +229,12 @@ const HeroBannerLink = styled.a`
 
   > div {
     transition: box-shadow 0.35s;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
+    ${defaultBoxShadow()}
   }
 
   &:hover {
     > div {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1.5rem;
+      ${defaultBoxShadow(true)}
     }
   }
 
