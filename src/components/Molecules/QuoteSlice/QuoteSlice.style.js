@@ -54,18 +54,18 @@ const TextWrapper = styled.div`
 `;
 
 const Heading = styled(Text)`
-  font-size: 2rem;
   margin-bottom: 0;
-  max-width: 500px;
+  max-width: 40rem;
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+  font-size: clamp(1.5rem, calc(var(--ratio) * 3rem), 3rem);
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, calc(var(--ratio) * 3.5rem), 3.5rem);
   }
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-size: 3rem;
+    font-size: clamp(2rem, calc(var(--ratio) * 4rem), 4rem);
   }
 `;
 
