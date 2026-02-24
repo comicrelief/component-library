@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import variants from './_variants';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
-
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 

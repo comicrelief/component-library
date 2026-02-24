@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 
 /**
  * Reusable defaultBoxShadow snippet
- * @param {boolean} hovered - switch out the opacity value
+ * @param {boolean} hovered - switch out the opacity value, typically used
+ * for hover/active states, but can just be used for a more exaggerated shadow.
  *
- * As markup varies from component to component, it made more
- * sense to only apply the CSS rules here, and build
- * context-specific selectors around the usage.
+ * As markup varies from component to component, it made sense to apply just
+ * the CSS rules here, and build context-specific selectors around the usage.
  *
  * @returns {css} template literal
  */
