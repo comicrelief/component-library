@@ -219,7 +219,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
@@ -329,7 +329,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   text-decoration: none;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -353,7 +353,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   transition: left 0.15s ease-out;
   background-color: #2042AD;
   left: 2px;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c7 {
@@ -1044,7 +1044,7 @@ exports[`Monthly donation renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
@@ -1158,7 +1158,7 @@ exports[`Monthly donation renders correctly 1`] = `
   text-decoration: none;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1182,7 +1182,7 @@ exports[`Monthly donation renders correctly 1`] = `
   transition: left 0.15s ease-out;
   background-color: #2042AD;
   left: 2px;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c7 {
@@ -1802,7 +1802,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   height: auto;
 }
 
@@ -1813,7 +1813,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c13 input:active:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c19 {
@@ -1828,10 +1828,10 @@ exports[`Single donation renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   height: auto;
   background-color: #2042AD;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   color: #FFFFFF;
 }
 
@@ -1842,11 +1842,11 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c19 input:active:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c19 input:focus {
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c0 {
@@ -1907,7 +1907,7 @@ exports[`Single donation renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
@@ -2048,7 +2048,7 @@ exports[`Single donation renders correctly 1`] = `
   text-decoration: none;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2718,7 +2718,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
@@ -2828,7 +2828,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   text-decoration: none;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

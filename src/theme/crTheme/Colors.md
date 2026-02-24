@@ -2,6 +2,7 @@
 import Card from '../../components/Molecules/Card/Card';
 import Text from '../../components/Atoms/Text/Text';
 import styled from 'styled-components';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Grid = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ const Item = styled.div`
     width: 160px;
     height: 160px;
     border-radius: 0.5rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    ${defaultBoxShadow()}
     justify-content: flex-end;
   }
 `;

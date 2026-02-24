@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 
 import Input from '../../../Atoms/Input/Input';
 import spacing from '../../../../theme/shared/spacing';
+import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 
 const MoneyBuyButton = styled(Input)`
   display: block;
@@ -16,7 +17,7 @@ const MoneyBuyButton = styled(Input)`
     font-weight: normal;
     border-radius: 0.5rem;
     padding: ${spacing('s')};
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    ${defaultBoxShadow()}
     height: auto;
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       font-size: ${({ theme }) => theme.fontSize('xl')};
@@ -28,16 +29,16 @@ const MoneyBuyButton = styled(Input)`
       box-shadow: inset 0 0 0 4px ${({ theme }) => theme.color('blue_donate')};
     }
     &:active:focus {
-      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+      ${defaultBoxShadow(true)}
     }
 
     ${({ isSelected }) => isSelected
       && css`
         background-color: ${({ theme }) => theme.color('blue_donate')};
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+        ${defaultBoxShadow(true)}
         color: ${({ theme }) => theme.color('white')};
         &:focus {
-          box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+          ${defaultBoxShadow(true)}
         }
       `}
   }

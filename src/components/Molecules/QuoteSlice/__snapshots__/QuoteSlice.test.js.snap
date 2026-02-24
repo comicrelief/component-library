@@ -140,7 +140,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   max-width: 1500px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c2 {
@@ -345,7 +345,7 @@ exports[`renders an empty Quote Slice with no options set 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   max-width: 1500px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c2 {
