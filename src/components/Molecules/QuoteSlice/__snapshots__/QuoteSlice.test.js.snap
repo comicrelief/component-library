@@ -183,6 +183,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+  --ratio: 1;
   font-size: clamp(1.5rem,calc(var(--ratio) * 3rem),3rem);
 }
 
@@ -281,11 +282,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
     >
       <h2
         className="c4 c5"
-        style={
-          Object {
-            "--ratio": 1,
-          }
-        }
       >
         Heading
       </h2>
