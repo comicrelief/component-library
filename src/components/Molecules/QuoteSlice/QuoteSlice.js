@@ -35,7 +35,7 @@ const QuoteSlice = ({
   // - shorter quotes, up to 100 characters, will be full size
   // - longer quotes, over 500 characters, will be at the smallest size
   // - mid-length quotes, between 100 and 500 characters, will scale down proportionally
-  const minCharacterCount = 100;
+  const minCharacterCount = 30;
   const maxCharacterCount = 500;
   const characterCount = heading?.length;
 

@@ -7,9 +7,6 @@ const OuterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 75vh;
-  min-height: 600px;
-  max-height: 750px;
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
   background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
   color: ${({ theme, textColour }) => theme.color(textColour)};
@@ -26,8 +23,12 @@ const InnerWrapper = styled.div`
   justify-content: center;
   align-items: stretch;
   flex: 1 1 auto;
+  height: 75vh;
+  min-height: 600px;
+  max-height: 750px;
   max-width: 1500px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: ${spacing('md')};
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1rem;
 `;
 
 const PictureWrapper = styled.div`
@@ -37,7 +38,7 @@ const PictureWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: ${spacing('md')};
-  background: ${({ theme }) => theme.color('grey_2')};
+  // background: ${({ theme }) => theme.color('grey_2')};
   overflow: hidden;
   z-index: 1;
 `;
@@ -66,7 +67,7 @@ const Heading = styled(Text)`
     font-size: clamp(2rem, calc(var(--ratio) * 3.5rem), 3.5rem);
   }
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-size: clamp(2rem, calc(var(--ratio) * 4rem), 4rem);
+    font-size: clamp(2rem, calc(var(--ratio) * 6rem), 6rem);
   }
 `;
 

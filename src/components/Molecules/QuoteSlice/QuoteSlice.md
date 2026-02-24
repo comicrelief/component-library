@@ -13,7 +13,7 @@
 ```js
 import { defaultData } from '../../../styleguide/data/data';
 <QuoteSlice
-    heading="Up to 100 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+    heading="Up to 30 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
     body="Body text"
     imageS={defaultData.pictures.small}
     imageM={defaultData.pictures.medium}
@@ -28,7 +28,7 @@ Longer heading text should automatically use a smaller font size for a better fi
 ```js
 import { defaultData } from '../../../styleguide/data/data';
 <QuoteSlice
-    heading="Mid-length quotes over 100 characters will slowly scale down. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    heading="Mid-length quotes over 30 characters will slowly scale down. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     body="Body text"
     imageS={defaultData.pictures.small}
     imageM={defaultData.pictures.medium}
