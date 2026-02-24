@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const OuterWrapper = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const InnerWrapper = styled.div`
   max-height: 750px;
   max-width: 1500px;
   border-radius: ${spacing('md')};
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1rem;
+  ${defaultBoxShadow()}
 `;
 
 const PictureWrapper = styled.div`

@@ -102,7 +102,7 @@ exports[`renders Column view correctly 1`] = `
 
 .c2 img {
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -120,7 +120,7 @@ exports[`renders Column view correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background: #FFFFFF;
   margin: 0 1.5rem 0 0;
   z-index: 1;
@@ -384,7 +384,7 @@ exports[`renders correctly 1`] = `
 
 .c2 img {
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -402,7 +402,7 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background: #FFFFFF;
   margin: 0 1.5rem 0 0;
   z-index: 1;

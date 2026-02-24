@@ -9,6 +9,7 @@ import spacing from '../../../theme/shared/spacing';
 import SR from '../../Atoms/Logo/assets/sr-logo.svg';
 import CR from '../../Atoms/Logo/assets/cr-logo.svg';
 import RND from './assets/RND.png';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 /**
  * Article Teaser
@@ -19,10 +20,10 @@ const Wrapper = styled.article`
   display: flex;
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   transition: all 0.2s;
   &:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  ${defaultBoxShadow(true)}
     transform: translateY(-4px);
   }
 `;

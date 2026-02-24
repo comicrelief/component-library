@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import Picture from '../../Atoms/Picture/Picture';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   position: relative;
@@ -122,7 +123,7 @@ const Form = styled.form`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   text-align: left;
 
   margin-left: auto;
