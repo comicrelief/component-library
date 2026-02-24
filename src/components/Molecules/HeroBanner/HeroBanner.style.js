@@ -60,6 +60,7 @@ const OuterWrapper = styled.div`
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+    ${defaultBoxShadow()}
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
