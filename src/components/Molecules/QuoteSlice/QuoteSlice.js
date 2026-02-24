@@ -42,7 +42,7 @@ const QuoteSlice = ({
   // we calculate the ratio and set it as a CSS variable;
   // the heading text uses a CSS clamp function to enfore a min and max font size
   // so we don't go too small or too large;
-  // this also lets us use breakppoints to set different min/max sizes for different screen sizes
+  // this also lets us use CSS breakpoints to set different min/max sizes for different screen sizes
   let ratio = 1;
 
   switch (true) {
