@@ -1,11 +1,11 @@
-import React from "react";
-import "jest-styled-components";
+import React from 'react';
+import 'jest-styled-components';
 
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import RichtextCarousel from "./RichtextCarousel";
-const { RichtextCarouselItems } = require("../../../styleguide/data/data");
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import RichtextCarousel from './RichtextCarousel';
+const { RichtextCarouselItems } = require('../../../styleguide/data/data');
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderWithTheme(
     <RichtextCarousel data={RichtextCarouselItems} />
   ).toJSON();
@@ -22,7 +22,7 @@ it("renders correctly", () => {
       padding: 2.5rem 2rem 3.5rem;
       margin: 0 auto;
       border-radius: 20px;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
     .c0 .carousel {

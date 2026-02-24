@@ -17,7 +17,7 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -104,7 +104,7 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-5 hXyQTI"
+            className="CTACardstyle__CardLink-sc-si8xx1-5 bFEvSM"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -150,7 +150,7 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -237,7 +237,7 @@ exports[`handles data structure correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 iSFtcX"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test-no-image"
             rel={null}
@@ -318,7 +318,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -405,7 +405,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-5 hXyQTI"
+            className="CTACardstyle__CardLink-sc-si8xx1-5 bFEvSM"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -451,7 +451,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -538,7 +538,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 gBbrVV"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test-no-image"
             rel={null}
@@ -619,7 +619,7 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -706,7 +706,7 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-5 hXyQTI"
+            className="CTACardstyle__CardLink-sc-si8xx1-5 bFEvSM"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -752,7 +752,7 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -839,7 +839,7 @@ exports[`renders carousel mode correctly 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test-no-image"
             rel={null}
@@ -920,7 +920,7 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -1007,7 +1007,7 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-5 hXyQTI"
+            className="CTACardstyle__CardLink-sc-si8xx1-5 bFEvSM"
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
@@ -1053,7 +1053,7 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test"
             rel={null}
@@ -1140,7 +1140,7 @@ exports[`renders correctly with data prop 1`] = `
           className="CTACardstyle__CardWrapper-sc-si8xx1-6 kNLFm"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jlRIUG"
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
             color="red"
             href="/test-no-image"
             rel={null}
