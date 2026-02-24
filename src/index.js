@@ -78,6 +78,7 @@ export {
   ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
+export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export {
   MarketingPreferencesDS,
