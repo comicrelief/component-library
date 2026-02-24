@@ -99,7 +99,7 @@ const QuoteSlice = ({
         </PictureWrapper>
         <TextWrapper>
           {heading && (
-            <Heading tag="h2" style={{ '--ratio': ratio }}>
+            <Heading tag="h2" ratio={ratio}>
               {heading}
             </Heading>
           )}

@@ -59,6 +59,8 @@ const Heading = styled(Text)`
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+  --ratio: ${({ ratio }) => ratio || 1};
+
   font-size: clamp(1.5rem, calc(var(--ratio) * 3rem), 3rem);
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
@@ -67,6 +69,7 @@ const Heading = styled(Text)`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     font-size: clamp(2rem, calc(var(--ratio) * 4rem), 4rem);
   }
+
 `;
 
 const Body = styled(Text)`
