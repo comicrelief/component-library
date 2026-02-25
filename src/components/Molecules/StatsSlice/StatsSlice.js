@@ -26,11 +26,8 @@ const StatsSlice = ({ stats }) => {
       <InnerWrapper>
         {stats?.map((stat, index) => {
           const key = index + String(stat.value);
-
           const delay = delays[index];
-          startDelay += delay;
-
-          return (
+          const statComponent = (
             <StatComponent
               key={key}
               value={String(stat.value)}
@@ -39,6 +36,9 @@ const StatsSlice = ({ stats }) => {
               description={stat.description}
             />
           );
+          // update the start delay for the next stat
+          startDelay += delay;
+          return statComponent;
         })}
       </InnerWrapper>
     </OuterWrapper>
