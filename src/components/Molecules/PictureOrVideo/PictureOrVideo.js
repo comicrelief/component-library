@@ -21,19 +21,19 @@ const PictureOrVideo = ({
   image,
   images,
   imageLow,
-  alt = '',
   videoDesktop,
   videoMobile,
   posterDesktop,
   posterMobile,
+  isBackgroundImage,
+  alt = '',
   videoLoop = true,
   videoShowFullControls = false,
   videoShowPlayPause = true,
   asBackground = false,
   objectFit = 'cover',
   width = '100%',
-  height = '100%',
-  isBackgroundImage
+  height = '100%'
 }) => {
   const imageObj = image && typeof image === 'object' ? image : null;
   const resolvedImages = imageObj?.images ?? images;
