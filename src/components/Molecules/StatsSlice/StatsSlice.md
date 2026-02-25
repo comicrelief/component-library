@@ -10,7 +10,7 @@
 
 ```js
 <StatsSlice stats={[{
-    value: 1234567890,
+    value: "123,456,789.02",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 }]}  />
 ```

@@ -12,63 +12,69 @@ import {
 import Text from '../../Atoms/Text/Text';
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 
-// prop type for an individual stat
-const StatPropTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  delay: PropTypes.number,
-  description: PropTypes.string
-};
+const characterDelayMs = 100;
 
-/**
-  stats slice
- */
 // MARK: stats slice
 const StatsSlice = ({ stats }) => {
-  const localStats = stats;
+  const delays = stats?.map(
+    stat => String(stat.value).length * characterDelayMs
+  );
+  let startDelay = 0;
+
   return (
     <OuterWrapper>
       <InnerWrapper>
-        {localStats?.map((stat, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <StatComponent key={index} {...stat} delay={index * 1000} />
-        ))}
+        {stats?.map((stat, index) => {
+          const key = index + String(stat.value);
+
+          const delay = delays[index];
+          startDelay += delay;
+
+          return (
+            <StatComponent
+              key={key}
+              value={String(stat.value)}
+              delay={delay}
+              startDelay={startDelay}
+              description={stat.description}
+            />
+          );
+        })}
       </InnerWrapper>
     </OuterWrapper>
   );
 };
-
 StatsSlice.propTypes = {
-  stats: PropTypes.arrayOf(PropTypes.shape(StatPropTypes))
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
+      delay: PropTypes.number,
+      description: PropTypes.string
+    })
+  )
 };
 
+/**
+ * check whether a string character is a number or a string
+ * @param {string} character
+ * @returns {'string' | 'number'}
+ */
+function getValueType(character) {
+  return Number.isNaN(parseInt(character, 10)) ? 'string' : 'number';
+}
+
 // MARK: individual stat
-function StatComponent({ value, description, delay }) {
-  return (
-    <StatContainer>
-      <ValueContainer>
-        <StatValue>
-          <AnimatedText value={value} delay={delay} />
-        </StatValue>
-        <ValueUnderline src={altCtaUnderline} className="cta-text-underline" />
-      </ValueContainer>
-      <Text size="s">{description}</Text>
-    </StatContainer>
-  );
-}
-
-StatComponent.propTypes = StatPropTypes;
-
-function getValueType(value) {
-  return Number.isNaN(parseInt(value, 10)) ? 'string' : 'number';
-}
-
-// MARK: string
-function AnimatedText({ value, delay }) {
-  const totalDelay = String(value).length * 100;
-
-  const characters = String(value)
+function StatComponent({
+  value,
+  delay,
+  startDelay,
+  description
+}) {
+  // split the value into characters and get the type of each character
+  const characters = value
     .split('')
-    .map((character) => {
+    .map(character => {
       const type = getValueType(character);
       return {
         character,
@@ -77,47 +83,56 @@ function AnimatedText({ value, delay }) {
     });
 
   return (
-    <div style={{ display: 'flex' }}>
-      {characters.map(({ character, type }, index) => {
-        const key = index + character;
-        const characterDelay = delay + (totalDelay - index * 100);
-        switch (type) {
-          case 'string':
-            return (
-              <AnimatedString
-                key={key}
-                value={character}
-                delay={characterDelay}
-              />
-            );
-          case 'number':
-            return (
-              <AnimatedNumber
-                key={key}
-                value={character}
-                delay={characterDelay}
-              />
-            );
-          default:
-            return null;
-        }
-      })}
-    </div>
+    <StatContainer>
+      <ValueContainer>
+        <StatValue>
+          {characters.map(({ character, type }, index) => {
+            const key = index + character;
+            const characterDelay = startDelay + (delay - index * characterDelayMs);
+            switch (type) {
+              case 'string':
+                return (
+                  <AnimatedString
+                    key={key}
+                    value={character}
+                    delay={characterDelay}
+                  />
+                );
+              case 'number':
+                return (
+                  <AnimatedNumber
+                    key={key}
+                    value={character}
+                    delay={characterDelay}
+                  />
+                );
+              default:
+                return null;
+            }
+          })}
+        </StatValue>
+        <ValueUnderline
+          src={altCtaUnderline}
+          delay={startDelay + delay * 1.5}
+        />
+      </ValueContainer>
+      <Text size="s">{description}</Text>
+    </StatContainer>
   );
 }
-
-AnimatedText.propTypes = {
+StatComponent.propTypes = {
   value: PropTypes.string.isRequired,
-  delay: PropTypes.number
+  delay: PropTypes.number,
+  startDelay: PropTypes.number,
+  description: PropTypes.string
 };
 
-// MARK: string char
+// MARK: string
 function AnimatedString({ value, delay }) {
   const digitRef = useRef(null);
 
   useEffect(() => {
-    const transform = `translateY(-50%)`;
-    digitRef.current?.style.setProperty('transform', transform);
+    digitRef.current?.style.setProperty('transform', 'translateY(-50%)');
   }, [value]);
 
   // TODO add more characters?
@@ -132,13 +147,12 @@ function AnimatedString({ value, delay }) {
     </div>
   );
 }
-
 AnimatedString.propTypes = {
   value: PropTypes.string.isRequired,
   delay: PropTypes.number
 };
 
-// MARK: numeric char
+// MARK: number
 function AnimatedNumber({ value, delay }) {
   const digitRef = useRef(null);
 
@@ -166,9 +180,8 @@ function AnimatedNumber({ value, delay }) {
     </div>
   );
 }
-
 AnimatedNumber.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
   delay: PropTypes.number
 };
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const OuterWrapper = styled.div`
   padding: 2rem;
@@ -36,13 +36,26 @@ export const ValueContainer = styled.div`
   padding-bottom: 1rem;
 `;
 
+const clipIn = keyframes`
+  0% {
+    clip-path: inset(0px 100% 0px 0px);
+  }
+  100% {
+    clip-path: inset(0px 0% 0px 0px);
+  }
+`;
+
 export const ValueUnderline = styled.img`
   position: absolute;
   width: 100%;
   height: 4px;
   left: 0;
   bottom: 0px;
-  clip-path: inset(0px 50% 0px 0px);
+  animation-name: ${clipIn};
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.219, -0.011, 0.164, 0.987);
+  animation-delay: ${({ delay }) => delay}ms;
+  animation-fill-mode: both;
 `;
 
 export const StatValue = styled.div`
@@ -69,5 +82,5 @@ export const AnimatedDigit = styled.div`
   transition-delay: var(--delay);
   transition-property: transform;
   transition-duration: 2s;
-  transition-timing-function: linear(0, 0.192 4.1%, 0.361 8.2%, 0.513 12.5%, 0.645 16.9%, 0.703 19.1%, 0.758 21.4%, 0.808 23.7%, 0.854 26.1%, 0.895 28.5%, 0.932 31%, 0.964 33.5%, 0.993 36.1%, 1.013 38.3%, 1.031 40.6%, 1.046 42.9%, 1.058 45.3%, 1.067 47.8%, 1.074 50.3%, 1.078 53%, 1.08 55.8%, 1.077 60.4%, 1.069 65.5%, 1.057 70.4%, 1.024 82.4%, 1.01 88.7%, 1.002 94.4%, 1);
+  transition-timing-function: linear(0, 0.329 8.8%, 0.59 18%, 0.787 27.7%, 0.863 32.8%, 0.926 38.2%, 0.968 43.1%, 1 48.3%, 1.022 53.7%, 1.034 59.6%, 1.035 69.8%, 1.006 90.7%, 1);
 `;
