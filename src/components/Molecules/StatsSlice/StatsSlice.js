@@ -5,9 +5,19 @@ import {
   InnerWrapper,
   StatContainer,
   StatValue,
-  AnimatedDigit
+  AnimatedDigit,
+  ValueContainer,
+  ValueUnderline
 } from './StatsSlice.style';
 import Text from '../../Atoms/Text/Text';
+import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
+
+// prop type for an individual stat
+const StatPropTypes = {
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  delay: PropTypes.number,
+  description: PropTypes.string
+};
 
 /**
   stats slice
@@ -20,29 +30,27 @@ const StatsSlice = ({ stats }) => {
       <InnerWrapper>
         {localStats?.map((stat, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <StatComponent key={index} {...stat} />
+          <StatComponent key={index} {...stat} delay={index * 1000} />
         ))}
       </InnerWrapper>
     </OuterWrapper>
   );
 };
 
-const StatPropTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  description: PropTypes.string
-};
-
 StatsSlice.propTypes = {
   stats: PropTypes.arrayOf(PropTypes.shape(StatPropTypes))
 };
 
-// MARK: stat
-function StatComponent({ value, description }) {
+// MARK: individual stat
+function StatComponent({ value, description, delay }) {
   return (
     <StatContainer>
-      <StatValue>
-        <AnimatedText value={value} />
-      </StatValue>
+      <ValueContainer>
+        <StatValue>
+          <AnimatedText value={value} delay={delay} />
+        </StatValue>
+        <ValueUnderline src={altCtaUnderline} className="cta-text-underline" />
+      </ValueContainer>
       <Text size="s">{description}</Text>
     </StatContainer>
   );
@@ -58,34 +66,52 @@ function getValueType(value) {
 function AnimatedText({ value, delay }) {
   const totalDelay = String(value).length * 100;
 
-  const characters = String(value).split('').map(character => {
-    const type = getValueType(character);
-    return {
-      character,
-      type
-    };
-  });
+  const characters = String(value)
+    .split('')
+    .map((character) => {
+      const type = getValueType(character);
+      return {
+        character,
+        type
+      };
+    });
 
   return (
     <div style={{ display: 'flex' }}>
-      {characters
-        .map(({ character, type }, index) => {
-          const key = index + character;
-          const delay = totalDelay - index * 100;
-          switch (type) {
-            case 'string':
-              return <AnimatedString key={key} value={character} delay={delay} />;
-            case 'number':
-              return <AnimatedNumber key={key} value={character} delay={delay} />;
-            default:
-              return null;
-          }
-        })}
+      {characters.map(({ character, type }, index) => {
+        const key = index + character;
+        const characterDelay = delay + (totalDelay - index * 100);
+        switch (type) {
+          case 'string':
+            return (
+              <AnimatedString
+                key={key}
+                value={character}
+                delay={characterDelay}
+              />
+            );
+          case 'number':
+            return (
+              <AnimatedNumber
+                key={key}
+                value={character}
+                delay={characterDelay}
+              />
+            );
+          default:
+            return null;
+        }
+      })}
     </div>
   );
 }
 
-// MARK: character
+AnimatedText.propTypes = {
+  value: PropTypes.string.isRequired,
+  delay: PropTypes.number
+};
+
+// MARK: string char
 function AnimatedString({ value, delay }) {
   const digitRef = useRef(null);
 
@@ -112,6 +138,7 @@ AnimatedString.propTypes = {
   delay: PropTypes.number
 };
 
+// MARK: numeric char
 function AnimatedNumber({ value, delay }) {
   const digitRef = useRef(null);
 

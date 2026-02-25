@@ -11,7 +11,7 @@
 ```js
 <StatsSlice stats={[{
     value: 1234567890,
-    description: "We raised a lot of cash"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 }]}  />
 ```
 
@@ -20,14 +20,14 @@
 ```js
 <StatsSlice stats={[{
     value: "£1234.56",
-    description: "We raised a lot of cash"
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
 },
 {
     value: "456 people",
-    description: "We raised a lot of cash"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 },
 {
     value: "over $800bn",
-    description: "We raised a lot of cash"
+    description: "Ut enim ad minima veniam, quis nostrum exercitationem."
 }]}  />
 ```

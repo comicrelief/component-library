@@ -19,20 +19,46 @@ export const InnerWrapper = styled.div`
 export const StatContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 1rem;
   background: #ffffff;
-  padding: 1rem;
-  flex: 1 1 auto;
+  padding: 2rem;
+  flex: 1;
   border-radius: 1rem;
+`;
+
+export const ValueContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+`;
+
+export const ValueUnderline = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0px;
+  clip-path: inset(0px 50% 0px 0px);
 `;
 
 export const StatValue = styled.div`
   display: flex;
   text-transform: uppercase;
-//   font-family: Courier New, Courier, monospace;
   font-family: ${({ theme }) => theme.fontFamilies('Anton')};
   font-size: ${({ theme }) => theme.fontSize('l')};
   line-height: 1;
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    font-size: ${({ theme }) => theme.fontSize('xl')};
+  }
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    font-size: ${({ theme }) => theme.fontSize('xxl')};
+  }
 `;
 
 export const AnimatedDigit = styled.div`
