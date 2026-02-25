@@ -75,12 +75,26 @@ export const StatValue = styled.div`
 `;
 
 export const AnimatedDigit = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   transition-delay: var(--delay);
   transition-property: transform;
   transition-duration: 2s;
-  transition-timing-function: linear(0, 0.329 8.8%, 0.59 18%, 0.787 27.7%, 0.863 32.8%, 0.926 38.2%, 0.968 43.1%, 1 48.3%, 1.022 53.7%, 1.034 59.6%, 1.035 69.8%, 1.006 90.7%, 1);
+  transition-timing-function: linear(
+    0,
+    0.329 8.8%,
+    0.59 18%,
+    0.787 27.7%,
+    0.863 32.8%,
+    0.926 38.2%,
+    0.968 43.1%,
+    1 48.3%,
+    1.022 53.7%,
+    1.034 59.6%,
+    1.035 69.8%,
+    1.006 90.7%,
+    1
+  );
 `;
